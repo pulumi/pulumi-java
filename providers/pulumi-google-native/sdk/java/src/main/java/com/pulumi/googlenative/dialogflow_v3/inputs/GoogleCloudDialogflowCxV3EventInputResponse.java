@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowCxV3EventInputResponse extends com.pulum
     @Import(name="event", required=true)
     private String event;
 
+    /**
+     * @return Name of the event.
+     * 
+     */
     public String event() {
         return this.event;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowCxV3EventInputResponse extends com.pulum
             $ = new GoogleCloudDialogflowCxV3EventInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param event Name of the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(String event) {
             $.event = event;
             return this;

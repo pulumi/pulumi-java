@@ -23,6 +23,10 @@ public final class BigQueryDestinationResponse extends com.pulumi.resources.Invo
     @Import(name="datasetId", required=true)
     private String datasetId;
 
+    /**
+     * @return The ID of a BigQuery Dataset.
+     * 
+     */
     public String datasetId() {
         return this.datasetId;
     }
@@ -51,6 +55,12 @@ public final class BigQueryDestinationResponse extends com.pulumi.resources.Invo
             $ = new BigQueryDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId The ID of a BigQuery Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             $.datasetId = datasetId;
             return this;

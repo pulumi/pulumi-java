@@ -24,6 +24,10 @@ public final class RouterNatLogConfigResponse extends com.pulumi.resources.Invok
     @Import(name="enable", required=true)
     private Boolean enable;
 
+    /**
+     * @return Indicates whether or not to export logs. This is false by default.
+     * 
+     */
     public Boolean enable() {
         return this.enable;
     }
@@ -35,6 +39,10 @@ public final class RouterNatLogConfigResponse extends com.pulumi.resources.Invok
     @Import(name="filter", required=true)
     private String filter;
 
+    /**
+     * @return Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: - ERRORS_ONLY: Export logs only for connection failures. - TRANSLATIONS_ONLY: Export logs only for successful connections. - ALL: Export logs for all connections, successful and unsuccessful.
+     * 
+     */
     public String filter() {
         return this.filter;
     }
@@ -64,11 +72,23 @@ public final class RouterNatLogConfigResponse extends com.pulumi.resources.Invok
             $ = new RouterNatLogConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enable Indicates whether or not to export logs. This is false by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param filter Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: - ERRORS_ONLY: Export logs only for connection failures. - TRANSLATIONS_ONLY: Export logs only for successful connections. - ALL: Export logs for all connections, successful and unsuccessful.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             $.filter = filter;
             return this;

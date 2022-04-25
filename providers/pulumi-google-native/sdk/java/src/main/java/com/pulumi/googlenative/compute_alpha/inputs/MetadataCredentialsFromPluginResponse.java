@@ -23,6 +23,10 @@ public final class MetadataCredentialsFromPluginResponse extends com.pulumi.reso
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Plugin name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class MetadataCredentialsFromPluginResponse extends com.pulumi.reso
     @Import(name="structConfig", required=true)
     private String structConfig;
 
+    /**
+     * @return A text proto that conforms to a Struct type definition interpreted by the plugin.
+     * 
+     */
     public String structConfig() {
         return this.structConfig;
     }
@@ -63,11 +71,23 @@ public final class MetadataCredentialsFromPluginResponse extends com.pulumi.reso
             $ = new MetadataCredentialsFromPluginResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Plugin name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param structConfig A text proto that conforms to a Struct type definition interpreted by the plugin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structConfig(String structConfig) {
             $.structConfig = structConfig;
             return this;

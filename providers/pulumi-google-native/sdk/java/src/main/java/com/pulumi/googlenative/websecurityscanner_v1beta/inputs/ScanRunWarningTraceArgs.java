@@ -26,6 +26,10 @@ public final class ScanRunWarningTraceArgs extends com.pulumi.resources.Resource
     @Import(name="code")
     private @Nullable Output<ScanRunWarningTraceCode> code;
 
+    /**
+     * @return Indicates the warning code.
+     * 
+     */
     public Optional<Output<ScanRunWarningTraceCode>> code() {
         return Optional.ofNullable(this.code);
     }
@@ -54,11 +58,23 @@ public final class ScanRunWarningTraceArgs extends com.pulumi.resources.Resource
             $ = new ScanRunWarningTraceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Indicates the warning code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Output<ScanRunWarningTraceCode> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code Indicates the warning code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(ScanRunWarningTraceCode code) {
             return code(Output.of(code));
         }

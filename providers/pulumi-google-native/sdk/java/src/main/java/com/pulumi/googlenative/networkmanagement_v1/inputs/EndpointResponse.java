@@ -24,6 +24,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cloudSqlInstance", required=true)
     private String cloudSqlInstance;
 
+    /**
+     * @return A [Cloud SQL](https://cloud.google.com/sql) instance URI.
+     * 
+     */
     public String cloudSqlInstance() {
         return this.cloudSqlInstance;
     }
@@ -35,6 +39,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="gkeMasterCluster", required=true)
     private String gkeMasterCluster;
 
+    /**
+     * @return A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture).
+     * 
+     */
     public String gkeMasterCluster() {
         return this.gkeMasterCluster;
     }
@@ -46,6 +54,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instance", required=true)
     private String instance;
 
+    /**
+     * @return A Compute Engine instance URI.
+     * 
+     */
     public String instance() {
         return this.instance;
     }
@@ -57,6 +69,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipAddress", required=true)
     private String ipAddress;
 
+    /**
+     * @return The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test&#39;s destination is a [global load balancer VIP](/load-balancing/docs/load-balancing-overview).
+     * 
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
@@ -68,6 +84,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return A Compute Engine network URI.
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -79,6 +99,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="networkType", required=true)
     private String networkType;
 
+    /**
+     * @return Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.
+     * 
+     */
     public String networkType() {
         return this.networkType;
     }
@@ -90,6 +114,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -101,6 +129,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -136,41 +168,89 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudSqlInstance A [Cloud SQL](https://cloud.google.com/sql) instance URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSqlInstance(String cloudSqlInstance) {
             $.cloudSqlInstance = cloudSqlInstance;
             return this;
         }
 
+        /**
+         * @param gkeMasterCluster A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeMasterCluster(String gkeMasterCluster) {
             $.gkeMasterCluster = gkeMasterCluster;
             return this;
         }
 
+        /**
+         * @param instance A Compute Engine instance URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param ipAddress The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test&#39;s destination is a [global load balancer VIP](/load-balancing/docs/load-balancing-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param network A Compute Engine network URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param networkType Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkType(String networkType) {
             $.networkType = networkType;
             return this;
         }
 
+        /**
+         * @param port The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param project Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;

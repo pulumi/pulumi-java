@@ -26,6 +26,10 @@ public final class MetadataCredentialsFromPluginArgs extends com.pulumi.resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Plugin name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class MetadataCredentialsFromPluginArgs extends com.pulumi.resource
     @Import(name="structConfig")
     private @Nullable Output<String> structConfig;
 
+    /**
+     * @return A text proto that conforms to a Struct type definition interpreted by the plugin.
+     * 
+     */
     public Optional<Output<String>> structConfig() {
         return Optional.ofNullable(this.structConfig);
     }
@@ -66,20 +74,44 @@ public final class MetadataCredentialsFromPluginArgs extends com.pulumi.resource
             $ = new MetadataCredentialsFromPluginArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Plugin name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Plugin name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param structConfig A text proto that conforms to a Struct type definition interpreted by the plugin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structConfig(@Nullable Output<String> structConfig) {
             $.structConfig = structConfig;
             return this;
         }
 
+        /**
+         * @param structConfig A text proto that conforms to a Struct type definition interpreted by the plugin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structConfig(String structConfig) {
             return structConfig(Output.of(structConfig));
         }

@@ -23,6 +23,10 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends com.pul
     @Import(name="interconnectName", required=true)
     private String interconnectName;
 
+    /**
+     * @return Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner&#39;s portal. For instance &#34;Chicago 1&#34;. This value may be validated to match approved Partner values.
+     * 
+     */
     public String interconnectName() {
         return this.interconnectName;
     }
@@ -34,6 +38,10 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends com.pul
     @Import(name="partnerName", required=true)
     private String partnerName;
 
+    /**
+     * @return Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.
+     * 
+     */
     public String partnerName() {
         return this.partnerName;
     }
@@ -45,6 +53,10 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends com.pul
     @Import(name="portalUrl", required=true)
     private String portalUrl;
 
+    /**
+     * @return URL of the Partner&#39;s portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
+     * 
+     */
     public String portalUrl() {
         return this.portalUrl;
     }
@@ -75,16 +87,34 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends com.pul
             $ = new InterconnectAttachmentPartnerMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interconnectName Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner&#39;s portal. For instance &#34;Chicago 1&#34;. This value may be validated to match approved Partner values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interconnectName(String interconnectName) {
             $.interconnectName = interconnectName;
             return this;
         }
 
+        /**
+         * @param partnerName Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerName(String partnerName) {
             $.partnerName = partnerName;
             return this;
         }
 
+        /**
+         * @param portalUrl URL of the Partner&#39;s portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalUrl(String portalUrl) {
             $.portalUrl = portalUrl;
             return this;

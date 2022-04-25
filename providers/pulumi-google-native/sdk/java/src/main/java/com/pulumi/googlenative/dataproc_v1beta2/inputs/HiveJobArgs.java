@@ -30,6 +30,10 @@ public final class HiveJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="continueOnFailure")
     private @Nullable Output<Boolean> continueOnFailure;
 
+    /**
+     * @return Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
+     * 
+     */
     public Optional<Output<Boolean>> continueOnFailure() {
         return Optional.ofNullable(this.continueOnFailure);
     }
@@ -41,6 +45,10 @@ public final class HiveJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jarFileUris")
     private @Nullable Output<List<String>> jarFileUris;
 
+    /**
+     * @return Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
+     * 
+     */
     public Optional<Output<List<String>>> jarFileUris() {
         return Optional.ofNullable(this.jarFileUris);
     }
@@ -52,6 +60,10 @@ public final class HiveJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -63,6 +75,10 @@ public final class HiveJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryFileUri")
     private @Nullable Output<String> queryFileUri;
 
+    /**
+     * @return The HCFS URI of the script that contains Hive queries.
+     * 
+     */
     public Optional<Output<String>> queryFileUri() {
         return Optional.ofNullable(this.queryFileUri);
     }
@@ -74,6 +90,10 @@ public final class HiveJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryList")
     private @Nullable Output<QueryListArgs> queryList;
 
+    /**
+     * @return A list of queries.
+     * 
+     */
     public Optional<Output<QueryListArgs>> queryList() {
         return Optional.ofNullable(this.queryList);
     }
@@ -85,6 +105,10 @@ public final class HiveJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scriptVariables")
     private @Nullable Output<Map<String,String>> scriptVariables;
 
+    /**
+     * @return Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name=&#34;value&#34;;).
+     * 
+     */
     public Optional<Output<Map<String,String>>> scriptVariables() {
         return Optional.ofNullable(this.scriptVariables);
     }
@@ -118,60 +142,138 @@ public final class HiveJobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HiveJobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param continueOnFailure Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continueOnFailure(@Nullable Output<Boolean> continueOnFailure) {
             $.continueOnFailure = continueOnFailure;
             return this;
         }
 
+        /**
+         * @param continueOnFailure Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continueOnFailure(Boolean continueOnFailure) {
             return continueOnFailure(Output.of(continueOnFailure));
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
             $.jarFileUris = jarFileUris;
             return this;
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(List<String> jarFileUris) {
             return jarFileUris(Output.of(jarFileUris));
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
 
+        /**
+         * @param properties Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param queryFileUri The HCFS URI of the script that contains Hive queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
             $.queryFileUri = queryFileUri;
             return this;
         }
 
+        /**
+         * @param queryFileUri The HCFS URI of the script that contains Hive queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryFileUri(String queryFileUri) {
             return queryFileUri(Output.of(queryFileUri));
         }
 
+        /**
+         * @param queryList A list of queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryList(@Nullable Output<QueryListArgs> queryList) {
             $.queryList = queryList;
             return this;
         }
 
+        /**
+         * @param queryList A list of queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryList(QueryListArgs queryList) {
             return queryList(Output.of(queryList));
         }
 
+        /**
+         * @param scriptVariables Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name=&#34;value&#34;;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptVariables(@Nullable Output<Map<String,String>> scriptVariables) {
             $.scriptVariables = scriptVariables;
             return this;
         }
 
+        /**
+         * @param scriptVariables Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name=&#34;value&#34;;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptVariables(Map<String,String> scriptVariables) {
             return scriptVariables(Output.of(scriptVariables));
         }

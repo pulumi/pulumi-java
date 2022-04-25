@@ -24,6 +24,10 @@ public final class BackendServiceIAPResponse extends com.pulumi.resources.Invoke
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether the serving infrastructure will authenticate and authorize all incoming requests. If true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -35,6 +39,10 @@ public final class BackendServiceIAPResponse extends com.pulumi.resources.Invoke
     @Import(name="oauth2ClientId", required=true)
     private String oauth2ClientId;
 
+    /**
+     * @return OAuth2 client ID to use for the authentication flow.
+     * 
+     */
     public String oauth2ClientId() {
         return this.oauth2ClientId;
     }
@@ -46,6 +54,10 @@ public final class BackendServiceIAPResponse extends com.pulumi.resources.Invoke
     @Import(name="oauth2ClientSecret", required=true)
     private String oauth2ClientSecret;
 
+    /**
+     * @return OAuth2 client secret to use for the authentication flow. For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field. @InputOnly
+     * 
+     */
     public String oauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
@@ -57,6 +69,10 @@ public final class BackendServiceIAPResponse extends com.pulumi.resources.Invoke
     @Import(name="oauth2ClientSecretSha256", required=true)
     private String oauth2ClientSecretSha256;
 
+    /**
+     * @return SHA256 hash value for the field oauth2_client_secret above.
+     * 
+     */
     public String oauth2ClientSecretSha256() {
         return this.oauth2ClientSecretSha256;
     }
@@ -88,21 +104,45 @@ public final class BackendServiceIAPResponse extends com.pulumi.resources.Invoke
             $ = new BackendServiceIAPResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether the serving infrastructure will authenticate and authorize all incoming requests. If true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param oauth2ClientId OAuth2 client ID to use for the authentication flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientId(String oauth2ClientId) {
             $.oauth2ClientId = oauth2ClientId;
             return this;
         }
 
+        /**
+         * @param oauth2ClientSecret OAuth2 client secret to use for the authentication flow. For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field. @InputOnly
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientSecret(String oauth2ClientSecret) {
             $.oauth2ClientSecret = oauth2ClientSecret;
             return this;
         }
 
+        /**
+         * @param oauth2ClientSecretSha256 SHA256 hash value for the field oauth2_client_secret above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientSecretSha256(String oauth2ClientSecretSha256) {
             $.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
             return this;

@@ -23,6 +23,10 @@ public final class InconclusiveDetailResponse extends com.pulumi.resources.Invok
     @Import(name="abortedByUser", required=true)
     private Boolean abortedByUser;
 
+    /**
+     * @return If the end user aborted the test execution before a pass or fail could be determined. For example, the user pressed ctrl-c which sent a kill signal to the test runner while the test was running.
+     * 
+     */
     public Boolean abortedByUser() {
         return this.abortedByUser;
     }
@@ -34,6 +38,10 @@ public final class InconclusiveDetailResponse extends com.pulumi.resources.Invok
     @Import(name="hasErrorLogs", required=true)
     private Boolean hasErrorLogs;
 
+    /**
+     * @return If results are being provided to the user in certain cases of infrastructure failures
+     * 
+     */
     public Boolean hasErrorLogs() {
         return this.hasErrorLogs;
     }
@@ -45,6 +53,10 @@ public final class InconclusiveDetailResponse extends com.pulumi.resources.Invok
     @Import(name="infrastructureFailure", required=true)
     private Boolean infrastructureFailure;
 
+    /**
+     * @return If the test runner could not determine success or failure because the test depends on a component other than the system under test which failed. For example, a mobile test requires provisioning a device where the test executes, and that provisioning can fail.
+     * 
+     */
     public Boolean infrastructureFailure() {
         return this.infrastructureFailure;
     }
@@ -75,16 +87,34 @@ public final class InconclusiveDetailResponse extends com.pulumi.resources.Invok
             $ = new InconclusiveDetailResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param abortedByUser If the end user aborted the test execution before a pass or fail could be determined. For example, the user pressed ctrl-c which sent a kill signal to the test runner while the test was running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abortedByUser(Boolean abortedByUser) {
             $.abortedByUser = abortedByUser;
             return this;
         }
 
+        /**
+         * @param hasErrorLogs If results are being provided to the user in certain cases of infrastructure failures
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasErrorLogs(Boolean hasErrorLogs) {
             $.hasErrorLogs = hasErrorLogs;
             return this;
         }
 
+        /**
+         * @param infrastructureFailure If the test runner could not determine success or failure because the test depends on a component other than the system under test which failed. For example, a mobile test requires provisioning a device where the test executes, and that provisioning can fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureFailure(Boolean infrastructureFailure) {
             $.infrastructureFailure = infrastructureFailure;
             return this;

@@ -24,6 +24,10 @@ public final class ReusableConfigWrapperResponse extends com.pulumi.resources.In
     @Import(name="reusableConfig", required=true)
     private String reusableConfig;
 
+    /**
+     * @return A resource path to a ReusableConfig in the format `projects/*{@literal /}locations/*{@literal /}reusableConfigs/*`.
+     * 
+     */
     public String reusableConfig() {
         return this.reusableConfig;
     }
@@ -35,6 +39,10 @@ public final class ReusableConfigWrapperResponse extends com.pulumi.resources.In
     @Import(name="reusableConfigValues", required=true)
     private ReusableConfigValuesResponse reusableConfigValues;
 
+    /**
+     * @return A user-specified inline ReusableConfigValues.
+     * 
+     */
     public ReusableConfigValuesResponse reusableConfigValues() {
         return this.reusableConfigValues;
     }
@@ -64,11 +72,23 @@ public final class ReusableConfigWrapperResponse extends com.pulumi.resources.In
             $ = new ReusableConfigWrapperResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param reusableConfig A resource path to a ReusableConfig in the format `projects/*{@literal /}locations/*{@literal /}reusableConfigs/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reusableConfig(String reusableConfig) {
             $.reusableConfig = reusableConfig;
             return this;
         }
 
+        /**
+         * @param reusableConfigValues A user-specified inline ReusableConfigValues.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reusableConfigValues(ReusableConfigValuesResponse reusableConfigValues) {
             $.reusableConfigValues = reusableConfigValues;
             return this;

@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse extends com.pulumi
     @Import(name="cryptoKey", required=true)
     private GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
+    /**
+     * @return The key used by the hash function.
+     * 
+     */
     public GooglePrivacyDlpV2CryptoKeyResponse cryptoKey() {
         return this.cryptoKey;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse extends com.pulumi
             $ = new GooglePrivacyDlpV2CryptoHashConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cryptoKey The key used by the hash function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
             $.cryptoKey = cryptoKey;
             return this;

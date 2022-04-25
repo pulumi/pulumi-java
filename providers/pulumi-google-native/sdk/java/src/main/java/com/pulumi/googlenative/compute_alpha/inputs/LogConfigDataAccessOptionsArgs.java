@@ -26,6 +26,10 @@ public final class LogConfigDataAccessOptionsArgs extends com.pulumi.resources.R
     @Import(name="logMode")
     private @Nullable Output<LogConfigDataAccessOptionsLogMode> logMode;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<LogConfigDataAccessOptionsLogMode>> logMode() {
         return Optional.ofNullable(this.logMode);
     }
@@ -54,11 +58,23 @@ public final class LogConfigDataAccessOptionsArgs extends com.pulumi.resources.R
             $ = new LogConfigDataAccessOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logMode This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logMode(@Nullable Output<LogConfigDataAccessOptionsLogMode> logMode) {
             $.logMode = logMode;
             return this;
         }
 
+        /**
+         * @param logMode This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logMode(LogConfigDataAccessOptionsLogMode logMode) {
             return logMode(Output.of(logMode));
         }

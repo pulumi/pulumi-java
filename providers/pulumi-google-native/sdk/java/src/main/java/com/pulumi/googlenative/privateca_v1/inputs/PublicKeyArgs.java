@@ -25,6 +25,10 @@ public final class PublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="format", required=true)
     private Output<PublicKeyFormat> format;
 
+    /**
+     * @return The format of the public key.
+     * 
+     */
     public Output<PublicKeyFormat> format() {
         return this.format;
     }
@@ -36,6 +40,10 @@ public final class PublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return A public key. The padding and encoding must match with the `KeyFormat` value specified for the `format` field.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -65,20 +73,44 @@ public final class PublicKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param format The format of the public key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(Output<PublicKeyFormat> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format The format of the public key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(PublicKeyFormat format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param key A public key. The padding and encoding must match with the `KeyFormat` value specified for the `format` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key A public key. The padding and encoding must match with the `KeyFormat` value specified for the `format` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }

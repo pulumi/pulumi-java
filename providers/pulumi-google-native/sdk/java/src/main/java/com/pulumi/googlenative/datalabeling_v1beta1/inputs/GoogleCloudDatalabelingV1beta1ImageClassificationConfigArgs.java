@@ -28,6 +28,10 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
     @Import(name="allowMultiLabel")
     private @Nullable Output<Boolean> allowMultiLabel;
 
+    /**
+     * @return Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
+     * 
+     */
     public Optional<Output<Boolean>> allowMultiLabel() {
         return Optional.ofNullable(this.allowMultiLabel);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
     @Import(name="annotationSpecSet", required=true)
     private Output<String> annotationSpecSet;
 
+    /**
+     * @return Annotation spec set resource name.
+     * 
+     */
     public Output<String> annotationSpecSet() {
         return this.annotationSpecSet;
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
     @Import(name="answerAggregationType")
     private @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType;
 
+    /**
+     * @return Optional. The type of how to aggregate answers.
+     * 
+     */
     public Optional<Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType>> answerAggregationType() {
         return Optional.ofNullable(this.answerAggregationType);
     }
@@ -80,29 +92,65 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
             $ = new GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowMultiLabel Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMultiLabel(@Nullable Output<Boolean> allowMultiLabel) {
             $.allowMultiLabel = allowMultiLabel;
             return this;
         }
 
+        /**
+         * @param allowMultiLabel Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMultiLabel(Boolean allowMultiLabel) {
             return allowMultiLabel(Output.of(allowMultiLabel));
         }
 
+        /**
+         * @param annotationSpecSet Annotation spec set resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationSpecSet(Output<String> annotationSpecSet) {
             $.annotationSpecSet = annotationSpecSet;
             return this;
         }
 
+        /**
+         * @param annotationSpecSet Annotation spec set resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationSpecSet(String annotationSpecSet) {
             return annotationSpecSet(Output.of(annotationSpecSet));
         }
 
+        /**
+         * @param answerAggregationType Optional. The type of how to aggregate answers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder answerAggregationType(@Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType) {
             $.answerAggregationType = answerAggregationType;
             return this;
         }
 
+        /**
+         * @param answerAggregationType Optional. The type of how to aggregate answers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder answerAggregationType(GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType answerAggregationType) {
             return answerAggregationType(Output.of(answerAggregationType));
         }

@@ -24,6 +24,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiProducts")
     private @Nullable Output<List<String>> apiProducts;
 
+    /**
+     * @return List of API products associated with the developer app.
+     * 
+     */
     public Optional<Output<List<String>>> apiProducts() {
         return Optional.ofNullable(this.apiProducts);
     }
@@ -35,6 +39,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appFamily")
     private @Nullable Output<String> appFamily;
 
+    /**
+     * @return Developer app family.
+     * 
+     */
     public Optional<Output<String>> appFamily() {
         return Optional.ofNullable(this.appFamily);
     }
@@ -46,6 +54,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appId")
     private @Nullable Output<String> appId;
 
+    /**
+     * @return ID of the developer app.
+     * 
+     */
     public Optional<Output<String>> appId() {
         return Optional.ofNullable(this.appId);
     }
@@ -57,6 +69,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
     private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
+    /**
+     * @return List of attributes for the developer app.
+     * 
+     */
     public Optional<Output<List<GoogleCloudApigeeV1AttributeArgs>>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -68,6 +84,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="callbackUrl")
     private @Nullable Output<String> callbackUrl;
 
+    /**
+     * @return Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to developer apps.
+     * 
+     */
     public Optional<Output<String>> callbackUrl() {
         return Optional.ofNullable(this.callbackUrl);
     }
@@ -79,6 +99,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="developerId", required=true)
     private Output<String> developerId;
 
+    /**
+     * @return ID of the developer.
+     * 
+     */
     public Output<String> developerId() {
         return this.developerId;
     }
@@ -90,6 +114,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyExpiresIn")
     private @Nullable Output<String> keyExpiresIn;
 
+    /**
+     * @return Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can&#39;t be updated after it is set.
+     * 
+     */
     public Optional<Output<String>> keyExpiresIn() {
         return Optional.ofNullable(this.keyExpiresIn);
     }
@@ -101,6 +129,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the developer app.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -119,6 +151,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scopes")
     private @Nullable Output<List<String>> scopes;
 
+    /**
+     * @return Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.
+     * 
+     */
     public Optional<Output<List<String>>> scopes() {
         return Optional.ofNullable(this.scopes);
     }
@@ -130,6 +166,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Status of the credential. Valid values include `approved` or `revoked`.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -168,82 +208,190 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AppArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiProducts List of API products associated with the developer app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiProducts(@Nullable Output<List<String>> apiProducts) {
             $.apiProducts = apiProducts;
             return this;
         }
 
+        /**
+         * @param apiProducts List of API products associated with the developer app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiProducts(List<String> apiProducts) {
             return apiProducts(Output.of(apiProducts));
         }
 
+        /**
+         * @param apiProducts List of API products associated with the developer app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiProducts(String... apiProducts) {
             return apiProducts(List.of(apiProducts));
         }
 
+        /**
+         * @param appFamily Developer app family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appFamily(@Nullable Output<String> appFamily) {
             $.appFamily = appFamily;
             return this;
         }
 
+        /**
+         * @param appFamily Developer app family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appFamily(String appFamily) {
             return appFamily(Output.of(appFamily));
         }
 
+        /**
+         * @param appId ID of the developer app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(@Nullable Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param appId ID of the developer app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(String appId) {
             return appId(Output.of(appId));
         }
 
+        /**
+         * @param attributes List of attributes for the developer app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes List of attributes for the developer app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(List<GoogleCloudApigeeV1AttributeArgs> attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param attributes List of attributes for the developer app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(GoogleCloudApigeeV1AttributeArgs... attributes) {
             return attributes(List.of(attributes));
         }
 
+        /**
+         * @param callbackUrl Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to developer apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callbackUrl(@Nullable Output<String> callbackUrl) {
             $.callbackUrl = callbackUrl;
             return this;
         }
 
+        /**
+         * @param callbackUrl Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to developer apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callbackUrl(String callbackUrl) {
             return callbackUrl(Output.of(callbackUrl));
         }
 
+        /**
+         * @param developerId ID of the developer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerId(Output<String> developerId) {
             $.developerId = developerId;
             return this;
         }
 
+        /**
+         * @param developerId ID of the developer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerId(String developerId) {
             return developerId(Output.of(developerId));
         }
 
+        /**
+         * @param keyExpiresIn Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can&#39;t be updated after it is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyExpiresIn(@Nullable Output<String> keyExpiresIn) {
             $.keyExpiresIn = keyExpiresIn;
             return this;
         }
 
+        /**
+         * @param keyExpiresIn Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can&#39;t be updated after it is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyExpiresIn(String keyExpiresIn) {
             return keyExpiresIn(Output.of(keyExpiresIn));
         }
 
+        /**
+         * @param name Name of the developer app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the developer app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -257,24 +405,54 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param scopes Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(@Nullable Output<List<String>> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(List<String> scopes) {
             return scopes(Output.of(scopes));
         }
 
+        /**
+         * @param scopes Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }
 
+        /**
+         * @param status Status of the credential. Valid values include `approved` or `revoked`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the credential. Valid values include `approved` or `revoked`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class LoadBalancerBackendResponse {
     /**
-     * Name of a Compute Engine instance or network endpoint.
+     * @return Name of a Compute Engine instance or network endpoint.
      * 
      */
     private final String displayName;
     /**
-     * A list of firewall rule URIs allowing probes from health check IP ranges.
+     * @return A list of firewall rule URIs allowing probes from health check IP ranges.
      * 
      */
     private final List<String> healthCheckAllowingFirewallRules;
     /**
-     * A list of firewall rule URIs blocking probes from health check IP ranges.
+     * @return A list of firewall rule URIs blocking probes from health check IP ranges.
      * 
      */
     private final List<String> healthCheckBlockingFirewallRules;
     /**
-     * State of the health check firewall configuration.
+     * @return State of the health check firewall configuration.
      * 
      */
     private final String healthCheckFirewallState;
     /**
-     * URI of a Compute Engine instance or network endpoint.
+     * @return URI of a Compute Engine instance or network endpoint.
      * 
      */
     private final String uri;
@@ -51,37 +51,37 @@ public final class LoadBalancerBackendResponse {
     }
 
     /**
-     * Name of a Compute Engine instance or network endpoint.
+     * @return Name of a Compute Engine instance or network endpoint.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * A list of firewall rule URIs allowing probes from health check IP ranges.
+     * @return A list of firewall rule URIs allowing probes from health check IP ranges.
      * 
-    */
+     */
     public List<String> healthCheckAllowingFirewallRules() {
         return this.healthCheckAllowingFirewallRules;
     }
     /**
-     * A list of firewall rule URIs blocking probes from health check IP ranges.
+     * @return A list of firewall rule URIs blocking probes from health check IP ranges.
      * 
-    */
+     */
     public List<String> healthCheckBlockingFirewallRules() {
         return this.healthCheckBlockingFirewallRules;
     }
     /**
-     * State of the health check firewall configuration.
+     * @return State of the health check firewall configuration.
      * 
-    */
+     */
     public String healthCheckFirewallState() {
         return this.healthCheckFirewallState;
     }
     /**
-     * URI of a Compute Engine instance or network endpoint.
+     * @return URI of a Compute Engine instance or network endpoint.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

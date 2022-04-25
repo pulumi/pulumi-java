@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
     @Import(name="confidenceInterval", required=true)
     private GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse confidenceInterval;
 
+    /**
+     * @return The probability that the treatment is better than all other treatments in the experiment
+     * 
+     */
     public GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse confidenceInterval() {
         return this.confidenceInterval;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
     @Import(name="count", required=true)
     private Double count;
 
+    /**
+     * @return Count value of a metric.
+     * 
+     */
     public Double count() {
         return this.count;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
     @Import(name="countType", required=true)
     private String countType;
 
+    /**
+     * @return Count-based metric type. Only one of type or count_type is specified in each Metric.
+     * 
+     */
     public String countType() {
         return this.countType;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
     @Import(name="ratio", required=true)
     private Double ratio;
 
+    /**
+     * @return Ratio value of a metric.
+     * 
+     */
     public Double ratio() {
         return this.ratio;
     }
@@ -69,6 +85,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Ratio-based metric type. Only one of type or count_type is specified in each Metric.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -101,26 +121,56 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
             $ = new GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param confidenceInterval The probability that the treatment is better than all other treatments in the experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidenceInterval(GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse confidenceInterval) {
             $.confidenceInterval = confidenceInterval;
             return this;
         }
 
+        /**
+         * @param count Count value of a metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Double count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param countType Count-based metric type. Only one of type or count_type is specified in each Metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countType(String countType) {
             $.countType = countType;
             return this;
         }
 
+        /**
+         * @param ratio Ratio value of a metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ratio(Double ratio) {
             $.ratio = ratio;
             return this;
         }
 
+        /**
+         * @param type Ratio-based metric type. Only one of type or count_type is specified in each Metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

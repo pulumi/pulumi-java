@@ -26,6 +26,10 @@ public final class BuildInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudBuildId")
     private @Nullable Output<String> cloudBuildId;
 
+    /**
+     * @return The Google Cloud Build id. Example: &#34;f966068f-08b2-42c8-bdfe-74137dff2bf9&#34;
+     * 
+     */
     public Optional<Output<String>> cloudBuildId() {
         return Optional.ofNullable(this.cloudBuildId);
     }
@@ -54,11 +58,23 @@ public final class BuildInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BuildInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudBuildId The Google Cloud Build id. Example: &#34;f966068f-08b2-42c8-bdfe-74137dff2bf9&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudBuildId(@Nullable Output<String> cloudBuildId) {
             $.cloudBuildId = cloudBuildId;
             return this;
         }
 
+        /**
+         * @param cloudBuildId The Google Cloud Build id. Example: &#34;f966068f-08b2-42c8-bdfe-74137dff2bf9&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudBuildId(String cloudBuildId) {
             return cloudBuildId(Output.of(cloudBuildId));
         }

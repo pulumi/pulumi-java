@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class BucketEncryptionResponse {
     /**
-     * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
+     * @return A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
      * 
      */
     private final String defaultKmsKeyName;
@@ -21,9 +21,9 @@ public final class BucketEncryptionResponse {
     }
 
     /**
-     * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
+     * @return A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
      * 
-    */
+     */
     public String defaultKmsKeyName() {
         return this.defaultKmsKeyName;
     }

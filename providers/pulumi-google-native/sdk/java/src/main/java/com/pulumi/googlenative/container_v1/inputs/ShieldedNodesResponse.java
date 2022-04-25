@@ -23,6 +23,10 @@ public final class ShieldedNodesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether Shielded Nodes features are enabled on all nodes in this cluster.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class ShieldedNodesResponse extends com.pulumi.resources.InvokeArgs
             $ = new ShieldedNodesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether Shielded Nodes features are enabled on all nodes in this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

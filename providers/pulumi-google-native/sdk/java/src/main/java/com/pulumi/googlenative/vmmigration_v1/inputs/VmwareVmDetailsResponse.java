@@ -24,6 +24,10 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="bootOption", required=true)
     private String bootOption;
 
+    /**
+     * @return The VM Boot Option.
+     * 
+     */
     public String bootOption() {
         return this.bootOption;
     }
@@ -35,6 +39,10 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="committedStorageMb", required=true)
     private String committedStorageMb;
 
+    /**
+     * @return The total size of the storage allocated to the VM in MB.
+     * 
+     */
     public String committedStorageMb() {
         return this.committedStorageMb;
     }
@@ -46,6 +54,10 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="cpuCount", required=true)
     private Integer cpuCount;
 
+    /**
+     * @return The number of cpus in the VM.
+     * 
+     */
     public Integer cpuCount() {
         return this.cpuCount;
     }
@@ -57,6 +69,10 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="datacenterDescription", required=true)
     private String datacenterDescription;
 
+    /**
+     * @return The descriptive name of the vCenter&#39;s datacenter this VM is contained in.
+     * 
+     */
     public String datacenterDescription() {
         return this.datacenterDescription;
     }
@@ -68,6 +84,10 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="datacenterId", required=true)
     private String datacenterId;
 
+    /**
+     * @return The id of the vCenter&#39;s datacenter this VM is contained in.
+     * 
+     */
     public String datacenterId() {
         return this.datacenterId;
     }
@@ -79,6 +99,10 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="diskCount", required=true)
     private Integer diskCount;
 
+    /**
+     * @return The number of disks the VM has.
+     * 
+     */
     public Integer diskCount() {
         return this.diskCount;
     }
@@ -90,6 +114,10 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The display name of the VM. Note that this is not necessarily unique.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -101,6 +129,10 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="guestDescription", required=true)
     private String guestDescription;
 
+    /**
+     * @return The VM&#39;s OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
+     * 
+     */
     public String guestDescription() {
         return this.guestDescription;
     }
@@ -112,6 +144,10 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="memoryMb", required=true)
     private Integer memoryMb;
 
+    /**
+     * @return The size of the memory of the VM in MB.
+     * 
+     */
     public Integer memoryMb() {
         return this.memoryMb;
     }
@@ -123,6 +159,10 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="powerState", required=true)
     private String powerState;
 
+    /**
+     * @return The power state of the VM at the moment list was taken.
+     * 
+     */
     public String powerState() {
         return this.powerState;
     }
@@ -134,6 +174,10 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="uuid", required=true)
     private String uuid;
 
+    /**
+     * @return The unique identifier of the VM in vCenter.
+     * 
+     */
     public String uuid() {
         return this.uuid;
     }
@@ -145,6 +189,10 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="vmId", required=true)
     private String vmId;
 
+    /**
+     * @return The VM&#39;s id in the source (note that this is not the MigratingVm&#39;s id). This is the moref id of the VM.
+     * 
+     */
     public String vmId() {
         return this.vmId;
     }
@@ -184,61 +232,133 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
             $ = new VmwareVmDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bootOption The VM Boot Option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootOption(String bootOption) {
             $.bootOption = bootOption;
             return this;
         }
 
+        /**
+         * @param committedStorageMb The total size of the storage allocated to the VM in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder committedStorageMb(String committedStorageMb) {
             $.committedStorageMb = committedStorageMb;
             return this;
         }
 
+        /**
+         * @param cpuCount The number of cpus in the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCount(Integer cpuCount) {
             $.cpuCount = cpuCount;
             return this;
         }
 
+        /**
+         * @param datacenterDescription The descriptive name of the vCenter&#39;s datacenter this VM is contained in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datacenterDescription(String datacenterDescription) {
             $.datacenterDescription = datacenterDescription;
             return this;
         }
 
+        /**
+         * @param datacenterId The id of the vCenter&#39;s datacenter this VM is contained in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datacenterId(String datacenterId) {
             $.datacenterId = datacenterId;
             return this;
         }
 
+        /**
+         * @param diskCount The number of disks the VM has.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskCount(Integer diskCount) {
             $.diskCount = diskCount;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the VM. Note that this is not necessarily unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param guestDescription The VM&#39;s OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestDescription(String guestDescription) {
             $.guestDescription = guestDescription;
             return this;
         }
 
+        /**
+         * @param memoryMb The size of the memory of the VM in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryMb(Integer memoryMb) {
             $.memoryMb = memoryMb;
             return this;
         }
 
+        /**
+         * @param powerState The power state of the VM at the moment list was taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder powerState(String powerState) {
             $.powerState = powerState;
             return this;
         }
 
+        /**
+         * @param uuid The unique identifier of the VM in vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uuid(String uuid) {
             $.uuid = uuid;
             return this;
         }
 
+        /**
+         * @param vmId The VM&#39;s id in the source (note that this is not the MigratingVm&#39;s id). This is the moref id of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmId(String vmId) {
             $.vmId = vmId;
             return this;

@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class GetTableResult {
     /**
-     * Map from cluster ID to per-cluster table state. If it could not be determined whether or not the table has data in a particular cluster (for example, if its zone is unavailable), then there will be an entry for the cluster with UNKNOWN `replication_status`. Views: `REPLICATION_VIEW`, `ENCRYPTION_VIEW`, `FULL`
+     * @return Map from cluster ID to per-cluster table state. If it could not be determined whether or not the table has data in a particular cluster (for example, if its zone is unavailable), then there will be an entry for the cluster with UNKNOWN `replication_status`. Views: `REPLICATION_VIEW`, `ENCRYPTION_VIEW`, `FULL`
      * 
      */
     private final Map<String,String> clusterStates;
     /**
-     * The column families configured for this table, mapped by column family ID. Views: `SCHEMA_VIEW`, `FULL`
+     * @return The column families configured for this table, mapped by column family ID. Views: `SCHEMA_VIEW`, `FULL`
      * 
      */
     private final Map<String,String> columnFamilies;
     /**
-     * Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
+     * @return Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
      * 
      */
     private final String granularity;
     /**
-     * The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
+     * @return The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
      * 
      */
     private final String name;
     /**
-     * If this table was restored from another data source (e.g. a backup), this field will be populated with information about the restore.
+     * @return If this table was restored from another data source (e.g. a backup), this field will be populated with information about the restore.
      * 
      */
     private final RestoreInfoResponse restoreInfo;
@@ -52,37 +52,37 @@ public final class GetTableResult {
     }
 
     /**
-     * Map from cluster ID to per-cluster table state. If it could not be determined whether or not the table has data in a particular cluster (for example, if its zone is unavailable), then there will be an entry for the cluster with UNKNOWN `replication_status`. Views: `REPLICATION_VIEW`, `ENCRYPTION_VIEW`, `FULL`
+     * @return Map from cluster ID to per-cluster table state. If it could not be determined whether or not the table has data in a particular cluster (for example, if its zone is unavailable), then there will be an entry for the cluster with UNKNOWN `replication_status`. Views: `REPLICATION_VIEW`, `ENCRYPTION_VIEW`, `FULL`
      * 
-    */
+     */
     public Map<String,String> clusterStates() {
         return this.clusterStates;
     }
     /**
-     * The column families configured for this table, mapped by column family ID. Views: `SCHEMA_VIEW`, `FULL`
+     * @return The column families configured for this table, mapped by column family ID. Views: `SCHEMA_VIEW`, `FULL`
      * 
-    */
+     */
     public Map<String,String> columnFamilies() {
         return this.columnFamilies;
     }
     /**
-     * Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
+     * @return Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
      * 
-    */
+     */
     public String granularity() {
         return this.granularity;
     }
     /**
-     * The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
+     * @return The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * If this table was restored from another data source (e.g. a backup), this field will be populated with information about the restore.
+     * @return If this table was restored from another data source (e.g. a backup), this field will be populated with information about the restore.
      * 
-    */
+     */
     public RestoreInfoResponse restoreInfo() {
         return this.restoreInfo;
     }

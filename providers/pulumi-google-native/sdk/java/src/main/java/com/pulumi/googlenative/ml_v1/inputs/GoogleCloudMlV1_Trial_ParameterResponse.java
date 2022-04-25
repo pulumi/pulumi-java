@@ -24,6 +24,10 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends com.pulumi.re
     @Import(name="floatValue", required=true)
     private Double floatValue;
 
+    /**
+     * @return Must be set if ParameterType is DOUBLE or DISCRETE.
+     * 
+     */
     public Double floatValue() {
         return this.floatValue;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends com.pulumi.re
     @Import(name="intValue", required=true)
     private String intValue;
 
+    /**
+     * @return Must be set if ParameterType is INTEGER
+     * 
+     */
     public String intValue() {
         return this.intValue;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends com.pulumi.re
     @Import(name="parameter", required=true)
     private String parameter;
 
+    /**
+     * @return The name of the parameter.
+     * 
+     */
     public String parameter() {
         return this.parameter;
     }
@@ -57,6 +69,10 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends com.pulumi.re
     @Import(name="stringValue", required=true)
     private String stringValue;
 
+    /**
+     * @return Must be set if ParameterTypeis CATEGORICAL
+     * 
+     */
     public String stringValue() {
         return this.stringValue;
     }
@@ -88,21 +104,45 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends com.pulumi.re
             $ = new GoogleCloudMlV1_Trial_ParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param floatValue Must be set if ParameterType is DOUBLE or DISCRETE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder floatValue(Double floatValue) {
             $.floatValue = floatValue;
             return this;
         }
 
+        /**
+         * @param intValue Must be set if ParameterType is INTEGER
+         * 
+         * @return builder
+         * 
+         */
         public Builder intValue(String intValue) {
             $.intValue = intValue;
             return this;
         }
 
+        /**
+         * @param parameter The name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameter(String parameter) {
             $.parameter = parameter;
             return this;
         }
 
+        /**
+         * @param stringValue Must be set if ParameterTypeis CATEGORICAL
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(String stringValue) {
             $.stringValue = stringValue;
             return this;

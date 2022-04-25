@@ -27,6 +27,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
     @Import(name="availabilityDomainCount")
     private @Nullable Output<Integer> availabilityDomainCount;
 
+    /**
+     * @return The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+     * 
+     */
     public Optional<Output<Integer>> availabilityDomainCount() {
         return Optional.ofNullable(this.availabilityDomainCount);
     }
@@ -38,6 +42,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
     @Import(name="collocation")
     private @Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
 
+    /**
+     * @return Specifies network collocation
+     * 
+     */
     public Optional<Output<ResourcePolicyGroupPlacementPolicyCollocation>> collocation() {
         return Optional.ofNullable(this.collocation);
     }
@@ -49,6 +57,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
     @Import(name="vmCount")
     private @Nullable Output<Integer> vmCount;
 
+    /**
+     * @return Number of vms in this placement group
+     * 
+     */
     public Optional<Output<Integer>> vmCount() {
         return Optional.ofNullable(this.vmCount);
     }
@@ -79,29 +91,65 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
             $ = new ResourcePolicyGroupPlacementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityDomainCount The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityDomainCount(@Nullable Output<Integer> availabilityDomainCount) {
             $.availabilityDomainCount = availabilityDomainCount;
             return this;
         }
 
+        /**
+         * @param availabilityDomainCount The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityDomainCount(Integer availabilityDomainCount) {
             return availabilityDomainCount(Output.of(availabilityDomainCount));
         }
 
+        /**
+         * @param collocation Specifies network collocation
+         * 
+         * @return builder
+         * 
+         */
         public Builder collocation(@Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation) {
             $.collocation = collocation;
             return this;
         }
 
+        /**
+         * @param collocation Specifies network collocation
+         * 
+         * @return builder
+         * 
+         */
         public Builder collocation(ResourcePolicyGroupPlacementPolicyCollocation collocation) {
             return collocation(Output.of(collocation));
         }
 
+        /**
+         * @param vmCount Number of vms in this placement group
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmCount(@Nullable Output<Integer> vmCount) {
             $.vmCount = vmCount;
             return this;
         }
 
+        /**
+         * @param vmCount Number of vms in this placement group
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmCount(Integer vmCount) {
             return vmCount(Output.of(vmCount));
         }

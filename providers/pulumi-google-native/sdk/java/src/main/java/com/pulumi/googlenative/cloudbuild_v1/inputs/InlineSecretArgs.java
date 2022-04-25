@@ -27,6 +27,10 @@ public final class InlineSecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="envMap")
     private @Nullable Output<Map<String,String>> envMap;
 
+    /**
+     * @return Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build&#39;s secrets.
+     * 
+     */
     public Optional<Output<Map<String,String>>> envMap() {
         return Optional.ofNullable(this.envMap);
     }
@@ -38,6 +42,10 @@ public final class InlineSecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
     private @Nullable Output<String> kmsKeyName;
 
+    /**
+     * @return Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
+     * 
+     */
     public Optional<Output<String>> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
@@ -67,20 +75,44 @@ public final class InlineSecretArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InlineSecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param envMap Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build&#39;s secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envMap(@Nullable Output<Map<String,String>> envMap) {
             $.envMap = envMap;
             return this;
         }
 
+        /**
+         * @param envMap Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build&#39;s secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envMap(Map<String,String> envMap) {
             return envMap(Output.of(envMap));
         }
 
+        /**
+         * @param kmsKeyName Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }

@@ -29,6 +29,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpeUri", required=true)
     private Output<String> cpeUri;
 
+    /**
+     * @return The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
+     * 
+     */
     public Output<String> cpeUri() {
         return this.cpeUri;
     }
@@ -40,6 +44,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A vendor-specific description of this note.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -51,6 +59,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fixedLocation")
     private @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
 
+    /**
+     * @return The fix for this specific package version.
+     * 
+     */
     public Optional<Output<VulnerabilityLocationArgs>> fixedLocation() {
         return Optional.ofNullable(this.fixedLocation);
     }
@@ -62,6 +74,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isObsolete")
     private @Nullable Output<Boolean> isObsolete;
 
+    /**
+     * @return Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.
+     * 
+     */
     public Optional<Output<Boolean>> isObsolete() {
         return Optional.ofNullable(this.isObsolete);
     }
@@ -73,6 +89,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxAffectedVersion")
     private @Nullable Output<VersionArgs> maxAffectedVersion;
 
+    /**
+     * @return The max version of the package in which the vulnerability exists.
+     * 
+     */
     public Optional<Output<VersionArgs>> maxAffectedVersion() {
         return Optional.ofNullable(this.maxAffectedVersion);
     }
@@ -84,6 +104,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minAffectedVersion")
     private @Nullable Output<VersionArgs> minAffectedVersion;
 
+    /**
+     * @return The min version of the package in which the vulnerability exists.
+     * 
+     */
     public Optional<Output<VersionArgs>> minAffectedVersion() {
         return Optional.ofNullable(this.minAffectedVersion);
     }
@@ -95,6 +119,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="package", required=true)
     private Output<String> package_;
 
+    /**
+     * @return The name of the package where the vulnerability was found.
+     * 
+     */
     public Output<String> package_() {
         return this.package_;
     }
@@ -106,6 +134,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageType")
     private @Nullable Output<String> packageType;
 
+    /**
+     * @return The type of package; whether native or non native(ruby gems, node.js packages etc).
+     * 
+     */
     public Optional<Output<String>> packageType() {
         return Optional.ofNullable(this.packageType);
     }
@@ -117,6 +149,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="severityName")
     private @Nullable Output<String> severityName;
 
+    /**
+     * @return The severity (eg: distro assigned severity) for this vulnerability.
+     * 
+     */
     public Optional<Output<String>> severityName() {
         return Optional.ofNullable(this.severityName);
     }
@@ -128,6 +164,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source")
     private @Nullable Output<String> source;
 
+    /**
+     * @return The source from which the information in this Detail was obtained.
+     * 
+     */
     public Optional<Output<String>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -139,6 +179,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceUpdateTime")
     private @Nullable Output<String> sourceUpdateTime;
 
+    /**
+     * @return The time this information was last changed at the source. This is an upstream timestamp from the underlying information source - e.g. Ubuntu security tracker.
+     * 
+     */
     public Optional<Output<String>> sourceUpdateTime() {
         return Optional.ofNullable(this.sourceUpdateTime);
     }
@@ -150,6 +194,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vendor")
     private @Nullable Output<String> vendor;
 
+    /**
+     * @return The name of the vendor of the product.
+     * 
+     */
     public Optional<Output<String>> vendor() {
         return Optional.ofNullable(this.vendor);
     }
@@ -189,110 +237,254 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DetailArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpeUri The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpeUri(Output<String> cpeUri) {
             $.cpeUri = cpeUri;
             return this;
         }
 
+        /**
+         * @param cpeUri The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpeUri(String cpeUri) {
             return cpeUri(Output.of(cpeUri));
         }
 
+        /**
+         * @param description A vendor-specific description of this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A vendor-specific description of this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param fixedLocation The fix for this specific package version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedLocation(@Nullable Output<VulnerabilityLocationArgs> fixedLocation) {
             $.fixedLocation = fixedLocation;
             return this;
         }
 
+        /**
+         * @param fixedLocation The fix for this specific package version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedLocation(VulnerabilityLocationArgs fixedLocation) {
             return fixedLocation(Output.of(fixedLocation));
         }
 
+        /**
+         * @param isObsolete Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isObsolete(@Nullable Output<Boolean> isObsolete) {
             $.isObsolete = isObsolete;
             return this;
         }
 
+        /**
+         * @param isObsolete Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isObsolete(Boolean isObsolete) {
             return isObsolete(Output.of(isObsolete));
         }
 
+        /**
+         * @param maxAffectedVersion The max version of the package in which the vulnerability exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAffectedVersion(@Nullable Output<VersionArgs> maxAffectedVersion) {
             $.maxAffectedVersion = maxAffectedVersion;
             return this;
         }
 
+        /**
+         * @param maxAffectedVersion The max version of the package in which the vulnerability exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAffectedVersion(VersionArgs maxAffectedVersion) {
             return maxAffectedVersion(Output.of(maxAffectedVersion));
         }
 
+        /**
+         * @param minAffectedVersion The min version of the package in which the vulnerability exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAffectedVersion(@Nullable Output<VersionArgs> minAffectedVersion) {
             $.minAffectedVersion = minAffectedVersion;
             return this;
         }
 
+        /**
+         * @param minAffectedVersion The min version of the package in which the vulnerability exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAffectedVersion(VersionArgs minAffectedVersion) {
             return minAffectedVersion(Output.of(minAffectedVersion));
         }
 
+        /**
+         * @param package_ The name of the package where the vulnerability was found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder package_(Output<String> package_) {
             $.package_ = package_;
             return this;
         }
 
+        /**
+         * @param package_ The name of the package where the vulnerability was found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder package_(String package_) {
             return package_(Output.of(package_));
         }
 
+        /**
+         * @param packageType The type of package; whether native or non native(ruby gems, node.js packages etc).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(@Nullable Output<String> packageType) {
             $.packageType = packageType;
             return this;
         }
 
+        /**
+         * @param packageType The type of package; whether native or non native(ruby gems, node.js packages etc).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(String packageType) {
             return packageType(Output.of(packageType));
         }
 
+        /**
+         * @param severityName The severity (eg: distro assigned severity) for this vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severityName(@Nullable Output<String> severityName) {
             $.severityName = severityName;
             return this;
         }
 
+        /**
+         * @param severityName The severity (eg: distro assigned severity) for this vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severityName(String severityName) {
             return severityName(Output.of(severityName));
         }
 
+        /**
+         * @param source The source from which the information in this Detail was obtained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The source from which the information in this Detail was obtained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param sourceUpdateTime The time this information was last changed at the source. This is an upstream timestamp from the underlying information source - e.g. Ubuntu security tracker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUpdateTime(@Nullable Output<String> sourceUpdateTime) {
             $.sourceUpdateTime = sourceUpdateTime;
             return this;
         }
 
+        /**
+         * @param sourceUpdateTime The time this information was last changed at the source. This is an upstream timestamp from the underlying information source - e.g. Ubuntu security tracker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUpdateTime(String sourceUpdateTime) {
             return sourceUpdateTime(Output.of(sourceUpdateTime));
         }
 
+        /**
+         * @param vendor The name of the vendor of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendor(@Nullable Output<String> vendor) {
             $.vendor = vendor;
             return this;
         }
 
+        /**
+         * @param vendor The name of the vendor of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendor(String vendor) {
             return vendor(Output.of(vendor));
         }

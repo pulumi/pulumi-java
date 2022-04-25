@@ -24,6 +24,10 @@ public final class TestIssueResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="category", required=true)
     private String category;
 
+    /**
+     * @return Category of issue. Required.
+     * 
+     */
     public String category() {
         return this.category;
     }
@@ -35,6 +39,10 @@ public final class TestIssueResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errorMessage", required=true)
     private String errorMessage;
 
+    /**
+     * @return A brief human-readable message describing the issue. Required.
+     * 
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
@@ -46,6 +54,10 @@ public final class TestIssueResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="severity", required=true)
     private String severity;
 
+    /**
+     * @return Severity of issue. Required.
+     * 
+     */
     public String severity() {
         return this.severity;
     }
@@ -57,6 +69,10 @@ public final class TestIssueResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of issue. Required.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -68,6 +84,10 @@ public final class TestIssueResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="warning", required=true)
     private AnyResponse warning;
 
+    /**
+     * @return Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings
+     * 
+     */
     public AnyResponse warning() {
         return this.warning;
     }
@@ -100,26 +120,56 @@ public final class TestIssueResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TestIssueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category Category of issue. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param errorMessage A brief human-readable message describing the issue. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessage(String errorMessage) {
             $.errorMessage = errorMessage;
             return this;
         }
 
+        /**
+         * @param severity Severity of issue. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param type Type of issue. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param warning Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings
+         * 
+         * @return builder
+         * 
+         */
         public Builder warning(AnyResponse warning) {
             $.warning = warning;
             return this;

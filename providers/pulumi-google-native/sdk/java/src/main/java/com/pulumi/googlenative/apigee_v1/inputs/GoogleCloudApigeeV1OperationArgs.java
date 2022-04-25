@@ -27,6 +27,10 @@ public final class GoogleCloudApigeeV1OperationArgs extends com.pulumi.resources
     @Import(name="methods")
     private @Nullable Output<List<String>> methods;
 
+    /**
+     * @return methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.
+     * 
+     */
     public Optional<Output<List<String>>> methods() {
         return Optional.ofNullable(this.methods);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudApigeeV1OperationArgs extends com.pulumi.resources
     @Import(name="resource", required=true)
     private Output<String> resource;
 
+    /**
+     * @return REST resource path associated with the API proxy or remote service.
+     * 
+     */
     public Output<String> resource() {
         return this.resource;
     }
@@ -67,24 +75,54 @@ public final class GoogleCloudApigeeV1OperationArgs extends com.pulumi.resources
             $ = new GoogleCloudApigeeV1OperationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param methods methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(@Nullable Output<List<String>> methods) {
             $.methods = methods;
             return this;
         }
 
+        /**
+         * @param methods methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(List<String> methods) {
             return methods(Output.of(methods));
         }
 
+        /**
+         * @param methods methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
 
+        /**
+         * @param resource REST resource path associated with the API proxy or remote service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(Output<String> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource REST resource path associated with the API proxy or remote service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(String resource) {
             return resource(Output.of(resource));
         }

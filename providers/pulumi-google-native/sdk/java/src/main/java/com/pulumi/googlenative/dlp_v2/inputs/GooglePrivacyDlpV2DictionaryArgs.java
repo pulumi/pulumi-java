@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends com.pulumi.resources
     @Import(name="cloudStoragePath")
     private @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath;
 
+    /**
+     * @return Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2CloudStoragePathArgs>> cloudStoragePath() {
         return Optional.ofNullable(this.cloudStoragePath);
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends com.pulumi.resources
     @Import(name="wordList")
     private @Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList;
 
+    /**
+     * @return List of words or phrases to search for.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2WordListArgs>> wordList() {
         return Optional.ofNullable(this.wordList);
     }
@@ -67,20 +75,44 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends com.pulumi.resources
             $ = new GooglePrivacyDlpV2DictionaryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudStoragePath Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStoragePath(@Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath) {
             $.cloudStoragePath = cloudStoragePath;
             return this;
         }
 
+        /**
+         * @param cloudStoragePath Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStoragePath(GooglePrivacyDlpV2CloudStoragePathArgs cloudStoragePath) {
             return cloudStoragePath(Output.of(cloudStoragePath));
         }
 
+        /**
+         * @param wordList List of words or phrases to search for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wordList(@Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList) {
             $.wordList = wordList;
             return this;
         }
 
+        /**
+         * @param wordList List of words or phrases to search for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wordList(GooglePrivacyDlpV2WordListArgs wordList) {
             return wordList(Output.of(wordList));
         }

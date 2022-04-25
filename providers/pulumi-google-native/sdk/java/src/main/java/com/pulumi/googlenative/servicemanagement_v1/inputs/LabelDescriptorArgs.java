@@ -27,6 +27,10 @@ public final class LabelDescriptorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A human-readable description for the label.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class LabelDescriptorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return The label key.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -49,6 +57,10 @@ public final class LabelDescriptorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="valueType")
     private @Nullable Output<LabelDescriptorValueType> valueType;
 
+    /**
+     * @return The type of data that can be assigned to the label.
+     * 
+     */
     public Optional<Output<LabelDescriptorValueType>> valueType() {
         return Optional.ofNullable(this.valueType);
     }
@@ -79,29 +91,65 @@ public final class LabelDescriptorArgs extends com.pulumi.resources.ResourceArgs
             $ = new LabelDescriptorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A human-readable description for the label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A human-readable description for the label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param key The label key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The label key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param valueType The type of data that can be assigned to the label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueType(@Nullable Output<LabelDescriptorValueType> valueType) {
             $.valueType = valueType;
             return this;
         }
 
+        /**
+         * @param valueType The type of data that can be assigned to the label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueType(LabelDescriptorValueType valueType) {
             return valueType(Output.of(valueType));
         }

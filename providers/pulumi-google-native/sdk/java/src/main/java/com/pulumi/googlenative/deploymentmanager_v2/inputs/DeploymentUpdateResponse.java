@@ -21,6 +21,10 @@ public final class DeploymentUpdateResponse extends com.pulumi.resources.InvokeA
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return An optional user-provided description of the deployment after the current update has been applied.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -32,6 +36,10 @@ public final class DeploymentUpdateResponse extends com.pulumi.resources.InvokeA
     @Import(name="labels", required=true)
     private List<DeploymentUpdateLabelEntryResponse> labels;
 
+    /**
+     * @return Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
+     * 
+     */
     public List<DeploymentUpdateLabelEntryResponse> labels() {
         return this.labels;
     }
@@ -43,6 +51,10 @@ public final class DeploymentUpdateResponse extends com.pulumi.resources.InvokeA
     @Import(name="manifest", required=true)
     private String manifest;
 
+    /**
+     * @return URL of the manifest representing the update configuration of this deployment.
+     * 
+     */
     public String manifest() {
         return this.manifest;
     }
@@ -73,20 +85,44 @@ public final class DeploymentUpdateResponse extends com.pulumi.resources.InvokeA
             $ = new DeploymentUpdateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional user-provided description of the deployment after the current update has been applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param labels Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<DeploymentUpdateLabelEntryResponse> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(DeploymentUpdateLabelEntryResponse... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param manifest URL of the manifest representing the update configuration of this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifest(String manifest) {
             $.manifest = manifest;
             return this;

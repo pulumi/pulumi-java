@@ -27,6 +27,10 @@ public final class AlertStrategyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoClose")
     private @Nullable Output<String> autoClose;
 
+    /**
+     * @return If an alert policy that was active has no data for this long, any open incidents will close
+     * 
+     */
     public Optional<Output<String>> autoClose() {
         return Optional.ofNullable(this.autoClose);
     }
@@ -38,6 +42,10 @@ public final class AlertStrategyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationRateLimit")
     private @Nullable Output<NotificationRateLimitArgs> notificationRateLimit;
 
+    /**
+     * @return Required for alert policies with a LogMatch condition.This limit is not implemented for alert policies that are not log-based.
+     * 
+     */
     public Optional<Output<NotificationRateLimitArgs>> notificationRateLimit() {
         return Optional.ofNullable(this.notificationRateLimit);
     }
@@ -67,20 +75,44 @@ public final class AlertStrategyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AlertStrategyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoClose If an alert policy that was active has no data for this long, any open incidents will close
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoClose(@Nullable Output<String> autoClose) {
             $.autoClose = autoClose;
             return this;
         }
 
+        /**
+         * @param autoClose If an alert policy that was active has no data for this long, any open incidents will close
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoClose(String autoClose) {
             return autoClose(Output.of(autoClose));
         }
 
+        /**
+         * @param notificationRateLimit Required for alert policies with a LogMatch condition.This limit is not implemented for alert policies that are not log-based.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationRateLimit(@Nullable Output<NotificationRateLimitArgs> notificationRateLimit) {
             $.notificationRateLimit = notificationRateLimit;
             return this;
         }
 
+        /**
+         * @param notificationRateLimit Required for alert policies with a LogMatch condition.This limit is not implemented for alert policies that are not log-based.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationRateLimit(NotificationRateLimitArgs notificationRateLimit) {
             return notificationRateLimit(Output.of(notificationRateLimit));
         }

@@ -23,6 +23,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return See Creating and managing labels.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -48,6 +52,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscription", required=true)
     private Output<String> subscription;
 
+    /**
+     * @return The subscription whose backlog the snapshot retains. Specifically, the created snapshot is guaranteed to retain: (a) The existing backlog on the subscription. More precisely, this is defined as the messages in the subscription&#39;s backlog that are unacknowledged upon the successful completion of the `CreateSnapshot` request; as well as: (b) Any messages published to the subscription&#39;s topic following the successful completion of the CreateSnapshot request. Format is `projects/{project}/subscriptions/{sub}`.
+     * 
+     */
     public Output<String> subscription() {
         return this.subscription;
     }
@@ -79,11 +87,23 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SnapshotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels See Creating and managing labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels See Creating and managing labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -106,11 +126,23 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
             return snapshotId(Output.of(snapshotId));
         }
 
+        /**
+         * @param subscription The subscription whose backlog the snapshot retains. Specifically, the created snapshot is guaranteed to retain: (a) The existing backlog on the subscription. More precisely, this is defined as the messages in the subscription&#39;s backlog that are unacknowledged upon the successful completion of the `CreateSnapshot` request; as well as: (b) Any messages published to the subscription&#39;s topic following the successful completion of the CreateSnapshot request. Format is `projects/{project}/subscriptions/{sub}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscription(Output<String> subscription) {
             $.subscription = subscription;
             return this;
         }
 
+        /**
+         * @param subscription The subscription whose backlog the snapshot retains. Specifically, the created snapshot is guaranteed to retain: (a) The existing backlog on the subscription. More precisely, this is defined as the messages in the subscription&#39;s backlog that are unacknowledged upon the successful completion of the `CreateSnapshot` request; as well as: (b) Any messages published to the subscription&#39;s topic following the successful completion of the CreateSnapshot request. Format is `projects/{project}/subscriptions/{sub}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscription(String subscription) {
             return subscription(Output.of(subscription));
         }

@@ -28,6 +28,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="desiredState")
     private @Nullable Output<PackageDesiredState> desiredState;
 
+    /**
+     * @return The desired_state the agent should maintain for this package. The default is to ensure the package is installed.
+     * 
+     */
     public Optional<Output<PackageDesiredState>> desiredState() {
         return Optional.ofNullable(this.desiredState);
     }
@@ -39,6 +43,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="manager")
     private @Nullable Output<PackageManager> manager;
 
+    /**
+     * @return Type of package manager that can be used to install this package. If a system does not have the package manager, the package is not installed or removed no error message is returned. By default, or if you specify `ANY`, the agent attempts to install and remove this package using the default package manager. This is useful when creating a policy that applies to different types of systems. The default behavior is ANY.
+     * 
+     */
     public Optional<Output<PackageManager>> manager() {
         return Optional.ofNullable(this.manager);
     }
@@ -50,6 +58,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the package. A package is uniquely identified for conflict validation by checking the package name and the manager(s) that the package targets.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -80,29 +92,65 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PackageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param desiredState The desired_state the agent should maintain for this package. The default is to ensure the package is installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredState(@Nullable Output<PackageDesiredState> desiredState) {
             $.desiredState = desiredState;
             return this;
         }
 
+        /**
+         * @param desiredState The desired_state the agent should maintain for this package. The default is to ensure the package is installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredState(PackageDesiredState desiredState) {
             return desiredState(Output.of(desiredState));
         }
 
+        /**
+         * @param manager Type of package manager that can be used to install this package. If a system does not have the package manager, the package is not installed or removed no error message is returned. By default, or if you specify `ANY`, the agent attempts to install and remove this package using the default package manager. This is useful when creating a policy that applies to different types of systems. The default behavior is ANY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manager(@Nullable Output<PackageManager> manager) {
             $.manager = manager;
             return this;
         }
 
+        /**
+         * @param manager Type of package manager that can be used to install this package. If a system does not have the package manager, the package is not installed or removed no error message is returned. By default, or if you specify `ANY`, the agent attempts to install and remove this package using the default package manager. This is useful when creating a policy that applies to different types of systems. The default behavior is ANY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manager(PackageManager manager) {
             return manager(Output.of(manager));
         }
 
+        /**
+         * @param name The name of the package. A package is uniquely identified for conflict validation by checking the package name and the manager(s) that the package targets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the package. A package is uniquely identified for conflict validation by checking the package name and the manager(s) that the package targets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

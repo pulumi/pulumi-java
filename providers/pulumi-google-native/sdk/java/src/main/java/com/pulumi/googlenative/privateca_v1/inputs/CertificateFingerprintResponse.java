@@ -23,6 +23,10 @@ public final class CertificateFingerprintResponse extends com.pulumi.resources.I
     @Import(name="sha256Hash", required=true)
     private String sha256Hash;
 
+    /**
+     * @return The SHA 256 hash, encoded in hexadecimal, of the DER x509 certificate.
+     * 
+     */
     public String sha256Hash() {
         return this.sha256Hash;
     }
@@ -51,6 +55,12 @@ public final class CertificateFingerprintResponse extends com.pulumi.resources.I
             $ = new CertificateFingerprintResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sha256Hash The SHA 256 hash, encoded in hexadecimal, of the DER x509 certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha256Hash(String sha256Hash) {
             $.sha256Hash = sha256Hash;
             return this;

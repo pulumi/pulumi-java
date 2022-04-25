@@ -23,6 +23,10 @@ public final class ResourceLimitResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="maximum", required=true)
     private String maximum;
 
+    /**
+     * @return Maximum amount of the resource in the cluster.
+     * 
+     */
     public String maximum() {
         return this.maximum;
     }
@@ -34,6 +38,10 @@ public final class ResourceLimitResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="minimum", required=true)
     private String minimum;
 
+    /**
+     * @return Minimum amount of the resource in the cluster.
+     * 
+     */
     public String minimum() {
         return this.minimum;
     }
@@ -45,6 +53,10 @@ public final class ResourceLimitResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return Resource name &#34;cpu&#34;, &#34;memory&#34; or gpu-specific string.
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -75,16 +87,34 @@ public final class ResourceLimitResponse extends com.pulumi.resources.InvokeArgs
             $ = new ResourceLimitResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maximum Maximum amount of the resource in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximum(String maximum) {
             $.maximum = maximum;
             return this;
         }
 
+        /**
+         * @param minimum Minimum amount of the resource in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimum(String minimum) {
             $.minimum = minimum;
             return this;
         }
 
+        /**
+         * @param resourceType Resource name &#34;cpu&#34;, &#34;memory&#34; or gpu-specific string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;

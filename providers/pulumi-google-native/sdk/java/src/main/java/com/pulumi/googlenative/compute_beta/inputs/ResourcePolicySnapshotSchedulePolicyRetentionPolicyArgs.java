@@ -27,6 +27,10 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
     @Import(name="maxRetentionDays")
     private @Nullable Output<Integer> maxRetentionDays;
 
+    /**
+     * @return Maximum age of the snapshot that is allowed to be kept.
+     * 
+     */
     public Optional<Output<Integer>> maxRetentionDays() {
         return Optional.ofNullable(this.maxRetentionDays);
     }
@@ -38,6 +42,10 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
     @Import(name="onSourceDiskDelete")
     private @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> onSourceDiskDelete;
 
+    /**
+     * @return Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.
+     * 
+     */
     public Optional<Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete>> onSourceDiskDelete() {
         return Optional.ofNullable(this.onSourceDiskDelete);
     }
@@ -67,20 +75,44 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
             $ = new ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxRetentionDays Maximum age of the snapshot that is allowed to be kept.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetentionDays(@Nullable Output<Integer> maxRetentionDays) {
             $.maxRetentionDays = maxRetentionDays;
             return this;
         }
 
+        /**
+         * @param maxRetentionDays Maximum age of the snapshot that is allowed to be kept.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetentionDays(Integer maxRetentionDays) {
             return maxRetentionDays(Output.of(maxRetentionDays));
         }
 
+        /**
+         * @param onSourceDiskDelete Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onSourceDiskDelete(@Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> onSourceDiskDelete) {
             $.onSourceDiskDelete = onSourceDiskDelete;
             return this;
         }
 
+        /**
+         * @param onSourceDiskDelete Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onSourceDiskDelete(ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete onSourceDiskDelete) {
             return onSourceDiskDelete(Output.of(onSourceDiskDelete));
         }

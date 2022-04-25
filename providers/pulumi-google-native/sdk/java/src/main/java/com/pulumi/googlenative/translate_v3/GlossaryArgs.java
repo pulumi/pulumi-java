@@ -25,6 +25,10 @@ public final class GlossaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputConfig", required=true)
     private Output<GlossaryInputConfigArgs> inputConfig;
 
+    /**
+     * @return Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.
+     * 
+     */
     public Output<GlossaryInputConfigArgs> inputConfig() {
         return this.inputConfig;
     }
@@ -36,6 +40,10 @@ public final class GlossaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="languageCodesSet")
     private @Nullable Output<LanguageCodesSetArgs> languageCodesSet;
 
+    /**
+     * @return Used with equivalent term set glossaries.
+     * 
+     */
     public Optional<Output<LanguageCodesSetArgs>> languageCodesSet() {
         return Optional.ofNullable(this.languageCodesSet);
     }
@@ -47,6 +55,10 @@ public final class GlossaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="languagePair")
     private @Nullable Output<LanguageCodePairArgs> languagePair;
 
+    /**
+     * @return Used with unidirectional glossaries.
+     * 
+     */
     public Optional<Output<LanguageCodePairArgs>> languagePair() {
         return Optional.ofNullable(this.languagePair);
     }
@@ -65,6 +77,10 @@ public final class GlossaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -105,29 +121,65 @@ public final class GlossaryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GlossaryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputConfig Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputConfig(Output<GlossaryInputConfigArgs> inputConfig) {
             $.inputConfig = inputConfig;
             return this;
         }
 
+        /**
+         * @param inputConfig Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputConfig(GlossaryInputConfigArgs inputConfig) {
             return inputConfig(Output.of(inputConfig));
         }
 
+        /**
+         * @param languageCodesSet Used with equivalent term set glossaries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCodesSet(@Nullable Output<LanguageCodesSetArgs> languageCodesSet) {
             $.languageCodesSet = languageCodesSet;
             return this;
         }
 
+        /**
+         * @param languageCodesSet Used with equivalent term set glossaries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCodesSet(LanguageCodesSetArgs languageCodesSet) {
             return languageCodesSet(Output.of(languageCodesSet));
         }
 
+        /**
+         * @param languagePair Used with unidirectional glossaries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languagePair(@Nullable Output<LanguageCodePairArgs> languagePair) {
             $.languagePair = languagePair;
             return this;
         }
 
+        /**
+         * @param languagePair Used with unidirectional glossaries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languagePair(LanguageCodePairArgs languagePair) {
             return languagePair(Output.of(languagePair));
         }
@@ -141,11 +193,23 @@ public final class GlossaryArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

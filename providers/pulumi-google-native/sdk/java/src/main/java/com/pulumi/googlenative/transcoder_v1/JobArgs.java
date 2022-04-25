@@ -24,6 +24,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="config")
     private @Nullable Output<JobConfigArgs> config;
 
+    /**
+     * @return The configuration for this job.
+     * 
+     */
     public Optional<Output<JobConfigArgs>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -35,6 +39,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputUri")
     private @Nullable Output<String> inputUri;
 
+    /**
+     * @return Input only. Specify the `input_uri` to populate empty `uri` fields in each element of `Job.config.inputs` or `JobTemplate.config.inputs` when using template. URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`).
+     * 
+     */
     public Optional<Output<String>> inputUri() {
         return Optional.ofNullable(this.inputUri);
     }
@@ -53,6 +61,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the job. Format: `projects/{project_number}/locations/{location}/jobs/{job}`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -64,6 +76,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputUri")
     private @Nullable Output<String> outputUri;
 
+    /**
+     * @return Input only. Specify the `output_uri` to populate an empty `Job.config.output.uri` or `JobTemplate.config.output.uri` when using template. URI for the output file(s). For example, `gs://my-bucket/outputs/`.
+     * 
+     */
     public Optional<Output<String>> outputUri() {
         return Optional.ofNullable(this.outputUri);
     }
@@ -82,6 +98,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateId")
     private @Nullable Output<String> templateId;
 
+    /**
+     * @return Input only. Specify the `template_id` to use for populating `Job.config`. The default is `preset/web-hd`. Preset Transcoder templates: - `preset/{preset_id}` - User defined JobTemplate: `{job_template_id}`
+     * 
+     */
     public Optional<Output<String>> templateId() {
         return Optional.ofNullable(this.templateId);
     }
@@ -93,6 +113,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ttlAfterCompletionDays")
     private @Nullable Output<Integer> ttlAfterCompletionDays;
 
+    /**
+     * @return Job time to live value in days, which will be effective after job completion. Job should be deleted automatically after the given TTL. Enter a value between 1 and 90. The default is 30.
+     * 
+     */
     public Optional<Output<Integer>> ttlAfterCompletionDays() {
         return Optional.ofNullable(this.ttlAfterCompletionDays);
     }
@@ -128,20 +152,44 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config The configuration for this job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<JobConfigArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config The configuration for this job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(JobConfigArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param inputUri Input only. Specify the `input_uri` to populate empty `uri` fields in each element of `Job.config.inputs` or `JobTemplate.config.inputs` when using template. URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputUri(@Nullable Output<String> inputUri) {
             $.inputUri = inputUri;
             return this;
         }
 
+        /**
+         * @param inputUri Input only. Specify the `input_uri` to populate empty `uri` fields in each element of `Job.config.inputs` or `JobTemplate.config.inputs` when using template. URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputUri(String inputUri) {
             return inputUri(Output.of(inputUri));
         }
@@ -155,20 +203,44 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the job. Format: `projects/{project_number}/locations/{location}/jobs/{job}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the job. Format: `projects/{project_number}/locations/{location}/jobs/{job}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param outputUri Input only. Specify the `output_uri` to populate an empty `Job.config.output.uri` or `JobTemplate.config.output.uri` when using template. URI for the output file(s). For example, `gs://my-bucket/outputs/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputUri(@Nullable Output<String> outputUri) {
             $.outputUri = outputUri;
             return this;
         }
 
+        /**
+         * @param outputUri Input only. Specify the `output_uri` to populate an empty `Job.config.output.uri` or `JobTemplate.config.output.uri` when using template. URI for the output file(s). For example, `gs://my-bucket/outputs/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputUri(String outputUri) {
             return outputUri(Output.of(outputUri));
         }
@@ -182,20 +254,44 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param templateId Input only. Specify the `template_id` to use for populating `Job.config`. The default is `preset/web-hd`. Preset Transcoder templates: - `preset/{preset_id}` - User defined JobTemplate: `{job_template_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateId(@Nullable Output<String> templateId) {
             $.templateId = templateId;
             return this;
         }
 
+        /**
+         * @param templateId Input only. Specify the `template_id` to use for populating `Job.config`. The default is `preset/web-hd`. Preset Transcoder templates: - `preset/{preset_id}` - User defined JobTemplate: `{job_template_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateId(String templateId) {
             return templateId(Output.of(templateId));
         }
 
+        /**
+         * @param ttlAfterCompletionDays Job time to live value in days, which will be effective after job completion. Job should be deleted automatically after the given TTL. Enter a value between 1 and 90. The default is 30.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttlAfterCompletionDays(@Nullable Output<Integer> ttlAfterCompletionDays) {
             $.ttlAfterCompletionDays = ttlAfterCompletionDays;
             return this;
         }
 
+        /**
+         * @param ttlAfterCompletionDays Job time to live value in days, which will be effective after job completion. Job should be deleted automatically after the given TTL. Enter a value between 1 and 90. The default is 30.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttlAfterCompletionDays(Integer ttlAfterCompletionDays) {
             return ttlAfterCompletionDays(Output.of(ttlAfterCompletionDays));
         }

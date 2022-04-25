@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class ServiceMeshFeatureStateResponse {
     /**
-     * Results of running Service Mesh analyzers.
+     * @return Results of running Service Mesh analyzers.
      * 
      */
     private final List<ServiceMeshAnalysisMessageResponse> analysisMessages;
@@ -22,9 +22,9 @@ public final class ServiceMeshFeatureStateResponse {
     }
 
     /**
-     * Results of running Service Mesh analyzers.
+     * @return Results of running Service Mesh analyzers.
      * 
-    */
+     */
     public List<ServiceMeshAnalysisMessageResponse> analysisMessages() {
         return this.analysisMessages;
     }

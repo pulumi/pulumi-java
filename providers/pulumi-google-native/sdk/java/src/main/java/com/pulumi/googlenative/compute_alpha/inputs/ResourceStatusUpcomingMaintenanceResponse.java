@@ -19,6 +19,10 @@ public final class ResourceStatusUpcomingMaintenanceResponse extends com.pulumi.
     @Import(name="canReschedule", required=true)
     private Boolean canReschedule;
 
+    /**
+     * @return Indicates if the maintenance can be customer triggered. See go/sf-ctm-design for more details
+     * 
+     */
     public Boolean canReschedule() {
         return this.canReschedule;
     }
@@ -47,6 +51,12 @@ public final class ResourceStatusUpcomingMaintenanceResponse extends com.pulumi.
             $ = new ResourceStatusUpcomingMaintenanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canReschedule Indicates if the maintenance can be customer triggered. See go/sf-ctm-design for more details
+         * 
+         * @return builder
+         * 
+         */
         public Builder canReschedule(Boolean canReschedule) {
             $.canReschedule = canReschedule;
             return this;

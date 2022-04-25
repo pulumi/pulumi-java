@@ -28,6 +28,10 @@ public final class DNSConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterDns")
     private @Nullable Output<DNSConfigClusterDns> clusterDns;
 
+    /**
+     * @return cluster_dns indicates which in-cluster DNS provider should be used.
+     * 
+     */
     public Optional<Output<DNSConfigClusterDns>> clusterDns() {
         return Optional.ofNullable(this.clusterDns);
     }
@@ -39,6 +43,10 @@ public final class DNSConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterDnsDomain")
     private @Nullable Output<String> clusterDnsDomain;
 
+    /**
+     * @return cluster_dns_domain is the suffix used for all cluster service records.
+     * 
+     */
     public Optional<Output<String>> clusterDnsDomain() {
         return Optional.ofNullable(this.clusterDnsDomain);
     }
@@ -50,6 +58,10 @@ public final class DNSConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterDnsScope")
     private @Nullable Output<DNSConfigClusterDnsScope> clusterDnsScope;
 
+    /**
+     * @return cluster_dns_scope indicates the scope of access to cluster DNS records.
+     * 
+     */
     public Optional<Output<DNSConfigClusterDnsScope>> clusterDnsScope() {
         return Optional.ofNullable(this.clusterDnsScope);
     }
@@ -80,29 +92,65 @@ public final class DNSConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DNSConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterDns cluster_dns indicates which in-cluster DNS provider should be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDns(@Nullable Output<DNSConfigClusterDns> clusterDns) {
             $.clusterDns = clusterDns;
             return this;
         }
 
+        /**
+         * @param clusterDns cluster_dns indicates which in-cluster DNS provider should be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDns(DNSConfigClusterDns clusterDns) {
             return clusterDns(Output.of(clusterDns));
         }
 
+        /**
+         * @param clusterDnsDomain cluster_dns_domain is the suffix used for all cluster service records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDnsDomain(@Nullable Output<String> clusterDnsDomain) {
             $.clusterDnsDomain = clusterDnsDomain;
             return this;
         }
 
+        /**
+         * @param clusterDnsDomain cluster_dns_domain is the suffix used for all cluster service records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDnsDomain(String clusterDnsDomain) {
             return clusterDnsDomain(Output.of(clusterDnsDomain));
         }
 
+        /**
+         * @param clusterDnsScope cluster_dns_scope indicates the scope of access to cluster DNS records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDnsScope(@Nullable Output<DNSConfigClusterDnsScope> clusterDnsScope) {
             $.clusterDnsScope = clusterDnsScope;
             return this;
         }
 
+        /**
+         * @param clusterDnsScope cluster_dns_scope indicates the scope of access to cluster DNS records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDnsScope(DNSConfigClusterDnsScope clusterDnsScope) {
             return clusterDnsScope(Output.of(clusterDnsScope));
         }

@@ -27,6 +27,10 @@ public final class ShardingOptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="manualSharding")
     private @Nullable Output<ManualShardingArgs> manualSharding;
 
+    /**
+     * @return Shards test cases into the specified groups of packages, classes, and/or methods.
+     * 
+     */
     public Optional<Output<ManualShardingArgs>> manualSharding() {
         return Optional.ofNullable(this.manualSharding);
     }
@@ -38,6 +42,10 @@ public final class ShardingOptionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="uniformSharding")
     private @Nullable Output<UniformShardingArgs> uniformSharding;
 
+    /**
+     * @return Uniformly shards test cases given a total number of shards.
+     * 
+     */
     public Optional<Output<UniformShardingArgs>> uniformSharding() {
         return Optional.ofNullable(this.uniformSharding);
     }
@@ -67,20 +75,44 @@ public final class ShardingOptionArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ShardingOptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param manualSharding Shards test cases into the specified groups of packages, classes, and/or methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualSharding(@Nullable Output<ManualShardingArgs> manualSharding) {
             $.manualSharding = manualSharding;
             return this;
         }
 
+        /**
+         * @param manualSharding Shards test cases into the specified groups of packages, classes, and/or methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualSharding(ManualShardingArgs manualSharding) {
             return manualSharding(Output.of(manualSharding));
         }
 
+        /**
+         * @param uniformSharding Uniformly shards test cases given a total number of shards.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniformSharding(@Nullable Output<UniformShardingArgs> uniformSharding) {
             $.uniformSharding = uniformSharding;
             return this;
         }
 
+        /**
+         * @param uniformSharding Uniformly shards test cases given a total number of shards.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniformSharding(UniformShardingArgs uniformSharding) {
             return uniformSharding(Output.of(uniformSharding));
         }

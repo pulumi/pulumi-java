@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowCxV3EventInputArgs extends com.pulumi.re
     @Import(name="event")
     private @Nullable Output<String> event;
 
+    /**
+     * @return Name of the event.
+     * 
+     */
     public Optional<Output<String>> event() {
         return Optional.ofNullable(this.event);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDialogflowCxV3EventInputArgs extends com.pulumi.re
             $ = new GoogleCloudDialogflowCxV3EventInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param event Name of the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(@Nullable Output<String> event) {
             $.event = event;
             return this;
         }
 
+        /**
+         * @param event Name of the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(String event) {
             return event(Output.of(event));
         }

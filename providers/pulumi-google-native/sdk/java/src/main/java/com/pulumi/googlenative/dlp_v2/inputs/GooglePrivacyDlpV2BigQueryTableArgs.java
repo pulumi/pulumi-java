@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends com.pulumi.resour
     @Import(name="datasetId")
     private @Nullable Output<String> datasetId;
 
+    /**
+     * @return Dataset ID of the table.
+     * 
+     */
     public Optional<Output<String>> datasetId() {
         return Optional.ofNullable(this.datasetId);
     }
@@ -37,6 +41,10 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends com.pulumi.resour
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -48,6 +56,10 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends com.pulumi.resour
     @Import(name="tableId")
     private @Nullable Output<String> tableId;
 
+    /**
+     * @return Name of the table.
+     * 
+     */
     public Optional<Output<String>> tableId() {
         return Optional.ofNullable(this.tableId);
     }
@@ -78,29 +90,65 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends com.pulumi.resour
             $ = new GooglePrivacyDlpV2BigQueryTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId Dataset ID of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(@Nullable Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetId Dataset ID of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param project The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param tableId Name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(@Nullable Output<String> tableId) {
             $.tableId = tableId;
             return this;
         }
 
+        /**
+         * @param tableId Name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(String tableId) {
             return tableId(Output.of(tableId));
         }

@@ -24,6 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends co
     @Import(name="analysisResult", required=true)
     private GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult;
 
+    /**
+     * @return The result of the analysis, which is populated when the analysis finishes.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult() {
         return this.analysisResult;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends co
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The time at which the analysis was created, which occurs when the long-running operation completes.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends co
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -57,6 +69,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends co
     @Import(name="requestTime", required=true)
     private String requestTime;
 
+    /**
+     * @return The time at which the analysis was requested.
+     * 
+     */
     public String requestTime() {
         return this.requestTime;
     }
@@ -88,21 +104,45 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends co
             $ = new GoogleCloudContactcenterinsightsV1AnalysisResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analysisResult The result of the analysis, which is populated when the analysis finishes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisResult(GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult) {
             $.analysisResult = analysisResult;
             return this;
         }
 
+        /**
+         * @param createTime The time at which the analysis was created, which occurs when the long-running operation completes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param name Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param requestTime The time at which the analysis was requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTime(String requestTime) {
             $.requestTime = requestTime;
             return this;

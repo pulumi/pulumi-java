@@ -22,6 +22,10 @@ public final class LicenseResourceRequirementsArgs extends com.pulumi.resources.
     @Import(name="minGuestCpuCount")
     private @Nullable Output<Integer> minGuestCpuCount;
 
+    /**
+     * @return Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and Instance start.
+     * 
+     */
     public Optional<Output<Integer>> minGuestCpuCount() {
         return Optional.ofNullable(this.minGuestCpuCount);
     }
@@ -33,6 +37,10 @@ public final class LicenseResourceRequirementsArgs extends com.pulumi.resources.
     @Import(name="minMemoryMb")
     private @Nullable Output<Integer> minMemoryMb;
 
+    /**
+     * @return Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
+     * 
+     */
     public Optional<Output<Integer>> minMemoryMb() {
         return Optional.ofNullable(this.minMemoryMb);
     }
@@ -62,20 +70,44 @@ public final class LicenseResourceRequirementsArgs extends com.pulumi.resources.
             $ = new LicenseResourceRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minGuestCpuCount Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and Instance start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minGuestCpuCount(@Nullable Output<Integer> minGuestCpuCount) {
             $.minGuestCpuCount = minGuestCpuCount;
             return this;
         }
 
+        /**
+         * @param minGuestCpuCount Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and Instance start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minGuestCpuCount(Integer minGuestCpuCount) {
             return minGuestCpuCount(Output.of(minGuestCpuCount));
         }
 
+        /**
+         * @param minMemoryMb Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minMemoryMb(@Nullable Output<Integer> minMemoryMb) {
             $.minMemoryMb = minMemoryMb;
             return this;
         }
 
+        /**
+         * @param minMemoryMb Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minMemoryMb(Integer minMemoryMb) {
             return minMemoryMb(Output.of(minMemoryMb));
         }

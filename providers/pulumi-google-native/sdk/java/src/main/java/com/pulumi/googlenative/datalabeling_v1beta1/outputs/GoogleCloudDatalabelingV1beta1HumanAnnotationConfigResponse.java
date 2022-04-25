@@ -12,47 +12,47 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse {
     /**
-     * Optional. A human-readable description for AnnotatedDataset. The description can be up to 10000 characters long.
+     * @return Optional. A human-readable description for AnnotatedDataset. The description can be up to 10000 characters long.
      * 
      */
     private final String annotatedDatasetDescription;
     /**
-     * A human-readable name for AnnotatedDataset defined by users. Maximum of 64 characters .
+     * @return A human-readable name for AnnotatedDataset defined by users. Maximum of 64 characters .
      * 
      */
     private final String annotatedDatasetDisplayName;
     /**
-     * Optional. If you want your own labeling contributors to manage and work on this labeling request, you can set these contributors here. We will give them access to the question types in crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https://crowd-compute.appspot.com/
+     * @return Optional. If you want your own labeling contributors to manage and work on this labeling request, you can set these contributors here. We will give them access to the question types in crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https://crowd-compute.appspot.com/
      * 
      */
     private final List<String> contributorEmails;
     /**
-     * Instruction resource name.
+     * @return Instruction resource name.
      * 
      */
     private final String instruction;
     /**
-     * Optional. A human-readable label used to logically group labeling tasks. This string must match the regular expression `[a-zA-Z\\d_-]{0,128}`.
+     * @return Optional. A human-readable label used to logically group labeling tasks. This string must match the regular expression `[a-zA-Z\\d_-]{0,128}`.
      * 
      */
     private final String labelGroup;
     /**
-     * Optional. The Language of this question, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US. Only need to set this when task is language related. For example, French text classification.
+     * @return Optional. The Language of this question, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US. Only need to set this when task is language related. For example, French text classification.
      * 
      */
     private final String languageCode;
     /**
-     * Optional. Maximum duration for contributors to answer a question. Maximum is 3600 seconds. Default is 3600 seconds.
+     * @return Optional. Maximum duration for contributors to answer a question. Maximum is 3600 seconds. Default is 3600 seconds.
      * 
      */
     private final String questionDuration;
     /**
-     * Optional. Replication of questions. Each question will be sent to up to this number of contributors to label. Aggregated answers will be returned. Default is set to 1. For image related labeling, valid values are 1, 3, 5.
+     * @return Optional. Replication of questions. Each question will be sent to up to this number of contributors to label. Aggregated answers will be returned. Default is set to 1. For image related labeling, valid values are 1, 3, 5.
      * 
      */
     private final Integer replicaCount;
     /**
-     * Email of the user who started the labeling task and should be notified by email. If empty no notification will be sent.
+     * @return Email of the user who started the labeling task and should be notified by email. If empty no notification will be sent.
      * 
      */
     private final String userEmailAddress;
@@ -80,65 +80,65 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse {
     }
 
     /**
-     * Optional. A human-readable description for AnnotatedDataset. The description can be up to 10000 characters long.
+     * @return Optional. A human-readable description for AnnotatedDataset. The description can be up to 10000 characters long.
      * 
-    */
+     */
     public String annotatedDatasetDescription() {
         return this.annotatedDatasetDescription;
     }
     /**
-     * A human-readable name for AnnotatedDataset defined by users. Maximum of 64 characters .
+     * @return A human-readable name for AnnotatedDataset defined by users. Maximum of 64 characters .
      * 
-    */
+     */
     public String annotatedDatasetDisplayName() {
         return this.annotatedDatasetDisplayName;
     }
     /**
-     * Optional. If you want your own labeling contributors to manage and work on this labeling request, you can set these contributors here. We will give them access to the question types in crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https://crowd-compute.appspot.com/
+     * @return Optional. If you want your own labeling contributors to manage and work on this labeling request, you can set these contributors here. We will give them access to the question types in crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https://crowd-compute.appspot.com/
      * 
-    */
+     */
     public List<String> contributorEmails() {
         return this.contributorEmails;
     }
     /**
-     * Instruction resource name.
+     * @return Instruction resource name.
      * 
-    */
+     */
     public String instruction() {
         return this.instruction;
     }
     /**
-     * Optional. A human-readable label used to logically group labeling tasks. This string must match the regular expression `[a-zA-Z\\d_-]{0,128}`.
+     * @return Optional. A human-readable label used to logically group labeling tasks. This string must match the regular expression `[a-zA-Z\\d_-]{0,128}`.
      * 
-    */
+     */
     public String labelGroup() {
         return this.labelGroup;
     }
     /**
-     * Optional. The Language of this question, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US. Only need to set this when task is language related. For example, French text classification.
+     * @return Optional. The Language of this question, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US. Only need to set this when task is language related. For example, French text classification.
      * 
-    */
+     */
     public String languageCode() {
         return this.languageCode;
     }
     /**
-     * Optional. Maximum duration for contributors to answer a question. Maximum is 3600 seconds. Default is 3600 seconds.
+     * @return Optional. Maximum duration for contributors to answer a question. Maximum is 3600 seconds. Default is 3600 seconds.
      * 
-    */
+     */
     public String questionDuration() {
         return this.questionDuration;
     }
     /**
-     * Optional. Replication of questions. Each question will be sent to up to this number of contributors to label. Aggregated answers will be returned. Default is set to 1. For image related labeling, valid values are 1, 3, 5.
+     * @return Optional. Replication of questions. Each question will be sent to up to this number of contributors to label. Aggregated answers will be returned. Default is set to 1. For image related labeling, valid values are 1, 3, 5.
      * 
-    */
+     */
     public Integer replicaCount() {
         return this.replicaCount;
     }
     /**
-     * Email of the user who started the labeling task and should be notified by email. If empty no notification will be sent.
+     * @return Email of the user who started the labeling task and should be notified by email. If empty no notification will be sent.
      * 
-    */
+     */
     public String userEmailAddress() {
         return this.userEmailAddress;
     }

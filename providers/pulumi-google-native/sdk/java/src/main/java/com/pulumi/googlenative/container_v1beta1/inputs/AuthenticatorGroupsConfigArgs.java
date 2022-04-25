@@ -27,6 +27,10 @@ public final class AuthenticatorGroupsConfigArgs extends com.pulumi.resources.Re
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether this cluster should return group membership lookups during authentication using a group of security groups.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class AuthenticatorGroupsConfigArgs extends com.pulumi.resources.Re
     @Import(name="securityGroup")
     private @Nullable Output<String> securityGroup;
 
+    /**
+     * @return The name of the security group-of-groups to be used. Only relevant if enabled = true.
+     * 
+     */
     public Optional<Output<String>> securityGroup() {
         return Optional.ofNullable(this.securityGroup);
     }
@@ -67,20 +75,44 @@ public final class AuthenticatorGroupsConfigArgs extends com.pulumi.resources.Re
             $ = new AuthenticatorGroupsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether this cluster should return group membership lookups during authentication using a group of security groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether this cluster should return group membership lookups during authentication using a group of security groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param securityGroup The name of the security group-of-groups to be used. Only relevant if enabled = true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroup(@Nullable Output<String> securityGroup) {
             $.securityGroup = securityGroup;
             return this;
         }
 
+        /**
+         * @param securityGroup The name of the security group-of-groups to be used. Only relevant if enabled = true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroup(String securityGroup) {
             return securityGroup(Output.of(securityGroup));
         }

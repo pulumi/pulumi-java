@@ -24,6 +24,10 @@ public final class GoogleCloudMlV1__MetricSpecResponse extends com.pulumi.resour
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return metric name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudMlV1__MetricSpecResponse extends com.pulumi.resour
     @Import(name="target", required=true)
     private Integer target;
 
+    /**
+     * @return Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.
+     * 
+     */
     public Integer target() {
         return this.target;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudMlV1__MetricSpecResponse extends com.pulumi.resour
             $ = new GoogleCloudMlV1__MetricSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name metric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param target Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Integer target) {
             $.target = target;
             return this;

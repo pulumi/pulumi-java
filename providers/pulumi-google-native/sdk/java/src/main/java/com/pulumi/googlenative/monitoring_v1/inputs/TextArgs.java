@@ -27,6 +27,10 @@ public final class TextArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return The text content to be displayed.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -38,6 +42,10 @@ public final class TextArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="format")
     private @Nullable Output<TextFormat> format;
 
+    /**
+     * @return How the text content is formatted.
+     * 
+     */
     public Optional<Output<TextFormat>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -67,20 +75,44 @@ public final class TextArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The text content to be displayed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The text content to be displayed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param format How the text content is formatted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<TextFormat> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format How the text content is formatted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(TextFormat format) {
             return format(Output.of(format));
         }

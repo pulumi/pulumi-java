@@ -23,6 +23,10 @@ public final class DataprocParametersResponse extends com.pulumi.resources.Invok
     @Import(name="cluster", required=true)
     private String cluster;
 
+    /**
+     * @return URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
+     * 
+     */
     public String cluster() {
         return this.cluster;
     }
@@ -51,6 +55,12 @@ public final class DataprocParametersResponse extends com.pulumi.resources.Invok
             $ = new DataprocParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             $.cluster = cluster;
             return this;

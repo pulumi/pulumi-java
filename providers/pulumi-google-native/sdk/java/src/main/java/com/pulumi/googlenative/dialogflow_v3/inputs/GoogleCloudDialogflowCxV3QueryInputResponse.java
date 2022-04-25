@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse extends com.pulum
     @Import(name="audio", required=true)
     private GoogleCloudDialogflowCxV3AudioInputResponse audio;
 
+    /**
+     * @return The natural language speech audio to be processed.
+     * 
+     */
     public GoogleCloudDialogflowCxV3AudioInputResponse audio() {
         return this.audio;
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse extends com.pulum
     @Import(name="dtmf", required=true)
     private GoogleCloudDialogflowCxV3DtmfInputResponse dtmf;
 
+    /**
+     * @return The DTMF event to be handled.
+     * 
+     */
     public GoogleCloudDialogflowCxV3DtmfInputResponse dtmf() {
         return this.dtmf;
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse extends com.pulum
     @Import(name="event", required=true)
     private GoogleCloudDialogflowCxV3EventInputResponse event;
 
+    /**
+     * @return The event to be triggered.
+     * 
+     */
     public GoogleCloudDialogflowCxV3EventInputResponse event() {
         return this.event;
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse extends com.pulum
     @Import(name="intent", required=true)
     private GoogleCloudDialogflowCxV3IntentInputResponse intent;
 
+    /**
+     * @return The intent to be triggered.
+     * 
+     */
     public GoogleCloudDialogflowCxV3IntentInputResponse intent() {
         return this.intent;
     }
@@ -72,6 +88,10 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse extends com.pulum
     @Import(name="languageCode", required=true)
     private String languageCode;
 
+    /**
+     * @return The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
+     * 
+     */
     public String languageCode() {
         return this.languageCode;
     }
@@ -83,6 +103,10 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse extends com.pulum
     @Import(name="text", required=true)
     private GoogleCloudDialogflowCxV3TextInputResponse text;
 
+    /**
+     * @return The natural language text to be processed.
+     * 
+     */
     public GoogleCloudDialogflowCxV3TextInputResponse text() {
         return this.text;
     }
@@ -116,31 +140,67 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse extends com.pulum
             $ = new GoogleCloudDialogflowCxV3QueryInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audio The natural language speech audio to be processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audio(GoogleCloudDialogflowCxV3AudioInputResponse audio) {
             $.audio = audio;
             return this;
         }
 
+        /**
+         * @param dtmf The DTMF event to be handled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dtmf(GoogleCloudDialogflowCxV3DtmfInputResponse dtmf) {
             $.dtmf = dtmf;
             return this;
         }
 
+        /**
+         * @param event The event to be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(GoogleCloudDialogflowCxV3EventInputResponse event) {
             $.event = event;
             return this;
         }
 
+        /**
+         * @param intent The intent to be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intent(GoogleCloudDialogflowCxV3IntentInputResponse intent) {
             $.intent = intent;
             return this;
         }
 
+        /**
+         * @param languageCode The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(String languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
+        /**
+         * @param text The natural language text to be processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(GoogleCloudDialogflowCxV3TextInputResponse text) {
             $.text = text;
             return this;

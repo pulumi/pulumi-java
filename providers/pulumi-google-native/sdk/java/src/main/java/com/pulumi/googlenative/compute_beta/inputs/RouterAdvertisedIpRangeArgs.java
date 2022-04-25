@@ -26,6 +26,10 @@ public final class RouterAdvertisedIpRangeArgs extends com.pulumi.resources.Reso
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User-specified description for the IP range.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class RouterAdvertisedIpRangeArgs extends com.pulumi.resources.Reso
     @Import(name="range")
     private @Nullable Output<String> range;
 
+    /**
+     * @return The IP range to advertise. The value must be a CIDR-formatted string.
+     * 
+     */
     public Optional<Output<String>> range() {
         return Optional.ofNullable(this.range);
     }
@@ -66,20 +74,44 @@ public final class RouterAdvertisedIpRangeArgs extends com.pulumi.resources.Reso
             $ = new RouterAdvertisedIpRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description User-specified description for the IP range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User-specified description for the IP range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param range The IP range to advertise. The value must be a CIDR-formatted string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(@Nullable Output<String> range) {
             $.range = range;
             return this;
         }
 
+        /**
+         * @param range The IP range to advertise. The value must be a CIDR-formatted string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(String range) {
             return range(Output.of(range));
         }

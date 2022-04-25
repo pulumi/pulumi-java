@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class DistributionCutResponse {
     /**
-     * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * @return A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
      */
     private final String distributionFilter;
     /**
-     * Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
+     * @return Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
      * 
      */
     private final GoogleMonitoringV3RangeResponse range;
@@ -30,16 +30,16 @@ public final class DistributionCutResponse {
     }
 
     /**
-     * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * @return A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-    */
+     */
     public String distributionFilter() {
         return this.distributionFilter;
     }
     /**
-     * Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
+     * @return Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
      * 
-    */
+     */
     public GoogleMonitoringV3RangeResponse range() {
         return this.range;
     }

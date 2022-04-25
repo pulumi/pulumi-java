@@ -28,6 +28,10 @@ public final class GoogleCloudRetailV2RatingArgs extends com.pulumi.resources.Re
     @Import(name="averageRating")
     private @Nullable Output<Double> averageRating;
 
+    /**
+     * @return The average rating of the Product. The rating is scaled at 1-5. Otherwise, an INVALID_ARGUMENT error is returned.
+     * 
+     */
     public Optional<Output<Double>> averageRating() {
         return Optional.ofNullable(this.averageRating);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudRetailV2RatingArgs extends com.pulumi.resources.Re
     @Import(name="ratingCount")
     private @Nullable Output<Integer> ratingCount;
 
+    /**
+     * @return The total number of ratings. This value is independent of the value of rating_histogram. This value must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.
+     * 
+     */
     public Optional<Output<Integer>> ratingCount() {
         return Optional.ofNullable(this.ratingCount);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudRetailV2RatingArgs extends com.pulumi.resources.Re
     @Import(name="ratingHistogram")
     private @Nullable Output<List<Integer>> ratingHistogram;
 
+    /**
+     * @return List of rating counts per rating value (index = rating - 1). The list is empty if there is no rating. If the list is non-empty, its size is always 5. Otherwise, an INVALID_ARGUMENT error is returned. For example, [41, 14, 13, 47, 303]. It means that the Product got 41 ratings with 1 star, 14 ratings with 2 star, and so on.
+     * 
+     */
     public Optional<Output<List<Integer>>> ratingHistogram() {
         return Optional.ofNullable(this.ratingHistogram);
     }
@@ -80,33 +92,75 @@ public final class GoogleCloudRetailV2RatingArgs extends com.pulumi.resources.Re
             $ = new GoogleCloudRetailV2RatingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param averageRating The average rating of the Product. The rating is scaled at 1-5. Otherwise, an INVALID_ARGUMENT error is returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageRating(@Nullable Output<Double> averageRating) {
             $.averageRating = averageRating;
             return this;
         }
 
+        /**
+         * @param averageRating The average rating of the Product. The rating is scaled at 1-5. Otherwise, an INVALID_ARGUMENT error is returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageRating(Double averageRating) {
             return averageRating(Output.of(averageRating));
         }
 
+        /**
+         * @param ratingCount The total number of ratings. This value is independent of the value of rating_histogram. This value must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ratingCount(@Nullable Output<Integer> ratingCount) {
             $.ratingCount = ratingCount;
             return this;
         }
 
+        /**
+         * @param ratingCount The total number of ratings. This value is independent of the value of rating_histogram. This value must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ratingCount(Integer ratingCount) {
             return ratingCount(Output.of(ratingCount));
         }
 
+        /**
+         * @param ratingHistogram List of rating counts per rating value (index = rating - 1). The list is empty if there is no rating. If the list is non-empty, its size is always 5. Otherwise, an INVALID_ARGUMENT error is returned. For example, [41, 14, 13, 47, 303]. It means that the Product got 41 ratings with 1 star, 14 ratings with 2 star, and so on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ratingHistogram(@Nullable Output<List<Integer>> ratingHistogram) {
             $.ratingHistogram = ratingHistogram;
             return this;
         }
 
+        /**
+         * @param ratingHistogram List of rating counts per rating value (index = rating - 1). The list is empty if there is no rating. If the list is non-empty, its size is always 5. Otherwise, an INVALID_ARGUMENT error is returned. For example, [41, 14, 13, 47, 303]. It means that the Product got 41 ratings with 1 star, 14 ratings with 2 star, and so on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ratingHistogram(List<Integer> ratingHistogram) {
             return ratingHistogram(Output.of(ratingHistogram));
         }
 
+        /**
+         * @param ratingHistogram List of rating counts per rating value (index = rating - 1). The list is empty if there is no rating. If the list is non-empty, its size is always 5. Otherwise, an INVALID_ARGUMENT error is returned. For example, [41, 14, 13, 47, 303]. It means that the Product got 41 ratings with 1 star, 14 ratings with 2 star, and so on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ratingHistogram(Integer... ratingHistogram) {
             return ratingHistogram(List.of(ratingHistogram));
         }

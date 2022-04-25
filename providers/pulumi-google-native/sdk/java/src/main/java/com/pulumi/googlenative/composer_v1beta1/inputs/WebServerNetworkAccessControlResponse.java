@@ -24,6 +24,10 @@ public final class WebServerNetworkAccessControlResponse extends com.pulumi.reso
     @Import(name="allowedIpRanges", required=true)
     private List<AllowedIpRangeResponse> allowedIpRanges;
 
+    /**
+     * @return A collection of allowed IP ranges with descriptions.
+     * 
+     */
     public List<AllowedIpRangeResponse> allowedIpRanges() {
         return this.allowedIpRanges;
     }
@@ -52,11 +56,23 @@ public final class WebServerNetworkAccessControlResponse extends com.pulumi.reso
             $ = new WebServerNetworkAccessControlResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedIpRanges A collection of allowed IP ranges with descriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedIpRanges(List<AllowedIpRangeResponse> allowedIpRanges) {
             $.allowedIpRanges = allowedIpRanges;
             return this;
         }
 
+        /**
+         * @param allowedIpRanges A collection of allowed IP ranges with descriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedIpRanges(AllowedIpRangeResponse... allowedIpRanges) {
             return allowedIpRanges(List.of(allowedIpRanges));
         }

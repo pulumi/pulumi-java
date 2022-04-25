@@ -10,42 +10,42 @@ import java.util.Objects;
 @CustomType
 public final class GitHubEnterpriseSecretsResponse {
     /**
-     * The resource name for the OAuth client ID secret in Secret Manager.
+     * @return The resource name for the OAuth client ID secret in Secret Manager.
      * 
      */
     private final String oauthClientIdName;
     /**
-     * The resource name for the OAuth client ID secret version in Secret Manager.
+     * @return The resource name for the OAuth client ID secret version in Secret Manager.
      * 
      */
     private final String oauthClientIdVersionName;
     /**
-     * The resource name for the OAuth secret in Secret Manager.
+     * @return The resource name for the OAuth secret in Secret Manager.
      * 
      */
     private final String oauthSecretName;
     /**
-     * The resource name for the OAuth secret secret version in Secret Manager.
+     * @return The resource name for the OAuth secret secret version in Secret Manager.
      * 
      */
     private final String oauthSecretVersionName;
     /**
-     * The resource name for the private key secret.
+     * @return The resource name for the private key secret.
      * 
      */
     private final String privateKeyName;
     /**
-     * The resource name for the private key secret version.
+     * @return The resource name for the private key secret version.
      * 
      */
     private final String privateKeyVersionName;
     /**
-     * The resource name for the webhook secret in Secret Manager.
+     * @return The resource name for the webhook secret in Secret Manager.
      * 
      */
     private final String webhookSecretName;
     /**
-     * The resource name for the webhook secret secret version in Secret Manager.
+     * @return The resource name for the webhook secret secret version in Secret Manager.
      * 
      */
     private final String webhookSecretVersionName;
@@ -71,58 +71,58 @@ public final class GitHubEnterpriseSecretsResponse {
     }
 
     /**
-     * The resource name for the OAuth client ID secret in Secret Manager.
+     * @return The resource name for the OAuth client ID secret in Secret Manager.
      * 
-    */
+     */
     public String oauthClientIdName() {
         return this.oauthClientIdName;
     }
     /**
-     * The resource name for the OAuth client ID secret version in Secret Manager.
+     * @return The resource name for the OAuth client ID secret version in Secret Manager.
      * 
-    */
+     */
     public String oauthClientIdVersionName() {
         return this.oauthClientIdVersionName;
     }
     /**
-     * The resource name for the OAuth secret in Secret Manager.
+     * @return The resource name for the OAuth secret in Secret Manager.
      * 
-    */
+     */
     public String oauthSecretName() {
         return this.oauthSecretName;
     }
     /**
-     * The resource name for the OAuth secret secret version in Secret Manager.
+     * @return The resource name for the OAuth secret secret version in Secret Manager.
      * 
-    */
+     */
     public String oauthSecretVersionName() {
         return this.oauthSecretVersionName;
     }
     /**
-     * The resource name for the private key secret.
+     * @return The resource name for the private key secret.
      * 
-    */
+     */
     public String privateKeyName() {
         return this.privateKeyName;
     }
     /**
-     * The resource name for the private key secret version.
+     * @return The resource name for the private key secret version.
      * 
-    */
+     */
     public String privateKeyVersionName() {
         return this.privateKeyVersionName;
     }
     /**
-     * The resource name for the webhook secret in Secret Manager.
+     * @return The resource name for the webhook secret in Secret Manager.
      * 
-    */
+     */
     public String webhookSecretName() {
         return this.webhookSecretName;
     }
     /**
-     * The resource name for the webhook secret secret version in Secret Manager.
+     * @return The resource name for the webhook secret secret version in Secret Manager.
      * 
-    */
+     */
     public String webhookSecretVersionName() {
         return this.webhookSecretVersionName;
     }

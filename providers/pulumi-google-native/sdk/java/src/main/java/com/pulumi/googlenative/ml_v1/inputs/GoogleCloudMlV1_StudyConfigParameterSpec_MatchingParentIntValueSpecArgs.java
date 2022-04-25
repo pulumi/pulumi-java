@@ -27,6 +27,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return Matches values of the parent parameter with type &#39;INTEGER&#39;. All values must lie in `integer_value_spec` of parent parameter.
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -55,15 +59,33 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
             $ = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param values Matches values of the parent parameter with type &#39;INTEGER&#39;. All values must lie in `integer_value_spec` of parent parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Matches values of the parent parameter with type &#39;INTEGER&#39;. All values must lie in `integer_value_spec` of parent parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values Matches values of the parent parameter with type &#39;INTEGER&#39;. All values must lie in `integer_value_spec` of parent parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

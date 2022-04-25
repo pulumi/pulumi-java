@@ -45,6 +45,10 @@ public final class CapacityCommitmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="plan")
     private @Nullable Output<CapacityCommitmentPlan> plan;
 
+    /**
+     * @return Capacity commitment commitment plan.
+     * 
+     */
     public Optional<Output<CapacityCommitmentPlan>> plan() {
         return Optional.ofNullable(this.plan);
     }
@@ -63,6 +67,10 @@ public final class CapacityCommitmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="renewalPlan")
     private @Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan;
 
+    /**
+     * @return The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL and TRIAL commitments.
+     * 
+     */
     public Optional<Output<CapacityCommitmentRenewalPlan>> renewalPlan() {
         return Optional.ofNullable(this.renewalPlan);
     }
@@ -74,6 +82,10 @@ public final class CapacityCommitmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="slotCount")
     private @Nullable Output<String> slotCount;
 
+    /**
+     * @return Number of slots in this commitment.
+     * 
+     */
     public Optional<Output<String>> slotCount() {
         return Optional.ofNullable(this.slotCount);
     }
@@ -135,11 +147,23 @@ public final class CapacityCommitmentArgs extends com.pulumi.resources.ResourceA
             return location(Output.of(location));
         }
 
+        /**
+         * @param plan Capacity commitment commitment plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(@Nullable Output<CapacityCommitmentPlan> plan) {
             $.plan = plan;
             return this;
         }
 
+        /**
+         * @param plan Capacity commitment commitment plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(CapacityCommitmentPlan plan) {
             return plan(Output.of(plan));
         }
@@ -153,20 +177,44 @@ public final class CapacityCommitmentArgs extends com.pulumi.resources.ResourceA
             return project(Output.of(project));
         }
 
+        /**
+         * @param renewalPlan The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL and TRIAL commitments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder renewalPlan(@Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan) {
             $.renewalPlan = renewalPlan;
             return this;
         }
 
+        /**
+         * @param renewalPlan The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL and TRIAL commitments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder renewalPlan(CapacityCommitmentRenewalPlan renewalPlan) {
             return renewalPlan(Output.of(renewalPlan));
         }
 
+        /**
+         * @param slotCount Number of slots in this commitment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotCount(@Nullable Output<String> slotCount) {
             $.slotCount = slotCount;
             return this;
         }
 
+        /**
+         * @param slotCount Number of slots in this commitment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotCount(String slotCount) {
             return slotCount(Output.of(slotCount));
         }

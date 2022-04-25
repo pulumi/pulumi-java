@@ -23,6 +23,10 @@ public final class FeatureSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="splitHealthChecks", required=true)
     private Boolean splitHealthChecks;
 
+    /**
+     * @return Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to &#39;readiness_check&#39; and &#39;liveness_check&#39; values instead of &#39;health_check&#39; ones. Once the legacy &#39;health_check&#39; behavior is deprecated, and this value is always true, this setting can be removed.
+     * 
+     */
     public Boolean splitHealthChecks() {
         return this.splitHealthChecks;
     }
@@ -34,6 +38,10 @@ public final class FeatureSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="useContainerOptimizedOs", required=true)
     private Boolean useContainerOptimizedOs;
 
+    /**
+     * @return If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base image for VMs, rather than a base Debian image.
+     * 
+     */
     public Boolean useContainerOptimizedOs() {
         return this.useContainerOptimizedOs;
     }
@@ -63,11 +71,23 @@ public final class FeatureSettingsResponse extends com.pulumi.resources.InvokeAr
             $ = new FeatureSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param splitHealthChecks Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to &#39;readiness_check&#39; and &#39;liveness_check&#39; values instead of &#39;health_check&#39; ones. Once the legacy &#39;health_check&#39; behavior is deprecated, and this value is always true, this setting can be removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder splitHealthChecks(Boolean splitHealthChecks) {
             $.splitHealthChecks = splitHealthChecks;
             return this;
         }
 
+        /**
+         * @param useContainerOptimizedOs If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base image for VMs, rather than a base Debian image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useContainerOptimizedOs(Boolean useContainerOptimizedOs) {
             $.useContainerOptimizedOs = useContainerOptimizedOs;
             return this;

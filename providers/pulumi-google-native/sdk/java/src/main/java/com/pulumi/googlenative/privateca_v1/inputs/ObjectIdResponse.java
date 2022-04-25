@@ -24,6 +24,10 @@ public final class ObjectIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="objectIdPath", required=true)
     private List<Integer> objectIdPath;
 
+    /**
+     * @return The parts of an OID path. The most significant parts of the path come first.
+     * 
+     */
     public List<Integer> objectIdPath() {
         return this.objectIdPath;
     }
@@ -52,11 +56,23 @@ public final class ObjectIdResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ObjectIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectIdPath The parts of an OID path. The most significant parts of the path come first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIdPath(List<Integer> objectIdPath) {
             $.objectIdPath = objectIdPath;
             return this;
         }
 
+        /**
+         * @param objectIdPath The parts of an OID path. The most significant parts of the path come first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIdPath(Integer... objectIdPath) {
             return objectIdPath(List.of(objectIdPath));
         }

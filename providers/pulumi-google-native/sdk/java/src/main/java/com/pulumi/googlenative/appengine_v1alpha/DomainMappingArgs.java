@@ -30,6 +30,10 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Relative name of the domain serving the application. Example: example.com.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -55,6 +59,10 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslSettings")
     private @Nullable Output<SslSettingsArgs> sslSettings;
 
+    /**
+     * @return SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+     * 
+     */
     public Optional<Output<SslSettingsArgs>> sslSettings() {
         return Optional.ofNullable(this.sslSettings);
     }
@@ -96,11 +104,23 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
             return appId(Output.of(appId));
         }
 
+        /**
+         * @param id Relative name of the domain serving the application. Example: example.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Relative name of the domain serving the application. Example: example.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
@@ -123,11 +143,23 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
             return overrideStrategy(Output.of(overrideStrategy));
         }
 
+        /**
+         * @param sslSettings SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslSettings(@Nullable Output<SslSettingsArgs> sslSettings) {
             $.sslSettings = sslSettings;
             return this;
         }
 
+        /**
+         * @param sslSettings SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslSettings(SslSettingsArgs sslSettings) {
             return sslSettings(Output.of(sslSettings));
         }

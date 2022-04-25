@@ -23,6 +23,10 @@ public final class CustomAccountResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="loginUrl", required=true)
     private String loginUrl;
 
+    /**
+     * @return The login form URL of the website.
+     * 
+     */
     public String loginUrl() {
         return this.loginUrl;
     }
@@ -34,6 +38,10 @@ public final class CustomAccountResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -45,6 +53,10 @@ public final class CustomAccountResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return The user name of the custom account.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -75,16 +87,34 @@ public final class CustomAccountResponse extends com.pulumi.resources.InvokeArgs
             $ = new CustomAccountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loginUrl The login form URL of the website.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginUrl(String loginUrl) {
             $.loginUrl = loginUrl;
             return this;
         }
 
+        /**
+         * @param password Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param username The user name of the custom account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

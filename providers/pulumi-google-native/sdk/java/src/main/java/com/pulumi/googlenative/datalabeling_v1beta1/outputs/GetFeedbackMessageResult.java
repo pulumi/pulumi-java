@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class GetFeedbackMessageResult {
     /**
-     * String content of the feedback. Maximum of 10000 characters.
+     * @return String content of the feedback. Maximum of 10000 characters.
      * 
      */
     private final String body;
     /**
-     * Create time.
+     * @return Create time.
      * 
      */
     private final String createTime;
     /**
-     * The image storing this feedback if the feedback is an image representing operator&#39;s comments.
+     * @return The image storing this feedback if the feedback is an image representing operator&#39;s comments.
      * 
      */
     private final String image;
     /**
-     * Name of the feedback message in a feedback thread. Format: &#39;project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}&#39;
+     * @return Name of the feedback message in a feedback thread. Format: &#39;project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}&#39;
      * 
      */
     private final String name;
@@ -51,30 +51,30 @@ public final class GetFeedbackMessageResult {
     }
 
     /**
-     * String content of the feedback. Maximum of 10000 characters.
+     * @return String content of the feedback. Maximum of 10000 characters.
      * 
-    */
+     */
     public String body() {
         return this.body;
     }
     /**
-     * Create time.
+     * @return Create time.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The image storing this feedback if the feedback is an image representing operator&#39;s comments.
+     * @return The image storing this feedback if the feedback is an image representing operator&#39;s comments.
      * 
-    */
+     */
     public String image() {
         return this.image;
     }
     /**
-     * Name of the feedback message in a feedback thread. Format: &#39;project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}&#39;
+     * @return Name of the feedback message in a feedback thread. Format: &#39;project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}&#39;
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

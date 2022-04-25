@@ -13,142 +13,142 @@ import java.util.Objects;
 @CustomType
 public final class GetDeviceResult {
     /**
-     * Attributes specific to Android devices.
+     * @return Attributes specific to Android devices.
      * 
      */
     private final GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse androidSpecificAttributes;
     /**
-     * Asset tag of the device.
+     * @return Asset tag of the device.
      * 
      */
     private final String assetTag;
     /**
-     * Baseband version of the device.
+     * @return Baseband version of the device.
      * 
      */
     private final String basebandVersion;
     /**
-     * Device bootloader version. Example: 0.6.7.
+     * @return Device bootloader version. Example: 0.6.7.
      * 
      */
     private final String bootloaderVersion;
     /**
-     * Device brand. Example: Samsung.
+     * @return Device brand. Example: Samsung.
      * 
      */
     private final String brand;
     /**
-     * Build number of the device.
+     * @return Build number of the device.
      * 
      */
     private final String buildNumber;
     /**
-     * Represents whether the Device is compromised.
+     * @return Represents whether the Device is compromised.
      * 
      */
     private final String compromisedState;
     /**
-     * When the Company-Owned device was imported. This field is empty for BYOD devices.
+     * @return When the Company-Owned device was imported. This field is empty for BYOD devices.
      * 
      */
     private final String createTime;
     /**
-     * Type of device.
+     * @return Type of device.
      * 
      */
     private final String deviceType;
     /**
-     * Whether developer options is enabled on device.
+     * @return Whether developer options is enabled on device.
      * 
      */
     private final Boolean enabledDeveloperOptions;
     /**
-     * Whether USB debugging is enabled on device.
+     * @return Whether USB debugging is enabled on device.
      * 
      */
     private final Boolean enabledUsbDebugging;
     /**
-     * Device encryption state.
+     * @return Device encryption state.
      * 
      */
     private final String encryptionState;
     /**
-     * IMEI number of device if GSM device; empty otherwise.
+     * @return IMEI number of device if GSM device; empty otherwise.
      * 
      */
     private final String imei;
     /**
-     * Kernel version of the device.
+     * @return Kernel version of the device.
      * 
      */
     private final String kernelVersion;
     /**
-     * Most recent time when device synced with this service.
+     * @return Most recent time when device synced with this service.
      * 
      */
     private final String lastSyncTime;
     /**
-     * Management state of the device
+     * @return Management state of the device
      * 
      */
     private final String managementState;
     /**
-     * Device manufacturer. Example: Motorola.
+     * @return Device manufacturer. Example: Motorola.
      * 
      */
     private final String manufacturer;
     /**
-     * MEID number of device if CDMA device; empty otherwise.
+     * @return MEID number of device if CDMA device; empty otherwise.
      * 
      */
     private final String meid;
     /**
-     * Model name of device. Example: Pixel 3.
+     * @return Model name of device. Example: Pixel 3.
      * 
      */
     private final String model;
     /**
-     * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device}`, where device is the unique id assigned to the Device.
+     * @return [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device}`, where device is the unique id assigned to the Device.
      * 
      */
     private final String name;
     /**
-     * Mobile or network operator of device, if available.
+     * @return Mobile or network operator of device, if available.
      * 
      */
     private final String networkOperator;
     /**
-     * OS version of the device. Example: Android 8.1.0.
+     * @return OS version of the device. Example: Android 8.1.0.
      * 
      */
     private final String osVersion;
     /**
-     * Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account&#39;s domain has only one account. Examples: &#34;com.example&#34;, &#34;xyz.com&#34;.
+     * @return Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account&#39;s domain has only one account. Examples: &#34;com.example&#34;, &#34;xyz.com&#34;.
      * 
      */
     private final List<String> otherAccounts;
     /**
-     * Whether the device is owned by the company or an individual
+     * @return Whether the device is owned by the company or an individual
      * 
      */
     private final String ownerType;
     /**
-     * OS release version. Example: 6.0.
+     * @return OS release version. Example: 6.0.
      * 
      */
     private final String releaseVersion;
     /**
-     * OS security patch update time on device.
+     * @return OS security patch update time on device.
      * 
      */
     private final String securityPatchTime;
     /**
-     * Serial Number of device. Example: HT82V1A01076.
+     * @return Serial Number of device. Example: HT82V1A01076.
      * 
      */
     private final String serialNumber;
     /**
-     * WiFi MAC addresses of device.
+     * @return WiFi MAC addresses of device.
      * 
      */
     private final List<String> wifiMacAddresses;
@@ -214,198 +214,198 @@ public final class GetDeviceResult {
     }
 
     /**
-     * Attributes specific to Android devices.
+     * @return Attributes specific to Android devices.
      * 
-    */
+     */
     public GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse androidSpecificAttributes() {
         return this.androidSpecificAttributes;
     }
     /**
-     * Asset tag of the device.
+     * @return Asset tag of the device.
      * 
-    */
+     */
     public String assetTag() {
         return this.assetTag;
     }
     /**
-     * Baseband version of the device.
+     * @return Baseband version of the device.
      * 
-    */
+     */
     public String basebandVersion() {
         return this.basebandVersion;
     }
     /**
-     * Device bootloader version. Example: 0.6.7.
+     * @return Device bootloader version. Example: 0.6.7.
      * 
-    */
+     */
     public String bootloaderVersion() {
         return this.bootloaderVersion;
     }
     /**
-     * Device brand. Example: Samsung.
+     * @return Device brand. Example: Samsung.
      * 
-    */
+     */
     public String brand() {
         return this.brand;
     }
     /**
-     * Build number of the device.
+     * @return Build number of the device.
      * 
-    */
+     */
     public String buildNumber() {
         return this.buildNumber;
     }
     /**
-     * Represents whether the Device is compromised.
+     * @return Represents whether the Device is compromised.
      * 
-    */
+     */
     public String compromisedState() {
         return this.compromisedState;
     }
     /**
-     * When the Company-Owned device was imported. This field is empty for BYOD devices.
+     * @return When the Company-Owned device was imported. This field is empty for BYOD devices.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Type of device.
+     * @return Type of device.
      * 
-    */
+     */
     public String deviceType() {
         return this.deviceType;
     }
     /**
-     * Whether developer options is enabled on device.
+     * @return Whether developer options is enabled on device.
      * 
-    */
+     */
     public Boolean enabledDeveloperOptions() {
         return this.enabledDeveloperOptions;
     }
     /**
-     * Whether USB debugging is enabled on device.
+     * @return Whether USB debugging is enabled on device.
      * 
-    */
+     */
     public Boolean enabledUsbDebugging() {
         return this.enabledUsbDebugging;
     }
     /**
-     * Device encryption state.
+     * @return Device encryption state.
      * 
-    */
+     */
     public String encryptionState() {
         return this.encryptionState;
     }
     /**
-     * IMEI number of device if GSM device; empty otherwise.
+     * @return IMEI number of device if GSM device; empty otherwise.
      * 
-    */
+     */
     public String imei() {
         return this.imei;
     }
     /**
-     * Kernel version of the device.
+     * @return Kernel version of the device.
      * 
-    */
+     */
     public String kernelVersion() {
         return this.kernelVersion;
     }
     /**
-     * Most recent time when device synced with this service.
+     * @return Most recent time when device synced with this service.
      * 
-    */
+     */
     public String lastSyncTime() {
         return this.lastSyncTime;
     }
     /**
-     * Management state of the device
+     * @return Management state of the device
      * 
-    */
+     */
     public String managementState() {
         return this.managementState;
     }
     /**
-     * Device manufacturer. Example: Motorola.
+     * @return Device manufacturer. Example: Motorola.
      * 
-    */
+     */
     public String manufacturer() {
         return this.manufacturer;
     }
     /**
-     * MEID number of device if CDMA device; empty otherwise.
+     * @return MEID number of device if CDMA device; empty otherwise.
      * 
-    */
+     */
     public String meid() {
         return this.meid;
     }
     /**
-     * Model name of device. Example: Pixel 3.
+     * @return Model name of device. Example: Pixel 3.
      * 
-    */
+     */
     public String model() {
         return this.model;
     }
     /**
-     * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device}`, where device is the unique id assigned to the Device.
+     * @return [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device}`, where device is the unique id assigned to the Device.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Mobile or network operator of device, if available.
+     * @return Mobile or network operator of device, if available.
      * 
-    */
+     */
     public String networkOperator() {
         return this.networkOperator;
     }
     /**
-     * OS version of the device. Example: Android 8.1.0.
+     * @return OS version of the device. Example: Android 8.1.0.
      * 
-    */
+     */
     public String osVersion() {
         return this.osVersion;
     }
     /**
-     * Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account&#39;s domain has only one account. Examples: &#34;com.example&#34;, &#34;xyz.com&#34;.
+     * @return Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account&#39;s domain has only one account. Examples: &#34;com.example&#34;, &#34;xyz.com&#34;.
      * 
-    */
+     */
     public List<String> otherAccounts() {
         return this.otherAccounts;
     }
     /**
-     * Whether the device is owned by the company or an individual
+     * @return Whether the device is owned by the company or an individual
      * 
-    */
+     */
     public String ownerType() {
         return this.ownerType;
     }
     /**
-     * OS release version. Example: 6.0.
+     * @return OS release version. Example: 6.0.
      * 
-    */
+     */
     public String releaseVersion() {
         return this.releaseVersion;
     }
     /**
-     * OS security patch update time on device.
+     * @return OS security patch update time on device.
      * 
-    */
+     */
     public String securityPatchTime() {
         return this.securityPatchTime;
     }
     /**
-     * Serial Number of device. Example: HT82V1A01076.
+     * @return Serial Number of device. Example: HT82V1A01076.
      * 
-    */
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
     /**
-     * WiFi MAC addresses of device.
+     * @return WiFi MAC addresses of device.
      * 
-    */
+     */
     public List<String> wifiMacAddresses() {
         return this.wifiMacAddresses;
     }

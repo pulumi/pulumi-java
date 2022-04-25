@@ -24,6 +24,10 @@ public final class PublicKeyCertificateResponse extends com.pulumi.resources.Inv
     @Import(name="certificate", required=true)
     private String certificate;
 
+    /**
+     * @return The certificate data.
+     * 
+     */
     public String certificate() {
         return this.certificate;
     }
@@ -35,6 +39,10 @@ public final class PublicKeyCertificateResponse extends com.pulumi.resources.Inv
     @Import(name="format", required=true)
     private String format;
 
+    /**
+     * @return The certificate format.
+     * 
+     */
     public String format() {
         return this.format;
     }
@@ -46,6 +54,10 @@ public final class PublicKeyCertificateResponse extends com.pulumi.resources.Inv
     @Import(name="x509Details", required=true)
     private X509CertificateDetailsResponse x509Details;
 
+    /**
+     * @return [Output only] The certificate details. Used only for X.509 certificates.
+     * 
+     */
     public X509CertificateDetailsResponse x509Details() {
         return this.x509Details;
     }
@@ -76,16 +88,34 @@ public final class PublicKeyCertificateResponse extends com.pulumi.resources.Inv
             $ = new PublicKeyCertificateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificate The certificate data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param format The certificate format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param x509Details [Output only] The certificate details. Used only for X.509 certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509Details(X509CertificateDetailsResponse x509Details) {
             $.x509Details = x509Details;
             return this;

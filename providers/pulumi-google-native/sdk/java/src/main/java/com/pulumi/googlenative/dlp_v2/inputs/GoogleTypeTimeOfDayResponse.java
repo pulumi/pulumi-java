@@ -23,6 +23,10 @@ public final class GoogleTypeTimeOfDayResponse extends com.pulumi.resources.Invo
     @Import(name="hours", required=true)
     private Integer hours;
 
+    /**
+     * @return Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value &#34;24:00:00&#34; for scenarios like business closing time.
+     * 
+     */
     public Integer hours() {
         return this.hours;
     }
@@ -34,6 +38,10 @@ public final class GoogleTypeTimeOfDayResponse extends com.pulumi.resources.Invo
     @Import(name="minutes", required=true)
     private Integer minutes;
 
+    /**
+     * @return Minutes of hour of day. Must be from 0 to 59.
+     * 
+     */
     public Integer minutes() {
         return this.minutes;
     }
@@ -45,6 +53,10 @@ public final class GoogleTypeTimeOfDayResponse extends com.pulumi.resources.Invo
     @Import(name="nanos", required=true)
     private Integer nanos;
 
+    /**
+     * @return Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+     * 
+     */
     public Integer nanos() {
         return this.nanos;
     }
@@ -56,6 +68,10 @@ public final class GoogleTypeTimeOfDayResponse extends com.pulumi.resources.Invo
     @Import(name="seconds", required=true)
     private Integer seconds;
 
+    /**
+     * @return Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
+     * 
+     */
     public Integer seconds() {
         return this.seconds;
     }
@@ -87,21 +103,45 @@ public final class GoogleTypeTimeOfDayResponse extends com.pulumi.resources.Invo
             $ = new GoogleTypeTimeOfDayResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hours Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value &#34;24:00:00&#34; for scenarios like business closing time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(Integer hours) {
             $.hours = hours;
             return this;
         }
 
+        /**
+         * @param minutes Minutes of hour of day. Must be from 0 to 59.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(Integer minutes) {
             $.minutes = minutes;
             return this;
         }
 
+        /**
+         * @param nanos Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nanos(Integer nanos) {
             $.nanos = nanos;
             return this;
         }
 
+        /**
+         * @param seconds Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seconds(Integer seconds) {
             $.seconds = seconds;
             return this;

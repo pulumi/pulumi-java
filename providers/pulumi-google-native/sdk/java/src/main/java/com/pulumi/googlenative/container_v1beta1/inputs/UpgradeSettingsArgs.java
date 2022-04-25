@@ -22,6 +22,10 @@ public final class UpgradeSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="maxSurge")
     private @Nullable Output<Integer> maxSurge;
 
+    /**
+     * @return The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.
+     * 
+     */
     public Optional<Output<Integer>> maxSurge() {
         return Optional.ofNullable(this.maxSurge);
     }
@@ -33,6 +37,10 @@ public final class UpgradeSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="maxUnavailable")
     private @Nullable Output<Integer> maxUnavailable;
 
+    /**
+     * @return The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.
+     * 
+     */
     public Optional<Output<Integer>> maxUnavailable() {
         return Optional.ofNullable(this.maxUnavailable);
     }
@@ -62,20 +70,44 @@ public final class UpgradeSettingsArgs extends com.pulumi.resources.ResourceArgs
             $ = new UpgradeSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxSurge The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSurge(@Nullable Output<Integer> maxSurge) {
             $.maxSurge = maxSurge;
             return this;
         }
 
+        /**
+         * @param maxSurge The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSurge(Integer maxSurge) {
             return maxSurge(Output.of(maxSurge));
         }
 
+        /**
+         * @param maxUnavailable The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnavailable(@Nullable Output<Integer> maxUnavailable) {
             $.maxUnavailable = maxUnavailable;
             return this;
         }
 
+        /**
+         * @param maxUnavailable The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnavailable(Integer maxUnavailable) {
             return maxUnavailable(Output.of(maxUnavailable));
         }

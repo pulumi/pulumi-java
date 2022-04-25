@@ -22,6 +22,10 @@ public final class ReferenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. A human-readable description of this reference.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class ReferenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +66,10 @@ public final class ReferenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="refers", required=true)
     private Output<String> refers;
 
+    /**
+     * @return The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
+     * 
+     */
     public Output<String> refers() {
         return this.refers;
     }
@@ -69,6 +81,10 @@ public final class ReferenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceType")
     private @Nullable Output<String> resourceType;
 
+    /**
+     * @return The type of resource referred to by this reference. Valid values are &#39;KeyStore&#39; or &#39;TrustStore&#39;.
+     * 
+     */
     public Optional<Output<String>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -102,11 +118,23 @@ public final class ReferenceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. A human-readable description of this reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. A human-readable description of this reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -120,11 +148,23 @@ public final class ReferenceArgs extends com.pulumi.resources.ResourceArgs {
             return environmentId(Output.of(environmentId));
         }
 
+        /**
+         * @param name The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -138,20 +178,44 @@ public final class ReferenceArgs extends com.pulumi.resources.ResourceArgs {
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param refers The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refers(Output<String> refers) {
             $.refers = refers;
             return this;
         }
 
+        /**
+         * @param refers The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refers(String refers) {
             return refers(Output.of(refers));
         }
 
+        /**
+         * @param resourceType The type of resource referred to by this reference. Valid values are &#39;KeyStore&#39; or &#39;TrustStore&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The type of resource referred to by this reference. Valid values are &#39;KeyStore&#39; or &#39;TrustStore&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }

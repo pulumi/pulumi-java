@@ -24,6 +24,10 @@ public final class PrivateConnectivityArgs extends com.pulumi.resources.Resource
     @Import(name="privateConnection", required=true)
     private Output<String> privateConnection;
 
+    /**
+     * @return A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
+     * 
+     */
     public Output<String> privateConnection() {
         return this.privateConnection;
     }
@@ -52,11 +56,23 @@ public final class PrivateConnectivityArgs extends com.pulumi.resources.Resource
             $ = new PrivateConnectivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateConnection A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateConnection(Output<String> privateConnection) {
             $.privateConnection = privateConnection;
             return this;
         }
 
+        /**
+         * @param privateConnection A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateConnection(String privateConnection) {
             return privateConnection(Output.of(privateConnection));
         }

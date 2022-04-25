@@ -23,6 +23,10 @@ public final class GoogleCloudApigeeV1AttributeResponse extends com.pulumi.resou
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return API key of the attribute.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudApigeeV1AttributeResponse extends com.pulumi.resou
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Value of the attribute.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudApigeeV1AttributeResponse extends com.pulumi.resou
             $ = new GoogleCloudApigeeV1AttributeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name API key of the attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value Value of the attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

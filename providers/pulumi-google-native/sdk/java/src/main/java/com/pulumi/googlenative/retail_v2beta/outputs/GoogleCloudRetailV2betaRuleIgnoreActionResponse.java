@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse {
     /**
-     * Terms to ignore in the search query.
+     * @return Terms to ignore in the search query.
      * 
      */
     private final List<String> ignoreTerms;
@@ -22,9 +22,9 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse {
     }
 
     /**
-     * Terms to ignore in the search query.
+     * @return Terms to ignore in the search query.
      * 
-    */
+     */
     public List<String> ignoreTerms() {
         return this.ignoreTerms;
     }

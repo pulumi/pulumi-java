@@ -23,6 +23,10 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
     @Import(name="diskSizeGb")
     private @Nullable Output<String> diskSizeGb;
 
+    /**
+     * @return Specifies the size of the disk in base-2 GB.
+     * 
+     */
     public Optional<Output<String>> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
@@ -34,6 +38,10 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
     @Import(name="interface")
     private @Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> interface_;
 
+    /**
+     * @return Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
+     * 
+     */
     public Optional<Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface>> interface_() {
         return Optional.ofNullable(this.interface_);
     }
@@ -63,20 +71,44 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
             $ = new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeGb Specifies the size of the disk in base-2 GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskSizeGb Specifies the size of the disk in base-2 GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(String diskSizeGb) {
             return diskSizeGb(Output.of(diskSizeGb));
         }
 
+        /**
+         * @param interface_ Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interface_(@Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> interface_) {
             $.interface_ = interface_;
             return this;
         }
 
+        /**
+         * @param interface_ Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interface_(AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface interface_) {
             return interface_(Output.of(interface_));
         }

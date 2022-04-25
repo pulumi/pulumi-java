@@ -25,6 +25,10 @@ public final class UpgradeOccurrenceResponse extends com.pulumi.resources.Invoke
     @Import(name="distribution", required=true)
     private UpgradeDistributionResponse distribution;
 
+    /**
+     * @return Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
+     * 
+     */
     public UpgradeDistributionResponse distribution() {
         return this.distribution;
     }
@@ -36,6 +40,10 @@ public final class UpgradeOccurrenceResponse extends com.pulumi.resources.Invoke
     @Import(name="package", required=true)
     private String package_;
 
+    /**
+     * @return Required - The package this Upgrade is for.
+     * 
+     */
     public String package_() {
         return this.package_;
     }
@@ -47,6 +55,10 @@ public final class UpgradeOccurrenceResponse extends com.pulumi.resources.Invoke
     @Import(name="parsedVersion", required=true)
     private VersionResponse parsedVersion;
 
+    /**
+     * @return Required - The version of the package in a machine + human readable form.
+     * 
+     */
     public VersionResponse parsedVersion() {
         return this.parsedVersion;
     }
@@ -77,16 +89,34 @@ public final class UpgradeOccurrenceResponse extends com.pulumi.resources.Invoke
             $ = new UpgradeOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distribution Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribution(UpgradeDistributionResponse distribution) {
             $.distribution = distribution;
             return this;
         }
 
+        /**
+         * @param package_ Required - The package this Upgrade is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder package_(String package_) {
             $.package_ = package_;
             return this;
         }
 
+        /**
+         * @param parsedVersion Required - The version of the package in a machine + human readable form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parsedVersion(VersionResponse parsedVersion) {
             $.parsedVersion = parsedVersion;
             return this;

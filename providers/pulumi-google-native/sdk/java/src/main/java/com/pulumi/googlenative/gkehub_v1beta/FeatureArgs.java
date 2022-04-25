@@ -31,6 +31,10 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return GCP labels for this Feature.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -49,6 +53,10 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="membershipSpecs")
     private @Nullable Output<Map<String,String>> membershipSpecs;
 
+    /**
+     * @return Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature&#39;s project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.
+     * 
+     */
     public Optional<Output<Map<String,String>>> membershipSpecs() {
         return Optional.ofNullable(this.membershipSpecs);
     }
@@ -74,6 +82,10 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spec")
     private @Nullable Output<CommonFeatureSpecArgs> spec;
 
+    /**
+     * @return Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+     * 
+     */
     public Optional<Output<CommonFeatureSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
@@ -117,11 +129,23 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
             return featureId(Output.of(featureId));
         }
 
+        /**
+         * @param labels GCP labels for this Feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels GCP labels for this Feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -135,11 +159,23 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param membershipSpecs Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature&#39;s project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membershipSpecs(@Nullable Output<Map<String,String>> membershipSpecs) {
             $.membershipSpecs = membershipSpecs;
             return this;
         }
 
+        /**
+         * @param membershipSpecs Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature&#39;s project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membershipSpecs(Map<String,String> membershipSpecs) {
             return membershipSpecs(Output.of(membershipSpecs));
         }
@@ -162,11 +198,23 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param spec Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(@Nullable Output<CommonFeatureSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(CommonFeatureSpecArgs spec) {
             return spec(Output.of(spec));
         }

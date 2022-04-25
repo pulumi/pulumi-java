@@ -28,6 +28,10 @@ public final class Hl7TypesConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type")
     private @Nullable Output<List<TypeArgs>> type;
 
+    /**
+     * @return The HL7v2 type definitions.
+     * 
+     */
     public Optional<Output<List<TypeArgs>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -39,6 +43,10 @@ public final class Hl7TypesConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="version")
     private @Nullable Output<List<VersionSourceArgs>> version;
 
+    /**
+     * @return The version selectors that this config applies to. A message must match ALL version sources to apply.
+     * 
+     */
     public Optional<Output<List<VersionSourceArgs>>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -68,28 +76,64 @@ public final class Hl7TypesConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new Hl7TypesConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The HL7v2 type definitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<List<TypeArgs>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The HL7v2 type definitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(List<TypeArgs> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The HL7v2 type definitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(TypeArgs... type) {
             return type(List.of(type));
         }
 
+        /**
+         * @param version The version selectors that this config applies to. A message must match ALL version sources to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<List<VersionSourceArgs>> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version selectors that this config applies to. A message must match ALL version sources to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(List<VersionSourceArgs> version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param version The version selectors that this config applies to. A message must match ALL version sources to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(VersionSourceArgs... version) {
             return version(List.of(version));
         }

@@ -24,6 +24,10 @@ public final class SpecificationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="androidTest", required=true)
     private AndroidTestResponse androidTest;
 
+    /**
+     * @return An Android mobile test execution specification.
+     * 
+     */
     public AndroidTestResponse androidTest() {
         return this.androidTest;
     }
@@ -35,6 +39,10 @@ public final class SpecificationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="iosTest", required=true)
     private IosTestResponse iosTest;
 
+    /**
+     * @return An iOS mobile test execution specification.
+     * 
+     */
     public IosTestResponse iosTest() {
         return this.iosTest;
     }
@@ -64,11 +72,23 @@ public final class SpecificationResponse extends com.pulumi.resources.InvokeArgs
             $ = new SpecificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidTest An Android mobile test execution specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidTest(AndroidTestResponse androidTest) {
             $.androidTest = androidTest;
             return this;
         }
 
+        /**
+         * @param iosTest An iOS mobile test execution specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosTest(IosTestResponse iosTest) {
             $.iosTest = iosTest;
             return this;

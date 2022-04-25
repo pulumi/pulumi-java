@@ -25,6 +25,10 @@ public final class MysqlProfileResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="hostname", required=true)
     private String hostname;
 
+    /**
+     * @return Hostname for the MySQL connection.
+     * 
+     */
     public String hostname() {
         return this.hostname;
     }
@@ -36,6 +40,10 @@ public final class MysqlProfileResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return Input only. Password for the MySQL connection.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -47,6 +55,10 @@ public final class MysqlProfileResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return Port for the MySQL connection, default value is 3306.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -58,6 +70,10 @@ public final class MysqlProfileResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sslConfig", required=true)
     private MysqlSslConfigResponse sslConfig;
 
+    /**
+     * @return SSL configuration for the MySQL connection.
+     * 
+     */
     public MysqlSslConfigResponse sslConfig() {
         return this.sslConfig;
     }
@@ -69,6 +85,10 @@ public final class MysqlProfileResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return Username for the MySQL connection.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -101,26 +121,56 @@ public final class MysqlProfileResponse extends com.pulumi.resources.InvokeArgs 
             $ = new MysqlProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostname Hostname for the MySQL connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param password Input only. Password for the MySQL connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param port Port for the MySQL connection, default value is 3306.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param sslConfig SSL configuration for the MySQL connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslConfig(MysqlSslConfigResponse sslConfig) {
             $.sslConfig = sslConfig;
             return this;
         }
 
+        /**
+         * @param username Username for the MySQL connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

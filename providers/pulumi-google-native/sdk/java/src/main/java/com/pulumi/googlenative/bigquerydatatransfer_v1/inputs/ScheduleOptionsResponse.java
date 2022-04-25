@@ -24,6 +24,10 @@ public final class ScheduleOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="disableAutoScheduling", required=true)
     private Boolean disableAutoScheduling;
 
+    /**
+     * @return If true, automatic scheduling of data transfer runs for this configuration will be disabled. The runs can be started on ad-hoc basis using StartManualTransferRuns API. When automatic scheduling is disabled, the TransferConfig.schedule field will be ignored.
+     * 
+     */
     public Boolean disableAutoScheduling() {
         return this.disableAutoScheduling;
     }
@@ -35,6 +39,10 @@ public final class ScheduleOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return Defines time to stop scheduling transfer runs. A transfer run cannot be scheduled at or after the end time. The end time can be changed at any moment. The time when a data transfer can be trigerred manually is not limited by this option.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -46,6 +54,10 @@ public final class ScheduleOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Specifies time to start scheduling transfer runs. The first run will be scheduled at or after the start time according to a recurrence pattern defined in the schedule string. The start time can be changed at any moment. The time when a data transfer can be trigerred manually is not limited by this option.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -76,16 +88,34 @@ public final class ScheduleOptionsResponse extends com.pulumi.resources.InvokeAr
             $ = new ScheduleOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableAutoScheduling If true, automatic scheduling of data transfer runs for this configuration will be disabled. The runs can be started on ad-hoc basis using StartManualTransferRuns API. When automatic scheduling is disabled, the TransferConfig.schedule field will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableAutoScheduling(Boolean disableAutoScheduling) {
             $.disableAutoScheduling = disableAutoScheduling;
             return this;
         }
 
+        /**
+         * @param endTime Defines time to stop scheduling transfer runs. A transfer run cannot be scheduled at or after the end time. The end time can be changed at any moment. The time when a data transfer can be trigerred manually is not limited by this option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param startTime Specifies time to start scheduling transfer runs. The first run will be scheduled at or after the start time according to a recurrence pattern defined in the schedule string. The start time can be changed at any moment. The time when a data transfer can be trigerred manually is not limited by this option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

@@ -15,32 +15,32 @@ import java.util.Objects;
 @CustomType
 public final class MembershipEndpointResponse {
     /**
-     * Optional. Specific information for a Google Edge cluster.
+     * @return Optional. Specific information for a Google Edge cluster.
      * 
      */
     private final EdgeClusterResponse edgeCluster;
     /**
-     * Optional. Specific information for a GKE-on-GCP cluster.
+     * @return Optional. Specific information for a GKE-on-GCP cluster.
      * 
      */
     private final GkeClusterResponse gkeCluster;
     /**
-     * Useful Kubernetes-specific metadata.
+     * @return Useful Kubernetes-specific metadata.
      * 
      */
     private final KubernetesMetadataResponse kubernetesMetadata;
     /**
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.
+     * @return Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.
      * 
      */
     private final KubernetesResourceResponse kubernetesResource;
     /**
-     * Optional. Specific information for a GKE Multi-Cloud cluster.
+     * @return Optional. Specific information for a GKE Multi-Cloud cluster.
      * 
      */
     private final MultiCloudClusterResponse multiCloudCluster;
     /**
-     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil &#34;type&#34; instead.
+     * @return Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil &#34;type&#34; instead.
      * 
      */
     private final OnPremClusterResponse onPremCluster;
@@ -62,44 +62,44 @@ public final class MembershipEndpointResponse {
     }
 
     /**
-     * Optional. Specific information for a Google Edge cluster.
+     * @return Optional. Specific information for a Google Edge cluster.
      * 
-    */
+     */
     public EdgeClusterResponse edgeCluster() {
         return this.edgeCluster;
     }
     /**
-     * Optional. Specific information for a GKE-on-GCP cluster.
+     * @return Optional. Specific information for a GKE-on-GCP cluster.
      * 
-    */
+     */
     public GkeClusterResponse gkeCluster() {
         return this.gkeCluster;
     }
     /**
-     * Useful Kubernetes-specific metadata.
+     * @return Useful Kubernetes-specific metadata.
      * 
-    */
+     */
     public KubernetesMetadataResponse kubernetesMetadata() {
         return this.kubernetesMetadata;
     }
     /**
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.
+     * @return Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.
      * 
-    */
+     */
     public KubernetesResourceResponse kubernetesResource() {
         return this.kubernetesResource;
     }
     /**
-     * Optional. Specific information for a GKE Multi-Cloud cluster.
+     * @return Optional. Specific information for a GKE Multi-Cloud cluster.
      * 
-    */
+     */
     public MultiCloudClusterResponse multiCloudCluster() {
         return this.multiCloudCluster;
     }
     /**
-     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil &#34;type&#34; instead.
+     * @return Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil &#34;type&#34; instead.
      * 
-    */
+     */
     public OnPremClusterResponse onPremCluster() {
         return this.onPremCluster;
     }

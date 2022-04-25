@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class TextResponse {
     /**
-     * The text content to be displayed.
+     * @return The text content to be displayed.
      * 
      */
     private final String content;
     /**
-     * How the text content is formatted.
+     * @return How the text content is formatted.
      * 
      */
     private final String format;
@@ -29,16 +29,16 @@ public final class TextResponse {
     }
 
     /**
-     * The text content to be displayed.
+     * @return The text content to be displayed.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }
     /**
-     * How the text content is formatted.
+     * @return How the text content is formatted.
      * 
-    */
+     */
     public String format() {
         return this.format;
     }

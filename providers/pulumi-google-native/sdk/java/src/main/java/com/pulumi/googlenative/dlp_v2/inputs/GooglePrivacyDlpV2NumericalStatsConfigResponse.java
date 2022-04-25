@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigResponse extends com.pu
     @Import(name="field", required=true)
     private GooglePrivacyDlpV2FieldIdResponse field;
 
+    /**
+     * @return Field to compute numerical stats on. Supported types are integer, float, date, datetime, timestamp, time.
+     * 
+     */
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigResponse extends com.pu
             $ = new GooglePrivacyDlpV2NumericalStatsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field Field to compute numerical stats on. Supported types are integer, float, date, datetime, timestamp, time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             $.field = field;
             return this;

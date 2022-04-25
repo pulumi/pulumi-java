@@ -24,6 +24,10 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
     @Import(name="appInitialActivity", required=true)
     private String appInitialActivity;
 
+    /**
+     * @return The initial activity that should be used to start the app. Optional
+     * 
+     */
     public String appInitialActivity() {
         return this.appInitialActivity;
     }
@@ -35,6 +39,10 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
     @Import(name="bootstrapPackageId", required=true)
     private String bootstrapPackageId;
 
+    /**
+     * @return The java package for the bootstrap. Optional
+     * 
+     */
     public String bootstrapPackageId() {
         return this.bootstrapPackageId;
     }
@@ -46,6 +54,10 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
     @Import(name="bootstrapRunnerClass", required=true)
     private String bootstrapRunnerClass;
 
+    /**
+     * @return The runner class for the bootstrap. Optional
+     * 
+     */
     public String bootstrapRunnerClass() {
         return this.bootstrapRunnerClass;
     }
@@ -57,6 +69,10 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
     @Import(name="maxDepth", required=true)
     private Integer maxDepth;
 
+    /**
+     * @return The max depth of the traversal stack Robo can explore. Optional
+     * 
+     */
     public Integer maxDepth() {
         return this.maxDepth;
     }
@@ -68,6 +84,10 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
     @Import(name="maxSteps", required=true)
     private Integer maxSteps;
 
+    /**
+     * @return The max number of steps/actions Robo can execute. Default is no limit (0). Optional
+     * 
+     */
     public Integer maxSteps() {
         return this.maxSteps;
     }
@@ -100,26 +120,56 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
             $ = new AndroidRoboTestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appInitialActivity The initial activity that should be used to start the app. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder appInitialActivity(String appInitialActivity) {
             $.appInitialActivity = appInitialActivity;
             return this;
         }
 
+        /**
+         * @param bootstrapPackageId The java package for the bootstrap. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapPackageId(String bootstrapPackageId) {
             $.bootstrapPackageId = bootstrapPackageId;
             return this;
         }
 
+        /**
+         * @param bootstrapRunnerClass The runner class for the bootstrap. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapRunnerClass(String bootstrapRunnerClass) {
             $.bootstrapRunnerClass = bootstrapRunnerClass;
             return this;
         }
 
+        /**
+         * @param maxDepth The max depth of the traversal stack Robo can explore. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDepth(Integer maxDepth) {
             $.maxDepth = maxDepth;
             return this;
         }
 
+        /**
+         * @param maxSteps The max number of steps/actions Robo can execute. Default is no limit (0). Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSteps(Integer maxSteps) {
             $.maxSteps = maxSteps;
             return this;

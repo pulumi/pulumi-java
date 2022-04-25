@@ -26,6 +26,10 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
     @Import(name="certChallengeDiscoveredTxt", required=true)
     private List<String> certChallengeDiscoveredTxt;
 
+    /**
+     * @return The TXT records (for the certificate challenge) that were found at the last DNS fetch.
+     * 
+     */
     public List<String> certChallengeDiscoveredTxt() {
         return this.certChallengeDiscoveredTxt;
     }
@@ -37,6 +41,10 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
     @Import(name="certChallengeDns", required=true)
     private CertDnsChallengeResponse certChallengeDns;
 
+    /**
+     * @return The DNS challenge for generating a certificate.
+     * 
+     */
     public CertDnsChallengeResponse certChallengeDns() {
         return this.certChallengeDns;
     }
@@ -48,6 +56,10 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
     @Import(name="certChallengeHttp", required=true)
     private CertHttpChallengeResponse certChallengeHttp;
 
+    /**
+     * @return The HTTP challenge for generating a certificate.
+     * 
+     */
     public CertHttpChallengeResponse certChallengeHttp() {
         return this.certChallengeHttp;
     }
@@ -59,6 +71,10 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
     @Import(name="certStatus", required=true)
     private String certStatus;
 
+    /**
+     * @return The certificate provisioning status; updated when Firebase Hosting provisions an SSL certificate for the domain.
+     * 
+     */
     public String certStatus() {
         return this.certStatus;
     }
@@ -70,6 +86,10 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
     @Import(name="discoveredIps", required=true)
     private List<String> discoveredIps;
 
+    /**
+     * @return The IPs found at the last DNS fetch.
+     * 
+     */
     public List<String> discoveredIps() {
         return this.discoveredIps;
     }
@@ -81,6 +101,10 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
     @Import(name="dnsFetchTime", required=true)
     private String dnsFetchTime;
 
+    /**
+     * @return The time at which the last DNS fetch occurred.
+     * 
+     */
     public String dnsFetchTime() {
         return this.dnsFetchTime;
     }
@@ -92,6 +116,10 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
     @Import(name="dnsStatus", required=true)
     private String dnsStatus;
 
+    /**
+     * @return The DNS record match status as of the last DNS fetch.
+     * 
+     */
     public String dnsStatus() {
         return this.dnsStatus;
     }
@@ -103,6 +131,10 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
     @Import(name="expectedIps", required=true)
     private List<String> expectedIps;
 
+    /**
+     * @return The list of IPs to which the domain is expected to resolve.
+     * 
+     */
     public List<String> expectedIps() {
         return this.expectedIps;
     }
@@ -138,54 +170,120 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
             $ = new DomainProvisioningResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certChallengeDiscoveredTxt The TXT records (for the certificate challenge) that were found at the last DNS fetch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certChallengeDiscoveredTxt(List<String> certChallengeDiscoveredTxt) {
             $.certChallengeDiscoveredTxt = certChallengeDiscoveredTxt;
             return this;
         }
 
+        /**
+         * @param certChallengeDiscoveredTxt The TXT records (for the certificate challenge) that were found at the last DNS fetch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certChallengeDiscoveredTxt(String... certChallengeDiscoveredTxt) {
             return certChallengeDiscoveredTxt(List.of(certChallengeDiscoveredTxt));
         }
 
+        /**
+         * @param certChallengeDns The DNS challenge for generating a certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certChallengeDns(CertDnsChallengeResponse certChallengeDns) {
             $.certChallengeDns = certChallengeDns;
             return this;
         }
 
+        /**
+         * @param certChallengeHttp The HTTP challenge for generating a certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certChallengeHttp(CertHttpChallengeResponse certChallengeHttp) {
             $.certChallengeHttp = certChallengeHttp;
             return this;
         }
 
+        /**
+         * @param certStatus The certificate provisioning status; updated when Firebase Hosting provisions an SSL certificate for the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certStatus(String certStatus) {
             $.certStatus = certStatus;
             return this;
         }
 
+        /**
+         * @param discoveredIps The IPs found at the last DNS fetch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoveredIps(List<String> discoveredIps) {
             $.discoveredIps = discoveredIps;
             return this;
         }
 
+        /**
+         * @param discoveredIps The IPs found at the last DNS fetch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoveredIps(String... discoveredIps) {
             return discoveredIps(List.of(discoveredIps));
         }
 
+        /**
+         * @param dnsFetchTime The time at which the last DNS fetch occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsFetchTime(String dnsFetchTime) {
             $.dnsFetchTime = dnsFetchTime;
             return this;
         }
 
+        /**
+         * @param dnsStatus The DNS record match status as of the last DNS fetch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsStatus(String dnsStatus) {
             $.dnsStatus = dnsStatus;
             return this;
         }
 
+        /**
+         * @param expectedIps The list of IPs to which the domain is expected to resolve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedIps(List<String> expectedIps) {
             $.expectedIps = expectedIps;
             return this;
         }
 
+        /**
+         * @param expectedIps The list of IPs to which the domain is expected to resolve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedIps(String... expectedIps) {
             return expectedIps(List.of(expectedIps));
         }

@@ -27,6 +27,10 @@ public final class PublicKeyCredentialArgs extends com.pulumi.resources.Resource
     @Import(name="format")
     private @Nullable Output<PublicKeyCredentialFormat> format;
 
+    /**
+     * @return The format of the key.
+     * 
+     */
     public Optional<Output<PublicKeyCredentialFormat>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -38,6 +42,10 @@ public final class PublicKeyCredentialArgs extends com.pulumi.resources.Resource
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return The key data.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -67,20 +75,44 @@ public final class PublicKeyCredentialArgs extends com.pulumi.resources.Resource
             $ = new PublicKeyCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param format The format of the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<PublicKeyCredentialFormat> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format The format of the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(PublicKeyCredentialFormat format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param key The key data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The key data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }

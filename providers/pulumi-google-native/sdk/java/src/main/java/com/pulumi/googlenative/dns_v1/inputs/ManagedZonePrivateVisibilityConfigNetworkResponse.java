@@ -26,6 +26,10 @@ public final class ManagedZonePrivateVisibilityConfigNetworkResponse extends com
     @Import(name="networkUrl", required=true)
     private String networkUrl;
 
+    /**
+     * @return The fully qualified URL of the VPC network to bind to. Format this URL like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+     * 
+     */
     public String networkUrl() {
         return this.networkUrl;
     }
@@ -60,6 +64,12 @@ public final class ManagedZonePrivateVisibilityConfigNetworkResponse extends com
             return this;
         }
 
+        /**
+         * @param networkUrl The fully qualified URL of the VPC network to bind to. Format this URL like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUrl(String networkUrl) {
             $.networkUrl = networkUrl;
             return this;

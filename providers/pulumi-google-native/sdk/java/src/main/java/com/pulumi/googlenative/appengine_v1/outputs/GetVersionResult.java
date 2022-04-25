@@ -29,187 +29,187 @@ import java.util.Objects;
 @CustomType
 public final class GetVersionResult {
     /**
-     * Serving configuration for Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/).Only returned in GET requests if view=FULL is set.
+     * @return Serving configuration for Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/).Only returned in GET requests if view=FULL is set.
      * 
      */
     private final ApiConfigHandlerResponse apiConfig;
     /**
-     * Automatic scaling is based on request rate, response latencies, and other application metrics. Instances are dynamically created and destroyed as needed in order to handle traffic.
+     * @return Automatic scaling is based on request rate, response latencies, and other application metrics. Instances are dynamically created and destroyed as needed in order to handle traffic.
      * 
      */
     private final AutomaticScalingResponse automaticScaling;
     /**
-     * A service with basic scaling will create an instance when the application receives a request. The instance will be turned down when the app becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
+     * @return A service with basic scaling will create an instance when the application receives a request. The instance will be turned down when the app becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
      * 
      */
     private final BasicScalingResponse basicScaling;
     /**
-     * Metadata settings that are supplied to this version to enable beta runtime features.
+     * @return Metadata settings that are supplied to this version to enable beta runtime features.
      * 
      */
     private final Map<String,String> betaSettings;
     /**
-     * Environment variables available to the build environment.Only returned in GET requests if view=FULL is set.
+     * @return Environment variables available to the build environment.Only returned in GET requests if view=FULL is set.
      * 
      */
     private final Map<String,String> buildEnvVariables;
     /**
-     * Time that this version was created.
+     * @return Time that this version was created.
      * 
      */
     private final String createTime;
     /**
-     * Email address of the user who created this version.
+     * @return Email address of the user who created this version.
      * 
      */
     private final String createdBy;
     /**
-     * Duration that static files should be cached by web proxies and browsers. Only applicable if the corresponding StaticFilesHandler (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#StaticFilesHandler) does not specify its own expiration time.Only returned in GET requests if view=FULL is set.
+     * @return Duration that static files should be cached by web proxies and browsers. Only applicable if the corresponding StaticFilesHandler (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#StaticFilesHandler) does not specify its own expiration time.Only returned in GET requests if view=FULL is set.
      * 
      */
     private final String defaultExpiration;
     /**
-     * Code and application artifacts that make up this version.Only returned in GET requests if view=FULL is set.
+     * @return Code and application artifacts that make up this version.Only returned in GET requests if view=FULL is set.
      * 
      */
     private final DeploymentResponse deployment;
     /**
-     * Total size in bytes of all the files that are included in this version and currently hosted on the App Engine disk.
+     * @return Total size in bytes of all the files that are included in this version and currently hosted on the App Engine disk.
      * 
      */
     private final String diskUsageBytes;
     /**
-     * Cloud Endpoints configuration.If endpoints_api_service is set, the Cloud Endpoints Extensible Service Proxy will be provided to serve the API implemented by the app.
+     * @return Cloud Endpoints configuration.If endpoints_api_service is set, the Cloud Endpoints Extensible Service Proxy will be provided to serve the API implemented by the app.
      * 
      */
     private final EndpointsApiServiceResponse endpointsApiService;
     /**
-     * The entrypoint for the application.
+     * @return The entrypoint for the application.
      * 
      */
     private final EntrypointResponse entrypoint;
     /**
-     * App Engine execution environment for this version.Defaults to standard.
+     * @return App Engine execution environment for this version.Defaults to standard.
      * 
      */
     private final String env;
     /**
-     * Environment variables available to the application.Only returned in GET requests if view=FULL is set.
+     * @return Environment variables available to the application.Only returned in GET requests if view=FULL is set.
      * 
      */
     private final Map<String,String> envVariables;
     /**
-     * Custom static error pages. Limited to 10KB per page.Only returned in GET requests if view=FULL is set.
+     * @return Custom static error pages. Limited to 10KB per page.Only returned in GET requests if view=FULL is set.
      * 
      */
     private final List<ErrorHandlerResponse> errorHandlers;
     /**
-     * An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the request and other request handlers are not attempted.Only returned in GET requests if view=FULL is set.
+     * @return An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the request and other request handlers are not attempted.Only returned in GET requests if view=FULL is set.
      * 
      */
     private final List<UrlMapResponse> handlers;
     /**
-     * Configures health checking for instances. Unhealthy instances are stopped and replaced with new instances. Only applicable in the App Engine flexible environment.Only returned in GET requests if view=FULL is set.
+     * @return Configures health checking for instances. Unhealthy instances are stopped and replaced with new instances. Only applicable in the App Engine flexible environment.Only returned in GET requests if view=FULL is set.
      * 
      */
     private final HealthCheckResponse healthCheck;
     /**
-     * Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+     * @return Before an application can receive email or XMPP messages, the application must be configured to enable the service.
      * 
      */
     private final List<String> inboundServices;
     /**
-     * Instance class that is used to run this version. Valid values are: AutomaticScaling: F1, F2, F4, F4_1G ManualScaling or BasicScaling: B1, B2, B4, B8, B4_1GDefaults to F1 for AutomaticScaling and B1 for ManualScaling or BasicScaling.
+     * @return Instance class that is used to run this version. Valid values are: AutomaticScaling: F1, F2, F4, F4_1G ManualScaling or BasicScaling: B1, B2, B4, B8, B4_1GDefaults to F1 for AutomaticScaling and B1 for ManualScaling or BasicScaling.
      * 
      */
     private final String instanceClass;
     /**
-     * Configuration for third-party Python runtime libraries that are required by the application.Only returned in GET requests if view=FULL is set.
+     * @return Configuration for third-party Python runtime libraries that are required by the application.Only returned in GET requests if view=FULL is set.
      * 
      */
     private final List<LibraryResponse> libraries;
     /**
-     * Configures liveness health checking for instances. Unhealthy instances are stopped and replaced with new instancesOnly returned in GET requests if view=FULL is set.
+     * @return Configures liveness health checking for instances. Unhealthy instances are stopped and replaced with new instancesOnly returned in GET requests if view=FULL is set.
      * 
      */
     private final LivenessCheckResponse livenessCheck;
     /**
-     * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as &#34;backends&#34;.
+     * @return A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as &#34;backends&#34;.
      * 
      */
     private final ManualScalingResponse manualScaling;
     /**
-     * Full path to the Version resource in the API. Example: apps/myapp/services/default/versions/v1.
+     * @return Full path to the Version resource in the API. Example: apps/myapp/services/default/versions/v1.
      * 
      */
     private final String name;
     /**
-     * Extra network settings. Only applicable in the App Engine flexible environment.
+     * @return Extra network settings. Only applicable in the App Engine flexible environment.
      * 
      */
     private final NetworkResponse network;
     /**
-     * Files that match this pattern will not be built into this version. Only applicable for Go runtimes.Only returned in GET requests if view=FULL is set.
+     * @return Files that match this pattern will not be built into this version. Only applicable for Go runtimes.Only returned in GET requests if view=FULL is set.
      * 
      */
     private final String nobuildFilesRegex;
     /**
-     * Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.Only returned in GET requests if view=FULL is set.
+     * @return Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.Only returned in GET requests if view=FULL is set.
      * 
      */
     private final ReadinessCheckResponse readinessCheck;
     /**
-     * Machine resources for this version. Only applicable in the App Engine flexible environment.
+     * @return Machine resources for this version. Only applicable in the App Engine flexible environment.
      * 
      */
     private final ResourcesResponse resources;
     /**
-     * Desired runtime. Example: python27.
+     * @return Desired runtime. Example: python27.
      * 
      */
     private final String runtime;
     /**
-     * The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
+     * @return The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
      * 
      */
     private final String runtimeApiVersion;
     /**
-     * The channel of the runtime to use. Only available for some runtimes. Defaults to the default channel.
+     * @return The channel of the runtime to use. Only available for some runtimes. Defaults to the default channel.
      * 
      */
     private final String runtimeChannel;
     /**
-     * The path or name of the app&#39;s main executable.
+     * @return The path or name of the app&#39;s main executable.
      * 
      */
     private final String runtimeMainExecutablePath;
     /**
-     * The identity that the deployed version will run as. Admin API will use the App Engine Appspot service account as default if this field is neither provided in app.yaml file nor through CLI flag.
+     * @return The identity that the deployed version will run as. Admin API will use the App Engine Appspot service account as default if this field is neither provided in app.yaml file nor through CLI flag.
      * 
      */
     private final String serviceAccount;
     /**
-     * Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to SERVING.
+     * @return Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to SERVING.
      * 
      */
     private final String servingStatus;
     /**
-     * Whether multiple requests can be dispatched to this version at once.
+     * @return Whether multiple requests can be dispatched to this version at once.
      * 
      */
     private final Boolean threadsafe;
     /**
-     * Serving URL for this version. Example: &#34;https://myversion-dot-myservice-dot-myapp.appspot.com&#34;
+     * @return Serving URL for this version. Example: &#34;https://myversion-dot-myservice-dot-myapp.appspot.com&#34;
      * 
      */
     private final String versionUrl;
     /**
-     * Whether to deploy this version in a container on a virtual machine.
+     * @return Whether to deploy this version in a container on a virtual machine.
      * 
      */
     private final Boolean vm;
     /**
-     * Enables VPC connectivity for standard apps.
+     * @return Enables VPC connectivity for standard apps.
      * 
      */
     private final VpcAccessConnectorResponse vpcAccessConnector;
@@ -293,261 +293,261 @@ public final class GetVersionResult {
     }
 
     /**
-     * Serving configuration for Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/).Only returned in GET requests if view=FULL is set.
+     * @return Serving configuration for Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/).Only returned in GET requests if view=FULL is set.
      * 
-    */
+     */
     public ApiConfigHandlerResponse apiConfig() {
         return this.apiConfig;
     }
     /**
-     * Automatic scaling is based on request rate, response latencies, and other application metrics. Instances are dynamically created and destroyed as needed in order to handle traffic.
+     * @return Automatic scaling is based on request rate, response latencies, and other application metrics. Instances are dynamically created and destroyed as needed in order to handle traffic.
      * 
-    */
+     */
     public AutomaticScalingResponse automaticScaling() {
         return this.automaticScaling;
     }
     /**
-     * A service with basic scaling will create an instance when the application receives a request. The instance will be turned down when the app becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
+     * @return A service with basic scaling will create an instance when the application receives a request. The instance will be turned down when the app becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
      * 
-    */
+     */
     public BasicScalingResponse basicScaling() {
         return this.basicScaling;
     }
     /**
-     * Metadata settings that are supplied to this version to enable beta runtime features.
+     * @return Metadata settings that are supplied to this version to enable beta runtime features.
      * 
-    */
+     */
     public Map<String,String> betaSettings() {
         return this.betaSettings;
     }
     /**
-     * Environment variables available to the build environment.Only returned in GET requests if view=FULL is set.
+     * @return Environment variables available to the build environment.Only returned in GET requests if view=FULL is set.
      * 
-    */
+     */
     public Map<String,String> buildEnvVariables() {
         return this.buildEnvVariables;
     }
     /**
-     * Time that this version was created.
+     * @return Time that this version was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Email address of the user who created this version.
+     * @return Email address of the user who created this version.
      * 
-    */
+     */
     public String createdBy() {
         return this.createdBy;
     }
     /**
-     * Duration that static files should be cached by web proxies and browsers. Only applicable if the corresponding StaticFilesHandler (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#StaticFilesHandler) does not specify its own expiration time.Only returned in GET requests if view=FULL is set.
+     * @return Duration that static files should be cached by web proxies and browsers. Only applicable if the corresponding StaticFilesHandler (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#StaticFilesHandler) does not specify its own expiration time.Only returned in GET requests if view=FULL is set.
      * 
-    */
+     */
     public String defaultExpiration() {
         return this.defaultExpiration;
     }
     /**
-     * Code and application artifacts that make up this version.Only returned in GET requests if view=FULL is set.
+     * @return Code and application artifacts that make up this version.Only returned in GET requests if view=FULL is set.
      * 
-    */
+     */
     public DeploymentResponse deployment() {
         return this.deployment;
     }
     /**
-     * Total size in bytes of all the files that are included in this version and currently hosted on the App Engine disk.
+     * @return Total size in bytes of all the files that are included in this version and currently hosted on the App Engine disk.
      * 
-    */
+     */
     public String diskUsageBytes() {
         return this.diskUsageBytes;
     }
     /**
-     * Cloud Endpoints configuration.If endpoints_api_service is set, the Cloud Endpoints Extensible Service Proxy will be provided to serve the API implemented by the app.
+     * @return Cloud Endpoints configuration.If endpoints_api_service is set, the Cloud Endpoints Extensible Service Proxy will be provided to serve the API implemented by the app.
      * 
-    */
+     */
     public EndpointsApiServiceResponse endpointsApiService() {
         return this.endpointsApiService;
     }
     /**
-     * The entrypoint for the application.
+     * @return The entrypoint for the application.
      * 
-    */
+     */
     public EntrypointResponse entrypoint() {
         return this.entrypoint;
     }
     /**
-     * App Engine execution environment for this version.Defaults to standard.
+     * @return App Engine execution environment for this version.Defaults to standard.
      * 
-    */
+     */
     public String env() {
         return this.env;
     }
     /**
-     * Environment variables available to the application.Only returned in GET requests if view=FULL is set.
+     * @return Environment variables available to the application.Only returned in GET requests if view=FULL is set.
      * 
-    */
+     */
     public Map<String,String> envVariables() {
         return this.envVariables;
     }
     /**
-     * Custom static error pages. Limited to 10KB per page.Only returned in GET requests if view=FULL is set.
+     * @return Custom static error pages. Limited to 10KB per page.Only returned in GET requests if view=FULL is set.
      * 
-    */
+     */
     public List<ErrorHandlerResponse> errorHandlers() {
         return this.errorHandlers;
     }
     /**
-     * An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the request and other request handlers are not attempted.Only returned in GET requests if view=FULL is set.
+     * @return An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the request and other request handlers are not attempted.Only returned in GET requests if view=FULL is set.
      * 
-    */
+     */
     public List<UrlMapResponse> handlers() {
         return this.handlers;
     }
     /**
-     * Configures health checking for instances. Unhealthy instances are stopped and replaced with new instances. Only applicable in the App Engine flexible environment.Only returned in GET requests if view=FULL is set.
+     * @return Configures health checking for instances. Unhealthy instances are stopped and replaced with new instances. Only applicable in the App Engine flexible environment.Only returned in GET requests if view=FULL is set.
      * 
-    */
+     */
     public HealthCheckResponse healthCheck() {
         return this.healthCheck;
     }
     /**
-     * Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+     * @return Before an application can receive email or XMPP messages, the application must be configured to enable the service.
      * 
-    */
+     */
     public List<String> inboundServices() {
         return this.inboundServices;
     }
     /**
-     * Instance class that is used to run this version. Valid values are: AutomaticScaling: F1, F2, F4, F4_1G ManualScaling or BasicScaling: B1, B2, B4, B8, B4_1GDefaults to F1 for AutomaticScaling and B1 for ManualScaling or BasicScaling.
+     * @return Instance class that is used to run this version. Valid values are: AutomaticScaling: F1, F2, F4, F4_1G ManualScaling or BasicScaling: B1, B2, B4, B8, B4_1GDefaults to F1 for AutomaticScaling and B1 for ManualScaling or BasicScaling.
      * 
-    */
+     */
     public String instanceClass() {
         return this.instanceClass;
     }
     /**
-     * Configuration for third-party Python runtime libraries that are required by the application.Only returned in GET requests if view=FULL is set.
+     * @return Configuration for third-party Python runtime libraries that are required by the application.Only returned in GET requests if view=FULL is set.
      * 
-    */
+     */
     public List<LibraryResponse> libraries() {
         return this.libraries;
     }
     /**
-     * Configures liveness health checking for instances. Unhealthy instances are stopped and replaced with new instancesOnly returned in GET requests if view=FULL is set.
+     * @return Configures liveness health checking for instances. Unhealthy instances are stopped and replaced with new instancesOnly returned in GET requests if view=FULL is set.
      * 
-    */
+     */
     public LivenessCheckResponse livenessCheck() {
         return this.livenessCheck;
     }
     /**
-     * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as &#34;backends&#34;.
+     * @return A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as &#34;backends&#34;.
      * 
-    */
+     */
     public ManualScalingResponse manualScaling() {
         return this.manualScaling;
     }
     /**
-     * Full path to the Version resource in the API. Example: apps/myapp/services/default/versions/v1.
+     * @return Full path to the Version resource in the API. Example: apps/myapp/services/default/versions/v1.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Extra network settings. Only applicable in the App Engine flexible environment.
+     * @return Extra network settings. Only applicable in the App Engine flexible environment.
      * 
-    */
+     */
     public NetworkResponse network() {
         return this.network;
     }
     /**
-     * Files that match this pattern will not be built into this version. Only applicable for Go runtimes.Only returned in GET requests if view=FULL is set.
+     * @return Files that match this pattern will not be built into this version. Only applicable for Go runtimes.Only returned in GET requests if view=FULL is set.
      * 
-    */
+     */
     public String nobuildFilesRegex() {
         return this.nobuildFilesRegex;
     }
     /**
-     * Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.Only returned in GET requests if view=FULL is set.
+     * @return Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.Only returned in GET requests if view=FULL is set.
      * 
-    */
+     */
     public ReadinessCheckResponse readinessCheck() {
         return this.readinessCheck;
     }
     /**
-     * Machine resources for this version. Only applicable in the App Engine flexible environment.
+     * @return Machine resources for this version. Only applicable in the App Engine flexible environment.
      * 
-    */
+     */
     public ResourcesResponse resources() {
         return this.resources;
     }
     /**
-     * Desired runtime. Example: python27.
+     * @return Desired runtime. Example: python27.
      * 
-    */
+     */
     public String runtime() {
         return this.runtime;
     }
     /**
-     * The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
+     * @return The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
      * 
-    */
+     */
     public String runtimeApiVersion() {
         return this.runtimeApiVersion;
     }
     /**
-     * The channel of the runtime to use. Only available for some runtimes. Defaults to the default channel.
+     * @return The channel of the runtime to use. Only available for some runtimes. Defaults to the default channel.
      * 
-    */
+     */
     public String runtimeChannel() {
         return this.runtimeChannel;
     }
     /**
-     * The path or name of the app&#39;s main executable.
+     * @return The path or name of the app&#39;s main executable.
      * 
-    */
+     */
     public String runtimeMainExecutablePath() {
         return this.runtimeMainExecutablePath;
     }
     /**
-     * The identity that the deployed version will run as. Admin API will use the App Engine Appspot service account as default if this field is neither provided in app.yaml file nor through CLI flag.
+     * @return The identity that the deployed version will run as. Admin API will use the App Engine Appspot service account as default if this field is neither provided in app.yaml file nor through CLI flag.
      * 
-    */
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
-     * Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to SERVING.
+     * @return Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to SERVING.
      * 
-    */
+     */
     public String servingStatus() {
         return this.servingStatus;
     }
     /**
-     * Whether multiple requests can be dispatched to this version at once.
+     * @return Whether multiple requests can be dispatched to this version at once.
      * 
-    */
+     */
     public Boolean threadsafe() {
         return this.threadsafe;
     }
     /**
-     * Serving URL for this version. Example: &#34;https://myversion-dot-myservice-dot-myapp.appspot.com&#34;
+     * @return Serving URL for this version. Example: &#34;https://myversion-dot-myservice-dot-myapp.appspot.com&#34;
      * 
-    */
+     */
     public String versionUrl() {
         return this.versionUrl;
     }
     /**
-     * Whether to deploy this version in a container on a virtual machine.
+     * @return Whether to deploy this version in a container on a virtual machine.
      * 
-    */
+     */
     public Boolean vm() {
         return this.vm;
     }
     /**
-     * Enables VPC connectivity for standard apps.
+     * @return Enables VPC connectivity for standard apps.
      * 
-    */
+     */
     public VpcAccessConnectorResponse vpcAccessConnector() {
         return this.vpcAccessConnector;
     }

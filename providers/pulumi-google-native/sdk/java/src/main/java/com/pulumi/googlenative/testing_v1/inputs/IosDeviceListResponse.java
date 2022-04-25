@@ -24,6 +24,10 @@ public final class IosDeviceListResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="iosDevices", required=true)
     private List<IosDeviceResponse> iosDevices;
 
+    /**
+     * @return A list of iOS devices.
+     * 
+     */
     public List<IosDeviceResponse> iosDevices() {
         return this.iosDevices;
     }
@@ -52,11 +56,23 @@ public final class IosDeviceListResponse extends com.pulumi.resources.InvokeArgs
             $ = new IosDeviceListResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iosDevices A list of iOS devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosDevices(List<IosDeviceResponse> iosDevices) {
             $.iosDevices = iosDevices;
             return this;
         }
 
+        /**
+         * @param iosDevices A list of iOS devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosDevices(IosDeviceResponse... iosDevices) {
             return iosDevices(List.of(iosDevices));
         }

@@ -22,6 +22,10 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
     @Import(name="timeoutSec")
     private @Nullable Output<Integer> timeoutSec;
 
+    /**
+     * @return The number of seconds to wait for a readiness signal during initialization before timing out.
+     * 
+     */
     public Optional<Output<Integer>> timeoutSec() {
         return Optional.ofNullable(this.timeoutSec);
     }
@@ -50,11 +54,23 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
             $ = new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param timeoutSec The number of seconds to wait for a readiness signal during initialization before timing out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
             $.timeoutSec = timeoutSec;
             return this;
         }
 
+        /**
+         * @param timeoutSec The number of seconds to wait for a readiness signal during initialization before timing out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSec(Integer timeoutSec) {
             return timeoutSec(Output.of(timeoutSec));
         }

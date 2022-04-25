@@ -24,6 +24,10 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
     @Import(name="caCertificate", required=true)
     private String caCertificate;
 
+    /**
+     * @return PEM representation of the trusted CA&#39;s x509 certificate.
+     * 
+     */
     public String caCertificate() {
         return this.caCertificate;
     }
@@ -35,6 +39,10 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
     @Import(name="clientCertificate", required=true)
     private String clientCertificate;
 
+    /**
+     * @return PEM representation of the replica&#39;s x509 certificate.
+     * 
+     */
     public String clientCertificate() {
         return this.clientCertificate;
     }
@@ -46,6 +54,10 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
     @Import(name="clientKey", required=true)
     private String clientKey;
 
+    /**
+     * @return PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
+     * 
+     */
     public String clientKey() {
         return this.clientKey;
     }
@@ -57,6 +69,10 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
     @Import(name="dumpFilePath", required=true)
     private String dumpFilePath;
 
+    /**
+     * @return The dump file to create the Cloud SQL replica.
+     * 
+     */
     public String dumpFilePath() {
         return this.dumpFilePath;
     }
@@ -68,6 +84,10 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
     @Import(name="hostPort", required=true)
     private String hostPort;
 
+    /**
+     * @return The host and port of the on-premises instance in host:port format
+     * 
+     */
     public String hostPort() {
         return this.hostPort;
     }
@@ -79,6 +99,10 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return This is always `sql#onPremisesConfiguration`.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -90,6 +114,10 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return The password for connecting to on-premises instance.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -101,6 +129,10 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
     @Import(name="sourceInstance", required=true)
     private InstanceReferenceResponse sourceInstance;
 
+    /**
+     * @return The reference to Cloud SQL instance if the source is Cloud SQL.
+     * 
+     */
     public InstanceReferenceResponse sourceInstance() {
         return this.sourceInstance;
     }
@@ -112,6 +144,10 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return The username for connecting to on-premises instance.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -148,46 +184,100 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
             $ = new OnPremisesConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caCertificate PEM representation of the trusted CA&#39;s x509 certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificate(String caCertificate) {
             $.caCertificate = caCertificate;
             return this;
         }
 
+        /**
+         * @param clientCertificate PEM representation of the replica&#39;s x509 certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(String clientCertificate) {
             $.clientCertificate = clientCertificate;
             return this;
         }
 
+        /**
+         * @param clientKey PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(String clientKey) {
             $.clientKey = clientKey;
             return this;
         }
 
+        /**
+         * @param dumpFilePath The dump file to create the Cloud SQL replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dumpFilePath(String dumpFilePath) {
             $.dumpFilePath = dumpFilePath;
             return this;
         }
 
+        /**
+         * @param hostPort The host and port of the on-premises instance in host:port format
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPort(String hostPort) {
             $.hostPort = hostPort;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#onPremisesConfiguration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param password The password for connecting to on-premises instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param sourceInstance The reference to Cloud SQL instance if the source is Cloud SQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstance(InstanceReferenceResponse sourceInstance) {
             $.sourceInstance = sourceInstance;
             return this;
         }
 
+        /**
+         * @param username The username for connecting to on-premises instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

@@ -25,6 +25,10 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="affectedCpeUri", required=true)
     private String affectedCpeUri;
 
+    /**
+     * @return The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
+     * 
+     */
     public String affectedCpeUri() {
         return this.affectedCpeUri;
     }
@@ -36,6 +40,10 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="affectedPackage", required=true)
     private String affectedPackage;
 
+    /**
+     * @return The package this vulnerability was found in.
+     * 
+     */
     public String affectedPackage() {
         return this.affectedPackage;
     }
@@ -47,6 +55,10 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="affectedVersion", required=true)
     private VersionResponse affectedVersion;
 
+    /**
+     * @return The version of the package that is installed on the resource affected by this vulnerability.
+     * 
+     */
     public VersionResponse affectedVersion() {
         return this.affectedVersion;
     }
@@ -58,6 +70,10 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="effectiveSeverity", required=true)
     private String effectiveSeverity;
 
+    /**
+     * @return The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when it is not available.
+     * 
+     */
     public String effectiveSeverity() {
         return this.effectiveSeverity;
     }
@@ -69,6 +85,10 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fixAvailable", required=true)
     private Boolean fixAvailable;
 
+    /**
+     * @return Whether a fix is available for this package.
+     * 
+     */
     public Boolean fixAvailable() {
         return this.fixAvailable;
     }
@@ -80,6 +100,10 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fixedCpeUri", required=true)
     private String fixedCpeUri;
 
+    /**
+     * @return The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was fixed in. It is possible for this to be different from the affected_cpe_uri.
+     * 
+     */
     public String fixedCpeUri() {
         return this.fixedCpeUri;
     }
@@ -91,6 +115,10 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fixedPackage", required=true)
     private String fixedPackage;
 
+    /**
+     * @return The package this vulnerability was fixed in. It is possible for this to be different from the affected_package.
+     * 
+     */
     public String fixedPackage() {
         return this.fixedPackage;
     }
@@ -102,6 +130,10 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fixedVersion", required=true)
     private VersionResponse fixedVersion;
 
+    /**
+     * @return The version of the package this vulnerability was fixed in. Setting this to VersionKind.MAXIMUM means no fix is yet available.
+     * 
+     */
     public VersionResponse fixedVersion() {
         return this.fixedVersion;
     }
@@ -113,6 +145,10 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="packageType", required=true)
     private String packageType;
 
+    /**
+     * @return The type of package (e.g. OS, MAVEN, GO).
+     * 
+     */
     public String packageType() {
         return this.packageType;
     }
@@ -149,46 +185,100 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
             $ = new PackageIssueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param affectedCpeUri The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedCpeUri(String affectedCpeUri) {
             $.affectedCpeUri = affectedCpeUri;
             return this;
         }
 
+        /**
+         * @param affectedPackage The package this vulnerability was found in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedPackage(String affectedPackage) {
             $.affectedPackage = affectedPackage;
             return this;
         }
 
+        /**
+         * @param affectedVersion The version of the package that is installed on the resource affected by this vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedVersion(VersionResponse affectedVersion) {
             $.affectedVersion = affectedVersion;
             return this;
         }
 
+        /**
+         * @param effectiveSeverity The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when it is not available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effectiveSeverity(String effectiveSeverity) {
             $.effectiveSeverity = effectiveSeverity;
             return this;
         }
 
+        /**
+         * @param fixAvailable Whether a fix is available for this package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixAvailable(Boolean fixAvailable) {
             $.fixAvailable = fixAvailable;
             return this;
         }
 
+        /**
+         * @param fixedCpeUri The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was fixed in. It is possible for this to be different from the affected_cpe_uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedCpeUri(String fixedCpeUri) {
             $.fixedCpeUri = fixedCpeUri;
             return this;
         }
 
+        /**
+         * @param fixedPackage The package this vulnerability was fixed in. It is possible for this to be different from the affected_package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedPackage(String fixedPackage) {
             $.fixedPackage = fixedPackage;
             return this;
         }
 
+        /**
+         * @param fixedVersion The version of the package this vulnerability was fixed in. Setting this to VersionKind.MAXIMUM means no fix is yet available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedVersion(VersionResponse fixedVersion) {
             $.fixedVersion = fixedVersion;
             return this;
         }
 
+        /**
+         * @param packageType The type of package (e.g. OS, MAVEN, GO).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(String packageType) {
             $.packageType = packageType;
             return this;

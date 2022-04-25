@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSucc
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return Custom metadata. Dialogflow doesn&#39;t impose any structure on this.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -55,11 +59,23 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSucc
             $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadata Custom metadata. Dialogflow doesn&#39;t impose any structure on this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Custom metadata. Dialogflow doesn&#39;t impose any structure on this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }

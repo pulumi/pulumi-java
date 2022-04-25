@@ -23,6 +23,10 @@ public final class RestoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="backup", required=true)
     private String backup;
 
+    /**
+     * @return The relative resource name of the metastore service backup to restore from, in the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
+     * 
+     */
     public String backup() {
         return this.backup;
     }
@@ -34,6 +38,10 @@ public final class RestoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
     private String details;
 
+    /**
+     * @return The restore details containing the revision of the service to be restored to, in format of JSON.
+     * 
+     */
     public String details() {
         return this.details;
     }
@@ -45,6 +53,10 @@ public final class RestoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return The time when the restore ended.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -56,6 +68,10 @@ public final class RestoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The time when the restore started.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -67,6 +83,10 @@ public final class RestoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The current state of the restore.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -78,6 +98,10 @@ public final class RestoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of restore.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -111,31 +135,67 @@ public final class RestoreResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RestoreResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backup The relative resource name of the metastore service backup to restore from, in the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backup(String backup) {
             $.backup = backup;
             return this;
         }
 
+        /**
+         * @param details The restore details containing the revision of the service to be restored to, in format of JSON.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(String details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param endTime The time when the restore ended.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param startTime The time when the restore started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param state The current state of the restore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param type The type of restore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

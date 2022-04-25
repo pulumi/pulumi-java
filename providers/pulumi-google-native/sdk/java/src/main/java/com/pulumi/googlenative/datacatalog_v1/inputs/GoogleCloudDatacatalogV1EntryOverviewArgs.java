@@ -26,6 +26,10 @@ public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends com.pulumi.
     @Import(name="overview")
     private @Nullable Output<String> overview;
 
+    /**
+     * @return Entry overview with support for rich text. The overview must only contain Unicode characters, and should be formatted using HTML. The maximum length is 10 MiB as this value holds HTML descriptions including encoded images. The maximum length of the text without images is 100 KiB.
+     * 
+     */
     public Optional<Output<String>> overview() {
         return Optional.ofNullable(this.overview);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends com.pulumi.
             $ = new GoogleCloudDatacatalogV1EntryOverviewArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param overview Entry overview with support for rich text. The overview must only contain Unicode characters, and should be formatted using HTML. The maximum length is 10 MiB as this value holds HTML descriptions including encoded images. The maximum length of the text without images is 100 KiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overview(@Nullable Output<String> overview) {
             $.overview = overview;
             return this;
         }
 
+        /**
+         * @param overview Entry overview with support for rich text. The overview must only contain Unicode characters, and should be formatted using HTML. The maximum length is 10 MiB as this value holds HTML descriptions including encoded images. The maximum length of the text without images is 100 KiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overview(String overview) {
             return overview(Output.of(overview));
         }

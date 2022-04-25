@@ -40,6 +40,10 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The human readable control display name. Used in Retail UI. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is thrown.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -51,6 +55,10 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="facetSpec")
     private @Nullable Output<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec;
 
+    /**
+     * @return A facet specification to perform faceted search.
+     * 
+     */
     public Optional<Output<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs>> facetSpec() {
         return Optional.ofNullable(this.facetSpec);
     }
@@ -69,6 +77,10 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -87,6 +99,10 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rule")
     private @Nullable Output<GoogleCloudRetailV2betaRuleArgs> rule;
 
+    /**
+     * @return A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost &#34;gShoe&#34; when query full matches &#34;Running Shoes&#34;.
+     * 
+     */
     public Optional<Output<GoogleCloudRetailV2betaRuleArgs>> rule() {
         return Optional.ofNullable(this.rule);
     }
@@ -98,6 +114,10 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="solutionTypes", required=true)
     private Output<List<ControlSolutionTypesItem>> solutionTypes;
 
+    /**
+     * @return Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
+     * 
+     */
     public Output<List<ControlSolutionTypesItem>> solutionTypes() {
         return this.solutionTypes;
     }
@@ -152,20 +172,44 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
             return controlId(Output.of(controlId));
         }
 
+        /**
+         * @param displayName The human readable control display name. Used in Retail UI. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is thrown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The human readable control display name. Used in Retail UI. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is thrown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param facetSpec A facet specification to perform faceted search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder facetSpec(@Nullable Output<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec) {
             $.facetSpec = facetSpec;
             return this;
         }
 
+        /**
+         * @param facetSpec A facet specification to perform faceted search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder facetSpec(GoogleCloudRetailV2betaSearchRequestFacetSpecArgs facetSpec) {
             return facetSpec(Output.of(facetSpec));
         }
@@ -179,11 +223,23 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -197,24 +253,54 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param rule A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost &#34;gShoe&#34; when query full matches &#34;Running Shoes&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(@Nullable Output<GoogleCloudRetailV2betaRuleArgs> rule) {
             $.rule = rule;
             return this;
         }
 
+        /**
+         * @param rule A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost &#34;gShoe&#34; when query full matches &#34;Running Shoes&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(GoogleCloudRetailV2betaRuleArgs rule) {
             return rule(Output.of(rule));
         }
 
+        /**
+         * @param solutionTypes Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutionTypes(Output<List<ControlSolutionTypesItem>> solutionTypes) {
             $.solutionTypes = solutionTypes;
             return this;
         }
 
+        /**
+         * @param solutionTypes Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutionTypes(List<ControlSolutionTypesItem> solutionTypes) {
             return solutionTypes(Output.of(solutionTypes));
         }
 
+        /**
+         * @param solutionTypes Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutionTypes(ControlSolutionTypesItem... solutionTypes) {
             return solutionTypes(List.of(solutionTypes));
         }

@@ -23,6 +23,10 @@ public final class SavedDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Type of the resource. Always compute#savedDisk for attached disks.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -34,6 +38,10 @@ public final class SavedDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceDisk", required=true)
     private String sourceDisk;
 
+    /**
+     * @return Specifies a URL of the disk attached to the source instance.
+     * 
+     */
     public String sourceDisk() {
         return this.sourceDisk;
     }
@@ -45,6 +53,10 @@ public final class SavedDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageBytes", required=true)
     private String storageBytes;
 
+    /**
+     * @return Size of the individual disk snapshot used by this machine image.
+     * 
+     */
     public String storageBytes() {
         return this.storageBytes;
     }
@@ -56,6 +68,10 @@ public final class SavedDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageBytesStatus", required=true)
     private String storageBytesStatus;
 
+    /**
+     * @return An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
+     * 
+     */
     public String storageBytesStatus() {
         return this.storageBytesStatus;
     }
@@ -87,21 +103,45 @@ public final class SavedDiskResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SavedDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind Type of the resource. Always compute#savedDisk for attached disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param sourceDisk Specifies a URL of the disk attached to the source instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(String sourceDisk) {
             $.sourceDisk = sourceDisk;
             return this;
         }
 
+        /**
+         * @param storageBytes Size of the individual disk snapshot used by this machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageBytes(String storageBytes) {
             $.storageBytes = storageBytes;
             return this;
         }
 
+        /**
+         * @param storageBytesStatus An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageBytesStatus(String storageBytesStatus) {
             $.storageBytesStatus = storageBytesStatus;
             return this;

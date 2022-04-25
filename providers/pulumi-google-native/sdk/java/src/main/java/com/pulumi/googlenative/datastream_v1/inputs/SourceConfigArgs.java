@@ -28,6 +28,10 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mysqlSourceConfig")
     private @Nullable Output<MysqlSourceConfigArgs> mysqlSourceConfig;
 
+    /**
+     * @return MySQL data source configuration
+     * 
+     */
     public Optional<Output<MysqlSourceConfigArgs>> mysqlSourceConfig() {
         return Optional.ofNullable(this.mysqlSourceConfig);
     }
@@ -39,6 +43,10 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="oracleSourceConfig")
     private @Nullable Output<OracleSourceConfigArgs> oracleSourceConfig;
 
+    /**
+     * @return Oracle data source configuration
+     * 
+     */
     public Optional<Output<OracleSourceConfigArgs>> oracleSourceConfig() {
         return Optional.ofNullable(this.oracleSourceConfig);
     }
@@ -50,6 +58,10 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceConnectionProfile", required=true)
     private Output<String> sourceConnectionProfile;
 
+    /**
+     * @return Source connection profile resoource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
+     * 
+     */
     public Output<String> sourceConnectionProfile() {
         return this.sourceConnectionProfile;
     }
@@ -80,29 +92,65 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SourceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mysqlSourceConfig MySQL data source configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlSourceConfig(@Nullable Output<MysqlSourceConfigArgs> mysqlSourceConfig) {
             $.mysqlSourceConfig = mysqlSourceConfig;
             return this;
         }
 
+        /**
+         * @param mysqlSourceConfig MySQL data source configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlSourceConfig(MysqlSourceConfigArgs mysqlSourceConfig) {
             return mysqlSourceConfig(Output.of(mysqlSourceConfig));
         }
 
+        /**
+         * @param oracleSourceConfig Oracle data source configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleSourceConfig(@Nullable Output<OracleSourceConfigArgs> oracleSourceConfig) {
             $.oracleSourceConfig = oracleSourceConfig;
             return this;
         }
 
+        /**
+         * @param oracleSourceConfig Oracle data source configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleSourceConfig(OracleSourceConfigArgs oracleSourceConfig) {
             return oracleSourceConfig(Output.of(oracleSourceConfig));
         }
 
+        /**
+         * @param sourceConnectionProfile Source connection profile resoource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionProfile(Output<String> sourceConnectionProfile) {
             $.sourceConnectionProfile = sourceConnectionProfile;
             return this;
         }
 
+        /**
+         * @param sourceConnectionProfile Source connection profile resoource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionProfile(String sourceConnectionProfile) {
             return sourceConnectionProfile(Output.of(sourceConnectionProfile));
         }

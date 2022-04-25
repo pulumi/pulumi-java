@@ -23,6 +23,10 @@ public final class IapCredentialResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="iapTestServiceAccountInfo", required=true)
     private IapTestServiceAccountInfoResponse iapTestServiceAccountInfo;
 
+    /**
+     * @return Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.
+     * 
+     */
     public IapTestServiceAccountInfoResponse iapTestServiceAccountInfo() {
         return this.iapTestServiceAccountInfo;
     }
@@ -51,6 +55,12 @@ public final class IapCredentialResponse extends com.pulumi.resources.InvokeArgs
             $ = new IapCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iapTestServiceAccountInfo Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iapTestServiceAccountInfo(IapTestServiceAccountInfoResponse iapTestServiceAccountInfo) {
             $.iapTestServiceAccountInfo = iapTestServiceAccountInfo;
             return this;

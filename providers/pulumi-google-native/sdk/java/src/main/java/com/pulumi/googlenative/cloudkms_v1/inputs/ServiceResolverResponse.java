@@ -25,6 +25,10 @@ public final class ServiceResolverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="endpointFilter", required=true)
     private String endpointFilter;
 
+    /**
+     * @return Optional. The filter applied to the endpoints of the resolved service. If no filter is specified, all endpoints will be considered. An endpoint will be chosen arbitrarily from the filtered list for each request. For endpoint filter syntax and examples, see https://cloud.google.com/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#resolveservicerequest.
+     * 
+     */
     public String endpointFilter() {
         return this.endpointFilter;
     }
@@ -36,6 +40,10 @@ public final class ServiceResolverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="hostname", required=true)
     private String hostname;
 
+    /**
+     * @return The hostname of the EKM replica used at TLS and HTTP layers.
+     * 
+     */
     public String hostname() {
         return this.hostname;
     }
@@ -47,6 +55,10 @@ public final class ServiceResolverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="serverCertificates", required=true)
     private List<CertificateResponse> serverCertificates;
 
+    /**
+     * @return A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+     * 
+     */
     public List<CertificateResponse> serverCertificates() {
         return this.serverCertificates;
     }
@@ -58,6 +70,10 @@ public final class ServiceResolverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="serviceDirectoryService", required=true)
     private String serviceDirectoryService;
 
+    /**
+     * @return The resource name of the Service Directory service pointing to an EKM replica, in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
+     * 
+     */
     public String serviceDirectoryService() {
         return this.serviceDirectoryService;
     }
@@ -89,25 +105,55 @@ public final class ServiceResolverResponse extends com.pulumi.resources.InvokeAr
             $ = new ServiceResolverResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointFilter Optional. The filter applied to the endpoints of the resolved service. If no filter is specified, all endpoints will be considered. An endpoint will be chosen arbitrarily from the filtered list for each request. For endpoint filter syntax and examples, see https://cloud.google.com/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#resolveservicerequest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointFilter(String endpointFilter) {
             $.endpointFilter = endpointFilter;
             return this;
         }
 
+        /**
+         * @param hostname The hostname of the EKM replica used at TLS and HTTP layers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param serverCertificates A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCertificates(List<CertificateResponse> serverCertificates) {
             $.serverCertificates = serverCertificates;
             return this;
         }
 
+        /**
+         * @param serverCertificates A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCertificates(CertificateResponse... serverCertificates) {
             return serverCertificates(List.of(serverCertificates));
         }
 
+        /**
+         * @param serviceDirectoryService The resource name of the Service Directory service pointing to an EKM replica, in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceDirectoryService(String serviceDirectoryService) {
             $.serviceDirectoryService = serviceDirectoryService;
             return this;

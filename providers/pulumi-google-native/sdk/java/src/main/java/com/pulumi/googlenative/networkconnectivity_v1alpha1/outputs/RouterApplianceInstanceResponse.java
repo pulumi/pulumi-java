@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class RouterApplianceInstanceResponse {
     /**
-     * The IP address of the network interface to use for peering.
+     * @return The IP address of the network interface to use for peering.
      * 
      */
     private final String ipAddress;
     private final String networkInterface;
     /**
-     * The URI of the virtual machine resource
+     * @return The URI of the virtual machine resource
      * 
      */
     private final String virtualMachine;
@@ -32,9 +32,9 @@ public final class RouterApplianceInstanceResponse {
     }
 
     /**
-     * The IP address of the network interface to use for peering.
+     * @return The IP address of the network interface to use for peering.
      * 
-    */
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
@@ -42,9 +42,9 @@ public final class RouterApplianceInstanceResponse {
         return this.networkInterface;
     }
     /**
-     * The URI of the virtual machine resource
+     * @return The URI of the virtual machine resource
      * 
-    */
+     */
     public String virtualMachine() {
         return this.virtualMachine;
     }

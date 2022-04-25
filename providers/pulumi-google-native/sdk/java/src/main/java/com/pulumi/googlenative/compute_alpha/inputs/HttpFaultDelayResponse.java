@@ -24,6 +24,10 @@ public final class HttpFaultDelayResponse extends com.pulumi.resources.InvokeArg
     @Import(name="fixedDelay", required=true)
     private DurationResponse fixedDelay;
 
+    /**
+     * @return Specifies the value of the fixed delay interval.
+     * 
+     */
     public DurationResponse fixedDelay() {
         return this.fixedDelay;
     }
@@ -35,6 +39,10 @@ public final class HttpFaultDelayResponse extends com.pulumi.resources.InvokeArg
     @Import(name="percentage", required=true)
     private Double percentage;
 
+    /**
+     * @return The percentage of traffic for connections, operations, or requests for which a delay is introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+     * 
+     */
     public Double percentage() {
         return this.percentage;
     }
@@ -64,11 +72,23 @@ public final class HttpFaultDelayResponse extends com.pulumi.resources.InvokeArg
             $ = new HttpFaultDelayResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fixedDelay Specifies the value of the fixed delay interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedDelay(DurationResponse fixedDelay) {
             $.fixedDelay = fixedDelay;
             return this;
         }
 
+        /**
+         * @param percentage The percentage of traffic for connections, operations, or requests for which a delay is introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(Double percentage) {
             $.percentage = percentage;
             return this;

@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class MonitoredResourceDescriptorResponse {
     /**
-     * Optional. A detailed description of the monitored resource type that might be used in documentation.
+     * @return Optional. A detailed description of the monitored resource type that might be used in documentation.
      * 
      */
     private final String description;
     /**
-     * Optional. A concise name for the monitored resource type that might be displayed in user interfaces. It should be a Title Cased Noun Phrase, without any article or other determiners. For example, `&#34;Google Cloud SQL Database&#34;`.
+     * @return Optional. A concise name for the monitored resource type that might be displayed in user interfaces. It should be a Title Cased Noun Phrase, without any article or other determiners. For example, `&#34;Google Cloud SQL Database&#34;`.
      * 
      */
     private final String displayName;
     /**
-     * A set of labels used to describe instances of this monitored resource type. For example, an individual Google Cloud SQL database is identified by values for the labels `&#34;database_id&#34;` and `&#34;zone&#34;`.
+     * @return A set of labels used to describe instances of this monitored resource type. For example, an individual Google Cloud SQL database is identified by values for the labels `&#34;database_id&#34;` and `&#34;zone&#34;`.
      * 
      */
     private final List<LabelDescriptorResponse> labels;
     /**
-     * Optional. The launch stage of the monitored resource definition.
+     * @return Optional. The launch stage of the monitored resource definition.
      * 
      */
     private final String launchStage;
     /**
-     * Optional. The resource name of the monitored resource descriptor: `&#34;projects/{project_id}/monitoredResourceDescriptors/{type}&#34;` where {type} is the value of the `type` field in this object and {project_id} is a project ID that provides API-specific context for accessing the type. APIs that do not use project information can use the resource name format `&#34;monitoredResourceDescriptors/{type}&#34;`.
+     * @return Optional. The resource name of the monitored resource descriptor: `&#34;projects/{project_id}/monitoredResourceDescriptors/{type}&#34;` where {type} is the value of the `type` field in this object and {project_id} is a project ID that provides API-specific context for accessing the type. APIs that do not use project information can use the resource name format `&#34;monitoredResourceDescriptors/{type}&#34;`.
      * 
      */
     private final String name;
     /**
-     * The monitored resource type. For example, the type `&#34;cloudsql_database&#34;` represents databases in Google Cloud SQL. For a list of types, see [Monitoring resource types](https://cloud.google.com/monitoring/api/resources) and [Logging resource types](https://cloud.google.com/logging/docs/api/v2/resource-list).
+     * @return The monitored resource type. For example, the type `&#34;cloudsql_database&#34;` represents databases in Google Cloud SQL. For a list of types, see [Monitoring resource types](https://cloud.google.com/monitoring/api/resources) and [Logging resource types](https://cloud.google.com/logging/docs/api/v2/resource-list).
      * 
      */
     private final String type;
@@ -59,44 +59,44 @@ public final class MonitoredResourceDescriptorResponse {
     }
 
     /**
-     * Optional. A detailed description of the monitored resource type that might be used in documentation.
+     * @return Optional. A detailed description of the monitored resource type that might be used in documentation.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Optional. A concise name for the monitored resource type that might be displayed in user interfaces. It should be a Title Cased Noun Phrase, without any article or other determiners. For example, `&#34;Google Cloud SQL Database&#34;`.
+     * @return Optional. A concise name for the monitored resource type that might be displayed in user interfaces. It should be a Title Cased Noun Phrase, without any article or other determiners. For example, `&#34;Google Cloud SQL Database&#34;`.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * A set of labels used to describe instances of this monitored resource type. For example, an individual Google Cloud SQL database is identified by values for the labels `&#34;database_id&#34;` and `&#34;zone&#34;`.
+     * @return A set of labels used to describe instances of this monitored resource type. For example, an individual Google Cloud SQL database is identified by values for the labels `&#34;database_id&#34;` and `&#34;zone&#34;`.
      * 
-    */
+     */
     public List<LabelDescriptorResponse> labels() {
         return this.labels;
     }
     /**
-     * Optional. The launch stage of the monitored resource definition.
+     * @return Optional. The launch stage of the monitored resource definition.
      * 
-    */
+     */
     public String launchStage() {
         return this.launchStage;
     }
     /**
-     * Optional. The resource name of the monitored resource descriptor: `&#34;projects/{project_id}/monitoredResourceDescriptors/{type}&#34;` where {type} is the value of the `type` field in this object and {project_id} is a project ID that provides API-specific context for accessing the type. APIs that do not use project information can use the resource name format `&#34;monitoredResourceDescriptors/{type}&#34;`.
+     * @return Optional. The resource name of the monitored resource descriptor: `&#34;projects/{project_id}/monitoredResourceDescriptors/{type}&#34;` where {type} is the value of the `type` field in this object and {project_id} is a project ID that provides API-specific context for accessing the type. APIs that do not use project information can use the resource name format `&#34;monitoredResourceDescriptors/{type}&#34;`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The monitored resource type. For example, the type `&#34;cloudsql_database&#34;` represents databases in Google Cloud SQL. For a list of types, see [Monitoring resource types](https://cloud.google.com/monitoring/api/resources) and [Logging resource types](https://cloud.google.com/logging/docs/api/v2/resource-list).
+     * @return The monitored resource type. For example, the type `&#34;cloudsql_database&#34;` represents databases in Google Cloud SQL. For a list of types, see [Monitoring resource types](https://cloud.google.com/monitoring/api/resources) and [Logging resource types](https://cloud.google.com/logging/docs/api/v2/resource-list).
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -23,6 +23,10 @@ public final class JsonFileFormatResponse extends com.pulumi.resources.InvokeArg
     @Import(name="compression", required=true)
     private String compression;
 
+    /**
+     * @return Compression of the loaded JSON file.
+     * 
+     */
     public String compression() {
         return this.compression;
     }
@@ -34,6 +38,10 @@ public final class JsonFileFormatResponse extends com.pulumi.resources.InvokeArg
     @Import(name="schemaFileFormat", required=true)
     private String schemaFileFormat;
 
+    /**
+     * @return The schema file format along JSON data files.
+     * 
+     */
     public String schemaFileFormat() {
         return this.schemaFileFormat;
     }
@@ -63,11 +71,23 @@ public final class JsonFileFormatResponse extends com.pulumi.resources.InvokeArg
             $ = new JsonFileFormatResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compression Compression of the loaded JSON file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(String compression) {
             $.compression = compression;
             return this;
         }
 
+        /**
+         * @param schemaFileFormat The schema file format along JSON data files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaFileFormat(String schemaFileFormat) {
             $.schemaFileFormat = schemaFileFormat;
             return this;

@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfi
     @Import(name="accountNumber", required=true)
     private String accountNumber;
 
+    /**
+     * @return Account number of the LivePerson account to connect. This is the account number you input at the login page.
+     * 
+     */
     public String accountNumber() {
         return this.accountNumber;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfi
             $ = new GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountNumber Account number of the LivePerson account to connect. This is the account number you input at the login page.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountNumber(String accountNumber) {
             $.accountNumber = accountNumber;
             return this;

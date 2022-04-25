@@ -34,6 +34,10 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends com.pulumi.resou
     @Import(name="detectionRules")
     private @Nullable Output<List<GooglePrivacyDlpV2DetectionRuleArgs>> detectionRules;
 
+    /**
+     * @return Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
+     * 
+     */
     public Optional<Output<List<GooglePrivacyDlpV2DetectionRuleArgs>>> detectionRules() {
         return Optional.ofNullable(this.detectionRules);
     }
@@ -45,6 +49,10 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends com.pulumi.resou
     @Import(name="dictionary")
     private @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
+    /**
+     * @return A list of phrases to detect as a CustomInfoType.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2DictionaryArgs>> dictionary() {
         return Optional.ofNullable(this.dictionary);
     }
@@ -56,6 +64,10 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends com.pulumi.resou
     @Import(name="exclusionType")
     private @Nullable Output<GooglePrivacyDlpV2CustomInfoTypeExclusionType> exclusionType;
 
+    /**
+     * @return If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2CustomInfoTypeExclusionType>> exclusionType() {
         return Optional.ofNullable(this.exclusionType);
     }
@@ -67,6 +79,10 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends com.pulumi.resou
     @Import(name="infoType")
     private @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
+    /**
+     * @return CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2InfoTypeArgs>> infoType() {
         return Optional.ofNullable(this.infoType);
     }
@@ -78,6 +94,10 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends com.pulumi.resou
     @Import(name="likelihood")
     private @Nullable Output<GooglePrivacyDlpV2CustomInfoTypeLikelihood> likelihood;
 
+    /**
+     * @return Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2CustomInfoTypeLikelihood>> likelihood() {
         return Optional.ofNullable(this.likelihood);
     }
@@ -89,6 +109,10 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends com.pulumi.resou
     @Import(name="regex")
     private @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
 
+    /**
+     * @return Regular expression based CustomInfoType.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2RegexArgs>> regex() {
         return Optional.ofNullable(this.regex);
     }
@@ -100,6 +124,10 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends com.pulumi.resou
     @Import(name="storedType")
     private @Nullable Output<GooglePrivacyDlpV2StoredTypeArgs> storedType;
 
+    /**
+     * @return Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2StoredTypeArgs>> storedType() {
         return Optional.ofNullable(this.storedType);
     }
@@ -111,6 +139,10 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends com.pulumi.resou
     @Import(name="surrogateType")
     private @Nullable Output<GooglePrivacyDlpV2SurrogateTypeArgs> surrogateType;
 
+    /**
+     * @return Message for detecting output from deidentification transformations that support reversing.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2SurrogateTypeArgs>> surrogateType() {
         return Optional.ofNullable(this.surrogateType);
     }
@@ -146,78 +178,180 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends com.pulumi.resou
             $ = new GooglePrivacyDlpV2CustomInfoTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param detectionRules Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectionRules(@Nullable Output<List<GooglePrivacyDlpV2DetectionRuleArgs>> detectionRules) {
             $.detectionRules = detectionRules;
             return this;
         }
 
+        /**
+         * @param detectionRules Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectionRules(List<GooglePrivacyDlpV2DetectionRuleArgs> detectionRules) {
             return detectionRules(Output.of(detectionRules));
         }
 
+        /**
+         * @param detectionRules Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectionRules(GooglePrivacyDlpV2DetectionRuleArgs... detectionRules) {
             return detectionRules(List.of(detectionRules));
         }
 
+        /**
+         * @param dictionary A list of phrases to detect as a CustomInfoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dictionary(@Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary) {
             $.dictionary = dictionary;
             return this;
         }
 
+        /**
+         * @param dictionary A list of phrases to detect as a CustomInfoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dictionary(GooglePrivacyDlpV2DictionaryArgs dictionary) {
             return dictionary(Output.of(dictionary));
         }
 
+        /**
+         * @param exclusionType If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusionType(@Nullable Output<GooglePrivacyDlpV2CustomInfoTypeExclusionType> exclusionType) {
             $.exclusionType = exclusionType;
             return this;
         }
 
+        /**
+         * @param exclusionType If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusionType(GooglePrivacyDlpV2CustomInfoTypeExclusionType exclusionType) {
             return exclusionType(Output.of(exclusionType));
         }
 
+        /**
+         * @param infoType CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoType(@Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
             $.infoType = infoType;
             return this;
         }
 
+        /**
+         * @param infoType CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoType(GooglePrivacyDlpV2InfoTypeArgs infoType) {
             return infoType(Output.of(infoType));
         }
 
+        /**
+         * @param likelihood Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder likelihood(@Nullable Output<GooglePrivacyDlpV2CustomInfoTypeLikelihood> likelihood) {
             $.likelihood = likelihood;
             return this;
         }
 
+        /**
+         * @param likelihood Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder likelihood(GooglePrivacyDlpV2CustomInfoTypeLikelihood likelihood) {
             return likelihood(Output.of(likelihood));
         }
 
+        /**
+         * @param regex Regular expression based CustomInfoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(@Nullable Output<GooglePrivacyDlpV2RegexArgs> regex) {
             $.regex = regex;
             return this;
         }
 
+        /**
+         * @param regex Regular expression based CustomInfoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(GooglePrivacyDlpV2RegexArgs regex) {
             return regex(Output.of(regex));
         }
 
+        /**
+         * @param storedType Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedType(@Nullable Output<GooglePrivacyDlpV2StoredTypeArgs> storedType) {
             $.storedType = storedType;
             return this;
         }
 
+        /**
+         * @param storedType Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedType(GooglePrivacyDlpV2StoredTypeArgs storedType) {
             return storedType(Output.of(storedType));
         }
 
+        /**
+         * @param surrogateType Message for detecting output from deidentification transformations that support reversing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder surrogateType(@Nullable Output<GooglePrivacyDlpV2SurrogateTypeArgs> surrogateType) {
             $.surrogateType = surrogateType;
             return this;
         }
 
+        /**
+         * @param surrogateType Message for detecting output from deidentification transformations that support reversing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder surrogateType(GooglePrivacyDlpV2SurrogateTypeArgs surrogateType) {
             return surrogateType(Output.of(surrogateType));
         }

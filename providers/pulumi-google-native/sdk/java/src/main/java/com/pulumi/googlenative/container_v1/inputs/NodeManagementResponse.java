@@ -24,6 +24,10 @@ public final class NodeManagementResponse extends com.pulumi.resources.InvokeArg
     @Import(name="autoRepair", required=true)
     private Boolean autoRepair;
 
+    /**
+     * @return A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.
+     * 
+     */
     public Boolean autoRepair() {
         return this.autoRepair;
     }
@@ -35,6 +39,10 @@ public final class NodeManagementResponse extends com.pulumi.resources.InvokeArg
     @Import(name="autoUpgrade", required=true)
     private Boolean autoUpgrade;
 
+    /**
+     * @return A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.
+     * 
+     */
     public Boolean autoUpgrade() {
         return this.autoUpgrade;
     }
@@ -46,6 +54,10 @@ public final class NodeManagementResponse extends com.pulumi.resources.InvokeArg
     @Import(name="upgradeOptions", required=true)
     private AutoUpgradeOptionsResponse upgradeOptions;
 
+    /**
+     * @return Specifies the Auto Upgrade knobs for the node pool.
+     * 
+     */
     public AutoUpgradeOptionsResponse upgradeOptions() {
         return this.upgradeOptions;
     }
@@ -76,16 +88,34 @@ public final class NodeManagementResponse extends com.pulumi.resources.InvokeArg
             $ = new NodeManagementResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoRepair A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRepair(Boolean autoRepair) {
             $.autoRepair = autoRepair;
             return this;
         }
 
+        /**
+         * @param autoUpgrade A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgrade(Boolean autoUpgrade) {
             $.autoUpgrade = autoUpgrade;
             return this;
         }
 
+        /**
+         * @param upgradeOptions Specifies the Auto Upgrade knobs for the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeOptions(AutoUpgradeOptionsResponse upgradeOptions) {
             $.upgradeOptions = upgradeOptions;
             return this;

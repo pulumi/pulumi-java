@@ -28,6 +28,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends com.pu
     @Import(name="allowAll")
     private @Nullable Output<Boolean> allowAll;
 
+    /**
+     * @return Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
+     * 
+     */
     public Optional<Output<Boolean>> allowAll() {
         return Optional.ofNullable(this.allowAll);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends com.pu
     @Import(name="condition")
     private @Nullable Output<GoogleTypeExprArgs> condition;
 
+    /**
+     * @return A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr&#39; must include from 1 to 10 subexpressions, joined by the &#34;||&#34; or &#34;&amp;&amp;&#34; operators. Each subexpression must be of the form &#34;resource.matchTag(&#39;/tag_key_short_name, &#39;tag_value_short_name&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/key_id&#39;, &#39;tagValues/value_id&#39;)&#34;. where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: &#34;resource.matchTag(&#39;123456789/environment, &#39;prod&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/123&#39;, &#39;tagValues/456&#39;)&#34;.
+     * 
+     */
     public Optional<Output<GoogleTypeExprArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends com.pu
     @Import(name="denyAll")
     private @Nullable Output<Boolean> denyAll;
 
+    /**
+     * @return Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
+     * 
+     */
     public Optional<Output<Boolean>> denyAll() {
         return Optional.ofNullable(this.denyAll);
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends com.pu
     @Import(name="enforce")
     private @Nullable Output<Boolean> enforce;
 
+    /**
+     * @return If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
+     * 
+     */
     public Optional<Output<Boolean>> enforce() {
         return Optional.ofNullable(this.enforce);
     }
@@ -72,6 +88,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends com.pu
     @Import(name="values")
     private @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values;
 
+    /**
+     * @return List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.
+     * 
+     */
     public Optional<Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -104,47 +124,107 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends com.pu
             $ = new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowAll Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowAll(@Nullable Output<Boolean> allowAll) {
             $.allowAll = allowAll;
             return this;
         }
 
+        /**
+         * @param allowAll Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowAll(Boolean allowAll) {
             return allowAll(Output.of(allowAll));
         }
 
+        /**
+         * @param condition A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr&#39; must include from 1 to 10 subexpressions, joined by the &#34;||&#34; or &#34;&amp;&amp;&#34; operators. Each subexpression must be of the form &#34;resource.matchTag(&#39;/tag_key_short_name, &#39;tag_value_short_name&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/key_id&#39;, &#39;tagValues/value_id&#39;)&#34;. where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: &#34;resource.matchTag(&#39;123456789/environment, &#39;prod&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/123&#39;, &#39;tagValues/456&#39;)&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<GoogleTypeExprArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr&#39; must include from 1 to 10 subexpressions, joined by the &#34;||&#34; or &#34;&amp;&amp;&#34; operators. Each subexpression must be of the form &#34;resource.matchTag(&#39;/tag_key_short_name, &#39;tag_value_short_name&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/key_id&#39;, &#39;tagValues/value_id&#39;)&#34;. where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: &#34;resource.matchTag(&#39;123456789/environment, &#39;prod&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/123&#39;, &#39;tagValues/456&#39;)&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(GoogleTypeExprArgs condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param denyAll Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyAll(@Nullable Output<Boolean> denyAll) {
             $.denyAll = denyAll;
             return this;
         }
 
+        /**
+         * @param denyAll Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyAll(Boolean denyAll) {
             return denyAll(Output.of(denyAll));
         }
 
+        /**
+         * @param enforce If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforce(@Nullable Output<Boolean> enforce) {
             $.enforce = enforce;
             return this;
         }
 
+        /**
+         * @param enforce If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforce(Boolean enforce) {
             return enforce(Output.of(enforce));
         }
 
+        /**
+         * @param values List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs values) {
             return values(Output.of(values));
         }

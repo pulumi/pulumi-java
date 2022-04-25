@@ -25,6 +25,10 @@ public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessConfig")
     private @Nullable Output<RuntimeAccessConfigArgs> accessConfig;
 
+    /**
+     * @return The config settings for accessing runtime.
+     * 
+     */
     public Optional<Output<RuntimeAccessConfigArgs>> accessConfig() {
         return Optional.ofNullable(this.accessConfig);
     }
@@ -57,6 +61,10 @@ public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="softwareConfig")
     private @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig;
 
+    /**
+     * @return The config settings for software inside the runtime.
+     * 
+     */
     public Optional<Output<RuntimeSoftwareConfigArgs>> softwareConfig() {
         return Optional.ofNullable(this.softwareConfig);
     }
@@ -68,6 +76,10 @@ public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualMachine")
     private @Nullable Output<VirtualMachineArgs> virtualMachine;
 
+    /**
+     * @return Use a Compute Engine VM image to start the managed notebook instance.
+     * 
+     */
     public Optional<Output<VirtualMachineArgs>> virtualMachine() {
         return Optional.ofNullable(this.virtualMachine);
     }
@@ -101,11 +113,23 @@ public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RuntimeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessConfig The config settings for accessing runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessConfig(@Nullable Output<RuntimeAccessConfigArgs> accessConfig) {
             $.accessConfig = accessConfig;
             return this;
         }
 
+        /**
+         * @param accessConfig The config settings for accessing runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessConfig(RuntimeAccessConfigArgs accessConfig) {
             return accessConfig(Output.of(accessConfig));
         }
@@ -137,20 +161,44 @@ public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
             return runtimeId(Output.of(runtimeId));
         }
 
+        /**
+         * @param softwareConfig The config settings for software inside the runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softwareConfig(@Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig) {
             $.softwareConfig = softwareConfig;
             return this;
         }
 
+        /**
+         * @param softwareConfig The config settings for software inside the runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softwareConfig(RuntimeSoftwareConfigArgs softwareConfig) {
             return softwareConfig(Output.of(softwareConfig));
         }
 
+        /**
+         * @param virtualMachine Use a Compute Engine VM image to start the managed notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachine(@Nullable Output<VirtualMachineArgs> virtualMachine) {
             $.virtualMachine = virtualMachine;
             return this;
         }
 
+        /**
+         * @param virtualMachine Use a Compute Engine VM image to start the managed notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachine(VirtualMachineArgs virtualMachine) {
             return virtualMachine(Output.of(virtualMachine));
         }

@@ -34,6 +34,10 @@ public final class ComputeSchedulingResponse extends com.pulumi.resources.Invoke
     @Import(name="minNodeCpus", required=true)
     private Integer minNodeCpus;
 
+    /**
+     * @return The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
+     * 
+     */
     public Integer minNodeCpus() {
         return this.minNodeCpus;
     }
@@ -45,6 +49,10 @@ public final class ComputeSchedulingResponse extends com.pulumi.resources.Invoke
     @Import(name="nodeAffinities", required=true)
     private List<SchedulingNodeAffinityResponse> nodeAffinities;
 
+    /**
+     * @return A set of node affinity and anti-affinity configurations for sole tenant nodes.
+     * 
+     */
     public List<SchedulingNodeAffinityResponse> nodeAffinities() {
         return this.nodeAffinities;
     }
@@ -56,6 +64,10 @@ public final class ComputeSchedulingResponse extends com.pulumi.resources.Invoke
     @Import(name="onHostMaintenance", required=true)
     private String onHostMaintenance;
 
+    /**
+     * @return How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
+     * 
+     */
     public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
@@ -67,6 +79,10 @@ public final class ComputeSchedulingResponse extends com.pulumi.resources.Invoke
     @Import(name="restartType", required=true)
     private String restartType;
 
+    /**
+     * @return Whether the Instance should be automatically restarted whenever it is terminated by Compute Engine (not terminated by user). This configuration is identical to `automaticRestart` field in Compute Engine create instance under scheduling. It was changed to an enum (instead of a boolean) to match the default value in Compute Engine which is automatic restart.
+     * 
+     */
     public String restartType() {
         return this.restartType;
     }
@@ -104,25 +120,55 @@ public final class ComputeSchedulingResponse extends com.pulumi.resources.Invoke
             return this;
         }
 
+        /**
+         * @param minNodeCpus The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCpus(Integer minNodeCpus) {
             $.minNodeCpus = minNodeCpus;
             return this;
         }
 
+        /**
+         * @param nodeAffinities A set of node affinity and anti-affinity configurations for sole tenant nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(List<SchedulingNodeAffinityResponse> nodeAffinities) {
             $.nodeAffinities = nodeAffinities;
             return this;
         }
 
+        /**
+         * @param nodeAffinities A set of node affinity and anti-affinity configurations for sole tenant nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(SchedulingNodeAffinityResponse... nodeAffinities) {
             return nodeAffinities(List.of(nodeAffinities));
         }
 
+        /**
+         * @param onHostMaintenance How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onHostMaintenance(String onHostMaintenance) {
             $.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
+        /**
+         * @param restartType Whether the Instance should be automatically restarted whenever it is terminated by Compute Engine (not terminated by user). This configuration is identical to `automaticRestart` field in Compute Engine create instance under scheduling. It was changed to an enum (instead of a boolean) to match the default value in Compute Engine which is automatic restart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartType(String restartType) {
             $.restartType = restartType;
             return this;

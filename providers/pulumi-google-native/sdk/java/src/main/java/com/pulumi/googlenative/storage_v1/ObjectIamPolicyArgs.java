@@ -25,6 +25,10 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="bindings")
     private @Nullable Output<List<ObjectIamPolicyBindingsItemArgs>> bindings;
 
+    /**
+     * @return An association between a role, which comes with a set of permissions, and members who may assume that role.
+     * 
+     */
     public Optional<Output<List<ObjectIamPolicyBindingsItemArgs>>> bindings() {
         return Optional.ofNullable(this.bindings);
     }
@@ -43,6 +47,10 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return HTTP 1.1  Entity tag for the policy.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -61,6 +69,10 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The kind of item this is. For policies, this is always storage#policy. This field is ignored on input.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -86,6 +98,10 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The ID of the resource to which this policy belongs. Will be of the form projects/_/buckets/bucket for buckets, and projects/_/buckets/bucket/objects/object for objects. A specific generation may be specified by appending #generationNumber to the end of the object name, e.g. projects/_/buckets/my-bucket/objects/data.txt#17. The current generation can be denoted with #0. This field is ignored on input.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -104,6 +120,10 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="version")
     private @Nullable Output<Integer> version;
 
+    /**
+     * @return The IAM policy format version.
+     * 
+     */
     public Optional<Output<Integer>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -141,15 +161,33 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
             $ = new ObjectIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bindings An association between a role, which comes with a set of permissions, and members who may assume that role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindings(@Nullable Output<List<ObjectIamPolicyBindingsItemArgs>> bindings) {
             $.bindings = bindings;
             return this;
         }
 
+        /**
+         * @param bindings An association between a role, which comes with a set of permissions, and members who may assume that role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindings(List<ObjectIamPolicyBindingsItemArgs> bindings) {
             return bindings(Output.of(bindings));
         }
 
+        /**
+         * @param bindings An association between a role, which comes with a set of permissions, and members who may assume that role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindings(ObjectIamPolicyBindingsItemArgs... bindings) {
             return bindings(List.of(bindings));
         }
@@ -163,11 +201,23 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param etag HTTP 1.1  Entity tag for the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag HTTP 1.1  Entity tag for the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
@@ -181,11 +231,23 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
             return generation(Output.of(generation));
         }
 
+        /**
+         * @param kind The kind of item this is. For policies, this is always storage#policy. This field is ignored on input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of item this is. For policies, this is always storage#policy. This field is ignored on input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
@@ -208,11 +270,23 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
             return provisionalUserProject(Output.of(provisionalUserProject));
         }
 
+        /**
+         * @param resourceId The ID of the resource to which this policy belongs. Will be of the form projects/_/buckets/bucket for buckets, and projects/_/buckets/bucket/objects/object for objects. A specific generation may be specified by appending #generationNumber to the end of the object name, e.g. projects/_/buckets/my-bucket/objects/data.txt#17. The current generation can be denoted with #0. This field is ignored on input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The ID of the resource to which this policy belongs. Will be of the form projects/_/buckets/bucket for buckets, and projects/_/buckets/bucket/objects/object for objects. A specific generation may be specified by appending #generationNumber to the end of the object name, e.g. projects/_/buckets/my-bucket/objects/data.txt#17. The current generation can be denoted with #0. This field is ignored on input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
@@ -226,11 +300,23 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
             return userProject(Output.of(userProject));
         }
 
+        /**
+         * @param version The IAM policy format version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<Integer> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The IAM policy format version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Integer version) {
             return version(Output.of(version));
         }

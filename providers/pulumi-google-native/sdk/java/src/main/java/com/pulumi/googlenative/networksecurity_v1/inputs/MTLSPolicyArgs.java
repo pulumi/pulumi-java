@@ -27,6 +27,10 @@ public final class MTLSPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientValidationCa")
     private @Nullable Output<List<ValidationCAArgs>> clientValidationCa;
 
+    /**
+     * @return  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
+     * 
+     */
     public Optional<Output<List<ValidationCAArgs>>> clientValidationCa() {
         return Optional.ofNullable(this.clientValidationCa);
     }
@@ -55,15 +59,33 @@ public final class MTLSPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MTLSPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientValidationCa  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientValidationCa(@Nullable Output<List<ValidationCAArgs>> clientValidationCa) {
             $.clientValidationCa = clientValidationCa;
             return this;
         }
 
+        /**
+         * @param clientValidationCa  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientValidationCa(List<ValidationCAArgs> clientValidationCa) {
             return clientValidationCa(Output.of(clientValidationCa));
         }
 
+        /**
+         * @param clientValidationCa  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientValidationCa(ValidationCAArgs... clientValidationCa) {
             return clientValidationCa(List.of(clientValidationCa));
         }

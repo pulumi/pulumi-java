@@ -27,6 +27,10 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends c
     @Import(name="baseUrl", required=true)
     private Output<String> baseUrl;
 
+    /**
+     * @return The location of the repository directory.
+     * 
+     */
     public Output<String> baseUrl() {
         return this.baseUrl;
     }
@@ -38,6 +42,10 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends c
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name of the repository.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -49,6 +57,10 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends c
     @Import(name="gpgKeys")
     private @Nullable Output<List<String>> gpgKeys;
 
+    /**
+     * @return URIs of GPG keys.
+     * 
+     */
     public Optional<Output<List<String>>> gpgKeys() {
         return Optional.ofNullable(this.gpgKeys);
     }
@@ -60,6 +72,10 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends c
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return A one word, unique name for this repository. This is the `repo id` in the yum config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for resource conflicts.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -91,42 +107,96 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends c
             $ = new OSPolicyResourceRepositoryResourceYumRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseUrl The location of the repository directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseUrl(Output<String> baseUrl) {
             $.baseUrl = baseUrl;
             return this;
         }
 
+        /**
+         * @param baseUrl The location of the repository directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseUrl(String baseUrl) {
             return baseUrl(Output.of(baseUrl));
         }
 
+        /**
+         * @param displayName The display name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param gpgKeys URIs of GPG keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpgKeys(@Nullable Output<List<String>> gpgKeys) {
             $.gpgKeys = gpgKeys;
             return this;
         }
 
+        /**
+         * @param gpgKeys URIs of GPG keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpgKeys(List<String> gpgKeys) {
             return gpgKeys(Output.of(gpgKeys));
         }
 
+        /**
+         * @param gpgKeys URIs of GPG keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpgKeys(String... gpgKeys) {
             return gpgKeys(List.of(gpgKeys));
         }
 
+        /**
+         * @param id A one word, unique name for this repository. This is the `repo id` in the yum config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for resource conflicts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id A one word, unique name for this repository. This is the `repo id` in the yum config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for resource conflicts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

@@ -26,6 +26,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advancedSettings")
     private @Nullable Output<GoogleCloudDialogflowCxV3AdvancedSettingsArgs> advancedSettings;
 
+    /**
+     * @return Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3AdvancedSettingsArgs>> advancedSettings() {
         return Optional.ofNullable(this.advancedSettings);
     }
@@ -37,6 +41,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="avatarUri")
     private @Nullable Output<String> avatarUri;
 
+    /**
+     * @return The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
+     * 
+     */
     public Optional<Output<String>> avatarUri() {
         return Optional.ofNullable(this.avatarUri);
     }
@@ -48,6 +56,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultLanguageCode", required=true)
     private Output<String> defaultLanguageCode;
 
+    /**
+     * @return Immutable. The default language of the agent as a language tag. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
+     * 
+     */
     public Output<String> defaultLanguageCode() {
         return this.defaultLanguageCode;
     }
@@ -59,6 +71,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the agent. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -70,6 +86,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The human-readable name of the agent, unique within the location.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -81,6 +101,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableSpellCorrection")
     private @Nullable Output<Boolean> enableSpellCorrection;
 
+    /**
+     * @return Indicates if automatic spell correction is enabled in detect intent requests.
+     * 
+     */
     public Optional<Output<Boolean>> enableSpellCorrection() {
         return Optional.ofNullable(this.enableSpellCorrection);
     }
@@ -92,6 +116,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableStackdriverLogging")
     private @Nullable Output<Boolean> enableStackdriverLogging;
 
+    /**
+     * @return Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings instead.
+     * 
+     */
     public Optional<Output<Boolean>> enableStackdriverLogging() {
         return Optional.ofNullable(this.enableStackdriverLogging);
     }
@@ -110,6 +138,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -128,6 +160,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securitySettings")
     private @Nullable Output<String> securitySettings;
 
+    /**
+     * @return Name of the SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
+     * 
+     */
     public Optional<Output<String>> securitySettings() {
         return Optional.ofNullable(this.securitySettings);
     }
@@ -139,6 +175,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="speechToTextSettings")
     private @Nullable Output<GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs> speechToTextSettings;
 
+    /**
+     * @return Speech recognition related settings.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs>> speechToTextSettings() {
         return Optional.ofNullable(this.speechToTextSettings);
     }
@@ -150,6 +190,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startFlow")
     private @Nullable Output<String> startFlow;
 
+    /**
+     * @return Immutable. Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: `projects//locations//agents//flows/`.
+     * 
+     */
     public Optional<Output<String>> startFlow() {
         return Optional.ofNullable(this.startFlow);
     }
@@ -161,6 +205,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportedLanguageCodes")
     private @Nullable Output<List<String>> supportedLanguageCodes;
 
+    /**
+     * @return The list of all languages supported by the agent (except for the `default_language_code`).
+     * 
+     */
     public Optional<Output<List<String>>> supportedLanguageCodes() {
         return Optional.ofNullable(this.supportedLanguageCodes);
     }
@@ -172,6 +220,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeZone", required=true)
     private Output<String> timeZone;
 
+    /**
+     * @return The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.
+     * 
+     */
     public Output<String> timeZone() {
         return this.timeZone;
     }
@@ -214,65 +266,149 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AgentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advancedSettings Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedSettings(@Nullable Output<GoogleCloudDialogflowCxV3AdvancedSettingsArgs> advancedSettings) {
             $.advancedSettings = advancedSettings;
             return this;
         }
 
+        /**
+         * @param advancedSettings Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedSettings(GoogleCloudDialogflowCxV3AdvancedSettingsArgs advancedSettings) {
             return advancedSettings(Output.of(advancedSettings));
         }
 
+        /**
+         * @param avatarUri The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder avatarUri(@Nullable Output<String> avatarUri) {
             $.avatarUri = avatarUri;
             return this;
         }
 
+        /**
+         * @param avatarUri The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder avatarUri(String avatarUri) {
             return avatarUri(Output.of(avatarUri));
         }
 
+        /**
+         * @param defaultLanguageCode Immutable. The default language of the agent as a language tag. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultLanguageCode(Output<String> defaultLanguageCode) {
             $.defaultLanguageCode = defaultLanguageCode;
             return this;
         }
 
+        /**
+         * @param defaultLanguageCode Immutable. The default language of the agent as a language tag. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultLanguageCode(String defaultLanguageCode) {
             return defaultLanguageCode(Output.of(defaultLanguageCode));
         }
 
+        /**
+         * @param description The description of the agent. The maximum length is 500 characters. If exceeded, the request is rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the agent. The maximum length is 500 characters. If exceeded, the request is rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The human-readable name of the agent, unique within the location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The human-readable name of the agent, unique within the location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param enableSpellCorrection Indicates if automatic spell correction is enabled in detect intent requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSpellCorrection(@Nullable Output<Boolean> enableSpellCorrection) {
             $.enableSpellCorrection = enableSpellCorrection;
             return this;
         }
 
+        /**
+         * @param enableSpellCorrection Indicates if automatic spell correction is enabled in detect intent requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSpellCorrection(Boolean enableSpellCorrection) {
             return enableSpellCorrection(Output.of(enableSpellCorrection));
         }
 
+        /**
+         * @param enableStackdriverLogging Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
             $.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
 
+        /**
+         * @param enableStackdriverLogging Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
             return enableStackdriverLogging(Output.of(enableStackdriverLogging));
         }
@@ -286,11 +422,23 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -304,51 +452,117 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param securitySettings Name of the SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securitySettings(@Nullable Output<String> securitySettings) {
             $.securitySettings = securitySettings;
             return this;
         }
 
+        /**
+         * @param securitySettings Name of the SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securitySettings(String securitySettings) {
             return securitySettings(Output.of(securitySettings));
         }
 
+        /**
+         * @param speechToTextSettings Speech recognition related settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder speechToTextSettings(@Nullable Output<GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs> speechToTextSettings) {
             $.speechToTextSettings = speechToTextSettings;
             return this;
         }
 
+        /**
+         * @param speechToTextSettings Speech recognition related settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder speechToTextSettings(GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs speechToTextSettings) {
             return speechToTextSettings(Output.of(speechToTextSettings));
         }
 
+        /**
+         * @param startFlow Immutable. Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: `projects//locations//agents//flows/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startFlow(@Nullable Output<String> startFlow) {
             $.startFlow = startFlow;
             return this;
         }
 
+        /**
+         * @param startFlow Immutable. Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: `projects//locations//agents//flows/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startFlow(String startFlow) {
             return startFlow(Output.of(startFlow));
         }
 
+        /**
+         * @param supportedLanguageCodes The list of all languages supported by the agent (except for the `default_language_code`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedLanguageCodes(@Nullable Output<List<String>> supportedLanguageCodes) {
             $.supportedLanguageCodes = supportedLanguageCodes;
             return this;
         }
 
+        /**
+         * @param supportedLanguageCodes The list of all languages supported by the agent (except for the `default_language_code`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedLanguageCodes(List<String> supportedLanguageCodes) {
             return supportedLanguageCodes(Output.of(supportedLanguageCodes));
         }
 
+        /**
+         * @param supportedLanguageCodes The list of all languages supported by the agent (except for the `default_language_code`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedLanguageCodes(String... supportedLanguageCodes) {
             return supportedLanguageCodes(List.of(supportedLanguageCodes));
         }
 
+        /**
+         * @param timeZone The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(Output<String> timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param timeZone The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             return timeZone(Output.of(timeZone));
         }

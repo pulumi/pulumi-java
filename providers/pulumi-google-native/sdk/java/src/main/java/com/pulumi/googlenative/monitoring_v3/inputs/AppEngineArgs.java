@@ -26,6 +26,10 @@ public final class AppEngineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="moduleId")
     private @Nullable Output<String> moduleId;
 
+    /**
+     * @return The ID of the App Engine module underlying this service. Corresponds to the module_id resource label in the gae_app monitored resource: https://cloud.google.com/monitoring/api/resources#tag_gae_app
+     * 
+     */
     public Optional<Output<String>> moduleId() {
         return Optional.ofNullable(this.moduleId);
     }
@@ -54,11 +58,23 @@ public final class AppEngineArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AppEngineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param moduleId The ID of the App Engine module underlying this service. Corresponds to the module_id resource label in the gae_app monitored resource: https://cloud.google.com/monitoring/api/resources#tag_gae_app
+         * 
+         * @return builder
+         * 
+         */
         public Builder moduleId(@Nullable Output<String> moduleId) {
             $.moduleId = moduleId;
             return this;
         }
 
+        /**
+         * @param moduleId The ID of the App Engine module underlying this service. Corresponds to the module_id resource label in the gae_app monitored resource: https://cloud.google.com/monitoring/api/resources#tag_gae_app
+         * 
+         * @return builder
+         * 
+         */
         public Builder moduleId(String moduleId) {
             return moduleId(Output.of(moduleId));
         }

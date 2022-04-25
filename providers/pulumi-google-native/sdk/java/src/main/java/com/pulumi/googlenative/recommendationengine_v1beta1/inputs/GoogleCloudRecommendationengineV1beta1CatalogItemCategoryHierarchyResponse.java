@@ -24,6 +24,10 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
     @Import(name="categories", required=true)
     private List<String> categories;
 
+    /**
+     * @return Catalog item categories. Each category should be a UTF-8 encoded string with a length limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most specific).
+     * 
+     */
     public List<String> categories() {
         return this.categories;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
             $ = new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categories Catalog item categories. Each category should be a UTF-8 encoded string with a length limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most specific).
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(List<String> categories) {
             $.categories = categories;
             return this;
         }
 
+        /**
+         * @param categories Catalog item categories. Each category should be a UTF-8 encoded string with a length limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most specific).
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }

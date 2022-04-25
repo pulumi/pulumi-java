@@ -27,6 +27,10 @@ public final class SandboxConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sandboxType")
     private @Nullable Output<String> sandboxType;
 
+    /**
+     * @return Type of the sandbox to use for the node (e.g. &#39;gvisor&#39;)
+     * 
+     */
     public Optional<Output<String>> sandboxType() {
         return Optional.ofNullable(this.sandboxType);
     }
@@ -38,6 +42,10 @@ public final class SandboxConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<SandboxConfigType> type;
 
+    /**
+     * @return Type of the sandbox to use for the node.
+     * 
+     */
     public Optional<Output<SandboxConfigType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -67,20 +75,44 @@ public final class SandboxConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SandboxConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sandboxType Type of the sandbox to use for the node (e.g. &#39;gvisor&#39;)
+         * 
+         * @return builder
+         * 
+         */
         public Builder sandboxType(@Nullable Output<String> sandboxType) {
             $.sandboxType = sandboxType;
             return this;
         }
 
+        /**
+         * @param sandboxType Type of the sandbox to use for the node (e.g. &#39;gvisor&#39;)
+         * 
+         * @return builder
+         * 
+         */
         public Builder sandboxType(String sandboxType) {
             return sandboxType(Output.of(sandboxType));
         }
 
+        /**
+         * @param type Type of the sandbox to use for the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<SandboxConfigType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the sandbox to use for the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(SandboxConfigType type) {
             return type(Output.of(type));
         }

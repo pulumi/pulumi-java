@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class StackTraceElementResponse {
     /**
-     * The source position information of the stack trace element.
+     * @return The source position information of the stack trace element.
      * 
      */
     private final PositionResponse position;
     /**
-     * The routine where the error occurred.
+     * @return The routine where the error occurred.
      * 
      */
     private final String routine;
     /**
-     * The step the error occurred at.
+     * @return The step the error occurred at.
      * 
      */
     private final String step;
@@ -37,23 +37,23 @@ public final class StackTraceElementResponse {
     }
 
     /**
-     * The source position information of the stack trace element.
+     * @return The source position information of the stack trace element.
      * 
-    */
+     */
     public PositionResponse position() {
         return this.position;
     }
     /**
-     * The routine where the error occurred.
+     * @return The routine where the error occurred.
      * 
-    */
+     */
     public String routine() {
         return this.routine;
     }
     /**
-     * The step the error occurred at.
+     * @return The step the error occurred at.
      * 
-    */
+     */
     public String step() {
         return this.step;
     }

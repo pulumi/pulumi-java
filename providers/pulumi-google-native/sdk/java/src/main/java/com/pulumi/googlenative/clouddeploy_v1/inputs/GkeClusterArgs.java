@@ -26,6 +26,10 @@ public final class GkeClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
     private @Nullable Output<String> cluster;
 
+    /**
+     * @return Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
+     * 
+     */
     public Optional<Output<String>> cluster() {
         return Optional.ofNullable(this.cluster);
     }
@@ -54,11 +58,23 @@ public final class GkeClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GkeClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(@Nullable Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
         }

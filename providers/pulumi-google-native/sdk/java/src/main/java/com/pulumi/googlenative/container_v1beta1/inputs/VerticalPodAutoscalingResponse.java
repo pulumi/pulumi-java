@@ -23,6 +23,10 @@ public final class VerticalPodAutoscalingResponse extends com.pulumi.resources.I
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Enables vertical pod autoscaling.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class VerticalPodAutoscalingResponse extends com.pulumi.resources.I
             $ = new VerticalPodAutoscalingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Enables vertical pod autoscaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

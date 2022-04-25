@@ -24,6 +24,10 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
     @Import(name="objectiveValue", required=true)
     private Double objectiveValue;
 
+    /**
+     * @return The objective value at this training step.
+     * 
+     */
     public Double objectiveValue() {
         return this.objectiveValue;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
     @Import(name="trainingStep", required=true)
     private String trainingStep;
 
+    /**
+     * @return The global training step for this metric.
+     * 
+     */
     public String trainingStep() {
         return this.trainingStep;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
             $ = new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectiveValue The objective value at this training step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectiveValue(Double objectiveValue) {
             $.objectiveValue = objectiveValue;
             return this;
         }
 
+        /**
+         * @param trainingStep The global training step for this metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingStep(String trainingStep) {
             $.trainingStep = trainingStep;
             return this;

@@ -14,112 +14,112 @@ import java.util.Objects;
 @CustomType
 public final class OperationResponse {
     /**
-     * The value of `requestId` if you provided it in the request. Not present otherwise.
+     * @return The value of `requestId` if you provided it in the request. Not present otherwise.
      * 
      */
     private final String clientOperationId;
     /**
-     * A textual description of the operation, which is set when the operation is created.
+     * @return A textual description of the operation, which is set when the operation is created.
      * 
      */
     private final String description;
     /**
-     * The time that this operation was completed. This value is in RFC3339 text format.
+     * @return The time that this operation was completed. This value is in RFC3339 text format.
      * 
      */
     private final String endTime;
     /**
-     * If errors are generated during processing of the operation, this field will be populated.
+     * @return If errors are generated during processing of the operation, this field will be populated.
      * 
      */
     private final OperationErrorResponse error;
     /**
-     * If the operation fails, this field contains the HTTP error message that was returned, such as `NOT FOUND`.
+     * @return If the operation fails, this field contains the HTTP error message that was returned, such as `NOT FOUND`.
      * 
      */
     private final String httpErrorMessage;
     /**
-     * If the operation fails, this field contains the HTTP error status code that was returned. For example, a `404` means the resource was not found.
+     * @return If the operation fails, this field contains the HTTP error status code that was returned. For example, a `404` means the resource was not found.
      * 
      */
     private final Integer httpErrorStatusCode;
     /**
-     * The time that this operation was requested. This value is in RFC3339 text format.
+     * @return The time that this operation was requested. This value is in RFC3339 text format.
      * 
      */
     private final String insertTime;
     /**
-     * Type of the resource. Always `compute#operation` for Operation resources.
+     * @return Type of the resource. Always `compute#operation` for Operation resources.
      * 
      */
     private final String kind;
     /**
-     * Name of the operation.
+     * @return Name of the operation.
      * 
      */
     private final String name;
     /**
-     * An ID that represents a group of operations, such as when a group of operations results from a `bulkInsert` API request.
+     * @return An ID that represents a group of operations, such as when a group of operations results from a `bulkInsert` API request.
      * 
      */
     private final String operationGroupId;
     /**
-     * The type of operation, such as `insert`, `update`, or `delete`, and so on.
+     * @return The type of operation, such as `insert`, `update`, or `delete`, and so on.
      * 
      */
     private final String operationType;
     /**
-     * An optional progress indicator that ranges from 0 to 100. There is no requirement that this be linear or support any granularity of operations. This should not be used to guess when the operation will be complete. This number should monotonically increase as the operation progresses.
+     * @return An optional progress indicator that ranges from 0 to 100. There is no requirement that this be linear or support any granularity of operations. This should not be used to guess when the operation will be complete. This number should monotonically increase as the operation progresses.
      * 
      */
     private final Integer progress;
     /**
-     * The URL of the region where the operation resides. Only applicable when performing regional operations.
+     * @return The URL of the region where the operation resides. Only applicable when performing regional operations.
      * 
      */
     private final String region;
     /**
-     * Server-defined URL for the resource.
+     * @return Server-defined URL for the resource.
      * 
      */
     private final String selfLink;
     /**
-     * The time that this operation was started by the server. This value is in RFC3339 text format.
+     * @return The time that this operation was started by the server. This value is in RFC3339 text format.
      * 
      */
     private final String startTime;
     /**
-     * The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.
+     * @return The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.
      * 
      */
     private final String status;
     /**
-     * An optional textual description of the current status of the operation.
+     * @return An optional textual description of the current status of the operation.
      * 
      */
     private final String statusMessage;
     /**
-     * The unique target ID, which identifies a specific incarnation of the target resource.
+     * @return The unique target ID, which identifies a specific incarnation of the target resource.
      * 
      */
     private final String targetId;
     /**
-     * The URL of the resource that the operation modifies. For operations related to creating a snapshot, this points to the persistent disk that the snapshot was created from.
+     * @return The URL of the resource that the operation modifies. For operations related to creating a snapshot, this points to the persistent disk that the snapshot was created from.
      * 
      */
     private final String targetLink;
     /**
-     * User who requested the operation, for example: `user@example.com`.
+     * @return User who requested the operation, for example: `user@example.com`.
      * 
      */
     private final String user;
     /**
-     * If warning messages are generated during processing of the operation, this field will be populated.
+     * @return If warning messages are generated during processing of the operation, this field will be populated.
      * 
      */
     private final List<OperationWarningsItemResponse> warnings;
     /**
-     * The URL of the zone where the operation resides. Only applicable when performing per-zone operations.
+     * @return The URL of the zone where the operation resides. Only applicable when performing per-zone operations.
      * 
      */
     private final String zone;
@@ -173,156 +173,156 @@ public final class OperationResponse {
     }
 
     /**
-     * The value of `requestId` if you provided it in the request. Not present otherwise.
+     * @return The value of `requestId` if you provided it in the request. Not present otherwise.
      * 
-    */
+     */
     public String clientOperationId() {
         return this.clientOperationId;
     }
     /**
-     * A textual description of the operation, which is set when the operation is created.
+     * @return A textual description of the operation, which is set when the operation is created.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The time that this operation was completed. This value is in RFC3339 text format.
+     * @return The time that this operation was completed. This value is in RFC3339 text format.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * If errors are generated during processing of the operation, this field will be populated.
+     * @return If errors are generated during processing of the operation, this field will be populated.
      * 
-    */
+     */
     public OperationErrorResponse error() {
         return this.error;
     }
     /**
-     * If the operation fails, this field contains the HTTP error message that was returned, such as `NOT FOUND`.
+     * @return If the operation fails, this field contains the HTTP error message that was returned, such as `NOT FOUND`.
      * 
-    */
+     */
     public String httpErrorMessage() {
         return this.httpErrorMessage;
     }
     /**
-     * If the operation fails, this field contains the HTTP error status code that was returned. For example, a `404` means the resource was not found.
+     * @return If the operation fails, this field contains the HTTP error status code that was returned. For example, a `404` means the resource was not found.
      * 
-    */
+     */
     public Integer httpErrorStatusCode() {
         return this.httpErrorStatusCode;
     }
     /**
-     * The time that this operation was requested. This value is in RFC3339 text format.
+     * @return The time that this operation was requested. This value is in RFC3339 text format.
      * 
-    */
+     */
     public String insertTime() {
         return this.insertTime;
     }
     /**
-     * Type of the resource. Always `compute#operation` for Operation resources.
+     * @return Type of the resource. Always `compute#operation` for Operation resources.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the operation.
+     * @return Name of the operation.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * An ID that represents a group of operations, such as when a group of operations results from a `bulkInsert` API request.
+     * @return An ID that represents a group of operations, such as when a group of operations results from a `bulkInsert` API request.
      * 
-    */
+     */
     public String operationGroupId() {
         return this.operationGroupId;
     }
     /**
-     * The type of operation, such as `insert`, `update`, or `delete`, and so on.
+     * @return The type of operation, such as `insert`, `update`, or `delete`, and so on.
      * 
-    */
+     */
     public String operationType() {
         return this.operationType;
     }
     /**
-     * An optional progress indicator that ranges from 0 to 100. There is no requirement that this be linear or support any granularity of operations. This should not be used to guess when the operation will be complete. This number should monotonically increase as the operation progresses.
+     * @return An optional progress indicator that ranges from 0 to 100. There is no requirement that this be linear or support any granularity of operations. This should not be used to guess when the operation will be complete. This number should monotonically increase as the operation progresses.
      * 
-    */
+     */
     public Integer progress() {
         return this.progress;
     }
     /**
-     * The URL of the region where the operation resides. Only applicable when performing regional operations.
+     * @return The URL of the region where the operation resides. Only applicable when performing regional operations.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * Server-defined URL for the resource.
+     * @return Server-defined URL for the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * The time that this operation was started by the server. This value is in RFC3339 text format.
+     * @return The time that this operation was started by the server. This value is in RFC3339 text format.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.
+     * @return The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * An optional textual description of the current status of the operation.
+     * @return An optional textual description of the current status of the operation.
      * 
-    */
+     */
     public String statusMessage() {
         return this.statusMessage;
     }
     /**
-     * The unique target ID, which identifies a specific incarnation of the target resource.
+     * @return The unique target ID, which identifies a specific incarnation of the target resource.
      * 
-    */
+     */
     public String targetId() {
         return this.targetId;
     }
     /**
-     * The URL of the resource that the operation modifies. For operations related to creating a snapshot, this points to the persistent disk that the snapshot was created from.
+     * @return The URL of the resource that the operation modifies. For operations related to creating a snapshot, this points to the persistent disk that the snapshot was created from.
      * 
-    */
+     */
     public String targetLink() {
         return this.targetLink;
     }
     /**
-     * User who requested the operation, for example: `user@example.com`.
+     * @return User who requested the operation, for example: `user@example.com`.
      * 
-    */
+     */
     public String user() {
         return this.user;
     }
     /**
-     * If warning messages are generated during processing of the operation, this field will be populated.
+     * @return If warning messages are generated during processing of the operation, this field will be populated.
      * 
-    */
+     */
     public List<OperationWarningsItemResponse> warnings() {
         return this.warnings;
     }
     /**
-     * The URL of the zone where the operation resides. Only applicable when performing per-zone operations.
+     * @return The URL of the zone where the operation resides. Only applicable when performing per-zone operations.
      * 
-    */
+     */
     public String zone() {
         return this.zone;
     }

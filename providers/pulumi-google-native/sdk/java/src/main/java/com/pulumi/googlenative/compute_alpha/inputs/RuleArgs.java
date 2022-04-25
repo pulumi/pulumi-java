@@ -30,6 +30,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action")
     private @Nullable Output<RuleAction> action;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<RuleAction>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -41,6 +45,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
     private @Nullable Output<List<ConditionArgs>> conditions;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<List<ConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -52,6 +60,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -63,6 +75,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ins")
     private @Nullable Output<List<String>> ins;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<List<String>>> ins() {
         return Optional.ofNullable(this.ins);
     }
@@ -74,6 +90,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logConfigs")
     private @Nullable Output<List<LogConfigArgs>> logConfigs;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<List<LogConfigArgs>>> logConfigs() {
         return Optional.ofNullable(this.logConfigs);
     }
@@ -85,6 +105,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notIns")
     private @Nullable Output<List<String>> notIns;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<List<String>>> notIns() {
         return Optional.ofNullable(this.notIns);
     }
@@ -96,6 +120,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
     private @Nullable Output<List<String>> permissions;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<List<String>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -130,85 +158,199 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<RuleAction> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(RuleAction action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param conditions This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<ConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<ConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(ConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param description This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ins This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ins(@Nullable Output<List<String>> ins) {
             $.ins = ins;
             return this;
         }
 
+        /**
+         * @param ins This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ins(List<String> ins) {
             return ins(Output.of(ins));
         }
 
+        /**
+         * @param ins This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ins(String... ins) {
             return ins(List.of(ins));
         }
 
+        /**
+         * @param logConfigs This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfigs(@Nullable Output<List<LogConfigArgs>> logConfigs) {
             $.logConfigs = logConfigs;
             return this;
         }
 
+        /**
+         * @param logConfigs This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfigs(List<LogConfigArgs> logConfigs) {
             return logConfigs(Output.of(logConfigs));
         }
 
+        /**
+         * @param logConfigs This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfigs(LogConfigArgs... logConfigs) {
             return logConfigs(List.of(logConfigs));
         }
 
+        /**
+         * @param notIns This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notIns(@Nullable Output<List<String>> notIns) {
             $.notIns = notIns;
             return this;
         }
 
+        /**
+         * @param notIns This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notIns(List<String> notIns) {
             return notIns(Output.of(notIns));
         }
 
+        /**
+         * @param notIns This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notIns(String... notIns) {
             return notIns(List.of(notIns));
         }
 
+        /**
+         * @param permissions This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<List<String>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<String> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }

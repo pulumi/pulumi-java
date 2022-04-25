@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class OSPolicyResourcePackageResourceDebResponse {
     /**
-     * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`
+     * @return Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`
      * 
      */
     private final Boolean pullDeps;
     /**
-     * A deb package.
+     * @return A deb package.
      * 
      */
     private final OSPolicyResourceFileResponse source;
@@ -30,16 +30,16 @@ public final class OSPolicyResourcePackageResourceDebResponse {
     }
 
     /**
-     * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`
+     * @return Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`
      * 
-    */
+     */
     public Boolean pullDeps() {
         return this.pullDeps;
     }
     /**
-     * A deb package.
+     * @return A deb package.
      * 
-    */
+     */
     public OSPolicyResourceFileResponse source() {
         return this.source;
     }

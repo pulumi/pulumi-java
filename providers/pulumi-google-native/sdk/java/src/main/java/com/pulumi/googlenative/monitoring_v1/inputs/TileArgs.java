@@ -27,6 +27,10 @@ public final class TileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="height")
     private @Nullable Output<Integer> height;
 
+    /**
+     * @return The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
+     * 
+     */
     public Optional<Output<Integer>> height() {
         return Optional.ofNullable(this.height);
     }
@@ -38,6 +42,10 @@ public final class TileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="widget")
     private @Nullable Output<WidgetArgs> widget;
 
+    /**
+     * @return The informational widget contained in the tile. For example an XyChart.
+     * 
+     */
     public Optional<Output<WidgetArgs>> widget() {
         return Optional.ofNullable(this.widget);
     }
@@ -49,6 +57,10 @@ public final class TileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="width")
     private @Nullable Output<Integer> width;
 
+    /**
+     * @return The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
+     * 
+     */
     public Optional<Output<Integer>> width() {
         return Optional.ofNullable(this.width);
     }
@@ -60,6 +72,10 @@ public final class TileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="xPos")
     private @Nullable Output<Integer> xPos;
 
+    /**
+     * @return The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
+     * 
+     */
     public Optional<Output<Integer>> xPos() {
         return Optional.ofNullable(this.xPos);
     }
@@ -71,6 +87,10 @@ public final class TileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="yPos")
     private @Nullable Output<Integer> yPos;
 
+    /**
+     * @return The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
+     * 
+     */
     public Optional<Output<Integer>> yPos() {
         return Optional.ofNullable(this.yPos);
     }
@@ -103,47 +123,107 @@ public final class TileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param height The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(@Nullable Output<Integer> height) {
             $.height = height;
             return this;
         }
 
+        /**
+         * @param height The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(Integer height) {
             return height(Output.of(height));
         }
 
+        /**
+         * @param widget The informational widget contained in the tile. For example an XyChart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widget(@Nullable Output<WidgetArgs> widget) {
             $.widget = widget;
             return this;
         }
 
+        /**
+         * @param widget The informational widget contained in the tile. For example an XyChart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widget(WidgetArgs widget) {
             return widget(Output.of(widget));
         }
 
+        /**
+         * @param width The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(@Nullable Output<Integer> width) {
             $.width = width;
             return this;
         }
 
+        /**
+         * @param width The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(Integer width) {
             return width(Output.of(width));
         }
 
+        /**
+         * @param xPos The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xPos(@Nullable Output<Integer> xPos) {
             $.xPos = xPos;
             return this;
         }
 
+        /**
+         * @param xPos The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xPos(Integer xPos) {
             return xPos(Output.of(xPos));
         }
 
+        /**
+         * @param yPos The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yPos(@Nullable Output<Integer> yPos) {
             $.yPos = yPos;
             return this;
         }
 
+        /**
+         * @param yPos The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yPos(Integer yPos) {
             return yPos(Output.of(yPos));
         }

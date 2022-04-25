@@ -23,6 +23,10 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="externalIp", required=true)
     private String externalIp;
 
+    /**
+     * @return An external IP address associated with the TPU worker.
+     * 
+     */
     public String externalIp() {
         return this.externalIp;
     }
@@ -51,6 +55,12 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new AccessConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param externalIp An external IP address associated with the TPU worker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIp(String externalIp) {
             $.externalIp = externalIp;
             return this;

@@ -24,6 +24,10 @@ public final class AndroidAttributesResponse extends com.pulumi.resources.Invoke
     @Import(name="enabledUnknownSources", required=true)
     private Boolean enabledUnknownSources;
 
+    /**
+     * @return Whether applications from unknown sources can be installed on device.
+     * 
+     */
     public Boolean enabledUnknownSources() {
         return this.enabledUnknownSources;
     }
@@ -35,6 +39,10 @@ public final class AndroidAttributesResponse extends com.pulumi.resources.Invoke
     @Import(name="ownerProfileAccount", required=true)
     private Boolean ownerProfileAccount;
 
+    /**
+     * @return Whether this account is on an owner/primary profile. For phones, only true for owner profiles. Android 4+ devices can have secondary or restricted user profiles.
+     * 
+     */
     public Boolean ownerProfileAccount() {
         return this.ownerProfileAccount;
     }
@@ -46,6 +54,10 @@ public final class AndroidAttributesResponse extends com.pulumi.resources.Invoke
     @Import(name="ownershipPrivilege", required=true)
     private String ownershipPrivilege;
 
+    /**
+     * @return Ownership privileges on device.
+     * 
+     */
     public String ownershipPrivilege() {
         return this.ownershipPrivilege;
     }
@@ -57,6 +69,10 @@ public final class AndroidAttributesResponse extends com.pulumi.resources.Invoke
     @Import(name="supportsWorkProfile", required=true)
     private Boolean supportsWorkProfile;
 
+    /**
+     * @return Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the &#34;Enforce Work Profile&#34; policy.
+     * 
+     */
     public Boolean supportsWorkProfile() {
         return this.supportsWorkProfile;
     }
@@ -88,21 +104,45 @@ public final class AndroidAttributesResponse extends com.pulumi.resources.Invoke
             $ = new AndroidAttributesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabledUnknownSources Whether applications from unknown sources can be installed on device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledUnknownSources(Boolean enabledUnknownSources) {
             $.enabledUnknownSources = enabledUnknownSources;
             return this;
         }
 
+        /**
+         * @param ownerProfileAccount Whether this account is on an owner/primary profile. For phones, only true for owner profiles. Android 4+ devices can have secondary or restricted user profiles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerProfileAccount(Boolean ownerProfileAccount) {
             $.ownerProfileAccount = ownerProfileAccount;
             return this;
         }
 
+        /**
+         * @param ownershipPrivilege Ownership privileges on device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownershipPrivilege(String ownershipPrivilege) {
             $.ownershipPrivilege = ownershipPrivilege;
             return this;
         }
 
+        /**
+         * @param supportsWorkProfile Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the &#34;Enforce Work Profile&#34; policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportsWorkProfile(Boolean supportsWorkProfile) {
             $.supportsWorkProfile = supportsWorkProfile;
             return this;

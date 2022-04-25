@@ -24,6 +24,10 @@ public final class RuntimeConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="containerImage", required=true)
     private String containerImage;
 
+    /**
+     * @return Optional. Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
+     * 
+     */
     public String containerImage() {
         return this.containerImage;
     }
@@ -35,6 +39,10 @@ public final class RuntimeConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="properties", required=true)
     private Map<String,String> properties;
 
+    /**
+     * @return Optional. A mapping of property names to values, which are used to configure workload execution.
+     * 
+     */
     public Map<String,String> properties() {
         return this.properties;
     }
@@ -46,6 +54,10 @@ public final class RuntimeConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Optional. Version of the batch runtime.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -76,16 +88,34 @@ public final class RuntimeConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new RuntimeConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerImage Optional. Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(String containerImage) {
             $.containerImage = containerImage;
             return this;
         }
 
+        /**
+         * @param properties Optional. A mapping of property names to values, which are used to configure workload execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param version Optional. Version of the batch runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

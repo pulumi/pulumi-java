@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="buttonId", required=true)
     private Output<String> buttonId;
 
+    /**
+     * @return Live Agent chat button ID.
+     * 
+     */
     public Output<String> buttonId() {
         return this.buttonId;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="deploymentId", required=true)
     private Output<String> deploymentId;
 
+    /**
+     * @return Live Agent deployment ID.
+     * 
+     */
     public Output<String> deploymentId() {
         return this.deploymentId;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="endpointDomain", required=true)
     private Output<String> endpointDomain;
 
+    /**
+     * @return Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.
+     * 
+     */
     public Output<String> endpointDomain() {
         return this.endpointDomain;
     }
@@ -57,6 +69,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
     @Import(name="organizationId", required=true)
     private Output<String> organizationId;
 
+    /**
+     * @return The organization ID of the Salesforce account.
+     * 
+     */
     public Output<String> organizationId() {
         return this.organizationId;
     }
@@ -88,38 +104,86 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
             $ = new GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buttonId Live Agent chat button ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttonId(Output<String> buttonId) {
             $.buttonId = buttonId;
             return this;
         }
 
+        /**
+         * @param buttonId Live Agent chat button ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttonId(String buttonId) {
             return buttonId(Output.of(buttonId));
         }
 
+        /**
+         * @param deploymentId Live Agent deployment ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(Output<String> deploymentId) {
             $.deploymentId = deploymentId;
             return this;
         }
 
+        /**
+         * @param deploymentId Live Agent deployment ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(String deploymentId) {
             return deploymentId(Output.of(deploymentId));
         }
 
+        /**
+         * @param endpointDomain Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointDomain(Output<String> endpointDomain) {
             $.endpointDomain = endpointDomain;
             return this;
         }
 
+        /**
+         * @param endpointDomain Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointDomain(String endpointDomain) {
             return endpointDomain(Output.of(endpointDomain));
         }
 
+        /**
+         * @param organizationId The organization ID of the Salesforce account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
+        /**
+         * @param organizationId The organization ID of the Salesforce account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationId(String organizationId) {
             return organizationId(Output.of(organizationId));
         }

@@ -12,42 +12,42 @@ import java.util.Objects;
 @CustomType
 public final class GetNotificationResult {
     /**
-     * An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
+     * @return An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
      * 
      */
     private final Map<String,String> customAttributes;
     /**
-     * HTTP 1.1 Entity tag for this subscription notification.
+     * @return HTTP 1.1 Entity tag for this subscription notification.
      * 
      */
     private final String etag;
     /**
-     * If present, only send notifications about listed event types. If empty, sent notifications for all event types.
+     * @return If present, only send notifications about listed event types. If empty, sent notifications for all event types.
      * 
      */
     private final List<String> eventTypes;
     /**
-     * The kind of item this is. For notifications, this is always storage#notification.
+     * @return The kind of item this is. For notifications, this is always storage#notification.
      * 
      */
     private final String kind;
     /**
-     * If present, only apply this notification configuration to object names that begin with this prefix.
+     * @return If present, only apply this notification configuration to object names that begin with this prefix.
      * 
      */
     private final String objectNamePrefix;
     /**
-     * The desired content of the Payload.
+     * @return The desired content of the Payload.
      * 
      */
     private final String payloadFormat;
     /**
-     * The canonical URL of this notification.
+     * @return The canonical URL of this notification.
      * 
      */
     private final String selfLink;
     /**
-     * The Cloud PubSub topic to which this subscription publishes. Formatted as: &#39;//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}&#39;
+     * @return The Cloud PubSub topic to which this subscription publishes. Formatted as: &#39;//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}&#39;
      * 
      */
     private final String topic;
@@ -73,58 +73,58 @@ public final class GetNotificationResult {
     }
 
     /**
-     * An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
+     * @return An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
      * 
-    */
+     */
     public Map<String,String> customAttributes() {
         return this.customAttributes;
     }
     /**
-     * HTTP 1.1 Entity tag for this subscription notification.
+     * @return HTTP 1.1 Entity tag for this subscription notification.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * If present, only send notifications about listed event types. If empty, sent notifications for all event types.
+     * @return If present, only send notifications about listed event types. If empty, sent notifications for all event types.
      * 
-    */
+     */
     public List<String> eventTypes() {
         return this.eventTypes;
     }
     /**
-     * The kind of item this is. For notifications, this is always storage#notification.
+     * @return The kind of item this is. For notifications, this is always storage#notification.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * If present, only apply this notification configuration to object names that begin with this prefix.
+     * @return If present, only apply this notification configuration to object names that begin with this prefix.
      * 
-    */
+     */
     public String objectNamePrefix() {
         return this.objectNamePrefix;
     }
     /**
-     * The desired content of the Payload.
+     * @return The desired content of the Payload.
      * 
-    */
+     */
     public String payloadFormat() {
         return this.payloadFormat;
     }
     /**
-     * The canonical URL of this notification.
+     * @return The canonical URL of this notification.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * The Cloud PubSub topic to which this subscription publishes. Formatted as: &#39;//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}&#39;
+     * @return The Cloud PubSub topic to which this subscription publishes. Formatted as: &#39;//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}&#39;
      * 
-    */
+     */
     public String topic() {
         return this.topic;
     }

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class AuditLogConfigResponse {
     /**
-     * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
+     * @return Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
      * 
      */
     private final List<String> exemptedMembers;
     /**
-     * The log type that this config enables.
+     * @return The log type that this config enables.
      * 
      */
     private final String logType;
@@ -30,16 +30,16 @@ public final class AuditLogConfigResponse {
     }
 
     /**
-     * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
+     * @return Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
      * 
-    */
+     */
     public List<String> exemptedMembers() {
         return this.exemptedMembers;
     }
     /**
-     * The log type that this config enables.
+     * @return The log type that this config enables.
      * 
-    */
+     */
     public String logType() {
         return this.logType;
     }

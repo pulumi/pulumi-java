@@ -30,6 +30,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifacts")
     private @Nullable Output<ArtifactsArgs> artifacts;
 
+    /**
+     * @return Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
+     * 
+     */
     public Optional<Output<ArtifactsArgs>> artifacts() {
         return Optional.ofNullable(this.artifacts);
     }
@@ -41,6 +45,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availableSecrets")
     private @Nullable Output<SecretsArgs> availableSecrets;
 
+    /**
+     * @return Secrets and secret environment variables.
+     * 
+     */
     public Optional<Output<SecretsArgs>> availableSecrets() {
         return Optional.ofNullable(this.availableSecrets);
     }
@@ -52,6 +60,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="images")
     private @Nullable Output<List<String>> images;
 
+    /**
+     * @return A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account&#39;s credentials. The digests of the pushed images will be stored in the `Build` resource&#39;s results field. If any of the images fail to be pushed, the build status is marked `FAILURE`.
+     * 
+     */
     public Optional<Output<List<String>>> images() {
         return Optional.ofNullable(this.images);
     }
@@ -70,6 +82,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logsBucket")
     private @Nullable Output<String> logsBucket;
 
+    /**
+     * @return Google Cloud Storage bucket where logs should be written (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Logs file names will be of the format `${logs_bucket}/log-${build_id}.txt`.
+     * 
+     */
     public Optional<Output<String>> logsBucket() {
         return Optional.ofNullable(this.logsBucket);
     }
@@ -81,6 +97,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
     private @Nullable Output<BuildOptionsArgs> options;
 
+    /**
+     * @return Special options for this build.
+     * 
+     */
     public Optional<Output<BuildOptionsArgs>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -106,6 +126,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queueTtl")
     private @Nullable Output<String> queueTtl;
 
+    /**
+     * @return TTL in queue for this build. If provided and the build is enqueued longer than this value, the build will expire and the build status will be `EXPIRED`. The TTL starts ticking from create_time.
+     * 
+     */
     public Optional<Output<String>> queueTtl() {
         return Optional.ofNullable(this.queueTtl);
     }
@@ -117,6 +141,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secrets")
     private @Nullable Output<List<SecretArgs>> secrets;
 
+    /**
+     * @return Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
+     * 
+     */
     public Optional<Output<List<SecretArgs>>> secrets() {
         return Optional.ofNullable(this.secrets);
     }
@@ -128,6 +156,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
     private @Nullable Output<String> serviceAccount;
 
+    /**
+     * @return IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account.
+     * 
+     */
     public Optional<Output<String>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -139,6 +171,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source")
     private @Nullable Output<SourceArgs> source;
 
+    /**
+     * @return The location of the source files to build.
+     * 
+     */
     public Optional<Output<SourceArgs>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -150,6 +186,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="steps", required=true)
     private Output<List<BuildStepArgs>> steps;
 
+    /**
+     * @return The operations to be performed on the workspace.
+     * 
+     */
     public Output<List<BuildStepArgs>> steps() {
         return this.steps;
     }
@@ -161,6 +201,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="substitutions")
     private @Nullable Output<Map<String,String>> substitutions;
 
+    /**
+     * @return Substitutions data for `Build` resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> substitutions() {
         return Optional.ofNullable(this.substitutions);
     }
@@ -172,6 +216,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
+    /**
+     * @return Tags for annotation of a `Build`. These are not docker tags.
+     * 
+     */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -183,6 +231,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
     private @Nullable Output<String> timeout;
 
+    /**
+     * @return Amount of time that this build should be allowed to run, to second granularity. If this amount of time elapses, work on the build will cease and the build status will be `TIMEOUT`. `timeout` starts ticking from `startTime`. Default time is ten minutes.
+     * 
+     */
     public Optional<Output<String>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -226,33 +278,75 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BuildArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifacts Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(@Nullable Output<ArtifactsArgs> artifacts) {
             $.artifacts = artifacts;
             return this;
         }
 
+        /**
+         * @param artifacts Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(ArtifactsArgs artifacts) {
             return artifacts(Output.of(artifacts));
         }
 
+        /**
+         * @param availableSecrets Secrets and secret environment variables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableSecrets(@Nullable Output<SecretsArgs> availableSecrets) {
             $.availableSecrets = availableSecrets;
             return this;
         }
 
+        /**
+         * @param availableSecrets Secrets and secret environment variables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableSecrets(SecretsArgs availableSecrets) {
             return availableSecrets(Output.of(availableSecrets));
         }
 
+        /**
+         * @param images A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account&#39;s credentials. The digests of the pushed images will be stored in the `Build` resource&#39;s results field. If any of the images fail to be pushed, the build status is marked `FAILURE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(@Nullable Output<List<String>> images) {
             $.images = images;
             return this;
         }
 
+        /**
+         * @param images A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account&#39;s credentials. The digests of the pushed images will be stored in the `Build` resource&#39;s results field. If any of the images fail to be pushed, the build status is marked `FAILURE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(List<String> images) {
             return images(Output.of(images));
         }
 
+        /**
+         * @param images A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account&#39;s credentials. The digests of the pushed images will be stored in the `Build` resource&#39;s results field. If any of the images fail to be pushed, the build status is marked `FAILURE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(String... images) {
             return images(List.of(images));
         }
@@ -266,20 +360,44 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param logsBucket Google Cloud Storage bucket where logs should be written (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Logs file names will be of the format `${logs_bucket}/log-${build_id}.txt`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logsBucket(@Nullable Output<String> logsBucket) {
             $.logsBucket = logsBucket;
             return this;
         }
 
+        /**
+         * @param logsBucket Google Cloud Storage bucket where logs should be written (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Logs file names will be of the format `${logs_bucket}/log-${build_id}.txt`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logsBucket(String logsBucket) {
             return logsBucket(Output.of(logsBucket));
         }
 
+        /**
+         * @param options Special options for this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<BuildOptionsArgs> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Special options for this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(BuildOptionsArgs options) {
             return options(Output.of(options));
         }
@@ -302,86 +420,200 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
             return projectId(Output.of(projectId));
         }
 
+        /**
+         * @param queueTtl TTL in queue for this build. If provided and the build is enqueued longer than this value, the build will expire and the build status will be `EXPIRED`. The TTL starts ticking from create_time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueTtl(@Nullable Output<String> queueTtl) {
             $.queueTtl = queueTtl;
             return this;
         }
 
+        /**
+         * @param queueTtl TTL in queue for this build. If provided and the build is enqueued longer than this value, the build will expire and the build status will be `EXPIRED`. The TTL starts ticking from create_time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueTtl(String queueTtl) {
             return queueTtl(Output.of(queueTtl));
         }
 
+        /**
+         * @param secrets Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(@Nullable Output<List<SecretArgs>> secrets) {
             $.secrets = secrets;
             return this;
         }
 
+        /**
+         * @param secrets Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(List<SecretArgs> secrets) {
             return secrets(Output.of(secrets));
         }
 
+        /**
+         * @param secrets Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(SecretArgs... secrets) {
             return secrets(List.of(secrets));
         }
 
+        /**
+         * @param serviceAccount IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param source The location of the source files to build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<SourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The location of the source files to build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(SourceArgs source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param steps The operations to be performed on the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(Output<List<BuildStepArgs>> steps) {
             $.steps = steps;
             return this;
         }
 
+        /**
+         * @param steps The operations to be performed on the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(List<BuildStepArgs> steps) {
             return steps(Output.of(steps));
         }
 
+        /**
+         * @param steps The operations to be performed on the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(BuildStepArgs... steps) {
             return steps(List.of(steps));
         }
 
+        /**
+         * @param substitutions Substitutions data for `Build` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder substitutions(@Nullable Output<Map<String,String>> substitutions) {
             $.substitutions = substitutions;
             return this;
         }
 
+        /**
+         * @param substitutions Substitutions data for `Build` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder substitutions(Map<String,String> substitutions) {
             return substitutions(Output.of(substitutions));
         }
 
+        /**
+         * @param tags Tags for annotation of a `Build`. These are not docker tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags for annotation of a `Build`. These are not docker tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags for annotation of a `Build`. These are not docker tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param timeout Amount of time that this build should be allowed to run, to second granularity. If this amount of time elapses, work on the build will cease and the build status will be `TIMEOUT`. `timeout` starts ticking from `startTime`. Default time is ten minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<String> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Amount of time that this build should be allowed to run, to second granularity. If this amount of time elapses, work on the build will cease and the build status will be `TIMEOUT`. `timeout` starts ticking from `startTime`. Default time is ten minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             return timeout(Output.of(timeout));
         }

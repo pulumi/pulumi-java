@@ -13,147 +13,147 @@ import java.util.Objects;
 @CustomType
 public final class ExplainQueryStageResponse {
     /**
-     * Number of parallel input segments completed.
+     * @return Number of parallel input segments completed.
      * 
      */
     private final String completedParallelInputs;
     /**
-     * Milliseconds the average shard spent on CPU-bound tasks.
+     * @return Milliseconds the average shard spent on CPU-bound tasks.
      * 
      */
     private final String computeMsAvg;
     /**
-     * Milliseconds the slowest shard spent on CPU-bound tasks.
+     * @return Milliseconds the slowest shard spent on CPU-bound tasks.
      * 
      */
     private final String computeMsMax;
     /**
-     * Relative amount of time the average shard spent on CPU-bound tasks.
+     * @return Relative amount of time the average shard spent on CPU-bound tasks.
      * 
      */
     private final Double computeRatioAvg;
     /**
-     * Relative amount of time the slowest shard spent on CPU-bound tasks.
+     * @return Relative amount of time the slowest shard spent on CPU-bound tasks.
      * 
      */
     private final Double computeRatioMax;
     /**
-     * Stage end time represented as milliseconds since epoch.
+     * @return Stage end time represented as milliseconds since epoch.
      * 
      */
     private final String endMs;
     /**
-     * IDs for stages that are inputs to this stage.
+     * @return IDs for stages that are inputs to this stage.
      * 
      */
     private final List<String> inputStages;
     /**
-     * Human-readable name for stage.
+     * @return Human-readable name for stage.
      * 
      */
     private final String name;
     /**
-     * Number of parallel input segments to be processed.
+     * @return Number of parallel input segments to be processed.
      * 
      */
     private final String parallelInputs;
     /**
-     * Milliseconds the average shard spent reading input.
+     * @return Milliseconds the average shard spent reading input.
      * 
      */
     private final String readMsAvg;
     /**
-     * Milliseconds the slowest shard spent reading input.
+     * @return Milliseconds the slowest shard spent reading input.
      * 
      */
     private final String readMsMax;
     /**
-     * Relative amount of time the average shard spent reading input.
+     * @return Relative amount of time the average shard spent reading input.
      * 
      */
     private final Double readRatioAvg;
     /**
-     * Relative amount of time the slowest shard spent reading input.
+     * @return Relative amount of time the slowest shard spent reading input.
      * 
      */
     private final Double readRatioMax;
     /**
-     * Number of records read into the stage.
+     * @return Number of records read into the stage.
      * 
      */
     private final String recordsRead;
     /**
-     * Number of records written by the stage.
+     * @return Number of records written by the stage.
      * 
      */
     private final String recordsWritten;
     /**
-     * Total number of bytes written to shuffle.
+     * @return Total number of bytes written to shuffle.
      * 
      */
     private final String shuffleOutputBytes;
     /**
-     * Total number of bytes written to shuffle and spilled to disk.
+     * @return Total number of bytes written to shuffle and spilled to disk.
      * 
      */
     private final String shuffleOutputBytesSpilled;
     /**
-     * Slot-milliseconds used by the stage.
+     * @return Slot-milliseconds used by the stage.
      * 
      */
     private final String slotMs;
     /**
-     * Stage start time represented as milliseconds since epoch.
+     * @return Stage start time represented as milliseconds since epoch.
      * 
      */
     private final String startMs;
     /**
-     * Current status for the stage.
+     * @return Current status for the stage.
      * 
      */
     private final String status;
     /**
-     * List of operations within the stage in dependency order (approximately chronological).
+     * @return List of operations within the stage in dependency order (approximately chronological).
      * 
      */
     private final List<ExplainQueryStepResponse> steps;
     /**
-     * Milliseconds the average shard spent waiting to be scheduled.
+     * @return Milliseconds the average shard spent waiting to be scheduled.
      * 
      */
     private final String waitMsAvg;
     /**
-     * Milliseconds the slowest shard spent waiting to be scheduled.
+     * @return Milliseconds the slowest shard spent waiting to be scheduled.
      * 
      */
     private final String waitMsMax;
     /**
-     * Relative amount of time the average shard spent waiting to be scheduled.
+     * @return Relative amount of time the average shard spent waiting to be scheduled.
      * 
      */
     private final Double waitRatioAvg;
     /**
-     * Relative amount of time the slowest shard spent waiting to be scheduled.
+     * @return Relative amount of time the slowest shard spent waiting to be scheduled.
      * 
      */
     private final Double waitRatioMax;
     /**
-     * Milliseconds the average shard spent on writing output.
+     * @return Milliseconds the average shard spent on writing output.
      * 
      */
     private final String writeMsAvg;
     /**
-     * Milliseconds the slowest shard spent on writing output.
+     * @return Milliseconds the slowest shard spent on writing output.
      * 
      */
     private final String writeMsMax;
     /**
-     * Relative amount of time the average shard spent on writing output.
+     * @return Relative amount of time the average shard spent on writing output.
      * 
      */
     private final Double writeRatioAvg;
     /**
-     * Relative amount of time the slowest shard spent on writing output.
+     * @return Relative amount of time the slowest shard spent on writing output.
      * 
      */
     private final Double writeRatioMax;
@@ -221,205 +221,205 @@ public final class ExplainQueryStageResponse {
     }
 
     /**
-     * Number of parallel input segments completed.
+     * @return Number of parallel input segments completed.
      * 
-    */
+     */
     public String completedParallelInputs() {
         return this.completedParallelInputs;
     }
     /**
-     * Milliseconds the average shard spent on CPU-bound tasks.
+     * @return Milliseconds the average shard spent on CPU-bound tasks.
      * 
-    */
+     */
     public String computeMsAvg() {
         return this.computeMsAvg;
     }
     /**
-     * Milliseconds the slowest shard spent on CPU-bound tasks.
+     * @return Milliseconds the slowest shard spent on CPU-bound tasks.
      * 
-    */
+     */
     public String computeMsMax() {
         return this.computeMsMax;
     }
     /**
-     * Relative amount of time the average shard spent on CPU-bound tasks.
+     * @return Relative amount of time the average shard spent on CPU-bound tasks.
      * 
-    */
+     */
     public Double computeRatioAvg() {
         return this.computeRatioAvg;
     }
     /**
-     * Relative amount of time the slowest shard spent on CPU-bound tasks.
+     * @return Relative amount of time the slowest shard spent on CPU-bound tasks.
      * 
-    */
+     */
     public Double computeRatioMax() {
         return this.computeRatioMax;
     }
     /**
-     * Stage end time represented as milliseconds since epoch.
+     * @return Stage end time represented as milliseconds since epoch.
      * 
-    */
+     */
     public String endMs() {
         return this.endMs;
     }
     /**
-     * IDs for stages that are inputs to this stage.
+     * @return IDs for stages that are inputs to this stage.
      * 
-    */
+     */
     public List<String> inputStages() {
         return this.inputStages;
     }
     /**
-     * Human-readable name for stage.
+     * @return Human-readable name for stage.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Number of parallel input segments to be processed.
+     * @return Number of parallel input segments to be processed.
      * 
-    */
+     */
     public String parallelInputs() {
         return this.parallelInputs;
     }
     /**
-     * Milliseconds the average shard spent reading input.
+     * @return Milliseconds the average shard spent reading input.
      * 
-    */
+     */
     public String readMsAvg() {
         return this.readMsAvg;
     }
     /**
-     * Milliseconds the slowest shard spent reading input.
+     * @return Milliseconds the slowest shard spent reading input.
      * 
-    */
+     */
     public String readMsMax() {
         return this.readMsMax;
     }
     /**
-     * Relative amount of time the average shard spent reading input.
+     * @return Relative amount of time the average shard spent reading input.
      * 
-    */
+     */
     public Double readRatioAvg() {
         return this.readRatioAvg;
     }
     /**
-     * Relative amount of time the slowest shard spent reading input.
+     * @return Relative amount of time the slowest shard spent reading input.
      * 
-    */
+     */
     public Double readRatioMax() {
         return this.readRatioMax;
     }
     /**
-     * Number of records read into the stage.
+     * @return Number of records read into the stage.
      * 
-    */
+     */
     public String recordsRead() {
         return this.recordsRead;
     }
     /**
-     * Number of records written by the stage.
+     * @return Number of records written by the stage.
      * 
-    */
+     */
     public String recordsWritten() {
         return this.recordsWritten;
     }
     /**
-     * Total number of bytes written to shuffle.
+     * @return Total number of bytes written to shuffle.
      * 
-    */
+     */
     public String shuffleOutputBytes() {
         return this.shuffleOutputBytes;
     }
     /**
-     * Total number of bytes written to shuffle and spilled to disk.
+     * @return Total number of bytes written to shuffle and spilled to disk.
      * 
-    */
+     */
     public String shuffleOutputBytesSpilled() {
         return this.shuffleOutputBytesSpilled;
     }
     /**
-     * Slot-milliseconds used by the stage.
+     * @return Slot-milliseconds used by the stage.
      * 
-    */
+     */
     public String slotMs() {
         return this.slotMs;
     }
     /**
-     * Stage start time represented as milliseconds since epoch.
+     * @return Stage start time represented as milliseconds since epoch.
      * 
-    */
+     */
     public String startMs() {
         return this.startMs;
     }
     /**
-     * Current status for the stage.
+     * @return Current status for the stage.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * List of operations within the stage in dependency order (approximately chronological).
+     * @return List of operations within the stage in dependency order (approximately chronological).
      * 
-    */
+     */
     public List<ExplainQueryStepResponse> steps() {
         return this.steps;
     }
     /**
-     * Milliseconds the average shard spent waiting to be scheduled.
+     * @return Milliseconds the average shard spent waiting to be scheduled.
      * 
-    */
+     */
     public String waitMsAvg() {
         return this.waitMsAvg;
     }
     /**
-     * Milliseconds the slowest shard spent waiting to be scheduled.
+     * @return Milliseconds the slowest shard spent waiting to be scheduled.
      * 
-    */
+     */
     public String waitMsMax() {
         return this.waitMsMax;
     }
     /**
-     * Relative amount of time the average shard spent waiting to be scheduled.
+     * @return Relative amount of time the average shard spent waiting to be scheduled.
      * 
-    */
+     */
     public Double waitRatioAvg() {
         return this.waitRatioAvg;
     }
     /**
-     * Relative amount of time the slowest shard spent waiting to be scheduled.
+     * @return Relative amount of time the slowest shard spent waiting to be scheduled.
      * 
-    */
+     */
     public Double waitRatioMax() {
         return this.waitRatioMax;
     }
     /**
-     * Milliseconds the average shard spent on writing output.
+     * @return Milliseconds the average shard spent on writing output.
      * 
-    */
+     */
     public String writeMsAvg() {
         return this.writeMsAvg;
     }
     /**
-     * Milliseconds the slowest shard spent on writing output.
+     * @return Milliseconds the slowest shard spent on writing output.
      * 
-    */
+     */
     public String writeMsMax() {
         return this.writeMsMax;
     }
     /**
-     * Relative amount of time the average shard spent on writing output.
+     * @return Relative amount of time the average shard spent on writing output.
      * 
-    */
+     */
     public Double writeRatioAvg() {
         return this.writeRatioAvg;
     }
     /**
-     * Relative amount of time the slowest shard spent on writing output.
+     * @return Relative amount of time the slowest shard spent on writing output.
      * 
-    */
+     */
     public Double writeRatioMax() {
         return this.writeRatioMax;
     }

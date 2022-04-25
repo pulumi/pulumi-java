@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs exte
     @Import(name="header", required=true)
     private Output<String> header;
 
+    /**
+     * @return Column heading.
+     * 
+     */
     public Output<String> header() {
         return this.header;
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs exte
     @Import(name="horizontalAlignment")
     private @Nullable Output<GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment;
 
+    /**
+     * @return Optional. Defines text alignment for all cells in this column.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment>> horizontalAlignment() {
         return Optional.ofNullable(this.horizontalAlignment);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs exte
             $ = new GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param header Column heading.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(Output<String> header) {
             $.header = header;
             return this;
         }
 
+        /**
+         * @param header Column heading.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(String header) {
             return header(Output.of(header));
         }
 
+        /**
+         * @param horizontalAlignment Optional. Defines text alignment for all cells in this column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder horizontalAlignment(@Nullable Output<GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment) {
             $.horizontalAlignment = horizontalAlignment;
             return this;
         }
 
+        /**
+         * @param horizontalAlignment Optional. Defines text alignment for all cells in this column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder horizontalAlignment(GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment horizontalAlignment) {
             return horizontalAlignment(Output.of(horizontalAlignment));
         }

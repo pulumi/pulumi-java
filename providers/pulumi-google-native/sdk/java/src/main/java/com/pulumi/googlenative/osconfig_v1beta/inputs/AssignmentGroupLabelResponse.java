@@ -24,6 +24,10 @@ public final class AssignmentGroupLabelResponse extends com.pulumi.resources.Inv
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -52,6 +56,12 @@ public final class AssignmentGroupLabelResponse extends com.pulumi.resources.Inv
             $ = new AssignmentGroupLabelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;

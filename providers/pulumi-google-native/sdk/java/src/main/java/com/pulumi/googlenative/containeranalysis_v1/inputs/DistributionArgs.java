@@ -28,6 +28,10 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="architecture")
     private @Nullable Output<DistributionArchitecture> architecture;
 
+    /**
+     * @return The CPU architecture for which packages in this distribution channel were built.
+     * 
+     */
     public Optional<Output<DistributionArchitecture>> architecture() {
         return Optional.ofNullable(this.architecture);
     }
@@ -39,6 +43,10 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpeUri", required=true)
     private Output<String> cpeUri;
 
+    /**
+     * @return The cpe_uri in [CPE format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
+     * 
+     */
     public Output<String> cpeUri() {
         return this.cpeUri;
     }
@@ -50,6 +58,10 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The distribution channel-specific description of this package.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -61,6 +73,10 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="latestVersion")
     private @Nullable Output<VersionArgs> latestVersion;
 
+    /**
+     * @return The latest available version of this package in this distribution channel.
+     * 
+     */
     public Optional<Output<VersionArgs>> latestVersion() {
         return Optional.ofNullable(this.latestVersion);
     }
@@ -72,6 +88,10 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintainer")
     private @Nullable Output<String> maintainer;
 
+    /**
+     * @return A freeform string denoting the maintainer of this package.
+     * 
+     */
     public Optional<Output<String>> maintainer() {
         return Optional.ofNullable(this.maintainer);
     }
@@ -83,6 +103,10 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return The distribution channel-specific homepage for this package.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -116,56 +140,128 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DistributionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param architecture The CPU architecture for which packages in this distribution channel were built.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(@Nullable Output<DistributionArchitecture> architecture) {
             $.architecture = architecture;
             return this;
         }
 
+        /**
+         * @param architecture The CPU architecture for which packages in this distribution channel were built.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(DistributionArchitecture architecture) {
             return architecture(Output.of(architecture));
         }
 
+        /**
+         * @param cpeUri The cpe_uri in [CPE format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpeUri(Output<String> cpeUri) {
             $.cpeUri = cpeUri;
             return this;
         }
 
+        /**
+         * @param cpeUri The cpe_uri in [CPE format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpeUri(String cpeUri) {
             return cpeUri(Output.of(cpeUri));
         }
 
+        /**
+         * @param description The distribution channel-specific description of this package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The distribution channel-specific description of this package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param latestVersion The latest available version of this package in this distribution channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestVersion(@Nullable Output<VersionArgs> latestVersion) {
             $.latestVersion = latestVersion;
             return this;
         }
 
+        /**
+         * @param latestVersion The latest available version of this package in this distribution channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestVersion(VersionArgs latestVersion) {
             return latestVersion(Output.of(latestVersion));
         }
 
+        /**
+         * @param maintainer A freeform string denoting the maintainer of this package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintainer(@Nullable Output<String> maintainer) {
             $.maintainer = maintainer;
             return this;
         }
 
+        /**
+         * @param maintainer A freeform string denoting the maintainer of this package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintainer(String maintainer) {
             return maintainer(Output.of(maintainer));
         }
 
+        /**
+         * @param url The distribution channel-specific homepage for this package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The distribution channel-specific homepage for this package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

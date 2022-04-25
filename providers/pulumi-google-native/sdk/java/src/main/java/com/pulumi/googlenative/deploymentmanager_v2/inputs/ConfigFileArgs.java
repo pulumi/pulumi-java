@@ -22,6 +22,10 @@ public final class ConfigFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return The contents of the file.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -50,11 +54,23 @@ public final class ConfigFileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConfigFileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The contents of the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The contents of the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }

@@ -24,6 +24,10 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="androidDevice", required=true)
     private AndroidDeviceResponse androidDevice;
 
+    /**
+     * @return An Android device which must be used with an Android test.
+     * 
+     */
     public AndroidDeviceResponse androidDevice() {
         return this.androidDevice;
     }
@@ -35,6 +39,10 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="iosDevice", required=true)
     private IosDeviceResponse iosDevice;
 
+    /**
+     * @return An iOS device which must be used with an iOS test.
+     * 
+     */
     public IosDeviceResponse iosDevice() {
         return this.iosDevice;
     }
@@ -64,11 +72,23 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EnvironmentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidDevice An Android device which must be used with an Android test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidDevice(AndroidDeviceResponse androidDevice) {
             $.androidDevice = androidDevice;
             return this;
         }
 
+        /**
+         * @param iosDevice An iOS device which must be used with an iOS test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosDevice(IosDeviceResponse iosDevice) {
             $.iosDevice = iosDevice;
             return this;

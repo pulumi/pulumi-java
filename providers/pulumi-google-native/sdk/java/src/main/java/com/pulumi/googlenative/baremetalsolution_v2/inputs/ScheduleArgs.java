@@ -27,6 +27,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="crontabSpec")
     private @Nullable Output<String> crontabSpec;
 
+    /**
+     * @return A crontab-like specification that the schedule uses to take snapshots.
+     * 
+     */
     public Optional<Output<String>> crontabSpec() {
         return Optional.ofNullable(this.crontabSpec);
     }
@@ -38,6 +42,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return A list of snapshot names created in this schedule.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -49,6 +57,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionCount")
     private @Nullable Output<Integer> retentionCount;
 
+    /**
+     * @return The maximum number of snapshots to retain in this schedule.
+     * 
+     */
     public Optional<Output<Integer>> retentionCount() {
         return Optional.ofNullable(this.retentionCount);
     }
@@ -79,29 +91,65 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param crontabSpec A crontab-like specification that the schedule uses to take snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crontabSpec(@Nullable Output<String> crontabSpec) {
             $.crontabSpec = crontabSpec;
             return this;
         }
 
+        /**
+         * @param crontabSpec A crontab-like specification that the schedule uses to take snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crontabSpec(String crontabSpec) {
             return crontabSpec(Output.of(crontabSpec));
         }
 
+        /**
+         * @param prefix A list of snapshot names created in this schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix A list of snapshot names created in this schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param retentionCount The maximum number of snapshots to retain in this schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionCount(@Nullable Output<Integer> retentionCount) {
             $.retentionCount = retentionCount;
             return this;
         }
 
+        /**
+         * @param retentionCount The maximum number of snapshots to retain in this schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionCount(Integer retentionCount) {
             return retentionCount(Output.of(retentionCount));
         }

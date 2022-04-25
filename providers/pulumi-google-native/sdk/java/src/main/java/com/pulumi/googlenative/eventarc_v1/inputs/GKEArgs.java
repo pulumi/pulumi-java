@@ -26,6 +26,10 @@ public final class GKEArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cluster", required=true)
     private Output<String> cluster;
 
+    /**
+     * @return The name of the cluster the GKE service is running in. The cluster must be running in the same project as the trigger being created.
+     * 
+     */
     public Output<String> cluster() {
         return this.cluster;
     }
@@ -37,6 +41,10 @@ public final class GKEArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The name of the Google Compute Engine in which the cluster resides, which can either be compute zone (for example, us-central1-a) for the zonal clusters or region (for example, us-central1) for regional clusters.
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -48,6 +56,10 @@ public final class GKEArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespace", required=true)
     private Output<String> namespace;
 
+    /**
+     * @return The namespace the GKE service is running in.
+     * 
+     */
     public Output<String> namespace() {
         return this.namespace;
     }
@@ -59,6 +71,10 @@ public final class GKEArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Optional. The relative path on the GKE service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: &#34;/route&#34;, &#34;route&#34;, &#34;route/subroute&#34;.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -70,6 +86,10 @@ public final class GKEArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="service", required=true)
     private Output<String> service;
 
+    /**
+     * @return Name of the GKE service.
+     * 
+     */
     public Output<String> service() {
         return this.service;
     }
@@ -102,47 +122,107 @@ public final class GKEArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GKEArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster The name of the cluster the GKE service is running in. The cluster must be running in the same project as the trigger being created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster The name of the cluster the GKE service is running in. The cluster must be running in the same project as the trigger being created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
         }
 
+        /**
+         * @param location The name of the Google Compute Engine in which the cluster resides, which can either be compute zone (for example, us-central1-a) for the zonal clusters or region (for example, us-central1) for regional clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The name of the Google Compute Engine in which the cluster resides, which can either be compute zone (for example, us-central1-a) for the zonal clusters or region (for example, us-central1) for regional clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param namespace The namespace the GKE service is running in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace The namespace the GKE service is running in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param path Optional. The relative path on the GKE service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: &#34;/route&#34;, &#34;route&#34;, &#34;route/subroute&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Optional. The relative path on the GKE service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: &#34;/route&#34;, &#34;route&#34;, &#34;route/subroute&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param service Name of the GKE service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Name of the GKE service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

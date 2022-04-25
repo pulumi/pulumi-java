@@ -25,6 +25,10 @@ public final class ReleaseResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return The deploy description when the release was created. The value can be up to 512 characters.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -36,6 +40,10 @@ public final class ReleaseResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The unique identifier for the release, in either of the following formats: - sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This name is provided in the response body when you call [`releases.create`](sites.releases/create) or [`channels.releases.create`](sites.channels.releases/create).
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class ReleaseResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="releaseTime", required=true)
     private String releaseTime;
 
+    /**
+     * @return The time at which the version is set to be public.
+     * 
+     */
     public String releaseTime() {
         return this.releaseTime;
     }
@@ -58,6 +70,10 @@ public final class ReleaseResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="releaseUser", required=true)
     private ActingUserResponse releaseUser;
 
+    /**
+     * @return Identifies the user who created the release.
+     * 
+     */
     public ActingUserResponse releaseUser() {
         return this.releaseUser;
     }
@@ -69,6 +85,10 @@ public final class ReleaseResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Explains the reason for the release. Specify a value for this field only when creating a `SITE_DISABLE` type release.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -80,6 +100,10 @@ public final class ReleaseResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
     private VersionResponse version;
 
+    /**
+     * @return The configuration and content that was released.
+     * 
+     */
     public VersionResponse version() {
         return this.version;
     }
@@ -113,31 +137,67 @@ public final class ReleaseResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ReleaseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message The deploy description when the release was created. The value can be up to 512 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param name The unique identifier for the release, in either of the following formats: - sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This name is provided in the response body when you call [`releases.create`](sites.releases/create) or [`channels.releases.create`](sites.channels.releases/create).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param releaseTime The time at which the version is set to be public.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseTime(String releaseTime) {
             $.releaseTime = releaseTime;
             return this;
         }
 
+        /**
+         * @param releaseUser Identifies the user who created the release.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseUser(ActingUserResponse releaseUser) {
             $.releaseUser = releaseUser;
             return this;
         }
 
+        /**
+         * @param type Explains the reason for the release. Specify a value for this field only when creating a `SITE_DISABLE` type release.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param version The configuration and content that was released.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(VersionResponse version) {
             $.version = version;
             return this;

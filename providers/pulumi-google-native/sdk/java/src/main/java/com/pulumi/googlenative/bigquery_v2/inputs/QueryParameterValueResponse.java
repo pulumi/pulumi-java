@@ -21,6 +21,10 @@ public final class QueryParameterValueResponse extends com.pulumi.resources.Invo
     @Import(name="arrayValues", required=true)
     private List<QueryParameterValueResponse> arrayValues;
 
+    /**
+     * @return [Optional] The array values, if this is an array type.
+     * 
+     */
     public List<QueryParameterValueResponse> arrayValues() {
         return this.arrayValues;
     }
@@ -32,6 +36,10 @@ public final class QueryParameterValueResponse extends com.pulumi.resources.Invo
     @Import(name="structValues", required=true)
     private Map<String,String> structValues;
 
+    /**
+     * @return [Optional] The struct field values, in order of the struct type&#39;s declaration.
+     * 
+     */
     public Map<String,String> structValues() {
         return this.structValues;
     }
@@ -43,6 +51,10 @@ public final class QueryParameterValueResponse extends com.pulumi.resources.Invo
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return [Optional] The value of this value, if a simple scalar type.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -73,20 +85,44 @@ public final class QueryParameterValueResponse extends com.pulumi.resources.Invo
             $ = new QueryParameterValueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arrayValues [Optional] The array values, if this is an array type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayValues(List<QueryParameterValueResponse> arrayValues) {
             $.arrayValues = arrayValues;
             return this;
         }
 
+        /**
+         * @param arrayValues [Optional] The array values, if this is an array type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayValues(QueryParameterValueResponse... arrayValues) {
             return arrayValues(List.of(arrayValues));
         }
 
+        /**
+         * @param structValues [Optional] The struct field values, in order of the struct type&#39;s declaration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structValues(Map<String,String> structValues) {
             $.structValues = structValues;
             return this;
         }
 
+        /**
+         * @param value [Optional] The value of this value, if a simple scalar type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

@@ -25,6 +25,10 @@ public final class ClientInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="clientInfoDetails", required=true)
     private List<ClientInfoDetailResponse> clientInfoDetails;
 
+    /**
+     * @return The list of detailed information about client.
+     * 
+     */
     public List<ClientInfoDetailResponse> clientInfoDetails() {
         return this.clientInfoDetails;
     }
@@ -36,6 +40,10 @@ public final class ClientInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Client name, such as gcloud.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -65,15 +73,33 @@ public final class ClientInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ClientInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientInfoDetails The list of detailed information about client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientInfoDetails(List<ClientInfoDetailResponse> clientInfoDetails) {
             $.clientInfoDetails = clientInfoDetails;
             return this;
         }
 
+        /**
+         * @param clientInfoDetails The list of detailed information about client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientInfoDetails(ClientInfoDetailResponse... clientInfoDetails) {
             return clientInfoDetails(List.of(clientInfoDetails));
         }
 
+        /**
+         * @param name Client name, such as gcloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

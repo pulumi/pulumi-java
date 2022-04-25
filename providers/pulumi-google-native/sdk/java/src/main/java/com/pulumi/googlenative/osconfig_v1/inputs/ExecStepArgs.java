@@ -26,6 +26,10 @@ public final class ExecStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linuxExecStepConfig")
     private @Nullable Output<ExecStepConfigArgs> linuxExecStepConfig;
 
+    /**
+     * @return The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+     * 
+     */
     public Optional<Output<ExecStepConfigArgs>> linuxExecStepConfig() {
         return Optional.ofNullable(this.linuxExecStepConfig);
     }
@@ -37,6 +41,10 @@ public final class ExecStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="windowsExecStepConfig")
     private @Nullable Output<ExecStepConfigArgs> windowsExecStepConfig;
 
+    /**
+     * @return The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+     * 
+     */
     public Optional<Output<ExecStepConfigArgs>> windowsExecStepConfig() {
         return Optional.ofNullable(this.windowsExecStepConfig);
     }
@@ -66,20 +74,44 @@ public final class ExecStepArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ExecStepArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linuxExecStepConfig The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxExecStepConfig(@Nullable Output<ExecStepConfigArgs> linuxExecStepConfig) {
             $.linuxExecStepConfig = linuxExecStepConfig;
             return this;
         }
 
+        /**
+         * @param linuxExecStepConfig The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxExecStepConfig(ExecStepConfigArgs linuxExecStepConfig) {
             return linuxExecStepConfig(Output.of(linuxExecStepConfig));
         }
 
+        /**
+         * @param windowsExecStepConfig The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsExecStepConfig(@Nullable Output<ExecStepConfigArgs> windowsExecStepConfig) {
             $.windowsExecStepConfig = windowsExecStepConfig;
             return this;
         }
 
+        /**
+         * @param windowsExecStepConfig The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsExecStepConfig(ExecStepConfigArgs windowsExecStepConfig) {
             return windowsExecStepConfig(Output.of(windowsExecStepConfig));
         }

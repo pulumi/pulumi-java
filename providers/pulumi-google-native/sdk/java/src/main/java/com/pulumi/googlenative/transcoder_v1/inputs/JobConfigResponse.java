@@ -33,6 +33,10 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="adBreaks", required=true)
     private List<AdBreakResponse> adBreaks;
 
+    /**
+     * @return List of ad breaks. Specifies where to insert ad break tags in the output manifests.
+     * 
+     */
     public List<AdBreakResponse> adBreaks() {
         return this.adBreaks;
     }
@@ -44,6 +48,10 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="editList", required=true)
     private List<EditAtomResponse> editList;
 
+    /**
+     * @return List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
+     * 
+     */
     public List<EditAtomResponse> editList() {
         return this.editList;
     }
@@ -55,6 +63,10 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="elementaryStreams", required=true)
     private List<ElementaryStreamResponse> elementaryStreams;
 
+    /**
+     * @return List of elementary streams.
+     * 
+     */
     public List<ElementaryStreamResponse> elementaryStreams() {
         return this.elementaryStreams;
     }
@@ -66,6 +78,10 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inputs", required=true)
     private List<InputResponse> inputs;
 
+    /**
+     * @return List of input assets stored in Cloud Storage.
+     * 
+     */
     public List<InputResponse> inputs() {
         return this.inputs;
     }
@@ -77,6 +93,10 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="manifests", required=true)
     private List<ManifestResponse> manifests;
 
+    /**
+     * @return List of output manifests.
+     * 
+     */
     public List<ManifestResponse> manifests() {
         return this.manifests;
     }
@@ -88,6 +108,10 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="muxStreams", required=true)
     private List<MuxStreamResponse> muxStreams;
 
+    /**
+     * @return List of multiplexing settings for output streams.
+     * 
+     */
     public List<MuxStreamResponse> muxStreams() {
         return this.muxStreams;
     }
@@ -99,6 +123,10 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="output", required=true)
     private OutputResponse output;
 
+    /**
+     * @return Output configuration.
+     * 
+     */
     public OutputResponse output() {
         return this.output;
     }
@@ -110,6 +138,10 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="overlays", required=true)
     private List<OverlayResponse> overlays;
 
+    /**
+     * @return List of overlays on the output video, in descending Z-order.
+     * 
+     */
     public List<OverlayResponse> overlays() {
         return this.overlays;
     }
@@ -121,6 +153,10 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pubsubDestination", required=true)
     private PubsubDestinationResponse pubsubDestination;
 
+    /**
+     * @return Destination on Pub/Sub.
+     * 
+     */
     public PubsubDestinationResponse pubsubDestination() {
         return this.pubsubDestination;
     }
@@ -132,6 +168,10 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="spriteSheets", required=true)
     private List<SpriteSheetResponse> spriteSheets;
 
+    /**
+     * @return List of output sprite sheets.
+     * 
+     */
     public List<SpriteSheetResponse> spriteSheets() {
         return this.spriteSheets;
     }
@@ -169,84 +209,192 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adBreaks List of ad breaks. Specifies where to insert ad break tags in the output manifests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adBreaks(List<AdBreakResponse> adBreaks) {
             $.adBreaks = adBreaks;
             return this;
         }
 
+        /**
+         * @param adBreaks List of ad breaks. Specifies where to insert ad break tags in the output manifests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adBreaks(AdBreakResponse... adBreaks) {
             return adBreaks(List.of(adBreaks));
         }
 
+        /**
+         * @param editList List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder editList(List<EditAtomResponse> editList) {
             $.editList = editList;
             return this;
         }
 
+        /**
+         * @param editList List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder editList(EditAtomResponse... editList) {
             return editList(List.of(editList));
         }
 
+        /**
+         * @param elementaryStreams List of elementary streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elementaryStreams(List<ElementaryStreamResponse> elementaryStreams) {
             $.elementaryStreams = elementaryStreams;
             return this;
         }
 
+        /**
+         * @param elementaryStreams List of elementary streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elementaryStreams(ElementaryStreamResponse... elementaryStreams) {
             return elementaryStreams(List.of(elementaryStreams));
         }
 
+        /**
+         * @param inputs List of input assets stored in Cloud Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(List<InputResponse> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs List of input assets stored in Cloud Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(InputResponse... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param manifests List of output manifests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifests(List<ManifestResponse> manifests) {
             $.manifests = manifests;
             return this;
         }
 
+        /**
+         * @param manifests List of output manifests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifests(ManifestResponse... manifests) {
             return manifests(List.of(manifests));
         }
 
+        /**
+         * @param muxStreams List of multiplexing settings for output streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder muxStreams(List<MuxStreamResponse> muxStreams) {
             $.muxStreams = muxStreams;
             return this;
         }
 
+        /**
+         * @param muxStreams List of multiplexing settings for output streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder muxStreams(MuxStreamResponse... muxStreams) {
             return muxStreams(List.of(muxStreams));
         }
 
+        /**
+         * @param output Output configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(OutputResponse output) {
             $.output = output;
             return this;
         }
 
+        /**
+         * @param overlays List of overlays on the output video, in descending Z-order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overlays(List<OverlayResponse> overlays) {
             $.overlays = overlays;
             return this;
         }
 
+        /**
+         * @param overlays List of overlays on the output video, in descending Z-order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overlays(OverlayResponse... overlays) {
             return overlays(List.of(overlays));
         }
 
+        /**
+         * @param pubsubDestination Destination on Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubDestination(PubsubDestinationResponse pubsubDestination) {
             $.pubsubDestination = pubsubDestination;
             return this;
         }
 
+        /**
+         * @param spriteSheets List of output sprite sheets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spriteSheets(List<SpriteSheetResponse> spriteSheets) {
             $.spriteSheets = spriteSheets;
             return this;
         }
 
+        /**
+         * @param spriteSheets List of output sprite sheets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spriteSheets(SpriteSheetResponse... spriteSheets) {
             return spriteSheets(List.of(spriteSheets));
         }

@@ -25,6 +25,10 @@ public final class GoogleCloudHealthcareV1ConsentPolicyResponse extends com.pulu
     @Import(name="authorizationRule", required=true)
     private ExprResponse authorizationRule;
 
+    /**
+     * @return The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&amp;&amp;`), `OR` (`||`).
+     * 
+     */
     public ExprResponse authorizationRule() {
         return this.authorizationRule;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudHealthcareV1ConsentPolicyResponse extends com.pulu
     @Import(name="resourceAttributes", required=true)
     private List<AttributeResponse> resourceAttributes;
 
+    /**
+     * @return The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
+     * 
+     */
     public List<AttributeResponse> resourceAttributes() {
         return this.resourceAttributes;
     }
@@ -65,16 +73,34 @@ public final class GoogleCloudHealthcareV1ConsentPolicyResponse extends com.pulu
             $ = new GoogleCloudHealthcareV1ConsentPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationRule The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&amp;&amp;`), `OR` (`||`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRule(ExprResponse authorizationRule) {
             $.authorizationRule = authorizationRule;
             return this;
         }
 
+        /**
+         * @param resourceAttributes The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAttributes(List<AttributeResponse> resourceAttributes) {
             $.resourceAttributes = resourceAttributes;
             return this;
         }
 
+        /**
+         * @param resourceAttributes The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAttributes(AttributeResponse... resourceAttributes) {
             return resourceAttributes(List.of(resourceAttributes));
         }

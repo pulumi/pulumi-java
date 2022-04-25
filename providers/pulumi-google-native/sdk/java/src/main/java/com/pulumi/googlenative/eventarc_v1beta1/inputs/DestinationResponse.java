@@ -23,6 +23,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cloudRunService", required=true)
     private CloudRunServiceResponse cloudRunService;
 
+    /**
+     * @return Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
+     * 
+     */
     public CloudRunServiceResponse cloudRunService() {
         return this.cloudRunService;
     }
@@ -51,6 +55,12 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudRunService Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRunService(CloudRunServiceResponse cloudRunService) {
             $.cloudRunService = cloudRunService;
             return this;

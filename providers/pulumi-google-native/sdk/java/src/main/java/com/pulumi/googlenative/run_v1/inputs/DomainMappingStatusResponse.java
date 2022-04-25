@@ -27,6 +27,10 @@ public final class DomainMappingStatusResponse extends com.pulumi.resources.Invo
     @Import(name="conditions", required=true)
     private List<GoogleCloudRunV1ConditionResponse> conditions;
 
+    /**
+     * @return Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
+     * 
+     */
     public List<GoogleCloudRunV1ConditionResponse> conditions() {
         return this.conditions;
     }
@@ -38,6 +42,10 @@ public final class DomainMappingStatusResponse extends com.pulumi.resources.Invo
     @Import(name="mappedRouteName", required=true)
     private String mappedRouteName;
 
+    /**
+     * @return The name of the route that the mapping currently points to.
+     * 
+     */
     public String mappedRouteName() {
         return this.mappedRouteName;
     }
@@ -49,6 +57,10 @@ public final class DomainMappingStatusResponse extends com.pulumi.resources.Invo
     @Import(name="observedGeneration", required=true)
     private Integer observedGeneration;
 
+    /**
+     * @return ObservedGeneration is the &#39;Generation&#39; of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
+     * 
+     */
     public Integer observedGeneration() {
         return this.observedGeneration;
     }
@@ -60,6 +72,10 @@ public final class DomainMappingStatusResponse extends com.pulumi.resources.Invo
     @Import(name="resourceRecords", required=true)
     private List<ResourceRecordResponse> resourceRecords;
 
+    /**
+     * @return The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
+     * 
+     */
     public List<ResourceRecordResponse> resourceRecords() {
         return this.resourceRecords;
     }
@@ -71,6 +87,10 @@ public final class DomainMappingStatusResponse extends com.pulumi.resources.Invo
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -103,34 +123,76 @@ public final class DomainMappingStatusResponse extends com.pulumi.resources.Invo
             $ = new DomainMappingStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<GoogleCloudRunV1ConditionResponse> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(GoogleCloudRunV1ConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param mappedRouteName The name of the route that the mapping currently points to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappedRouteName(String mappedRouteName) {
             $.mappedRouteName = mappedRouteName;
             return this;
         }
 
+        /**
+         * @param observedGeneration ObservedGeneration is the &#39;Generation&#39; of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition&#39;s status is True or False.
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedGeneration(Integer observedGeneration) {
             $.observedGeneration = observedGeneration;
             return this;
         }
 
+        /**
+         * @param resourceRecords The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRecords(List<ResourceRecordResponse> resourceRecords) {
             $.resourceRecords = resourceRecords;
             return this;
         }
 
+        /**
+         * @param resourceRecords The resource records required to configure this domain mapping. These records must be added to the domain&#39;s DNS configuration in order to serve the application via this domain mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRecords(ResourceRecordResponse... resourceRecords) {
             return resourceRecords(List.of(resourceRecords));
         }
 
+        /**
+         * @param url Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

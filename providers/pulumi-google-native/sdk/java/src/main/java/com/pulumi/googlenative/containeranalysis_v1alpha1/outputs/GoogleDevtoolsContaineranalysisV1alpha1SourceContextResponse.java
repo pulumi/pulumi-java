@@ -14,22 +14,22 @@ import java.util.Objects;
 @CustomType
 public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse {
     /**
-     * A SourceContext referring to a revision in a Google Cloud Source Repo.
+     * @return A SourceContext referring to a revision in a Google Cloud Source Repo.
      * 
      */
     private final GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo;
     /**
-     * A SourceContext referring to a Gerrit project.
+     * @return A SourceContext referring to a Gerrit project.
      * 
      */
     private final GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit;
     /**
-     * A SourceContext referring to any third party Git repo (e.g., GitHub).
+     * @return A SourceContext referring to any third party Git repo (e.g., GitHub).
      * 
      */
     private final GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git;
     /**
-     * Labels with user defined metadata.
+     * @return Labels with user defined metadata.
      * 
      */
     private final Map<String,String> labels;
@@ -47,30 +47,30 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
     }
 
     /**
-     * A SourceContext referring to a revision in a Google Cloud Source Repo.
+     * @return A SourceContext referring to a revision in a Google Cloud Source Repo.
      * 
-    */
+     */
     public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo() {
         return this.cloudRepo;
     }
     /**
-     * A SourceContext referring to a Gerrit project.
+     * @return A SourceContext referring to a Gerrit project.
      * 
-    */
+     */
     public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit() {
         return this.gerrit;
     }
     /**
-     * A SourceContext referring to any third party Git repo (e.g., GitHub).
+     * @return A SourceContext referring to any third party Git repo (e.g., GitHub).
      * 
-    */
+     */
     public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git() {
         return this.git;
     }
     /**
-     * Labels with user defined metadata.
+     * @return Labels with user defined metadata.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }

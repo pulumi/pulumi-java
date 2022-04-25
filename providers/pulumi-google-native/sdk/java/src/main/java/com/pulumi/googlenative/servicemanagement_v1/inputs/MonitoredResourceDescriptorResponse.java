@@ -25,6 +25,10 @@ public final class MonitoredResourceDescriptorResponse extends com.pulumi.resour
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Optional. A detailed description of the monitored resource type that might be used in documentation.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -36,6 +40,10 @@ public final class MonitoredResourceDescriptorResponse extends com.pulumi.resour
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Optional. A concise name for the monitored resource type that might be displayed in user interfaces. It should be a Title Cased Noun Phrase, without any article or other determiners. For example, `&#34;Google Cloud SQL Database&#34;`.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -47,6 +55,10 @@ public final class MonitoredResourceDescriptorResponse extends com.pulumi.resour
     @Import(name="labels", required=true)
     private List<LabelDescriptorResponse> labels;
 
+    /**
+     * @return A set of labels used to describe instances of this monitored resource type. For example, an individual Google Cloud SQL database is identified by values for the labels `&#34;database_id&#34;` and `&#34;zone&#34;`.
+     * 
+     */
     public List<LabelDescriptorResponse> labels() {
         return this.labels;
     }
@@ -58,6 +70,10 @@ public final class MonitoredResourceDescriptorResponse extends com.pulumi.resour
     @Import(name="launchStage", required=true)
     private String launchStage;
 
+    /**
+     * @return Optional. The launch stage of the monitored resource definition.
+     * 
+     */
     public String launchStage() {
         return this.launchStage;
     }
@@ -69,6 +85,10 @@ public final class MonitoredResourceDescriptorResponse extends com.pulumi.resour
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Optional. The resource name of the monitored resource descriptor: `&#34;projects/{project_id}/monitoredResourceDescriptors/{type}&#34;` where {type} is the value of the `type` field in this object and {project_id} is a project ID that provides API-specific context for accessing the type. APIs that do not use project information can use the resource name format `&#34;monitoredResourceDescriptors/{type}&#34;`.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -80,6 +100,10 @@ public final class MonitoredResourceDescriptorResponse extends com.pulumi.resour
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The monitored resource type. For example, the type `&#34;cloudsql_database&#34;` represents databases in Google Cloud SQL. For a list of types, see [Monitoring resource types](https://cloud.google.com/monitoring/api/resources) and [Logging resource types](https://cloud.google.com/logging/docs/api/v2/resource-list).
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -113,35 +137,77 @@ public final class MonitoredResourceDescriptorResponse extends com.pulumi.resour
             $ = new MonitoredResourceDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. A detailed description of the monitored resource type that might be used in documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName Optional. A concise name for the monitored resource type that might be displayed in user interfaces. It should be a Title Cased Noun Phrase, without any article or other determiners. For example, `&#34;Google Cloud SQL Database&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param labels A set of labels used to describe instances of this monitored resource type. For example, an individual Google Cloud SQL database is identified by values for the labels `&#34;database_id&#34;` and `&#34;zone&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<LabelDescriptorResponse> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels A set of labels used to describe instances of this monitored resource type. For example, an individual Google Cloud SQL database is identified by values for the labels `&#34;database_id&#34;` and `&#34;zone&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(LabelDescriptorResponse... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param launchStage Optional. The launch stage of the monitored resource definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchStage(String launchStage) {
             $.launchStage = launchStage;
             return this;
         }
 
+        /**
+         * @param name Optional. The resource name of the monitored resource descriptor: `&#34;projects/{project_id}/monitoredResourceDescriptors/{type}&#34;` where {type} is the value of the `type` field in this object and {project_id} is a project ID that provides API-specific context for accessing the type. APIs that do not use project information can use the resource name format `&#34;monitoredResourceDescriptors/{type}&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The monitored resource type. For example, the type `&#34;cloudsql_database&#34;` represents databases in Google Cloud SQL. For a list of types, see [Monitoring resource types](https://cloud.google.com/monitoring/api/resources) and [Logging resource types](https://cloud.google.com/logging/docs/api/v2/resource-list).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

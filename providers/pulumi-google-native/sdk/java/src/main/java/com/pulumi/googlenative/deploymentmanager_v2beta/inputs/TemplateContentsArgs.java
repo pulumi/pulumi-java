@@ -29,6 +29,10 @@ public final class TemplateContentsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="imports")
     private @Nullable Output<List<ImportFileArgs>> imports;
 
+    /**
+     * @return Import files referenced by the main template.
+     * 
+     */
     public Optional<Output<List<ImportFileArgs>>> imports() {
         return Optional.ofNullable(this.imports);
     }
@@ -40,6 +44,10 @@ public final class TemplateContentsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="interpreter")
     private @Nullable Output<TemplateContentsInterpreter> interpreter;
 
+    /**
+     * @return Which interpreter (python or jinja) should be used during expansion.
+     * 
+     */
     public Optional<Output<TemplateContentsInterpreter>> interpreter() {
         return Optional.ofNullable(this.interpreter);
     }
@@ -51,6 +59,10 @@ public final class TemplateContentsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="mainTemplate")
     private @Nullable Output<String> mainTemplate;
 
+    /**
+     * @return The filename of the mainTemplate
+     * 
+     */
     public Optional<Output<String>> mainTemplate() {
         return Optional.ofNullable(this.mainTemplate);
     }
@@ -62,6 +74,10 @@ public final class TemplateContentsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="schema")
     private @Nullable Output<String> schema;
 
+    /**
+     * @return The contents of the template schema.
+     * 
+     */
     public Optional<Output<String>> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -73,6 +89,10 @@ public final class TemplateContentsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="template")
     private @Nullable Output<String> template;
 
+    /**
+     * @return The contents of the main template file.
+     * 
+     */
     public Optional<Output<String>> template() {
         return Optional.ofNullable(this.template);
     }
@@ -105,51 +125,117 @@ public final class TemplateContentsArgs extends com.pulumi.resources.ResourceArg
             $ = new TemplateContentsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imports Import files referenced by the main template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imports(@Nullable Output<List<ImportFileArgs>> imports) {
             $.imports = imports;
             return this;
         }
 
+        /**
+         * @param imports Import files referenced by the main template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imports(List<ImportFileArgs> imports) {
             return imports(Output.of(imports));
         }
 
+        /**
+         * @param imports Import files referenced by the main template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imports(ImportFileArgs... imports) {
             return imports(List.of(imports));
         }
 
+        /**
+         * @param interpreter Which interpreter (python or jinja) should be used during expansion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interpreter(@Nullable Output<TemplateContentsInterpreter> interpreter) {
             $.interpreter = interpreter;
             return this;
         }
 
+        /**
+         * @param interpreter Which interpreter (python or jinja) should be used during expansion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interpreter(TemplateContentsInterpreter interpreter) {
             return interpreter(Output.of(interpreter));
         }
 
+        /**
+         * @param mainTemplate The filename of the mainTemplate
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainTemplate(@Nullable Output<String> mainTemplate) {
             $.mainTemplate = mainTemplate;
             return this;
         }
 
+        /**
+         * @param mainTemplate The filename of the mainTemplate
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainTemplate(String mainTemplate) {
             return mainTemplate(Output.of(mainTemplate));
         }
 
+        /**
+         * @param schema The contents of the template schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Output<String> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema The contents of the template schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(String schema) {
             return schema(Output.of(schema));
         }
 
+        /**
+         * @param template The contents of the main template file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(@Nullable Output<String> template) {
             $.template = template;
             return this;
         }
 
+        /**
+         * @param template The contents of the main template file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(String template) {
             return template(Output.of(template));
         }

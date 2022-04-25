@@ -24,6 +24,10 @@ public final class ContainerPortResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="containerPort", required=true)
     private Integer containerPort;
 
+    /**
+     * @return (Optional) Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
+     * 
+     */
     public Integer containerPort() {
         return this.containerPort;
     }
@@ -35,6 +39,10 @@ public final class ContainerPortResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return (Optional) If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -46,6 +54,10 @@ public final class ContainerPortResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="protocol", required=true)
     private String protocol;
 
+    /**
+     * @return (Optional) Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
+     * 
+     */
     public String protocol() {
         return this.protocol;
     }
@@ -76,16 +88,34 @@ public final class ContainerPortResponse extends com.pulumi.resources.InvokeArgs
             $ = new ContainerPortResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerPort (Optional) Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(Integer containerPort) {
             $.containerPort = containerPort;
             return this;
         }
 
+        /**
+         * @param name (Optional) If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param protocol (Optional) Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             $.protocol = protocol;
             return this;

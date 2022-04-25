@@ -26,6 +26,10 @@ public final class CloudBuildOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="appYamlPath")
     private @Nullable Output<String> appYamlPath;
 
+    /**
+     * @return Path to the yaml file used in deployment, used to determine runtime configuration details.Required for flexible environment builds.See https://cloud.google.com/appengine/docs/standard/python/config/appref for more details.
+     * 
+     */
     public Optional<Output<String>> appYamlPath() {
         return Optional.ofNullable(this.appYamlPath);
     }
@@ -37,6 +41,10 @@ public final class CloudBuildOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cloudBuildTimeout")
     private @Nullable Output<String> cloudBuildTimeout;
 
+    /**
+     * @return The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
+     * 
+     */
     public Optional<Output<String>> cloudBuildTimeout() {
         return Optional.ofNullable(this.cloudBuildTimeout);
     }
@@ -66,20 +74,44 @@ public final class CloudBuildOptionsArgs extends com.pulumi.resources.ResourceAr
             $ = new CloudBuildOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appYamlPath Path to the yaml file used in deployment, used to determine runtime configuration details.Required for flexible environment builds.See https://cloud.google.com/appengine/docs/standard/python/config/appref for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appYamlPath(@Nullable Output<String> appYamlPath) {
             $.appYamlPath = appYamlPath;
             return this;
         }
 
+        /**
+         * @param appYamlPath Path to the yaml file used in deployment, used to determine runtime configuration details.Required for flexible environment builds.See https://cloud.google.com/appengine/docs/standard/python/config/appref for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appYamlPath(String appYamlPath) {
             return appYamlPath(Output.of(appYamlPath));
         }
 
+        /**
+         * @param cloudBuildTimeout The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudBuildTimeout(@Nullable Output<String> cloudBuildTimeout) {
             $.cloudBuildTimeout = cloudBuildTimeout;
             return this;
         }
 
+        /**
+         * @param cloudBuildTimeout The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudBuildTimeout(String cloudBuildTimeout) {
             return cloudBuildTimeout(Output.of(cloudBuildTimeout));
         }

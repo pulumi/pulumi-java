@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse {
     /**
-     * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with &#39;gs://&#39;.
+     * @return A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with &#39;gs://&#39;.
      * 
      */
     private final String gcsPath;
     /**
-     * The parameters of the template to launch. This should be part of the body of the POST request.
+     * @return The parameters of the template to launch. This should be part of the body of the POST request.
      * 
      */
     private final GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters;
     /**
-     * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
+     * @return The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
      * 
      */
     private final String location;
     /**
-     * The ID of the Cloud Platform project that the job belongs to.
+     * @return The ID of the Cloud Platform project that the job belongs to.
      * 
      */
     private final String project;
     /**
-     * If true, the request is validated but not actually executed. Defaults to false.
+     * @return If true, the request is validated but not actually executed. Defaults to false.
      * 
      */
     private final Boolean validateOnly;
@@ -52,37 +52,37 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse {
     }
 
     /**
-     * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with &#39;gs://&#39;.
+     * @return A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with &#39;gs://&#39;.
      * 
-    */
+     */
     public String gcsPath() {
         return this.gcsPath;
     }
     /**
-     * The parameters of the template to launch. This should be part of the body of the POST request.
+     * @return The parameters of the template to launch. This should be part of the body of the POST request.
      * 
-    */
+     */
     public GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters() {
         return this.launchParameters;
     }
     /**
-     * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
+     * @return The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The ID of the Cloud Platform project that the job belongs to.
+     * @return The ID of the Cloud Platform project that the job belongs to.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * If true, the request is validated but not actually executed. Defaults to false.
+     * @return If true, the request is validated but not actually executed. Defaults to false.
      * 
-    */
+     */
     public Boolean validateOnly() {
         return this.validateOnly;
     }

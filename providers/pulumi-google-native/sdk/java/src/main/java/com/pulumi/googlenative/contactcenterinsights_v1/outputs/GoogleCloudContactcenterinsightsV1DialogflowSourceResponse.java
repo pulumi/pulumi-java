@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse {
     /**
-     * Cloud Storage URI that points to a file that contains the conversation audio.
+     * @return Cloud Storage URI that points to a file that contains the conversation audio.
      * 
      */
     private final String audioUri;
     /**
-     * The name of the Dialogflow conversation that this conversation resource is derived from. Format: projects/{project}/locations/{location}/conversations/{conversation}
+     * @return The name of the Dialogflow conversation that this conversation resource is derived from. Format: projects/{project}/locations/{location}/conversations/{conversation}
      * 
      */
     private final String dialogflowConversation;
@@ -29,16 +29,16 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse {
     }
 
     /**
-     * Cloud Storage URI that points to a file that contains the conversation audio.
+     * @return Cloud Storage URI that points to a file that contains the conversation audio.
      * 
-    */
+     */
     public String audioUri() {
         return this.audioUri;
     }
     /**
-     * The name of the Dialogflow conversation that this conversation resource is derived from. Format: projects/{project}/locations/{location}/conversations/{conversation}
+     * @return The name of the Dialogflow conversation that this conversation resource is derived from. Format: projects/{project}/locations/{location}/conversations/{conversation}
      * 
-    */
+     */
     public String dialogflowConversation() {
         return this.dialogflowConversation;
     }

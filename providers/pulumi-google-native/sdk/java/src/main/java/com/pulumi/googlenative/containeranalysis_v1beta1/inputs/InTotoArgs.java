@@ -29,6 +29,10 @@ public final class InTotoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expectedCommand")
     private @Nullable Output<List<String>> expectedCommand;
 
+    /**
+     * @return This field contains the expected command used to perform the step.
+     * 
+     */
     public Optional<Output<List<String>>> expectedCommand() {
         return Optional.ofNullable(this.expectedCommand);
     }
@@ -40,6 +44,10 @@ public final class InTotoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expectedMaterials")
     private @Nullable Output<List<ArtifactRuleArgs>> expectedMaterials;
 
+    /**
+     * @return The following fields contain in-toto artifact rules identifying the artifacts that enter this supply chain step, and exit the supply chain step, i.e. materials and products of the step.
+     * 
+     */
     public Optional<Output<List<ArtifactRuleArgs>>> expectedMaterials() {
         return Optional.ofNullable(this.expectedMaterials);
     }
@@ -58,6 +66,10 @@ public final class InTotoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="signingKeys")
     private @Nullable Output<List<SigningKeyArgs>> signingKeys;
 
+    /**
+     * @return This field contains the public keys that can be used to verify the signatures on the step metadata.
+     * 
+     */
     public Optional<Output<List<SigningKeyArgs>>> signingKeys() {
         return Optional.ofNullable(this.signingKeys);
     }
@@ -69,6 +81,10 @@ public final class InTotoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stepName")
     private @Nullable Output<String> stepName;
 
+    /**
+     * @return This field identifies the name of the step in the supply chain.
+     * 
+     */
     public Optional<Output<String>> stepName() {
         return Optional.ofNullable(this.stepName);
     }
@@ -80,6 +96,10 @@ public final class InTotoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="threshold")
     private @Nullable Output<String> threshold;
 
+    /**
+     * @return This field contains a value that indicates the minimum number of keys that need to be used to sign the step&#39;s in-toto link.
+     * 
+     */
     public Optional<Output<String>> threshold() {
         return Optional.ofNullable(this.threshold);
     }
@@ -113,28 +133,64 @@ public final class InTotoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InTotoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expectedCommand This field contains the expected command used to perform the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedCommand(@Nullable Output<List<String>> expectedCommand) {
             $.expectedCommand = expectedCommand;
             return this;
         }
 
+        /**
+         * @param expectedCommand This field contains the expected command used to perform the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedCommand(List<String> expectedCommand) {
             return expectedCommand(Output.of(expectedCommand));
         }
 
+        /**
+         * @param expectedCommand This field contains the expected command used to perform the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedCommand(String... expectedCommand) {
             return expectedCommand(List.of(expectedCommand));
         }
 
+        /**
+         * @param expectedMaterials The following fields contain in-toto artifact rules identifying the artifacts that enter this supply chain step, and exit the supply chain step, i.e. materials and products of the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedMaterials(@Nullable Output<List<ArtifactRuleArgs>> expectedMaterials) {
             $.expectedMaterials = expectedMaterials;
             return this;
         }
 
+        /**
+         * @param expectedMaterials The following fields contain in-toto artifact rules identifying the artifacts that enter this supply chain step, and exit the supply chain step, i.e. materials and products of the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedMaterials(List<ArtifactRuleArgs> expectedMaterials) {
             return expectedMaterials(Output.of(expectedMaterials));
         }
 
+        /**
+         * @param expectedMaterials The following fields contain in-toto artifact rules identifying the artifacts that enter this supply chain step, and exit the supply chain step, i.e. materials and products of the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedMaterials(ArtifactRuleArgs... expectedMaterials) {
             return expectedMaterials(List.of(expectedMaterials));
         }
@@ -152,33 +208,75 @@ public final class InTotoArgs extends com.pulumi.resources.ResourceArgs {
             return expectedProducts(List.of(expectedProducts));
         }
 
+        /**
+         * @param signingKeys This field contains the public keys that can be used to verify the signatures on the step metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingKeys(@Nullable Output<List<SigningKeyArgs>> signingKeys) {
             $.signingKeys = signingKeys;
             return this;
         }
 
+        /**
+         * @param signingKeys This field contains the public keys that can be used to verify the signatures on the step metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingKeys(List<SigningKeyArgs> signingKeys) {
             return signingKeys(Output.of(signingKeys));
         }
 
+        /**
+         * @param signingKeys This field contains the public keys that can be used to verify the signatures on the step metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingKeys(SigningKeyArgs... signingKeys) {
             return signingKeys(List.of(signingKeys));
         }
 
+        /**
+         * @param stepName This field identifies the name of the step in the supply chain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepName(@Nullable Output<String> stepName) {
             $.stepName = stepName;
             return this;
         }
 
+        /**
+         * @param stepName This field identifies the name of the step in the supply chain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepName(String stepName) {
             return stepName(Output.of(stepName));
         }
 
+        /**
+         * @param threshold This field contains a value that indicates the minimum number of keys that need to be used to sign the step&#39;s in-toto link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(@Nullable Output<String> threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param threshold This field contains a value that indicates the minimum number of keys that need to be used to sign the step&#39;s in-toto link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(String threshold) {
             return threshold(Output.of(threshold));
         }

@@ -25,6 +25,10 @@ public final class SignatureResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="image", required=true)
     private ImageResponse image;
 
+    /**
+     * @return Optional. An image of the user&#39;s signature.
+     * 
+     */
     public ImageResponse image() {
         return this.image;
     }
@@ -36,6 +40,10 @@ public final class SignatureResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metadata", required=true)
     private Map<String,String> metadata;
 
+    /**
+     * @return Optional. Metadata associated with the user&#39;s signature. For example, the user&#39;s name or the user&#39;s title.
+     * 
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
@@ -47,6 +55,10 @@ public final class SignatureResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="signatureTime", required=true)
     private String signatureTime;
 
+    /**
+     * @return Optional. Timestamp of the signature.
+     * 
+     */
     public String signatureTime() {
         return this.signatureTime;
     }
@@ -58,6 +70,10 @@ public final class SignatureResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userId", required=true)
     private String userId;
 
+    /**
+     * @return User&#39;s UUID provided by the client.
+     * 
+     */
     public String userId() {
         return this.userId;
     }
@@ -89,21 +105,45 @@ public final class SignatureResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SignatureResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param image Optional. An image of the user&#39;s signature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(ImageResponse image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param metadata Optional. Metadata associated with the user&#39;s signature. For example, the user&#39;s name or the user&#39;s title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param signatureTime Optional. Timestamp of the signature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureTime(String signatureTime) {
             $.signatureTime = signatureTime;
             return this;
         }
 
+        /**
+         * @param userId User&#39;s UUID provided by the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             $.userId = userId;
             return this;

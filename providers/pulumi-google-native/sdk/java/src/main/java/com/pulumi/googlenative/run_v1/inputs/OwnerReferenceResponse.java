@@ -24,6 +24,10 @@ public final class OwnerReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="apiVersion", required=true)
     private String apiVersion;
 
+    /**
+     * @return API version of the referent.
+     * 
+     */
     public String apiVersion() {
         return this.apiVersion;
     }
@@ -35,6 +39,10 @@ public final class OwnerReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="blockOwnerDeletion", required=true)
     private Boolean blockOwnerDeletion;
 
+    /**
+     * @return If true, AND if the owner has the &#34;foregroundDeletion&#34; finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs &#34;delete&#34; permission of the owner, otherwise 422 (Unprocessable Entity) will be returned. +optional
+     * 
+     */
     public Boolean blockOwnerDeletion() {
         return this.blockOwnerDeletion;
     }
@@ -46,6 +54,10 @@ public final class OwnerReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="controller", required=true)
     private Boolean controller;
 
+    /**
+     * @return If true, this reference points to the managing controller. +optional
+     * 
+     */
     public Boolean controller() {
         return this.controller;
     }
@@ -57,6 +69,10 @@ public final class OwnerReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -68,6 +84,10 @@ public final class OwnerReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -79,6 +99,10 @@ public final class OwnerReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="uid", required=true)
     private String uid;
 
+    /**
+     * @return UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+     * 
+     */
     public String uid() {
         return this.uid;
     }
@@ -112,31 +136,67 @@ public final class OwnerReferenceResponse extends com.pulumi.resources.InvokeArg
             $ = new OwnerReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion API version of the referent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param blockOwnerDeletion If true, AND if the owner has the &#34;foregroundDeletion&#34; finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs &#34;delete&#34; permission of the owner, otherwise 422 (Unprocessable Entity) will be returned. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockOwnerDeletion(Boolean blockOwnerDeletion) {
             $.blockOwnerDeletion = blockOwnerDeletion;
             return this;
         }
 
+        /**
+         * @param controller If true, this reference points to the managing controller. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder controller(Boolean controller) {
             $.controller = controller;
             return this;
         }
 
+        /**
+         * @param kind Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param uid UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             $.uid = uid;
             return this;

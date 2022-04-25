@@ -27,6 +27,10 @@ public final class InstanceParamsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceManagerTags")
     private @Nullable Output<Map<String,String>> resourceManagerTags;
 
+    /**
+     * @return Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
+     * 
+     */
     public Optional<Output<Map<String,String>>> resourceManagerTags() {
         return Optional.ofNullable(this.resourceManagerTags);
     }
@@ -55,11 +59,23 @@ public final class InstanceParamsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new InstanceParamsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceManagerTags Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceManagerTags(@Nullable Output<Map<String,String>> resourceManagerTags) {
             $.resourceManagerTags = resourceManagerTags;
             return this;
         }
 
+        /**
+         * @param resourceManagerTags Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceManagerTags(Map<String,String> resourceManagerTags) {
             return resourceManagerTags(Output.of(resourceManagerTags));
         }

@@ -41,6 +41,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advancedMachineFeatures")
     private @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
+    /**
+     * @return Controls for advanced machine-related behavior features.
+     * 
+     */
     public Optional<Output<AdvancedMachineFeaturesArgs>> advancedMachineFeatures() {
         return Optional.ofNullable(this.advancedMachineFeatures);
     }
@@ -52,6 +56,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="canIpForward")
     private @Nullable Output<Boolean> canIpForward;
 
+    /**
+     * @return Allows this instance to send and receive packets with non-matching destination or source IPs. This is required if you plan to use this instance to forward routes. For more information, see Enabling IP Forwarding .
+     * 
+     */
     public Optional<Output<Boolean>> canIpForward() {
         return Optional.ofNullable(this.canIpForward);
     }
@@ -70,6 +78,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deletionProtection")
     private @Nullable Output<Boolean> deletionProtection;
 
+    /**
+     * @return Whether the resource should be protected against deletion.
+     * 
+     */
     public Optional<Output<Boolean>> deletionProtection() {
         return Optional.ofNullable(this.deletionProtection);
     }
@@ -81,6 +93,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -92,6 +108,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disks")
     private @Nullable Output<List<AttachedDiskArgs>> disks;
 
+    /**
+     * @return Array of disks associated with this instance. Persistent disks must be created before you can assign them.
+     * 
+     */
     public Optional<Output<List<AttachedDiskArgs>>> disks() {
         return Optional.ofNullable(this.disks);
     }
@@ -103,6 +123,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayDevice")
     private @Nullable Output<DisplayDeviceArgs> displayDevice;
 
+    /**
+     * @return Enables display device for the instance.
+     * 
+     */
     public Optional<Output<DisplayDeviceArgs>> displayDevice() {
         return Optional.ofNullable(this.displayDevice);
     }
@@ -114,6 +138,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="guestAccelerators")
     private @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
 
+    /**
+     * @return A list of the type and count of accelerator cards attached to the instance.
+     * 
+     */
     public Optional<Output<List<AcceleratorConfigArgs>>> guestAccelerators() {
         return Optional.ofNullable(this.guestAccelerators);
     }
@@ -125,6 +153,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostname")
     private @Nullable Output<String> hostname;
 
+    /**
+     * @return Specifies the hostname of the instance. The specified hostname must be RFC1035 compliant. If hostname is not specified, the default hostname is [INSTANCE_NAME].c.[PROJECT_ID].internal when using the global DNS, and [INSTANCE_NAME].[ZONE].c.[PROJECT_ID].internal when using zonal DNS.
+     * 
+     */
     public Optional<Output<String>> hostname() {
         return Optional.ofNullable(this.hostname);
     }
@@ -136,6 +168,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to this instance. These can be later modified by the setLabels method.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -147,6 +183,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="machineType")
     private @Nullable Output<String> machineType;
 
+    /**
+     * @return Full or partial URL of the machine type resource to use for this instance, in the format: zones/zone/machineTypes/machine-type. This is provided by the client when the instance is created. For example, the following is a valid partial url to a predefined machine type: zones/us-central1-f/machineTypes/n1-standard-1 To create a custom machine type, provide a URL to a machine type in the following format, where CPUS is 1 or an even number up to 32 (2, 4, 6, ... 24, etc), and MEMORY is the total memory for this instance. Memory must be a multiple of 256 MB and must be supplied in MB (e.g. 5 GB of memory is 5120 MB): zones/zone/machineTypes/custom-CPUS-MEMORY For example: zones/us-central1-f/machineTypes/custom-4-5120 For a full list of restrictions, read the Specifications for custom machine types.
+     * 
+     */
     public Optional<Output<String>> machineType() {
         return Optional.ofNullable(this.machineType);
     }
@@ -158,6 +198,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<MetadataArgs> metadata;
 
+    /**
+     * @return The metadata key/value pairs assigned to this instance. This includes custom metadata and predefined keys.
+     * 
+     */
     public Optional<Output<MetadataArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -169,6 +213,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minCpuPlatform")
     private @Nullable Output<String> minCpuPlatform;
 
+    /**
+     * @return Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;.
+     * 
+     */
     public Optional<Output<String>> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
@@ -180,6 +228,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -191,6 +243,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkInterfaces")
     private @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
+    /**
+     * @return An array of network configurations for this instance. These specify how interfaces are configured to interact with other network services, such as connecting to the internet. Multiple interfaces are supported per instance.
+     * 
+     */
     public Optional<Output<List<NetworkInterfaceArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -209,6 +265,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateIpv6GoogleAccess")
     private @Nullable Output<InstancePrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
+    /**
+     * @return The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK as default.
+     * 
+     */
     public Optional<Output<InstancePrivateIpv6GoogleAccess>> privateIpv6GoogleAccess() {
         return Optional.ofNullable(this.privateIpv6GoogleAccess);
     }
@@ -234,6 +294,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservationAffinity")
     private @Nullable Output<ReservationAffinityArgs> reservationAffinity;
 
+    /**
+     * @return Specifies the reservations that this instance can consume from.
+     * 
+     */
     public Optional<Output<ReservationAffinityArgs>> reservationAffinity() {
         return Optional.ofNullable(this.reservationAffinity);
     }
@@ -245,6 +309,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourcePolicies")
     private @Nullable Output<List<String>> resourcePolicies;
 
+    /**
+     * @return Resource policies applied to this instance.
+     * 
+     */
     public Optional<Output<List<String>>> resourcePolicies() {
         return Optional.ofNullable(this.resourcePolicies);
     }
@@ -256,6 +324,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheduling")
     private @Nullable Output<SchedulingArgs> scheduling;
 
+    /**
+     * @return Sets the scheduling options for this instance.
+     * 
+     */
     public Optional<Output<SchedulingArgs>> scheduling() {
         return Optional.ofNullable(this.scheduling);
     }
@@ -267,6 +339,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccounts")
     private @Nullable Output<List<ServiceAccountArgs>> serviceAccounts;
 
+    /**
+     * @return A list of service accounts, with their specified scopes, authorized for this instance. Only one service account per VM instance is supported. Service accounts generate access tokens that can be accessed through the metadata server and used to authenticate applications on the instance. See Service Accounts for more information.
+     * 
+     */
     public Optional<Output<List<ServiceAccountArgs>>> serviceAccounts() {
         return Optional.ofNullable(this.serviceAccounts);
     }
@@ -299,6 +375,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceMachineImage")
     private @Nullable Output<String> sourceMachineImage;
 
+    /**
+     * @return Source machine image
+     * 
+     */
     public Optional<Output<String>> sourceMachineImage() {
         return Optional.ofNullable(this.sourceMachineImage);
     }
@@ -310,6 +390,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceMachineImageEncryptionKey")
     private @Nullable Output<CustomerEncryptionKeyArgs> sourceMachineImageEncryptionKey;
 
+    /**
+     * @return Source machine image encryption key when creating an instance from a machine image.
+     * 
+     */
     public Optional<Output<CustomerEncryptionKeyArgs>> sourceMachineImageEncryptionKey() {
         return Optional.ofNullable(this.sourceMachineImageEncryptionKey);
     }
@@ -321,6 +405,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<TagsArgs> tags;
 
+    /**
+     * @return Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the &#39;tags.items&#39; field.
+     * 
+     */
     public Optional<Output<TagsArgs>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -385,20 +473,44 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advancedMachineFeatures Controls for advanced machine-related behavior features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedMachineFeatures(@Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures) {
             $.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
 
+        /**
+         * @param advancedMachineFeatures Controls for advanced machine-related behavior features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedMachineFeatures(AdvancedMachineFeaturesArgs advancedMachineFeatures) {
             return advancedMachineFeatures(Output.of(advancedMachineFeatures));
         }
 
+        /**
+         * @param canIpForward Allows this instance to send and receive packets with non-matching destination or source IPs. This is required if you plan to use this instance to forward routes. For more information, see Enabling IP Forwarding .
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
             $.canIpForward = canIpForward;
             return this;
         }
 
+        /**
+         * @param canIpForward Allows this instance to send and receive packets with non-matching destination or source IPs. This is required if you plan to use this instance to forward routes. For more information, see Enabling IP Forwarding .
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(Boolean canIpForward) {
             return canIpForward(Output.of(canIpForward));
         }
@@ -412,122 +524,284 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return confidentialInstanceConfig(Output.of(confidentialInstanceConfig));
         }
 
+        /**
+         * @param deletionProtection Whether the resource should be protected against deletion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             $.deletionProtection = deletionProtection;
             return this;
         }
 
+        /**
+         * @param deletionProtection Whether the resource should be protected against deletion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(Boolean deletionProtection) {
             return deletionProtection(Output.of(deletionProtection));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param disks Array of disks associated with this instance. Persistent disks must be created before you can assign them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(@Nullable Output<List<AttachedDiskArgs>> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks Array of disks associated with this instance. Persistent disks must be created before you can assign them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(List<AttachedDiskArgs> disks) {
             return disks(Output.of(disks));
         }
 
+        /**
+         * @param disks Array of disks associated with this instance. Persistent disks must be created before you can assign them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(AttachedDiskArgs... disks) {
             return disks(List.of(disks));
         }
 
+        /**
+         * @param displayDevice Enables display device for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayDevice(@Nullable Output<DisplayDeviceArgs> displayDevice) {
             $.displayDevice = displayDevice;
             return this;
         }
 
+        /**
+         * @param displayDevice Enables display device for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayDevice(DisplayDeviceArgs displayDevice) {
             return displayDevice(Output.of(displayDevice));
         }
 
+        /**
+         * @param guestAccelerators A list of the type and count of accelerator cards attached to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(@Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators) {
             $.guestAccelerators = guestAccelerators;
             return this;
         }
 
+        /**
+         * @param guestAccelerators A list of the type and count of accelerator cards attached to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(List<AcceleratorConfigArgs> guestAccelerators) {
             return guestAccelerators(Output.of(guestAccelerators));
         }
 
+        /**
+         * @param guestAccelerators A list of the type and count of accelerator cards attached to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(AcceleratorConfigArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
 
+        /**
+         * @param hostname Specifies the hostname of the instance. The specified hostname must be RFC1035 compliant. If hostname is not specified, the default hostname is [INSTANCE_NAME].c.[PROJECT_ID].internal when using the global DNS, and [INSTANCE_NAME].[ZONE].c.[PROJECT_ID].internal when using zonal DNS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(@Nullable Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname Specifies the hostname of the instance. The specified hostname must be RFC1035 compliant. If hostname is not specified, the default hostname is [INSTANCE_NAME].c.[PROJECT_ID].internal when using the global DNS, and [INSTANCE_NAME].[ZONE].c.[PROJECT_ID].internal when using zonal DNS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param labels Labels to apply to this instance. These can be later modified by the setLabels method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels to apply to this instance. These can be later modified by the setLabels method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param machineType Full or partial URL of the machine type resource to use for this instance, in the format: zones/zone/machineTypes/machine-type. This is provided by the client when the instance is created. For example, the following is a valid partial url to a predefined machine type: zones/us-central1-f/machineTypes/n1-standard-1 To create a custom machine type, provide a URL to a machine type in the following format, where CPUS is 1 or an even number up to 32 (2, 4, 6, ... 24, etc), and MEMORY is the total memory for this instance. Memory must be a multiple of 256 MB and must be supplied in MB (e.g. 5 GB of memory is 5120 MB): zones/zone/machineTypes/custom-CPUS-MEMORY For example: zones/us-central1-f/machineTypes/custom-4-5120 For a full list of restrictions, read the Specifications for custom machine types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(@Nullable Output<String> machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineType Full or partial URL of the machine type resource to use for this instance, in the format: zones/zone/machineTypes/machine-type. This is provided by the client when the instance is created. For example, the following is a valid partial url to a predefined machine type: zones/us-central1-f/machineTypes/n1-standard-1 To create a custom machine type, provide a URL to a machine type in the following format, where CPUS is 1 or an even number up to 32 (2, 4, 6, ... 24, etc), and MEMORY is the total memory for this instance. Memory must be a multiple of 256 MB and must be supplied in MB (e.g. 5 GB of memory is 5120 MB): zones/zone/machineTypes/custom-CPUS-MEMORY For example: zones/us-central1-f/machineTypes/custom-4-5120 For a full list of restrictions, read the Specifications for custom machine types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             return machineType(Output.of(machineType));
         }
 
+        /**
+         * @param metadata The metadata key/value pairs assigned to this instance. This includes custom metadata and predefined keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<MetadataArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The metadata key/value pairs assigned to this instance. This includes custom metadata and predefined keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(MetadataArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param minCpuPlatform Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             return minCpuPlatform(Output.of(minCpuPlatform));
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkInterfaces An array of network configurations for this instance. These specify how interfaces are configured to interact with other network services, such as connecting to the internet. Multiple interfaces are supported per instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces An array of network configurations for this instance. These specify how interfaces are configured to interact with other network services, such as connecting to the internet. Multiple interfaces are supported per instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<NetworkInterfaceArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
+        /**
+         * @param networkInterfaces An array of network configurations for this instance. These specify how interfaces are configured to interact with other network services, such as connecting to the internet. Multiple interfaces are supported per instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
@@ -541,11 +815,23 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return networkPerformanceConfig(Output.of(networkPerformanceConfig));
         }
 
+        /**
+         * @param privateIpv6GoogleAccess The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK as default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpv6GoogleAccess(@Nullable Output<InstancePrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
             $.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
+        /**
+         * @param privateIpv6GoogleAccess The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK as default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpv6GoogleAccess(InstancePrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
             return privateIpv6GoogleAccess(Output.of(privateIpv6GoogleAccess));
         }
@@ -568,46 +854,106 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param reservationAffinity Specifies the reservations that this instance can consume from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(@Nullable Output<ReservationAffinityArgs> reservationAffinity) {
             $.reservationAffinity = reservationAffinity;
             return this;
         }
 
+        /**
+         * @param reservationAffinity Specifies the reservations that this instance can consume from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(ReservationAffinityArgs reservationAffinity) {
             return reservationAffinity(Output.of(reservationAffinity));
         }
 
+        /**
+         * @param resourcePolicies Resource policies applied to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
             $.resourcePolicies = resourcePolicies;
             return this;
         }
 
+        /**
+         * @param resourcePolicies Resource policies applied to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(List<String> resourcePolicies) {
             return resourcePolicies(Output.of(resourcePolicies));
         }
 
+        /**
+         * @param resourcePolicies Resource policies applied to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(String... resourcePolicies) {
             return resourcePolicies(List.of(resourcePolicies));
         }
 
+        /**
+         * @param scheduling Sets the scheduling options for this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(@Nullable Output<SchedulingArgs> scheduling) {
             $.scheduling = scheduling;
             return this;
         }
 
+        /**
+         * @param scheduling Sets the scheduling options for this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(SchedulingArgs scheduling) {
             return scheduling(Output.of(scheduling));
         }
 
+        /**
+         * @param serviceAccounts A list of service accounts, with their specified scopes, authorized for this instance. Only one service account per VM instance is supported. Service accounts generate access tokens that can be accessed through the metadata server and used to authenticate applications on the instance. See Service Accounts for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccounts(@Nullable Output<List<ServiceAccountArgs>> serviceAccounts) {
             $.serviceAccounts = serviceAccounts;
             return this;
         }
 
+        /**
+         * @param serviceAccounts A list of service accounts, with their specified scopes, authorized for this instance. Only one service account per VM instance is supported. Service accounts generate access tokens that can be accessed through the metadata server and used to authenticate applications on the instance. See Service Accounts for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccounts(List<ServiceAccountArgs> serviceAccounts) {
             return serviceAccounts(Output.of(serviceAccounts));
         }
 
+        /**
+         * @param serviceAccounts A list of service accounts, with their specified scopes, authorized for this instance. Only one service account per VM instance is supported. Service accounts generate access tokens that can be accessed through the metadata server and used to authenticate applications on the instance. See Service Accounts for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccounts(ServiceAccountArgs... serviceAccounts) {
             return serviceAccounts(List.of(serviceAccounts));
         }
@@ -639,29 +985,65 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return sourceInstanceTemplate(Output.of(sourceInstanceTemplate));
         }
 
+        /**
+         * @param sourceMachineImage Source machine image
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceMachineImage(@Nullable Output<String> sourceMachineImage) {
             $.sourceMachineImage = sourceMachineImage;
             return this;
         }
 
+        /**
+         * @param sourceMachineImage Source machine image
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceMachineImage(String sourceMachineImage) {
             return sourceMachineImage(Output.of(sourceMachineImage));
         }
 
+        /**
+         * @param sourceMachineImageEncryptionKey Source machine image encryption key when creating an instance from a machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceMachineImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceMachineImageEncryptionKey) {
             $.sourceMachineImageEncryptionKey = sourceMachineImageEncryptionKey;
             return this;
         }
 
+        /**
+         * @param sourceMachineImageEncryptionKey Source machine image encryption key when creating an instance from a machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceMachineImageEncryptionKey(CustomerEncryptionKeyArgs sourceMachineImageEncryptionKey) {
             return sourceMachineImageEncryptionKey(Output.of(sourceMachineImageEncryptionKey));
         }
 
+        /**
+         * @param tags Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the &#39;tags.items&#39; field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<TagsArgs> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the &#39;tags.items&#39; field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(TagsArgs tags) {
             return tags(Output.of(tags));
         }

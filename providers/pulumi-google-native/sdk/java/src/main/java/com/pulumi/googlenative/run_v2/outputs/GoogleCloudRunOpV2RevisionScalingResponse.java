@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudRunOpV2RevisionScalingResponse {
     /**
-     * Maximum number of serving instances that this resource should have.
+     * @return Maximum number of serving instances that this resource should have.
      * 
      */
     private final Integer maxInstanceCount;
     /**
-     * Minimum number of serving instances that this resource should have.
+     * @return Minimum number of serving instances that this resource should have.
      * 
      */
     private final Integer minInstanceCount;
@@ -29,16 +29,16 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse {
     }
 
     /**
-     * Maximum number of serving instances that this resource should have.
+     * @return Maximum number of serving instances that this resource should have.
      * 
-    */
+     */
     public Integer maxInstanceCount() {
         return this.maxInstanceCount;
     }
     /**
-     * Minimum number of serving instances that this resource should have.
+     * @return Minimum number of serving instances that this resource should have.
      * 
-    */
+     */
     public Integer minInstanceCount() {
         return this.minInstanceCount;
     }

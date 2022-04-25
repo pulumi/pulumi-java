@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3RolloutConfigResponse {
     /**
-     * The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. &#34;containment_rate &lt; 10% OR average_turn_count &lt; 3&#34;. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+     * @return The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. &#34;containment_rate &lt; 10% OR average_turn_count &lt; 3&#34;. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
      */
     private final String failureCondition;
     /**
-     * The conditions that are used to evaluate the success of a rollout step. If not specified, all rollout steps will proceed to the next one unless failure conditions are met. E.g. &#34;containment_rate &gt; 60% AND callback_rate &lt; 20%&#34;. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+     * @return The conditions that are used to evaluate the success of a rollout step. If not specified, all rollout steps will proceed to the next one unless failure conditions are met. E.g. &#34;containment_rate &gt; 60% AND callback_rate &lt; 20%&#34;. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
      */
     private final String rolloutCondition;
     /**
-     * Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.
+     * @return Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.
      * 
      */
     private final List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps;
@@ -38,23 +38,23 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigResponse {
     }
 
     /**
-     * The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. &#34;containment_rate &lt; 10% OR average_turn_count &lt; 3&#34;. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+     * @return The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. &#34;containment_rate &lt; 10% OR average_turn_count &lt; 3&#34;. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
-    */
+     */
     public String failureCondition() {
         return this.failureCondition;
     }
     /**
-     * The conditions that are used to evaluate the success of a rollout step. If not specified, all rollout steps will proceed to the next one unless failure conditions are met. E.g. &#34;containment_rate &gt; 60% AND callback_rate &lt; 20%&#34;. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+     * @return The conditions that are used to evaluate the success of a rollout step. If not specified, all rollout steps will proceed to the next one unless failure conditions are met. E.g. &#34;containment_rate &gt; 60% AND callback_rate &lt; 20%&#34;. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
-    */
+     */
     public String rolloutCondition() {
         return this.rolloutCondition;
     }
     /**
-     * Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.
+     * @return Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps() {
         return this.rolloutSteps;
     }

@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioRespons
     @Import(name="allowPlaybackInterruption", required=true)
     private Boolean allowPlaybackInterruption;
 
+    /**
+     * @return Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
+     * 
+     */
     public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioRespons
     @Import(name="audioUri", required=true)
     private String audioUri;
 
+    /**
+     * @return URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
+     * 
+     */
     public String audioUri() {
         return this.audioUri;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioRespons
             $ = new GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowPlaybackInterruption Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
             $.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
 
+        /**
+         * @param audioUri URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioUri(String audioUri) {
             $.audioUri = audioUri;
             return this;

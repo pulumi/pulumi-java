@@ -24,6 +24,10 @@ public final class NodeManagementResponse extends com.pulumi.resources.InvokeArg
     @Import(name="autoRepair", required=true)
     private Boolean autoRepair;
 
+    /**
+     * @return Whether the nodes will be automatically repaired.
+     * 
+     */
     public Boolean autoRepair() {
         return this.autoRepair;
     }
@@ -35,6 +39,10 @@ public final class NodeManagementResponse extends com.pulumi.resources.InvokeArg
     @Import(name="autoUpgrade", required=true)
     private Boolean autoUpgrade;
 
+    /**
+     * @return Whether the nodes will be automatically upgraded.
+     * 
+     */
     public Boolean autoUpgrade() {
         return this.autoUpgrade;
     }
@@ -46,6 +54,10 @@ public final class NodeManagementResponse extends com.pulumi.resources.InvokeArg
     @Import(name="upgradeOptions", required=true)
     private AutoUpgradeOptionsResponse upgradeOptions;
 
+    /**
+     * @return Specifies the Auto Upgrade knobs for the node pool.
+     * 
+     */
     public AutoUpgradeOptionsResponse upgradeOptions() {
         return this.upgradeOptions;
     }
@@ -76,16 +88,34 @@ public final class NodeManagementResponse extends com.pulumi.resources.InvokeArg
             $ = new NodeManagementResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoRepair Whether the nodes will be automatically repaired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRepair(Boolean autoRepair) {
             $.autoRepair = autoRepair;
             return this;
         }
 
+        /**
+         * @param autoUpgrade Whether the nodes will be automatically upgraded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgrade(Boolean autoUpgrade) {
             $.autoUpgrade = autoUpgrade;
             return this;
         }
 
+        /**
+         * @param upgradeOptions Specifies the Auto Upgrade knobs for the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeOptions(AutoUpgradeOptionsResponse upgradeOptions) {
             $.upgradeOptions = upgradeOptions;
             return this;

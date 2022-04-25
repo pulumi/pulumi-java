@@ -23,6 +23,10 @@ public final class SchemaConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="recursiveStructureDepth", required=true)
     private String recursiveStructureDepth;
 
+    /**
+     * @return The depth for all recursive structures in the output analytics schema. For example, `concept` in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called `concept.concept` but not `concept.concept.concept`. If not specified or set to 0, the server will use the default value 2. The maximum depth allowed is 5.
+     * 
+     */
     public String recursiveStructureDepth() {
         return this.recursiveStructureDepth;
     }
@@ -34,6 +38,10 @@ public final class SchemaConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="schemaType", required=true)
     private String schemaType;
 
+    /**
+     * @return Specifies the output schema type. Schema type is required.
+     * 
+     */
     public String schemaType() {
         return this.schemaType;
     }
@@ -63,11 +71,23 @@ public final class SchemaConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SchemaConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recursiveStructureDepth The depth for all recursive structures in the output analytics schema. For example, `concept` in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called `concept.concept` but not `concept.concept.concept`. If not specified or set to 0, the server will use the default value 2. The maximum depth allowed is 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recursiveStructureDepth(String recursiveStructureDepth) {
             $.recursiveStructureDepth = recursiveStructureDepth;
             return this;
         }
 
+        /**
+         * @param schemaType Specifies the output schema type. Schema type is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaType(String schemaType) {
             $.schemaType = schemaType;
             return this;

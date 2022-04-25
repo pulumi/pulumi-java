@@ -24,6 +24,10 @@ public final class CustomMetricResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="filter", required=true)
     private String filter;
 
+    /**
+     * @return Allows filtering on the metric&#39;s fields.
+     * 
+     */
     public String filter() {
         return this.filter;
     }
@@ -35,6 +39,10 @@ public final class CustomMetricResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="metricName", required=true)
     private String metricName;
 
+    /**
+     * @return The name of the metric.
+     * 
+     */
     public String metricName() {
         return this.metricName;
     }
@@ -46,6 +54,10 @@ public final class CustomMetricResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="singleInstanceAssignment", required=true)
     private Double singleInstanceAssignment;
 
+    /**
+     * @return May be used instead of target_utilization when an instance can handle a specific amount of work/resources and the metric value is equal to the current amount of work remaining. The autoscaler will try to keep the number of instances equal to the metric value divided by single_instance_assignment.
+     * 
+     */
     public Double singleInstanceAssignment() {
         return this.singleInstanceAssignment;
     }
@@ -57,6 +69,10 @@ public final class CustomMetricResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="targetType", required=true)
     private String targetType;
 
+    /**
+     * @return The type of the metric. Must be a string representing a Stackdriver metric type e.g. GAGUE, DELTA_PER_SECOND, etc.
+     * 
+     */
     public String targetType() {
         return this.targetType;
     }
@@ -68,6 +84,10 @@ public final class CustomMetricResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="targetUtilization", required=true)
     private Double targetUtilization;
 
+    /**
+     * @return The target value for the metric.
+     * 
+     */
     public Double targetUtilization() {
         return this.targetUtilization;
     }
@@ -100,26 +120,56 @@ public final class CustomMetricResponse extends com.pulumi.resources.InvokeArgs 
             $ = new CustomMetricResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filter Allows filtering on the metric&#39;s fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param metricName The name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param singleInstanceAssignment May be used instead of target_utilization when an instance can handle a specific amount of work/resources and the metric value is equal to the current amount of work remaining. The autoscaler will try to keep the number of instances equal to the metric value divided by single_instance_assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleInstanceAssignment(Double singleInstanceAssignment) {
             $.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
 
+        /**
+         * @param targetType The type of the metric. Must be a string representing a Stackdriver metric type e.g. GAGUE, DELTA_PER_SECOND, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(String targetType) {
             $.targetType = targetType;
             return this;
         }
 
+        /**
+         * @param targetUtilization The target value for the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilization(Double targetUtilization) {
             $.targetUtilization = targetUtilization;
             return this;

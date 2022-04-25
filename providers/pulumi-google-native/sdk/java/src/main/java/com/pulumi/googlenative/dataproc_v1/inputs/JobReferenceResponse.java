@@ -23,6 +23,10 @@ public final class JobReferenceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="jobId", required=true)
     private String jobId;
 
+    /**
+     * @return Optional. The job ID, which must be unique within the project.The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or hyphens (-). The maximum length is 100 characters.If not specified by the caller, the job ID will be provided by the server.
+     * 
+     */
     public String jobId() {
         return this.jobId;
     }
@@ -34,6 +38,10 @@ public final class JobReferenceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return Optional. The ID of the Google Cloud Platform project that the job belongs to. If specified, must match the request project ID.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -63,11 +71,23 @@ public final class JobReferenceResponse extends com.pulumi.resources.InvokeArgs 
             $ = new JobReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobId Optional. The job ID, which must be unique within the project.The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or hyphens (-). The maximum length is 100 characters.If not specified by the caller, the job ID will be provided by the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(String jobId) {
             $.jobId = jobId;
             return this;
         }
 
+        /**
+         * @param project Optional. The ID of the Google Cloud Platform project that the job belongs to. If specified, must match the request project ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;

@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudChannelV1ParameterResponse {
     /**
-     * Specifies whether this parameter is allowed to be changed. For example, for a Google Workspace Business Starter entitlement in commitment plan, num_units is editable when entitlement is active.
+     * @return Specifies whether this parameter is allowed to be changed. For example, for a Google Workspace Business Starter entitlement in commitment plan, num_units is editable when entitlement is active.
      * 
      */
     private final Boolean editable;
     /**
-     * Name of the parameter.
+     * @return Name of the parameter.
      * 
      */
     private final String name;
     /**
-     * Value of the parameter.
+     * @return Value of the parameter.
      * 
      */
     private final GoogleCloudChannelV1ValueResponse value;
@@ -38,23 +38,23 @@ public final class GoogleCloudChannelV1ParameterResponse {
     }
 
     /**
-     * Specifies whether this parameter is allowed to be changed. For example, for a Google Workspace Business Starter entitlement in commitment plan, num_units is editable when entitlement is active.
+     * @return Specifies whether this parameter is allowed to be changed. For example, for a Google Workspace Business Starter entitlement in commitment plan, num_units is editable when entitlement is active.
      * 
-    */
+     */
     public Boolean editable() {
         return this.editable;
     }
     /**
-     * Name of the parameter.
+     * @return Name of the parameter.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Value of the parameter.
+     * @return Value of the parameter.
      * 
-    */
+     */
     public GoogleCloudChannelV1ValueResponse value() {
         return this.value;
     }

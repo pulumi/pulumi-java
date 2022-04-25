@@ -29,6 +29,10 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the tag, for example: &#34;projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/tags/tag1&#34;. If the package part contains slashes, the slashes are escaped. The tag part can only have characters in [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,6 +72,10 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The name of the version the tag refers to, for example: &#34;projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/versions/sha256:5243811&#34; If the package or version ID parts contain slashes, the slashes are escaped.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -111,11 +119,23 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the tag, for example: &#34;projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/tags/tag1&#34;. If the package part contains slashes, the slashes are escaped. The tag part can only have characters in [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the tag, for example: &#34;projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/tags/tag1&#34;. If the package part contains slashes, the slashes are escaped. The tag part can only have characters in [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -156,11 +176,23 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
             return tagId(Output.of(tagId));
         }
 
+        /**
+         * @param version The name of the version the tag refers to, for example: &#34;projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/versions/sha256:5243811&#34; If the package or version ID parts contain slashes, the slashes are escaped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The name of the version the tag refers to, for example: &#34;projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/versions/sha256:5243811&#34; If the package or version ID parts contain slashes, the slashes are escaped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

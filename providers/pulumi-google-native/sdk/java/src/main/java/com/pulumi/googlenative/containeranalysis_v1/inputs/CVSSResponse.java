@@ -31,6 +31,10 @@ public final class CVSSResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="attackVector", required=true)
     private String attackVector;
 
+    /**
+     * @return Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
+     * 
+     */
     public String attackVector() {
         return this.attackVector;
     }
@@ -56,6 +60,10 @@ public final class CVSSResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="baseScore", required=true)
     private Double baseScore;
 
+    /**
+     * @return The base score is a function of the base metric scores.
+     * 
+     */
     public Double baseScore() {
         return this.baseScore;
     }
@@ -149,6 +157,12 @@ public final class CVSSResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param attackVector Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attackVector(String attackVector) {
             $.attackVector = attackVector;
             return this;
@@ -164,6 +178,12 @@ public final class CVSSResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param baseScore The base score is a function of the base metric scores.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseScore(Double baseScore) {
             $.baseScore = baseScore;
             return this;

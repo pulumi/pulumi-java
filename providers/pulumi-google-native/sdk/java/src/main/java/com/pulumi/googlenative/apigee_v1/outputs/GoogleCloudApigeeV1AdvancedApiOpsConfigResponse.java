@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudApigeeV1AdvancedApiOpsConfigResponse {
     /**
-     * Flag that specifies whether the Advanced API Ops add-on is enabled.
+     * @return Flag that specifies whether the Advanced API Ops add-on is enabled.
      * 
      */
     private final Boolean enabled;
@@ -21,9 +21,9 @@ public final class GoogleCloudApigeeV1AdvancedApiOpsConfigResponse {
     }
 
     /**
-     * Flag that specifies whether the Advanced API Ops add-on is enabled.
+     * @return Flag that specifies whether the Advanced API Ops add-on is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

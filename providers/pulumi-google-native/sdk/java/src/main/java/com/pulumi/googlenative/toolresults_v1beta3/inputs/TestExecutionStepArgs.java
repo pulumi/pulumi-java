@@ -30,6 +30,10 @@ public final class TestExecutionStepArgs extends com.pulumi.resources.ResourceAr
     @Import(name="testIssues")
     private @Nullable Output<List<TestIssueArgs>> testIssues;
 
+    /**
+     * @return Issues observed during the test execution. For example, if the mobile app under test crashed during the test, the error message and the stack trace content can be recorded here to assist debugging. - In response: present if set by create or update - In create/update request: optional
+     * 
+     */
     public Optional<Output<List<TestIssueArgs>>> testIssues() {
         return Optional.ofNullable(this.testIssues);
     }
@@ -41,6 +45,10 @@ public final class TestExecutionStepArgs extends com.pulumi.resources.ResourceAr
     @Import(name="testSuiteOverviews")
     private @Nullable Output<List<TestSuiteOverviewArgs>> testSuiteOverviews;
 
+    /**
+     * @return List of test suite overview contents. This could be parsed from xUnit XML log by server, or uploaded directly by user. This references should only be called when test suites are fully parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In response: always set - In create request: optional - In update request: never (use publishXunitXmlFiles custom method instead)
+     * 
+     */
     public Optional<Output<List<TestSuiteOverviewArgs>>> testSuiteOverviews() {
         return Optional.ofNullable(this.testSuiteOverviews);
     }
@@ -52,6 +60,10 @@ public final class TestExecutionStepArgs extends com.pulumi.resources.ResourceAr
     @Import(name="testTiming")
     private @Nullable Output<TestTimingArgs> testTiming;
 
+    /**
+     * @return The timing break down of the test execution. - In response: present if set by create or update - In create/update request: optional
+     * 
+     */
     public Optional<Output<TestTimingArgs>> testTiming() {
         return Optional.ofNullable(this.testTiming);
     }
@@ -63,6 +75,10 @@ public final class TestExecutionStepArgs extends com.pulumi.resources.ResourceAr
     @Import(name="toolExecution")
     private @Nullable Output<ToolExecutionArgs> toolExecution;
 
+    /**
+     * @return Represents the execution of the test runner. The exit code of this tool will be used to determine if the test passed. - In response: always set - In create/update request: optional
+     * 
+     */
     public Optional<Output<ToolExecutionArgs>> toolExecution() {
         return Optional.ofNullable(this.toolExecution);
     }
@@ -94,46 +110,106 @@ public final class TestExecutionStepArgs extends com.pulumi.resources.ResourceAr
             $ = new TestExecutionStepArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param testIssues Issues observed during the test execution. For example, if the mobile app under test crashed during the test, the error message and the stack trace content can be recorded here to assist debugging. - In response: present if set by create or update - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder testIssues(@Nullable Output<List<TestIssueArgs>> testIssues) {
             $.testIssues = testIssues;
             return this;
         }
 
+        /**
+         * @param testIssues Issues observed during the test execution. For example, if the mobile app under test crashed during the test, the error message and the stack trace content can be recorded here to assist debugging. - In response: present if set by create or update - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder testIssues(List<TestIssueArgs> testIssues) {
             return testIssues(Output.of(testIssues));
         }
 
+        /**
+         * @param testIssues Issues observed during the test execution. For example, if the mobile app under test crashed during the test, the error message and the stack trace content can be recorded here to assist debugging. - In response: present if set by create or update - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder testIssues(TestIssueArgs... testIssues) {
             return testIssues(List.of(testIssues));
         }
 
+        /**
+         * @param testSuiteOverviews List of test suite overview contents. This could be parsed from xUnit XML log by server, or uploaded directly by user. This references should only be called when test suites are fully parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In response: always set - In create request: optional - In update request: never (use publishXunitXmlFiles custom method instead)
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSuiteOverviews(@Nullable Output<List<TestSuiteOverviewArgs>> testSuiteOverviews) {
             $.testSuiteOverviews = testSuiteOverviews;
             return this;
         }
 
+        /**
+         * @param testSuiteOverviews List of test suite overview contents. This could be parsed from xUnit XML log by server, or uploaded directly by user. This references should only be called when test suites are fully parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In response: always set - In create request: optional - In update request: never (use publishXunitXmlFiles custom method instead)
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSuiteOverviews(List<TestSuiteOverviewArgs> testSuiteOverviews) {
             return testSuiteOverviews(Output.of(testSuiteOverviews));
         }
 
+        /**
+         * @param testSuiteOverviews List of test suite overview contents. This could be parsed from xUnit XML log by server, or uploaded directly by user. This references should only be called when test suites are fully parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In response: always set - In create request: optional - In update request: never (use publishXunitXmlFiles custom method instead)
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSuiteOverviews(TestSuiteOverviewArgs... testSuiteOverviews) {
             return testSuiteOverviews(List.of(testSuiteOverviews));
         }
 
+        /**
+         * @param testTiming The timing break down of the test execution. - In response: present if set by create or update - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTiming(@Nullable Output<TestTimingArgs> testTiming) {
             $.testTiming = testTiming;
             return this;
         }
 
+        /**
+         * @param testTiming The timing break down of the test execution. - In response: present if set by create or update - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTiming(TestTimingArgs testTiming) {
             return testTiming(Output.of(testTiming));
         }
 
+        /**
+         * @param toolExecution Represents the execution of the test runner. The exit code of this tool will be used to determine if the test passed. - In response: always set - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolExecution(@Nullable Output<ToolExecutionArgs> toolExecution) {
             $.toolExecution = toolExecution;
             return this;
         }
 
+        /**
+         * @param toolExecution Represents the execution of the test runner. The exit code of this tool will be used to determine if the test passed. - In response: always set - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolExecution(ToolExecutionArgs toolExecution) {
             return toolExecution(Output.of(toolExecution));
         }

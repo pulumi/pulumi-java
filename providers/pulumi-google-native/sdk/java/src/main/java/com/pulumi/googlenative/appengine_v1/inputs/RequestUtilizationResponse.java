@@ -23,6 +23,10 @@ public final class RequestUtilizationResponse extends com.pulumi.resources.Invok
     @Import(name="targetConcurrentRequests", required=true)
     private Integer targetConcurrentRequests;
 
+    /**
+     * @return Target number of concurrent requests.
+     * 
+     */
     public Integer targetConcurrentRequests() {
         return this.targetConcurrentRequests;
     }
@@ -34,6 +38,10 @@ public final class RequestUtilizationResponse extends com.pulumi.resources.Invok
     @Import(name="targetRequestCountPerSecond", required=true)
     private Integer targetRequestCountPerSecond;
 
+    /**
+     * @return Target requests per second.
+     * 
+     */
     public Integer targetRequestCountPerSecond() {
         return this.targetRequestCountPerSecond;
     }
@@ -63,11 +71,23 @@ public final class RequestUtilizationResponse extends com.pulumi.resources.Invok
             $ = new RequestUtilizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetConcurrentRequests Target number of concurrent requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConcurrentRequests(Integer targetConcurrentRequests) {
             $.targetConcurrentRequests = targetConcurrentRequests;
             return this;
         }
 
+        /**
+         * @param targetRequestCountPerSecond Target requests per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRequestCountPerSecond(Integer targetRequestCountPerSecond) {
             $.targetRequestCountPerSecond = targetRequestCountPerSecond;
             return this;

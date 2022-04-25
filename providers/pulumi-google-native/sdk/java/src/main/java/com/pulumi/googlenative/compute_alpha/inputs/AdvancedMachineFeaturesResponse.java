@@ -24,6 +24,10 @@ public final class AdvancedMachineFeaturesResponse extends com.pulumi.resources.
     @Import(name="enableNestedVirtualization", required=true)
     private Boolean enableNestedVirtualization;
 
+    /**
+     * @return Whether to enable nested virtualization or not (default is false).
+     * 
+     */
     public Boolean enableNestedVirtualization() {
         return this.enableNestedVirtualization;
     }
@@ -35,6 +39,10 @@ public final class AdvancedMachineFeaturesResponse extends com.pulumi.resources.
     @Import(name="enableUefiNetworking", required=true)
     private Boolean enableUefiNetworking;
 
+    /**
+     * @return Whether to enable UEFI networking for instance creation.
+     * 
+     */
     public Boolean enableUefiNetworking() {
         return this.enableUefiNetworking;
     }
@@ -46,6 +54,10 @@ public final class AdvancedMachineFeaturesResponse extends com.pulumi.resources.
     @Import(name="numaNodeCount", required=true)
     private Integer numaNodeCount;
 
+    /**
+     * @return The number of vNUMA nodes.
+     * 
+     */
     public Integer numaNodeCount() {
         return this.numaNodeCount;
     }
@@ -57,6 +69,10 @@ public final class AdvancedMachineFeaturesResponse extends com.pulumi.resources.
     @Import(name="threadsPerCore", required=true)
     private Integer threadsPerCore;
 
+    /**
+     * @return The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+     * 
+     */
     public Integer threadsPerCore() {
         return this.threadsPerCore;
     }
@@ -68,6 +84,10 @@ public final class AdvancedMachineFeaturesResponse extends com.pulumi.resources.
     @Import(name="visibleCoreCount", required=true)
     private Integer visibleCoreCount;
 
+    /**
+     * @return The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance&#39;s nominal CPU count and the underlying platform&#39;s SMT width.
+     * 
+     */
     public Integer visibleCoreCount() {
         return this.visibleCoreCount;
     }
@@ -100,26 +120,56 @@ public final class AdvancedMachineFeaturesResponse extends com.pulumi.resources.
             $ = new AdvancedMachineFeaturesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableNestedVirtualization Whether to enable nested virtualization or not (default is false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNestedVirtualization(Boolean enableNestedVirtualization) {
             $.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
 
+        /**
+         * @param enableUefiNetworking Whether to enable UEFI networking for instance creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableUefiNetworking(Boolean enableUefiNetworking) {
             $.enableUefiNetworking = enableUefiNetworking;
             return this;
         }
 
+        /**
+         * @param numaNodeCount The number of vNUMA nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numaNodeCount(Integer numaNodeCount) {
             $.numaNodeCount = numaNodeCount;
             return this;
         }
 
+        /**
+         * @param threadsPerCore The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threadsPerCore(Integer threadsPerCore) {
             $.threadsPerCore = threadsPerCore;
             return this;
         }
 
+        /**
+         * @param visibleCoreCount The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance&#39;s nominal CPU count and the underlying platform&#39;s SMT width.
+         * 
+         * @return builder
+         * 
+         */
         public Builder visibleCoreCount(Integer visibleCoreCount) {
             $.visibleCoreCount = visibleCoreCount;
             return this;

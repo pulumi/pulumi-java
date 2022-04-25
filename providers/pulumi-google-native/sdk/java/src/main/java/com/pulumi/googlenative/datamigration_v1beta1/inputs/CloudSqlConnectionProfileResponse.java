@@ -24,6 +24,10 @@ public final class CloudSqlConnectionProfileResponse extends com.pulumi.resource
     @Import(name="cloudSqlId", required=true)
     private String cloudSqlId;
 
+    /**
+     * @return The Cloud SQL instance ID that this connection profile is associated with.
+     * 
+     */
     public String cloudSqlId() {
         return this.cloudSqlId;
     }
@@ -35,6 +39,10 @@ public final class CloudSqlConnectionProfileResponse extends com.pulumi.resource
     @Import(name="privateIp", required=true)
     private String privateIp;
 
+    /**
+     * @return The Cloud SQL database instance&#39;s private IP.
+     * 
+     */
     public String privateIp() {
         return this.privateIp;
     }
@@ -46,6 +54,10 @@ public final class CloudSqlConnectionProfileResponse extends com.pulumi.resource
     @Import(name="publicIp", required=true)
     private String publicIp;
 
+    /**
+     * @return The Cloud SQL database instance&#39;s public IP.
+     * 
+     */
     public String publicIp() {
         return this.publicIp;
     }
@@ -57,6 +69,10 @@ public final class CloudSqlConnectionProfileResponse extends com.pulumi.resource
     @Import(name="settings", required=true)
     private CloudSqlSettingsResponse settings;
 
+    /**
+     * @return Immutable. Metadata used to create the destination Cloud SQL database.
+     * 
+     */
     public CloudSqlSettingsResponse settings() {
         return this.settings;
     }
@@ -88,21 +104,45 @@ public final class CloudSqlConnectionProfileResponse extends com.pulumi.resource
             $ = new CloudSqlConnectionProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudSqlId The Cloud SQL instance ID that this connection profile is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSqlId(String cloudSqlId) {
             $.cloudSqlId = cloudSqlId;
             return this;
         }
 
+        /**
+         * @param privateIp The Cloud SQL database instance&#39;s private IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIp(String privateIp) {
             $.privateIp = privateIp;
             return this;
         }
 
+        /**
+         * @param publicIp The Cloud SQL database instance&#39;s public IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIp(String publicIp) {
             $.publicIp = publicIp;
             return this;
         }
 
+        /**
+         * @param settings Immutable. Metadata used to create the destination Cloud SQL database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(CloudSqlSettingsResponse settings) {
             $.settings = settings;
             return this;

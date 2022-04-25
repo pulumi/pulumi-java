@@ -14,42 +14,42 @@ import java.util.Objects;
 @CustomType
 public final class GetTestCaseResult {
     /**
-     * When the test was created.
+     * @return When the test was created.
      * 
      */
     private final String creationTime;
     /**
-     * The human-readable name of the test case, unique within the agent. Limit of 200 characters.
+     * @return The human-readable name of the test case, unique within the agent. Limit of 200 characters.
      * 
      */
     private final String displayName;
     /**
-     * The latest test result.
+     * @return The latest test result.
      * 
      */
     private final GoogleCloudDialogflowCxV3beta1TestCaseResultResponse lastTestResult;
     /**
-     * The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
+     * @return The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
      * 
      */
     private final String name;
     /**
-     * Additional freeform notes about the test case. Limit of 400 characters.
+     * @return Additional freeform notes about the test case. Limit of 400 characters.
      * 
      */
     private final String notes;
     /**
-     * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with &#34;#&#34; and has a limit of 30 characters.
+     * @return Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with &#34;#&#34; and has a limit of 30 characters.
      * 
      */
     private final List<String> tags;
     /**
-     * The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.
+     * @return The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.
      * 
      */
     private final List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> testCaseConversationTurns;
     /**
-     * Config for the test case.
+     * @return Config for the test case.
      * 
      */
     private final GoogleCloudDialogflowCxV3beta1TestConfigResponse testConfig;
@@ -75,58 +75,58 @@ public final class GetTestCaseResult {
     }
 
     /**
-     * When the test was created.
+     * @return When the test was created.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * The human-readable name of the test case, unique within the agent. Limit of 200 characters.
+     * @return The human-readable name of the test case, unique within the agent. Limit of 200 characters.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The latest test result.
+     * @return The latest test result.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3beta1TestCaseResultResponse lastTestResult() {
         return this.lastTestResult;
     }
     /**
-     * The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
+     * @return The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Additional freeform notes about the test case. Limit of 400 characters.
+     * @return Additional freeform notes about the test case. Limit of 400 characters.
      * 
-    */
+     */
     public String notes() {
         return this.notes;
     }
     /**
-     * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with &#34;#&#34; and has a limit of 30 characters.
+     * @return Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with &#34;#&#34; and has a limit of 30 characters.
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags;
     }
     /**
-     * The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.
+     * @return The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> testCaseConversationTurns() {
         return this.testCaseConversationTurns;
     }
     /**
-     * Config for the test case.
+     * @return Config for the test case.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3beta1TestConfigResponse testConfig() {
         return this.testConfig;
     }

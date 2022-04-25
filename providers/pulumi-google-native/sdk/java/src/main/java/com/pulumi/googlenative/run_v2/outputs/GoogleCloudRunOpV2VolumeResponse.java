@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudRunOpV2VolumeResponse {
     /**
-     * For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.
+     * @return For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.
      * 
      */
     private final GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance;
     /**
-     * Volume&#39;s name.
+     * @return Volume&#39;s name.
      * 
      */
     private final String name;
     /**
-     * Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+     * @return Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
      * 
      */
     private final GoogleCloudRunOpV2SecretVolumeSourceResponse secret;
@@ -38,23 +38,23 @@ public final class GoogleCloudRunOpV2VolumeResponse {
     }
 
     /**
-     * For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.
+     * @return For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.
      * 
-    */
+     */
     public GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance() {
         return this.cloudSqlInstance;
     }
     /**
-     * Volume&#39;s name.
+     * @return Volume&#39;s name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+     * @return Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
      * 
-    */
+     */
     public GoogleCloudRunOpV2SecretVolumeSourceResponse secret() {
         return this.secret;
     }

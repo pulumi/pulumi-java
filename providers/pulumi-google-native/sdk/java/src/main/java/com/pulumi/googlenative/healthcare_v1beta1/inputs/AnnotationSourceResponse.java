@@ -23,6 +23,10 @@ public final class AnnotationSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="cloudHealthcareSource", required=true)
     private CloudHealthcareSourceResponse cloudHealthcareSource;
 
+    /**
+     * @return Cloud Healthcare API resource.
+     * 
+     */
     public CloudHealthcareSourceResponse cloudHealthcareSource() {
         return this.cloudHealthcareSource;
     }
@@ -51,6 +55,12 @@ public final class AnnotationSourceResponse extends com.pulumi.resources.InvokeA
             $ = new AnnotationSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudHealthcareSource Cloud Healthcare API resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudHealthcareSource(CloudHealthcareSourceResponse cloudHealthcareSource) {
             $.cloudHealthcareSource = cloudHealthcareSource;
             return this;

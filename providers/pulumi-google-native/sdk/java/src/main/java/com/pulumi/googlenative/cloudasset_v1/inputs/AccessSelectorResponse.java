@@ -24,6 +24,10 @@ public final class AccessSelectorResponse extends com.pulumi.resources.InvokeArg
     @Import(name="permissions", required=true)
     private List<String> permissions;
 
+    /**
+     * @return Optional. The permissions to appear in result.
+     * 
+     */
     public List<String> permissions() {
         return this.permissions;
     }
@@ -35,6 +39,10 @@ public final class AccessSelectorResponse extends com.pulumi.resources.InvokeArg
     @Import(name="roles", required=true)
     private List<String> roles;
 
+    /**
+     * @return Optional. The roles to appear in result.
+     * 
+     */
     public List<String> roles() {
         return this.roles;
     }
@@ -64,20 +72,44 @@ public final class AccessSelectorResponse extends com.pulumi.resources.InvokeArg
             $ = new AccessSelectorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param permissions Optional. The permissions to appear in result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<String> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions Optional. The permissions to appear in result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }
 
+        /**
+         * @param roles Optional. The roles to appear in result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(List<String> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles Optional. The roles to appear in result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(String... roles) {
             return roles(List.of(roles));
         }

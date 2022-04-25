@@ -23,6 +23,10 @@ public final class PerfSampleSeriesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="basicPerfSampleSeries")
     private @Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries;
 
+    /**
+     * @return Basic series represented by a line chart
+     * 
+     */
     public Optional<Output<BasicPerfSampleSeriesArgs>> basicPerfSampleSeries() {
         return Optional.ofNullable(this.basicPerfSampleSeries);
     }
@@ -83,11 +87,23 @@ public final class PerfSampleSeriesArgs extends com.pulumi.resources.ResourceArg
             $ = new PerfSampleSeriesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicPerfSampleSeries Basic series represented by a line chart
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicPerfSampleSeries(@Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries) {
             $.basicPerfSampleSeries = basicPerfSampleSeries;
             return this;
         }
 
+        /**
+         * @param basicPerfSampleSeries Basic series represented by a line chart
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicPerfSampleSeries(BasicPerfSampleSeriesArgs basicPerfSampleSeries) {
             return basicPerfSampleSeries(Output.of(basicPerfSampleSeries));
         }

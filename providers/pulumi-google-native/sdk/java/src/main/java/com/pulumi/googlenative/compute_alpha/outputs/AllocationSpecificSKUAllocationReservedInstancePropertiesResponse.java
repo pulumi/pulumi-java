@@ -14,37 +14,37 @@ import java.util.Objects;
 @CustomType
 public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResponse {
     /**
-     * Specifies accelerator type and count.
+     * @return Specifies accelerator type and count.
      * 
      */
     private final List<AcceleratorConfigResponse> guestAccelerators;
     /**
-     * Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
+     * @return Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
      * 
      */
     private final List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds;
     /**
-     * An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
+     * @return An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
      * 
      */
     private final String locationHint;
     /**
-     * Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
+     * @return Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
      * 
      */
     private final String machineType;
     /**
-     * Specifies the number of hours after reservation creation where instances using the reservation won&#39;t be scheduled for maintenance.
+     * @return Specifies the number of hours after reservation creation where instances using the reservation won&#39;t be scheduled for maintenance.
      * 
      */
     private final Integer maintenanceFreezeDurationHours;
     /**
-     * For more information about maintenance intervals, see Setting maintenance intervals.
+     * @return For more information about maintenance intervals, see Setting maintenance intervals.
      * 
      */
     private final String maintenanceInterval;
     /**
-     * Minimum cpu platform the reservation.
+     * @return Minimum cpu platform the reservation.
      * 
      */
     private final String minCpuPlatform;
@@ -68,51 +68,51 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
     }
 
     /**
-     * Specifies accelerator type and count.
+     * @return Specifies accelerator type and count.
      * 
-    */
+     */
     public List<AcceleratorConfigResponse> guestAccelerators() {
         return this.guestAccelerators;
     }
     /**
-     * Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
+     * @return Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
      * 
-    */
+     */
     public List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds() {
         return this.localSsds;
     }
     /**
-     * An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
+     * @return An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
      * 
-    */
+     */
     public String locationHint() {
         return this.locationHint;
     }
     /**
-     * Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
+     * @return Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
      * 
-    */
+     */
     public String machineType() {
         return this.machineType;
     }
     /**
-     * Specifies the number of hours after reservation creation where instances using the reservation won&#39;t be scheduled for maintenance.
+     * @return Specifies the number of hours after reservation creation where instances using the reservation won&#39;t be scheduled for maintenance.
      * 
-    */
+     */
     public Integer maintenanceFreezeDurationHours() {
         return this.maintenanceFreezeDurationHours;
     }
     /**
-     * For more information about maintenance intervals, see Setting maintenance intervals.
+     * @return For more information about maintenance intervals, see Setting maintenance intervals.
      * 
-    */
+     */
     public String maintenanceInterval() {
         return this.maintenanceInterval;
     }
     /**
-     * Minimum cpu platform the reservation.
+     * @return Minimum cpu platform the reservation.
      * 
-    */
+     */
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }

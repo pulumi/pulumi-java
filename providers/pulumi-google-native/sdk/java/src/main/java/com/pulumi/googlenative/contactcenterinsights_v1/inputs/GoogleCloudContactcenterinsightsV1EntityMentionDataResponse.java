@@ -24,6 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
     @Import(name="entityUniqueId", required=true)
     private String entityUniqueId;
 
+    /**
+     * @return The key of this entity in conversation entities. Can be used to retrieve the exact `Entity` this mention is attached to.
+     * 
+     */
     public String entityUniqueId() {
         return this.entityUniqueId;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
     @Import(name="sentiment", required=true)
     private GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
 
+    /**
+     * @return Sentiment expressed for this mention of the entity.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment() {
         return this.sentiment;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the entity mention.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
             $ = new GoogleCloudContactcenterinsightsV1EntityMentionDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param entityUniqueId The key of this entity in conversation entities. Can be used to retrieve the exact `Entity` this mention is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityUniqueId(String entityUniqueId) {
             $.entityUniqueId = entityUniqueId;
             return this;
         }
 
+        /**
+         * @param sentiment Sentiment expressed for this mention of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentiment(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment) {
             $.sentiment = sentiment;
             return this;
         }
 
+        /**
+         * @param type The type of the entity mention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

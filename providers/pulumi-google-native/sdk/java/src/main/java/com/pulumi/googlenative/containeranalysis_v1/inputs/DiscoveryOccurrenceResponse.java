@@ -24,6 +24,10 @@ public final class DiscoveryOccurrenceResponse extends com.pulumi.resources.Invo
     @Import(name="analysisStatus", required=true)
     private String analysisStatus;
 
+    /**
+     * @return The status of discovery for the resource.
+     * 
+     */
     public String analysisStatus() {
         return this.analysisStatus;
     }
@@ -35,6 +39,10 @@ public final class DiscoveryOccurrenceResponse extends com.pulumi.resources.Invo
     @Import(name="analysisStatusError", required=true)
     private StatusResponse analysisStatusError;
 
+    /**
+     * @return When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
+     * 
+     */
     public StatusResponse analysisStatusError() {
         return this.analysisStatusError;
     }
@@ -46,6 +54,10 @@ public final class DiscoveryOccurrenceResponse extends com.pulumi.resources.Invo
     @Import(name="continuousAnalysis", required=true)
     private String continuousAnalysis;
 
+    /**
+     * @return Whether the resource is continuously analyzed.
+     * 
+     */
     public String continuousAnalysis() {
         return this.continuousAnalysis;
     }
@@ -57,6 +69,10 @@ public final class DiscoveryOccurrenceResponse extends com.pulumi.resources.Invo
     @Import(name="cpe", required=true)
     private String cpe;
 
+    /**
+     * @return The CPE of the resource being scanned.
+     * 
+     */
     public String cpe() {
         return this.cpe;
     }
@@ -68,6 +84,10 @@ public final class DiscoveryOccurrenceResponse extends com.pulumi.resources.Invo
     @Import(name="lastScanTime", required=true)
     private String lastScanTime;
 
+    /**
+     * @return The last time this resource was scanned.
+     * 
+     */
     public String lastScanTime() {
         return this.lastScanTime;
     }
@@ -100,26 +120,56 @@ public final class DiscoveryOccurrenceResponse extends com.pulumi.resources.Invo
             $ = new DiscoveryOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analysisStatus The status of discovery for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisStatus(String analysisStatus) {
             $.analysisStatus = analysisStatus;
             return this;
         }
 
+        /**
+         * @param analysisStatusError When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisStatusError(StatusResponse analysisStatusError) {
             $.analysisStatusError = analysisStatusError;
             return this;
         }
 
+        /**
+         * @param continuousAnalysis Whether the resource is continuously analyzed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continuousAnalysis(String continuousAnalysis) {
             $.continuousAnalysis = continuousAnalysis;
             return this;
         }
 
+        /**
+         * @param cpe The CPE of the resource being scanned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpe(String cpe) {
             $.cpe = cpe;
             return this;
         }
 
+        /**
+         * @param lastScanTime The last time this resource was scanned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastScanTime(String lastScanTime) {
             $.lastScanTime = lastScanTime;
             return this;

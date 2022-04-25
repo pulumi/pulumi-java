@@ -33,6 +33,10 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="categoryHierarchies", required=true)
     private Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies;
 
+    /**
+     * @return Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both [&#34;Shoes &amp; Accessories&#34; -&gt; &#34;Shoes&#34;] and [&#34;Sports &amp; Fitness&#34; -&gt; &#34;Athletic Clothing&#34; -&gt; &#34;Shoes&#34;], it could be represented as: &#34;categoryHierarchies&#34;: [ { &#34;categories&#34;: [&#34;Shoes &amp; Accessories&#34;, &#34;Shoes&#34;]}, { &#34;categories&#34;: [&#34;Sports &amp; Fitness&#34;, &#34;Athletic Clothing&#34;, &#34;Shoes&#34;] } ]
+     * 
+     */
     public Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies() {
         return this.categoryHierarchies;
     }
@@ -44,6 +48,10 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Catalog item description. UTF-8 encoded string with a length limit of 5 KiB.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -55,6 +63,10 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Catalog item identifier. UTF-8 encoded string with a length limit of 128 bytes. This id must be unique among all catalog items within the same catalog. It should also be used when logging user events in order for the user events to be joined with the Catalog.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -66,6 +78,10 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="itemAttributes")
     private @Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes;
 
+    /**
+     * @return Optional. Highly encouraged. Extra catalog item attributes to be included in the recommendation model. For example, for retail products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the item attributes here.
+     * 
+     */
     public Optional<Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs>> itemAttributes() {
         return Optional.ofNullable(this.itemAttributes);
     }
@@ -77,6 +93,10 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="itemGroupId")
     private @Nullable Output<String> itemGroupId;
 
+    /**
+     * @return Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length limit of 128 bytes. This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).
+     * 
+     */
     public Optional<Output<String>> itemGroupId() {
         return Optional.ofNullable(this.itemGroupId);
     }
@@ -95,6 +115,10 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productMetadata")
     private @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata;
 
+    /**
+     * @return Optional. Metadata specific to retail products.
+     * 
+     */
     public Optional<Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs>> productMetadata() {
         return Optional.ofNullable(this.productMetadata);
     }
@@ -113,6 +137,10 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
+    /**
+     * @return Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded string with a length limit of 1 KiB. This tag can be used for filtering recommendation results by passing the tag as part of the predict request filter.
+     * 
+     */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -124,6 +152,10 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="title", required=true)
     private Output<String> title;
 
+    /**
+     * @return Catalog item title. UTF-8 encoded string with a length limit of 1 KiB.
+     * 
+     */
     public Output<String> title() {
         return this.title;
     }
@@ -171,51 +203,117 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
             return catalogId(Output.of(catalogId));
         }
 
+        /**
+         * @param categoryHierarchies Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both [&#34;Shoes &amp; Accessories&#34; -&gt; &#34;Shoes&#34;] and [&#34;Sports &amp; Fitness&#34; -&gt; &#34;Athletic Clothing&#34; -&gt; &#34;Shoes&#34;], it could be represented as: &#34;categoryHierarchies&#34;: [ { &#34;categories&#34;: [&#34;Shoes &amp; Accessories&#34;, &#34;Shoes&#34;]}, { &#34;categories&#34;: [&#34;Sports &amp; Fitness&#34;, &#34;Athletic Clothing&#34;, &#34;Shoes&#34;] } ]
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoryHierarchies(Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies) {
             $.categoryHierarchies = categoryHierarchies;
             return this;
         }
 
+        /**
+         * @param categoryHierarchies Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both [&#34;Shoes &amp; Accessories&#34; -&gt; &#34;Shoes&#34;] and [&#34;Sports &amp; Fitness&#34; -&gt; &#34;Athletic Clothing&#34; -&gt; &#34;Shoes&#34;], it could be represented as: &#34;categoryHierarchies&#34;: [ { &#34;categories&#34;: [&#34;Shoes &amp; Accessories&#34;, &#34;Shoes&#34;]}, { &#34;categories&#34;: [&#34;Sports &amp; Fitness&#34;, &#34;Athletic Clothing&#34;, &#34;Shoes&#34;] } ]
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoryHierarchies(List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs> categoryHierarchies) {
             return categoryHierarchies(Output.of(categoryHierarchies));
         }
 
+        /**
+         * @param categoryHierarchies Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both [&#34;Shoes &amp; Accessories&#34; -&gt; &#34;Shoes&#34;] and [&#34;Sports &amp; Fitness&#34; -&gt; &#34;Athletic Clothing&#34; -&gt; &#34;Shoes&#34;], it could be represented as: &#34;categoryHierarchies&#34;: [ { &#34;categories&#34;: [&#34;Shoes &amp; Accessories&#34;, &#34;Shoes&#34;]}, { &#34;categories&#34;: [&#34;Sports &amp; Fitness&#34;, &#34;Athletic Clothing&#34;, &#34;Shoes&#34;] } ]
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoryHierarchies(GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs... categoryHierarchies) {
             return categoryHierarchies(List.of(categoryHierarchies));
         }
 
+        /**
+         * @param description Optional. Catalog item description. UTF-8 encoded string with a length limit of 5 KiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Catalog item description. UTF-8 encoded string with a length limit of 5 KiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param id Catalog item identifier. UTF-8 encoded string with a length limit of 128 bytes. This id must be unique among all catalog items within the same catalog. It should also be used when logging user events in order for the user events to be joined with the Catalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Catalog item identifier. UTF-8 encoded string with a length limit of 128 bytes. This id must be unique among all catalog items within the same catalog. It should also be used when logging user events in order for the user events to be joined with the Catalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param itemAttributes Optional. Highly encouraged. Extra catalog item attributes to be included in the recommendation model. For example, for retail products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the item attributes here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemAttributes(@Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes) {
             $.itemAttributes = itemAttributes;
             return this;
         }
 
+        /**
+         * @param itemAttributes Optional. Highly encouraged. Extra catalog item attributes to be included in the recommendation model. For example, for retail products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the item attributes here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemAttributes(GoogleCloudRecommendationengineV1beta1FeatureMapArgs itemAttributes) {
             return itemAttributes(Output.of(itemAttributes));
         }
 
+        /**
+         * @param itemGroupId Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length limit of 128 bytes. This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemGroupId(@Nullable Output<String> itemGroupId) {
             $.itemGroupId = itemGroupId;
             return this;
         }
 
+        /**
+         * @param itemGroupId Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length limit of 128 bytes. This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemGroupId(String itemGroupId) {
             return itemGroupId(Output.of(itemGroupId));
         }
@@ -229,11 +327,23 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param productMetadata Optional. Metadata specific to retail products.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productMetadata(@Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata) {
             $.productMetadata = productMetadata;
             return this;
         }
 
+        /**
+         * @param productMetadata Optional. Metadata specific to retail products.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productMetadata(GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs productMetadata) {
             return productMetadata(Output.of(productMetadata));
         }
@@ -247,24 +357,54 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param tags Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded string with a length limit of 1 KiB. This tag can be used for filtering recommendation results by passing the tag as part of the predict request filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded string with a length limit of 1 KiB. This tag can be used for filtering recommendation results by passing the tag as part of the predict request filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded string with a length limit of 1 KiB. This tag can be used for filtering recommendation results by passing the tag as part of the predict request filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param title Catalog item title. UTF-8 encoded string with a length limit of 1 KiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Catalog item title. UTF-8 encoded string with a length limit of 1 KiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

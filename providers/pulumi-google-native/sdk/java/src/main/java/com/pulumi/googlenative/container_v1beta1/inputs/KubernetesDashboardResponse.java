@@ -23,6 +23,10 @@ public final class KubernetesDashboardResponse extends com.pulumi.resources.Invo
     @Import(name="disabled", required=true)
     private Boolean disabled;
 
+    /**
+     * @return Whether the Kubernetes Dashboard is enabled for this cluster.
+     * 
+     */
     public Boolean disabled() {
         return this.disabled;
     }
@@ -51,6 +55,12 @@ public final class KubernetesDashboardResponse extends com.pulumi.resources.Invo
             $ = new KubernetesDashboardResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disabled Whether the Kubernetes Dashboard is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             $.disabled = disabled;
             return this;

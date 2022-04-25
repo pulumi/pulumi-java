@@ -23,6 +23,10 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="branchName", required=true)
     private String branchName;
 
+    /**
+     * @return Name of the branch to build.
+     * 
+     */
     public String branchName() {
         return this.branchName;
     }
@@ -34,6 +38,10 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="commitSha", required=true)
     private String commitSha;
 
+    /**
+     * @return Explicit commit SHA to build.
+     * 
+     */
     public String commitSha() {
         return this.commitSha;
     }
@@ -45,6 +53,10 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return ID of the project that owns the repo.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -56,6 +68,10 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="repoName", required=true)
     private String repoName;
 
+    /**
+     * @return Name of the repo.
+     * 
+     */
     public String repoName() {
         return this.repoName;
     }
@@ -67,6 +83,10 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tagName", required=true)
     private String tagName;
 
+    /**
+     * @return Name of the tag to build.
+     * 
+     */
     public String tagName() {
         return this.tagName;
     }
@@ -99,26 +119,56 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RepoSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branchName Name of the branch to build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(String branchName) {
             $.branchName = branchName;
             return this;
         }
 
+        /**
+         * @param commitSha Explicit commit SHA to build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitSha(String commitSha) {
             $.commitSha = commitSha;
             return this;
         }
 
+        /**
+         * @param project ID of the project that owns the repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param repoName Name of the repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoName(String repoName) {
             $.repoName = repoName;
             return this;
         }
 
+        /**
+         * @param tagName Name of the tag to build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagName(String tagName) {
             $.tagName = tagName;
             return this;

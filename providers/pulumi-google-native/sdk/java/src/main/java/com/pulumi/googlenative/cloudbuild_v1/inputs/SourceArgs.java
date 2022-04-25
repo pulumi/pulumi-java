@@ -28,6 +28,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repoSource")
     private @Nullable Output<RepoSourceArgs> repoSource;
 
+    /**
+     * @return If provided, get the source from this location in a Cloud Source Repository.
+     * 
+     */
     public Optional<Output<RepoSourceArgs>> repoSource() {
         return Optional.ofNullable(this.repoSource);
     }
@@ -39,6 +43,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageSource")
     private @Nullable Output<StorageSourceArgs> storageSource;
 
+    /**
+     * @return If provided, get the source from this location in Google Cloud Storage.
+     * 
+     */
     public Optional<Output<StorageSourceArgs>> storageSource() {
         return Optional.ofNullable(this.storageSource);
     }
@@ -50,6 +58,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageSourceManifest")
     private @Nullable Output<StorageSourceManifestArgs> storageSourceManifest;
 
+    /**
+     * @return If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
+     * 
+     */
     public Optional<Output<StorageSourceManifestArgs>> storageSourceManifest() {
         return Optional.ofNullable(this.storageSourceManifest);
     }
@@ -80,29 +92,65 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param repoSource If provided, get the source from this location in a Cloud Source Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoSource(@Nullable Output<RepoSourceArgs> repoSource) {
             $.repoSource = repoSource;
             return this;
         }
 
+        /**
+         * @param repoSource If provided, get the source from this location in a Cloud Source Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoSource(RepoSourceArgs repoSource) {
             return repoSource(Output.of(repoSource));
         }
 
+        /**
+         * @param storageSource If provided, get the source from this location in Google Cloud Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSource(@Nullable Output<StorageSourceArgs> storageSource) {
             $.storageSource = storageSource;
             return this;
         }
 
+        /**
+         * @param storageSource If provided, get the source from this location in Google Cloud Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSource(StorageSourceArgs storageSource) {
             return storageSource(Output.of(storageSource));
         }
 
+        /**
+         * @param storageSourceManifest If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSourceManifest(@Nullable Output<StorageSourceManifestArgs> storageSourceManifest) {
             $.storageSourceManifest = storageSourceManifest;
             return this;
         }
 
+        /**
+         * @param storageSourceManifest If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSourceManifest(StorageSourceManifestArgs storageSourceManifest) {
             return storageSourceManifest(Output.of(storageSourceManifest));
         }

@@ -27,6 +27,10 @@ public final class MachineImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class MachineImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="guestFlush")
     private @Nullable Output<Boolean> guestFlush;
 
+    /**
+     * @return [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * 
+     */
     public Optional<Output<Boolean>> guestFlush() {
         return Optional.ofNullable(this.guestFlush);
     }
@@ -49,6 +57,10 @@ public final class MachineImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="machineImageEncryptionKey")
     private @Nullable Output<CustomerEncryptionKeyArgs> machineImageEncryptionKey;
 
+    /**
+     * @return Encrypts the machine image using a customer-supplied encryption key. After you encrypt a machine image using a customer-supplied key, you must provide the same key if you use the machine image later. For example, you must provide the encryption key when you create an instance from the encrypted machine image in a future request. Customer-supplied encryption keys do not protect access to metadata of the machine image. If you do not provide an encryption key when creating the machine image, then the machine image will be encrypted using an automatically generated key and you do not need to provide a key to use the machine image later.
+     * 
+     */
     public Optional<Output<CustomerEncryptionKeyArgs>> machineImageEncryptionKey() {
         return Optional.ofNullable(this.machineImageEncryptionKey);
     }
@@ -60,6 +72,10 @@ public final class MachineImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -85,6 +101,10 @@ public final class MachineImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="savedDisks")
     private @Nullable Output<List<SavedDiskArgs>> savedDisks;
 
+    /**
+     * @return An array of Machine Image specific properties for disks attached to the source instance
+     * 
+     */
     public Optional<Output<List<SavedDiskArgs>>> savedDisks() {
         return Optional.ofNullable(this.savedDisks);
     }
@@ -96,6 +116,10 @@ public final class MachineImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDiskEncryptionKeys")
     private @Nullable Output<List<SourceDiskEncryptionKeyArgs>> sourceDiskEncryptionKeys;
 
+    /**
+     * @return [Input Only] The customer-supplied encryption key of the disks attached to the source instance. Required if the source disk is protected by a customer-supplied encryption key.
+     * 
+     */
     public Optional<Output<List<SourceDiskEncryptionKeyArgs>>> sourceDiskEncryptionKeys() {
         return Optional.ofNullable(this.sourceDiskEncryptionKeys);
     }
@@ -107,6 +131,10 @@ public final class MachineImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceInstance", required=true)
     private Output<String> sourceInstance;
 
+    /**
+     * @return The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance
+     * 
+     */
     public Output<String> sourceInstance() {
         return this.sourceInstance;
     }
@@ -118,6 +146,10 @@ public final class MachineImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageLocations")
     private @Nullable Output<List<String>> storageLocations;
 
+    /**
+     * @return The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
+     * 
+     */
     public Optional<Output<List<String>>> storageLocations() {
         return Optional.ofNullable(this.storageLocations);
     }
@@ -155,38 +187,86 @@ public final class MachineImageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MachineImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param guestFlush [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
             $.guestFlush = guestFlush;
             return this;
         }
 
+        /**
+         * @param guestFlush [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestFlush(Boolean guestFlush) {
             return guestFlush(Output.of(guestFlush));
         }
 
+        /**
+         * @param machineImageEncryptionKey Encrypts the machine image using a customer-supplied encryption key. After you encrypt a machine image using a customer-supplied key, you must provide the same key if you use the machine image later. For example, you must provide the encryption key when you create an instance from the encrypted machine image in a future request. Customer-supplied encryption keys do not protect access to metadata of the machine image. If you do not provide an encryption key when creating the machine image, then the machine image will be encrypted using an automatically generated key and you do not need to provide a key to use the machine image later.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> machineImageEncryptionKey) {
             $.machineImageEncryptionKey = machineImageEncryptionKey;
             return this;
         }
 
+        /**
+         * @param machineImageEncryptionKey Encrypts the machine image using a customer-supplied encryption key. After you encrypt a machine image using a customer-supplied key, you must provide the same key if you use the machine image later. For example, you must provide the encryption key when you create an instance from the encrypted machine image in a future request. Customer-supplied encryption keys do not protect access to metadata of the machine image. If you do not provide an encryption key when creating the machine image, then the machine image will be encrypted using an automatically generated key and you do not need to provide a key to use the machine image later.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineImageEncryptionKey(CustomerEncryptionKeyArgs machineImageEncryptionKey) {
             return machineImageEncryptionKey(Output.of(machineImageEncryptionKey));
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -209,50 +289,116 @@ public final class MachineImageArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param savedDisks An array of Machine Image specific properties for disks attached to the source instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder savedDisks(@Nullable Output<List<SavedDiskArgs>> savedDisks) {
             $.savedDisks = savedDisks;
             return this;
         }
 
+        /**
+         * @param savedDisks An array of Machine Image specific properties for disks attached to the source instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder savedDisks(List<SavedDiskArgs> savedDisks) {
             return savedDisks(Output.of(savedDisks));
         }
 
+        /**
+         * @param savedDisks An array of Machine Image specific properties for disks attached to the source instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder savedDisks(SavedDiskArgs... savedDisks) {
             return savedDisks(List.of(savedDisks));
         }
 
+        /**
+         * @param sourceDiskEncryptionKeys [Input Only] The customer-supplied encryption key of the disks attached to the source instance. Required if the source disk is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDiskEncryptionKeys(@Nullable Output<List<SourceDiskEncryptionKeyArgs>> sourceDiskEncryptionKeys) {
             $.sourceDiskEncryptionKeys = sourceDiskEncryptionKeys;
             return this;
         }
 
+        /**
+         * @param sourceDiskEncryptionKeys [Input Only] The customer-supplied encryption key of the disks attached to the source instance. Required if the source disk is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDiskEncryptionKeys(List<SourceDiskEncryptionKeyArgs> sourceDiskEncryptionKeys) {
             return sourceDiskEncryptionKeys(Output.of(sourceDiskEncryptionKeys));
         }
 
+        /**
+         * @param sourceDiskEncryptionKeys [Input Only] The customer-supplied encryption key of the disks attached to the source instance. Required if the source disk is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDiskEncryptionKeys(SourceDiskEncryptionKeyArgs... sourceDiskEncryptionKeys) {
             return sourceDiskEncryptionKeys(List.of(sourceDiskEncryptionKeys));
         }
 
+        /**
+         * @param sourceInstance The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstance(Output<String> sourceInstance) {
             $.sourceInstance = sourceInstance;
             return this;
         }
 
+        /**
+         * @param sourceInstance The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstance(String sourceInstance) {
             return sourceInstance(Output.of(sourceInstance));
         }
 
+        /**
+         * @param storageLocations The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
             $.storageLocations = storageLocations;
             return this;
         }
 
+        /**
+         * @param storageLocations The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(List<String> storageLocations) {
             return storageLocations(Output.of(storageLocations));
         }
 
+        /**
+         * @param storageLocations The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(String... storageLocations) {
             return storageLocations(List.of(storageLocations));
         }

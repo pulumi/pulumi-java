@@ -30,6 +30,10 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The simple name of this method.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -41,6 +45,10 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
     private @Nullable Output<List<OptionArgs>> options;
 
+    /**
+     * @return Any metadata attached to the method.
+     * 
+     */
     public Optional<Output<List<OptionArgs>>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -52,6 +60,10 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestStreaming")
     private @Nullable Output<Boolean> requestStreaming;
 
+    /**
+     * @return If true, the request is streamed.
+     * 
+     */
     public Optional<Output<Boolean>> requestStreaming() {
         return Optional.ofNullable(this.requestStreaming);
     }
@@ -63,6 +75,10 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestTypeUrl")
     private @Nullable Output<String> requestTypeUrl;
 
+    /**
+     * @return A URL of the input message type.
+     * 
+     */
     public Optional<Output<String>> requestTypeUrl() {
         return Optional.ofNullable(this.requestTypeUrl);
     }
@@ -74,6 +90,10 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseStreaming")
     private @Nullable Output<Boolean> responseStreaming;
 
+    /**
+     * @return If true, the response is streamed.
+     * 
+     */
     public Optional<Output<Boolean>> responseStreaming() {
         return Optional.ofNullable(this.responseStreaming);
     }
@@ -85,6 +105,10 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseTypeUrl")
     private @Nullable Output<String> responseTypeUrl;
 
+    /**
+     * @return The URL of the output message type.
+     * 
+     */
     public Optional<Output<String>> responseTypeUrl() {
         return Optional.ofNullable(this.responseTypeUrl);
     }
@@ -96,6 +120,10 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syntax")
     private @Nullable Output<MethodSyntax> syntax;
 
+    /**
+     * @return The source syntax of this method.
+     * 
+     */
     public Optional<Output<MethodSyntax>> syntax() {
         return Optional.ofNullable(this.syntax);
     }
@@ -130,69 +158,159 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MethodArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The simple name of this method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The simple name of this method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param options Any metadata attached to the method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Any metadata attached to the method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<OptionArgs> options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param options Any metadata attached to the method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionArgs... options) {
             return options(List.of(options));
         }
 
+        /**
+         * @param requestStreaming If true, the request is streamed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestStreaming(@Nullable Output<Boolean> requestStreaming) {
             $.requestStreaming = requestStreaming;
             return this;
         }
 
+        /**
+         * @param requestStreaming If true, the request is streamed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestStreaming(Boolean requestStreaming) {
             return requestStreaming(Output.of(requestStreaming));
         }
 
+        /**
+         * @param requestTypeUrl A URL of the input message type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTypeUrl(@Nullable Output<String> requestTypeUrl) {
             $.requestTypeUrl = requestTypeUrl;
             return this;
         }
 
+        /**
+         * @param requestTypeUrl A URL of the input message type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTypeUrl(String requestTypeUrl) {
             return requestTypeUrl(Output.of(requestTypeUrl));
         }
 
+        /**
+         * @param responseStreaming If true, the response is streamed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseStreaming(@Nullable Output<Boolean> responseStreaming) {
             $.responseStreaming = responseStreaming;
             return this;
         }
 
+        /**
+         * @param responseStreaming If true, the response is streamed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseStreaming(Boolean responseStreaming) {
             return responseStreaming(Output.of(responseStreaming));
         }
 
+        /**
+         * @param responseTypeUrl The URL of the output message type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseTypeUrl(@Nullable Output<String> responseTypeUrl) {
             $.responseTypeUrl = responseTypeUrl;
             return this;
         }
 
+        /**
+         * @param responseTypeUrl The URL of the output message type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseTypeUrl(String responseTypeUrl) {
             return responseTypeUrl(Output.of(responseTypeUrl));
         }
 
+        /**
+         * @param syntax The source syntax of this method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syntax(@Nullable Output<MethodSyntax> syntax) {
             $.syntax = syntax;
             return this;
         }
 
+        /**
+         * @param syntax The source syntax of this method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syntax(MethodSyntax syntax) {
             return syntax(Output.of(syntax));
         }

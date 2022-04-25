@@ -26,6 +26,10 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="backupRetentionSettings", required=true)
     private BackupRetentionSettingsResponse backupRetentionSettings;
 
+    /**
+     * @return Backup retention settings.
+     * 
+     */
     public BackupRetentionSettingsResponse backupRetentionSettings() {
         return this.backupRetentionSettings;
     }
@@ -37,6 +41,10 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="binaryLogEnabled", required=true)
     private Boolean binaryLogEnabled;
 
+    /**
+     * @return (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.
+     * 
+     */
     public Boolean binaryLogEnabled() {
         return this.binaryLogEnabled;
     }
@@ -48,6 +56,10 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether this configuration is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -59,6 +71,10 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return This is always `sql#backupConfiguration`.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -70,6 +86,10 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return Location of the backup
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -81,6 +101,10 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="pointInTimeRecoveryEnabled", required=true)
     private Boolean pointInTimeRecoveryEnabled;
 
+    /**
+     * @return (Postgres only) Whether point in time recovery is enabled.
+     * 
+     */
     public Boolean pointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled;
     }
@@ -92,6 +116,10 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="replicationLogArchivingEnabled", required=true)
     private Boolean replicationLogArchivingEnabled;
 
+    /**
+     * @return Reserved for future use.
+     * 
+     */
     public Boolean replicationLogArchivingEnabled() {
         return this.replicationLogArchivingEnabled;
     }
@@ -103,6 +131,10 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -114,6 +146,10 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="transactionLogRetentionDays", required=true)
     private Integer transactionLogRetentionDays;
 
+    /**
+     * @return The number of days of transaction logs we retain for point in time restore, from 1-7.
+     * 
+     */
     public Integer transactionLogRetentionDays() {
         return this.transactionLogRetentionDays;
     }
@@ -150,46 +186,100 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
             $ = new BackupConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupRetentionSettings Backup retention settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupRetentionSettings(BackupRetentionSettingsResponse backupRetentionSettings) {
             $.backupRetentionSettings = backupRetentionSettings;
             return this;
         }
 
+        /**
+         * @param binaryLogEnabled (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryLogEnabled(Boolean binaryLogEnabled) {
             $.binaryLogEnabled = binaryLogEnabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether this configuration is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#backupConfiguration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param location Location of the backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param pointInTimeRecoveryEnabled (Postgres only) Whether point in time recovery is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pointInTimeRecoveryEnabled(Boolean pointInTimeRecoveryEnabled) {
             $.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
 
+        /**
+         * @param replicationLogArchivingEnabled Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationLogArchivingEnabled(Boolean replicationLogArchivingEnabled) {
             $.replicationLogArchivingEnabled = replicationLogArchivingEnabled;
             return this;
         }
 
+        /**
+         * @param startTime Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param transactionLogRetentionDays The number of days of transaction logs we retain for point in time restore, from 1-7.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionLogRetentionDays(Integer transactionLogRetentionDays) {
             $.transactionLogRetentionDays = transactionLogRetentionDays;
             return this;

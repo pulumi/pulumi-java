@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class UrlMapTestHeaderResponse {
     /**
-     * Header name.
+     * @return Header name.
      * 
      */
     private final String name;
     /**
-     * Header value.
+     * @return Header value.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class UrlMapTestHeaderResponse {
     }
 
     /**
-     * Header name.
+     * @return Header name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Header value.
+     * @return Header value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

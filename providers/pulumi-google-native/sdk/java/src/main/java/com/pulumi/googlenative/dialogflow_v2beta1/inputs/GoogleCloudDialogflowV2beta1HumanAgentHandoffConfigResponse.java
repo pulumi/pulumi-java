@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse e
     @Import(name="livePersonConfig", required=true)
     private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig;
 
+    /**
+     * @return Uses LivePerson (https://www.liveperson.com).
+     * 
+     */
     public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig() {
         return this.livePersonConfig;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse e
     @Import(name="salesforceLiveAgentConfig", required=true)
     private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
 
+    /**
+     * @return Uses Salesforce Live Agent.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig() {
         return this.salesforceLiveAgentConfig;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse e
             $ = new GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param livePersonConfig Uses LivePerson (https://www.liveperson.com).
+         * 
+         * @return builder
+         * 
+         */
         public Builder livePersonConfig(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig) {
             $.livePersonConfig = livePersonConfig;
             return this;
         }
 
+        /**
+         * @param salesforceLiveAgentConfig Uses Salesforce Live Agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder salesforceLiveAgentConfig(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
             $.salesforceLiveAgentConfig = salesforceLiveAgentConfig;
             return this;

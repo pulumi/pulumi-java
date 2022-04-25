@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class NodeConfigResponse {
     /**
-     * Number of cpus per Memcached node.
+     * @return Number of cpus per Memcached node.
      * 
      */
     private final Integer cpuCount;
     /**
-     * Memory size in MiB for each Memcached node.
+     * @return Memory size in MiB for each Memcached node.
      * 
      */
     private final Integer memorySizeMb;
@@ -29,16 +29,16 @@ public final class NodeConfigResponse {
     }
 
     /**
-     * Number of cpus per Memcached node.
+     * @return Number of cpus per Memcached node.
      * 
-    */
+     */
     public Integer cpuCount() {
         return this.cpuCount;
     }
     /**
-     * Memory size in MiB for each Memcached node.
+     * @return Memory size in MiB for each Memcached node.
      * 
-    */
+     */
     public Integer memorySizeMb() {
         return this.memorySizeMb;
     }

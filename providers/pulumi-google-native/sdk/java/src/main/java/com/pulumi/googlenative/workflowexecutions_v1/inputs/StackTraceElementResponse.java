@@ -24,6 +24,10 @@ public final class StackTraceElementResponse extends com.pulumi.resources.Invoke
     @Import(name="position", required=true)
     private PositionResponse position;
 
+    /**
+     * @return The source position information of the stack trace element.
+     * 
+     */
     public PositionResponse position() {
         return this.position;
     }
@@ -35,6 +39,10 @@ public final class StackTraceElementResponse extends com.pulumi.resources.Invoke
     @Import(name="routine", required=true)
     private String routine;
 
+    /**
+     * @return The routine where the error occurred.
+     * 
+     */
     public String routine() {
         return this.routine;
     }
@@ -46,6 +54,10 @@ public final class StackTraceElementResponse extends com.pulumi.resources.Invoke
     @Import(name="step", required=true)
     private String step;
 
+    /**
+     * @return The step the error occurred at.
+     * 
+     */
     public String step() {
         return this.step;
     }
@@ -76,16 +88,34 @@ public final class StackTraceElementResponse extends com.pulumi.resources.Invoke
             $ = new StackTraceElementResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param position The source position information of the stack trace element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder position(PositionResponse position) {
             $.position = position;
             return this;
         }
 
+        /**
+         * @param routine The routine where the error occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routine(String routine) {
             $.routine = routine;
             return this;
         }
 
+        /**
+         * @param step The step the error occurred at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder step(String step) {
             $.step = step;
             return this;

@@ -17,77 +17,77 @@ import java.util.Objects;
 @CustomType
 public final class SecurityPolicyRuleResponse {
     /**
-     * The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
+     * @return The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
      * 
      */
     private final String action;
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
     private final String description;
     /**
-     * The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.
+     * @return The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.
      * 
      */
     private final String direction;
     /**
-     * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on &#34;goto_next&#34; rules. This field may only be specified when the versioned_expr is set to FIREWALL.
+     * @return Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on &#34;goto_next&#34; rules. This field may only be specified when the versioned_expr is set to FIREWALL.
      * 
      */
     private final Boolean enableLogging;
     /**
-     * Optional, additional actions that are performed on headers.
+     * @return Optional, additional actions that are performed on headers.
      * 
      */
     private final SecurityPolicyRuleHttpHeaderActionResponse headerAction;
     /**
-     * [Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules
+     * @return [Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules
      * 
      */
     private final String kind;
     /**
-     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
+     * @return A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
      * 
      */
     private final SecurityPolicyRuleMatcherResponse match;
     /**
-     * If set to true, the specified action is not enforced.
+     * @return If set to true, the specified action is not enforced.
      * 
      */
     private final Boolean preview;
     /**
-     * An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.
+     * @return An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.
      * 
      */
     private final Integer priority;
     /**
-     * Must be specified if the action is &#34;rate_based_ban&#34; or &#34;throttle&#34;. Cannot be specified for any other actions.
+     * @return Must be specified if the action is &#34;rate_based_ban&#34; or &#34;throttle&#34;. Cannot be specified for any other actions.
      * 
      */
     private final SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions;
     /**
-     * Parameters defining the redirect action. Cannot be specified for any other actions.
+     * @return Parameters defining the redirect action. Cannot be specified for any other actions.
      * 
      */
     private final SecurityPolicyRuleRedirectOptionsResponse redirectOptions;
     /**
-     * Identifier for the rule. This is only unique within the given security policy. This can only be set during rule creation, if rule number is not specified it will be generated by the server.
+     * @return Identifier for the rule. This is only unique within the given security policy. This can only be set during rule creation, if rule number is not specified it will be generated by the server.
      * 
      */
     private final String ruleNumber;
     /**
-     * Calculation of the complexity of a single firewall security policy rule.
+     * @return Calculation of the complexity of a single firewall security policy rule.
      * 
      */
     private final Integer ruleTupleCount;
     /**
-     * A list of network resource URLs to which this rule applies. This field allows you to control which network&#39;s VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule. This field may only be specified when versioned_expr is set to FIREWALL.
+     * @return A list of network resource URLs to which this rule applies. This field allows you to control which network&#39;s VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule. This field may only be specified when versioned_expr is set to FIREWALL.
      * 
      */
     private final List<String> targetResources;
     /**
-     * A list of service accounts indicating the sets of instances that are applied with this rule.
+     * @return A list of service accounts indicating the sets of instances that are applied with this rule.
      * 
      */
     private final List<String> targetServiceAccounts;
@@ -127,107 +127,107 @@ public final class SecurityPolicyRuleResponse {
     }
 
     /**
-     * The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
+     * @return The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
      * 
-    */
+     */
     public String action() {
         return this.action;
     }
     /**
-     * An optional description of this resource. Provide this property when you create the resource.
+     * @return An optional description of this resource. Provide this property when you create the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.
+     * @return The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.
      * 
-    */
+     */
     public String direction() {
         return this.direction;
     }
     /**
-     * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on &#34;goto_next&#34; rules. This field may only be specified when the versioned_expr is set to FIREWALL.
+     * @return Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on &#34;goto_next&#34; rules. This field may only be specified when the versioned_expr is set to FIREWALL.
      * 
-    */
+     */
     public Boolean enableLogging() {
         return this.enableLogging;
     }
     /**
-     * Optional, additional actions that are performed on headers.
+     * @return Optional, additional actions that are performed on headers.
      * 
-    */
+     */
     public SecurityPolicyRuleHttpHeaderActionResponse headerAction() {
         return this.headerAction;
     }
     /**
-     * [Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules
+     * @return [Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
+     * @return A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
      * 
-    */
+     */
     public SecurityPolicyRuleMatcherResponse match() {
         return this.match;
     }
     /**
-     * If set to true, the specified action is not enforced.
+     * @return If set to true, the specified action is not enforced.
      * 
-    */
+     */
     public Boolean preview() {
         return this.preview;
     }
     /**
-     * An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.
+     * @return An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.
      * 
-    */
+     */
     public Integer priority() {
         return this.priority;
     }
     /**
-     * Must be specified if the action is &#34;rate_based_ban&#34; or &#34;throttle&#34;. Cannot be specified for any other actions.
+     * @return Must be specified if the action is &#34;rate_based_ban&#34; or &#34;throttle&#34;. Cannot be specified for any other actions.
      * 
-    */
+     */
     public SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions() {
         return this.rateLimitOptions;
     }
     /**
-     * Parameters defining the redirect action. Cannot be specified for any other actions.
+     * @return Parameters defining the redirect action. Cannot be specified for any other actions.
      * 
-    */
+     */
     public SecurityPolicyRuleRedirectOptionsResponse redirectOptions() {
         return this.redirectOptions;
     }
     /**
-     * Identifier for the rule. This is only unique within the given security policy. This can only be set during rule creation, if rule number is not specified it will be generated by the server.
+     * @return Identifier for the rule. This is only unique within the given security policy. This can only be set during rule creation, if rule number is not specified it will be generated by the server.
      * 
-    */
+     */
     public String ruleNumber() {
         return this.ruleNumber;
     }
     /**
-     * Calculation of the complexity of a single firewall security policy rule.
+     * @return Calculation of the complexity of a single firewall security policy rule.
      * 
-    */
+     */
     public Integer ruleTupleCount() {
         return this.ruleTupleCount;
     }
     /**
-     * A list of network resource URLs to which this rule applies. This field allows you to control which network&#39;s VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule. This field may only be specified when versioned_expr is set to FIREWALL.
+     * @return A list of network resource URLs to which this rule applies. This field allows you to control which network&#39;s VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule. This field may only be specified when versioned_expr is set to FIREWALL.
      * 
-    */
+     */
     public List<String> targetResources() {
         return this.targetResources;
     }
     /**
-     * A list of service accounts indicating the sets of instances that are applied with this rule.
+     * @return A list of service accounts indicating the sets of instances that are applied with this rule.
      * 
-    */
+     */
     public List<String> targetServiceAccounts() {
         return this.targetServiceAccounts;
     }

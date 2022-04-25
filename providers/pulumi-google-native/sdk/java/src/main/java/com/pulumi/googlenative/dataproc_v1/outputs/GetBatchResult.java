@@ -20,87 +20,87 @@ import java.util.Objects;
 @CustomType
 public final class GetBatchResult {
     /**
-     * The time when the batch was created.
+     * @return The time when the batch was created.
      * 
      */
     private final String createTime;
     /**
-     * The email address of the user who created the batch.
+     * @return The email address of the user who created the batch.
      * 
      */
     private final String creator;
     /**
-     * Optional. Environment configuration for the batch execution.
+     * @return Optional. Environment configuration for the batch execution.
      * 
      */
     private final EnvironmentConfigResponse environmentConfig;
     /**
-     * Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
+     * @return Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The resource name of the batch.
+     * @return The resource name of the batch.
      * 
      */
     private final String name;
     /**
-     * The resource name of the operation associated with this batch.
+     * @return The resource name of the operation associated with this batch.
      * 
      */
     private final String operation;
     /**
-     * Optional. PySpark batch config.
+     * @return Optional. PySpark batch config.
      * 
      */
     private final PySparkBatchResponse pysparkBatch;
     /**
-     * Optional. Runtime configuration for the batch execution.
+     * @return Optional. Runtime configuration for the batch execution.
      * 
      */
     private final RuntimeConfigResponse runtimeConfig;
     /**
-     * Runtime information about batch execution.
+     * @return Runtime information about batch execution.
      * 
      */
     private final RuntimeInfoResponse runtimeInfo;
     /**
-     * Optional. Spark batch config.
+     * @return Optional. Spark batch config.
      * 
      */
     private final SparkBatchResponse sparkBatch;
     /**
-     * Optional. SparkR batch config.
+     * @return Optional. SparkR batch config.
      * 
      */
     private final SparkRBatchResponse sparkRBatch;
     /**
-     * Optional. SparkSql batch config.
+     * @return Optional. SparkSql batch config.
      * 
      */
     private final SparkSqlBatchResponse sparkSqlBatch;
     /**
-     * The state of the batch.
+     * @return The state of the batch.
      * 
      */
     private final String state;
     /**
-     * Historical state information for the batch.
+     * @return Historical state information for the batch.
      * 
      */
     private final List<StateHistoryResponse> stateHistory;
     /**
-     * Batch state details, such as a failure description if the state is FAILED.
+     * @return Batch state details, such as a failure description if the state is FAILED.
      * 
      */
     private final String stateMessage;
     /**
-     * The time when the batch entered a current state.
+     * @return The time when the batch entered a current state.
      * 
      */
     private final String stateTime;
     /**
-     * A batch UUID (Unique Universal Identifier). The service generates this value when it creates the batch.
+     * @return A batch UUID (Unique Universal Identifier). The service generates this value when it creates the batch.
      * 
      */
     private final String uuid;
@@ -144,121 +144,121 @@ public final class GetBatchResult {
     }
 
     /**
-     * The time when the batch was created.
+     * @return The time when the batch was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The email address of the user who created the batch.
+     * @return The email address of the user who created the batch.
      * 
-    */
+     */
     public String creator() {
         return this.creator;
     }
     /**
-     * Optional. Environment configuration for the batch execution.
+     * @return Optional. Environment configuration for the batch execution.
      * 
-    */
+     */
     public EnvironmentConfigResponse environmentConfig() {
         return this.environmentConfig;
     }
     /**
-     * Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
+     * @return Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The resource name of the batch.
+     * @return The resource name of the batch.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource name of the operation associated with this batch.
+     * @return The resource name of the operation associated with this batch.
      * 
-    */
+     */
     public String operation() {
         return this.operation;
     }
     /**
-     * Optional. PySpark batch config.
+     * @return Optional. PySpark batch config.
      * 
-    */
+     */
     public PySparkBatchResponse pysparkBatch() {
         return this.pysparkBatch;
     }
     /**
-     * Optional. Runtime configuration for the batch execution.
+     * @return Optional. Runtime configuration for the batch execution.
      * 
-    */
+     */
     public RuntimeConfigResponse runtimeConfig() {
         return this.runtimeConfig;
     }
     /**
-     * Runtime information about batch execution.
+     * @return Runtime information about batch execution.
      * 
-    */
+     */
     public RuntimeInfoResponse runtimeInfo() {
         return this.runtimeInfo;
     }
     /**
-     * Optional. Spark batch config.
+     * @return Optional. Spark batch config.
      * 
-    */
+     */
     public SparkBatchResponse sparkBatch() {
         return this.sparkBatch;
     }
     /**
-     * Optional. SparkR batch config.
+     * @return Optional. SparkR batch config.
      * 
-    */
+     */
     public SparkRBatchResponse sparkRBatch() {
         return this.sparkRBatch;
     }
     /**
-     * Optional. SparkSql batch config.
+     * @return Optional. SparkSql batch config.
      * 
-    */
+     */
     public SparkSqlBatchResponse sparkSqlBatch() {
         return this.sparkSqlBatch;
     }
     /**
-     * The state of the batch.
+     * @return The state of the batch.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Historical state information for the batch.
+     * @return Historical state information for the batch.
      * 
-    */
+     */
     public List<StateHistoryResponse> stateHistory() {
         return this.stateHistory;
     }
     /**
-     * Batch state details, such as a failure description if the state is FAILED.
+     * @return Batch state details, such as a failure description if the state is FAILED.
      * 
-    */
+     */
     public String stateMessage() {
         return this.stateMessage;
     }
     /**
-     * The time when the batch entered a current state.
+     * @return The time when the batch entered a current state.
      * 
-    */
+     */
     public String stateTime() {
         return this.stateTime;
     }
     /**
-     * A batch UUID (Unique Universal Identifier). The service generates this value when it creates the batch.
+     * @return A batch UUID (Unique Universal Identifier). The service generates this value when it creates the batch.
      * 
-    */
+     */
     public String uuid() {
         return this.uuid;
     }

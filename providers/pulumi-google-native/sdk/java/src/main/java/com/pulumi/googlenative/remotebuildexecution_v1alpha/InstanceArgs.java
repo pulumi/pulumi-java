@@ -23,6 +23,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="featurePolicy")
     private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy;
 
+    /**
+     * @return The policy to define whether or not RBE features can be used or how they can be used.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs>> featurePolicy() {
         return Optional.ofNullable(this.featurePolicy);
     }
@@ -34,6 +38,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
+    /**
+     * @return ID of the created instance. A valid `instance_id` must: be 6-50 characters long, contain only lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with a lowercase letter or a digit.
+     * 
+     */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -45,6 +53,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location is a GCP region. Currently only `us-central1` is supported.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -56,6 +68,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return Resource name of the project containing the instance. Format: `projects/[PROJECT_ID]`.
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -95,38 +111,86 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param featurePolicy The policy to define whether or not RBE features can be used or how they can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featurePolicy(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy) {
             $.featurePolicy = featurePolicy;
             return this;
         }
 
+        /**
+         * @param featurePolicy The policy to define whether or not RBE features can be used or how they can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featurePolicy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs featurePolicy) {
             return featurePolicy(Output.of(featurePolicy));
         }
 
+        /**
+         * @param instanceId ID of the created instance. A valid `instance_id` must: be 6-50 characters long, contain only lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with a lowercase letter or a digit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId ID of the created instance. A valid `instance_id` must: be 6-50 characters long, contain only lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with a lowercase letter or a digit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param location The location is a GCP region. Currently only `us-central1` is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location is a GCP region. Currently only `us-central1` is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param parent Resource name of the project containing the instance. Format: `projects/[PROJECT_ID]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent Resource name of the project containing the instance. Format: `projects/[PROJECT_ID]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }

@@ -31,6 +31,10 @@ public final class AccessLevelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="basic")
     private @Nullable Output<BasicLevelArgs> basic;
 
+    /**
+     * @return A `BasicLevel` composed of `Conditions`.
+     * 
+     */
     public Optional<Output<BasicLevelArgs>> basic() {
         return Optional.ofNullable(this.basic);
     }
@@ -42,6 +46,10 @@ public final class AccessLevelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="custom")
     private @Nullable Output<CustomLevelArgs> custom;
 
+    /**
+     * @return A `CustomLevel` written in the Common Expression Language.
+     * 
+     */
     public Optional<Output<CustomLevelArgs>> custom() {
         return Optional.ofNullable(this.custom);
     }
@@ -53,6 +61,10 @@ public final class AccessLevelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the `AccessLevel` and its use. Does not affect behavior.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -64,6 +76,10 @@ public final class AccessLevelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{access_policy}/accessLevels/{access_level}`. The maximum length of the `access_level` component is 50 characters.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -75,6 +91,10 @@ public final class AccessLevelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Human readable title. Must be unique within the Policy.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -117,47 +137,107 @@ public final class AccessLevelArgs extends com.pulumi.resources.ResourceArgs {
             return accessPolicyId(Output.of(accessPolicyId));
         }
 
+        /**
+         * @param basic A `BasicLevel` composed of `Conditions`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basic(@Nullable Output<BasicLevelArgs> basic) {
             $.basic = basic;
             return this;
         }
 
+        /**
+         * @param basic A `BasicLevel` composed of `Conditions`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basic(BasicLevelArgs basic) {
             return basic(Output.of(basic));
         }
 
+        /**
+         * @param custom A `CustomLevel` written in the Common Expression Language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder custom(@Nullable Output<CustomLevelArgs> custom) {
             $.custom = custom;
             return this;
         }
 
+        /**
+         * @param custom A `CustomLevel` written in the Common Expression Language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder custom(CustomLevelArgs custom) {
             return custom(Output.of(custom));
         }
 
+        /**
+         * @param description Description of the `AccessLevel` and its use. Does not affect behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the `AccessLevel` and its use. Does not affect behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{access_policy}/accessLevels/{access_level}`. The maximum length of the `access_level` component is 50 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{access_policy}/accessLevels/{access_level}`. The maximum length of the `access_level` component is 50 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param title Human readable title. Must be unique within the Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Human readable title. Must be unique within the Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

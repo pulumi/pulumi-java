@@ -24,6 +24,10 @@ public final class UsageRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowUnregisteredCalls", required=true)
     private Boolean allowUnregisteredCalls;
 
+    /**
+     * @return If true, the selected method allows unregistered calls, e.g. calls that don&#39;t identify any user or application.
+     * 
+     */
     public Boolean allowUnregisteredCalls() {
         return this.allowUnregisteredCalls;
     }
@@ -35,6 +39,10 @@ public final class UsageRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="selector", required=true)
     private String selector;
 
+    /**
+     * @return Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
+     * 
+     */
     public String selector() {
         return this.selector;
     }
@@ -46,6 +54,10 @@ public final class UsageRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="skipServiceControl", required=true)
     private Boolean skipServiceControl;
 
+    /**
+     * @return If true, the selected method should skip service control and the control plane features, such as quota and billing, will not be available. This flag is used by Google Cloud Endpoints to bypass checks for internal methods, such as service health check methods.
+     * 
+     */
     public Boolean skipServiceControl() {
         return this.skipServiceControl;
     }
@@ -76,16 +88,34 @@ public final class UsageRuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new UsageRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowUnregisteredCalls If true, the selected method allows unregistered calls, e.g. calls that don&#39;t identify any user or application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowUnregisteredCalls(Boolean allowUnregisteredCalls) {
             $.allowUnregisteredCalls = allowUnregisteredCalls;
             return this;
         }
 
+        /**
+         * @param selector Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param skipServiceControl If true, the selected method should skip service control and the control plane features, such as quota and billing, will not be available. This flag is used by Google Cloud Endpoints to bypass checks for internal methods, such as service health check methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipServiceControl(Boolean skipServiceControl) {
             $.skipServiceControl = skipServiceControl;
             return this;

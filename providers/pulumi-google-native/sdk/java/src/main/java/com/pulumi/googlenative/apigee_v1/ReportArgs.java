@@ -25,6 +25,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="chartType")
     private @Nullable Output<String> chartType;
 
+    /**
+     * @return This field contains the chart type for the report
+     * 
+     */
     public Optional<Output<String>> chartType() {
         return Optional.ofNullable(this.chartType);
     }
@@ -36,6 +40,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="comments")
     private @Nullable Output<List<String>> comments;
 
+    /**
+     * @return Legacy field: not used. This field contains a list of comments associated with custom report
+     * 
+     */
     public Optional<Output<List<String>>> comments() {
         return Optional.ofNullable(this.comments);
     }
@@ -47,6 +55,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dimensions")
     private @Nullable Output<List<String>> dimensions;
 
+    /**
+     * @return This contains the list of dimensions for the report
+     * 
+     */
     public Optional<Output<List<String>>> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -58,6 +70,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return This is the display name for the report
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -69,6 +85,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
     private @Nullable Output<String> filter;
 
+    /**
+     * @return This field contains the filter expression
+     * 
+     */
     public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -80,6 +100,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fromTime")
     private @Nullable Output<String> fromTime;
 
+    /**
+     * @return Legacy field: not used. Contains the from time for the report
+     * 
+     */
     public Optional<Output<String>> fromTime() {
         return Optional.ofNullable(this.fromTime);
     }
@@ -91,6 +115,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="limit")
     private @Nullable Output<String> limit;
 
+    /**
+     * @return Legacy field: not used This field contains the limit for the result retrieved
+     * 
+     */
     public Optional<Output<String>> limit() {
         return Optional.ofNullable(this.limit);
     }
@@ -102,6 +130,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metrics", required=true)
     private Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics;
 
+    /**
+     * @return This contains the list of metrics
+     * 
+     */
     public Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics() {
         return this.metrics;
     }
@@ -113,6 +145,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique identifier for the report T his is a legacy field used to encode custom report unique id
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -124,6 +160,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="offset")
     private @Nullable Output<String> offset;
 
+    /**
+     * @return Legacy field: not used. This field contains the offset for the data
+     * 
+     */
     public Optional<Output<String>> offset() {
         return Optional.ofNullable(this.offset);
     }
@@ -142,6 +182,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties;
 
+    /**
+     * @return This field contains report properties such as ui metadata etc.
+     * 
+     */
     public Optional<Output<List<GoogleCloudApigeeV1ReportPropertyArgs>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -153,6 +197,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sortByCols")
     private @Nullable Output<List<String>> sortByCols;
 
+    /**
+     * @return Legacy field: not used much. Contains the list of sort by columns
+     * 
+     */
     public Optional<Output<List<String>>> sortByCols() {
         return Optional.ofNullable(this.sortByCols);
     }
@@ -164,6 +212,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sortOrder")
     private @Nullable Output<String> sortOrder;
 
+    /**
+     * @return Legacy field: not used much. Contains the sort order for the sort columns
+     * 
+     */
     public Optional<Output<String>> sortOrder() {
         return Optional.ofNullable(this.sortOrder);
     }
@@ -175,6 +227,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
+    /**
+     * @return Legacy field: not used. This field contains a list of tags associated with custom report
+     * 
+     */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -186,6 +242,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeUnit")
     private @Nullable Output<String> timeUnit;
 
+    /**
+     * @return This field contains the time unit of aggregation for the report
+     * 
+     */
     public Optional<Output<String>> timeUnit() {
         return Optional.ofNullable(this.timeUnit);
     }
@@ -197,6 +257,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="toTime")
     private @Nullable Output<String> toTime;
 
+    /**
+     * @return Legacy field: not used. Contains the end time for the report
+     * 
+     */
     public Optional<Output<String>> toTime() {
         return Optional.ofNullable(this.toTime);
     }
@@ -208,6 +272,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topk")
     private @Nullable Output<String> topk;
 
+    /**
+     * @return Legacy field: not used. This field contains the top k parameter value for restricting the result
+     * 
+     */
     public Optional<Output<String>> topk() {
         return Optional.ofNullable(this.topk);
     }
@@ -253,104 +321,242 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param chartType This field contains the chart type for the report
+         * 
+         * @return builder
+         * 
+         */
         public Builder chartType(@Nullable Output<String> chartType) {
             $.chartType = chartType;
             return this;
         }
 
+        /**
+         * @param chartType This field contains the chart type for the report
+         * 
+         * @return builder
+         * 
+         */
         public Builder chartType(String chartType) {
             return chartType(Output.of(chartType));
         }
 
+        /**
+         * @param comments Legacy field: not used. This field contains a list of comments associated with custom report
+         * 
+         * @return builder
+         * 
+         */
         public Builder comments(@Nullable Output<List<String>> comments) {
             $.comments = comments;
             return this;
         }
 
+        /**
+         * @param comments Legacy field: not used. This field contains a list of comments associated with custom report
+         * 
+         * @return builder
+         * 
+         */
         public Builder comments(List<String> comments) {
             return comments(Output.of(comments));
         }
 
+        /**
+         * @param comments Legacy field: not used. This field contains a list of comments associated with custom report
+         * 
+         * @return builder
+         * 
+         */
         public Builder comments(String... comments) {
             return comments(List.of(comments));
         }
 
+        /**
+         * @param dimensions This contains the list of dimensions for the report
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable Output<List<String>> dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param dimensions This contains the list of dimensions for the report
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(List<String> dimensions) {
             return dimensions(Output.of(dimensions));
         }
 
+        /**
+         * @param dimensions This contains the list of dimensions for the report
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(String... dimensions) {
             return dimensions(List.of(dimensions));
         }
 
+        /**
+         * @param displayName This is the display name for the report
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName This is the display name for the report
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param filter This field contains the filter expression
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter This field contains the filter expression
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param fromTime Legacy field: not used. Contains the from time for the report
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromTime(@Nullable Output<String> fromTime) {
             $.fromTime = fromTime;
             return this;
         }
 
+        /**
+         * @param fromTime Legacy field: not used. Contains the from time for the report
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromTime(String fromTime) {
             return fromTime(Output.of(fromTime));
         }
 
+        /**
+         * @param limit Legacy field: not used This field contains the limit for the result retrieved
+         * 
+         * @return builder
+         * 
+         */
         public Builder limit(@Nullable Output<String> limit) {
             $.limit = limit;
             return this;
         }
 
+        /**
+         * @param limit Legacy field: not used This field contains the limit for the result retrieved
+         * 
+         * @return builder
+         * 
+         */
         public Builder limit(String limit) {
             return limit(Output.of(limit));
         }
 
+        /**
+         * @param metrics This contains the list of metrics
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics This contains the list of metrics
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<GoogleCloudApigeeV1CustomReportMetricArgs> metrics) {
             return metrics(Output.of(metrics));
         }
 
+        /**
+         * @param metrics This contains the list of metrics
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(GoogleCloudApigeeV1CustomReportMetricArgs... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param name Unique identifier for the report T his is a legacy field used to encode custom report unique id
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique identifier for the report T his is a legacy field used to encode custom report unique id
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param offset Legacy field: not used. This field contains the offset for the data
+         * 
+         * @return builder
+         * 
+         */
         public Builder offset(@Nullable Output<String> offset) {
             $.offset = offset;
             return this;
         }
 
+        /**
+         * @param offset Legacy field: not used. This field contains the offset for the data
+         * 
+         * @return builder
+         * 
+         */
         public Builder offset(String offset) {
             return offset(Output.of(offset));
         }
@@ -364,77 +570,179 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param properties This field contains report properties such as ui metadata etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties This field contains report properties such as ui metadata etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(List<GoogleCloudApigeeV1ReportPropertyArgs> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param properties This field contains report properties such as ui metadata etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(GoogleCloudApigeeV1ReportPropertyArgs... properties) {
             return properties(List.of(properties));
         }
 
+        /**
+         * @param sortByCols Legacy field: not used much. Contains the list of sort by columns
+         * 
+         * @return builder
+         * 
+         */
         public Builder sortByCols(@Nullable Output<List<String>> sortByCols) {
             $.sortByCols = sortByCols;
             return this;
         }
 
+        /**
+         * @param sortByCols Legacy field: not used much. Contains the list of sort by columns
+         * 
+         * @return builder
+         * 
+         */
         public Builder sortByCols(List<String> sortByCols) {
             return sortByCols(Output.of(sortByCols));
         }
 
+        /**
+         * @param sortByCols Legacy field: not used much. Contains the list of sort by columns
+         * 
+         * @return builder
+         * 
+         */
         public Builder sortByCols(String... sortByCols) {
             return sortByCols(List.of(sortByCols));
         }
 
+        /**
+         * @param sortOrder Legacy field: not used much. Contains the sort order for the sort columns
+         * 
+         * @return builder
+         * 
+         */
         public Builder sortOrder(@Nullable Output<String> sortOrder) {
             $.sortOrder = sortOrder;
             return this;
         }
 
+        /**
+         * @param sortOrder Legacy field: not used much. Contains the sort order for the sort columns
+         * 
+         * @return builder
+         * 
+         */
         public Builder sortOrder(String sortOrder) {
             return sortOrder(Output.of(sortOrder));
         }
 
+        /**
+         * @param tags Legacy field: not used. This field contains a list of tags associated with custom report
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Legacy field: not used. This field contains a list of tags associated with custom report
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Legacy field: not used. This field contains a list of tags associated with custom report
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param timeUnit This field contains the time unit of aggregation for the report
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeUnit(@Nullable Output<String> timeUnit) {
             $.timeUnit = timeUnit;
             return this;
         }
 
+        /**
+         * @param timeUnit This field contains the time unit of aggregation for the report
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeUnit(String timeUnit) {
             return timeUnit(Output.of(timeUnit));
         }
 
+        /**
+         * @param toTime Legacy field: not used. Contains the end time for the report
+         * 
+         * @return builder
+         * 
+         */
         public Builder toTime(@Nullable Output<String> toTime) {
             $.toTime = toTime;
             return this;
         }
 
+        /**
+         * @param toTime Legacy field: not used. Contains the end time for the report
+         * 
+         * @return builder
+         * 
+         */
         public Builder toTime(String toTime) {
             return toTime(Output.of(toTime));
         }
 
+        /**
+         * @param topk Legacy field: not used. This field contains the top k parameter value for restricting the result
+         * 
+         * @return builder
+         * 
+         */
         public Builder topk(@Nullable Output<String> topk) {
             $.topk = topk;
             return this;
         }
 
+        /**
+         * @param topk Legacy field: not used. This field contains the top k parameter value for restricting the result
+         * 
+         * @return builder
+         * 
+         */
         public Builder topk(String topk) {
             return topk(Output.of(topk));
         }

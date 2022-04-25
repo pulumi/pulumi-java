@@ -26,6 +26,10 @@ public final class EmailPreferencesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enableFailureEmail")
     private @Nullable Output<Boolean> enableFailureEmail;
 
+    /**
+     * @return If true, email notifications will be sent on transfer run failures.
+     * 
+     */
     public Optional<Output<Boolean>> enableFailureEmail() {
         return Optional.ofNullable(this.enableFailureEmail);
     }
@@ -54,11 +58,23 @@ public final class EmailPreferencesArgs extends com.pulumi.resources.ResourceArg
             $ = new EmailPreferencesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableFailureEmail If true, email notifications will be sent on transfer run failures.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFailureEmail(@Nullable Output<Boolean> enableFailureEmail) {
             $.enableFailureEmail = enableFailureEmail;
             return this;
         }
 
+        /**
+         * @param enableFailureEmail If true, email notifications will be sent on transfer run failures.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFailureEmail(Boolean enableFailureEmail) {
             return enableFailureEmail(Output.of(enableFailureEmail));
         }

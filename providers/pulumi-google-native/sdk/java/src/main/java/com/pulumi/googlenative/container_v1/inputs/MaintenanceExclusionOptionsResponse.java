@@ -23,6 +23,10 @@ public final class MaintenanceExclusionOptionsResponse extends com.pulumi.resour
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return Scope specifies the upgrade scope which upgrades are blocked by the exclusion.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -51,6 +55,12 @@ public final class MaintenanceExclusionOptionsResponse extends com.pulumi.resour
             $ = new MaintenanceExclusionOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scope Scope specifies the upgrade scope which upgrades are blocked by the exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2ExpressionsResponse {
     /**
-     * Conditions to apply to the expression.
+     * @return Conditions to apply to the expression.
      * 
      */
     private final GooglePrivacyDlpV2ConditionsResponse conditions;
     /**
-     * The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
+     * @return The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
      * 
      */
     private final String logicalOperator;
@@ -30,16 +30,16 @@ public final class GooglePrivacyDlpV2ExpressionsResponse {
     }
 
     /**
-     * Conditions to apply to the expression.
+     * @return Conditions to apply to the expression.
      * 
-    */
+     */
     public GooglePrivacyDlpV2ConditionsResponse conditions() {
         return this.conditions;
     }
     /**
-     * The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
+     * @return The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
      * 
-    */
+     */
     public String logicalOperator() {
         return this.logicalOperator;
     }

@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse extends com.pulu
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return A 128/192/256 bit key.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse extends com.pulu
             $ = new GooglePrivacyDlpV2UnwrappedCryptoKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key A 128/192/256 bit key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;

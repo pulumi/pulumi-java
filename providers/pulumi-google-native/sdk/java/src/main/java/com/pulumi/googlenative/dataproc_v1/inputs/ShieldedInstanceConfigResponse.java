@@ -23,6 +23,10 @@ public final class ShieldedInstanceConfigResponse extends com.pulumi.resources.I
     @Import(name="enableIntegrityMonitoring", required=true)
     private Boolean enableIntegrityMonitoring;
 
+    /**
+     * @return Optional. Defines whether instances have integrity monitoring enabled.
+     * 
+     */
     public Boolean enableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
     }
@@ -34,6 +38,10 @@ public final class ShieldedInstanceConfigResponse extends com.pulumi.resources.I
     @Import(name="enableSecureBoot", required=true)
     private Boolean enableSecureBoot;
 
+    /**
+     * @return Optional. Defines whether instances have Secure Boot enabled.
+     * 
+     */
     public Boolean enableSecureBoot() {
         return this.enableSecureBoot;
     }
@@ -45,6 +53,10 @@ public final class ShieldedInstanceConfigResponse extends com.pulumi.resources.I
     @Import(name="enableVtpm", required=true)
     private Boolean enableVtpm;
 
+    /**
+     * @return Optional. Defines whether instances have the vTPM enabled.
+     * 
+     */
     public Boolean enableVtpm() {
         return this.enableVtpm;
     }
@@ -75,16 +87,34 @@ public final class ShieldedInstanceConfigResponse extends com.pulumi.resources.I
             $ = new ShieldedInstanceConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableIntegrityMonitoring Optional. Defines whether instances have integrity monitoring enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
             $.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
 
+        /**
+         * @param enableSecureBoot Optional. Defines whether instances have Secure Boot enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSecureBoot(Boolean enableSecureBoot) {
             $.enableSecureBoot = enableSecureBoot;
             return this;
         }
 
+        /**
+         * @param enableVtpm Optional. Defines whether instances have the vTPM enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableVtpm(Boolean enableVtpm) {
             $.enableVtpm = enableVtpm;
             return this;

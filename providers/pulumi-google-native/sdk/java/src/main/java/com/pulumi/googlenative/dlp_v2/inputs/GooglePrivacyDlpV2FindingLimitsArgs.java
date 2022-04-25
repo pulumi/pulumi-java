@@ -28,6 +28,10 @@ public final class GooglePrivacyDlpV2FindingLimitsArgs extends com.pulumi.resour
     @Import(name="maxFindingsPerInfoType")
     private @Nullable Output<List<GooglePrivacyDlpV2InfoTypeLimitArgs>> maxFindingsPerInfoType;
 
+    /**
+     * @return Configuration of findings limit given for specified infoTypes.
+     * 
+     */
     public Optional<Output<List<GooglePrivacyDlpV2InfoTypeLimitArgs>>> maxFindingsPerInfoType() {
         return Optional.ofNullable(this.maxFindingsPerInfoType);
     }
@@ -39,6 +43,10 @@ public final class GooglePrivacyDlpV2FindingLimitsArgs extends com.pulumi.resour
     @Import(name="maxFindingsPerItem")
     private @Nullable Output<Integer> maxFindingsPerItem;
 
+    /**
+     * @return Max number of findings that will be returned for each item scanned. When set within `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set within `InspectContentRequest`, this field is ignored.
+     * 
+     */
     public Optional<Output<Integer>> maxFindingsPerItem() {
         return Optional.ofNullable(this.maxFindingsPerItem);
     }
@@ -50,6 +58,10 @@ public final class GooglePrivacyDlpV2FindingLimitsArgs extends com.pulumi.resour
     @Import(name="maxFindingsPerRequest")
     private @Nullable Output<Integer> maxFindingsPerRequest;
 
+    /**
+     * @return Max number of findings that will be returned per request/job. When set within `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.
+     * 
+     */
     public Optional<Output<Integer>> maxFindingsPerRequest() {
         return Optional.ofNullable(this.maxFindingsPerRequest);
     }
@@ -80,33 +92,75 @@ public final class GooglePrivacyDlpV2FindingLimitsArgs extends com.pulumi.resour
             $ = new GooglePrivacyDlpV2FindingLimitsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxFindingsPerInfoType Configuration of findings limit given for specified infoTypes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindingsPerInfoType(@Nullable Output<List<GooglePrivacyDlpV2InfoTypeLimitArgs>> maxFindingsPerInfoType) {
             $.maxFindingsPerInfoType = maxFindingsPerInfoType;
             return this;
         }
 
+        /**
+         * @param maxFindingsPerInfoType Configuration of findings limit given for specified infoTypes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindingsPerInfoType(List<GooglePrivacyDlpV2InfoTypeLimitArgs> maxFindingsPerInfoType) {
             return maxFindingsPerInfoType(Output.of(maxFindingsPerInfoType));
         }
 
+        /**
+         * @param maxFindingsPerInfoType Configuration of findings limit given for specified infoTypes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindingsPerInfoType(GooglePrivacyDlpV2InfoTypeLimitArgs... maxFindingsPerInfoType) {
             return maxFindingsPerInfoType(List.of(maxFindingsPerInfoType));
         }
 
+        /**
+         * @param maxFindingsPerItem Max number of findings that will be returned for each item scanned. When set within `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set within `InspectContentRequest`, this field is ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindingsPerItem(@Nullable Output<Integer> maxFindingsPerItem) {
             $.maxFindingsPerItem = maxFindingsPerItem;
             return this;
         }
 
+        /**
+         * @param maxFindingsPerItem Max number of findings that will be returned for each item scanned. When set within `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set within `InspectContentRequest`, this field is ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindingsPerItem(Integer maxFindingsPerItem) {
             return maxFindingsPerItem(Output.of(maxFindingsPerItem));
         }
 
+        /**
+         * @param maxFindingsPerRequest Max number of findings that will be returned per request/job. When set within `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindingsPerRequest(@Nullable Output<Integer> maxFindingsPerRequest) {
             $.maxFindingsPerRequest = maxFindingsPerRequest;
             return this;
         }
 
+        /**
+         * @param maxFindingsPerRequest Max number of findings that will be returned per request/job. When set within `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindingsPerRequest(Integer maxFindingsPerRequest) {
             return maxFindingsPerRequest(Output.of(maxFindingsPerRequest));
         }

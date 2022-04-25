@@ -12,42 +12,42 @@ import java.util.Objects;
 @CustomType
 public final class InstanceStatusResponse {
     /**
-     * Optional. Represents time when the instance was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+     * @return Optional. Represents time when the instance was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
      * 
      */
     private final String completionTime;
     /**
-     * Optional. The number of times this instance exited with code &gt; 0; +optional
+     * @return Optional. The number of times this instance exited with code &gt; 0; +optional
      * 
      */
     private final Integer failed;
     /**
-     * Index of the instance, unique per Job, and beginning at 0.
+     * @return Index of the instance, unique per Job, and beginning at 0.
      * 
      */
     private final Integer index;
     /**
-     * Optional. Result of the last attempt of this instance. +optional
+     * @return Optional. Result of the last attempt of this instance. +optional
      * 
      */
     private final InstanceAttemptResultResponse lastAttemptResult;
     /**
-     * Optional. Last exit code seen for this instance. +optional
+     * @return Optional. Last exit code seen for this instance. +optional
      * 
      */
     private final Integer lastExitCode;
     /**
-     * Optional. The number of times this instance was restarted. Instances are restarted according the restartPolicy configured in the Job template. +optional
+     * @return Optional. The number of times this instance was restarted. Instances are restarted according the restartPolicy configured in the Job template. +optional
      * 
      */
     private final Integer restarted;
     /**
-     * Optional. Represents time when the instance was created by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+     * @return Optional. Represents time when the instance was created by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
      * 
      */
     private final String startTime;
     /**
-     * Optional. The number of times this instance exited with code == 0. +optional
+     * @return Optional. The number of times this instance exited with code == 0. +optional
      * 
      */
     private final Integer succeeded;
@@ -73,58 +73,58 @@ public final class InstanceStatusResponse {
     }
 
     /**
-     * Optional. Represents time when the instance was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+     * @return Optional. Represents time when the instance was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
      * 
-    */
+     */
     public String completionTime() {
         return this.completionTime;
     }
     /**
-     * Optional. The number of times this instance exited with code &gt; 0; +optional
+     * @return Optional. The number of times this instance exited with code &gt; 0; +optional
      * 
-    */
+     */
     public Integer failed() {
         return this.failed;
     }
     /**
-     * Index of the instance, unique per Job, and beginning at 0.
+     * @return Index of the instance, unique per Job, and beginning at 0.
      * 
-    */
+     */
     public Integer index() {
         return this.index;
     }
     /**
-     * Optional. Result of the last attempt of this instance. +optional
+     * @return Optional. Result of the last attempt of this instance. +optional
      * 
-    */
+     */
     public InstanceAttemptResultResponse lastAttemptResult() {
         return this.lastAttemptResult;
     }
     /**
-     * Optional. Last exit code seen for this instance. +optional
+     * @return Optional. Last exit code seen for this instance. +optional
      * 
-    */
+     */
     public Integer lastExitCode() {
         return this.lastExitCode;
     }
     /**
-     * Optional. The number of times this instance was restarted. Instances are restarted according the restartPolicy configured in the Job template. +optional
+     * @return Optional. The number of times this instance was restarted. Instances are restarted according the restartPolicy configured in the Job template. +optional
      * 
-    */
+     */
     public Integer restarted() {
         return this.restarted;
     }
     /**
-     * Optional. Represents time when the instance was created by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
+     * @return Optional. Represents time when the instance was created by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Optional. The number of times this instance exited with code == 0. +optional
+     * @return Optional. The number of times this instance exited with code == 0. +optional
      * 
-    */
+     */
     public Integer succeeded() {
         return this.succeeded;
     }

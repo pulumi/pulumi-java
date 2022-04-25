@@ -24,6 +24,10 @@ public final class ReplicaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="customerManagedEncryption", required=true)
     private CustomerManagedEncryptionResponse customerManagedEncryption;
 
+    /**
+     * @return Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+     * 
+     */
     public CustomerManagedEncryptionResponse customerManagedEncryption() {
         return this.customerManagedEncryption;
     }
@@ -35,6 +39,10 @@ public final class ReplicaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -64,11 +72,23 @@ public final class ReplicaResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ReplicaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerManagedEncryption Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerManagedEncryption(CustomerManagedEncryptionResponse customerManagedEncryption) {
             $.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
 
+        /**
+         * @param location The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;

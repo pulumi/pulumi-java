@@ -26,6 +26,10 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code", required=true)
     private Integer code;
 
+    /**
+     * @return The status code, which should be an enum value of google.rpc.Code.
+     * 
+     */
     public Integer code() {
         return this.code;
     }
@@ -37,6 +41,10 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
     private List<Map<String,String>> details;
 
+    /**
+     * @return A list of messages that carry the error details. There is a common set of message types for APIs to use.
+     * 
+     */
     public List<Map<String,String>> details() {
         return this.details;
     }
@@ -48,6 +56,10 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -78,20 +90,44 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
             $ = new StatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The status code, which should be an enum value of google.rpc.Code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(Integer code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param details A list of messages that carry the error details. There is a common set of message types for APIs to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(List<Map<String,String>> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details A list of messages that carry the error details. There is a common set of message types for APIs to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(Map<String,String>... details) {
             return details(List.of(details));
         }
 
+        /**
+         * @param message A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;

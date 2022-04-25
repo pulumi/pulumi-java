@@ -24,6 +24,10 @@ public final class ServiceAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return Email address of the service account.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -35,6 +39,10 @@ public final class ServiceAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="scopes", required=true)
     private List<String> scopes;
 
+    /**
+     * @return The list of scopes to be made available for this service account.
+     * 
+     */
     public List<String> scopes() {
         return this.scopes;
     }
@@ -64,16 +72,34 @@ public final class ServiceAccountResponse extends com.pulumi.resources.InvokeArg
             $ = new ServiceAccountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email Email address of the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param scopes The list of scopes to be made available for this service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(List<String> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes The list of scopes to be made available for this service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }

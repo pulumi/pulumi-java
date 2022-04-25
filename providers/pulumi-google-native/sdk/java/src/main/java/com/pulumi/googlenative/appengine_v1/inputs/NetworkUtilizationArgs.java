@@ -26,6 +26,10 @@ public final class NetworkUtilizationArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetReceivedBytesPerSecond")
     private @Nullable Output<Integer> targetReceivedBytesPerSecond;
 
+    /**
+     * @return Target bytes received per second.
+     * 
+     */
     public Optional<Output<Integer>> targetReceivedBytesPerSecond() {
         return Optional.ofNullable(this.targetReceivedBytesPerSecond);
     }
@@ -37,6 +41,10 @@ public final class NetworkUtilizationArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetReceivedPacketsPerSecond")
     private @Nullable Output<Integer> targetReceivedPacketsPerSecond;
 
+    /**
+     * @return Target packets received per second.
+     * 
+     */
     public Optional<Output<Integer>> targetReceivedPacketsPerSecond() {
         return Optional.ofNullable(this.targetReceivedPacketsPerSecond);
     }
@@ -48,6 +56,10 @@ public final class NetworkUtilizationArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetSentBytesPerSecond")
     private @Nullable Output<Integer> targetSentBytesPerSecond;
 
+    /**
+     * @return Target bytes sent per second.
+     * 
+     */
     public Optional<Output<Integer>> targetSentBytesPerSecond() {
         return Optional.ofNullable(this.targetSentBytesPerSecond);
     }
@@ -59,6 +71,10 @@ public final class NetworkUtilizationArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetSentPacketsPerSecond")
     private @Nullable Output<Integer> targetSentPacketsPerSecond;
 
+    /**
+     * @return Target packets sent per second.
+     * 
+     */
     public Optional<Output<Integer>> targetSentPacketsPerSecond() {
         return Optional.ofNullable(this.targetSentPacketsPerSecond);
     }
@@ -90,38 +106,86 @@ public final class NetworkUtilizationArgs extends com.pulumi.resources.ResourceA
             $ = new NetworkUtilizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetReceivedBytesPerSecond Target bytes received per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetReceivedBytesPerSecond(@Nullable Output<Integer> targetReceivedBytesPerSecond) {
             $.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
             return this;
         }
 
+        /**
+         * @param targetReceivedBytesPerSecond Target bytes received per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetReceivedBytesPerSecond(Integer targetReceivedBytesPerSecond) {
             return targetReceivedBytesPerSecond(Output.of(targetReceivedBytesPerSecond));
         }
 
+        /**
+         * @param targetReceivedPacketsPerSecond Target packets received per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetReceivedPacketsPerSecond(@Nullable Output<Integer> targetReceivedPacketsPerSecond) {
             $.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
             return this;
         }
 
+        /**
+         * @param targetReceivedPacketsPerSecond Target packets received per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetReceivedPacketsPerSecond(Integer targetReceivedPacketsPerSecond) {
             return targetReceivedPacketsPerSecond(Output.of(targetReceivedPacketsPerSecond));
         }
 
+        /**
+         * @param targetSentBytesPerSecond Target bytes sent per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSentBytesPerSecond(@Nullable Output<Integer> targetSentBytesPerSecond) {
             $.targetSentBytesPerSecond = targetSentBytesPerSecond;
             return this;
         }
 
+        /**
+         * @param targetSentBytesPerSecond Target bytes sent per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSentBytesPerSecond(Integer targetSentBytesPerSecond) {
             return targetSentBytesPerSecond(Output.of(targetSentBytesPerSecond));
         }
 
+        /**
+         * @param targetSentPacketsPerSecond Target packets sent per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSentPacketsPerSecond(@Nullable Output<Integer> targetSentPacketsPerSecond) {
             $.targetSentPacketsPerSecond = targetSentPacketsPerSecond;
             return this;
         }
 
+        /**
+         * @param targetSentPacketsPerSecond Target packets sent per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSentPacketsPerSecond(Integer targetSentPacketsPerSecond) {
             return targetSentPacketsPerSecond(Output.of(targetSentPacketsPerSecond));
         }

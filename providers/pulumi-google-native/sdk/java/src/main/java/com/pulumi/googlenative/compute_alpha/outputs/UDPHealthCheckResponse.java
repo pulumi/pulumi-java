@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class UDPHealthCheckResponse {
     /**
-     * The UDP port number for the health check request. Valid values are 1 through 65535.
+     * @return The UDP port number for the health check request. Valid values are 1 through 65535.
      * 
      */
     private final Integer port;
     /**
-     * Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
+     * @return Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
      * 
      */
     private final String portName;
     /**
-     * Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.
+     * @return Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.
      * 
      */
     private final String request;
     /**
-     * The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.
+     * @return The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.
      * 
      */
     private final String response;
@@ -44,30 +44,30 @@ public final class UDPHealthCheckResponse {
     }
 
     /**
-     * The UDP port number for the health check request. Valid values are 1 through 65535.
+     * @return The UDP port number for the health check request. Valid values are 1 through 65535.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
+     * @return Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
      * 
-    */
+     */
     public String portName() {
         return this.portName;
     }
     /**
-     * Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.
+     * @return Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.
      * 
-    */
+     */
     public String request() {
         return this.request;
     }
     /**
-     * The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.
+     * @return The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.
      * 
-    */
+     */
     public String response() {
         return this.response;
     }

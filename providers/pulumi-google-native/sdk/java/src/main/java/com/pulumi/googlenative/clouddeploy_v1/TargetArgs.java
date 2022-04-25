@@ -28,6 +28,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
     private @Nullable Output<Map<String,String>> annotations;
 
+    /**
+     * @return Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+     * 
+     */
     public Optional<Output<Map<String,String>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -39,6 +43,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="anthosCluster")
     private @Nullable Output<AnthosClusterArgs> anthosCluster;
 
+    /**
+     * @return Information specifying an Anthos Cluster.
+     * 
+     */
     public Optional<Output<AnthosClusterArgs>> anthosCluster() {
         return Optional.ofNullable(this.anthosCluster);
     }
@@ -50,6 +58,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Description of the `Target`. Max length is 255 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -61,6 +73,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -72,6 +88,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionConfigs")
     private @Nullable Output<List<ExecutionConfigArgs>> executionConfigs;
 
+    /**
+     * @return Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
+     * 
+     */
     public Optional<Output<List<ExecutionConfigArgs>>> executionConfigs() {
         return Optional.ofNullable(this.executionConfigs);
     }
@@ -83,6 +103,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gke")
     private @Nullable Output<GkeClusterArgs> gke;
 
+    /**
+     * @return Information specifying a GKE Cluster.
+     * 
+     */
     public Optional<Output<GkeClusterArgs>> gke() {
         return Optional.ofNullable(this.gke);
     }
@@ -94,6 +118,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -112,6 +140,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -137,6 +169,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requireApproval")
     private @Nullable Output<Boolean> requireApproval;
 
+    /**
+     * @return Optional. Whether or not the `Target` requires approval.
+     * 
+     */
     public Optional<Output<Boolean>> requireApproval() {
         return Optional.ofNullable(this.requireApproval);
     }
@@ -192,69 +228,159 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Map<String,String> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param anthosCluster Information specifying an Anthos Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anthosCluster(@Nullable Output<AnthosClusterArgs> anthosCluster) {
             $.anthosCluster = anthosCluster;
             return this;
         }
 
+        /**
+         * @param anthosCluster Information specifying an Anthos Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anthosCluster(AnthosClusterArgs anthosCluster) {
             return anthosCluster(Output.of(anthosCluster));
         }
 
+        /**
+         * @param description Optional. Description of the `Target`. Max length is 255 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Description of the `Target`. Max length is 255 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param etag Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param executionConfigs Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionConfigs(@Nullable Output<List<ExecutionConfigArgs>> executionConfigs) {
             $.executionConfigs = executionConfigs;
             return this;
         }
 
+        /**
+         * @param executionConfigs Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionConfigs(List<ExecutionConfigArgs> executionConfigs) {
             return executionConfigs(Output.of(executionConfigs));
         }
 
+        /**
+         * @param executionConfigs Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionConfigs(ExecutionConfigArgs... executionConfigs) {
             return executionConfigs(List.of(executionConfigs));
         }
 
+        /**
+         * @param gke Information specifying a GKE Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gke(@Nullable Output<GkeClusterArgs> gke) {
             $.gke = gke;
             return this;
         }
 
+        /**
+         * @param gke Information specifying a GKE Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gke(GkeClusterArgs gke) {
             return gke(Output.of(gke));
         }
 
+        /**
+         * @param labels Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -268,11 +394,23 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -295,11 +433,23 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param requireApproval Optional. Whether or not the `Target` requires approval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireApproval(@Nullable Output<Boolean> requireApproval) {
             $.requireApproval = requireApproval;
             return this;
         }
 
+        /**
+         * @param requireApproval Optional. Whether or not the `Target` requires approval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireApproval(Boolean requireApproval) {
             return requireApproval(Output.of(requireApproval));
         }

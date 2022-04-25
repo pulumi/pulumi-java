@@ -29,6 +29,10 @@ public final class LoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableOnpremGcsTransferLogs")
     private @Nullable Output<Boolean> enableOnpremGcsTransferLogs;
 
+    /**
+     * @return For transfers with a PosixFilesystem source, this option enables the Cloud Storage transfer logs for this transfer.
+     * 
+     */
     public Optional<Output<Boolean>> enableOnpremGcsTransferLogs() {
         return Optional.ofNullable(this.enableOnpremGcsTransferLogs);
     }
@@ -40,6 +44,10 @@ public final class LoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logActionStates")
     private @Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates;
 
+    /**
+     * @return States in which `log_actions` are logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+     * 
+     */
     public Optional<Output<List<LoggingConfigLogActionStatesItem>>> logActionStates() {
         return Optional.ofNullable(this.logActionStates);
     }
@@ -51,6 +59,10 @@ public final class LoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logActions")
     private @Nullable Output<List<LoggingConfigLogActionsItem>> logActions;
 
+    /**
+     * @return Specifies the actions to be logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+     * 
+     */
     public Optional<Output<List<LoggingConfigLogActionsItem>>> logActions() {
         return Optional.ofNullable(this.logActions);
     }
@@ -81,37 +93,85 @@ public final class LoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableOnpremGcsTransferLogs For transfers with a PosixFilesystem source, this option enables the Cloud Storage transfer logs for this transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableOnpremGcsTransferLogs(@Nullable Output<Boolean> enableOnpremGcsTransferLogs) {
             $.enableOnpremGcsTransferLogs = enableOnpremGcsTransferLogs;
             return this;
         }
 
+        /**
+         * @param enableOnpremGcsTransferLogs For transfers with a PosixFilesystem source, this option enables the Cloud Storage transfer logs for this transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableOnpremGcsTransferLogs(Boolean enableOnpremGcsTransferLogs) {
             return enableOnpremGcsTransferLogs(Output.of(enableOnpremGcsTransferLogs));
         }
 
+        /**
+         * @param logActionStates States in which `log_actions` are logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logActionStates(@Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates) {
             $.logActionStates = logActionStates;
             return this;
         }
 
+        /**
+         * @param logActionStates States in which `log_actions` are logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logActionStates(List<LoggingConfigLogActionStatesItem> logActionStates) {
             return logActionStates(Output.of(logActionStates));
         }
 
+        /**
+         * @param logActionStates States in which `log_actions` are logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logActionStates(LoggingConfigLogActionStatesItem... logActionStates) {
             return logActionStates(List.of(logActionStates));
         }
 
+        /**
+         * @param logActions Specifies the actions to be logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logActions(@Nullable Output<List<LoggingConfigLogActionsItem>> logActions) {
             $.logActions = logActions;
             return this;
         }
 
+        /**
+         * @param logActions Specifies the actions to be logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logActions(List<LoggingConfigLogActionsItem> logActions) {
             return logActions(Output.of(logActions));
         }
 
+        /**
+         * @param logActions Specifies the actions to be logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logActions(LoggingConfigLogActionsItem... logActions) {
             return logActions(List.of(logActions));
         }

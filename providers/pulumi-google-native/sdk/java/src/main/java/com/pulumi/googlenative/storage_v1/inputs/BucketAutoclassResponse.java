@@ -24,6 +24,10 @@ public final class BucketAutoclassResponse extends com.pulumi.resources.InvokeAr
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether or not Autoclass is enabled on this bucket
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -35,6 +39,10 @@ public final class BucketAutoclassResponse extends com.pulumi.resources.InvokeAr
     @Import(name="toggleTime", required=true)
     private String toggleTime;
 
+    /**
+     * @return A date and time in RFC 3339 format representing the instant at which &#34;enabled&#34; was last toggled.
+     * 
+     */
     public String toggleTime() {
         return this.toggleTime;
     }
@@ -64,11 +72,23 @@ public final class BucketAutoclassResponse extends com.pulumi.resources.InvokeAr
             $ = new BucketAutoclassResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether or not Autoclass is enabled on this bucket
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param toggleTime A date and time in RFC 3339 format representing the instant at which &#34;enabled&#34; was last toggled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toggleTime(String toggleTime) {
             $.toggleTime = toggleTime;
             return this;

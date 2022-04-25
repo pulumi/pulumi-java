@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse {
     /**
-     * The audio channel that contains the agent.
+     * @return The audio channel that contains the agent.
      * 
      */
     private final Integer agentChannel;
     /**
-     * The audio channel that contains the customer.
+     * @return The audio channel that contains the customer.
      * 
      */
     private final Integer customerChannel;
@@ -29,16 +29,16 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
     }
 
     /**
-     * The audio channel that contains the agent.
+     * @return The audio channel that contains the agent.
      * 
-    */
+     */
     public Integer agentChannel() {
         return this.agentChannel;
     }
     /**
-     * The audio channel that contains the customer.
+     * @return The audio channel that contains the customer.
      * 
-    */
+     */
     public Integer customerChannel() {
         return this.customerChannel;
     }

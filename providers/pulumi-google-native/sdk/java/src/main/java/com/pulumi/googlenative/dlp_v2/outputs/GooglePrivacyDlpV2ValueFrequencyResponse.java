@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2ValueFrequencyResponse {
     /**
-     * How many times the value is contained in the field.
+     * @return How many times the value is contained in the field.
      * 
      */
     private final String count;
     /**
-     * A value contained in the field in question.
+     * @return A value contained in the field in question.
      * 
      */
     private final GooglePrivacyDlpV2ValueResponse value;
@@ -30,16 +30,16 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse {
     }
 
     /**
-     * How many times the value is contained in the field.
+     * @return How many times the value is contained in the field.
      * 
-    */
+     */
     public String count() {
         return this.count;
     }
     /**
-     * A value contained in the field in question.
+     * @return A value contained in the field in question.
      * 
-    */
+     */
     public GooglePrivacyDlpV2ValueResponse value() {
         return this.value;
     }

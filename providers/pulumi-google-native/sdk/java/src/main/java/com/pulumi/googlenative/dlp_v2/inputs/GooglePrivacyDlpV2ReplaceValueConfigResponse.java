@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse extends com.pulu
     @Import(name="newValue", required=true)
     private GooglePrivacyDlpV2ValueResponse newValue;
 
+    /**
+     * @return Value to replace it with.
+     * 
+     */
     public GooglePrivacyDlpV2ValueResponse newValue() {
         return this.newValue;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse extends com.pulu
             $ = new GooglePrivacyDlpV2ReplaceValueConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param newValue Value to replace it with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newValue(GooglePrivacyDlpV2ValueResponse newValue) {
             $.newValue = newValue;
             return this;

@@ -25,6 +25,10 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="externalIpv6", required=true)
     private String externalIpv6;
 
+    /**
+     * @return The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. The field is output only, an IPv6 address from a subnetwork associated with the instance will be allocated dynamically.
+     * 
+     */
     public String externalIpv6() {
         return this.externalIpv6;
     }
@@ -36,6 +40,10 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="externalIpv6PrefixLength", required=true)
     private Integer externalIpv6PrefixLength;
 
+    /**
+     * @return The prefix length of the external IPv6 range.
+     * 
+     */
     public Integer externalIpv6PrefixLength() {
         return this.externalIpv6PrefixLength;
     }
@@ -47,6 +55,10 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Type of the resource. Always compute#accessConfig for access configs.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -58,6 +70,10 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of this access configuration. The default and recommended name is External NAT, but you can use any arbitrary string, such as My external IP or Network Access.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -69,6 +85,10 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="natIP", required=true)
     private String natIP;
 
+    /**
+     * @return An external IP address associated with this instance. Specify an unused static external IP address available to the project or leave this field undefined to use an IP from a shared ephemeral IP address pool. If you specify a static external IP address, it must live in the same region as the zone of the instance.
+     * 
+     */
     public String natIP() {
         return this.natIP;
     }
@@ -80,6 +100,10 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="networkTier", required=true)
     private String networkTier;
 
+    /**
+     * @return This signifies the networking tier used for configuring this access configuration and can only take the following values: PREMIUM, STANDARD. If an AccessConfig is specified without a valid external IP address, an ephemeral IP will be created with this networkTier. If an AccessConfig with a valid external IP address is specified, it must match that of the networkTier associated with the Address resource owning that IP.
+     * 
+     */
     public String networkTier() {
         return this.networkTier;
     }
@@ -91,6 +115,10 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="publicDnsName", required=true)
     private String publicDnsName;
 
+    /**
+     * @return The public DNS domain name for the instance.
+     * 
+     */
     public String publicDnsName() {
         return this.publicDnsName;
     }
@@ -102,6 +130,10 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="publicPtrDomainName", required=true)
     private String publicPtrDomainName;
 
+    /**
+     * @return The DNS domain name for the public PTR record. You can set this field only if the `setPublicPtr` field is enabled in accessConfig. If this field is unspecified in ipv6AccessConfig, a default PTR record will be createc for first IP in associated external IPv6 range.
+     * 
+     */
     public String publicPtrDomainName() {
         return this.publicPtrDomainName;
     }
@@ -113,6 +145,10 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="setPublicDns", required=true)
     private Boolean setPublicDns;
 
+    /**
+     * @return Specifies whether a public DNS &#39;A&#39; record should be created for the external IP address of this access configuration.
+     * 
+     */
     public Boolean setPublicDns() {
         return this.setPublicDns;
     }
@@ -124,6 +160,10 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="setPublicPtr", required=true)
     private Boolean setPublicPtr;
 
+    /**
+     * @return Specifies whether a public DNS &#39;PTR&#39; record should be created to map the external IP address of the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR record will be created if the VM has external IPv6 range associated.
+     * 
+     */
     public Boolean setPublicPtr() {
         return this.setPublicPtr;
     }
@@ -135,6 +175,10 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of configuration. The default and only option is ONE_TO_ONE_NAT.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -173,56 +217,122 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new AccessConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param externalIpv6 The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. The field is output only, an IPv6 address from a subnetwork associated with the instance will be allocated dynamically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIpv6(String externalIpv6) {
             $.externalIpv6 = externalIpv6;
             return this;
         }
 
+        /**
+         * @param externalIpv6PrefixLength The prefix length of the external IPv6 range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIpv6PrefixLength(Integer externalIpv6PrefixLength) {
             $.externalIpv6PrefixLength = externalIpv6PrefixLength;
             return this;
         }
 
+        /**
+         * @param kind Type of the resource. Always compute#accessConfig for access configs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name The name of this access configuration. The default and recommended name is External NAT, but you can use any arbitrary string, such as My external IP or Network Access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param natIP An external IP address associated with this instance. Specify an unused static external IP address available to the project or leave this field undefined to use an IP from a shared ephemeral IP address pool. If you specify a static external IP address, it must live in the same region as the zone of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natIP(String natIP) {
             $.natIP = natIP;
             return this;
         }
 
+        /**
+         * @param networkTier This signifies the networking tier used for configuring this access configuration and can only take the following values: PREMIUM, STANDARD. If an AccessConfig is specified without a valid external IP address, an ephemeral IP will be created with this networkTier. If an AccessConfig with a valid external IP address is specified, it must match that of the networkTier associated with the Address resource owning that IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTier(String networkTier) {
             $.networkTier = networkTier;
             return this;
         }
 
+        /**
+         * @param publicDnsName The public DNS domain name for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicDnsName(String publicDnsName) {
             $.publicDnsName = publicDnsName;
             return this;
         }
 
+        /**
+         * @param publicPtrDomainName The DNS domain name for the public PTR record. You can set this field only if the `setPublicPtr` field is enabled in accessConfig. If this field is unspecified in ipv6AccessConfig, a default PTR record will be createc for first IP in associated external IPv6 range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicPtrDomainName(String publicPtrDomainName) {
             $.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
 
+        /**
+         * @param setPublicDns Specifies whether a public DNS &#39;A&#39; record should be created for the external IP address of this access configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setPublicDns(Boolean setPublicDns) {
             $.setPublicDns = setPublicDns;
             return this;
         }
 
+        /**
+         * @param setPublicPtr Specifies whether a public DNS &#39;PTR&#39; record should be created to map the external IP address of the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR record will be created if the VM has external IPv6 range associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setPublicPtr(Boolean setPublicPtr) {
             $.setPublicPtr = setPublicPtr;
             return this;
         }
 
+        /**
+         * @param type The type of configuration. The default and only option is ONE_TO_ONE_NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

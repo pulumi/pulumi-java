@@ -27,6 +27,10 @@ public final class InsightsConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="queryInsightsEnabled")
     private @Nullable Output<Boolean> queryInsightsEnabled;
 
+    /**
+     * @return Whether Query Insights feature is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> queryInsightsEnabled() {
         return Optional.ofNullable(this.queryInsightsEnabled);
     }
@@ -38,6 +42,10 @@ public final class InsightsConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="queryPlansPerMinute")
     private @Nullable Output<Integer> queryPlansPerMinute;
 
+    /**
+     * @return Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.
+     * 
+     */
     public Optional<Output<Integer>> queryPlansPerMinute() {
         return Optional.ofNullable(this.queryPlansPerMinute);
     }
@@ -49,6 +57,10 @@ public final class InsightsConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="queryStringLength")
     private @Nullable Output<Integer> queryStringLength;
 
+    /**
+     * @return Maximum query length stored in bytes. Default value: 1024 bytes. Range: 256-4500 bytes. Query length more than this field value will be truncated to this value. When unset, query length will be the default value. Changing query length will restart the database.
+     * 
+     */
     public Optional<Output<Integer>> queryStringLength() {
         return Optional.ofNullable(this.queryStringLength);
     }
@@ -60,6 +72,10 @@ public final class InsightsConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="recordApplicationTags")
     private @Nullable Output<Boolean> recordApplicationTags;
 
+    /**
+     * @return Whether Query Insights will record application tags from query when enabled.
+     * 
+     */
     public Optional<Output<Boolean>> recordApplicationTags() {
         return Optional.ofNullable(this.recordApplicationTags);
     }
@@ -71,6 +87,10 @@ public final class InsightsConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="recordClientAddress")
     private @Nullable Output<Boolean> recordClientAddress;
 
+    /**
+     * @return Whether Query Insights will record client address when enabled.
+     * 
+     */
     public Optional<Output<Boolean>> recordClientAddress() {
         return Optional.ofNullable(this.recordClientAddress);
     }
@@ -103,47 +123,107 @@ public final class InsightsConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new InsightsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queryInsightsEnabled Whether Query Insights feature is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryInsightsEnabled(@Nullable Output<Boolean> queryInsightsEnabled) {
             $.queryInsightsEnabled = queryInsightsEnabled;
             return this;
         }
 
+        /**
+         * @param queryInsightsEnabled Whether Query Insights feature is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryInsightsEnabled(Boolean queryInsightsEnabled) {
             return queryInsightsEnabled(Output.of(queryInsightsEnabled));
         }
 
+        /**
+         * @param queryPlansPerMinute Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryPlansPerMinute(@Nullable Output<Integer> queryPlansPerMinute) {
             $.queryPlansPerMinute = queryPlansPerMinute;
             return this;
         }
 
+        /**
+         * @param queryPlansPerMinute Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryPlansPerMinute(Integer queryPlansPerMinute) {
             return queryPlansPerMinute(Output.of(queryPlansPerMinute));
         }
 
+        /**
+         * @param queryStringLength Maximum query length stored in bytes. Default value: 1024 bytes. Range: 256-4500 bytes. Query length more than this field value will be truncated to this value. When unset, query length will be the default value. Changing query length will restart the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringLength(@Nullable Output<Integer> queryStringLength) {
             $.queryStringLength = queryStringLength;
             return this;
         }
 
+        /**
+         * @param queryStringLength Maximum query length stored in bytes. Default value: 1024 bytes. Range: 256-4500 bytes. Query length more than this field value will be truncated to this value. When unset, query length will be the default value. Changing query length will restart the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringLength(Integer queryStringLength) {
             return queryStringLength(Output.of(queryStringLength));
         }
 
+        /**
+         * @param recordApplicationTags Whether Query Insights will record application tags from query when enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordApplicationTags(@Nullable Output<Boolean> recordApplicationTags) {
             $.recordApplicationTags = recordApplicationTags;
             return this;
         }
 
+        /**
+         * @param recordApplicationTags Whether Query Insights will record application tags from query when enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordApplicationTags(Boolean recordApplicationTags) {
             return recordApplicationTags(Output.of(recordApplicationTags));
         }
 
+        /**
+         * @param recordClientAddress Whether Query Insights will record client address when enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordClientAddress(@Nullable Output<Boolean> recordClientAddress) {
             $.recordClientAddress = recordClientAddress;
             return this;
         }
 
+        /**
+         * @param recordClientAddress Whether Query Insights will record client address when enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordClientAddress(Boolean recordClientAddress) {
             return recordClientAddress(Output.of(recordClientAddress));
         }

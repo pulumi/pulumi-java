@@ -33,6 +33,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -44,6 +48,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The human-readable name of the flow.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -55,6 +63,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventHandlers")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers;
 
+    /**
+     * @return A flow&#39;s event handlers serve two purposes: * They are responsible for handling events (e.g. no match, webhook errors) in the flow. * They are inherited by every page&#39;s event handlers, which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow. Unlike transition_routes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>>> eventHandlers() {
         return Optional.ofNullable(this.eventHandlers);
     }
@@ -80,6 +92,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,6 +107,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nluSettings")
     private @Nullable Output<GoogleCloudDialogflowCxV3NluSettingsArgs> nluSettings;
 
+    /**
+     * @return NLU related settings of the flow.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3NluSettingsArgs>> nluSettings() {
         return Optional.ofNullable(this.nluSettings);
     }
@@ -109,6 +129,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transitionRouteGroups")
     private @Nullable Output<List<String>> transitionRouteGroups;
 
+    /**
+     * @return A flow&#39;s transition route group serve two purposes: * They are responsible for matching the user&#39;s first utterances in the flow. * They are inherited by every page&#39;s transition route groups. Transition route groups defined in the page have higher priority than those defined in the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+     * 
+     */
     public Optional<Output<List<String>>> transitionRouteGroups() {
         return Optional.ofNullable(this.transitionRouteGroups);
     }
@@ -120,6 +144,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transitionRoutes")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes;
 
+    /**
+     * @return A flow&#39;s transition routes serve two purposes: * They are responsible for matching the user&#39;s first utterances in the flow. * They are inherited by every page&#39;s transition routes and can support use cases such as the user saying &#34;help&#34; or &#34;can I talk to a human?&#34;, which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow. TransitionRoutes are evalauted in the following order: * TransitionRoutes with intent specified.. * TransitionRoutes with only condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>>> transitionRoutes() {
         return Optional.ofNullable(this.transitionRoutes);
     }
@@ -167,33 +195,75 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
             return agentId(Output.of(agentId));
         }
 
+        /**
+         * @param description The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The human-readable name of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The human-readable name of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param eventHandlers A flow&#39;s event handlers serve two purposes: * They are responsible for handling events (e.g. no match, webhook errors) in the flow. * They are inherited by every page&#39;s event handlers, which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow. Unlike transition_routes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHandlers(@Nullable Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers) {
             $.eventHandlers = eventHandlers;
             return this;
         }
 
+        /**
+         * @param eventHandlers A flow&#39;s event handlers serve two purposes: * They are responsible for handling events (e.g. no match, webhook errors) in the flow. * They are inherited by every page&#39;s event handlers, which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow. Unlike transition_routes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHandlers(List<GoogleCloudDialogflowCxV3EventHandlerArgs> eventHandlers) {
             return eventHandlers(Output.of(eventHandlers));
         }
 
+        /**
+         * @param eventHandlers A flow&#39;s event handlers serve two purposes: * They are responsible for handling events (e.g. no match, webhook errors) in the flow. * They are inherited by every page&#39;s event handlers, which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow. Unlike transition_routes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHandlers(GoogleCloudDialogflowCxV3EventHandlerArgs... eventHandlers) {
             return eventHandlers(List.of(eventHandlers));
         }
@@ -216,20 +286,44 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nluSettings NLU related settings of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nluSettings(@Nullable Output<GoogleCloudDialogflowCxV3NluSettingsArgs> nluSettings) {
             $.nluSettings = nluSettings;
             return this;
         }
 
+        /**
+         * @param nluSettings NLU related settings of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nluSettings(GoogleCloudDialogflowCxV3NluSettingsArgs nluSettings) {
             return nluSettings(Output.of(nluSettings));
         }
@@ -243,28 +337,64 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param transitionRouteGroups A flow&#39;s transition route group serve two purposes: * They are responsible for matching the user&#39;s first utterances in the flow. * They are inherited by every page&#39;s transition route groups. Transition route groups defined in the page have higher priority than those defined in the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRouteGroups(@Nullable Output<List<String>> transitionRouteGroups) {
             $.transitionRouteGroups = transitionRouteGroups;
             return this;
         }
 
+        /**
+         * @param transitionRouteGroups A flow&#39;s transition route group serve two purposes: * They are responsible for matching the user&#39;s first utterances in the flow. * They are inherited by every page&#39;s transition route groups. Transition route groups defined in the page have higher priority than those defined in the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRouteGroups(List<String> transitionRouteGroups) {
             return transitionRouteGroups(Output.of(transitionRouteGroups));
         }
 
+        /**
+         * @param transitionRouteGroups A flow&#39;s transition route group serve two purposes: * They are responsible for matching the user&#39;s first utterances in the flow. * They are inherited by every page&#39;s transition route groups. Transition route groups defined in the page have higher priority than those defined in the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRouteGroups(String... transitionRouteGroups) {
             return transitionRouteGroups(List.of(transitionRouteGroups));
         }
 
+        /**
+         * @param transitionRoutes A flow&#39;s transition routes serve two purposes: * They are responsible for matching the user&#39;s first utterances in the flow. * They are inherited by every page&#39;s transition routes and can support use cases such as the user saying &#34;help&#34; or &#34;can I talk to a human?&#34;, which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow. TransitionRoutes are evalauted in the following order: * TransitionRoutes with intent specified.. * TransitionRoutes with only condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRoutes(@Nullable Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes) {
             $.transitionRoutes = transitionRoutes;
             return this;
         }
 
+        /**
+         * @param transitionRoutes A flow&#39;s transition routes serve two purposes: * They are responsible for matching the user&#39;s first utterances in the flow. * They are inherited by every page&#39;s transition routes and can support use cases such as the user saying &#34;help&#34; or &#34;can I talk to a human?&#34;, which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow. TransitionRoutes are evalauted in the following order: * TransitionRoutes with intent specified.. * TransitionRoutes with only condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRoutes(List<GoogleCloudDialogflowCxV3TransitionRouteArgs> transitionRoutes) {
             return transitionRoutes(Output.of(transitionRoutes));
         }
 
+        /**
+         * @param transitionRoutes A flow&#39;s transition routes serve two purposes: * They are responsible for matching the user&#39;s first utterances in the flow. * They are inherited by every page&#39;s transition routes and can support use cases such as the user saying &#34;help&#34; or &#34;can I talk to a human?&#34;, which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow. TransitionRoutes are evalauted in the following order: * TransitionRoutes with intent specified.. * TransitionRoutes with only condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRoutes(GoogleCloudDialogflowCxV3TransitionRouteArgs... transitionRoutes) {
             return transitionRoutes(List.of(transitionRoutes));
         }

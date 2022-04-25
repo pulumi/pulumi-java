@@ -24,6 +24,10 @@ public final class AllowedKeyTypeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="ellipticCurve", required=true)
     private EcKeyTypeResponse ellipticCurve;
 
+    /**
+     * @return Represents an allowed Elliptic Curve key type.
+     * 
+     */
     public EcKeyTypeResponse ellipticCurve() {
         return this.ellipticCurve;
     }
@@ -35,6 +39,10 @@ public final class AllowedKeyTypeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="rsa", required=true)
     private RsaKeyTypeResponse rsa;
 
+    /**
+     * @return Represents an allowed RSA key type.
+     * 
+     */
     public RsaKeyTypeResponse rsa() {
         return this.rsa;
     }
@@ -64,11 +72,23 @@ public final class AllowedKeyTypeResponse extends com.pulumi.resources.InvokeArg
             $ = new AllowedKeyTypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ellipticCurve Represents an allowed Elliptic Curve key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ellipticCurve(EcKeyTypeResponse ellipticCurve) {
             $.ellipticCurve = ellipticCurve;
             return this;
         }
 
+        /**
+         * @param rsa Represents an allowed RSA key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rsa(RsaKeyTypeResponse rsa) {
             $.rsa = rsa;
             return this;

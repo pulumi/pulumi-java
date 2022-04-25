@@ -26,6 +26,10 @@ public final class Hl7SchemaConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="messageSchemaConfigs", required=true)
     private Map<String,String> messageSchemaConfigs;
 
+    /**
+     * @return Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.
+     * 
+     */
     public Map<String,String> messageSchemaConfigs() {
         return this.messageSchemaConfigs;
     }
@@ -37,6 +41,10 @@ public final class Hl7SchemaConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="version", required=true)
     private List<VersionSourceResponse> version;
 
+    /**
+     * @return Each VersionSource is tested and only if they all match is the schema used for the message.
+     * 
+     */
     public List<VersionSourceResponse> version() {
         return this.version;
     }
@@ -66,16 +74,34 @@ public final class Hl7SchemaConfigResponse extends com.pulumi.resources.InvokeAr
             $ = new Hl7SchemaConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messageSchemaConfigs Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageSchemaConfigs(Map<String,String> messageSchemaConfigs) {
             $.messageSchemaConfigs = messageSchemaConfigs;
             return this;
         }
 
+        /**
+         * @param version Each VersionSource is tested and only if they all match is the schema used for the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(List<VersionSourceResponse> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Each VersionSource is tested and only if they all match is the schema used for the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(VersionSourceResponse... version) {
             return version(List.of(version));
         }

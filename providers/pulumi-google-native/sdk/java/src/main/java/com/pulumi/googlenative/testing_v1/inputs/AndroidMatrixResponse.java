@@ -24,6 +24,10 @@ public final class AndroidMatrixResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="androidModelIds", required=true)
     private List<String> androidModelIds;
 
+    /**
+     * @return The ids of the set of Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public List<String> androidModelIds() {
         return this.androidModelIds;
     }
@@ -35,6 +39,10 @@ public final class AndroidMatrixResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="androidVersionIds", required=true)
     private List<String> androidVersionIds;
 
+    /**
+     * @return The ids of the set of Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public List<String> androidVersionIds() {
         return this.androidVersionIds;
     }
@@ -46,6 +54,10 @@ public final class AndroidMatrixResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="locales", required=true)
     private List<String> locales;
 
+    /**
+     * @return The set of locales the test device will enable for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public List<String> locales() {
         return this.locales;
     }
@@ -57,6 +69,10 @@ public final class AndroidMatrixResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="orientations", required=true)
     private List<String> orientations;
 
+    /**
+     * @return The set of orientations to test with. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public List<String> orientations() {
         return this.orientations;
     }
@@ -88,38 +104,86 @@ public final class AndroidMatrixResponse extends com.pulumi.resources.InvokeArgs
             $ = new AndroidMatrixResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidModelIds The ids of the set of Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidModelIds(List<String> androidModelIds) {
             $.androidModelIds = androidModelIds;
             return this;
         }
 
+        /**
+         * @param androidModelIds The ids of the set of Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidModelIds(String... androidModelIds) {
             return androidModelIds(List.of(androidModelIds));
         }
 
+        /**
+         * @param androidVersionIds The ids of the set of Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidVersionIds(List<String> androidVersionIds) {
             $.androidVersionIds = androidVersionIds;
             return this;
         }
 
+        /**
+         * @param androidVersionIds The ids of the set of Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidVersionIds(String... androidVersionIds) {
             return androidVersionIds(List.of(androidVersionIds));
         }
 
+        /**
+         * @param locales The set of locales the test device will enable for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locales(List<String> locales) {
             $.locales = locales;
             return this;
         }
 
+        /**
+         * @param locales The set of locales the test device will enable for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locales(String... locales) {
             return locales(List.of(locales));
         }
 
+        /**
+         * @param orientations The set of orientations to test with. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orientations(List<String> orientations) {
             $.orientations = orientations;
             return this;
         }
 
+        /**
+         * @param orientations The set of orientations to test with. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orientations(String... orientations) {
             return orientations(List.of(orientations));
         }

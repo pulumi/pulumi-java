@@ -26,6 +26,10 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
     @Import(name="calendarPeriod")
     private @Nullable Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod;
 
+    /**
+     * @return A calendar period, semantically &#34;since the start of the current &#34;. At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
+     * 
+     */
     public Optional<Output<ServiceLevelObjectiveCalendarPeriod>> calendarPeriod() {
         return Optional.ofNullable(this.calendarPeriod);
     }
@@ -37,6 +41,10 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Name used for UI elements listing this SLO.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -48,6 +56,10 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
     @Import(name="goal")
     private @Nullable Output<Double> goal;
 
+    /**
+     * @return The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999.
+     * 
+     */
     public Optional<Output<Double>> goal() {
         return Optional.ofNullable(this.goal);
     }
@@ -59,6 +71,10 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name for this ServiceLevelObjective. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
     @Import(name="rollingPeriod")
     private @Nullable Output<String> rollingPeriod;
 
+    /**
+     * @return A rolling time period, semantically &#34;in the past &#34;. Must be an integer multiple of 1 day no larger than 30 days.
+     * 
+     */
     public Optional<Output<String>> rollingPeriod() {
         return Optional.ofNullable(this.rollingPeriod);
     }
@@ -88,6 +108,10 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
     @Import(name="serviceLevelIndicator")
     private @Nullable Output<ServiceLevelIndicatorArgs> serviceLevelIndicator;
 
+    /**
+     * @return The definition of good service, used to measure and calculate the quality of the Service&#39;s performance with respect to a single aspect of service quality.
+     * 
+     */
     public Optional<Output<ServiceLevelIndicatorArgs>> serviceLevelIndicator() {
         return Optional.ofNullable(this.serviceLevelIndicator);
     }
@@ -106,6 +130,10 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
     @Import(name="userLabels")
     private @Nullable Output<Map<String,String>> userLabels;
 
+    /**
+     * @return Labels which have been used to annotate the service-level objective. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
+     * 
+     */
     public Optional<Output<Map<String,String>>> userLabels() {
         return Optional.ofNullable(this.userLabels);
     }
@@ -158,47 +186,107 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
             $ = new ServiceLevelObjectiveArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param calendarPeriod A calendar period, semantically &#34;since the start of the current &#34;. At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder calendarPeriod(@Nullable Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod) {
             $.calendarPeriod = calendarPeriod;
             return this;
         }
 
+        /**
+         * @param calendarPeriod A calendar period, semantically &#34;since the start of the current &#34;. At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder calendarPeriod(ServiceLevelObjectiveCalendarPeriod calendarPeriod) {
             return calendarPeriod(Output.of(calendarPeriod));
         }
 
+        /**
+         * @param displayName Name used for UI elements listing this SLO.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Name used for UI elements listing this SLO.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param goal The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goal(@Nullable Output<Double> goal) {
             $.goal = goal;
             return this;
         }
 
+        /**
+         * @param goal The fraction of service that must be good in order for this objective to be met. 0 &lt; goal &lt;= 0.999.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goal(Double goal) {
             return goal(Output.of(goal));
         }
 
+        /**
+         * @param name Resource name for this ServiceLevelObjective. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name for this ServiceLevelObjective. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param rollingPeriod A rolling time period, semantically &#34;in the past &#34;. Must be an integer multiple of 1 day no larger than 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingPeriod(@Nullable Output<String> rollingPeriod) {
             $.rollingPeriod = rollingPeriod;
             return this;
         }
 
+        /**
+         * @param rollingPeriod A rolling time period, semantically &#34;in the past &#34;. Must be an integer multiple of 1 day no larger than 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingPeriod(String rollingPeriod) {
             return rollingPeriod(Output.of(rollingPeriod));
         }
@@ -212,11 +300,23 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
             return serviceId(Output.of(serviceId));
         }
 
+        /**
+         * @param serviceLevelIndicator The definition of good service, used to measure and calculate the quality of the Service&#39;s performance with respect to a single aspect of service quality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceLevelIndicator(@Nullable Output<ServiceLevelIndicatorArgs> serviceLevelIndicator) {
             $.serviceLevelIndicator = serviceLevelIndicator;
             return this;
         }
 
+        /**
+         * @param serviceLevelIndicator The definition of good service, used to measure and calculate the quality of the Service&#39;s performance with respect to a single aspect of service quality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceLevelIndicator(ServiceLevelIndicatorArgs serviceLevelIndicator) {
             return serviceLevelIndicator(Output.of(serviceLevelIndicator));
         }
@@ -230,11 +330,23 @@ public final class ServiceLevelObjectiveArgs extends com.pulumi.resources.Resour
             return serviceLevelObjectiveId(Output.of(serviceLevelObjectiveId));
         }
 
+        /**
+         * @param userLabels Labels which have been used to annotate the service-level objective. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             $.userLabels = userLabels;
             return this;
         }
 
+        /**
+         * @param userLabels Labels which have been used to annotate the service-level objective. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userLabels(Map<String,String> userLabels) {
             return userLabels(Output.of(userLabels));
         }

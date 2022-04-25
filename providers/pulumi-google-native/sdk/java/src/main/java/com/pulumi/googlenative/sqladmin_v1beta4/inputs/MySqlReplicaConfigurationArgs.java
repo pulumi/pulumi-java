@@ -28,6 +28,10 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="caCertificate")
     private @Nullable Output<String> caCertificate;
 
+    /**
+     * @return PEM representation of the trusted CA&#39;s x509 certificate.
+     * 
+     */
     public Optional<Output<String>> caCertificate() {
         return Optional.ofNullable(this.caCertificate);
     }
@@ -39,6 +43,10 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="clientCertificate")
     private @Nullable Output<String> clientCertificate;
 
+    /**
+     * @return PEM representation of the replica&#39;s x509 certificate.
+     * 
+     */
     public Optional<Output<String>> clientCertificate() {
         return Optional.ofNullable(this.clientCertificate);
     }
@@ -50,6 +58,10 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="clientKey")
     private @Nullable Output<String> clientKey;
 
+    /**
+     * @return PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
+     * 
+     */
     public Optional<Output<String>> clientKey() {
         return Optional.ofNullable(this.clientKey);
     }
@@ -61,6 +73,10 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="connectRetryInterval")
     private @Nullable Output<Integer> connectRetryInterval;
 
+    /**
+     * @return Seconds to wait between connect retries. MySQL&#39;s default is 60 seconds.
+     * 
+     */
     public Optional<Output<Integer>> connectRetryInterval() {
         return Optional.ofNullable(this.connectRetryInterval);
     }
@@ -72,6 +88,10 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="dumpFilePath")
     private @Nullable Output<String> dumpFilePath;
 
+    /**
+     * @return Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also supported. Dumps have the binlog co-ordinates from which replication begins. This can be accomplished by setting --master-data to 1 when using mysqldump.
+     * 
+     */
     public Optional<Output<String>> dumpFilePath() {
         return Optional.ofNullable(this.dumpFilePath);
     }
@@ -83,6 +103,10 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return This is always `sql#mysqlReplicaConfiguration`.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -94,6 +118,10 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="masterHeartbeatPeriod")
     private @Nullable Output<String> masterHeartbeatPeriod;
 
+    /**
+     * @return Interval in milliseconds between replication heartbeats.
+     * 
+     */
     public Optional<Output<String>> masterHeartbeatPeriod() {
         return Optional.ofNullable(this.masterHeartbeatPeriod);
     }
@@ -105,6 +133,10 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return The password for the replication connection.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -116,6 +148,10 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="sslCipher")
     private @Nullable Output<String> sslCipher;
 
+    /**
+     * @return A list of permissible ciphers to use for SSL encryption.
+     * 
+     */
     public Optional<Output<String>> sslCipher() {
         return Optional.ofNullable(this.sslCipher);
     }
@@ -127,6 +163,10 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return The username for the replication connection.
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -138,6 +178,10 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="verifyServerCertificate")
     private @Nullable Output<Boolean> verifyServerCertificate;
 
+    /**
+     * @return Whether or not to check the primary instance&#39;s Common Name value in the certificate that it sends during the SSL handshake.
+     * 
+     */
     public Optional<Output<Boolean>> verifyServerCertificate() {
         return Optional.ofNullable(this.verifyServerCertificate);
     }
@@ -176,101 +220,233 @@ public final class MySqlReplicaConfigurationArgs extends com.pulumi.resources.Re
             $ = new MySqlReplicaConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caCertificate PEM representation of the trusted CA&#39;s x509 certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificate(@Nullable Output<String> caCertificate) {
             $.caCertificate = caCertificate;
             return this;
         }
 
+        /**
+         * @param caCertificate PEM representation of the trusted CA&#39;s x509 certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificate(String caCertificate) {
             return caCertificate(Output.of(caCertificate));
         }
 
+        /**
+         * @param clientCertificate PEM representation of the replica&#39;s x509 certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
             $.clientCertificate = clientCertificate;
             return this;
         }
 
+        /**
+         * @param clientCertificate PEM representation of the replica&#39;s x509 certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(String clientCertificate) {
             return clientCertificate(Output.of(clientCertificate));
         }
 
+        /**
+         * @param clientKey PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(@Nullable Output<String> clientKey) {
             $.clientKey = clientKey;
             return this;
         }
 
+        /**
+         * @param clientKey PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(String clientKey) {
             return clientKey(Output.of(clientKey));
         }
 
+        /**
+         * @param connectRetryInterval Seconds to wait between connect retries. MySQL&#39;s default is 60 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectRetryInterval(@Nullable Output<Integer> connectRetryInterval) {
             $.connectRetryInterval = connectRetryInterval;
             return this;
         }
 
+        /**
+         * @param connectRetryInterval Seconds to wait between connect retries. MySQL&#39;s default is 60 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectRetryInterval(Integer connectRetryInterval) {
             return connectRetryInterval(Output.of(connectRetryInterval));
         }
 
+        /**
+         * @param dumpFilePath Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also supported. Dumps have the binlog co-ordinates from which replication begins. This can be accomplished by setting --master-data to 1 when using mysqldump.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dumpFilePath(@Nullable Output<String> dumpFilePath) {
             $.dumpFilePath = dumpFilePath;
             return this;
         }
 
+        /**
+         * @param dumpFilePath Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also supported. Dumps have the binlog co-ordinates from which replication begins. This can be accomplished by setting --master-data to 1 when using mysqldump.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dumpFilePath(String dumpFilePath) {
             return dumpFilePath(Output.of(dumpFilePath));
         }
 
+        /**
+         * @param kind This is always `sql#mysqlReplicaConfiguration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#mysqlReplicaConfiguration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param masterHeartbeatPeriod Interval in milliseconds between replication heartbeats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterHeartbeatPeriod(@Nullable Output<String> masterHeartbeatPeriod) {
             $.masterHeartbeatPeriod = masterHeartbeatPeriod;
             return this;
         }
 
+        /**
+         * @param masterHeartbeatPeriod Interval in milliseconds between replication heartbeats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterHeartbeatPeriod(String masterHeartbeatPeriod) {
             return masterHeartbeatPeriod(Output.of(masterHeartbeatPeriod));
         }
 
+        /**
+         * @param password The password for the replication connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password for the replication connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param sslCipher A list of permissible ciphers to use for SSL encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCipher(@Nullable Output<String> sslCipher) {
             $.sslCipher = sslCipher;
             return this;
         }
 
+        /**
+         * @param sslCipher A list of permissible ciphers to use for SSL encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCipher(String sslCipher) {
             return sslCipher(Output.of(sslCipher));
         }
 
+        /**
+         * @param username The username for the replication connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The username for the replication connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }
 
+        /**
+         * @param verifyServerCertificate Whether or not to check the primary instance&#39;s Common Name value in the certificate that it sends during the SSL handshake.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verifyServerCertificate(@Nullable Output<Boolean> verifyServerCertificate) {
             $.verifyServerCertificate = verifyServerCertificate;
             return this;
         }
 
+        /**
+         * @param verifyServerCertificate Whether or not to check the primary instance&#39;s Common Name value in the certificate that it sends during the SSL handshake.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verifyServerCertificate(Boolean verifyServerCertificate) {
             return verifyServerCertificate(Output.of(verifyServerCertificate));
         }

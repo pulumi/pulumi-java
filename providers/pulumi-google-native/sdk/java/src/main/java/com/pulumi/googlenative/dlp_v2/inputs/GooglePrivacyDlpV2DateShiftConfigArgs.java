@@ -28,6 +28,10 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends com.pulumi.reso
     @Import(name="context")
     private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context;
 
+    /**
+     * @return Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2FieldIdArgs>> context() {
         return Optional.ofNullable(this.context);
     }
@@ -39,6 +43,10 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends com.pulumi.reso
     @Import(name="cryptoKey")
     private @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
+    /**
+     * @return Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2CryptoKeyArgs>> cryptoKey() {
         return Optional.ofNullable(this.cryptoKey);
     }
@@ -50,6 +58,10 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends com.pulumi.reso
     @Import(name="lowerBoundDays", required=true)
     private Output<Integer> lowerBoundDays;
 
+    /**
+     * @return For example, -5 means shift date to at most 5 days back in the past.
+     * 
+     */
     public Output<Integer> lowerBoundDays() {
         return this.lowerBoundDays;
     }
@@ -61,6 +73,10 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends com.pulumi.reso
     @Import(name="upperBoundDays", required=true)
     private Output<Integer> upperBoundDays;
 
+    /**
+     * @return Range of shift in days. Actual shift will be selected at random within this range (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days (1000 years) each direction. For example, 3 means shift date to at most 3 days into the future.
+     * 
+     */
     public Output<Integer> upperBoundDays() {
         return this.upperBoundDays;
     }
@@ -92,38 +108,86 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends com.pulumi.reso
             $ = new GooglePrivacyDlpV2DateShiftConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param context Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param context Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(GooglePrivacyDlpV2FieldIdArgs context) {
             return context(Output.of(context));
         }
 
+        /**
+         * @param cryptoKey Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKey(@Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
             $.cryptoKey = cryptoKey;
             return this;
         }
 
+        /**
+         * @param cryptoKey Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
             return cryptoKey(Output.of(cryptoKey));
         }
 
+        /**
+         * @param lowerBoundDays For example, -5 means shift date to at most 5 days back in the past.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowerBoundDays(Output<Integer> lowerBoundDays) {
             $.lowerBoundDays = lowerBoundDays;
             return this;
         }
 
+        /**
+         * @param lowerBoundDays For example, -5 means shift date to at most 5 days back in the past.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowerBoundDays(Integer lowerBoundDays) {
             return lowerBoundDays(Output.of(lowerBoundDays));
         }
 
+        /**
+         * @param upperBoundDays Range of shift in days. Actual shift will be selected at random within this range (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days (1000 years) each direction. For example, 3 means shift date to at most 3 days into the future.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upperBoundDays(Output<Integer> upperBoundDays) {
             $.upperBoundDays = upperBoundDays;
             return this;
         }
 
+        /**
+         * @param upperBoundDays Range of shift in days. Actual shift will be selected at random within this range (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days (1000 years) each direction. For example, 3 means shift date to at most 3 days into the future.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upperBoundDays(Integer upperBoundDays) {
             return upperBoundDays(Output.of(upperBoundDays));
         }

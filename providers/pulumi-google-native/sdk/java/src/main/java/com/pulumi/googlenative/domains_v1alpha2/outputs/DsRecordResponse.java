@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class DsRecordResponse {
     /**
-     * The algorithm used to generate the referenced DNSKEY.
+     * @return The algorithm used to generate the referenced DNSKEY.
      * 
      */
     private final String algorithm;
     /**
-     * The digest generated from the referenced DNSKEY.
+     * @return The digest generated from the referenced DNSKEY.
      * 
      */
     private final String digest;
     /**
-     * The hash function used to generate the digest of the referenced DNSKEY.
+     * @return The hash function used to generate the digest of the referenced DNSKEY.
      * 
      */
     private final String digestType;
     /**
-     * The key tag of the record. Must be set in range 0 -- 65535.
+     * @return The key tag of the record. Must be set in range 0 -- 65535.
      * 
      */
     private final Integer keyTag;
@@ -44,30 +44,30 @@ public final class DsRecordResponse {
     }
 
     /**
-     * The algorithm used to generate the referenced DNSKEY.
+     * @return The algorithm used to generate the referenced DNSKEY.
      * 
-    */
+     */
     public String algorithm() {
         return this.algorithm;
     }
     /**
-     * The digest generated from the referenced DNSKEY.
+     * @return The digest generated from the referenced DNSKEY.
      * 
-    */
+     */
     public String digest() {
         return this.digest;
     }
     /**
-     * The hash function used to generate the digest of the referenced DNSKEY.
+     * @return The hash function used to generate the digest of the referenced DNSKEY.
      * 
-    */
+     */
     public String digestType() {
         return this.digestType;
     }
     /**
-     * The key tag of the record. Must be set in range 0 -- 65535.
+     * @return The key tag of the record. Must be set in range 0 -- 65535.
      * 
-    */
+     */
     public Integer keyTag() {
         return this.keyTag;
     }

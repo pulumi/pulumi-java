@@ -24,6 +24,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     @Import(name="allowedValues", required=true)
     private List<String> allowedValues;
 
+    /**
+     * @return A list of acceptable values. Only effective when the policy is `RESTRICTED`.
+     * 
+     */
     public List<String> allowedValues() {
         return this.allowedValues;
     }
@@ -35,6 +39,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     @Import(name="policy", required=true)
     private String policy;
 
+    /**
+     * @return The policy of the feature.
+     * 
+     */
     public String policy() {
         return this.policy;
     }
@@ -64,15 +72,33 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
             $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedValues A list of acceptable values. Only effective when the policy is `RESTRICTED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(List<String> allowedValues) {
             $.allowedValues = allowedValues;
             return this;
         }
 
+        /**
+         * @param allowedValues A list of acceptable values. Only effective when the policy is `RESTRICTED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(String... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
 
+        /**
+         * @param policy The policy of the feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             $.policy = policy;
             return this;

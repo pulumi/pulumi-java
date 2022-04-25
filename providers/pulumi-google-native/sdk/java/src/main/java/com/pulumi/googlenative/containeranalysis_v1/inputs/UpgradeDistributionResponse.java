@@ -24,6 +24,10 @@ public final class UpgradeDistributionResponse extends com.pulumi.resources.Invo
     @Import(name="classification", required=true)
     private String classification;
 
+    /**
+     * @return The operating system classification of this Upgrade, as specified by the upstream operating system upgrade feed. For Windows the classification is one of the category_ids listed at https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ff357803(v=vs.85)
+     * 
+     */
     public String classification() {
         return this.classification;
     }
@@ -35,6 +39,10 @@ public final class UpgradeDistributionResponse extends com.pulumi.resources.Invo
     @Import(name="cpeUri", required=true)
     private String cpeUri;
 
+    /**
+     * @return Required - The specific operating system this metadata applies to. See https://cpe.mitre.org/specification/.
+     * 
+     */
     public String cpeUri() {
         return this.cpeUri;
     }
@@ -46,6 +54,10 @@ public final class UpgradeDistributionResponse extends com.pulumi.resources.Invo
     @Import(name="cve", required=true)
     private List<String> cve;
 
+    /**
+     * @return The cve tied to this Upgrade.
+     * 
+     */
     public List<String> cve() {
         return this.cve;
     }
@@ -57,6 +69,10 @@ public final class UpgradeDistributionResponse extends com.pulumi.resources.Invo
     @Import(name="severity", required=true)
     private String severity;
 
+    /**
+     * @return The severity as specified by the upstream operating system.
+     * 
+     */
     public String severity() {
         return this.severity;
     }
@@ -88,25 +104,55 @@ public final class UpgradeDistributionResponse extends com.pulumi.resources.Invo
             $ = new UpgradeDistributionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param classification The operating system classification of this Upgrade, as specified by the upstream operating system upgrade feed. For Windows the classification is one of the category_ids listed at https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ff357803(v=vs.85)
+         * 
+         * @return builder
+         * 
+         */
         public Builder classification(String classification) {
             $.classification = classification;
             return this;
         }
 
+        /**
+         * @param cpeUri Required - The specific operating system this metadata applies to. See https://cpe.mitre.org/specification/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpeUri(String cpeUri) {
             $.cpeUri = cpeUri;
             return this;
         }
 
+        /**
+         * @param cve The cve tied to this Upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cve(List<String> cve) {
             $.cve = cve;
             return this;
         }
 
+        /**
+         * @param cve The cve tied to this Upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cve(String... cve) {
             return cve(List.of(cve));
         }
 
+        /**
+         * @param severity The severity as specified by the upstream operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             $.severity = severity;
             return this;

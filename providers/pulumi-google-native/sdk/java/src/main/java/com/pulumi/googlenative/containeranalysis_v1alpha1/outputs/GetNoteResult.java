@@ -26,112 +26,112 @@ import java.util.Objects;
 @CustomType
 public final class GetNoteResult {
     /**
-     * A note describing an attestation role.
+     * @return A note describing an attestation role.
      * 
      */
     private final AttestationAuthorityResponse attestationAuthority;
     /**
-     * A note describing a base image.
+     * @return A note describing a base image.
      * 
      */
     private final BasisResponse baseImage;
     /**
-     * Build provenance type for a verifiable build.
+     * @return Build provenance type for a verifiable build.
      * 
      */
     private final BuildTypeResponse buildType;
     /**
-     * A note describing a compliance check.
+     * @return A note describing a compliance check.
      * 
      */
     private final ComplianceNoteResponse compliance;
     /**
-     * The time this note was created. This field can be used as a filter in list requests.
+     * @return The time this note was created. This field can be used as a filter in list requests.
      * 
      */
     private final String createTime;
     /**
-     * A note describing something that can be deployed.
+     * @return A note describing something that can be deployed.
      * 
      */
     private final DeployableResponse deployable;
     /**
-     * A note describing a provider/analysis type.
+     * @return A note describing a provider/analysis type.
      * 
      */
     private final DiscoveryResponse discovery;
     /**
-     * A note describing a dsse attestation note.
+     * @return A note describing a dsse attestation note.
      * 
      */
     private final DSSEAttestationNoteResponse dsseAttestation;
     /**
-     * Time of expiration for this note, null if note does not expire.
+     * @return Time of expiration for this note, null if note does not expire.
      * 
      */
     private final String expirationTime;
     /**
-     * This explicitly denotes which kind of note is specified. This field can be used as a filter in list requests.
+     * @return This explicitly denotes which kind of note is specified. This field can be used as a filter in list requests.
      * 
      */
     private final String kind;
     /**
-     * A detailed description of this `Note`.
+     * @return A detailed description of this `Note`.
      * 
      */
     private final String longDescription;
     /**
-     * The name of the note in the form &#34;projects/{provider_project_id}/notes/{NOTE_ID}&#34;
+     * @return The name of the note in the form &#34;projects/{provider_project_id}/notes/{NOTE_ID}&#34;
      * 
      */
     private final String name;
     /**
-     * A note describing a package hosted by various package managers.
+     * @return A note describing a package hosted by various package managers.
      * 
      */
     private final PackageResponse package_;
     /**
-     * URLs associated with this note
+     * @return URLs associated with this note
      * 
      */
     private final List<RelatedUrlResponse> relatedUrl;
     /**
-     * A note describing a software bill of materials.
+     * @return A note describing a software bill of materials.
      * 
      */
     private final DocumentNoteResponse sbom;
     /**
-     * A one sentence description of this `Note`.
+     * @return A one sentence description of this `Note`.
      * 
      */
     private final String shortDescription;
     /**
-     * A note describing an SPDX File.
+     * @return A note describing an SPDX File.
      * 
      */
     private final FileNoteResponse spdxFile;
     /**
-     * A note describing an SPDX Package.
+     * @return A note describing an SPDX Package.
      * 
      */
     private final PackageInfoNoteResponse spdxPackage;
     /**
-     * A note describing a relationship between SPDX elements.
+     * @return A note describing a relationship between SPDX elements.
      * 
      */
     private final RelationshipNoteResponse spdxRelationship;
     /**
-     * The time this note was last updated. This field can be used as a filter in list requests.
+     * @return The time this note was last updated. This field can be used as a filter in list requests.
      * 
      */
     private final String updateTime;
     /**
-     * A note describing an upgrade.
+     * @return A note describing an upgrade.
      * 
      */
     private final UpgradeNoteResponse upgrade;
     /**
-     * A package vulnerability type of note.
+     * @return A package vulnerability type of note.
      * 
      */
     private final VulnerabilityTypeResponse vulnerabilityType;
@@ -185,156 +185,156 @@ public final class GetNoteResult {
     }
 
     /**
-     * A note describing an attestation role.
+     * @return A note describing an attestation role.
      * 
-    */
+     */
     public AttestationAuthorityResponse attestationAuthority() {
         return this.attestationAuthority;
     }
     /**
-     * A note describing a base image.
+     * @return A note describing a base image.
      * 
-    */
+     */
     public BasisResponse baseImage() {
         return this.baseImage;
     }
     /**
-     * Build provenance type for a verifiable build.
+     * @return Build provenance type for a verifiable build.
      * 
-    */
+     */
     public BuildTypeResponse buildType() {
         return this.buildType;
     }
     /**
-     * A note describing a compliance check.
+     * @return A note describing a compliance check.
      * 
-    */
+     */
     public ComplianceNoteResponse compliance() {
         return this.compliance;
     }
     /**
-     * The time this note was created. This field can be used as a filter in list requests.
+     * @return The time this note was created. This field can be used as a filter in list requests.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * A note describing something that can be deployed.
+     * @return A note describing something that can be deployed.
      * 
-    */
+     */
     public DeployableResponse deployable() {
         return this.deployable;
     }
     /**
-     * A note describing a provider/analysis type.
+     * @return A note describing a provider/analysis type.
      * 
-    */
+     */
     public DiscoveryResponse discovery() {
         return this.discovery;
     }
     /**
-     * A note describing a dsse attestation note.
+     * @return A note describing a dsse attestation note.
      * 
-    */
+     */
     public DSSEAttestationNoteResponse dsseAttestation() {
         return this.dsseAttestation;
     }
     /**
-     * Time of expiration for this note, null if note does not expire.
+     * @return Time of expiration for this note, null if note does not expire.
      * 
-    */
+     */
     public String expirationTime() {
         return this.expirationTime;
     }
     /**
-     * This explicitly denotes which kind of note is specified. This field can be used as a filter in list requests.
+     * @return This explicitly denotes which kind of note is specified. This field can be used as a filter in list requests.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * A detailed description of this `Note`.
+     * @return A detailed description of this `Note`.
      * 
-    */
+     */
     public String longDescription() {
         return this.longDescription;
     }
     /**
-     * The name of the note in the form &#34;projects/{provider_project_id}/notes/{NOTE_ID}&#34;
+     * @return The name of the note in the form &#34;projects/{provider_project_id}/notes/{NOTE_ID}&#34;
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A note describing a package hosted by various package managers.
+     * @return A note describing a package hosted by various package managers.
      * 
-    */
+     */
     public PackageResponse package_() {
         return this.package_;
     }
     /**
-     * URLs associated with this note
+     * @return URLs associated with this note
      * 
-    */
+     */
     public List<RelatedUrlResponse> relatedUrl() {
         return this.relatedUrl;
     }
     /**
-     * A note describing a software bill of materials.
+     * @return A note describing a software bill of materials.
      * 
-    */
+     */
     public DocumentNoteResponse sbom() {
         return this.sbom;
     }
     /**
-     * A one sentence description of this `Note`.
+     * @return A one sentence description of this `Note`.
      * 
-    */
+     */
     public String shortDescription() {
         return this.shortDescription;
     }
     /**
-     * A note describing an SPDX File.
+     * @return A note describing an SPDX File.
      * 
-    */
+     */
     public FileNoteResponse spdxFile() {
         return this.spdxFile;
     }
     /**
-     * A note describing an SPDX Package.
+     * @return A note describing an SPDX Package.
      * 
-    */
+     */
     public PackageInfoNoteResponse spdxPackage() {
         return this.spdxPackage;
     }
     /**
-     * A note describing a relationship between SPDX elements.
+     * @return A note describing a relationship between SPDX elements.
      * 
-    */
+     */
     public RelationshipNoteResponse spdxRelationship() {
         return this.spdxRelationship;
     }
     /**
-     * The time this note was last updated. This field can be used as a filter in list requests.
+     * @return The time this note was last updated. This field can be used as a filter in list requests.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * A note describing an upgrade.
+     * @return A note describing an upgrade.
      * 
-    */
+     */
     public UpgradeNoteResponse upgrade() {
         return this.upgrade;
     }
     /**
-     * A package vulnerability type of note.
+     * @return A package vulnerability type of note.
      * 
-    */
+     */
     public VulnerabilityTypeResponse vulnerabilityType() {
         return this.vulnerabilityType;
     }

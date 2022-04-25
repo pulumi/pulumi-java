@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
     @Import(name="buttons", required=true)
     private List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons;
 
+    /**
+     * @return Optional. List of buttons for the card.
+     * 
+     */
     public List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons() {
         return this.buttons;
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
     @Import(name="columnProperties", required=true)
     private List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse> columnProperties;
 
+    /**
+     * @return Optional. Display properties for the columns in this table.
+     * 
+     */
     public List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse> columnProperties() {
         return this.columnProperties;
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
     @Import(name="image", required=true)
     private GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
+    /**
+     * @return Optional. Image which should be displayed on the card.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
     @Import(name="rows", required=true)
     private List<GoogleCloudDialogflowV2IntentMessageTableCardRowResponse> rows;
 
+    /**
+     * @return Optional. Rows in this table of data.
+     * 
+     */
     public List<GoogleCloudDialogflowV2IntentMessageTableCardRowResponse> rows() {
         return this.rows;
     }
@@ -72,6 +88,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
     @Import(name="subtitle", required=true)
     private String subtitle;
 
+    /**
+     * @return Optional. Subtitle to the title.
+     * 
+     */
     public String subtitle() {
         return this.subtitle;
     }
@@ -83,6 +103,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Title of the card.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -116,43 +140,97 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
             $ = new GoogleCloudDialogflowV2IntentMessageTableCardResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buttons Optional. List of buttons for the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons) {
             $.buttons = buttons;
             return this;
         }
 
+        /**
+         * @param buttons Optional. List of buttons for the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse... buttons) {
             return buttons(List.of(buttons));
         }
 
+        /**
+         * @param columnProperties Optional. Display properties for the columns in this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnProperties(List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse> columnProperties) {
             $.columnProperties = columnProperties;
             return this;
         }
 
+        /**
+         * @param columnProperties Optional. Display properties for the columns in this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnProperties(GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse... columnProperties) {
             return columnProperties(List.of(columnProperties));
         }
 
+        /**
+         * @param image Optional. Image which should be displayed on the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param rows Optional. Rows in this table of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rows(List<GoogleCloudDialogflowV2IntentMessageTableCardRowResponse> rows) {
             $.rows = rows;
             return this;
         }
 
+        /**
+         * @param rows Optional. Rows in this table of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rows(GoogleCloudDialogflowV2IntentMessageTableCardRowResponse... rows) {
             return rows(List.of(rows));
         }
 
+        /**
+         * @param subtitle Optional. Subtitle to the title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(String subtitle) {
             $.subtitle = subtitle;
             return this;
         }
 
+        /**
+         * @param title Title of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

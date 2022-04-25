@@ -30,6 +30,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accelerators")
     private @Nullable Output<List<AcceleratorArgs>> accelerators;
 
+    /**
+     * @return List of accelerators enabled for this CDF instance.
+     * 
+     */
     public Optional<Output<List<AcceleratorArgs>>> accelerators() {
         return Optional.ofNullable(this.accelerators);
     }
@@ -41,6 +45,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availableVersion")
     private @Nullable Output<List<VersionArgs>> availableVersion;
 
+    /**
+     * @return Available versions that the instance can be upgraded to using UpdateInstanceRequest.
+     * 
+     */
     public Optional<Output<List<VersionArgs>>> availableVersion() {
         return Optional.ofNullable(this.availableVersion);
     }
@@ -52,6 +60,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cryptoKeyConfig")
     private @Nullable Output<CryptoKeyConfigArgs> cryptoKeyConfig;
 
+    /**
+     * @return The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK) feature.
+     * 
+     */
     public Optional<Output<CryptoKeyConfigArgs>> cryptoKeyConfig() {
         return Optional.ofNullable(this.cryptoKeyConfig);
     }
@@ -63,6 +75,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataprocServiceAccount")
     private @Nullable Output<String> dataprocServiceAccount;
 
+    /**
+     * @return User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc&#39;s accesses to cloud resources.
+     * 
+     */
     public Optional<Output<String>> dataprocServiceAccount() {
         return Optional.ofNullable(this.dataprocServiceAccount);
     }
@@ -74,6 +90,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of this instance.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -85,6 +105,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name for an instance.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -96,6 +120,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableRbac")
     private @Nullable Output<Boolean> enableRbac;
 
+    /**
+     * @return Option to enable granular role-based access control.
+     * 
+     */
     public Optional<Output<Boolean>> enableRbac() {
         return Optional.ofNullable(this.enableRbac);
     }
@@ -107,6 +135,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableStackdriverLogging")
     private @Nullable Output<Boolean> enableStackdriverLogging;
 
+    /**
+     * @return Option to enable Stackdriver Logging.
+     * 
+     */
     public Optional<Output<Boolean>> enableStackdriverLogging() {
         return Optional.ofNullable(this.enableStackdriverLogging);
     }
@@ -118,6 +150,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableStackdriverMonitoring")
     private @Nullable Output<Boolean> enableStackdriverMonitoring;
 
+    /**
+     * @return Option to enable Stackdriver Monitoring.
+     * 
+     */
     public Optional<Output<Boolean>> enableStackdriverMonitoring() {
         return Optional.ofNullable(this.enableStackdriverMonitoring);
     }
@@ -136,6 +172,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The resource labels for instance to use to annotate any related underlying resources such as Compute Engine VMs. The character &#39;=&#39; is not allowed to be used within the labels.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -154,6 +194,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
     private @Nullable Output<NetworkConfigArgs> networkConfig;
 
+    /**
+     * @return Network configuration options. These are required when a private Data Fusion instance is to be created.
+     * 
+     */
     public Optional<Output<NetworkConfigArgs>> networkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
@@ -165,6 +209,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
     private @Nullable Output<Map<String,String>> options;
 
+    /**
+     * @return Map of additional options used to configure the behavior of Data Fusion instance.
+     * 
+     */
     public Optional<Output<Map<String,String>>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -176,6 +224,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateInstance")
     private @Nullable Output<Boolean> privateInstance;
 
+    /**
+     * @return Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP addresses and will not be able to access the public internet.
+     * 
+     */
     public Optional<Output<Boolean>> privateInstance() {
         return Optional.ofNullable(this.privateInstance);
     }
@@ -194,6 +246,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<InstanceType> type;
 
+    /**
+     * @return Instance type.
+     * 
+     */
     public Output<InstanceType> type() {
         return this.type;
     }
@@ -205,6 +261,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Current version of Data Fusion.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -216,6 +276,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances use this field.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -262,91 +326,211 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accelerators List of accelerators enabled for this CDF instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accelerators(@Nullable Output<List<AcceleratorArgs>> accelerators) {
             $.accelerators = accelerators;
             return this;
         }
 
+        /**
+         * @param accelerators List of accelerators enabled for this CDF instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accelerators(List<AcceleratorArgs> accelerators) {
             return accelerators(Output.of(accelerators));
         }
 
+        /**
+         * @param accelerators List of accelerators enabled for this CDF instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accelerators(AcceleratorArgs... accelerators) {
             return accelerators(List.of(accelerators));
         }
 
+        /**
+         * @param availableVersion Available versions that the instance can be upgraded to using UpdateInstanceRequest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableVersion(@Nullable Output<List<VersionArgs>> availableVersion) {
             $.availableVersion = availableVersion;
             return this;
         }
 
+        /**
+         * @param availableVersion Available versions that the instance can be upgraded to using UpdateInstanceRequest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableVersion(List<VersionArgs> availableVersion) {
             return availableVersion(Output.of(availableVersion));
         }
 
+        /**
+         * @param availableVersion Available versions that the instance can be upgraded to using UpdateInstanceRequest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableVersion(VersionArgs... availableVersion) {
             return availableVersion(List.of(availableVersion));
         }
 
+        /**
+         * @param cryptoKeyConfig The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK) feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKeyConfig(@Nullable Output<CryptoKeyConfigArgs> cryptoKeyConfig) {
             $.cryptoKeyConfig = cryptoKeyConfig;
             return this;
         }
 
+        /**
+         * @param cryptoKeyConfig The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK) feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKeyConfig(CryptoKeyConfigArgs cryptoKeyConfig) {
             return cryptoKeyConfig(Output.of(cryptoKeyConfig));
         }
 
+        /**
+         * @param dataprocServiceAccount User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc&#39;s accesses to cloud resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataprocServiceAccount(@Nullable Output<String> dataprocServiceAccount) {
             $.dataprocServiceAccount = dataprocServiceAccount;
             return this;
         }
 
+        /**
+         * @param dataprocServiceAccount User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc&#39;s accesses to cloud resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataprocServiceAccount(String dataprocServiceAccount) {
             return dataprocServiceAccount(Output.of(dataprocServiceAccount));
         }
 
+        /**
+         * @param description A description of this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Display name for an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name for an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param enableRbac Option to enable granular role-based access control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRbac(@Nullable Output<Boolean> enableRbac) {
             $.enableRbac = enableRbac;
             return this;
         }
 
+        /**
+         * @param enableRbac Option to enable granular role-based access control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRbac(Boolean enableRbac) {
             return enableRbac(Output.of(enableRbac));
         }
 
+        /**
+         * @param enableStackdriverLogging Option to enable Stackdriver Logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
             $.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
 
+        /**
+         * @param enableStackdriverLogging Option to enable Stackdriver Logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
             return enableStackdriverLogging(Output.of(enableStackdriverLogging));
         }
 
+        /**
+         * @param enableStackdriverMonitoring Option to enable Stackdriver Monitoring.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverMonitoring(@Nullable Output<Boolean> enableStackdriverMonitoring) {
             $.enableStackdriverMonitoring = enableStackdriverMonitoring;
             return this;
         }
 
+        /**
+         * @param enableStackdriverMonitoring Option to enable Stackdriver Monitoring.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverMonitoring(Boolean enableStackdriverMonitoring) {
             return enableStackdriverMonitoring(Output.of(enableStackdriverMonitoring));
         }
@@ -360,11 +544,23 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param labels The resource labels for instance to use to annotate any related underlying resources such as Compute Engine VMs. The character &#39;=&#39; is not allowed to be used within the labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The resource labels for instance to use to annotate any related underlying resources such as Compute Engine VMs. The character &#39;=&#39; is not allowed to be used within the labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -378,29 +574,65 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param networkConfig Network configuration options. These are required when a private Data Fusion instance is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
 
+        /**
+         * @param networkConfig Network configuration options. These are required when a private Data Fusion instance is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(NetworkConfigArgs networkConfig) {
             return networkConfig(Output.of(networkConfig));
         }
 
+        /**
+         * @param options Map of additional options used to configure the behavior of Data Fusion instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<Map<String,String>> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Map of additional options used to configure the behavior of Data Fusion instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(Map<String,String> options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param privateInstance Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP addresses and will not be able to access the public internet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateInstance(@Nullable Output<Boolean> privateInstance) {
             $.privateInstance = privateInstance;
             return this;
         }
 
+        /**
+         * @param privateInstance Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP addresses and will not be able to access the public internet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateInstance(Boolean privateInstance) {
             return privateInstance(Output.of(privateInstance));
         }
@@ -414,29 +646,65 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param type Instance type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<InstanceType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Instance type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(InstanceType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param version Current version of Data Fusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Current version of Data Fusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param zone Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances use this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances use this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

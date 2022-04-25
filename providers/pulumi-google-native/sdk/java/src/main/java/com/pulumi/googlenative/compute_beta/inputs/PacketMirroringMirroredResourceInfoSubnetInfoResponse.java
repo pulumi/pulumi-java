@@ -19,6 +19,10 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse extends
     @Import(name="canonicalUrl", required=true)
     private String canonicalUrl;
 
+    /**
+     * @return Unique identifier for the subnetwork; defined by the server.
+     * 
+     */
     public String canonicalUrl() {
         return this.canonicalUrl;
     }
@@ -30,6 +34,10 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse extends
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -59,11 +67,23 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse extends
             $ = new PacketMirroringMirroredResourceInfoSubnetInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canonicalUrl Unique identifier for the subnetwork; defined by the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalUrl(String canonicalUrl) {
             $.canonicalUrl = canonicalUrl;
             return this;
         }
 
+        /**
+         * @param url Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

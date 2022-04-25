@@ -26,6 +26,10 @@ public final class ChartOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mode")
     private @Nullable Output<ChartOptionsMode> mode;
 
+    /**
+     * @return The chart mode.
+     * 
+     */
     public Optional<Output<ChartOptionsMode>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -54,11 +58,23 @@ public final class ChartOptionsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ChartOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode The chart mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<ChartOptionsMode> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode The chart mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(ChartOptionsMode mode) {
             return mode(Output.of(mode));
         }

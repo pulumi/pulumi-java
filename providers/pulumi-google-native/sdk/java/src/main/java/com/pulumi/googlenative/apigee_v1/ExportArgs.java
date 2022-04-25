@@ -23,6 +23,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="csvDelimiter")
     private @Nullable Output<String> csvDelimiter;
 
+    /**
+     * @return Optional. Delimiter used in the CSV file, if `outputFormat` is set to `csv`. Defaults to the `,` (comma) character. Supported delimiter characters include comma (`,`), pipe (`|`), and tab (`\t`).
+     * 
+     */
     public Optional<Output<String>> csvDelimiter() {
         return Optional.ofNullable(this.csvDelimiter);
     }
@@ -34,6 +38,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datastoreName", required=true)
     private Output<String> datastoreName;
 
+    /**
+     * @return Name of the preconfigured datastore.
+     * 
+     */
     public Output<String> datastoreName() {
         return this.datastoreName;
     }
@@ -45,6 +53,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dateRange", required=true)
     private Output<GoogleCloudApigeeV1DateRangeArgs> dateRange;
 
+    /**
+     * @return Date range of the data to export.
+     * 
+     */
     public Output<GoogleCloudApigeeV1DateRangeArgs> dateRange() {
         return this.dateRange;
     }
@@ -56,6 +68,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Description of the export job.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -74,6 +90,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Display name of the export job.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -92,6 +112,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputFormat")
     private @Nullable Output<String> outputFormat;
 
+    /**
+     * @return Optional. Output format of the export. Valid values include: `csv` or `json`. Defaults to `json`. Note: Configure the delimiter for CSV output using the `csvDelimiter` property.
+     * 
+     */
     public Optional<Output<String>> outputFormat() {
         return Optional.ofNullable(this.outputFormat);
     }
@@ -127,38 +151,86 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ExportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param csvDelimiter Optional. Delimiter used in the CSV file, if `outputFormat` is set to `csv`. Defaults to the `,` (comma) character. Supported delimiter characters include comma (`,`), pipe (`|`), and tab (`\t`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvDelimiter(@Nullable Output<String> csvDelimiter) {
             $.csvDelimiter = csvDelimiter;
             return this;
         }
 
+        /**
+         * @param csvDelimiter Optional. Delimiter used in the CSV file, if `outputFormat` is set to `csv`. Defaults to the `,` (comma) character. Supported delimiter characters include comma (`,`), pipe (`|`), and tab (`\t`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvDelimiter(String csvDelimiter) {
             return csvDelimiter(Output.of(csvDelimiter));
         }
 
+        /**
+         * @param datastoreName Name of the preconfigured datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreName(Output<String> datastoreName) {
             $.datastoreName = datastoreName;
             return this;
         }
 
+        /**
+         * @param datastoreName Name of the preconfigured datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreName(String datastoreName) {
             return datastoreName(Output.of(datastoreName));
         }
 
+        /**
+         * @param dateRange Date range of the data to export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateRange(Output<GoogleCloudApigeeV1DateRangeArgs> dateRange) {
             $.dateRange = dateRange;
             return this;
         }
 
+        /**
+         * @param dateRange Date range of the data to export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateRange(GoogleCloudApigeeV1DateRangeArgs dateRange) {
             return dateRange(Output.of(dateRange));
         }
 
+        /**
+         * @param description Optional. Description of the export job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Description of the export job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -172,11 +244,23 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
             return environmentId(Output.of(environmentId));
         }
 
+        /**
+         * @param name Display name of the export job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Display name of the export job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -190,11 +274,23 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param outputFormat Optional. Output format of the export. Valid values include: `csv` or `json`. Defaults to `json`. Note: Configure the delimiter for CSV output using the `csvDelimiter` property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
             $.outputFormat = outputFormat;
             return this;
         }
 
+        /**
+         * @param outputFormat Optional. Output format of the export. Valid values include: `csv` or `json`. Defaults to `json`. Note: Configure the delimiter for CSV output using the `csvDelimiter` property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputFormat(String outputFormat) {
             return outputFormat(Output.of(outputFormat));
         }

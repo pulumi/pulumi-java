@@ -25,6 +25,10 @@ public final class CompensationInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="annualizedBaseCompensationRange", required=true)
     private CompensationRangeResponse annualizedBaseCompensationRange;
 
+    /**
+     * @return Annualized base compensation range. Computed as base compensation entry&#39;s CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
+     * 
+     */
     public CompensationRangeResponse annualizedBaseCompensationRange() {
         return this.annualizedBaseCompensationRange;
     }
@@ -36,6 +40,10 @@ public final class CompensationInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="annualizedTotalCompensationRange", required=true)
     private CompensationRangeResponse annualizedTotalCompensationRange;
 
+    /**
+     * @return Annualized total compensation range. Computed as all compensation entries&#39; CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
+     * 
+     */
     public CompensationRangeResponse annualizedTotalCompensationRange() {
         return this.annualizedTotalCompensationRange;
     }
@@ -47,6 +55,10 @@ public final class CompensationInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="entries", required=true)
     private List<CompensationEntryResponse> entries;
 
+    /**
+     * @return Optional. Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for the job.
+     * 
+     */
     public List<CompensationEntryResponse> entries() {
         return this.entries;
     }
@@ -77,21 +89,45 @@ public final class CompensationInfoResponse extends com.pulumi.resources.InvokeA
             $ = new CompensationInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annualizedBaseCompensationRange Annualized base compensation range. Computed as base compensation entry&#39;s CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annualizedBaseCompensationRange(CompensationRangeResponse annualizedBaseCompensationRange) {
             $.annualizedBaseCompensationRange = annualizedBaseCompensationRange;
             return this;
         }
 
+        /**
+         * @param annualizedTotalCompensationRange Annualized total compensation range. Computed as all compensation entries&#39; CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annualizedTotalCompensationRange(CompensationRangeResponse annualizedTotalCompensationRange) {
             $.annualizedTotalCompensationRange = annualizedTotalCompensationRange;
             return this;
         }
 
+        /**
+         * @param entries Optional. Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entries(List<CompensationEntryResponse> entries) {
             $.entries = entries;
             return this;
         }
 
+        /**
+         * @param entries Optional. Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entries(CompensationEntryResponse... entries) {
             return entries(List.of(entries));
         }

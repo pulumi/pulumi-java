@@ -23,6 +23,10 @@ public final class ReplayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="config", required=true)
     private Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
 
+    /**
+     * @return The configuration used for the `Replay`.
+     * 
+     */
     public Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config() {
         return this.config;
     }
@@ -67,11 +71,23 @@ public final class ReplayArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReplayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config The configuration used for the `Replay`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config The configuration used for the `Replay`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs config) {
             return config(Output.of(config));
         }

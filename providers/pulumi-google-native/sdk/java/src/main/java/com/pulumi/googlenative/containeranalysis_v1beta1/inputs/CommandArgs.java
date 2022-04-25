@@ -27,6 +27,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="args")
     private @Nullable Output<List<String>> args;
 
+    /**
+     * @return Command-line arguments used when executing this command.
+     * 
+     */
     public Optional<Output<List<String>>> args() {
         return Optional.ofNullable(this.args);
     }
@@ -38,6 +42,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dir")
     private @Nullable Output<String> dir;
 
+    /**
+     * @return Working directory (relative to project source root) used when running this command.
+     * 
+     */
     public Optional<Output<String>> dir() {
         return Optional.ofNullable(this.dir);
     }
@@ -49,6 +57,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="env")
     private @Nullable Output<List<String>> env;
 
+    /**
+     * @return Environment variables set before running this command.
+     * 
+     */
     public Optional<Output<List<String>>> env() {
         return Optional.ofNullable(this.env);
     }
@@ -60,6 +72,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Optional unique identifier for this command, used in wait_for to reference this command as a dependency.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -71,6 +87,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the command, as presented on the command line, or if the command is packaged as a Docker container, as presented to `docker pull`.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -82,6 +102,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="waitFor")
     private @Nullable Output<List<String>> waitFor;
 
+    /**
+     * @return The ID(s) of the command(s) that this command depends on.
+     * 
+     */
     public Optional<Output<List<String>>> waitFor() {
         return Optional.ofNullable(this.waitFor);
     }
@@ -115,68 +139,158 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CommandArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args Command-line arguments used when executing this command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(@Nullable Output<List<String>> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Command-line arguments used when executing this command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             return args(Output.of(args));
         }
 
+        /**
+         * @param args Command-line arguments used when executing this command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param dir Working directory (relative to project source root) used when running this command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dir(@Nullable Output<String> dir) {
             $.dir = dir;
             return this;
         }
 
+        /**
+         * @param dir Working directory (relative to project source root) used when running this command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dir(String dir) {
             return dir(Output.of(dir));
         }
 
+        /**
+         * @param env Environment variables set before running this command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(@Nullable Output<List<String>> env) {
             $.env = env;
             return this;
         }
 
+        /**
+         * @param env Environment variables set before running this command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(List<String> env) {
             return env(Output.of(env));
         }
 
+        /**
+         * @param env Environment variables set before running this command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(String... env) {
             return env(List.of(env));
         }
 
+        /**
+         * @param id Optional unique identifier for this command, used in wait_for to reference this command as a dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Optional unique identifier for this command, used in wait_for to reference this command as a dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name of the command, as presented on the command line, or if the command is packaged as a Docker container, as presented to `docker pull`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the command, as presented on the command line, or if the command is packaged as a Docker container, as presented to `docker pull`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param waitFor The ID(s) of the command(s) that this command depends on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitFor(@Nullable Output<List<String>> waitFor) {
             $.waitFor = waitFor;
             return this;
         }
 
+        /**
+         * @param waitFor The ID(s) of the command(s) that this command depends on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitFor(List<String> waitFor) {
             return waitFor(Output.of(waitFor));
         }
 
+        /**
+         * @param waitFor The ID(s) of the command(s) that this command depends on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitFor(String... waitFor) {
             return waitFor(List.of(waitFor));
         }

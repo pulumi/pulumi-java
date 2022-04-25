@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class ConditionResponse {
     /**
-     * Trusted attributes supplied by the IAM system.
+     * @return Trusted attributes supplied by the IAM system.
      * 
      */
     private final String iam;
     /**
-     * An operator to apply the subject with.
+     * @return An operator to apply the subject with.
      * 
      */
     private final String op;
     /**
-     * Trusted attributes discharged by the service.
+     * @return Trusted attributes discharged by the service.
      * 
      */
     private final String svc;
     /**
-     * Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.
+     * @return Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.
      * 
      */
     private final String sys;
     /**
-     * The objects of the condition.
+     * @return The objects of the condition.
      * 
      */
     private final List<String> values;
@@ -51,37 +51,37 @@ public final class ConditionResponse {
     }
 
     /**
-     * Trusted attributes supplied by the IAM system.
+     * @return Trusted attributes supplied by the IAM system.
      * 
-    */
+     */
     public String iam() {
         return this.iam;
     }
     /**
-     * An operator to apply the subject with.
+     * @return An operator to apply the subject with.
      * 
-    */
+     */
     public String op() {
         return this.op;
     }
     /**
-     * Trusted attributes discharged by the service.
+     * @return Trusted attributes discharged by the service.
      * 
-    */
+     */
     public String svc() {
         return this.svc;
     }
     /**
-     * Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.
+     * @return Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.
      * 
-    */
+     */
     public String sys() {
         return this.sys;
     }
     /**
-     * The objects of the condition.
+     * @return The objects of the condition.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

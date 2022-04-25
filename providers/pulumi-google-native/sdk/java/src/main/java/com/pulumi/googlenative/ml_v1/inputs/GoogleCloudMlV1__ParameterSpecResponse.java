@@ -25,6 +25,10 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
     @Import(name="categoricalValues", required=true)
     private List<String> categoricalValues;
 
+    /**
+     * @return Required if type is `CATEGORICAL`. The list of possible categories.
+     * 
+     */
     public List<String> categoricalValues() {
         return this.categoricalValues;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
     @Import(name="discreteValues", required=true)
     private List<Double> discreteValues;
 
+    /**
+     * @return Required if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+     * 
+     */
     public List<Double> discreteValues() {
         return this.discreteValues;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
     @Import(name="maxValue", required=true)
     private Double maxValue;
 
+    /**
+     * @return Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is `INTEGER`.
+     * 
+     */
     public Double maxValue() {
         return this.maxValue;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
     @Import(name="minValue", required=true)
     private Double minValue;
 
+    /**
+     * @return Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is INTEGER.
+     * 
+     */
     public Double minValue() {
         return this.minValue;
     }
@@ -69,6 +85,10 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
     @Import(name="parameterName", required=true)
     private String parameterName;
 
+    /**
+     * @return The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., &#34;learning_rate&#34;.
+     * 
+     */
     public String parameterName() {
         return this.parameterName;
     }
@@ -80,6 +100,10 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
     @Import(name="scaleType", required=true)
     private String scaleType;
 
+    /**
+     * @return Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).
+     * 
+     */
     public String scaleType() {
         return this.scaleType;
     }
@@ -91,6 +115,10 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the parameter.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -125,44 +153,98 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
             $ = new GoogleCloudMlV1__ParameterSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categoricalValues Required if type is `CATEGORICAL`. The list of possible categories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoricalValues(List<String> categoricalValues) {
             $.categoricalValues = categoricalValues;
             return this;
         }
 
+        /**
+         * @param categoricalValues Required if type is `CATEGORICAL`. The list of possible categories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoricalValues(String... categoricalValues) {
             return categoricalValues(List.of(categoricalValues));
         }
 
+        /**
+         * @param discreteValues Required if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discreteValues(List<Double> discreteValues) {
             $.discreteValues = discreteValues;
             return this;
         }
 
+        /**
+         * @param discreteValues Required if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discreteValues(Double... discreteValues) {
             return discreteValues(List.of(discreteValues));
         }
 
+        /**
+         * @param maxValue Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is `INTEGER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxValue(Double maxValue) {
             $.maxValue = maxValue;
             return this;
         }
 
+        /**
+         * @param minValue Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is INTEGER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minValue(Double minValue) {
             $.minValue = minValue;
             return this;
         }
 
+        /**
+         * @param parameterName The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., &#34;learning_rate&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterName(String parameterName) {
             $.parameterName = parameterName;
             return this;
         }
 
+        /**
+         * @param scaleType Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(String scaleType) {
             $.scaleType = scaleType;
             return this;
         }
 
+        /**
+         * @param type The type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

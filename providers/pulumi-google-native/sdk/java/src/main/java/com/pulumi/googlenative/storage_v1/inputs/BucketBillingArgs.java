@@ -26,6 +26,10 @@ public final class BucketBillingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requesterPays")
     private @Nullable Output<Boolean> requesterPays;
 
+    /**
+     * @return When set to true, Requester Pays is enabled for this bucket.
+     * 
+     */
     public Optional<Output<Boolean>> requesterPays() {
         return Optional.ofNullable(this.requesterPays);
     }
@@ -54,11 +58,23 @@ public final class BucketBillingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BucketBillingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param requesterPays When set to true, Requester Pays is enabled for this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requesterPays(@Nullable Output<Boolean> requesterPays) {
             $.requesterPays = requesterPays;
             return this;
         }
 
+        /**
+         * @param requesterPays When set to true, Requester Pays is enabled for this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requesterPays(Boolean requesterPays) {
             return requesterPays(Output.of(requesterPays));
         }

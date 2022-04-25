@@ -24,6 +24,10 @@ public final class RuntimeInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diagnosticOutputUri", required=true)
     private String diagnosticOutputUri;
 
+    /**
+     * @return A URI pointing to the location of the diagnostics tarball.
+     * 
+     */
     public String diagnosticOutputUri() {
         return this.diagnosticOutputUri;
     }
@@ -35,6 +39,10 @@ public final class RuntimeInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpoints", required=true)
     private Map<String,String> endpoints;
 
+    /**
+     * @return Map of remote access endpoints (such as web interfaces and APIs) to their URIs.
+     * 
+     */
     public Map<String,String> endpoints() {
         return this.endpoints;
     }
@@ -46,6 +54,10 @@ public final class RuntimeInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="outputUri", required=true)
     private String outputUri;
 
+    /**
+     * @return A URI pointing to the location of the stdout and stderr of the workload.
+     * 
+     */
     public String outputUri() {
         return this.outputUri;
     }
@@ -76,16 +88,34 @@ public final class RuntimeInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RuntimeInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diagnosticOutputUri A URI pointing to the location of the diagnostics tarball.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnosticOutputUri(String diagnosticOutputUri) {
             $.diagnosticOutputUri = diagnosticOutputUri;
             return this;
         }
 
+        /**
+         * @param endpoints Map of remote access endpoints (such as web interfaces and APIs) to their URIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(Map<String,String> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param outputUri A URI pointing to the location of the stdout and stderr of the workload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputUri(String outputUri) {
             $.outputUri = outputUri;
             return this;

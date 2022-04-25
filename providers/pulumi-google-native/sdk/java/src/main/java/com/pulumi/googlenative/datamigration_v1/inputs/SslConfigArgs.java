@@ -26,6 +26,10 @@ public final class SslConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="caCertificate", required=true)
     private Output<String> caCertificate;
 
+    /**
+     * @return Input only. The x509 PEM-encoded certificate of the CA that signed the source database server&#39;s certificate. The replica will use this certificate to verify it&#39;s connecting to the right host.
+     * 
+     */
     public Output<String> caCertificate() {
         return this.caCertificate;
     }
@@ -37,6 +41,10 @@ public final class SslConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificate")
     private @Nullable Output<String> clientCertificate;
 
+    /**
+     * @return Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the &#39;client_key&#39; field is mandatory.
+     * 
+     */
     public Optional<Output<String>> clientCertificate() {
         return Optional.ofNullable(this.clientCertificate);
     }
@@ -48,6 +56,10 @@ public final class SslConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientKey")
     private @Nullable Output<String> clientKey;
 
+    /**
+     * @return Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the &#39;client_certificate&#39; field is mandatory.
+     * 
+     */
     public Optional<Output<String>> clientKey() {
         return Optional.ofNullable(this.clientKey);
     }
@@ -78,29 +90,65 @@ public final class SslConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SslConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caCertificate Input only. The x509 PEM-encoded certificate of the CA that signed the source database server&#39;s certificate. The replica will use this certificate to verify it&#39;s connecting to the right host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificate(Output<String> caCertificate) {
             $.caCertificate = caCertificate;
             return this;
         }
 
+        /**
+         * @param caCertificate Input only. The x509 PEM-encoded certificate of the CA that signed the source database server&#39;s certificate. The replica will use this certificate to verify it&#39;s connecting to the right host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificate(String caCertificate) {
             return caCertificate(Output.of(caCertificate));
         }
 
+        /**
+         * @param clientCertificate Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the &#39;client_key&#39; field is mandatory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
             $.clientCertificate = clientCertificate;
             return this;
         }
 
+        /**
+         * @param clientCertificate Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the &#39;client_key&#39; field is mandatory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(String clientCertificate) {
             return clientCertificate(Output.of(clientCertificate));
         }
 
+        /**
+         * @param clientKey Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the &#39;client_certificate&#39; field is mandatory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(@Nullable Output<String> clientKey) {
             $.clientKey = clientKey;
             return this;
         }
 
+        /**
+         * @param clientKey Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the &#39;client_certificate&#39; field is mandatory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(String clientKey) {
             return clientKey(Output.of(clientKey));
         }

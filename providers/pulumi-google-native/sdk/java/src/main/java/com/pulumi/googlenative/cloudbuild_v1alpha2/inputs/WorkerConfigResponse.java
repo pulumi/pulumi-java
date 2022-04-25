@@ -23,6 +23,10 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="diskSizeGb", required=true)
     private String diskSizeGb;
 
+    /**
+     * @return Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size.
+     * 
+     */
     public String diskSizeGb() {
         return this.diskSizeGb;
     }
@@ -34,6 +38,10 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="machineType", required=true)
     private String machineType;
 
+    /**
+     * @return Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool.
+     * 
+     */
     public String machineType() {
         return this.machineType;
     }
@@ -63,11 +71,23 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new WorkerConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeGb Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(String diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param machineType Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             $.machineType = machineType;
             return this;

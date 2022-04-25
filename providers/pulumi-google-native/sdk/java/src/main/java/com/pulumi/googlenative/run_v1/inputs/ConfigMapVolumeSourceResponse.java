@@ -27,6 +27,10 @@ public final class ConfigMapVolumeSourceResponse extends com.pulumi.resources.In
     @Import(name="defaultMode", required=true)
     private Integer defaultMode;
 
+    /**
+     * @return (Optional) Integer representation of mode bits to use on created files by default. Must be a value between 01 and 0777 (octal). If 0 or not set, it will default to 0644. Directories within the path are not affected by this setting. Notes * Internally, a umask of 0222 will be applied to any non-zero value. * This is an integer representation of the mode bits. So, the octal integer value should look exactly as the chmod numeric notation with a leading zero. Some examples: for chmod 777 (a=rwx), set to 0777 (octal) or 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493 (base-10). * This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+     * 
+     */
     public Integer defaultMode() {
         return this.defaultMode;
     }
@@ -38,6 +42,10 @@ public final class ConfigMapVolumeSourceResponse extends com.pulumi.resources.In
     @Import(name="items", required=true)
     private List<KeyToPathResponse> items;
 
+    /**
+     * @return (Optional) If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.
+     * 
+     */
     public List<KeyToPathResponse> items() {
         return this.items;
     }
@@ -49,6 +57,10 @@ public final class ConfigMapVolumeSourceResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the config.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -60,6 +72,10 @@ public final class ConfigMapVolumeSourceResponse extends com.pulumi.resources.In
     @Import(name="optional", required=true)
     private Boolean optional;
 
+    /**
+     * @return (Optional) Specify whether the Secret or its keys must be defined.
+     * 
+     */
     public Boolean optional() {
         return this.optional;
     }
@@ -91,25 +107,55 @@ public final class ConfigMapVolumeSourceResponse extends com.pulumi.resources.In
             $ = new ConfigMapVolumeSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultMode (Optional) Integer representation of mode bits to use on created files by default. Must be a value between 01 and 0777 (octal). If 0 or not set, it will default to 0644. Directories within the path are not affected by this setting. Notes * Internally, a umask of 0222 will be applied to any non-zero value. * This is an integer representation of the mode bits. So, the octal integer value should look exactly as the chmod numeric notation with a leading zero. Some examples: for chmod 777 (a=rwx), set to 0777 (octal) or 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493 (base-10). * This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMode(Integer defaultMode) {
             $.defaultMode = defaultMode;
             return this;
         }
 
+        /**
+         * @param items (Optional) If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<KeyToPathResponse> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items (Optional) If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(KeyToPathResponse... items) {
             return items(List.of(items));
         }
 
+        /**
+         * @param name Name of the config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param optional (Optional) Specify whether the Secret or its keys must be defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optional(Boolean optional) {
             $.optional = optional;
             return this;

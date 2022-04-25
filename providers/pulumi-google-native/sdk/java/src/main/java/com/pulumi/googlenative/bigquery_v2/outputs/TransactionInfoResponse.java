@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class TransactionInfoResponse {
     /**
-     * // [Alpha] Id of the transaction.
+     * @return // [Alpha] Id of the transaction.
      * 
      */
     private final String transactionId;
@@ -21,9 +21,9 @@ public final class TransactionInfoResponse {
     }
 
     /**
-     * // [Alpha] Id of the transaction.
+     * @return // [Alpha] Id of the transaction.
      * 
-    */
+     */
     public String transactionId() {
         return this.transactionId;
     }

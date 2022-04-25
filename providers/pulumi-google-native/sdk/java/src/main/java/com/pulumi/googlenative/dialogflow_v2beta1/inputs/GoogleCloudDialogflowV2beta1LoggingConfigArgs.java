@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigArgs extends com.pul
     @Import(name="enableStackdriverLogging")
     private @Nullable Output<Boolean> enableStackdriverLogging;
 
+    /**
+     * @return Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.
+     * 
+     */
     public Optional<Output<Boolean>> enableStackdriverLogging() {
         return Optional.ofNullable(this.enableStackdriverLogging);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigArgs extends com.pul
             $ = new GoogleCloudDialogflowV2beta1LoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableStackdriverLogging Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
             $.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
 
+        /**
+         * @param enableStackdriverLogging Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
             return enableStackdriverLogging(Output.of(enableStackdriverLogging));
         }

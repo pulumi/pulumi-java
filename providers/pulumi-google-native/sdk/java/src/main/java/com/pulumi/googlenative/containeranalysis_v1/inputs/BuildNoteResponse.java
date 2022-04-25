@@ -23,6 +23,10 @@ public final class BuildNoteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="builderVersion", required=true)
     private String builderVersion;
 
+    /**
+     * @return Immutable. Version of the builder which produced this build.
+     * 
+     */
     public String builderVersion() {
         return this.builderVersion;
     }
@@ -51,6 +55,12 @@ public final class BuildNoteResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BuildNoteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param builderVersion Immutable. Version of the builder which produced this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builderVersion(String builderVersion) {
             $.builderVersion = builderVersion;
             return this;

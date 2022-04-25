@@ -23,6 +23,10 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
     @Import(name="oauthClientIdName", required=true)
     private String oauthClientIdName;
 
+    /**
+     * @return The resource name for the OAuth client ID secret in Secret Manager.
+     * 
+     */
     public String oauthClientIdName() {
         return this.oauthClientIdName;
     }
@@ -34,6 +38,10 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
     @Import(name="oauthClientIdVersionName", required=true)
     private String oauthClientIdVersionName;
 
+    /**
+     * @return The resource name for the OAuth client ID secret version in Secret Manager.
+     * 
+     */
     public String oauthClientIdVersionName() {
         return this.oauthClientIdVersionName;
     }
@@ -45,6 +53,10 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
     @Import(name="oauthSecretName", required=true)
     private String oauthSecretName;
 
+    /**
+     * @return The resource name for the OAuth secret in Secret Manager.
+     * 
+     */
     public String oauthSecretName() {
         return this.oauthSecretName;
     }
@@ -56,6 +68,10 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
     @Import(name="oauthSecretVersionName", required=true)
     private String oauthSecretVersionName;
 
+    /**
+     * @return The resource name for the OAuth secret secret version in Secret Manager.
+     * 
+     */
     public String oauthSecretVersionName() {
         return this.oauthSecretVersionName;
     }
@@ -67,6 +83,10 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
     @Import(name="privateKeyName", required=true)
     private String privateKeyName;
 
+    /**
+     * @return The resource name for the private key secret.
+     * 
+     */
     public String privateKeyName() {
         return this.privateKeyName;
     }
@@ -78,6 +98,10 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
     @Import(name="privateKeyVersionName", required=true)
     private String privateKeyVersionName;
 
+    /**
+     * @return The resource name for the private key secret version.
+     * 
+     */
     public String privateKeyVersionName() {
         return this.privateKeyVersionName;
     }
@@ -89,6 +113,10 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
     @Import(name="webhookSecretName", required=true)
     private String webhookSecretName;
 
+    /**
+     * @return The resource name for the webhook secret in Secret Manager.
+     * 
+     */
     public String webhookSecretName() {
         return this.webhookSecretName;
     }
@@ -100,6 +128,10 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
     @Import(name="webhookSecretVersionName", required=true)
     private String webhookSecretVersionName;
 
+    /**
+     * @return The resource name for the webhook secret secret version in Secret Manager.
+     * 
+     */
     public String webhookSecretVersionName() {
         return this.webhookSecretVersionName;
     }
@@ -135,41 +167,89 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
             $ = new GitHubEnterpriseSecretsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oauthClientIdName The resource name for the OAuth client ID secret in Secret Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthClientIdName(String oauthClientIdName) {
             $.oauthClientIdName = oauthClientIdName;
             return this;
         }
 
+        /**
+         * @param oauthClientIdVersionName The resource name for the OAuth client ID secret version in Secret Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthClientIdVersionName(String oauthClientIdVersionName) {
             $.oauthClientIdVersionName = oauthClientIdVersionName;
             return this;
         }
 
+        /**
+         * @param oauthSecretName The resource name for the OAuth secret in Secret Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthSecretName(String oauthSecretName) {
             $.oauthSecretName = oauthSecretName;
             return this;
         }
 
+        /**
+         * @param oauthSecretVersionName The resource name for the OAuth secret secret version in Secret Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthSecretVersionName(String oauthSecretVersionName) {
             $.oauthSecretVersionName = oauthSecretVersionName;
             return this;
         }
 
+        /**
+         * @param privateKeyName The resource name for the private key secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyName(String privateKeyName) {
             $.privateKeyName = privateKeyName;
             return this;
         }
 
+        /**
+         * @param privateKeyVersionName The resource name for the private key secret version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyVersionName(String privateKeyVersionName) {
             $.privateKeyVersionName = privateKeyVersionName;
             return this;
         }
 
+        /**
+         * @param webhookSecretName The resource name for the webhook secret in Secret Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookSecretName(String webhookSecretName) {
             $.webhookSecretName = webhookSecretName;
             return this;
         }
 
+        /**
+         * @param webhookSecretVersionName The resource name for the webhook secret secret version in Secret Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookSecretVersionName(String webhookSecretVersionName) {
             $.webhookSecretVersionName = webhookSecretVersionName;
             return this;

@@ -26,6 +26,10 @@ public final class SuccessDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="otherNativeCrash")
     private @Nullable Output<Boolean> otherNativeCrash;
 
+    /**
+     * @return If a native process other than the app crashed.
+     * 
+     */
     public Optional<Output<Boolean>> otherNativeCrash() {
         return Optional.ofNullable(this.otherNativeCrash);
     }
@@ -54,11 +58,23 @@ public final class SuccessDetailArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SuccessDetailArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param otherNativeCrash If a native process other than the app crashed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder otherNativeCrash(@Nullable Output<Boolean> otherNativeCrash) {
             $.otherNativeCrash = otherNativeCrash;
             return this;
         }
 
+        /**
+         * @param otherNativeCrash If a native process other than the app crashed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder otherNativeCrash(Boolean otherNativeCrash) {
             return otherNativeCrash(Output.of(otherNativeCrash));
         }

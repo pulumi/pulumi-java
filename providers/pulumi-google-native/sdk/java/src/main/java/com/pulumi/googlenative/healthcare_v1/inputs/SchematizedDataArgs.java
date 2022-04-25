@@ -26,6 +26,10 @@ public final class SchematizedDataArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="data")
     private @Nullable Output<String> data;
 
+    /**
+     * @return JSON output of the parser.
+     * 
+     */
     public Optional<Output<String>> data() {
         return Optional.ofNullable(this.data);
     }
@@ -37,6 +41,10 @@ public final class SchematizedDataArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="error")
     private @Nullable Output<String> error;
 
+    /**
+     * @return The error output of the parser.
+     * 
+     */
     public Optional<Output<String>> error() {
         return Optional.ofNullable(this.error);
     }
@@ -66,20 +74,44 @@ public final class SchematizedDataArgs extends com.pulumi.resources.ResourceArgs
             $ = new SchematizedDataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param data JSON output of the parser.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(@Nullable Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data JSON output of the parser.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }
 
+        /**
+         * @param error The error output of the parser.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable Output<String> error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param error The error output of the parser.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(String error) {
             return error(Output.of(error));
         }

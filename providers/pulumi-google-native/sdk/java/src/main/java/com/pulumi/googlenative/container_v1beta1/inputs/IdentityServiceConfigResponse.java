@@ -23,6 +23,10 @@ public final class IdentityServiceConfigResponse extends com.pulumi.resources.In
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether to enable the Identity Service component
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class IdentityServiceConfigResponse extends com.pulumi.resources.In
             $ = new IdentityServiceConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether to enable the Identity Service component
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

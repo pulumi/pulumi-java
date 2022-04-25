@@ -19,6 +19,10 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
     @Import(name="timeoutSec", required=true)
     private Integer timeoutSec;
 
+    /**
+     * @return The number of seconds to wait for a readiness signal during initialization before timing out.
+     * 
+     */
     public Integer timeoutSec() {
         return this.timeoutSec;
     }
@@ -47,6 +51,12 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
             $ = new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param timeoutSec The number of seconds to wait for a readiness signal during initialization before timing out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSec(Integer timeoutSec) {
             $.timeoutSec = timeoutSec;
             return this;

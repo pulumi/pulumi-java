@@ -23,6 +23,10 @@ public final class VmwareSourceDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return Input only. The credentials password. This is write only and can not be read in a GET operation.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -34,6 +38,10 @@ public final class VmwareSourceDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="thumbprint", required=true)
     private String thumbprint;
 
+    /**
+     * @return The thumbprint representing the certificate for the vcenter.
+     * 
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
@@ -45,6 +53,10 @@ public final class VmwareSourceDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return The credentials username.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -56,6 +68,10 @@ public final class VmwareSourceDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="vcenterIp", required=true)
     private String vcenterIp;
 
+    /**
+     * @return The ip address of the vcenter this Source represents.
+     * 
+     */
     public String vcenterIp() {
         return this.vcenterIp;
     }
@@ -87,21 +103,45 @@ public final class VmwareSourceDetailsResponse extends com.pulumi.resources.Invo
             $ = new VmwareSourceDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Input only. The credentials password. This is write only and can not be read in a GET operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param thumbprint The thumbprint representing the certificate for the vcenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param username The credentials username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param vcenterIp The ip address of the vcenter this Source represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcenterIp(String vcenterIp) {
             $.vcenterIp = vcenterIp;
             return this;

@@ -25,6 +25,10 @@ public final class AndroidDeviceListArgs extends com.pulumi.resources.ResourceAr
     @Import(name="androidDevices", required=true)
     private Output<List<AndroidDeviceArgs>> androidDevices;
 
+    /**
+     * @return A list of Android devices.
+     * 
+     */
     public Output<List<AndroidDeviceArgs>> androidDevices() {
         return this.androidDevices;
     }
@@ -53,15 +57,33 @@ public final class AndroidDeviceListArgs extends com.pulumi.resources.ResourceAr
             $ = new AndroidDeviceListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidDevices A list of Android devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidDevices(Output<List<AndroidDeviceArgs>> androidDevices) {
             $.androidDevices = androidDevices;
             return this;
         }
 
+        /**
+         * @param androidDevices A list of Android devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidDevices(List<AndroidDeviceArgs> androidDevices) {
             return androidDevices(Output.of(androidDevices));
         }
 
+        /**
+         * @param androidDevices A list of Android devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidDevices(AndroidDeviceArgs... androidDevices) {
             return androidDevices(List.of(androidDevices));
         }

@@ -23,6 +23,10 @@ public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse ext
     @Import(name="intentUniqueId", required=true)
     private String intentUniqueId;
 
+    /**
+     * @return The id of the matched intent. Can be used to retrieve the corresponding intent information.
+     * 
+     */
     public String intentUniqueId() {
         return this.intentUniqueId;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse ext
             $ = new GoogleCloudContactcenterinsightsV1IntentMatchDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param intentUniqueId The id of the matched intent. Can be used to retrieve the corresponding intent information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intentUniqueId(String intentUniqueId) {
             $.intentUniqueId = intentUniqueId;
             return this;

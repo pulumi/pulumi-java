@@ -20,6 +20,10 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
     @Import(name="currentRevision", required=true)
     private String currentRevision;
 
+    /**
+     * @return Current instances&#39; config revision. This value is in RFC3339 text format.
+     * 
+     */
     public String currentRevision() {
         return this.currentRevision;
     }
@@ -31,6 +35,10 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
     @Import(name="effective", required=true)
     private Boolean effective;
 
+    /**
+     * @return A bit indicating whether instances&#39; config has been applied to all managed instances in managed instance group.
+     * 
+     */
     public Boolean effective() {
         return this.effective;
     }
@@ -60,11 +68,23 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
             $ = new InstanceGroupManagerStatusAllInstancesConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentRevision Current instances&#39; config revision. This value is in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentRevision(String currentRevision) {
             $.currentRevision = currentRevision;
             return this;
         }
 
+        /**
+         * @param effective A bit indicating whether instances&#39; config has been applied to all managed instances in managed instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effective(Boolean effective) {
             $.effective = effective;
             return this;

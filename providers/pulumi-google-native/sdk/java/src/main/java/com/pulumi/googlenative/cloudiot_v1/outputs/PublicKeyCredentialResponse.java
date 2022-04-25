@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class PublicKeyCredentialResponse {
     /**
-     * The format of the key.
+     * @return The format of the key.
      * 
      */
     private final String format;
     /**
-     * The key data.
+     * @return The key data.
      * 
      */
     private final String key;
@@ -29,16 +29,16 @@ public final class PublicKeyCredentialResponse {
     }
 
     /**
-     * The format of the key.
+     * @return The format of the key.
      * 
-    */
+     */
     public String format() {
         return this.format;
     }
     /**
-     * The key data.
+     * @return The key data.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }

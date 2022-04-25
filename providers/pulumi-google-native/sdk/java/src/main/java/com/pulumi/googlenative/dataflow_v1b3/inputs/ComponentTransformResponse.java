@@ -23,6 +23,10 @@ public final class ComponentTransformResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Dataflow service generated name for this source.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class ComponentTransformResponse extends com.pulumi.resources.Invok
     @Import(name="originalTransform", required=true)
     private String originalTransform;
 
+    /**
+     * @return User name for the original user transform with which this transform is most closely associated.
+     * 
+     */
     public String originalTransform() {
         return this.originalTransform;
     }
@@ -45,6 +53,10 @@ public final class ComponentTransformResponse extends com.pulumi.resources.Invok
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return Human-readable name for this transform; may be user or system generated.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -75,16 +87,34 @@ public final class ComponentTransformResponse extends com.pulumi.resources.Invok
             $ = new ComponentTransformResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Dataflow service generated name for this source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param originalTransform User name for the original user transform with which this transform is most closely associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalTransform(String originalTransform) {
             $.originalTransform = originalTransform;
             return this;
         }
 
+        /**
+         * @param userName Human-readable name for this transform; may be user or system generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

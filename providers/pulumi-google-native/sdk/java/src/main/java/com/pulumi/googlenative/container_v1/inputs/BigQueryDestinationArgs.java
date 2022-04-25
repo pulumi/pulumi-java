@@ -26,6 +26,10 @@ public final class BigQueryDestinationArgs extends com.pulumi.resources.Resource
     @Import(name="datasetId")
     private @Nullable Output<String> datasetId;
 
+    /**
+     * @return The ID of a BigQuery Dataset.
+     * 
+     */
     public Optional<Output<String>> datasetId() {
         return Optional.ofNullable(this.datasetId);
     }
@@ -54,11 +58,23 @@ public final class BigQueryDestinationArgs extends com.pulumi.resources.Resource
             $ = new BigQueryDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId The ID of a BigQuery Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(@Nullable Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetId The ID of a BigQuery Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             return datasetId(Output.of(datasetId));
         }

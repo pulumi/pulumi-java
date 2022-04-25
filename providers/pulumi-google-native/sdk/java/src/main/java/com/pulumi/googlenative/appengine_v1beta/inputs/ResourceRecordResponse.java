@@ -23,6 +23,10 @@ public final class ResourceRecordResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Relative name of the object affected by this record. Only applicable for CNAME records. Example: &#39;www&#39;.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class ResourceRecordResponse extends com.pulumi.resources.InvokeArg
     @Import(name="rrdata", required=true)
     private String rrdata;
 
+    /**
+     * @return Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).
+     * 
+     */
     public String rrdata() {
         return this.rrdata;
     }
@@ -45,6 +53,10 @@ public final class ResourceRecordResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource record type. Example: AAAA.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -75,16 +87,34 @@ public final class ResourceRecordResponse extends com.pulumi.resources.InvokeArg
             $ = new ResourceRecordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Relative name of the object affected by this record. Only applicable for CNAME records. Example: &#39;www&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param rrdata Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rrdata(String rrdata) {
             $.rrdata = rrdata;
             return this;
         }
 
+        /**
+         * @param type Resource record type. Example: AAAA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

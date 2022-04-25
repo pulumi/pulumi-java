@@ -28,6 +28,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="autoDelete", required=true)
     private Boolean autoDelete;
 
+    /**
+     * @return Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
+     * 
+     */
     public Boolean autoDelete() {
         return this.autoDelete;
     }
@@ -39,6 +43,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="boot", required=true)
     private Boolean boot;
 
+    /**
+     * @return Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
+     * 
+     */
     public Boolean boot() {
         return this.boot;
     }
@@ -50,6 +58,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return Specifies the name of the disk attached to the source instance.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -61,6 +73,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="diskEncryptionKey", required=true)
     private CustomerEncryptionKeyResponse diskEncryptionKey;
 
+    /**
+     * @return The encryption key for the disk.
+     * 
+     */
     public CustomerEncryptionKeyResponse diskEncryptionKey() {
         return this.diskEncryptionKey;
     }
@@ -72,6 +88,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="diskSizeGb", required=true)
     private String diskSizeGb;
 
+    /**
+     * @return The size of the disk in base-2 GB.
+     * 
+     */
     public String diskSizeGb() {
         return this.diskSizeGb;
     }
@@ -83,6 +103,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="diskType", required=true)
     private String diskType;
 
+    /**
+     * @return URL of the disk type resource. For example: projects/project /zones/zone/diskTypes/pd-standard or pd-ssd
+     * 
+     */
     public String diskType() {
         return this.diskType;
     }
@@ -94,6 +118,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="guestOsFeatures", required=true)
     private List<GuestOsFeatureResponse> guestOsFeatures;
 
+    /**
+     * @return A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+     * 
+     */
     public List<GuestOsFeatureResponse> guestOsFeatures() {
         return this.guestOsFeatures;
     }
@@ -105,6 +133,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="index", required=true)
     private Integer index;
 
+    /**
+     * @return Specifies zero-based index of the disk that is attached to the source instance.
+     * 
+     */
     public Integer index() {
         return this.index;
     }
@@ -116,6 +148,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="interface", required=true)
     private String interface_;
 
+    /**
+     * @return Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
+     * 
+     */
     public String interface_() {
         return this.interface_;
     }
@@ -127,6 +163,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Type of the resource. Always compute#attachedDisk for attached disks.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -138,6 +178,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="licenses", required=true)
     private List<String> licenses;
 
+    /**
+     * @return Any valid publicly visible licenses.
+     * 
+     */
     public List<String> licenses() {
         return this.licenses;
     }
@@ -149,6 +193,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return The mode in which this disk is attached to the source instance, either READ_WRITE or READ_ONLY.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -160,6 +208,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="source", required=true)
     private String source;
 
+    /**
+     * @return Specifies a URL of the disk attached to the source instance.
+     * 
+     */
     public String source() {
         return this.source;
     }
@@ -171,6 +223,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="storageBytes", required=true)
     private String storageBytes;
 
+    /**
+     * @return A size of the storage used by the disk&#39;s snapshot by this machine image.
+     * 
+     */
     public String storageBytes() {
         return this.storageBytes;
     }
@@ -182,6 +238,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="storageBytesStatus", required=true)
     private String storageBytesStatus;
 
+    /**
+     * @return An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
+     * 
+     */
     public String storageBytesStatus() {
         return this.storageBytesStatus;
     }
@@ -193,6 +253,10 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Specifies the type of the attached disk, either SCRATCH or PERSISTENT.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -236,89 +300,197 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
             $ = new SavedAttachedDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoDelete Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDelete(Boolean autoDelete) {
             $.autoDelete = autoDelete;
             return this;
         }
 
+        /**
+         * @param boot Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boot(Boolean boot) {
             $.boot = boot;
             return this;
         }
 
+        /**
+         * @param deviceName Specifies the name of the disk attached to the source instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param diskEncryptionKey The encryption key for the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKey(CustomerEncryptionKeyResponse diskEncryptionKey) {
             $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
+        /**
+         * @param diskSizeGb The size of the disk in base-2 GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(String diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskType URL of the disk type resource. For example: projects/project /zones/zone/diskTypes/pd-standard or pd-ssd
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param guestOsFeatures A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
             $.guestOsFeatures = guestOsFeatures;
             return this;
         }
 
+        /**
+         * @param guestOsFeatures A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestOsFeatures(GuestOsFeatureResponse... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
         }
 
+        /**
+         * @param index Specifies zero-based index of the disk that is attached to the source instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder index(Integer index) {
             $.index = index;
             return this;
         }
 
+        /**
+         * @param interface_ Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interface_(String interface_) {
             $.interface_ = interface_;
             return this;
         }
 
+        /**
+         * @param kind Type of the resource. Always compute#attachedDisk for attached disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param licenses Any valid publicly visible licenses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(List<String> licenses) {
             $.licenses = licenses;
             return this;
         }
 
+        /**
+         * @param licenses Any valid publicly visible licenses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(String... licenses) {
             return licenses(List.of(licenses));
         }
 
+        /**
+         * @param mode The mode in which this disk is attached to the source instance, either READ_WRITE or READ_ONLY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param source Specifies a URL of the disk attached to the source instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param storageBytes A size of the storage used by the disk&#39;s snapshot by this machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageBytes(String storageBytes) {
             $.storageBytes = storageBytes;
             return this;
         }
 
+        /**
+         * @param storageBytesStatus An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageBytesStatus(String storageBytesStatus) {
             $.storageBytesStatus = storageBytesStatus;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of the attached disk, either SCRATCH or PERSISTENT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

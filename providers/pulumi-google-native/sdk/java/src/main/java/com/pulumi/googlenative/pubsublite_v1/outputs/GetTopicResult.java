@@ -13,22 +13,22 @@ import java.util.Objects;
 @CustomType
 public final class GetTopicResult {
     /**
-     * The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
+     * @return The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
      * 
      */
     private final String name;
     /**
-     * The settings for this topic&#39;s partitions.
+     * @return The settings for this topic&#39;s partitions.
      * 
      */
     private final PartitionConfigResponse partitionConfig;
     /**
-     * The settings for this topic&#39;s Reservation usage.
+     * @return The settings for this topic&#39;s Reservation usage.
      * 
      */
     private final ReservationConfigResponse reservationConfig;
     /**
-     * The settings for this topic&#39;s message retention.
+     * @return The settings for this topic&#39;s message retention.
      * 
      */
     private final RetentionConfigResponse retentionConfig;
@@ -46,30 +46,30 @@ public final class GetTopicResult {
     }
 
     /**
-     * The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
+     * @return The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The settings for this topic&#39;s partitions.
+     * @return The settings for this topic&#39;s partitions.
      * 
-    */
+     */
     public PartitionConfigResponse partitionConfig() {
         return this.partitionConfig;
     }
     /**
-     * The settings for this topic&#39;s Reservation usage.
+     * @return The settings for this topic&#39;s Reservation usage.
      * 
-    */
+     */
     public ReservationConfigResponse reservationConfig() {
         return this.reservationConfig;
     }
     /**
-     * The settings for this topic&#39;s message retention.
+     * @return The settings for this topic&#39;s message retention.
      * 
-    */
+     */
     public RetentionConfigResponse retentionConfig() {
         return this.retentionConfig;
     }

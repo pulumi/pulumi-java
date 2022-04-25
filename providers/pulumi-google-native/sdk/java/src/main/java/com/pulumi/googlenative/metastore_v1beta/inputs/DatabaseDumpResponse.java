@@ -23,6 +23,10 @@ public final class DatabaseDumpResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="databaseType", required=true)
     private String databaseType;
 
+    /**
+     * @return The type of the database.
+     * 
+     */
     public String databaseType() {
         return this.databaseType;
     }
@@ -34,6 +38,10 @@ public final class DatabaseDumpResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="gcsUri", required=true)
     private String gcsUri;
 
+    /**
+     * @return A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
+     * 
+     */
     public String gcsUri() {
         return this.gcsUri;
     }
@@ -45,6 +53,10 @@ public final class DatabaseDumpResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceDatabase", required=true)
     private String sourceDatabase;
 
+    /**
+     * @return The name of the source database.
+     * 
+     */
     public String sourceDatabase() {
         return this.sourceDatabase;
     }
@@ -56,6 +68,10 @@ public final class DatabaseDumpResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -87,21 +103,45 @@ public final class DatabaseDumpResponse extends com.pulumi.resources.InvokeArgs 
             $ = new DatabaseDumpResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseType The type of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseType(String databaseType) {
             $.databaseType = databaseType;
             return this;
         }
 
+        /**
+         * @param gcsUri A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsUri(String gcsUri) {
             $.gcsUri = gcsUri;
             return this;
         }
 
+        /**
+         * @param sourceDatabase The name of the source database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabase(String sourceDatabase) {
             $.sourceDatabase = sourceDatabase;
             return this;
         }
 
+        /**
+         * @param type Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

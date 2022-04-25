@@ -23,6 +23,10 @@ public final class VpnGatewayInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Name of a VPN gateway.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -34,6 +38,10 @@ public final class VpnGatewayInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="ipAddress", required=true)
     private String ipAddress;
 
+    /**
+     * @return IP address of the VPN gateway.
+     * 
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
@@ -45,6 +53,10 @@ public final class VpnGatewayInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="networkUri", required=true)
     private String networkUri;
 
+    /**
+     * @return URI of a Compute Engine network where the VPN gateway is configured.
+     * 
+     */
     public String networkUri() {
         return this.networkUri;
     }
@@ -56,6 +68,10 @@ public final class VpnGatewayInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return Name of a Google Cloud region where this VPN gateway is configured.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -67,6 +83,10 @@ public final class VpnGatewayInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI of a VPN gateway.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -78,6 +98,10 @@ public final class VpnGatewayInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="vpnTunnelUri", required=true)
     private String vpnTunnelUri;
 
+    /**
+     * @return A VPN tunnel that is associated with this VPN gateway. There may be multiple VPN tunnels configured on a VPN gateway, and only the one relevant to the test is displayed.
+     * 
+     */
     public String vpnTunnelUri() {
         return this.vpnTunnelUri;
     }
@@ -111,31 +135,67 @@ public final class VpnGatewayInfoResponse extends com.pulumi.resources.InvokeArg
             $ = new VpnGatewayInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Name of a VPN gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param ipAddress IP address of the VPN gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param networkUri URI of a Compute Engine network where the VPN gateway is configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUri(String networkUri) {
             $.networkUri = networkUri;
             return this;
         }
 
+        /**
+         * @param region Name of a Google Cloud region where this VPN gateway is configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param uri URI of a VPN gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param vpnTunnelUri A VPN tunnel that is associated with this VPN gateway. There may be multiple VPN tunnels configured on a VPN gateway, and only the one relevant to the test is displayed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnTunnelUri(String vpnTunnelUri) {
             $.vpnTunnelUri = vpnTunnelUri;
             return this;

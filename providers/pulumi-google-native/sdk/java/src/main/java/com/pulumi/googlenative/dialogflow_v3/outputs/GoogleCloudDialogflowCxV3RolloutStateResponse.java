@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3RolloutStateResponse {
     /**
-     * Start time of the current step.
+     * @return Start time of the current step.
      * 
      */
     private final String startTime;
     /**
-     * Display name of the current auto rollout step.
+     * @return Display name of the current auto rollout step.
      * 
      */
     private final String step;
     /**
-     * Index of the current step in the auto rollout steps list.
+     * @return Index of the current step in the auto rollout steps list.
      * 
      */
     private final Integer stepIndex;
@@ -37,23 +37,23 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse {
     }
 
     /**
-     * Start time of the current step.
+     * @return Start time of the current step.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Display name of the current auto rollout step.
+     * @return Display name of the current auto rollout step.
      * 
-    */
+     */
     public String step() {
         return this.step;
     }
     /**
-     * Index of the current step in the auto rollout steps list.
+     * @return Index of the current step in the auto rollout steps list.
      * 
-    */
+     */
     public Integer stepIndex() {
         return this.stepIndex;
     }

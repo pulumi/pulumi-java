@@ -28,6 +28,10 @@ public final class EnvironmentMatrixArgs extends com.pulumi.resources.ResourceAr
     @Import(name="androidDeviceList")
     private @Nullable Output<AndroidDeviceListArgs> androidDeviceList;
 
+    /**
+     * @return A list of Android devices; the test will be run only on the specified devices.
+     * 
+     */
     public Optional<Output<AndroidDeviceListArgs>> androidDeviceList() {
         return Optional.ofNullable(this.androidDeviceList);
     }
@@ -39,6 +43,10 @@ public final class EnvironmentMatrixArgs extends com.pulumi.resources.ResourceAr
     @Import(name="androidMatrix")
     private @Nullable Output<AndroidMatrixArgs> androidMatrix;
 
+    /**
+     * @return A matrix of Android devices.
+     * 
+     */
     public Optional<Output<AndroidMatrixArgs>> androidMatrix() {
         return Optional.ofNullable(this.androidMatrix);
     }
@@ -50,6 +58,10 @@ public final class EnvironmentMatrixArgs extends com.pulumi.resources.ResourceAr
     @Import(name="iosDeviceList")
     private @Nullable Output<IosDeviceListArgs> iosDeviceList;
 
+    /**
+     * @return A list of iOS devices.
+     * 
+     */
     public Optional<Output<IosDeviceListArgs>> iosDeviceList() {
         return Optional.ofNullable(this.iosDeviceList);
     }
@@ -80,29 +92,65 @@ public final class EnvironmentMatrixArgs extends com.pulumi.resources.ResourceAr
             $ = new EnvironmentMatrixArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidDeviceList A list of Android devices; the test will be run only on the specified devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidDeviceList(@Nullable Output<AndroidDeviceListArgs> androidDeviceList) {
             $.androidDeviceList = androidDeviceList;
             return this;
         }
 
+        /**
+         * @param androidDeviceList A list of Android devices; the test will be run only on the specified devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidDeviceList(AndroidDeviceListArgs androidDeviceList) {
             return androidDeviceList(Output.of(androidDeviceList));
         }
 
+        /**
+         * @param androidMatrix A matrix of Android devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidMatrix(@Nullable Output<AndroidMatrixArgs> androidMatrix) {
             $.androidMatrix = androidMatrix;
             return this;
         }
 
+        /**
+         * @param androidMatrix A matrix of Android devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidMatrix(AndroidMatrixArgs androidMatrix) {
             return androidMatrix(Output.of(androidMatrix));
         }
 
+        /**
+         * @param iosDeviceList A list of iOS devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosDeviceList(@Nullable Output<IosDeviceListArgs> iosDeviceList) {
             $.iosDeviceList = iosDeviceList;
             return this;
         }
 
+        /**
+         * @param iosDeviceList A list of iOS devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosDeviceList(IosDeviceListArgs iosDeviceList) {
             return iosDeviceList(Output.of(iosDeviceList));
         }

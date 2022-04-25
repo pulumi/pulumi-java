@@ -23,6 +23,10 @@ public final class GaugeViewResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lowerBound", required=true)
     private Double lowerBound;
 
+    /**
+     * @return The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.
+     * 
+     */
     public Double lowerBound() {
         return this.lowerBound;
     }
@@ -34,6 +38,10 @@ public final class GaugeViewResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="upperBound", required=true)
     private Double upperBound;
 
+    /**
+     * @return The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.
+     * 
+     */
     public Double upperBound() {
         return this.upperBound;
     }
@@ -63,11 +71,23 @@ public final class GaugeViewResponse extends com.pulumi.resources.InvokeArgs {
             $ = new GaugeViewResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lowerBound The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowerBound(Double lowerBound) {
             $.lowerBound = lowerBound;
             return this;
         }
 
+        /**
+         * @param upperBound The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upperBound(Double upperBound) {
             $.upperBound = upperBound;
             return this;

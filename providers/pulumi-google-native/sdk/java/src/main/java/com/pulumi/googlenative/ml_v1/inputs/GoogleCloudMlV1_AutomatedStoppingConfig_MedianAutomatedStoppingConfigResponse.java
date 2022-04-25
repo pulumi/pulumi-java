@@ -23,6 +23,10 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
     @Import(name="useElapsedTime", required=true)
     private Boolean useElapsedTime;
 
+    /**
+     * @return If true, the median automated stopping rule applies to measurement.use_elapsed_time, which means the elapsed_time field of the current trial&#39;s latest measurement is used to compute the median objective value for each completed trial.
+     * 
+     */
     public Boolean useElapsedTime() {
         return this.useElapsedTime;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
             $ = new GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param useElapsedTime If true, the median automated stopping rule applies to measurement.use_elapsed_time, which means the elapsed_time field of the current trial&#39;s latest measurement is used to compute the median objective value for each completed trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useElapsedTime(Boolean useElapsedTime) {
             $.useElapsedTime = useElapsedTime;
             return this;

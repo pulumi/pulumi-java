@@ -27,6 +27,10 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     @Import(name="appApk", required=true)
     private FileReferenceResponse appApk;
 
+    /**
+     * @return The APK for the application under test.
+     * 
+     */
     public FileReferenceResponse appApk() {
         return this.appApk;
     }
@@ -38,6 +42,10 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     @Import(name="appBundle", required=true)
     private AppBundleResponse appBundle;
 
+    /**
+     * @return A multi-apk app bundle for the application under test.
+     * 
+     */
     public AppBundleResponse appBundle() {
         return this.appBundle;
     }
@@ -49,6 +57,10 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     @Import(name="appPackageId", required=true)
     private String appPackageId;
 
+    /**
+     * @return The java package for the application under test. The default value is determined by examining the application&#39;s manifest.
+     * 
+     */
     public String appPackageId() {
         return this.appPackageId;
     }
@@ -60,6 +72,10 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     @Import(name="orchestratorOption", required=true)
     private String orchestratorOption;
 
+    /**
+     * @return The option of whether running each test within its own invocation of instrumentation with Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner version 1.1 or higher! ** Orchestrator offers the following benefits: - No shared state - Crashes are isolated - Logs are scoped per test See for more information about Android Test Orchestrator. If not set, the test will be run without the orchestrator.
+     * 
+     */
     public String orchestratorOption() {
         return this.orchestratorOption;
     }
@@ -71,6 +87,10 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     @Import(name="shardingOption", required=true)
     private ShardingOptionResponse shardingOption;
 
+    /**
+     * @return The option to run tests in multiple shards in parallel.
+     * 
+     */
     public ShardingOptionResponse shardingOption() {
         return this.shardingOption;
     }
@@ -82,6 +102,10 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     @Import(name="testApk", required=true)
     private FileReferenceResponse testApk;
 
+    /**
+     * @return The APK containing the test code to be executed.
+     * 
+     */
     public FileReferenceResponse testApk() {
         return this.testApk;
     }
@@ -93,6 +117,10 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     @Import(name="testPackageId", required=true)
     private String testPackageId;
 
+    /**
+     * @return The java package for the test to be executed. The default value is determined by examining the application&#39;s manifest.
+     * 
+     */
     public String testPackageId() {
         return this.testPackageId;
     }
@@ -104,6 +132,10 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     @Import(name="testRunnerClass", required=true)
     private String testRunnerClass;
 
+    /**
+     * @return The InstrumentationTestRunner class. The default value is determined by examining the application&#39;s manifest.
+     * 
+     */
     public String testRunnerClass() {
         return this.testRunnerClass;
     }
@@ -115,6 +147,10 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     @Import(name="testTargets", required=true)
     private List<String> testTargets;
 
+    /**
+     * @return Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+     * 
+     */
     public List<String> testTargets() {
         return this.testTargets;
     }
@@ -151,51 +187,111 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
             $ = new AndroidInstrumentationTestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appApk The APK for the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appApk(FileReferenceResponse appApk) {
             $.appApk = appApk;
             return this;
         }
 
+        /**
+         * @param appBundle A multi-apk app bundle for the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appBundle(AppBundleResponse appBundle) {
             $.appBundle = appBundle;
             return this;
         }
 
+        /**
+         * @param appPackageId The java package for the application under test. The default value is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appPackageId(String appPackageId) {
             $.appPackageId = appPackageId;
             return this;
         }
 
+        /**
+         * @param orchestratorOption The option of whether running each test within its own invocation of instrumentation with Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner version 1.1 or higher! ** Orchestrator offers the following benefits: - No shared state - Crashes are isolated - Logs are scoped per test See for more information about Android Test Orchestrator. If not set, the test will be run without the orchestrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestratorOption(String orchestratorOption) {
             $.orchestratorOption = orchestratorOption;
             return this;
         }
 
+        /**
+         * @param shardingOption The option to run tests in multiple shards in parallel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardingOption(ShardingOptionResponse shardingOption) {
             $.shardingOption = shardingOption;
             return this;
         }
 
+        /**
+         * @param testApk The APK containing the test code to be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testApk(FileReferenceResponse testApk) {
             $.testApk = testApk;
             return this;
         }
 
+        /**
+         * @param testPackageId The java package for the test to be executed. The default value is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testPackageId(String testPackageId) {
             $.testPackageId = testPackageId;
             return this;
         }
 
+        /**
+         * @param testRunnerClass The InstrumentationTestRunner class. The default value is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testRunnerClass(String testRunnerClass) {
             $.testRunnerClass = testRunnerClass;
             return this;
         }
 
+        /**
+         * @param testTargets Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargets(List<String> testTargets) {
             $.testTargets = testTargets;
             return this;
         }
 
+        /**
+         * @param testTargets Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargets(String... testTargets) {
             return testTargets(List.of(testTargets));
         }

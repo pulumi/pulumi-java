@@ -23,6 +23,10 @@ public final class AccountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="googleAuto", required=true)
     private GoogleAutoResponse googleAuto;
 
+    /**
+     * @return An automatic google login account.
+     * 
+     */
     public GoogleAutoResponse googleAuto() {
         return this.googleAuto;
     }
@@ -51,6 +55,12 @@ public final class AccountResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AccountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param googleAuto An automatic google login account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleAuto(GoogleAutoResponse googleAuto) {
             $.googleAuto = googleAuto;
             return this;

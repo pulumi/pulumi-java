@@ -27,6 +27,10 @@ public final class DestinationConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="destinationConnectionProfileName", required=true)
     private Output<String> destinationConnectionProfileName;
 
+    /**
+     * @return Destination connection profile identifier.
+     * 
+     */
     public Output<String> destinationConnectionProfileName() {
         return this.destinationConnectionProfileName;
     }
@@ -38,6 +42,10 @@ public final class DestinationConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="gcsDestinationConfig")
     private @Nullable Output<GcsDestinationConfigArgs> gcsDestinationConfig;
 
+    /**
+     * @return GCS destination configuration.
+     * 
+     */
     public Optional<Output<GcsDestinationConfigArgs>> gcsDestinationConfig() {
         return Optional.ofNullable(this.gcsDestinationConfig);
     }
@@ -67,20 +75,44 @@ public final class DestinationConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new DestinationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationConnectionProfileName Destination connection profile identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationConnectionProfileName(Output<String> destinationConnectionProfileName) {
             $.destinationConnectionProfileName = destinationConnectionProfileName;
             return this;
         }
 
+        /**
+         * @param destinationConnectionProfileName Destination connection profile identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationConnectionProfileName(String destinationConnectionProfileName) {
             return destinationConnectionProfileName(Output.of(destinationConnectionProfileName));
         }
 
+        /**
+         * @param gcsDestinationConfig GCS destination configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDestinationConfig(@Nullable Output<GcsDestinationConfigArgs> gcsDestinationConfig) {
             $.gcsDestinationConfig = gcsDestinationConfig;
             return this;
         }
 
+        /**
+         * @param gcsDestinationConfig GCS destination configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDestinationConfig(GcsDestinationConfigArgs gcsDestinationConfig) {
             return gcsDestinationConfig(Output.of(gcsDestinationConfig));
         }

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class SecurityConfigResponse {
     /**
-     * Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.
+     * @return Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.
      * 
      */
     private final IdentityConfigResponse identityConfig;
     /**
-     * Optional. Kerberos related configuration.
+     * @return Optional. Kerberos related configuration.
      * 
      */
     private final KerberosConfigResponse kerberosConfig;
@@ -30,16 +30,16 @@ public final class SecurityConfigResponse {
     }
 
     /**
-     * Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.
+     * @return Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.
      * 
-    */
+     */
     public IdentityConfigResponse identityConfig() {
         return this.identityConfig;
     }
     /**
-     * Optional. Kerberos related configuration.
+     * @return Optional. Kerberos related configuration.
      * 
-    */
+     */
     public KerberosConfigResponse kerberosConfig() {
         return this.kerberosConfig;
     }

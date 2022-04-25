@@ -25,6 +25,10 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
     @Import(name="commonName", required=true)
     private String commonName;
 
+    /**
+     * @return The &#34;common name&#34; of the distinguished name.
+     * 
+     */
     public String commonName() {
         return this.commonName;
     }
@@ -36,6 +40,10 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
     @Import(name="hexSerialNumber", required=true)
     private String hexSerialNumber;
 
+    /**
+     * @return The serial number encoded in lowercase hexadecimal.
+     * 
+     */
     public String hexSerialNumber() {
         return this.hexSerialNumber;
     }
@@ -47,6 +55,10 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
     @Import(name="lifetime", required=true)
     private String lifetime;
 
+    /**
+     * @return For convenience, the actual lifetime of an issued certificate. Corresponds to &#39;not_after_time&#39; - &#39;not_before_time&#39;.
+     * 
+     */
     public String lifetime() {
         return this.lifetime;
     }
@@ -58,6 +70,10 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
     @Import(name="notAfterTime", required=true)
     private String notAfterTime;
 
+    /**
+     * @return The time at which the certificate expires.
+     * 
+     */
     public String notAfterTime() {
         return this.notAfterTime;
     }
@@ -69,6 +85,10 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
     @Import(name="notBeforeTime", required=true)
     private String notBeforeTime;
 
+    /**
+     * @return The time at which the certificate becomes valid.
+     * 
+     */
     public String notBeforeTime() {
         return this.notBeforeTime;
     }
@@ -80,6 +100,10 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
     @Import(name="subject", required=true)
     private SubjectResponse subject;
 
+    /**
+     * @return Contains distinguished name fields such as the location and organization.
+     * 
+     */
     public SubjectResponse subject() {
         return this.subject;
     }
@@ -91,6 +115,10 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
     @Import(name="subjectAltName", required=true)
     private SubjectAltNamesResponse subjectAltName;
 
+    /**
+     * @return The subject alternative name fields.
+     * 
+     */
     public SubjectAltNamesResponse subjectAltName() {
         return this.subjectAltName;
     }
@@ -125,36 +153,78 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
             $ = new SubjectDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commonName The &#34;common name&#34; of the distinguished name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonName(String commonName) {
             $.commonName = commonName;
             return this;
         }
 
+        /**
+         * @param hexSerialNumber The serial number encoded in lowercase hexadecimal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hexSerialNumber(String hexSerialNumber) {
             $.hexSerialNumber = hexSerialNumber;
             return this;
         }
 
+        /**
+         * @param lifetime For convenience, the actual lifetime of an issued certificate. Corresponds to &#39;not_after_time&#39; - &#39;not_before_time&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifetime(String lifetime) {
             $.lifetime = lifetime;
             return this;
         }
 
+        /**
+         * @param notAfterTime The time at which the certificate expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notAfterTime(String notAfterTime) {
             $.notAfterTime = notAfterTime;
             return this;
         }
 
+        /**
+         * @param notBeforeTime The time at which the certificate becomes valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notBeforeTime(String notBeforeTime) {
             $.notBeforeTime = notBeforeTime;
             return this;
         }
 
+        /**
+         * @param subject Contains distinguished name fields such as the location and organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(SubjectResponse subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subjectAltName The subject alternative name fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltName(SubjectAltNamesResponse subjectAltName) {
             $.subjectAltName = subjectAltName;
             return this;

@@ -26,6 +26,10 @@ public final class OutputConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destination")
     private @Nullable Output<String> destination;
 
+    /**
+     * @return The destination for writing trace data. Currently only BigQuery is supported. E.g.: &#34;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&#34;
+     * 
+     */
     public Optional<Output<String>> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -54,11 +58,23 @@ public final class OutputConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OutputConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination The destination for writing trace data. Currently only BigQuery is supported. E.g.: &#34;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable Output<String> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination The destination for writing trace data. Currently only BigQuery is supported. E.g.: &#34;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(String destination) {
             return destination(Output.of(destination));
         }

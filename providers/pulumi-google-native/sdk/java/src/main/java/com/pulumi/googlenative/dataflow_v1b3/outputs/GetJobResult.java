@@ -18,117 +18,117 @@ import java.util.Objects;
 @CustomType
 public final class GetJobResult {
     /**
-     * The client&#39;s unique identifier of the job, re-used across retried attempts. If this field is set, the service will ensure its uniqueness. The request to create a job will fail if the service has knowledge of a previously submitted job with the same client&#39;s ID and job name. The caller may use this field to ensure idempotence of job creation across retried attempts to create a job. By default, the field is empty and, in that case, the service ignores it.
+     * @return The client&#39;s unique identifier of the job, re-used across retried attempts. If this field is set, the service will ensure its uniqueness. The request to create a job will fail if the service has knowledge of a previously submitted job with the same client&#39;s ID and job name. The caller may use this field to ensure idempotence of job creation across retried attempts to create a job. By default, the field is empty and, in that case, the service ignores it.
      * 
      */
     private final String clientRequestId;
     /**
-     * The timestamp when the job was initially created. Immutable and set by the Cloud Dataflow service.
+     * @return The timestamp when the job was initially created. Immutable and set by the Cloud Dataflow service.
      * 
      */
     private final String createTime;
     /**
-     * If this is specified, the job&#39;s initial state is populated from the given snapshot.
+     * @return If this is specified, the job&#39;s initial state is populated from the given snapshot.
      * 
      */
     private final String createdFromSnapshotId;
     /**
-     * The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job has reached a terminal state, no further state updates may be made. This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+     * @return The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job has reached a terminal state, no further state updates may be made. This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
      * 
      */
     private final String currentState;
     /**
-     * The timestamp associated with the current state.
+     * @return The timestamp associated with the current state.
      * 
      */
     private final String currentStateTime;
     /**
-     * The environment for the job.
+     * @return The environment for the job.
      * 
      */
     private final EnvironmentResponse environment;
     /**
-     * This field is populated by the Dataflow service to support filtering jobs by the metadata values provided here. Populated for ListJobs and all GetJob views SUMMARY and higher.
+     * @return This field is populated by the Dataflow service to support filtering jobs by the metadata values provided here. Populated for ListJobs and all GetJob views SUMMARY and higher.
      * 
      */
     private final JobMetadataResponse jobMetadata;
     /**
-     * User-defined labels for this job. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be &lt;= 128 bytes in size.
+     * @return User-defined labels for this job. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be &lt;= 128 bytes in size.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains this job.
+     * @return The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains this job.
      * 
      */
     private final String location;
     /**
-     * The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a project at any given time. If a caller attempts to create a Job with the same name as an already-existing Job, the attempt returns the existing Job. The name must match the regular expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+     * @return The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a project at any given time. If a caller attempts to create a Job with the same name as an already-existing Job, the attempt returns the existing Job. The name must match the regular expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
      * 
      */
     private final String name;
     /**
-     * Preliminary field: The format of this data may change at any time. A description of the user pipeline and stages through which it is executed. Created by Cloud Dataflow service. Only retrieved with JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.
+     * @return Preliminary field: The format of this data may change at any time. A description of the user pipeline and stages through which it is executed. Created by Cloud Dataflow service. Only retrieved with JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.
      * 
      */
     private final PipelineDescriptionResponse pipelineDescription;
     /**
-     * The ID of the Cloud Platform project that the job belongs to.
+     * @return The ID of the Cloud Platform project that the job belongs to.
      * 
      */
     private final String project;
     /**
-     * If this job is an update of an existing job, this field is the job ID of the job it replaced. When sending a `CreateJobRequest`, you can update a job by specifying it here. The job named here is stopped, and its intermediate state is transferred to this job.
+     * @return If this job is an update of an existing job, this field is the job ID of the job it replaced. When sending a `CreateJobRequest`, you can update a job by specifying it here. The job named here is stopped, and its intermediate state is transferred to this job.
      * 
      */
     private final String replaceJobId;
     /**
-     * If another job is an update of this job (and thus, this job is in `JOB_STATE_UPDATED`), this field contains the ID of that job.
+     * @return If another job is an update of this job (and thus, this job is in `JOB_STATE_UPDATED`), this field contains the ID of that job.
      * 
      */
     private final String replacedByJobId;
     /**
-     * The job&#39;s requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job&#39;s requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.
+     * @return The job&#39;s requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job&#39;s requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.
      * 
      */
     private final String requestedState;
     /**
-     * Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.
+     * @return Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.
      * 
      */
     private final Boolean satisfiesPzs;
     /**
-     * This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+     * @return This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
      * 
      */
     private final List<ExecutionStageStateResponse> stageStates;
     /**
-     * The timestamp when the job was started (transitioned to JOB_STATE_PENDING). Flexible resource scheduling jobs are started with some delay after job creation, so start_time is unset before start and is updated when the job is started by the Cloud Dataflow service. For other jobs, start_time always equals to create_time and is immutable and set by the Cloud Dataflow service.
+     * @return The timestamp when the job was started (transitioned to JOB_STATE_PENDING). Flexible resource scheduling jobs are started with some delay after job creation, so start_time is unset before start and is updated when the job is started by the Cloud Dataflow service. For other jobs, start_time always equals to create_time and is immutable and set by the Cloud Dataflow service.
      * 
      */
     private final String startTime;
     /**
-     * Exactly one of step or steps_location should be specified. The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
+     * @return Exactly one of step or steps_location should be specified. The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
      * 
      */
     private final List<StepResponse> steps;
     /**
-     * The Cloud Storage location where the steps are stored.
+     * @return The Cloud Storage location where the steps are stored.
      * 
      */
     private final String stepsLocation;
     /**
-     * A set of files the system should be aware of that are used for temporary storage. These temporary files will be removed on job completion. No duplicates are allowed. No file patterns are supported. The supported files are: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+     * @return A set of files the system should be aware of that are used for temporary storage. These temporary files will be removed on job completion. No duplicates are allowed. No file patterns are supported. The supported files are: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
      * 
      */
     private final List<String> tempFiles;
     /**
-     * The map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job.
+     * @return The map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job.
      * 
      */
     private final Map<String,String> transformNameMapping;
     /**
-     * The type of Cloud Dataflow job.
+     * @return The type of Cloud Dataflow job.
      * 
      */
     private final String type;
@@ -184,163 +184,163 @@ public final class GetJobResult {
     }
 
     /**
-     * The client&#39;s unique identifier of the job, re-used across retried attempts. If this field is set, the service will ensure its uniqueness. The request to create a job will fail if the service has knowledge of a previously submitted job with the same client&#39;s ID and job name. The caller may use this field to ensure idempotence of job creation across retried attempts to create a job. By default, the field is empty and, in that case, the service ignores it.
+     * @return The client&#39;s unique identifier of the job, re-used across retried attempts. If this field is set, the service will ensure its uniqueness. The request to create a job will fail if the service has knowledge of a previously submitted job with the same client&#39;s ID and job name. The caller may use this field to ensure idempotence of job creation across retried attempts to create a job. By default, the field is empty and, in that case, the service ignores it.
      * 
-    */
+     */
     public String clientRequestId() {
         return this.clientRequestId;
     }
     /**
-     * The timestamp when the job was initially created. Immutable and set by the Cloud Dataflow service.
+     * @return The timestamp when the job was initially created. Immutable and set by the Cloud Dataflow service.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * If this is specified, the job&#39;s initial state is populated from the given snapshot.
+     * @return If this is specified, the job&#39;s initial state is populated from the given snapshot.
      * 
-    */
+     */
     public String createdFromSnapshotId() {
         return this.createdFromSnapshotId;
     }
     /**
-     * The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job has reached a terminal state, no further state updates may be made. This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+     * @return The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job has reached a terminal state, no further state updates may be made. This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
      * 
-    */
+     */
     public String currentState() {
         return this.currentState;
     }
     /**
-     * The timestamp associated with the current state.
+     * @return The timestamp associated with the current state.
      * 
-    */
+     */
     public String currentStateTime() {
         return this.currentStateTime;
     }
     /**
-     * The environment for the job.
+     * @return The environment for the job.
      * 
-    */
+     */
     public EnvironmentResponse environment() {
         return this.environment;
     }
     /**
-     * This field is populated by the Dataflow service to support filtering jobs by the metadata values provided here. Populated for ListJobs and all GetJob views SUMMARY and higher.
+     * @return This field is populated by the Dataflow service to support filtering jobs by the metadata values provided here. Populated for ListJobs and all GetJob views SUMMARY and higher.
      * 
-    */
+     */
     public JobMetadataResponse jobMetadata() {
         return this.jobMetadata;
     }
     /**
-     * User-defined labels for this job. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be &lt;= 128 bytes in size.
+     * @return User-defined labels for this job. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be &lt;= 128 bytes in size.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains this job.
+     * @return The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains this job.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a project at any given time. If a caller attempts to create a Job with the same name as an already-existing Job, the attempt returns the existing Job. The name must match the regular expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+     * @return The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a project at any given time. If a caller attempts to create a Job with the same name as an already-existing Job, the attempt returns the existing Job. The name must match the regular expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Preliminary field: The format of this data may change at any time. A description of the user pipeline and stages through which it is executed. Created by Cloud Dataflow service. Only retrieved with JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.
+     * @return Preliminary field: The format of this data may change at any time. A description of the user pipeline and stages through which it is executed. Created by Cloud Dataflow service. Only retrieved with JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.
      * 
-    */
+     */
     public PipelineDescriptionResponse pipelineDescription() {
         return this.pipelineDescription;
     }
     /**
-     * The ID of the Cloud Platform project that the job belongs to.
+     * @return The ID of the Cloud Platform project that the job belongs to.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * If this job is an update of an existing job, this field is the job ID of the job it replaced. When sending a `CreateJobRequest`, you can update a job by specifying it here. The job named here is stopped, and its intermediate state is transferred to this job.
+     * @return If this job is an update of an existing job, this field is the job ID of the job it replaced. When sending a `CreateJobRequest`, you can update a job by specifying it here. The job named here is stopped, and its intermediate state is transferred to this job.
      * 
-    */
+     */
     public String replaceJobId() {
         return this.replaceJobId;
     }
     /**
-     * If another job is an update of this job (and thus, this job is in `JOB_STATE_UPDATED`), this field contains the ID of that job.
+     * @return If another job is an update of this job (and thus, this job is in `JOB_STATE_UPDATED`), this field contains the ID of that job.
      * 
-    */
+     */
     public String replacedByJobId() {
         return this.replacedByJobId;
     }
     /**
-     * The job&#39;s requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job&#39;s requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.
+     * @return The job&#39;s requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job&#39;s requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.
      * 
-    */
+     */
     public String requestedState() {
         return this.requestedState;
     }
     /**
-     * Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.
+     * @return Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.
      * 
-    */
+     */
     public Boolean satisfiesPzs() {
         return this.satisfiesPzs;
     }
     /**
-     * This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+     * @return This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
      * 
-    */
+     */
     public List<ExecutionStageStateResponse> stageStates() {
         return this.stageStates;
     }
     /**
-     * The timestamp when the job was started (transitioned to JOB_STATE_PENDING). Flexible resource scheduling jobs are started with some delay after job creation, so start_time is unset before start and is updated when the job is started by the Cloud Dataflow service. For other jobs, start_time always equals to create_time and is immutable and set by the Cloud Dataflow service.
+     * @return The timestamp when the job was started (transitioned to JOB_STATE_PENDING). Flexible resource scheduling jobs are started with some delay after job creation, so start_time is unset before start and is updated when the job is started by the Cloud Dataflow service. For other jobs, start_time always equals to create_time and is immutable and set by the Cloud Dataflow service.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Exactly one of step or steps_location should be specified. The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
+     * @return Exactly one of step or steps_location should be specified. The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
      * 
-    */
+     */
     public List<StepResponse> steps() {
         return this.steps;
     }
     /**
-     * The Cloud Storage location where the steps are stored.
+     * @return The Cloud Storage location where the steps are stored.
      * 
-    */
+     */
     public String stepsLocation() {
         return this.stepsLocation;
     }
     /**
-     * A set of files the system should be aware of that are used for temporary storage. These temporary files will be removed on job completion. No duplicates are allowed. No file patterns are supported. The supported files are: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+     * @return A set of files the system should be aware of that are used for temporary storage. These temporary files will be removed on job completion. No duplicates are allowed. No file patterns are supported. The supported files are: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
      * 
-    */
+     */
     public List<String> tempFiles() {
         return this.tempFiles;
     }
     /**
-     * The map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job.
+     * @return The map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job.
      * 
-    */
+     */
     public Map<String,String> transformNameMapping() {
         return this.transformNameMapping;
     }
     /**
-     * The type of Cloud Dataflow job.
+     * @return The type of Cloud Dataflow job.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

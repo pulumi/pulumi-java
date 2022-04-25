@@ -26,6 +26,10 @@ public final class SqlIpConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="authorizedNetworks", required=true)
     private List<SqlAclEntryResponse> authorizedNetworks;
 
+    /**
+     * @return The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as &#39;slash&#39; notation (e.g. `192.168.100.0/24`).
+     * 
+     */
     public List<SqlAclEntryResponse> authorizedNetworks() {
         return this.authorizedNetworks;
     }
@@ -37,6 +41,10 @@ public final class SqlIpConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enableIpv4", required=true)
     private Boolean enableIpv4;
 
+    /**
+     * @return Whether the instance is assigned a public IP address or not.
+     * 
+     */
     public Boolean enableIpv4() {
         return this.enableIpv4;
     }
@@ -48,6 +56,10 @@ public final class SqlIpConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="privateNetwork", required=true)
     private String privateNetwork;
 
+    /**
+     * @return The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `/projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.
+     * 
+     */
     public String privateNetwork() {
         return this.privateNetwork;
     }
@@ -59,6 +71,10 @@ public final class SqlIpConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requireSsl", required=true)
     private Boolean requireSsl;
 
+    /**
+     * @return Whether SSL connections over IP should be enforced or not.
+     * 
+     */
     public Boolean requireSsl() {
         return this.requireSsl;
     }
@@ -90,25 +106,55 @@ public final class SqlIpConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SqlIpConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizedNetworks The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as &#39;slash&#39; notation (e.g. `192.168.100.0/24`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedNetworks(List<SqlAclEntryResponse> authorizedNetworks) {
             $.authorizedNetworks = authorizedNetworks;
             return this;
         }
 
+        /**
+         * @param authorizedNetworks The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as &#39;slash&#39; notation (e.g. `192.168.100.0/24`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedNetworks(SqlAclEntryResponse... authorizedNetworks) {
             return authorizedNetworks(List.of(authorizedNetworks));
         }
 
+        /**
+         * @param enableIpv4 Whether the instance is assigned a public IP address or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIpv4(Boolean enableIpv4) {
             $.enableIpv4 = enableIpv4;
             return this;
         }
 
+        /**
+         * @param privateNetwork The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `/projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateNetwork(String privateNetwork) {
             $.privateNetwork = privateNetwork;
             return this;
         }
 
+        /**
+         * @param requireSsl Whether SSL connections over IP should be enforced or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireSsl(Boolean requireSsl) {
             $.requireSsl = requireSsl;
             return this;

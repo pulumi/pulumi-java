@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class UpcomingMaintenanceResponse {
     /**
-     * Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
+     * @return Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
      * 
      */
     private final Boolean canReschedule;
     /**
-     * The start time window of the maintenance disruption.
+     * @return The start time window of the maintenance disruption.
      * 
      */
     private final UpcomingMaintenanceTimeWindowResponse startTimeWindow;
     /**
-     * Defines the type of maintenance.
+     * @return Defines the type of maintenance.
      * 
      */
     private final String type;
@@ -38,23 +38,23 @@ public final class UpcomingMaintenanceResponse {
     }
 
     /**
-     * Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
+     * @return Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
      * 
-    */
+     */
     public Boolean canReschedule() {
         return this.canReschedule;
     }
     /**
-     * The start time window of the maintenance disruption.
+     * @return The start time window of the maintenance disruption.
      * 
-    */
+     */
     public UpcomingMaintenanceTimeWindowResponse startTimeWindow() {
         return this.startTimeWindow;
     }
     /**
-     * Defines the type of maintenance.
+     * @return Defines the type of maintenance.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

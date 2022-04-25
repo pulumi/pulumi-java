@@ -24,6 +24,10 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="connectionInfo")
     private @Nullable Output<GameServerClusterConnectionInfoArgs> connectionInfo;
 
+    /**
+     * @return The game server cluster connection information. This information is used to manage game server clusters.
+     * 
+     */
     public Optional<Output<GameServerClusterConnectionInfoArgs>> connectionInfo() {
         return Optional.ofNullable(this.connectionInfo);
     }
@@ -35,6 +39,10 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Human readable description of the cluster.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return ETag of the resource.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -64,6 +76,10 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The labels associated with this game server cluster. Each label is a key-value pair.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -82,6 +98,10 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -132,29 +152,65 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
             $ = new GameServerClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionInfo The game server cluster connection information. This information is used to manage game server clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionInfo(@Nullable Output<GameServerClusterConnectionInfoArgs> connectionInfo) {
             $.connectionInfo = connectionInfo;
             return this;
         }
 
+        /**
+         * @param connectionInfo The game server cluster connection information. This information is used to manage game server clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionInfo(GameServerClusterConnectionInfoArgs connectionInfo) {
             return connectionInfo(Output.of(connectionInfo));
         }
 
+        /**
+         * @param description Human readable description of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Human readable description of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param etag ETag of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag ETag of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
@@ -168,11 +224,23 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
             return gameServerClusterId(Output.of(gameServerClusterId));
         }
 
+        /**
+         * @param labels The labels associated with this game server cluster. Each label is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The labels associated with this game server cluster. Each label is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -186,11 +254,23 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

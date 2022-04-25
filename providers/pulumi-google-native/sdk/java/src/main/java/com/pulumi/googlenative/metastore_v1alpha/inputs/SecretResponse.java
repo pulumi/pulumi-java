@@ -23,6 +23,10 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cloudSecret", required=true)
     private String cloudSecret;
 
+    /**
+     * @return The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
+     * 
+     */
     public String cloudSecret() {
         return this.cloudSecret;
     }
@@ -51,6 +55,12 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SecretResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudSecret The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSecret(String cloudSecret) {
             $.cloudSecret = cloudSecret;
             return this;

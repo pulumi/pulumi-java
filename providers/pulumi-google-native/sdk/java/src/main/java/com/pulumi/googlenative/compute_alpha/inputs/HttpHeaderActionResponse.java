@@ -25,6 +25,10 @@ public final class HttpHeaderActionResponse extends com.pulumi.resources.InvokeA
     @Import(name="requestHeadersToAdd", required=true)
     private List<HttpHeaderOptionResponse> requestHeadersToAdd;
 
+    /**
+     * @return Headers to add to a matching request before forwarding the request to the backendService.
+     * 
+     */
     public List<HttpHeaderOptionResponse> requestHeadersToAdd() {
         return this.requestHeadersToAdd;
     }
@@ -36,6 +40,10 @@ public final class HttpHeaderActionResponse extends com.pulumi.resources.InvokeA
     @Import(name="requestHeadersToRemove", required=true)
     private List<String> requestHeadersToRemove;
 
+    /**
+     * @return A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
+     * 
+     */
     public List<String> requestHeadersToRemove() {
         return this.requestHeadersToRemove;
     }
@@ -47,6 +55,10 @@ public final class HttpHeaderActionResponse extends com.pulumi.resources.InvokeA
     @Import(name="responseHeadersToAdd", required=true)
     private List<HttpHeaderOptionResponse> responseHeadersToAdd;
 
+    /**
+     * @return Headers to add the response before sending the response back to the client.
+     * 
+     */
     public List<HttpHeaderOptionResponse> responseHeadersToAdd() {
         return this.responseHeadersToAdd;
     }
@@ -58,6 +70,10 @@ public final class HttpHeaderActionResponse extends com.pulumi.resources.InvokeA
     @Import(name="responseHeadersToRemove", required=true)
     private List<String> responseHeadersToRemove;
 
+    /**
+     * @return A list of header names for headers that need to be removed from the response before sending the response back to the client.
+     * 
+     */
     public List<String> responseHeadersToRemove() {
         return this.responseHeadersToRemove;
     }
@@ -89,38 +105,86 @@ public final class HttpHeaderActionResponse extends com.pulumi.resources.InvokeA
             $ = new HttpHeaderActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param requestHeadersToAdd Headers to add to a matching request before forwarding the request to the backendService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeadersToAdd(List<HttpHeaderOptionResponse> requestHeadersToAdd) {
             $.requestHeadersToAdd = requestHeadersToAdd;
             return this;
         }
 
+        /**
+         * @param requestHeadersToAdd Headers to add to a matching request before forwarding the request to the backendService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeadersToAdd(HttpHeaderOptionResponse... requestHeadersToAdd) {
             return requestHeadersToAdd(List.of(requestHeadersToAdd));
         }
 
+        /**
+         * @param requestHeadersToRemove A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeadersToRemove(List<String> requestHeadersToRemove) {
             $.requestHeadersToRemove = requestHeadersToRemove;
             return this;
         }
 
+        /**
+         * @param requestHeadersToRemove A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeadersToRemove(String... requestHeadersToRemove) {
             return requestHeadersToRemove(List.of(requestHeadersToRemove));
         }
 
+        /**
+         * @param responseHeadersToAdd Headers to add the response before sending the response back to the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeadersToAdd(List<HttpHeaderOptionResponse> responseHeadersToAdd) {
             $.responseHeadersToAdd = responseHeadersToAdd;
             return this;
         }
 
+        /**
+         * @param responseHeadersToAdd Headers to add the response before sending the response back to the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeadersToAdd(HttpHeaderOptionResponse... responseHeadersToAdd) {
             return responseHeadersToAdd(List.of(responseHeadersToAdd));
         }
 
+        /**
+         * @param responseHeadersToRemove A list of header names for headers that need to be removed from the response before sending the response back to the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeadersToRemove(List<String> responseHeadersToRemove) {
             $.responseHeadersToRemove = responseHeadersToRemove;
             return this;
         }
 
+        /**
+         * @param responseHeadersToRemove A list of header names for headers that need to be removed from the response before sending the response back to the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeadersToRemove(String... responseHeadersToRemove) {
             return responseHeadersToRemove(List.of(responseHeadersToRemove));
         }

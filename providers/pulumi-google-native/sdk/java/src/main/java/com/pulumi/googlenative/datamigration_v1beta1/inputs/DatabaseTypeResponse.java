@@ -23,6 +23,10 @@ public final class DatabaseTypeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="engine", required=true)
     private String engine;
 
+    /**
+     * @return The database engine.
+     * 
+     */
     public String engine() {
         return this.engine;
     }
@@ -34,6 +38,10 @@ public final class DatabaseTypeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="provider", required=true)
     private String provider;
 
+    /**
+     * @return The database provider.
+     * 
+     */
     public String provider() {
         return this.provider;
     }
@@ -63,11 +71,23 @@ public final class DatabaseTypeResponse extends com.pulumi.resources.InvokeArgs 
             $ = new DatabaseTypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param engine The database engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(String engine) {
             $.engine = engine;
             return this;
         }
 
+        /**
+         * @param provider The database provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(String provider) {
             $.provider = provider;
             return this;

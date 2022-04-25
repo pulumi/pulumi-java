@@ -27,6 +27,10 @@ public final class SchedulerResourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="count")
     private @Nullable Output<Integer> count;
 
+    /**
+     * @return Optional. The number of schedulers.
+     * 
+     */
     public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -38,6 +42,10 @@ public final class SchedulerResourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cpu")
     private @Nullable Output<Double> cpu;
 
+    /**
+     * @return Optional. CPU request and limit for a single Airflow scheduler replica.
+     * 
+     */
     public Optional<Output<Double>> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -49,6 +57,10 @@ public final class SchedulerResourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="memoryGb")
     private @Nullable Output<Double> memoryGb;
 
+    /**
+     * @return Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
+     * 
+     */
     public Optional<Output<Double>> memoryGb() {
         return Optional.ofNullable(this.memoryGb);
     }
@@ -60,6 +72,10 @@ public final class SchedulerResourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="storageGb")
     private @Nullable Output<Double> storageGb;
 
+    /**
+     * @return Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
+     * 
+     */
     public Optional<Output<Double>> storageGb() {
         return Optional.ofNullable(this.storageGb);
     }
@@ -91,38 +107,86 @@ public final class SchedulerResourceArgs extends com.pulumi.resources.ResourceAr
             $ = new SchedulerResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Optional. The number of schedulers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Optional. The number of schedulers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param cpu Optional. CPU request and limit for a single Airflow scheduler replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Output<Double> cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param cpu Optional. CPU request and limit for a single Airflow scheduler replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Double cpu) {
             return cpu(Output.of(cpu));
         }
 
+        /**
+         * @param memoryGb Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             $.memoryGb = memoryGb;
             return this;
         }
 
+        /**
+         * @param memoryGb Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryGb(Double memoryGb) {
             return memoryGb(Output.of(memoryGb));
         }
 
+        /**
+         * @param storageGb Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageGb(@Nullable Output<Double> storageGb) {
             $.storageGb = storageGb;
             return this;
         }
 
+        /**
+         * @param storageGb Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageGb(Double storageGb) {
             return storageGb(Output.of(storageGb));
         }

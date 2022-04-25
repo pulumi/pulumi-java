@@ -23,6 +23,10 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="countryCode", required=true)
     private String countryCode;
 
+    /**
+     * @return The country code of the subject.
+     * 
+     */
     public String countryCode() {
         return this.countryCode;
     }
@@ -34,6 +38,10 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="locality", required=true)
     private String locality;
 
+    /**
+     * @return The locality or city of the subject.
+     * 
+     */
     public String locality() {
         return this.locality;
     }
@@ -45,6 +53,10 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="organization", required=true)
     private String organization;
 
+    /**
+     * @return The organization of the subject.
+     * 
+     */
     public String organization() {
         return this.organization;
     }
@@ -56,6 +68,10 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="organizationalUnit", required=true)
     private String organizationalUnit;
 
+    /**
+     * @return The organizational_unit of the subject.
+     * 
+     */
     public String organizationalUnit() {
         return this.organizationalUnit;
     }
@@ -67,6 +83,10 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="postalCode", required=true)
     private String postalCode;
 
+    /**
+     * @return The postal code of the subject.
+     * 
+     */
     public String postalCode() {
         return this.postalCode;
     }
@@ -78,6 +98,10 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="province", required=true)
     private String province;
 
+    /**
+     * @return The province, territory, or regional state of the subject.
+     * 
+     */
     public String province() {
         return this.province;
     }
@@ -89,6 +113,10 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="streetAddress", required=true)
     private String streetAddress;
 
+    /**
+     * @return The street address of the subject.
+     * 
+     */
     public String streetAddress() {
         return this.streetAddress;
     }
@@ -123,36 +151,78 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SubjectResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param countryCode The country code of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryCode(String countryCode) {
             $.countryCode = countryCode;
             return this;
         }
 
+        /**
+         * @param locality The locality or city of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locality(String locality) {
             $.locality = locality;
             return this;
         }
 
+        /**
+         * @param organization The organization of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organization(String organization) {
             $.organization = organization;
             return this;
         }
 
+        /**
+         * @param organizationalUnit The organizational_unit of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnit(String organizationalUnit) {
             $.organizationalUnit = organizationalUnit;
             return this;
         }
 
+        /**
+         * @param postalCode The postal code of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalCode(String postalCode) {
             $.postalCode = postalCode;
             return this;
         }
 
+        /**
+         * @param province The province, territory, or regional state of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder province(String province) {
             $.province = province;
             return this;
         }
 
+        /**
+         * @param streetAddress The street address of the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress(String streetAddress) {
             $.streetAddress = streetAddress;
             return this;

@@ -24,6 +24,10 @@ public final class MetricRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metricCosts", required=true)
     private Map<String,String> metricCosts;
 
+    /**
+     * @return Metrics to update when the selected methods are called, and the associated cost applied to each metric. The key of the map is the metric name, and the values are the amount increased for the metric against which the quota limits are defined. The value must not be negative.
+     * 
+     */
     public Map<String,String> metricCosts() {
         return this.metricCosts;
     }
@@ -35,6 +39,10 @@ public final class MetricRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="selector", required=true)
     private String selector;
 
+    /**
+     * @return Selects the methods to which this rule applies. Refer to selector for syntax details.
+     * 
+     */
     public String selector() {
         return this.selector;
     }
@@ -64,11 +72,23 @@ public final class MetricRuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MetricRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metricCosts Metrics to update when the selected methods are called, and the associated cost applied to each metric. The key of the map is the metric name, and the values are the amount increased for the metric against which the quota limits are defined. The value must not be negative.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricCosts(Map<String,String> metricCosts) {
             $.metricCosts = metricCosts;
             return this;
         }
 
+        /**
+         * @param selector Selects the methods to which this rule applies. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             $.selector = selector;
             return this;

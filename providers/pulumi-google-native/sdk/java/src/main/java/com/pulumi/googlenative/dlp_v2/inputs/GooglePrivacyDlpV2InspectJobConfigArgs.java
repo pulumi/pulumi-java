@@ -30,6 +30,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends com.pulumi.res
     @Import(name="actions")
     private @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
 
+    /**
+     * @return Actions to execute at the completion of the job.
+     * 
+     */
     public Optional<Output<List<GooglePrivacyDlpV2ActionArgs>>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -41,6 +45,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends com.pulumi.res
     @Import(name="inspectConfig")
     private @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
 
+    /**
+     * @return How and what to scan for.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2InspectConfigArgs>> inspectConfig() {
         return Optional.ofNullable(this.inspectConfig);
     }
@@ -52,6 +60,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends com.pulumi.res
     @Import(name="inspectTemplateName")
     private @Nullable Output<String> inspectTemplateName;
 
+    /**
+     * @return If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
+     * 
+     */
     public Optional<Output<String>> inspectTemplateName() {
         return Optional.ofNullable(this.inspectTemplateName);
     }
@@ -63,6 +75,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends com.pulumi.res
     @Import(name="storageConfig")
     private @Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;
 
+    /**
+     * @return The data to scan.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2StorageConfigArgs>> storageConfig() {
         return Optional.ofNullable(this.storageConfig);
     }
@@ -94,42 +110,96 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends com.pulumi.res
             $ = new GooglePrivacyDlpV2InspectJobConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions Actions to execute at the completion of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions Actions to execute at the completion of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<GooglePrivacyDlpV2ActionArgs> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions Actions to execute at the completion of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(GooglePrivacyDlpV2ActionArgs... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param inspectConfig How and what to scan for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectConfig(@Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig) {
             $.inspectConfig = inspectConfig;
             return this;
         }
 
+        /**
+         * @param inspectConfig How and what to scan for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectConfig(GooglePrivacyDlpV2InspectConfigArgs inspectConfig) {
             return inspectConfig(Output.of(inspectConfig));
         }
 
+        /**
+         * @param inspectTemplateName If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectTemplateName(@Nullable Output<String> inspectTemplateName) {
             $.inspectTemplateName = inspectTemplateName;
             return this;
         }
 
+        /**
+         * @param inspectTemplateName If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectTemplateName(String inspectTemplateName) {
             return inspectTemplateName(Output.of(inspectTemplateName));
         }
 
+        /**
+         * @param storageConfig The data to scan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageConfig(@Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig) {
             $.storageConfig = storageConfig;
             return this;
         }
 
+        /**
+         * @param storageConfig The data to scan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageConfig(GooglePrivacyDlpV2StorageConfigArgs storageConfig) {
             return storageConfig(Output.of(storageConfig));
         }

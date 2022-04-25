@@ -27,6 +27,10 @@ public final class BucketAutoclassArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether or not Autoclass is enabled on this bucket
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class BucketAutoclassArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="toggleTime")
     private @Nullable Output<String> toggleTime;
 
+    /**
+     * @return A date and time in RFC 3339 format representing the instant at which &#34;enabled&#34; was last toggled.
+     * 
+     */
     public Optional<Output<String>> toggleTime() {
         return Optional.ofNullable(this.toggleTime);
     }
@@ -67,20 +75,44 @@ public final class BucketAutoclassArgs extends com.pulumi.resources.ResourceArgs
             $ = new BucketAutoclassArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether or not Autoclass is enabled on this bucket
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether or not Autoclass is enabled on this bucket
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param toggleTime A date and time in RFC 3339 format representing the instant at which &#34;enabled&#34; was last toggled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toggleTime(@Nullable Output<String> toggleTime) {
             $.toggleTime = toggleTime;
             return this;
         }
 
+        /**
+         * @param toggleTime A date and time in RFC 3339 format representing the instant at which &#34;enabled&#34; was last toggled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toggleTime(String toggleTime) {
             return toggleTime(Output.of(toggleTime));
         }

@@ -29,6 +29,10 @@ public final class IndividualOutcomeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="multistepNumber")
     private @Nullable Output<Integer> multistepNumber;
 
+    /**
+     * @return Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
+     * 
+     */
     public Optional<Output<Integer>> multistepNumber() {
         return Optional.ofNullable(this.multistepNumber);
     }
@@ -47,6 +51,10 @@ public final class IndividualOutcomeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="runDuration")
     private @Nullable Output<DurationArgs> runDuration;
 
+    /**
+     * @return How long it took for this step to run.
+     * 
+     */
     public Optional<Output<DurationArgs>> runDuration() {
         return Optional.ofNullable(this.runDuration);
     }
@@ -85,11 +93,23 @@ public final class IndividualOutcomeArgs extends com.pulumi.resources.ResourceAr
             $ = new IndividualOutcomeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param multistepNumber Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multistepNumber(@Nullable Output<Integer> multistepNumber) {
             $.multistepNumber = multistepNumber;
             return this;
         }
 
+        /**
+         * @param multistepNumber Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multistepNumber(Integer multistepNumber) {
             return multistepNumber(Output.of(multistepNumber));
         }
@@ -103,11 +123,23 @@ public final class IndividualOutcomeArgs extends com.pulumi.resources.ResourceAr
             return outcomeSummary(Output.of(outcomeSummary));
         }
 
+        /**
+         * @param runDuration How long it took for this step to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runDuration(@Nullable Output<DurationArgs> runDuration) {
             $.runDuration = runDuration;
             return this;
         }
 
+        /**
+         * @param runDuration How long it took for this step to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runDuration(DurationArgs runDuration) {
             return runDuration(Output.of(runDuration));
         }

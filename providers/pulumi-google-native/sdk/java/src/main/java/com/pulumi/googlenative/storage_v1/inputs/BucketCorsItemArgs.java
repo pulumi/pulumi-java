@@ -24,6 +24,10 @@ public final class BucketCorsItemArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="maxAgeSeconds")
     private @Nullable Output<Integer> maxAgeSeconds;
 
+    /**
+     * @return The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.
+     * 
+     */
     public Optional<Output<Integer>> maxAgeSeconds() {
         return Optional.ofNullable(this.maxAgeSeconds);
     }
@@ -35,6 +39,10 @@ public final class BucketCorsItemArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="method")
     private @Nullable Output<List<String>> method;
 
+    /**
+     * @return The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
+     * 
+     */
     public Optional<Output<List<String>>> method() {
         return Optional.ofNullable(this.method);
     }
@@ -46,6 +54,10 @@ public final class BucketCorsItemArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="origin")
     private @Nullable Output<List<String>> origin;
 
+    /**
+     * @return The list of Origins eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
+     * 
+     */
     public Optional<Output<List<String>>> origin() {
         return Optional.ofNullable(this.origin);
     }
@@ -57,6 +69,10 @@ public final class BucketCorsItemArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="responseHeader")
     private @Nullable Output<List<String>> responseHeader;
 
+    /**
+     * @return The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
+     * 
+     */
     public Optional<Output<List<String>>> responseHeader() {
         return Optional.ofNullable(this.responseHeader);
     }
@@ -88,50 +104,116 @@ public final class BucketCorsItemArgs extends com.pulumi.resources.ResourceArgs 
             $ = new BucketCorsItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxAgeSeconds The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAgeSeconds(@Nullable Output<Integer> maxAgeSeconds) {
             $.maxAgeSeconds = maxAgeSeconds;
             return this;
         }
 
+        /**
+         * @param maxAgeSeconds The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAgeSeconds(Integer maxAgeSeconds) {
             return maxAgeSeconds(Output.of(maxAgeSeconds));
         }
 
+        /**
+         * @param method The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable Output<List<String>> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(List<String> method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param method The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String... method) {
             return method(List.of(method));
         }
 
+        /**
+         * @param origin The list of Origins eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origin(@Nullable Output<List<String>> origin) {
             $.origin = origin;
             return this;
         }
 
+        /**
+         * @param origin The list of Origins eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origin(List<String> origin) {
             return origin(Output.of(origin));
         }
 
+        /**
+         * @param origin The list of Origins eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origin(String... origin) {
             return origin(List.of(origin));
         }
 
+        /**
+         * @param responseHeader The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeader(@Nullable Output<List<String>> responseHeader) {
             $.responseHeader = responseHeader;
             return this;
         }
 
+        /**
+         * @param responseHeader The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeader(List<String> responseHeader) {
             return responseHeader(Output.of(responseHeader));
         }
 
+        /**
+         * @param responseHeader The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeader(String... responseHeader) {
             return responseHeader(List.of(responseHeader));
         }

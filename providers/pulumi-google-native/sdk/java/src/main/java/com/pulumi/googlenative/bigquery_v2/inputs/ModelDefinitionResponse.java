@@ -21,6 +21,10 @@ public final class ModelDefinitionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="modelOptions", required=true)
     private ModelDefinitionModelOptionsResponse modelOptions;
 
+    /**
+     * @return [Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.
+     * 
+     */
     public ModelDefinitionModelOptionsResponse modelOptions() {
         return this.modelOptions;
     }
@@ -32,6 +36,10 @@ public final class ModelDefinitionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="trainingRuns", required=true)
     private List<BqmlTrainingRunResponse> trainingRuns;
 
+    /**
+     * @return [Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.
+     * 
+     */
     public List<BqmlTrainingRunResponse> trainingRuns() {
         return this.trainingRuns;
     }
@@ -61,16 +69,34 @@ public final class ModelDefinitionResponse extends com.pulumi.resources.InvokeAr
             $ = new ModelDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param modelOptions [Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelOptions(ModelDefinitionModelOptionsResponse modelOptions) {
             $.modelOptions = modelOptions;
             return this;
         }
 
+        /**
+         * @param trainingRuns [Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingRuns(List<BqmlTrainingRunResponse> trainingRuns) {
             $.trainingRuns = trainingRuns;
             return this;
         }
 
+        /**
+         * @param trainingRuns [Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingRuns(BqmlTrainingRunResponse... trainingRuns) {
             return trainingRuns(List.of(trainingRuns));
         }

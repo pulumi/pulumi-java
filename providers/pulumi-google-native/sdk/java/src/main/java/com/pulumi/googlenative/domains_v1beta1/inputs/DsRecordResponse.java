@@ -24,6 +24,10 @@ public final class DsRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="algorithm", required=true)
     private String algorithm;
 
+    /**
+     * @return The algorithm used to generate the referenced DNSKEY.
+     * 
+     */
     public String algorithm() {
         return this.algorithm;
     }
@@ -35,6 +39,10 @@ public final class DsRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="digest", required=true)
     private String digest;
 
+    /**
+     * @return The digest generated from the referenced DNSKEY.
+     * 
+     */
     public String digest() {
         return this.digest;
     }
@@ -46,6 +54,10 @@ public final class DsRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="digestType", required=true)
     private String digestType;
 
+    /**
+     * @return The hash function used to generate the digest of the referenced DNSKEY.
+     * 
+     */
     public String digestType() {
         return this.digestType;
     }
@@ -57,6 +69,10 @@ public final class DsRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyTag", required=true)
     private Integer keyTag;
 
+    /**
+     * @return The key tag of the record. Must be set in range 0 -- 65535.
+     * 
+     */
     public Integer keyTag() {
         return this.keyTag;
     }
@@ -88,21 +104,45 @@ public final class DsRecordResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DsRecordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The algorithm used to generate the referenced DNSKEY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param digest The digest generated from the referenced DNSKEY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digest(String digest) {
             $.digest = digest;
             return this;
         }
 
+        /**
+         * @param digestType The hash function used to generate the digest of the referenced DNSKEY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digestType(String digestType) {
             $.digestType = digestType;
             return this;
         }
 
+        /**
+         * @param keyTag The key tag of the record. Must be set in range 0 -- 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyTag(Integer keyTag) {
             $.keyTag = keyTag;
             return this;

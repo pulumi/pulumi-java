@@ -26,6 +26,10 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mainPageSuffix")
     private @Nullable Output<String> mainPageSuffix;
 
+    /**
+     * @return If the requested object path is missing, the service will ensure the path has a trailing &#39;/&#39;, append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
+     * 
+     */
     public Optional<Output<String>> mainPageSuffix() {
         return Optional.ofNullable(this.mainPageSuffix);
     }
@@ -37,6 +41,10 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notFoundPage")
     private @Nullable Output<String> notFoundPage;
 
+    /**
+     * @return If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.
+     * 
+     */
     public Optional<Output<String>> notFoundPage() {
         return Optional.ofNullable(this.notFoundPage);
     }
@@ -66,20 +74,44 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BucketWebsiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mainPageSuffix If the requested object path is missing, the service will ensure the path has a trailing &#39;/&#39;, append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainPageSuffix(@Nullable Output<String> mainPageSuffix) {
             $.mainPageSuffix = mainPageSuffix;
             return this;
         }
 
+        /**
+         * @param mainPageSuffix If the requested object path is missing, the service will ensure the path has a trailing &#39;/&#39;, append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainPageSuffix(String mainPageSuffix) {
             return mainPageSuffix(Output.of(mainPageSuffix));
         }
 
+        /**
+         * @param notFoundPage If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notFoundPage(@Nullable Output<String> notFoundPage) {
             $.notFoundPage = notFoundPage;
             return this;
         }
 
+        /**
+         * @param notFoundPage If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notFoundPage(String notFoundPage) {
             return notFoundPage(Output.of(notFoundPage));
         }

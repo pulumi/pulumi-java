@@ -26,6 +26,10 @@ public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileName")
     private @Nullable Output<String> fileName;
 
+    /**
+     * @return The path-qualified name of the .proto file that contained the associated protobuf element. For example: `&#34;google/protobuf/source_context.proto&#34;`.
+     * 
+     */
     public Optional<Output<String>> fileName() {
         return Optional.ofNullable(this.fileName);
     }
@@ -54,11 +58,23 @@ public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SourceContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileName The path-qualified name of the .proto file that contained the associated protobuf element. For example: `&#34;google/protobuf/source_context.proto&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(@Nullable Output<String> fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param fileName The path-qualified name of the .proto file that contained the associated protobuf element. For example: `&#34;google/protobuf/source_context.proto&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(String fileName) {
             return fileName(Output.of(fileName));
         }

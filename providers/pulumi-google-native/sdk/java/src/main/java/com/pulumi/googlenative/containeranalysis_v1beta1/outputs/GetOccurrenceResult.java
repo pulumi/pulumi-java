@@ -23,97 +23,97 @@ import java.util.Objects;
 @CustomType
 public final class GetOccurrenceResult {
     /**
-     * Describes an attestation of an artifact.
+     * @return Describes an attestation of an artifact.
      * 
      */
     private final DetailsResponse attestation;
     /**
-     * Describes a verifiable build.
+     * @return Describes a verifiable build.
      * 
      */
     private final GrafeasV1beta1BuildDetailsResponse build;
     /**
-     * The time this occurrence was created.
+     * @return The time this occurrence was created.
      * 
      */
     private final String createTime;
     /**
-     * Describes the deployment of an artifact on a runtime.
+     * @return Describes the deployment of an artifact on a runtime.
      * 
      */
     private final GrafeasV1beta1DeploymentDetailsResponse deployment;
     /**
-     * Describes how this resource derives from the basis in the associated note.
+     * @return Describes how this resource derives from the basis in the associated note.
      * 
      */
     private final GrafeasV1beta1ImageDetailsResponse derivedImage;
     /**
-     * Describes when a resource was discovered.
+     * @return Describes when a resource was discovered.
      * 
      */
     private final GrafeasV1beta1DiscoveryDetailsResponse discovered;
     /**
-     * Describes the installation of a package on the linked resource.
+     * @return Describes the installation of a package on the linked resource.
      * 
      */
     private final GrafeasV1beta1PackageDetailsResponse installation;
     /**
-     * Describes a specific in-toto link.
+     * @return Describes a specific in-toto link.
      * 
      */
     private final GrafeasV1beta1IntotoDetailsResponse intoto;
     /**
-     * This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
+     * @return This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
      * 
      */
     private final String kind;
     /**
-     * The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+     * @return The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
      * 
      */
     private final String name;
     /**
-     * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
+     * @return Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
      * 
      */
     private final String noteName;
     /**
-     * A description of actions that can be taken to remedy the note.
+     * @return A description of actions that can be taken to remedy the note.
      * 
      */
     private final String remediation;
     /**
-     * Immutable. The resource for which the occurrence applies.
+     * @return Immutable. The resource for which the occurrence applies.
      * 
      */
     private final ResourceResponse resource;
     /**
-     * Describes a specific software bill of materials document.
+     * @return Describes a specific software bill of materials document.
      * 
      */
     private final DocumentOccurrenceResponse sbom;
     /**
-     * Describes a specific SPDX File.
+     * @return Describes a specific SPDX File.
      * 
      */
     private final FileOccurrenceResponse spdxFile;
     /**
-     * Describes a specific SPDX Package.
+     * @return Describes a specific SPDX Package.
      * 
      */
     private final PackageInfoOccurrenceResponse spdxPackage;
     /**
-     * Describes a specific SPDX Relationship.
+     * @return Describes a specific SPDX Relationship.
      * 
      */
     private final RelationshipOccurrenceResponse spdxRelationship;
     /**
-     * The time this occurrence was last updated.
+     * @return The time this occurrence was last updated.
      * 
      */
     private final String updateTime;
     /**
-     * Describes a security vulnerability.
+     * @return Describes a security vulnerability.
      * 
      */
     private final GrafeasV1beta1VulnerabilityDetailsResponse vulnerability;
@@ -161,135 +161,135 @@ public final class GetOccurrenceResult {
     }
 
     /**
-     * Describes an attestation of an artifact.
+     * @return Describes an attestation of an artifact.
      * 
-    */
+     */
     public DetailsResponse attestation() {
         return this.attestation;
     }
     /**
-     * Describes a verifiable build.
+     * @return Describes a verifiable build.
      * 
-    */
+     */
     public GrafeasV1beta1BuildDetailsResponse build() {
         return this.build;
     }
     /**
-     * The time this occurrence was created.
+     * @return The time this occurrence was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Describes the deployment of an artifact on a runtime.
+     * @return Describes the deployment of an artifact on a runtime.
      * 
-    */
+     */
     public GrafeasV1beta1DeploymentDetailsResponse deployment() {
         return this.deployment;
     }
     /**
-     * Describes how this resource derives from the basis in the associated note.
+     * @return Describes how this resource derives from the basis in the associated note.
      * 
-    */
+     */
     public GrafeasV1beta1ImageDetailsResponse derivedImage() {
         return this.derivedImage;
     }
     /**
-     * Describes when a resource was discovered.
+     * @return Describes when a resource was discovered.
      * 
-    */
+     */
     public GrafeasV1beta1DiscoveryDetailsResponse discovered() {
         return this.discovered;
     }
     /**
-     * Describes the installation of a package on the linked resource.
+     * @return Describes the installation of a package on the linked resource.
      * 
-    */
+     */
     public GrafeasV1beta1PackageDetailsResponse installation() {
         return this.installation;
     }
     /**
-     * Describes a specific in-toto link.
+     * @return Describes a specific in-toto link.
      * 
-    */
+     */
     public GrafeasV1beta1IntotoDetailsResponse intoto() {
         return this.intoto;
     }
     /**
-     * This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
+     * @return This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+     * @return The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
+     * @return Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
      * 
-    */
+     */
     public String noteName() {
         return this.noteName;
     }
     /**
-     * A description of actions that can be taken to remedy the note.
+     * @return A description of actions that can be taken to remedy the note.
      * 
-    */
+     */
     public String remediation() {
         return this.remediation;
     }
     /**
-     * Immutable. The resource for which the occurrence applies.
+     * @return Immutable. The resource for which the occurrence applies.
      * 
-    */
+     */
     public ResourceResponse resource() {
         return this.resource;
     }
     /**
-     * Describes a specific software bill of materials document.
+     * @return Describes a specific software bill of materials document.
      * 
-    */
+     */
     public DocumentOccurrenceResponse sbom() {
         return this.sbom;
     }
     /**
-     * Describes a specific SPDX File.
+     * @return Describes a specific SPDX File.
      * 
-    */
+     */
     public FileOccurrenceResponse spdxFile() {
         return this.spdxFile;
     }
     /**
-     * Describes a specific SPDX Package.
+     * @return Describes a specific SPDX Package.
      * 
-    */
+     */
     public PackageInfoOccurrenceResponse spdxPackage() {
         return this.spdxPackage;
     }
     /**
-     * Describes a specific SPDX Relationship.
+     * @return Describes a specific SPDX Relationship.
      * 
-    */
+     */
     public RelationshipOccurrenceResponse spdxRelationship() {
         return this.spdxRelationship;
     }
     /**
-     * The time this occurrence was last updated.
+     * @return The time this occurrence was last updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * Describes a security vulnerability.
+     * @return Describes a security vulnerability.
      * 
-    */
+     */
     public GrafeasV1beta1VulnerabilityDetailsResponse vulnerability() {
         return this.vulnerability;
     }

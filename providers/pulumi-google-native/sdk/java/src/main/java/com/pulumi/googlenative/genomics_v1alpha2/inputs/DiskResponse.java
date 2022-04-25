@@ -25,6 +25,10 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mountPoint", required=true)
     private String mountPoint;
 
+    /**
+     * @return Required at create time and cannot be overridden at run time. Specifies the path in the docker container where files on this disk should be located. For example, if `mountPoint` is `/mnt/disk`, and the parameter has `localPath` `inputs/file.txt`, the docker container can access the data at `/mnt/disk/inputs/file.txt`.
+     * 
+     */
     public String mountPoint() {
         return this.mountPoint;
     }
@@ -36,6 +40,10 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the disk that can be used in the pipeline parameters. Must be 1 - 63 characters. The name &#34;boot&#34; is reserved for system use.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="readOnly", required=true)
     private Boolean readOnly;
 
+    /**
+     * @return Specifies how a sourced-base persistent disk will be mounted. See https://cloud.google.com/compute/docs/disks/persistent-disks#use_multi_instances for more details. Can only be set at create time.
+     * 
+     */
     public Boolean readOnly() {
         return this.readOnly;
     }
@@ -58,6 +70,10 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sizeGb", required=true)
     private Integer sizeGb;
 
+    /**
+     * @return The size of the disk. Defaults to 500 (GB). This field is not applicable for local SSD.
+     * 
+     */
     public Integer sizeGb() {
         return this.sizeGb;
     }
@@ -69,6 +85,10 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
     private String source;
 
+    /**
+     * @return The full or partial URL of the persistent disk to attach. See https://cloud.google.com/compute/docs/reference/latest/instances#resource and https://cloud.google.com/compute/docs/disks/persistent-disks#snapshots for more details.
+     * 
+     */
     public String source() {
         return this.source;
     }
@@ -80,6 +100,10 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the disk to create.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -113,31 +137,67 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mountPoint Required at create time and cannot be overridden at run time. Specifies the path in the docker container where files on this disk should be located. For example, if `mountPoint` is `/mnt/disk`, and the parameter has `localPath` `inputs/file.txt`, the docker container can access the data at `/mnt/disk/inputs/file.txt`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPoint(String mountPoint) {
             $.mountPoint = mountPoint;
             return this;
         }
 
+        /**
+         * @param name The name of the disk that can be used in the pipeline parameters. Must be 1 - 63 characters. The name &#34;boot&#34; is reserved for system use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param readOnly Specifies how a sourced-base persistent disk will be mounted. See https://cloud.google.com/compute/docs/disks/persistent-disks#use_multi_instances for more details. Can only be set at create time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param sizeGb The size of the disk. Defaults to 500 (GB). This field is not applicable for local SSD.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeGb(Integer sizeGb) {
             $.sizeGb = sizeGb;
             return this;
         }
 
+        /**
+         * @param source The full or partial URL of the persistent disk to attach. See https://cloud.google.com/compute/docs/reference/latest/instances#resource and https://cloud.google.com/compute/docs/disks/persistent-disks#snapshots for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param type The type of the disk to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

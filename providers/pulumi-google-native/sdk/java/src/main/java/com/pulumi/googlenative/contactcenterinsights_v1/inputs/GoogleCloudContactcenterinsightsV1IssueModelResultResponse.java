@@ -25,6 +25,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
     @Import(name="issueModel", required=true)
     private String issueModel;
 
+    /**
+     * @return Issue model that generates the result. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
+     * 
+     */
     public String issueModel() {
         return this.issueModel;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
     @Import(name="issues", required=true)
     private List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues;
 
+    /**
+     * @return All the matched issues.
+     * 
+     */
     public List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues() {
         return this.issues;
     }
@@ -65,16 +73,34 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
             $ = new GoogleCloudContactcenterinsightsV1IssueModelResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param issueModel Issue model that generates the result. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
+         * 
+         * @return builder
+         * 
+         */
         public Builder issueModel(String issueModel) {
             $.issueModel = issueModel;
             return this;
         }
 
+        /**
+         * @param issues All the matched issues.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issues(List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
             $.issues = issues;
             return this;
         }
 
+        /**
+         * @param issues All the matched issues.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issues(GoogleCloudContactcenterinsightsV1IssueAssignmentResponse... issues) {
             return issues(List.of(issues));
         }

@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class GitFileSourceResponse {
     /**
-     * The path of the file, with the repo root as the root of the path.
+     * @return The path of the file, with the repo root as the root of the path.
      * 
      */
     private final String path;
     /**
-     * See RepoType above.
+     * @return See RepoType above.
      * 
      */
     private final String repoType;
     /**
-     * The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
+     * @return The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
      * 
      */
     private final String revision;
     /**
-     * The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
+     * @return The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
      * 
      */
     private final String uri;
@@ -43,30 +43,30 @@ public final class GitFileSourceResponse {
     }
 
     /**
-     * The path of the file, with the repo root as the root of the path.
+     * @return The path of the file, with the repo root as the root of the path.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * See RepoType above.
+     * @return See RepoType above.
      * 
-    */
+     */
     public String repoType() {
         return this.repoType;
     }
     /**
-     * The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
+     * @return The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
      * 
-    */
+     */
     public String revision() {
         return this.revision;
     }
     /**
-     * The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
+     * @return The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

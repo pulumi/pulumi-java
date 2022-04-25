@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class UserInfoResponse {
     /**
-     * E-mail address of the user.
+     * @return E-mail address of the user.
      * 
      */
     private final String email;
@@ -21,9 +21,9 @@ public final class UserInfoResponse {
     }
 
     /**
-     * E-mail address of the user.
+     * @return E-mail address of the user.
      * 
-    */
+     */
     public String email() {
         return this.email;
     }

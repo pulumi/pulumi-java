@@ -24,6 +24,10 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends com.pulumi.res
     @Import(name="documentationUrl", required=true)
     private String documentationUrl;
 
+    /**
+     * @return A url pointing to the Service Mesh or Istio documentation for this specific error type.
+     * 
+     */
     public String documentationUrl() {
         return this.documentationUrl;
     }
@@ -35,6 +39,10 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends com.pulumi.res
     @Import(name="level", required=true)
     private String level;
 
+    /**
+     * @return Represents how severe a message is.
+     * 
+     */
     public String level() {
         return this.level;
     }
@@ -46,6 +54,10 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends com.pulumi.res
     @Import(name="type", required=true)
     private ServiceMeshTypeResponse type;
 
+    /**
+     * @return Represents the specific type of a message.
+     * 
+     */
     public ServiceMeshTypeResponse type() {
         return this.type;
     }
@@ -76,16 +88,34 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends com.pulumi.res
             $ = new ServiceMeshAnalysisMessageBaseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param documentationUrl A url pointing to the Service Mesh or Istio documentation for this specific error type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentationUrl(String documentationUrl) {
             $.documentationUrl = documentationUrl;
             return this;
         }
 
+        /**
+         * @param level Represents how severe a message is.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(String level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param type Represents the specific type of a message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ServiceMeshTypeResponse type) {
             $.type = type;
             return this;

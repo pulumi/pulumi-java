@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     @Import(name="agent", required=true)
     private Output<String> agent;
 
+    /**
+     * @return The name of a Dialogflow virtual agent used for end user side intent detection and suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same Dialogflow project.
+     * 
+     */
     public Output<String> agent() {
         return this.agent;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
             $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agent The name of a Dialogflow virtual agent used for end user side intent detection and suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same Dialogflow project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agent(Output<String> agent) {
             $.agent = agent;
             return this;
         }
 
+        /**
+         * @param agent The name of a Dialogflow virtual agent used for end user side intent detection and suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same Dialogflow project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agent(String agent) {
             return agent(Output.of(agent));
         }

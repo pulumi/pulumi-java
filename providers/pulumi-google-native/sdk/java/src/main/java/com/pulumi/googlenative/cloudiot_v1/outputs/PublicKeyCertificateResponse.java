@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class PublicKeyCertificateResponse {
     /**
-     * The certificate data.
+     * @return The certificate data.
      * 
      */
     private final String certificate;
     /**
-     * The certificate format.
+     * @return The certificate format.
      * 
      */
     private final String format;
     /**
-     * [Output only] The certificate details. Used only for X.509 certificates.
+     * @return [Output only] The certificate details. Used only for X.509 certificates.
      * 
      */
     private final X509CertificateDetailsResponse x509Details;
@@ -37,23 +37,23 @@ public final class PublicKeyCertificateResponse {
     }
 
     /**
-     * The certificate data.
+     * @return The certificate data.
      * 
-    */
+     */
     public String certificate() {
         return this.certificate;
     }
     /**
-     * The certificate format.
+     * @return The certificate format.
      * 
-    */
+     */
     public String format() {
         return this.format;
     }
     /**
-     * [Output only] The certificate details. Used only for X.509 certificates.
+     * @return [Output only] The certificate details. Used only for X.509 certificates.
      * 
-    */
+     */
     public X509CertificateDetailsResponse x509Details() {
         return this.x509Details;
     }

@@ -29,6 +29,10 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends com.pulumi.resour
     @Import(name="advancedApiOpsConfig")
     private @Nullable Output<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig;
 
+    /**
+     * @return Configuration for the Advanced API Ops add-on.
+     * 
+     */
     public Optional<Output<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs>> advancedApiOpsConfig() {
         return Optional.ofNullable(this.advancedApiOpsConfig);
     }
@@ -40,6 +44,10 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends com.pulumi.resour
     @Import(name="connectorsPlatformConfig")
     private @Nullable Output<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig;
 
+    /**
+     * @return Configuration for the Connectors Platform add-on.
+     * 
+     */
     public Optional<Output<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs>> connectorsPlatformConfig() {
         return Optional.ofNullable(this.connectorsPlatformConfig);
     }
@@ -51,6 +59,10 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends com.pulumi.resour
     @Import(name="integrationConfig")
     private @Nullable Output<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig;
 
+    /**
+     * @return Configuration for the Integration add-on.
+     * 
+     */
     public Optional<Output<GoogleCloudApigeeV1IntegrationConfigArgs>> integrationConfig() {
         return Optional.ofNullable(this.integrationConfig);
     }
@@ -62,6 +74,10 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends com.pulumi.resour
     @Import(name="monetizationConfig")
     private @Nullable Output<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig;
 
+    /**
+     * @return Configuration for the Monetization add-on.
+     * 
+     */
     public Optional<Output<GoogleCloudApigeeV1MonetizationConfigArgs>> monetizationConfig() {
         return Optional.ofNullable(this.monetizationConfig);
     }
@@ -93,38 +109,86 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends com.pulumi.resour
             $ = new GoogleCloudApigeeV1AddonsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advancedApiOpsConfig Configuration for the Advanced API Ops add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedApiOpsConfig(@Nullable Output<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig) {
             $.advancedApiOpsConfig = advancedApiOpsConfig;
             return this;
         }
 
+        /**
+         * @param advancedApiOpsConfig Configuration for the Advanced API Ops add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedApiOpsConfig(GoogleCloudApigeeV1AdvancedApiOpsConfigArgs advancedApiOpsConfig) {
             return advancedApiOpsConfig(Output.of(advancedApiOpsConfig));
         }
 
+        /**
+         * @param connectorsPlatformConfig Configuration for the Connectors Platform add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorsPlatformConfig(@Nullable Output<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig) {
             $.connectorsPlatformConfig = connectorsPlatformConfig;
             return this;
         }
 
+        /**
+         * @param connectorsPlatformConfig Configuration for the Connectors Platform add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorsPlatformConfig(GoogleCloudApigeeV1ConnectorsPlatformConfigArgs connectorsPlatformConfig) {
             return connectorsPlatformConfig(Output.of(connectorsPlatformConfig));
         }
 
+        /**
+         * @param integrationConfig Configuration for the Integration add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationConfig(@Nullable Output<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig) {
             $.integrationConfig = integrationConfig;
             return this;
         }
 
+        /**
+         * @param integrationConfig Configuration for the Integration add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationConfig(GoogleCloudApigeeV1IntegrationConfigArgs integrationConfig) {
             return integrationConfig(Output.of(integrationConfig));
         }
 
+        /**
+         * @param monetizationConfig Configuration for the Monetization add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monetizationConfig(@Nullable Output<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig) {
             $.monetizationConfig = monetizationConfig;
             return this;
         }
 
+        /**
+         * @param monetizationConfig Configuration for the Monetization add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monetizationConfig(GoogleCloudApigeeV1MonetizationConfigArgs monetizationConfig) {
             return monetizationConfig(Output.of(monetizationConfig));
         }

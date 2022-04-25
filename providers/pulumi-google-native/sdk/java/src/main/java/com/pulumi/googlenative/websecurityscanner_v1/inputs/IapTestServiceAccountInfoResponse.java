@@ -23,6 +23,10 @@ public final class IapTestServiceAccountInfoResponse extends com.pulumi.resource
     @Import(name="targetAudienceClientId", required=true)
     private String targetAudienceClientId;
 
+    /**
+     * @return Describes OAuth2 client id of resources protected by Identity-Aware-Proxy (IAP).
+     * 
+     */
     public String targetAudienceClientId() {
         return this.targetAudienceClientId;
     }
@@ -51,6 +55,12 @@ public final class IapTestServiceAccountInfoResponse extends com.pulumi.resource
             $ = new IapTestServiceAccountInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetAudienceClientId Describes OAuth2 client id of resources protected by Identity-Aware-Proxy (IAP).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAudienceClientId(String targetAudienceClientId) {
             $.targetAudienceClientId = targetAudienceClientId;
             return this;

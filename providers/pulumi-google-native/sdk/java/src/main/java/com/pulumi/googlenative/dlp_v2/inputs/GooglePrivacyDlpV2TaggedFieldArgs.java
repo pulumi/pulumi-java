@@ -29,6 +29,10 @@ public final class GooglePrivacyDlpV2TaggedFieldArgs extends com.pulumi.resource
     @Import(name="customTag")
     private @Nullable Output<String> customTag;
 
+    /**
+     * @return A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
+     * 
+     */
     public Optional<Output<String>> customTag() {
         return Optional.ofNullable(this.customTag);
     }
@@ -40,6 +44,10 @@ public final class GooglePrivacyDlpV2TaggedFieldArgs extends com.pulumi.resource
     @Import(name="field", required=true)
     private Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
+    /**
+     * @return Identifies the column.
+     * 
+     */
     public Output<GooglePrivacyDlpV2FieldIdArgs> field() {
         return this.field;
     }
@@ -51,6 +59,10 @@ public final class GooglePrivacyDlpV2TaggedFieldArgs extends com.pulumi.resource
     @Import(name="inferred")
     private @Nullable Output<GoogleProtobufEmptyArgs> inferred;
 
+    /**
+     * @return If no semantic tag is indicated, we infer the statistical model from the distribution of values in the input data
+     * 
+     */
     public Optional<Output<GoogleProtobufEmptyArgs>> inferred() {
         return Optional.ofNullable(this.inferred);
     }
@@ -62,6 +74,10 @@ public final class GooglePrivacyDlpV2TaggedFieldArgs extends com.pulumi.resource
     @Import(name="infoType")
     private @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
+    /**
+     * @return A column can be tagged with a InfoType to use the relevant public dataset as a statistical model of population, if available. We currently support US ZIP codes, region codes, ages and genders. To programmatically obtain the list of supported InfoTypes, use ListInfoTypes with the supported_by=RISK_ANALYSIS filter.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2InfoTypeArgs>> infoType() {
         return Optional.ofNullable(this.infoType);
     }
@@ -93,38 +109,86 @@ public final class GooglePrivacyDlpV2TaggedFieldArgs extends com.pulumi.resource
             $ = new GooglePrivacyDlpV2TaggedFieldArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customTag A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customTag(@Nullable Output<String> customTag) {
             $.customTag = customTag;
             return this;
         }
 
+        /**
+         * @param customTag A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customTag(String customTag) {
             return customTag(Output.of(customTag));
         }
 
+        /**
+         * @param field Identifies the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(Output<GooglePrivacyDlpV2FieldIdArgs> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field Identifies the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
             return field(Output.of(field));
         }
 
+        /**
+         * @param inferred If no semantic tag is indicated, we infer the statistical model from the distribution of values in the input data
+         * 
+         * @return builder
+         * 
+         */
         public Builder inferred(@Nullable Output<GoogleProtobufEmptyArgs> inferred) {
             $.inferred = inferred;
             return this;
         }
 
+        /**
+         * @param inferred If no semantic tag is indicated, we infer the statistical model from the distribution of values in the input data
+         * 
+         * @return builder
+         * 
+         */
         public Builder inferred(GoogleProtobufEmptyArgs inferred) {
             return inferred(Output.of(inferred));
         }
 
+        /**
+         * @param infoType A column can be tagged with a InfoType to use the relevant public dataset as a statistical model of population, if available. We currently support US ZIP codes, region codes, ages and genders. To programmatically obtain the list of supported InfoTypes, use ListInfoTypes with the supported_by=RISK_ANALYSIS filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoType(@Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
             $.infoType = infoType;
             return this;
         }
 
+        /**
+         * @param infoType A column can be tagged with a InfoType to use the relevant public dataset as a statistical model of population, if available. We currently support US ZIP codes, region codes, ages and genders. To programmatically obtain the list of supported InfoTypes, use ListInfoTypes with the supported_by=RISK_ANALYSIS filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoType(GooglePrivacyDlpV2InfoTypeArgs infoType) {
             return infoType(Output.of(infoType));
         }

@@ -27,6 +27,10 @@ public final class RowLayoutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rows")
     private @Nullable Output<List<RowArgs>> rows;
 
+    /**
+     * @return The rows of content to display.
+     * 
+     */
     public Optional<Output<List<RowArgs>>> rows() {
         return Optional.ofNullable(this.rows);
     }
@@ -55,15 +59,33 @@ public final class RowLayoutArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RowLayoutArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rows The rows of content to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rows(@Nullable Output<List<RowArgs>> rows) {
             $.rows = rows;
             return this;
         }
 
+        /**
+         * @param rows The rows of content to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rows(List<RowArgs> rows) {
             return rows(Output.of(rows));
         }
 
+        /**
+         * @param rows The rows of content to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rows(RowArgs... rows) {
             return rows(List.of(rows));
         }

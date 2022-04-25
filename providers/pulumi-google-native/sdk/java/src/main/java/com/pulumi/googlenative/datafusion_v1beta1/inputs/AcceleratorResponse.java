@@ -23,6 +23,10 @@ public final class AcceleratorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="acceleratorType", required=true)
     private String acceleratorType;
 
+    /**
+     * @return The type of an accelator for a CDF instance.
+     * 
+     */
     public String acceleratorType() {
         return this.acceleratorType;
     }
@@ -51,6 +55,12 @@ public final class AcceleratorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AcceleratorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorType The type of an accelator for a CDF instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(String acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;

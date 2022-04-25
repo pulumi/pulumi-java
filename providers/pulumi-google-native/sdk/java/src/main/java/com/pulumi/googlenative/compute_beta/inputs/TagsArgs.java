@@ -27,6 +27,10 @@ public final class TagsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="items")
     private @Nullable Output<List<String>> items;
 
+    /**
+     * @return An array of tags. Each tag must be 1-63 characters long, and comply with RFC1035.
+     * 
+     */
     public Optional<Output<List<String>>> items() {
         return Optional.ofNullable(this.items);
     }
@@ -55,15 +59,33 @@ public final class TagsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TagsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items An array of tags. Each tag must be 1-63 characters long, and comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(@Nullable Output<List<String>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items An array of tags. Each tag must be 1-63 characters long, and comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<String> items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param items An array of tags. Each tag must be 1-63 characters long, and comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(String... items) {
             return items(List.of(items));
         }

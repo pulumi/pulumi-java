@@ -26,6 +26,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="action", required=true)
     private String action;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String action() {
         return this.action;
     }
@@ -37,6 +41,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="conditions", required=true)
     private List<ConditionResponse> conditions;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public List<ConditionResponse> conditions() {
         return this.conditions;
     }
@@ -48,6 +56,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -59,6 +71,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ins", required=true)
     private List<String> ins;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public List<String> ins() {
         return this.ins;
     }
@@ -70,6 +86,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="logConfigs", required=true)
     private List<LogConfigResponse> logConfigs;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public List<LogConfigResponse> logConfigs() {
         return this.logConfigs;
     }
@@ -81,6 +101,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="notIns", required=true)
     private List<String> notIns;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public List<String> notIns() {
         return this.notIns;
     }
@@ -92,6 +116,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="permissions", required=true)
     private List<String> permissions;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public List<String> permissions() {
         return this.permissions;
     }
@@ -126,57 +154,129 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param conditions This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<ConditionResponse> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(ConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param description This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param ins This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ins(List<String> ins) {
             $.ins = ins;
             return this;
         }
 
+        /**
+         * @param ins This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ins(String... ins) {
             return ins(List.of(ins));
         }
 
+        /**
+         * @param logConfigs This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfigs(List<LogConfigResponse> logConfigs) {
             $.logConfigs = logConfigs;
             return this;
         }
 
+        /**
+         * @param logConfigs This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfigs(LogConfigResponse... logConfigs) {
             return logConfigs(List.of(logConfigs));
         }
 
+        /**
+         * @param notIns This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notIns(List<String> notIns) {
             $.notIns = notIns;
             return this;
         }
 
+        /**
+         * @param notIns This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notIns(String... notIns) {
             return notIns(List.of(notIns));
         }
 
+        /**
+         * @param permissions This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<String> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }

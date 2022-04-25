@@ -28,6 +28,10 @@ public final class RoboStartingIntentArgs extends com.pulumi.resources.ResourceA
     @Import(name="launcherActivity")
     private @Nullable Output<LauncherActivityIntentArgs> launcherActivity;
 
+    /**
+     * @return An intent that starts the main launcher activity.
+     * 
+     */
     public Optional<Output<LauncherActivityIntentArgs>> launcherActivity() {
         return Optional.ofNullable(this.launcherActivity);
     }
@@ -39,6 +43,10 @@ public final class RoboStartingIntentArgs extends com.pulumi.resources.ResourceA
     @Import(name="startActivity")
     private @Nullable Output<StartActivityIntentArgs> startActivity;
 
+    /**
+     * @return An intent that starts an activity with specific details.
+     * 
+     */
     public Optional<Output<StartActivityIntentArgs>> startActivity() {
         return Optional.ofNullable(this.startActivity);
     }
@@ -50,6 +58,10 @@ public final class RoboStartingIntentArgs extends com.pulumi.resources.ResourceA
     @Import(name="timeout")
     private @Nullable Output<String> timeout;
 
+    /**
+     * @return Timeout in seconds for each intent.
+     * 
+     */
     public Optional<Output<String>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -80,29 +92,65 @@ public final class RoboStartingIntentArgs extends com.pulumi.resources.ResourceA
             $ = new RoboStartingIntentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param launcherActivity An intent that starts the main launcher activity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launcherActivity(@Nullable Output<LauncherActivityIntentArgs> launcherActivity) {
             $.launcherActivity = launcherActivity;
             return this;
         }
 
+        /**
+         * @param launcherActivity An intent that starts the main launcher activity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launcherActivity(LauncherActivityIntentArgs launcherActivity) {
             return launcherActivity(Output.of(launcherActivity));
         }
 
+        /**
+         * @param startActivity An intent that starts an activity with specific details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startActivity(@Nullable Output<StartActivityIntentArgs> startActivity) {
             $.startActivity = startActivity;
             return this;
         }
 
+        /**
+         * @param startActivity An intent that starts an activity with specific details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startActivity(StartActivityIntentArgs startActivity) {
             return startActivity(Output.of(startActivity));
         }
 
+        /**
+         * @param timeout Timeout in seconds for each intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<String> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Timeout in seconds for each intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             return timeout(Output.of(timeout));
         }

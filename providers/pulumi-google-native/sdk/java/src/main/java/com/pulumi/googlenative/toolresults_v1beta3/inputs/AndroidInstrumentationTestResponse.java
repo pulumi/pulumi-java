@@ -25,6 +25,10 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     @Import(name="testPackageId", required=true)
     private String testPackageId;
 
+    /**
+     * @return The java package for the test to be executed. Required
+     * 
+     */
     public String testPackageId() {
         return this.testPackageId;
     }
@@ -36,6 +40,10 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     @Import(name="testRunnerClass", required=true)
     private String testRunnerClass;
 
+    /**
+     * @return The InstrumentationTestRunner class. Required
+     * 
+     */
     public String testRunnerClass() {
         return this.testRunnerClass;
     }
@@ -47,6 +55,10 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     @Import(name="testTargets", required=true)
     private List<String> testTargets;
 
+    /**
+     * @return Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+     * 
+     */
     public List<String> testTargets() {
         return this.testTargets;
     }
@@ -58,6 +70,10 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
     @Import(name="useOrchestrator", required=true)
     private Boolean useOrchestrator;
 
+    /**
+     * @return The flag indicates whether Android Test Orchestrator will be used to run test or not.
+     * 
+     */
     public Boolean useOrchestrator() {
         return this.useOrchestrator;
     }
@@ -89,25 +105,55 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
             $ = new AndroidInstrumentationTestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param testPackageId The java package for the test to be executed. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder testPackageId(String testPackageId) {
             $.testPackageId = testPackageId;
             return this;
         }
 
+        /**
+         * @param testRunnerClass The InstrumentationTestRunner class. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder testRunnerClass(String testRunnerClass) {
             $.testRunnerClass = testRunnerClass;
             return this;
         }
 
+        /**
+         * @param testTargets Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargets(List<String> testTargets) {
             $.testTargets = testTargets;
             return this;
         }
 
+        /**
+         * @param testTargets Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargets(String... testTargets) {
             return testTargets(List.of(testTargets));
         }
 
+        /**
+         * @param useOrchestrator The flag indicates whether Android Test Orchestrator will be used to run test or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useOrchestrator(Boolean useOrchestrator) {
             $.useOrchestrator = useOrchestrator;
             return this;

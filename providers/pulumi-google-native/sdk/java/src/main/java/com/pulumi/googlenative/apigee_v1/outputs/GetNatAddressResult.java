@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class GetNatAddressResult {
     /**
-     * The static IPV4 address.
+     * @return The static IPV4 address.
      * 
      */
     private final String ipAddress;
     /**
-     * Resource ID of the NAT address.
+     * @return Resource ID of the NAT address.
      * 
      */
     private final String name;
     /**
-     * State of the nat address.
+     * @return State of the nat address.
      * 
      */
     private final String state;
@@ -36,23 +36,23 @@ public final class GetNatAddressResult {
     }
 
     /**
-     * The static IPV4 address.
+     * @return The static IPV4 address.
      * 
-    */
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
     /**
-     * Resource ID of the NAT address.
+     * @return Resource ID of the NAT address.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * State of the nat address.
+     * @return State of the nat address.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

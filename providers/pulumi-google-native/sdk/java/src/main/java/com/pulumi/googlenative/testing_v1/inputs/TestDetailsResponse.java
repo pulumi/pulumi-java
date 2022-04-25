@@ -24,6 +24,10 @@ public final class TestDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errorMessage", required=true)
     private String errorMessage;
 
+    /**
+     * @return If the TestState is ERROR, then this string will contain human-readable details about the error.
+     * 
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
@@ -35,6 +39,10 @@ public final class TestDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="progressMessages", required=true)
     private List<String> progressMessages;
 
+    /**
+     * @return Human-readable, detailed descriptions of the test&#39;s progress. For example: &#34;Provisioning a device&#34;, &#34;Starting Test&#34;. During the course of execution new data may be appended to the end of progress_messages.
+     * 
+     */
     public List<String> progressMessages() {
         return this.progressMessages;
     }
@@ -64,16 +72,34 @@ public final class TestDetailsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TestDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorMessage If the TestState is ERROR, then this string will contain human-readable details about the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessage(String errorMessage) {
             $.errorMessage = errorMessage;
             return this;
         }
 
+        /**
+         * @param progressMessages Human-readable, detailed descriptions of the test&#39;s progress. For example: &#34;Provisioning a device&#34;, &#34;Starting Test&#34;. During the course of execution new data may be appended to the end of progress_messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progressMessages(List<String> progressMessages) {
             $.progressMessages = progressMessages;
             return this;
         }
 
+        /**
+         * @param progressMessages Human-readable, detailed descriptions of the test&#39;s progress. For example: &#34;Provisioning a device&#34;, &#34;Starting Test&#34;. During the course of execution new data may be appended to the end of progress_messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progressMessages(String... progressMessages) {
             return progressMessages(List.of(progressMessages));
         }

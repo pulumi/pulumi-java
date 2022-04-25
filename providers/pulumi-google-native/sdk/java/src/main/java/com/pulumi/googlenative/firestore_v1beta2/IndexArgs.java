@@ -39,6 +39,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fields")
     private @Nullable Output<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields;
 
+    /**
+     * @return The fields supported by this index. For composite indexes, this is always 2 or more fields. The last field entry is always for the field path `__name__`. If, on creation, `__name__` was not specified as the last field, it will be added automatically with the same direction as that of the last field defined. If the final field in a composite index is not directional, the `__name__` will be ordered ASCENDING (unless explicitly specified). For single field indexes, this will always be exactly one entry with a field path equal to the field path of the associated field.
+     * 
+     */
     public Optional<Output<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>>> fields() {
         return Optional.ofNullable(this.fields);
     }
@@ -57,6 +61,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryScope")
     private @Nullable Output<IndexQueryScope> queryScope;
 
+    /**
+     * @return Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the same collection id. Indexes with a collection group query scope specified allow queries against all collections descended from a specific document, specified at query time, and that have the same collection id as this index.
+     * 
+     */
     public Optional<Output<IndexQueryScope>> queryScope() {
         return Optional.ofNullable(this.queryScope);
     }
@@ -107,15 +115,33 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
             return databaseId(Output.of(databaseId));
         }
 
+        /**
+         * @param fields The fields supported by this index. For composite indexes, this is always 2 or more fields. The last field entry is always for the field path `__name__`. If, on creation, `__name__` was not specified as the last field, it will be added automatically with the same direction as that of the last field defined. If the final field in a composite index is not directional, the `__name__` will be ordered ASCENDING (unless explicitly specified). For single field indexes, this will always be exactly one entry with a field path equal to the field path of the associated field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(@Nullable Output<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields The fields supported by this index. For composite indexes, this is always 2 or more fields. The last field entry is always for the field path `__name__`. If, on creation, `__name__` was not specified as the last field, it will be added automatically with the same direction as that of the last field defined. If the final field in a composite index is not directional, the `__name__` will be ordered ASCENDING (unless explicitly specified). For single field indexes, this will always be exactly one entry with a field path equal to the field path of the associated field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(List<GoogleFirestoreAdminV1beta2IndexFieldArgs> fields) {
             return fields(Output.of(fields));
         }
 
+        /**
+         * @param fields The fields supported by this index. For composite indexes, this is always 2 or more fields. The last field entry is always for the field path `__name__`. If, on creation, `__name__` was not specified as the last field, it will be added automatically with the same direction as that of the last field defined. If the final field in a composite index is not directional, the `__name__` will be ordered ASCENDING (unless explicitly specified). For single field indexes, this will always be exactly one entry with a field path equal to the field path of the associated field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(GoogleFirestoreAdminV1beta2IndexFieldArgs... fields) {
             return fields(List.of(fields));
         }
@@ -129,11 +155,23 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param queryScope Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the same collection id. Indexes with a collection group query scope specified allow queries against all collections descended from a specific document, specified at query time, and that have the same collection id as this index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryScope(@Nullable Output<IndexQueryScope> queryScope) {
             $.queryScope = queryScope;
             return this;
         }
 
+        /**
+         * @param queryScope Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the same collection id. Indexes with a collection group query scope specified allow queries against all collections descended from a specific document, specified at query time, and that have the same collection id as this index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryScope(IndexQueryScope queryScope) {
             return queryScope(Output.of(queryScope));
         }

@@ -25,6 +25,10 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="checkInterval", required=true)
     private String checkInterval;
 
+    /**
+     * @return Interval between health checks.
+     * 
+     */
     public String checkInterval() {
         return this.checkInterval;
     }
@@ -36,6 +40,10 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="disableHealthCheck", required=true)
     private Boolean disableHealthCheck;
 
+    /**
+     * @return Whether to explicitly disable health checks for this instance.
+     * 
+     */
     public Boolean disableHealthCheck() {
         return this.disableHealthCheck;
     }
@@ -47,6 +55,10 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="healthyThreshold", required=true)
     private Integer healthyThreshold;
 
+    /**
+     * @return Number of consecutive successful health checks required before receiving traffic.
+     * 
+     */
     public Integer healthyThreshold() {
         return this.healthyThreshold;
     }
@@ -58,6 +70,10 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="host", required=true)
     private String host;
 
+    /**
+     * @return Host header to send when performing an HTTP health check. Example: &#34;myapp.appspot.com&#34;
+     * 
+     */
     public String host() {
         return this.host;
     }
@@ -69,6 +85,10 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="restartThreshold", required=true)
     private Integer restartThreshold;
 
+    /**
+     * @return Number of consecutive failed health checks required before an instance is restarted.
+     * 
+     */
     public Integer restartThreshold() {
         return this.restartThreshold;
     }
@@ -80,6 +100,10 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeout", required=true)
     private String timeout;
 
+    /**
+     * @return Time before the health check is considered failed.
+     * 
+     */
     public String timeout() {
         return this.timeout;
     }
@@ -91,6 +115,10 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="unhealthyThreshold", required=true)
     private Integer unhealthyThreshold;
 
+    /**
+     * @return Number of consecutive failed health checks required before removing traffic.
+     * 
+     */
     public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
@@ -125,36 +153,78 @@ public final class HealthCheckResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HealthCheckResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checkInterval Interval between health checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkInterval(String checkInterval) {
             $.checkInterval = checkInterval;
             return this;
         }
 
+        /**
+         * @param disableHealthCheck Whether to explicitly disable health checks for this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableHealthCheck(Boolean disableHealthCheck) {
             $.disableHealthCheck = disableHealthCheck;
             return this;
         }
 
+        /**
+         * @param healthyThreshold Number of consecutive successful health checks required before receiving traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthyThreshold(Integer healthyThreshold) {
             $.healthyThreshold = healthyThreshold;
             return this;
         }
 
+        /**
+         * @param host Host header to send when performing an HTTP health check. Example: &#34;myapp.appspot.com&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param restartThreshold Number of consecutive failed health checks required before an instance is restarted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartThreshold(Integer restartThreshold) {
             $.restartThreshold = restartThreshold;
             return this;
         }
 
+        /**
+         * @param timeout Time before the health check is considered failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param unhealthyThreshold Number of consecutive failed health checks required before removing traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             $.unhealthyThreshold = unhealthyThreshold;
             return this;

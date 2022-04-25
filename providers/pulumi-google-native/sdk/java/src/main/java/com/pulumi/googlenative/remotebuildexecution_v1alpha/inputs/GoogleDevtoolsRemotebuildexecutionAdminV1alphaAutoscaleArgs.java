@@ -26,6 +26,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
     @Import(name="maxSize")
     private @Nullable Output<String> maxSize;
 
+    /**
+     * @return The maximal number of workers. Must be equal to or greater than min_size.
+     * 
+     */
     public Optional<Output<String>> maxSize() {
         return Optional.ofNullable(this.maxSize);
     }
@@ -37,6 +41,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
     @Import(name="minSize")
     private @Nullable Output<String> minSize;
 
+    /**
+     * @return The minimal number of workers. Must be greater than 0.
+     * 
+     */
     public Optional<Output<String>> minSize() {
         return Optional.ofNullable(this.minSize);
     }
@@ -66,20 +74,44 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
             $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxSize The maximal number of workers. Must be equal to or greater than min_size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSize(@Nullable Output<String> maxSize) {
             $.maxSize = maxSize;
             return this;
         }
 
+        /**
+         * @param maxSize The maximal number of workers. Must be equal to or greater than min_size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSize(String maxSize) {
             return maxSize(Output.of(maxSize));
         }
 
+        /**
+         * @param minSize The minimal number of workers. Must be greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSize(@Nullable Output<String> minSize) {
             $.minSize = minSize;
             return this;
         }
 
+        /**
+         * @param minSize The minimal number of workers. Must be greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSize(String minSize) {
             return minSize(Output.of(minSize));
         }

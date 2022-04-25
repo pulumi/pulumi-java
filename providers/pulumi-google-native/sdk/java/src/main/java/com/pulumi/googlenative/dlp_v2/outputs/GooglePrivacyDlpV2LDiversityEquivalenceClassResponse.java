@@ -13,22 +13,22 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse {
     /**
-     * Size of the k-anonymity equivalence class.
+     * @return Size of the k-anonymity equivalence class.
      * 
      */
     private final String equivalenceClassSize;
     /**
-     * Number of distinct sensitive values in this equivalence class.
+     * @return Number of distinct sensitive values in this equivalence class.
      * 
      */
     private final String numDistinctSensitiveValues;
     /**
-     * Quasi-identifier values defining the k-anonymity equivalence class. The order is always the same as the original request.
+     * @return Quasi-identifier values defining the k-anonymity equivalence class. The order is always the same as the original request.
      * 
      */
     private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
     /**
-     * Estimated frequencies of top sensitive values.
+     * @return Estimated frequencies of top sensitive values.
      * 
      */
     private final List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues;
@@ -46,30 +46,30 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse {
     }
 
     /**
-     * Size of the k-anonymity equivalence class.
+     * @return Size of the k-anonymity equivalence class.
      * 
-    */
+     */
     public String equivalenceClassSize() {
         return this.equivalenceClassSize;
     }
     /**
-     * Number of distinct sensitive values in this equivalence class.
+     * @return Number of distinct sensitive values in this equivalence class.
      * 
-    */
+     */
     public String numDistinctSensitiveValues() {
         return this.numDistinctSensitiveValues;
     }
     /**
-     * Quasi-identifier values defining the k-anonymity equivalence class. The order is always the same as the original request.
+     * @return Quasi-identifier values defining the k-anonymity equivalence class. The order is always the same as the original request.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
     }
     /**
-     * Estimated frequencies of top sensitive values.
+     * @return Estimated frequencies of top sensitive values.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues() {
         return this.topSensitiveValues;
     }

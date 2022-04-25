@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class FeedOutputConfigResponse {
     /**
-     * Destination on Pub/Sub.
+     * @return Destination on Pub/Sub.
      * 
      */
     private final PubsubDestinationResponse pubsubDestination;
@@ -21,9 +21,9 @@ public final class FeedOutputConfigResponse {
     }
 
     /**
-     * Destination on Pub/Sub.
+     * @return Destination on Pub/Sub.
      * 
-    */
+     */
     public PubsubDestinationResponse pubsubDestination() {
         return this.pubsubDestination;
     }

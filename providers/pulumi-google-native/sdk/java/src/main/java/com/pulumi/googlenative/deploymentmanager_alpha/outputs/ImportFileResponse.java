@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ImportFileResponse {
     /**
-     * The contents of the file.
+     * @return The contents of the file.
      * 
      */
     private final String content;
     /**
-     * The name of the file.
+     * @return The name of the file.
      * 
      */
     private final String name;
@@ -29,16 +29,16 @@ public final class ImportFileResponse {
     }
 
     /**
-     * The contents of the file.
+     * @return The contents of the file.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }
     /**
-     * The name of the file.
+     * @return The name of the file.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

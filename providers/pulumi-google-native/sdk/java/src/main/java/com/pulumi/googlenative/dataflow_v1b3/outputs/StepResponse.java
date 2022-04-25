@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class StepResponse {
     /**
-     * The kind of step in the Cloud Dataflow job.
+     * @return The kind of step in the Cloud Dataflow job.
      * 
      */
     private final String kind;
     /**
-     * The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.
+     * @return The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.
      * 
      */
     private final String name;
     /**
-     * Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
+     * @return Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
      * 
      */
     private final Map<String,String> properties;
@@ -37,23 +37,23 @@ public final class StepResponse {
     }
 
     /**
-     * The kind of step in the Cloud Dataflow job.
+     * @return The kind of step in the Cloud Dataflow job.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.
+     * @return The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
+     * @return Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties;
     }

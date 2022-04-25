@@ -23,6 +23,10 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse exte
     @Import(name="headerName", required=true)
     private String headerName;
 
+    /**
+     * @return The header field name to match on when bypassing cache. Values are case-insensitive.
+     * 
+     */
     public String headerName() {
         return this.headerName;
     }
@@ -51,6 +55,12 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse exte
             $ = new BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerName The header field name to match on when bypassing cache. Values are case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             $.headerName = headerName;
             return this;

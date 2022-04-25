@@ -14,22 +14,22 @@ import java.util.Objects;
 @CustomType
 public final class UpgradeNoteResponse {
     /**
-     * Metadata about the upgrade for each specific operating system.
+     * @return Metadata about the upgrade for each specific operating system.
      * 
      */
     private final List<UpgradeDistributionResponse> distributions;
     /**
-     * Required for non-Windows OS. The package this Upgrade is for.
+     * @return Required for non-Windows OS. The package this Upgrade is for.
      * 
      */
     private final String package_;
     /**
-     * Required for non-Windows OS. The version of the package in machine + human readable form.
+     * @return Required for non-Windows OS. The version of the package in machine + human readable form.
      * 
      */
     private final VersionResponse version;
     /**
-     * Required for Windows OS. Represents the metadata about the Windows update.
+     * @return Required for Windows OS. Represents the metadata about the Windows update.
      * 
      */
     private final WindowsUpdateResponse windowsUpdate;
@@ -47,30 +47,30 @@ public final class UpgradeNoteResponse {
     }
 
     /**
-     * Metadata about the upgrade for each specific operating system.
+     * @return Metadata about the upgrade for each specific operating system.
      * 
-    */
+     */
     public List<UpgradeDistributionResponse> distributions() {
         return this.distributions;
     }
     /**
-     * Required for non-Windows OS. The package this Upgrade is for.
+     * @return Required for non-Windows OS. The package this Upgrade is for.
      * 
-    */
+     */
     public String package_() {
         return this.package_;
     }
     /**
-     * Required for non-Windows OS. The version of the package in machine + human readable form.
+     * @return Required for non-Windows OS. The version of the package in machine + human readable form.
      * 
-    */
+     */
     public VersionResponse version() {
         return this.version;
     }
     /**
-     * Required for Windows OS. Represents the metadata about the Windows update.
+     * @return Required for Windows OS. Represents the metadata about the Windows update.
      * 
-    */
+     */
     public WindowsUpdateResponse windowsUpdate() {
         return this.windowsUpdate;
     }

@@ -25,6 +25,10 @@ public final class CredentialResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="basicAuth", required=true)
     private BasicAuthResponse basicAuth;
 
+    /**
+     * @return Basic Auth Credential, only used by TypeProvider.
+     * 
+     */
     public BasicAuthResponse basicAuth() {
         return this.basicAuth;
     }
@@ -36,6 +40,10 @@ public final class CredentialResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccount", required=true)
     private ServiceAccountResponse serviceAccount;
 
+    /**
+     * @return Service Account Credential, only used by Deployment.
+     * 
+     */
     public ServiceAccountResponse serviceAccount() {
         return this.serviceAccount;
     }
@@ -47,6 +55,10 @@ public final class CredentialResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="useProjectDefault", required=true)
     private Boolean useProjectDefault;
 
+    /**
+     * @return Specify to use the project default credential, only supported by Deployment.
+     * 
+     */
     public Boolean useProjectDefault() {
         return this.useProjectDefault;
     }
@@ -77,16 +89,34 @@ public final class CredentialResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicAuth Basic Auth Credential, only used by TypeProvider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicAuth(BasicAuthResponse basicAuth) {
             $.basicAuth = basicAuth;
             return this;
         }
 
+        /**
+         * @param serviceAccount Service Account Credential, only used by Deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(ServiceAccountResponse serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param useProjectDefault Specify to use the project default credential, only supported by Deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useProjectDefault(Boolean useProjectDefault) {
             $.useProjectDefault = useProjectDefault;
             return this;

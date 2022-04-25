@@ -13,27 +13,27 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse {
     /**
-     * Description of the StoredInfoType (max 256 characters).
+     * @return Description of the StoredInfoType (max 256 characters).
      * 
      */
     private final String description;
     /**
-     * Store dictionary-based CustomInfoType.
+     * @return Store dictionary-based CustomInfoType.
      * 
      */
     private final GooglePrivacyDlpV2DictionaryResponse dictionary;
     /**
-     * Display name of the StoredInfoType (max 256 characters).
+     * @return Display name of the StoredInfoType (max 256 characters).
      * 
      */
     private final String displayName;
     /**
-     * StoredInfoType where findings are defined by a dictionary of phrases.
+     * @return StoredInfoType where findings are defined by a dictionary of phrases.
      * 
      */
     private final GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary;
     /**
-     * Store regular expression-based StoredInfoType.
+     * @return Store regular expression-based StoredInfoType.
      * 
      */
     private final GooglePrivacyDlpV2RegexResponse regex;
@@ -53,37 +53,37 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse {
     }
 
     /**
-     * Description of the StoredInfoType (max 256 characters).
+     * @return Description of the StoredInfoType (max 256 characters).
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Store dictionary-based CustomInfoType.
+     * @return Store dictionary-based CustomInfoType.
      * 
-    */
+     */
     public GooglePrivacyDlpV2DictionaryResponse dictionary() {
         return this.dictionary;
     }
     /**
-     * Display name of the StoredInfoType (max 256 characters).
+     * @return Display name of the StoredInfoType (max 256 characters).
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * StoredInfoType where findings are defined by a dictionary of phrases.
+     * @return StoredInfoType where findings are defined by a dictionary of phrases.
      * 
-    */
+     */
     public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary() {
         return this.largeCustomDictionary;
     }
     /**
-     * Store regular expression-based StoredInfoType.
+     * @return Store regular expression-based StoredInfoType.
      * 
-    */
+     */
     public GooglePrivacyDlpV2RegexResponse regex() {
         return this.regex;
     }

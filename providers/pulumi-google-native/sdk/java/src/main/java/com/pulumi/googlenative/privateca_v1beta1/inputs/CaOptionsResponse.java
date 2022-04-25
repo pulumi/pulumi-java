@@ -24,6 +24,10 @@ public final class CaOptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isCa", required=true)
     private Boolean isCa;
 
+    /**
+     * @return Optional. Refers to the &#34;CA&#34; X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
+     * 
+     */
     public Boolean isCa() {
         return this.isCa;
     }
@@ -35,6 +39,10 @@ public final class CaOptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxIssuerPathLength", required=true)
     private Integer maxIssuerPathLength;
 
+    /**
+     * @return Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.
+     * 
+     */
     public Integer maxIssuerPathLength() {
         return this.maxIssuerPathLength;
     }
@@ -64,11 +72,23 @@ public final class CaOptionsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CaOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isCa Optional. Refers to the &#34;CA&#34; X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCa(Boolean isCa) {
             $.isCa = isCa;
             return this;
         }
 
+        /**
+         * @param maxIssuerPathLength Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxIssuerPathLength(Integer maxIssuerPathLength) {
             $.maxIssuerPathLength = maxIssuerPathLength;
             return this;

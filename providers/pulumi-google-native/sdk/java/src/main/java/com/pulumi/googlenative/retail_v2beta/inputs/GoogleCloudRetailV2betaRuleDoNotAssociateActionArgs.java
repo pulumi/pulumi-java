@@ -27,6 +27,10 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends c
     @Import(name="doNotAssociateTerms")
     private @Nullable Output<List<String>> doNotAssociateTerms;
 
+    /**
+     * @return Cannot contain duplicates or the query term. Can specify up to 100 terms.
+     * 
+     */
     public Optional<Output<List<String>>> doNotAssociateTerms() {
         return Optional.ofNullable(this.doNotAssociateTerms);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends c
     @Import(name="queryTerms")
     private @Nullable Output<List<String>> queryTerms;
 
+    /**
+     * @return Terms from the search query. Will not consider do_not_associate_terms for search if in search query. Can specify up to 100 terms.
+     * 
+     */
     public Optional<Output<List<String>>> queryTerms() {
         return Optional.ofNullable(this.queryTerms);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends c
     @Import(name="terms")
     private @Nullable Output<List<String>> terms;
 
+    /**
+     * @return Will be [deprecated = true] post migration;
+     * 
+     */
     public Optional<Output<List<String>>> terms() {
         return Optional.ofNullable(this.terms);
     }
@@ -79,41 +91,95 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends c
             $ = new GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param doNotAssociateTerms Cannot contain duplicates or the query term. Can specify up to 100 terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doNotAssociateTerms(@Nullable Output<List<String>> doNotAssociateTerms) {
             $.doNotAssociateTerms = doNotAssociateTerms;
             return this;
         }
 
+        /**
+         * @param doNotAssociateTerms Cannot contain duplicates or the query term. Can specify up to 100 terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doNotAssociateTerms(List<String> doNotAssociateTerms) {
             return doNotAssociateTerms(Output.of(doNotAssociateTerms));
         }
 
+        /**
+         * @param doNotAssociateTerms Cannot contain duplicates or the query term. Can specify up to 100 terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doNotAssociateTerms(String... doNotAssociateTerms) {
             return doNotAssociateTerms(List.of(doNotAssociateTerms));
         }
 
+        /**
+         * @param queryTerms Terms from the search query. Will not consider do_not_associate_terms for search if in search query. Can specify up to 100 terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(@Nullable Output<List<String>> queryTerms) {
             $.queryTerms = queryTerms;
             return this;
         }
 
+        /**
+         * @param queryTerms Terms from the search query. Will not consider do_not_associate_terms for search if in search query. Can specify up to 100 terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(List<String> queryTerms) {
             return queryTerms(Output.of(queryTerms));
         }
 
+        /**
+         * @param queryTerms Terms from the search query. Will not consider do_not_associate_terms for search if in search query. Can specify up to 100 terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(String... queryTerms) {
             return queryTerms(List.of(queryTerms));
         }
 
+        /**
+         * @param terms Will be [deprecated = true] post migration;
+         * 
+         * @return builder
+         * 
+         */
         public Builder terms(@Nullable Output<List<String>> terms) {
             $.terms = terms;
             return this;
         }
 
+        /**
+         * @param terms Will be [deprecated = true] post migration;
+         * 
+         * @return builder
+         * 
+         */
         public Builder terms(List<String> terms) {
             return terms(Output.of(terms));
         }
 
+        /**
+         * @param terms Will be [deprecated = true] post migration;
+         * 
+         * @return builder
+         * 
+         */
         public Builder terms(String... terms) {
             return terms(List.of(terms));
         }

@@ -24,6 +24,10 @@ public final class BucketAccessControlResponse extends com.pulumi.resources.Invo
     @Import(name="bucket", required=true)
     private String bucket;
 
+    /**
+     * @return The name of the bucket.
+     * 
+     */
     public String bucket() {
         return this.bucket;
     }
@@ -35,6 +39,10 @@ public final class BucketAccessControlResponse extends com.pulumi.resources.Invo
     @Import(name="domain", required=true)
     private String domain;
 
+    /**
+     * @return The domain associated with the entity, if any.
+     * 
+     */
     public String domain() {
         return this.domain;
     }
@@ -46,6 +54,10 @@ public final class BucketAccessControlResponse extends com.pulumi.resources.Invo
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return The email address associated with the entity, if any.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -68,6 +80,21 @@ public final class BucketAccessControlResponse extends com.pulumi.resources.Invo
     @Import(name="entity", required=true)
     private String entity;
 
+    /**
+     * @return The entity holding the permission, in one of the following forms:
+     * - user-userId
+     * - user-email
+     * - group-groupId
+     * - group-email
+     * - domain-domain
+     * - project-team-projectId
+     * - allUsers
+     * - allAuthenticatedUsers Examples:
+     * - The user liz@example.com would be user-liz@example.com.
+     * - The group example@googlegroups.com would be group-example@googlegroups.com.
+     * - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+     * 
+     */
     public String entity() {
         return this.entity;
     }
@@ -79,6 +106,10 @@ public final class BucketAccessControlResponse extends com.pulumi.resources.Invo
     @Import(name="entityId", required=true)
     private String entityId;
 
+    /**
+     * @return The ID for the entity, if any.
+     * 
+     */
     public String entityId() {
         return this.entityId;
     }
@@ -90,6 +121,10 @@ public final class BucketAccessControlResponse extends com.pulumi.resources.Invo
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return HTTP 1.1 Entity tag for the access-control entry.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -101,6 +136,10 @@ public final class BucketAccessControlResponse extends com.pulumi.resources.Invo
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -112,6 +151,10 @@ public final class BucketAccessControlResponse extends com.pulumi.resources.Invo
     @Import(name="projectTeam", required=true)
     private BucketAccessControlProjectTeamResponse projectTeam;
 
+    /**
+     * @return The project team associated with the entity, if any.
+     * 
+     */
     public BucketAccessControlProjectTeamResponse projectTeam() {
         return this.projectTeam;
     }
@@ -123,6 +166,10 @@ public final class BucketAccessControlResponse extends com.pulumi.resources.Invo
     @Import(name="role", required=true)
     private String role;
 
+    /**
+     * @return The access permission for the entity.
+     * 
+     */
     public String role() {
         return this.role;
     }
@@ -134,6 +181,10 @@ public final class BucketAccessControlResponse extends com.pulumi.resources.Invo
     @Import(name="selfLink", required=true)
     private String selfLink;
 
+    /**
+     * @return The link to this access-control entry.
+     * 
+     */
     public String selfLink() {
         return this.selfLink;
     }
@@ -171,51 +222,122 @@ public final class BucketAccessControlResponse extends com.pulumi.resources.Invo
             $ = new BucketAccessControlResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param domain The domain associated with the entity, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param email The email address associated with the entity, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param entity The entity holding the permission, in one of the following forms:
+         * - user-userId
+         * - user-email
+         * - group-groupId
+         * - group-email
+         * - domain-domain
+         * - project-team-projectId
+         * - allUsers
+         * - allAuthenticatedUsers Examples:
+         * - The user liz@example.com would be user-liz@example.com.
+         * - The group example@googlegroups.com would be group-example@googlegroups.com.
+         * - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entity(String entity) {
             $.entity = entity;
             return this;
         }
 
+        /**
+         * @param entityId The ID for the entity, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityId(String entityId) {
             $.entityId = entityId;
             return this;
         }
 
+        /**
+         * @param etag HTTP 1.1 Entity tag for the access-control entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param kind The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param projectTeam The project team associated with the entity, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectTeam(BucketAccessControlProjectTeamResponse projectTeam) {
             $.projectTeam = projectTeam;
             return this;
         }
 
+        /**
+         * @param role The access permission for the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param selfLink The link to this access-control entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             $.selfLink = selfLink;
             return this;

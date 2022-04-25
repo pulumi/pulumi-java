@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse extends com.pulumi.re
     @Import(name="infoType", required=true)
     private GooglePrivacyDlpV2InfoTypeResponse infoType;
 
+    /**
+     * @return Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.
+     * 
+     */
     public GooglePrivacyDlpV2InfoTypeResponse infoType() {
         return this.infoType;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse extends com.pulumi.re
     @Import(name="maxFindings", required=true)
     private Integer maxFindings;
 
+    /**
+     * @return Max findings limit for the given infoType.
+     * 
+     */
     public Integer maxFindings() {
         return this.maxFindings;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse extends com.pulumi.re
             $ = new GooglePrivacyDlpV2InfoTypeLimitResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param infoType Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
             $.infoType = infoType;
             return this;
         }
 
+        /**
+         * @param maxFindings Max findings limit for the given infoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindings(Integer maxFindings) {
             $.maxFindings = maxFindings;
             return this;

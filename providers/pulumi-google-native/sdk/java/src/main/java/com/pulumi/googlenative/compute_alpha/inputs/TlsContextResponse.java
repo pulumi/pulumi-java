@@ -24,6 +24,10 @@ public final class TlsContextResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="certificateContext", required=true)
     private TlsCertificateContextResponse certificateContext;
 
+    /**
+     * @return Defines the mechanism to obtain the client or server certificate.
+     * 
+     */
     public TlsCertificateContextResponse certificateContext() {
         return this.certificateContext;
     }
@@ -35,6 +39,10 @@ public final class TlsContextResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="validationContext", required=true)
     private TlsValidationContextResponse validationContext;
 
+    /**
+     * @return Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.
+     * 
+     */
     public TlsValidationContextResponse validationContext() {
         return this.validationContext;
     }
@@ -64,11 +72,23 @@ public final class TlsContextResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TlsContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateContext Defines the mechanism to obtain the client or server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateContext(TlsCertificateContextResponse certificateContext) {
             $.certificateContext = certificateContext;
             return this;
         }
 
+        /**
+         * @param validationContext Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationContext(TlsValidationContextResponse validationContext) {
             $.validationContext = validationContext;
             return this;

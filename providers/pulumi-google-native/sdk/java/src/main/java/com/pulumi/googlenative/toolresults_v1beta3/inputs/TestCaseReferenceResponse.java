@@ -23,6 +23,10 @@ public final class TestCaseReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="className", required=true)
     private String className;
 
+    /**
+     * @return The name of the class.
+     * 
+     */
     public String className() {
         return this.className;
     }
@@ -34,6 +38,10 @@ public final class TestCaseReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the test case. Required.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class TestCaseReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="testSuiteName", required=true)
     private String testSuiteName;
 
+    /**
+     * @return The name of the test suite to which this test case belongs.
+     * 
+     */
     public String testSuiteName() {
         return this.testSuiteName;
     }
@@ -75,16 +87,34 @@ public final class TestCaseReferenceResponse extends com.pulumi.resources.Invoke
             $ = new TestCaseReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param className The name of the class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder className(String className) {
             $.className = className;
             return this;
         }
 
+        /**
+         * @param name The name of the test case. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param testSuiteName The name of the test suite to which this test case belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSuiteName(String testSuiteName) {
             $.testSuiteName = testSuiteName;
             return this;

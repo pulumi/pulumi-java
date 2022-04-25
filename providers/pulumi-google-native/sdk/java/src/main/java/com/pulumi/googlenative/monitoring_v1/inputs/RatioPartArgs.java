@@ -27,6 +27,10 @@ public final class RatioPartArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aggregation")
     private @Nullable Output<AggregationArgs> aggregation;
 
+    /**
+     * @return By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
+     * 
+     */
     public Optional<Output<AggregationArgs>> aggregation() {
         return Optional.ofNullable(this.aggregation);
     }
@@ -38,6 +42,10 @@ public final class RatioPartArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter", required=true)
     private Output<String> filter;
 
+    /**
+     * @return The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
+     * 
+     */
     public Output<String> filter() {
         return this.filter;
     }
@@ -67,20 +75,44 @@ public final class RatioPartArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RatioPartArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregation By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregation(@Nullable Output<AggregationArgs> aggregation) {
             $.aggregation = aggregation;
             return this;
         }
 
+        /**
+         * @param aggregation By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregation(AggregationArgs aggregation) {
             return aggregation(Output.of(aggregation));
         }
 
+        /**
+         * @param filter The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(Output<String> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Output.of(filter));
         }

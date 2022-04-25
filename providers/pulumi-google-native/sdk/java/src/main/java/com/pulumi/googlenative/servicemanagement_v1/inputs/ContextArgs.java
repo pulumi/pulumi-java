@@ -27,6 +27,10 @@ public final class ContextArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<List<ContextRuleArgs>> rules;
 
+    /**
+     * @return A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * 
+     */
     public Optional<Output<List<ContextRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -55,15 +59,33 @@ public final class ContextArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<ContextRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<ContextRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(ContextRuleArgs... rules) {
             return rules(List.of(rules));
         }

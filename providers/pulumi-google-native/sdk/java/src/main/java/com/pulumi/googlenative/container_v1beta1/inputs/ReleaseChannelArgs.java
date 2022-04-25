@@ -26,6 +26,10 @@ public final class ReleaseChannelArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="channel")
     private @Nullable Output<ReleaseChannelChannel> channel;
 
+    /**
+     * @return channel specifies which release channel the cluster is subscribed to.
+     * 
+     */
     public Optional<Output<ReleaseChannelChannel>> channel() {
         return Optional.ofNullable(this.channel);
     }
@@ -54,11 +58,23 @@ public final class ReleaseChannelArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ReleaseChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channel channel specifies which release channel the cluster is subscribed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channel(@Nullable Output<ReleaseChannelChannel> channel) {
             $.channel = channel;
             return this;
         }
 
+        /**
+         * @param channel channel specifies which release channel the cluster is subscribed to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channel(ReleaseChannelChannel channel) {
             return channel(Output.of(channel));
         }

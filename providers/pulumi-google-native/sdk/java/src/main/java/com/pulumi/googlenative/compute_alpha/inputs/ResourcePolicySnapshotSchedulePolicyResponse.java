@@ -25,6 +25,10 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends com.pulu
     @Import(name="retentionPolicy", required=true)
     private ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy;
 
+    /**
+     * @return Retention policy applied to snapshots created by this resource policy.
+     * 
+     */
     public ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy() {
         return this.retentionPolicy;
     }
@@ -36,6 +40,10 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends com.pulu
     @Import(name="schedule", required=true)
     private ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule;
 
+    /**
+     * @return A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
+     * 
+     */
     public ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule() {
         return this.schedule;
     }
@@ -47,6 +55,10 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends com.pulu
     @Import(name="snapshotProperties", required=true)
     private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties;
 
+    /**
+     * @return Properties with which snapshots are created such as labels, encryption keys.
+     * 
+     */
     public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties() {
         return this.snapshotProperties;
     }
@@ -77,16 +89,34 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends com.pulu
             $ = new ResourcePolicySnapshotSchedulePolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retentionPolicy Retention policy applied to snapshots created by this resource policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param schedule A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param snapshotProperties Properties with which snapshots are created such as labels, encryption keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotProperties(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties) {
             $.snapshotProperties = snapshotProperties;
             return this;

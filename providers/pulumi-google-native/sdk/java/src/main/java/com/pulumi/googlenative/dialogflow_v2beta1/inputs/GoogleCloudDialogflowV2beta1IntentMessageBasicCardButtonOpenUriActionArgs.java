@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenU
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return The HTTP or HTTPS scheme URI.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenU
             $ = new GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uri The HTTP or HTTPS scheme URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The HTTP or HTTPS scheme URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

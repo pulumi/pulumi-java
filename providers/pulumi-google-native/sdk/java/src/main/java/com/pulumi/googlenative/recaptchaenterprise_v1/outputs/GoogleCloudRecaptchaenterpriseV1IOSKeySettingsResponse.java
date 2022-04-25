@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
     /**
-     * If set to true, allowed_bundle_ids are not enforced.
+     * @return If set to true, allowed_bundle_ids are not enforced.
      * 
      */
     private final Boolean allowAllBundleIds;
     /**
-     * iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
+     * @return iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
      * 
      */
     private final List<String> allowedBundleIds;
@@ -31,16 +31,16 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
     }
 
     /**
-     * If set to true, allowed_bundle_ids are not enforced.
+     * @return If set to true, allowed_bundle_ids are not enforced.
      * 
-    */
+     */
     public Boolean allowAllBundleIds() {
         return this.allowAllBundleIds;
     }
     /**
-     * iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
+     * @return iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
      * 
-    */
+     */
     public List<String> allowedBundleIds() {
         return this.allowedBundleIds;
     }

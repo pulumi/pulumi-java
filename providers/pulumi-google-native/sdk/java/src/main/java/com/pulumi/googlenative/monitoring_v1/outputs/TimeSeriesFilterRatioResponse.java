@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class TimeSeriesFilterRatioResponse {
     /**
-     * The denominator of the ratio.
+     * @return The denominator of the ratio.
      * 
      */
     private final RatioPartResponse denominator;
     /**
-     * The numerator of the ratio.
+     * @return The numerator of the ratio.
      * 
      */
     private final RatioPartResponse numerator;
     /**
-     * Ranking based time series filter.
+     * @return Ranking based time series filter.
      * 
      */
     private final PickTimeSeriesFilterResponse pickTimeSeriesFilter;
     /**
-     * Apply a second aggregation after the ratio is computed.
+     * @return Apply a second aggregation after the ratio is computed.
      * 
      */
     private final AggregationResponse secondaryAggregation;
@@ -45,30 +45,30 @@ public final class TimeSeriesFilterRatioResponse {
     }
 
     /**
-     * The denominator of the ratio.
+     * @return The denominator of the ratio.
      * 
-    */
+     */
     public RatioPartResponse denominator() {
         return this.denominator;
     }
     /**
-     * The numerator of the ratio.
+     * @return The numerator of the ratio.
      * 
-    */
+     */
     public RatioPartResponse numerator() {
         return this.numerator;
     }
     /**
-     * Ranking based time series filter.
+     * @return Ranking based time series filter.
      * 
-    */
+     */
     public PickTimeSeriesFilterResponse pickTimeSeriesFilter() {
         return this.pickTimeSeriesFilter;
     }
     /**
-     * Apply a second aggregation after the ratio is computed.
+     * @return Apply a second aggregation after the ratio is computed.
      * 
-    */
+     */
     public AggregationResponse secondaryAggregation() {
         return this.secondaryAggregation;
     }

@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs exte
     @Import(name="suggestions", required=true)
     private Output<List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs>> suggestions;
 
+    /**
+     * @return The list of suggested replies.
+     * 
+     */
     public Output<List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs>> suggestions() {
         return this.suggestions;
     }
@@ -53,15 +57,33 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs exte
             $ = new GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param suggestions The list of suggested replies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestions(Output<List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs>> suggestions) {
             $.suggestions = suggestions;
             return this;
         }
 
+        /**
+         * @param suggestions The list of suggested replies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestions(List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs> suggestions) {
             return suggestions(Output.of(suggestions));
         }
 
+        /**
+         * @param suggestions The list of suggested replies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestions(GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs... suggestions) {
             return suggestions(List.of(suggestions));
         }

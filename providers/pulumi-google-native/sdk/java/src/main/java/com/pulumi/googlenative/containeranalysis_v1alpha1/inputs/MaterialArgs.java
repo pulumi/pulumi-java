@@ -27,6 +27,10 @@ public final class MaterialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="digest")
     private @Nullable Output<Map<String,String>> digest;
 
+    /**
+     * @return digest is a map from a hash algorithm (e.g. sha256) to the value in the material
+     * 
+     */
     public Optional<Output<Map<String,String>>> digest() {
         return Optional.ofNullable(this.digest);
     }
@@ -38,6 +42,10 @@ public final class MaterialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return uri is the uri of the material
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -67,20 +75,44 @@ public final class MaterialArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MaterialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param digest digest is a map from a hash algorithm (e.g. sha256) to the value in the material
+         * 
+         * @return builder
+         * 
+         */
         public Builder digest(@Nullable Output<Map<String,String>> digest) {
             $.digest = digest;
             return this;
         }
 
+        /**
+         * @param digest digest is a map from a hash algorithm (e.g. sha256) to the value in the material
+         * 
+         * @return builder
+         * 
+         */
         public Builder digest(Map<String,String> digest) {
             return digest(Output.of(digest));
         }
 
+        /**
+         * @param uri uri is the uri of the material
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri uri is the uri of the material
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

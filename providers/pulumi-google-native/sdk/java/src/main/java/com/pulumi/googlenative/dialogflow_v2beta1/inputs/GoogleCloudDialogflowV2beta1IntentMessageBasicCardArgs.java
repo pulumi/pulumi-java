@@ -29,6 +29,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
     @Import(name="buttons")
     private @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons;
 
+    /**
+     * @return Optional. The collection of card buttons.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>>> buttons() {
         return Optional.ofNullable(this.buttons);
     }
@@ -40,6 +44,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
     @Import(name="formattedText")
     private @Nullable Output<String> formattedText;
 
+    /**
+     * @return Required, unless image is present. The body text of the card.
+     * 
+     */
     public Optional<Output<String>> formattedText() {
         return Optional.ofNullable(this.formattedText);
     }
@@ -51,6 +59,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
     @Import(name="image")
     private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
+    /**
+     * @return Optional. The image for the card.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -62,6 +74,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
     @Import(name="subtitle")
     private @Nullable Output<String> subtitle;
 
+    /**
+     * @return Optional. The subtitle of the card.
+     * 
+     */
     public Optional<Output<String>> subtitle() {
         return Optional.ofNullable(this.subtitle);
     }
@@ -73,6 +89,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Optional. The title of the card.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -105,51 +125,117 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
             $ = new GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buttons Optional. The collection of card buttons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(@Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons) {
             $.buttons = buttons;
             return this;
         }
 
+        /**
+         * @param buttons Optional. The collection of card buttons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs> buttons) {
             return buttons(Output.of(buttons));
         }
 
+        /**
+         * @param buttons Optional. The collection of card buttons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs... buttons) {
             return buttons(List.of(buttons));
         }
 
+        /**
+         * @param formattedText Required, unless image is present. The body text of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formattedText(@Nullable Output<String> formattedText) {
             $.formattedText = formattedText;
             return this;
         }
 
+        /**
+         * @param formattedText Required, unless image is present. The body text of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formattedText(String formattedText) {
             return formattedText(Output.of(formattedText));
         }
 
+        /**
+         * @param image Optional. The image for the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image Optional. The image for the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param subtitle Optional. The subtitle of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(@Nullable Output<String> subtitle) {
             $.subtitle = subtitle;
             return this;
         }
 
+        /**
+         * @param subtitle Optional. The subtitle of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(String subtitle) {
             return subtitle(Output.of(subtitle));
         }
 
+        /**
+         * @param title Optional. The title of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Optional. The title of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

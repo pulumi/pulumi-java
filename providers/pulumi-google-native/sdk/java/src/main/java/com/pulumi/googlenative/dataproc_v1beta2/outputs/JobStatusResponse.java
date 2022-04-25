@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class JobStatusResponse {
     /**
-     * Optional Job state details, such as an error description if the state is ERROR.
+     * @return Optional Job state details, such as an error description if the state is ERROR.
      * 
      */
     private final String details;
     /**
-     * A state message specifying the overall job state.
+     * @return A state message specifying the overall job state.
      * 
      */
     private final String state;
     /**
-     * The time when this state was entered.
+     * @return The time when this state was entered.
      * 
      */
     private final String stateStartTime;
     /**
-     * Additional state information, which includes status reported by the agent.
+     * @return Additional state information, which includes status reported by the agent.
      * 
      */
     private final String substate;
@@ -43,30 +43,30 @@ public final class JobStatusResponse {
     }
 
     /**
-     * Optional Job state details, such as an error description if the state is ERROR.
+     * @return Optional Job state details, such as an error description if the state is ERROR.
      * 
-    */
+     */
     public String details() {
         return this.details;
     }
     /**
-     * A state message specifying the overall job state.
+     * @return A state message specifying the overall job state.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The time when this state was entered.
+     * @return The time when this state was entered.
      * 
-    */
+     */
     public String stateStartTime() {
         return this.stateStartTime;
     }
     /**
-     * Additional state information, which includes status reported by the agent.
+     * @return Additional state information, which includes status reported by the agent.
      * 
-    */
+     */
     public String substate() {
         return this.substate;
     }

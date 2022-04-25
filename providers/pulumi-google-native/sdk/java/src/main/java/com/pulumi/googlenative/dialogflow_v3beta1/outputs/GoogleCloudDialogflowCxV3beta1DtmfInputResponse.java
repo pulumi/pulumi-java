@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1DtmfInputResponse {
     /**
-     * The dtmf digits.
+     * @return The dtmf digits.
      * 
      */
     private final String digits;
     /**
-     * The finish digit (if any).
+     * @return The finish digit (if any).
      * 
      */
     private final String finishDigit;
@@ -29,16 +29,16 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputResponse {
     }
 
     /**
-     * The dtmf digits.
+     * @return The dtmf digits.
      * 
-    */
+     */
     public String digits() {
         return this.digits;
     }
     /**
-     * The finish digit (if any).
+     * @return The finish digit (if any).
      * 
-    */
+     */
     public String finishDigit() {
         return this.finishDigit;
     }

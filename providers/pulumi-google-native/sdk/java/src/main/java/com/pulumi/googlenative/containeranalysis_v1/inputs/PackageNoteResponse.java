@@ -25,6 +25,10 @@ public final class PackageNoteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="distribution", required=true)
     private List<DistributionResponse> distribution;
 
+    /**
+     * @return The various channels by which a package is distributed.
+     * 
+     */
     public List<DistributionResponse> distribution() {
         return this.distribution;
     }
@@ -36,6 +40,10 @@ public final class PackageNoteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Immutable. The name of the package.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -65,15 +73,33 @@ public final class PackageNoteResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PackageNoteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distribution The various channels by which a package is distributed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribution(List<DistributionResponse> distribution) {
             $.distribution = distribution;
             return this;
         }
 
+        /**
+         * @param distribution The various channels by which a package is distributed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribution(DistributionResponse... distribution) {
             return distribution(List.of(distribution));
         }
 
+        /**
+         * @param name Immutable. The name of the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -23,6 +23,10 @@ public final class RouterAdvertisedIpRangeResponse extends com.pulumi.resources.
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return User-specified description for the IP range.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -34,6 +38,10 @@ public final class RouterAdvertisedIpRangeResponse extends com.pulumi.resources.
     @Import(name="range", required=true)
     private String range;
 
+    /**
+     * @return The IP range to advertise. The value must be a CIDR-formatted string.
+     * 
+     */
     public String range() {
         return this.range;
     }
@@ -63,11 +71,23 @@ public final class RouterAdvertisedIpRangeResponse extends com.pulumi.resources.
             $ = new RouterAdvertisedIpRangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description User-specified description for the IP range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param range The IP range to advertise. The value must be a CIDR-formatted string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(String range) {
             $.range = range;
             return this;

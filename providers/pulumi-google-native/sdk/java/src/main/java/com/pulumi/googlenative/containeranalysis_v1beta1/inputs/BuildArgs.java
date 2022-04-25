@@ -27,6 +27,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="builderVersion", required=true)
     private Output<String> builderVersion;
 
+    /**
+     * @return Immutable. Version of the builder which produced this build.
+     * 
+     */
     public Output<String> builderVersion() {
         return this.builderVersion;
     }
@@ -38,6 +42,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="signature")
     private @Nullable Output<BuildSignatureArgs> signature;
 
+    /**
+     * @return Signature of the build in occurrences pointing to this build note containing build details.
+     * 
+     */
     public Optional<Output<BuildSignatureArgs>> signature() {
         return Optional.ofNullable(this.signature);
     }
@@ -67,20 +75,44 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BuildArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param builderVersion Immutable. Version of the builder which produced this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builderVersion(Output<String> builderVersion) {
             $.builderVersion = builderVersion;
             return this;
         }
 
+        /**
+         * @param builderVersion Immutable. Version of the builder which produced this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builderVersion(String builderVersion) {
             return builderVersion(Output.of(builderVersion));
         }
 
+        /**
+         * @param signature Signature of the build in occurrences pointing to this build note containing build details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signature(@Nullable Output<BuildSignatureArgs> signature) {
             $.signature = signature;
             return this;
         }
 
+        /**
+         * @param signature Signature of the build in occurrences pointing to this build note containing build details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signature(BuildSignatureArgs signature) {
             return signature(Output.of(signature));
         }

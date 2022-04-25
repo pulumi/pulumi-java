@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Optional. The body text of the card.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
     @Import(name="image", required=true)
     private GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
+    /**
+     * @return Optional. The image to display.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
     @Import(name="info", required=true)
     private GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info;
 
+    /**
+     * @return Additional info about the option item.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info() {
         return this.info;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Title of the carousel item.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -89,21 +105,45 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
             $ = new GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. The body text of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param image Optional. The image to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param info Additional info about the option item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder info(GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info) {
             $.info = info;
             return this;
         }
 
+        /**
+         * @param title Title of the carousel item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

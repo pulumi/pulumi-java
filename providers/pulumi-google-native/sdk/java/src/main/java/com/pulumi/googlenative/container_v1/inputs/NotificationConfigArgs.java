@@ -26,6 +26,10 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="pubsub")
     private @Nullable Output<PubSubArgs> pubsub;
 
+    /**
+     * @return Notification config for Pub/Sub.
+     * 
+     */
     public Optional<Output<PubSubArgs>> pubsub() {
         return Optional.ofNullable(this.pubsub);
     }
@@ -54,11 +58,23 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
             $ = new NotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsub Notification config for Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsub(@Nullable Output<PubSubArgs> pubsub) {
             $.pubsub = pubsub;
             return this;
         }
 
+        /**
+         * @param pubsub Notification config for Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsub(PubSubArgs pubsub) {
             return pubsub(Output.of(pubsub));
         }

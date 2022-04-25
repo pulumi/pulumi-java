@@ -11,32 +11,32 @@ import java.util.Objects;
 @CustomType
 public final class ScriptStackFrameResponse {
     /**
-     * One-based end column.
+     * @return One-based end column.
      * 
      */
     private final Integer endColumn;
     /**
-     * One-based end line.
+     * @return One-based end line.
      * 
      */
     private final Integer endLine;
     /**
-     * Name of the active procedure, empty if in a top-level script.
+     * @return Name of the active procedure, empty if in a top-level script.
      * 
      */
     private final String procedureId;
     /**
-     * One-based start column.
+     * @return One-based start column.
      * 
      */
     private final Integer startColumn;
     /**
-     * One-based start line.
+     * @return One-based start line.
      * 
      */
     private final Integer startLine;
     /**
-     * Text of the current statement/expression.
+     * @return Text of the current statement/expression.
      * 
      */
     private final String text;
@@ -58,44 +58,44 @@ public final class ScriptStackFrameResponse {
     }
 
     /**
-     * One-based end column.
+     * @return One-based end column.
      * 
-    */
+     */
     public Integer endColumn() {
         return this.endColumn;
     }
     /**
-     * One-based end line.
+     * @return One-based end line.
      * 
-    */
+     */
     public Integer endLine() {
         return this.endLine;
     }
     /**
-     * Name of the active procedure, empty if in a top-level script.
+     * @return Name of the active procedure, empty if in a top-level script.
      * 
-    */
+     */
     public String procedureId() {
         return this.procedureId;
     }
     /**
-     * One-based start column.
+     * @return One-based start column.
      * 
-    */
+     */
     public Integer startColumn() {
         return this.startColumn;
     }
     /**
-     * One-based start line.
+     * @return One-based start line.
      * 
-    */
+     */
     public Integer startLine() {
         return this.startLine;
     }
     /**
-     * Text of the current statement/expression.
+     * @return Text of the current statement/expression.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }

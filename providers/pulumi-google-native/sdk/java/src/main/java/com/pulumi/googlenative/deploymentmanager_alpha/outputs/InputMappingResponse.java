@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class InputMappingResponse {
     /**
-     * The name of the field that is going to be injected.
+     * @return The name of the field that is going to be injected.
      * 
      */
     private final String fieldName;
     /**
-     * The location where this mapping applies.
+     * @return The location where this mapping applies.
      * 
      */
     private final String location;
     /**
-     * Regex to evaluate on method to decide if input applies.
+     * @return Regex to evaluate on method to decide if input applies.
      * 
      */
     private final String methodMatch;
     /**
-     * A jsonPath expression to select an element.
+     * @return A jsonPath expression to select an element.
      * 
      */
     private final String value;
@@ -43,30 +43,30 @@ public final class InputMappingResponse {
     }
 
     /**
-     * The name of the field that is going to be injected.
+     * @return The name of the field that is going to be injected.
      * 
-    */
+     */
     public String fieldName() {
         return this.fieldName;
     }
     /**
-     * The location where this mapping applies.
+     * @return The location where this mapping applies.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Regex to evaluate on method to decide if input applies.
+     * @return Regex to evaluate on method to decide if input applies.
      * 
-    */
+     */
     public String methodMatch() {
         return this.methodMatch;
     }
     /**
-     * A jsonPath expression to select an element.
+     * @return A jsonPath expression to select an element.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

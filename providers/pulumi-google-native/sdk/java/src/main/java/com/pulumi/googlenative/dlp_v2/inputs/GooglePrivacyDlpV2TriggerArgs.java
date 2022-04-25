@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2TriggerArgs extends com.pulumi.resources.Re
     @Import(name="manual")
     private @Nullable Output<GooglePrivacyDlpV2ManualArgs> manual;
 
+    /**
+     * @return For use with hybrid jobs. Jobs must be manually created and finished.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ManualArgs>> manual() {
         return Optional.ofNullable(this.manual);
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2TriggerArgs extends com.pulumi.resources.Re
     @Import(name="schedule")
     private @Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule;
 
+    /**
+     * @return Create a job on a repeating basis based on the elapse of time.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ScheduleArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -67,20 +75,44 @@ public final class GooglePrivacyDlpV2TriggerArgs extends com.pulumi.resources.Re
             $ = new GooglePrivacyDlpV2TriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param manual For use with hybrid jobs. Jobs must be manually created and finished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manual(@Nullable Output<GooglePrivacyDlpV2ManualArgs> manual) {
             $.manual = manual;
             return this;
         }
 
+        /**
+         * @param manual For use with hybrid jobs. Jobs must be manually created and finished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manual(GooglePrivacyDlpV2ManualArgs manual) {
             return manual(Output.of(manual));
         }
 
+        /**
+         * @param schedule Create a job on a repeating basis based on the elapse of time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Create a job on a repeating basis based on the elapse of time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(GooglePrivacyDlpV2ScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }

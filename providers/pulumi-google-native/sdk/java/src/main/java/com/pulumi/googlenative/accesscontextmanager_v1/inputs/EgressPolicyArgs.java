@@ -27,6 +27,10 @@ public final class EgressPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="egressFrom")
     private @Nullable Output<EgressFromArgs> egressFrom;
 
+    /**
+     * @return Defines conditions on the source of a request causing this EgressPolicy to apply.
+     * 
+     */
     public Optional<Output<EgressFromArgs>> egressFrom() {
         return Optional.ofNullable(this.egressFrom);
     }
@@ -38,6 +42,10 @@ public final class EgressPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="egressTo")
     private @Nullable Output<EgressToArgs> egressTo;
 
+    /**
+     * @return Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply.
+     * 
+     */
     public Optional<Output<EgressToArgs>> egressTo() {
         return Optional.ofNullable(this.egressTo);
     }
@@ -67,20 +75,44 @@ public final class EgressPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EgressPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param egressFrom Defines conditions on the source of a request causing this EgressPolicy to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressFrom(@Nullable Output<EgressFromArgs> egressFrom) {
             $.egressFrom = egressFrom;
             return this;
         }
 
+        /**
+         * @param egressFrom Defines conditions on the source of a request causing this EgressPolicy to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressFrom(EgressFromArgs egressFrom) {
             return egressFrom(Output.of(egressFrom));
         }
 
+        /**
+         * @param egressTo Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressTo(@Nullable Output<EgressToArgs> egressTo) {
             $.egressTo = egressTo;
             return this;
         }
 
+        /**
+         * @param egressTo Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressTo(EgressToArgs egressTo) {
             return egressTo(Output.of(egressTo));
         }

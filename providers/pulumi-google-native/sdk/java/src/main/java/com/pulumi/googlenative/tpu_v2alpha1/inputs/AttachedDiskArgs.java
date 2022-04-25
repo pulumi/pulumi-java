@@ -27,6 +27,10 @@ public final class AttachedDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mode")
     private @Nullable Output<AttachedDiskMode> mode;
 
+    /**
+     * @return The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
+     * 
+     */
     public Optional<Output<AttachedDiskMode>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -38,6 +42,10 @@ public final class AttachedDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
     private @Nullable Output<String> sourceDisk;
 
+    /**
+     * @return Specifies the full path to an existing disk. For example: &#34;projects/my-project/zones/us-central1-c/disks/my-disk&#34;.
+     * 
+     */
     public Optional<Output<String>> sourceDisk() {
         return Optional.ofNullable(this.sourceDisk);
     }
@@ -67,20 +75,44 @@ public final class AttachedDiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AttachedDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<AttachedDiskMode> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(AttachedDiskMode mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param sourceDisk Specifies the full path to an existing disk. For example: &#34;projects/my-project/zones/us-central1-c/disks/my-disk&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             $.sourceDisk = sourceDisk;
             return this;
         }
 
+        /**
+         * @param sourceDisk Specifies the full path to an existing disk. For example: &#34;projects/my-project/zones/us-central1-c/disks/my-disk&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(String sourceDisk) {
             return sourceDisk(Output.of(sourceDisk));
         }

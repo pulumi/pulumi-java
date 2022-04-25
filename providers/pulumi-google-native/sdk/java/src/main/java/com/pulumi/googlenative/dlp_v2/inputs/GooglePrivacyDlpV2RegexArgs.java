@@ -28,6 +28,10 @@ public final class GooglePrivacyDlpV2RegexArgs extends com.pulumi.resources.Reso
     @Import(name="groupIndexes")
     private @Nullable Output<List<Integer>> groupIndexes;
 
+    /**
+     * @return The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
+     * 
+     */
     public Optional<Output<List<Integer>>> groupIndexes() {
         return Optional.ofNullable(this.groupIndexes);
     }
@@ -39,6 +43,10 @@ public final class GooglePrivacyDlpV2RegexArgs extends com.pulumi.resources.Reso
     @Import(name="pattern")
     private @Nullable Output<String> pattern;
 
+    /**
+     * @return Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+     * 
+     */
     public Optional<Output<String>> pattern() {
         return Optional.ofNullable(this.pattern);
     }
@@ -68,24 +76,54 @@ public final class GooglePrivacyDlpV2RegexArgs extends com.pulumi.resources.Reso
             $ = new GooglePrivacyDlpV2RegexArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupIndexes The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIndexes(@Nullable Output<List<Integer>> groupIndexes) {
             $.groupIndexes = groupIndexes;
             return this;
         }
 
+        /**
+         * @param groupIndexes The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIndexes(List<Integer> groupIndexes) {
             return groupIndexes(Output.of(groupIndexes));
         }
 
+        /**
+         * @param groupIndexes The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIndexes(Integer... groupIndexes) {
             return groupIndexes(List.of(groupIndexes));
         }
 
+        /**
+         * @param pattern Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(@Nullable Output<String> pattern) {
             $.pattern = pattern;
             return this;
         }
 
+        /**
+         * @param pattern Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(String pattern) {
             return pattern(Output.of(pattern));
         }

@@ -24,6 +24,10 @@ public final class ClusterAutoscalingConfigResponse extends com.pulumi.resources
     @Import(name="autoscalingLimits", required=true)
     private AutoscalingLimitsResponse autoscalingLimits;
 
+    /**
+     * @return Autoscaling limits for this cluster.
+     * 
+     */
     public AutoscalingLimitsResponse autoscalingLimits() {
         return this.autoscalingLimits;
     }
@@ -35,6 +39,10 @@ public final class ClusterAutoscalingConfigResponse extends com.pulumi.resources
     @Import(name="autoscalingTargets", required=true)
     private AutoscalingTargetsResponse autoscalingTargets;
 
+    /**
+     * @return Autoscaling targets for this cluster.
+     * 
+     */
     public AutoscalingTargetsResponse autoscalingTargets() {
         return this.autoscalingTargets;
     }
@@ -64,11 +72,23 @@ public final class ClusterAutoscalingConfigResponse extends com.pulumi.resources
             $ = new ClusterAutoscalingConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscalingLimits Autoscaling limits for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingLimits(AutoscalingLimitsResponse autoscalingLimits) {
             $.autoscalingLimits = autoscalingLimits;
             return this;
         }
 
+        /**
+         * @param autoscalingTargets Autoscaling targets for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingTargets(AutoscalingTargetsResponse autoscalingTargets) {
             $.autoscalingTargets = autoscalingTargets;
             return this;

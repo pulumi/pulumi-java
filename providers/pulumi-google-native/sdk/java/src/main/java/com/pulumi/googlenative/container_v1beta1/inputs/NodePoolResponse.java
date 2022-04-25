@@ -33,6 +33,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="autoscaling", required=true)
     private NodePoolAutoscalingResponse autoscaling;
 
+    /**
+     * @return Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is present.
+     * 
+     */
     public NodePoolAutoscalingResponse autoscaling() {
         return this.autoscaling;
     }
@@ -44,6 +48,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="conditions", required=true)
     private List<StatusConditionResponse> conditions;
 
+    /**
+     * @return Which conditions caused the current node pool state.
+     * 
+     */
     public List<StatusConditionResponse> conditions() {
         return this.conditions;
     }
@@ -55,6 +63,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="config", required=true)
     private NodeConfigResponse config;
 
+    /**
+     * @return The node configuration of the pool.
+     * 
+     */
     public NodeConfigResponse config() {
         return this.config;
     }
@@ -66,6 +78,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="initialNodeCount", required=true)
     private Integer initialNodeCount;
 
+    /**
+     * @return The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.
+     * 
+     */
     public Integer initialNodeCount() {
         return this.initialNodeCount;
     }
@@ -77,6 +93,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceGroupUrls", required=true)
     private List<String> instanceGroupUrls;
 
+    /**
+     * @return [Output only] The resource URLs of the [managed instance groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances) associated with this node pool.
+     * 
+     */
     public List<String> instanceGroupUrls() {
         return this.instanceGroupUrls;
     }
@@ -88,6 +108,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="locations", required=true)
     private List<String> locations;
 
+    /**
+     * @return The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes should be located. If this value is unspecified during node pool creation, the [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will be used, instead. Warning: changing node pool locations will result in nodes being added and/or removed.
+     * 
+     */
     public List<String> locations() {
         return this.locations;
     }
@@ -99,6 +123,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="management", required=true)
     private NodeManagementResponse management;
 
+    /**
+     * @return NodeManagement configuration for this NodePool.
+     * 
+     */
     public NodeManagementResponse management() {
         return this.management;
     }
@@ -110,6 +138,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxPodsConstraint", required=true)
     private MaxPodsConstraintResponse maxPodsConstraint;
 
+    /**
+     * @return The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * 
+     */
     public MaxPodsConstraintResponse maxPodsConstraint() {
         return this.maxPodsConstraint;
     }
@@ -121,6 +153,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the node pool.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -132,6 +168,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="networkConfig", required=true)
     private NodeNetworkConfigResponse networkConfig;
 
+    /**
+     * @return Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults.
+     * 
+     */
     public NodeNetworkConfigResponse networkConfig() {
         return this.networkConfig;
     }
@@ -143,6 +183,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="placementPolicy", required=true)
     private PlacementPolicyResponse placementPolicy;
 
+    /**
+     * @return Specifies the node placement policy.
+     * 
+     */
     public PlacementPolicyResponse placementPolicy() {
         return this.placementPolicy;
     }
@@ -154,6 +198,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="podIpv4CidrSize", required=true)
     private Integer podIpv4CidrSize;
 
+    /**
+     * @return [Output only] The pod CIDR block size per node in this node pool.
+     * 
+     */
     public Integer podIpv4CidrSize() {
         return this.podIpv4CidrSize;
     }
@@ -165,6 +213,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="selfLink", required=true)
     private String selfLink;
 
+    /**
+     * @return [Output only] Server-defined URL for the resource.
+     * 
+     */
     public String selfLink() {
         return this.selfLink;
     }
@@ -176,6 +228,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return [Output only] The status of the nodes in this pool instance.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -187,6 +243,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="upgradeSettings", required=true)
     private UpgradeSettingsResponse upgradeSettings;
 
+    /**
+     * @return Upgrade settings control disruption and speed of the upgrade.
+     * 
+     */
     public UpgradeSettingsResponse upgradeSettings() {
         return this.upgradeSettings;
     }
@@ -198,6 +258,10 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The version of the Kubernetes of this node.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -241,93 +305,207 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NodePoolResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscaling Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaling(NodePoolAutoscalingResponse autoscaling) {
             $.autoscaling = autoscaling;
             return this;
         }
 
+        /**
+         * @param conditions Which conditions caused the current node pool state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<StatusConditionResponse> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Which conditions caused the current node pool state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(StatusConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param config The node configuration of the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(NodeConfigResponse config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param initialNodeCount The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialNodeCount(Integer initialNodeCount) {
             $.initialNodeCount = initialNodeCount;
             return this;
         }
 
+        /**
+         * @param instanceGroupUrls [Output only] The resource URLs of the [managed instance groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances) associated with this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceGroupUrls(List<String> instanceGroupUrls) {
             $.instanceGroupUrls = instanceGroupUrls;
             return this;
         }
 
+        /**
+         * @param instanceGroupUrls [Output only] The resource URLs of the [managed instance groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances) associated with this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceGroupUrls(String... instanceGroupUrls) {
             return instanceGroupUrls(List.of(instanceGroupUrls));
         }
 
+        /**
+         * @param locations The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes should be located. If this value is unspecified during node pool creation, the [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will be used, instead. Warning: changing node pool locations will result in nodes being added and/or removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(List<String> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes should be located. If this value is unspecified during node pool creation, the [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will be used, instead. Warning: changing node pool locations will result in nodes being added and/or removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param management NodeManagement configuration for this NodePool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder management(NodeManagementResponse management) {
             $.management = management;
             return this;
         }
 
+        /**
+         * @param maxPodsConstraint The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPodsConstraint(MaxPodsConstraintResponse maxPodsConstraint) {
             $.maxPodsConstraint = maxPodsConstraint;
             return this;
         }
 
+        /**
+         * @param name The name of the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param networkConfig Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(NodeNetworkConfigResponse networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
 
+        /**
+         * @param placementPolicy Specifies the node placement policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementPolicy(PlacementPolicyResponse placementPolicy) {
             $.placementPolicy = placementPolicy;
             return this;
         }
 
+        /**
+         * @param podIpv4CidrSize [Output only] The pod CIDR block size per node in this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podIpv4CidrSize(Integer podIpv4CidrSize) {
             $.podIpv4CidrSize = podIpv4CidrSize;
             return this;
         }
 
+        /**
+         * @param selfLink [Output only] Server-defined URL for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param status [Output only] The status of the nodes in this pool instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param upgradeSettings Upgrade settings control disruption and speed of the upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeSettings(UpgradeSettingsResponse upgradeSettings) {
             $.upgradeSettings = upgradeSettings;
             return this;
         }
 
+        /**
+         * @param version The version of the Kubernetes of this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

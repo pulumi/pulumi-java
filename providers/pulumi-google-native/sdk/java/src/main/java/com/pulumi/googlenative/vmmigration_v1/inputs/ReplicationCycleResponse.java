@@ -24,6 +24,10 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
     @Import(name="progressPercent", required=true)
     private Integer progressPercent;
 
+    /**
+     * @return The current progress in percentage of this cycle.
+     * 
+     */
     public Integer progressPercent() {
         return this.progressPercent;
     }
@@ -35,6 +39,10 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The time the replication cycle has started.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -64,11 +72,23 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
             $ = new ReplicationCycleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param progressPercent The current progress in percentage of this cycle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progressPercent(Integer progressPercent) {
             $.progressPercent = progressPercent;
             return this;
         }
 
+        /**
+         * @param startTime The time the replication cycle has started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

@@ -25,6 +25,10 @@ public final class GoogleCloudDatacatalogV1beta1SchemaArgs extends com.pulumi.re
     @Import(name="columns", required=true)
     private Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns;
 
+    /**
+     * @return Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.
+     * 
+     */
     public Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns() {
         return this.columns;
     }
@@ -53,15 +57,33 @@ public final class GoogleCloudDatacatalogV1beta1SchemaArgs extends com.pulumi.re
             $ = new GoogleCloudDatacatalogV1beta1SchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs> columns) {
             return columns(Output.of(columns));
         }
 
+        /**
+         * @param columns Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(GoogleCloudDatacatalogV1beta1ColumnSchemaArgs... columns) {
             return columns(List.of(columns));
         }

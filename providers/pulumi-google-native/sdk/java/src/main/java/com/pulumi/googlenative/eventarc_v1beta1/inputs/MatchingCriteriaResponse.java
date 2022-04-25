@@ -23,6 +23,10 @@ public final class MatchingCriteriaResponse extends com.pulumi.resources.InvokeA
     @Import(name="attribute", required=true)
     private String attribute;
 
+    /**
+     * @return The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the &#39;type&#39; attribute.
+     * 
+     */
     public String attribute() {
         return this.attribute;
     }
@@ -34,6 +38,10 @@ public final class MatchingCriteriaResponse extends com.pulumi.resources.InvokeA
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value for the attribute.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class MatchingCriteriaResponse extends com.pulumi.resources.InvokeA
             $ = new MatchingCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attribute The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the &#39;type&#39; attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribute(String attribute) {
             $.attribute = attribute;
             return this;
         }
 
+        /**
+         * @param value The value for the attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

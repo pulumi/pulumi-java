@@ -24,6 +24,10 @@ public final class HttpHeaderMatchArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="headerName", required=true)
     private Output<String> headerName;
 
+    /**
+     * @return The name of the HTTP header to match. For matching against the HTTP request&#39;s authority, use a headerMatch with the header name &#34;:authority&#34;. For matching a request&#39;s method, use the headerName &#34;:method&#34;.
+     * 
+     */
     public Output<String> headerName() {
         return this.headerName;
     }
@@ -35,6 +39,10 @@ public final class HttpHeaderMatchArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="regexMatch", required=true)
     private Output<String> regexMatch;
 
+    /**
+     * @return The value of the header must match the regular expression specified in regexMatch. For regular expression grammar, please see: en.cppreference.com/w/cpp/regex/ecmascript For matching against a port specified in the HTTP request, use a headerMatch with headerName set to Host and a regular expression that satisfies the RFC2616 Host header&#39;s port specifier.
+     * 
+     */
     public Output<String> regexMatch() {
         return this.regexMatch;
     }
@@ -64,20 +72,44 @@ public final class HttpHeaderMatchArgs extends com.pulumi.resources.ResourceArgs
             $ = new HttpHeaderMatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerName The name of the HTTP header to match. For matching against the HTTP request&#39;s authority, use a headerMatch with the header name &#34;:authority&#34;. For matching a request&#39;s method, use the headerName &#34;:method&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(Output<String> headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param headerName The name of the HTTP header to match. For matching against the HTTP request&#39;s authority, use a headerMatch with the header name &#34;:authority&#34;. For matching a request&#39;s method, use the headerName &#34;:method&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             return headerName(Output.of(headerName));
         }
 
+        /**
+         * @param regexMatch The value of the header must match the regular expression specified in regexMatch. For regular expression grammar, please see: en.cppreference.com/w/cpp/regex/ecmascript For matching against a port specified in the HTTP request, use a headerMatch with headerName set to Host and a regular expression that satisfies the RFC2616 Host header&#39;s port specifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexMatch(Output<String> regexMatch) {
             $.regexMatch = regexMatch;
             return this;
         }
 
+        /**
+         * @param regexMatch The value of the header must match the regular expression specified in regexMatch. For regular expression grammar, please see: en.cppreference.com/w/cpp/regex/ecmascript For matching against a port specified in the HTTP request, use a headerMatch with headerName set to Host and a regular expression that satisfies the RFC2616 Host header&#39;s port specifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexMatch(String regexMatch) {
             return regexMatch(Output.of(regexMatch));
         }

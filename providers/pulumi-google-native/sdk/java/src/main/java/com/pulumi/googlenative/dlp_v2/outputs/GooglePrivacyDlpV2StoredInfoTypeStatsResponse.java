@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse {
     /**
-     * StoredInfoType where findings are defined by a dictionary of phrases.
+     * @return StoredInfoType where findings are defined by a dictionary of phrases.
      * 
      */
     private final GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary;
@@ -21,9 +21,9 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse {
     }
 
     /**
-     * StoredInfoType where findings are defined by a dictionary of phrases.
+     * @return StoredInfoType where findings are defined by a dictionary of phrases.
      * 
-    */
+     */
     public GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary() {
         return this.largeCustomDictionary;
     }

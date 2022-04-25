@@ -28,6 +28,10 @@ public final class RRSetRoutingPolicyGeoPolicyArgs extends com.pulumi.resources.
     @Import(name="items")
     private @Nullable Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items;
 
+    /**
+     * @return The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
+     * 
+     */
     public Optional<Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>>> items() {
         return Optional.ofNullable(this.items);
     }
@@ -64,15 +68,33 @@ public final class RRSetRoutingPolicyGeoPolicyArgs extends com.pulumi.resources.
             $ = new RRSetRoutingPolicyGeoPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(@Nullable Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs> items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param items The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs... items) {
             return items(List.of(items));
         }

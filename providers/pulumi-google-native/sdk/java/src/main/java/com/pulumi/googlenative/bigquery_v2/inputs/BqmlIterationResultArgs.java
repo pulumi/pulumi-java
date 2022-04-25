@@ -24,6 +24,10 @@ public final class BqmlIterationResultArgs extends com.pulumi.resources.Resource
     @Import(name="durationMs")
     private @Nullable Output<String> durationMs;
 
+    /**
+     * @return [Output-only, Beta] Time taken to run the training iteration in milliseconds.
+     * 
+     */
     public Optional<Output<String>> durationMs() {
         return Optional.ofNullable(this.durationMs);
     }
@@ -35,6 +39,10 @@ public final class BqmlIterationResultArgs extends com.pulumi.resources.Resource
     @Import(name="evalLoss")
     private @Nullable Output<Double> evalLoss;
 
+    /**
+     * @return [Output-only, Beta] Eval loss computed on the eval data at the end of the iteration. The eval loss is used for early stopping to avoid overfitting. No eval loss if eval_split_method option is specified as no_split or auto_split with input data size less than 500 rows.
+     * 
+     */
     public Optional<Output<Double>> evalLoss() {
         return Optional.ofNullable(this.evalLoss);
     }
@@ -46,6 +54,10 @@ public final class BqmlIterationResultArgs extends com.pulumi.resources.Resource
     @Import(name="index")
     private @Nullable Output<Integer> index;
 
+    /**
+     * @return [Output-only, Beta] Index of the ML training iteration, starting from zero for each training run.
+     * 
+     */
     public Optional<Output<Integer>> index() {
         return Optional.ofNullable(this.index);
     }
@@ -57,6 +69,10 @@ public final class BqmlIterationResultArgs extends com.pulumi.resources.Resource
     @Import(name="learnRate")
     private @Nullable Output<Double> learnRate;
 
+    /**
+     * @return [Output-only, Beta] Learning rate used for this iteration, it varies for different training iterations if learn_rate_strategy option is not constant.
+     * 
+     */
     public Optional<Output<Double>> learnRate() {
         return Optional.ofNullable(this.learnRate);
     }
@@ -68,6 +84,10 @@ public final class BqmlIterationResultArgs extends com.pulumi.resources.Resource
     @Import(name="trainingLoss")
     private @Nullable Output<Double> trainingLoss;
 
+    /**
+     * @return [Output-only, Beta] Training loss computed on the training data at the end of the iteration. The training loss function is defined by model type.
+     * 
+     */
     public Optional<Output<Double>> trainingLoss() {
         return Optional.ofNullable(this.trainingLoss);
     }
@@ -100,47 +120,107 @@ public final class BqmlIterationResultArgs extends com.pulumi.resources.Resource
             $ = new BqmlIterationResultArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param durationMs [Output-only, Beta] Time taken to run the training iteration in milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationMs(@Nullable Output<String> durationMs) {
             $.durationMs = durationMs;
             return this;
         }
 
+        /**
+         * @param durationMs [Output-only, Beta] Time taken to run the training iteration in milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationMs(String durationMs) {
             return durationMs(Output.of(durationMs));
         }
 
+        /**
+         * @param evalLoss [Output-only, Beta] Eval loss computed on the eval data at the end of the iteration. The eval loss is used for early stopping to avoid overfitting. No eval loss if eval_split_method option is specified as no_split or auto_split with input data size less than 500 rows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evalLoss(@Nullable Output<Double> evalLoss) {
             $.evalLoss = evalLoss;
             return this;
         }
 
+        /**
+         * @param evalLoss [Output-only, Beta] Eval loss computed on the eval data at the end of the iteration. The eval loss is used for early stopping to avoid overfitting. No eval loss if eval_split_method option is specified as no_split or auto_split with input data size less than 500 rows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evalLoss(Double evalLoss) {
             return evalLoss(Output.of(evalLoss));
         }
 
+        /**
+         * @param index [Output-only, Beta] Index of the ML training iteration, starting from zero for each training run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder index(@Nullable Output<Integer> index) {
             $.index = index;
             return this;
         }
 
+        /**
+         * @param index [Output-only, Beta] Index of the ML training iteration, starting from zero for each training run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder index(Integer index) {
             return index(Output.of(index));
         }
 
+        /**
+         * @param learnRate [Output-only, Beta] Learning rate used for this iteration, it varies for different training iterations if learn_rate_strategy option is not constant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder learnRate(@Nullable Output<Double> learnRate) {
             $.learnRate = learnRate;
             return this;
         }
 
+        /**
+         * @param learnRate [Output-only, Beta] Learning rate used for this iteration, it varies for different training iterations if learn_rate_strategy option is not constant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder learnRate(Double learnRate) {
             return learnRate(Output.of(learnRate));
         }
 
+        /**
+         * @param trainingLoss [Output-only, Beta] Training loss computed on the training data at the end of the iteration. The training loss function is defined by model type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingLoss(@Nullable Output<Double> trainingLoss) {
             $.trainingLoss = trainingLoss;
             return this;
         }
 
+        /**
+         * @param trainingLoss [Output-only, Beta] Training loss computed on the training data at the end of the iteration. The training loss function is defined by model type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingLoss(Double trainingLoss) {
             return trainingLoss(Output.of(trainingLoss));
         }

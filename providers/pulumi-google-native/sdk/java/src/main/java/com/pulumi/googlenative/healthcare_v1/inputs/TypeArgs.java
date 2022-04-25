@@ -29,6 +29,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fields")
     private @Nullable Output<List<FieldArgs>> fields;
 
+    /**
+     * @return The (sub) fields this type has (if not primitive).
+     * 
+     */
     public Optional<Output<List<FieldArgs>>> fields() {
         return Optional.ofNullable(this.fields);
     }
@@ -40,6 +44,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of this type. This would be the segment or datatype name. For example, &#34;PID&#34; or &#34;XPN&#34;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -51,6 +59,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="primitive")
     private @Nullable Output<TypePrimitive> primitive;
 
+    /**
+     * @return If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
+     * 
+     */
     public Optional<Output<TypePrimitive>> primitive() {
         return Optional.ofNullable(this.primitive);
     }
@@ -81,33 +93,75 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fields The (sub) fields this type has (if not primitive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(@Nullable Output<List<FieldArgs>> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields The (sub) fields this type has (if not primitive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(List<FieldArgs> fields) {
             return fields(Output.of(fields));
         }
 
+        /**
+         * @param fields The (sub) fields this type has (if not primitive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(FieldArgs... fields) {
             return fields(List.of(fields));
         }
 
+        /**
+         * @param name The name of this type. This would be the segment or datatype name. For example, &#34;PID&#34; or &#34;XPN&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of this type. This would be the segment or datatype name. For example, &#34;PID&#34; or &#34;XPN&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param primitive If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primitive(@Nullable Output<TypePrimitive> primitive) {
             $.primitive = primitive;
             return this;
         }
 
+        /**
+         * @param primitive If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primitive(TypePrimitive primitive) {
             return primitive(Output.of(primitive));
         }

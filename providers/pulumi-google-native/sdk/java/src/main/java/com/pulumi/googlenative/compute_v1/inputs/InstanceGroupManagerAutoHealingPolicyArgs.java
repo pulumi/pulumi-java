@@ -23,6 +23,10 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends com.pulumi.
     @Import(name="healthCheck")
     private @Nullable Output<String> healthCheck;
 
+    /**
+     * @return The URL for the health check that signals autohealing.
+     * 
+     */
     public Optional<Output<String>> healthCheck() {
         return Optional.ofNullable(this.healthCheck);
     }
@@ -34,6 +38,10 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends com.pulumi.
     @Import(name="initialDelaySec")
     private @Nullable Output<Integer> initialDelaySec;
 
+    /**
+     * @return The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. This initial delay allows instances to initialize and run their startup scripts before the instance group determines that they are UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely. This value must be from range [0, 3600].
+     * 
+     */
     public Optional<Output<Integer>> initialDelaySec() {
         return Optional.ofNullable(this.initialDelaySec);
     }
@@ -63,20 +71,44 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends com.pulumi.
             $ = new InstanceGroupManagerAutoHealingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthCheck The URL for the health check that signals autohealing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheck(@Nullable Output<String> healthCheck) {
             $.healthCheck = healthCheck;
             return this;
         }
 
+        /**
+         * @param healthCheck The URL for the health check that signals autohealing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheck(String healthCheck) {
             return healthCheck(Output.of(healthCheck));
         }
 
+        /**
+         * @param initialDelaySec The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. This initial delay allows instances to initialize and run their startup scripts before the instance group determines that they are UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely. This value must be from range [0, 3600].
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelaySec(@Nullable Output<Integer> initialDelaySec) {
             $.initialDelaySec = initialDelaySec;
             return this;
         }
 
+        /**
+         * @param initialDelaySec The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. This initial delay allows instances to initialize and run their startup scripts before the instance group determines that they are UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely. This value must be from range [0, 3600].
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelaySec(Integer initialDelaySec) {
             return initialDelaySec(Output.of(initialDelaySec));
         }

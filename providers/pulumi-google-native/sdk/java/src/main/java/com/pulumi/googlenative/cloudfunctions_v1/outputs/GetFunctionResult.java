@@ -18,162 +18,162 @@ import java.util.Objects;
 @CustomType
 public final class GetFunctionResult {
     /**
-     * The amount of memory in MB available for a function. Defaults to 256MB.
+     * @return The amount of memory in MB available for a function. Defaults to 256MB.
      * 
      */
     private final Integer availableMemoryMb;
     /**
-     * Build environment variables that shall be available during build time.
+     * @return Build environment variables that shall be available during build time.
      * 
      */
     private final Map<String,String> buildEnvironmentVariables;
     /**
-     * The Cloud Build ID of the latest successful deployment of the function.
+     * @return The Cloud Build ID of the latest successful deployment of the function.
      * 
      */
     private final String buildId;
     /**
-     * The Cloud Build Name of the function deployment. `projects//locations//builds/`.
+     * @return The Cloud Build Name of the function deployment. `projects//locations//builds/`.
      * 
      */
     private final String buildName;
     /**
-     * Name of the Cloud Build Custom Worker Pool that should be used to build the function. The format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where `{project}` and `{region}` are the project id and region respectively where the worker pool is defined and `{workerPool}` is the short name of the worker pool. If the project id is not the same as the function, then the Cloud Functions Service Agent (`service-@gcf-admin-robot.iam.gserviceaccount.com`) must be granted the role Cloud Build Custom Workers Builder (`roles/cloudbuild.customworkers.builder`) in the project.
+     * @return Name of the Cloud Build Custom Worker Pool that should be used to build the function. The format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where `{project}` and `{region}` are the project id and region respectively where the worker pool is defined and `{workerPool}` is the short name of the worker pool. If the project id is not the same as the function, then the Cloud Functions Service Agent (`service-@gcf-admin-robot.iam.gserviceaccount.com`) must be granted the role Cloud Build Custom Workers Builder (`roles/cloudbuild.customworkers.builder`) in the project.
      * 
      */
     private final String buildWorkerPool;
     /**
-     * User-provided description of a function.
+     * @return User-provided description of a function.
      * 
      */
     private final String description;
     /**
-     * User managed repository created in Artifact Registry optionally with a customer managed encryption key. If specified, deployments will use Artifact Registry. If unspecified and the deployment is eligible to use Artifact Registry, GCF will create and use a repository named &#39;gcf-artifacts&#39; for every deployed region. This is the repository to which the function docker image will be pushed after it is built by Cloud Build. It must match the pattern `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories are not supported. Cross-location repositories are not supported. Repository format must be &#39;DOCKER&#39;.
+     * @return User managed repository created in Artifact Registry optionally with a customer managed encryption key. If specified, deployments will use Artifact Registry. If unspecified and the deployment is eligible to use Artifact Registry, GCF will create and use a repository named &#39;gcf-artifacts&#39; for every deployed region. This is the repository to which the function docker image will be pushed after it is built by Cloud Build. It must match the pattern `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories are not supported. Cross-location repositories are not supported. Repository format must be &#39;DOCKER&#39;.
      * 
      */
     private final String dockerRepository;
     /**
-     * The name of the function (as defined in source code) that will be executed. Defaults to the resource name suffix, if not specified. For backward compatibility, if function with given name is not found, then the system will try to use function named &#34;function&#34;. For Node.js this is name of a function exported by the module specified in `source_location`.
+     * @return The name of the function (as defined in source code) that will be executed. Defaults to the resource name suffix, if not specified. For backward compatibility, if function with given name is not found, then the system will try to use function named &#34;function&#34;. For Node.js this is name of a function exported by the module specified in `source_location`.
      * 
      */
     private final String entryPoint;
     /**
-     * Environment variables that shall be available during function execution.
+     * @return Environment variables that shall be available during function execution.
      * 
      */
     private final Map<String,String> environmentVariables;
     /**
-     * A source that fires events in response to a condition in another service.
+     * @return A source that fires events in response to a condition in another service.
      * 
      */
     private final EventTriggerResponse eventTrigger;
     /**
-     * An HTTPS endpoint type of source that can be triggered via URL.
+     * @return An HTTPS endpoint type of source that can be triggered via URL.
      * 
      */
     private final HttpsTriggerResponse httpsTrigger;
     /**
-     * The ingress settings for the function, controlling what traffic can reach it.
+     * @return The ingress settings for the function, controlling what traffic can reach it.
      * 
      */
     private final String ingressSettings;
     /**
-     * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`. If specified, you must also provide an artifact registry repository using the `docker_repository` field that was created with the same KMS crypto key. The following service accounts need to be granted the role &#39;Cloud KMS CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)&#39; on the Key/KeyRing/Project/Organization (least access preferred). 1. Google Cloud Functions service account (service-{project_number}@gcf-admin-robot.iam.gserviceaccount.com) - Required to protect the function&#39;s image. 2. Google Storage service account (service-{project_number}@gs-project-accounts.iam.gserviceaccount.com) - Required to protect the function&#39;s source code. If this service account does not exist, deploying a function without a KMS key or retrieving the service agent name provisions it. For more information, see https://cloud.google.com/storage/docs/projects#service-agents and https://cloud.google.com/storage/docs/getting-service-agent#gsutil. Google Cloud Functions delegates access to service agents to protect function resources in internal projects that are not accessible by the end user.
+     * @return Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`. If specified, you must also provide an artifact registry repository using the `docker_repository` field that was created with the same KMS crypto key. The following service accounts need to be granted the role &#39;Cloud KMS CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)&#39; on the Key/KeyRing/Project/Organization (least access preferred). 1. Google Cloud Functions service account (service-{project_number}@gcf-admin-robot.iam.gserviceaccount.com) - Required to protect the function&#39;s image. 2. Google Storage service account (service-{project_number}@gs-project-accounts.iam.gserviceaccount.com) - Required to protect the function&#39;s source code. If this service account does not exist, deploying a function without a KMS key or retrieving the service agent name provisions it. For more information, see https://cloud.google.com/storage/docs/projects#service-agents and https://cloud.google.com/storage/docs/getting-service-agent#gsutil. Google Cloud Functions delegates access to service agents to protect function resources in internal projects that are not accessible by the end user.
      * 
      */
     private final String kmsKeyName;
     /**
-     * Labels associated with this Cloud Function.
+     * @return Labels associated with this Cloud Function.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The limit on the maximum number of function instances that may coexist at a given time. In some cases, such as rapid traffic surges, Cloud Functions may, for a short period of time, create more instances than the specified max instances limit. If your function cannot tolerate this temporary behavior, you may want to factor in a safety margin and set a lower max instances value than your function can tolerate. See the [Max Instances](https://cloud.google.com/functions/docs/max-instances) Guide for more details.
+     * @return The limit on the maximum number of function instances that may coexist at a given time. In some cases, such as rapid traffic surges, Cloud Functions may, for a short period of time, create more instances than the specified max instances limit. If your function cannot tolerate this temporary behavior, you may want to factor in a safety margin and set a lower max instances value than your function can tolerate. See the [Max Instances](https://cloud.google.com/functions/docs/max-instances) Guide for more details.
      * 
      */
     private final Integer maxInstances;
     /**
-     * A lower bound for the number function instances that may coexist at a given time.
+     * @return A lower bound for the number function instances that may coexist at a given time.
      * 
      */
     private final Integer minInstances;
     /**
-     * A user-defined name of the function. Function names must be unique globally and match pattern `projects/*{@literal /}locations/*{@literal /}functions/*`
+     * @return A user-defined name of the function. Function names must be unique globally and match pattern `projects/*{@literal /}locations/*{@literal /}functions/*`
      * 
      */
     private final String name;
     /**
-     * The VPC Network that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network resource. If the short network name is used, the network must belong to the same project. Otherwise, it must belong to a project within the same organization. The format of this field is either `projects/{project}/global/networks/{network}` or `{network}`, where `{project}` is a project id where the network is defined, and `{network}` is the short name of the network. This field is mutually exclusive with `vpc_connector` and will be replaced by it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
+     * @return The VPC Network that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network resource. If the short network name is used, the network must belong to the same project. Otherwise, it must belong to a project within the same organization. The format of this field is either `projects/{project}/global/networks/{network}` or `{network}`, where `{project}` is a project id where the network is defined, and `{network}` is the short name of the network. This field is mutually exclusive with `vpc_connector` and will be replaced by it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
      * 
      */
     private final String network;
     /**
-     * The runtime in which to run the function. Required when deploying a new function, optional when updating an existing function. For a complete list of possible choices, see the [`gcloud` command reference](https://cloud.google.com/sdk/gcloud/reference/functions/deploy#--runtime).
+     * @return The runtime in which to run the function. Required when deploying a new function, optional when updating an existing function. For a complete list of possible choices, see the [`gcloud` command reference](https://cloud.google.com/sdk/gcloud/reference/functions/deploy#--runtime).
      * 
      */
     private final String runtime;
     /**
-     * Secret environment variables configuration.
+     * @return Secret environment variables configuration.
      * 
      */
     private final List<SecretEnvVarResponse> secretEnvironmentVariables;
     /**
-     * Secret volumes configuration.
+     * @return Secret volumes configuration.
      * 
      */
     private final List<SecretVolumeResponse> secretVolumes;
     /**
-     * The email of the function&#39;s service account. If empty, defaults to `{project_id}@appspot.gserviceaccount.com`.
+     * @return The email of the function&#39;s service account. If empty, defaults to `{project_id}@appspot.gserviceaccount.com`.
      * 
      */
     private final String serviceAccountEmail;
     /**
-     * The Google Cloud Storage URL, starting with `gs://`, pointing to the zip archive which contains the function.
+     * @return The Google Cloud Storage URL, starting with `gs://`, pointing to the zip archive which contains the function.
      * 
      */
     private final String sourceArchiveUrl;
     /**
-     * **Beta Feature** The source repository where a function is hosted.
+     * @return **Beta Feature** The source repository where a function is hosted.
      * 
      */
     private final SourceRepositoryResponse sourceRepository;
     /**
-     * Input only. An identifier for Firebase function sources. Disclaimer: This field is only supported for Firebase function deployments.
+     * @return Input only. An identifier for Firebase function sources. Disclaimer: This field is only supported for Firebase function deployments.
      * 
      */
     private final String sourceToken;
     /**
-     * The Google Cloud Storage signed URL used for source uploading, generated by calling [google.cloud.functions.v1.GenerateUploadUrl]. The signature is validated on write methods (Create, Update) The signature is stripped from the Function object on read methods (Get, List)
+     * @return The Google Cloud Storage signed URL used for source uploading, generated by calling [google.cloud.functions.v1.GenerateUploadUrl]. The signature is validated on write methods (Create, Update) The signature is stripped from the Function object on read methods (Get, List)
      * 
      */
     private final String sourceUploadUrl;
     /**
-     * Status of the function deployment.
+     * @return Status of the function deployment.
      * 
      */
     private final String status;
     /**
-     * The function execution timeout. Execution is considered failed and can be terminated if the function is not completed at the end of the timeout period. Defaults to 60 seconds.
+     * @return The function execution timeout. Execution is considered failed and can be terminated if the function is not completed at the end of the timeout period. Defaults to 60 seconds.
      * 
      */
     private final String timeout;
     /**
-     * The last update timestamp of a Cloud Function.
+     * @return The last update timestamp of a Cloud Function.
      * 
      */
     private final String updateTime;
     /**
-     * The version identifier of the Cloud Function. Each deployment attempt results in a new version of a function being created.
+     * @return The version identifier of the Cloud Function. Each deployment attempt results in a new version of a function being created.
      * 
      */
     private final String versionId;
     /**
-     * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
+     * @return The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
      * 
      */
     private final String vpcConnector;
     /**
-     * The egress settings for the connector, controlling what traffic is diverted through it.
+     * @return The egress settings for the connector, controlling what traffic is diverted through it.
      * 
      */
     private final String vpcConnectorEgressSettings;
@@ -247,226 +247,226 @@ public final class GetFunctionResult {
     }
 
     /**
-     * The amount of memory in MB available for a function. Defaults to 256MB.
+     * @return The amount of memory in MB available for a function. Defaults to 256MB.
      * 
-    */
+     */
     public Integer availableMemoryMb() {
         return this.availableMemoryMb;
     }
     /**
-     * Build environment variables that shall be available during build time.
+     * @return Build environment variables that shall be available during build time.
      * 
-    */
+     */
     public Map<String,String> buildEnvironmentVariables() {
         return this.buildEnvironmentVariables;
     }
     /**
-     * The Cloud Build ID of the latest successful deployment of the function.
+     * @return The Cloud Build ID of the latest successful deployment of the function.
      * 
-    */
+     */
     public String buildId() {
         return this.buildId;
     }
     /**
-     * The Cloud Build Name of the function deployment. `projects//locations//builds/`.
+     * @return The Cloud Build Name of the function deployment. `projects//locations//builds/`.
      * 
-    */
+     */
     public String buildName() {
         return this.buildName;
     }
     /**
-     * Name of the Cloud Build Custom Worker Pool that should be used to build the function. The format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where `{project}` and `{region}` are the project id and region respectively where the worker pool is defined and `{workerPool}` is the short name of the worker pool. If the project id is not the same as the function, then the Cloud Functions Service Agent (`service-@gcf-admin-robot.iam.gserviceaccount.com`) must be granted the role Cloud Build Custom Workers Builder (`roles/cloudbuild.customworkers.builder`) in the project.
+     * @return Name of the Cloud Build Custom Worker Pool that should be used to build the function. The format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where `{project}` and `{region}` are the project id and region respectively where the worker pool is defined and `{workerPool}` is the short name of the worker pool. If the project id is not the same as the function, then the Cloud Functions Service Agent (`service-@gcf-admin-robot.iam.gserviceaccount.com`) must be granted the role Cloud Build Custom Workers Builder (`roles/cloudbuild.customworkers.builder`) in the project.
      * 
-    */
+     */
     public String buildWorkerPool() {
         return this.buildWorkerPool;
     }
     /**
-     * User-provided description of a function.
+     * @return User-provided description of a function.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * User managed repository created in Artifact Registry optionally with a customer managed encryption key. If specified, deployments will use Artifact Registry. If unspecified and the deployment is eligible to use Artifact Registry, GCF will create and use a repository named &#39;gcf-artifacts&#39; for every deployed region. This is the repository to which the function docker image will be pushed after it is built by Cloud Build. It must match the pattern `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories are not supported. Cross-location repositories are not supported. Repository format must be &#39;DOCKER&#39;.
+     * @return User managed repository created in Artifact Registry optionally with a customer managed encryption key. If specified, deployments will use Artifact Registry. If unspecified and the deployment is eligible to use Artifact Registry, GCF will create and use a repository named &#39;gcf-artifacts&#39; for every deployed region. This is the repository to which the function docker image will be pushed after it is built by Cloud Build. It must match the pattern `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories are not supported. Cross-location repositories are not supported. Repository format must be &#39;DOCKER&#39;.
      * 
-    */
+     */
     public String dockerRepository() {
         return this.dockerRepository;
     }
     /**
-     * The name of the function (as defined in source code) that will be executed. Defaults to the resource name suffix, if not specified. For backward compatibility, if function with given name is not found, then the system will try to use function named &#34;function&#34;. For Node.js this is name of a function exported by the module specified in `source_location`.
+     * @return The name of the function (as defined in source code) that will be executed. Defaults to the resource name suffix, if not specified. For backward compatibility, if function with given name is not found, then the system will try to use function named &#34;function&#34;. For Node.js this is name of a function exported by the module specified in `source_location`.
      * 
-    */
+     */
     public String entryPoint() {
         return this.entryPoint;
     }
     /**
-     * Environment variables that shall be available during function execution.
+     * @return Environment variables that shall be available during function execution.
      * 
-    */
+     */
     public Map<String,String> environmentVariables() {
         return this.environmentVariables;
     }
     /**
-     * A source that fires events in response to a condition in another service.
+     * @return A source that fires events in response to a condition in another service.
      * 
-    */
+     */
     public EventTriggerResponse eventTrigger() {
         return this.eventTrigger;
     }
     /**
-     * An HTTPS endpoint type of source that can be triggered via URL.
+     * @return An HTTPS endpoint type of source that can be triggered via URL.
      * 
-    */
+     */
     public HttpsTriggerResponse httpsTrigger() {
         return this.httpsTrigger;
     }
     /**
-     * The ingress settings for the function, controlling what traffic can reach it.
+     * @return The ingress settings for the function, controlling what traffic can reach it.
      * 
-    */
+     */
     public String ingressSettings() {
         return this.ingressSettings;
     }
     /**
-     * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`. If specified, you must also provide an artifact registry repository using the `docker_repository` field that was created with the same KMS crypto key. The following service accounts need to be granted the role &#39;Cloud KMS CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)&#39; on the Key/KeyRing/Project/Organization (least access preferred). 1. Google Cloud Functions service account (service-{project_number}@gcf-admin-robot.iam.gserviceaccount.com) - Required to protect the function&#39;s image. 2. Google Storage service account (service-{project_number}@gs-project-accounts.iam.gserviceaccount.com) - Required to protect the function&#39;s source code. If this service account does not exist, deploying a function without a KMS key or retrieving the service agent name provisions it. For more information, see https://cloud.google.com/storage/docs/projects#service-agents and https://cloud.google.com/storage/docs/getting-service-agent#gsutil. Google Cloud Functions delegates access to service agents to protect function resources in internal projects that are not accessible by the end user.
+     * @return Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`. If specified, you must also provide an artifact registry repository using the `docker_repository` field that was created with the same KMS crypto key. The following service accounts need to be granted the role &#39;Cloud KMS CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)&#39; on the Key/KeyRing/Project/Organization (least access preferred). 1. Google Cloud Functions service account (service-{project_number}@gcf-admin-robot.iam.gserviceaccount.com) - Required to protect the function&#39;s image. 2. Google Storage service account (service-{project_number}@gs-project-accounts.iam.gserviceaccount.com) - Required to protect the function&#39;s source code. If this service account does not exist, deploying a function without a KMS key or retrieving the service agent name provisions it. For more information, see https://cloud.google.com/storage/docs/projects#service-agents and https://cloud.google.com/storage/docs/getting-service-agent#gsutil. Google Cloud Functions delegates access to service agents to protect function resources in internal projects that are not accessible by the end user.
      * 
-    */
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
-     * Labels associated with this Cloud Function.
+     * @return Labels associated with this Cloud Function.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The limit on the maximum number of function instances that may coexist at a given time. In some cases, such as rapid traffic surges, Cloud Functions may, for a short period of time, create more instances than the specified max instances limit. If your function cannot tolerate this temporary behavior, you may want to factor in a safety margin and set a lower max instances value than your function can tolerate. See the [Max Instances](https://cloud.google.com/functions/docs/max-instances) Guide for more details.
+     * @return The limit on the maximum number of function instances that may coexist at a given time. In some cases, such as rapid traffic surges, Cloud Functions may, for a short period of time, create more instances than the specified max instances limit. If your function cannot tolerate this temporary behavior, you may want to factor in a safety margin and set a lower max instances value than your function can tolerate. See the [Max Instances](https://cloud.google.com/functions/docs/max-instances) Guide for more details.
      * 
-    */
+     */
     public Integer maxInstances() {
         return this.maxInstances;
     }
     /**
-     * A lower bound for the number function instances that may coexist at a given time.
+     * @return A lower bound for the number function instances that may coexist at a given time.
      * 
-    */
+     */
     public Integer minInstances() {
         return this.minInstances;
     }
     /**
-     * A user-defined name of the function. Function names must be unique globally and match pattern `projects/*{@literal /}locations/*{@literal /}functions/*`
+     * @return A user-defined name of the function. Function names must be unique globally and match pattern `projects/*{@literal /}locations/*{@literal /}functions/*`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The VPC Network that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network resource. If the short network name is used, the network must belong to the same project. Otherwise, it must belong to a project within the same organization. The format of this field is either `projects/{project}/global/networks/{network}` or `{network}`, where `{project}` is a project id where the network is defined, and `{network}` is the short name of the network. This field is mutually exclusive with `vpc_connector` and will be replaced by it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
+     * @return The VPC Network that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network resource. If the short network name is used, the network must belong to the same project. Otherwise, it must belong to a project within the same organization. The format of this field is either `projects/{project}/global/networks/{network}` or `{network}`, where `{project}` is a project id where the network is defined, and `{network}` is the short name of the network. This field is mutually exclusive with `vpc_connector` and will be replaced by it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * The runtime in which to run the function. Required when deploying a new function, optional when updating an existing function. For a complete list of possible choices, see the [`gcloud` command reference](https://cloud.google.com/sdk/gcloud/reference/functions/deploy#--runtime).
+     * @return The runtime in which to run the function. Required when deploying a new function, optional when updating an existing function. For a complete list of possible choices, see the [`gcloud` command reference](https://cloud.google.com/sdk/gcloud/reference/functions/deploy#--runtime).
      * 
-    */
+     */
     public String runtime() {
         return this.runtime;
     }
     /**
-     * Secret environment variables configuration.
+     * @return Secret environment variables configuration.
      * 
-    */
+     */
     public List<SecretEnvVarResponse> secretEnvironmentVariables() {
         return this.secretEnvironmentVariables;
     }
     /**
-     * Secret volumes configuration.
+     * @return Secret volumes configuration.
      * 
-    */
+     */
     public List<SecretVolumeResponse> secretVolumes() {
         return this.secretVolumes;
     }
     /**
-     * The email of the function&#39;s service account. If empty, defaults to `{project_id}@appspot.gserviceaccount.com`.
+     * @return The email of the function&#39;s service account. If empty, defaults to `{project_id}@appspot.gserviceaccount.com`.
      * 
-    */
+     */
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
     /**
-     * The Google Cloud Storage URL, starting with `gs://`, pointing to the zip archive which contains the function.
+     * @return The Google Cloud Storage URL, starting with `gs://`, pointing to the zip archive which contains the function.
      * 
-    */
+     */
     public String sourceArchiveUrl() {
         return this.sourceArchiveUrl;
     }
     /**
-     * **Beta Feature** The source repository where a function is hosted.
+     * @return **Beta Feature** The source repository where a function is hosted.
      * 
-    */
+     */
     public SourceRepositoryResponse sourceRepository() {
         return this.sourceRepository;
     }
     /**
-     * Input only. An identifier for Firebase function sources. Disclaimer: This field is only supported for Firebase function deployments.
+     * @return Input only. An identifier for Firebase function sources. Disclaimer: This field is only supported for Firebase function deployments.
      * 
-    */
+     */
     public String sourceToken() {
         return this.sourceToken;
     }
     /**
-     * The Google Cloud Storage signed URL used for source uploading, generated by calling [google.cloud.functions.v1.GenerateUploadUrl]. The signature is validated on write methods (Create, Update) The signature is stripped from the Function object on read methods (Get, List)
+     * @return The Google Cloud Storage signed URL used for source uploading, generated by calling [google.cloud.functions.v1.GenerateUploadUrl]. The signature is validated on write methods (Create, Update) The signature is stripped from the Function object on read methods (Get, List)
      * 
-    */
+     */
     public String sourceUploadUrl() {
         return this.sourceUploadUrl;
     }
     /**
-     * Status of the function deployment.
+     * @return Status of the function deployment.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The function execution timeout. Execution is considered failed and can be terminated if the function is not completed at the end of the timeout period. Defaults to 60 seconds.
+     * @return The function execution timeout. Execution is considered failed and can be terminated if the function is not completed at the end of the timeout period. Defaults to 60 seconds.
      * 
-    */
+     */
     public String timeout() {
         return this.timeout;
     }
     /**
-     * The last update timestamp of a Cloud Function.
+     * @return The last update timestamp of a Cloud Function.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * The version identifier of the Cloud Function. Each deployment attempt results in a new version of a function being created.
+     * @return The version identifier of the Cloud Function. Each deployment attempt results in a new version of a function being created.
      * 
-    */
+     */
     public String versionId() {
         return this.versionId;
     }
     /**
-     * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
+     * @return The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
      * 
-    */
+     */
     public String vpcConnector() {
         return this.vpcConnector;
     }
     /**
-     * The egress settings for the connector, controlling what traffic is diverted through it.
+     * @return The egress settings for the connector, controlling what traffic is diverted through it.
      * 
-    */
+     */
     public String vpcConnectorEgressSettings() {
         return this.vpcConnectorEgressSettings;
     }

@@ -24,6 +24,10 @@ public final class PeripheralsConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="metastoreService", required=true)
     private String metastoreService;
 
+    /**
+     * @return Optional. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[region]/services/[service_id]
+     * 
+     */
     public String metastoreService() {
         return this.metastoreService;
     }
@@ -35,6 +39,10 @@ public final class PeripheralsConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="sparkHistoryServerConfig", required=true)
     private SparkHistoryServerConfigResponse sparkHistoryServerConfig;
 
+    /**
+     * @return Optional. The Spark History Server configuration for the workload.
+     * 
+     */
     public SparkHistoryServerConfigResponse sparkHistoryServerConfig() {
         return this.sparkHistoryServerConfig;
     }
@@ -64,11 +72,23 @@ public final class PeripheralsConfigResponse extends com.pulumi.resources.Invoke
             $ = new PeripheralsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metastoreService Optional. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[region]/services/[service_id]
+         * 
+         * @return builder
+         * 
+         */
         public Builder metastoreService(String metastoreService) {
             $.metastoreService = metastoreService;
             return this;
         }
 
+        /**
+         * @param sparkHistoryServerConfig Optional. The Spark History Server configuration for the workload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkHistoryServerConfig(SparkHistoryServerConfigResponse sparkHistoryServerConfig) {
             $.sparkHistoryServerConfig = sparkHistoryServerConfig;
             return this;

@@ -18,44 +18,44 @@ import java.util.Objects;
 @CustomType
 public final class AutoscalingPolicyResponse {
     /**
-     * The number of seconds that the autoscaler waits before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.
+     * @return The number of seconds that the autoscaler waits before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.
      * 
      */
     private final Integer coolDownPeriodSec;
     /**
-     * Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.
+     * @return Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.
      * 
      */
     private final AutoscalingPolicyCpuUtilizationResponse cpuUtilization;
     /**
-     * Configuration parameters of autoscaling based on a custom metric.
+     * @return Configuration parameters of autoscaling based on a custom metric.
      * 
      */
     private final List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations;
     /**
-     * Configuration parameters of autoscaling based on load balancer.
+     * @return Configuration parameters of autoscaling based on load balancer.
      * 
      */
     private final AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization;
     /**
-     * The maximum number of instances that the autoscaler can scale out to. This is required when creating or updating an autoscaler. The maximum number of replicas must not be lower than minimal number of replicas.
+     * @return The maximum number of instances that the autoscaler can scale out to. This is required when creating or updating an autoscaler. The maximum number of replicas must not be lower than minimal number of replicas.
      * 
      */
     private final Integer maxNumReplicas;
     /**
-     * The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0. If not provided, autoscaler chooses a default value depending on maximum number of instances allowed.
+     * @return The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0. If not provided, autoscaler chooses a default value depending on maximum number of instances allowed.
      * 
      */
     private final Integer minNumReplicas;
     /**
-     * Defines operating mode for this policy.
+     * @return Defines operating mode for this policy.
      * 
      */
     private final String mode;
     private final AutoscalingPolicyScaleDownControlResponse scaleDownControl;
     private final AutoscalingPolicyScaleInControlResponse scaleInControl;
     /**
-     * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler, and they can overlap. During overlapping periods the greatest min_required_replicas of all scaling schedules is applied. Up to 128 scaling schedules are allowed.
+     * @return Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler, and they can overlap. During overlapping periods the greatest min_required_replicas of all scaling schedules is applied. Up to 128 scaling schedules are allowed.
      * 
      */
     private final Map<String,String> scalingSchedules;
@@ -85,51 +85,51 @@ public final class AutoscalingPolicyResponse {
     }
 
     /**
-     * The number of seconds that the autoscaler waits before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.
+     * @return The number of seconds that the autoscaler waits before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.
      * 
-    */
+     */
     public Integer coolDownPeriodSec() {
         return this.coolDownPeriodSec;
     }
     /**
-     * Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.
+     * @return Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.
      * 
-    */
+     */
     public AutoscalingPolicyCpuUtilizationResponse cpuUtilization() {
         return this.cpuUtilization;
     }
     /**
-     * Configuration parameters of autoscaling based on a custom metric.
+     * @return Configuration parameters of autoscaling based on a custom metric.
      * 
-    */
+     */
     public List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations() {
         return this.customMetricUtilizations;
     }
     /**
-     * Configuration parameters of autoscaling based on load balancer.
+     * @return Configuration parameters of autoscaling based on load balancer.
      * 
-    */
+     */
     public AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization() {
         return this.loadBalancingUtilization;
     }
     /**
-     * The maximum number of instances that the autoscaler can scale out to. This is required when creating or updating an autoscaler. The maximum number of replicas must not be lower than minimal number of replicas.
+     * @return The maximum number of instances that the autoscaler can scale out to. This is required when creating or updating an autoscaler. The maximum number of replicas must not be lower than minimal number of replicas.
      * 
-    */
+     */
     public Integer maxNumReplicas() {
         return this.maxNumReplicas;
     }
     /**
-     * The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0. If not provided, autoscaler chooses a default value depending on maximum number of instances allowed.
+     * @return The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0. If not provided, autoscaler chooses a default value depending on maximum number of instances allowed.
      * 
-    */
+     */
     public Integer minNumReplicas() {
         return this.minNumReplicas;
     }
     /**
-     * Defines operating mode for this policy.
+     * @return Defines operating mode for this policy.
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }
@@ -140,9 +140,9 @@ public final class AutoscalingPolicyResponse {
         return this.scaleInControl;
     }
     /**
-     * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler, and they can overlap. During overlapping periods the greatest min_required_replicas of all scaling schedules is applied. Up to 128 scaling schedules are allowed.
+     * @return Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler, and they can overlap. During overlapping periods the greatest min_required_replicas of all scaling schedules is applied. Up to 128 scaling schedules are allowed.
      * 
-    */
+     */
     public Map<String,String> scalingSchedules() {
         return this.scalingSchedules;
     }

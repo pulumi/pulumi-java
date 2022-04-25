@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2EntityIdResponse extends com.pulumi.resourc
     @Import(name="field", required=true)
     private GooglePrivacyDlpV2FieldIdResponse field;
 
+    /**
+     * @return Composite key indicating which field contains the entity identifier.
+     * 
+     */
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2EntityIdResponse extends com.pulumi.resourc
             $ = new GooglePrivacyDlpV2EntityIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field Composite key indicating which field contains the entity identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             $.field = field;
             return this;

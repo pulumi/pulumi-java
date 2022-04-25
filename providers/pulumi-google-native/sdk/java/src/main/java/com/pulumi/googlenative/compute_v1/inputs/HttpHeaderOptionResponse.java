@@ -24,6 +24,10 @@ public final class HttpHeaderOptionResponse extends com.pulumi.resources.InvokeA
     @Import(name="headerName", required=true)
     private String headerName;
 
+    /**
+     * @return The name of the header.
+     * 
+     */
     public String headerName() {
         return this.headerName;
     }
@@ -35,6 +39,10 @@ public final class HttpHeaderOptionResponse extends com.pulumi.resources.InvokeA
     @Import(name="headerValue", required=true)
     private String headerValue;
 
+    /**
+     * @return The value of the header to add.
+     * 
+     */
     public String headerValue() {
         return this.headerValue;
     }
@@ -46,6 +54,10 @@ public final class HttpHeaderOptionResponse extends com.pulumi.resources.InvokeA
     @Import(name="replace", required=true)
     private Boolean replace;
 
+    /**
+     * @return If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header. The default value is false.
+     * 
+     */
     public Boolean replace() {
         return this.replace;
     }
@@ -76,16 +88,34 @@ public final class HttpHeaderOptionResponse extends com.pulumi.resources.InvokeA
             $ = new HttpHeaderOptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerName The name of the header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param headerValue The value of the header to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerValue(String headerValue) {
             $.headerValue = headerValue;
             return this;
         }
 
+        /**
+         * @param replace If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replace(Boolean replace) {
             $.replace = replace;
             return this;

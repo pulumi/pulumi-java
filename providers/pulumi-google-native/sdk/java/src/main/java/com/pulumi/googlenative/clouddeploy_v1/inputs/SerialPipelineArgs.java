@@ -27,6 +27,10 @@ public final class SerialPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="stages")
     private @Nullable Output<List<StageArgs>> stages;
 
+    /**
+     * @return Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
+     * 
+     */
     public Optional<Output<List<StageArgs>>> stages() {
         return Optional.ofNullable(this.stages);
     }
@@ -55,15 +59,33 @@ public final class SerialPipelineArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SerialPipelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param stages Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stages(@Nullable Output<List<StageArgs>> stages) {
             $.stages = stages;
             return this;
         }
 
+        /**
+         * @param stages Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stages(List<StageArgs> stages) {
             return stages(Output.of(stages));
         }
 
+        /**
+         * @param stages Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stages(StageArgs... stages) {
             return stages(List.of(stages));
         }

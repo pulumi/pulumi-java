@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ConsumerResponse {
     /**
-     * The URI of the endpoint used to access the metastore service.
+     * @return The URI of the endpoint used to access the metastore service.
      * 
      */
     private final String endpointUri;
     /**
-     * The subnetwork of the customer project from which an IP address is reserved and used as the Dataproc Metastore service&#39;s endpoint. It is accessible to hosts in the subnet and to all hosts in a subnet in the same region and same network. There must be at least one IP address available in the subnet&#39;s primary range. The subnet is specified in the following form:`projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
+     * @return The subnetwork of the customer project from which an IP address is reserved and used as the Dataproc Metastore service&#39;s endpoint. It is accessible to hosts in the subnet and to all hosts in a subnet in the same region and same network. There must be at least one IP address available in the subnet&#39;s primary range. The subnet is specified in the following form:`projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
      * 
      */
     private final String subnetwork;
@@ -29,16 +29,16 @@ public final class ConsumerResponse {
     }
 
     /**
-     * The URI of the endpoint used to access the metastore service.
+     * @return The URI of the endpoint used to access the metastore service.
      * 
-    */
+     */
     public String endpointUri() {
         return this.endpointUri;
     }
     /**
-     * The subnetwork of the customer project from which an IP address is reserved and used as the Dataproc Metastore service&#39;s endpoint. It is accessible to hosts in the subnet and to all hosts in a subnet in the same region and same network. There must be at least one IP address available in the subnet&#39;s primary range. The subnet is specified in the following form:`projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
+     * @return The subnetwork of the customer project from which an IP address is reserved and used as the Dataproc Metastore service&#39;s endpoint. It is accessible to hosts in the subnet and to all hosts in a subnet in the same region and same network. There must be at least one IP address available in the subnet&#39;s primary range. The subnet is specified in the following form:`projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
      * 
-    */
+     */
     public String subnetwork() {
         return this.subnetwork;
     }

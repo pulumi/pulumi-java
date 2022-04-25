@@ -23,6 +23,10 @@ public final class GoogleCloudApigeeV1AdvancedApiOpsConfigResponse extends com.p
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Flag that specifies whether the Advanced API Ops add-on is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudApigeeV1AdvancedApiOpsConfigResponse extends com.p
             $ = new GoogleCloudApigeeV1AdvancedApiOpsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Flag that specifies whether the Advanced API Ops add-on is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

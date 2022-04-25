@@ -24,6 +24,10 @@ public final class OSPolicyResourcePackageResourceAPTArgs extends com.pulumi.res
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Package name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -52,11 +56,23 @@ public final class OSPolicyResourcePackageResourceAPTArgs extends com.pulumi.res
             $ = new OSPolicyResourcePackageResourceAPTArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Package name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Package name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

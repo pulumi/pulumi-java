@@ -23,6 +23,10 @@ public final class EnvelopeSignatureResponse extends com.pulumi.resources.Invoke
     @Import(name="keyid", required=true)
     private String keyid;
 
+    /**
+     * @return A reference id to the key being used for signing
+     * 
+     */
     public String keyid() {
         return this.keyid;
     }
@@ -34,6 +38,10 @@ public final class EnvelopeSignatureResponse extends com.pulumi.resources.Invoke
     @Import(name="sig", required=true)
     private String sig;
 
+    /**
+     * @return The signature itself
+     * 
+     */
     public String sig() {
         return this.sig;
     }
@@ -63,11 +71,23 @@ public final class EnvelopeSignatureResponse extends com.pulumi.resources.Invoke
             $ = new EnvelopeSignatureResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyid A reference id to the key being used for signing
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyid(String keyid) {
             $.keyid = keyid;
             return this;
         }
 
+        /**
+         * @param sig The signature itself
+         * 
+         * @return builder
+         * 
+         */
         public Builder sig(String sig) {
             $.sig = sig;
             return this;

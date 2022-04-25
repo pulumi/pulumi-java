@@ -24,6 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="confidence", required=true)
     private Double confidence;
 
+    /**
+     * @return A confidence estimate between 0.0 and 1.0 of the fidelity of this word. A default value of 0.0 indicates that the value is unset.
+     * 
+     */
     public Double confidence() {
         return this.confidence;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="endOffset", required=true)
     private String endOffset;
 
+    /**
+     * @return Time offset of the end of this word relative to the beginning of the total conversation.
+     * 
+     */
     public String endOffset() {
         return this.endOffset;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="startOffset", required=true)
     private String startOffset;
 
+    /**
+     * @return Time offset of the start of this word relative to the beginning of the total conversation.
+     * 
+     */
     public String startOffset() {
         return this.startOffset;
     }
@@ -57,6 +69,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     @Import(name="word", required=true)
     private String word;
 
+    /**
+     * @return The word itself. Includes punctuation marks that surround the word.
+     * 
+     */
     public String word() {
         return this.word;
     }
@@ -88,21 +104,45 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
             $ = new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param confidence A confidence estimate between 0.0 and 1.0 of the fidelity of this word. A default value of 0.0 indicates that the value is unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidence(Double confidence) {
             $.confidence = confidence;
             return this;
         }
 
+        /**
+         * @param endOffset Time offset of the end of this word relative to the beginning of the total conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endOffset(String endOffset) {
             $.endOffset = endOffset;
             return this;
         }
 
+        /**
+         * @param startOffset Time offset of the start of this word relative to the beginning of the total conversation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startOffset(String startOffset) {
             $.startOffset = startOffset;
             return this;
         }
 
+        /**
+         * @param word The word itself. Includes punctuation marks that surround the word.
+         * 
+         * @return builder
+         * 
+         */
         public Builder word(String word) {
             $.word = word;
             return this;

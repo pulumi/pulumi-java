@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends com.pulumi.re
     @Import(name="field", required=true)
     private GooglePrivacyDlpV2FieldIdResponse field;
 
+    /**
+     * @return Designated field in the BigQuery table.
+     * 
+     */
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends com.pulumi.re
     @Import(name="table", required=true)
     private GooglePrivacyDlpV2BigQueryTableResponse table;
 
+    /**
+     * @return Source table of the field.
+     * 
+     */
     public GooglePrivacyDlpV2BigQueryTableResponse table() {
         return this.table;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends com.pulumi.re
             $ = new GooglePrivacyDlpV2BigQueryFieldResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field Designated field in the BigQuery table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param table Source table of the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(GooglePrivacyDlpV2BigQueryTableResponse table) {
             $.table = table;
             return this;

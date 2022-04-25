@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class EndConditionResponse {
     /**
-     * The cardinality of the `EndCondition`.
+     * @return The cardinality of the `EndCondition`.
      * 
      */
     private final CardinalityResponse cardinality;
@@ -21,9 +21,9 @@ public final class EndConditionResponse {
     }
 
     /**
-     * The cardinality of the `EndCondition`.
+     * @return The cardinality of the `EndCondition`.
      * 
-    */
+     */
     public CardinalityResponse cardinality() {
         return this.cardinality;
     }

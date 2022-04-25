@@ -26,117 +26,117 @@ import java.util.Objects;
 @CustomType
 public final class GetOccurrenceResult {
     /**
-     * Describes an attestation of an artifact.
+     * @return Describes an attestation of an artifact.
      * 
      */
     private final AttestationResponse attestation;
     /**
-     * Build details for a verifiable build.
+     * @return Build details for a verifiable build.
      * 
      */
     private final BuildDetailsResponse buildDetails;
     /**
-     * Describes whether or not a resource passes compliance checks.
+     * @return Describes whether or not a resource passes compliance checks.
      * 
      */
     private final ComplianceOccurrenceResponse compliance;
     /**
-     * The time this `Occurrence` was created.
+     * @return The time this `Occurrence` was created.
      * 
      */
     private final String createTime;
     /**
-     * Describes the deployment of an artifact on a runtime.
+     * @return Describes the deployment of an artifact on a runtime.
      * 
      */
     private final DeploymentResponse deployment;
     /**
-     * Describes how this resource derives from the basis in the associated note.
+     * @return Describes how this resource derives from the basis in the associated note.
      * 
      */
     private final DerivedResponse derivedImage;
     /**
-     * Describes the initial scan status for this resource.
+     * @return Describes the initial scan status for this resource.
      * 
      */
     private final DiscoveredResponse discovered;
     /**
-     * This represents a DSSE attestation occurrence
+     * @return This represents a DSSE attestation occurrence
      * 
      */
     private final DSSEAttestationOccurrenceResponse dsseAttestation;
     /**
-     * https://github.com/secure-systems-lab/dsse
+     * @return https://github.com/secure-systems-lab/dsse
      * 
      */
     private final EnvelopeResponse envelope;
     /**
-     * Describes the installation of a package on the linked resource.
+     * @return Describes the installation of a package on the linked resource.
      * 
      */
     private final InstallationResponse installation;
     /**
-     * This explicitly denotes which of the `Occurrence` details are specified. This field can be used as a filter in list requests.
+     * @return This explicitly denotes which of the `Occurrence` details are specified. This field can be used as a filter in list requests.
      * 
      */
     private final String kind;
     /**
-     * The name of the `Occurrence` in the form &#34;projects/{project_id}/occurrences/{OCCURRENCE_ID}&#34;
+     * @return The name of the `Occurrence` in the form &#34;projects/{project_id}/occurrences/{OCCURRENCE_ID}&#34;
      * 
      */
     private final String name;
     /**
-     * An analysis note associated with this image, in the form &#34;providers/{provider_id}/notes/{NOTE_ID}&#34; This field can be used as a filter in list requests.
+     * @return An analysis note associated with this image, in the form &#34;providers/{provider_id}/notes/{NOTE_ID}&#34; This field can be used as a filter in list requests.
      * 
      */
     private final String noteName;
     /**
-     * A description of actions that can be taken to remedy the `Note`
+     * @return A description of actions that can be taken to remedy the `Note`
      * 
      */
     private final String remediation;
     /**
-     *  The resource for which the `Occurrence` applies.
+     * @return  The resource for which the `Occurrence` applies.
      * 
      */
     private final ResourceResponse resource;
     /**
-     * The unique URL of the image or the container for which the `Occurrence` applies. For example, https://gcr.io/project/image@sha256:foo This field can be used as a filter in list requests.
+     * @return The unique URL of the image or the container for which the `Occurrence` applies. For example, https://gcr.io/project/image@sha256:foo This field can be used as a filter in list requests.
      * 
      */
     private final String resourceUrl;
     /**
-     * Describes a specific software bill of materials document.
+     * @return Describes a specific software bill of materials document.
      * 
      */
     private final DocumentOccurrenceResponse sbom;
     /**
-     * Describes a specific SPDX File.
+     * @return Describes a specific SPDX File.
      * 
      */
     private final FileOccurrenceResponse spdxFile;
     /**
-     * Describes a specific SPDX Package.
+     * @return Describes a specific SPDX Package.
      * 
      */
     private final PackageInfoOccurrenceResponse spdxPackage;
     /**
-     * Describes a specific relationship between SPDX elements.
+     * @return Describes a specific relationship between SPDX elements.
      * 
      */
     private final RelationshipOccurrenceResponse spdxRelationship;
     /**
-     * The time this `Occurrence` was last updated.
+     * @return The time this `Occurrence` was last updated.
      * 
      */
     private final String updateTime;
     /**
-     * Describes an upgrade.
+     * @return Describes an upgrade.
      * 
      */
     private final UpgradeOccurrenceResponse upgrade;
     /**
-     * Details of a security vulnerability note.
+     * @return Details of a security vulnerability note.
      * 
      */
     private final VulnerabilityDetailsResponse vulnerabilityDetails;
@@ -192,163 +192,163 @@ public final class GetOccurrenceResult {
     }
 
     /**
-     * Describes an attestation of an artifact.
+     * @return Describes an attestation of an artifact.
      * 
-    */
+     */
     public AttestationResponse attestation() {
         return this.attestation;
     }
     /**
-     * Build details for a verifiable build.
+     * @return Build details for a verifiable build.
      * 
-    */
+     */
     public BuildDetailsResponse buildDetails() {
         return this.buildDetails;
     }
     /**
-     * Describes whether or not a resource passes compliance checks.
+     * @return Describes whether or not a resource passes compliance checks.
      * 
-    */
+     */
     public ComplianceOccurrenceResponse compliance() {
         return this.compliance;
     }
     /**
-     * The time this `Occurrence` was created.
+     * @return The time this `Occurrence` was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Describes the deployment of an artifact on a runtime.
+     * @return Describes the deployment of an artifact on a runtime.
      * 
-    */
+     */
     public DeploymentResponse deployment() {
         return this.deployment;
     }
     /**
-     * Describes how this resource derives from the basis in the associated note.
+     * @return Describes how this resource derives from the basis in the associated note.
      * 
-    */
+     */
     public DerivedResponse derivedImage() {
         return this.derivedImage;
     }
     /**
-     * Describes the initial scan status for this resource.
+     * @return Describes the initial scan status for this resource.
      * 
-    */
+     */
     public DiscoveredResponse discovered() {
         return this.discovered;
     }
     /**
-     * This represents a DSSE attestation occurrence
+     * @return This represents a DSSE attestation occurrence
      * 
-    */
+     */
     public DSSEAttestationOccurrenceResponse dsseAttestation() {
         return this.dsseAttestation;
     }
     /**
-     * https://github.com/secure-systems-lab/dsse
+     * @return https://github.com/secure-systems-lab/dsse
      * 
-    */
+     */
     public EnvelopeResponse envelope() {
         return this.envelope;
     }
     /**
-     * Describes the installation of a package on the linked resource.
+     * @return Describes the installation of a package on the linked resource.
      * 
-    */
+     */
     public InstallationResponse installation() {
         return this.installation;
     }
     /**
-     * This explicitly denotes which of the `Occurrence` details are specified. This field can be used as a filter in list requests.
+     * @return This explicitly denotes which of the `Occurrence` details are specified. This field can be used as a filter in list requests.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The name of the `Occurrence` in the form &#34;projects/{project_id}/occurrences/{OCCURRENCE_ID}&#34;
+     * @return The name of the `Occurrence` in the form &#34;projects/{project_id}/occurrences/{OCCURRENCE_ID}&#34;
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * An analysis note associated with this image, in the form &#34;providers/{provider_id}/notes/{NOTE_ID}&#34; This field can be used as a filter in list requests.
+     * @return An analysis note associated with this image, in the form &#34;providers/{provider_id}/notes/{NOTE_ID}&#34; This field can be used as a filter in list requests.
      * 
-    */
+     */
     public String noteName() {
         return this.noteName;
     }
     /**
-     * A description of actions that can be taken to remedy the `Note`
+     * @return A description of actions that can be taken to remedy the `Note`
      * 
-    */
+     */
     public String remediation() {
         return this.remediation;
     }
     /**
-     *  The resource for which the `Occurrence` applies.
+     * @return  The resource for which the `Occurrence` applies.
      * 
-    */
+     */
     public ResourceResponse resource() {
         return this.resource;
     }
     /**
-     * The unique URL of the image or the container for which the `Occurrence` applies. For example, https://gcr.io/project/image@sha256:foo This field can be used as a filter in list requests.
+     * @return The unique URL of the image or the container for which the `Occurrence` applies. For example, https://gcr.io/project/image@sha256:foo This field can be used as a filter in list requests.
      * 
-    */
+     */
     public String resourceUrl() {
         return this.resourceUrl;
     }
     /**
-     * Describes a specific software bill of materials document.
+     * @return Describes a specific software bill of materials document.
      * 
-    */
+     */
     public DocumentOccurrenceResponse sbom() {
         return this.sbom;
     }
     /**
-     * Describes a specific SPDX File.
+     * @return Describes a specific SPDX File.
      * 
-    */
+     */
     public FileOccurrenceResponse spdxFile() {
         return this.spdxFile;
     }
     /**
-     * Describes a specific SPDX Package.
+     * @return Describes a specific SPDX Package.
      * 
-    */
+     */
     public PackageInfoOccurrenceResponse spdxPackage() {
         return this.spdxPackage;
     }
     /**
-     * Describes a specific relationship between SPDX elements.
+     * @return Describes a specific relationship between SPDX elements.
      * 
-    */
+     */
     public RelationshipOccurrenceResponse spdxRelationship() {
         return this.spdxRelationship;
     }
     /**
-     * The time this `Occurrence` was last updated.
+     * @return The time this `Occurrence` was last updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * Describes an upgrade.
+     * @return Describes an upgrade.
      * 
-    */
+     */
     public UpgradeOccurrenceResponse upgrade() {
         return this.upgrade;
     }
     /**
-     * Details of a security vulnerability note.
+     * @return Details of a security vulnerability note.
      * 
-    */
+     */
     public VulnerabilityDetailsResponse vulnerabilityDetails() {
         return this.vulnerabilityDetails;
     }

@@ -24,6 +24,10 @@ public final class RolloutPolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="defaultRolloutTime", required=true)
     private String defaultRolloutTime;
 
+    /**
+     * @return An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.
+     * 
+     */
     public String defaultRolloutTime() {
         return this.defaultRolloutTime;
     }
@@ -35,6 +39,10 @@ public final class RolloutPolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="locationRolloutPolicies", required=true)
     private Map<String,String> locationRolloutPolicies;
 
+    /**
+     * @return Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.
+     * 
+     */
     public Map<String,String> locationRolloutPolicies() {
         return this.locationRolloutPolicies;
     }
@@ -64,11 +72,23 @@ public final class RolloutPolicyResponse extends com.pulumi.resources.InvokeArgs
             $ = new RolloutPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultRolloutTime An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRolloutTime(String defaultRolloutTime) {
             $.defaultRolloutTime = defaultRolloutTime;
             return this;
         }
 
+        /**
+         * @param locationRolloutPolicies Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationRolloutPolicies(Map<String,String> locationRolloutPolicies) {
             $.locationRolloutPolicies = locationRolloutPolicies;
             return this;

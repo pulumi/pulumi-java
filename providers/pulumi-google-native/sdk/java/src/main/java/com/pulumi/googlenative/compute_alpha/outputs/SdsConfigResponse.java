@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class SdsConfigResponse {
     /**
-     * The configuration to access the SDS server over GRPC.
+     * @return The configuration to access the SDS server over GRPC.
      * 
      */
     private final GrpcServiceConfigResponse grpcServiceConfig;
@@ -21,9 +21,9 @@ public final class SdsConfigResponse {
     }
 
     /**
-     * The configuration to access the SDS server over GRPC.
+     * @return The configuration to access the SDS server over GRPC.
      * 
-    */
+     */
     public GrpcServiceConfigResponse grpcServiceConfig() {
         return this.grpcServiceConfig;
     }

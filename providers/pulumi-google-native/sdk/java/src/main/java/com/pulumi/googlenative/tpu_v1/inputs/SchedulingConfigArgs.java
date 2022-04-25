@@ -26,6 +26,10 @@ public final class SchedulingConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="preemptible")
     private @Nullable Output<Boolean> preemptible;
 
+    /**
+     * @return Defines whether the node is preemptible.
+     * 
+     */
     public Optional<Output<Boolean>> preemptible() {
         return Optional.ofNullable(this.preemptible);
     }
@@ -37,6 +41,10 @@ public final class SchedulingConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="reserved")
     private @Nullable Output<Boolean> reserved;
 
+    /**
+     * @return Whether the node is created under a reservation.
+     * 
+     */
     public Optional<Output<Boolean>> reserved() {
         return Optional.ofNullable(this.reserved);
     }
@@ -66,20 +74,44 @@ public final class SchedulingConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new SchedulingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param preemptible Defines whether the node is preemptible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
             $.preemptible = preemptible;
             return this;
         }
 
+        /**
+         * @param preemptible Defines whether the node is preemptible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptible(Boolean preemptible) {
             return preemptible(Output.of(preemptible));
         }
 
+        /**
+         * @param reserved Whether the node is created under a reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reserved(@Nullable Output<Boolean> reserved) {
             $.reserved = reserved;
             return this;
         }
 
+        /**
+         * @param reserved Whether the node is created under a reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reserved(Boolean reserved) {
             return reserved(Output.of(reserved));
         }

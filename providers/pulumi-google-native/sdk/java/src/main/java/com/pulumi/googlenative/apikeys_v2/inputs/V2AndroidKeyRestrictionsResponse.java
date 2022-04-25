@@ -24,6 +24,10 @@ public final class V2AndroidKeyRestrictionsResponse extends com.pulumi.resources
     @Import(name="allowedApplications", required=true)
     private List<V2AndroidApplicationResponse> allowedApplications;
 
+    /**
+     * @return A list of Android applications that are allowed to make API calls with this key.
+     * 
+     */
     public List<V2AndroidApplicationResponse> allowedApplications() {
         return this.allowedApplications;
     }
@@ -52,11 +56,23 @@ public final class V2AndroidKeyRestrictionsResponse extends com.pulumi.resources
             $ = new V2AndroidKeyRestrictionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedApplications A list of Android applications that are allowed to make API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedApplications(List<V2AndroidApplicationResponse> allowedApplications) {
             $.allowedApplications = allowedApplications;
             return this;
         }
 
+        /**
+         * @param allowedApplications A list of Android applications that are allowed to make API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedApplications(V2AndroidApplicationResponse... allowedApplications) {
             return allowedApplications(List.of(allowedApplications));
         }

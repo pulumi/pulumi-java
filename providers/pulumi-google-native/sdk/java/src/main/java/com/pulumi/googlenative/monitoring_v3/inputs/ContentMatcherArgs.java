@@ -27,6 +27,10 @@ public final class ContentMatcherArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -38,6 +42,10 @@ public final class ContentMatcherArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="matcher")
     private @Nullable Output<ContentMatcherMatcher> matcher;
 
+    /**
+     * @return The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+     * 
+     */
     public Optional<Output<ContentMatcherMatcher>> matcher() {
         return Optional.ofNullable(this.matcher);
     }
@@ -67,20 +75,44 @@ public final class ContentMatcherArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ContentMatcherArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param matcher The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matcher(@Nullable Output<ContentMatcherMatcher> matcher) {
             $.matcher = matcher;
             return this;
         }
 
+        /**
+         * @param matcher The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matcher(ContentMatcherMatcher matcher) {
             return matcher(Output.of(matcher));
         }

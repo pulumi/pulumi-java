@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse exte
     @Import(name="mediaObjects", required=true)
     private List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
 
+    /**
+     * @return List of media objects.
+     * 
+     */
     public List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects() {
         return this.mediaObjects;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse exte
     @Import(name="mediaType", required=true)
     private String mediaType;
 
+    /**
+     * @return Optional. What type of media is the content (ie &#34;audio&#34;).
+     * 
+     */
     public String mediaType() {
         return this.mediaType;
     }
@@ -65,15 +73,33 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse exte
             $ = new GoogleCloudDialogflowV2IntentMessageMediaContentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mediaObjects List of media objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaObjects(List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects) {
             $.mediaObjects = mediaObjects;
             return this;
         }
 
+        /**
+         * @param mediaObjects List of media objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaObjects(GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse... mediaObjects) {
             return mediaObjects(List.of(mediaObjects));
         }
 
+        /**
+         * @param mediaType Optional. What type of media is the content (ie &#34;audio&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaType(String mediaType) {
             $.mediaType = mediaType;
             return this;

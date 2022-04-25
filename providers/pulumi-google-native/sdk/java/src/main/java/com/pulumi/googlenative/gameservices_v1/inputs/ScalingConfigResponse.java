@@ -26,6 +26,10 @@ public final class ScalingConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="fleetAutoscalerSpec", required=true)
     private String fleetAutoscalerSpec;
 
+    /**
+     * @return Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
+     * 
+     */
     public String fleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
     }
@@ -37,6 +41,10 @@ public final class ScalingConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the Scaling Config
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -48,6 +56,10 @@ public final class ScalingConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="schedules", required=true)
     private List<ScheduleResponse> schedules;
 
+    /**
+     * @return The schedules to which this Scaling Config applies.
+     * 
+     */
     public List<ScheduleResponse> schedules() {
         return this.schedules;
     }
@@ -59,6 +71,10 @@ public final class ScalingConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="selectors", required=true)
     private List<LabelSelectorResponse> selectors;
 
+    /**
+     * @return Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.
+     * 
+     */
     public List<LabelSelectorResponse> selectors() {
         return this.selectors;
     }
@@ -90,30 +106,66 @@ public final class ScalingConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new ScalingConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fleetAutoscalerSpec Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetAutoscalerSpec(String fleetAutoscalerSpec) {
             $.fleetAutoscalerSpec = fleetAutoscalerSpec;
             return this;
         }
 
+        /**
+         * @param name The name of the Scaling Config
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param schedules The schedules to which this Scaling Config applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedules(List<ScheduleResponse> schedules) {
             $.schedules = schedules;
             return this;
         }
 
+        /**
+         * @param schedules The schedules to which this Scaling Config applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedules(ScheduleResponse... schedules) {
             return schedules(List.of(schedules));
         }
 
+        /**
+         * @param selectors Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(List<LabelSelectorResponse> selectors) {
             $.selectors = selectors;
             return this;
         }
 
+        /**
+         * @param selectors Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(LabelSelectorResponse... selectors) {
             return selectors(List.of(selectors));
         }

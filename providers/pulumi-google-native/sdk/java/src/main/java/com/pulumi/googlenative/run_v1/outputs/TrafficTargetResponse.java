@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class TrafficTargetResponse {
     /**
-     * ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the &#34;status.latestReadyRevisionName&#34; of the referenced configuration changes, we will automatically migrate traffic from the prior &#34;latest ready&#34; revision to the new one. This field is never set in Route&#39;s status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
+     * @return ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the &#34;status.latestReadyRevisionName&#34; of the referenced configuration changes, we will automatically migrate traffic from the prior &#34;latest ready&#34; revision to the new one. This field is never set in Route&#39;s status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
      * 
      */
     private final String configurationName;
     /**
-     * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.
+     * @return Optional. LatestRevision may be provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.
      * 
      */
     private final Boolean latestRevision;
     /**
-     * Percent specifies percent of the traffic to this Revision or Configuration. This defaults to zero if unspecified.
+     * @return Percent specifies percent of the traffic to this Revision or Configuration. This defaults to zero if unspecified.
      * 
      */
     private final Integer percent;
     /**
-     * RevisionName of a specific revision to which to send this portion of traffic. This is mutually exclusive with ConfigurationName.
+     * @return RevisionName of a specific revision to which to send this portion of traffic. This is mutually exclusive with ConfigurationName.
      * 
      */
     private final String revisionName;
     /**
-     * Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
+     * @return Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
      * 
      */
     private final String tag;
     /**
-     * URL displays the URL for accessing tagged traffic targets. URL is displayed in status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but may not contain anything else (e.g. basic auth, url path, etc.)
+     * @return URL displays the URL for accessing tagged traffic targets. URL is displayed in status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but may not contain anything else (e.g. basic auth, url path, etc.)
      * 
      */
     private final String url;
@@ -59,44 +59,44 @@ public final class TrafficTargetResponse {
     }
 
     /**
-     * ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the &#34;status.latestReadyRevisionName&#34; of the referenced configuration changes, we will automatically migrate traffic from the prior &#34;latest ready&#34; revision to the new one. This field is never set in Route&#39;s status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
+     * @return ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the &#34;status.latestReadyRevisionName&#34; of the referenced configuration changes, we will automatically migrate traffic from the prior &#34;latest ready&#34; revision to the new one. This field is never set in Route&#39;s status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
      * 
-    */
+     */
     public String configurationName() {
         return this.configurationName;
     }
     /**
-     * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.
+     * @return Optional. LatestRevision may be provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.
      * 
-    */
+     */
     public Boolean latestRevision() {
         return this.latestRevision;
     }
     /**
-     * Percent specifies percent of the traffic to this Revision or Configuration. This defaults to zero if unspecified.
+     * @return Percent specifies percent of the traffic to this Revision or Configuration. This defaults to zero if unspecified.
      * 
-    */
+     */
     public Integer percent() {
         return this.percent;
     }
     /**
-     * RevisionName of a specific revision to which to send this portion of traffic. This is mutually exclusive with ConfigurationName.
+     * @return RevisionName of a specific revision to which to send this portion of traffic. This is mutually exclusive with ConfigurationName.
      * 
-    */
+     */
     public String revisionName() {
         return this.revisionName;
     }
     /**
-     * Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
+     * @return Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
      * 
-    */
+     */
     public String tag() {
         return this.tag;
     }
     /**
-     * URL displays the URL for accessing tagged traffic targets. URL is displayed in status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but may not contain anything else (e.g. basic auth, url path, etc.)
+     * @return URL displays the URL for accessing tagged traffic targets. URL is displayed in status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but may not contain anything else (e.g. basic auth, url path, etc.)
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

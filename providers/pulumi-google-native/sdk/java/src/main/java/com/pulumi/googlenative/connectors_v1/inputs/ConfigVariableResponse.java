@@ -25,6 +25,10 @@ public final class ConfigVariableResponse extends com.pulumi.resources.InvokeArg
     @Import(name="boolValue", required=true)
     private Boolean boolValue;
 
+    /**
+     * @return Value is a bool.
+     * 
+     */
     public Boolean boolValue() {
         return this.boolValue;
     }
@@ -36,6 +40,10 @@ public final class ConfigVariableResponse extends com.pulumi.resources.InvokeArg
     @Import(name="intValue", required=true)
     private String intValue;
 
+    /**
+     * @return Value is an integer
+     * 
+     */
     public String intValue() {
         return this.intValue;
     }
@@ -47,6 +55,10 @@ public final class ConfigVariableResponse extends com.pulumi.resources.InvokeArg
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return Key of the config variable.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -58,6 +70,10 @@ public final class ConfigVariableResponse extends com.pulumi.resources.InvokeArg
     @Import(name="secretValue", required=true)
     private SecretResponse secretValue;
 
+    /**
+     * @return Value is a secret.
+     * 
+     */
     public SecretResponse secretValue() {
         return this.secretValue;
     }
@@ -69,6 +85,10 @@ public final class ConfigVariableResponse extends com.pulumi.resources.InvokeArg
     @Import(name="stringValue", required=true)
     private String stringValue;
 
+    /**
+     * @return Value is a string.
+     * 
+     */
     public String stringValue() {
         return this.stringValue;
     }
@@ -101,26 +121,56 @@ public final class ConfigVariableResponse extends com.pulumi.resources.InvokeArg
             $ = new ConfigVariableResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param boolValue Value is a bool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boolValue(Boolean boolValue) {
             $.boolValue = boolValue;
             return this;
         }
 
+        /**
+         * @param intValue Value is an integer
+         * 
+         * @return builder
+         * 
+         */
         public Builder intValue(String intValue) {
             $.intValue = intValue;
             return this;
         }
 
+        /**
+         * @param key Key of the config variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param secretValue Value is a secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretValue(SecretResponse secretValue) {
             $.secretValue = secretValue;
             return this;
         }
 
+        /**
+         * @param stringValue Value is a string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(String stringValue) {
             $.stringValue = stringValue;
             return this;

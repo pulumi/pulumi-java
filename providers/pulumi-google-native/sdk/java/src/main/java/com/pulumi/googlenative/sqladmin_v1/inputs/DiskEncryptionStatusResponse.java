@@ -23,6 +23,10 @@ public final class DiskEncryptionStatusResponse extends com.pulumi.resources.Inv
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return This is always `sql#diskEncryptionStatus`.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -34,6 +38,10 @@ public final class DiskEncryptionStatusResponse extends com.pulumi.resources.Inv
     @Import(name="kmsKeyVersionName", required=true)
     private String kmsKeyVersionName;
 
+    /**
+     * @return KMS key version used to encrypt the Cloud SQL instance resource
+     * 
+     */
     public String kmsKeyVersionName() {
         return this.kmsKeyVersionName;
     }
@@ -63,11 +71,23 @@ public final class DiskEncryptionStatusResponse extends com.pulumi.resources.Inv
             $ = new DiskEncryptionStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind This is always `sql#diskEncryptionStatus`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kmsKeyVersionName KMS key version used to encrypt the Cloud SQL instance resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyVersionName(String kmsKeyVersionName) {
             $.kmsKeyVersionName = kmsKeyVersionName;
             return this;

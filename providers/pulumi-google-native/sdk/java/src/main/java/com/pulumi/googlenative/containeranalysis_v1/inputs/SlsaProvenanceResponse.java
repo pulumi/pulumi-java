@@ -23,6 +23,10 @@ public final class SlsaProvenanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="builder", required=true)
     private SlsaBuilderResponse builder;
 
+    /**
+     * @return required
+     * 
+     */
     public SlsaBuilderResponse builder_() {
         return this.builder;
     }
@@ -34,6 +38,10 @@ public final class SlsaProvenanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="materials", required=true)
     private List<MaterialResponse> materials;
 
+    /**
+     * @return The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+     * 
+     */
     public List<MaterialResponse> materials() {
         return this.materials;
     }
@@ -52,6 +60,10 @@ public final class SlsaProvenanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="recipe", required=true)
     private SlsaRecipeResponse recipe;
 
+    /**
+     * @return Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
+     * 
+     */
     public SlsaRecipeResponse recipe() {
         return this.recipe;
     }
@@ -83,16 +95,34 @@ public final class SlsaProvenanceResponse extends com.pulumi.resources.InvokeArg
             $ = new SlsaProvenanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param builder required
+         * 
+         * @return builder
+         * 
+         */
         public Builder builder_(SlsaBuilderResponse builder) {
             $.builder = builder;
             return this;
         }
 
+        /**
+         * @param materials The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(List<MaterialResponse> materials) {
             $.materials = materials;
             return this;
         }
 
+        /**
+         * @param materials The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(MaterialResponse... materials) {
             return materials(List.of(materials));
         }
@@ -102,6 +132,12 @@ public final class SlsaProvenanceResponse extends com.pulumi.resources.InvokeArg
             return this;
         }
 
+        /**
+         * @param recipe Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipe(SlsaRecipeResponse recipe) {
             $.recipe = recipe;
             return this;

@@ -22,6 +22,10 @@ public final class RoutineReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="datasetId")
     private @Nullable Output<String> datasetId;
 
+    /**
+     * @return [Required] The ID of the dataset containing this routine.
+     * 
+     */
     public Optional<Output<String>> datasetId() {
         return Optional.ofNullable(this.datasetId);
     }
@@ -33,6 +37,10 @@ public final class RoutineReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return [Required] The ID of the project containing this routine.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -44,6 +52,10 @@ public final class RoutineReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="routineId")
     private @Nullable Output<String> routineId;
 
+    /**
+     * @return [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+     * 
+     */
     public Optional<Output<String>> routineId() {
         return Optional.ofNullable(this.routineId);
     }
@@ -74,29 +86,65 @@ public final class RoutineReferenceArgs extends com.pulumi.resources.ResourceArg
             $ = new RoutineReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId [Required] The ID of the dataset containing this routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(@Nullable Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetId [Required] The ID of the dataset containing this routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param project [Required] The ID of the project containing this routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project [Required] The ID of the project containing this routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param routineId [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineId(@Nullable Output<String> routineId) {
             $.routineId = routineId;
             return this;
         }
 
+        /**
+         * @param routineId [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineId(String routineId) {
             return routineId(Output.of(routineId));
         }

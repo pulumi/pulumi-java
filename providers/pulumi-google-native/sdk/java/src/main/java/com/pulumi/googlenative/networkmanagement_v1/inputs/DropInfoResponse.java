@@ -23,6 +23,10 @@ public final class DropInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cause", required=true)
     private String cause;
 
+    /**
+     * @return Cause that the packet is dropped.
+     * 
+     */
     public String cause() {
         return this.cause;
     }
@@ -34,6 +38,10 @@ public final class DropInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri", required=true)
     private String resourceUri;
 
+    /**
+     * @return URI of the resource that caused the drop.
+     * 
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
@@ -63,11 +71,23 @@ public final class DropInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DropInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cause Cause that the packet is dropped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cause(String cause) {
             $.cause = cause;
             return this;
         }
 
+        /**
+         * @param resourceUri URI of the resource that caused the drop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             $.resourceUri = resourceUri;
             return this;

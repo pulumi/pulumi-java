@@ -26,6 +26,10 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends com.
     @Import(name="gcsFileUri")
     private @Nullable Output<String> gcsFileUri;
 
+    /**
+     * @return PDF file for the instruction. Only gcs path is allowed.
+     * 
+     */
     public Optional<Output<String>> gcsFileUri() {
         return Optional.ofNullable(this.gcsFileUri);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends com.
             $ = new GoogleCloudDatalabelingV1beta1PdfInstructionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gcsFileUri PDF file for the instruction. Only gcs path is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsFileUri(@Nullable Output<String> gcsFileUri) {
             $.gcsFileUri = gcsFileUri;
             return this;
         }
 
+        /**
+         * @param gcsFileUri PDF file for the instruction. Only gcs path is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsFileUri(String gcsFileUri) {
             return gcsFileUri(Output.of(gcsFileUri));
         }

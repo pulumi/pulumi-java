@@ -19,6 +19,10 @@ public final class InstantSnapshotResourceStatusResponse extends com.pulumi.reso
     @Import(name="storageSizeBytes", required=true)
     private String storageSizeBytes;
 
+    /**
+     * @return The storage size of this instant snapshot.
+     * 
+     */
     public String storageSizeBytes() {
         return this.storageSizeBytes;
     }
@@ -47,6 +51,12 @@ public final class InstantSnapshotResourceStatusResponse extends com.pulumi.reso
             $ = new InstantSnapshotResourceStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param storageSizeBytes The storage size of this instant snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSizeBytes(String storageSizeBytes) {
             $.storageSizeBytes = storageSizeBytes;
             return this;

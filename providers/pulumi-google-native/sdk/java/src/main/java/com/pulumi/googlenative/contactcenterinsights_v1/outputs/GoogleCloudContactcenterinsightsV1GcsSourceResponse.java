@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse {
     /**
-     * Cloud Storage URI that points to a file that contains the conversation audio.
+     * @return Cloud Storage URI that points to a file that contains the conversation audio.
      * 
      */
     private final String audioUri;
     /**
-     * Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
+     * @return Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
      * 
      */
     private final String transcriptUri;
@@ -29,16 +29,16 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse {
     }
 
     /**
-     * Cloud Storage URI that points to a file that contains the conversation audio.
+     * @return Cloud Storage URI that points to a file that contains the conversation audio.
      * 
-    */
+     */
     public String audioUri() {
         return this.audioUri;
     }
     /**
-     * Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
+     * @return Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
      * 
-    */
+     */
     public String transcriptUri() {
         return this.transcriptUri;
     }

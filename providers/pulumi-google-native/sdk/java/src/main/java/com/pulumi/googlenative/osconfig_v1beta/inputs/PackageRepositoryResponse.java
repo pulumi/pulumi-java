@@ -26,6 +26,10 @@ public final class PackageRepositoryResponse extends com.pulumi.resources.Invoke
     @Import(name="apt", required=true)
     private AptRepositoryResponse apt;
 
+    /**
+     * @return An Apt Repository.
+     * 
+     */
     public AptRepositoryResponse apt() {
         return this.apt;
     }
@@ -37,6 +41,10 @@ public final class PackageRepositoryResponse extends com.pulumi.resources.Invoke
     @Import(name="goo", required=true)
     private GooRepositoryResponse goo;
 
+    /**
+     * @return A Goo Repository.
+     * 
+     */
     public GooRepositoryResponse goo() {
         return this.goo;
     }
@@ -48,6 +56,10 @@ public final class PackageRepositoryResponse extends com.pulumi.resources.Invoke
     @Import(name="yum", required=true)
     private YumRepositoryResponse yum;
 
+    /**
+     * @return A Yum Repository.
+     * 
+     */
     public YumRepositoryResponse yum() {
         return this.yum;
     }
@@ -59,6 +71,10 @@ public final class PackageRepositoryResponse extends com.pulumi.resources.Invoke
     @Import(name="zypper", required=true)
     private ZypperRepositoryResponse zypper;
 
+    /**
+     * @return A Zypper Repository.
+     * 
+     */
     public ZypperRepositoryResponse zypper() {
         return this.zypper;
     }
@@ -90,21 +106,45 @@ public final class PackageRepositoryResponse extends com.pulumi.resources.Invoke
             $ = new PackageRepositoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apt An Apt Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(AptRepositoryResponse apt) {
             $.apt = apt;
             return this;
         }
 
+        /**
+         * @param goo A Goo Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goo(GooRepositoryResponse goo) {
             $.goo = goo;
             return this;
         }
 
+        /**
+         * @param yum A Yum Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(YumRepositoryResponse yum) {
             $.yum = yum;
             return this;
         }
 
+        /**
+         * @param zypper A Zypper Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(ZypperRepositoryResponse zypper) {
             $.zypper = zypper;
             return this;

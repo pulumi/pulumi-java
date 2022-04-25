@@ -27,6 +27,10 @@ public final class SdkHarnessContainerImageArgs extends com.pulumi.resources.Res
     @Import(name="containerImage")
     private @Nullable Output<String> containerImage;
 
+    /**
+     * @return A docker container image that resides in Google Container Registry.
+     * 
+     */
     public Optional<Output<String>> containerImage() {
         return Optional.ofNullable(this.containerImage);
     }
@@ -38,6 +42,10 @@ public final class SdkHarnessContainerImageArgs extends com.pulumi.resources.Res
     @Import(name="environmentId")
     private @Nullable Output<String> environmentId;
 
+    /**
+     * @return Environment ID for the Beam runner API proto Environment that corresponds to the current SDK Harness.
+     * 
+     */
     public Optional<Output<String>> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
@@ -49,6 +57,10 @@ public final class SdkHarnessContainerImageArgs extends com.pulumi.resources.Res
     @Import(name="useSingleCorePerContainer")
     private @Nullable Output<Boolean> useSingleCorePerContainer;
 
+    /**
+     * @return If true, recommends the Dataflow service to use only one core per SDK container instance with this image. If false (or unset) recommends using more than one core per SDK container instance with this image for efficiency. Note that Dataflow service may choose to override this property if needed.
+     * 
+     */
     public Optional<Output<Boolean>> useSingleCorePerContainer() {
         return Optional.ofNullable(this.useSingleCorePerContainer);
     }
@@ -79,29 +91,65 @@ public final class SdkHarnessContainerImageArgs extends com.pulumi.resources.Res
             $ = new SdkHarnessContainerImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerImage A docker container image that resides in Google Container Registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(@Nullable Output<String> containerImage) {
             $.containerImage = containerImage;
             return this;
         }
 
+        /**
+         * @param containerImage A docker container image that resides in Google Container Registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(String containerImage) {
             return containerImage(Output.of(containerImage));
         }
 
+        /**
+         * @param environmentId Environment ID for the Beam runner API proto Environment that corresponds to the current SDK Harness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(@Nullable Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
+        /**
+         * @param environmentId Environment ID for the Beam runner API proto Environment that corresponds to the current SDK Harness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(String environmentId) {
             return environmentId(Output.of(environmentId));
         }
 
+        /**
+         * @param useSingleCorePerContainer If true, recommends the Dataflow service to use only one core per SDK container instance with this image. If false (or unset) recommends using more than one core per SDK container instance with this image for efficiency. Note that Dataflow service may choose to override this property if needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useSingleCorePerContainer(@Nullable Output<Boolean> useSingleCorePerContainer) {
             $.useSingleCorePerContainer = useSingleCorePerContainer;
             return this;
         }
 
+        /**
+         * @param useSingleCorePerContainer If true, recommends the Dataflow service to use only one core per SDK container instance with this image. If false (or unset) recommends using more than one core per SDK container instance with this image for efficiency. Note that Dataflow service may choose to override this property if needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useSingleCorePerContainer(Boolean useSingleCorePerContainer) {
             return useSingleCorePerContainer(Output.of(useSingleCorePerContainer));
         }

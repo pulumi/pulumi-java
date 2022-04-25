@@ -26,6 +26,10 @@ public final class BucketObjectOwnerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="entity")
     private @Nullable Output<String> entity;
 
+    /**
+     * @return The entity, in the form user-userId.
+     * 
+     */
     public Optional<Output<String>> entity() {
         return Optional.ofNullable(this.entity);
     }
@@ -37,6 +41,10 @@ public final class BucketObjectOwnerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="entityId")
     private @Nullable Output<String> entityId;
 
+    /**
+     * @return The ID for the entity.
+     * 
+     */
     public Optional<Output<String>> entityId() {
         return Optional.ofNullable(this.entityId);
     }
@@ -66,20 +74,44 @@ public final class BucketObjectOwnerArgs extends com.pulumi.resources.ResourceAr
             $ = new BucketObjectOwnerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param entity The entity, in the form user-userId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entity(@Nullable Output<String> entity) {
             $.entity = entity;
             return this;
         }
 
+        /**
+         * @param entity The entity, in the form user-userId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entity(String entity) {
             return entity(Output.of(entity));
         }
 
+        /**
+         * @param entityId The ID for the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityId(@Nullable Output<String> entityId) {
             $.entityId = entityId;
             return this;
         }
 
+        /**
+         * @param entityId The ID for the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityId(String entityId) {
             return entityId(Output.of(entityId));
         }

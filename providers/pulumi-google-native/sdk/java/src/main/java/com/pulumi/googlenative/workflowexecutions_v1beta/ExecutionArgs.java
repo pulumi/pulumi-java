@@ -23,6 +23,10 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="argument")
     private @Nullable Output<String> argument;
 
+    /**
+     * @return Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `&#39;{&#34;argument&#34;:&#34;{\&#34;firstName\&#34;:\&#34;FIRST\&#34;,\&#34;lastName\&#34;:\&#34;LAST\&#34;}&#34;}&#39;`
+     * 
+     */
     public Optional<Output<String>> argument() {
         return Optional.ofNullable(this.argument);
     }
@@ -34,6 +38,10 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="callLogLevel")
     private @Nullable Output<ExecutionCallLogLevel> callLogLevel;
 
+    /**
+     * @return The call logging level associated to this execution.
+     * 
+     */
     public Optional<Output<ExecutionCallLogLevel>> callLogLevel() {
         return Optional.ofNullable(this.callLogLevel);
     }
@@ -87,20 +95,44 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ExecutionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param argument Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `&#39;{&#34;argument&#34;:&#34;{\&#34;firstName\&#34;:\&#34;FIRST\&#34;,\&#34;lastName\&#34;:\&#34;LAST\&#34;}&#34;}&#39;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder argument(@Nullable Output<String> argument) {
             $.argument = argument;
             return this;
         }
 
+        /**
+         * @param argument Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `&#39;{&#34;argument&#34;:&#34;{\&#34;firstName\&#34;:\&#34;FIRST\&#34;,\&#34;lastName\&#34;:\&#34;LAST\&#34;}&#34;}&#39;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder argument(String argument) {
             return argument(Output.of(argument));
         }
 
+        /**
+         * @param callLogLevel The call logging level associated to this execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callLogLevel(@Nullable Output<ExecutionCallLogLevel> callLogLevel) {
             $.callLogLevel = callLogLevel;
             return this;
         }
 
+        /**
+         * @param callLogLevel The call logging level associated to this execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callLogLevel(ExecutionCallLogLevel callLogLevel) {
             return callLogLevel(Output.of(callLogLevel));
         }

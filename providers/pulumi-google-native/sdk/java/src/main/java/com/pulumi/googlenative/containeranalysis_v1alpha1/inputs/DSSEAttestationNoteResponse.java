@@ -23,6 +23,10 @@ public final class DSSEAttestationNoteResponse extends com.pulumi.resources.Invo
     @Import(name="hint", required=true)
     private DSSEHintResponse hint;
 
+    /**
+     * @return DSSEHint hints at the purpose of the attestation authority.
+     * 
+     */
     public DSSEHintResponse hint() {
         return this.hint;
     }
@@ -51,6 +55,12 @@ public final class DSSEAttestationNoteResponse extends com.pulumi.resources.Invo
             $ = new DSSEAttestationNoteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hint DSSEHint hints at the purpose of the attestation authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hint(DSSEHintResponse hint) {
             $.hint = hint;
             return this;

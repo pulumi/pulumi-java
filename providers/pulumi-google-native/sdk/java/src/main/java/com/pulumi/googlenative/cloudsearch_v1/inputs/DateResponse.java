@@ -23,6 +23,10 @@ public final class DateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="day", required=true)
     private Integer day;
 
+    /**
+     * @return Day of month. Must be from 1 to 31 and valid for the year and month.
+     * 
+     */
     public Integer day() {
         return this.day;
     }
@@ -34,6 +38,10 @@ public final class DateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="month", required=true)
     private Integer month;
 
+    /**
+     * @return Month of date. Must be from 1 to 12.
+     * 
+     */
     public Integer month() {
         return this.month;
     }
@@ -45,6 +53,10 @@ public final class DateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="year", required=true)
     private Integer year;
 
+    /**
+     * @return Year of date. Must be from 1 to 9999.
+     * 
+     */
     public Integer year() {
         return this.year;
     }
@@ -75,16 +87,34 @@ public final class DateResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day Day of month. Must be from 1 to 31 and valid for the year and month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Integer day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param month Month of date. Must be from 1 to 12.
+         * 
+         * @return builder
+         * 
+         */
         public Builder month(Integer month) {
             $.month = month;
             return this;
         }
 
+        /**
+         * @param year Year of date. Must be from 1 to 9999.
+         * 
+         * @return builder
+         * 
+         */
         public Builder year(Integer year) {
             $.year = year;
             return this;

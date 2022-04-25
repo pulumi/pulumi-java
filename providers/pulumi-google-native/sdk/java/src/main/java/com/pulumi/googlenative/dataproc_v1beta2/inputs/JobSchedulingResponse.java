@@ -23,6 +23,10 @@ public final class JobSchedulingResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="maxFailuresPerHour", required=true)
     private Integer maxFailuresPerHour;
 
+    /**
+     * @return Optional. Maximum number of times per hour a driver may be restarted as a result of driver terminating with non-zero code before job is reported failed.A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window.Maximum value is 10.
+     * 
+     */
     public Integer maxFailuresPerHour() {
         return this.maxFailuresPerHour;
     }
@@ -34,6 +38,10 @@ public final class JobSchedulingResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="maxFailuresTotal", required=true)
     private Integer maxFailuresTotal;
 
+    /**
+     * @return Optional. Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240.
+     * 
+     */
     public Integer maxFailuresTotal() {
         return this.maxFailuresTotal;
     }
@@ -63,11 +71,23 @@ public final class JobSchedulingResponse extends com.pulumi.resources.InvokeArgs
             $ = new JobSchedulingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxFailuresPerHour Optional. Maximum number of times per hour a driver may be restarted as a result of driver terminating with non-zero code before job is reported failed.A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window.Maximum value is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFailuresPerHour(Integer maxFailuresPerHour) {
             $.maxFailuresPerHour = maxFailuresPerHour;
             return this;
         }
 
+        /**
+         * @param maxFailuresTotal Optional. Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFailuresTotal(Integer maxFailuresTotal) {
             $.maxFailuresTotal = maxFailuresTotal;
             return this;

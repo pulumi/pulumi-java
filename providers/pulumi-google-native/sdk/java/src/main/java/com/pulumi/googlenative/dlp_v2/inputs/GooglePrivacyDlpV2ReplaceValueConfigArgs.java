@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigArgs extends com.pulumi.r
     @Import(name="newValue")
     private @Nullable Output<GooglePrivacyDlpV2ValueArgs> newValue;
 
+    /**
+     * @return Value to replace it with.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ValueArgs>> newValue() {
         return Optional.ofNullable(this.newValue);
     }
@@ -54,11 +58,23 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigArgs extends com.pulumi.r
             $ = new GooglePrivacyDlpV2ReplaceValueConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param newValue Value to replace it with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newValue(@Nullable Output<GooglePrivacyDlpV2ValueArgs> newValue) {
             $.newValue = newValue;
             return this;
         }
 
+        /**
+         * @param newValue Value to replace it with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newValue(GooglePrivacyDlpV2ValueArgs newValue) {
             return newValue(Output.of(newValue));
         }

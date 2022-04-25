@@ -27,6 +27,10 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends com.pulumi.resources.
     @Import(name="connector")
     private @Nullable Output<String> connector;
 
+    /**
+     * @return VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
+     * 
+     */
     public Optional<Output<String>> connector() {
         return Optional.ofNullable(this.connector);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends com.pulumi.resources.
     @Import(name="egress")
     private @Nullable Output<GoogleCloudRunOpV2VpcAccessEgress> egress;
 
+    /**
+     * @return Traffic VPC egress settings.
+     * 
+     */
     public Optional<Output<GoogleCloudRunOpV2VpcAccessEgress>> egress() {
         return Optional.ofNullable(this.egress);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends com.pulumi.resources.
             $ = new GoogleCloudRunOpV2VpcAccessArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connector VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
+         * 
+         * @return builder
+         * 
+         */
         public Builder connector(@Nullable Output<String> connector) {
             $.connector = connector;
             return this;
         }
 
+        /**
+         * @param connector VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
+         * 
+         * @return builder
+         * 
+         */
         public Builder connector(String connector) {
             return connector(Output.of(connector));
         }
 
+        /**
+         * @param egress Traffic VPC egress settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egress(@Nullable Output<GoogleCloudRunOpV2VpcAccessEgress> egress) {
             $.egress = egress;
             return this;
         }
 
+        /**
+         * @param egress Traffic VPC egress settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egress(GoogleCloudRunOpV2VpcAccessEgress egress) {
             return egress(Output.of(egress));
         }

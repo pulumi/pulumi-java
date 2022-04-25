@@ -25,6 +25,10 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends com.pulumi.res
     @Import(name="gkeClusters")
     private @Nullable Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters;
 
+    /**
+     * @return The list of Google Kubernetes Engine clusters that can see this zone.
+     * 
+     */
     public Optional<Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>>> gkeClusters() {
         return Optional.ofNullable(this.gkeClusters);
     }
@@ -43,6 +47,10 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends com.pulumi.res
     @Import(name="networks")
     private @Nullable Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
 
+    /**
+     * @return The list of VPC networks that can see this zone.
+     * 
+     */
     public Optional<Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>>> networks() {
         return Optional.ofNullable(this.networks);
     }
@@ -73,15 +81,33 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends com.pulumi.res
             $ = new ManagedZonePrivateVisibilityConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gkeClusters The list of Google Kubernetes Engine clusters that can see this zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusters(@Nullable Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters) {
             $.gkeClusters = gkeClusters;
             return this;
         }
 
+        /**
+         * @param gkeClusters The list of Google Kubernetes Engine clusters that can see this zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusters(List<ManagedZonePrivateVisibilityConfigGKEClusterArgs> gkeClusters) {
             return gkeClusters(Output.of(gkeClusters));
         }
 
+        /**
+         * @param gkeClusters The list of Google Kubernetes Engine clusters that can see this zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusters(ManagedZonePrivateVisibilityConfigGKEClusterArgs... gkeClusters) {
             return gkeClusters(List.of(gkeClusters));
         }
@@ -95,15 +121,33 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends com.pulumi.res
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param networks The list of VPC networks that can see this zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(@Nullable Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks) {
             $.networks = networks;
             return this;
         }
 
+        /**
+         * @param networks The list of VPC networks that can see this zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(List<ManagedZonePrivateVisibilityConfigNetworkArgs> networks) {
             return networks(Output.of(networks));
         }
 
+        /**
+         * @param networks The list of VPC networks that can see this zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(ManagedZonePrivateVisibilityConfigNetworkArgs... networks) {
             return networks(List.of(networks));
         }

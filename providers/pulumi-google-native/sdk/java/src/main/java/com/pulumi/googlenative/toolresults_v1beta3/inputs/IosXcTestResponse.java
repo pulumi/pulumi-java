@@ -23,6 +23,10 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bundleId", required=true)
     private String bundleId;
 
+    /**
+     * @return Bundle ID of the app.
+     * 
+     */
     public String bundleId() {
         return this.bundleId;
     }
@@ -34,6 +38,10 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="xcodeVersion", required=true)
     private String xcodeVersion;
 
+    /**
+     * @return Xcode version that the test was run with.
+     * 
+     */
     public String xcodeVersion() {
         return this.xcodeVersion;
     }
@@ -63,11 +71,23 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IosXcTestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bundleId Bundle ID of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(String bundleId) {
             $.bundleId = bundleId;
             return this;
         }
 
+        /**
+         * @param xcodeVersion Xcode version that the test was run with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xcodeVersion(String xcodeVersion) {
             $.xcodeVersion = xcodeVersion;
             return this;

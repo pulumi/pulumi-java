@@ -26,6 +26,10 @@ public final class RegionSslPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="customFeatures")
     private @Nullable Output<List<String>> customFeatures;
 
+    /**
+     * @return A list of features enabled when the selected profile is CUSTOM. The method returns the set of features that can be specified in this list. This field must be empty if the profile is not CUSTOM.
+     * 
+     */
     public Optional<Output<List<String>>> customFeatures() {
         return Optional.ofNullable(this.customFeatures);
     }
@@ -37,6 +41,10 @@ public final class RegionSslPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class RegionSslPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="minTlsVersion")
     private @Nullable Output<RegionSslPolicyMinTlsVersion> minTlsVersion;
 
+    /**
+     * @return The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.
+     * 
+     */
     public Optional<Output<RegionSslPolicyMinTlsVersion>> minTlsVersion() {
         return Optional.ofNullable(this.minTlsVersion);
     }
@@ -59,6 +71,10 @@ public final class RegionSslPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class RegionSslPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="profile")
     private @Nullable Output<RegionSslPolicyProfile> profile;
 
+    /**
+     * @return Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.
+     * 
+     */
     public Optional<Output<RegionSslPolicyProfile>> profile() {
         return Optional.ofNullable(this.profile);
     }
@@ -102,6 +122,10 @@ public final class RegionSslPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tlsSettings")
     private @Nullable Output<ServerTlsSettingsArgs> tlsSettings;
 
+    /**
+     * @return Security settings for the proxy. This field is only applicable to a global backend service with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+     * 
+     */
     public Optional<Output<ServerTlsSettingsArgs>> tlsSettings() {
         return Optional.ofNullable(this.tlsSettings);
     }
@@ -138,51 +162,117 @@ public final class RegionSslPolicyArgs extends com.pulumi.resources.ResourceArgs
             $ = new RegionSslPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customFeatures A list of features enabled when the selected profile is CUSTOM. The method returns the set of features that can be specified in this list. This field must be empty if the profile is not CUSTOM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFeatures(@Nullable Output<List<String>> customFeatures) {
             $.customFeatures = customFeatures;
             return this;
         }
 
+        /**
+         * @param customFeatures A list of features enabled when the selected profile is CUSTOM. The method returns the set of features that can be specified in this list. This field must be empty if the profile is not CUSTOM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFeatures(List<String> customFeatures) {
             return customFeatures(Output.of(customFeatures));
         }
 
+        /**
+         * @param customFeatures A list of features enabled when the selected profile is CUSTOM. The method returns the set of features that can be specified in this list. This field must be empty if the profile is not CUSTOM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFeatures(String... customFeatures) {
             return customFeatures(List.of(customFeatures));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param minTlsVersion The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTlsVersion(@Nullable Output<RegionSslPolicyMinTlsVersion> minTlsVersion) {
             $.minTlsVersion = minTlsVersion;
             return this;
         }
 
+        /**
+         * @param minTlsVersion The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTlsVersion(RegionSslPolicyMinTlsVersion minTlsVersion) {
             return minTlsVersion(Output.of(minTlsVersion));
         }
 
+        /**
+         * @param name Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param profile Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(@Nullable Output<RegionSslPolicyProfile> profile) {
             $.profile = profile;
             return this;
         }
 
+        /**
+         * @param profile Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(RegionSslPolicyProfile profile) {
             return profile(Output.of(profile));
         }
@@ -214,11 +304,23 @@ public final class RegionSslPolicyArgs extends com.pulumi.resources.ResourceArgs
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param tlsSettings Security settings for the proxy. This field is only applicable to a global backend service with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tlsSettings(@Nullable Output<ServerTlsSettingsArgs> tlsSettings) {
             $.tlsSettings = tlsSettings;
             return this;
         }
 
+        /**
+         * @param tlsSettings Security settings for the proxy. This field is only applicable to a global backend service with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tlsSettings(ServerTlsSettingsArgs tlsSettings) {
             return tlsSettings(Output.of(tlsSettings));
         }

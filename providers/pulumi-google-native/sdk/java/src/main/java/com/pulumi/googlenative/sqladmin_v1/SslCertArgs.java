@@ -22,6 +22,10 @@ public final class SslCertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="commonName")
     private @Nullable Output<String> commonName;
 
+    /**
+     * @return User supplied name. Must be a distinct name from the other certificates for this instance.
+     * 
+     */
     public Optional<Output<String>> commonName() {
         return Optional.ofNullable(this.commonName);
     }
@@ -66,11 +70,23 @@ public final class SslCertArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SslCertArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commonName User supplied name. Must be a distinct name from the other certificates for this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonName(@Nullable Output<String> commonName) {
             $.commonName = commonName;
             return this;
         }
 
+        /**
+         * @param commonName User supplied name. Must be a distinct name from the other certificates for this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonName(String commonName) {
             return commonName(Output.of(commonName));
         }

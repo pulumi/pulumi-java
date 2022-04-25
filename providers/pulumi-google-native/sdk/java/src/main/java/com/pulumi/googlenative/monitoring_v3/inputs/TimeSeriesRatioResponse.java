@@ -23,6 +23,10 @@ public final class TimeSeriesRatioResponse extends com.pulumi.resources.InvokeAr
     @Import(name="badServiceFilter", required=true)
     private String badServiceFilter;
 
+    /**
+     * @return A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * 
+     */
     public String badServiceFilter() {
         return this.badServiceFilter;
     }
@@ -34,6 +38,10 @@ public final class TimeSeriesRatioResponse extends com.pulumi.resources.InvokeAr
     @Import(name="goodServiceFilter", required=true)
     private String goodServiceFilter;
 
+    /**
+     * @return A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying good service provided. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * 
+     */
     public String goodServiceFilter() {
         return this.goodServiceFilter;
     }
@@ -45,6 +53,10 @@ public final class TimeSeriesRatioResponse extends com.pulumi.resources.InvokeAr
     @Import(name="totalServiceFilter", required=true)
     private String totalServiceFilter;
 
+    /**
+     * @return A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying total demanded service. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * 
+     */
     public String totalServiceFilter() {
         return this.totalServiceFilter;
     }
@@ -75,16 +87,34 @@ public final class TimeSeriesRatioResponse extends com.pulumi.resources.InvokeAr
             $ = new TimeSeriesRatioResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param badServiceFilter A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder badServiceFilter(String badServiceFilter) {
             $.badServiceFilter = badServiceFilter;
             return this;
         }
 
+        /**
+         * @param goodServiceFilter A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying good service provided. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goodServiceFilter(String goodServiceFilter) {
             $.goodServiceFilter = goodServiceFilter;
             return this;
         }
 
+        /**
+         * @param totalServiceFilter A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying total demanded service. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalServiceFilter(String totalServiceFilter) {
             $.totalServiceFilter = totalServiceFilter;
             return this;

@@ -43,6 +43,10 @@ public final class CloneJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the clone.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -125,11 +129,23 @@ public final class CloneJobArgs extends com.pulumi.resources.ResourceArgs {
             return migratingVmId(Output.of(migratingVmId));
         }
 
+        /**
+         * @param name The name of the clone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the clone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

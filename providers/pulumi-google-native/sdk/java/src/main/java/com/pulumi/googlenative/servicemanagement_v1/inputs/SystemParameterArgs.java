@@ -26,6 +26,10 @@ public final class SystemParameterArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="httpHeader")
     private @Nullable Output<String> httpHeader;
 
+    /**
+     * @return Define the HTTP header name to use for the parameter. It is case insensitive.
+     * 
+     */
     public Optional<Output<String>> httpHeader() {
         return Optional.ofNullable(this.httpHeader);
     }
@@ -37,6 +41,10 @@ public final class SystemParameterArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Define the name of the parameter, such as &#34;api_key&#34; . It is case sensitive.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class SystemParameterArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="urlQueryParameter")
     private @Nullable Output<String> urlQueryParameter;
 
+    /**
+     * @return Define the URL query parameter name to use for the parameter. It is case sensitive.
+     * 
+     */
     public Optional<Output<String>> urlQueryParameter() {
         return Optional.ofNullable(this.urlQueryParameter);
     }
@@ -78,29 +90,65 @@ public final class SystemParameterArgs extends com.pulumi.resources.ResourceArgs
             $ = new SystemParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpHeader Define the HTTP header name to use for the parameter. It is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeader(@Nullable Output<String> httpHeader) {
             $.httpHeader = httpHeader;
             return this;
         }
 
+        /**
+         * @param httpHeader Define the HTTP header name to use for the parameter. It is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeader(String httpHeader) {
             return httpHeader(Output.of(httpHeader));
         }
 
+        /**
+         * @param name Define the name of the parameter, such as &#34;api_key&#34; . It is case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Define the name of the parameter, such as &#34;api_key&#34; . It is case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param urlQueryParameter Define the URL query parameter name to use for the parameter. It is case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlQueryParameter(@Nullable Output<String> urlQueryParameter) {
             $.urlQueryParameter = urlQueryParameter;
             return this;
         }
 
+        /**
+         * @param urlQueryParameter Define the URL query parameter name to use for the parameter. It is case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlQueryParameter(String urlQueryParameter) {
             return urlQueryParameter(Output.of(urlQueryParameter));
         }

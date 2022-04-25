@@ -25,6 +25,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return User-defined name of the `WorkerPool`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project ID of the GCP project for which the `WorkerPool` is created.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -47,6 +55,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="regions")
     private @Nullable Output<List<WorkerPoolRegionsItem>> regions;
 
+    /**
+     * @return List of regions to create the `WorkerPool`. Regions can&#39;t be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
+     * 
+     */
     public Optional<Output<List<WorkerPoolRegionsItem>>> regions() {
         return Optional.ofNullable(this.regions);
     }
@@ -58,6 +70,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workerConfig")
     private @Nullable Output<WorkerConfigArgs> workerConfig;
 
+    /**
+     * @return Configuration to be used for a creating workers in the `WorkerPool`.
+     * 
+     */
     public Optional<Output<WorkerConfigArgs>> workerConfig() {
         return Optional.ofNullable(this.workerConfig);
     }
@@ -69,6 +85,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workerCount")
     private @Nullable Output<String> workerCount;
 
+    /**
+     * @return Total number of workers to be created across all requested regions.
+     * 
+     */
     public Optional<Output<String>> workerCount() {
         return Optional.ofNullable(this.workerCount);
     }
@@ -101,51 +121,117 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkerPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name User-defined name of the `WorkerPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name User-defined name of the `WorkerPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The project ID of the GCP project for which the `WorkerPool` is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project ID of the GCP project for which the `WorkerPool` is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param regions List of regions to create the `WorkerPool`. Regions can&#39;t be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(@Nullable Output<List<WorkerPoolRegionsItem>> regions) {
             $.regions = regions;
             return this;
         }
 
+        /**
+         * @param regions List of regions to create the `WorkerPool`. Regions can&#39;t be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(List<WorkerPoolRegionsItem> regions) {
             return regions(Output.of(regions));
         }
 
+        /**
+         * @param regions List of regions to create the `WorkerPool`. Regions can&#39;t be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(WorkerPoolRegionsItem... regions) {
             return regions(List.of(regions));
         }
 
+        /**
+         * @param workerConfig Configuration to be used for a creating workers in the `WorkerPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(@Nullable Output<WorkerConfigArgs> workerConfig) {
             $.workerConfig = workerConfig;
             return this;
         }
 
+        /**
+         * @param workerConfig Configuration to be used for a creating workers in the `WorkerPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(WorkerConfigArgs workerConfig) {
             return workerConfig(Output.of(workerConfig));
         }
 
+        /**
+         * @param workerCount Total number of workers to be created across all requested regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerCount(@Nullable Output<String> workerCount) {
             $.workerCount = workerCount;
             return this;
         }
 
+        /**
+         * @param workerCount Total number of workers to be created across all requested regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerCount(String workerCount) {
             return workerCount(Output.of(workerCount));
         }

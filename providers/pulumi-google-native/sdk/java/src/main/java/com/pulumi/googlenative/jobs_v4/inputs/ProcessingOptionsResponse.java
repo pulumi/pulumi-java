@@ -24,6 +24,10 @@ public final class ProcessingOptionsResponse extends com.pulumi.resources.Invoke
     @Import(name="disableStreetAddressResolution", required=true)
     private Boolean disableStreetAddressResolution;
 
+    /**
+     * @return If set to `true`, the service does not attempt to resolve a more precise address for the job.
+     * 
+     */
     public Boolean disableStreetAddressResolution() {
         return this.disableStreetAddressResolution;
     }
@@ -35,6 +39,10 @@ public final class ProcessingOptionsResponse extends com.pulumi.resources.Invoke
     @Import(name="htmlSanitization", required=true)
     private String htmlSanitization;
 
+    /**
+     * @return Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation isn&#39;t disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
+     * 
+     */
     public String htmlSanitization() {
         return this.htmlSanitization;
     }
@@ -64,11 +72,23 @@ public final class ProcessingOptionsResponse extends com.pulumi.resources.Invoke
             $ = new ProcessingOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableStreetAddressResolution If set to `true`, the service does not attempt to resolve a more precise address for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableStreetAddressResolution(Boolean disableStreetAddressResolution) {
             $.disableStreetAddressResolution = disableStreetAddressResolution;
             return this;
         }
 
+        /**
+         * @param htmlSanitization Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation isn&#39;t disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder htmlSanitization(String htmlSanitization) {
             $.htmlSanitization = htmlSanitization;
             return this;

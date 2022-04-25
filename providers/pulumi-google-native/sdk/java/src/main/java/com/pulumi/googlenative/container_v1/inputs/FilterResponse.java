@@ -24,6 +24,10 @@ public final class FilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="eventType", required=true)
     private List<String> eventType;
 
+    /**
+     * @return Event types to allowlist.
+     * 
+     */
     public List<String> eventType() {
         return this.eventType;
     }
@@ -52,11 +56,23 @@ public final class FilterResponse extends com.pulumi.resources.InvokeArgs {
             $ = new FilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventType Event types to allowlist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(List<String> eventType) {
             $.eventType = eventType;
             return this;
         }
 
+        /**
+         * @param eventType Event types to allowlist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(String... eventType) {
             return eventType(List.of(eventType));
         }

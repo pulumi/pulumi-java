@@ -24,6 +24,10 @@ public final class Oauth2ClientCredentialsResponse extends com.pulumi.resources.
     @Import(name="clientId", required=true)
     private String clientId;
 
+    /**
+     * @return The client identifier.
+     * 
+     */
     public String clientId() {
         return this.clientId;
     }
@@ -35,6 +39,10 @@ public final class Oauth2ClientCredentialsResponse extends com.pulumi.resources.
     @Import(name="clientSecret", required=true)
     private SecretResponse clientSecret;
 
+    /**
+     * @return Secret version reference containing the client secret.
+     * 
+     */
     public SecretResponse clientSecret() {
         return this.clientSecret;
     }
@@ -64,11 +72,23 @@ public final class Oauth2ClientCredentialsResponse extends com.pulumi.resources.
             $ = new Oauth2ClientCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The client identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientSecret Secret version reference containing the client secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(SecretResponse clientSecret) {
             $.clientSecret = clientSecret;
             return this;

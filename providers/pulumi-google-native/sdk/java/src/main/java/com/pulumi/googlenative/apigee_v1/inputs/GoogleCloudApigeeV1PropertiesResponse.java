@@ -24,6 +24,10 @@ public final class GoogleCloudApigeeV1PropertiesResponse extends com.pulumi.reso
     @Import(name="property", required=true)
     private List<GoogleCloudApigeeV1PropertyResponse> property;
 
+    /**
+     * @return List of all properties in the object
+     * 
+     */
     public List<GoogleCloudApigeeV1PropertyResponse> property() {
         return this.property;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudApigeeV1PropertiesResponse extends com.pulumi.reso
             $ = new GoogleCloudApigeeV1PropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param property List of all properties in the object
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(List<GoogleCloudApigeeV1PropertyResponse> property) {
             $.property = property;
             return this;
         }
 
+        /**
+         * @param property List of all properties in the object
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(GoogleCloudApigeeV1PropertyResponse... property) {
             return property(List.of(property));
         }

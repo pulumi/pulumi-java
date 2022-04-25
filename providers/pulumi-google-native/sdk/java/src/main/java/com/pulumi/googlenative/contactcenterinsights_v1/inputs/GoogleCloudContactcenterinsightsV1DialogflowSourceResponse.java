@@ -23,6 +23,10 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse ex
     @Import(name="audioUri", required=true)
     private String audioUri;
 
+    /**
+     * @return Cloud Storage URI that points to a file that contains the conversation audio.
+     * 
+     */
     public String audioUri() {
         return this.audioUri;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse ex
     @Import(name="dialogflowConversation", required=true)
     private String dialogflowConversation;
 
+    /**
+     * @return The name of the Dialogflow conversation that this conversation resource is derived from. Format: projects/{project}/locations/{location}/conversations/{conversation}
+     * 
+     */
     public String dialogflowConversation() {
         return this.dialogflowConversation;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse ex
             $ = new GoogleCloudContactcenterinsightsV1DialogflowSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audioUri Cloud Storage URI that points to a file that contains the conversation audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioUri(String audioUri) {
             $.audioUri = audioUri;
             return this;
         }
 
+        /**
+         * @param dialogflowConversation The name of the Dialogflow conversation that this conversation resource is derived from. Format: projects/{project}/locations/{location}/conversations/{conversation}
+         * 
+         * @return builder
+         * 
+         */
         public Builder dialogflowConversation(String dialogflowConversation) {
             $.dialogflowConversation = dialogflowConversation;
             return this;

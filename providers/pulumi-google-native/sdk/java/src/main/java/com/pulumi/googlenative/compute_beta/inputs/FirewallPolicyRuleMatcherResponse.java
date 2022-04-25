@@ -25,6 +25,10 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="destIpRanges", required=true)
     private List<String> destIpRanges;
 
+    /**
+     * @return CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
+     * 
+     */
     public List<String> destIpRanges() {
         return this.destIpRanges;
     }
@@ -36,6 +40,10 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="layer4Configs", required=true)
     private List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
 
+    /**
+     * @return Pairs of IP protocols and ports that the rule should match.
+     * 
+     */
     public List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs() {
         return this.layer4Configs;
     }
@@ -47,6 +55,10 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="srcIpRanges", required=true)
     private List<String> srcIpRanges;
 
+    /**
+     * @return CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
+     * 
+     */
     public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
@@ -77,29 +89,65 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
             $ = new FirewallPolicyRuleMatcherResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destIpRanges CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(List<String> destIpRanges) {
             $.destIpRanges = destIpRanges;
             return this;
         }
 
+        /**
+         * @param destIpRanges CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(String... destIpRanges) {
             return destIpRanges(List.of(destIpRanges));
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs) {
             $.layer4Configs = layer4Configs;
             return this;
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(FirewallPolicyRuleMatcherLayer4ConfigResponse... layer4Configs) {
             return layer4Configs(List.of(layer4Configs));
         }
 
+        /**
+         * @param srcIpRanges CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(List<String> srcIpRanges) {
             $.srcIpRanges = srcIpRanges;
             return this;
         }
 
+        /**
+         * @param srcIpRanges CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
         }

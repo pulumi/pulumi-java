@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends com.pulumi.r
     @Import(name="count", required=true)
     private String count;
 
+    /**
+     * @return How many times the value is contained in the field.
+     * 
+     */
     public String count() {
         return this.count;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends com.pulumi.r
     @Import(name="value", required=true)
     private GooglePrivacyDlpV2ValueResponse value;
 
+    /**
+     * @return A value contained in the field in question.
+     * 
+     */
     public GooglePrivacyDlpV2ValueResponse value() {
         return this.value;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends com.pulumi.r
             $ = new GooglePrivacyDlpV2ValueFrequencyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count How many times the value is contained in the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(String count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param value A value contained in the field in question.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(GooglePrivacyDlpV2ValueResponse value) {
             $.value = value;
             return this;

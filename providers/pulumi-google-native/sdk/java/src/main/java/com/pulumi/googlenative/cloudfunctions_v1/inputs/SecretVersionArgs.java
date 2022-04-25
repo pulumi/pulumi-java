@@ -26,6 +26,10 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mount_path as &#39;/etc/secrets&#39; and path as `/secret_foo` would mount the secret value file at `/etc/secrets/secret_foo`.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -37,6 +41,10 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Version of the secret (version number or the string &#39;latest&#39;). It is preferrable to use `latest` version with secret volumes as secret value changes are reflected immediately.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -66,20 +74,44 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SecretVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mount_path as &#39;/etc/secrets&#39; and path as `/secret_foo` would mount the secret value file at `/etc/secrets/secret_foo`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mount_path as &#39;/etc/secrets&#39; and path as `/secret_foo` would mount the secret value file at `/etc/secrets/secret_foo`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param version Version of the secret (version number or the string &#39;latest&#39;). It is preferrable to use `latest` version with secret volumes as secret value changes are reflected immediately.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version of the secret (version number or the string &#39;latest&#39;). It is preferrable to use `latest` version with secret volumes as secret value changes are reflected immediately.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

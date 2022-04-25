@@ -29,6 +29,10 @@ public final class TransformSummaryArgs extends com.pulumi.resources.ResourceArg
     @Import(name="displayData")
     private @Nullable Output<List<DisplayDataArgs>> displayData;
 
+    /**
+     * @return Transform-specific display data.
+     * 
+     */
     public Optional<Output<List<DisplayDataArgs>>> displayData() {
         return Optional.ofNullable(this.displayData);
     }
@@ -40,6 +44,10 @@ public final class TransformSummaryArgs extends com.pulumi.resources.ResourceArg
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return SDK generated id of this transform instance.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -51,6 +59,10 @@ public final class TransformSummaryArgs extends com.pulumi.resources.ResourceArg
     @Import(name="inputCollectionName")
     private @Nullable Output<List<String>> inputCollectionName;
 
+    /**
+     * @return User names for all collection inputs to this transform.
+     * 
+     */
     public Optional<Output<List<String>>> inputCollectionName() {
         return Optional.ofNullable(this.inputCollectionName);
     }
@@ -62,6 +74,10 @@ public final class TransformSummaryArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kind")
     private @Nullable Output<TransformSummaryKind> kind;
 
+    /**
+     * @return Type of transform.
+     * 
+     */
     public Optional<Output<TransformSummaryKind>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -73,6 +89,10 @@ public final class TransformSummaryArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return User provided name for this transform instance.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -84,6 +104,10 @@ public final class TransformSummaryArgs extends com.pulumi.resources.ResourceArg
     @Import(name="outputCollectionName")
     private @Nullable Output<List<String>> outputCollectionName;
 
+    /**
+     * @return User names for all collection outputs to this transform.
+     * 
+     */
     public Optional<Output<List<String>>> outputCollectionName() {
         return Optional.ofNullable(this.outputCollectionName);
     }
@@ -117,68 +141,158 @@ public final class TransformSummaryArgs extends com.pulumi.resources.ResourceArg
             $ = new TransformSummaryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayData Transform-specific display data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayData(@Nullable Output<List<DisplayDataArgs>> displayData) {
             $.displayData = displayData;
             return this;
         }
 
+        /**
+         * @param displayData Transform-specific display data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayData(List<DisplayDataArgs> displayData) {
             return displayData(Output.of(displayData));
         }
 
+        /**
+         * @param displayData Transform-specific display data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayData(DisplayDataArgs... displayData) {
             return displayData(List.of(displayData));
         }
 
+        /**
+         * @param id SDK generated id of this transform instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id SDK generated id of this transform instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param inputCollectionName User names for all collection inputs to this transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputCollectionName(@Nullable Output<List<String>> inputCollectionName) {
             $.inputCollectionName = inputCollectionName;
             return this;
         }
 
+        /**
+         * @param inputCollectionName User names for all collection inputs to this transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputCollectionName(List<String> inputCollectionName) {
             return inputCollectionName(Output.of(inputCollectionName));
         }
 
+        /**
+         * @param inputCollectionName User names for all collection inputs to this transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputCollectionName(String... inputCollectionName) {
             return inputCollectionName(List.of(inputCollectionName));
         }
 
+        /**
+         * @param kind Type of transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<TransformSummaryKind> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Type of transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(TransformSummaryKind kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name User provided name for this transform instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name User provided name for this transform instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param outputCollectionName User names for all collection outputs to this transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputCollectionName(@Nullable Output<List<String>> outputCollectionName) {
             $.outputCollectionName = outputCollectionName;
             return this;
         }
 
+        /**
+         * @param outputCollectionName User names for all collection outputs to this transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputCollectionName(List<String> outputCollectionName) {
             return outputCollectionName(Output.of(outputCollectionName));
         }
 
+        /**
+         * @param outputCollectionName User names for all collection outputs to this transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputCollectionName(String... outputCollectionName) {
             return outputCollectionName(List.of(outputCollectionName));
         }

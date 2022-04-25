@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleMonitoringV3RangeResponse {
     /**
-     * Range maximum.
+     * @return Range maximum.
      * 
      */
     private final Double max;
     /**
-     * Range minimum.
+     * @return Range minimum.
      * 
      */
     private final Double min;
@@ -29,16 +29,16 @@ public final class GoogleMonitoringV3RangeResponse {
     }
 
     /**
-     * Range maximum.
+     * @return Range maximum.
      * 
-    */
+     */
     public Double max() {
         return this.max;
     }
     /**
-     * Range minimum.
+     * @return Range minimum.
      * 
-    */
+     */
     public Double min() {
         return this.min;
     }

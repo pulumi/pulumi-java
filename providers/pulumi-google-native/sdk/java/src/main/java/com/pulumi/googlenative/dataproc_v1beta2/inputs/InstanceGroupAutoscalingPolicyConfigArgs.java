@@ -26,6 +26,10 @@ public final class InstanceGroupAutoscalingPolicyConfigArgs extends com.pulumi.r
     @Import(name="maxInstances")
     private @Nullable Output<Integer> maxInstances;
 
+    /**
+     * @return Optional. Maximum number of instances for this group. Required for primary workers. Note that by default, clusters will not use secondary workers. Required for secondary workers if the minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Required. Secondary workers - Bounds: [min_instances, ). Default: 0.
+     * 
+     */
     public Optional<Output<Integer>> maxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
@@ -37,6 +41,10 @@ public final class InstanceGroupAutoscalingPolicyConfigArgs extends com.pulumi.r
     @Import(name="minInstances")
     private @Nullable Output<Integer> minInstances;
 
+    /**
+     * @return Optional. Minimum number of instances for this group.Primary workers - Bounds: 2, max_instances. Default: 2. Secondary workers - Bounds: 0, max_instances. Default: 0.
+     * 
+     */
     public Optional<Output<Integer>> minInstances() {
         return Optional.ofNullable(this.minInstances);
     }
@@ -48,6 +56,10 @@ public final class InstanceGroupAutoscalingPolicyConfigArgs extends com.pulumi.r
     @Import(name="weight")
     private @Nullable Output<Integer> weight;
 
+    /**
+     * @return Optional. Weight for the instance group, which is used to determine the fraction of total workers in the cluster from this instance group. For example, if primary workers have weight 2, and secondary workers have weight 1, the cluster will have approximately 2 primary workers for each secondary worker.The cluster may not reach the specified balance if constrained by min/max bounds or other autoscaling settings. For example, if max_instances for secondary workers is 0, then only primary workers will be added. The cluster can also be out of balance when created.If weight is not set on any instance group, the cluster will default to equal weight for all groups: the cluster will attempt to maintain an equal number of workers in each group within the configured size bounds for each group. If weight is set for one group only, the cluster will default to zero weight on the unset group. For example if weight is set only on primary workers, the cluster will use primary workers only and no secondary workers.
+     * 
+     */
     public Optional<Output<Integer>> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -78,29 +90,65 @@ public final class InstanceGroupAutoscalingPolicyConfigArgs extends com.pulumi.r
             $ = new InstanceGroupAutoscalingPolicyConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxInstances Optional. Maximum number of instances for this group. Required for primary workers. Note that by default, clusters will not use secondary workers. Required for secondary workers if the minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Required. Secondary workers - Bounds: [min_instances, ). Default: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
             $.maxInstances = maxInstances;
             return this;
         }
 
+        /**
+         * @param maxInstances Optional. Maximum number of instances for this group. Required for primary workers. Note that by default, clusters will not use secondary workers. Required for secondary workers if the minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Required. Secondary workers - Bounds: [min_instances, ). Default: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(Integer maxInstances) {
             return maxInstances(Output.of(maxInstances));
         }
 
+        /**
+         * @param minInstances Optional. Minimum number of instances for this group.Primary workers - Bounds: 2, max_instances. Default: 2. Secondary workers - Bounds: 0, max_instances. Default: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
             $.minInstances = minInstances;
             return this;
         }
 
+        /**
+         * @param minInstances Optional. Minimum number of instances for this group.Primary workers - Bounds: 2, max_instances. Default: 2. Secondary workers - Bounds: 0, max_instances. Default: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstances(Integer minInstances) {
             return minInstances(Output.of(minInstances));
         }
 
+        /**
+         * @param weight Optional. Weight for the instance group, which is used to determine the fraction of total workers in the cluster from this instance group. For example, if primary workers have weight 2, and secondary workers have weight 1, the cluster will have approximately 2 primary workers for each secondary worker.The cluster may not reach the specified balance if constrained by min/max bounds or other autoscaling settings. For example, if max_instances for secondary workers is 0, then only primary workers will be added. The cluster can also be out of balance when created.If weight is not set on any instance group, the cluster will default to equal weight for all groups: the cluster will attempt to maintain an equal number of workers in each group within the configured size bounds for each group. If weight is set for one group only, the cluster will default to zero weight on the unset group. For example if weight is set only on primary workers, the cluster will use primary workers only and no secondary workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Output<Integer> weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param weight Optional. Weight for the instance group, which is used to determine the fraction of total workers in the cluster from this instance group. For example, if primary workers have weight 2, and secondary workers have weight 1, the cluster will have approximately 2 primary workers for each secondary worker.The cluster may not reach the specified balance if constrained by min/max bounds or other autoscaling settings. For example, if max_instances for secondary workers is 0, then only primary workers will be added. The cluster can also be out of balance when created.If weight is not set on any instance group, the cluster will default to equal weight for all groups: the cluster will attempt to maintain an equal number of workers in each group within the configured size bounds for each group. If weight is set for one group only, the cluster will default to zero weight on the unset group. For example if weight is set only on primary workers, the cluster will use primary workers only and no secondary workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Integer weight) {
             return weight(Output.of(weight));
         }

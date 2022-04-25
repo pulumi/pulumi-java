@@ -19,6 +19,10 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends co
     @Import(name="deletionTime", required=true)
     private String deletionTime;
 
+    /**
+     * @return The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.
+     * 
+     */
     public String deletionTime() {
         return this.deletionTime;
     }
@@ -37,6 +41,10 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends co
     @Import(name="namespaceUrl", required=true)
     private String namespaceUrl;
 
+    /**
+     * @return The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
+     * 
+     */
     public String namespaceUrl() {
         return this.namespaceUrl;
     }
@@ -67,6 +75,12 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends co
             $ = new ManagedZoneServiceDirectoryConfigNamespaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deletionTime The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionTime(String deletionTime) {
             $.deletionTime = deletionTime;
             return this;
@@ -77,6 +91,12 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends co
             return this;
         }
 
+        /**
+         * @param namespaceUrl The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceUrl(String namespaceUrl) {
             $.namespaceUrl = namespaceUrl;
             return this;

@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends com.pulumi.resource
     @Import(name="namespaceId")
     private @Nullable Output<String> namespaceId;
 
+    /**
+     * @return If not empty, the ID of the namespace to which the entities belong.
+     * 
+     */
     public Optional<Output<String>> namespaceId() {
         return Optional.ofNullable(this.namespaceId);
     }
@@ -37,6 +41,10 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends com.pulumi.resource
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project to which the entities belong.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -66,20 +74,44 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends com.pulumi.resource
             $ = new GooglePrivacyDlpV2PartitionIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespaceId If not empty, the ID of the namespace to which the entities belong.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceId(@Nullable Output<String> namespaceId) {
             $.namespaceId = namespaceId;
             return this;
         }
 
+        /**
+         * @param namespaceId If not empty, the ID of the namespace to which the entities belong.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceId(String namespaceId) {
             return namespaceId(Output.of(namespaceId));
         }
 
+        /**
+         * @param project The ID of the project to which the entities belong.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project to which the entities belong.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

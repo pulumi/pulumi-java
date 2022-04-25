@@ -25,6 +25,10 @@ public final class LogConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cloudAudit", required=true)
     private LogConfigCloudAuditOptionsResponse cloudAudit;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public LogConfigCloudAuditOptionsResponse cloudAudit() {
         return this.cloudAudit;
     }
@@ -36,6 +40,10 @@ public final class LogConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="counter", required=true)
     private LogConfigCounterOptionsResponse counter;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public LogConfigCounterOptionsResponse counter() {
         return this.counter;
     }
@@ -47,6 +55,10 @@ public final class LogConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataAccess", required=true)
     private LogConfigDataAccessOptionsResponse dataAccess;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public LogConfigDataAccessOptionsResponse dataAccess() {
         return this.dataAccess;
     }
@@ -77,16 +89,34 @@ public final class LogConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LogConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudAudit This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudAudit(LogConfigCloudAuditOptionsResponse cloudAudit) {
             $.cloudAudit = cloudAudit;
             return this;
         }
 
+        /**
+         * @param counter This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counter(LogConfigCounterOptionsResponse counter) {
             $.counter = counter;
             return this;
         }
 
+        /**
+         * @param dataAccess This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccess(LogConfigDataAccessOptionsResponse dataAccess) {
             $.dataAccess = dataAccess;
             return this;

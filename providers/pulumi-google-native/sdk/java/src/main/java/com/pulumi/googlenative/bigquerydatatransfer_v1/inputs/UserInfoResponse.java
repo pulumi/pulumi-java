@@ -23,6 +23,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return E-mail address of the user.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -51,6 +55,12 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new UserInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email E-mail address of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;

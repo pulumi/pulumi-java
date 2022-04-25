@@ -26,6 +26,10 @@ public final class SoftwareRecipeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="artifacts", required=true)
     private List<SoftwareRecipeArtifactResponse> artifacts;
 
+    /**
+     * @return Resources available to be used in the steps in the recipe.
+     * 
+     */
     public List<SoftwareRecipeArtifactResponse> artifacts() {
         return this.artifacts;
     }
@@ -37,6 +41,10 @@ public final class SoftwareRecipeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="desiredState", required=true)
     private String desiredState;
 
+    /**
+     * @return Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won&#39;t be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.
+     * 
+     */
     public String desiredState() {
         return this.desiredState;
     }
@@ -48,6 +56,10 @@ public final class SoftwareRecipeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="installSteps", required=true)
     private List<SoftwareRecipeStepResponse> installSteps;
 
+    /**
+     * @return Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.
+     * 
+     */
     public List<SoftwareRecipeStepResponse> installSteps() {
         return this.installSteps;
     }
@@ -59,6 +71,10 @@ public final class SoftwareRecipeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Unique identifier for the recipe. Only one recipe with a given name is installed on an instance. Names are also used to identify resources which helps to determine whether guest policies have conflicts. This means that requests to create multiple recipes with the same name and version are rejected since they could potentially have conflicting assignments.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -70,6 +86,10 @@ public final class SoftwareRecipeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="updateSteps", required=true)
     private List<SoftwareRecipeStepResponse> updateSteps;
 
+    /**
+     * @return Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.
+     * 
+     */
     public List<SoftwareRecipeStepResponse> updateSteps() {
         return this.updateSteps;
     }
@@ -81,6 +101,10 @@ public final class SoftwareRecipeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -114,43 +138,97 @@ public final class SoftwareRecipeResponse extends com.pulumi.resources.InvokeArg
             $ = new SoftwareRecipeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifacts Resources available to be used in the steps in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(List<SoftwareRecipeArtifactResponse> artifacts) {
             $.artifacts = artifacts;
             return this;
         }
 
+        /**
+         * @param artifacts Resources available to be used in the steps in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(SoftwareRecipeArtifactResponse... artifacts) {
             return artifacts(List.of(artifacts));
         }
 
+        /**
+         * @param desiredState Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won&#39;t be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredState(String desiredState) {
             $.desiredState = desiredState;
             return this;
         }
 
+        /**
+         * @param installSteps Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installSteps(List<SoftwareRecipeStepResponse> installSteps) {
             $.installSteps = installSteps;
             return this;
         }
 
+        /**
+         * @param installSteps Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installSteps(SoftwareRecipeStepResponse... installSteps) {
             return installSteps(List.of(installSteps));
         }
 
+        /**
+         * @param name Unique identifier for the recipe. Only one recipe with a given name is installed on an instance. Names are also used to identify resources which helps to determine whether guest policies have conflicts. This means that requests to create multiple recipes with the same name and version are rejected since they could potentially have conflicting assignments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param updateSteps Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateSteps(List<SoftwareRecipeStepResponse> updateSteps) {
             $.updateSteps = updateSteps;
             return this;
         }
 
+        /**
+         * @param updateSteps Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateSteps(SoftwareRecipeStepResponse... updateSteps) {
             return updateSteps(List.of(updateSteps));
         }
 
+        /**
+         * @param version The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

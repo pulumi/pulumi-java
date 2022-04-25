@@ -26,6 +26,10 @@ public final class TrialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="finalMeasurement")
     private @Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
 
+    /**
+     * @return The final measurement containing the objective value.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__MeasurementArgs>> finalMeasurement() {
         return Optional.ofNullable(this.finalMeasurement);
     }
@@ -44,6 +48,10 @@ public final class TrialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="measurements")
     private @Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
 
+    /**
+     * @return A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
+     * 
+     */
     public Optional<Output<List<GoogleCloudMlV1__MeasurementArgs>>> measurements() {
         return Optional.ofNullable(this.measurements);
     }
@@ -55,6 +63,10 @@ public final class TrialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
 
+    /**
+     * @return The parameters of the trial.
+     * 
+     */
     public Optional<Output<List<GoogleCloudMlV1_Trial_ParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -73,6 +85,10 @@ public final class TrialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<TrialState> state;
 
+    /**
+     * @return The detailed state of a trial.
+     * 
+     */
     public Optional<Output<TrialState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -114,11 +130,23 @@ public final class TrialArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TrialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param finalMeasurement The final measurement containing the objective value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalMeasurement(@Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement) {
             $.finalMeasurement = finalMeasurement;
             return this;
         }
 
+        /**
+         * @param finalMeasurement The final measurement containing the objective value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalMeasurement(GoogleCloudMlV1__MeasurementArgs finalMeasurement) {
             return finalMeasurement(Output.of(finalMeasurement));
         }
@@ -132,28 +160,64 @@ public final class TrialArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param measurements A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder measurements(@Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements) {
             $.measurements = measurements;
             return this;
         }
 
+        /**
+         * @param measurements A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder measurements(List<GoogleCloudMlV1__MeasurementArgs> measurements) {
             return measurements(Output.of(measurements));
         }
 
+        /**
+         * @param measurements A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder measurements(GoogleCloudMlV1__MeasurementArgs... measurements) {
             return measurements(List.of(measurements));
         }
 
+        /**
+         * @param parameters The parameters of the trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters of the trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<GoogleCloudMlV1_Trial_ParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters The parameters of the trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(GoogleCloudMlV1_Trial_ParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
@@ -167,11 +231,23 @@ public final class TrialArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param state The detailed state of a trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<TrialState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The detailed state of a trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(TrialState state) {
             return state(Output.of(state));
         }

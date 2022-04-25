@@ -28,6 +28,10 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
     @Import(name="appApk", required=true)
     private FileReferenceResponse appApk;
 
+    /**
+     * @return The APK for the application under test.
+     * 
+     */
     public FileReferenceResponse appApk() {
         return this.appApk;
     }
@@ -39,6 +43,10 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
     @Import(name="appBundle", required=true)
     private AppBundleResponse appBundle;
 
+    /**
+     * @return A multi-apk app bundle for the application under test.
+     * 
+     */
     public AppBundleResponse appBundle() {
         return this.appBundle;
     }
@@ -50,6 +58,10 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
     @Import(name="appInitialActivity", required=true)
     private String appInitialActivity;
 
+    /**
+     * @return The initial activity that should be used to start the app.
+     * 
+     */
     public String appInitialActivity() {
         return this.appInitialActivity;
     }
@@ -61,6 +73,10 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
     @Import(name="appPackageId", required=true)
     private String appPackageId;
 
+    /**
+     * @return The java package for the application under test. The default value is determined by examining the application&#39;s manifest.
+     * 
+     */
     public String appPackageId() {
         return this.appPackageId;
     }
@@ -72,6 +88,10 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
     @Import(name="roboDirectives", required=true)
     private List<RoboDirectiveResponse> roboDirectives;
 
+    /**
+     * @return A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.
+     * 
+     */
     public List<RoboDirectiveResponse> roboDirectives() {
         return this.roboDirectives;
     }
@@ -83,6 +103,10 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
     @Import(name="roboMode", required=true)
     private String roboMode;
 
+    /**
+     * @return The mode in which Robo should run. Most clients should allow the server to populate this field automatically.
+     * 
+     */
     public String roboMode() {
         return this.roboMode;
     }
@@ -94,6 +118,10 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
     @Import(name="roboScript", required=true)
     private FileReferenceResponse roboScript;
 
+    /**
+     * @return A JSON file with a sequence of actions Robo should perform as a prologue for the crawl.
+     * 
+     */
     public FileReferenceResponse roboScript() {
         return this.roboScript;
     }
@@ -105,6 +133,10 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
     @Import(name="startingIntents", required=true)
     private List<RoboStartingIntentResponse> startingIntents;
 
+    /**
+     * @return The intents used to launch the app for the crawl. If none are provided, then the main launcher activity is launched. If some are provided, then only those provided are launched (the main launcher activity must be provided explicitly).
+     * 
+     */
     public List<RoboStartingIntentResponse> startingIntents() {
         return this.startingIntents;
     }
@@ -140,50 +172,110 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
             $ = new AndroidRoboTestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appApk The APK for the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appApk(FileReferenceResponse appApk) {
             $.appApk = appApk;
             return this;
         }
 
+        /**
+         * @param appBundle A multi-apk app bundle for the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appBundle(AppBundleResponse appBundle) {
             $.appBundle = appBundle;
             return this;
         }
 
+        /**
+         * @param appInitialActivity The initial activity that should be used to start the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appInitialActivity(String appInitialActivity) {
             $.appInitialActivity = appInitialActivity;
             return this;
         }
 
+        /**
+         * @param appPackageId The java package for the application under test. The default value is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appPackageId(String appPackageId) {
             $.appPackageId = appPackageId;
             return this;
         }
 
+        /**
+         * @param roboDirectives A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roboDirectives(List<RoboDirectiveResponse> roboDirectives) {
             $.roboDirectives = roboDirectives;
             return this;
         }
 
+        /**
+         * @param roboDirectives A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roboDirectives(RoboDirectiveResponse... roboDirectives) {
             return roboDirectives(List.of(roboDirectives));
         }
 
+        /**
+         * @param roboMode The mode in which Robo should run. Most clients should allow the server to populate this field automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roboMode(String roboMode) {
             $.roboMode = roboMode;
             return this;
         }
 
+        /**
+         * @param roboScript A JSON file with a sequence of actions Robo should perform as a prologue for the crawl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roboScript(FileReferenceResponse roboScript) {
             $.roboScript = roboScript;
             return this;
         }
 
+        /**
+         * @param startingIntents The intents used to launch the app for the crawl. If none are provided, then the main launcher activity is launched. If some are provided, then only those provided are launched (the main launcher activity must be provided explicitly).
+         * 
+         * @return builder
+         * 
+         */
         public Builder startingIntents(List<RoboStartingIntentResponse> startingIntents) {
             $.startingIntents = startingIntents;
             return this;
         }
 
+        /**
+         * @param startingIntents The intents used to launch the app for the crawl. If none are provided, then the main launcher activity is launched. If some are provided, then only those provided are launched (the main launcher activity must be provided explicitly).
+         * 
+         * @return builder
+         * 
+         */
         public Builder startingIntents(RoboStartingIntentResponse... startingIntents) {
             return startingIntents(List.of(startingIntents));
         }

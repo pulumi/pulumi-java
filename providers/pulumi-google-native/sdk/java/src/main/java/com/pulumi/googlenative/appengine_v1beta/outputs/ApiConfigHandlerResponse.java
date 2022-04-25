@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class ApiConfigHandlerResponse {
     /**
-     * Action to take when users access resources that require authentication. Defaults to redirect.
+     * @return Action to take when users access resources that require authentication. Defaults to redirect.
      * 
      */
     private final String authFailAction;
     /**
-     * Level of login required to access this resource. Defaults to optional.
+     * @return Level of login required to access this resource. Defaults to optional.
      * 
      */
     private final String login;
     /**
-     * Path to the script from the application root directory.
+     * @return Path to the script from the application root directory.
      * 
      */
     private final String script;
     /**
-     * Security (HTTPS) enforcement for this URL.
+     * @return Security (HTTPS) enforcement for this URL.
      * 
      */
     private final String securityLevel;
     /**
-     * URL to serve the endpoint at.
+     * @return URL to serve the endpoint at.
      * 
      */
     private final String url;
@@ -50,37 +50,37 @@ public final class ApiConfigHandlerResponse {
     }
 
     /**
-     * Action to take when users access resources that require authentication. Defaults to redirect.
+     * @return Action to take when users access resources that require authentication. Defaults to redirect.
      * 
-    */
+     */
     public String authFailAction() {
         return this.authFailAction;
     }
     /**
-     * Level of login required to access this resource. Defaults to optional.
+     * @return Level of login required to access this resource. Defaults to optional.
      * 
-    */
+     */
     public String login() {
         return this.login;
     }
     /**
-     * Path to the script from the application root directory.
+     * @return Path to the script from the application root directory.
      * 
-    */
+     */
     public String script() {
         return this.script;
     }
     /**
-     * Security (HTTPS) enforcement for this URL.
+     * @return Security (HTTPS) enforcement for this URL.
      * 
-    */
+     */
     public String securityLevel() {
         return this.securityLevel;
     }
     /**
-     * URL to serve the endpoint at.
+     * @return URL to serve the endpoint at.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

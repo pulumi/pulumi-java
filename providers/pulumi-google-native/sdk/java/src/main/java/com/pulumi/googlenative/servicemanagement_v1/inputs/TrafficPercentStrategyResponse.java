@@ -24,6 +24,10 @@ public final class TrafficPercentStrategyResponse extends com.pulumi.resources.I
     @Import(name="percentages", required=true)
     private Map<String,String> percentages;
 
+    /**
+     * @return Maps service configuration IDs to their corresponding traffic percentage. Key is the service configuration ID, Value is the traffic percentage which must be greater than 0.0 and the sum must equal to 100.0.
+     * 
+     */
     public Map<String,String> percentages() {
         return this.percentages;
     }
@@ -52,6 +56,12 @@ public final class TrafficPercentStrategyResponse extends com.pulumi.resources.I
             $ = new TrafficPercentStrategyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param percentages Maps service configuration IDs to their corresponding traffic percentage. Key is the service configuration ID, Value is the traffic percentage which must be greater than 0.0 and the sum must equal to 100.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentages(Map<String,String> percentages) {
             $.percentages = percentages;
             return this;

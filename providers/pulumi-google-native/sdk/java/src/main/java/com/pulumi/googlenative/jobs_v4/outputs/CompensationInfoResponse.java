@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class CompensationInfoResponse {
     /**
-     * Annualized base compensation range. Computed as base compensation entry&#39;s CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
+     * @return Annualized base compensation range. Computed as base compensation entry&#39;s CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
      * 
      */
     private final CompensationRangeResponse annualizedBaseCompensationRange;
     /**
-     * Annualized total compensation range. Computed as all compensation entries&#39; CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
+     * @return Annualized total compensation range. Computed as all compensation entries&#39; CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
      * 
      */
     private final CompensationRangeResponse annualizedTotalCompensationRange;
     /**
-     * Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as **base compensation entry** for the job.
+     * @return Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as **base compensation entry** for the job.
      * 
      */
     private final List<CompensationEntryResponse> entries;
@@ -38,23 +38,23 @@ public final class CompensationInfoResponse {
     }
 
     /**
-     * Annualized base compensation range. Computed as base compensation entry&#39;s CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
+     * @return Annualized base compensation range. Computed as base compensation entry&#39;s CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
      * 
-    */
+     */
     public CompensationRangeResponse annualizedBaseCompensationRange() {
         return this.annualizedBaseCompensationRange;
     }
     /**
-     * Annualized total compensation range. Computed as all compensation entries&#39; CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
+     * @return Annualized total compensation range. Computed as all compensation entries&#39; CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
      * 
-    */
+     */
     public CompensationRangeResponse annualizedTotalCompensationRange() {
         return this.annualizedTotalCompensationRange;
     }
     /**
-     * Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as **base compensation entry** for the job.
+     * @return Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as **base compensation entry** for the job.
      * 
-    */
+     */
     public List<CompensationEntryResponse> entries() {
         return this.entries;
     }

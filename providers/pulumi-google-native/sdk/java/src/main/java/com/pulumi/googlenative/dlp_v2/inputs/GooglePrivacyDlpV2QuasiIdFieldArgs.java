@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2QuasiIdFieldArgs extends com.pulumi.resourc
     @Import(name="customTag")
     private @Nullable Output<String> customTag;
 
+    /**
+     * @return A auxiliary field.
+     * 
+     */
     public Optional<Output<String>> customTag() {
         return Optional.ofNullable(this.customTag);
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2QuasiIdFieldArgs extends com.pulumi.resourc
     @Import(name="field")
     private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
+    /**
+     * @return Identifies the column.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2FieldIdArgs>> field() {
         return Optional.ofNullable(this.field);
     }
@@ -67,20 +75,44 @@ public final class GooglePrivacyDlpV2QuasiIdFieldArgs extends com.pulumi.resourc
             $ = new GooglePrivacyDlpV2QuasiIdFieldArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customTag A auxiliary field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customTag(@Nullable Output<String> customTag) {
             $.customTag = customTag;
             return this;
         }
 
+        /**
+         * @param customTag A auxiliary field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customTag(String customTag) {
             return customTag(Output.of(customTag));
         }
 
+        /**
+         * @param field Identifies the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field Identifies the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
             return field(Output.of(field));
         }

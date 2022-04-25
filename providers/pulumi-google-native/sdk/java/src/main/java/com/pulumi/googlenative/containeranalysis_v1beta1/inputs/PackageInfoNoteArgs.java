@@ -30,6 +30,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="analyzed")
     private @Nullable Output<Boolean> analyzed;
 
+    /**
+     * @return Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document
+     * 
+     */
     public Optional<Output<Boolean>> analyzed() {
         return Optional.ofNullable(this.analyzed);
     }
@@ -41,6 +45,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="attribution")
     private @Nullable Output<String> attribution;
 
+    /**
+     * @return A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts
+     * 
+     */
     public Optional<Output<String>> attribution() {
         return Optional.ofNullable(this.attribution);
     }
@@ -52,6 +60,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="checksum")
     private @Nullable Output<String> checksum;
 
+    /**
+     * @return Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file
+     * 
+     */
     public Optional<Output<String>> checksum() {
         return Optional.ofNullable(this.checksum);
     }
@@ -63,6 +75,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="copyright")
     private @Nullable Output<String> copyright;
 
+    /**
+     * @return Identify the copyright holders of the package, as well as any dates present
+     * 
+     */
     public Optional<Output<String>> copyright() {
         return Optional.ofNullable(this.copyright);
     }
@@ -74,6 +90,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="detailedDescription")
     private @Nullable Output<String> detailedDescription;
 
+    /**
+     * @return A more detailed description of the package
+     * 
+     */
     public Optional<Output<String>> detailedDescription() {
         return Optional.ofNullable(this.detailedDescription);
     }
@@ -85,6 +105,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="downloadLocation")
     private @Nullable Output<String> downloadLocation;
 
+    /**
+     * @return This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created
+     * 
+     */
     public Optional<Output<String>> downloadLocation() {
         return Optional.ofNullable(this.downloadLocation);
     }
@@ -96,6 +120,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="externalRefs")
     private @Nullable Output<List<ExternalRefArgs>> externalRefs;
 
+    /**
+     * @return ExternalRef
+     * 
+     */
     public Optional<Output<List<ExternalRefArgs>>> externalRefs() {
         return Optional.ofNullable(this.externalRefs);
     }
@@ -107,6 +135,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="filesLicenseInfo")
     private @Nullable Output<List<String>> filesLicenseInfo;
 
+    /**
+     * @return Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found
+     * 
+     */
     public Optional<Output<List<String>>> filesLicenseInfo() {
         return Optional.ofNullable(this.filesLicenseInfo);
     }
@@ -118,6 +150,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="homePage")
     private @Nullable Output<String> homePage;
 
+    /**
+     * @return Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
+     * 
+     */
     public Optional<Output<String>> homePage() {
         return Optional.ofNullable(this.homePage);
     }
@@ -129,6 +165,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="licenseDeclared")
     private @Nullable Output<LicenseArgs> licenseDeclared;
 
+    /**
+     * @return List the licenses that have been declared by the authors of the package
+     * 
+     */
     public Optional<Output<LicenseArgs>> licenseDeclared() {
         return Optional.ofNullable(this.licenseDeclared);
     }
@@ -140,6 +180,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="originator")
     private @Nullable Output<String> originator;
 
+    /**
+     * @return If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came
+     * 
+     */
     public Optional<Output<String>> originator() {
         return Optional.ofNullable(this.originator);
     }
@@ -151,6 +195,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="packageType")
     private @Nullable Output<String> packageType;
 
+    /**
+     * @return The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
+     * 
+     */
     public Optional<Output<String>> packageType() {
         return Optional.ofNullable(this.packageType);
     }
@@ -162,6 +210,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="summaryDescription")
     private @Nullable Output<String> summaryDescription;
 
+    /**
+     * @return A short description of the package
+     * 
+     */
     public Optional<Output<String>> summaryDescription() {
         return Optional.ofNullable(this.summaryDescription);
     }
@@ -173,6 +225,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="supplier")
     private @Nullable Output<String> supplier;
 
+    /**
+     * @return Identify the actual distribution source for the package/directory identified in the SPDX file
+     * 
+     */
     public Optional<Output<String>> supplier() {
         return Optional.ofNullable(this.supplier);
     }
@@ -184,6 +240,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Identify the full name of the package as given by the Package Originator
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -195,6 +255,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="verificationCode")
     private @Nullable Output<String> verificationCode;
 
+    /**
+     * @return This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file
+     * 
+     */
     public Optional<Output<String>> verificationCode() {
         return Optional.ofNullable(this.verificationCode);
     }
@@ -206,6 +270,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Identify the version of the package
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -250,163 +318,379 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
             $ = new PackageInfoNoteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analyzed Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document
+         * 
+         * @return builder
+         * 
+         */
         public Builder analyzed(@Nullable Output<Boolean> analyzed) {
             $.analyzed = analyzed;
             return this;
         }
 
+        /**
+         * @param analyzed Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document
+         * 
+         * @return builder
+         * 
+         */
         public Builder analyzed(Boolean analyzed) {
             return analyzed(Output.of(analyzed));
         }
 
+        /**
+         * @param attribution A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribution(@Nullable Output<String> attribution) {
             $.attribution = attribution;
             return this;
         }
 
+        /**
+         * @param attribution A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribution(String attribution) {
             return attribution(Output.of(attribution));
         }
 
+        /**
+         * @param checksum Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksum(@Nullable Output<String> checksum) {
             $.checksum = checksum;
             return this;
         }
 
+        /**
+         * @param checksum Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksum(String checksum) {
             return checksum(Output.of(checksum));
         }
 
+        /**
+         * @param copyright Identify the copyright holders of the package, as well as any dates present
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyright(@Nullable Output<String> copyright) {
             $.copyright = copyright;
             return this;
         }
 
+        /**
+         * @param copyright Identify the copyright holders of the package, as well as any dates present
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyright(String copyright) {
             return copyright(Output.of(copyright));
         }
 
+        /**
+         * @param detailedDescription A more detailed description of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailedDescription(@Nullable Output<String> detailedDescription) {
             $.detailedDescription = detailedDescription;
             return this;
         }
 
+        /**
+         * @param detailedDescription A more detailed description of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailedDescription(String detailedDescription) {
             return detailedDescription(Output.of(detailedDescription));
         }
 
+        /**
+         * @param downloadLocation This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created
+         * 
+         * @return builder
+         * 
+         */
         public Builder downloadLocation(@Nullable Output<String> downloadLocation) {
             $.downloadLocation = downloadLocation;
             return this;
         }
 
+        /**
+         * @param downloadLocation This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created
+         * 
+         * @return builder
+         * 
+         */
         public Builder downloadLocation(String downloadLocation) {
             return downloadLocation(Output.of(downloadLocation));
         }
 
+        /**
+         * @param externalRefs ExternalRef
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalRefs(@Nullable Output<List<ExternalRefArgs>> externalRefs) {
             $.externalRefs = externalRefs;
             return this;
         }
 
+        /**
+         * @param externalRefs ExternalRef
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalRefs(List<ExternalRefArgs> externalRefs) {
             return externalRefs(Output.of(externalRefs));
         }
 
+        /**
+         * @param externalRefs ExternalRef
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalRefs(ExternalRefArgs... externalRefs) {
             return externalRefs(List.of(externalRefs));
         }
 
+        /**
+         * @param filesLicenseInfo Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesLicenseInfo(@Nullable Output<List<String>> filesLicenseInfo) {
             $.filesLicenseInfo = filesLicenseInfo;
             return this;
         }
 
+        /**
+         * @param filesLicenseInfo Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesLicenseInfo(List<String> filesLicenseInfo) {
             return filesLicenseInfo(Output.of(filesLicenseInfo));
         }
 
+        /**
+         * @param filesLicenseInfo Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesLicenseInfo(String... filesLicenseInfo) {
             return filesLicenseInfo(List.of(filesLicenseInfo));
         }
 
+        /**
+         * @param homePage Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
+         * 
+         * @return builder
+         * 
+         */
         public Builder homePage(@Nullable Output<String> homePage) {
             $.homePage = homePage;
             return this;
         }
 
+        /**
+         * @param homePage Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
+         * 
+         * @return builder
+         * 
+         */
         public Builder homePage(String homePage) {
             return homePage(Output.of(homePage));
         }
 
+        /**
+         * @param licenseDeclared List the licenses that have been declared by the authors of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseDeclared(@Nullable Output<LicenseArgs> licenseDeclared) {
             $.licenseDeclared = licenseDeclared;
             return this;
         }
 
+        /**
+         * @param licenseDeclared List the licenses that have been declared by the authors of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseDeclared(LicenseArgs licenseDeclared) {
             return licenseDeclared(Output.of(licenseDeclared));
         }
 
+        /**
+         * @param originator If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came
+         * 
+         * @return builder
+         * 
+         */
         public Builder originator(@Nullable Output<String> originator) {
             $.originator = originator;
             return this;
         }
 
+        /**
+         * @param originator If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came
+         * 
+         * @return builder
+         * 
+         */
         public Builder originator(String originator) {
             return originator(Output.of(originator));
         }
 
+        /**
+         * @param packageType The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(@Nullable Output<String> packageType) {
             $.packageType = packageType;
             return this;
         }
 
+        /**
+         * @param packageType The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(String packageType) {
             return packageType(Output.of(packageType));
         }
 
+        /**
+         * @param summaryDescription A short description of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder summaryDescription(@Nullable Output<String> summaryDescription) {
             $.summaryDescription = summaryDescription;
             return this;
         }
 
+        /**
+         * @param summaryDescription A short description of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder summaryDescription(String summaryDescription) {
             return summaryDescription(Output.of(summaryDescription));
         }
 
+        /**
+         * @param supplier Identify the actual distribution source for the package/directory identified in the SPDX file
+         * 
+         * @return builder
+         * 
+         */
         public Builder supplier(@Nullable Output<String> supplier) {
             $.supplier = supplier;
             return this;
         }
 
+        /**
+         * @param supplier Identify the actual distribution source for the package/directory identified in the SPDX file
+         * 
+         * @return builder
+         * 
+         */
         public Builder supplier(String supplier) {
             return supplier(Output.of(supplier));
         }
 
+        /**
+         * @param title Identify the full name of the package as given by the Package Originator
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Identify the full name of the package as given by the Package Originator
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }
 
+        /**
+         * @param verificationCode This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file
+         * 
+         * @return builder
+         * 
+         */
         public Builder verificationCode(@Nullable Output<String> verificationCode) {
             $.verificationCode = verificationCode;
             return this;
         }
 
+        /**
+         * @param verificationCode This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file
+         * 
+         * @return builder
+         * 
+         */
         public Builder verificationCode(String verificationCode) {
             return verificationCode(Output.of(verificationCode));
         }
 
+        /**
+         * @param version Identify the version of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Identify the version of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

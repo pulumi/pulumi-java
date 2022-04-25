@@ -20,6 +20,10 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse extends com.pulumi
     @Import(name="requestHeadersToAdds", required=true)
     private List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds;
 
+    /**
+     * @return The list of request headers to add or overwrite if they&#39;re already present.
+     * 
+     */
     public List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds() {
         return this.requestHeadersToAdds;
     }
@@ -48,11 +52,23 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse extends com.pulumi
             $ = new SecurityPolicyRuleHttpHeaderActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param requestHeadersToAdds The list of request headers to add or overwrite if they&#39;re already present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeadersToAdds(List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds) {
             $.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
 
+        /**
+         * @param requestHeadersToAdds The list of request headers to add or overwrite if they&#39;re already present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeadersToAdds(SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse... requestHeadersToAdds) {
             return requestHeadersToAdds(List.of(requestHeadersToAdds));
         }

@@ -24,6 +24,10 @@ public final class TriggerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="count", required=true)
     private Integer count;
 
+    /**
+     * @return The absolute number of time series that must fail the predicate for the condition to be triggered.
+     * 
+     */
     public Integer count() {
         return this.count;
     }
@@ -35,6 +39,10 @@ public final class TriggerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="percent", required=true)
     private Double percent;
 
+    /**
+     * @return The percentage of time series that must fail the predicate for the condition to be triggered.
+     * 
+     */
     public Double percent() {
         return this.percent;
     }
@@ -64,11 +72,23 @@ public final class TriggerResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The absolute number of time series that must fail the predicate for the condition to be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param percent The percentage of time series that must fail the predicate for the condition to be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(Double percent) {
             $.percent = percent;
             return this;

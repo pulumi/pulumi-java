@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class NetworkResponse {
     /**
-     * Network on which the workers are created. &#34;default&#34; network is used if empty.
+     * @return Network on which the workers are created. &#34;default&#34; network is used if empty.
      * 
      */
     private final String network;
     /**
-     * Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.
+     * @return Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.
      * 
      */
     private final String project;
     /**
-     * Subnetwork on which the workers are created. &#34;default&#34; subnetwork is used if empty.
+     * @return Subnetwork on which the workers are created. &#34;default&#34; subnetwork is used if empty.
      * 
      */
     private final String subnetwork;
@@ -36,23 +36,23 @@ public final class NetworkResponse {
     }
 
     /**
-     * Network on which the workers are created. &#34;default&#34; network is used if empty.
+     * @return Network on which the workers are created. &#34;default&#34; network is used if empty.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.
+     * @return Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * Subnetwork on which the workers are created. &#34;default&#34; subnetwork is used if empty.
+     * @return Subnetwork on which the workers are created. &#34;default&#34; subnetwork is used if empty.
      * 
-    */
+     */
     public String subnetwork() {
         return this.subnetwork;
     }

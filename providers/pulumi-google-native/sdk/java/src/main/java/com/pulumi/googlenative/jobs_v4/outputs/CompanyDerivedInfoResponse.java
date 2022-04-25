@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class CompanyDerivedInfoResponse {
     /**
-     * A structured headquarters location of the company, resolved from Company.headquarters_address if provided.
+     * @return A structured headquarters location of the company, resolved from Company.headquarters_address if provided.
      * 
      */
     private final LocationResponse headquartersLocation;
@@ -21,9 +21,9 @@ public final class CompanyDerivedInfoResponse {
     }
 
     /**
-     * A structured headquarters location of the company, resolved from Company.headquarters_address if provided.
+     * @return A structured headquarters location of the company, resolved from Company.headquarters_address if provided.
      * 
-    */
+     */
     public LocationResponse headquartersLocation() {
         return this.headquartersLocation;
     }

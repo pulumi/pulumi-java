@@ -29,6 +29,10 @@ public final class EnvgroupAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="environment", required=true)
     private Output<String> environment;
 
+    /**
+     * @return ID of the attached environment.
+     * 
+     */
     public Output<String> environment() {
         return this.environment;
     }
@@ -40,6 +44,10 @@ public final class EnvgroupAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return ID of the environment group attachment.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -87,20 +95,44 @@ public final class EnvgroupAttachmentArgs extends com.pulumi.resources.ResourceA
             return envgroupId(Output.of(envgroupId));
         }
 
+        /**
+         * @param environment ID of the attached environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(Output<String> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment ID of the attached environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(String environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param name ID of the environment group attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name ID of the environment group attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

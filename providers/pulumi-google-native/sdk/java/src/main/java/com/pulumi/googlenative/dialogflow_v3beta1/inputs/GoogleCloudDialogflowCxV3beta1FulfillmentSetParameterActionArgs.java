@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
     @Import(name="parameter")
     private @Nullable Output<String> parameter;
 
+    /**
+     * @return Display name of the parameter.
+     * 
+     */
     public Optional<Output<String>> parameter() {
         return Optional.ofNullable(this.parameter);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
     @Import(name="value")
     private @Nullable Output<Object> value;
 
+    /**
+     * @return The new value of the parameter. A null value clears the parameter.
+     * 
+     */
     public Optional<Output<Object>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
             $ = new GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameter Display name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameter(@Nullable Output<String> parameter) {
             $.parameter = parameter;
             return this;
         }
 
+        /**
+         * @param parameter Display name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameter(String parameter) {
             return parameter(Output.of(parameter));
         }
 
+        /**
+         * @param value The new value of the parameter. A null value clears the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<Object> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The new value of the parameter. A null value clears the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Object value) {
             return value(Output.of(value));
         }

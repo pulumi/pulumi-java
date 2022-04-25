@@ -31,6 +31,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datapathProvider")
     private @Nullable Output<NetworkConfigDatapathProvider> datapathProvider;
 
+    /**
+     * @return The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
+     * 
+     */
     public Optional<Output<NetworkConfigDatapathProvider>> datapathProvider() {
         return Optional.ofNullable(this.datapathProvider);
     }
@@ -42,6 +46,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultSnatStatus")
     private @Nullable Output<DefaultSnatStatusArgs> defaultSnatStatus;
 
+    /**
+     * @return Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when default_snat_status is disabled. When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
+     * 
+     */
     public Optional<Output<DefaultSnatStatusArgs>> defaultSnatStatus() {
         return Optional.ofNullable(this.defaultSnatStatus);
     }
@@ -53,6 +61,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsConfig")
     private @Nullable Output<DNSConfigArgs> dnsConfig;
 
+    /**
+     * @return DNSConfig contains clusterDNS config for this cluster.
+     * 
+     */
     public Optional<Output<DNSConfigArgs>> dnsConfig() {
         return Optional.ofNullable(this.dnsConfig);
     }
@@ -64,6 +76,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableIntraNodeVisibility")
     private @Nullable Output<Boolean> enableIntraNodeVisibility;
 
+    /**
+     * @return Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+     * 
+     */
     public Optional<Output<Boolean>> enableIntraNodeVisibility() {
         return Optional.ofNullable(this.enableIntraNodeVisibility);
     }
@@ -75,6 +91,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableL4ilbSubsetting")
     private @Nullable Output<Boolean> enableL4ilbSubsetting;
 
+    /**
+     * @return Whether L4ILB Subsetting is enabled for this cluster.
+     * 
+     */
     public Optional<Output<Boolean>> enableL4ilbSubsetting() {
         return Optional.ofNullable(this.enableL4ilbSubsetting);
     }
@@ -86,6 +106,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateIpv6GoogleAccess")
     private @Nullable Output<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
+    /**
+     * @return The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4)
+     * 
+     */
     public Optional<Output<NetworkConfigPrivateIpv6GoogleAccess>> privateIpv6GoogleAccess() {
         return Optional.ofNullable(this.privateIpv6GoogleAccess);
     }
@@ -97,6 +121,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceExternalIpsConfig")
     private @Nullable Output<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig;
 
+    /**
+     * @return ServiceExternalIPsConfig specifies if services with externalIPs field are blocked or not.
+     * 
+     */
     public Optional<Output<ServiceExternalIPsConfigArgs>> serviceExternalIpsConfig() {
         return Optional.ofNullable(this.serviceExternalIpsConfig);
     }
@@ -131,65 +159,149 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datapathProvider The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datapathProvider(@Nullable Output<NetworkConfigDatapathProvider> datapathProvider) {
             $.datapathProvider = datapathProvider;
             return this;
         }
 
+        /**
+         * @param datapathProvider The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datapathProvider(NetworkConfigDatapathProvider datapathProvider) {
             return datapathProvider(Output.of(datapathProvider));
         }
 
+        /**
+         * @param defaultSnatStatus Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when default_snat_status is disabled. When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSnatStatus(@Nullable Output<DefaultSnatStatusArgs> defaultSnatStatus) {
             $.defaultSnatStatus = defaultSnatStatus;
             return this;
         }
 
+        /**
+         * @param defaultSnatStatus Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when default_snat_status is disabled. When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSnatStatus(DefaultSnatStatusArgs defaultSnatStatus) {
             return defaultSnatStatus(Output.of(defaultSnatStatus));
         }
 
+        /**
+         * @param dnsConfig DNSConfig contains clusterDNS config for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsConfig(@Nullable Output<DNSConfigArgs> dnsConfig) {
             $.dnsConfig = dnsConfig;
             return this;
         }
 
+        /**
+         * @param dnsConfig DNSConfig contains clusterDNS config for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsConfig(DNSConfigArgs dnsConfig) {
             return dnsConfig(Output.of(dnsConfig));
         }
 
+        /**
+         * @param enableIntraNodeVisibility Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntraNodeVisibility(@Nullable Output<Boolean> enableIntraNodeVisibility) {
             $.enableIntraNodeVisibility = enableIntraNodeVisibility;
             return this;
         }
 
+        /**
+         * @param enableIntraNodeVisibility Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntraNodeVisibility(Boolean enableIntraNodeVisibility) {
             return enableIntraNodeVisibility(Output.of(enableIntraNodeVisibility));
         }
 
+        /**
+         * @param enableL4ilbSubsetting Whether L4ILB Subsetting is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableL4ilbSubsetting(@Nullable Output<Boolean> enableL4ilbSubsetting) {
             $.enableL4ilbSubsetting = enableL4ilbSubsetting;
             return this;
         }
 
+        /**
+         * @param enableL4ilbSubsetting Whether L4ILB Subsetting is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableL4ilbSubsetting(Boolean enableL4ilbSubsetting) {
             return enableL4ilbSubsetting(Output.of(enableL4ilbSubsetting));
         }
 
+        /**
+         * @param privateIpv6GoogleAccess The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4)
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpv6GoogleAccess(@Nullable Output<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
             $.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
+        /**
+         * @param privateIpv6GoogleAccess The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4)
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpv6GoogleAccess(NetworkConfigPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
             return privateIpv6GoogleAccess(Output.of(privateIpv6GoogleAccess));
         }
 
+        /**
+         * @param serviceExternalIpsConfig ServiceExternalIPsConfig specifies if services with externalIPs field are blocked or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceExternalIpsConfig(@Nullable Output<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig) {
             $.serviceExternalIpsConfig = serviceExternalIpsConfig;
             return this;
         }
 
+        /**
+         * @param serviceExternalIpsConfig ServiceExternalIPsConfig specifies if services with externalIPs field are blocked or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceExternalIpsConfig(ServiceExternalIPsConfigArgs serviceExternalIpsConfig) {
             return serviceExternalIpsConfig(Output.of(serviceExternalIpsConfig));
         }

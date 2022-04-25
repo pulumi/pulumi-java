@@ -23,6 +23,10 @@ public final class FileIODetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="filePattern", required=true)
     private String filePattern;
 
+    /**
+     * @return File Pattern used to access files by the connector.
+     * 
+     */
     public String filePattern() {
         return this.filePattern;
     }
@@ -51,6 +55,12 @@ public final class FileIODetailsResponse extends com.pulumi.resources.InvokeArgs
             $ = new FileIODetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filePattern File Pattern used to access files by the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePattern(String filePattern) {
             $.filePattern = filePattern;
             return this;

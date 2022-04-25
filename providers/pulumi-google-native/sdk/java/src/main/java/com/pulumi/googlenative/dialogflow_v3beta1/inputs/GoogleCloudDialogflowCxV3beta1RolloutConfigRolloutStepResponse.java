@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The name of the rollout step;
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
     @Import(name="minDuration", required=true)
     private String minDuration;
 
+    /**
+     * @return The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
+     * 
+     */
     public String minDuration() {
         return this.minDuration;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
     @Import(name="trafficPercent", required=true)
     private Integer trafficPercent;
 
+    /**
+     * @return The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
+     * 
+     */
     public Integer trafficPercent() {
         return this.trafficPercent;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
             $ = new GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The name of the rollout step;
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param minDuration The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minDuration(String minDuration) {
             $.minDuration = minDuration;
             return this;
         }
 
+        /**
+         * @param trafficPercent The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficPercent(Integer trafficPercent) {
             $.trafficPercent = trafficPercent;
             return this;

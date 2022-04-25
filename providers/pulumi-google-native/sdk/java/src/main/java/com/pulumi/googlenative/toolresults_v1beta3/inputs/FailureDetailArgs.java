@@ -26,6 +26,10 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="crashed")
     private @Nullable Output<Boolean> crashed;
 
+    /**
+     * @return If the failure was severe because the system (app) under test crashed.
+     * 
+     */
     public Optional<Output<Boolean>> crashed() {
         return Optional.ofNullable(this.crashed);
     }
@@ -37,6 +41,10 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceOutOfMemory")
     private @Nullable Output<Boolean> deviceOutOfMemory;
 
+    /**
+     * @return If the device ran out of memory during a test, causing the test to crash.
+     * 
+     */
     public Optional<Output<Boolean>> deviceOutOfMemory() {
         return Optional.ofNullable(this.deviceOutOfMemory);
     }
@@ -48,6 +56,10 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failedRoboscript")
     private @Nullable Output<Boolean> failedRoboscript;
 
+    /**
+     * @return If the Roboscript failed to complete successfully, e.g., because a Roboscript action or assertion failed or a Roboscript action could not be matched during the entire crawl.
+     * 
+     */
     public Optional<Output<Boolean>> failedRoboscript() {
         return Optional.ofNullable(this.failedRoboscript);
     }
@@ -59,6 +71,10 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notInstalled")
     private @Nullable Output<Boolean> notInstalled;
 
+    /**
+     * @return If an app is not installed and thus no test can be run with the app. This might be caused by trying to run a test on an unsupported platform.
+     * 
+     */
     public Optional<Output<Boolean>> notInstalled() {
         return Optional.ofNullable(this.notInstalled);
     }
@@ -70,6 +86,10 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="otherNativeCrash")
     private @Nullable Output<Boolean> otherNativeCrash;
 
+    /**
+     * @return If a native process (including any other than the app) crashed.
+     * 
+     */
     public Optional<Output<Boolean>> otherNativeCrash() {
         return Optional.ofNullable(this.otherNativeCrash);
     }
@@ -81,6 +101,10 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timedOut")
     private @Nullable Output<Boolean> timedOut;
 
+    /**
+     * @return If the test overran some time limit, and that is why it failed.
+     * 
+     */
     public Optional<Output<Boolean>> timedOut() {
         return Optional.ofNullable(this.timedOut);
     }
@@ -92,6 +116,10 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="unableToCrawl")
     private @Nullable Output<Boolean> unableToCrawl;
 
+    /**
+     * @return If the robo was unable to crawl the app; perhaps because the app did not start.
+     * 
+     */
     public Optional<Output<Boolean>> unableToCrawl() {
         return Optional.ofNullable(this.unableToCrawl);
     }
@@ -126,65 +154,149 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FailureDetailArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param crashed If the failure was severe because the system (app) under test crashed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crashed(@Nullable Output<Boolean> crashed) {
             $.crashed = crashed;
             return this;
         }
 
+        /**
+         * @param crashed If the failure was severe because the system (app) under test crashed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crashed(Boolean crashed) {
             return crashed(Output.of(crashed));
         }
 
+        /**
+         * @param deviceOutOfMemory If the device ran out of memory during a test, causing the test to crash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceOutOfMemory(@Nullable Output<Boolean> deviceOutOfMemory) {
             $.deviceOutOfMemory = deviceOutOfMemory;
             return this;
         }
 
+        /**
+         * @param deviceOutOfMemory If the device ran out of memory during a test, causing the test to crash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceOutOfMemory(Boolean deviceOutOfMemory) {
             return deviceOutOfMemory(Output.of(deviceOutOfMemory));
         }
 
+        /**
+         * @param failedRoboscript If the Roboscript failed to complete successfully, e.g., because a Roboscript action or assertion failed or a Roboscript action could not be matched during the entire crawl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failedRoboscript(@Nullable Output<Boolean> failedRoboscript) {
             $.failedRoboscript = failedRoboscript;
             return this;
         }
 
+        /**
+         * @param failedRoboscript If the Roboscript failed to complete successfully, e.g., because a Roboscript action or assertion failed or a Roboscript action could not be matched during the entire crawl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failedRoboscript(Boolean failedRoboscript) {
             return failedRoboscript(Output.of(failedRoboscript));
         }
 
+        /**
+         * @param notInstalled If an app is not installed and thus no test can be run with the app. This might be caused by trying to run a test on an unsupported platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notInstalled(@Nullable Output<Boolean> notInstalled) {
             $.notInstalled = notInstalled;
             return this;
         }
 
+        /**
+         * @param notInstalled If an app is not installed and thus no test can be run with the app. This might be caused by trying to run a test on an unsupported platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notInstalled(Boolean notInstalled) {
             return notInstalled(Output.of(notInstalled));
         }
 
+        /**
+         * @param otherNativeCrash If a native process (including any other than the app) crashed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder otherNativeCrash(@Nullable Output<Boolean> otherNativeCrash) {
             $.otherNativeCrash = otherNativeCrash;
             return this;
         }
 
+        /**
+         * @param otherNativeCrash If a native process (including any other than the app) crashed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder otherNativeCrash(Boolean otherNativeCrash) {
             return otherNativeCrash(Output.of(otherNativeCrash));
         }
 
+        /**
+         * @param timedOut If the test overran some time limit, and that is why it failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timedOut(@Nullable Output<Boolean> timedOut) {
             $.timedOut = timedOut;
             return this;
         }
 
+        /**
+         * @param timedOut If the test overran some time limit, and that is why it failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timedOut(Boolean timedOut) {
             return timedOut(Output.of(timedOut));
         }
 
+        /**
+         * @param unableToCrawl If the robo was unable to crawl the app; perhaps because the app did not start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unableToCrawl(@Nullable Output<Boolean> unableToCrawl) {
             $.unableToCrawl = unableToCrawl;
             return this;
         }
 
+        /**
+         * @param unableToCrawl If the robo was unable to crawl the app; perhaps because the app did not start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unableToCrawl(Boolean unableToCrawl) {
             return unableToCrawl(Output.of(unableToCrawl));
         }

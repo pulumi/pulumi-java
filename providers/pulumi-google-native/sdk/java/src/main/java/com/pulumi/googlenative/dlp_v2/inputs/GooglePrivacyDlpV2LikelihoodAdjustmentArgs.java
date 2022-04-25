@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends com.pulumi
     @Import(name="fixedLikelihood")
     private @Nullable Output<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood> fixedLikelihood;
 
+    /**
+     * @return Set the likelihood of a finding to a fixed value.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood>> fixedLikelihood() {
         return Optional.ofNullable(this.fixedLikelihood);
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends com.pulumi
     @Import(name="relativeLikelihood")
     private @Nullable Output<Integer> relativeLikelihood;
 
+    /**
+     * @return Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.
+     * 
+     */
     public Optional<Output<Integer>> relativeLikelihood() {
         return Optional.ofNullable(this.relativeLikelihood);
     }
@@ -67,20 +75,44 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends com.pulumi
             $ = new GooglePrivacyDlpV2LikelihoodAdjustmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fixedLikelihood Set the likelihood of a finding to a fixed value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedLikelihood(@Nullable Output<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood> fixedLikelihood) {
             $.fixedLikelihood = fixedLikelihood;
             return this;
         }
 
+        /**
+         * @param fixedLikelihood Set the likelihood of a finding to a fixed value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedLikelihood(GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood fixedLikelihood) {
             return fixedLikelihood(Output.of(fixedLikelihood));
         }
 
+        /**
+         * @param relativeLikelihood Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeLikelihood(@Nullable Output<Integer> relativeLikelihood) {
             $.relativeLikelihood = relativeLikelihood;
             return this;
         }
 
+        /**
+         * @param relativeLikelihood Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeLikelihood(Integer relativeLikelihood) {
             return relativeLikelihood(Output.of(relativeLikelihood));
         }

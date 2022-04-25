@@ -28,6 +28,10 @@ public final class MasterAuthorizedNetworksConfigArgs extends com.pulumi.resourc
     @Import(name="cidrBlocks")
     private @Nullable Output<List<CidrBlockArgs>> cidrBlocks;
 
+    /**
+     * @return cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS.
+     * 
+     */
     public Optional<Output<List<CidrBlockArgs>>> cidrBlocks() {
         return Optional.ofNullable(this.cidrBlocks);
     }
@@ -39,6 +43,10 @@ public final class MasterAuthorizedNetworksConfigArgs extends com.pulumi.resourc
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether or not master authorized networks is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -68,24 +76,54 @@ public final class MasterAuthorizedNetworksConfigArgs extends com.pulumi.resourc
             $ = new MasterAuthorizedNetworksConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrBlocks cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlocks(@Nullable Output<List<CidrBlockArgs>> cidrBlocks) {
             $.cidrBlocks = cidrBlocks;
             return this;
         }
 
+        /**
+         * @param cidrBlocks cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlocks(List<CidrBlockArgs> cidrBlocks) {
             return cidrBlocks(Output.of(cidrBlocks));
         }
 
+        /**
+         * @param cidrBlocks cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlocks(CidrBlockArgs... cidrBlocks) {
             return cidrBlocks(List.of(cidrBlocks));
         }
 
+        /**
+         * @param enabled Whether or not master authorized networks is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether or not master authorized networks is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

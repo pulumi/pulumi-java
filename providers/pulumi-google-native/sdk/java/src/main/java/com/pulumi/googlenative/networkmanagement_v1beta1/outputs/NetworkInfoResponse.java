@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class NetworkInfoResponse {
     /**
-     * Name of a Compute Engine network.
+     * @return Name of a Compute Engine network.
      * 
      */
     private final String displayName;
     /**
-     * The IP range that matches the test.
+     * @return The IP range that matches the test.
      * 
      */
     private final String matchedIpRange;
     /**
-     * URI of a Compute Engine network.
+     * @return URI of a Compute Engine network.
      * 
      */
     private final String uri;
@@ -36,23 +36,23 @@ public final class NetworkInfoResponse {
     }
 
     /**
-     * Name of a Compute Engine network.
+     * @return Name of a Compute Engine network.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The IP range that matches the test.
+     * @return The IP range that matches the test.
      * 
-    */
+     */
     public String matchedIpRange() {
         return this.matchedIpRange;
     }
     /**
-     * URI of a Compute Engine network.
+     * @return URI of a Compute Engine network.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

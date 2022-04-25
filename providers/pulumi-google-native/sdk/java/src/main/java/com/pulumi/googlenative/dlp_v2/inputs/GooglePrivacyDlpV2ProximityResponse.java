@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2ProximityResponse extends com.pulumi.resour
     @Import(name="windowAfter", required=true)
     private Integer windowAfter;
 
+    /**
+     * @return Number of characters after the finding to consider.
+     * 
+     */
     public Integer windowAfter() {
         return this.windowAfter;
     }
@@ -34,6 +38,10 @@ public final class GooglePrivacyDlpV2ProximityResponse extends com.pulumi.resour
     @Import(name="windowBefore", required=true)
     private Integer windowBefore;
 
+    /**
+     * @return Number of characters before the finding to consider.
+     * 
+     */
     public Integer windowBefore() {
         return this.windowBefore;
     }
@@ -63,11 +71,23 @@ public final class GooglePrivacyDlpV2ProximityResponse extends com.pulumi.resour
             $ = new GooglePrivacyDlpV2ProximityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param windowAfter Number of characters after the finding to consider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowAfter(Integer windowAfter) {
             $.windowAfter = windowAfter;
             return this;
         }
 
+        /**
+         * @param windowBefore Number of characters before the finding to consider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowBefore(Integer windowBefore) {
             $.windowBefore = windowBefore;
             return this;

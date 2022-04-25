@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class SqlServerAuditConfigResponse {
     /**
-     * The name of the destination bucket (e.g., gs://mybucket).
+     * @return The name of the destination bucket (e.g., gs://mybucket).
      * 
      */
     private final String bucket;
     /**
-     * This is always sql#sqlServerAuditConfig
+     * @return This is always sql#sqlServerAuditConfig
      * 
      */
     private final String kind;
@@ -29,16 +29,16 @@ public final class SqlServerAuditConfigResponse {
     }
 
     /**
-     * The name of the destination bucket (e.g., gs://mybucket).
+     * @return The name of the destination bucket (e.g., gs://mybucket).
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * This is always sql#sqlServerAuditConfig
+     * @return This is always sql#sqlServerAuditConfig
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }

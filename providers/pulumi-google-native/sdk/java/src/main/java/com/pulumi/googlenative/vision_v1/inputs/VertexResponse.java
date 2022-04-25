@@ -23,6 +23,10 @@ public final class VertexResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="x", required=true)
     private Integer x;
 
+    /**
+     * @return X coordinate.
+     * 
+     */
     public Integer x() {
         return this.x;
     }
@@ -34,6 +38,10 @@ public final class VertexResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="y", required=true)
     private Integer y;
 
+    /**
+     * @return Y coordinate.
+     * 
+     */
     public Integer y() {
         return this.y;
     }
@@ -63,11 +71,23 @@ public final class VertexResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VertexResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param x X coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x(Integer x) {
             $.x = x;
             return this;
         }
 
+        /**
+         * @param y Y coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y(Integer y) {
             $.y = y;
             return this;

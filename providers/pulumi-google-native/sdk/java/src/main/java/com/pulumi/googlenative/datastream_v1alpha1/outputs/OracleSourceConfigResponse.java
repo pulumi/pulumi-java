@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class OracleSourceConfigResponse {
     /**
-     * Oracle objects to include in the stream.
+     * @return Oracle objects to include in the stream.
      * 
      */
     private final OracleRdbmsResponse allowlist;
     /**
-     * Oracle objects to exclude from the stream.
+     * @return Oracle objects to exclude from the stream.
      * 
      */
     private final OracleRdbmsResponse rejectlist;
@@ -29,16 +29,16 @@ public final class OracleSourceConfigResponse {
     }
 
     /**
-     * Oracle objects to include in the stream.
+     * @return Oracle objects to include in the stream.
      * 
-    */
+     */
     public OracleRdbmsResponse allowlist() {
         return this.allowlist;
     }
     /**
-     * Oracle objects to exclude from the stream.
+     * @return Oracle objects to exclude from the stream.
      * 
-    */
+     */
     public OracleRdbmsResponse rejectlist() {
         return this.rejectlist;
     }

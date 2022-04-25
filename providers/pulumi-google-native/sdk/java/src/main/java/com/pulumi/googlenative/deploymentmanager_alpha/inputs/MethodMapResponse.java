@@ -23,6 +23,10 @@ public final class MethodMapResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="create", required=true)
     private String create;
 
+    /**
+     * @return The action identifier for the create method to be used for this collection
+     * 
+     */
     public String create() {
         return this.create;
     }
@@ -34,6 +38,10 @@ public final class MethodMapResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="delete", required=true)
     private String delete;
 
+    /**
+     * @return The action identifier for the delete method to be used for this collection
+     * 
+     */
     public String delete() {
         return this.delete;
     }
@@ -45,6 +53,10 @@ public final class MethodMapResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="get", required=true)
     private String get;
 
+    /**
+     * @return The action identifier for the get method to be used for this collection
+     * 
+     */
     public String get() {
         return this.get;
     }
@@ -56,6 +68,10 @@ public final class MethodMapResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="setIamPolicy", required=true)
     private String setIamPolicy;
 
+    /**
+     * @return The action identifier for the setIamPolicy method to be used for this collection
+     * 
+     */
     public String setIamPolicy() {
         return this.setIamPolicy;
     }
@@ -67,6 +83,10 @@ public final class MethodMapResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="update", required=true)
     private String update;
 
+    /**
+     * @return The action identifier for the update method to be used for this collection
+     * 
+     */
     public String update() {
         return this.update;
     }
@@ -99,26 +119,56 @@ public final class MethodMapResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MethodMapResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param create The action identifier for the create method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder create(String create) {
             $.create = create;
             return this;
         }
 
+        /**
+         * @param delete The action identifier for the delete method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder delete(String delete) {
             $.delete = delete;
             return this;
         }
 
+        /**
+         * @param get The action identifier for the get method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder get(String get) {
             $.get = get;
             return this;
         }
 
+        /**
+         * @param setIamPolicy The action identifier for the setIamPolicy method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder setIamPolicy(String setIamPolicy) {
             $.setIamPolicy = setIamPolicy;
             return this;
         }
 
+        /**
+         * @param update The action identifier for the update method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder update(String update) {
             $.update = update;
             return this;

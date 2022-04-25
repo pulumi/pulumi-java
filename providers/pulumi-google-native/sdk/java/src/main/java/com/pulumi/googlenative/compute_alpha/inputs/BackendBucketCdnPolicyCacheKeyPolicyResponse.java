@@ -24,6 +24,10 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends com.pulu
     @Import(name="includeHttpHeaders", required=true)
     private List<String> includeHttpHeaders;
 
+    /**
+     * @return Allows HTTP request headers (by name) to be used in the cache key.
+     * 
+     */
     public List<String> includeHttpHeaders() {
         return this.includeHttpHeaders;
     }
@@ -35,6 +39,10 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends com.pulu
     @Import(name="queryStringWhitelist", required=true)
     private List<String> queryStringWhitelist;
 
+    /**
+     * @return Names of query string parameters to include in cache keys. All other parameters will be excluded. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+     * 
+     */
     public List<String> queryStringWhitelist() {
         return this.queryStringWhitelist;
     }
@@ -64,20 +72,44 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends com.pulu
             $ = new BackendBucketCdnPolicyCacheKeyPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param includeHttpHeaders Allows HTTP request headers (by name) to be used in the cache key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeHttpHeaders(List<String> includeHttpHeaders) {
             $.includeHttpHeaders = includeHttpHeaders;
             return this;
         }
 
+        /**
+         * @param includeHttpHeaders Allows HTTP request headers (by name) to be used in the cache key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeHttpHeaders(String... includeHttpHeaders) {
             return includeHttpHeaders(List.of(includeHttpHeaders));
         }
 
+        /**
+         * @param queryStringWhitelist Names of query string parameters to include in cache keys. All other parameters will be excluded. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringWhitelist(List<String> queryStringWhitelist) {
             $.queryStringWhitelist = queryStringWhitelist;
             return this;
         }
 
+        /**
+         * @param queryStringWhitelist Names of query string parameters to include in cache keys. All other parameters will be excluded. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringWhitelist(String... queryStringWhitelist) {
             return queryStringWhitelist(List.of(queryStringWhitelist));
         }

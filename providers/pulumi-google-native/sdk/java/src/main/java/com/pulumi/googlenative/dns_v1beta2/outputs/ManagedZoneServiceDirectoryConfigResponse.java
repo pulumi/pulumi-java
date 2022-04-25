@@ -12,7 +12,7 @@ import java.util.Objects;
 public final class ManagedZoneServiceDirectoryConfigResponse {
     private final String kind;
     /**
-     * Contains information about the namespace associated with the zone.
+     * @return Contains information about the namespace associated with the zone.
      * 
      */
     private final ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;
@@ -29,9 +29,9 @@ public final class ManagedZoneServiceDirectoryConfigResponse {
         return this.kind;
     }
     /**
-     * Contains information about the namespace associated with the zone.
+     * @return Contains information about the namespace associated with the zone.
      * 
-    */
+     */
     public ManagedZoneServiceDirectoryConfigNamespaceResponse namespace() {
         return this.namespace;
     }

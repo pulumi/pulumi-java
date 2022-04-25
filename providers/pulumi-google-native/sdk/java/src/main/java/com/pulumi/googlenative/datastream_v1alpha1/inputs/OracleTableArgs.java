@@ -28,6 +28,10 @@ public final class OracleTableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="oracleColumns")
     private @Nullable Output<List<OracleColumnArgs>> oracleColumns;
 
+    /**
+     * @return Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+     * 
+     */
     public Optional<Output<List<OracleColumnArgs>>> oracleColumns() {
         return Optional.ofNullable(this.oracleColumns);
     }
@@ -39,6 +43,10 @@ public final class OracleTableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableName")
     private @Nullable Output<String> tableName;
 
+    /**
+     * @return Table name.
+     * 
+     */
     public Optional<Output<String>> tableName() {
         return Optional.ofNullable(this.tableName);
     }
@@ -68,24 +76,54 @@ public final class OracleTableArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OracleTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oracleColumns Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleColumns(@Nullable Output<List<OracleColumnArgs>> oracleColumns) {
             $.oracleColumns = oracleColumns;
             return this;
         }
 
+        /**
+         * @param oracleColumns Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleColumns(List<OracleColumnArgs> oracleColumns) {
             return oracleColumns(Output.of(oracleColumns));
         }
 
+        /**
+         * @param oracleColumns Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleColumns(OracleColumnArgs... oracleColumns) {
             return oracleColumns(List.of(oracleColumns));
         }
 
+        /**
+         * @param tableName Table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(@Nullable Output<String> tableName) {
             $.tableName = tableName;
             return this;
         }
 
+        /**
+         * @param tableName Table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             return tableName(Output.of(tableName));
         }

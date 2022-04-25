@@ -25,6 +25,10 @@ public final class SecretEnvSourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="localObjectReference", required=true)
     private LocalObjectReferenceResponse localObjectReference;
 
+    /**
+     * @return This field should not be used directly as it is meant to be inlined directly into the message. Use the &#34;name&#34; field instead.
+     * 
+     */
     public LocalObjectReferenceResponse localObjectReference() {
         return this.localObjectReference;
     }
@@ -36,6 +40,10 @@ public final class SecretEnvSourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The Secret to select from.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class SecretEnvSourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="optional", required=true)
     private Boolean optional;
 
+    /**
+     * @return (Optional) Specify whether the Secret must be defined
+     * 
+     */
     public Boolean optional() {
         return this.optional;
     }
@@ -77,16 +89,34 @@ public final class SecretEnvSourceResponse extends com.pulumi.resources.InvokeAr
             $ = new SecretEnvSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localObjectReference This field should not be used directly as it is meant to be inlined directly into the message. Use the &#34;name&#34; field instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localObjectReference(LocalObjectReferenceResponse localObjectReference) {
             $.localObjectReference = localObjectReference;
             return this;
         }
 
+        /**
+         * @param name The Secret to select from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param optional (Optional) Specify whether the Secret must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder optional(Boolean optional) {
             $.optional = optional;
             return this;

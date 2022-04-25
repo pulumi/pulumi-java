@@ -24,6 +24,10 @@ public final class AttemptResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dispatchTime", required=true)
     private String dispatchTime;
 
+    /**
+     * @return The time that this attempt was dispatched. `dispatch_time` will be truncated to the nearest microsecond.
+     * 
+     */
     public String dispatchTime() {
         return this.dispatchTime;
     }
@@ -35,6 +39,10 @@ public final class AttemptResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="responseStatus", required=true)
     private StatusResponse responseStatus;
 
+    /**
+     * @return The response from the worker for this attempt. If `response_time` is unset, then the task has not been attempted or is currently running and the `response_status` field is meaningless.
+     * 
+     */
     public StatusResponse responseStatus() {
         return this.responseStatus;
     }
@@ -46,6 +54,10 @@ public final class AttemptResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="responseTime", required=true)
     private String responseTime;
 
+    /**
+     * @return The time that this attempt response was received. `response_time` will be truncated to the nearest microsecond.
+     * 
+     */
     public String responseTime() {
         return this.responseTime;
     }
@@ -57,6 +69,10 @@ public final class AttemptResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scheduleTime", required=true)
     private String scheduleTime;
 
+    /**
+     * @return The time that this attempt was scheduled. `schedule_time` will be truncated to the nearest microsecond.
+     * 
+     */
     public String scheduleTime() {
         return this.scheduleTime;
     }
@@ -88,21 +104,45 @@ public final class AttemptResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AttemptResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dispatchTime The time that this attempt was dispatched. `dispatch_time` will be truncated to the nearest microsecond.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dispatchTime(String dispatchTime) {
             $.dispatchTime = dispatchTime;
             return this;
         }
 
+        /**
+         * @param responseStatus The response from the worker for this attempt. If `response_time` is unset, then the task has not been attempted or is currently running and the `response_status` field is meaningless.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseStatus(StatusResponse responseStatus) {
             $.responseStatus = responseStatus;
             return this;
         }
 
+        /**
+         * @param responseTime The time that this attempt response was received. `response_time` will be truncated to the nearest microsecond.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseTime(String responseTime) {
             $.responseTime = responseTime;
             return this;
         }
 
+        /**
+         * @param scheduleTime The time that this attempt was scheduled. `schedule_time` will be truncated to the nearest microsecond.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleTime(String scheduleTime) {
             $.scheduleTime = scheduleTime;
             return this;

@@ -29,6 +29,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowed")
     private @Nullable Output<List<FirewallAllowedItemArgs>> allowed;
 
+    /**
+     * @return The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection.
+     * 
+     */
     public Optional<Output<List<FirewallAllowedItemArgs>>> allowed() {
         return Optional.ofNullable(this.allowed);
     }
@@ -40,6 +44,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="denied")
     private @Nullable Output<List<FirewallDeniedItemArgs>> denied;
 
+    /**
+     * @return The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a denied connection.
+     * 
+     */
     public Optional<Output<List<FirewallDeniedItemArgs>>> denied() {
         return Optional.ofNullable(this.denied);
     }
@@ -51,6 +59,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this field when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -62,6 +74,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationRanges")
     private @Nullable Output<List<String>> destinationRanges;
 
+    /**
+     * @return If destination ranges are specified, the firewall rule applies only to traffic that has destination IP address in these ranges. These ranges must be expressed in CIDR format. Both IPv4 and IPv6 are supported.
+     * 
+     */
     public Optional<Output<List<String>>> destinationRanges() {
         return Optional.ofNullable(this.destinationRanges);
     }
@@ -73,6 +89,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="direction")
     private @Nullable Output<FirewallDirection> direction;
 
+    /**
+     * @return Direction of traffic to which this firewall applies, either `INGRESS` or `EGRESS`. The default is `INGRESS`. For `INGRESS` traffic, you cannot specify the destinationRanges field, and for `EGRESS` traffic, you cannot specify the sourceRanges or sourceTags fields.
+     * 
+     */
     public Optional<Output<FirewallDirection>> direction() {
         return Optional.ofNullable(this.direction);
     }
@@ -84,6 +104,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
+    /**
+     * @return Denotes whether the firewall rule is disabled. When set to true, the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall rule will be enabled.
+     * 
+     */
     public Optional<Output<Boolean>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -95,6 +119,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logConfig")
     private @Nullable Output<FirewallLogConfigArgs> logConfig;
 
+    /**
+     * @return This field denotes the logging options for a particular firewall rule. If logging is enabled, logs will be exported to Cloud Logging.
+     * 
+     */
     public Optional<Output<FirewallLogConfigArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
@@ -106,6 +134,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -117,6 +149,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return URL of the network resource for this firewall rule. If not specified when creating a firewall rule, the default network is used: global/networks/default If you choose to specify this field, you can specify the network as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/myproject/global/networks/my-network - projects/myproject/global/networks/my-network - global/networks/default
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -128,6 +164,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return Priority for this rule. This is an integer between `0` and `65535`, both inclusive. The default value is `1000`. Relative priorities determine which rule takes effect if multiple rules apply. Lower values indicate higher priority. For example, a rule with priority `0` has higher precedence than a rule with priority `1`. DENY rules take precedence over ALLOW rules if they have equal priority. Note that VPC networks have implied rules with a priority of `65535`. To avoid conflicts with the implied rules, use a priority number less than `65535`.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -153,6 +193,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRanges")
     private @Nullable Output<List<String>> sourceRanges;
 
+    /**
+     * @return If source ranges are specified, the firewall rule applies only to traffic that has a source IP address in these ranges. These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic that has a source IP address within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags field. The connection does not need to match both fields for the rule to apply. Both IPv4 and IPv6 are supported.
+     * 
+     */
     public Optional<Output<List<String>>> sourceRanges() {
         return Optional.ofNullable(this.sourceRanges);
     }
@@ -164,6 +208,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceServiceAccounts")
     private @Nullable Output<List<String>> sourceServiceAccounts;
 
+    /**
+     * @return If source service accounts are specified, the firewall rules apply only to traffic originating from an instance with a service account in this list. Source service accounts cannot be used to control traffic to an instance&#39;s external IP address because service accounts are associated with an instance, not an IP address. sourceRanges can be set at the same time as sourceServiceAccounts. If both are set, the firewall applies to traffic that has a source IP address within the sourceRanges OR a source IP that belongs to an instance with service account listed in sourceServiceAccount. The connection does not need to match both fields for the firewall to apply. sourceServiceAccounts cannot be used at the same time as sourceTags or targetTags.
+     * 
+     */
     public Optional<Output<List<String>>> sourceServiceAccounts() {
         return Optional.ofNullable(this.sourceServiceAccounts);
     }
@@ -175,6 +223,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceTags")
     private @Nullable Output<List<String>> sourceTags;
 
+    /**
+     * @return If source tags are specified, the firewall rule applies only to traffic with source IPs that match the primary network interfaces of VM instances that have the tag and are in the same VPC network. Source tags cannot be used to control traffic to an instance&#39;s external IP address, it only applies to traffic between instances in the same virtual network. Because tags are associated with instances, not IP addresses. One or both of sourceRanges and sourceTags may be set. If both fields are set, the firewall applies to traffic that has a source IP address within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags field. The connection does not need to match both fields for the firewall to apply.
+     * 
+     */
     public Optional<Output<List<String>>> sourceTags() {
         return Optional.ofNullable(this.sourceTags);
     }
@@ -186,6 +238,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetServiceAccounts")
     private @Nullable Output<List<String>> targetServiceAccounts;
 
+    /**
+     * @return A list of service accounts indicating sets of instances located in the network that may make network connections as specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags or sourceTags. If neither targetServiceAccounts nor targetTags are specified, the firewall rule applies to all instances on the specified network.
+     * 
+     */
     public Optional<Output<List<String>>> targetServiceAccounts() {
         return Optional.ofNullable(this.targetServiceAccounts);
     }
@@ -197,6 +253,10 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetTags")
     private @Nullable Output<List<String>> targetTags;
 
+    /**
+     * @return A list of tags that controls which instances the firewall rule applies to. If targetTags are specified, then the firewall rule applies only to instances in the VPC network that have one of those tags. If no targetTags are specified, the firewall rule applies to all instances on the specified network.
+     * 
+     */
     public Optional<Output<List<String>>> targetTags() {
         return Optional.ofNullable(this.targetTags);
     }
@@ -241,104 +301,242 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FirewallArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowed The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowed(@Nullable Output<List<FirewallAllowedItemArgs>> allowed) {
             $.allowed = allowed;
             return this;
         }
 
+        /**
+         * @param allowed The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowed(List<FirewallAllowedItemArgs> allowed) {
             return allowed(Output.of(allowed));
         }
 
+        /**
+         * @param allowed The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowed(FirewallAllowedItemArgs... allowed) {
             return allowed(List.of(allowed));
         }
 
+        /**
+         * @param denied The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a denied connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denied(@Nullable Output<List<FirewallDeniedItemArgs>> denied) {
             $.denied = denied;
             return this;
         }
 
+        /**
+         * @param denied The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a denied connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denied(List<FirewallDeniedItemArgs> denied) {
             return denied(Output.of(denied));
         }
 
+        /**
+         * @param denied The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a denied connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denied(FirewallDeniedItemArgs... denied) {
             return denied(List.of(denied));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this field when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this field when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param destinationRanges If destination ranges are specified, the firewall rule applies only to traffic that has destination IP address in these ranges. These ranges must be expressed in CIDR format. Both IPv4 and IPv6 are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationRanges(@Nullable Output<List<String>> destinationRanges) {
             $.destinationRanges = destinationRanges;
             return this;
         }
 
+        /**
+         * @param destinationRanges If destination ranges are specified, the firewall rule applies only to traffic that has destination IP address in these ranges. These ranges must be expressed in CIDR format. Both IPv4 and IPv6 are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationRanges(List<String> destinationRanges) {
             return destinationRanges(Output.of(destinationRanges));
         }
 
+        /**
+         * @param destinationRanges If destination ranges are specified, the firewall rule applies only to traffic that has destination IP address in these ranges. These ranges must be expressed in CIDR format. Both IPv4 and IPv6 are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationRanges(String... destinationRanges) {
             return destinationRanges(List.of(destinationRanges));
         }
 
+        /**
+         * @param direction Direction of traffic to which this firewall applies, either `INGRESS` or `EGRESS`. The default is `INGRESS`. For `INGRESS` traffic, you cannot specify the destinationRanges field, and for `EGRESS` traffic, you cannot specify the sourceRanges or sourceTags fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(@Nullable Output<FirewallDirection> direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param direction Direction of traffic to which this firewall applies, either `INGRESS` or `EGRESS`. The default is `INGRESS`. For `INGRESS` traffic, you cannot specify the destinationRanges field, and for `EGRESS` traffic, you cannot specify the sourceRanges or sourceTags fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(FirewallDirection direction) {
             return direction(Output.of(direction));
         }
 
+        /**
+         * @param disabled Denotes whether the firewall rule is disabled. When set to true, the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall rule will be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled Denotes whether the firewall rule is disabled. When set to true, the firewall rule is not enforced and the network behaves as if it did not exist. If this is unspecified, the firewall rule will be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }
 
+        /**
+         * @param logConfig This field denotes the logging options for a particular firewall rule. If logging is enabled, logs will be exported to Cloud Logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(@Nullable Output<FirewallLogConfigArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
 
+        /**
+         * @param logConfig This field denotes the logging options for a particular firewall rule. If logging is enabled, logs will be exported to Cloud Logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(FirewallLogConfigArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network URL of the network resource for this firewall rule. If not specified when creating a firewall rule, the default network is used: global/networks/default If you choose to specify this field, you can specify the network as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/myproject/global/networks/my-network - projects/myproject/global/networks/my-network - global/networks/default
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network URL of the network resource for this firewall rule. If not specified when creating a firewall rule, the default network is used: global/networks/default If you choose to specify this field, you can specify the network as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/myproject/global/networks/my-network - projects/myproject/global/networks/my-network - global/networks/default
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param priority Priority for this rule. This is an integer between `0` and `65535`, both inclusive. The default value is `1000`. Relative priorities determine which rule takes effect if multiple rules apply. Lower values indicate higher priority. For example, a rule with priority `0` has higher precedence than a rule with priority `1`. DENY rules take precedence over ALLOW rules if they have equal priority. Note that VPC networks have implied rules with a priority of `65535`. To avoid conflicts with the implied rules, use a priority number less than `65535`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Priority for this rule. This is an integer between `0` and `65535`, both inclusive. The default value is `1000`. Relative priorities determine which rule takes effect if multiple rules apply. Lower values indicate higher priority. For example, a rule with priority `0` has higher precedence than a rule with priority `1`. DENY rules take precedence over ALLOW rules if they have equal priority. Note that VPC networks have implied rules with a priority of `65535`. To avoid conflicts with the implied rules, use a priority number less than `65535`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
@@ -361,67 +559,157 @@ public final class FirewallArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param sourceRanges If source ranges are specified, the firewall rule applies only to traffic that has a source IP address in these ranges. These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic that has a source IP address within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags field. The connection does not need to match both fields for the rule to apply. Both IPv4 and IPv6 are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRanges(@Nullable Output<List<String>> sourceRanges) {
             $.sourceRanges = sourceRanges;
             return this;
         }
 
+        /**
+         * @param sourceRanges If source ranges are specified, the firewall rule applies only to traffic that has a source IP address in these ranges. These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic that has a source IP address within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags field. The connection does not need to match both fields for the rule to apply. Both IPv4 and IPv6 are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRanges(List<String> sourceRanges) {
             return sourceRanges(Output.of(sourceRanges));
         }
 
+        /**
+         * @param sourceRanges If source ranges are specified, the firewall rule applies only to traffic that has a source IP address in these ranges. These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic that has a source IP address within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags field. The connection does not need to match both fields for the rule to apply. Both IPv4 and IPv6 are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRanges(String... sourceRanges) {
             return sourceRanges(List.of(sourceRanges));
         }
 
+        /**
+         * @param sourceServiceAccounts If source service accounts are specified, the firewall rules apply only to traffic originating from an instance with a service account in this list. Source service accounts cannot be used to control traffic to an instance&#39;s external IP address because service accounts are associated with an instance, not an IP address. sourceRanges can be set at the same time as sourceServiceAccounts. If both are set, the firewall applies to traffic that has a source IP address within the sourceRanges OR a source IP that belongs to an instance with service account listed in sourceServiceAccount. The connection does not need to match both fields for the firewall to apply. sourceServiceAccounts cannot be used at the same time as sourceTags or targetTags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceServiceAccounts(@Nullable Output<List<String>> sourceServiceAccounts) {
             $.sourceServiceAccounts = sourceServiceAccounts;
             return this;
         }
 
+        /**
+         * @param sourceServiceAccounts If source service accounts are specified, the firewall rules apply only to traffic originating from an instance with a service account in this list. Source service accounts cannot be used to control traffic to an instance&#39;s external IP address because service accounts are associated with an instance, not an IP address. sourceRanges can be set at the same time as sourceServiceAccounts. If both are set, the firewall applies to traffic that has a source IP address within the sourceRanges OR a source IP that belongs to an instance with service account listed in sourceServiceAccount. The connection does not need to match both fields for the firewall to apply. sourceServiceAccounts cannot be used at the same time as sourceTags or targetTags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceServiceAccounts(List<String> sourceServiceAccounts) {
             return sourceServiceAccounts(Output.of(sourceServiceAccounts));
         }
 
+        /**
+         * @param sourceServiceAccounts If source service accounts are specified, the firewall rules apply only to traffic originating from an instance with a service account in this list. Source service accounts cannot be used to control traffic to an instance&#39;s external IP address because service accounts are associated with an instance, not an IP address. sourceRanges can be set at the same time as sourceServiceAccounts. If both are set, the firewall applies to traffic that has a source IP address within the sourceRanges OR a source IP that belongs to an instance with service account listed in sourceServiceAccount. The connection does not need to match both fields for the firewall to apply. sourceServiceAccounts cannot be used at the same time as sourceTags or targetTags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceServiceAccounts(String... sourceServiceAccounts) {
             return sourceServiceAccounts(List.of(sourceServiceAccounts));
         }
 
+        /**
+         * @param sourceTags If source tags are specified, the firewall rule applies only to traffic with source IPs that match the primary network interfaces of VM instances that have the tag and are in the same VPC network. Source tags cannot be used to control traffic to an instance&#39;s external IP address, it only applies to traffic between instances in the same virtual network. Because tags are associated with instances, not IP addresses. One or both of sourceRanges and sourceTags may be set. If both fields are set, the firewall applies to traffic that has a source IP address within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags field. The connection does not need to match both fields for the firewall to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTags(@Nullable Output<List<String>> sourceTags) {
             $.sourceTags = sourceTags;
             return this;
         }
 
+        /**
+         * @param sourceTags If source tags are specified, the firewall rule applies only to traffic with source IPs that match the primary network interfaces of VM instances that have the tag and are in the same VPC network. Source tags cannot be used to control traffic to an instance&#39;s external IP address, it only applies to traffic between instances in the same virtual network. Because tags are associated with instances, not IP addresses. One or both of sourceRanges and sourceTags may be set. If both fields are set, the firewall applies to traffic that has a source IP address within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags field. The connection does not need to match both fields for the firewall to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTags(List<String> sourceTags) {
             return sourceTags(Output.of(sourceTags));
         }
 
+        /**
+         * @param sourceTags If source tags are specified, the firewall rule applies only to traffic with source IPs that match the primary network interfaces of VM instances that have the tag and are in the same VPC network. Source tags cannot be used to control traffic to an instance&#39;s external IP address, it only applies to traffic between instances in the same virtual network. Because tags are associated with instances, not IP addresses. One or both of sourceRanges and sourceTags may be set. If both fields are set, the firewall applies to traffic that has a source IP address within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags field. The connection does not need to match both fields for the firewall to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTags(String... sourceTags) {
             return sourceTags(List.of(sourceTags));
         }
 
+        /**
+         * @param targetServiceAccounts A list of service accounts indicating sets of instances located in the network that may make network connections as specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags or sourceTags. If neither targetServiceAccounts nor targetTags are specified, the firewall rule applies to all instances on the specified network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServiceAccounts(@Nullable Output<List<String>> targetServiceAccounts) {
             $.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
 
+        /**
+         * @param targetServiceAccounts A list of service accounts indicating sets of instances located in the network that may make network connections as specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags or sourceTags. If neither targetServiceAccounts nor targetTags are specified, the firewall rule applies to all instances on the specified network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
             return targetServiceAccounts(Output.of(targetServiceAccounts));
         }
 
+        /**
+         * @param targetServiceAccounts A list of service accounts indicating sets of instances located in the network that may make network connections as specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags or sourceTags. If neither targetServiceAccounts nor targetTags are specified, the firewall rule applies to all instances on the specified network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServiceAccounts(String... targetServiceAccounts) {
             return targetServiceAccounts(List.of(targetServiceAccounts));
         }
 
+        /**
+         * @param targetTags A list of tags that controls which instances the firewall rule applies to. If targetTags are specified, then the firewall rule applies only to instances in the VPC network that have one of those tags. If no targetTags are specified, the firewall rule applies to all instances on the specified network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTags(@Nullable Output<List<String>> targetTags) {
             $.targetTags = targetTags;
             return this;
         }
 
+        /**
+         * @param targetTags A list of tags that controls which instances the firewall rule applies to. If targetTags are specified, then the firewall rule applies only to instances in the VPC network that have one of those tags. If no targetTags are specified, the firewall rule applies to all instances on the specified network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTags(List<String> targetTags) {
             return targetTags(Output.of(targetTags));
         }
 
+        /**
+         * @param targetTags A list of tags that controls which instances the firewall rule applies to. If targetTags are specified, then the firewall rule applies only to instances in the VPC network that have one of those tags. If no targetTags are specified, the firewall rule applies to all instances on the specified network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTags(String... targetTags) {
             return targetTags(List.of(targetTags));
         }

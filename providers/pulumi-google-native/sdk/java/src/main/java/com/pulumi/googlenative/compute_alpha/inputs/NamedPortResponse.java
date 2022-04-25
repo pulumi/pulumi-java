@@ -24,6 +24,10 @@ public final class NamedPortResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class NamedPortResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The port number, which can be a value between 1 and 65535.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -64,11 +72,23 @@ public final class NamedPortResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NamedPortResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param port The port number, which can be a value between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;

@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2FieldIdArgs extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name describing the field.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -54,11 +58,23 @@ public final class GooglePrivacyDlpV2FieldIdArgs extends com.pulumi.resources.Re
             $ = new GooglePrivacyDlpV2FieldIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name describing the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name describing the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
