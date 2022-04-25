@@ -22,6 +22,10 @@ public final class VendorSkuPreviewArgs extends com.pulumi.resources.ResourceArg
     @Import(name="previewSubscription")
     private @Nullable Output<String> previewSubscription;
 
+    /**
+     * @return Preview subscription ID.
+     * 
+     */
     public Optional<Output<String>> previewSubscription() {
         return Optional.ofNullable(this.previewSubscription);
     }
@@ -33,6 +37,10 @@ public final class VendorSkuPreviewArgs extends com.pulumi.resources.ResourceArg
     @Import(name="skuName", required=true)
     private Output<String> skuName;
 
+    /**
+     * @return The name of the vendor sku.
+     * 
+     */
     public Output<String> skuName() {
         return this.skuName;
     }
@@ -44,6 +52,10 @@ public final class VendorSkuPreviewArgs extends com.pulumi.resources.ResourceArg
     @Import(name="vendorName", required=true)
     private Output<String> vendorName;
 
+    /**
+     * @return The name of the vendor.
+     * 
+     */
     public Output<String> vendorName() {
         return this.vendorName;
     }
@@ -74,29 +86,65 @@ public final class VendorSkuPreviewArgs extends com.pulumi.resources.ResourceArg
             $ = new VendorSkuPreviewArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param previewSubscription Preview subscription ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder previewSubscription(@Nullable Output<String> previewSubscription) {
             $.previewSubscription = previewSubscription;
             return this;
         }
 
+        /**
+         * @param previewSubscription Preview subscription ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder previewSubscription(String previewSubscription) {
             return previewSubscription(Output.of(previewSubscription));
         }
 
+        /**
+         * @param skuName The name of the vendor sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuName(Output<String> skuName) {
             $.skuName = skuName;
             return this;
         }
 
+        /**
+         * @param skuName The name of the vendor sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuName(String skuName) {
             return skuName(Output.of(skuName));
         }
 
+        /**
+         * @param vendorName The name of the vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendorName(Output<String> vendorName) {
             $.vendorName = vendorName;
             return this;
         }
 
+        /**
+         * @param vendorName The name of the vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendorName(String vendorName) {
             return vendorName(Output.of(vendorName));
         }

@@ -26,6 +26,10 @@ public final class BaiduCredentialArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="baiduApiKey")
     private @Nullable Output<String> baiduApiKey;
 
+    /**
+     * @return Baidu Api Key.
+     * 
+     */
     public Optional<Output<String>> baiduApiKey() {
         return Optional.ofNullable(this.baiduApiKey);
     }
@@ -37,6 +41,10 @@ public final class BaiduCredentialArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="baiduEndPoint")
     private @Nullable Output<String> baiduEndPoint;
 
+    /**
+     * @return Baidu Endpoint.
+     * 
+     */
     public Optional<Output<String>> baiduEndPoint() {
         return Optional.ofNullable(this.baiduEndPoint);
     }
@@ -48,6 +56,10 @@ public final class BaiduCredentialArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="baiduSecretKey")
     private @Nullable Output<String> baiduSecretKey;
 
+    /**
+     * @return Baidu Secret Key
+     * 
+     */
     public Optional<Output<String>> baiduSecretKey() {
         return Optional.ofNullable(this.baiduSecretKey);
     }
@@ -78,29 +90,65 @@ public final class BaiduCredentialArgs extends com.pulumi.resources.ResourceArgs
             $ = new BaiduCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baiduApiKey Baidu Api Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baiduApiKey(@Nullable Output<String> baiduApiKey) {
             $.baiduApiKey = baiduApiKey;
             return this;
         }
 
+        /**
+         * @param baiduApiKey Baidu Api Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baiduApiKey(String baiduApiKey) {
             return baiduApiKey(Output.of(baiduApiKey));
         }
 
+        /**
+         * @param baiduEndPoint Baidu Endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baiduEndPoint(@Nullable Output<String> baiduEndPoint) {
             $.baiduEndPoint = baiduEndPoint;
             return this;
         }
 
+        /**
+         * @param baiduEndPoint Baidu Endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baiduEndPoint(String baiduEndPoint) {
             return baiduEndPoint(Output.of(baiduEndPoint));
         }
 
+        /**
+         * @param baiduSecretKey Baidu Secret Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder baiduSecretKey(@Nullable Output<String> baiduSecretKey) {
             $.baiduSecretKey = baiduSecretKey;
             return this;
         }
 
+        /**
+         * @param baiduSecretKey Baidu Secret Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder baiduSecretKey(String baiduSecretKey) {
             return baiduSecretKey(Output.of(baiduSecretKey));
         }

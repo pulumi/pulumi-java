@@ -11,68 +11,68 @@ import java.util.Objects;
 @CustomType
 public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
     /**
-     * Count of databases
+     * @return Count of databases
      * 
      */
     private final Integer databaseCount;
     /**
-     * Number of database level errors
+     * @return Number of database level errors
      * 
      */
     private final Integer databaseErrorCount;
     /**
-     * Migration end time
+     * @return Migration end time
      * 
      */
     private final String endedOn;
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
      */
     private final String resultType;
     /**
-     * Source server brand version
+     * @return Source server brand version
      * 
      */
     private final String sourceServerBrandVersion;
     /**
-     * Source server name
+     * @return Source server name
      * 
      */
     private final String sourceServerName;
     /**
-     * Source server version
+     * @return Source server version
      * 
      */
     private final String sourceServerVersion;
     /**
-     * Migration start time
+     * @return Migration start time
      * 
      */
     private final String startedOn;
     /**
-     * Current state of migration
+     * @return Current state of migration
      * 
      */
     private final String state;
     /**
-     * Target server brand version
+     * @return Target server brand version
      * 
      */
     private final String targetServerBrandVersion;
     /**
-     * Target server name
+     * @return Target server name
      * 
      */
     private final String targetServerName;
     /**
-     * Target server version
+     * @return Target server version
      * 
      */
     private final String targetServerVersion;
@@ -108,94 +108,94 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
     }
 
     /**
-     * Count of databases
+     * @return Count of databases
      * 
-    */
+     */
     public Integer databaseCount() {
         return this.databaseCount;
     }
     /**
-     * Number of database level errors
+     * @return Number of database level errors
      * 
-    */
+     */
     public Integer databaseErrorCount() {
         return this.databaseErrorCount;
     }
     /**
-     * Migration end time
+     * @return Migration end time
      * 
-    */
+     */
     public String endedOn() {
         return this.endedOn;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }
     /**
-     * Source server brand version
+     * @return Source server brand version
      * 
-    */
+     */
     public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
     /**
-     * Source server name
+     * @return Source server name
      * 
-    */
+     */
     public String sourceServerName() {
         return this.sourceServerName;
     }
     /**
-     * Source server version
+     * @return Source server version
      * 
-    */
+     */
     public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
-     * Migration start time
+     * @return Migration start time
      * 
-    */
+     */
     public String startedOn() {
         return this.startedOn;
     }
     /**
-     * Current state of migration
+     * @return Current state of migration
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Target server brand version
+     * @return Target server brand version
      * 
-    */
+     */
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
-     * Target server name
+     * @return Target server name
      * 
-    */
+     */
     public String targetServerName() {
         return this.targetServerName;
     }
     /**
-     * Target server version
+     * @return Target server version
      * 
-    */
+     */
     public String targetServerVersion() {
         return this.targetServerVersion;
     }

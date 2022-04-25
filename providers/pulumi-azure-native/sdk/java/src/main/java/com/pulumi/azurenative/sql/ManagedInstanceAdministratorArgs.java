@@ -31,6 +31,10 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
     @Import(name="administratorType", required=true)
     private Output<Either<String,ManagedInstanceAdministratorType>> administratorType;
 
+    /**
+     * @return Type of the managed instance administrator.
+     * 
+     */
     public Output<Either<String,ManagedInstanceAdministratorType>> administratorType() {
         return this.administratorType;
     }
@@ -42,6 +46,10 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
     @Import(name="login", required=true)
     private Output<String> login;
 
+    /**
+     * @return Login name of the managed instance administrator.
+     * 
+     */
     public Output<String> login() {
         return this.login;
     }
@@ -53,6 +61,10 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
     @Import(name="managedInstanceName", required=true)
     private Output<String> managedInstanceName;
 
+    /**
+     * @return The name of the managed instance.
+     * 
+     */
     public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
@@ -64,6 +76,10 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -75,6 +91,10 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
     @Import(name="sid", required=true)
     private Output<String> sid;
 
+    /**
+     * @return SID (object ID) of the managed instance administrator.
+     * 
+     */
     public Output<String> sid() {
         return this.sid;
     }
@@ -86,6 +106,10 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return Tenant ID of the managed instance administrator.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -129,64 +153,148 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
             return administratorName(Output.of(administratorName));
         }
 
+        /**
+         * @param administratorType Type of the managed instance administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(Output<Either<String,ManagedInstanceAdministratorType>> administratorType) {
             $.administratorType = administratorType;
             return this;
         }
 
+        /**
+         * @param administratorType Type of the managed instance administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(Either<String,ManagedInstanceAdministratorType> administratorType) {
             return administratorType(Output.of(administratorType));
         }
 
+        /**
+         * @param administratorType Type of the managed instance administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(String administratorType) {
             return administratorType(Either.ofLeft(administratorType));
         }
 
+        /**
+         * @param administratorType Type of the managed instance administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(ManagedInstanceAdministratorType administratorType) {
             return administratorType(Either.ofRight(administratorType));
         }
 
+        /**
+         * @param login Login name of the managed instance administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(Output<String> login) {
             $.login = login;
             return this;
         }
 
+        /**
+         * @param login Login name of the managed instance administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(String login) {
             return login(Output.of(login));
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(Output<String> managedInstanceName) {
             $.managedInstanceName = managedInstanceName;
             return this;
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(String managedInstanceName) {
             return managedInstanceName(Output.of(managedInstanceName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sid SID (object ID) of the managed instance administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sid(Output<String> sid) {
             $.sid = sid;
             return this;
         }
 
+        /**
+         * @param sid SID (object ID) of the managed instance administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sid(String sid) {
             return sid(Output.of(sid));
         }
 
+        /**
+         * @param tenantId Tenant ID of the managed instance administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant ID of the managed instance administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

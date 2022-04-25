@@ -28,6 +28,10 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource Id
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -39,6 +43,10 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,10 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties")
     private @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties;
 
+    /**
+     * @return The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -61,6 +73,10 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -92,29 +108,65 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
             $ = new InputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param properties The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ReferenceInputPropertiesResponse properties) {
             return properties(Either.ofLeft(properties));
         }
 
+        /**
+         * @param properties The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(StreamInputPropertiesResponse properties) {
             return properties(Either.ofRight(properties));
         }
 
+        /**
+         * @param type Resource type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

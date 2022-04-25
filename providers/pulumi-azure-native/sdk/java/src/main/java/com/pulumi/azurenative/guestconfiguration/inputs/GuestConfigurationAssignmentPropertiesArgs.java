@@ -27,6 +27,10 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends com.pulumi
     @Import(name="context")
     private @Nullable Output<String> context;
 
+    /**
+     * @return The source which initiated the guest configuration assignment. Ex: Azure Policy
+     * 
+     */
     public Optional<Output<String>> context() {
         return Optional.ofNullable(this.context);
     }
@@ -38,6 +42,10 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends com.pulumi
     @Import(name="guestConfiguration")
     private @Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration;
 
+    /**
+     * @return The guest configuration to assign.
+     * 
+     */
     public Optional<Output<GuestConfigurationNavigationArgs>> guestConfiguration() {
         return Optional.ofNullable(this.guestConfiguration);
     }
@@ -67,20 +75,44 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends com.pulumi
             $ = new GuestConfigurationAssignmentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param context The source which initiated the guest configuration assignment. Ex: Azure Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(@Nullable Output<String> context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param context The source which initiated the guest configuration assignment. Ex: Azure Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(String context) {
             return context(Output.of(context));
         }
 
+        /**
+         * @param guestConfiguration The guest configuration to assign.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestConfiguration(@Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration) {
             $.guestConfiguration = guestConfiguration;
             return this;
         }
 
+        /**
+         * @param guestConfiguration The guest configuration to assign.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestConfiguration(GuestConfigurationNavigationArgs guestConfiguration) {
             return guestConfiguration(Output.of(guestConfiguration));
         }

@@ -27,6 +27,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends com
     @Import(name="apiSource", required=true)
     private String apiSource;
 
+    /**
+     * @return Name of the API proxy endpoint or remote service with which the GraphQL operation and quota are associated.
+     * 
+     */
     public String apiSource() {
         return this.apiSource;
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends com
     @Import(name="attributes", required=true)
     private List<GoogleCloudApigeeV1AttributeResponse> attributes;
 
+    /**
+     * @return Custom attributes associated with the operation.
+     * 
+     */
     public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends com
     @Import(name="operations", required=true)
     private List<GoogleCloudApigeeV1GraphQLOperationResponse> operations;
 
+    /**
+     * @return List of GraphQL name/operation type pairs for the proxy or remote service to which quota will be applied. If only operation types are specified, the quota will be applied to all GraphQL requests irrespective of the GraphQL name. **Note**: Currently, you can specify only a single GraphQLOperation. Specifying more than one will cause the operation to fail.
+     * 
+     */
     public List<GoogleCloudApigeeV1GraphQLOperationResponse> operations() {
         return this.operations;
     }
@@ -60,6 +72,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends com
     @Import(name="quota", required=true)
     private GoogleCloudApigeeV1QuotaResponse quota;
 
+    /**
+     * @return Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
+     * 
+     */
     public GoogleCloudApigeeV1QuotaResponse quota() {
         return this.quota;
     }
@@ -91,29 +107,65 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends com
             $ = new GoogleCloudApigeeV1GraphQLOperationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiSource Name of the API proxy endpoint or remote service with which the GraphQL operation and quota are associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiSource(String apiSource) {
             $.apiSource = apiSource;
             return this;
         }
 
+        /**
+         * @param attributes Custom attributes associated with the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes Custom attributes associated with the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(GoogleCloudApigeeV1AttributeResponse... attributes) {
             return attributes(List.of(attributes));
         }
 
+        /**
+         * @param operations List of GraphQL name/operation type pairs for the proxy or remote service to which quota will be applied. If only operation types are specified, the quota will be applied to all GraphQL requests irrespective of the GraphQL name. **Note**: Currently, you can specify only a single GraphQLOperation. Specifying more than one will cause the operation to fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operations(List<GoogleCloudApigeeV1GraphQLOperationResponse> operations) {
             $.operations = operations;
             return this;
         }
 
+        /**
+         * @param operations List of GraphQL name/operation type pairs for the proxy or remote service to which quota will be applied. If only operation types are specified, the quota will be applied to all GraphQL requests irrespective of the GraphQL name. **Note**: Currently, you can specify only a single GraphQLOperation. Specifying more than one will cause the operation to fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operations(GoogleCloudApigeeV1GraphQLOperationResponse... operations) {
             return operations(List.of(operations));
         }
 
+        /**
+         * @param quota Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quota(GoogleCloudApigeeV1QuotaResponse quota) {
             $.quota = quota;
             return this;

@@ -26,6 +26,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationName", required=true)
     private Output<String> applicationName;
 
+    /**
+     * @return Application name
+     * 
+     */
     public Output<String> applicationName() {
         return this.applicationName;
     }
@@ -37,6 +41,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blobPath", required=true)
     private Output<String> blobPath;
 
+    /**
+     * @return The file path of the package.
+     * 
+     */
     public Output<String> blobPath() {
         return this.blobPath;
     }
@@ -48,6 +56,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="flightingRing", required=true)
     private Output<String> flightingRing;
 
+    /**
+     * @return The flighting ring for feature update.
+     * 
+     */
     public Output<String> flightingRing() {
         return this.flightingRing;
     }
@@ -59,6 +71,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -70,6 +86,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageName")
     private @Nullable Output<String> packageName;
 
+    /**
+     * @return The resource name of the Test Base Package.
+     * 
+     */
     public Optional<Output<String>> packageName() {
         return Optional.ofNullable(this.packageName);
     }
@@ -81,6 +101,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -92,6 +116,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -103,6 +131,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetOSList", required=true)
     private Output<List<TargetOSInfoArgs>> targetOSList;
 
+    /**
+     * @return Specifies the target OSs of specific OS Update types.
+     * 
+     */
     public Output<List<TargetOSInfoArgs>> targetOSList() {
         return this.targetOSList;
     }
@@ -114,6 +146,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="testBaseAccountName", required=true)
     private Output<String> testBaseAccountName;
 
+    /**
+     * @return The resource name of the Test Base Account.
+     * 
+     */
     public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
     }
@@ -125,6 +161,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tests", required=true)
     private Output<List<TestArgs>> tests;
 
+    /**
+     * @return The detailed test information.
+     * 
+     */
     public Output<List<TestArgs>> tests() {
         return this.tests;
     }
@@ -136,6 +176,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version", required=true)
     private Output<String> version;
 
+    /**
+     * @return Application version
+     * 
+     */
     public Output<String> version() {
         return this.version;
     }
@@ -174,109 +218,253 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PackageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationName Application name
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(Output<String> applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param applicationName Application name
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(String applicationName) {
             return applicationName(Output.of(applicationName));
         }
 
+        /**
+         * @param blobPath The file path of the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPath(Output<String> blobPath) {
             $.blobPath = blobPath;
             return this;
         }
 
+        /**
+         * @param blobPath The file path of the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPath(String blobPath) {
             return blobPath(Output.of(blobPath));
         }
 
+        /**
+         * @param flightingRing The flighting ring for feature update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flightingRing(Output<String> flightingRing) {
             $.flightingRing = flightingRing;
             return this;
         }
 
+        /**
+         * @param flightingRing The flighting ring for feature update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flightingRing(String flightingRing) {
             return flightingRing(Output.of(flightingRing));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param packageName The resource name of the Test Base Package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(@Nullable Output<String> packageName) {
             $.packageName = packageName;
             return this;
         }
 
+        /**
+         * @param packageName The resource name of the Test Base Package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(String packageName) {
             return packageName(Output.of(packageName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param targetOSList Specifies the target OSs of specific OS Update types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetOSList(Output<List<TargetOSInfoArgs>> targetOSList) {
             $.targetOSList = targetOSList;
             return this;
         }
 
+        /**
+         * @param targetOSList Specifies the target OSs of specific OS Update types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetOSList(List<TargetOSInfoArgs> targetOSList) {
             return targetOSList(Output.of(targetOSList));
         }
 
+        /**
+         * @param targetOSList Specifies the target OSs of specific OS Update types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetOSList(TargetOSInfoArgs... targetOSList) {
             return targetOSList(List.of(targetOSList));
         }
 
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testBaseAccountName(Output<String> testBaseAccountName) {
             $.testBaseAccountName = testBaseAccountName;
             return this;
         }
 
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testBaseAccountName(String testBaseAccountName) {
             return testBaseAccountName(Output.of(testBaseAccountName));
         }
 
+        /**
+         * @param tests The detailed test information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tests(Output<List<TestArgs>> tests) {
             $.tests = tests;
             return this;
         }
 
+        /**
+         * @param tests The detailed test information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tests(List<TestArgs> tests) {
             return tests(Output.of(tests));
         }
 
+        /**
+         * @param tests The detailed test information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tests(TestArgs... tests) {
             return tests(List.of(tests));
         }
 
+        /**
+         * @param version Application version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Application version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

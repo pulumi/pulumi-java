@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class LibraryResponse {
     /**
-     * Name of the library. Example: &#34;django&#34;.
+     * @return Name of the library. Example: &#34;django&#34;.
      * 
      */
     private final String name;
     /**
-     * Version of the library to select, or &#34;latest&#34;.
+     * @return Version of the library to select, or &#34;latest&#34;.
      * 
      */
     private final String version;
@@ -29,16 +29,16 @@ public final class LibraryResponse {
     }
 
     /**
-     * Name of the library. Example: &#34;django&#34;.
+     * @return Name of the library. Example: &#34;django&#34;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Version of the library to select, or &#34;latest&#34;.
+     * @return Version of the library to select, or &#34;latest&#34;.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

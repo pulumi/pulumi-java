@@ -25,6 +25,10 @@ public final class TokenPasswordResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="creationTime")
     private @Nullable String creationTime;
 
+    /**
+     * @return The creation datetime of the password.
+     * 
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
@@ -36,6 +40,10 @@ public final class TokenPasswordResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="expiry")
     private @Nullable String expiry;
 
+    /**
+     * @return The expiry datetime of the password.
+     * 
+     */
     public Optional<String> expiry() {
         return Optional.ofNullable(this.expiry);
     }
@@ -47,6 +55,10 @@ public final class TokenPasswordResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The password name &#34;password1&#34; or &#34;password2&#34;
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class TokenPasswordResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The password value.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -89,21 +105,45 @@ public final class TokenPasswordResponse extends com.pulumi.resources.InvokeArgs
             $ = new TokenPasswordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTime The creation datetime of the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(@Nullable String creationTime) {
             $.creationTime = creationTime;
             return this;
         }
 
+        /**
+         * @param expiry The expiry datetime of the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiry(@Nullable String expiry) {
             $.expiry = expiry;
             return this;
         }
 
+        /**
+         * @param name The password name &#34;password1&#34; or &#34;password2&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The password value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

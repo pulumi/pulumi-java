@@ -24,6 +24,10 @@ public final class RoutingVPCResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requiredForNewSiteToSiteDataTransferSpokes", required=true)
     private Boolean requiredForNewSiteToSiteDataTransferSpokes;
 
+    /**
+     * @return If true, indicates that this VPC network is currently associated with spokes that use the data transfer feature (spokes where the site_to_site_data_transfer field is set to true). If you create new spokes that use data transfer, they must be associated with this VPC network. At most, one VPC network will have this field set to true.
+     * 
+     */
     public Boolean requiredForNewSiteToSiteDataTransferSpokes() {
         return this.requiredForNewSiteToSiteDataTransferSpokes;
     }
@@ -35,6 +39,10 @@ public final class RoutingVPCResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return The URI of the VPC network.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -64,11 +72,23 @@ public final class RoutingVPCResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RoutingVPCResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param requiredForNewSiteToSiteDataTransferSpokes If true, indicates that this VPC network is currently associated with spokes that use the data transfer feature (spokes where the site_to_site_data_transfer field is set to true). If you create new spokes that use data transfer, they must be associated with this VPC network. At most, one VPC network will have this field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredForNewSiteToSiteDataTransferSpokes(Boolean requiredForNewSiteToSiteDataTransferSpokes) {
             $.requiredForNewSiteToSiteDataTransferSpokes = requiredForNewSiteToSiteDataTransferSpokes;
             return this;
         }
 
+        /**
+         * @param uri The URI of the VPC network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

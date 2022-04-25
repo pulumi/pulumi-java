@@ -24,6 +24,10 @@ public final class PlaybackKeyPairArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource. The value does not need to be unique.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -35,6 +39,10 @@ public final class PlaybackKeyPairArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="publicKeyMaterial", required=true)
     private Output<String> publicKeyMaterial;
 
+    /**
+     * @return The public portion of a customer-generated key pair.
+     * 
+     */
     public Output<String> publicKeyMaterial() {
         return this.publicKeyMaterial;
     }
@@ -46,6 +54,10 @@ public final class PlaybackKeyPairArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<List<PlaybackKeyPairTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     public Optional<Output<List<PlaybackKeyPairTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -76,33 +88,75 @@ public final class PlaybackKeyPairArgs extends com.pulumi.resources.ResourceArgs
             $ = new PlaybackKeyPairArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource. The value does not need to be unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource. The value does not need to be unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param publicKeyMaterial The public portion of a customer-generated key pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyMaterial(Output<String> publicKeyMaterial) {
             $.publicKeyMaterial = publicKeyMaterial;
             return this;
         }
 
+        /**
+         * @param publicKeyMaterial The public portion of a customer-generated key pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyMaterial(String publicKeyMaterial) {
             return publicKeyMaterial(Output.of(publicKeyMaterial));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<PlaybackKeyPairTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<PlaybackKeyPairTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(PlaybackKeyPairTagArgs... tags) {
             return tags(List.of(tags));
         }

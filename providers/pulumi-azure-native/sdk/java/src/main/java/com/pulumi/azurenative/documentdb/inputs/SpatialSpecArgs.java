@@ -25,6 +25,10 @@ public final class SpatialSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -36,6 +40,10 @@ public final class SpatialSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="types")
     private @Nullable Output<List<Either<String,SpatialType>>> types;
 
+    /**
+     * @return List of path&#39;s spatial type
+     * 
+     */
     public Optional<Output<List<Either<String,SpatialType>>>> types() {
         return Optional.ofNullable(this.types);
     }
@@ -65,24 +73,54 @@ public final class SpatialSpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SpatialSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param types List of path&#39;s spatial type
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(@Nullable Output<List<Either<String,SpatialType>>> types) {
             $.types = types;
             return this;
         }
 
+        /**
+         * @param types List of path&#39;s spatial type
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(List<Either<String,SpatialType>> types) {
             return types(Output.of(types));
         }
 
+        /**
+         * @param types List of path&#39;s spatial type
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(Either<String,SpatialType>... types) {
             return types(List.of(types));
         }

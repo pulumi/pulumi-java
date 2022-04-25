@@ -38,6 +38,10 @@ public final class OriginEndpointCmafPackageArgs extends com.pulumi.resources.Re
     @Import(name="hlsManifests")
     private @Nullable Output<List<OriginEndpointHlsManifestArgs>> hlsManifests;
 
+    /**
+     * @return A list of HLS manifest configurations
+     * 
+     */
     public Optional<Output<List<OriginEndpointHlsManifestArgs>>> hlsManifests() {
         return Optional.ofNullable(this.hlsManifests);
     }
@@ -49,6 +53,10 @@ public final class OriginEndpointCmafPackageArgs extends com.pulumi.resources.Re
     @Import(name="segmentDurationSeconds")
     private @Nullable Output<Integer> segmentDurationSeconds;
 
+    /**
+     * @return Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
+     * 
+     */
     public Optional<Output<Integer>> segmentDurationSeconds() {
         return Optional.ofNullable(this.segmentDurationSeconds);
     }
@@ -60,6 +68,10 @@ public final class OriginEndpointCmafPackageArgs extends com.pulumi.resources.Re
     @Import(name="segmentPrefix")
     private @Nullable Output<String> segmentPrefix;
 
+    /**
+     * @return An optional custom string that is prepended to the name of each segment. If not specified, it defaults to the ChannelId.
+     * 
+     */
     public Optional<Output<String>> segmentPrefix() {
         return Optional.ofNullable(this.segmentPrefix);
     }
@@ -108,33 +120,75 @@ public final class OriginEndpointCmafPackageArgs extends com.pulumi.resources.Re
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param hlsManifests A list of HLS manifest configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder hlsManifests(@Nullable Output<List<OriginEndpointHlsManifestArgs>> hlsManifests) {
             $.hlsManifests = hlsManifests;
             return this;
         }
 
+        /**
+         * @param hlsManifests A list of HLS manifest configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder hlsManifests(List<OriginEndpointHlsManifestArgs> hlsManifests) {
             return hlsManifests(Output.of(hlsManifests));
         }
 
+        /**
+         * @param hlsManifests A list of HLS manifest configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder hlsManifests(OriginEndpointHlsManifestArgs... hlsManifests) {
             return hlsManifests(List.of(hlsManifests));
         }
 
+        /**
+         * @param segmentDurationSeconds Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
             $.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
+        /**
+         * @param segmentDurationSeconds Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentDurationSeconds(Integer segmentDurationSeconds) {
             return segmentDurationSeconds(Output.of(segmentDurationSeconds));
         }
 
+        /**
+         * @param segmentPrefix An optional custom string that is prepended to the name of each segment. If not specified, it defaults to the ChannelId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentPrefix(@Nullable Output<String> segmentPrefix) {
             $.segmentPrefix = segmentPrefix;
             return this;
         }
 
+        /**
+         * @param segmentPrefix An optional custom string that is prepended to the name of each segment. If not specified, it defaults to the ChannelId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentPrefix(String segmentPrefix) {
             return segmentPrefix(Output.of(segmentPrefix));
         }

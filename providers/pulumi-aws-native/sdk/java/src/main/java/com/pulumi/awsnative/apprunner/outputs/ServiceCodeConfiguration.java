@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class ServiceCodeConfiguration {
     private final @Nullable ServiceCodeConfigurationValues codeConfigurationValues;
     /**
-     * Configuration Source
+     * @return Configuration Source
      * 
      */
     private final ServiceCodeConfigurationConfigurationSource configurationSource;
@@ -31,9 +31,9 @@ public final class ServiceCodeConfiguration {
         return Optional.ofNullable(this.codeConfigurationValues);
     }
     /**
-     * Configuration Source
+     * @return Configuration Source
      * 
-    */
+     */
     public ServiceCodeConfigurationConfigurationSource configurationSource() {
         return this.configurationSource;
     }

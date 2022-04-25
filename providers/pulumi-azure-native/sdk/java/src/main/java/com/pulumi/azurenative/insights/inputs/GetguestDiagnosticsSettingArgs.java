@@ -19,6 +19,10 @@ public final class GetguestDiagnosticsSettingArgs extends com.pulumi.resources.I
     @Import(name="diagnosticSettingsName", required=true)
     private String diagnosticSettingsName;
 
+    /**
+     * @return The name of the diagnostic setting.
+     * 
+     */
     public String diagnosticSettingsName() {
         return this.diagnosticSettingsName;
     }
@@ -30,6 +34,10 @@ public final class GetguestDiagnosticsSettingArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetguestDiagnosticsSettingArgs extends com.pulumi.resources.I
             $ = new GetguestDiagnosticsSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diagnosticSettingsName The name of the diagnostic setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnosticSettingsName(String diagnosticSettingsName) {
             $.diagnosticSettingsName = diagnosticSettingsName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

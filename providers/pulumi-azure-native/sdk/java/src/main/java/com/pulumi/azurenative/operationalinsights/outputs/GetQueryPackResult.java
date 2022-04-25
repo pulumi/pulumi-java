@@ -12,47 +12,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetQueryPackResult {
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * Current state of this QueryPack: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
+     * @return Current state of this QueryPack: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
      */
     private final String provisioningState;
     /**
-     * The unique ID of your application. This field cannot be changed.
+     * @return The unique ID of your application. This field cannot be changed.
      * 
      */
     private final String queryPackId;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
+     * @return Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
      * 
      */
     private final String timeCreated;
     /**
-     * Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
+     * @return Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
      * 
      */
     private final String timeModified;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
@@ -80,65 +80,65 @@ public final class GetQueryPackResult {
     }
 
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Current state of this QueryPack: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
+     * @return Current state of this QueryPack: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The unique ID of your application. This field cannot be changed.
+     * @return The unique ID of your application. This field cannot be changed.
      * 
-    */
+     */
     public String queryPackId() {
         return this.queryPackId;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
+     * @return Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
      * 
-    */
+     */
     public String timeCreated() {
         return this.timeCreated;
     }
     /**
-     * Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
+     * @return Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
      * 
-    */
+     */
     public String timeModified() {
         return this.timeModified;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

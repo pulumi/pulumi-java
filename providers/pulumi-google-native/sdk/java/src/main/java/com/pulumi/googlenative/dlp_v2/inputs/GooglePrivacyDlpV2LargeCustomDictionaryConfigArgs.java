@@ -28,6 +28,10 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends com
     @Import(name="bigQueryField")
     private @Nullable Output<GooglePrivacyDlpV2BigQueryFieldArgs> bigQueryField;
 
+    /**
+     * @return Field in a BigQuery table where each cell represents a dictionary phrase.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2BigQueryFieldArgs>> bigQueryField() {
         return Optional.ofNullable(this.bigQueryField);
     }
@@ -39,6 +43,10 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends com
     @Import(name="cloudStorageFileSet")
     private @Nullable Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet;
 
+    /**
+     * @return Set of files containing newline-delimited lists of dictionary phrases.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2CloudStorageFileSetArgs>> cloudStorageFileSet() {
         return Optional.ofNullable(this.cloudStorageFileSet);
     }
@@ -50,6 +58,10 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends com
     @Import(name="outputPath")
     private @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath;
 
+    /**
+     * @return Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2CloudStoragePathArgs>> outputPath() {
         return Optional.ofNullable(this.outputPath);
     }
@@ -80,29 +92,65 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends com
             $ = new GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigQueryField Field in a BigQuery table where each cell represents a dictionary phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigQueryField(@Nullable Output<GooglePrivacyDlpV2BigQueryFieldArgs> bigQueryField) {
             $.bigQueryField = bigQueryField;
             return this;
         }
 
+        /**
+         * @param bigQueryField Field in a BigQuery table where each cell represents a dictionary phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigQueryField(GooglePrivacyDlpV2BigQueryFieldArgs bigQueryField) {
             return bigQueryField(Output.of(bigQueryField));
         }
 
+        /**
+         * @param cloudStorageFileSet Set of files containing newline-delimited lists of dictionary phrases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStorageFileSet(@Nullable Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet) {
             $.cloudStorageFileSet = cloudStorageFileSet;
             return this;
         }
 
+        /**
+         * @param cloudStorageFileSet Set of files containing newline-delimited lists of dictionary phrases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStorageFileSet(GooglePrivacyDlpV2CloudStorageFileSetArgs cloudStorageFileSet) {
             return cloudStorageFileSet(Output.of(cloudStorageFileSet));
         }
 
+        /**
+         * @param outputPath Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputPath(@Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath) {
             $.outputPath = outputPath;
             return this;
         }
 
+        /**
+         * @param outputPath Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputPath(GooglePrivacyDlpV2CloudStoragePathArgs outputPath) {
             return outputPath(Output.of(outputPath));
         }

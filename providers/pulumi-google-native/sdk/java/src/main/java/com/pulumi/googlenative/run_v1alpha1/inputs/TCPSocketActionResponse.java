@@ -24,6 +24,10 @@ public final class TCPSocketActionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="host", required=true)
     private String host;
 
+    /**
+     * @return (Optional) Optional: Host name to connect to, defaults to the pod IP.
+     * 
+     */
     public String host() {
         return this.host;
     }
@@ -35,6 +39,10 @@ public final class TCPSocketActionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto&#39;s inability to properly support the IntOrString golang type.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -64,11 +72,23 @@ public final class TCPSocketActionResponse extends com.pulumi.resources.InvokeAr
             $ = new TCPSocketActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host (Optional) Optional: Host name to connect to, defaults to the pod IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param port Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto&#39;s inability to properly support the IntOrString golang type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;

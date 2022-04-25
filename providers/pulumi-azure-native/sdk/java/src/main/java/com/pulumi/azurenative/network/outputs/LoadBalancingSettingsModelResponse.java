@@ -13,37 +13,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LoadBalancingSettingsModelResponse {
     /**
-     * The additional latency in milliseconds for probes to fall into the lowest latency bucket
+     * @return The additional latency in milliseconds for probes to fall into the lowest latency bucket
      * 
      */
     private final @Nullable Integer additionalLatencyMilliseconds;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final @Nullable String name;
     /**
-     * Resource status.
+     * @return Resource status.
      * 
      */
     private final String resourceState;
     /**
-     * The number of samples to consider for load balancing decisions
+     * @return The number of samples to consider for load balancing decisions
      * 
      */
     private final @Nullable Integer sampleSize;
     /**
-     * The number of samples within the sample period that must succeed
+     * @return The number of samples within the sample period that must succeed
      * 
      */
     private final @Nullable Integer successfulSamplesRequired;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -67,51 +67,51 @@ public final class LoadBalancingSettingsModelResponse {
     }
 
     /**
-     * The additional latency in milliseconds for probes to fall into the lowest latency bucket
+     * @return The additional latency in milliseconds for probes to fall into the lowest latency bucket
      * 
-    */
+     */
     public Optional<Integer> additionalLatencyMilliseconds() {
         return Optional.ofNullable(this.additionalLatencyMilliseconds);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Resource status.
+     * @return Resource status.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * The number of samples to consider for load balancing decisions
+     * @return The number of samples to consider for load balancing decisions
      * 
-    */
+     */
     public Optional<Integer> sampleSize() {
         return Optional.ofNullable(this.sampleSize);
     }
     /**
-     * The number of samples within the sample period that must succeed
+     * @return The number of samples within the sample period that must succeed
      * 
-    */
+     */
     public Optional<Integer> successfulSamplesRequired() {
         return Optional.ofNullable(this.successfulSamplesRequired);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

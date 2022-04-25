@@ -26,6 +26,10 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
     @Import(name="extension")
     private @Nullable String extension;
 
+    /**
+     * @return Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
+     * 
+     */
     public Optional<String> extension() {
         return Optional.ofNullable(this.extension);
     }
@@ -37,6 +41,10 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
     @Import(name="filePath")
     private @Nullable String filePath;
 
+    /**
+     * @return Relative path of this file resource. This property can be set when creating or updating the file resource.
+     * 
+     */
     public Optional<String> filePath() {
         return Optional.ofNullable(this.filePath);
     }
@@ -48,6 +56,10 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
     @Import(name="lastModified", required=true)
     private String lastModified;
 
+    /**
+     * @return Modification DateTime.
+     * 
+     */
     public String lastModified() {
         return this.lastModified;
     }
@@ -59,6 +71,10 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
     @Import(name="mediaType")
     private @Nullable String mediaType;
 
+    /**
+     * @return File content type. This property can be modified to reflect the file content type.
+     * 
+     */
     public Optional<String> mediaType() {
         return Optional.ofNullable(this.mediaType);
     }
@@ -70,6 +86,10 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
     @Import(name="size", required=true)
     private Double size;
 
+    /**
+     * @return File size.
+     * 
+     */
     public Double size() {
         return this.size;
     }
@@ -102,26 +122,56 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
             $ = new ProjectFilePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extension Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extension(@Nullable String extension) {
             $.extension = extension;
             return this;
         }
 
+        /**
+         * @param filePath Relative path of this file resource. This property can be set when creating or updating the file resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePath(@Nullable String filePath) {
             $.filePath = filePath;
             return this;
         }
 
+        /**
+         * @param lastModified Modification DateTime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModified(String lastModified) {
             $.lastModified = lastModified;
             return this;
         }
 
+        /**
+         * @param mediaType File content type. This property can be modified to reflect the file content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaType(@Nullable String mediaType) {
             $.mediaType = mediaType;
             return this;
         }
 
+        /**
+         * @param size File size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Double size) {
             $.size = size;
             return this;

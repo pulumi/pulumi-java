@@ -28,6 +28,10 @@ public final class LifecycleHandlerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="exec")
     private @Nullable Output<ExecActionArgs> exec;
 
+    /**
+     * @return Exec specifies the action to take.
+     * 
+     */
     public Optional<Output<ExecActionArgs>> exec() {
         return Optional.ofNullable(this.exec);
     }
@@ -39,6 +43,10 @@ public final class LifecycleHandlerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="httpGet")
     private @Nullable Output<HTTPGetActionArgs> httpGet;
 
+    /**
+     * @return HTTPGet specifies the http request to perform.
+     * 
+     */
     public Optional<Output<HTTPGetActionArgs>> httpGet() {
         return Optional.ofNullable(this.httpGet);
     }
@@ -50,6 +58,10 @@ public final class LifecycleHandlerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tcpSocket")
     private @Nullable Output<TCPSocketActionArgs> tcpSocket;
 
+    /**
+     * @return Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.
+     * 
+     */
     public Optional<Output<TCPSocketActionArgs>> tcpSocket() {
         return Optional.ofNullable(this.tcpSocket);
     }
@@ -80,29 +92,65 @@ public final class LifecycleHandlerArgs extends com.pulumi.resources.ResourceArg
             $ = new LifecycleHandlerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exec Exec specifies the action to take.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exec(@Nullable Output<ExecActionArgs> exec) {
             $.exec = exec;
             return this;
         }
 
+        /**
+         * @param exec Exec specifies the action to take.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exec(ExecActionArgs exec) {
             return exec(Output.of(exec));
         }
 
+        /**
+         * @param httpGet HTTPGet specifies the http request to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpGet(@Nullable Output<HTTPGetActionArgs> httpGet) {
             $.httpGet = httpGet;
             return this;
         }
 
+        /**
+         * @param httpGet HTTPGet specifies the http request to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpGet(HTTPGetActionArgs httpGet) {
             return httpGet(Output.of(httpGet));
         }
 
+        /**
+         * @param tcpSocket Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpSocket(@Nullable Output<TCPSocketActionArgs> tcpSocket) {
             $.tcpSocket = tcpSocket;
             return this;
         }
 
+        /**
+         * @param tcpSocket Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpSocket(TCPSocketActionArgs tcpSocket) {
             return tcpSocket(Output.of(tcpSocket));
         }

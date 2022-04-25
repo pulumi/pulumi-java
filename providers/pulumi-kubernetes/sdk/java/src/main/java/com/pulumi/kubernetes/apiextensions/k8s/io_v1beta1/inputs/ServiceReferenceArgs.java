@@ -27,6 +27,10 @@ public final class ServiceReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return name is the name of the service. Required
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class ServiceReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="namespace", required=true)
     private Output<String> namespace;
 
+    /**
+     * @return namespace is the namespace of the service. Required
+     * 
+     */
     public Output<String> namespace() {
         return this.namespace;
     }
@@ -49,6 +57,10 @@ public final class ServiceReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return path is an optional URL path at which the webhook will be contacted.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -60,6 +72,10 @@ public final class ServiceReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return port is an optional service port at which the webhook will be contacted. `port` should be a valid port number (1-65535, inclusive). Defaults to 443 for backward compatibility.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -91,38 +107,86 @@ public final class ServiceReferenceArgs extends com.pulumi.resources.ResourceArg
             $ = new ServiceReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name name is the name of the service. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name name is the name of the service. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namespace namespace is the namespace of the service. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace namespace is the namespace of the service. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param path path is an optional URL path at which the webhook will be contacted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path path is an optional URL path at which the webhook will be contacted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param port port is an optional service port at which the webhook will be contacted. `port` should be a valid port number (1-65535, inclusive). Defaults to 443 for backward compatibility.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port port is an optional service port at which the webhook will be contacted. `port` should be a valid port number (1-65535, inclusive). Defaults to 443 for backward compatibility.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

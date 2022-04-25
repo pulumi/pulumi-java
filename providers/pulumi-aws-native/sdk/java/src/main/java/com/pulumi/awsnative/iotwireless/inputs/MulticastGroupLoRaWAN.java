@@ -22,6 +22,10 @@ public final class MulticastGroupLoRaWAN extends com.pulumi.resources.InvokeArgs
     @Import(name="dlClass", required=true)
     private String dlClass;
 
+    /**
+     * @return Multicast group LoRaWAN DL Class
+     * 
+     */
     public String dlClass() {
         return this.dlClass;
     }
@@ -33,6 +37,10 @@ public final class MulticastGroupLoRaWAN extends com.pulumi.resources.InvokeArgs
     @Import(name="numberOfDevicesInGroup")
     private @Nullable Integer numberOfDevicesInGroup;
 
+    /**
+     * @return Multicast group number of devices in group. Returned after successful read.
+     * 
+     */
     public Optional<Integer> numberOfDevicesInGroup() {
         return Optional.ofNullable(this.numberOfDevicesInGroup);
     }
@@ -44,6 +52,10 @@ public final class MulticastGroupLoRaWAN extends com.pulumi.resources.InvokeArgs
     @Import(name="numberOfDevicesRequested")
     private @Nullable Integer numberOfDevicesRequested;
 
+    /**
+     * @return Multicast group number of devices requested. Returned after successful read.
+     * 
+     */
     public Optional<Integer> numberOfDevicesRequested() {
         return Optional.ofNullable(this.numberOfDevicesRequested);
     }
@@ -55,6 +67,10 @@ public final class MulticastGroupLoRaWAN extends com.pulumi.resources.InvokeArgs
     @Import(name="rfRegion", required=true)
     private String rfRegion;
 
+    /**
+     * @return Multicast group LoRaWAN RF region
+     * 
+     */
     public String rfRegion() {
         return this.rfRegion;
     }
@@ -86,21 +102,45 @@ public final class MulticastGroupLoRaWAN extends com.pulumi.resources.InvokeArgs
             $ = new MulticastGroupLoRaWAN(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dlClass Multicast group LoRaWAN DL Class
+         * 
+         * @return builder
+         * 
+         */
         public Builder dlClass(String dlClass) {
             $.dlClass = dlClass;
             return this;
         }
 
+        /**
+         * @param numberOfDevicesInGroup Multicast group number of devices in group. Returned after successful read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfDevicesInGroup(@Nullable Integer numberOfDevicesInGroup) {
             $.numberOfDevicesInGroup = numberOfDevicesInGroup;
             return this;
         }
 
+        /**
+         * @param numberOfDevicesRequested Multicast group number of devices requested. Returned after successful read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfDevicesRequested(@Nullable Integer numberOfDevicesRequested) {
             $.numberOfDevicesRequested = numberOfDevicesRequested;
             return this;
         }
 
+        /**
+         * @param rfRegion Multicast group LoRaWAN RF region
+         * 
+         * @return builder
+         * 
+         */
         public Builder rfRegion(String rfRegion) {
             $.rfRegion = rfRegion;
             return this;

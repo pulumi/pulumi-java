@@ -36,6 +36,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Required
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -90,11 +94,23 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
             return group(Output.of(group));
         }
 
+        /**
+         * @param kind Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }

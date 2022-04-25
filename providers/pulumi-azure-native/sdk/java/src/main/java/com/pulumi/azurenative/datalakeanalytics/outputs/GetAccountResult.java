@@ -21,172 +21,172 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAccountResult {
     /**
-     * The unique identifier associated with this Data Lake Analytics account.
+     * @return The unique identifier associated with this Data Lake Analytics account.
      * 
      */
     private final String accountId;
     /**
-     * The list of compute policies associated with this account.
+     * @return The list of compute policies associated with this account.
      * 
      */
     private final List<ComputePolicyResponse> computePolicies;
     /**
-     * The account creation time.
+     * @return The account creation time.
      * 
      */
     private final String creationTime;
     /**
-     * The commitment tier in use for the current month.
+     * @return The commitment tier in use for the current month.
      * 
      */
     private final String currentTier;
     /**
-     * The list of Data Lake Store accounts associated with this account.
+     * @return The list of Data Lake Store accounts associated with this account.
      * 
      */
     private final List<DataLakeStoreAccountInformationResponse> dataLakeStoreAccounts;
     /**
-     * The current state of the DebugDataAccessLevel for this account.
+     * @return The current state of the DebugDataAccessLevel for this account.
      * 
      */
     private final String debugDataAccessLevel;
     /**
-     * The default Data Lake Store account associated with this account.
+     * @return The default Data Lake Store account associated with this account.
      * 
      */
     private final String defaultDataLakeStoreAccount;
     /**
-     * The full CName endpoint for this account.
+     * @return The full CName endpoint for this account.
      * 
      */
     private final String endpoint;
     /**
-     * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
+     * @return The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
      * 
      */
     private final @Nullable String firewallAllowAzureIps;
     /**
-     * The list of firewall rules associated with this account.
+     * @return The list of firewall rules associated with this account.
      * 
      */
     private final List<FirewallRuleResponse> firewallRules;
     /**
-     * The current state of the IP address firewall for this account.
+     * @return The current state of the IP address firewall for this account.
      * 
      */
     private final @Nullable String firewallState;
     /**
-     * The list of hiveMetastores associated with this account.
+     * @return The list of hiveMetastores associated with this account.
      * 
      */
     private final List<HiveMetastoreResponse> hiveMetastores;
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
      */
     private final String id;
     /**
-     * The account last modified time.
+     * @return The account last modified time.
      * 
      */
     private final String lastModifiedTime;
     /**
-     * The resource location.
+     * @return The resource location.
      * 
      */
     private final String location;
     /**
-     * The maximum supported active jobs under the account at the same time.
+     * @return The maximum supported active jobs under the account at the same time.
      * 
      */
     private final Integer maxActiveJobCountPerUser;
     /**
-     * The maximum supported degree of parallelism for this account.
+     * @return The maximum supported degree of parallelism for this account.
      * 
      */
     private final @Nullable Integer maxDegreeOfParallelism;
     /**
-     * The maximum supported degree of parallelism per job for this account.
+     * @return The maximum supported degree of parallelism per job for this account.
      * 
      */
     private final @Nullable Integer maxDegreeOfParallelismPerJob;
     /**
-     * The maximum supported jobs running under the account at the same time.
+     * @return The maximum supported jobs running under the account at the same time.
      * 
      */
     private final @Nullable Integer maxJobCount;
     /**
-     * The maximum supported active jobs under the account at the same time.
+     * @return The maximum supported active jobs under the account at the same time.
      * 
      */
     private final Integer maxJobRunningTimeInMin;
     /**
-     * The maximum supported jobs queued under the account at the same time.
+     * @return The maximum supported jobs queued under the account at the same time.
      * 
      */
     private final Integer maxQueuedJobCountPerUser;
     /**
-     * The minimum supported priority per job for this account.
+     * @return The minimum supported priority per job for this account.
      * 
      */
     private final Integer minPriorityPerJob;
     /**
-     * The resource name.
+     * @return The resource name.
      * 
      */
     private final String name;
     /**
-     * The commitment tier for the next month.
+     * @return The commitment tier for the next month.
      * 
      */
     private final @Nullable String newTier;
     /**
-     * The provisioning status of the Data Lake Analytics account.
+     * @return The provisioning status of the Data Lake Analytics account.
      * 
      */
     private final String provisioningState;
     /**
-     * The list of Data Lake Store accounts associated with this account.
+     * @return The list of Data Lake Store accounts associated with this account.
      * 
      */
     private final @Nullable List<DataLakeStoreAccountInformationResponse> publicDataLakeStoreAccounts;
     /**
-     * The number of days that job metadata is retained.
+     * @return The number of days that job metadata is retained.
      * 
      */
     private final @Nullable Integer queryStoreRetention;
     /**
-     * The state of the Data Lake Analytics account.
+     * @return The state of the Data Lake Analytics account.
      * 
      */
     private final String state;
     /**
-     * The list of Azure Blob Storage accounts associated with this account.
+     * @return The list of Azure Blob Storage accounts associated with this account.
      * 
      */
     private final List<StorageAccountInformationResponse> storageAccounts;
     /**
-     * The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.
+     * @return The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.
      * 
      */
     private final Integer systemMaxDegreeOfParallelism;
     /**
-     * The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.
+     * @return The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.
      * 
      */
     private final Integer systemMaxJobCount;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final Map<String,String> tags;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String type;
     /**
-     * The list of virtualNetwork rules associated with this account.
+     * @return The list of virtualNetwork rules associated with this account.
      * 
      */
     private final List<VirtualNetworkRuleResponse> virtualNetworkRules;
@@ -264,240 +264,240 @@ public final class GetAccountResult {
     }
 
     /**
-     * The unique identifier associated with this Data Lake Analytics account.
+     * @return The unique identifier associated with this Data Lake Analytics account.
      * 
-    */
+     */
     public String accountId() {
         return this.accountId;
     }
     /**
-     * The list of compute policies associated with this account.
+     * @return The list of compute policies associated with this account.
      * 
-    */
+     */
     public List<ComputePolicyResponse> computePolicies() {
         return this.computePolicies;
     }
     /**
-     * The account creation time.
+     * @return The account creation time.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * The commitment tier in use for the current month.
+     * @return The commitment tier in use for the current month.
      * 
-    */
+     */
     public String currentTier() {
         return this.currentTier;
     }
     /**
-     * The list of Data Lake Store accounts associated with this account.
+     * @return The list of Data Lake Store accounts associated with this account.
      * 
-    */
+     */
     public List<DataLakeStoreAccountInformationResponse> dataLakeStoreAccounts() {
         return this.dataLakeStoreAccounts;
     }
     /**
-     * The current state of the DebugDataAccessLevel for this account.
+     * @return The current state of the DebugDataAccessLevel for this account.
      * 
-    */
+     */
     public String debugDataAccessLevel() {
         return this.debugDataAccessLevel;
     }
     /**
-     * The default Data Lake Store account associated with this account.
+     * @return The default Data Lake Store account associated with this account.
      * 
-    */
+     */
     public String defaultDataLakeStoreAccount() {
         return this.defaultDataLakeStoreAccount;
     }
     /**
-     * The full CName endpoint for this account.
+     * @return The full CName endpoint for this account.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
+     * @return The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
      * 
-    */
+     */
     public Optional<String> firewallAllowAzureIps() {
         return Optional.ofNullable(this.firewallAllowAzureIps);
     }
     /**
-     * The list of firewall rules associated with this account.
+     * @return The list of firewall rules associated with this account.
      * 
-    */
+     */
     public List<FirewallRuleResponse> firewallRules() {
         return this.firewallRules;
     }
     /**
-     * The current state of the IP address firewall for this account.
+     * @return The current state of the IP address firewall for this account.
      * 
-    */
+     */
     public Optional<String> firewallState() {
         return Optional.ofNullable(this.firewallState);
     }
     /**
-     * The list of hiveMetastores associated with this account.
+     * @return The list of hiveMetastores associated with this account.
      * 
-    */
+     */
     public List<HiveMetastoreResponse> hiveMetastores() {
         return this.hiveMetastores;
     }
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The account last modified time.
+     * @return The account last modified time.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The maximum supported active jobs under the account at the same time.
+     * @return The maximum supported active jobs under the account at the same time.
      * 
-    */
+     */
     public Integer maxActiveJobCountPerUser() {
         return this.maxActiveJobCountPerUser;
     }
     /**
-     * The maximum supported degree of parallelism for this account.
+     * @return The maximum supported degree of parallelism for this account.
      * 
-    */
+     */
     public Optional<Integer> maxDegreeOfParallelism() {
         return Optional.ofNullable(this.maxDegreeOfParallelism);
     }
     /**
-     * The maximum supported degree of parallelism per job for this account.
+     * @return The maximum supported degree of parallelism per job for this account.
      * 
-    */
+     */
     public Optional<Integer> maxDegreeOfParallelismPerJob() {
         return Optional.ofNullable(this.maxDegreeOfParallelismPerJob);
     }
     /**
-     * The maximum supported jobs running under the account at the same time.
+     * @return The maximum supported jobs running under the account at the same time.
      * 
-    */
+     */
     public Optional<Integer> maxJobCount() {
         return Optional.ofNullable(this.maxJobCount);
     }
     /**
-     * The maximum supported active jobs under the account at the same time.
+     * @return The maximum supported active jobs under the account at the same time.
      * 
-    */
+     */
     public Integer maxJobRunningTimeInMin() {
         return this.maxJobRunningTimeInMin;
     }
     /**
-     * The maximum supported jobs queued under the account at the same time.
+     * @return The maximum supported jobs queued under the account at the same time.
      * 
-    */
+     */
     public Integer maxQueuedJobCountPerUser() {
         return this.maxQueuedJobCountPerUser;
     }
     /**
-     * The minimum supported priority per job for this account.
+     * @return The minimum supported priority per job for this account.
      * 
-    */
+     */
     public Integer minPriorityPerJob() {
         return this.minPriorityPerJob;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The commitment tier for the next month.
+     * @return The commitment tier for the next month.
      * 
-    */
+     */
     public Optional<String> newTier() {
         return Optional.ofNullable(this.newTier);
     }
     /**
-     * The provisioning status of the Data Lake Analytics account.
+     * @return The provisioning status of the Data Lake Analytics account.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The list of Data Lake Store accounts associated with this account.
+     * @return The list of Data Lake Store accounts associated with this account.
      * 
-    */
+     */
     public List<DataLakeStoreAccountInformationResponse> publicDataLakeStoreAccounts() {
         return this.publicDataLakeStoreAccounts == null ? List.of() : this.publicDataLakeStoreAccounts;
     }
     /**
-     * The number of days that job metadata is retained.
+     * @return The number of days that job metadata is retained.
      * 
-    */
+     */
     public Optional<Integer> queryStoreRetention() {
         return Optional.ofNullable(this.queryStoreRetention);
     }
     /**
-     * The state of the Data Lake Analytics account.
+     * @return The state of the Data Lake Analytics account.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The list of Azure Blob Storage accounts associated with this account.
+     * @return The list of Azure Blob Storage accounts associated with this account.
      * 
-    */
+     */
     public List<StorageAccountInformationResponse> storageAccounts() {
         return this.storageAccounts;
     }
     /**
-     * The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.
+     * @return The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.
      * 
-    */
+     */
     public Integer systemMaxDegreeOfParallelism() {
         return this.systemMaxDegreeOfParallelism;
     }
     /**
-     * The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.
+     * @return The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.
      * 
-    */
+     */
     public Integer systemMaxJobCount() {
         return this.systemMaxJobCount;
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The list of virtualNetwork rules associated with this account.
+     * @return The list of virtualNetwork rules associated with this account.
      * 
-    */
+     */
     public List<VirtualNetworkRuleResponse> virtualNetworkRules() {
         return this.virtualNetworkRules;
     }

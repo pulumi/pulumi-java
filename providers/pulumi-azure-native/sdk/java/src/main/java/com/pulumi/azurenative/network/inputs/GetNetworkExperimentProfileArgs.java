@@ -19,6 +19,10 @@ public final class GetNetworkExperimentProfileArgs extends com.pulumi.resources.
     @Import(name="profileName", required=true)
     private String profileName;
 
+    /**
+     * @return The Profile identifier associated with the Tenant and Partner
+     * 
+     */
     public String profileName() {
         return this.profileName;
     }
@@ -30,6 +34,10 @@ public final class GetNetworkExperimentProfileArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetNetworkExperimentProfileArgs extends com.pulumi.resources.
             $ = new GetNetworkExperimentProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param profileName The Profile identifier associated with the Tenant and Partner
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

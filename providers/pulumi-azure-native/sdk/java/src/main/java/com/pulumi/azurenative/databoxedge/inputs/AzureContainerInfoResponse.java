@@ -23,6 +23,10 @@ public final class AzureContainerInfoResponse extends com.pulumi.resources.Invok
     @Import(name="containerName", required=true)
     private String containerName;
 
+    /**
+     * @return Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
+     * 
+     */
     public String containerName() {
         return this.containerName;
     }
@@ -34,6 +38,10 @@ public final class AzureContainerInfoResponse extends com.pulumi.resources.Invok
     @Import(name="dataFormat", required=true)
     private String dataFormat;
 
+    /**
+     * @return Storage format used for the file represented by the share.
+     * 
+     */
     public String dataFormat() {
         return this.dataFormat;
     }
@@ -45,6 +53,10 @@ public final class AzureContainerInfoResponse extends com.pulumi.resources.Invok
     @Import(name="storageAccountCredentialId", required=true)
     private String storageAccountCredentialId;
 
+    /**
+     * @return ID of the storage account credential used to access storage.
+     * 
+     */
     public String storageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
@@ -75,16 +87,34 @@ public final class AzureContainerInfoResponse extends com.pulumi.resources.Invok
             $ = new AzureContainerInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerName Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param dataFormat Storage format used for the file represented by the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFormat(String dataFormat) {
             $.dataFormat = dataFormat;
             return this;
         }
 
+        /**
+         * @param storageAccountCredentialId ID of the storage account credential used to access storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountCredentialId(String storageAccountCredentialId) {
             $.storageAccountCredentialId = storageAccountCredentialId;
             return this;

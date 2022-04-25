@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IngressServiceBackend {
     /**
-     * Name is the referenced service. The service must exist in the same namespace as the Ingress object.
+     * @return Name is the referenced service. The service must exist in the same namespace as the Ingress object.
      * 
      */
     private final String name;
     /**
-     * Port of the referenced service. A port name or port number is required for a IngressServiceBackend.
+     * @return Port of the referenced service. A port name or port number is required for a IngressServiceBackend.
      * 
      */
     private final @Nullable ServiceBackendPort port;
@@ -32,16 +32,16 @@ public final class IngressServiceBackend {
     }
 
     /**
-     * Name is the referenced service. The service must exist in the same namespace as the Ingress object.
+     * @return Name is the referenced service. The service must exist in the same namespace as the Ingress object.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Port of the referenced service. A port name or port number is required for a IngressServiceBackend.
+     * @return Port of the referenced service. A port name or port number is required for a IngressServiceBackend.
      * 
-    */
+     */
     public Optional<ServiceBackendPort> port() {
         return Optional.ofNullable(this.port);
     }

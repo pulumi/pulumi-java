@@ -27,6 +27,10 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="endAzimuthDegrees", required=true)
     private Double endAzimuthDegrees;
 
+    /**
+     * @return Azimuth of the antenna at the end of the contact in decimal degrees.
+     * 
+     */
     public Double endAzimuthDegrees() {
         return this.endAzimuthDegrees;
     }
@@ -38,6 +42,10 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="endElevationDegrees", required=true)
     private Double endElevationDegrees;
 
+    /**
+     * @return Spacecraft elevation above the horizon at contact end.
+     * 
+     */
     public Double endElevationDegrees() {
         return this.endElevationDegrees;
     }
@@ -49,6 +57,10 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="groundStationName", required=true)
     private String groundStationName;
 
+    /**
+     * @return Name of Azure Ground Station.
+     * 
+     */
     public String groundStationName() {
         return this.groundStationName;
     }
@@ -60,6 +72,10 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="maximumElevationDegrees", required=true)
     private Double maximumElevationDegrees;
 
+    /**
+     * @return Maximum elevation of the antenna during the contact in decimal degrees.
+     * 
+     */
     public Double maximumElevationDegrees() {
         return this.maximumElevationDegrees;
     }
@@ -71,6 +87,10 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="rxEndTime", required=true)
     private String rxEndTime;
 
+    /**
+     * @return Time to lost receiving a signal.
+     * 
+     */
     public String rxEndTime() {
         return this.rxEndTime;
     }
@@ -82,6 +102,10 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="rxStartTime", required=true)
     private String rxStartTime;
 
+    /**
+     * @return Earliest time to receive a signal.
+     * 
+     */
     public String rxStartTime() {
         return this.rxStartTime;
     }
@@ -93,6 +117,10 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="spacecraft")
     private @Nullable ResourceReferenceResponse spacecraft;
 
+    /**
+     * @return The reference to the spacecraft resource.
+     * 
+     */
     public Optional<ResourceReferenceResponse> spacecraft() {
         return Optional.ofNullable(this.spacecraft);
     }
@@ -104,6 +132,10 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="startAzimuthDegrees", required=true)
     private Double startAzimuthDegrees;
 
+    /**
+     * @return Azimuth of the antenna at the start of the contact in decimal degrees.
+     * 
+     */
     public Double startAzimuthDegrees() {
         return this.startAzimuthDegrees;
     }
@@ -115,6 +147,10 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="startElevationDegrees", required=true)
     private Double startElevationDegrees;
 
+    /**
+     * @return Spacecraft elevation above the horizon at contact start.
+     * 
+     */
     public Double startElevationDegrees() {
         return this.startElevationDegrees;
     }
@@ -126,6 +162,10 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="txEndTime", required=true)
     private String txEndTime;
 
+    /**
+     * @return Time at which antenna transmit will be disabled.
+     * 
+     */
     public String txEndTime() {
         return this.txEndTime;
     }
@@ -137,6 +177,10 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
     @Import(name="txStartTime", required=true)
     private String txStartTime;
 
+    /**
+     * @return Time at which antenna transmit will be enabled.
+     * 
+     */
     public String txStartTime() {
         return this.txStartTime;
     }
@@ -175,56 +219,122 @@ public final class AvailableContactsResponse extends com.pulumi.resources.Invoke
             $ = new AvailableContactsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endAzimuthDegrees Azimuth of the antenna at the end of the contact in decimal degrees.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endAzimuthDegrees(Double endAzimuthDegrees) {
             $.endAzimuthDegrees = endAzimuthDegrees;
             return this;
         }
 
+        /**
+         * @param endElevationDegrees Spacecraft elevation above the horizon at contact end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endElevationDegrees(Double endElevationDegrees) {
             $.endElevationDegrees = endElevationDegrees;
             return this;
         }
 
+        /**
+         * @param groundStationName Name of Azure Ground Station.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groundStationName(String groundStationName) {
             $.groundStationName = groundStationName;
             return this;
         }
 
+        /**
+         * @param maximumElevationDegrees Maximum elevation of the antenna during the contact in decimal degrees.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumElevationDegrees(Double maximumElevationDegrees) {
             $.maximumElevationDegrees = maximumElevationDegrees;
             return this;
         }
 
+        /**
+         * @param rxEndTime Time to lost receiving a signal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rxEndTime(String rxEndTime) {
             $.rxEndTime = rxEndTime;
             return this;
         }
 
+        /**
+         * @param rxStartTime Earliest time to receive a signal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rxStartTime(String rxStartTime) {
             $.rxStartTime = rxStartTime;
             return this;
         }
 
+        /**
+         * @param spacecraft The reference to the spacecraft resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spacecraft(@Nullable ResourceReferenceResponse spacecraft) {
             $.spacecraft = spacecraft;
             return this;
         }
 
+        /**
+         * @param startAzimuthDegrees Azimuth of the antenna at the start of the contact in decimal degrees.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startAzimuthDegrees(Double startAzimuthDegrees) {
             $.startAzimuthDegrees = startAzimuthDegrees;
             return this;
         }
 
+        /**
+         * @param startElevationDegrees Spacecraft elevation above the horizon at contact start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startElevationDegrees(Double startElevationDegrees) {
             $.startElevationDegrees = startElevationDegrees;
             return this;
         }
 
+        /**
+         * @param txEndTime Time at which antenna transmit will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder txEndTime(String txEndTime) {
             $.txEndTime = txEndTime;
             return this;
         }
 
+        /**
+         * @param txStartTime Time at which antenna transmit will be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder txStartTime(String txStartTime) {
             $.txStartTime = txStartTime;
             return this;

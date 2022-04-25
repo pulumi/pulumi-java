@@ -23,6 +23,10 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="gatewayName", required=true)
     private Output<String> gatewayName;
 
+    /**
+     * @return The name of Spring Cloud Gateway.
+     * 
+     */
     public Output<String> gatewayName() {
         return this.gatewayName;
     }
@@ -34,6 +38,10 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="properties")
     private @Nullable Output<GatewayRouteConfigPropertiesArgs> properties;
 
+    /**
+     * @return API route config of the Spring Cloud Gateway
+     * 
+     */
     public Optional<Output<GatewayRouteConfigPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="routeConfigName")
     private @Nullable Output<String> routeConfigName;
 
+    /**
+     * @return The name of the Spring Cloud Gateway route config.
+     * 
+     */
     public Optional<Output<String>> routeConfigName() {
         return Optional.ofNullable(this.routeConfigName);
     }
@@ -67,6 +83,10 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -99,47 +119,107 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
             $ = new GatewayRouteConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayName The name of Spring Cloud Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(Output<String> gatewayName) {
             $.gatewayName = gatewayName;
             return this;
         }
 
+        /**
+         * @param gatewayName The name of Spring Cloud Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(String gatewayName) {
             return gatewayName(Output.of(gatewayName));
         }
 
+        /**
+         * @param properties API route config of the Spring Cloud Gateway
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<GatewayRouteConfigPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties API route config of the Spring Cloud Gateway
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(GatewayRouteConfigPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param routeConfigName The name of the Spring Cloud Gateway route config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeConfigName(@Nullable Output<String> routeConfigName) {
             $.routeConfigName = routeConfigName;
             return this;
         }
 
+        /**
+         * @param routeConfigName The name of the Spring Cloud Gateway route config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeConfigName(String routeConfigName) {
             return routeConfigName(Output.of(routeConfigName));
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

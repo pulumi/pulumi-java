@@ -25,6 +25,10 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
     @Import(name="backupId", required=true)
     private String backupId;
 
+    /**
+     * @return ID of backup.
+     * 
+     */
     public String backupId() {
         return this.backupId;
     }
@@ -36,6 +40,10 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
     @Import(name="backupName")
     private @Nullable String backupName;
 
+    /**
+     * @return Name of the backup.
+     * 
+     */
     public Optional<String> backupName() {
         return Optional.ofNullable(this.backupName);
     }
@@ -47,6 +55,10 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
     @Import(name="backupSchedule")
     private @Nullable BackupSchedule backupSchedule;
 
+    /**
+     * @return Schedule for the backup if it is executed periodically.
+     * 
+     */
     public Optional<BackupSchedule> backupSchedule() {
         return Optional.ofNullable(this.backupSchedule);
     }
@@ -58,6 +70,10 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
     @Import(name="databases")
     private @Nullable List<DatabaseBackupSetting> databases;
 
+    /**
+     * @return Databases included in the backup.
+     * 
+     */
     public Optional<List<DatabaseBackupSetting>> databases() {
         return Optional.ofNullable(this.databases);
     }
@@ -69,6 +85,10 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -80,6 +100,10 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -91,6 +115,10 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of web app.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -102,6 +130,10 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -113,6 +145,10 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
     @Import(name="storageAccountUrl", required=true)
     private String storageAccountUrl;
 
+    /**
+     * @return SAS URL to the container.
+     * 
+     */
     public String storageAccountUrl() {
         return this.storageAccountUrl;
     }
@@ -149,50 +185,110 @@ public final class ListWebAppBackupStatusSecretsArgs extends com.pulumi.resource
             $ = new ListWebAppBackupStatusSecretsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupId ID of backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupId(String backupId) {
             $.backupId = backupId;
             return this;
         }
 
+        /**
+         * @param backupName Name of the backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupName(@Nullable String backupName) {
             $.backupName = backupName;
             return this;
         }
 
+        /**
+         * @param backupSchedule Schedule for the backup if it is executed periodically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupSchedule(@Nullable BackupSchedule backupSchedule) {
             $.backupSchedule = backupSchedule;
             return this;
         }
 
+        /**
+         * @param databases Databases included in the backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databases(@Nullable List<DatabaseBackupSetting> databases) {
             $.databases = databases;
             return this;
         }
 
+        /**
+         * @param databases Databases included in the backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databases(DatabaseBackupSetting... databases) {
             return databases(List.of(databases));
         }
 
+        /**
+         * @param enabled True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Name of web app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param storageAccountUrl SAS URL to the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountUrl(String storageAccountUrl) {
             $.storageAccountUrl = storageAccountUrl;
             return this;

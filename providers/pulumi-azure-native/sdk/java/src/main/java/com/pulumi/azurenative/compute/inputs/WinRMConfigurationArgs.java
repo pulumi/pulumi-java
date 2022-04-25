@@ -27,6 +27,10 @@ public final class WinRMConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="listeners")
     private @Nullable Output<List<WinRMListenerArgs>> listeners;
 
+    /**
+     * @return The list of Windows Remote Management listeners
+     * 
+     */
     public Optional<Output<List<WinRMListenerArgs>>> listeners() {
         return Optional.ofNullable(this.listeners);
     }
@@ -55,15 +59,33 @@ public final class WinRMConfigurationArgs extends com.pulumi.resources.ResourceA
             $ = new WinRMConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param listeners The list of Windows Remote Management listeners
+         * 
+         * @return builder
+         * 
+         */
         public Builder listeners(@Nullable Output<List<WinRMListenerArgs>> listeners) {
             $.listeners = listeners;
             return this;
         }
 
+        /**
+         * @param listeners The list of Windows Remote Management listeners
+         * 
+         * @return builder
+         * 
+         */
         public Builder listeners(List<WinRMListenerArgs> listeners) {
             return listeners(Output.of(listeners));
         }
 
+        /**
+         * @param listeners The list of Windows Remote Management listeners
+         * 
+         * @return builder
+         * 
+         */
         public Builder listeners(WinRMListenerArgs... listeners) {
             return listeners(List.of(listeners));
         }

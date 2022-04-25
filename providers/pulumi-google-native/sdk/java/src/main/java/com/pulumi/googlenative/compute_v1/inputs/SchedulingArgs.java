@@ -33,6 +33,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automaticRestart")
     private @Nullable Output<Boolean> automaticRestart;
 
+    /**
+     * @return Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
+     * 
+     */
     public Optional<Output<Boolean>> automaticRestart() {
         return Optional.ofNullable(this.automaticRestart);
     }
@@ -44,6 +48,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceTerminationAction")
     private @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction;
 
+    /**
+     * @return Specifies the termination action for the instance.
+     * 
+     */
     public Optional<Output<SchedulingInstanceTerminationAction>> instanceTerminationAction() {
         return Optional.ofNullable(this.instanceTerminationAction);
     }
@@ -55,6 +63,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locationHint")
     private @Nullable Output<String> locationHint;
 
+    /**
+     * @return An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
+     * 
+     */
     public Optional<Output<String>> locationHint() {
         return Optional.ofNullable(this.locationHint);
     }
@@ -66,6 +78,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minNodeCpus")
     private @Nullable Output<Integer> minNodeCpus;
 
+    /**
+     * @return The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+     * 
+     */
     public Optional<Output<Integer>> minNodeCpus() {
         return Optional.ofNullable(this.minNodeCpus);
     }
@@ -77,6 +93,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeAffinities")
     private @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
 
+    /**
+     * @return A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
+     * 
+     */
     public Optional<Output<List<SchedulingNodeAffinityArgs>>> nodeAffinities() {
         return Optional.ofNullable(this.nodeAffinities);
     }
@@ -88,6 +108,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="onHostMaintenance")
     private @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance;
 
+    /**
+     * @return Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
+     * 
+     */
     public Optional<Output<SchedulingOnHostMaintenance>> onHostMaintenance() {
         return Optional.ofNullable(this.onHostMaintenance);
     }
@@ -99,6 +123,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preemptible")
     private @Nullable Output<Boolean> preemptible;
 
+    /**
+     * @return Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+     * 
+     */
     public Optional<Output<Boolean>> preemptible() {
         return Optional.ofNullable(this.preemptible);
     }
@@ -110,6 +138,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningModel")
     private @Nullable Output<SchedulingProvisioningModel> provisioningModel;
 
+    /**
+     * @return Specifies the provisioning model of the instance.
+     * 
+     */
     public Optional<Output<SchedulingProvisioningModel>> provisioningModel() {
         return Optional.ofNullable(this.provisioningModel);
     }
@@ -145,78 +177,180 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SchedulingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automaticRestart Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticRestart(@Nullable Output<Boolean> automaticRestart) {
             $.automaticRestart = automaticRestart;
             return this;
         }
 
+        /**
+         * @param automaticRestart Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticRestart(Boolean automaticRestart) {
             return automaticRestart(Output.of(automaticRestart));
         }
 
+        /**
+         * @param instanceTerminationAction Specifies the termination action for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTerminationAction(@Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction) {
             $.instanceTerminationAction = instanceTerminationAction;
             return this;
         }
 
+        /**
+         * @param instanceTerminationAction Specifies the termination action for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTerminationAction(SchedulingInstanceTerminationAction instanceTerminationAction) {
             return instanceTerminationAction(Output.of(instanceTerminationAction));
         }
 
+        /**
+         * @param locationHint An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationHint(@Nullable Output<String> locationHint) {
             $.locationHint = locationHint;
             return this;
         }
 
+        /**
+         * @param locationHint An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationHint(String locationHint) {
             return locationHint(Output.of(locationHint));
         }
 
+        /**
+         * @param minNodeCpus The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCpus(@Nullable Output<Integer> minNodeCpus) {
             $.minNodeCpus = minNodeCpus;
             return this;
         }
 
+        /**
+         * @param minNodeCpus The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCpus(Integer minNodeCpus) {
             return minNodeCpus(Output.of(minNodeCpus));
         }
 
+        /**
+         * @param nodeAffinities A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(@Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities) {
             $.nodeAffinities = nodeAffinities;
             return this;
         }
 
+        /**
+         * @param nodeAffinities A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(List<SchedulingNodeAffinityArgs> nodeAffinities) {
             return nodeAffinities(Output.of(nodeAffinities));
         }
 
+        /**
+         * @param nodeAffinities A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinities(SchedulingNodeAffinityArgs... nodeAffinities) {
             return nodeAffinities(List.of(nodeAffinities));
         }
 
+        /**
+         * @param onHostMaintenance Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onHostMaintenance(@Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance) {
             $.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
+        /**
+         * @param onHostMaintenance Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onHostMaintenance(SchedulingOnHostMaintenance onHostMaintenance) {
             return onHostMaintenance(Output.of(onHostMaintenance));
         }
 
+        /**
+         * @param preemptible Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
             $.preemptible = preemptible;
             return this;
         }
 
+        /**
+         * @param preemptible Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptible(Boolean preemptible) {
             return preemptible(Output.of(preemptible));
         }
 
+        /**
+         * @param provisioningModel Specifies the provisioning model of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningModel(@Nullable Output<SchedulingProvisioningModel> provisioningModel) {
             $.provisioningModel = provisioningModel;
             return this;
         }
 
+        /**
+         * @param provisioningModel Specifies the provisioning model of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningModel(SchedulingProvisioningModel provisioningModel) {
             return provisioningModel(Output.of(provisioningModel));
         }

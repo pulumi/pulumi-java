@@ -26,6 +26,10 @@ public final class FlowOutputVpcInterfaceAttachmentArgs extends com.pulumi.resou
     @Import(name="vpcInterfaceName")
     private @Nullable Output<String> vpcInterfaceName;
 
+    /**
+     * @return The name of the VPC interface to use for this output.
+     * 
+     */
     public Optional<Output<String>> vpcInterfaceName() {
         return Optional.ofNullable(this.vpcInterfaceName);
     }
@@ -54,11 +58,23 @@ public final class FlowOutputVpcInterfaceAttachmentArgs extends com.pulumi.resou
             $ = new FlowOutputVpcInterfaceAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vpcInterfaceName The name of the VPC interface to use for this output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcInterfaceName(@Nullable Output<String> vpcInterfaceName) {
             $.vpcInterfaceName = vpcInterfaceName;
             return this;
         }
 
+        /**
+         * @param vpcInterfaceName The name of the VPC interface to use for this output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcInterfaceName(String vpcInterfaceName) {
             return vpcInterfaceName(Output.of(vpcInterfaceName));
         }

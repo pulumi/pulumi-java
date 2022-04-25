@@ -26,6 +26,10 @@ public final class ExpirationPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ttl")
     private @Nullable Output<String> ttl;
 
+    /**
+     * @return Specifies the &#34;time-to-live&#34; duration for an associated resource. The resource expires if it is not active for a period of `ttl`. The definition of &#34;activity&#34; depends on the type of the associated resource. The minimum and maximum allowed values for `ttl` depend on the type of the associated resource, as well. If `ttl` is not set, the associated resource never expires.
+     * 
+     */
     public Optional<Output<String>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -54,11 +58,23 @@ public final class ExpirationPolicyArgs extends com.pulumi.resources.ResourceArg
             $ = new ExpirationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ttl Specifies the &#34;time-to-live&#34; duration for an associated resource. The resource expires if it is not active for a period of `ttl`. The definition of &#34;activity&#34; depends on the type of the associated resource. The minimum and maximum allowed values for `ttl` depend on the type of the associated resource, as well. If `ttl` is not set, the associated resource never expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Output<String> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl Specifies the &#34;time-to-live&#34; duration for an associated resource. The resource expires if it is not active for a period of `ttl`. The definition of &#34;activity&#34; depends on the type of the associated resource. The minimum and maximum allowed values for `ttl` depend on the type of the associated resource, as well. If `ttl` is not set, the associated resource never expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(String ttl) {
             return ttl(Output.of(ttl));
         }

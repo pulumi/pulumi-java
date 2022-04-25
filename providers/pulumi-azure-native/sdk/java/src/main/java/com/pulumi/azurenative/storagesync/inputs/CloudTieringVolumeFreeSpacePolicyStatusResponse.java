@@ -24,6 +24,10 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends com.p
     @Import(name="currentVolumeFreeSpacePercent", required=true)
     private Integer currentVolumeFreeSpacePercent;
 
+    /**
+     * @return Current volume free space percentage.
+     * 
+     */
     public Integer currentVolumeFreeSpacePercent() {
         return this.currentVolumeFreeSpacePercent;
     }
@@ -35,6 +39,10 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends com.p
     @Import(name="effectiveVolumeFreeSpacePolicy", required=true)
     private Integer effectiveVolumeFreeSpacePolicy;
 
+    /**
+     * @return In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
+     * 
+     */
     public Integer effectiveVolumeFreeSpacePolicy() {
         return this.effectiveVolumeFreeSpacePolicy;
     }
@@ -46,6 +54,10 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends com.p
     @Import(name="lastUpdatedTimestamp", required=true)
     private String lastUpdatedTimestamp;
 
+    /**
+     * @return Last updated timestamp
+     * 
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
@@ -76,16 +88,34 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends com.p
             $ = new CloudTieringVolumeFreeSpacePolicyStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentVolumeFreeSpacePercent Current volume free space percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentVolumeFreeSpacePercent(Integer currentVolumeFreeSpacePercent) {
             $.currentVolumeFreeSpacePercent = currentVolumeFreeSpacePercent;
             return this;
         }
 
+        /**
+         * @param effectiveVolumeFreeSpacePolicy In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effectiveVolumeFreeSpacePolicy(Integer effectiveVolumeFreeSpacePolicy) {
             $.effectiveVolumeFreeSpacePolicy = effectiveVolumeFreeSpacePolicy;
             return this;
         }
 
+        /**
+         * @param lastUpdatedTimestamp Last updated timestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;

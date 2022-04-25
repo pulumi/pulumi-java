@@ -11,32 +11,32 @@ import java.util.Objects;
 @CustomType
 public final class AmlComputeNodeInformationResponse {
     /**
-     * ID of the compute node.
+     * @return ID of the compute node.
      * 
      */
     private final String nodeId;
     /**
-     * State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
+     * @return State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
      * 
      */
     private final String nodeState;
     /**
-     * SSH port number of the node.
+     * @return SSH port number of the node.
      * 
      */
     private final Double port;
     /**
-     * Private IP address of the compute node.
+     * @return Private IP address of the compute node.
      * 
      */
     private final String privateIpAddress;
     /**
-     * Public IP address of the compute node.
+     * @return Public IP address of the compute node.
      * 
      */
     private final String publicIpAddress;
     /**
-     * ID of the Experiment running on the node, if any else null.
+     * @return ID of the Experiment running on the node, if any else null.
      * 
      */
     private final String runId;
@@ -58,44 +58,44 @@ public final class AmlComputeNodeInformationResponse {
     }
 
     /**
-     * ID of the compute node.
+     * @return ID of the compute node.
      * 
-    */
+     */
     public String nodeId() {
         return this.nodeId;
     }
     /**
-     * State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
+     * @return State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
      * 
-    */
+     */
     public String nodeState() {
         return this.nodeState;
     }
     /**
-     * SSH port number of the node.
+     * @return SSH port number of the node.
      * 
-    */
+     */
     public Double port() {
         return this.port;
     }
     /**
-     * Private IP address of the compute node.
+     * @return Private IP address of the compute node.
      * 
-    */
+     */
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
     /**
-     * Public IP address of the compute node.
+     * @return Public IP address of the compute node.
      * 
-    */
+     */
     public String publicIpAddress() {
         return this.publicIpAddress;
     }
     /**
-     * ID of the Experiment running on the node, if any else null.
+     * @return ID of the Experiment running on the node, if any else null.
      * 
-    */
+     */
     public String runId() {
         return this.runId;
     }

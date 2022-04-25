@@ -23,6 +23,10 @@ public final class AppEngineResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="moduleId", required=true)
     private String moduleId;
 
+    /**
+     * @return The ID of the App Engine module underlying this service. Corresponds to the module_id resource label in the gae_app monitored resource: https://cloud.google.com/monitoring/api/resources#tag_gae_app
+     * 
+     */
     public String moduleId() {
         return this.moduleId;
     }
@@ -51,6 +55,12 @@ public final class AppEngineResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AppEngineResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param moduleId The ID of the App Engine module underlying this service. Corresponds to the module_id resource label in the gae_app monitored resource: https://cloud.google.com/monitoring/api/resources#tag_gae_app
+         * 
+         * @return builder
+         * 
+         */
         public Builder moduleId(String moduleId) {
             $.moduleId = moduleId;
             return this;

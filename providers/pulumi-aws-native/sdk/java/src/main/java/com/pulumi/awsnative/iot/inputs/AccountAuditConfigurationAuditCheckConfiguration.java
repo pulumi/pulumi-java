@@ -25,6 +25,10 @@ public final class AccountAuditConfigurationAuditCheckConfiguration extends com.
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return True if the check is enabled.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -53,6 +57,12 @@ public final class AccountAuditConfigurationAuditCheckConfiguration extends com.
             $ = new AccountAuditConfigurationAuditCheckConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled True if the check is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;

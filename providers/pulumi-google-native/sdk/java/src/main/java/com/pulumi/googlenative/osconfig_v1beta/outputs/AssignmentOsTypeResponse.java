@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class AssignmentOsTypeResponse {
     /**
-     * Targets VM instances with OS Inventory enabled and having the following OS architecture.
+     * @return Targets VM instances with OS Inventory enabled and having the following OS architecture.
      * 
      */
     private final String osArchitecture;
     /**
-     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
+     * @return Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
      * 
      */
     private final String osShortName;
     /**
-     * Targets VM instances with OS Inventory enabled and having the following following OS version.
+     * @return Targets VM instances with OS Inventory enabled and having the following following OS version.
      * 
      */
     private final String osVersion;
@@ -36,23 +36,23 @@ public final class AssignmentOsTypeResponse {
     }
 
     /**
-     * Targets VM instances with OS Inventory enabled and having the following OS architecture.
+     * @return Targets VM instances with OS Inventory enabled and having the following OS architecture.
      * 
-    */
+     */
     public String osArchitecture() {
         return this.osArchitecture;
     }
     /**
-     * Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
+     * @return Targets VM instances with OS Inventory enabled and having the following OS short name, for example &#34;debian&#34; or &#34;windows&#34;.
      * 
-    */
+     */
     public String osShortName() {
         return this.osShortName;
     }
     /**
-     * Targets VM instances with OS Inventory enabled and having the following following OS version.
+     * @return Targets VM instances with OS Inventory enabled and having the following following OS version.
      * 
-    */
+     */
     public String osVersion() {
         return this.osVersion;
     }

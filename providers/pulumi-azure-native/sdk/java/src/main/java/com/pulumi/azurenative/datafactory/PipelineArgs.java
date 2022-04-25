@@ -68,6 +68,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="activities")
     private @Nullable Output<List<Object>> activities;
 
+    /**
+     * @return List of activities in pipeline.
+     * 
+     */
     public Optional<Output<List<Object>>> activities() {
         return Optional.ofNullable(this.activities);
     }
@@ -79,6 +83,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the Pipeline.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -90,6 +98,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="concurrency")
     private @Nullable Output<Integer> concurrency;
 
+    /**
+     * @return The max number of concurrent runs for the pipeline.
+     * 
+     */
     public Optional<Output<Integer>> concurrency() {
         return Optional.ofNullable(this.concurrency);
     }
@@ -101,6 +113,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the pipeline.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -112,6 +128,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="factoryName", required=true)
     private Output<String> factoryName;
 
+    /**
+     * @return The factory name.
+     * 
+     */
     public Output<String> factoryName() {
         return this.factoryName;
     }
@@ -123,6 +143,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="folder")
     private @Nullable Output<PipelineFolderArgs> folder;
 
+    /**
+     * @return The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
+     * 
+     */
     public Optional<Output<PipelineFolderArgs>> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -134,6 +158,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return List of parameters for pipeline.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -145,6 +173,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineName")
     private @Nullable Output<String> pipelineName;
 
+    /**
+     * @return The pipeline name.
+     * 
+     */
     public Optional<Output<String>> pipelineName() {
         return Optional.ofNullable(this.pipelineName);
     }
@@ -156,6 +188,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
     private @Nullable Output<PipelinePolicyArgs> policy;
 
+    /**
+     * @return Pipeline Policy.
+     * 
+     */
     public Optional<Output<PipelinePolicyArgs>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -167,6 +203,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -178,6 +218,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runDimensions")
     private @Nullable Output<Map<String,Object>> runDimensions;
 
+    /**
+     * @return Dimensions emitted by Pipeline.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> runDimensions() {
         return Optional.ofNullable(this.runDimensions);
     }
@@ -189,6 +233,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="variables")
     private @Nullable Output<Map<String,VariableSpecificationArgs>> variables;
 
+    /**
+     * @return List of variables for pipeline.
+     * 
+     */
     public Optional<Output<Map<String,VariableSpecificationArgs>>> variables() {
         return Optional.ofNullable(this.variables);
     }
@@ -228,118 +276,274 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PipelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activities List of activities in pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(@Nullable Output<List<Object>> activities) {
             $.activities = activities;
             return this;
         }
 
+        /**
+         * @param activities List of activities in pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(List<Object> activities) {
             return activities(Output.of(activities));
         }
 
+        /**
+         * @param activities List of activities in pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(Object... activities) {
             return activities(List.of(activities));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param concurrency The max number of concurrent runs for the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder concurrency(@Nullable Output<Integer> concurrency) {
             $.concurrency = concurrency;
             return this;
         }
 
+        /**
+         * @param concurrency The max number of concurrent runs for the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder concurrency(Integer concurrency) {
             return concurrency(Output.of(concurrency));
         }
 
+        /**
+         * @param description The description of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(Output<String> factoryName) {
             $.factoryName = factoryName;
             return this;
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(String factoryName) {
             return factoryName(Output.of(factoryName));
         }
 
+        /**
+         * @param folder The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable Output<PipelineFolderArgs> folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folder The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(PipelineFolderArgs folder) {
             return folder(Output.of(folder));
         }
 
+        /**
+         * @param parameters List of parameters for pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters List of parameters for pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param pipelineName The pipeline name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineName(@Nullable Output<String> pipelineName) {
             $.pipelineName = pipelineName;
             return this;
         }
 
+        /**
+         * @param pipelineName The pipeline name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineName(String pipelineName) {
             return pipelineName(Output.of(pipelineName));
         }
 
+        /**
+         * @param policy Pipeline Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<PipelinePolicyArgs> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy Pipeline Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(PipelinePolicyArgs policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param runDimensions Dimensions emitted by Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runDimensions(@Nullable Output<Map<String,Object>> runDimensions) {
             $.runDimensions = runDimensions;
             return this;
         }
 
+        /**
+         * @param runDimensions Dimensions emitted by Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runDimensions(Map<String,Object> runDimensions) {
             return runDimensions(Output.of(runDimensions));
         }
 
+        /**
+         * @param variables List of variables for pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(@Nullable Output<Map<String,VariableSpecificationArgs>> variables) {
             $.variables = variables;
             return this;
         }
 
+        /**
+         * @param variables List of variables for pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(Map<String,VariableSpecificationArgs> variables) {
             return variables(Output.of(variables));
         }

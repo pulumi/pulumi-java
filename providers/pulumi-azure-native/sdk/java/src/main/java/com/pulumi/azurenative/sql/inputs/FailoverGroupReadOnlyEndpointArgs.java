@@ -28,6 +28,10 @@ public final class FailoverGroupReadOnlyEndpointArgs extends com.pulumi.resource
     @Import(name="failoverPolicy")
     private @Nullable Output<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy;
 
+    /**
+     * @return Failover policy of the read-only endpoint for the failover group.
+     * 
+     */
     public Optional<Output<Either<String,ReadOnlyEndpointFailoverPolicy>>> failoverPolicy() {
         return Optional.ofNullable(this.failoverPolicy);
     }
@@ -56,19 +60,43 @@ public final class FailoverGroupReadOnlyEndpointArgs extends com.pulumi.resource
             $ = new FailoverGroupReadOnlyEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failoverPolicy Failover policy of the read-only endpoint for the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverPolicy(@Nullable Output<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy) {
             $.failoverPolicy = failoverPolicy;
             return this;
         }
 
+        /**
+         * @param failoverPolicy Failover policy of the read-only endpoint for the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverPolicy(Either<String,ReadOnlyEndpointFailoverPolicy> failoverPolicy) {
             return failoverPolicy(Output.of(failoverPolicy));
         }
 
+        /**
+         * @param failoverPolicy Failover policy of the read-only endpoint for the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverPolicy(String failoverPolicy) {
             return failoverPolicy(Either.ofLeft(failoverPolicy));
         }
 
+        /**
+         * @param failoverPolicy Failover policy of the read-only endpoint for the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverPolicy(ReadOnlyEndpointFailoverPolicy failoverPolicy) {
             return failoverPolicy(Either.ofRight(failoverPolicy));
         }

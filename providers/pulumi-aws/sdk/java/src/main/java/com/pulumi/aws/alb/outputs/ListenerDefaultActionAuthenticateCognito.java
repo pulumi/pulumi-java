@@ -14,42 +14,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListenerDefaultActionAuthenticateCognito {
     /**
-     * Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+     * @return Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
      * 
      */
     private final @Nullable Map<String,String> authenticationRequestExtraParams;
     /**
-     * Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+     * @return Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
      * 
      */
     private final @Nullable String onUnauthenticatedRequest;
     /**
-     * Set of user claims to be requested from the IdP.
+     * @return Set of user claims to be requested from the IdP.
      * 
      */
     private final @Nullable String scope;
     /**
-     * Name of the cookie used to maintain session information.
+     * @return Name of the cookie used to maintain session information.
      * 
      */
     private final @Nullable String sessionCookieName;
     /**
-     * Maximum duration of the authentication session, in seconds.
+     * @return Maximum duration of the authentication session, in seconds.
      * 
      */
     private final @Nullable Integer sessionTimeout;
     /**
-     * ARN of the Cognito user pool.
+     * @return ARN of the Cognito user pool.
      * 
      */
     private final String userPoolArn;
     /**
-     * ID of the Cognito user pool client.
+     * @return ID of the Cognito user pool client.
      * 
      */
     private final String userPoolClientId;
     /**
-     * Domain prefix or fully-qualified domain name of the Cognito user pool.
+     * @return Domain prefix or fully-qualified domain name of the Cognito user pool.
      * 
      */
     private final String userPoolDomain;
@@ -75,58 +75,58 @@ public final class ListenerDefaultActionAuthenticateCognito {
     }
 
     /**
-     * Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+     * @return Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
      * 
-    */
+     */
     public Map<String,String> authenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Map.of() : this.authenticationRequestExtraParams;
     }
     /**
-     * Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+     * @return Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
      * 
-    */
+     */
     public Optional<String> onUnauthenticatedRequest() {
         return Optional.ofNullable(this.onUnauthenticatedRequest);
     }
     /**
-     * Set of user claims to be requested from the IdP.
+     * @return Set of user claims to be requested from the IdP.
      * 
-    */
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
-     * Name of the cookie used to maintain session information.
+     * @return Name of the cookie used to maintain session information.
      * 
-    */
+     */
     public Optional<String> sessionCookieName() {
         return Optional.ofNullable(this.sessionCookieName);
     }
     /**
-     * Maximum duration of the authentication session, in seconds.
+     * @return Maximum duration of the authentication session, in seconds.
      * 
-    */
+     */
     public Optional<Integer> sessionTimeout() {
         return Optional.ofNullable(this.sessionTimeout);
     }
     /**
-     * ARN of the Cognito user pool.
+     * @return ARN of the Cognito user pool.
      * 
-    */
+     */
     public String userPoolArn() {
         return this.userPoolArn;
     }
     /**
-     * ID of the Cognito user pool client.
+     * @return ID of the Cognito user pool client.
      * 
-    */
+     */
     public String userPoolClientId() {
         return this.userPoolClientId;
     }
     /**
-     * Domain prefix or fully-qualified domain name of the Cognito user pool.
+     * @return Domain prefix or fully-qualified domain name of the Cognito user pool.
      * 
-    */
+     */
     public String userPoolDomain() {
         return this.userPoolDomain;
     }

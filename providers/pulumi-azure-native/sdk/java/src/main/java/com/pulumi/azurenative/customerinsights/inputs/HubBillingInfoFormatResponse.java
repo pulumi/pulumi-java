@@ -26,6 +26,10 @@ public final class HubBillingInfoFormatResponse extends com.pulumi.resources.Inv
     @Import(name="maxUnits")
     private @Nullable Integer maxUnits;
 
+    /**
+     * @return The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
+     * 
+     */
     public Optional<Integer> maxUnits() {
         return Optional.ofNullable(this.maxUnits);
     }
@@ -37,6 +41,10 @@ public final class HubBillingInfoFormatResponse extends com.pulumi.resources.Inv
     @Import(name="minUnits")
     private @Nullable Integer minUnits;
 
+    /**
+     * @return The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
+     * 
+     */
     public Optional<Integer> minUnits() {
         return Optional.ofNullable(this.minUnits);
     }
@@ -48,6 +56,10 @@ public final class HubBillingInfoFormatResponse extends com.pulumi.resources.Inv
     @Import(name="skuName")
     private @Nullable String skuName;
 
+    /**
+     * @return The sku name.
+     * 
+     */
     public Optional<String> skuName() {
         return Optional.ofNullable(this.skuName);
     }
@@ -78,16 +90,34 @@ public final class HubBillingInfoFormatResponse extends com.pulumi.resources.Inv
             $ = new HubBillingInfoFormatResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxUnits The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnits(@Nullable Integer maxUnits) {
             $.maxUnits = maxUnits;
             return this;
         }
 
+        /**
+         * @param minUnits The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minUnits(@Nullable Integer minUnits) {
             $.minUnits = minUnits;
             return this;
         }
 
+        /**
+         * @param skuName The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuName(@Nullable String skuName) {
             $.skuName = skuName;
             return this;

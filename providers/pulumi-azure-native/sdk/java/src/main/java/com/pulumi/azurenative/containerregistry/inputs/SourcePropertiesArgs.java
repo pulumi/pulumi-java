@@ -29,6 +29,10 @@ public final class SourcePropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="branch")
     private @Nullable Output<String> branch;
 
+    /**
+     * @return The branch name of the source code.
+     * 
+     */
     public Optional<Output<String>> branch() {
         return Optional.ofNullable(this.branch);
     }
@@ -40,6 +44,10 @@ public final class SourcePropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="repositoryUrl", required=true)
     private Output<String> repositoryUrl;
 
+    /**
+     * @return The full URL to the source code repository
+     * 
+     */
     public Output<String> repositoryUrl() {
         return this.repositoryUrl;
     }
@@ -52,6 +60,11 @@ public final class SourcePropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sourceControlAuthProperties")
     private @Nullable Output<AuthInfoArgs> sourceControlAuthProperties;
 
+    /**
+     * @return The authorization properties for accessing the source code repository and to set up
+     * webhooks for notifications.
+     * 
+     */
     public Optional<Output<AuthInfoArgs>> sourceControlAuthProperties() {
         return Optional.ofNullable(this.sourceControlAuthProperties);
     }
@@ -63,6 +76,10 @@ public final class SourcePropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sourceControlType", required=true)
     private Output<Either<String,SourceControlType>> sourceControlType;
 
+    /**
+     * @return The type of source control service.
+     * 
+     */
     public Output<Either<String,SourceControlType>> sourceControlType() {
         return this.sourceControlType;
     }
@@ -94,46 +111,108 @@ public final class SourcePropertiesArgs extends com.pulumi.resources.ResourceArg
             $ = new SourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branch The branch name of the source code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(@Nullable Output<String> branch) {
             $.branch = branch;
             return this;
         }
 
+        /**
+         * @param branch The branch name of the source code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(String branch) {
             return branch(Output.of(branch));
         }
 
+        /**
+         * @param repositoryUrl The full URL to the source code repository
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUrl(Output<String> repositoryUrl) {
             $.repositoryUrl = repositoryUrl;
             return this;
         }
 
+        /**
+         * @param repositoryUrl The full URL to the source code repository
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUrl(String repositoryUrl) {
             return repositoryUrl(Output.of(repositoryUrl));
         }
 
+        /**
+         * @param sourceControlAuthProperties The authorization properties for accessing the source code repository and to set up
+         * webhooks for notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceControlAuthProperties(@Nullable Output<AuthInfoArgs> sourceControlAuthProperties) {
             $.sourceControlAuthProperties = sourceControlAuthProperties;
             return this;
         }
 
+        /**
+         * @param sourceControlAuthProperties The authorization properties for accessing the source code repository and to set up
+         * webhooks for notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceControlAuthProperties(AuthInfoArgs sourceControlAuthProperties) {
             return sourceControlAuthProperties(Output.of(sourceControlAuthProperties));
         }
 
+        /**
+         * @param sourceControlType The type of source control service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceControlType(Output<Either<String,SourceControlType>> sourceControlType) {
             $.sourceControlType = sourceControlType;
             return this;
         }
 
+        /**
+         * @param sourceControlType The type of source control service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceControlType(Either<String,SourceControlType> sourceControlType) {
             return sourceControlType(Output.of(sourceControlType));
         }
 
+        /**
+         * @param sourceControlType The type of source control service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceControlType(String sourceControlType) {
             return sourceControlType(Either.ofLeft(sourceControlType));
         }
 
+        /**
+         * @param sourceControlType The type of source control service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceControlType(SourceControlType sourceControlType) {
             return sourceControlType(Either.ofRight(sourceControlType));
         }

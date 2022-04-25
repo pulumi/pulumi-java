@@ -21,6 +21,10 @@ public final class SettingsPropertiesResponseCache extends com.pulumi.resources.
     @Import(name="channel", required=true)
     private String channel;
 
+    /**
+     * @return Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
+     * 
+     */
     public String channel() {
         return this.channel;
     }
@@ -32,6 +36,10 @@ public final class SettingsPropertiesResponseCache extends com.pulumi.resources.
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource ID used by Resource Manager to uniquely identify the scope.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -43,6 +51,10 @@ public final class SettingsPropertiesResponseCache extends com.pulumi.resources.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Display name for the scope.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -54,6 +66,10 @@ public final class SettingsPropertiesResponseCache extends com.pulumi.resources.
     @Import(name="parent")
     private @Nullable String parent;
 
+    /**
+     * @return Resource ID of the parent scope. For instance, subscription&#39;s resource ID for a resource group or a management group resource ID for a subscription.
+     * 
+     */
     public Optional<String> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -65,6 +81,10 @@ public final class SettingsPropertiesResponseCache extends com.pulumi.resources.
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -76,6 +96,10 @@ public final class SettingsPropertiesResponseCache extends com.pulumi.resources.
     @Import(name="subchannel", required=true)
     private String subchannel;
 
+    /**
+     * @return Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
+     * 
+     */
     public String subchannel() {
         return this.subchannel;
     }
@@ -109,31 +133,67 @@ public final class SettingsPropertiesResponseCache extends com.pulumi.resources.
             $ = new SettingsPropertiesResponseCache(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channel Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channel(String channel) {
             $.channel = channel;
             return this;
         }
 
+        /**
+         * @param id Resource ID used by Resource Manager to uniquely identify the scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Display name for the scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parent Resource ID of the parent scope. For instance, subscription&#39;s resource ID for a resource group or a management group resource ID for a subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable String parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param status Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param subchannel Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
+         * 
+         * @return builder
+         * 
+         */
         public Builder subchannel(String subchannel) {
             $.subchannel = subchannel;
             return this;

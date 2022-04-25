@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConfigurationTemplateSetting {
     /**
-     * A unique name for this Template.
+     * @return A unique name for this Template.
      * 
      */
     private final String name;
@@ -33,9 +33,9 @@ public final class ConfigurationTemplateSetting {
     }
 
     /**
-     * A unique name for this Template.
+     * @return A unique name for this Template.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PrivateLinkServiceConnectionStateResponse {
     /**
-     * A message indicating if changes on the service provider require any updates on the consumer.
+     * @return A message indicating if changes on the service provider require any updates on the consumer.
      * 
      */
     private final @Nullable String actionRequired;
     /**
-     * The reason for approval or rejection.
+     * @return The reason for approval or rejection.
      * 
      */
     private final @Nullable String description;
     /**
-     * Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.
+     * @return Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.
      * 
      */
     private final @Nullable String status;
@@ -38,23 +38,23 @@ public final class PrivateLinkServiceConnectionStateResponse {
     }
 
     /**
-     * A message indicating if changes on the service provider require any updates on the consumer.
+     * @return A message indicating if changes on the service provider require any updates on the consumer.
      * 
-    */
+     */
     public Optional<String> actionRequired() {
         return Optional.ofNullable(this.actionRequired);
     }
     /**
-     * The reason for approval or rejection.
+     * @return The reason for approval or rejection.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.
+     * @return Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

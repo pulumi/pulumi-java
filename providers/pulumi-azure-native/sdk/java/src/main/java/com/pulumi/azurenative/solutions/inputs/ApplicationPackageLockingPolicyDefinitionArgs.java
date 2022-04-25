@@ -27,6 +27,10 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends com.pul
     @Import(name="allowedActions")
     private @Nullable Output<List<String>> allowedActions;
 
+    /**
+     * @return The deny assignment excluded actions.
+     * 
+     */
     public Optional<Output<List<String>>> allowedActions() {
         return Optional.ofNullable(this.allowedActions);
     }
@@ -38,6 +42,10 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends com.pul
     @Import(name="allowedDataActions")
     private @Nullable Output<List<String>> allowedDataActions;
 
+    /**
+     * @return The deny assignment excluded data actions.
+     * 
+     */
     public Optional<Output<List<String>>> allowedDataActions() {
         return Optional.ofNullable(this.allowedDataActions);
     }
@@ -67,28 +75,64 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends com.pul
             $ = new ApplicationPackageLockingPolicyDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedActions The deny assignment excluded actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedActions(@Nullable Output<List<String>> allowedActions) {
             $.allowedActions = allowedActions;
             return this;
         }
 
+        /**
+         * @param allowedActions The deny assignment excluded actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedActions(List<String> allowedActions) {
             return allowedActions(Output.of(allowedActions));
         }
 
+        /**
+         * @param allowedActions The deny assignment excluded actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedActions(String... allowedActions) {
             return allowedActions(List.of(allowedActions));
         }
 
+        /**
+         * @param allowedDataActions The deny assignment excluded data actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedDataActions(@Nullable Output<List<String>> allowedDataActions) {
             $.allowedDataActions = allowedDataActions;
             return this;
         }
 
+        /**
+         * @param allowedDataActions The deny assignment excluded data actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedDataActions(List<String> allowedDataActions) {
             return allowedDataActions(Output.of(allowedDataActions));
         }
 
+        /**
+         * @param allowedDataActions The deny assignment excluded data actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedDataActions(String... allowedDataActions) {
             return allowedDataActions(List.of(allowedDataActions));
         }

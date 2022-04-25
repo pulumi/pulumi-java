@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 public final class StackSetStackInstances {
     private final StackSetDeploymentTargets deploymentTargets;
     /**
-     * A list of stack set parameters whose values you want to override in the selected stack instances.
+     * @return A list of stack set parameters whose values you want to override in the selected stack instances.
      * 
      */
     private final @Nullable List<StackSetParameter> parameterOverrides;
     /**
-     * The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
+     * @return The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
      * 
      */
     private final List<String> regions;
@@ -39,16 +39,16 @@ public final class StackSetStackInstances {
         return this.deploymentTargets;
     }
     /**
-     * A list of stack set parameters whose values you want to override in the selected stack instances.
+     * @return A list of stack set parameters whose values you want to override in the selected stack instances.
      * 
-    */
+     */
     public List<StackSetParameter> parameterOverrides() {
         return this.parameterOverrides == null ? List.of() : this.parameterOverrides;
     }
     /**
-     * The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
+     * @return The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
      * 
-    */
+     */
     public List<String> regions() {
         return this.regions;
     }

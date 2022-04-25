@@ -24,6 +24,10 @@ public final class ParameterGroupTagArgs extends com.pulumi.resources.ResourceAr
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The key for the tag. May not be null.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -35,6 +39,10 @@ public final class ParameterGroupTagArgs extends com.pulumi.resources.ResourceAr
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The tag&#39;s value. May be null.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -64,20 +72,44 @@ public final class ParameterGroupTagArgs extends com.pulumi.resources.ResourceAr
             $ = new ParameterGroupTagArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key for the tag. May not be null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The key for the tag. May not be null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param value The tag&#39;s value. May be null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The tag&#39;s value. May be null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

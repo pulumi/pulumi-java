@@ -27,6 +27,10 @@ public final class ReplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automatic")
     private @Nullable Output<AutomaticArgs> automatic;
 
+    /**
+     * @return The Secret will automatically be replicated without any restrictions.
+     * 
+     */
     public Optional<Output<AutomaticArgs>> automatic() {
         return Optional.ofNullable(this.automatic);
     }
@@ -38,6 +42,10 @@ public final class ReplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userManaged")
     private @Nullable Output<UserManagedArgs> userManaged;
 
+    /**
+     * @return The Secret will only be replicated into the locations specified.
+     * 
+     */
     public Optional<Output<UserManagedArgs>> userManaged() {
         return Optional.ofNullable(this.userManaged);
     }
@@ -67,20 +75,44 @@ public final class ReplicationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automatic The Secret will automatically be replicated without any restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatic(@Nullable Output<AutomaticArgs> automatic) {
             $.automatic = automatic;
             return this;
         }
 
+        /**
+         * @param automatic The Secret will automatically be replicated without any restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatic(AutomaticArgs automatic) {
             return automatic(Output.of(automatic));
         }
 
+        /**
+         * @param userManaged The Secret will only be replicated into the locations specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userManaged(@Nullable Output<UserManagedArgs> userManaged) {
             $.userManaged = userManaged;
             return this;
         }
 
+        /**
+         * @param userManaged The Secret will only be replicated into the locations specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userManaged(UserManagedArgs userManaged) {
             return userManaged(Output.of(userManaged));
         }

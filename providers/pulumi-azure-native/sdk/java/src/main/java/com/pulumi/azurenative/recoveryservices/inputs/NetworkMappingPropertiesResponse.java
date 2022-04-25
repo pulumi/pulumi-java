@@ -29,6 +29,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="fabricSpecificSettings")
     private @Nullable Object fabricSpecificSettings;
 
+    /**
+     * @return The fabric specific settings.
+     * 
+     */
     public Optional<Object> fabricSpecificSettings() {
         return Optional.ofNullable(this.fabricSpecificSettings);
     }
@@ -40,6 +44,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="primaryFabricFriendlyName")
     private @Nullable String primaryFabricFriendlyName;
 
+    /**
+     * @return The primary fabric friendly name.
+     * 
+     */
     public Optional<String> primaryFabricFriendlyName() {
         return Optional.ofNullable(this.primaryFabricFriendlyName);
     }
@@ -51,6 +59,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="primaryNetworkFriendlyName")
     private @Nullable String primaryNetworkFriendlyName;
 
+    /**
+     * @return The primary network friendly name.
+     * 
+     */
     public Optional<String> primaryNetworkFriendlyName() {
         return Optional.ofNullable(this.primaryNetworkFriendlyName);
     }
@@ -62,6 +74,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="primaryNetworkId")
     private @Nullable String primaryNetworkId;
 
+    /**
+     * @return The primary network id for network mapping.
+     * 
+     */
     public Optional<String> primaryNetworkId() {
         return Optional.ofNullable(this.primaryNetworkId);
     }
@@ -73,6 +89,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="recoveryFabricArmId")
     private @Nullable String recoveryFabricArmId;
 
+    /**
+     * @return The recovery fabric ARM id.
+     * 
+     */
     public Optional<String> recoveryFabricArmId() {
         return Optional.ofNullable(this.recoveryFabricArmId);
     }
@@ -84,6 +104,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="recoveryFabricFriendlyName")
     private @Nullable String recoveryFabricFriendlyName;
 
+    /**
+     * @return The recovery fabric friendly name.
+     * 
+     */
     public Optional<String> recoveryFabricFriendlyName() {
         return Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
@@ -95,6 +119,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="recoveryNetworkFriendlyName")
     private @Nullable String recoveryNetworkFriendlyName;
 
+    /**
+     * @return The recovery network friendly name.
+     * 
+     */
     public Optional<String> recoveryNetworkFriendlyName() {
         return Optional.ofNullable(this.recoveryNetworkFriendlyName);
     }
@@ -106,6 +134,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="recoveryNetworkId")
     private @Nullable String recoveryNetworkId;
 
+    /**
+     * @return The recovery network id for network mapping.
+     * 
+     */
     public Optional<String> recoveryNetworkId() {
         return Optional.ofNullable(this.recoveryNetworkId);
     }
@@ -117,6 +149,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return The pairing state for network mapping.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -153,46 +189,100 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
             $ = new NetworkMappingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fabricSpecificSettings The fabric specific settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricSpecificSettings(@Nullable Object fabricSpecificSettings) {
             $.fabricSpecificSettings = fabricSpecificSettings;
             return this;
         }
 
+        /**
+         * @param primaryFabricFriendlyName The primary fabric friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryFabricFriendlyName(@Nullable String primaryFabricFriendlyName) {
             $.primaryFabricFriendlyName = primaryFabricFriendlyName;
             return this;
         }
 
+        /**
+         * @param primaryNetworkFriendlyName The primary network friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryNetworkFriendlyName(@Nullable String primaryNetworkFriendlyName) {
             $.primaryNetworkFriendlyName = primaryNetworkFriendlyName;
             return this;
         }
 
+        /**
+         * @param primaryNetworkId The primary network id for network mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryNetworkId(@Nullable String primaryNetworkId) {
             $.primaryNetworkId = primaryNetworkId;
             return this;
         }
 
+        /**
+         * @param recoveryFabricArmId The recovery fabric ARM id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryFabricArmId(@Nullable String recoveryFabricArmId) {
             $.recoveryFabricArmId = recoveryFabricArmId;
             return this;
         }
 
+        /**
+         * @param recoveryFabricFriendlyName The recovery fabric friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryFabricFriendlyName(@Nullable String recoveryFabricFriendlyName) {
             $.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
             return this;
         }
 
+        /**
+         * @param recoveryNetworkFriendlyName The recovery network friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryNetworkFriendlyName(@Nullable String recoveryNetworkFriendlyName) {
             $.recoveryNetworkFriendlyName = recoveryNetworkFriendlyName;
             return this;
         }
 
+        /**
+         * @param recoveryNetworkId The recovery network id for network mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryNetworkId(@Nullable String recoveryNetworkId) {
             $.recoveryNetworkId = recoveryNetworkId;
             return this;
         }
 
+        /**
+         * @param state The pairing state for network mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

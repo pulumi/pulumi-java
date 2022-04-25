@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class RouterNatSubnetworkToNatResponse {
     /**
-     * URL for the subnetwork resource that will use NAT.
+     * @return URL for the subnetwork resource that will use NAT.
      * 
      */
     private final String name;
     /**
-     * A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if &#34;LIST_OF_SECONDARY_IP_RANGES&#34; is one of the values in source_ip_ranges_to_nat.
+     * @return A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if &#34;LIST_OF_SECONDARY_IP_RANGES&#34; is one of the values in source_ip_ranges_to_nat.
      * 
      */
     private final List<String> secondaryIpRangeNames;
     /**
-     * Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: [&#34;PRIMARY_IP_RANGE&#34;, &#34;LIST_OF_SECONDARY_IP_RANGES&#34;] Default: [ALL_IP_RANGES]
+     * @return Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: [&#34;PRIMARY_IP_RANGE&#34;, &#34;LIST_OF_SECONDARY_IP_RANGES&#34;] Default: [ALL_IP_RANGES]
      * 
      */
     private final List<String> sourceIpRangesToNat;
@@ -37,23 +37,23 @@ public final class RouterNatSubnetworkToNatResponse {
     }
 
     /**
-     * URL for the subnetwork resource that will use NAT.
+     * @return URL for the subnetwork resource that will use NAT.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if &#34;LIST_OF_SECONDARY_IP_RANGES&#34; is one of the values in source_ip_ranges_to_nat.
+     * @return A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if &#34;LIST_OF_SECONDARY_IP_RANGES&#34; is one of the values in source_ip_ranges_to_nat.
      * 
-    */
+     */
     public List<String> secondaryIpRangeNames() {
         return this.secondaryIpRangeNames;
     }
     /**
-     * Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: [&#34;PRIMARY_IP_RANGE&#34;, &#34;LIST_OF_SECONDARY_IP_RANGES&#34;] Default: [ALL_IP_RANGES]
+     * @return Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: [&#34;PRIMARY_IP_RANGE&#34;, &#34;LIST_OF_SECONDARY_IP_RANGES&#34;] Default: [ALL_IP_RANGES]
      * 
-    */
+     */
     public List<String> sourceIpRangesToNat() {
         return this.sourceIpRangesToNat;
     }

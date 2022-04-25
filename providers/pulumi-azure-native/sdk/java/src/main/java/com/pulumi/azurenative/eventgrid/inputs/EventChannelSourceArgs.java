@@ -27,6 +27,11 @@ public final class EventChannelSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="source")
     private @Nullable Output<String> source;
 
+    /**
+     * @return The identifier of the resource that&#39;s the source of the events.
+     * This represents a unique resource in the partner&#39;s resource model.
+     * 
+     */
     public Optional<Output<String>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -55,11 +60,25 @@ public final class EventChannelSourceArgs extends com.pulumi.resources.ResourceA
             $ = new EventChannelSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param source The identifier of the resource that&#39;s the source of the events.
+         * This represents a unique resource in the partner&#39;s resource model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The identifier of the resource that&#39;s the source of the events.
+         * This represents a unique resource in the partner&#39;s resource model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }

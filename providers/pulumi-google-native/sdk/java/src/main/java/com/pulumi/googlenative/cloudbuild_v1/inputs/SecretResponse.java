@@ -24,6 +24,10 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kmsKeyName", required=true)
     private String kmsKeyName;
 
+    /**
+     * @return Cloud KMS key name to use to decrypt these envs.
+     * 
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -35,6 +39,10 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="secretEnv", required=true)
     private Map<String,String> secretEnv;
 
+    /**
+     * @return Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build&#39;s secrets.
+     * 
+     */
     public Map<String,String> secretEnv() {
         return this.secretEnv;
     }
@@ -64,11 +72,23 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SecretResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName Cloud KMS key name to use to decrypt these envs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param secretEnv Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build&#39;s secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretEnv(Map<String,String> secretEnv) {
             $.secretEnv = secretEnv;
             return this;

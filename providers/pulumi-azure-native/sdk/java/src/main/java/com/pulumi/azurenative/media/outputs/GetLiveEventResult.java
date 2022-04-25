@@ -21,97 +21,97 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLiveEventResult {
     /**
-     * The creation time for the live event
+     * @return The creation time for the live event
      * 
      */
     private final String created;
     /**
-     * Live event cross site access policies.
+     * @return Live event cross site access policies.
      * 
      */
     private final @Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies;
     /**
-     * A description for the live event.
+     * @return A description for the live event.
      * 
      */
     private final @Nullable String description;
     /**
-     * Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
+     * @return Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
      * 
      */
     private final @Nullable LiveEventEncodingResponse encoding;
     /**
-     * When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
+     * @return When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
      * 
      */
     private final @Nullable String hostnamePrefix;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Live event input settings. It defines how the live event receives input from a contribution encoder.
+     * @return Live event input settings. It defines how the live event receives input from a contribution encoder.
      * 
      */
     private final LiveEventInputResponse input;
     /**
-     * The last modified time of the live event.
+     * @return The last modified time of the live event.
      * 
      */
     private final String lastModified;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.
+     * @return Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.
      * 
      */
     private final @Nullable LiveEventPreviewResponse preview;
     /**
-     * The provisioning state of the live event.
+     * @return The provisioning state of the live event.
      * 
      */
     private final String provisioningState;
     /**
-     * The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.
+     * @return The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.
      * 
      */
     private final String resourceState;
     /**
-     * The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are &#39;Default&#39; and &#39;LowLatency&#39;.
+     * @return The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are &#39;Default&#39; and &#39;LowLatency&#39;.
      * 
      */
     private final @Nullable List<String> streamOptions;
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
+     * @return Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
      * 
      */
     private final @Nullable List<LiveEventTranscriptionResponse> transcriptions;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
     /**
-     * Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
+     * @return Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
      * 
      */
     private final @Nullable Boolean useStaticHostname;
@@ -159,135 +159,135 @@ public final class GetLiveEventResult {
     }
 
     /**
-     * The creation time for the live event
+     * @return The creation time for the live event
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * Live event cross site access policies.
+     * @return Live event cross site access policies.
      * 
-    */
+     */
     public Optional<CrossSiteAccessPoliciesResponse> crossSiteAccessPolicies() {
         return Optional.ofNullable(this.crossSiteAccessPolicies);
     }
     /**
-     * A description for the live event.
+     * @return A description for the live event.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
+     * @return Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
      * 
-    */
+     */
     public Optional<LiveEventEncodingResponse> encoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
-     * When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
+     * @return When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
      * 
-    */
+     */
     public Optional<String> hostnamePrefix() {
         return Optional.ofNullable(this.hostnamePrefix);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Live event input settings. It defines how the live event receives input from a contribution encoder.
+     * @return Live event input settings. It defines how the live event receives input from a contribution encoder.
      * 
-    */
+     */
     public LiveEventInputResponse input() {
         return this.input;
     }
     /**
-     * The last modified time of the live event.
+     * @return The last modified time of the live event.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.
+     * @return Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.
      * 
-    */
+     */
     public Optional<LiveEventPreviewResponse> preview() {
         return Optional.ofNullable(this.preview);
     }
     /**
-     * The provisioning state of the live event.
+     * @return The provisioning state of the live event.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.
+     * @return The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are &#39;Default&#39; and &#39;LowLatency&#39;.
+     * @return The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are &#39;Default&#39; and &#39;LowLatency&#39;.
      * 
-    */
+     */
     public List<String> streamOptions() {
         return this.streamOptions == null ? List.of() : this.streamOptions;
     }
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
+     * @return Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
      * 
-    */
+     */
     public List<LiveEventTranscriptionResponse> transcriptions() {
         return this.transcriptions == null ? List.of() : this.transcriptions;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
+     * @return Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
      * 
-    */
+     */
     public Optional<Boolean> useStaticHostname() {
         return Optional.ofNullable(this.useStaticHostname);
     }

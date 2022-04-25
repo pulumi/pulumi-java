@@ -16,37 +16,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EventContentResponse {
     /**
-     * The action that encompasses the provided event.
+     * @return The action that encompasses the provided event.
      * 
      */
     private final @Nullable String action;
     /**
-     * The agent that initiated the event. For most situations, this could be from the authorization context of the request.
+     * @return The agent that initiated the event. For most situations, this could be from the authorization context of the request.
      * 
      */
     private final @Nullable ActorResponse actor;
     /**
-     * The event ID.
+     * @return The event ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The request that generated the event.
+     * @return The request that generated the event.
      * 
      */
     private final @Nullable RequestResponse request;
     /**
-     * The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
+     * @return The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
      * 
      */
     private final @Nullable SourceResponse source;
     /**
-     * The target of the event.
+     * @return The target of the event.
      * 
      */
     private final @Nullable TargetResponse target;
     /**
-     * The time at which the event occurred.
+     * @return The time at which the event occurred.
      * 
      */
     private final @Nullable String timestamp;
@@ -70,51 +70,51 @@ public final class EventContentResponse {
     }
 
     /**
-     * The action that encompasses the provided event.
+     * @return The action that encompasses the provided event.
      * 
-    */
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * The agent that initiated the event. For most situations, this could be from the authorization context of the request.
+     * @return The agent that initiated the event. For most situations, this could be from the authorization context of the request.
      * 
-    */
+     */
     public Optional<ActorResponse> actor() {
         return Optional.ofNullable(this.actor);
     }
     /**
-     * The event ID.
+     * @return The event ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The request that generated the event.
+     * @return The request that generated the event.
      * 
-    */
+     */
     public Optional<RequestResponse> request() {
         return Optional.ofNullable(this.request);
     }
     /**
-     * The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
+     * @return The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
      * 
-    */
+     */
     public Optional<SourceResponse> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * The target of the event.
+     * @return The target of the event.
      * 
-    */
+     */
     public Optional<TargetResponse> target() {
         return Optional.ofNullable(this.target);
     }
     /**
-     * The time at which the event occurred.
+     * @return The time at which the event occurred.
      * 
-    */
+     */
     public Optional<String> timestamp() {
         return Optional.ofNullable(this.timestamp);
     }

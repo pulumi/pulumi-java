@@ -24,6 +24,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return The unique URI of the resource. For example, `https://gcr.io/project/image@sha256:foo` for a Docker image.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -52,11 +56,23 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uri The unique URI of the resource. For example, `https://gcr.io/project/image@sha256:foo` for a Docker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The unique URI of the resource. For example, `https://gcr.io/project/image@sha256:foo` for a Docker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

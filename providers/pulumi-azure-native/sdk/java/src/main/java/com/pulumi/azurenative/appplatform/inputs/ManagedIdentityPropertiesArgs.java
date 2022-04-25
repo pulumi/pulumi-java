@@ -28,6 +28,10 @@ public final class ManagedIdentityPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="principalId")
     private @Nullable Output<String> principalId;
 
+    /**
+     * @return Principal Id
+     * 
+     */
     public Optional<Output<String>> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -39,6 +43,10 @@ public final class ManagedIdentityPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return Tenant Id
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -50,6 +58,10 @@ public final class ManagedIdentityPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="type")
     private @Nullable Output<Either<String,ManagedIdentityType>> type;
 
+    /**
+     * @return Type of the managed identity
+     * 
+     */
     public Optional<Output<Either<String,ManagedIdentityType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -80,37 +92,85 @@ public final class ManagedIdentityPropertiesArgs extends com.pulumi.resources.Re
             $ = new ManagedIdentityPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId Principal Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId Principal Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }
 
+        /**
+         * @param tenantId Tenant Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }
 
+        /**
+         * @param type Type of the managed identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ManagedIdentityType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the managed identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ManagedIdentityType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Type of the managed identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Type of the managed identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ManagedIdentityType type) {
             return type(Either.ofRight(type));
         }

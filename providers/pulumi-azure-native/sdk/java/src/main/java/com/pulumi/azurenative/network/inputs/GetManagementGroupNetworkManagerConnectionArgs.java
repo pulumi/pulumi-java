@@ -19,6 +19,10 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends com.pu
     @Import(name="managementGroupId", required=true)
     private String managementGroupId;
 
+    /**
+     * @return The management group Id which uniquely identify the Microsoft Azure management group.
+     * 
+     */
     public String managementGroupId() {
         return this.managementGroupId;
     }
@@ -30,6 +34,10 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends com.pu
     @Import(name="networkManagerConnectionName", required=true)
     private String networkManagerConnectionName;
 
+    /**
+     * @return Name for the network manager connection.
+     * 
+     */
     public String networkManagerConnectionName() {
         return this.networkManagerConnectionName;
     }
@@ -59,11 +67,23 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends com.pu
             $ = new GetManagementGroupNetworkManagerConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managementGroupId The management group Id which uniquely identify the Microsoft Azure management group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroupId(String managementGroupId) {
             $.managementGroupId = managementGroupId;
             return this;
         }
 
+        /**
+         * @param networkManagerConnectionName Name for the network manager connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerConnectionName(String networkManagerConnectionName) {
             $.networkManagerConnectionName = networkManagerConnectionName;
             return this;

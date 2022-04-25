@@ -20,6 +20,10 @@ public final class LifecyclePolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="policy", required=true)
     private Output<String> policy;
 
+    /**
+     * @return The policy document. This is a JSON formatted string. See more details about [Policy Parameters](http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters) in the official AWS docs.
+     * 
+     */
     public Output<String> policy() {
         return this.policy;
     }
@@ -31,6 +35,10 @@ public final class LifecyclePolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="repository", required=true)
     private Output<String> repository;
 
+    /**
+     * @return Name of the repository to apply the policy.
+     * 
+     */
     public Output<String> repository() {
         return this.repository;
     }
@@ -60,20 +68,44 @@ public final class LifecyclePolicyArgs extends com.pulumi.resources.ResourceArgs
             $ = new LifecyclePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policy The policy document. This is a JSON formatted string. See more details about [Policy Parameters](http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters) in the official AWS docs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(Output<String> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy The policy document. This is a JSON formatted string. See more details about [Policy Parameters](http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters) in the official AWS docs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param repository Name of the repository to apply the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(Output<String> repository) {
             $.repository = repository;
             return this;
         }
 
+        /**
+         * @param repository Name of the repository to apply the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(String repository) {
             return repository(Output.of(repository));
         }

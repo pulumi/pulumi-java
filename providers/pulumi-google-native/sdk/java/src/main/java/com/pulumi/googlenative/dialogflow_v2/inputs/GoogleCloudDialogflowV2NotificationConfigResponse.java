@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2NotificationConfigResponse extends com
     @Import(name="messageFormat", required=true)
     private String messageFormat;
 
+    /**
+     * @return Format of message.
+     * 
+     */
     public String messageFormat() {
         return this.messageFormat;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowV2NotificationConfigResponse extends com
     @Import(name="topic", required=true)
     private String topic;
 
+    /**
+     * @return Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as serialized ConversationEvent protos. Notification works for phone calls, if this topic either is in the same project as the conversation or you grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project. Format: `projects//locations//topics/`.
+     * 
+     */
     public String topic() {
         return this.topic;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDialogflowV2NotificationConfigResponse extends com
             $ = new GoogleCloudDialogflowV2NotificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messageFormat Format of message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFormat(String messageFormat) {
             $.messageFormat = messageFormat;
             return this;
         }
 
+        /**
+         * @param topic Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as serialized ConversationEvent protos. Notification works for phone calls, if this topic either is in the same project as the conversation or you grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project. Format: `projects//locations//topics/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             $.topic = topic;
             return this;

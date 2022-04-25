@@ -13,18 +13,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedZoneDnssecConfigDefaultKeySpec {
     /**
-     * String mnemonic specifying the DNSSEC algorithm of this key
+     * @return String mnemonic specifying the DNSSEC algorithm of this key
      * Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
      * 
      */
     private final @Nullable String algorithm;
     /**
-     * Length of the keys in bits
+     * @return Length of the keys in bits
      * 
      */
     private final @Nullable Integer keyLength;
     /**
-     * Specifies whether this is a key signing key (KSK) or a zone
+     * @return Specifies whether this is a key signing key (KSK) or a zone
      * signing key (ZSK). Key signing keys have the Secure Entry
      * Point flag set and, when active, will only be used to sign
      * resource record sets of type DNSKEY. Zone signing keys do
@@ -35,7 +35,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpec {
      */
     private final @Nullable String keyType;
     /**
-     * Identifies what kind of resource this is
+     * @return Identifies what kind of resource this is
      * 
      */
     private final @Nullable String kind;
@@ -53,22 +53,22 @@ public final class ManagedZoneDnssecConfigDefaultKeySpec {
     }
 
     /**
-     * String mnemonic specifying the DNSSEC algorithm of this key
+     * @return String mnemonic specifying the DNSSEC algorithm of this key
      * Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
      * 
-    */
+     */
     public Optional<String> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
     /**
-     * Length of the keys in bits
+     * @return Length of the keys in bits
      * 
-    */
+     */
     public Optional<Integer> keyLength() {
         return Optional.ofNullable(this.keyLength);
     }
     /**
-     * Specifies whether this is a key signing key (KSK) or a zone
+     * @return Specifies whether this is a key signing key (KSK) or a zone
      * signing key (ZSK). Key signing keys have the Secure Entry
      * Point flag set and, when active, will only be used to sign
      * resource record sets of type DNSKEY. Zone signing keys do
@@ -76,14 +76,14 @@ public final class ManagedZoneDnssecConfigDefaultKeySpec {
      * to sign all other types of resource record sets.
      * Possible values are `keySigning` and `zoneSigning`.
      * 
-    */
+     */
     public Optional<String> keyType() {
         return Optional.ofNullable(this.keyType);
     }
     /**
-     * Identifies what kind of resource this is
+     * @return Identifies what kind of resource this is
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }

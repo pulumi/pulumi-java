@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class LatencyDistributionResponse {
     /**
-     * Representative latency percentiles.
+     * @return Representative latency percentiles.
      * 
      */
     private final List<LatencyPercentileResponse> latencyPercentiles;
@@ -22,9 +22,9 @@ public final class LatencyDistributionResponse {
     }
 
     /**
-     * Representative latency percentiles.
+     * @return Representative latency percentiles.
      * 
-    */
+     */
     public List<LatencyPercentileResponse> latencyPercentiles() {
         return this.latencyPercentiles;
     }

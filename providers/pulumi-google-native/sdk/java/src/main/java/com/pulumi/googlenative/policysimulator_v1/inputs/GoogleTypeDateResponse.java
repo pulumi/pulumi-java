@@ -23,6 +23,10 @@ public final class GoogleTypeDateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="day", required=true)
     private Integer day;
 
+    /**
+     * @return Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant.
+     * 
+     */
     public Integer day() {
         return this.day;
     }
@@ -34,6 +38,10 @@ public final class GoogleTypeDateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="month", required=true)
     private Integer month;
 
+    /**
+     * @return Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+     * 
+     */
     public Integer month() {
         return this.month;
     }
@@ -45,6 +53,10 @@ public final class GoogleTypeDateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="year", required=true)
     private Integer year;
 
+    /**
+     * @return Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+     * 
+     */
     public Integer year() {
         return this.year;
     }
@@ -75,16 +87,34 @@ public final class GoogleTypeDateResponse extends com.pulumi.resources.InvokeArg
             $ = new GoogleTypeDateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Integer day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param month Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder month(Integer month) {
             $.month = month;
             return this;
         }
 
+        /**
+         * @param year Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+         * 
+         * @return builder
+         * 
+         */
         public Builder year(Integer year) {
             $.year = year;
             return this;

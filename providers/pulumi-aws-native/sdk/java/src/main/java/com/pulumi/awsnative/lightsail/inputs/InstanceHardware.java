@@ -27,6 +27,10 @@ public final class InstanceHardware extends com.pulumi.resources.InvokeArgs {
     @Import(name="cpuCount")
     private @Nullable Integer cpuCount;
 
+    /**
+     * @return CPU count of the Instance.
+     * 
+     */
     public Optional<Integer> cpuCount() {
         return Optional.ofNullable(this.cpuCount);
     }
@@ -38,6 +42,10 @@ public final class InstanceHardware extends com.pulumi.resources.InvokeArgs {
     @Import(name="disks")
     private @Nullable List<InstanceDisk> disks;
 
+    /**
+     * @return Disks attached to the Instance.
+     * 
+     */
     public Optional<List<InstanceDisk>> disks() {
         return Optional.ofNullable(this.disks);
     }
@@ -49,6 +57,10 @@ public final class InstanceHardware extends com.pulumi.resources.InvokeArgs {
     @Import(name="ramSizeInGb")
     private @Nullable Integer ramSizeInGb;
 
+    /**
+     * @return RAM Size of the Instance.
+     * 
+     */
     public Optional<Integer> ramSizeInGb() {
         return Optional.ofNullable(this.ramSizeInGb);
     }
@@ -79,20 +91,44 @@ public final class InstanceHardware extends com.pulumi.resources.InvokeArgs {
             $ = new InstanceHardware(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuCount CPU count of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCount(@Nullable Integer cpuCount) {
             $.cpuCount = cpuCount;
             return this;
         }
 
+        /**
+         * @param disks Disks attached to the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(@Nullable List<InstanceDisk> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks Disks attached to the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(InstanceDisk... disks) {
             return disks(List.of(disks));
         }
 
+        /**
+         * @param ramSizeInGb RAM Size of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ramSizeInGb(@Nullable Integer ramSizeInGb) {
             $.ramSizeInGb = ramSizeInGb;
             return this;

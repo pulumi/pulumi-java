@@ -24,6 +24,10 @@ public final class WebACLCustomRequestHandling extends com.pulumi.resources.Invo
     @Import(name="insertHeaders", required=true)
     private List<WebACLCustomHTTPHeader> insertHeaders;
 
+    /**
+     * @return Collection of HTTP headers.
+     * 
+     */
     public List<WebACLCustomHTTPHeader> insertHeaders() {
         return this.insertHeaders;
     }
@@ -52,11 +56,23 @@ public final class WebACLCustomRequestHandling extends com.pulumi.resources.Invo
             $ = new WebACLCustomRequestHandling(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param insertHeaders Collection of HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertHeaders(List<WebACLCustomHTTPHeader> insertHeaders) {
             $.insertHeaders = insertHeaders;
             return this;
         }
 
+        /**
+         * @param insertHeaders Collection of HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertHeaders(WebACLCustomHTTPHeader... insertHeaders) {
             return insertHeaders(List.of(insertHeaders));
         }

@@ -14,19 +14,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AuthorityConfigX509ConfigKeyUsage {
     /**
-     * Describes high-level ways in which a key may be used.
+     * @return Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
      */
     private final AuthorityConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage;
     /**
-     * Describes high-level ways in which a key may be used.
+     * @return Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
      */
     private final AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage;
     /**
-     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * Structure is documented below.
      * 
      */
@@ -43,26 +43,26 @@ public final class AuthorityConfigX509ConfigKeyUsage {
     }
 
     /**
-     * Describes high-level ways in which a key may be used.
+     * @return Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-    */
+     */
     public AuthorityConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage() {
         return this.baseKeyUsage;
     }
     /**
-     * Describes high-level ways in which a key may be used.
+     * @return Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-    */
+     */
     public AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage() {
         return this.extendedKeyUsage;
     }
     /**
-     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * Structure is documented below.
      * 
-    */
+     */
     public List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }

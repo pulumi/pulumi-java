@@ -23,6 +23,10 @@ public final class AzureActiveDirectoryAppResponse extends com.pulumi.resources.
     @Import(name="appKey", required=true)
     private String appKey;
 
+    /**
+     * @return Key used to authenticate to the Azure Active Directory Application
+     * 
+     */
     public String appKey() {
         return this.appKey;
     }
@@ -34,6 +38,10 @@ public final class AzureActiveDirectoryAppResponse extends com.pulumi.resources.
     @Import(name="applicationId", required=true)
     private String applicationId;
 
+    /**
+     * @return Application ID of the Azure Active Directory Application
+     * 
+     */
     public String applicationId() {
         return this.applicationId;
     }
@@ -45,6 +53,10 @@ public final class AzureActiveDirectoryAppResponse extends com.pulumi.resources.
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return Tenant id of the customer
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -75,16 +87,34 @@ public final class AzureActiveDirectoryAppResponse extends com.pulumi.resources.
             $ = new AzureActiveDirectoryAppResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appKey Key used to authenticate to the Azure Active Directory Application
+         * 
+         * @return builder
+         * 
+         */
         public Builder appKey(String appKey) {
             $.appKey = appKey;
             return this;
         }
 
+        /**
+         * @param applicationId Application ID of the Azure Active Directory Application
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant id of the customer
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;

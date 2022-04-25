@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends com.pul
     @Import(name="transformations", required=true)
     private Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations;
 
+    /**
+     * @return Transformation for each infoType. Cannot specify more than one for a given infoType.
+     * 
+     */
     public Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations() {
         return this.transformations;
     }
@@ -53,15 +57,33 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends com.pul
             $ = new GooglePrivacyDlpV2InfoTypeTransformationsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param transformations Transformation for each infoType. Cannot specify more than one for a given infoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformations(Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations) {
             $.transformations = transformations;
             return this;
         }
 
+        /**
+         * @param transformations Transformation for each infoType. Cannot specify more than one for a given infoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformations(List<GooglePrivacyDlpV2InfoTypeTransformationArgs> transformations) {
             return transformations(Output.of(transformations));
         }
 
+        /**
+         * @param transformations Transformation for each infoType. Cannot specify more than one for a given infoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformations(GooglePrivacyDlpV2InfoTypeTransformationArgs... transformations) {
             return transformations(List.of(transformations));
         }

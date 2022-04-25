@@ -26,6 +26,10 @@ public final class DataDisksGroupsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="disksPerNode")
     private @Nullable Output<Integer> disksPerNode;
 
+    /**
+     * @return The number of disks per node.
+     * 
+     */
     public Optional<Output<Integer>> disksPerNode() {
         return Optional.ofNullable(this.disksPerNode);
     }
@@ -54,11 +58,23 @@ public final class DataDisksGroupsArgs extends com.pulumi.resources.ResourceArgs
             $ = new DataDisksGroupsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disksPerNode The number of disks per node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disksPerNode(@Nullable Output<Integer> disksPerNode) {
             $.disksPerNode = disksPerNode;
             return this;
         }
 
+        /**
+         * @param disksPerNode The number of disks per node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disksPerNode(Integer disksPerNode) {
             return disksPerNode(Output.of(disksPerNode));
         }

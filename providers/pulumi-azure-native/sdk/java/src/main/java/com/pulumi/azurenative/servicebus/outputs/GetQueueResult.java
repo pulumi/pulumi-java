@@ -16,122 +16,122 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetQueueResult {
     /**
-     * Last time a message was sent, or the last time there was a receive request to this queue.
+     * @return Last time a message was sent, or the last time there was a receive request to this queue.
      * 
      */
     private final String accessedAt;
     /**
-     * ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.
+     * @return ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.
      * 
      */
     private final @Nullable String autoDeleteOnIdle;
     /**
-     * Message Count Details.
+     * @return Message Count Details.
      * 
      */
     private final MessageCountDetailsResponse countDetails;
     /**
-     * The exact time the message was created.
+     * @return The exact time the message was created.
      * 
      */
     private final String createdAt;
     /**
-     * A value that indicates whether this queue has dead letter support when a message expires.
+     * @return A value that indicates whether this queue has dead letter support when a message expires.
      * 
      */
     private final @Nullable Boolean deadLetteringOnMessageExpiration;
     /**
-     * ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+     * @return ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
      */
     private final @Nullable String defaultMessageTimeToLive;
     /**
-     * ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+     * @return ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
      */
     private final @Nullable String duplicateDetectionHistoryTimeWindow;
     /**
-     * Value that indicates whether server-side batched operations are enabled.
+     * @return Value that indicates whether server-side batched operations are enabled.
      * 
      */
     private final @Nullable Boolean enableBatchedOperations;
     /**
-     * A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
+     * @return A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
      * 
      */
     private final @Nullable Boolean enableExpress;
     /**
-     * A value that indicates whether the queue is to be partitioned across multiple message brokers.
+     * @return A value that indicates whether the queue is to be partitioned across multiple message brokers.
      * 
      */
     private final @Nullable Boolean enablePartitioning;
     /**
-     * Queue/Topic name to forward the Dead Letter message
+     * @return Queue/Topic name to forward the Dead Letter message
      * 
      */
     private final @Nullable String forwardDeadLetteredMessagesTo;
     /**
-     * Queue/Topic name to forward the messages
+     * @return Queue/Topic name to forward the messages
      * 
      */
     private final @Nullable String forwardTo;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.
+     * @return ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.
      * 
      */
     private final @Nullable String lockDuration;
     /**
-     * The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.
+     * @return The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.
      * 
      */
     private final @Nullable Integer maxDeliveryCount;
     /**
-     * The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.
+     * @return The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.
      * 
      */
     private final @Nullable Integer maxSizeInMegabytes;
     /**
-     * The number of messages in the queue.
+     * @return The number of messages in the queue.
      * 
      */
     private final Double messageCount;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * A value indicating if this queue requires duplicate detection.
+     * @return A value indicating if this queue requires duplicate detection.
      * 
      */
     private final @Nullable Boolean requiresDuplicateDetection;
     /**
-     * A value that indicates whether the queue supports the concept of sessions.
+     * @return A value that indicates whether the queue supports the concept of sessions.
      * 
      */
     private final @Nullable Boolean requiresSession;
     /**
-     * The size of the queue, in bytes.
+     * @return The size of the queue, in bytes.
      * 
      */
     private final Double sizeInBytes;
     /**
-     * Enumerates the possible values for the status of a messaging entity.
+     * @return Enumerates the possible values for the status of a messaging entity.
      * 
      */
     private final @Nullable String status;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
     /**
-     * The exact time the message was updated.
+     * @return The exact time the message was updated.
      * 
      */
     private final String updatedAt;
@@ -189,170 +189,170 @@ public final class GetQueueResult {
     }
 
     /**
-     * Last time a message was sent, or the last time there was a receive request to this queue.
+     * @return Last time a message was sent, or the last time there was a receive request to this queue.
      * 
-    */
+     */
     public String accessedAt() {
         return this.accessedAt;
     }
     /**
-     * ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.
+     * @return ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.
      * 
-    */
+     */
     public Optional<String> autoDeleteOnIdle() {
         return Optional.ofNullable(this.autoDeleteOnIdle);
     }
     /**
-     * Message Count Details.
+     * @return Message Count Details.
      * 
-    */
+     */
     public MessageCountDetailsResponse countDetails() {
         return this.countDetails;
     }
     /**
-     * The exact time the message was created.
+     * @return The exact time the message was created.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * A value that indicates whether this queue has dead letter support when a message expires.
+     * @return A value that indicates whether this queue has dead letter support when a message expires.
      * 
-    */
+     */
     public Optional<Boolean> deadLetteringOnMessageExpiration() {
         return Optional.ofNullable(this.deadLetteringOnMessageExpiration);
     }
     /**
-     * ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+     * @return ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
-    */
+     */
     public Optional<String> defaultMessageTimeToLive() {
         return Optional.ofNullable(this.defaultMessageTimeToLive);
     }
     /**
-     * ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+     * @return ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
-    */
+     */
     public Optional<String> duplicateDetectionHistoryTimeWindow() {
         return Optional.ofNullable(this.duplicateDetectionHistoryTimeWindow);
     }
     /**
-     * Value that indicates whether server-side batched operations are enabled.
+     * @return Value that indicates whether server-side batched operations are enabled.
      * 
-    */
+     */
     public Optional<Boolean> enableBatchedOperations() {
         return Optional.ofNullable(this.enableBatchedOperations);
     }
     /**
-     * A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
+     * @return A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
      * 
-    */
+     */
     public Optional<Boolean> enableExpress() {
         return Optional.ofNullable(this.enableExpress);
     }
     /**
-     * A value that indicates whether the queue is to be partitioned across multiple message brokers.
+     * @return A value that indicates whether the queue is to be partitioned across multiple message brokers.
      * 
-    */
+     */
     public Optional<Boolean> enablePartitioning() {
         return Optional.ofNullable(this.enablePartitioning);
     }
     /**
-     * Queue/Topic name to forward the Dead Letter message
+     * @return Queue/Topic name to forward the Dead Letter message
      * 
-    */
+     */
     public Optional<String> forwardDeadLetteredMessagesTo() {
         return Optional.ofNullable(this.forwardDeadLetteredMessagesTo);
     }
     /**
-     * Queue/Topic name to forward the messages
+     * @return Queue/Topic name to forward the messages
      * 
-    */
+     */
     public Optional<String> forwardTo() {
         return Optional.ofNullable(this.forwardTo);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.
+     * @return ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.
      * 
-    */
+     */
     public Optional<String> lockDuration() {
         return Optional.ofNullable(this.lockDuration);
     }
     /**
-     * The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.
+     * @return The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.
      * 
-    */
+     */
     public Optional<Integer> maxDeliveryCount() {
         return Optional.ofNullable(this.maxDeliveryCount);
     }
     /**
-     * The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.
+     * @return The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.
      * 
-    */
+     */
     public Optional<Integer> maxSizeInMegabytes() {
         return Optional.ofNullable(this.maxSizeInMegabytes);
     }
     /**
-     * The number of messages in the queue.
+     * @return The number of messages in the queue.
      * 
-    */
+     */
     public Double messageCount() {
         return this.messageCount;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A value indicating if this queue requires duplicate detection.
+     * @return A value indicating if this queue requires duplicate detection.
      * 
-    */
+     */
     public Optional<Boolean> requiresDuplicateDetection() {
         return Optional.ofNullable(this.requiresDuplicateDetection);
     }
     /**
-     * A value that indicates whether the queue supports the concept of sessions.
+     * @return A value that indicates whether the queue supports the concept of sessions.
      * 
-    */
+     */
     public Optional<Boolean> requiresSession() {
         return Optional.ofNullable(this.requiresSession);
     }
     /**
-     * The size of the queue, in bytes.
+     * @return The size of the queue, in bytes.
      * 
-    */
+     */
     public Double sizeInBytes() {
         return this.sizeInBytes;
     }
     /**
-     * Enumerates the possible values for the status of a messaging entity.
+     * @return Enumerates the possible values for the status of a messaging entity.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The exact time the message was updated.
+     * @return The exact time the message was updated.
      * 
-    */
+     */
     public String updatedAt() {
         return this.updatedAt;
     }

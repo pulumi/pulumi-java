@@ -33,6 +33,10 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -44,6 +48,10 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -55,6 +63,10 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -66,6 +78,10 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
     @Import(name="parameters")
     private @Nullable Map<String,Object> parameters;
 
+    /**
+     * @return Pipeline parameters.
+     * 
+     */
     public Optional<Map<String,Object>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -77,6 +93,10 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
     @Import(name="pipeline", required=true)
     private PipelineReferenceResponse pipeline;
 
+    /**
+     * @return Pipeline reference.
+     * 
+     */
     public PipelineReferenceResponse pipeline() {
         return this.pipeline;
     }
@@ -89,6 +109,11 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;ExecutePipeline&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -100,6 +125,10 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -111,6 +140,10 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
     @Import(name="waitOnCompletion")
     private @Nullable Boolean waitOnCompletion;
 
+    /**
+     * @return Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
+     * 
+     */
     public Optional<Boolean> waitOnCompletion() {
         return Optional.ofNullable(this.waitOnCompletion);
     }
@@ -146,49 +179,110 @@ public final class ExecutePipelineActivityResponse extends com.pulumi.resources.
             $ = new ExecutePipelineActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters Pipeline parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param pipeline Pipeline reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipeline(PipelineReferenceResponse pipeline) {
             $.pipeline = pipeline;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;ExecutePipeline&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }
 
+        /**
+         * @param waitOnCompletion Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitOnCompletion(@Nullable Boolean waitOnCompletion) {
             $.waitOnCompletion = waitOnCompletion;
             return this;

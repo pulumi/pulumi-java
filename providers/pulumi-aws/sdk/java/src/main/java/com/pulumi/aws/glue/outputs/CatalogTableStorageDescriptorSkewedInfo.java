@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CatalogTableStorageDescriptorSkewedInfo {
     /**
-     * List of names of columns that contain skewed values.
+     * @return List of names of columns that contain skewed values.
      * 
      */
     private final @Nullable List<String> skewedColumnNames;
     /**
-     * List of values that appear so frequently as to be considered skewed.
+     * @return List of values that appear so frequently as to be considered skewed.
      * 
      */
     private final @Nullable Map<String,String> skewedColumnValueLocationMaps;
     /**
-     * Map of skewed values to the columns that contain them.
+     * @return Map of skewed values to the columns that contain them.
      * 
      */
     private final @Nullable List<String> skewedColumnValues;
@@ -39,23 +39,23 @@ public final class CatalogTableStorageDescriptorSkewedInfo {
     }
 
     /**
-     * List of names of columns that contain skewed values.
+     * @return List of names of columns that contain skewed values.
      * 
-    */
+     */
     public List<String> skewedColumnNames() {
         return this.skewedColumnNames == null ? List.of() : this.skewedColumnNames;
     }
     /**
-     * List of values that appear so frequently as to be considered skewed.
+     * @return List of values that appear so frequently as to be considered skewed.
      * 
-    */
+     */
     public Map<String,String> skewedColumnValueLocationMaps() {
         return this.skewedColumnValueLocationMaps == null ? Map.of() : this.skewedColumnValueLocationMaps;
     }
     /**
-     * Map of skewed values to the columns that contain them.
+     * @return Map of skewed values to the columns that contain them.
      * 
-    */
+     */
     public List<String> skewedColumnValues() {
         return this.skewedColumnValues == null ? List.of() : this.skewedColumnValues;
     }

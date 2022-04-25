@@ -28,6 +28,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
     @Import(name="apiType")
     private @Nullable String apiType;
 
+    /**
+     * @return The api type.
+     * 
+     */
     public Optional<String> apiType() {
         return Optional.ofNullable(this.apiType);
     }
@@ -39,6 +43,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
     @Import(name="brandColor")
     private @Nullable String brandColor;
 
+    /**
+     * @return The brand color.
+     * 
+     */
     public Optional<String> brandColor() {
         return Optional.ofNullable(this.brandColor);
     }
@@ -50,6 +58,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
     @Import(name="connectionType")
     private @Nullable String connectionType;
 
+    /**
+     * @return The connection type.
+     * 
+     */
     public Optional<String> connectionType() {
         return Optional.ofNullable(this.connectionType);
     }
@@ -61,6 +73,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
     @Import(name="deploymentParameters")
     private @Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters;
 
+    /**
+     * @return The connector deployment parameters metadata.
+     * 
+     */
     public Optional<ApiDeploymentParameterMetadataSetResponse> deploymentParameters() {
         return Optional.ofNullable(this.deploymentParameters);
     }
@@ -72,6 +88,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
     @Import(name="hideKey")
     private @Nullable String hideKey;
 
+    /**
+     * @return The hide key.
+     * 
+     */
     public Optional<String> hideKey() {
         return Optional.ofNullable(this.hideKey);
     }
@@ -83,6 +103,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return The provisioning state.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -94,6 +118,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
     @Import(name="source")
     private @Nullable String source;
 
+    /**
+     * @return The source.
+     * 
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
@@ -105,6 +133,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return The tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -116,6 +148,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
     @Import(name="wsdlImportMethod")
     private @Nullable String wsdlImportMethod;
 
+    /**
+     * @return The WSDL import method.
+     * 
+     */
     public Optional<String> wsdlImportMethod() {
         return Optional.ofNullable(this.wsdlImportMethod);
     }
@@ -127,6 +163,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
     @Import(name="wsdlService")
     private @Nullable WsdlServiceResponse wsdlService;
 
+    /**
+     * @return The WSDL service.
+     * 
+     */
     public Optional<WsdlServiceResponse> wsdlService() {
         return Optional.ofNullable(this.wsdlService);
     }
@@ -164,51 +204,111 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
             $ = new ApiResourceMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiType The api type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiType(@Nullable String apiType) {
             $.apiType = apiType;
             return this;
         }
 
+        /**
+         * @param brandColor The brand color.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brandColor(@Nullable String brandColor) {
             $.brandColor = brandColor;
             return this;
         }
 
+        /**
+         * @param connectionType The connection type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionType(@Nullable String connectionType) {
             $.connectionType = connectionType;
             return this;
         }
 
+        /**
+         * @param deploymentParameters The connector deployment parameters metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentParameters(@Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters) {
             $.deploymentParameters = deploymentParameters;
             return this;
         }
 
+        /**
+         * @param hideKey The hide key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hideKey(@Nullable String hideKey) {
             $.hideKey = hideKey;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param source The source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable String source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param tags The tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param wsdlImportMethod The WSDL import method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wsdlImportMethod(@Nullable String wsdlImportMethod) {
             $.wsdlImportMethod = wsdlImportMethod;
             return this;
         }
 
+        /**
+         * @param wsdlService The WSDL service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wsdlService(@Nullable WsdlServiceResponse wsdlService) {
             $.wsdlService = wsdlService;
             return this;

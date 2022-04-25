@@ -24,6 +24,10 @@ public final class RouterNatRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action")
     private @Nullable Output<RouterNatRuleActionArgs> action;
 
+    /**
+     * @return The action to be enforced for traffic that matches this rule.
+     * 
+     */
     public Optional<Output<RouterNatRuleActionArgs>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -35,6 +39,10 @@ public final class RouterNatRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this rule.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class RouterNatRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="match")
     private @Nullable Output<String> match;
 
+    /**
+     * @return CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions for public NAT: &#34;inIpRange(destination.ip, &#39;1.1.0.0/16&#39;) || inIpRange(destination.ip, &#39;2.2.0.0/16&#39;)&#34; &#34;destination.ip == &#39;1.1.0.1&#39; || destination.ip == &#39;8.8.8.8&#39;&#34; The following example is a valid match expression for private NAT: &#34;nexthop.hub == &#39;https://networkconnectivity.googleapis.com/v1alpha1/projects/my-project/global/hub/hub-1&#39;&#34;
+     * 
+     */
     public Optional<Output<String>> match() {
         return Optional.ofNullable(this.match);
     }
@@ -57,6 +69,10 @@ public final class RouterNatRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleNumber")
     private @Nullable Output<Integer> ruleNumber;
 
+    /**
+     * @return An integer uniquely identifying a rule in the list. The rule number must be a positive value between 0 and 65000, and must be unique among rules within a NAT.
+     * 
+     */
     public Optional<Output<Integer>> ruleNumber() {
         return Optional.ofNullable(this.ruleNumber);
     }
@@ -88,38 +104,86 @@ public final class RouterNatRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RouterNatRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action to be enforced for traffic that matches this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<RouterNatRuleActionArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action to be enforced for traffic that matches this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(RouterNatRuleActionArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param description An optional description of this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param match CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions for public NAT: &#34;inIpRange(destination.ip, &#39;1.1.0.0/16&#39;) || inIpRange(destination.ip, &#39;2.2.0.0/16&#39;)&#34; &#34;destination.ip == &#39;1.1.0.1&#39; || destination.ip == &#39;8.8.8.8&#39;&#34; The following example is a valid match expression for private NAT: &#34;nexthop.hub == &#39;https://networkconnectivity.googleapis.com/v1alpha1/projects/my-project/global/hub/hub-1&#39;&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(@Nullable Output<String> match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param match CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions for public NAT: &#34;inIpRange(destination.ip, &#39;1.1.0.0/16&#39;) || inIpRange(destination.ip, &#39;2.2.0.0/16&#39;)&#34; &#34;destination.ip == &#39;1.1.0.1&#39; || destination.ip == &#39;8.8.8.8&#39;&#34; The following example is a valid match expression for private NAT: &#34;nexthop.hub == &#39;https://networkconnectivity.googleapis.com/v1alpha1/projects/my-project/global/hub/hub-1&#39;&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(String match) {
             return match(Output.of(match));
         }
 
+        /**
+         * @param ruleNumber An integer uniquely identifying a rule in the list. The rule number must be a positive value between 0 and 65000, and must be unique among rules within a NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleNumber(@Nullable Output<Integer> ruleNumber) {
             $.ruleNumber = ruleNumber;
             return this;
         }
 
+        /**
+         * @param ruleNumber An integer uniquely identifying a rule in the list. The rule number must be a positive value between 0 and 65000, and must be unique among rules within a NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleNumber(Integer ruleNumber) {
             return ruleNumber(Output.of(ruleNumber));
         }

@@ -25,6 +25,10 @@ public final class ExpressRouteCircuitAuthorizationResponse extends com.pulumi.r
     @Import(name="authorizationKey")
     private @Nullable String authorizationKey;
 
+    /**
+     * @return The authorization key.
+     * 
+     */
     public Optional<String> authorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
@@ -36,6 +40,10 @@ public final class ExpressRouteCircuitAuthorizationResponse extends com.pulumi.r
     @Import(name="authorizationUseStatus")
     private @Nullable String authorizationUseStatus;
 
+    /**
+     * @return The authorization use status.
+     * 
+     */
     public Optional<String> authorizationUseStatus() {
         return Optional.ofNullable(this.authorizationUseStatus);
     }
@@ -47,6 +55,10 @@ public final class ExpressRouteCircuitAuthorizationResponse extends com.pulumi.r
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -58,6 +70,10 @@ public final class ExpressRouteCircuitAuthorizationResponse extends com.pulumi.r
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -69,6 +85,10 @@ public final class ExpressRouteCircuitAuthorizationResponse extends com.pulumi.r
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class ExpressRouteCircuitAuthorizationResponse extends com.pulumi.r
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the authorization resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -91,6 +115,10 @@ public final class ExpressRouteCircuitAuthorizationResponse extends com.pulumi.r
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -125,36 +153,78 @@ public final class ExpressRouteCircuitAuthorizationResponse extends com.pulumi.r
             $ = new ExpressRouteCircuitAuthorizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationKey The authorization key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationKey(@Nullable String authorizationKey) {
             $.authorizationKey = authorizationKey;
             return this;
         }
 
+        /**
+         * @param authorizationUseStatus The authorization use status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationUseStatus(@Nullable String authorizationUseStatus) {
             $.authorizationUseStatus = authorizationUseStatus;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the authorization resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

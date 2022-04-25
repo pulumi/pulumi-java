@@ -19,6 +19,10 @@ public final class GetStageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restApiId", required=true)
     private String restApiId;
 
+    /**
+     * @return The ID of the RestApi resource that you&#39;re deploying with this stage.
+     * 
+     */
     public String restApiId() {
         return this.restApiId;
     }
@@ -30,6 +34,10 @@ public final class GetStageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="stageName", required=true)
     private String stageName;
 
+    /**
+     * @return The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).
+     * 
+     */
     public String stageName() {
         return this.stageName;
     }
@@ -59,11 +67,23 @@ public final class GetStageArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetStageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param restApiId The ID of the RestApi resource that you&#39;re deploying with this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             $.restApiId = restApiId;
             return this;
         }
 
+        /**
+         * @param stageName The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageName(String stageName) {
             $.stageName = stageName;
             return this;

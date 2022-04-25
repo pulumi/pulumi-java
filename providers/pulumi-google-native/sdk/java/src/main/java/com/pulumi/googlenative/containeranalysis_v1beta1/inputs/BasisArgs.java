@@ -25,6 +25,10 @@ public final class BasisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint", required=true)
     private Output<FingerprintArgs> fingerprint;
 
+    /**
+     * @return Immutable. The fingerprint of the base image.
+     * 
+     */
     public Output<FingerprintArgs> fingerprint() {
         return this.fingerprint;
     }
@@ -36,6 +40,10 @@ public final class BasisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceUrl", required=true)
     private Output<String> resourceUrl;
 
+    /**
+     * @return Immutable. The resource_url for the resource representing the basis of associated occurrence images.
+     * 
+     */
     public Output<String> resourceUrl() {
         return this.resourceUrl;
     }
@@ -65,20 +73,44 @@ public final class BasisArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BasisArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fingerprint Immutable. The fingerprint of the base image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(Output<FingerprintArgs> fingerprint) {
             $.fingerprint = fingerprint;
             return this;
         }
 
+        /**
+         * @param fingerprint Immutable. The fingerprint of the base image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(FingerprintArgs fingerprint) {
             return fingerprint(Output.of(fingerprint));
         }
 
+        /**
+         * @param resourceUrl Immutable. The resource_url for the resource representing the basis of associated occurrence images.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUrl(Output<String> resourceUrl) {
             $.resourceUrl = resourceUrl;
             return this;
         }
 
+        /**
+         * @param resourceUrl Immutable. The resource_url for the resource representing the basis of associated occurrence images.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUrl(String resourceUrl) {
             return resourceUrl(Output.of(resourceUrl));
         }

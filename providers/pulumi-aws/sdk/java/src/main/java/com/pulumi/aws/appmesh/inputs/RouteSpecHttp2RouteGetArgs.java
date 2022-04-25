@@ -25,6 +25,10 @@ public final class RouteSpecHttp2RouteGetArgs extends com.pulumi.resources.Resou
     @Import(name="action", required=true)
     private Output<RouteSpecHttp2RouteActionGetArgs> action;
 
+    /**
+     * @return The action to take if a match is determined.
+     * 
+     */
     public Output<RouteSpecHttp2RouteActionGetArgs> action() {
         return this.action;
     }
@@ -36,6 +40,10 @@ public final class RouteSpecHttp2RouteGetArgs extends com.pulumi.resources.Resou
     @Import(name="match", required=true)
     private Output<RouteSpecHttp2RouteMatchGetArgs> match;
 
+    /**
+     * @return The criteria for determining an gRPC request match.
+     * 
+     */
     public Output<RouteSpecHttp2RouteMatchGetArgs> match() {
         return this.match;
     }
@@ -47,6 +55,10 @@ public final class RouteSpecHttp2RouteGetArgs extends com.pulumi.resources.Resou
     @Import(name="retryPolicy")
     private @Nullable Output<RouteSpecHttp2RouteRetryPolicyGetArgs> retryPolicy;
 
+    /**
+     * @return The retry policy.
+     * 
+     */
     public Optional<Output<RouteSpecHttp2RouteRetryPolicyGetArgs>> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
@@ -58,6 +70,10 @@ public final class RouteSpecHttp2RouteGetArgs extends com.pulumi.resources.Resou
     @Import(name="timeout")
     private @Nullable Output<RouteSpecHttp2RouteTimeoutGetArgs> timeout;
 
+    /**
+     * @return The types of timeouts.
+     * 
+     */
     public Optional<Output<RouteSpecHttp2RouteTimeoutGetArgs>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -89,38 +105,86 @@ public final class RouteSpecHttp2RouteGetArgs extends com.pulumi.resources.Resou
             $ = new RouteSpecHttp2RouteGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action to take if a match is determined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<RouteSpecHttp2RouteActionGetArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action to take if a match is determined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(RouteSpecHttp2RouteActionGetArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param match The criteria for determining an gRPC request match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(Output<RouteSpecHttp2RouteMatchGetArgs> match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param match The criteria for determining an gRPC request match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(RouteSpecHttp2RouteMatchGetArgs match) {
             return match(Output.of(match));
         }
 
+        /**
+         * @param retryPolicy The retry policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(@Nullable Output<RouteSpecHttp2RouteRetryPolicyGetArgs> retryPolicy) {
             $.retryPolicy = retryPolicy;
             return this;
         }
 
+        /**
+         * @param retryPolicy The retry policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(RouteSpecHttp2RouteRetryPolicyGetArgs retryPolicy) {
             return retryPolicy(Output.of(retryPolicy));
         }
 
+        /**
+         * @param timeout The types of timeouts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<RouteSpecHttp2RouteTimeoutGetArgs> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout The types of timeouts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(RouteSpecHttp2RouteTimeoutGetArgs timeout) {
             return timeout(Output.of(timeout));
         }

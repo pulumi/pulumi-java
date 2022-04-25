@@ -22,6 +22,10 @@ public final class MediaServiceIdentityArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
     private Output<Either<String,ManagedIdentityType>> type;
 
+    /**
+     * @return The identity type.
+     * 
+     */
     public Output<Either<String,ManagedIdentityType>> type() {
         return this.type;
     }
@@ -50,19 +54,43 @@ public final class MediaServiceIdentityArgs extends com.pulumi.resources.Resourc
             $ = new MediaServiceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,ManagedIdentityType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ManagedIdentityType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ManagedIdentityType type) {
             return type(Either.ofRight(type));
         }

@@ -30,6 +30,10 @@ public final class TargetRegionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
     private @Nullable Output<EncryptionImagesArgs> encryption;
 
+    /**
+     * @return Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
+     * 
+     */
     public Optional<Output<EncryptionImagesArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -41,6 +45,10 @@ public final class TargetRegionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the region.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -52,6 +60,10 @@ public final class TargetRegionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="regionalReplicaCount")
     private @Nullable Output<Integer> regionalReplicaCount;
 
+    /**
+     * @return The number of replicas of the Image Version to be created per region. This property is updatable.
+     * 
+     */
     public Optional<Output<Integer>> regionalReplicaCount() {
         return Optional.ofNullable(this.regionalReplicaCount);
     }
@@ -63,6 +75,10 @@ public final class TargetRegionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountType")
     private @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
+    /**
+     * @return Specifies the storage account type to be used to store the image. This property is not updatable.
+     * 
+     */
     public Optional<Output<Either<String,StorageAccountType>>> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
@@ -94,46 +110,106 @@ public final class TargetRegionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TargetRegionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryption Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<EncryptionImagesArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(EncryptionImagesArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param name The name of the region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param regionalReplicaCount The number of replicas of the Image Version to be created per region. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionalReplicaCount(@Nullable Output<Integer> regionalReplicaCount) {
             $.regionalReplicaCount = regionalReplicaCount;
             return this;
         }
 
+        /**
+         * @param regionalReplicaCount The number of replicas of the Image Version to be created per region. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionalReplicaCount(Integer regionalReplicaCount) {
             return regionalReplicaCount(Output.of(regionalReplicaCount));
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type to be used to store the image. This property is not updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
             $.storageAccountType = storageAccountType;
             return this;
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type to be used to store the image. This property is not updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(Either<String,StorageAccountType> storageAccountType) {
             return storageAccountType(Output.of(storageAccountType));
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type to be used to store the image. This property is not updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(String storageAccountType) {
             return storageAccountType(Either.ofLeft(storageAccountType));
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type to be used to store the image. This property is not updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(StorageAccountType storageAccountType) {
             return storageAccountType(Either.ofRight(storageAccountType));
         }

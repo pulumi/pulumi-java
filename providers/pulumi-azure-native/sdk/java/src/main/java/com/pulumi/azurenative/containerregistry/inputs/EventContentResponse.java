@@ -29,6 +29,10 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="action")
     private @Nullable String action;
 
+    /**
+     * @return The action that encompasses the provided event.
+     * 
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
@@ -40,6 +44,10 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="actor")
     private @Nullable ActorResponse actor;
 
+    /**
+     * @return The agent that initiated the event. For most situations, this could be from the authorization context of the request.
+     * 
+     */
     public Optional<ActorResponse> actor() {
         return Optional.ofNullable(this.actor);
     }
@@ -51,6 +59,10 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The event ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -62,6 +74,10 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="request")
     private @Nullable RequestResponse request;
 
+    /**
+     * @return The request that generated the event.
+     * 
+     */
     public Optional<RequestResponse> request() {
         return Optional.ofNullable(this.request);
     }
@@ -73,6 +89,10 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="source")
     private @Nullable SourceResponse source;
 
+    /**
+     * @return The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
+     * 
+     */
     public Optional<SourceResponse> source() {
         return Optional.ofNullable(this.source);
     }
@@ -84,6 +104,10 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="target")
     private @Nullable TargetResponse target;
 
+    /**
+     * @return The target of the event.
+     * 
+     */
     public Optional<TargetResponse> target() {
         return Optional.ofNullable(this.target);
     }
@@ -95,6 +119,10 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="timestamp")
     private @Nullable String timestamp;
 
+    /**
+     * @return The time at which the event occurred.
+     * 
+     */
     public Optional<String> timestamp() {
         return Optional.ofNullable(this.timestamp);
     }
@@ -129,36 +157,78 @@ public final class EventContentResponse extends com.pulumi.resources.InvokeArgs 
             $ = new EventContentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action that encompasses the provided event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param actor The agent that initiated the event. For most situations, this could be from the authorization context of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actor(@Nullable ActorResponse actor) {
             $.actor = actor;
             return this;
         }
 
+        /**
+         * @param id The event ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param request The request that generated the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(@Nullable RequestResponse request) {
             $.request = request;
             return this;
         }
 
+        /**
+         * @param source The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable SourceResponse source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param target The target of the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable TargetResponse target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param timestamp The time at which the event occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestamp(@Nullable String timestamp) {
             $.timestamp = timestamp;
             return this;

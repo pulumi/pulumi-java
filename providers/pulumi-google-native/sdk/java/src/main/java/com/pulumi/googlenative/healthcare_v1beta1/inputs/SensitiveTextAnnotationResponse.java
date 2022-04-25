@@ -24,6 +24,10 @@ public final class SensitiveTextAnnotationResponse extends com.pulumi.resources.
     @Import(name="details", required=true)
     private Map<String,String> details;
 
+    /**
+     * @return Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --&gt; {findings_1, findings_2, findings_3}
+     * 
+     */
     public Map<String,String> details() {
         return this.details;
     }
@@ -52,6 +56,12 @@ public final class SensitiveTextAnnotationResponse extends com.pulumi.resources.
             $ = new SensitiveTextAnnotationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param details Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --&gt; {findings_1, findings_2, findings_3}
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(Map<String,String> details) {
             $.details = details;
             return this;

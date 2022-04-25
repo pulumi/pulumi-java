@@ -19,6 +19,10 @@ public final class GetArtifactSourceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="artifactSourceName", required=true)
     private String artifactSourceName;
 
+    /**
+     * @return The name of the artifact source.
+     * 
+     */
     public String artifactSourceName() {
         return this.artifactSourceName;
     }
@@ -30,6 +34,10 @@ public final class GetArtifactSourceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetArtifactSourceArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetArtifactSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactSourceName The name of the artifact source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactSourceName(String artifactSourceName) {
             $.artifactSourceName = artifactSourceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

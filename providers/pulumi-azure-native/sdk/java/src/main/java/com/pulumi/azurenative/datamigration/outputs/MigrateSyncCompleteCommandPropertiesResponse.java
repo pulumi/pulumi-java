@@ -16,28 +16,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MigrateSyncCompleteCommandPropertiesResponse {
     /**
-     * Command type.
+     * @return Command type.
      * Expected value is &#39;Migrate.Sync.Complete.Database&#39;.
      * 
      */
     private final String commandType;
     /**
-     * Array of errors. This is ignored if submitted.
+     * @return Array of errors. This is ignored if submitted.
      * 
      */
     private final List<ODataErrorResponse> errors;
     /**
-     * Command input
+     * @return Command input
      * 
      */
     private final @Nullable MigrateSyncCompleteCommandInputResponse input;
     /**
-     * Command output. This is ignored if submitted.
+     * @return Command output. This is ignored if submitted.
      * 
      */
     private final MigrateSyncCompleteCommandOutputResponse output;
     /**
-     * The state of the command. This is ignored if submitted.
+     * @return The state of the command. This is ignored if submitted.
      * 
      */
     private final String state;
@@ -57,38 +57,38 @@ public final class MigrateSyncCompleteCommandPropertiesResponse {
     }
 
     /**
-     * Command type.
+     * @return Command type.
      * Expected value is &#39;Migrate.Sync.Complete.Database&#39;.
      * 
-    */
+     */
     public String commandType() {
         return this.commandType;
     }
     /**
-     * Array of errors. This is ignored if submitted.
+     * @return Array of errors. This is ignored if submitted.
      * 
-    */
+     */
     public List<ODataErrorResponse> errors() {
         return this.errors;
     }
     /**
-     * Command input
+     * @return Command input
      * 
-    */
+     */
     public Optional<MigrateSyncCompleteCommandInputResponse> input() {
         return Optional.ofNullable(this.input);
     }
     /**
-     * Command output. This is ignored if submitted.
+     * @return Command output. This is ignored if submitted.
      * 
-    */
+     */
     public MigrateSyncCompleteCommandOutputResponse output() {
         return this.output;
     }
     /**
-     * The state of the command. This is ignored if submitted.
+     * @return The state of the command. This is ignored if submitted.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

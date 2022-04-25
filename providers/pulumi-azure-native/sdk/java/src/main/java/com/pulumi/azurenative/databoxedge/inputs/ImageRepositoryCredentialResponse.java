@@ -26,6 +26,10 @@ public final class ImageRepositoryCredentialResponse extends com.pulumi.resource
     @Import(name="imageRepositoryUrl", required=true)
     private String imageRepositoryUrl;
 
+    /**
+     * @return Image repository url (e.g.: mcr.microsoft.com).
+     * 
+     */
     public String imageRepositoryUrl() {
         return this.imageRepositoryUrl;
     }
@@ -37,6 +41,10 @@ public final class ImageRepositoryCredentialResponse extends com.pulumi.resource
     @Import(name="password")
     private @Nullable AsymmetricEncryptedSecretResponse password;
 
+    /**
+     * @return Repository user password.
+     * 
+     */
     public Optional<AsymmetricEncryptedSecretResponse> password() {
         return Optional.ofNullable(this.password);
     }
@@ -48,6 +56,10 @@ public final class ImageRepositoryCredentialResponse extends com.pulumi.resource
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return Repository user name.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -78,16 +90,34 @@ public final class ImageRepositoryCredentialResponse extends com.pulumi.resource
             $ = new ImageRepositoryCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageRepositoryUrl Image repository url (e.g.: mcr.microsoft.com).
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRepositoryUrl(String imageRepositoryUrl) {
             $.imageRepositoryUrl = imageRepositoryUrl;
             return this;
         }
 
+        /**
+         * @param password Repository user password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable AsymmetricEncryptedSecretResponse password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param userName Repository user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

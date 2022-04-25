@@ -19,6 +19,10 @@ public final class MediaServiceIdentityResponse extends com.pulumi.resources.Inv
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The Principal ID of the identity.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -30,6 +34,10 @@ public final class MediaServiceIdentityResponse extends com.pulumi.resources.Inv
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The Tenant ID of the identity.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -41,6 +49,10 @@ public final class MediaServiceIdentityResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The identity type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -71,16 +83,34 @@ public final class MediaServiceIdentityResponse extends com.pulumi.resources.Inv
             $ = new MediaServiceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The Principal ID of the identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The Tenant ID of the identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

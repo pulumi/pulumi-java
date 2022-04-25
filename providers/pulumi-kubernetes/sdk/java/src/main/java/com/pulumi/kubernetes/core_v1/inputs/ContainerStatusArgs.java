@@ -29,6 +29,10 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="containerID")
     private @Nullable Output<String> containerID;
 
+    /**
+     * @return Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;.
+     * 
+     */
     public Optional<Output<String>> containerID() {
         return Optional.ofNullable(this.containerID);
     }
@@ -40,6 +44,10 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="image", required=true)
     private Output<String> image;
 
+    /**
+     * @return The image the container is running. More info: https://kubernetes.io/docs/concepts/containers/images.
+     * 
+     */
     public Output<String> image() {
         return this.image;
     }
@@ -51,6 +59,10 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="imageID", required=true)
     private Output<String> imageID;
 
+    /**
+     * @return ImageID of the container&#39;s image.
+     * 
+     */
     public Output<String> imageID() {
         return this.imageID;
     }
@@ -62,6 +74,10 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="lastState")
     private @Nullable Output<ContainerStateArgs> lastState;
 
+    /**
+     * @return Details about the container&#39;s last termination condition.
+     * 
+     */
     public Optional<Output<ContainerStateArgs>> lastState() {
         return Optional.ofNullable(this.lastState);
     }
@@ -73,6 +89,10 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return This must be a DNS_LABEL. Each container in a pod must have a unique name. Cannot be updated.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -84,6 +104,10 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ready", required=true)
     private Output<Boolean> ready;
 
+    /**
+     * @return Specifies whether the container has passed its readiness probe.
+     * 
+     */
     public Output<Boolean> ready() {
         return this.ready;
     }
@@ -95,6 +119,10 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="restartCount", required=true)
     private Output<Integer> restartCount;
 
+    /**
+     * @return The number of times the container has been restarted.
+     * 
+     */
     public Output<Integer> restartCount() {
         return this.restartCount;
     }
@@ -106,6 +134,10 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="started")
     private @Nullable Output<Boolean> started;
 
+    /**
+     * @return Specifies whether the container has passed its startup probe. Initialized as false, becomes true after startupProbe is considered successful. Resets to false when the container is restarted, or if kubelet loses state temporarily. Is always true when no startupProbe is defined.
+     * 
+     */
     public Optional<Output<Boolean>> started() {
         return Optional.ofNullable(this.started);
     }
@@ -117,6 +149,10 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="state")
     private @Nullable Output<ContainerStateArgs> state;
 
+    /**
+     * @return Details about the container&#39;s current condition.
+     * 
+     */
     public Optional<Output<ContainerStateArgs>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -153,83 +189,191 @@ public final class ContainerStatusArgs extends com.pulumi.resources.ResourceArgs
             $ = new ContainerStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerID Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerID(@Nullable Output<String> containerID) {
             $.containerID = containerID;
             return this;
         }
 
+        /**
+         * @param containerID Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerID(String containerID) {
             return containerID(Output.of(containerID));
         }
 
+        /**
+         * @param image The image the container is running. More info: https://kubernetes.io/docs/concepts/containers/images.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(Output<String> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image The image the container is running. More info: https://kubernetes.io/docs/concepts/containers/images.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param imageID ImageID of the container&#39;s image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageID(Output<String> imageID) {
             $.imageID = imageID;
             return this;
         }
 
+        /**
+         * @param imageID ImageID of the container&#39;s image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageID(String imageID) {
             return imageID(Output.of(imageID));
         }
 
+        /**
+         * @param lastState Details about the container&#39;s last termination condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastState(@Nullable Output<ContainerStateArgs> lastState) {
             $.lastState = lastState;
             return this;
         }
 
+        /**
+         * @param lastState Details about the container&#39;s last termination condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastState(ContainerStateArgs lastState) {
             return lastState(Output.of(lastState));
         }
 
+        /**
+         * @param name This must be a DNS_LABEL. Each container in a pod must have a unique name. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name This must be a DNS_LABEL. Each container in a pod must have a unique name. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param ready Specifies whether the container has passed its readiness probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ready(Output<Boolean> ready) {
             $.ready = ready;
             return this;
         }
 
+        /**
+         * @param ready Specifies whether the container has passed its readiness probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ready(Boolean ready) {
             return ready(Output.of(ready));
         }
 
+        /**
+         * @param restartCount The number of times the container has been restarted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartCount(Output<Integer> restartCount) {
             $.restartCount = restartCount;
             return this;
         }
 
+        /**
+         * @param restartCount The number of times the container has been restarted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartCount(Integer restartCount) {
             return restartCount(Output.of(restartCount));
         }
 
+        /**
+         * @param started Specifies whether the container has passed its startup probe. Initialized as false, becomes true after startupProbe is considered successful. Resets to false when the container is restarted, or if kubelet loses state temporarily. Is always true when no startupProbe is defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder started(@Nullable Output<Boolean> started) {
             $.started = started;
             return this;
         }
 
+        /**
+         * @param started Specifies whether the container has passed its startup probe. Initialized as false, becomes true after startupProbe is considered successful. Resets to false when the container is restarted, or if kubelet loses state temporarily. Is always true when no startupProbe is defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder started(Boolean started) {
             return started(Output.of(started));
         }
 
+        /**
+         * @param state Details about the container&#39;s current condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<ContainerStateArgs> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Details about the container&#39;s current condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(ContainerStateArgs state) {
             return state(Output.of(state));
         }

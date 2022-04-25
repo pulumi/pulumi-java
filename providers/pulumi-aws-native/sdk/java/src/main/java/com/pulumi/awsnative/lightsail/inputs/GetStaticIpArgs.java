@@ -19,6 +19,10 @@ public final class GetStaticIpArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="staticIpName", required=true)
     private String staticIpName;
 
+    /**
+     * @return The name of the static IP address.
+     * 
+     */
     public String staticIpName() {
         return this.staticIpName;
     }
@@ -47,6 +51,12 @@ public final class GetStaticIpArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetStaticIpArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param staticIpName The name of the static IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticIpName(String staticIpName) {
             $.staticIpName = staticIpName;
             return this;

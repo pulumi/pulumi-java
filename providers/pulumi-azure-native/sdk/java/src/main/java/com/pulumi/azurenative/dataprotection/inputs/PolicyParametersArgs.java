@@ -27,6 +27,10 @@ public final class PolicyParametersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataStoreParametersList")
     private @Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList;
 
+    /**
+     * @return Gets or sets the DataStore Parameters
+     * 
+     */
     public Optional<Output<List<AzureOperationalStoreParametersArgs>>> dataStoreParametersList() {
         return Optional.ofNullable(this.dataStoreParametersList);
     }
@@ -55,15 +59,33 @@ public final class PolicyParametersArgs extends com.pulumi.resources.ResourceArg
             $ = new PolicyParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataStoreParametersList Gets or sets the DataStore Parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreParametersList(@Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList) {
             $.dataStoreParametersList = dataStoreParametersList;
             return this;
         }
 
+        /**
+         * @param dataStoreParametersList Gets or sets the DataStore Parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreParametersList(List<AzureOperationalStoreParametersArgs> dataStoreParametersList) {
             return dataStoreParametersList(Output.of(dataStoreParametersList));
         }
 
+        /**
+         * @param dataStoreParametersList Gets or sets the DataStore Parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreParametersList(AzureOperationalStoreParametersArgs... dataStoreParametersList) {
             return dataStoreParametersList(List.of(dataStoreParametersList));
         }

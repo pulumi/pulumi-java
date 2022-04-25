@@ -25,6 +25,10 @@ public final class SecurityPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="config", required=true)
     private SecurityPolicyRuleMatcherConfigResponse config;
 
+    /**
+     * @return The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.
+     * 
+     */
     public SecurityPolicyRuleMatcherConfigResponse config() {
         return this.config;
     }
@@ -36,6 +40,10 @@ public final class SecurityPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="expr", required=true)
     private ExprResponse expr;
 
+    /**
+     * @return User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.
+     * 
+     */
     public ExprResponse expr() {
         return this.expr;
     }
@@ -47,6 +55,10 @@ public final class SecurityPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="versionedExpr", required=true)
     private String versionedExpr;
 
+    /**
+     * @return Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.
+     * 
+     */
     public String versionedExpr() {
         return this.versionedExpr;
     }
@@ -77,16 +89,34 @@ public final class SecurityPolicyRuleMatcherResponse extends com.pulumi.resource
             $ = new SecurityPolicyRuleMatcherResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(SecurityPolicyRuleMatcherConfigResponse config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param expr User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expr(ExprResponse expr) {
             $.expr = expr;
             return this;
         }
 
+        /**
+         * @param versionedExpr Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionedExpr(String versionedExpr) {
             $.versionedExpr = versionedExpr;
             return this;

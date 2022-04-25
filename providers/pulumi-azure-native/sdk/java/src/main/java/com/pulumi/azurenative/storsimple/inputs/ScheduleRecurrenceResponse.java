@@ -27,6 +27,10 @@ public final class ScheduleRecurrenceResponse extends com.pulumi.resources.Invok
     @Import(name="recurrenceType", required=true)
     private String recurrenceType;
 
+    /**
+     * @return The recurrence type.
+     * 
+     */
     public String recurrenceType() {
         return this.recurrenceType;
     }
@@ -38,6 +42,10 @@ public final class ScheduleRecurrenceResponse extends com.pulumi.resources.Invok
     @Import(name="recurrenceValue", required=true)
     private Integer recurrenceValue;
 
+    /**
+     * @return The recurrence value.
+     * 
+     */
     public Integer recurrenceValue() {
         return this.recurrenceValue;
     }
@@ -49,6 +57,10 @@ public final class ScheduleRecurrenceResponse extends com.pulumi.resources.Invok
     @Import(name="weeklyDaysList")
     private @Nullable List<String> weeklyDaysList;
 
+    /**
+     * @return The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
+     * 
+     */
     public Optional<List<String>> weeklyDaysList() {
         return Optional.ofNullable(this.weeklyDaysList);
     }
@@ -79,21 +91,45 @@ public final class ScheduleRecurrenceResponse extends com.pulumi.resources.Invok
             $ = new ScheduleRecurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recurrenceType The recurrence type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceType(String recurrenceType) {
             $.recurrenceType = recurrenceType;
             return this;
         }
 
+        /**
+         * @param recurrenceValue The recurrence value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceValue(Integer recurrenceValue) {
             $.recurrenceValue = recurrenceValue;
             return this;
         }
 
+        /**
+         * @param weeklyDaysList The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyDaysList(@Nullable List<String> weeklyDaysList) {
             $.weeklyDaysList = weeklyDaysList;
             return this;
         }
 
+        /**
+         * @param weeklyDaysList The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyDaysList(String... weeklyDaysList) {
             return weeklyDaysList(List.of(weeklyDaysList));
         }

@@ -23,6 +23,10 @@ public final class UserAssignedResourceIdentityResponse extends com.pulumi.resou
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal id of user assigned identity.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -34,6 +38,10 @@ public final class UserAssignedResourceIdentityResponse extends com.pulumi.resou
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenant id of user assigned identity.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -63,11 +71,23 @@ public final class UserAssignedResourceIdentityResponse extends com.pulumi.resou
             $ = new UserAssignedResourceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;

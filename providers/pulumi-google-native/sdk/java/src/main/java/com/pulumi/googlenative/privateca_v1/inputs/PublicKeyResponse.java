@@ -23,6 +23,10 @@ public final class PublicKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="format", required=true)
     private String format;
 
+    /**
+     * @return The format of the public key.
+     * 
+     */
     public String format() {
         return this.format;
     }
@@ -34,6 +38,10 @@ public final class PublicKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return A public key. The padding and encoding must match with the `KeyFormat` value specified for the `format` field.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -63,11 +71,23 @@ public final class PublicKeyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param format The format of the public key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param key A public key. The padding and encoding must match with the `KeyFormat` value specified for the `format` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;

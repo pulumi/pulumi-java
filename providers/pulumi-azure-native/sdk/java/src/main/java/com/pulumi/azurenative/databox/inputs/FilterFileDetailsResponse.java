@@ -23,6 +23,10 @@ public final class FilterFileDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="filterFilePath", required=true)
     private String filterFilePath;
 
+    /**
+     * @return Path of the file that contains the details of all items to transfer.
+     * 
+     */
     public String filterFilePath() {
         return this.filterFilePath;
     }
@@ -34,6 +38,10 @@ public final class FilterFileDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="filterFileType", required=true)
     private String filterFileType;
 
+    /**
+     * @return Type of the filter file.
+     * 
+     */
     public String filterFileType() {
         return this.filterFileType;
     }
@@ -63,11 +71,23 @@ public final class FilterFileDetailsResponse extends com.pulumi.resources.Invoke
             $ = new FilterFileDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filterFilePath Path of the file that contains the details of all items to transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterFilePath(String filterFilePath) {
             $.filterFilePath = filterFilePath;
             return this;
         }
 
+        /**
+         * @param filterFileType Type of the filter file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterFileType(String filterFileType) {
             $.filterFileType = filterFileType;
             return this;

@@ -21,6 +21,10 @@ public final class WebAclLoggingConfigurationRedactedFieldsGetArgs extends com.p
     @Import(name="fieldToMatches", required=true)
     private Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches;
 
+    /**
+     * @return Set of configuration blocks for fields to redact. Detailed below.
+     * 
+     */
     public Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches() {
         return this.fieldToMatches;
     }
@@ -49,15 +53,33 @@ public final class WebAclLoggingConfigurationRedactedFieldsGetArgs extends com.p
             $ = new WebAclLoggingConfigurationRedactedFieldsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fieldToMatches Set of configuration blocks for fields to redact. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldToMatches(Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs>> fieldToMatches) {
             $.fieldToMatches = fieldToMatches;
             return this;
         }
 
+        /**
+         * @param fieldToMatches Set of configuration blocks for fields to redact. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldToMatches(List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs> fieldToMatches) {
             return fieldToMatches(Output.of(fieldToMatches));
         }
 
+        /**
+         * @param fieldToMatches Set of configuration blocks for fields to redact. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldToMatches(WebAclLoggingConfigurationRedactedFieldsFieldToMatchGetArgs... fieldToMatches) {
             return fieldToMatches(List.of(fieldToMatches));
         }

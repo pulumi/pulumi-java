@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class WarmStoreConfigurationPropertiesResponse {
     /**
-     * ISO8601 timespan specifying the number of days the environment&#39;s events will be available for query from the warm store.
+     * @return ISO8601 timespan specifying the number of days the environment&#39;s events will be available for query from the warm store.
      * 
      */
     private final String dataRetention;
@@ -21,9 +21,9 @@ public final class WarmStoreConfigurationPropertiesResponse {
     }
 
     /**
-     * ISO8601 timespan specifying the number of days the environment&#39;s events will be available for query from the warm store.
+     * @return ISO8601 timespan specifying the number of days the environment&#39;s events will be available for query from the warm store.
      * 
-    */
+     */
     public String dataRetention() {
         return this.dataRetention;
     }

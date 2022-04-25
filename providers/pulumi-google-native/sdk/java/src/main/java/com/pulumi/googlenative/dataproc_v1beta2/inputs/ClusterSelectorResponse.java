@@ -24,6 +24,10 @@ public final class ClusterSelectorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="clusterLabels", required=true)
     private Map<String,String> clusterLabels;
 
+    /**
+     * @return The cluster labels. Cluster must have all labels to match.
+     * 
+     */
     public Map<String,String> clusterLabels() {
         return this.clusterLabels;
     }
@@ -35,6 +39,10 @@ public final class ClusterSelectorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="zone", required=true)
     private String zone;
 
+    /**
+     * @return Optional. The zone where workflow process executes. This parameter does not affect the selection of the cluster.If unspecified, the zone of the first cluster matching the selector is used.
+     * 
+     */
     public String zone() {
         return this.zone;
     }
@@ -64,11 +72,23 @@ public final class ClusterSelectorResponse extends com.pulumi.resources.InvokeAr
             $ = new ClusterSelectorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterLabels The cluster labels. Cluster must have all labels to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterLabels(Map<String,String> clusterLabels) {
             $.clusterLabels = clusterLabels;
             return this;
         }
 
+        /**
+         * @param zone Optional. The zone where workflow process executes. This parameter does not affect the selection of the cluster.If unspecified, the zone of the first cluster matching the selector is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             $.zone = zone;
             return this;

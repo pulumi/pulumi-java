@@ -26,6 +26,10 @@ public final class SuppressionConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="recurrenceType", required=true)
     private String recurrenceType;
 
+    /**
+     * @return Specifies when the suppression should be applied
+     * 
+     */
     public String recurrenceType() {
         return this.recurrenceType;
     }
@@ -37,6 +41,10 @@ public final class SuppressionConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="schedule")
     private @Nullable SuppressionScheduleResponse schedule;
 
+    /**
+     * @return suppression schedule configuration
+     * 
+     */
     public Optional<SuppressionScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -66,11 +74,23 @@ public final class SuppressionConfigResponse extends com.pulumi.resources.Invoke
             $ = new SuppressionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recurrenceType Specifies when the suppression should be applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceType(String recurrenceType) {
             $.recurrenceType = recurrenceType;
             return this;
         }
 
+        /**
+         * @param schedule suppression schedule configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable SuppressionScheduleResponse schedule) {
             $.schedule = schedule;
             return this;

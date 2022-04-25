@@ -59,6 +59,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addonsConfig")
     private @Nullable Output<AddonsConfigArgs> addonsConfig;
 
+    /**
+     * @return Configurations for the various addons available to run in the cluster.
+     * 
+     */
     public Optional<Output<AddonsConfigArgs>> addonsConfig() {
         return Optional.ofNullable(this.addonsConfig);
     }
@@ -70,6 +74,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticatorGroupsConfig")
     private @Nullable Output<AuthenticatorGroupsConfigArgs> authenticatorGroupsConfig;
 
+    /**
+     * @return Configuration controlling RBAC group membership information.
+     * 
+     */
     public Optional<Output<AuthenticatorGroupsConfigArgs>> authenticatorGroupsConfig() {
         return Optional.ofNullable(this.authenticatorGroupsConfig);
     }
@@ -81,6 +89,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autopilot")
     private @Nullable Output<AutopilotArgs> autopilot;
 
+    /**
+     * @return Autopilot configuration for the cluster.
+     * 
+     */
     public Optional<Output<AutopilotArgs>> autopilot() {
         return Optional.ofNullable(this.autopilot);
     }
@@ -92,6 +104,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoscaling")
     private @Nullable Output<ClusterAutoscalingArgs> autoscaling;
 
+    /**
+     * @return Cluster-level autoscaling configuration.
+     * 
+     */
     public Optional<Output<ClusterAutoscalingArgs>> autoscaling() {
         return Optional.ofNullable(this.autoscaling);
     }
@@ -103,6 +119,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="binaryAuthorization")
     private @Nullable Output<BinaryAuthorizationArgs> binaryAuthorization;
 
+    /**
+     * @return Configuration for Binary Authorization.
+     * 
+     */
     public Optional<Output<BinaryAuthorizationArgs>> binaryAuthorization() {
         return Optional.ofNullable(this.binaryAuthorization);
     }
@@ -114,6 +134,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterIpv4Cidr")
     private @Nullable Output<String> clusterIpv4Cidr;
 
+    /**
+     * @return The IP address range of the container pods in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in `10.0.0.0/8`.
+     * 
+     */
     public Optional<Output<String>> clusterIpv4Cidr() {
         return Optional.ofNullable(this.clusterIpv4Cidr);
     }
@@ -125,6 +149,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterTelemetry")
     private @Nullable Output<ClusterTelemetryArgs> clusterTelemetry;
 
+    /**
+     * @return Telemetry integration for the cluster.
+     * 
+     */
     public Optional<Output<ClusterTelemetryArgs>> clusterTelemetry() {
         return Optional.ofNullable(this.clusterTelemetry);
     }
@@ -136,6 +164,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
     private @Nullable Output<List<StatusConditionArgs>> conditions;
 
+    /**
+     * @return Which conditions caused the current cluster state.
+     * 
+     */
     public Optional<Output<List<StatusConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -147,6 +179,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="confidentialNodes")
     private @Nullable Output<ConfidentialNodesArgs> confidentialNodes;
 
+    /**
+     * @return Configuration of Confidential Nodes. All the nodes in the cluster will be Confidential VM once enabled.
+     * 
+     */
     public Optional<Output<ConfidentialNodesArgs>> confidentialNodes() {
         return Optional.ofNullable(this.confidentialNodes);
     }
@@ -158,6 +194,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseEncryption")
     private @Nullable Output<DatabaseEncryptionArgs> databaseEncryption;
 
+    /**
+     * @return Configuration of etcd encryption.
+     * 
+     */
     public Optional<Output<DatabaseEncryptionArgs>> databaseEncryption() {
         return Optional.ofNullable(this.databaseEncryption);
     }
@@ -169,6 +209,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultMaxPodsConstraint")
     private @Nullable Output<MaxPodsConstraintArgs> defaultMaxPodsConstraint;
 
+    /**
+     * @return The default constraint on the maximum number of pods that can be run simultaneously on a node in the node pool of this cluster. Only honored if cluster created with IP Alias support.
+     * 
+     */
     public Optional<Output<MaxPodsConstraintArgs>> defaultMaxPodsConstraint() {
         return Optional.ofNullable(this.defaultMaxPodsConstraint);
     }
@@ -180,6 +224,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this cluster.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -191,6 +239,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableKubernetesAlpha")
     private @Nullable Output<Boolean> enableKubernetesAlpha;
 
+    /**
+     * @return Kubernetes alpha features are enabled on this cluster. This includes alpha API groups (e.g. v1beta1) and features that may not be production ready in the kubernetes version of the master and nodes. The cluster has no SLA for uptime and master/node upgrades are disabled. Alpha enabled clusters are automatically deleted thirty days after creation.
+     * 
+     */
     public Optional<Output<Boolean>> enableKubernetesAlpha() {
         return Optional.ofNullable(this.enableKubernetesAlpha);
     }
@@ -202,6 +254,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identityServiceConfig")
     private @Nullable Output<IdentityServiceConfigArgs> identityServiceConfig;
 
+    /**
+     * @return Configuration for Identity Service component.
+     * 
+     */
     public Optional<Output<IdentityServiceConfigArgs>> identityServiceConfig() {
         return Optional.ofNullable(this.identityServiceConfig);
     }
@@ -213,6 +269,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="initialClusterVersion")
     private @Nullable Output<String> initialClusterVersion;
 
+    /**
+     * @return The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - &#34;latest&#34;: picks the highest valid Kubernetes version - &#34;1.X&#34;: picks the highest valid patch+gke.N patch in the 1.X version - &#34;1.X.Y&#34;: picks the highest valid gke.N patch in the 1.X.Y version - &#34;1.X.Y-gke.N&#34;: picks an explicit Kubernetes version - &#34;&#34;,&#34;-&#34;: picks the default Kubernetes version
+     * 
+     */
     public Optional<Output<String>> initialClusterVersion() {
         return Optional.ofNullable(this.initialClusterVersion);
     }
@@ -224,6 +284,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAllocationPolicy")
     private @Nullable Output<IPAllocationPolicyArgs> ipAllocationPolicy;
 
+    /**
+     * @return Configuration for cluster IP allocation.
+     * 
+     */
     public Optional<Output<IPAllocationPolicyArgs>> ipAllocationPolicy() {
         return Optional.ofNullable(this.ipAllocationPolicy);
     }
@@ -235,6 +299,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="legacyAbac")
     private @Nullable Output<LegacyAbacArgs> legacyAbac;
 
+    /**
+     * @return Configuration for the legacy ABAC authorization mode.
+     * 
+     */
     public Optional<Output<LegacyAbacArgs>> legacyAbac() {
         return Optional.ofNullable(this.legacyAbac);
     }
@@ -253,6 +321,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locations")
     private @Nullable Output<List<String>> locations;
 
+    /**
+     * @return The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster&#39;s nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.
+     * 
+     */
     public Optional<Output<List<String>>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -264,6 +336,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfig")
     private @Nullable Output<LoggingConfigArgs> loggingConfig;
 
+    /**
+     * @return Logging configuration for the cluster.
+     * 
+     */
     public Optional<Output<LoggingConfigArgs>> loggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
@@ -275,6 +351,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggingService")
     private @Nullable Output<String> loggingService;
 
+    /**
+     * @return The logging service the cluster should use to write logs. Currently available options: * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or `logging.googleapis.com` for earlier versions.
+     * 
+     */
     public Optional<Output<String>> loggingService() {
         return Optional.ofNullable(this.loggingService);
     }
@@ -286,6 +366,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintenancePolicy")
     private @Nullable Output<MaintenancePolicyArgs> maintenancePolicy;
 
+    /**
+     * @return Configure the maintenance policy for this cluster.
+     * 
+     */
     public Optional<Output<MaintenancePolicyArgs>> maintenancePolicy() {
         return Optional.ofNullable(this.maintenancePolicy);
     }
@@ -297,6 +381,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="master")
     private @Nullable Output<MasterArgs> master;
 
+    /**
+     * @return Configuration for master components.
+     * 
+     */
     public Optional<Output<MasterArgs>> master() {
         return Optional.ofNullable(this.master);
     }
@@ -308,6 +396,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterAuth")
     private @Nullable Output<MasterAuthArgs> masterAuth;
 
+    /**
+     * @return The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to &#34;admin&#34;, a random password will be generated, and a client certificate will be issued.
+     * 
+     */
     public Optional<Output<MasterAuthArgs>> masterAuth() {
         return Optional.ofNullable(this.masterAuth);
     }
@@ -319,6 +411,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterAuthorizedNetworksConfig")
     private @Nullable Output<MasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig;
 
+    /**
+     * @return The configuration options for master authorized networks feature.
+     * 
+     */
     public Optional<Output<MasterAuthorizedNetworksConfigArgs>> masterAuthorizedNetworksConfig() {
         return Optional.ofNullable(this.masterAuthorizedNetworksConfig);
     }
@@ -330,6 +426,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="meshCertificates")
     private @Nullable Output<MeshCertificatesArgs> meshCertificates;
 
+    /**
+     * @return Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+     * 
+     */
     public Optional<Output<MeshCertificatesArgs>> meshCertificates() {
         return Optional.ofNullable(this.meshCertificates);
     }
@@ -341,6 +441,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitoringConfig")
     private @Nullable Output<MonitoringConfigArgs> monitoringConfig;
 
+    /**
+     * @return Monitoring configuration for the cluster.
+     * 
+     */
     public Optional<Output<MonitoringConfigArgs>> monitoringConfig() {
         return Optional.ofNullable(this.monitoringConfig);
     }
@@ -352,6 +456,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitoringService")
     private @Nullable Output<String> monitoringService;
 
+    /**
+     * @return The monitoring service the cluster should use to write metrics. Currently available options: * &#34;monitoring.googleapis.com/kubernetes&#34; - The Cloud Monitoring service with a Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or `monitoring.googleapis.com` for earlier versions.
+     * 
+     */
     public Optional<Output<String>> monitoringService() {
         return Optional.ofNullable(this.monitoringService);
     }
@@ -363,6 +471,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of this cluster. The name must be unique within this project and location (e.g. zone or region), and can be up to 40 characters with the following restrictions: * Lowercase letters, numbers, and hyphens only. * Must start with a letter. * Must end with a number or a letter.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -374,6 +486,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The name of the Google Compute Engine [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. If left unspecified, the `default` network will be used. On output this shows the network ID instead of the name.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -385,6 +501,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
     private @Nullable Output<NetworkConfigArgs> networkConfig;
 
+    /**
+     * @return Configuration for cluster networking.
+     * 
+     */
     public Optional<Output<NetworkConfigArgs>> networkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
@@ -396,6 +516,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkPolicy")
     private @Nullable Output<NetworkPolicyArgs> networkPolicy;
 
+    /**
+     * @return Configuration options for the NetworkPolicy feature.
+     * 
+     */
     public Optional<Output<NetworkPolicyArgs>> networkPolicy() {
         return Optional.ofNullable(this.networkPolicy);
     }
@@ -407,6 +531,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodePoolDefaults")
     private @Nullable Output<NodePoolDefaultsArgs> nodePoolDefaults;
 
+    /**
+     * @return Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object.
+     * 
+     */
     public Optional<Output<NodePoolDefaultsArgs>> nodePoolDefaults() {
         return Optional.ofNullable(this.nodePoolDefaults);
     }
@@ -418,6 +546,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodePools")
     private @Nullable Output<List<NodePoolArgs>> nodePools;
 
+    /**
+     * @return The node pools associated with this cluster. This field should not be set if &#34;node_config&#34; or &#34;initial_node_count&#34; are specified.
+     * 
+     */
     public Optional<Output<List<NodePoolArgs>>> nodePools() {
         return Optional.ofNullable(this.nodePools);
     }
@@ -429,6 +561,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfig")
     private @Nullable Output<NotificationConfigArgs> notificationConfig;
 
+    /**
+     * @return Notification configuration of the cluster.
+     * 
+     */
     public Optional<Output<NotificationConfigArgs>> notificationConfig() {
         return Optional.ofNullable(this.notificationConfig);
     }
@@ -440,6 +576,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return The parent (project and location) where the cluster will be created. Specified in the format `projects/*{@literal /}locations/*`.
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -451,6 +591,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="podSecurityPolicyConfig")
     private @Nullable Output<PodSecurityPolicyConfigArgs> podSecurityPolicyConfig;
 
+    /**
+     * @return Configuration for the PodSecurityPolicy feature.
+     * 
+     */
     public Optional<Output<PodSecurityPolicyConfigArgs>> podSecurityPolicyConfig() {
         return Optional.ofNullable(this.podSecurityPolicyConfig);
     }
@@ -462,6 +606,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateClusterConfig")
     private @Nullable Output<PrivateClusterConfigArgs> privateClusterConfig;
 
+    /**
+     * @return Configuration for private cluster.
+     * 
+     */
     public Optional<Output<PrivateClusterConfigArgs>> privateClusterConfig() {
         return Optional.ofNullable(this.privateClusterConfig);
     }
@@ -480,6 +628,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="releaseChannel")
     private @Nullable Output<ReleaseChannelArgs> releaseChannel;
 
+    /**
+     * @return Release channel configuration.
+     * 
+     */
     public Optional<Output<ReleaseChannelArgs>> releaseChannel() {
         return Optional.ofNullable(this.releaseChannel);
     }
@@ -491,6 +643,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceLabels")
     private @Nullable Output<Map<String,String>> resourceLabels;
 
+    /**
+     * @return The resource labels for the cluster to use to annotate any related Google Compute Engine resources.
+     * 
+     */
     public Optional<Output<Map<String,String>>> resourceLabels() {
         return Optional.ofNullable(this.resourceLabels);
     }
@@ -502,6 +658,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceUsageExportConfig")
     private @Nullable Output<ResourceUsageExportConfigArgs> resourceUsageExportConfig;
 
+    /**
+     * @return Configuration for exporting resource usages. Resource usage export is disabled when this config unspecified.
+     * 
+     */
     public Optional<Output<ResourceUsageExportConfigArgs>> resourceUsageExportConfig() {
         return Optional.ofNullable(this.resourceUsageExportConfig);
     }
@@ -513,6 +673,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shieldedNodes")
     private @Nullable Output<ShieldedNodesArgs> shieldedNodes;
 
+    /**
+     * @return Shielded Nodes configuration.
+     * 
+     */
     public Optional<Output<ShieldedNodesArgs>> shieldedNodes() {
         return Optional.ofNullable(this.shieldedNodes);
     }
@@ -524,6 +688,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetwork")
     private @Nullable Output<String> subnetwork;
 
+    /**
+     * @return The name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is connected. On output this shows the subnetwork ID instead of the name.
+     * 
+     */
     public Optional<Output<String>> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
@@ -535,6 +703,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tpuConfig")
     private @Nullable Output<TpuConfigArgs> tpuConfig;
 
+    /**
+     * @return Configuration for Cloud TPU support;
+     * 
+     */
     public Optional<Output<TpuConfigArgs>> tpuConfig() {
         return Optional.ofNullable(this.tpuConfig);
     }
@@ -546,6 +718,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="verticalPodAutoscaling")
     private @Nullable Output<VerticalPodAutoscalingArgs> verticalPodAutoscaling;
 
+    /**
+     * @return Cluster-level Vertical Pod Autoscaling configuration.
+     * 
+     */
     public Optional<Output<VerticalPodAutoscalingArgs>> verticalPodAutoscaling() {
         return Optional.ofNullable(this.verticalPodAutoscaling);
     }
@@ -557,6 +733,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workloadCertificates")
     private @Nullable Output<WorkloadCertificatesArgs> workloadCertificates;
 
+    /**
+     * @return Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+     * 
+     */
     public Optional<Output<WorkloadCertificatesArgs>> workloadCertificates() {
         return Optional.ofNullable(this.workloadCertificates);
     }
@@ -568,6 +748,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workloadIdentityConfig")
     private @Nullable Output<WorkloadIdentityConfigArgs> workloadIdentityConfig;
 
+    /**
+     * @return Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
+     * 
+     */
     public Optional<Output<WorkloadIdentityConfigArgs>> workloadIdentityConfig() {
         return Optional.ofNullable(this.workloadIdentityConfig);
     }
@@ -643,159 +827,369 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addonsConfig Configurations for the various addons available to run in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonsConfig(@Nullable Output<AddonsConfigArgs> addonsConfig) {
             $.addonsConfig = addonsConfig;
             return this;
         }
 
+        /**
+         * @param addonsConfig Configurations for the various addons available to run in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonsConfig(AddonsConfigArgs addonsConfig) {
             return addonsConfig(Output.of(addonsConfig));
         }
 
+        /**
+         * @param authenticatorGroupsConfig Configuration controlling RBAC group membership information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticatorGroupsConfig(@Nullable Output<AuthenticatorGroupsConfigArgs> authenticatorGroupsConfig) {
             $.authenticatorGroupsConfig = authenticatorGroupsConfig;
             return this;
         }
 
+        /**
+         * @param authenticatorGroupsConfig Configuration controlling RBAC group membership information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticatorGroupsConfig(AuthenticatorGroupsConfigArgs authenticatorGroupsConfig) {
             return authenticatorGroupsConfig(Output.of(authenticatorGroupsConfig));
         }
 
+        /**
+         * @param autopilot Autopilot configuration for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autopilot(@Nullable Output<AutopilotArgs> autopilot) {
             $.autopilot = autopilot;
             return this;
         }
 
+        /**
+         * @param autopilot Autopilot configuration for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autopilot(AutopilotArgs autopilot) {
             return autopilot(Output.of(autopilot));
         }
 
+        /**
+         * @param autoscaling Cluster-level autoscaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaling(@Nullable Output<ClusterAutoscalingArgs> autoscaling) {
             $.autoscaling = autoscaling;
             return this;
         }
 
+        /**
+         * @param autoscaling Cluster-level autoscaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaling(ClusterAutoscalingArgs autoscaling) {
             return autoscaling(Output.of(autoscaling));
         }
 
+        /**
+         * @param binaryAuthorization Configuration for Binary Authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryAuthorization(@Nullable Output<BinaryAuthorizationArgs> binaryAuthorization) {
             $.binaryAuthorization = binaryAuthorization;
             return this;
         }
 
+        /**
+         * @param binaryAuthorization Configuration for Binary Authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryAuthorization(BinaryAuthorizationArgs binaryAuthorization) {
             return binaryAuthorization(Output.of(binaryAuthorization));
         }
 
+        /**
+         * @param clusterIpv4Cidr The IP address range of the container pods in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in `10.0.0.0/8`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIpv4Cidr(@Nullable Output<String> clusterIpv4Cidr) {
             $.clusterIpv4Cidr = clusterIpv4Cidr;
             return this;
         }
 
+        /**
+         * @param clusterIpv4Cidr The IP address range of the container pods in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in `10.0.0.0/8`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIpv4Cidr(String clusterIpv4Cidr) {
             return clusterIpv4Cidr(Output.of(clusterIpv4Cidr));
         }
 
+        /**
+         * @param clusterTelemetry Telemetry integration for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterTelemetry(@Nullable Output<ClusterTelemetryArgs> clusterTelemetry) {
             $.clusterTelemetry = clusterTelemetry;
             return this;
         }
 
+        /**
+         * @param clusterTelemetry Telemetry integration for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterTelemetry(ClusterTelemetryArgs clusterTelemetry) {
             return clusterTelemetry(Output.of(clusterTelemetry));
         }
 
+        /**
+         * @param conditions Which conditions caused the current cluster state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<StatusConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Which conditions caused the current cluster state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<StatusConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions Which conditions caused the current cluster state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(StatusConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param confidentialNodes Configuration of Confidential Nodes. All the nodes in the cluster will be Confidential VM once enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidentialNodes(@Nullable Output<ConfidentialNodesArgs> confidentialNodes) {
             $.confidentialNodes = confidentialNodes;
             return this;
         }
 
+        /**
+         * @param confidentialNodes Configuration of Confidential Nodes. All the nodes in the cluster will be Confidential VM once enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidentialNodes(ConfidentialNodesArgs confidentialNodes) {
             return confidentialNodes(Output.of(confidentialNodes));
         }
 
+        /**
+         * @param databaseEncryption Configuration of etcd encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseEncryption(@Nullable Output<DatabaseEncryptionArgs> databaseEncryption) {
             $.databaseEncryption = databaseEncryption;
             return this;
         }
 
+        /**
+         * @param databaseEncryption Configuration of etcd encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseEncryption(DatabaseEncryptionArgs databaseEncryption) {
             return databaseEncryption(Output.of(databaseEncryption));
         }
 
+        /**
+         * @param defaultMaxPodsConstraint The default constraint on the maximum number of pods that can be run simultaneously on a node in the node pool of this cluster. Only honored if cluster created with IP Alias support.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMaxPodsConstraint(@Nullable Output<MaxPodsConstraintArgs> defaultMaxPodsConstraint) {
             $.defaultMaxPodsConstraint = defaultMaxPodsConstraint;
             return this;
         }
 
+        /**
+         * @param defaultMaxPodsConstraint The default constraint on the maximum number of pods that can be run simultaneously on a node in the node pool of this cluster. Only honored if cluster created with IP Alias support.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMaxPodsConstraint(MaxPodsConstraintArgs defaultMaxPodsConstraint) {
             return defaultMaxPodsConstraint(Output.of(defaultMaxPodsConstraint));
         }
 
+        /**
+         * @param description An optional description of this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enableKubernetesAlpha Kubernetes alpha features are enabled on this cluster. This includes alpha API groups (e.g. v1beta1) and features that may not be production ready in the kubernetes version of the master and nodes. The cluster has no SLA for uptime and master/node upgrades are disabled. Alpha enabled clusters are automatically deleted thirty days after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableKubernetesAlpha(@Nullable Output<Boolean> enableKubernetesAlpha) {
             $.enableKubernetesAlpha = enableKubernetesAlpha;
             return this;
         }
 
+        /**
+         * @param enableKubernetesAlpha Kubernetes alpha features are enabled on this cluster. This includes alpha API groups (e.g. v1beta1) and features that may not be production ready in the kubernetes version of the master and nodes. The cluster has no SLA for uptime and master/node upgrades are disabled. Alpha enabled clusters are automatically deleted thirty days after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableKubernetesAlpha(Boolean enableKubernetesAlpha) {
             return enableKubernetesAlpha(Output.of(enableKubernetesAlpha));
         }
 
+        /**
+         * @param identityServiceConfig Configuration for Identity Service component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityServiceConfig(@Nullable Output<IdentityServiceConfigArgs> identityServiceConfig) {
             $.identityServiceConfig = identityServiceConfig;
             return this;
         }
 
+        /**
+         * @param identityServiceConfig Configuration for Identity Service component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityServiceConfig(IdentityServiceConfigArgs identityServiceConfig) {
             return identityServiceConfig(Output.of(identityServiceConfig));
         }
 
+        /**
+         * @param initialClusterVersion The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - &#34;latest&#34;: picks the highest valid Kubernetes version - &#34;1.X&#34;: picks the highest valid patch+gke.N patch in the 1.X version - &#34;1.X.Y&#34;: picks the highest valid gke.N patch in the 1.X.Y version - &#34;1.X.Y-gke.N&#34;: picks an explicit Kubernetes version - &#34;&#34;,&#34;-&#34;: picks the default Kubernetes version
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialClusterVersion(@Nullable Output<String> initialClusterVersion) {
             $.initialClusterVersion = initialClusterVersion;
             return this;
         }
 
+        /**
+         * @param initialClusterVersion The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - &#34;latest&#34;: picks the highest valid Kubernetes version - &#34;1.X&#34;: picks the highest valid patch+gke.N patch in the 1.X version - &#34;1.X.Y&#34;: picks the highest valid gke.N patch in the 1.X.Y version - &#34;1.X.Y-gke.N&#34;: picks an explicit Kubernetes version - &#34;&#34;,&#34;-&#34;: picks the default Kubernetes version
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialClusterVersion(String initialClusterVersion) {
             return initialClusterVersion(Output.of(initialClusterVersion));
         }
 
+        /**
+         * @param ipAllocationPolicy Configuration for cluster IP allocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocationPolicy(@Nullable Output<IPAllocationPolicyArgs> ipAllocationPolicy) {
             $.ipAllocationPolicy = ipAllocationPolicy;
             return this;
         }
 
+        /**
+         * @param ipAllocationPolicy Configuration for cluster IP allocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocationPolicy(IPAllocationPolicyArgs ipAllocationPolicy) {
             return ipAllocationPolicy(Output.of(ipAllocationPolicy));
         }
 
+        /**
+         * @param legacyAbac Configuration for the legacy ABAC authorization mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder legacyAbac(@Nullable Output<LegacyAbacArgs> legacyAbac) {
             $.legacyAbac = legacyAbac;
             return this;
         }
 
+        /**
+         * @param legacyAbac Configuration for the legacy ABAC authorization mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder legacyAbac(LegacyAbacArgs legacyAbac) {
             return legacyAbac(Output.of(legacyAbac));
         }
@@ -809,190 +1203,442 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param locations The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster&#39;s nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(@Nullable Output<List<String>> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster&#39;s nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(List<String> locations) {
             return locations(Output.of(locations));
         }
 
+        /**
+         * @param locations The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster&#39;s nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param loggingConfig Logging configuration for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfig(@Nullable Output<LoggingConfigArgs> loggingConfig) {
             $.loggingConfig = loggingConfig;
             return this;
         }
 
+        /**
+         * @param loggingConfig Logging configuration for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfig(LoggingConfigArgs loggingConfig) {
             return loggingConfig(Output.of(loggingConfig));
         }
 
+        /**
+         * @param loggingService The logging service the cluster should use to write logs. Currently available options: * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or `logging.googleapis.com` for earlier versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingService(@Nullable Output<String> loggingService) {
             $.loggingService = loggingService;
             return this;
         }
 
+        /**
+         * @param loggingService The logging service the cluster should use to write logs. Currently available options: * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or `logging.googleapis.com` for earlier versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingService(String loggingService) {
             return loggingService(Output.of(loggingService));
         }
 
+        /**
+         * @param maintenancePolicy Configure the maintenance policy for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenancePolicy(@Nullable Output<MaintenancePolicyArgs> maintenancePolicy) {
             $.maintenancePolicy = maintenancePolicy;
             return this;
         }
 
+        /**
+         * @param maintenancePolicy Configure the maintenance policy for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenancePolicy(MaintenancePolicyArgs maintenancePolicy) {
             return maintenancePolicy(Output.of(maintenancePolicy));
         }
 
+        /**
+         * @param master Configuration for master components.
+         * 
+         * @return builder
+         * 
+         */
         public Builder master(@Nullable Output<MasterArgs> master) {
             $.master = master;
             return this;
         }
 
+        /**
+         * @param master Configuration for master components.
+         * 
+         * @return builder
+         * 
+         */
         public Builder master(MasterArgs master) {
             return master(Output.of(master));
         }
 
+        /**
+         * @param masterAuth The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to &#34;admin&#34;, a random password will be generated, and a client certificate will be issued.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterAuth(@Nullable Output<MasterAuthArgs> masterAuth) {
             $.masterAuth = masterAuth;
             return this;
         }
 
+        /**
+         * @param masterAuth The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to &#34;admin&#34;, a random password will be generated, and a client certificate will be issued.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterAuth(MasterAuthArgs masterAuth) {
             return masterAuth(Output.of(masterAuth));
         }
 
+        /**
+         * @param masterAuthorizedNetworksConfig The configuration options for master authorized networks feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterAuthorizedNetworksConfig(@Nullable Output<MasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig) {
             $.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
             return this;
         }
 
+        /**
+         * @param masterAuthorizedNetworksConfig The configuration options for master authorized networks feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterAuthorizedNetworksConfig(MasterAuthorizedNetworksConfigArgs masterAuthorizedNetworksConfig) {
             return masterAuthorizedNetworksConfig(Output.of(masterAuthorizedNetworksConfig));
         }
 
+        /**
+         * @param meshCertificates Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshCertificates(@Nullable Output<MeshCertificatesArgs> meshCertificates) {
             $.meshCertificates = meshCertificates;
             return this;
         }
 
+        /**
+         * @param meshCertificates Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshCertificates(MeshCertificatesArgs meshCertificates) {
             return meshCertificates(Output.of(meshCertificates));
         }
 
+        /**
+         * @param monitoringConfig Monitoring configuration for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringConfig(@Nullable Output<MonitoringConfigArgs> monitoringConfig) {
             $.monitoringConfig = monitoringConfig;
             return this;
         }
 
+        /**
+         * @param monitoringConfig Monitoring configuration for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringConfig(MonitoringConfigArgs monitoringConfig) {
             return monitoringConfig(Output.of(monitoringConfig));
         }
 
+        /**
+         * @param monitoringService The monitoring service the cluster should use to write metrics. Currently available options: * &#34;monitoring.googleapis.com/kubernetes&#34; - The Cloud Monitoring service with a Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or `monitoring.googleapis.com` for earlier versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringService(@Nullable Output<String> monitoringService) {
             $.monitoringService = monitoringService;
             return this;
         }
 
+        /**
+         * @param monitoringService The monitoring service the cluster should use to write metrics. Currently available options: * &#34;monitoring.googleapis.com/kubernetes&#34; - The Cloud Monitoring service with a Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or `monitoring.googleapis.com` for earlier versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringService(String monitoringService) {
             return monitoringService(Output.of(monitoringService));
         }
 
+        /**
+         * @param name The name of this cluster. The name must be unique within this project and location (e.g. zone or region), and can be up to 40 characters with the following restrictions: * Lowercase letters, numbers, and hyphens only. * Must start with a letter. * Must end with a number or a letter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of this cluster. The name must be unique within this project and location (e.g. zone or region), and can be up to 40 characters with the following restrictions: * Lowercase letters, numbers, and hyphens only. * Must start with a letter. * Must end with a number or a letter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network The name of the Google Compute Engine [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. If left unspecified, the `default` network will be used. On output this shows the network ID instead of the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The name of the Google Compute Engine [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. If left unspecified, the `default` network will be used. On output this shows the network ID instead of the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param networkConfig Configuration for cluster networking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
 
+        /**
+         * @param networkConfig Configuration for cluster networking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(NetworkConfigArgs networkConfig) {
             return networkConfig(Output.of(networkConfig));
         }
 
+        /**
+         * @param networkPolicy Configuration options for the NetworkPolicy feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPolicy(@Nullable Output<NetworkPolicyArgs> networkPolicy) {
             $.networkPolicy = networkPolicy;
             return this;
         }
 
+        /**
+         * @param networkPolicy Configuration options for the NetworkPolicy feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPolicy(NetworkPolicyArgs networkPolicy) {
             return networkPolicy(Output.of(networkPolicy));
         }
 
+        /**
+         * @param nodePoolDefaults Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePoolDefaults(@Nullable Output<NodePoolDefaultsArgs> nodePoolDefaults) {
             $.nodePoolDefaults = nodePoolDefaults;
             return this;
         }
 
+        /**
+         * @param nodePoolDefaults Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePoolDefaults(NodePoolDefaultsArgs nodePoolDefaults) {
             return nodePoolDefaults(Output.of(nodePoolDefaults));
         }
 
+        /**
+         * @param nodePools The node pools associated with this cluster. This field should not be set if &#34;node_config&#34; or &#34;initial_node_count&#34; are specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePools(@Nullable Output<List<NodePoolArgs>> nodePools) {
             $.nodePools = nodePools;
             return this;
         }
 
+        /**
+         * @param nodePools The node pools associated with this cluster. This field should not be set if &#34;node_config&#34; or &#34;initial_node_count&#34; are specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePools(List<NodePoolArgs> nodePools) {
             return nodePools(Output.of(nodePools));
         }
 
+        /**
+         * @param nodePools The node pools associated with this cluster. This field should not be set if &#34;node_config&#34; or &#34;initial_node_count&#34; are specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePools(NodePoolArgs... nodePools) {
             return nodePools(List.of(nodePools));
         }
 
+        /**
+         * @param notificationConfig Notification configuration of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfig(@Nullable Output<NotificationConfigArgs> notificationConfig) {
             $.notificationConfig = notificationConfig;
             return this;
         }
 
+        /**
+         * @param notificationConfig Notification configuration of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfig(NotificationConfigArgs notificationConfig) {
             return notificationConfig(Output.of(notificationConfig));
         }
 
+        /**
+         * @param parent The parent (project and location) where the cluster will be created. Specified in the format `projects/*{@literal /}locations/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The parent (project and location) where the cluster will be created. Specified in the format `projects/*{@literal /}locations/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param podSecurityPolicyConfig Configuration for the PodSecurityPolicy feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podSecurityPolicyConfig(@Nullable Output<PodSecurityPolicyConfigArgs> podSecurityPolicyConfig) {
             $.podSecurityPolicyConfig = podSecurityPolicyConfig;
             return this;
         }
 
+        /**
+         * @param podSecurityPolicyConfig Configuration for the PodSecurityPolicy feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podSecurityPolicyConfig(PodSecurityPolicyConfigArgs podSecurityPolicyConfig) {
             return podSecurityPolicyConfig(Output.of(podSecurityPolicyConfig));
         }
 
+        /**
+         * @param privateClusterConfig Configuration for private cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateClusterConfig(@Nullable Output<PrivateClusterConfigArgs> privateClusterConfig) {
             $.privateClusterConfig = privateClusterConfig;
             return this;
         }
 
+        /**
+         * @param privateClusterConfig Configuration for private cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateClusterConfig(PrivateClusterConfigArgs privateClusterConfig) {
             return privateClusterConfig(Output.of(privateClusterConfig));
         }
@@ -1006,83 +1652,191 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param releaseChannel Release channel configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseChannel(@Nullable Output<ReleaseChannelArgs> releaseChannel) {
             $.releaseChannel = releaseChannel;
             return this;
         }
 
+        /**
+         * @param releaseChannel Release channel configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseChannel(ReleaseChannelArgs releaseChannel) {
             return releaseChannel(Output.of(releaseChannel));
         }
 
+        /**
+         * @param resourceLabels The resource labels for the cluster to use to annotate any related Google Compute Engine resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLabels(@Nullable Output<Map<String,String>> resourceLabels) {
             $.resourceLabels = resourceLabels;
             return this;
         }
 
+        /**
+         * @param resourceLabels The resource labels for the cluster to use to annotate any related Google Compute Engine resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLabels(Map<String,String> resourceLabels) {
             return resourceLabels(Output.of(resourceLabels));
         }
 
+        /**
+         * @param resourceUsageExportConfig Configuration for exporting resource usages. Resource usage export is disabled when this config unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUsageExportConfig(@Nullable Output<ResourceUsageExportConfigArgs> resourceUsageExportConfig) {
             $.resourceUsageExportConfig = resourceUsageExportConfig;
             return this;
         }
 
+        /**
+         * @param resourceUsageExportConfig Configuration for exporting resource usages. Resource usage export is disabled when this config unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUsageExportConfig(ResourceUsageExportConfigArgs resourceUsageExportConfig) {
             return resourceUsageExportConfig(Output.of(resourceUsageExportConfig));
         }
 
+        /**
+         * @param shieldedNodes Shielded Nodes configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedNodes(@Nullable Output<ShieldedNodesArgs> shieldedNodes) {
             $.shieldedNodes = shieldedNodes;
             return this;
         }
 
+        /**
+         * @param shieldedNodes Shielded Nodes configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedNodes(ShieldedNodesArgs shieldedNodes) {
             return shieldedNodes(Output.of(shieldedNodes));
         }
 
+        /**
+         * @param subnetwork The name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is connected. On output this shows the subnetwork ID instead of the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             $.subnetwork = subnetwork;
             return this;
         }
 
+        /**
+         * @param subnetwork The name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is connected. On output this shows the subnetwork ID instead of the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             return subnetwork(Output.of(subnetwork));
         }
 
+        /**
+         * @param tpuConfig Configuration for Cloud TPU support;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tpuConfig(@Nullable Output<TpuConfigArgs> tpuConfig) {
             $.tpuConfig = tpuConfig;
             return this;
         }
 
+        /**
+         * @param tpuConfig Configuration for Cloud TPU support;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tpuConfig(TpuConfigArgs tpuConfig) {
             return tpuConfig(Output.of(tpuConfig));
         }
 
+        /**
+         * @param verticalPodAutoscaling Cluster-level Vertical Pod Autoscaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verticalPodAutoscaling(@Nullable Output<VerticalPodAutoscalingArgs> verticalPodAutoscaling) {
             $.verticalPodAutoscaling = verticalPodAutoscaling;
             return this;
         }
 
+        /**
+         * @param verticalPodAutoscaling Cluster-level Vertical Pod Autoscaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verticalPodAutoscaling(VerticalPodAutoscalingArgs verticalPodAutoscaling) {
             return verticalPodAutoscaling(Output.of(verticalPodAutoscaling));
         }
 
+        /**
+         * @param workloadCertificates Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadCertificates(@Nullable Output<WorkloadCertificatesArgs> workloadCertificates) {
             $.workloadCertificates = workloadCertificates;
             return this;
         }
 
+        /**
+         * @param workloadCertificates Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadCertificates(WorkloadCertificatesArgs workloadCertificates) {
             return workloadCertificates(Output.of(workloadCertificates));
         }
 
+        /**
+         * @param workloadIdentityConfig Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadIdentityConfig(@Nullable Output<WorkloadIdentityConfigArgs> workloadIdentityConfig) {
             $.workloadIdentityConfig = workloadIdentityConfig;
             return this;
         }
 
+        /**
+         * @param workloadIdentityConfig Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadIdentityConfig(WorkloadIdentityConfigArgs workloadIdentityConfig) {
             return workloadIdentityConfig(Output.of(workloadIdentityConfig));
         }

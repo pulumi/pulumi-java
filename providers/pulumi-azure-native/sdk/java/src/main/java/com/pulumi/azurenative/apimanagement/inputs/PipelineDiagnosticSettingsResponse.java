@@ -25,6 +25,10 @@ public final class PipelineDiagnosticSettingsResponse extends com.pulumi.resourc
     @Import(name="request")
     private @Nullable HttpMessageDiagnosticResponse request;
 
+    /**
+     * @return Diagnostic settings for request.
+     * 
+     */
     public Optional<HttpMessageDiagnosticResponse> request() {
         return Optional.ofNullable(this.request);
     }
@@ -36,6 +40,10 @@ public final class PipelineDiagnosticSettingsResponse extends com.pulumi.resourc
     @Import(name="response")
     private @Nullable HttpMessageDiagnosticResponse response;
 
+    /**
+     * @return Diagnostic settings for response.
+     * 
+     */
     public Optional<HttpMessageDiagnosticResponse> response() {
         return Optional.ofNullable(this.response);
     }
@@ -65,11 +73,23 @@ public final class PipelineDiagnosticSettingsResponse extends com.pulumi.resourc
             $ = new PipelineDiagnosticSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param request Diagnostic settings for request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(@Nullable HttpMessageDiagnosticResponse request) {
             $.request = request;
             return this;
         }
 
+        /**
+         * @param response Diagnostic settings for response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder response(@Nullable HttpMessageDiagnosticResponse response) {
             $.response = response;
             return this;

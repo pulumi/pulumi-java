@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GetDelegatedServicesDelegatedService {
     /**
-     * The date that the account became a delegated administrator for this service.
+     * @return The date that the account became a delegated administrator for this service.
      * 
      */
     private final String delegationEnabledDate;
     /**
-     * The name of an AWS service that can request an operation for the specified service.
+     * @return The name of an AWS service that can request an operation for the specified service.
      * 
      */
     private final String servicePrincipal;
@@ -29,16 +29,16 @@ public final class GetDelegatedServicesDelegatedService {
     }
 
     /**
-     * The date that the account became a delegated administrator for this service.
+     * @return The date that the account became a delegated administrator for this service.
      * 
-    */
+     */
     public String delegationEnabledDate() {
         return this.delegationEnabledDate;
     }
     /**
-     * The name of an AWS service that can request an operation for the specified service.
+     * @return The name of an AWS service that can request an operation for the specified service.
      * 
-    */
+     */
     public String servicePrincipal() {
         return this.servicePrincipal;
     }

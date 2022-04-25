@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class KpiGroupByMetadataResponse {
     /**
-     * The display name.
+     * @return The display name.
      * 
      */
     private final @Nullable Map<String,String> displayName;
     /**
-     * The name of the field.
+     * @return The name of the field.
      * 
      */
     private final @Nullable String fieldName;
     /**
-     * The type of the field.
+     * @return The type of the field.
      * 
      */
     private final @Nullable String fieldType;
@@ -39,23 +39,23 @@ public final class KpiGroupByMetadataResponse {
     }
 
     /**
-     * The display name.
+     * @return The display name.
      * 
-    */
+     */
     public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
-     * The name of the field.
+     * @return The name of the field.
      * 
-    */
+     */
     public Optional<String> fieldName() {
         return Optional.ofNullable(this.fieldName);
     }
     /**
-     * The type of the field.
+     * @return The type of the field.
      * 
-    */
+     */
     public Optional<String> fieldType() {
         return Optional.ofNullable(this.fieldType);
     }

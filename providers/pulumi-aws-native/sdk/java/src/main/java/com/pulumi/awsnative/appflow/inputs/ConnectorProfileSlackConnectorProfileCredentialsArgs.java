@@ -23,6 +23,10 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
     @Import(name="accessToken")
     private @Nullable Output<String> accessToken;
 
+    /**
+     * @return The credentials used to access protected resources.
+     * 
+     */
     public Optional<Output<String>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
@@ -34,6 +38,10 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
     @Import(name="clientId", required=true)
     private Output<String> clientId;
 
+    /**
+     * @return The identiﬁer for the desired client.
+     * 
+     */
     public Output<String> clientId() {
         return this.clientId;
     }
@@ -45,6 +53,10 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
     @Import(name="clientSecret", required=true)
     private Output<String> clientSecret;
 
+    /**
+     * @return The client secret used by the oauth client to authenticate to the authorization server.
+     * 
+     */
     public Output<String> clientSecret() {
         return this.clientSecret;
     }
@@ -56,6 +68,10 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
     @Import(name="connectorOAuthRequest")
     private @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
+    /**
+     * @return The oauth needed to request security tokens from the connector endpoint.
+     * 
+     */
     public Optional<Output<ConnectorProfileConnectorOAuthRequestArgs>> connectorOAuthRequest() {
         return Optional.ofNullable(this.connectorOAuthRequest);
     }
@@ -87,38 +103,86 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
             $ = new ConnectorProfileSlackConnectorProfileCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken The credentials used to access protected resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(@Nullable Output<String> accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param accessToken The credentials used to access protected resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(String accessToken) {
             return accessToken(Output.of(accessToken));
         }
 
+        /**
+         * @param clientId The identiﬁer for the desired client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The identiﬁer for the desired client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret The client secret used by the oauth client to authenticate to the authorization server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(Output<String> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret The client secret used by the oauth client to authenticate to the authorization server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(String clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }
 
+        /**
+         * @param connectorOAuthRequest The oauth needed to request security tokens from the connector endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorOAuthRequest(@Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
             $.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
 
+        /**
+         * @param connectorOAuthRequest The oauth needed to request security tokens from the connector endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorOAuthRequest(ConnectorProfileConnectorOAuthRequestArgs connectorOAuthRequest) {
             return connectorOAuthRequest(Output.of(connectorOAuthRequest));
         }

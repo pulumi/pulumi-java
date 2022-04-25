@@ -21,6 +21,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="groupId")
     private @Nullable String groupId;
 
+    /**
+     * @return The private link resource group id.
+     * 
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -32,6 +36,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Unique name of the private link.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -43,6 +51,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="privateLinkResourceId")
     private @Nullable String privateLinkResourceId;
 
+    /**
+     * @return The resource id that private link links to.
+     * 
+     */
     public Optional<String> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
@@ -54,6 +66,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="requestMessage")
     private @Nullable String requestMessage;
 
+    /**
+     * @return Request message.
+     * 
+     */
     public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
@@ -65,6 +81,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -97,26 +117,56 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
             $ = new SharedPrivateLinkResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The private link resource group id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable String groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param name Unique name of the private link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateLinkResourceId The resource id that private link links to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
+        /**
+         * @param requestMessage Request message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(@Nullable String requestMessage) {
             $.requestMessage = requestMessage;
             return this;
         }
 
+        /**
+         * @param status Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

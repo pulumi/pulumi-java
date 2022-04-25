@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
     /**
-     * Set of files to scan.
+     * @return Set of files to scan.
      * Structure is documented below.
      * 
      */
@@ -22,10 +22,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
     }
 
     /**
-     * Set of files to scan.
+     * @return Set of files to scan.
      * Structure is documented below.
      * 
-    */
+     */
     public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference tableReference() {
         return this.tableReference;
     }

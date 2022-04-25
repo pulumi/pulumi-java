@@ -21,6 +21,10 @@ public final class QueryParameterTypeResponse extends com.pulumi.resources.Invok
     @Import(name="arrayType", required=true)
     private QueryParameterTypeResponse arrayType;
 
+    /**
+     * @return [Optional] The type of the array&#39;s elements, if this is an array.
+     * 
+     */
     public QueryParameterTypeResponse arrayType() {
         return this.arrayType;
     }
@@ -32,6 +36,10 @@ public final class QueryParameterTypeResponse extends com.pulumi.resources.Invok
     @Import(name="structTypes", required=true)
     private List<QueryParameterTypeStructTypesItemResponse> structTypes;
 
+    /**
+     * @return [Optional] The types of the fields of this struct, in order, if this is a struct.
+     * 
+     */
     public List<QueryParameterTypeStructTypesItemResponse> structTypes() {
         return this.structTypes;
     }
@@ -43,6 +51,10 @@ public final class QueryParameterTypeResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return [Required] The top level type of this field.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -73,20 +85,44 @@ public final class QueryParameterTypeResponse extends com.pulumi.resources.Invok
             $ = new QueryParameterTypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arrayType [Optional] The type of the array&#39;s elements, if this is an array.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayType(QueryParameterTypeResponse arrayType) {
             $.arrayType = arrayType;
             return this;
         }
 
+        /**
+         * @param structTypes [Optional] The types of the fields of this struct, in order, if this is a struct.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structTypes(List<QueryParameterTypeStructTypesItemResponse> structTypes) {
             $.structTypes = structTypes;
             return this;
         }
 
+        /**
+         * @param structTypes [Optional] The types of the fields of this struct, in order, if this is a struct.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structTypes(QueryParameterTypeStructTypesItemResponse... structTypes) {
             return structTypes(List.of(structTypes));
         }
 
+        /**
+         * @param type [Required] The top level type of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

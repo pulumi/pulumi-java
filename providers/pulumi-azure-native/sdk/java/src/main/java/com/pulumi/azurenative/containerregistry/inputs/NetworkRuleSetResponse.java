@@ -29,6 +29,10 @@ public final class NetworkRuleSetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="defaultAction", required=true)
     private String defaultAction;
 
+    /**
+     * @return The default action of allow or deny when no other rules match.
+     * 
+     */
     public String defaultAction() {
         return this.defaultAction;
     }
@@ -40,6 +44,10 @@ public final class NetworkRuleSetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="ipRules")
     private @Nullable List<IPRuleResponse> ipRules;
 
+    /**
+     * @return The IP ACL rules.
+     * 
+     */
     public Optional<List<IPRuleResponse>> ipRules() {
         return Optional.ofNullable(this.ipRules);
     }
@@ -51,6 +59,10 @@ public final class NetworkRuleSetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="virtualNetworkRules")
     private @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
+    /**
+     * @return The virtual network rules.
+     * 
+     */
     public Optional<List<VirtualNetworkRuleResponse>> virtualNetworkRules() {
         return Optional.ofNullable(this.virtualNetworkRules);
     }
@@ -81,25 +93,55 @@ public final class NetworkRuleSetResponse extends com.pulumi.resources.InvokeArg
             $ = new NetworkRuleSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultAction The default action of allow or deny when no other rules match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(String defaultAction) {
             $.defaultAction = defaultAction;
             return this;
         }
 
+        /**
+         * @param ipRules The IP ACL rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(@Nullable List<IPRuleResponse> ipRules) {
             $.ipRules = ipRules;
             return this;
         }
 
+        /**
+         * @param ipRules The IP ACL rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(IPRuleResponse... ipRules) {
             return ipRules(List.of(ipRules));
         }
 
+        /**
+         * @param virtualNetworkRules The virtual network rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
             $.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
+        /**
+         * @param virtualNetworkRules The virtual network rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRules(VirtualNetworkRuleResponse... virtualNetworkRules) {
             return virtualNetworkRules(List.of(virtualNetworkRules));
         }

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class EnvironmentStatusResponse {
     /**
-     * An object that represents the status of ingress on an environment.
+     * @return An object that represents the status of ingress on an environment.
      * 
      */
     private final IngressEnvironmentStatusResponse ingress;
     /**
-     * An object that represents the status of warm storage on an environment.
+     * @return An object that represents the status of warm storage on an environment.
      * 
      */
     private final WarmStorageEnvironmentStatusResponse warmStorage;
@@ -30,16 +30,16 @@ public final class EnvironmentStatusResponse {
     }
 
     /**
-     * An object that represents the status of ingress on an environment.
+     * @return An object that represents the status of ingress on an environment.
      * 
-    */
+     */
     public IngressEnvironmentStatusResponse ingress() {
         return this.ingress;
     }
     /**
-     * An object that represents the status of warm storage on an environment.
+     * @return An object that represents the status of warm storage on an environment.
      * 
-    */
+     */
     public WarmStorageEnvironmentStatusResponse warmStorage() {
         return this.warmStorage;
     }

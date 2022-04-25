@@ -27,6 +27,10 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends com.pulumi.
     @Import(name="privateEndpoint")
     private @Nullable MHSMPrivateEndpointResponse privateEndpoint;
 
+    /**
+     * @return Properties of the private endpoint object.
+     * 
+     */
     public Optional<MHSMPrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -38,6 +42,10 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends com.pulumi.
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
+    /**
+     * @return Approval state of the private link connection.
+     * 
+     */
     public Optional<MHSMPrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -49,6 +57,10 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends com.pulumi.
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of the private endpoint connection.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -79,16 +91,34 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends com.pulumi.
             $ = new MHSMPrivateEndpointConnectionItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpoint Properties of the private endpoint object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable MHSMPrivateEndpointResponse privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Approval state of the private link connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

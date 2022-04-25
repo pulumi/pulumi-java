@@ -27,6 +27,10 @@ public final class BucketNoncurrentVersionTransitionArgs extends com.pulumi.reso
     @Import(name="newerNoncurrentVersions")
     private @Nullable Output<Integer> newerNoncurrentVersions;
 
+    /**
+     * @return Specified the number of newer noncurrent and current versions that must exists before performing the associated action
+     * 
+     */
     public Optional<Output<Integer>> newerNoncurrentVersions() {
         return Optional.ofNullable(this.newerNoncurrentVersions);
     }
@@ -38,6 +42,10 @@ public final class BucketNoncurrentVersionTransitionArgs extends com.pulumi.reso
     @Import(name="storageClass", required=true)
     private Output<BucketNoncurrentVersionTransitionStorageClass> storageClass;
 
+    /**
+     * @return The class of storage used to store the object.
+     * 
+     */
     public Output<BucketNoncurrentVersionTransitionStorageClass> storageClass() {
         return this.storageClass;
     }
@@ -49,6 +57,10 @@ public final class BucketNoncurrentVersionTransitionArgs extends com.pulumi.reso
     @Import(name="transitionInDays", required=true)
     private Output<Integer> transitionInDays;
 
+    /**
+     * @return Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.
+     * 
+     */
     public Output<Integer> transitionInDays() {
         return this.transitionInDays;
     }
@@ -79,29 +91,65 @@ public final class BucketNoncurrentVersionTransitionArgs extends com.pulumi.reso
             $ = new BucketNoncurrentVersionTransitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param newerNoncurrentVersions Specified the number of newer noncurrent and current versions that must exists before performing the associated action
+         * 
+         * @return builder
+         * 
+         */
         public Builder newerNoncurrentVersions(@Nullable Output<Integer> newerNoncurrentVersions) {
             $.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
 
+        /**
+         * @param newerNoncurrentVersions Specified the number of newer noncurrent and current versions that must exists before performing the associated action
+         * 
+         * @return builder
+         * 
+         */
         public Builder newerNoncurrentVersions(Integer newerNoncurrentVersions) {
             return newerNoncurrentVersions(Output.of(newerNoncurrentVersions));
         }
 
+        /**
+         * @param storageClass The class of storage used to store the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(Output<BucketNoncurrentVersionTransitionStorageClass> storageClass) {
             $.storageClass = storageClass;
             return this;
         }
 
+        /**
+         * @param storageClass The class of storage used to store the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(BucketNoncurrentVersionTransitionStorageClass storageClass) {
             return storageClass(Output.of(storageClass));
         }
 
+        /**
+         * @param transitionInDays Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionInDays(Output<Integer> transitionInDays) {
             $.transitionInDays = transitionInDays;
             return this;
         }
 
+        /**
+         * @param transitionInDays Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionInDays(Integer transitionInDays) {
             return transitionInDays(Output.of(transitionInDays));
         }

@@ -27,6 +27,10 @@ public final class RestorePolicyPropertiesResponse extends com.pulumi.resources.
     @Import(name="days")
     private @Nullable Integer days;
 
+    /**
+     * @return how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
+     * 
+     */
     public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
@@ -38,6 +42,10 @@ public final class RestorePolicyPropertiesResponse extends com.pulumi.resources.
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Blob restore is enabled if set to true.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -49,6 +57,10 @@ public final class RestorePolicyPropertiesResponse extends com.pulumi.resources.
     @Import(name="lastEnabledTime", required=true)
     private String lastEnabledTime;
 
+    /**
+     * @return Deprecated in favor of minRestoreTime property.
+     * 
+     */
     public String lastEnabledTime() {
         return this.lastEnabledTime;
     }
@@ -60,6 +72,10 @@ public final class RestorePolicyPropertiesResponse extends com.pulumi.resources.
     @Import(name="minRestoreTime", required=true)
     private String minRestoreTime;
 
+    /**
+     * @return Returns the minimum date and time that the restore can be started.
+     * 
+     */
     public String minRestoreTime() {
         return this.minRestoreTime;
     }
@@ -91,21 +107,45 @@ public final class RestorePolicyPropertiesResponse extends com.pulumi.resources.
             $ = new RestorePolicyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param days how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(@Nullable Integer days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param enabled Blob restore is enabled if set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param lastEnabledTime Deprecated in favor of minRestoreTime property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastEnabledTime(String lastEnabledTime) {
             $.lastEnabledTime = lastEnabledTime;
             return this;
         }
 
+        /**
+         * @param minRestoreTime Returns the minimum date and time that the restore can be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minRestoreTime(String minRestoreTime) {
             $.minRestoreTime = minRestoreTime;
             return this;

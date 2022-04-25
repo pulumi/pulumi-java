@@ -26,6 +26,10 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
     @Import(name="lastProbeTime")
     private @Nullable Output<String> lastProbeTime;
 
+    /**
+     * @return Last time we probed the condition.
+     * 
+     */
     public Optional<Output<String>> lastProbeTime() {
         return Optional.ofNullable(this.lastProbeTime);
     }
@@ -37,6 +41,10 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
     @Import(name="lastTransitionTime")
     private @Nullable Output<String> lastTransitionTime;
 
+    /**
+     * @return Last time the condition transitioned from one status to another.
+     * 
+     */
     public Optional<Output<String>> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
@@ -48,6 +56,10 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return Human-readable message indicating details about last transition.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -59,6 +71,10 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
     @Import(name="reason")
     private @Nullable Output<String> reason;
 
+    /**
+     * @return Unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
+     * 
+     */
     public Optional<Output<String>> reason() {
         return Optional.ofNullable(this.reason);
     }
@@ -79,6 +95,14 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return
+     * 
+     * Possible enum values:
+     *  - `&#34;FileSystemResizePending&#34;` - controller resize is finished and a file system resize is pending on node
+     *  - `&#34;Resizing&#34;` - a user trigger resize of pvc has been started
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -112,38 +136,86 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
             $ = new PersistentVolumeClaimConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastProbeTime Last time we probed the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastProbeTime(@Nullable Output<String> lastProbeTime) {
             $.lastProbeTime = lastProbeTime;
             return this;
         }
 
+        /**
+         * @param lastProbeTime Last time we probed the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastProbeTime(String lastProbeTime) {
             return lastProbeTime(Output.of(lastProbeTime));
         }
 
+        /**
+         * @param lastTransitionTime Last time the condition transitioned from one status to another.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTransitionTime(@Nullable Output<String> lastTransitionTime) {
             $.lastTransitionTime = lastTransitionTime;
             return this;
         }
 
+        /**
+         * @param lastTransitionTime Last time the condition transitioned from one status to another.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTransitionTime(String lastTransitionTime) {
             return lastTransitionTime(Output.of(lastTransitionTime));
         }
 
+        /**
+         * @param message Human-readable message indicating details about last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message Human-readable message indicating details about last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param reason Unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(@Nullable Output<String> reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param reason Unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             return reason(Output.of(reason));
         }
@@ -157,11 +229,31 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
             return status(Output.of(status));
         }
 
+        /**
+         * @param type
+         * 
+         * Possible enum values:
+         *  - `&#34;FileSystemResizePending&#34;` - controller resize is finished and a file system resize is pending on node
+         *  - `&#34;Resizing&#34;` - a user trigger resize of pvc has been started
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type
+         * 
+         * Possible enum values:
+         *  - `&#34;FileSystemResizePending&#34;` - controller resize is finished and a file system resize is pending on node
+         *  - `&#34;Resizing&#34;` - a user trigger resize of pvc has been started
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

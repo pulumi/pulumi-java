@@ -28,6 +28,10 @@ public final class ManagementPolicyActionArgs extends com.pulumi.resources.Resou
     @Import(name="baseBlob")
     private @Nullable Output<ManagementPolicyBaseBlobArgs> baseBlob;
 
+    /**
+     * @return The management policy action for base blob
+     * 
+     */
     public Optional<Output<ManagementPolicyBaseBlobArgs>> baseBlob() {
         return Optional.ofNullable(this.baseBlob);
     }
@@ -39,6 +43,10 @@ public final class ManagementPolicyActionArgs extends com.pulumi.resources.Resou
     @Import(name="snapshot")
     private @Nullable Output<ManagementPolicySnapShotArgs> snapshot;
 
+    /**
+     * @return The management policy action for snapshot
+     * 
+     */
     public Optional<Output<ManagementPolicySnapShotArgs>> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
@@ -50,6 +58,10 @@ public final class ManagementPolicyActionArgs extends com.pulumi.resources.Resou
     @Import(name="version")
     private @Nullable Output<ManagementPolicyVersionArgs> version;
 
+    /**
+     * @return The management policy action for version
+     * 
+     */
     public Optional<Output<ManagementPolicyVersionArgs>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -80,29 +92,65 @@ public final class ManagementPolicyActionArgs extends com.pulumi.resources.Resou
             $ = new ManagementPolicyActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseBlob The management policy action for base blob
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseBlob(@Nullable Output<ManagementPolicyBaseBlobArgs> baseBlob) {
             $.baseBlob = baseBlob;
             return this;
         }
 
+        /**
+         * @param baseBlob The management policy action for base blob
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseBlob(ManagementPolicyBaseBlobArgs baseBlob) {
             return baseBlob(Output.of(baseBlob));
         }
 
+        /**
+         * @param snapshot The management policy action for snapshot
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(@Nullable Output<ManagementPolicySnapShotArgs> snapshot) {
             $.snapshot = snapshot;
             return this;
         }
 
+        /**
+         * @param snapshot The management policy action for snapshot
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(ManagementPolicySnapShotArgs snapshot) {
             return snapshot(Output.of(snapshot));
         }
 
+        /**
+         * @param version The management policy action for version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<ManagementPolicyVersionArgs> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The management policy action for version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(ManagementPolicyVersionArgs version) {
             return version(Output.of(version));
         }

@@ -14,27 +14,27 @@ import java.util.Objects;
 @CustomType
 public final class ClusterAutoscalingResponse {
     /**
-     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes can be created by NAP.
+     * @return The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes can be created by NAP.
      * 
      */
     private final List<String> autoprovisioningLocations;
     /**
-     * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
+     * @return AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
      * 
      */
     private final AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults;
     /**
-     * Defines autoscaling behaviour.
+     * @return Defines autoscaling behaviour.
      * 
      */
     private final String autoscalingProfile;
     /**
-     * Enables automatic node pool creation and deletion.
+     * @return Enables automatic node pool creation and deletion.
      * 
      */
     private final Boolean enableNodeAutoprovisioning;
     /**
-     * Contains global constraints regarding minimum and maximum amount of resources in the cluster.
+     * @return Contains global constraints regarding minimum and maximum amount of resources in the cluster.
      * 
      */
     private final List<ResourceLimitResponse> resourceLimits;
@@ -54,37 +54,37 @@ public final class ClusterAutoscalingResponse {
     }
 
     /**
-     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes can be created by NAP.
+     * @return The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes can be created by NAP.
      * 
-    */
+     */
     public List<String> autoprovisioningLocations() {
         return this.autoprovisioningLocations;
     }
     /**
-     * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
+     * @return AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
      * 
-    */
+     */
     public AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults() {
         return this.autoprovisioningNodePoolDefaults;
     }
     /**
-     * Defines autoscaling behaviour.
+     * @return Defines autoscaling behaviour.
      * 
-    */
+     */
     public String autoscalingProfile() {
         return this.autoscalingProfile;
     }
     /**
-     * Enables automatic node pool creation and deletion.
+     * @return Enables automatic node pool creation and deletion.
      * 
-    */
+     */
     public Boolean enableNodeAutoprovisioning() {
         return this.enableNodeAutoprovisioning;
     }
     /**
-     * Contains global constraints regarding minimum and maximum amount of resources in the cluster.
+     * @return Contains global constraints regarding minimum and maximum amount of resources in the cluster.
      * 
-    */
+     */
     public List<ResourceLimitResponse> resourceLimits() {
         return this.resourceLimits;
     }

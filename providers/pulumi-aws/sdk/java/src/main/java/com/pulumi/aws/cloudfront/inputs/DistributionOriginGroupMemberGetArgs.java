@@ -20,6 +20,10 @@ public final class DistributionOriginGroupMemberGetArgs extends com.pulumi.resou
     @Import(name="originId", required=true)
     private Output<String> originId;
 
+    /**
+     * @return The unique identifier of the member origin
+     * 
+     */
     public Output<String> originId() {
         return this.originId;
     }
@@ -48,11 +52,23 @@ public final class DistributionOriginGroupMemberGetArgs extends com.pulumi.resou
             $ = new DistributionOriginGroupMemberGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param originId The unique identifier of the member origin
+         * 
+         * @return builder
+         * 
+         */
         public Builder originId(Output<String> originId) {
             $.originId = originId;
             return this;
         }
 
+        /**
+         * @param originId The unique identifier of the member origin
+         * 
+         * @return builder
+         * 
+         */
         public Builder originId(String originId) {
             return originId(Output.of(originId));
         }

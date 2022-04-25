@@ -28,6 +28,10 @@ public final class ApplicationWindowsEventArgs extends com.pulumi.resources.Reso
     @Import(name="eventLevels", required=true)
     private Output<List<ApplicationEventLevel>> eventLevels;
 
+    /**
+     * @return The levels of event to log.
+     * 
+     */
     public Output<List<ApplicationEventLevel>> eventLevels() {
         return this.eventLevels;
     }
@@ -39,6 +43,10 @@ public final class ApplicationWindowsEventArgs extends com.pulumi.resources.Reso
     @Import(name="eventName", required=true)
     private Output<String> eventName;
 
+    /**
+     * @return The type of Windows Events to log.
+     * 
+     */
     public Output<String> eventName() {
         return this.eventName;
     }
@@ -50,6 +58,10 @@ public final class ApplicationWindowsEventArgs extends com.pulumi.resources.Reso
     @Import(name="logGroupName", required=true)
     private Output<String> logGroupName;
 
+    /**
+     * @return The CloudWatch log group name to be associated to the monitored log.
+     * 
+     */
     public Output<String> logGroupName() {
         return this.logGroupName;
     }
@@ -61,6 +73,10 @@ public final class ApplicationWindowsEventArgs extends com.pulumi.resources.Reso
     @Import(name="patternSet")
     private @Nullable Output<String> patternSet;
 
+    /**
+     * @return The name of the log pattern set.
+     * 
+     */
     public Optional<Output<String>> patternSet() {
         return Optional.ofNullable(this.patternSet);
     }
@@ -92,42 +108,96 @@ public final class ApplicationWindowsEventArgs extends com.pulumi.resources.Reso
             $ = new ApplicationWindowsEventArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventLevels The levels of event to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventLevels(Output<List<ApplicationEventLevel>> eventLevels) {
             $.eventLevels = eventLevels;
             return this;
         }
 
+        /**
+         * @param eventLevels The levels of event to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventLevels(List<ApplicationEventLevel> eventLevels) {
             return eventLevels(Output.of(eventLevels));
         }
 
+        /**
+         * @param eventLevels The levels of event to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventLevels(ApplicationEventLevel... eventLevels) {
             return eventLevels(List.of(eventLevels));
         }
 
+        /**
+         * @param eventName The type of Windows Events to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(Output<String> eventName) {
             $.eventName = eventName;
             return this;
         }
 
+        /**
+         * @param eventName The type of Windows Events to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(String eventName) {
             return eventName(Output.of(eventName));
         }
 
+        /**
+         * @param logGroupName The CloudWatch log group name to be associated to the monitored log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(Output<String> logGroupName) {
             $.logGroupName = logGroupName;
             return this;
         }
 
+        /**
+         * @param logGroupName The CloudWatch log group name to be associated to the monitored log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(String logGroupName) {
             return logGroupName(Output.of(logGroupName));
         }
 
+        /**
+         * @param patternSet The name of the log pattern set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternSet(@Nullable Output<String> patternSet) {
             $.patternSet = patternSet;
             return this;
         }
 
+        /**
+         * @param patternSet The name of the log pattern set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternSet(String patternSet) {
             return patternSet(Output.of(patternSet));
         }

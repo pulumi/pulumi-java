@@ -23,6 +23,10 @@ public final class GalleryIdentifierResponse extends com.pulumi.resources.Invoke
     @Import(name="uniqueName", required=true)
     private String uniqueName;
 
+    /**
+     * @return The unique name of the Shared Image Gallery. This name is generated automatically by Azure.
+     * 
+     */
     public String uniqueName() {
         return this.uniqueName;
     }
@@ -51,6 +55,12 @@ public final class GalleryIdentifierResponse extends com.pulumi.resources.Invoke
             $ = new GalleryIdentifierResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uniqueName The unique name of the Shared Image Gallery. This name is generated automatically by Azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueName(String uniqueName) {
             $.uniqueName = uniqueName;
             return this;

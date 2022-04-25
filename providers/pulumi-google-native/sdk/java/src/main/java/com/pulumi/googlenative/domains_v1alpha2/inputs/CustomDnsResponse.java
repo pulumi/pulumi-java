@@ -25,6 +25,10 @@ public final class CustomDnsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dsRecords", required=true)
     private List<DsRecordResponse> dsRecords;
 
+    /**
+     * @return The list of DS records for this domain, which are used to enable DNSSEC. The domain&#39;s DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
+     * 
+     */
     public List<DsRecordResponse> dsRecords() {
         return this.dsRecords;
     }
@@ -36,6 +40,10 @@ public final class CustomDnsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nameServers", required=true)
     private List<String> nameServers;
 
+    /**
+     * @return A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.
+     * 
+     */
     public List<String> nameServers() {
         return this.nameServers;
     }
@@ -65,20 +73,44 @@ public final class CustomDnsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CustomDnsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dsRecords The list of DS records for this domain, which are used to enable DNSSEC. The domain&#39;s DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dsRecords(List<DsRecordResponse> dsRecords) {
             $.dsRecords = dsRecords;
             return this;
         }
 
+        /**
+         * @param dsRecords The list of DS records for this domain, which are used to enable DNSSEC. The domain&#39;s DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dsRecords(DsRecordResponse... dsRecords) {
             return dsRecords(List.of(dsRecords));
         }
 
+        /**
+         * @param nameServers A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(List<String> nameServers) {
             $.nameServers = nameServers;
             return this;
         }
 
+        /**
+         * @param nameServers A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(String... nameServers) {
             return nameServers(List.of(nameServers));
         }

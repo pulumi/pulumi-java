@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterEc2Attributes {
     /**
-     * String containing a comma separated list of additional Amazon EC2 security group IDs for the master node.
+     * @return String containing a comma separated list of additional Amazon EC2 security group IDs for the master node.
      * 
      */
     private final @Nullable String additionalMasterSecurityGroups;
     /**
-     * String containing a comma separated list of additional Amazon EC2 security group IDs for the slave nodes as a comma separated string.
+     * @return String containing a comma separated list of additional Amazon EC2 security group IDs for the slave nodes as a comma separated string.
      * 
      */
     private final @Nullable String additionalSlaveSecurityGroups;
     /**
-     * Identifier of the Amazon EC2 EMR-Managed security group for the master node.
+     * @return Identifier of the Amazon EC2 EMR-Managed security group for the master node.
      * 
      */
     private final @Nullable String emrManagedMasterSecurityGroup;
     /**
-     * Identifier of the Amazon EC2 EMR-Managed security group for the slave nodes.
+     * @return Identifier of the Amazon EC2 EMR-Managed security group for the slave nodes.
      * 
      */
     private final @Nullable String emrManagedSlaveSecurityGroup;
     /**
-     * Instance Profile for EC2 instances of the cluster assume this role.
+     * @return Instance Profile for EC2 instances of the cluster assume this role.
      * 
      */
     private final String instanceProfile;
     /**
-     * Amazon EC2 key pair that can be used to ssh to the master node as the user called `hadoop`.
+     * @return Amazon EC2 key pair that can be used to ssh to the master node as the user called `hadoop`.
      * 
      */
     private final @Nullable String keyName;
     /**
-     * Identifier of the Amazon EC2 service-access security group - required when the cluster runs on a private subnet.
+     * @return Identifier of the Amazon EC2 service-access security group - required when the cluster runs on a private subnet.
      * 
      */
     private final @Nullable String serviceAccessSecurityGroup;
     /**
-     * VPC subnet id where you want the job flow to launch. Cannot specify the `cc1.4xlarge` instance type for nodes of a job flow launched in an Amazon VPC.
+     * @return VPC subnet id where you want the job flow to launch. Cannot specify the `cc1.4xlarge` instance type for nodes of a job flow launched in an Amazon VPC.
      * 
      */
     private final @Nullable String subnetId;
     /**
-     * List of VPC subnet id-s where you want the job flow to launch.  Amazon EMR identifies the best Availability Zone to launch instances according to your fleet specifications.
+     * @return List of VPC subnet id-s where you want the job flow to launch.  Amazon EMR identifies the best Availability Zone to launch instances according to your fleet specifications.
      * 
      */
     private final @Nullable List<String> subnetIds;
@@ -81,65 +81,65 @@ public final class ClusterEc2Attributes {
     }
 
     /**
-     * String containing a comma separated list of additional Amazon EC2 security group IDs for the master node.
+     * @return String containing a comma separated list of additional Amazon EC2 security group IDs for the master node.
      * 
-    */
+     */
     public Optional<String> additionalMasterSecurityGroups() {
         return Optional.ofNullable(this.additionalMasterSecurityGroups);
     }
     /**
-     * String containing a comma separated list of additional Amazon EC2 security group IDs for the slave nodes as a comma separated string.
+     * @return String containing a comma separated list of additional Amazon EC2 security group IDs for the slave nodes as a comma separated string.
      * 
-    */
+     */
     public Optional<String> additionalSlaveSecurityGroups() {
         return Optional.ofNullable(this.additionalSlaveSecurityGroups);
     }
     /**
-     * Identifier of the Amazon EC2 EMR-Managed security group for the master node.
+     * @return Identifier of the Amazon EC2 EMR-Managed security group for the master node.
      * 
-    */
+     */
     public Optional<String> emrManagedMasterSecurityGroup() {
         return Optional.ofNullable(this.emrManagedMasterSecurityGroup);
     }
     /**
-     * Identifier of the Amazon EC2 EMR-Managed security group for the slave nodes.
+     * @return Identifier of the Amazon EC2 EMR-Managed security group for the slave nodes.
      * 
-    */
+     */
     public Optional<String> emrManagedSlaveSecurityGroup() {
         return Optional.ofNullable(this.emrManagedSlaveSecurityGroup);
     }
     /**
-     * Instance Profile for EC2 instances of the cluster assume this role.
+     * @return Instance Profile for EC2 instances of the cluster assume this role.
      * 
-    */
+     */
     public String instanceProfile() {
         return this.instanceProfile;
     }
     /**
-     * Amazon EC2 key pair that can be used to ssh to the master node as the user called `hadoop`.
+     * @return Amazon EC2 key pair that can be used to ssh to the master node as the user called `hadoop`.
      * 
-    */
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
-     * Identifier of the Amazon EC2 service-access security group - required when the cluster runs on a private subnet.
+     * @return Identifier of the Amazon EC2 service-access security group - required when the cluster runs on a private subnet.
      * 
-    */
+     */
     public Optional<String> serviceAccessSecurityGroup() {
         return Optional.ofNullable(this.serviceAccessSecurityGroup);
     }
     /**
-     * VPC subnet id where you want the job flow to launch. Cannot specify the `cc1.4xlarge` instance type for nodes of a job flow launched in an Amazon VPC.
+     * @return VPC subnet id where you want the job flow to launch. Cannot specify the `cc1.4xlarge` instance type for nodes of a job flow launched in an Amazon VPC.
      * 
-    */
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
-     * List of VPC subnet id-s where you want the job flow to launch.  Amazon EMR identifies the best Availability Zone to launch instances according to your fleet specifications.
+     * @return List of VPC subnet id-s where you want the job flow to launch.  Amazon EMR identifies the best Availability Zone to launch instances according to your fleet specifications.
      * 
-    */
+     */
     public List<String> subnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }

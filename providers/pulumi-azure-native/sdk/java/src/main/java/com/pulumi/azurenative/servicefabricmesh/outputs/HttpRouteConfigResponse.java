@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class HttpRouteConfigResponse {
     /**
-     * Describes destination endpoint for routing traffic.
+     * @return Describes destination endpoint for routing traffic.
      * 
      */
     private final GatewayDestinationResponse destination;
     /**
-     * Describes a rule for http route matching.
+     * @return Describes a rule for http route matching.
      * 
      */
     private final HttpRouteMatchRuleResponse match;
     /**
-     * http route name.
+     * @return http route name.
      * 
      */
     private final String name;
@@ -38,23 +38,23 @@ public final class HttpRouteConfigResponse {
     }
 
     /**
-     * Describes destination endpoint for routing traffic.
+     * @return Describes destination endpoint for routing traffic.
      * 
-    */
+     */
     public GatewayDestinationResponse destination() {
         return this.destination;
     }
     /**
-     * Describes a rule for http route matching.
+     * @return Describes a rule for http route matching.
      * 
-    */
+     */
     public HttpRouteMatchRuleResponse match() {
         return this.match;
     }
     /**
-     * http route name.
+     * @return http route name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

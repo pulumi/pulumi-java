@@ -25,6 +25,10 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
     @Import(name="alertType", required=true)
     private Output<String> alertType;
 
+    /**
+     * @return Type of the alert to automatically suppress. For all alert types, use &#39;*&#39;
+     * 
+     */
     public Output<String> alertType() {
         return this.alertType;
     }
@@ -36,6 +40,10 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
     @Import(name="alertsSuppressionRuleName")
     private @Nullable Output<String> alertsSuppressionRuleName;
 
+    /**
+     * @return The unique name of the suppression alert rule
+     * 
+     */
     public Optional<Output<String>> alertsSuppressionRuleName() {
         return Optional.ofNullable(this.alertsSuppressionRuleName);
     }
@@ -47,6 +55,10 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
     @Import(name="comment")
     private @Nullable Output<String> comment;
 
+    /**
+     * @return Any comment regarding the rule
+     * 
+     */
     public Optional<Output<String>> comment() {
         return Optional.ofNullable(this.comment);
     }
@@ -58,6 +70,10 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
     @Import(name="expirationDateUtc")
     private @Nullable Output<String> expirationDateUtc;
 
+    /**
+     * @return Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
+     * 
+     */
     public Optional<Output<String>> expirationDateUtc() {
         return Optional.ofNullable(this.expirationDateUtc);
     }
@@ -69,6 +85,10 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
     @Import(name="reason", required=true)
     private Output<String> reason;
 
+    /**
+     * @return The reason for dismissing the alert
+     * 
+     */
     public Output<String> reason() {
         return this.reason;
     }
@@ -80,6 +100,10 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
     @Import(name="state", required=true)
     private Output<Either<String,RuleState>> state;
 
+    /**
+     * @return Possible states of the rule
+     * 
+     */
     public Output<Either<String,RuleState>> state() {
         return this.state;
     }
@@ -91,6 +115,10 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
     @Import(name="suppressionAlertsScope")
     private @Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope;
 
+    /**
+     * @return The suppression conditions
+     * 
+     */
     public Optional<Output<SuppressionAlertsScopeArgs>> suppressionAlertsScope() {
         return Optional.ofNullable(this.suppressionAlertsScope);
     }
@@ -125,73 +153,169 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
             $ = new AlertsSuppressionRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertType Type of the alert to automatically suppress. For all alert types, use &#39;*&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertType(Output<String> alertType) {
             $.alertType = alertType;
             return this;
         }
 
+        /**
+         * @param alertType Type of the alert to automatically suppress. For all alert types, use &#39;*&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertType(String alertType) {
             return alertType(Output.of(alertType));
         }
 
+        /**
+         * @param alertsSuppressionRuleName The unique name of the suppression alert rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertsSuppressionRuleName(@Nullable Output<String> alertsSuppressionRuleName) {
             $.alertsSuppressionRuleName = alertsSuppressionRuleName;
             return this;
         }
 
+        /**
+         * @param alertsSuppressionRuleName The unique name of the suppression alert rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertsSuppressionRuleName(String alertsSuppressionRuleName) {
             return alertsSuppressionRuleName(Output.of(alertsSuppressionRuleName));
         }
 
+        /**
+         * @param comment Any comment regarding the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(@Nullable Output<String> comment) {
             $.comment = comment;
             return this;
         }
 
+        /**
+         * @param comment Any comment regarding the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(String comment) {
             return comment(Output.of(comment));
         }
 
+        /**
+         * @param expirationDateUtc Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDateUtc(@Nullable Output<String> expirationDateUtc) {
             $.expirationDateUtc = expirationDateUtc;
             return this;
         }
 
+        /**
+         * @param expirationDateUtc Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDateUtc(String expirationDateUtc) {
             return expirationDateUtc(Output.of(expirationDateUtc));
         }
 
+        /**
+         * @param reason The reason for dismissing the alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(Output<String> reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param reason The reason for dismissing the alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             return reason(Output.of(reason));
         }
 
+        /**
+         * @param state Possible states of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Output<Either<String,RuleState>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Possible states of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,RuleState> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state Possible states of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state Possible states of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(RuleState state) {
             return state(Either.ofRight(state));
         }
 
+        /**
+         * @param suppressionAlertsScope The suppression conditions
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressionAlertsScope(@Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope) {
             $.suppressionAlertsScope = suppressionAlertsScope;
             return this;
         }
 
+        /**
+         * @param suppressionAlertsScope The suppression conditions
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressionAlertsScope(SuppressionAlertsScopeArgs suppressionAlertsScope) {
             return suppressionAlertsScope(Output.of(suppressionAlertsScope));
         }

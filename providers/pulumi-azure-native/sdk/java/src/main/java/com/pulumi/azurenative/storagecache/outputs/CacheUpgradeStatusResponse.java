@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class CacheUpgradeStatusResponse {
     /**
-     * Version string of the firmware currently installed on this Cache.
+     * @return Version string of the firmware currently installed on this Cache.
      * 
      */
     private final String currentFirmwareVersion;
     /**
-     * Time at which the pending firmware update will automatically be installed on the Cache.
+     * @return Time at which the pending firmware update will automatically be installed on the Cache.
      * 
      */
     private final String firmwareUpdateDeadline;
     /**
-     * True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
+     * @return True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
      * 
      */
     private final String firmwareUpdateStatus;
     /**
-     * Time of the last successful firmware update.
+     * @return Time of the last successful firmware update.
      * 
      */
     private final String lastFirmwareUpdate;
     /**
-     * When firmwareUpdateAvailable is true, this field holds the version string for the update.
+     * @return When firmwareUpdateAvailable is true, this field holds the version string for the update.
      * 
      */
     private final String pendingFirmwareVersion;
@@ -50,37 +50,37 @@ public final class CacheUpgradeStatusResponse {
     }
 
     /**
-     * Version string of the firmware currently installed on this Cache.
+     * @return Version string of the firmware currently installed on this Cache.
      * 
-    */
+     */
     public String currentFirmwareVersion() {
         return this.currentFirmwareVersion;
     }
     /**
-     * Time at which the pending firmware update will automatically be installed on the Cache.
+     * @return Time at which the pending firmware update will automatically be installed on the Cache.
      * 
-    */
+     */
     public String firmwareUpdateDeadline() {
         return this.firmwareUpdateDeadline;
     }
     /**
-     * True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
+     * @return True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
      * 
-    */
+     */
     public String firmwareUpdateStatus() {
         return this.firmwareUpdateStatus;
     }
     /**
-     * Time of the last successful firmware update.
+     * @return Time of the last successful firmware update.
      * 
-    */
+     */
     public String lastFirmwareUpdate() {
         return this.lastFirmwareUpdate;
     }
     /**
-     * When firmwareUpdateAvailable is true, this field holds the version string for the update.
+     * @return When firmwareUpdateAvailable is true, this field holds the version string for the update.
      * 
-    */
+     */
     public String pendingFirmwareVersion() {
         return this.pendingFirmwareVersion;
     }

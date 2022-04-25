@@ -28,6 +28,10 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="identity")
     private @Nullable Output<IdentityPropertiesArgs> identity;
 
+    /**
+     * @return The identity of the import pipeline.
+     * 
+     */
     public Optional<Output<IdentityPropertiesArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -39,6 +43,10 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="importPipelineName")
     private @Nullable Output<String> importPipelineName;
 
+    /**
+     * @return The name of the import pipeline.
+     * 
+     */
     public Optional<Output<String>> importPipelineName() {
         return Optional.ofNullable(this.importPipelineName);
     }
@@ -50,6 +58,10 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the import pipeline.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -61,6 +73,10 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="options")
     private @Nullable Output<List<Either<String,PipelineOptions>>> options;
 
+    /**
+     * @return The list of all options configured for the pipeline.
+     * 
+     */
     public Optional<Output<List<Either<String,PipelineOptions>>>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -72,6 +88,10 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="registryName", required=true)
     private Output<String> registryName;
 
+    /**
+     * @return The name of the container registry.
+     * 
+     */
     public Output<String> registryName() {
         return this.registryName;
     }
@@ -83,6 +103,10 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -94,6 +118,10 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="source", required=true)
     private Output<ImportPipelineSourcePropertiesArgs> source;
 
+    /**
+     * @return The source properties of the import pipeline.
+     * 
+     */
     public Output<ImportPipelineSourcePropertiesArgs> source() {
         return this.source;
     }
@@ -105,6 +133,10 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="trigger")
     private @Nullable Output<PipelineTriggerPropertiesArgs> trigger;
 
+    /**
+     * @return The properties that describe the trigger of the import pipeline.
+     * 
+     */
     public Optional<Output<PipelineTriggerPropertiesArgs>> trigger() {
         return Optional.ofNullable(this.trigger);
     }
@@ -140,78 +172,180 @@ public final class ImportPipelineArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ImportPipelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity The identity of the import pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the import pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityPropertiesArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param importPipelineName The name of the import pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importPipelineName(@Nullable Output<String> importPipelineName) {
             $.importPipelineName = importPipelineName;
             return this;
         }
 
+        /**
+         * @param importPipelineName The name of the import pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importPipelineName(String importPipelineName) {
             return importPipelineName(Output.of(importPipelineName));
         }
 
+        /**
+         * @param location The location of the import pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the import pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param options The list of all options configured for the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<List<Either<String,PipelineOptions>>> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options The list of all options configured for the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<Either<String,PipelineOptions>> options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param options The list of all options configured for the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(Either<String,PipelineOptions>... options) {
             return options(List.of(options));
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(Output<String> registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             return registryName(Output.of(registryName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param source The source properties of the import pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<ImportPipelineSourcePropertiesArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The source properties of the import pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(ImportPipelineSourcePropertiesArgs source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param trigger The properties that describe the trigger of the import pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(@Nullable Output<PipelineTriggerPropertiesArgs> trigger) {
             $.trigger = trigger;
             return this;
         }
 
+        /**
+         * @param trigger The properties that describe the trigger of the import pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(PipelineTriggerPropertiesArgs trigger) {
             return trigger(Output.of(trigger));
         }

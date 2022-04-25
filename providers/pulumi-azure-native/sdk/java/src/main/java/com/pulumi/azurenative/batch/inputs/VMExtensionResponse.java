@@ -24,6 +24,10 @@ public final class VMExtensionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="autoUpgradeMinorVersion")
     private @Nullable Boolean autoUpgradeMinorVersion;
 
+    /**
+     * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * 
+     */
     public Optional<Boolean> autoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
@@ -42,6 +46,10 @@ public final class VMExtensionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="protectedSettings")
     private @Nullable Object protectedSettings;
 
+    /**
+     * @return The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * 
+     */
     public Optional<Object> protectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
@@ -53,6 +61,10 @@ public final class VMExtensionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisionAfterExtensions")
     private @Nullable List<String> provisionAfterExtensions;
 
+    /**
+     * @return Collection of extension names after which this extension needs to be provisioned.
+     * 
+     */
     public Optional<List<String>> provisionAfterExtensions() {
         return Optional.ofNullable(this.provisionAfterExtensions);
     }
@@ -116,6 +128,12 @@ public final class VMExtensionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VMExtensionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoUpgradeMinorVersion Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             $.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
@@ -126,16 +144,34 @@ public final class VMExtensionResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param protectedSettings The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedSettings(@Nullable Object protectedSettings) {
             $.protectedSettings = protectedSettings;
             return this;
         }
 
+        /**
+         * @param provisionAfterExtensions Collection of extension names after which this extension needs to be provisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionAfterExtensions(@Nullable List<String> provisionAfterExtensions) {
             $.provisionAfterExtensions = provisionAfterExtensions;
             return this;
         }
 
+        /**
+         * @param provisionAfterExtensions Collection of extension names after which this extension needs to be provisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionAfterExtensions(String... provisionAfterExtensions) {
             return provisionAfterExtensions(List.of(provisionAfterExtensions));
         }

@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig {
     /**
-     * Number of milliseconds a token is valid after being authenticated.
+     * @return Number of milliseconds a token is valid after being authenticated.
      * 
      */
     private final @Nullable Integer authTtl;
     /**
-     * Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.
+     * @return Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.
      * 
      */
     private final @Nullable String clientId;
     /**
-     * Number of milliseconds a token is valid after being issued to a user.
+     * @return Number of milliseconds a token is valid after being issued to a user.
      * 
      */
     private final @Nullable Integer iatTtl;
     /**
-     * Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.
+     * @return Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.
      * 
      */
     private final String issuer;
@@ -46,30 +46,30 @@ public final class GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig
     }
 
     /**
-     * Number of milliseconds a token is valid after being authenticated.
+     * @return Number of milliseconds a token is valid after being authenticated.
      * 
-    */
+     */
     public Optional<Integer> authTtl() {
         return Optional.ofNullable(this.authTtl);
     }
     /**
-     * Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.
+     * @return Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * Number of milliseconds a token is valid after being issued to a user.
+     * @return Number of milliseconds a token is valid after being issued to a user.
      * 
-    */
+     */
     public Optional<Integer> iatTtl() {
         return Optional.ofNullable(this.iatTtl);
     }
     /**
-     * Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.
+     * @return Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.
      * 
-    */
+     */
     public String issuer() {
         return this.issuer;
     }

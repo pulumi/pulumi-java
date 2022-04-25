@@ -24,6 +24,10 @@ public final class CodeSigningConfigCodeSigningPoliciesArgs extends com.pulumi.r
     @Import(name="untrustedArtifactOnDeployment", required=true)
     private Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment;
 
+    /**
+     * @return Indicates how Lambda operations involve updating the code artifact will operate. Default to Warn if not provided
+     * 
+     */
     public Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
     }
@@ -52,11 +56,23 @@ public final class CodeSigningConfigCodeSigningPoliciesArgs extends com.pulumi.r
             $ = new CodeSigningConfigCodeSigningPoliciesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param untrustedArtifactOnDeployment Indicates how Lambda operations involve updating the code artifact will operate. Default to Warn if not provided
+         * 
+         * @return builder
+         * 
+         */
         public Builder untrustedArtifactOnDeployment(Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment) {
             $.untrustedArtifactOnDeployment = untrustedArtifactOnDeployment;
             return this;
         }
 
+        /**
+         * @param untrustedArtifactOnDeployment Indicates how Lambda operations involve updating the code artifact will operate. Default to Warn if not provided
+         * 
+         * @return builder
+         * 
+         */
         public Builder untrustedArtifactOnDeployment(CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment) {
             return untrustedArtifactOnDeployment(Output.of(untrustedArtifactOnDeployment));
         }

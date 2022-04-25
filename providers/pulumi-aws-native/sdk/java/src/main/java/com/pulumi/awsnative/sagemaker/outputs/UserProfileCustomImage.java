@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UserProfileCustomImage {
     /**
-     * The Name of the AppImageConfig.
+     * @return The Name of the AppImageConfig.
      * 
      */
     private final String appImageConfigName;
     /**
-     * The name of the CustomImage. Must be unique to your account.
+     * @return The name of the CustomImage. Must be unique to your account.
      * 
      */
     private final String imageName;
     /**
-     * The version number of the CustomImage.
+     * @return The version number of the CustomImage.
      * 
      */
     private final @Nullable Integer imageVersionNumber;
@@ -39,23 +39,23 @@ public final class UserProfileCustomImage {
     }
 
     /**
-     * The Name of the AppImageConfig.
+     * @return The Name of the AppImageConfig.
      * 
-    */
+     */
     public String appImageConfigName() {
         return this.appImageConfigName;
     }
     /**
-     * The name of the CustomImage. Must be unique to your account.
+     * @return The name of the CustomImage. Must be unique to your account.
      * 
-    */
+     */
     public String imageName() {
         return this.imageName;
     }
     /**
-     * The version number of the CustomImage.
+     * @return The version number of the CustomImage.
      * 
-    */
+     */
     public Optional<Integer> imageVersionNumber() {
         return Optional.ofNullable(this.imageVersionNumber);
     }

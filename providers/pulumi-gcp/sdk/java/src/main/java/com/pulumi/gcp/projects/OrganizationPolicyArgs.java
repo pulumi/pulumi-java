@@ -26,6 +26,10 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="booleanPolicy")
     private @Nullable Output<OrganizationPolicyBooleanPolicyArgs> booleanPolicy;
 
+    /**
+     * @return A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+     * 
+     */
     public Optional<Output<OrganizationPolicyBooleanPolicyArgs>> booleanPolicy() {
         return Optional.ofNullable(this.booleanPolicy);
     }
@@ -37,6 +41,10 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="constraint", required=true)
     private Output<String> constraint;
 
+    /**
+     * @return The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
+     * 
+     */
     public Output<String> constraint() {
         return this.constraint;
     }
@@ -48,6 +56,10 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="listPolicy")
     private @Nullable Output<OrganizationPolicyListPolicyArgs> listPolicy;
 
+    /**
+     * @return A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
+     * 
+     */
     public Optional<Output<OrganizationPolicyListPolicyArgs>> listPolicy() {
         return Optional.ofNullable(this.listPolicy);
     }
@@ -59,6 +71,10 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="project", required=true)
     private Output<String> project;
 
+    /**
+     * @return The project id of the project to set the policy for.
+     * 
+     */
     public Output<String> project() {
         return this.project;
     }
@@ -70,6 +86,10 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="restorePolicy")
     private @Nullable Output<OrganizationPolicyRestorePolicyArgs> restorePolicy;
 
+    /**
+     * @return A restore policy is a constraint to restore the default policy. Structure is documented below.
+     * 
+     */
     public Optional<Output<OrganizationPolicyRestorePolicyArgs>> restorePolicy() {
         return Optional.ofNullable(this.restorePolicy);
     }
@@ -81,6 +101,10 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="version")
     private @Nullable Output<Integer> version;
 
+    /**
+     * @return Version of the Policy. Default version is 0.
+     * 
+     */
     public Optional<Output<Integer>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -114,56 +138,128 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
             $ = new OrganizationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param booleanPolicy A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder booleanPolicy(@Nullable Output<OrganizationPolicyBooleanPolicyArgs> booleanPolicy) {
             $.booleanPolicy = booleanPolicy;
             return this;
         }
 
+        /**
+         * @param booleanPolicy A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder booleanPolicy(OrganizationPolicyBooleanPolicyArgs booleanPolicy) {
             return booleanPolicy(Output.of(booleanPolicy));
         }
 
+        /**
+         * @param constraint The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
+         * 
+         * @return builder
+         * 
+         */
         public Builder constraint(Output<String> constraint) {
             $.constraint = constraint;
             return this;
         }
 
+        /**
+         * @param constraint The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
+         * 
+         * @return builder
+         * 
+         */
         public Builder constraint(String constraint) {
             return constraint(Output.of(constraint));
         }
 
+        /**
+         * @param listPolicy A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listPolicy(@Nullable Output<OrganizationPolicyListPolicyArgs> listPolicy) {
             $.listPolicy = listPolicy;
             return this;
         }
 
+        /**
+         * @param listPolicy A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listPolicy(OrganizationPolicyListPolicyArgs listPolicy) {
             return listPolicy(Output.of(listPolicy));
         }
 
+        /**
+         * @param project The project id of the project to set the policy for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project id of the project to set the policy for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param restorePolicy A restore policy is a constraint to restore the default policy. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePolicy(@Nullable Output<OrganizationPolicyRestorePolicyArgs> restorePolicy) {
             $.restorePolicy = restorePolicy;
             return this;
         }
 
+        /**
+         * @param restorePolicy A restore policy is a constraint to restore the default policy. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePolicy(OrganizationPolicyRestorePolicyArgs restorePolicy) {
             return restorePolicy(Output.of(restorePolicy));
         }
 
+        /**
+         * @param version Version of the Policy. Default version is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<Integer> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version of the Policy. Default version is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Integer version) {
             return version(Output.of(version));
         }

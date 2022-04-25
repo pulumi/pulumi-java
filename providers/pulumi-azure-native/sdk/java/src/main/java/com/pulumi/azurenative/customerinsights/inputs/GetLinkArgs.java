@@ -19,6 +19,10 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="hubName", required=true)
     private String hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public String hubName() {
         return this.hubName;
     }
@@ -30,6 +34,10 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkName", required=true)
     private String linkName;
 
+    /**
+     * @return The name of the link.
+     * 
+     */
     public String linkName() {
         return this.linkName;
     }
@@ -41,6 +49,10 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param linkName The name of the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkName(String linkName) {
             $.linkName = linkName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

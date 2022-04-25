@@ -23,6 +23,10 @@ public final class TargetReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return String of the resource ID of a Target resource.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -34,6 +38,10 @@ public final class TargetReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Enum of the Target reference type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -63,11 +71,23 @@ public final class TargetReferenceResponse extends com.pulumi.resources.InvokeAr
             $ = new TargetReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id String of the resource ID of a Target resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param type Enum of the Target reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

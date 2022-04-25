@@ -26,6 +26,10 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
     private @Nullable Output<GuestCredentialArgs> credentials;
 
+    /**
+     * @return Username / Password Credentials to provision guest agent.
+     * 
+     */
     public Optional<Output<GuestCredentialArgs>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -37,6 +41,10 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpProxyConfig")
     private @Nullable Output<HttpProxyConfigurationArgs> httpProxyConfig;
 
+    /**
+     * @return HTTP Proxy configuration for the VM.
+     * 
+     */
     public Optional<Output<HttpProxyConfigurationArgs>> httpProxyConfig() {
         return Optional.ofNullable(this.httpProxyConfig);
     }
@@ -48,6 +56,10 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the guestAgents.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningAction")
     private @Nullable Output<Either<String,ProvisioningAction>> provisioningAction;
 
+    /**
+     * @return Gets or sets the guest agent provisioning action.
+     * 
+     */
     public Optional<Output<Either<String,ProvisioningAction>>> provisioningAction() {
         return Optional.ofNullable(this.provisioningAction);
     }
@@ -70,6 +86,10 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -81,6 +101,10 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualMachineName", required=true)
     private Output<String> virtualMachineName;
 
+    /**
+     * @return Name of the vm.
+     * 
+     */
     public Output<String> virtualMachineName() {
         return this.virtualMachineName;
     }
@@ -114,64 +138,148 @@ public final class GuestAgentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GuestAgentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credentials Username / Password Credentials to provision guest agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<GuestCredentialArgs> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials Username / Password Credentials to provision guest agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(GuestCredentialArgs credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param httpProxyConfig HTTP Proxy configuration for the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpProxyConfig(@Nullable Output<HttpProxyConfigurationArgs> httpProxyConfig) {
             $.httpProxyConfig = httpProxyConfig;
             return this;
         }
 
+        /**
+         * @param httpProxyConfig HTTP Proxy configuration for the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpProxyConfig(HttpProxyConfigurationArgs httpProxyConfig) {
             return httpProxyConfig(Output.of(httpProxyConfig));
         }
 
+        /**
+         * @param name Name of the guestAgents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the guestAgents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param provisioningAction Gets or sets the guest agent provisioning action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningAction(@Nullable Output<Either<String,ProvisioningAction>> provisioningAction) {
             $.provisioningAction = provisioningAction;
             return this;
         }
 
+        /**
+         * @param provisioningAction Gets or sets the guest agent provisioning action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningAction(Either<String,ProvisioningAction> provisioningAction) {
             return provisioningAction(Output.of(provisioningAction));
         }
 
+        /**
+         * @param provisioningAction Gets or sets the guest agent provisioning action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningAction(String provisioningAction) {
             return provisioningAction(Either.ofLeft(provisioningAction));
         }
 
+        /**
+         * @param provisioningAction Gets or sets the guest agent provisioning action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningAction(ProvisioningAction provisioningAction) {
             return provisioningAction(Either.ofRight(provisioningAction));
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param virtualMachineName Name of the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineName(Output<String> virtualMachineName) {
             $.virtualMachineName = virtualMachineName;
             return this;
         }
 
+        /**
+         * @param virtualMachineName Name of the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineName(String virtualMachineName) {
             return virtualMachineName(Output.of(virtualMachineName));
         }

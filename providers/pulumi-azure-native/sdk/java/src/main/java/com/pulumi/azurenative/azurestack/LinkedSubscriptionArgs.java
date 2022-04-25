@@ -24,6 +24,10 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="linkedSubscriptionId", required=true)
     private Output<String> linkedSubscriptionId;
 
+    /**
+     * @return The identifier associated with the device subscription.
+     * 
+     */
     public Output<String> linkedSubscriptionId() {
         return this.linkedSubscriptionId;
     }
@@ -35,6 +39,10 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="linkedSubscriptionName")
     private @Nullable Output<String> linkedSubscriptionName;
 
+    /**
+     * @return Name of the Linked Subscription resource.
+     * 
+     */
     public Optional<Output<String>> linkedSubscriptionName() {
         return Optional.ofNullable(this.linkedSubscriptionName);
     }
@@ -46,6 +54,10 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
     private @Nullable Output<Either<String,Location>> location;
 
+    /**
+     * @return Location of the resource.
+     * 
+     */
     public Optional<Output<Either<String,Location>>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -57,6 +69,10 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="registrationResourceId", required=true)
     private Output<String> registrationResourceId;
 
+    /**
+     * @return The identifier associated with the device registration.
+     * 
+     */
     public Output<String> registrationResourceId() {
         return this.registrationResourceId;
     }
@@ -68,6 +84,10 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroup", required=true)
     private Output<String> resourceGroup;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
@@ -100,55 +120,127 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
             $ = new LinkedSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkedSubscriptionId The identifier associated with the device subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedSubscriptionId(Output<String> linkedSubscriptionId) {
             $.linkedSubscriptionId = linkedSubscriptionId;
             return this;
         }
 
+        /**
+         * @param linkedSubscriptionId The identifier associated with the device subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedSubscriptionId(String linkedSubscriptionId) {
             return linkedSubscriptionId(Output.of(linkedSubscriptionId));
         }
 
+        /**
+         * @param linkedSubscriptionName Name of the Linked Subscription resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedSubscriptionName(@Nullable Output<String> linkedSubscriptionName) {
             $.linkedSubscriptionName = linkedSubscriptionName;
             return this;
         }
 
+        /**
+         * @param linkedSubscriptionName Name of the Linked Subscription resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedSubscriptionName(String linkedSubscriptionName) {
             return linkedSubscriptionName(Output.of(linkedSubscriptionName));
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<Either<String,Location>> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Either<String,Location> location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Either.ofLeft(location));
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Location location) {
             return location(Either.ofRight(location));
         }
 
+        /**
+         * @param registrationResourceId The identifier associated with the device registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationResourceId(Output<String> registrationResourceId) {
             $.registrationResourceId = registrationResourceId;
             return this;
         }
 
+        /**
+         * @param registrationResourceId The identifier associated with the device registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationResourceId(String registrationResourceId) {
             return registrationResourceId(Output.of(registrationResourceId));
         }
 
+        /**
+         * @param resourceGroup Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(Output<String> resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param resourceGroup Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             return resourceGroup(Output.of(resourceGroup));
         }

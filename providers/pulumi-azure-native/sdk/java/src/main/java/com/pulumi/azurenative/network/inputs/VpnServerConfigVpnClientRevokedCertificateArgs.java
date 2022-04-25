@@ -26,6 +26,10 @@ public final class VpnServerConfigVpnClientRevokedCertificateArgs extends com.pu
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The certificate name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class VpnServerConfigVpnClientRevokedCertificateArgs extends com.pu
     @Import(name="thumbprint")
     private @Nullable Output<String> thumbprint;
 
+    /**
+     * @return The revoked VPN client certificate thumbprint.
+     * 
+     */
     public Optional<Output<String>> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -66,20 +74,44 @@ public final class VpnServerConfigVpnClientRevokedCertificateArgs extends com.pu
             $ = new VpnServerConfigVpnClientRevokedCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The certificate name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The certificate name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param thumbprint The revoked VPN client certificate thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param thumbprint The revoked VPN client certificate thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             return thumbprint(Output.of(thumbprint));
         }

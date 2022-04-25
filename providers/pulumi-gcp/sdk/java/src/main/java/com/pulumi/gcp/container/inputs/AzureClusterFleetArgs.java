@@ -23,6 +23,11 @@ public final class AzureClusterFleetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="membership")
     private @Nullable Output<String> membership;
 
+    /**
+     * @return -
+     * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;.
+     * 
+     */
     public Optional<Output<String>> membership() {
         return Optional.ofNullable(this.membership);
     }
@@ -34,6 +39,10 @@ public final class AzureClusterFleetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project for the resource
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -63,20 +72,46 @@ public final class AzureClusterFleetArgs extends com.pulumi.resources.ResourceAr
             $ = new AzureClusterFleetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param membership -
+         * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membership(@Nullable Output<String> membership) {
             $.membership = membership;
             return this;
         }
 
+        /**
+         * @param membership -
+         * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membership(String membership) {
             return membership(Output.of(membership));
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

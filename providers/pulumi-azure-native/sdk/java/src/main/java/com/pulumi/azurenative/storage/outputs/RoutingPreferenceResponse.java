@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RoutingPreferenceResponse {
     /**
-     * A boolean flag which indicates whether internet routing storage endpoints are to be published
+     * @return A boolean flag which indicates whether internet routing storage endpoints are to be published
      * 
      */
     private final @Nullable Boolean publishInternetEndpoints;
     /**
-     * A boolean flag which indicates whether microsoft routing storage endpoints are to be published
+     * @return A boolean flag which indicates whether microsoft routing storage endpoints are to be published
      * 
      */
     private final @Nullable Boolean publishMicrosoftEndpoints;
     /**
-     * Routing Choice defines the kind of network routing opted by the user.
+     * @return Routing Choice defines the kind of network routing opted by the user.
      * 
      */
     private final @Nullable String routingChoice;
@@ -39,23 +39,23 @@ public final class RoutingPreferenceResponse {
     }
 
     /**
-     * A boolean flag which indicates whether internet routing storage endpoints are to be published
+     * @return A boolean flag which indicates whether internet routing storage endpoints are to be published
      * 
-    */
+     */
     public Optional<Boolean> publishInternetEndpoints() {
         return Optional.ofNullable(this.publishInternetEndpoints);
     }
     /**
-     * A boolean flag which indicates whether microsoft routing storage endpoints are to be published
+     * @return A boolean flag which indicates whether microsoft routing storage endpoints are to be published
      * 
-    */
+     */
     public Optional<Boolean> publishMicrosoftEndpoints() {
         return Optional.ofNullable(this.publishMicrosoftEndpoints);
     }
     /**
-     * Routing Choice defines the kind of network routing opted by the user.
+     * @return Routing Choice defines the kind of network routing opted by the user.
      * 
-    */
+     */
     public Optional<String> routingChoice() {
         return Optional.ofNullable(this.routingChoice);
     }

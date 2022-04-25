@@ -28,6 +28,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="assessmentType", required=true)
     private String assessmentType;
 
+    /**
+     * @return BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+     * 
+     */
     public String assessmentType() {
         return this.assessmentType;
     }
@@ -46,6 +50,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Human readable description of the assessment
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -57,6 +65,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return User friendly display name of the assessment
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -68,6 +80,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="implementationEffort")
     private @Nullable String implementationEffort;
 
+    /**
+     * @return The implementation effort required to remediate this assessment
+     * 
+     */
     public Optional<String> implementationEffort() {
         return Optional.ofNullable(this.implementationEffort);
     }
@@ -79,6 +95,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="partnerData")
     private @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData;
 
+    /**
+     * @return Describes the partner that created the assessment
+     * 
+     */
     public Optional<SecurityAssessmentMetadataPartnerDataResponse> partnerData() {
         return Optional.ofNullable(this.partnerData);
     }
@@ -90,6 +110,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="policyDefinitionId", required=true)
     private String policyDefinitionId;
 
+    /**
+     * @return Azure resource ID of the policy definition that turns this assessment calculation on
+     * 
+     */
     public String policyDefinitionId() {
         return this.policyDefinitionId;
     }
@@ -101,6 +125,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="preview")
     private @Nullable Boolean preview;
 
+    /**
+     * @return True if this assessment is in preview release status
+     * 
+     */
     public Optional<Boolean> preview() {
         return Optional.ofNullable(this.preview);
     }
@@ -112,6 +140,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="remediationDescription")
     private @Nullable String remediationDescription;
 
+    /**
+     * @return Human readable description of what you should do to mitigate this security issue
+     * 
+     */
     public Optional<String> remediationDescription() {
         return Optional.ofNullable(this.remediationDescription);
     }
@@ -123,6 +155,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="severity", required=true)
     private String severity;
 
+    /**
+     * @return The severity level of the assessment
+     * 
+     */
     public String severity() {
         return this.severity;
     }
@@ -141,6 +177,10 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
     @Import(name="userImpact")
     private @Nullable String userImpact;
 
+    /**
+     * @return The user impact of the assessment
+     * 
+     */
     public Optional<String> userImpact() {
         return Optional.ofNullable(this.userImpact);
     }
@@ -180,6 +220,12 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
             $ = new SecurityAssessmentMetadataPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assessmentType BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentType(String assessmentType) {
             $.assessmentType = assessmentType;
             return this;
@@ -194,41 +240,89 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
             return categories(List.of(categories));
         }
 
+        /**
+         * @param description Human readable description of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName User friendly display name of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param implementationEffort The implementation effort required to remediate this assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder implementationEffort(@Nullable String implementationEffort) {
             $.implementationEffort = implementationEffort;
             return this;
         }
 
+        /**
+         * @param partnerData Describes the partner that created the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerData(@Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData) {
             $.partnerData = partnerData;
             return this;
         }
 
+        /**
+         * @param policyDefinitionId Azure resource ID of the policy definition that turns this assessment calculation on
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionId(String policyDefinitionId) {
             $.policyDefinitionId = policyDefinitionId;
             return this;
         }
 
+        /**
+         * @param preview True if this assessment is in preview release status
+         * 
+         * @return builder
+         * 
+         */
         public Builder preview(@Nullable Boolean preview) {
             $.preview = preview;
             return this;
         }
 
+        /**
+         * @param remediationDescription Human readable description of what you should do to mitigate this security issue
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediationDescription(@Nullable String remediationDescription) {
             $.remediationDescription = remediationDescription;
             return this;
         }
 
+        /**
+         * @param severity The severity level of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             $.severity = severity;
             return this;
@@ -243,6 +337,12 @@ public final class SecurityAssessmentMetadataPropertiesResponse extends com.pulu
             return threats(List.of(threats));
         }
 
+        /**
+         * @param userImpact The user impact of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder userImpact(@Nullable String userImpact) {
             $.userImpact = userImpact;
             return this;

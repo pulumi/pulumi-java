@@ -29,6 +29,10 @@ public final class FabricCreationInputPropertiesArgs extends com.pulumi.resource
     @Import(name="customDetails")
     private @Nullable Output<Object> customDetails;
 
+    /**
+     * @return Fabric provider specific creation input.
+     * 
+     */
     public Optional<Output<Object>> customDetails() {
         return Optional.ofNullable(this.customDetails);
     }
@@ -57,11 +61,23 @@ public final class FabricCreationInputPropertiesArgs extends com.pulumi.resource
             $ = new FabricCreationInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customDetails Fabric provider specific creation input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDetails(@Nullable Output<Object> customDetails) {
             $.customDetails = customDetails;
             return this;
         }
 
+        /**
+         * @param customDetails Fabric provider specific creation input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDetails(Object customDetails) {
             return customDetails(Output.of(customDetails));
         }

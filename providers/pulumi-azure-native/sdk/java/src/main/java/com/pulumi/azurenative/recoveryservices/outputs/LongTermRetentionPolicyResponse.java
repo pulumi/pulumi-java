@@ -16,28 +16,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LongTermRetentionPolicyResponse {
     /**
-     * Daily retention schedule of the protection policy.
+     * @return Daily retention schedule of the protection policy.
      * 
      */
     private final @Nullable DailyRetentionScheduleResponse dailySchedule;
     /**
-     * Monthly retention schedule of the protection policy.
+     * @return Monthly retention schedule of the protection policy.
      * 
      */
     private final @Nullable MonthlyRetentionScheduleResponse monthlySchedule;
     /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is &#39;LongTermRetentionPolicy&#39;.
      * 
      */
     private final String retentionPolicyType;
     /**
-     * Weekly retention schedule of the protection policy.
+     * @return Weekly retention schedule of the protection policy.
      * 
      */
     private final @Nullable WeeklyRetentionScheduleResponse weeklySchedule;
     /**
-     * Yearly retention schedule of the protection policy.
+     * @return Yearly retention schedule of the protection policy.
      * 
      */
     private final @Nullable YearlyRetentionScheduleResponse yearlySchedule;
@@ -57,38 +57,38 @@ public final class LongTermRetentionPolicyResponse {
     }
 
     /**
-     * Daily retention schedule of the protection policy.
+     * @return Daily retention schedule of the protection policy.
      * 
-    */
+     */
     public Optional<DailyRetentionScheduleResponse> dailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
     /**
-     * Monthly retention schedule of the protection policy.
+     * @return Monthly retention schedule of the protection policy.
      * 
-    */
+     */
     public Optional<MonthlyRetentionScheduleResponse> monthlySchedule() {
         return Optional.ofNullable(this.monthlySchedule);
     }
     /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is &#39;LongTermRetentionPolicy&#39;.
      * 
-    */
+     */
     public String retentionPolicyType() {
         return this.retentionPolicyType;
     }
     /**
-     * Weekly retention schedule of the protection policy.
+     * @return Weekly retention schedule of the protection policy.
      * 
-    */
+     */
     public Optional<WeeklyRetentionScheduleResponse> weeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }
     /**
-     * Yearly retention schedule of the protection policy.
+     * @return Yearly retention schedule of the protection policy.
      * 
-    */
+     */
     public Optional<YearlyRetentionScheduleResponse> yearlySchedule() {
         return Optional.ofNullable(this.yearlySchedule);
     }

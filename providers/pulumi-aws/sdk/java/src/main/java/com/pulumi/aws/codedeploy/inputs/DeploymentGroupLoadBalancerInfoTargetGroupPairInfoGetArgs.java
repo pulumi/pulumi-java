@@ -25,6 +25,10 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
     @Import(name="prodTrafficRoute", required=true)
     private Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute;
 
+    /**
+     * @return Configuration block for the production traffic route (documented below).
+     * 
+     */
     public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute() {
         return this.prodTrafficRoute;
     }
@@ -36,6 +40,10 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
     @Import(name="targetGroups", required=true)
     private Output<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups;
 
+    /**
+     * @return Configuration blocks for a target group within a target group pair (documented below).
+     * 
+     */
     public Output<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups() {
         return this.targetGroups;
     }
@@ -47,6 +55,10 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
     @Import(name="testTrafficRoute")
     private @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> testTrafficRoute;
 
+    /**
+     * @return Configuration block for the test traffic route (documented below).
+     * 
+     */
     public Optional<Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs>> testTrafficRoute() {
         return Optional.ofNullable(this.testTrafficRoute);
     }
@@ -77,33 +89,75 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
             $ = new DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param prodTrafficRoute Configuration block for the production traffic route (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder prodTrafficRoute(Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute) {
             $.prodTrafficRoute = prodTrafficRoute;
             return this;
         }
 
+        /**
+         * @param prodTrafficRoute Configuration block for the production traffic route (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder prodTrafficRoute(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs prodTrafficRoute) {
             return prodTrafficRoute(Output.of(prodTrafficRoute));
         }
 
+        /**
+         * @param targetGroups Configuration blocks for a target group within a target group pair (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroups(Output<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups) {
             $.targetGroups = targetGroups;
             return this;
         }
 
+        /**
+         * @param targetGroups Configuration blocks for a target group within a target group pair (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroups(List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs> targetGroups) {
             return targetGroups(Output.of(targetGroups));
         }
 
+        /**
+         * @param targetGroups Configuration blocks for a target group within a target group pair (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroups(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs... targetGroups) {
             return targetGroups(List.of(targetGroups));
         }
 
+        /**
+         * @param testTrafficRoute Configuration block for the test traffic route (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTrafficRoute(@Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> testTrafficRoute) {
             $.testTrafficRoute = testTrafficRoute;
             return this;
         }
 
+        /**
+         * @param testTrafficRoute Configuration block for the test traffic route (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTrafficRoute(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs testTrafficRoute) {
             return testTrafficRoute(Output.of(testTrafficRoute));
         }

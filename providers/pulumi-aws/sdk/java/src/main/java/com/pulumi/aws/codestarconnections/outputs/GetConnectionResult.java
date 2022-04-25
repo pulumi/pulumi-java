@@ -12,32 +12,32 @@ import java.util.Objects;
 public final class GetConnectionResult {
     private final String arn;
     /**
-     * The CodeStar Connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
+     * @return The CodeStar Connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
      * 
      */
     private final String connectionStatus;
     /**
-     * The Amazon Resource Name (ARN) of the host associated with the connection.
+     * @return The Amazon Resource Name (ARN) of the host associated with the connection.
      * 
      */
     private final String hostArn;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The name of the CodeStar Connection. The name is unique in the calling AWS account.
+     * @return The name of the CodeStar Connection. The name is unique in the calling AWS account.
      * 
      */
     private final String name;
     /**
-     * The name of the external provider where your third-party code repository is configured. Possible values are `Bitbucket`, `GitHub`, or `GitHubEnterpriseServer`.
+     * @return The name of the external provider where your third-party code repository is configured. Possible values are `Bitbucket`, `GitHub`, or `GitHubEnterpriseServer`.
      * 
      */
     private final String providerType;
     /**
-     * Map of key-value resource tags to associate with the resource.
+     * @return Map of key-value resource tags to associate with the resource.
      * 
      */
     private final Map<String,String> tags;
@@ -64,44 +64,44 @@ public final class GetConnectionResult {
         return this.arn;
     }
     /**
-     * The CodeStar Connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
+     * @return The CodeStar Connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
      * 
-    */
+     */
     public String connectionStatus() {
         return this.connectionStatus;
     }
     /**
-     * The Amazon Resource Name (ARN) of the host associated with the connection.
+     * @return The Amazon Resource Name (ARN) of the host associated with the connection.
      * 
-    */
+     */
     public String hostArn() {
         return this.hostArn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the CodeStar Connection. The name is unique in the calling AWS account.
+     * @return The name of the CodeStar Connection. The name is unique in the calling AWS account.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The name of the external provider where your third-party code repository is configured. Possible values are `Bitbucket`, `GitHub`, or `GitHubEnterpriseServer`.
+     * @return The name of the external provider where your third-party code repository is configured. Possible values are `Bitbucket`, `GitHub`, or `GitHubEnterpriseServer`.
      * 
-    */
+     */
     public String providerType() {
         return this.providerType;
     }
     /**
-     * Map of key-value resource tags to associate with the resource.
+     * @return Map of key-value resource tags to associate with the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

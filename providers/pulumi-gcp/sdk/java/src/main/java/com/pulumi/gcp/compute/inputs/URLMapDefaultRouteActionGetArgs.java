@@ -31,6 +31,12 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
     @Import(name="corsPolicy")
     private @Nullable Output<URLMapDefaultRouteActionCorsPolicyGetArgs> corsPolicy;
 
+    /**
+     * @return The specification for allowing client side cross-origin requests. Please see
+     * [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<URLMapDefaultRouteActionCorsPolicyGetArgs>> corsPolicy() {
         return Optional.ofNullable(this.corsPolicy);
     }
@@ -47,6 +53,15 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
     @Import(name="faultInjectionPolicy")
     private @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy;
 
+    /**
+     * @return The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+     * As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+     * percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+     * by the Loadbalancer for a percentage of requests.
+     * timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<URLMapDefaultRouteActionFaultInjectionPolicyGetArgs>> faultInjectionPolicy() {
         return Optional.ofNullable(this.faultInjectionPolicy);
     }
@@ -61,6 +76,13 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
     @Import(name="requestMirrorPolicy")
     private @Nullable Output<URLMapDefaultRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy;
 
+    /**
+     * @return Specifies the policy on how requests intended for the route&#39;s backends are shadowed to a separate mirrored backend service.
+     * Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+     * the host / authority header is suffixed with -shadow.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<URLMapDefaultRouteActionRequestMirrorPolicyGetArgs>> requestMirrorPolicy() {
         return Optional.ofNullable(this.requestMirrorPolicy);
     }
@@ -73,6 +95,11 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
     @Import(name="retryPolicy")
     private @Nullable Output<URLMapDefaultRouteActionRetryPolicyGetArgs> retryPolicy;
 
+    /**
+     * @return Specifies the retry policy associated with this route.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<URLMapDefaultRouteActionRetryPolicyGetArgs>> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
@@ -87,6 +114,13 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
     @Import(name="timeout")
     private @Nullable Output<URLMapDefaultRouteActionTimeoutGetArgs> timeout;
 
+    /**
+     * @return Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+     * fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+     * If not specified, will use the largest timeout among all backend services associated with the route.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<URLMapDefaultRouteActionTimeoutGetArgs>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -99,6 +133,11 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
     @Import(name="urlRewrite")
     private @Nullable Output<URLMapDefaultRouteActionUrlRewriteGetArgs> urlRewrite;
 
+    /**
+     * @return The spec to modify the URL of the request, prior to forwarding the request to the matched service.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<URLMapDefaultRouteActionUrlRewriteGetArgs>> urlRewrite() {
         return Optional.ofNullable(this.urlRewrite);
     }
@@ -117,6 +156,17 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
     @Import(name="weightedBackendServices")
     private @Nullable Output<List<URLMapDefaultRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices;
 
+    /**
+     * @return A list of weighted backend services to send traffic to when a route match occurs.
+     * The weights determine the fraction of traffic that flows to their corresponding backend service.
+     * If all traffic needs to go to a single backend service, there must be one weightedBackendService
+     * with weight set to a non 0 number.
+     * Once a backendService is identified and before forwarding the request to the backend service,
+     * advanced routing actions like Url rewrites and header transformations are applied depending on
+     * additional settings specified in this HttpRouteAction.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<URLMapDefaultRouteActionWeightedBackendServiceGetArgs>>> weightedBackendServices() {
         return Optional.ofNullable(this.weightedBackendServices);
     }
@@ -151,69 +201,210 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
             $ = new URLMapDefaultRouteActionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param corsPolicy The specification for allowing client side cross-origin requests. Please see
+         * [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsPolicy(@Nullable Output<URLMapDefaultRouteActionCorsPolicyGetArgs> corsPolicy) {
             $.corsPolicy = corsPolicy;
             return this;
         }
 
+        /**
+         * @param corsPolicy The specification for allowing client side cross-origin requests. Please see
+         * [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsPolicy(URLMapDefaultRouteActionCorsPolicyGetArgs corsPolicy) {
             return corsPolicy(Output.of(corsPolicy));
         }
 
+        /**
+         * @param faultInjectionPolicy The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+         * As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+         * percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+         * by the Loadbalancer for a percentage of requests.
+         * timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder faultInjectionPolicy(@Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy) {
             $.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
 
+        /**
+         * @param faultInjectionPolicy The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
+         * As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
+         * percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
+         * by the Loadbalancer for a percentage of requests.
+         * timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder faultInjectionPolicy(URLMapDefaultRouteActionFaultInjectionPolicyGetArgs faultInjectionPolicy) {
             return faultInjectionPolicy(Output.of(faultInjectionPolicy));
         }
 
+        /**
+         * @param requestMirrorPolicy Specifies the policy on how requests intended for the route&#39;s backends are shadowed to a separate mirrored backend service.
+         * Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+         * the host / authority header is suffixed with -shadow.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMirrorPolicy(@Nullable Output<URLMapDefaultRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy) {
             $.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
 
+        /**
+         * @param requestMirrorPolicy Specifies the policy on how requests intended for the route&#39;s backends are shadowed to a separate mirrored backend service.
+         * Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
+         * the host / authority header is suffixed with -shadow.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMirrorPolicy(URLMapDefaultRouteActionRequestMirrorPolicyGetArgs requestMirrorPolicy) {
             return requestMirrorPolicy(Output.of(requestMirrorPolicy));
         }
 
+        /**
+         * @param retryPolicy Specifies the retry policy associated with this route.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(@Nullable Output<URLMapDefaultRouteActionRetryPolicyGetArgs> retryPolicy) {
             $.retryPolicy = retryPolicy;
             return this;
         }
 
+        /**
+         * @param retryPolicy Specifies the retry policy associated with this route.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(URLMapDefaultRouteActionRetryPolicyGetArgs retryPolicy) {
             return retryPolicy(Output.of(retryPolicy));
         }
 
+        /**
+         * @param timeout Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+         * fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+         * If not specified, will use the largest timeout among all backend services associated with the route.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<URLMapDefaultRouteActionTimeoutGetArgs> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Specifies the timeout for the selected route. Timeout is computed from the time the request has been
+         * fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
+         * If not specified, will use the largest timeout among all backend services associated with the route.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(URLMapDefaultRouteActionTimeoutGetArgs timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param urlRewrite The spec to modify the URL of the request, prior to forwarding the request to the matched service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRewrite(@Nullable Output<URLMapDefaultRouteActionUrlRewriteGetArgs> urlRewrite) {
             $.urlRewrite = urlRewrite;
             return this;
         }
 
+        /**
+         * @param urlRewrite The spec to modify the URL of the request, prior to forwarding the request to the matched service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRewrite(URLMapDefaultRouteActionUrlRewriteGetArgs urlRewrite) {
             return urlRewrite(Output.of(urlRewrite));
         }
 
+        /**
+         * @param weightedBackendServices A list of weighted backend services to send traffic to when a route match occurs.
+         * The weights determine the fraction of traffic that flows to their corresponding backend service.
+         * If all traffic needs to go to a single backend service, there must be one weightedBackendService
+         * with weight set to a non 0 number.
+         * Once a backendService is identified and before forwarding the request to the backend service,
+         * advanced routing actions like Url rewrites and header transformations are applied depending on
+         * additional settings specified in this HttpRouteAction.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedBackendServices(@Nullable Output<List<URLMapDefaultRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices) {
             $.weightedBackendServices = weightedBackendServices;
             return this;
         }
 
+        /**
+         * @param weightedBackendServices A list of weighted backend services to send traffic to when a route match occurs.
+         * The weights determine the fraction of traffic that flows to their corresponding backend service.
+         * If all traffic needs to go to a single backend service, there must be one weightedBackendService
+         * with weight set to a non 0 number.
+         * Once a backendService is identified and before forwarding the request to the backend service,
+         * advanced routing actions like Url rewrites and header transformations are applied depending on
+         * additional settings specified in this HttpRouteAction.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedBackendServices(List<URLMapDefaultRouteActionWeightedBackendServiceGetArgs> weightedBackendServices) {
             return weightedBackendServices(Output.of(weightedBackendServices));
         }
 
+        /**
+         * @param weightedBackendServices A list of weighted backend services to send traffic to when a route match occurs.
+         * The weights determine the fraction of traffic that flows to their corresponding backend service.
+         * If all traffic needs to go to a single backend service, there must be one weightedBackendService
+         * with weight set to a non 0 number.
+         * Once a backendService is identified and before forwarding the request to the backend service,
+         * advanced routing actions like Url rewrites and header transformations are applied depending on
+         * additional settings specified in this HttpRouteAction.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedBackendServices(URLMapDefaultRouteActionWeightedBackendServiceGetArgs... weightedBackendServices) {
             return weightedBackendServices(List.of(weightedBackendServices));
         }

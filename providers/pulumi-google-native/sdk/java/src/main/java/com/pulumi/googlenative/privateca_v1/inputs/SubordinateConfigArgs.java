@@ -25,6 +25,10 @@ public final class SubordinateConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="certificateAuthority", required=true)
     private Output<String> certificateAuthority;
 
+    /**
+     * @return This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
+     * 
+     */
     public Output<String> certificateAuthority() {
         return this.certificateAuthority;
     }
@@ -36,6 +40,10 @@ public final class SubordinateConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="pemIssuerChain", required=true)
     private Output<SubordinateConfigChainArgs> pemIssuerChain;
 
+    /**
+     * @return Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.
+     * 
+     */
     public Output<SubordinateConfigChainArgs> pemIssuerChain() {
         return this.pemIssuerChain;
     }
@@ -65,20 +73,44 @@ public final class SubordinateConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new SubordinateConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAuthority This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthority(Output<String> certificateAuthority) {
             $.certificateAuthority = certificateAuthority;
             return this;
         }
 
+        /**
+         * @param certificateAuthority This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthority(String certificateAuthority) {
             return certificateAuthority(Output.of(certificateAuthority));
         }
 
+        /**
+         * @param pemIssuerChain Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pemIssuerChain(Output<SubordinateConfigChainArgs> pemIssuerChain) {
             $.pemIssuerChain = pemIssuerChain;
             return this;
         }
 
+        /**
+         * @param pemIssuerChain Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pemIssuerChain(SubordinateConfigChainArgs pemIssuerChain) {
             return pemIssuerChain(Output.of(pemIssuerChain));
         }

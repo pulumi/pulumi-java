@@ -19,6 +19,10 @@ public final class GetSubnetGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the RDS database subnet group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetSubnetGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSubnetGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the RDS database subnet group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

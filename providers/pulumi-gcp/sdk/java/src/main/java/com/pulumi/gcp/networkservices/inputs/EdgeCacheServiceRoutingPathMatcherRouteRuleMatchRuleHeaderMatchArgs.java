@@ -23,6 +23,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     @Import(name="exactMatch")
     private @Nullable Output<String> exactMatch;
 
+    /**
+     * @return The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+     * 
+     */
     public Optional<Output<String>> exactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
@@ -35,6 +39,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     @Import(name="headerName", required=true)
     private Output<String> headerName;
 
+    /**
+     * @return Headers to remove from the response prior to sending it back to the client.
+     * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+     * 
+     */
     public Output<String> headerName() {
         return this.headerName;
     }
@@ -47,6 +56,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     @Import(name="invertMatch")
     private @Nullable Output<Boolean> invertMatch;
 
+    /**
+     * @return If set to false (default), the headerMatch is considered a match if the match criteria above are met.
+     * If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
+     * 
+     */
     public Optional<Output<Boolean>> invertMatch() {
         return Optional.ofNullable(this.invertMatch);
     }
@@ -58,6 +72,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     @Import(name="prefixMatch")
     private @Nullable Output<String> prefixMatch;
 
+    /**
+     * @return The value of the header must start with the contents of prefixMatch.
+     * 
+     */
     public Optional<Output<String>> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
@@ -69,6 +87,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     @Import(name="presentMatch")
     private @Nullable Output<Boolean> presentMatch;
 
+    /**
+     * @return Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+     * 
+     */
     public Optional<Output<Boolean>> presentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }
@@ -80,6 +102,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     @Import(name="suffixMatch")
     private @Nullable Output<String> suffixMatch;
 
+    /**
+     * @return The value of the header must end with the contents of suffixMatch.
+     * 
+     */
     public Optional<Output<String>> suffixMatch() {
         return Optional.ofNullable(this.suffixMatch);
     }
@@ -113,56 +139,132 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
             $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exactMatch The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exactMatch(@Nullable Output<String> exactMatch) {
             $.exactMatch = exactMatch;
             return this;
         }
 
+        /**
+         * @param exactMatch The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exactMatch(String exactMatch) {
             return exactMatch(Output.of(exactMatch));
         }
 
+        /**
+         * @param headerName Headers to remove from the response prior to sending it back to the client.
+         * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(Output<String> headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param headerName Headers to remove from the response prior to sending it back to the client.
+         * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             return headerName(Output.of(headerName));
         }
 
+        /**
+         * @param invertMatch If set to false (default), the headerMatch is considered a match if the match criteria above are met.
+         * If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invertMatch(@Nullable Output<Boolean> invertMatch) {
             $.invertMatch = invertMatch;
             return this;
         }
 
+        /**
+         * @param invertMatch If set to false (default), the headerMatch is considered a match if the match criteria above are met.
+         * If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invertMatch(Boolean invertMatch) {
             return invertMatch(Output.of(invertMatch));
         }
 
+        /**
+         * @param prefixMatch The value of the header must start with the contents of prefixMatch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(@Nullable Output<String> prefixMatch) {
             $.prefixMatch = prefixMatch;
             return this;
         }
 
+        /**
+         * @param prefixMatch The value of the header must start with the contents of prefixMatch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(String prefixMatch) {
             return prefixMatch(Output.of(prefixMatch));
         }
 
+        /**
+         * @param presentMatch Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presentMatch(@Nullable Output<Boolean> presentMatch) {
             $.presentMatch = presentMatch;
             return this;
         }
 
+        /**
+         * @param presentMatch Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presentMatch(Boolean presentMatch) {
             return presentMatch(Output.of(presentMatch));
         }
 
+        /**
+         * @param suffixMatch The value of the header must end with the contents of suffixMatch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suffixMatch(@Nullable Output<String> suffixMatch) {
             $.suffixMatch = suffixMatch;
             return this;
         }
 
+        /**
+         * @param suffixMatch The value of the header must end with the contents of suffixMatch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suffixMatch(String suffixMatch) {
             return suffixMatch(Output.of(suffixMatch));
         }

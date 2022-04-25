@@ -19,6 +19,10 @@ public final class GetLoadBalancerTlsCertificateArgs extends com.pulumi.resource
     @Import(name="certificateName", required=true)
     private String certificateName;
 
+    /**
+     * @return The SSL/TLS certificate name.
+     * 
+     */
     public String certificateName() {
         return this.certificateName;
     }
@@ -30,6 +34,10 @@ public final class GetLoadBalancerTlsCertificateArgs extends com.pulumi.resource
     @Import(name="loadBalancerName", required=true)
     private String loadBalancerName;
 
+    /**
+     * @return The name of your load balancer.
+     * 
+     */
     public String loadBalancerName() {
         return this.loadBalancerName;
     }
@@ -59,11 +67,23 @@ public final class GetLoadBalancerTlsCertificateArgs extends com.pulumi.resource
             $ = new GetLoadBalancerTlsCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateName The SSL/TLS certificate name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             $.certificateName = certificateName;
             return this;
         }
 
+        /**
+         * @param loadBalancerName The name of your load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerName(String loadBalancerName) {
             $.loadBalancerName = loadBalancerName;
             return this;

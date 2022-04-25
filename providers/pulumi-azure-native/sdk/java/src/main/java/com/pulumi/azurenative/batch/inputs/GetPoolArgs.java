@@ -19,6 +19,10 @@ public final class GetPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the Batch account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="poolName", required=true)
     private String poolName;
 
+    /**
+     * @return The pool name. This must be unique within the account.
+     * 
+     */
     public String poolName() {
         return this.poolName;
     }
@@ -41,6 +49,10 @@ public final class GetPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the Batch account.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetPoolArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param poolName The pool name. This must be unique within the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolName(String poolName) {
             $.poolName = poolName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

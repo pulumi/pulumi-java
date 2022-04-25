@@ -21,6 +21,10 @@ public final class GuestPoliciesAssignmentGroupLabelGetArgs extends com.pulumi.r
     @Import(name="labels", required=true)
     private Output<Map<String,String>> labels;
 
+    /**
+     * @return Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
+     * 
+     */
     public Output<Map<String,String>> labels() {
         return this.labels;
     }
@@ -49,11 +53,23 @@ public final class GuestPoliciesAssignmentGroupLabelGetArgs extends com.pulumi.r
             $ = new GuestPoliciesAssignmentGroupLabelGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }

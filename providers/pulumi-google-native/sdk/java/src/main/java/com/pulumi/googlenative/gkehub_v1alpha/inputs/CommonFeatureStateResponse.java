@@ -25,6 +25,10 @@ public final class CommonFeatureStateResponse extends com.pulumi.resources.Invok
     @Import(name="appdevexperience", required=true)
     private AppDevExperienceFeatureStateResponse appdevexperience;
 
+    /**
+     * @return Appdevexperience specific state.
+     * 
+     */
     public AppDevExperienceFeatureStateResponse appdevexperience() {
         return this.appdevexperience;
     }
@@ -36,6 +40,10 @@ public final class CommonFeatureStateResponse extends com.pulumi.resources.Invok
     @Import(name="servicemesh", required=true)
     private ServiceMeshFeatureStateResponse servicemesh;
 
+    /**
+     * @return Service Mesh-specific state.
+     * 
+     */
     public ServiceMeshFeatureStateResponse servicemesh() {
         return this.servicemesh;
     }
@@ -47,6 +55,10 @@ public final class CommonFeatureStateResponse extends com.pulumi.resources.Invok
     @Import(name="state", required=true)
     private FeatureStateResponse state;
 
+    /**
+     * @return The &#34;running state&#34; of the Feature in this Hub.
+     * 
+     */
     public FeatureStateResponse state() {
         return this.state;
     }
@@ -77,16 +89,34 @@ public final class CommonFeatureStateResponse extends com.pulumi.resources.Invok
             $ = new CommonFeatureStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appdevexperience Appdevexperience specific state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appdevexperience(AppDevExperienceFeatureStateResponse appdevexperience) {
             $.appdevexperience = appdevexperience;
             return this;
         }
 
+        /**
+         * @param servicemesh Service Mesh-specific state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicemesh(ServiceMeshFeatureStateResponse servicemesh) {
             $.servicemesh = servicemesh;
             return this;
         }
 
+        /**
+         * @param state The &#34;running state&#34; of the Feature in this Hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(FeatureStateResponse state) {
             $.state = state;
             return this;

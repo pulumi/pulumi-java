@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WorkgroupConfigurationResultConfiguration {
     /**
-     * Configuration block with encryption settings. Documented below.
+     * @return Configuration block with encryption settings. Documented below.
      * 
      */
     private final @Nullable WorkgroupConfigurationResultConfigurationEncryptionConfiguration encryptionConfiguration;
     /**
-     * The location in Amazon S3 where your query results are stored, such as `s3://path/to/query/bucket/`. For more information, see [Queries and Query Result Files](https://docs.aws.amazon.com/athena/latest/ug/querying.html).
+     * @return The location in Amazon S3 where your query results are stored, such as `s3://path/to/query/bucket/`. For more information, see [Queries and Query Result Files](https://docs.aws.amazon.com/athena/latest/ug/querying.html).
      * 
      */
     private final @Nullable String outputLocation;
@@ -32,16 +32,16 @@ public final class WorkgroupConfigurationResultConfiguration {
     }
 
     /**
-     * Configuration block with encryption settings. Documented below.
+     * @return Configuration block with encryption settings. Documented below.
      * 
-    */
+     */
     public Optional<WorkgroupConfigurationResultConfigurationEncryptionConfiguration> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
     /**
-     * The location in Amazon S3 where your query results are stored, such as `s3://path/to/query/bucket/`. For more information, see [Queries and Query Result Files](https://docs.aws.amazon.com/athena/latest/ug/querying.html).
+     * @return The location in Amazon S3 where your query results are stored, such as `s3://path/to/query/bucket/`. For more information, see [Queries and Query Result Files](https://docs.aws.amazon.com/athena/latest/ug/querying.html).
      * 
-    */
+     */
     public Optional<String> outputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }

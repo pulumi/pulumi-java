@@ -29,6 +29,14 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends com.pulumi.
     @Import(name="imageVersion")
     private @Nullable Output<String> imageVersion;
 
+    /**
+     * @return The Cloud Dataproc image version to use
+     * for the cluster - this controls the sets of software versions
+     * installed onto the nodes when you create clusters. If not specified, defaults to the
+     * latest version. For a list of valid versions see
+     * [Cloud Dataproc versions](https://cloud.google.com/dataproc/docs/concepts/dataproc-versions)
+     * 
+     */
     public Optional<Output<String>> imageVersion() {
         return Optional.ofNullable(this.imageVersion);
     }
@@ -52,6 +60,22 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends com.pulumi.
     @Import(name="optionalComponents")
     private @Nullable Output<List<String>> optionalComponents;
 
+    /**
+     * @return The set of optional components to activate on the cluster.
+     * Accepted values are:
+     * * ANACONDA
+     * * DRUID
+     * * FLINK
+     * * HBASE
+     * * HIVE_WEBHCAT
+     * * JUPYTER
+     * * PRESTO
+     * * RANGER
+     * * SOLR
+     * * ZEPPELIN
+     * * ZOOKEEPER
+     * 
+     */
     public Optional<Output<List<String>>> optionalComponents() {
         return Optional.ofNullable(this.optionalComponents);
     }
@@ -66,6 +90,13 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends com.pulumi.
     @Import(name="overrideProperties")
     private @Nullable Output<Map<String,String>> overrideProperties;
 
+    /**
+     * @return A list of override and additional properties (key/value pairs)
+     * used to modify various aspects of the common configuration files used when creating
+     * a cluster. For a list of valid properties please see
+     * [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties)
+     * 
+     */
     public Optional<Output<Map<String,String>>> overrideProperties() {
         return Optional.ofNullable(this.overrideProperties);
     }
@@ -104,33 +135,125 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends com.pulumi.
             $ = new ClusterClusterConfigSoftwareConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageVersion The Cloud Dataproc image version to use
+         * for the cluster - this controls the sets of software versions
+         * installed onto the nodes when you create clusters. If not specified, defaults to the
+         * latest version. For a list of valid versions see
+         * [Cloud Dataproc versions](https://cloud.google.com/dataproc/docs/concepts/dataproc-versions)
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageVersion(@Nullable Output<String> imageVersion) {
             $.imageVersion = imageVersion;
             return this;
         }
 
+        /**
+         * @param imageVersion The Cloud Dataproc image version to use
+         * for the cluster - this controls the sets of software versions
+         * installed onto the nodes when you create clusters. If not specified, defaults to the
+         * latest version. For a list of valid versions see
+         * [Cloud Dataproc versions](https://cloud.google.com/dataproc/docs/concepts/dataproc-versions)
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageVersion(String imageVersion) {
             return imageVersion(Output.of(imageVersion));
         }
 
+        /**
+         * @param optionalComponents The set of optional components to activate on the cluster.
+         * Accepted values are:
+         * * ANACONDA
+         * * DRUID
+         * * FLINK
+         * * HBASE
+         * * HIVE_WEBHCAT
+         * * JUPYTER
+         * * PRESTO
+         * * RANGER
+         * * SOLR
+         * * ZEPPELIN
+         * * ZOOKEEPER
+         * 
+         * @return builder
+         * 
+         */
         public Builder optionalComponents(@Nullable Output<List<String>> optionalComponents) {
             $.optionalComponents = optionalComponents;
             return this;
         }
 
+        /**
+         * @param optionalComponents The set of optional components to activate on the cluster.
+         * Accepted values are:
+         * * ANACONDA
+         * * DRUID
+         * * FLINK
+         * * HBASE
+         * * HIVE_WEBHCAT
+         * * JUPYTER
+         * * PRESTO
+         * * RANGER
+         * * SOLR
+         * * ZEPPELIN
+         * * ZOOKEEPER
+         * 
+         * @return builder
+         * 
+         */
         public Builder optionalComponents(List<String> optionalComponents) {
             return optionalComponents(Output.of(optionalComponents));
         }
 
+        /**
+         * @param optionalComponents The set of optional components to activate on the cluster.
+         * Accepted values are:
+         * * ANACONDA
+         * * DRUID
+         * * FLINK
+         * * HBASE
+         * * HIVE_WEBHCAT
+         * * JUPYTER
+         * * PRESTO
+         * * RANGER
+         * * SOLR
+         * * ZEPPELIN
+         * * ZOOKEEPER
+         * 
+         * @return builder
+         * 
+         */
         public Builder optionalComponents(String... optionalComponents) {
             return optionalComponents(List.of(optionalComponents));
         }
 
+        /**
+         * @param overrideProperties A list of override and additional properties (key/value pairs)
+         * used to modify various aspects of the common configuration files used when creating
+         * a cluster. For a list of valid properties please see
+         * [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties)
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideProperties(@Nullable Output<Map<String,String>> overrideProperties) {
             $.overrideProperties = overrideProperties;
             return this;
         }
 
+        /**
+         * @param overrideProperties A list of override and additional properties (key/value pairs)
+         * used to modify various aspects of the common configuration files used when creating
+         * a cluster. For a list of valid properties please see
+         * [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties)
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideProperties(Map<String,String> overrideProperties) {
             return overrideProperties(Output.of(overrideProperties));
         }

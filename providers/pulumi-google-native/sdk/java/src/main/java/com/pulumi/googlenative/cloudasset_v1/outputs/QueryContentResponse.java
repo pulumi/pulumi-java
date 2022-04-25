@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class QueryContentResponse {
     /**
-     * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
+     * @return An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
      * 
      */
     private final IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;
@@ -21,9 +21,9 @@ public final class QueryContentResponse {
     }
 
     /**
-     * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
+     * @return An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
      * 
-    */
+     */
     public IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery() {
         return this.iamPolicyAnalysisQuery;
     }

@@ -30,6 +30,10 @@ public final class DiskEncryptionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="encryptionAlgorithm")
     private @Nullable Output<Either<String,JsonWebKeyEncryptionAlgorithm>> encryptionAlgorithm;
 
+    /**
+     * @return Algorithm identifier for encryption, default RSA-OAEP.
+     * 
+     */
     public Optional<Output<Either<String,JsonWebKeyEncryptionAlgorithm>>> encryptionAlgorithm() {
         return Optional.ofNullable(this.encryptionAlgorithm);
     }
@@ -41,6 +45,10 @@ public final class DiskEncryptionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="encryptionAtHost")
     private @Nullable Output<Boolean> encryptionAtHost;
 
+    /**
+     * @return Indicates whether or not resource disk encryption is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> encryptionAtHost() {
         return Optional.ofNullable(this.encryptionAtHost);
     }
@@ -52,6 +60,10 @@ public final class DiskEncryptionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="keyName")
     private @Nullable Output<String> keyName;
 
+    /**
+     * @return Key name that is used for enabling disk encryption.
+     * 
+     */
     public Optional<Output<String>> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -63,6 +75,10 @@ public final class DiskEncryptionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="keyVersion")
     private @Nullable Output<String> keyVersion;
 
+    /**
+     * @return Specific key version that is used for enabling disk encryption.
+     * 
+     */
     public Optional<Output<String>> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -74,6 +90,10 @@ public final class DiskEncryptionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="msiResourceId")
     private @Nullable Output<String> msiResourceId;
 
+    /**
+     * @return Resource ID of Managed Identity that is used to access the key vault.
+     * 
+     */
     public Optional<Output<String>> msiResourceId() {
         return Optional.ofNullable(this.msiResourceId);
     }
@@ -85,6 +105,10 @@ public final class DiskEncryptionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="vaultUri")
     private @Nullable Output<String> vaultUri;
 
+    /**
+     * @return Base key vault URI where the customers key is located eg. https://myvault.vault.azure.net
+     * 
+     */
     public Optional<Output<String>> vaultUri() {
         return Optional.ofNullable(this.vaultUri);
     }
@@ -118,64 +142,148 @@ public final class DiskEncryptionPropertiesArgs extends com.pulumi.resources.Res
             $ = new DiskEncryptionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionAlgorithm Algorithm identifier for encryption, default RSA-OAEP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(@Nullable Output<Either<String,JsonWebKeyEncryptionAlgorithm>> encryptionAlgorithm) {
             $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
+        /**
+         * @param encryptionAlgorithm Algorithm identifier for encryption, default RSA-OAEP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(Either<String,JsonWebKeyEncryptionAlgorithm> encryptionAlgorithm) {
             return encryptionAlgorithm(Output.of(encryptionAlgorithm));
         }
 
+        /**
+         * @param encryptionAlgorithm Algorithm identifier for encryption, default RSA-OAEP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             return encryptionAlgorithm(Either.ofLeft(encryptionAlgorithm));
         }
 
+        /**
+         * @param encryptionAlgorithm Algorithm identifier for encryption, default RSA-OAEP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(JsonWebKeyEncryptionAlgorithm encryptionAlgorithm) {
             return encryptionAlgorithm(Either.ofRight(encryptionAlgorithm));
         }
 
+        /**
+         * @param encryptionAtHost Indicates whether or not resource disk encryption is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAtHost(@Nullable Output<Boolean> encryptionAtHost) {
             $.encryptionAtHost = encryptionAtHost;
             return this;
         }
 
+        /**
+         * @param encryptionAtHost Indicates whether or not resource disk encryption is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAtHost(Boolean encryptionAtHost) {
             return encryptionAtHost(Output.of(encryptionAtHost));
         }
 
+        /**
+         * @param keyName Key name that is used for enabling disk encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName Key name that is used for enabling disk encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param keyVersion Specific key version that is used for enabling disk encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param keyVersion Specific key version that is used for enabling disk encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(String keyVersion) {
             return keyVersion(Output.of(keyVersion));
         }
 
+        /**
+         * @param msiResourceId Resource ID of Managed Identity that is used to access the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msiResourceId(@Nullable Output<String> msiResourceId) {
             $.msiResourceId = msiResourceId;
             return this;
         }
 
+        /**
+         * @param msiResourceId Resource ID of Managed Identity that is used to access the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msiResourceId(String msiResourceId) {
             return msiResourceId(Output.of(msiResourceId));
         }
 
+        /**
+         * @param vaultUri Base key vault URI where the customers key is located eg. https://myvault.vault.azure.net
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultUri(@Nullable Output<String> vaultUri) {
             $.vaultUri = vaultUri;
             return this;
         }
 
+        /**
+         * @param vaultUri Base key vault URI where the customers key is located eg. https://myvault.vault.azure.net
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultUri(String vaultUri) {
             return vaultUri(Output.of(vaultUri));
         }

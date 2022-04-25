@@ -27,6 +27,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return If set to true, enables CAAP for L7 DDoS detection.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -38,6 +42,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     @Import(name="ruleVisibility")
     private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> ruleVisibility;
 
+    /**
+     * @return Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+     * 
+     */
     public Optional<Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility>> ruleVisibility() {
         return Optional.ofNullable(this.ruleVisibility);
     }
@@ -67,20 +75,44 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
             $ = new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enable If set to true, enables CAAP for L7 DDoS detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable If set to true, enables CAAP for L7 DDoS detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param ruleVisibility Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleVisibility(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> ruleVisibility) {
             $.ruleVisibility = ruleVisibility;
             return this;
         }
 
+        /**
+         * @param ruleVisibility Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleVisibility(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility ruleVisibility) {
             return ruleVisibility(Output.of(ruleVisibility));
         }

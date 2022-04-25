@@ -30,6 +30,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientProtocol")
     private @Nullable Output<Either<String,Protocol>> clientProtocol;
 
+    /**
+     * @return Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
+     * 
+     */
     public Optional<Output<Either<String,Protocol>>> clientProtocol() {
         return Optional.ofNullable(this.clientProtocol);
     }
@@ -41,6 +45,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return The name of the RedisEnterprise cluster.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -52,6 +60,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusteringPolicy")
     private @Nullable Output<Either<String,ClusteringPolicy>> clusteringPolicy;
 
+    /**
+     * @return Clustering policy - default is OSSCluster. Specified at create time.
+     * 
+     */
     public Optional<Output<Either<String,ClusteringPolicy>>> clusteringPolicy() {
         return Optional.ofNullable(this.clusteringPolicy);
     }
@@ -63,6 +75,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return The name of the database.
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -74,6 +90,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="evictionPolicy")
     private @Nullable Output<Either<String,EvictionPolicy>> evictionPolicy;
 
+    /**
+     * @return Redis eviction policy - default is VolatileLRU
+     * 
+     */
     public Optional<Output<Either<String,EvictionPolicy>>> evictionPolicy() {
         return Optional.ofNullable(this.evictionPolicy);
     }
@@ -85,6 +105,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="modules")
     private @Nullable Output<List<ModuleArgs>> modules;
 
+    /**
+     * @return Optional set of redis modules to enable in this database - modules can only be added at creation time.
+     * 
+     */
     public Optional<Output<List<ModuleArgs>>> modules() {
         return Optional.ofNullable(this.modules);
     }
@@ -96,6 +120,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="persistence")
     private @Nullable Output<PersistenceArgs> persistence;
 
+    /**
+     * @return Persistence settings
+     * 
+     */
     public Optional<Output<PersistenceArgs>> persistence() {
         return Optional.ofNullable(this.persistence);
     }
@@ -107,6 +135,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return TCP port of the database endpoint. Specified at create time. Defaults to an available port.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -118,6 +150,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -154,111 +190,261 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatabaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientProtocol Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientProtocol(@Nullable Output<Either<String,Protocol>> clientProtocol) {
             $.clientProtocol = clientProtocol;
             return this;
         }
 
+        /**
+         * @param clientProtocol Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientProtocol(Either<String,Protocol> clientProtocol) {
             return clientProtocol(Output.of(clientProtocol));
         }
 
+        /**
+         * @param clientProtocol Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientProtocol(String clientProtocol) {
             return clientProtocol(Either.ofLeft(clientProtocol));
         }
 
+        /**
+         * @param clientProtocol Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientProtocol(Protocol clientProtocol) {
             return clientProtocol(Either.ofRight(clientProtocol));
         }
 
+        /**
+         * @param clusterName The name of the RedisEnterprise cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the RedisEnterprise cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param clusteringPolicy Clustering policy - default is OSSCluster. Specified at create time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusteringPolicy(@Nullable Output<Either<String,ClusteringPolicy>> clusteringPolicy) {
             $.clusteringPolicy = clusteringPolicy;
             return this;
         }
 
+        /**
+         * @param clusteringPolicy Clustering policy - default is OSSCluster. Specified at create time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusteringPolicy(Either<String,ClusteringPolicy> clusteringPolicy) {
             return clusteringPolicy(Output.of(clusteringPolicy));
         }
 
+        /**
+         * @param clusteringPolicy Clustering policy - default is OSSCluster. Specified at create time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusteringPolicy(String clusteringPolicy) {
             return clusteringPolicy(Either.ofLeft(clusteringPolicy));
         }
 
+        /**
+         * @param clusteringPolicy Clustering policy - default is OSSCluster. Specified at create time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusteringPolicy(ClusteringPolicy clusteringPolicy) {
             return clusteringPolicy(Either.ofRight(clusteringPolicy));
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param evictionPolicy Redis eviction policy - default is VolatileLRU
+         * 
+         * @return builder
+         * 
+         */
         public Builder evictionPolicy(@Nullable Output<Either<String,EvictionPolicy>> evictionPolicy) {
             $.evictionPolicy = evictionPolicy;
             return this;
         }
 
+        /**
+         * @param evictionPolicy Redis eviction policy - default is VolatileLRU
+         * 
+         * @return builder
+         * 
+         */
         public Builder evictionPolicy(Either<String,EvictionPolicy> evictionPolicy) {
             return evictionPolicy(Output.of(evictionPolicy));
         }
 
+        /**
+         * @param evictionPolicy Redis eviction policy - default is VolatileLRU
+         * 
+         * @return builder
+         * 
+         */
         public Builder evictionPolicy(String evictionPolicy) {
             return evictionPolicy(Either.ofLeft(evictionPolicy));
         }
 
+        /**
+         * @param evictionPolicy Redis eviction policy - default is VolatileLRU
+         * 
+         * @return builder
+         * 
+         */
         public Builder evictionPolicy(EvictionPolicy evictionPolicy) {
             return evictionPolicy(Either.ofRight(evictionPolicy));
         }
 
+        /**
+         * @param modules Optional set of redis modules to enable in this database - modules can only be added at creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modules(@Nullable Output<List<ModuleArgs>> modules) {
             $.modules = modules;
             return this;
         }
 
+        /**
+         * @param modules Optional set of redis modules to enable in this database - modules can only be added at creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modules(List<ModuleArgs> modules) {
             return modules(Output.of(modules));
         }
 
+        /**
+         * @param modules Optional set of redis modules to enable in this database - modules can only be added at creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modules(ModuleArgs... modules) {
             return modules(List.of(modules));
         }
 
+        /**
+         * @param persistence Persistence settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder persistence(@Nullable Output<PersistenceArgs> persistence) {
             $.persistence = persistence;
             return this;
         }
 
+        /**
+         * @param persistence Persistence settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder persistence(PersistenceArgs persistence) {
             return persistence(Output.of(persistence));
         }
 
+        /**
+         * @param port TCP port of the database endpoint. Specified at create time. Defaults to an available port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port TCP port of the database endpoint. Specified at create time. Defaults to an available port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

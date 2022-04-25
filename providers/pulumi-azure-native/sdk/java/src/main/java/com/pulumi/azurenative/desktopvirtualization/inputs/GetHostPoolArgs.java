@@ -19,6 +19,10 @@ public final class GetHostPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="hostPoolName", required=true)
     private String hostPoolName;
 
+    /**
+     * @return The name of the host pool within the specified resource group
+     * 
+     */
     public String hostPoolName() {
         return this.hostPoolName;
     }
@@ -30,6 +34,10 @@ public final class GetHostPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetHostPoolArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetHostPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostPoolName The name of the host pool within the specified resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPoolName(String hostPoolName) {
             $.hostPoolName = hostPoolName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

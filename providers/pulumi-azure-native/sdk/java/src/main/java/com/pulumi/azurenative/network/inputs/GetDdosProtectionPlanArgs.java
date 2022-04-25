@@ -19,6 +19,10 @@ public final class GetDdosProtectionPlanArgs extends com.pulumi.resources.Invoke
     @Import(name="ddosProtectionPlanName", required=true)
     private String ddosProtectionPlanName;
 
+    /**
+     * @return The name of the DDoS protection plan.
+     * 
+     */
     public String ddosProtectionPlanName() {
         return this.ddosProtectionPlanName;
     }
@@ -30,6 +34,10 @@ public final class GetDdosProtectionPlanArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetDdosProtectionPlanArgs extends com.pulumi.resources.Invoke
             $ = new GetDdosProtectionPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ddosProtectionPlanName The name of the DDoS protection plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddosProtectionPlanName(String ddosProtectionPlanName) {
             $.ddosProtectionPlanName = ddosProtectionPlanName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -24,6 +24,10 @@ public final class InitialStateConfigResponse extends com.pulumi.resources.Invok
     @Import(name="dbs", required=true)
     private List<FileContentBufferResponse> dbs;
 
+    /**
+     * @return The Key Database (db).
+     * 
+     */
     public List<FileContentBufferResponse> dbs() {
         return this.dbs;
     }
@@ -35,6 +39,10 @@ public final class InitialStateConfigResponse extends com.pulumi.resources.Invok
     @Import(name="dbxs", required=true)
     private List<FileContentBufferResponse> dbxs;
 
+    /**
+     * @return The forbidden key database (dbx).
+     * 
+     */
     public List<FileContentBufferResponse> dbxs() {
         return this.dbxs;
     }
@@ -46,6 +54,10 @@ public final class InitialStateConfigResponse extends com.pulumi.resources.Invok
     @Import(name="keks", required=true)
     private List<FileContentBufferResponse> keks;
 
+    /**
+     * @return The Key Exchange Key (KEK).
+     * 
+     */
     public List<FileContentBufferResponse> keks() {
         return this.keks;
     }
@@ -57,6 +69,10 @@ public final class InitialStateConfigResponse extends com.pulumi.resources.Invok
     @Import(name="pk", required=true)
     private FileContentBufferResponse pk;
 
+    /**
+     * @return The Platform Key (PK).
+     * 
+     */
     public FileContentBufferResponse pk() {
         return this.pk;
     }
@@ -88,33 +104,75 @@ public final class InitialStateConfigResponse extends com.pulumi.resources.Invok
             $ = new InitialStateConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dbs The Key Database (db).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbs(List<FileContentBufferResponse> dbs) {
             $.dbs = dbs;
             return this;
         }
 
+        /**
+         * @param dbs The Key Database (db).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbs(FileContentBufferResponse... dbs) {
             return dbs(List.of(dbs));
         }
 
+        /**
+         * @param dbxs The forbidden key database (dbx).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbxs(List<FileContentBufferResponse> dbxs) {
             $.dbxs = dbxs;
             return this;
         }
 
+        /**
+         * @param dbxs The forbidden key database (dbx).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbxs(FileContentBufferResponse... dbxs) {
             return dbxs(List.of(dbxs));
         }
 
+        /**
+         * @param keks The Key Exchange Key (KEK).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keks(List<FileContentBufferResponse> keks) {
             $.keks = keks;
             return this;
         }
 
+        /**
+         * @param keks The Key Exchange Key (KEK).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keks(FileContentBufferResponse... keks) {
             return keks(List.of(keks));
         }
 
+        /**
+         * @param pk The Platform Key (PK).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pk(FileContentBufferResponse pk) {
             $.pk = pk;
             return this;

@@ -27,6 +27,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User-assigned resource display name. If not empty it will be used to create a resource with the specified name.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
     @Import(name="resourceType")
     private @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType;
 
+    /**
+     * @return Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT)
+     * 
+     */
     public Optional<Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -79,29 +91,65 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
             $ = new GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName User-assigned resource display name. If not empty it will be used to create a resource with the specified name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User-assigned resource display name. If not empty it will be used to create a resource with the specified name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param resourceId Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param resourceType Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT)
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT)
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType resourceType) {
             return resourceType(Output.of(resourceType));
         }

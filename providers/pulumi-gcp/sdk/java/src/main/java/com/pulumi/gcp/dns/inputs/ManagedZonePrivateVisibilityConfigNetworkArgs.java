@@ -22,6 +22,12 @@ public final class ManagedZonePrivateVisibilityConfigNetworkArgs extends com.pul
     @Import(name="networkUrl", required=true)
     private Output<String> networkUrl;
 
+    /**
+     * @return The id or fully qualified URL of the VPC network to forward queries to.
+     * This should be formatted like `projects/{project}/global/networks/{network}` or
+     * `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
+     * 
+     */
     public Output<String> networkUrl() {
         return this.networkUrl;
     }
@@ -50,11 +56,27 @@ public final class ManagedZonePrivateVisibilityConfigNetworkArgs extends com.pul
             $ = new ManagedZonePrivateVisibilityConfigNetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkUrl The id or fully qualified URL of the VPC network to forward queries to.
+         * This should be formatted like `projects/{project}/global/networks/{network}` or
+         * `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUrl(Output<String> networkUrl) {
             $.networkUrl = networkUrl;
             return this;
         }
 
+        /**
+         * @param networkUrl The id or fully qualified URL of the VPC network to forward queries to.
+         * This should be formatted like `projects/{project}/global/networks/{network}` or
+         * `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUrl(String networkUrl) {
             return networkUrl(Output.of(networkUrl));
         }

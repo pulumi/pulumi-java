@@ -25,6 +25,10 @@ public final class VideoScaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="height")
     private @Nullable String height;
 
+    /**
+     * @return The desired output video height.
+     * 
+     */
     public Optional<String> height() {
         return Optional.ofNullable(this.height);
     }
@@ -36,6 +40,10 @@ public final class VideoScaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return Describes the video scaling mode to be applied. Default mode is &#39;Pad&#39;. If the mode is &#39;Pad&#39; or &#39;Stretch&#39; then both width and height must be specified. Else if the mode is &#39;PreserveAspectRatio&#39; then only one of width or height need be provided.
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -47,6 +55,10 @@ public final class VideoScaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="width")
     private @Nullable String width;
 
+    /**
+     * @return The desired output video width.
+     * 
+     */
     public Optional<String> width() {
         return Optional.ofNullable(this.width);
     }
@@ -77,16 +89,34 @@ public final class VideoScaleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VideoScaleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param height The desired output video height.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(@Nullable String height) {
             $.height = height;
             return this;
         }
 
+        /**
+         * @param mode Describes the video scaling mode to be applied. Default mode is &#39;Pad&#39;. If the mode is &#39;Pad&#39; or &#39;Stretch&#39; then both width and height must be specified. Else if the mode is &#39;PreserveAspectRatio&#39; then only one of width or height need be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param width The desired output video width.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(@Nullable String width) {
             $.width = width;
             return this;

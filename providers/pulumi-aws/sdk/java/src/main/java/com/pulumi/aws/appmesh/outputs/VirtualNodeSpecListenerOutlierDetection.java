@@ -12,23 +12,23 @@ import java.util.Objects;
 @CustomType
 public final class VirtualNodeSpecListenerOutlierDetection {
     /**
-     * The base amount of time for which a host is ejected.
+     * @return The base amount of time for which a host is ejected.
      * 
      */
     private final VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration baseEjectionDuration;
     /**
-     * The time interval between ejection sweep analysis.
+     * @return The time interval between ejection sweep analysis.
      * 
      */
     private final VirtualNodeSpecListenerOutlierDetectionInterval interval;
     /**
-     * Maximum percentage of hosts in load balancing pool for upstream service that can be ejected. Will eject at least one host regardless of the value.
+     * @return Maximum percentage of hosts in load balancing pool for upstream service that can be ejected. Will eject at least one host regardless of the value.
      * Minimum value of `0`. Maximum value of `100`.
      * 
      */
     private final Integer maxEjectionPercent;
     /**
-     * Number of consecutive `5xx` errors required for ejection. Minimum value of `1`.
+     * @return Number of consecutive `5xx` errors required for ejection. Minimum value of `1`.
      * 
      */
     private final Integer maxServerErrors;
@@ -46,31 +46,31 @@ public final class VirtualNodeSpecListenerOutlierDetection {
     }
 
     /**
-     * The base amount of time for which a host is ejected.
+     * @return The base amount of time for which a host is ejected.
      * 
-    */
+     */
     public VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration baseEjectionDuration() {
         return this.baseEjectionDuration;
     }
     /**
-     * The time interval between ejection sweep analysis.
+     * @return The time interval between ejection sweep analysis.
      * 
-    */
+     */
     public VirtualNodeSpecListenerOutlierDetectionInterval interval() {
         return this.interval;
     }
     /**
-     * Maximum percentage of hosts in load balancing pool for upstream service that can be ejected. Will eject at least one host regardless of the value.
+     * @return Maximum percentage of hosts in load balancing pool for upstream service that can be ejected. Will eject at least one host regardless of the value.
      * Minimum value of `0`. Maximum value of `100`.
      * 
-    */
+     */
     public Integer maxEjectionPercent() {
         return this.maxEjectionPercent;
     }
     /**
-     * Number of consecutive `5xx` errors required for ejection. Minimum value of `1`.
+     * @return Number of consecutive `5xx` errors required for ejection. Minimum value of `1`.
      * 
-    */
+     */
     public Integer maxServerErrors() {
         return this.maxServerErrors;
     }

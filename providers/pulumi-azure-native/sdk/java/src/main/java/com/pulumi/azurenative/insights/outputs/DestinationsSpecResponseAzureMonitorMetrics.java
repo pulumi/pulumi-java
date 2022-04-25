@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DestinationsSpecResponseAzureMonitorMetrics {
     /**
-     * A friendly name for the destination.
+     * @return A friendly name for the destination.
      * This name should be unique across all destinations (regardless of type) within the data collection rule.
      * 
      */
@@ -24,10 +24,10 @@ public final class DestinationsSpecResponseAzureMonitorMetrics {
     }
 
     /**
-     * A friendly name for the destination.
+     * @return A friendly name for the destination.
      * This name should be unique across all destinations (regardless of type) within the data collection rule.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

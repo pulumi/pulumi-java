@@ -23,128 +23,128 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ACIServiceResponseResponse {
     /**
-     * Whether or not Application Insights is enabled.
+     * @return Whether or not Application Insights is enabled.
      * 
      */
     private final @Nullable Boolean appInsightsEnabled;
     /**
-     * Whether or not authentication is enabled on the service.
+     * @return Whether or not authentication is enabled on the service.
      * 
      */
     private final @Nullable Boolean authEnabled;
     /**
-     * The CName for the service.
+     * @return The CName for the service.
      * 
      */
     private final @Nullable String cname;
     /**
-     * The compute environment type for the service.
+     * @return The compute environment type for the service.
      * Expected value is &#39;ACI&#39;.
      * 
      */
     private final String computeType;
     /**
-     * The container resource requirements.
+     * @return The container resource requirements.
      * 
      */
     private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
     /**
-     * Details of the data collection options specified.
+     * @return Details of the data collection options specified.
      * 
      */
     private final @Nullable ACIServiceResponseResponseDataCollection dataCollection;
     /**
-     * The deployment type for the service.
+     * @return The deployment type for the service.
      * 
      */
     private final @Nullable String deploymentType;
     /**
-     * The service description.
+     * @return The service description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The encryption properties.
+     * @return The encryption properties.
      * 
      */
     private final @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties;
     /**
-     * The Environment, models and assets used for inferencing.
+     * @return The Environment, models and assets used for inferencing.
      * 
      */
     private final @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
     /**
-     * The error details.
+     * @return The error details.
      * 
      */
     private final ServiceResponseBaseResponseError error;
     /**
-     * The service tag dictionary. Tags are mutable.
+     * @return The service tag dictionary. Tags are mutable.
      * 
      */
     private final @Nullable Map<String,String> kvTags;
     /**
-     * The name of the Azure location/region.
+     * @return The name of the Azure location/region.
      * 
      */
     private final @Nullable String location;
     /**
-     * Details on the models and configurations.
+     * @return Details on the models and configurations.
      * 
      */
     private final Map<String,Object> modelConfigMap;
     /**
-     * The list of models.
+     * @return The list of models.
      * 
      */
     private final @Nullable List<ModelResponse> models;
     /**
-     * The service property dictionary. Properties are immutable.
+     * @return The service property dictionary. Properties are immutable.
      * 
      */
     private final @Nullable Map<String,String> properties;
     /**
-     * The public Fqdn for the service.
+     * @return The public Fqdn for the service.
      * 
      */
     private final @Nullable String publicFqdn;
     /**
-     * The public IP address for the service.
+     * @return The public IP address for the service.
      * 
      */
     private final @Nullable String publicIp;
     /**
-     * The Uri for sending scoring requests.
+     * @return The Uri for sending scoring requests.
      * 
      */
     private final String scoringUri;
     /**
-     * The public SSL certificate in PEM format to use if SSL is enabled.
+     * @return The public SSL certificate in PEM format to use if SSL is enabled.
      * 
      */
     private final @Nullable String sslCertificate;
     /**
-     * Whether or not SSL is enabled.
+     * @return Whether or not SSL is enabled.
      * 
      */
     private final @Nullable Boolean sslEnabled;
     /**
-     * The public SSL key in PEM format for the certificate.
+     * @return The public SSL key in PEM format for the certificate.
      * 
      */
     private final @Nullable String sslKey;
     /**
-     * The current state of the service.
+     * @return The current state of the service.
      * 
      */
     private final String state;
     /**
-     * The Uri for sending swagger requests.
+     * @return The Uri for sending swagger requests.
      * 
      */
     private final String swaggerUri;
     /**
-     * The virtual network configuration.
+     * @return The virtual network configuration.
      * 
      */
     private final @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration;
@@ -204,178 +204,178 @@ public final class ACIServiceResponseResponse {
     }
 
     /**
-     * Whether or not Application Insights is enabled.
+     * @return Whether or not Application Insights is enabled.
      * 
-    */
+     */
     public Optional<Boolean> appInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
     /**
-     * Whether or not authentication is enabled on the service.
+     * @return Whether or not authentication is enabled on the service.
      * 
-    */
+     */
     public Optional<Boolean> authEnabled() {
         return Optional.ofNullable(this.authEnabled);
     }
     /**
-     * The CName for the service.
+     * @return The CName for the service.
      * 
-    */
+     */
     public Optional<String> cname() {
         return Optional.ofNullable(this.cname);
     }
     /**
-     * The compute environment type for the service.
+     * @return The compute environment type for the service.
      * Expected value is &#39;ACI&#39;.
      * 
-    */
+     */
     public String computeType() {
         return this.computeType;
     }
     /**
-     * The container resource requirements.
+     * @return The container resource requirements.
      * 
-    */
+     */
     public Optional<ContainerResourceRequirementsResponse> containerResourceRequirements() {
         return Optional.ofNullable(this.containerResourceRequirements);
     }
     /**
-     * Details of the data collection options specified.
+     * @return Details of the data collection options specified.
      * 
-    */
+     */
     public Optional<ACIServiceResponseResponseDataCollection> dataCollection() {
         return Optional.ofNullable(this.dataCollection);
     }
     /**
-     * The deployment type for the service.
+     * @return The deployment type for the service.
      * 
-    */
+     */
     public Optional<String> deploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
     /**
-     * The service description.
+     * @return The service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encryption properties.
+     * @return The encryption properties.
      * 
-    */
+     */
     public Optional<ACIServiceResponseResponseEncryptionProperties> encryptionProperties() {
         return Optional.ofNullable(this.encryptionProperties);
     }
     /**
-     * The Environment, models and assets used for inferencing.
+     * @return The Environment, models and assets used for inferencing.
      * 
-    */
+     */
     public Optional<ACIServiceResponseResponseEnvironmentImageRequest> environmentImageRequest() {
         return Optional.ofNullable(this.environmentImageRequest);
     }
     /**
-     * The error details.
+     * @return The error details.
      * 
-    */
+     */
     public ServiceResponseBaseResponseError error() {
         return this.error;
     }
     /**
-     * The service tag dictionary. Tags are mutable.
+     * @return The service tag dictionary. Tags are mutable.
      * 
-    */
+     */
     public Map<String,String> kvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
     /**
-     * The name of the Azure location/region.
+     * @return The name of the Azure location/region.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Details on the models and configurations.
+     * @return Details on the models and configurations.
      * 
-    */
+     */
     public Map<String,Object> modelConfigMap() {
         return this.modelConfigMap;
     }
     /**
-     * The list of models.
+     * @return The list of models.
      * 
-    */
+     */
     public List<ModelResponse> models() {
         return this.models == null ? List.of() : this.models;
     }
     /**
-     * The service property dictionary. Properties are immutable.
+     * @return The service property dictionary. Properties are immutable.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * The public Fqdn for the service.
+     * @return The public Fqdn for the service.
      * 
-    */
+     */
     public Optional<String> publicFqdn() {
         return Optional.ofNullable(this.publicFqdn);
     }
     /**
-     * The public IP address for the service.
+     * @return The public IP address for the service.
      * 
-    */
+     */
     public Optional<String> publicIp() {
         return Optional.ofNullable(this.publicIp);
     }
     /**
-     * The Uri for sending scoring requests.
+     * @return The Uri for sending scoring requests.
      * 
-    */
+     */
     public String scoringUri() {
         return this.scoringUri;
     }
     /**
-     * The public SSL certificate in PEM format to use if SSL is enabled.
+     * @return The public SSL certificate in PEM format to use if SSL is enabled.
      * 
-    */
+     */
     public Optional<String> sslCertificate() {
         return Optional.ofNullable(this.sslCertificate);
     }
     /**
-     * Whether or not SSL is enabled.
+     * @return Whether or not SSL is enabled.
      * 
-    */
+     */
     public Optional<Boolean> sslEnabled() {
         return Optional.ofNullable(this.sslEnabled);
     }
     /**
-     * The public SSL key in PEM format for the certificate.
+     * @return The public SSL key in PEM format for the certificate.
      * 
-    */
+     */
     public Optional<String> sslKey() {
         return Optional.ofNullable(this.sslKey);
     }
     /**
-     * The current state of the service.
+     * @return The current state of the service.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The Uri for sending swagger requests.
+     * @return The Uri for sending swagger requests.
      * 
-    */
+     */
     public String swaggerUri() {
         return this.swaggerUri;
     }
     /**
-     * The virtual network configuration.
+     * @return The virtual network configuration.
      * 
-    */
+     */
     public Optional<ACIServiceResponseResponseVnetConfiguration> vnetConfiguration() {
         return Optional.ofNullable(this.vnetConfiguration);
     }

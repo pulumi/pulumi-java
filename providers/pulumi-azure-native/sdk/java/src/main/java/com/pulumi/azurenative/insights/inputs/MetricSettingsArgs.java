@@ -28,6 +28,10 @@ public final class MetricSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="category")
     private @Nullable Output<String> category;
 
+    /**
+     * @return Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
+     * 
+     */
     public Optional<Output<String>> category() {
         return Optional.ofNullable(this.category);
     }
@@ -39,6 +43,10 @@ public final class MetricSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return a value indicating whether this category is enabled.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -50,6 +58,10 @@ public final class MetricSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="retentionPolicy")
     private @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
+    /**
+     * @return the retention policy for this category.
+     * 
+     */
     public Optional<Output<RetentionPolicyArgs>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -61,6 +73,10 @@ public final class MetricSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="timeGrain")
     private @Nullable Output<String> timeGrain;
 
+    /**
+     * @return the timegrain of the metric in ISO8601 format.
+     * 
+     */
     public Optional<Output<String>> timeGrain() {
         return Optional.ofNullable(this.timeGrain);
     }
@@ -92,38 +108,86 @@ public final class MetricSettingsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MetricSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(@Nullable Output<String> category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param category Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             return category(Output.of(category));
         }
 
+        /**
+         * @param enabled a value indicating whether this category is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled a value indicating whether this category is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param retentionPolicy the retention policy for this category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Output<RetentionPolicyArgs> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy the retention policy for this category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(RetentionPolicyArgs retentionPolicy) {
             return retentionPolicy(Output.of(retentionPolicy));
         }
 
+        /**
+         * @param timeGrain the timegrain of the metric in ISO8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeGrain(@Nullable Output<String> timeGrain) {
             $.timeGrain = timeGrain;
             return this;
         }
 
+        /**
+         * @param timeGrain the timegrain of the metric in ISO8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeGrain(String timeGrain) {
             return timeGrain(Output.of(timeGrain));
         }

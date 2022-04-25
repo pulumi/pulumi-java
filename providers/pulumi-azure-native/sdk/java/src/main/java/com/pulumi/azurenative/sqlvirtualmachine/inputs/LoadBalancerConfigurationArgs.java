@@ -29,6 +29,10 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="loadBalancerResourceId")
     private @Nullable Output<String> loadBalancerResourceId;
 
+    /**
+     * @return Resource id of the load balancer.
+     * 
+     */
     public Optional<Output<String>> loadBalancerResourceId() {
         return Optional.ofNullable(this.loadBalancerResourceId);
     }
@@ -40,6 +44,10 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="privateIpAddress")
     private @Nullable Output<PrivateIPAddressArgs> privateIpAddress;
 
+    /**
+     * @return Private IP address.
+     * 
+     */
     public Optional<Output<PrivateIPAddressArgs>> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
@@ -51,6 +59,10 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="probePort")
     private @Nullable Output<Integer> probePort;
 
+    /**
+     * @return Probe port.
+     * 
+     */
     public Optional<Output<Integer>> probePort() {
         return Optional.ofNullable(this.probePort);
     }
@@ -62,6 +74,10 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="publicIpAddressResourceId")
     private @Nullable Output<String> publicIpAddressResourceId;
 
+    /**
+     * @return Resource id of the public IP.
+     * 
+     */
     public Optional<Output<String>> publicIpAddressResourceId() {
         return Optional.ofNullable(this.publicIpAddressResourceId);
     }
@@ -73,6 +89,10 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="sqlVirtualMachineInstances")
     private @Nullable Output<List<String>> sqlVirtualMachineInstances;
 
+    /**
+     * @return List of the SQL virtual machine instance resource id&#39;s that are enrolled into the availability group listener.
+     * 
+     */
     public Optional<Output<List<String>>> sqlVirtualMachineInstances() {
         return Optional.ofNullable(this.sqlVirtualMachineInstances);
     }
@@ -105,51 +125,117 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
             $ = new LoadBalancerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loadBalancerResourceId Resource id of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerResourceId(@Nullable Output<String> loadBalancerResourceId) {
             $.loadBalancerResourceId = loadBalancerResourceId;
             return this;
         }
 
+        /**
+         * @param loadBalancerResourceId Resource id of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerResourceId(String loadBalancerResourceId) {
             return loadBalancerResourceId(Output.of(loadBalancerResourceId));
         }
 
+        /**
+         * @param privateIpAddress Private IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(@Nullable Output<PrivateIPAddressArgs> privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param privateIpAddress Private IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(PrivateIPAddressArgs privateIpAddress) {
             return privateIpAddress(Output.of(privateIpAddress));
         }
 
+        /**
+         * @param probePort Probe port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probePort(@Nullable Output<Integer> probePort) {
             $.probePort = probePort;
             return this;
         }
 
+        /**
+         * @param probePort Probe port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probePort(Integer probePort) {
             return probePort(Output.of(probePort));
         }
 
+        /**
+         * @param publicIpAddressResourceId Resource id of the public IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddressResourceId(@Nullable Output<String> publicIpAddressResourceId) {
             $.publicIpAddressResourceId = publicIpAddressResourceId;
             return this;
         }
 
+        /**
+         * @param publicIpAddressResourceId Resource id of the public IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddressResourceId(String publicIpAddressResourceId) {
             return publicIpAddressResourceId(Output.of(publicIpAddressResourceId));
         }
 
+        /**
+         * @param sqlVirtualMachineInstances List of the SQL virtual machine instance resource id&#39;s that are enrolled into the availability group listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineInstances(@Nullable Output<List<String>> sqlVirtualMachineInstances) {
             $.sqlVirtualMachineInstances = sqlVirtualMachineInstances;
             return this;
         }
 
+        /**
+         * @param sqlVirtualMachineInstances List of the SQL virtual machine instance resource id&#39;s that are enrolled into the availability group listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineInstances(List<String> sqlVirtualMachineInstances) {
             return sqlVirtualMachineInstances(Output.of(sqlVirtualMachineInstances));
         }
 
+        /**
+         * @param sqlVirtualMachineInstances List of the SQL virtual machine instance resource id&#39;s that are enrolled into the availability group listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineInstances(String... sqlVirtualMachineInstances) {
             return sqlVirtualMachineInstances(List.of(sqlVirtualMachineInstances));
         }

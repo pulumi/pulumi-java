@@ -24,6 +24,10 @@ public final class ConsistentHashLoadBalancerSettingsResponse extends com.pulumi
     @Import(name="httpCookie", required=true)
     private ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie;
 
+    /**
+     * @return Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+     * 
+     */
     public ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie() {
         return this.httpCookie;
     }
@@ -35,6 +39,10 @@ public final class ConsistentHashLoadBalancerSettingsResponse extends com.pulumi
     @Import(name="httpHeaderName", required=true)
     private String httpHeaderName;
 
+    /**
+     * @return The hash based on the value of the specified header field. This field is applicable if the sessionAffinity is set to HEADER_FIELD.
+     * 
+     */
     public String httpHeaderName() {
         return this.httpHeaderName;
     }
@@ -46,6 +54,10 @@ public final class ConsistentHashLoadBalancerSettingsResponse extends com.pulumi
     @Import(name="minimumRingSize", required=true)
     private String minimumRingSize;
 
+    /**
+     * @return The minimum number of virtual nodes to use for the hash ring. Defaults to 1024. Larger ring sizes result in more granular load distributions. If the number of hosts in the load balancing pool is larger than the ring size, each host will be assigned a single virtual node.
+     * 
+     */
     public String minimumRingSize() {
         return this.minimumRingSize;
     }
@@ -76,16 +88,34 @@ public final class ConsistentHashLoadBalancerSettingsResponse extends com.pulumi
             $ = new ConsistentHashLoadBalancerSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpCookie Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpCookie(ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie) {
             $.httpCookie = httpCookie;
             return this;
         }
 
+        /**
+         * @param httpHeaderName The hash based on the value of the specified header field. This field is applicable if the sessionAffinity is set to HEADER_FIELD.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeaderName(String httpHeaderName) {
             $.httpHeaderName = httpHeaderName;
             return this;
         }
 
+        /**
+         * @param minimumRingSize The minimum number of virtual nodes to use for the hash ring. Defaults to 1024. Larger ring sizes result in more granular load distributions. If the number of hosts in the load balancing pool is larger than the ring size, each host will be assigned a single virtual node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumRingSize(String minimumRingSize) {
             $.minimumRingSize = minimumRingSize;
             return this;

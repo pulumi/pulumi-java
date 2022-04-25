@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AdvancedScheduleResponse {
     /**
-     * Days of the month that the job should execute on. Must be between 1 and 31.
+     * @return Days of the month that the job should execute on. Must be between 1 and 31.
      * 
      */
     private final @Nullable List<Integer> monthDays;
     /**
-     * Occurrences of days within a month.
+     * @return Occurrences of days within a month.
      * 
      */
     private final @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
     /**
-     * Days of the week that the job should execute on.
+     * @return Days of the week that the job should execute on.
      * 
      */
     private final @Nullable List<String> weekDays;
@@ -40,23 +40,23 @@ public final class AdvancedScheduleResponse {
     }
 
     /**
-     * Days of the month that the job should execute on. Must be between 1 and 31.
+     * @return Days of the month that the job should execute on. Must be between 1 and 31.
      * 
-    */
+     */
     public List<Integer> monthDays() {
         return this.monthDays == null ? List.of() : this.monthDays;
     }
     /**
-     * Occurrences of days within a month.
+     * @return Occurrences of days within a month.
      * 
-    */
+     */
     public List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences() {
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
     }
     /**
-     * Days of the week that the job should execute on.
+     * @return Days of the week that the job should execute on.
      * 
-    */
+     */
     public List<String> weekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
     }

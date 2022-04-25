@@ -26,6 +26,10 @@ public final class StorageConfigurationSettingsResponse extends com.pulumi.resou
     @Import(name="diskConfigurationType")
     private @Nullable String diskConfigurationType;
 
+    /**
+     * @return Disk configuration to apply to SQL Server.
+     * 
+     */
     public Optional<String> diskConfigurationType() {
         return Optional.ofNullable(this.diskConfigurationType);
     }
@@ -37,6 +41,10 @@ public final class StorageConfigurationSettingsResponse extends com.pulumi.resou
     @Import(name="sqlDataSettings")
     private @Nullable SQLStorageSettingsResponse sqlDataSettings;
 
+    /**
+     * @return SQL Server Data Storage Settings.
+     * 
+     */
     public Optional<SQLStorageSettingsResponse> sqlDataSettings() {
         return Optional.ofNullable(this.sqlDataSettings);
     }
@@ -48,6 +56,10 @@ public final class StorageConfigurationSettingsResponse extends com.pulumi.resou
     @Import(name="sqlLogSettings")
     private @Nullable SQLStorageSettingsResponse sqlLogSettings;
 
+    /**
+     * @return SQL Server Log Storage Settings.
+     * 
+     */
     public Optional<SQLStorageSettingsResponse> sqlLogSettings() {
         return Optional.ofNullable(this.sqlLogSettings);
     }
@@ -59,6 +71,10 @@ public final class StorageConfigurationSettingsResponse extends com.pulumi.resou
     @Import(name="sqlTempDbSettings")
     private @Nullable SQLStorageSettingsResponse sqlTempDbSettings;
 
+    /**
+     * @return SQL Server TempDb Storage Settings.
+     * 
+     */
     public Optional<SQLStorageSettingsResponse> sqlTempDbSettings() {
         return Optional.ofNullable(this.sqlTempDbSettings);
     }
@@ -70,6 +86,10 @@ public final class StorageConfigurationSettingsResponse extends com.pulumi.resou
     @Import(name="storageWorkloadType")
     private @Nullable String storageWorkloadType;
 
+    /**
+     * @return Storage workload type.
+     * 
+     */
     public Optional<String> storageWorkloadType() {
         return Optional.ofNullable(this.storageWorkloadType);
     }
@@ -102,26 +122,56 @@ public final class StorageConfigurationSettingsResponse extends com.pulumi.resou
             $ = new StorageConfigurationSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskConfigurationType Disk configuration to apply to SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigurationType(@Nullable String diskConfigurationType) {
             $.diskConfigurationType = diskConfigurationType;
             return this;
         }
 
+        /**
+         * @param sqlDataSettings SQL Server Data Storage Settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlDataSettings(@Nullable SQLStorageSettingsResponse sqlDataSettings) {
             $.sqlDataSettings = sqlDataSettings;
             return this;
         }
 
+        /**
+         * @param sqlLogSettings SQL Server Log Storage Settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlLogSettings(@Nullable SQLStorageSettingsResponse sqlLogSettings) {
             $.sqlLogSettings = sqlLogSettings;
             return this;
         }
 
+        /**
+         * @param sqlTempDbSettings SQL Server TempDb Storage Settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlTempDbSettings(@Nullable SQLStorageSettingsResponse sqlTempDbSettings) {
             $.sqlTempDbSettings = sqlTempDbSettings;
             return this;
         }
 
+        /**
+         * @param storageWorkloadType Storage workload type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageWorkloadType(@Nullable String storageWorkloadType) {
             $.storageWorkloadType = storageWorkloadType;
             return this;

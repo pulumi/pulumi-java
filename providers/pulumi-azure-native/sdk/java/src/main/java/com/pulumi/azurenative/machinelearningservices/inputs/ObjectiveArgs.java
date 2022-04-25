@@ -26,6 +26,10 @@ public final class ObjectiveArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="goal", required=true)
     private Output<Either<String,Goal>> goal;
 
+    /**
+     * @return Defines supported metric goals for hyperparameter tuning
+     * 
+     */
     public Output<Either<String,Goal>> goal() {
         return this.goal;
     }
@@ -37,6 +41,10 @@ public final class ObjectiveArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="primaryMetric", required=true)
     private Output<String> primaryMetric;
 
+    /**
+     * @return Name of the metric to optimize.
+     * 
+     */
     public Output<String> primaryMetric() {
         return this.primaryMetric;
     }
@@ -66,28 +74,64 @@ public final class ObjectiveArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ObjectiveArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param goal Defines supported metric goals for hyperparameter tuning
+         * 
+         * @return builder
+         * 
+         */
         public Builder goal(Output<Either<String,Goal>> goal) {
             $.goal = goal;
             return this;
         }
 
+        /**
+         * @param goal Defines supported metric goals for hyperparameter tuning
+         * 
+         * @return builder
+         * 
+         */
         public Builder goal(Either<String,Goal> goal) {
             return goal(Output.of(goal));
         }
 
+        /**
+         * @param goal Defines supported metric goals for hyperparameter tuning
+         * 
+         * @return builder
+         * 
+         */
         public Builder goal(String goal) {
             return goal(Either.ofLeft(goal));
         }
 
+        /**
+         * @param goal Defines supported metric goals for hyperparameter tuning
+         * 
+         * @return builder
+         * 
+         */
         public Builder goal(Goal goal) {
             return goal(Either.ofRight(goal));
         }
 
+        /**
+         * @param primaryMetric Name of the metric to optimize.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryMetric(Output<String> primaryMetric) {
             $.primaryMetric = primaryMetric;
             return this;
         }
 
+        /**
+         * @param primaryMetric Name of the metric to optimize.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryMetric(String primaryMetric) {
             return primaryMetric(Output.of(primaryMetric));
         }

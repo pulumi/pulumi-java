@@ -27,6 +27,10 @@ public final class ResourceSetDescriptionArgs extends com.pulumi.resources.Resou
     @Import(name="elements")
     private @Nullable Output<List<String>> elements;
 
+    /**
+     * @return The elements included in the set.
+     * 
+     */
     public Optional<Output<List<String>>> elements() {
         return Optional.ofNullable(this.elements);
     }
@@ -38,6 +42,10 @@ public final class ResourceSetDescriptionArgs extends com.pulumi.resources.Resou
     @Import(name="exceptions")
     private @Nullable Output<List<String>> exceptions;
 
+    /**
+     * @return The elements that are not included in the set, in case elements contains &#39;*&#39; indicating &#39;all&#39;.
+     * 
+     */
     public Optional<Output<List<String>>> exceptions() {
         return Optional.ofNullable(this.exceptions);
     }
@@ -67,28 +75,64 @@ public final class ResourceSetDescriptionArgs extends com.pulumi.resources.Resou
             $ = new ResourceSetDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param elements The elements included in the set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elements(@Nullable Output<List<String>> elements) {
             $.elements = elements;
             return this;
         }
 
+        /**
+         * @param elements The elements included in the set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elements(List<String> elements) {
             return elements(Output.of(elements));
         }
 
+        /**
+         * @param elements The elements included in the set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elements(String... elements) {
             return elements(List.of(elements));
         }
 
+        /**
+         * @param exceptions The elements that are not included in the set, in case elements contains &#39;*&#39; indicating &#39;all&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptions(@Nullable Output<List<String>> exceptions) {
             $.exceptions = exceptions;
             return this;
         }
 
+        /**
+         * @param exceptions The elements that are not included in the set, in case elements contains &#39;*&#39; indicating &#39;all&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptions(List<String> exceptions) {
             return exceptions(Output.of(exceptions));
         }
 
+        /**
+         * @param exceptions The elements that are not included in the set, in case elements contains &#39;*&#39; indicating &#39;all&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptions(String... exceptions) {
             return exceptions(List.of(exceptions));
         }

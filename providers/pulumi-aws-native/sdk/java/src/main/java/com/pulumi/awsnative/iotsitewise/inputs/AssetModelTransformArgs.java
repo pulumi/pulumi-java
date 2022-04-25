@@ -22,6 +22,10 @@ public final class AssetModelTransformArgs extends com.pulumi.resources.Resource
     @Import(name="expression", required=true)
     private Output<String> expression;
 
+    /**
+     * @return The mathematical expression that defines the transformation function. You can specify up to 10 functions per expression.
+     * 
+     */
     public Output<String> expression() {
         return this.expression;
     }
@@ -33,6 +37,10 @@ public final class AssetModelTransformArgs extends com.pulumi.resources.Resource
     @Import(name="variables", required=true)
     private Output<List<AssetModelExpressionVariableArgs>> variables;
 
+    /**
+     * @return The list of variables used in the expression.
+     * 
+     */
     public Output<List<AssetModelExpressionVariableArgs>> variables() {
         return this.variables;
     }
@@ -62,24 +70,54 @@ public final class AssetModelTransformArgs extends com.pulumi.resources.Resource
             $ = new AssetModelTransformArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expression The mathematical expression that defines the transformation function. You can specify up to 10 functions per expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(Output<String> expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param expression The mathematical expression that defines the transformation function. You can specify up to 10 functions per expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             return expression(Output.of(expression));
         }
 
+        /**
+         * @param variables The list of variables used in the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(Output<List<AssetModelExpressionVariableArgs>> variables) {
             $.variables = variables;
             return this;
         }
 
+        /**
+         * @param variables The list of variables used in the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(List<AssetModelExpressionVariableArgs> variables) {
             return variables(Output.of(variables));
         }
 
+        /**
+         * @param variables The list of variables used in the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(AssetModelExpressionVariableArgs... variables) {
             return variables(List.of(variables));
         }

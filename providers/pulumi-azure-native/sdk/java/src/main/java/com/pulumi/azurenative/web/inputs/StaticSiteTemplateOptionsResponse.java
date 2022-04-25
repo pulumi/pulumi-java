@@ -26,6 +26,10 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the newly generated repository.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
     @Import(name="isPrivate")
     private @Nullable Boolean isPrivate;
 
+    /**
+     * @return Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).
+     * 
+     */
     public Optional<Boolean> isPrivate() {
         return Optional.ofNullable(this.isPrivate);
     }
@@ -48,6 +56,10 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
     @Import(name="owner")
     private @Nullable String owner;
 
+    /**
+     * @return Owner of the newly generated repository.
+     * 
+     */
     public Optional<String> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -59,6 +71,10 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
     @Import(name="repositoryName")
     private @Nullable String repositoryName;
 
+    /**
+     * @return Name of the newly generated repository.
+     * 
+     */
     public Optional<String> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
@@ -70,6 +86,10 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
     @Import(name="templateRepositoryUrl")
     private @Nullable String templateRepositoryUrl;
 
+    /**
+     * @return URL of the template repository. The newly generated repository will be based on this one.
+     * 
+     */
     public Optional<String> templateRepositoryUrl() {
         return Optional.ofNullable(this.templateRepositoryUrl);
     }
@@ -102,26 +122,56 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
             $ = new StaticSiteTemplateOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the newly generated repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param isPrivate Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPrivate(@Nullable Boolean isPrivate) {
             $.isPrivate = isPrivate;
             return this;
         }
 
+        /**
+         * @param owner Owner of the newly generated repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(@Nullable String owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param repositoryName Name of the newly generated repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(@Nullable String repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param templateRepositoryUrl URL of the template repository. The newly generated repository will be based on this one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateRepositoryUrl(@Nullable String templateRepositoryUrl) {
             $.templateRepositoryUrl = templateRepositoryUrl;
             return this;

@@ -24,6 +24,10 @@ public final class ParticipantProfilePropertyReferenceArgs extends com.pulumi.re
     @Import(name="interactionPropertyName", required=true)
     private Output<String> interactionPropertyName;
 
+    /**
+     * @return The source interaction property that maps to the target profile property.
+     * 
+     */
     public Output<String> interactionPropertyName() {
         return this.interactionPropertyName;
     }
@@ -35,6 +39,10 @@ public final class ParticipantProfilePropertyReferenceArgs extends com.pulumi.re
     @Import(name="profilePropertyName", required=true)
     private Output<String> profilePropertyName;
 
+    /**
+     * @return The target profile property that maps to the source interaction property.
+     * 
+     */
     public Output<String> profilePropertyName() {
         return this.profilePropertyName;
     }
@@ -64,20 +72,44 @@ public final class ParticipantProfilePropertyReferenceArgs extends com.pulumi.re
             $ = new ParticipantProfilePropertyReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interactionPropertyName The source interaction property that maps to the target profile property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interactionPropertyName(Output<String> interactionPropertyName) {
             $.interactionPropertyName = interactionPropertyName;
             return this;
         }
 
+        /**
+         * @param interactionPropertyName The source interaction property that maps to the target profile property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interactionPropertyName(String interactionPropertyName) {
             return interactionPropertyName(Output.of(interactionPropertyName));
         }
 
+        /**
+         * @param profilePropertyName The target profile property that maps to the source interaction property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profilePropertyName(Output<String> profilePropertyName) {
             $.profilePropertyName = profilePropertyName;
             return this;
         }
 
+        /**
+         * @param profilePropertyName The target profile property that maps to the source interaction property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profilePropertyName(String profilePropertyName) {
             return profilePropertyName(Output.of(profilePropertyName));
         }

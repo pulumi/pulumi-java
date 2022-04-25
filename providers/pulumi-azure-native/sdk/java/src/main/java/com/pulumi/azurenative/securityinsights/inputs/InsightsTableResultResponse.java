@@ -27,6 +27,10 @@ public final class InsightsTableResultResponse extends com.pulumi.resources.Invo
     @Import(name="columns")
     private @Nullable List<InsightsTableResultResponseColumns> columns;
 
+    /**
+     * @return Columns Metadata of the table
+     * 
+     */
     public Optional<List<InsightsTableResultResponseColumns>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -38,6 +42,10 @@ public final class InsightsTableResultResponse extends com.pulumi.resources.Invo
     @Import(name="rows")
     private @Nullable List<List<String>> rows;
 
+    /**
+     * @return Rows data of the table
+     * 
+     */
     public Optional<List<List<String>>> rows() {
         return Optional.ofNullable(this.rows);
     }
@@ -67,20 +75,44 @@ public final class InsightsTableResultResponse extends com.pulumi.resources.Invo
             $ = new InsightsTableResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns Columns Metadata of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable List<InsightsTableResultResponseColumns> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns Columns Metadata of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(InsightsTableResultResponseColumns... columns) {
             return columns(List.of(columns));
         }
 
+        /**
+         * @param rows Rows data of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder rows(@Nullable List<List<String>> rows) {
             $.rows = rows;
             return this;
         }
 
+        /**
+         * @param rows Rows data of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder rows(List<String>... rows) {
             return rows(List.of(rows));
         }

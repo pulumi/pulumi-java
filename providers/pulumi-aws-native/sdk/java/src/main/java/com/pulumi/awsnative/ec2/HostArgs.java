@@ -22,6 +22,10 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoPlacement")
     private @Nullable Output<String> autoPlacement;
 
+    /**
+     * @return Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
+     * 
+     */
     public Optional<Output<String>> autoPlacement() {
         return Optional.ofNullable(this.autoPlacement);
     }
@@ -33,6 +37,10 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone", required=true)
     private Output<String> availabilityZone;
 
+    /**
+     * @return The Availability Zone in which to allocate the Dedicated Host.
+     * 
+     */
     public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
@@ -44,6 +52,10 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostRecovery")
     private @Nullable Output<String> hostRecovery;
 
+    /**
+     * @return Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
+     * 
+     */
     public Optional<Output<String>> hostRecovery() {
         return Optional.ofNullable(this.hostRecovery);
     }
@@ -55,6 +67,10 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceType", required=true)
     private Output<String> instanceType;
 
+    /**
+     * @return Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.
+     * 
+     */
     public Output<String> instanceType() {
         return this.instanceType;
     }
@@ -86,38 +102,86 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HostArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoPlacement Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoPlacement(@Nullable Output<String> autoPlacement) {
             $.autoPlacement = autoPlacement;
             return this;
         }
 
+        /**
+         * @param autoPlacement Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoPlacement(String autoPlacement) {
             return autoPlacement(Output.of(autoPlacement));
         }
 
+        /**
+         * @param availabilityZone The Availability Zone in which to allocate the Dedicated Host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param availabilityZone The Availability Zone in which to allocate the Dedicated Host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(String availabilityZone) {
             return availabilityZone(Output.of(availabilityZone));
         }
 
+        /**
+         * @param hostRecovery Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostRecovery(@Nullable Output<String> hostRecovery) {
             $.hostRecovery = hostRecovery;
             return this;
         }
 
+        /**
+         * @param hostRecovery Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostRecovery(String hostRecovery) {
             return hostRecovery(Output.of(hostRecovery));
         }
 
+        /**
+         * @param instanceType Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }

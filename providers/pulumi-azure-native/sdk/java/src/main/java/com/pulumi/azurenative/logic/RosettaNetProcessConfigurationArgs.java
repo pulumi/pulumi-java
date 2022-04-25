@@ -25,6 +25,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="activitySettings", required=true)
     private Output<RosettaNetPipActivitySettingsArgs> activitySettings;
 
+    /**
+     * @return The RosettaNet process configuration activity settings.
+     * 
+     */
     public Output<RosettaNetPipActivitySettingsArgs> activitySettings() {
         return this.activitySettings;
     }
@@ -36,6 +40,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The integration account RosettaNet ProcessConfiguration properties.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="initiatorRoleSettings", required=true)
     private Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings;
 
+    /**
+     * @return The RosettaNet initiator role settings.
+     * 
+     */
     public Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings() {
         return this.initiatorRoleSettings;
     }
@@ -58,6 +70,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="integrationAccountName", required=true)
     private Output<String> integrationAccountName;
 
+    /**
+     * @return The integration account name.
+     * 
+     */
     public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
@@ -69,6 +85,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -80,6 +100,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return The metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -91,6 +115,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="processCode", required=true)
     private Output<String> processCode;
 
+    /**
+     * @return The integration account RosettaNet process code.
+     * 
+     */
     public Output<String> processCode() {
         return this.processCode;
     }
@@ -102,6 +130,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="processName", required=true)
     private Output<String> processName;
 
+    /**
+     * @return The integration account RosettaNet process name.
+     * 
+     */
     public Output<String> processName() {
         return this.processName;
     }
@@ -113,6 +145,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="processVersion", required=true)
     private Output<String> processVersion;
 
+    /**
+     * @return The integration account RosettaNet process version.
+     * 
+     */
     public Output<String> processVersion() {
         return this.processVersion;
     }
@@ -124,6 +160,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -135,6 +175,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="responderRoleSettings", required=true)
     private Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings;
 
+    /**
+     * @return The RosettaNet responder role settings.
+     * 
+     */
     public Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings() {
         return this.responderRoleSettings;
     }
@@ -146,6 +190,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="rosettaNetProcessConfigurationName")
     private @Nullable Output<String> rosettaNetProcessConfigurationName;
 
+    /**
+     * @return The integration account RosettaNet ProcessConfiguration name.
+     * 
+     */
     public Optional<Output<String>> rosettaNetProcessConfigurationName() {
         return Optional.ofNullable(this.rosettaNetProcessConfigurationName);
     }
@@ -157,6 +205,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -197,119 +249,275 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
             $ = new RosettaNetProcessConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activitySettings The RosettaNet process configuration activity settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activitySettings(Output<RosettaNetPipActivitySettingsArgs> activitySettings) {
             $.activitySettings = activitySettings;
             return this;
         }
 
+        /**
+         * @param activitySettings The RosettaNet process configuration activity settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activitySettings(RosettaNetPipActivitySettingsArgs activitySettings) {
             return activitySettings(Output.of(activitySettings));
         }
 
+        /**
+         * @param description The integration account RosettaNet ProcessConfiguration properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The integration account RosettaNet ProcessConfiguration properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param initiatorRoleSettings The RosettaNet initiator role settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initiatorRoleSettings(Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings) {
             $.initiatorRoleSettings = initiatorRoleSettings;
             return this;
         }
 
+        /**
+         * @param initiatorRoleSettings The RosettaNet initiator role settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initiatorRoleSettings(RosettaNetPipRoleSettingsArgs initiatorRoleSettings) {
             return initiatorRoleSettings(Output.of(initiatorRoleSettings));
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(Output<String> integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
             return this;
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(String integrationAccountName) {
             return integrationAccountName(Output.of(integrationAccountName));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param metadata The metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param processCode The integration account RosettaNet process code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processCode(Output<String> processCode) {
             $.processCode = processCode;
             return this;
         }
 
+        /**
+         * @param processCode The integration account RosettaNet process code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processCode(String processCode) {
             return processCode(Output.of(processCode));
         }
 
+        /**
+         * @param processName The integration account RosettaNet process name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processName(Output<String> processName) {
             $.processName = processName;
             return this;
         }
 
+        /**
+         * @param processName The integration account RosettaNet process name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processName(String processName) {
             return processName(Output.of(processName));
         }
 
+        /**
+         * @param processVersion The integration account RosettaNet process version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processVersion(Output<String> processVersion) {
             $.processVersion = processVersion;
             return this;
         }
 
+        /**
+         * @param processVersion The integration account RosettaNet process version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processVersion(String processVersion) {
             return processVersion(Output.of(processVersion));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param responderRoleSettings The RosettaNet responder role settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responderRoleSettings(Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings) {
             $.responderRoleSettings = responderRoleSettings;
             return this;
         }
 
+        /**
+         * @param responderRoleSettings The RosettaNet responder role settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responderRoleSettings(RosettaNetPipRoleSettingsArgs responderRoleSettings) {
             return responderRoleSettings(Output.of(responderRoleSettings));
         }
 
+        /**
+         * @param rosettaNetProcessConfigurationName The integration account RosettaNet ProcessConfiguration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rosettaNetProcessConfigurationName(@Nullable Output<String> rosettaNetProcessConfigurationName) {
             $.rosettaNetProcessConfigurationName = rosettaNetProcessConfigurationName;
             return this;
         }
 
+        /**
+         * @param rosettaNetProcessConfigurationName The integration account RosettaNet ProcessConfiguration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rosettaNetProcessConfigurationName(String rosettaNetProcessConfigurationName) {
             return rosettaNetProcessConfigurationName(Output.of(rosettaNetProcessConfigurationName));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

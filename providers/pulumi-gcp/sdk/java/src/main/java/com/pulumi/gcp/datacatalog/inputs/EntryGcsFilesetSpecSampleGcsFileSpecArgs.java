@@ -24,6 +24,11 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends com.pulumi.r
     @Import(name="filePath")
     private @Nullable Output<String> filePath;
 
+    /**
+     * @return -
+     * The full file path
+     * 
+     */
     public Optional<Output<String>> filePath() {
         return Optional.ofNullable(this.filePath);
     }
@@ -36,6 +41,11 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends com.pulumi.r
     @Import(name="sizeBytes")
     private @Nullable Output<Integer> sizeBytes;
 
+    /**
+     * @return -
+     * The size of the file, in bytes.
+     * 
+     */
     public Optional<Output<Integer>> sizeBytes() {
         return Optional.ofNullable(this.sizeBytes);
     }
@@ -65,20 +75,48 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends com.pulumi.r
             $ = new EntryGcsFilesetSpecSampleGcsFileSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filePath -
+         * The full file path
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePath(@Nullable Output<String> filePath) {
             $.filePath = filePath;
             return this;
         }
 
+        /**
+         * @param filePath -
+         * The full file path
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePath(String filePath) {
             return filePath(Output.of(filePath));
         }
 
+        /**
+         * @param sizeBytes -
+         * The size of the file, in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeBytes(@Nullable Output<Integer> sizeBytes) {
             $.sizeBytes = sizeBytes;
             return this;
         }
 
+        /**
+         * @param sizeBytes -
+         * The size of the file, in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeBytes(Integer sizeBytes) {
             return sizeBytes(Output.of(sizeBytes));
         }

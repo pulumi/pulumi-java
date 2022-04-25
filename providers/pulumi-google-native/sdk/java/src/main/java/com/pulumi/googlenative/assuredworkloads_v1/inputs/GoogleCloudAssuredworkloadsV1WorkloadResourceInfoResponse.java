@@ -23,6 +23,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return Resource identifier. For a project this represents project_number.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return Indicates the type of resource.
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
             $ = new GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId Resource identifier. For a project this represents project_number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceType Indicates the type of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;

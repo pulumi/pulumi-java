@@ -27,6 +27,10 @@ public final class AutoscalingPolicyScaleInControlArgs extends com.pulumi.resour
     @Import(name="maxScaledInReplicas")
     private @Nullable Output<FixedOrPercentArgs> maxScaledInReplicas;
 
+    /**
+     * @return Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.
+     * 
+     */
     public Optional<Output<FixedOrPercentArgs>> maxScaledInReplicas() {
         return Optional.ofNullable(this.maxScaledInReplicas);
     }
@@ -38,6 +42,10 @@ public final class AutoscalingPolicyScaleInControlArgs extends com.pulumi.resour
     @Import(name="timeWindowSec")
     private @Nullable Output<Integer> timeWindowSec;
 
+    /**
+     * @return How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.
+     * 
+     */
     public Optional<Output<Integer>> timeWindowSec() {
         return Optional.ofNullable(this.timeWindowSec);
     }
@@ -67,20 +75,44 @@ public final class AutoscalingPolicyScaleInControlArgs extends com.pulumi.resour
             $ = new AutoscalingPolicyScaleInControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxScaledInReplicas Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxScaledInReplicas(@Nullable Output<FixedOrPercentArgs> maxScaledInReplicas) {
             $.maxScaledInReplicas = maxScaledInReplicas;
             return this;
         }
 
+        /**
+         * @param maxScaledInReplicas Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxScaledInReplicas(FixedOrPercentArgs maxScaledInReplicas) {
             return maxScaledInReplicas(Output.of(maxScaledInReplicas));
         }
 
+        /**
+         * @param timeWindowSec How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeWindowSec(@Nullable Output<Integer> timeWindowSec) {
             $.timeWindowSec = timeWindowSec;
             return this;
         }
 
+        /**
+         * @param timeWindowSec How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeWindowSec(Integer timeWindowSec) {
             return timeWindowSec(Output.of(timeWindowSec));
         }

@@ -20,6 +20,10 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
     @Import(name="recordRowPath", required=true)
     private Output<String> recordRowPath;
 
+    /**
+     * @return Path to the top-level parent that contains the records.
+     * 
+     */
     public Output<String> recordRowPath() {
         return this.recordRowPath;
     }
@@ -48,11 +52,23 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
             $ = new AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recordRowPath Path to the top-level parent that contains the records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordRowPath(Output<String> recordRowPath) {
             $.recordRowPath = recordRowPath;
             return this;
         }
 
+        /**
+         * @param recordRowPath Path to the top-level parent that contains the records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordRowPath(String recordRowPath) {
             return recordRowPath(Output.of(recordRowPath));
         }

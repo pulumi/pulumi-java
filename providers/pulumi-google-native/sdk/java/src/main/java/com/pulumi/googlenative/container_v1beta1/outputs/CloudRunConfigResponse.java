@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class CloudRunConfigResponse {
     /**
-     * Whether Cloud Run addon is enabled for this cluster.
+     * @return Whether Cloud Run addon is enabled for this cluster.
      * 
      */
     private final Boolean disabled;
     /**
-     * Which load balancer type is installed for Cloud Run.
+     * @return Which load balancer type is installed for Cloud Run.
      * 
      */
     private final String loadBalancerType;
@@ -30,16 +30,16 @@ public final class CloudRunConfigResponse {
     }
 
     /**
-     * Whether Cloud Run addon is enabled for this cluster.
+     * @return Whether Cloud Run addon is enabled for this cluster.
      * 
-    */
+     */
     public Boolean disabled() {
         return this.disabled;
     }
     /**
-     * Which load balancer type is installed for Cloud Run.
+     * @return Which load balancer type is installed for Cloud Run.
      * 
-    */
+     */
     public String loadBalancerType() {
         return this.loadBalancerType;
     }

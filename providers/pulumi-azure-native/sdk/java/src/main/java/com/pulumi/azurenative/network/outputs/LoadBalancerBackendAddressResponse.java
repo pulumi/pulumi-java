@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LoadBalancerBackendAddressResponse {
     /**
-     * IP Address belonging to the referenced virtual network.
+     * @return IP Address belonging to the referenced virtual network.
      * 
      */
     private final @Nullable String ipAddress;
     /**
-     * Reference to the frontend ip address configuration defined in regional loadbalancer.
+     * @return Reference to the frontend ip address configuration defined in regional loadbalancer.
      * 
      */
     private final @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration;
     /**
-     * Name of the backend address.
+     * @return Name of the backend address.
      * 
      */
     private final @Nullable String name;
     /**
-     * Reference to IP address defined in network interfaces.
+     * @return Reference to IP address defined in network interfaces.
      * 
      */
     private final SubResourceResponse networkInterfaceIPConfiguration;
     /**
-     * Reference to an existing subnet.
+     * @return Reference to an existing subnet.
      * 
      */
     private final @Nullable SubResourceResponse subnet;
     /**
-     * Reference to an existing virtual network.
+     * @return Reference to an existing virtual network.
      * 
      */
     private final @Nullable SubResourceResponse virtualNetwork;
@@ -60,44 +60,44 @@ public final class LoadBalancerBackendAddressResponse {
     }
 
     /**
-     * IP Address belonging to the referenced virtual network.
+     * @return IP Address belonging to the referenced virtual network.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * Reference to the frontend ip address configuration defined in regional loadbalancer.
+     * @return Reference to the frontend ip address configuration defined in regional loadbalancer.
      * 
-    */
+     */
     public Optional<SubResourceResponse> loadBalancerFrontendIPConfiguration() {
         return Optional.ofNullable(this.loadBalancerFrontendIPConfiguration);
     }
     /**
-     * Name of the backend address.
+     * @return Name of the backend address.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Reference to IP address defined in network interfaces.
+     * @return Reference to IP address defined in network interfaces.
      * 
-    */
+     */
     public SubResourceResponse networkInterfaceIPConfiguration() {
         return this.networkInterfaceIPConfiguration;
     }
     /**
-     * Reference to an existing subnet.
+     * @return Reference to an existing subnet.
      * 
-    */
+     */
     public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
-     * Reference to an existing virtual network.
+     * @return Reference to an existing virtual network.
      * 
-    */
+     */
     public Optional<SubResourceResponse> virtualNetwork() {
         return Optional.ofNullable(this.virtualNetwork);
     }

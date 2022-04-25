@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRegistrationDefinitionResult {
     /**
-     * Fully qualified path of the registration definition.
+     * @return Fully qualified path of the registration definition.
      * 
      */
     private final String id;
     /**
-     * Name of the registration definition.
+     * @return Name of the registration definition.
      * 
      */
     private final String name;
     /**
-     * Plan details for the managed services.
+     * @return Plan details for the managed services.
      * 
      */
     private final @Nullable PlanResponse plan;
     /**
-     * Properties of a registration definition.
+     * @return Properties of a registration definition.
      * 
      */
     private final RegistrationDefinitionPropertiesResponse properties;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -54,37 +54,37 @@ public final class GetRegistrationDefinitionResult {
     }
 
     /**
-     * Fully qualified path of the registration definition.
+     * @return Fully qualified path of the registration definition.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the registration definition.
+     * @return Name of the registration definition.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Plan details for the managed services.
+     * @return Plan details for the managed services.
      * 
-    */
+     */
     public Optional<PlanResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
-     * Properties of a registration definition.
+     * @return Properties of a registration definition.
      * 
-    */
+     */
     public RegistrationDefinitionPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

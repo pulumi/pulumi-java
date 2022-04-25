@@ -26,6 +26,10 @@ public final class FirewallPolicyCertificateAuthorityArgs extends com.pulumi.res
     @Import(name="keyVaultSecretId")
     private @Nullable Output<String> keyVaultSecretId;
 
+    /**
+     * @return Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+     * 
+     */
     public Optional<Output<String>> keyVaultSecretId() {
         return Optional.ofNullable(this.keyVaultSecretId);
     }
@@ -37,6 +41,10 @@ public final class FirewallPolicyCertificateAuthorityArgs extends com.pulumi.res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the CA certificate.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,20 +74,44 @@ public final class FirewallPolicyCertificateAuthorityArgs extends com.pulumi.res
             $ = new FirewallPolicyCertificateAuthorityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultSecretId Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultSecretId(@Nullable Output<String> keyVaultSecretId) {
             $.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
 
+        /**
+         * @param keyVaultSecretId Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultSecretId(String keyVaultSecretId) {
             return keyVaultSecretId(Output.of(keyVaultSecretId));
         }
 
+        /**
+         * @param name Name of the CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

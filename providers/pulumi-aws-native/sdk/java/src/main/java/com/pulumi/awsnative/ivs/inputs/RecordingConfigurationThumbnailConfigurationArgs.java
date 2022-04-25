@@ -27,6 +27,10 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends com.
     @Import(name="recordingMode", required=true)
     private Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode;
 
+    /**
+     * @return Thumbnail Recording Mode, which determines whether thumbnails are recorded at an interval or are disabled.
+     * 
+     */
     public Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode() {
         return this.recordingMode;
     }
@@ -38,6 +42,10 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends com.
     @Import(name="targetIntervalSeconds")
     private @Nullable Output<Integer> targetIntervalSeconds;
 
+    /**
+     * @return Thumbnail recording Target Interval Seconds defines the interval at which thumbnails are recorded. This field is required if RecordingMode is INTERVAL.
+     * 
+     */
     public Optional<Output<Integer>> targetIntervalSeconds() {
         return Optional.ofNullable(this.targetIntervalSeconds);
     }
@@ -67,20 +75,44 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends com.
             $ = new RecordingConfigurationThumbnailConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recordingMode Thumbnail Recording Mode, which determines whether thumbnails are recorded at an interval or are disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordingMode(Output<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode) {
             $.recordingMode = recordingMode;
             return this;
         }
 
+        /**
+         * @param recordingMode Thumbnail Recording Mode, which determines whether thumbnails are recorded at an interval or are disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordingMode(RecordingConfigurationThumbnailConfigurationRecordingMode recordingMode) {
             return recordingMode(Output.of(recordingMode));
         }
 
+        /**
+         * @param targetIntervalSeconds Thumbnail recording Target Interval Seconds defines the interval at which thumbnails are recorded. This field is required if RecordingMode is INTERVAL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetIntervalSeconds(@Nullable Output<Integer> targetIntervalSeconds) {
             $.targetIntervalSeconds = targetIntervalSeconds;
             return this;
         }
 
+        /**
+         * @param targetIntervalSeconds Thumbnail recording Target Interval Seconds defines the interval at which thumbnails are recorded. This field is required if RecordingMode is INTERVAL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetIntervalSeconds(Integer targetIntervalSeconds) {
             return targetIntervalSeconds(Output.of(targetIntervalSeconds));
         }

@@ -26,6 +26,10 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reportDeliveryChannel", required=true)
     private Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel;
 
+    /**
+     * @return A structure that contains information about where and how to deliver your reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports.
+     * 
+     */
     public Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel() {
         return this.reportDeliveryChannel;
     }
@@ -37,6 +41,10 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reportPlanDescription")
     private @Nullable Output<String> reportPlanDescription;
 
+    /**
+     * @return An optional description of the report plan with a maximum of 1,024 characters.
+     * 
+     */
     public Optional<Output<String>> reportPlanDescription() {
         return Optional.ofNullable(this.reportPlanDescription);
     }
@@ -48,6 +56,10 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reportPlanName")
     private @Nullable Output<String> reportPlanName;
 
+    /**
+     * @return The unique name of the report plan. The name must be between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
+     * 
+     */
     public Optional<Output<String>> reportPlanName() {
         return Optional.ofNullable(this.reportPlanName);
     }
@@ -59,6 +71,10 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reportPlanTags")
     private @Nullable Output<List<ReportPlanTagArgs>> reportPlanTags;
 
+    /**
+     * @return Metadata that you can assign to help organize the report plans that you create. Each tag is a key-value pair.
+     * 
+     */
     public Optional<Output<List<ReportPlanTagArgs>>> reportPlanTags() {
         return Optional.ofNullable(this.reportPlanTags);
     }
@@ -70,6 +86,10 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reportSetting", required=true)
     private Output<ReportSettingPropertiesArgs> reportSetting;
 
+    /**
+     * @return Identifies the report template for the report. Reports are built using a report template.
+     * 
+     */
     public Output<ReportSettingPropertiesArgs> reportSetting() {
         return this.reportSetting;
     }
@@ -102,51 +122,117 @@ public final class ReportPlanArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReportPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param reportDeliveryChannel A structure that contains information about where and how to deliver your reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportDeliveryChannel(Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel) {
             $.reportDeliveryChannel = reportDeliveryChannel;
             return this;
         }
 
+        /**
+         * @param reportDeliveryChannel A structure that contains information about where and how to deliver your reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportDeliveryChannel(ReportDeliveryChannelPropertiesArgs reportDeliveryChannel) {
             return reportDeliveryChannel(Output.of(reportDeliveryChannel));
         }
 
+        /**
+         * @param reportPlanDescription An optional description of the report plan with a maximum of 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportPlanDescription(@Nullable Output<String> reportPlanDescription) {
             $.reportPlanDescription = reportPlanDescription;
             return this;
         }
 
+        /**
+         * @param reportPlanDescription An optional description of the report plan with a maximum of 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportPlanDescription(String reportPlanDescription) {
             return reportPlanDescription(Output.of(reportPlanDescription));
         }
 
+        /**
+         * @param reportPlanName The unique name of the report plan. The name must be between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportPlanName(@Nullable Output<String> reportPlanName) {
             $.reportPlanName = reportPlanName;
             return this;
         }
 
+        /**
+         * @param reportPlanName The unique name of the report plan. The name must be between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportPlanName(String reportPlanName) {
             return reportPlanName(Output.of(reportPlanName));
         }
 
+        /**
+         * @param reportPlanTags Metadata that you can assign to help organize the report plans that you create. Each tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportPlanTags(@Nullable Output<List<ReportPlanTagArgs>> reportPlanTags) {
             $.reportPlanTags = reportPlanTags;
             return this;
         }
 
+        /**
+         * @param reportPlanTags Metadata that you can assign to help organize the report plans that you create. Each tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportPlanTags(List<ReportPlanTagArgs> reportPlanTags) {
             return reportPlanTags(Output.of(reportPlanTags));
         }
 
+        /**
+         * @param reportPlanTags Metadata that you can assign to help organize the report plans that you create. Each tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportPlanTags(ReportPlanTagArgs... reportPlanTags) {
             return reportPlanTags(List.of(reportPlanTags));
         }
 
+        /**
+         * @param reportSetting Identifies the report template for the report. Reports are built using a report template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportSetting(Output<ReportSettingPropertiesArgs> reportSetting) {
             $.reportSetting = reportSetting;
             return this;
         }
 
+        /**
+         * @param reportSetting Identifies the report template for the report. Reports are built using a report template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportSetting(ReportSettingPropertiesArgs reportSetting) {
             return reportSetting(Output.of(reportSetting));
         }

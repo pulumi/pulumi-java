@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagementResourcePreferencesResponse {
     /**
-     * Customer preferred Management resource ARM ID
+     * @return Customer preferred Management resource ARM ID
      * 
      */
     private final @Nullable String preferredManagementResourceId;
@@ -23,9 +23,9 @@ public final class ManagementResourcePreferencesResponse {
     }
 
     /**
-     * Customer preferred Management resource ARM ID
+     * @return Customer preferred Management resource ARM ID
      * 
-    */
+     */
     public Optional<String> preferredManagementResourceId() {
         return Optional.ofNullable(this.preferredManagementResourceId);
     }

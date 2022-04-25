@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SELinuxOptions {
     /**
-     * Level is SELinux level label that applies to the container.
+     * @return Level is SELinux level label that applies to the container.
      * 
      */
     private final @Nullable String level;
     /**
-     * Role is a SELinux role label that applies to the container.
+     * @return Role is a SELinux role label that applies to the container.
      * 
      */
     private final @Nullable String role;
     /**
-     * Type is a SELinux type label that applies to the container.
+     * @return Type is a SELinux type label that applies to the container.
      * 
      */
     private final @Nullable String type;
     /**
-     * User is a SELinux user label that applies to the container.
+     * @return User is a SELinux user label that applies to the container.
      * 
      */
     private final @Nullable String user;
@@ -45,30 +45,30 @@ public final class SELinuxOptions {
     }
 
     /**
-     * Level is SELinux level label that applies to the container.
+     * @return Level is SELinux level label that applies to the container.
      * 
-    */
+     */
     public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
     /**
-     * Role is a SELinux role label that applies to the container.
+     * @return Role is a SELinux role label that applies to the container.
      * 
-    */
+     */
     public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
     /**
-     * Type is a SELinux type label that applies to the container.
+     * @return Type is a SELinux type label that applies to the container.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * User is a SELinux user label that applies to the container.
+     * @return User is a SELinux user label that applies to the container.
      * 
-    */
+     */
     public Optional<String> user() {
         return Optional.ofNullable(this.user);
     }

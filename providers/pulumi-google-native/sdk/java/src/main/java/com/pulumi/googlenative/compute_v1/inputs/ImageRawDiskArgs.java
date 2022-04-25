@@ -27,6 +27,10 @@ public final class ImageRawDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerType")
     private @Nullable Output<ImageRawDiskContainerType> containerType;
 
+    /**
+     * @return The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.
+     * 
+     */
     public Optional<Output<ImageRawDiskContainerType>> containerType() {
         return Optional.ofNullable(this.containerType);
     }
@@ -38,6 +42,10 @@ public final class ImageRawDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source")
     private @Nullable Output<String> source;
 
+    /**
+     * @return The full Google Cloud Storage URL where the raw disk image archive is stored. The following are valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name - https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+     * 
+     */
     public Optional<Output<String>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -67,20 +75,44 @@ public final class ImageRawDiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ImageRawDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerType The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(@Nullable Output<ImageRawDiskContainerType> containerType) {
             $.containerType = containerType;
             return this;
         }
 
+        /**
+         * @param containerType The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(ImageRawDiskContainerType containerType) {
             return containerType(Output.of(containerType));
         }
 
+        /**
+         * @param source The full Google Cloud Storage URL where the raw disk image archive is stored. The following are valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name - https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The full Google Cloud Storage URL where the raw disk image archive is stored. The following are valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name - https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }

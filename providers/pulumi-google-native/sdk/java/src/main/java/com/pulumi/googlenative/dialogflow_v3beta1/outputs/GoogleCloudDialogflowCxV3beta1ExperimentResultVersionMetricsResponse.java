@@ -13,17 +13,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse {
     /**
-     * The metrics and corresponding confidence intervals in the inference result.
+     * @return The metrics and corresponding confidence intervals in the inference result.
      * 
      */
     private final List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse> metrics;
     /**
-     * Number of sessions that were allocated to this version.
+     * @return Number of sessions that were allocated to this version.
      * 
      */
     private final Integer sessionCount;
     /**
-     * The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
+     * @return The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
      * 
      */
     private final String version;
@@ -39,23 +39,23 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsR
     }
 
     /**
-     * The metrics and corresponding confidence intervals in the inference result.
+     * @return The metrics and corresponding confidence intervals in the inference result.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse> metrics() {
         return this.metrics;
     }
     /**
-     * Number of sessions that were allocated to this version.
+     * @return Number of sessions that were allocated to this version.
      * 
-    */
+     */
     public Integer sessionCount() {
         return this.sessionCount;
     }
     /**
-     * The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
+     * @return The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

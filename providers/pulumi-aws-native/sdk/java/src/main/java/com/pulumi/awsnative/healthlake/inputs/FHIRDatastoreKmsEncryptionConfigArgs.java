@@ -27,6 +27,10 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends com.pulumi.resou
     @Import(name="cmkType", required=true)
     private Output<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType;
 
+    /**
+     * @return The type of customer-managed-key (CMK) used for encryption. The two types of supported CMKs are customer owned CMKs and AWS owned CMKs.
+     * 
+     */
     public Output<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType() {
         return this.cmkType;
     }
@@ -38,6 +42,10 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends com.pulumi.resou
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return The KMS encryption key id/alias used to encrypt the Data Store contents at rest.
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -67,20 +75,44 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends com.pulumi.resou
             $ = new FHIRDatastoreKmsEncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cmkType The type of customer-managed-key (CMK) used for encryption. The two types of supported CMKs are customer owned CMKs and AWS owned CMKs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cmkType(Output<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType) {
             $.cmkType = cmkType;
             return this;
         }
 
+        /**
+         * @param cmkType The type of customer-managed-key (CMK) used for encryption. The two types of supported CMKs are customer owned CMKs and AWS owned CMKs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cmkType(FHIRDatastoreKmsEncryptionConfigCmkType cmkType) {
             return cmkType(Output.of(cmkType));
         }
 
+        /**
+         * @param kmsKeyId The KMS encryption key id/alias used to encrypt the Data Store contents at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId The KMS encryption key id/alias used to encrypt the Data Store contents at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }

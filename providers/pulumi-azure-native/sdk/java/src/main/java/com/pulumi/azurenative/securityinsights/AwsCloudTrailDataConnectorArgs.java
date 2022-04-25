@@ -24,6 +24,10 @@ public final class AwsCloudTrailDataConnectorArgs extends com.pulumi.resources.R
     @Import(name="awsRoleArn")
     private @Nullable Output<String> awsRoleArn;
 
+    /**
+     * @return The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
+     * 
+     */
     public Optional<Output<String>> awsRoleArn() {
         return Optional.ofNullable(this.awsRoleArn);
     }
@@ -35,6 +39,10 @@ public final class AwsCloudTrailDataConnectorArgs extends com.pulumi.resources.R
     @Import(name="dataConnectorId")
     private @Nullable Output<String> dataConnectorId;
 
+    /**
+     * @return Connector ID
+     * 
+     */
     public Optional<Output<String>> dataConnectorId() {
         return Optional.ofNullable(this.dataConnectorId);
     }
@@ -46,6 +54,10 @@ public final class AwsCloudTrailDataConnectorArgs extends com.pulumi.resources.R
     @Import(name="dataTypes")
     private @Nullable Output<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes;
 
+    /**
+     * @return The available data types for the connector.
+     * 
+     */
     public Optional<Output<AwsCloudTrailDataConnectorDataTypesArgs>> dataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
@@ -58,6 +70,11 @@ public final class AwsCloudTrailDataConnectorArgs extends com.pulumi.resources.R
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return The kind of the data connector
+     * Expected value is &#39;AmazonWebServicesCloudTrail&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -69,6 +86,10 @@ public final class AwsCloudTrailDataConnectorArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -80,6 +101,10 @@ public final class AwsCloudTrailDataConnectorArgs extends com.pulumi.resources.R
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -113,56 +138,130 @@ public final class AwsCloudTrailDataConnectorArgs extends com.pulumi.resources.R
             $ = new AwsCloudTrailDataConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsRoleArn The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsRoleArn(@Nullable Output<String> awsRoleArn) {
             $.awsRoleArn = awsRoleArn;
             return this;
         }
 
+        /**
+         * @param awsRoleArn The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsRoleArn(String awsRoleArn) {
             return awsRoleArn(Output.of(awsRoleArn));
         }
 
+        /**
+         * @param dataConnectorId Connector ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataConnectorId(@Nullable Output<String> dataConnectorId) {
             $.dataConnectorId = dataConnectorId;
             return this;
         }
 
+        /**
+         * @param dataConnectorId Connector ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataConnectorId(String dataConnectorId) {
             return dataConnectorId(Output.of(dataConnectorId));
         }
 
+        /**
+         * @param dataTypes The available data types for the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypes(@Nullable Output<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes) {
             $.dataTypes = dataTypes;
             return this;
         }
 
+        /**
+         * @param dataTypes The available data types for the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypes(AwsCloudTrailDataConnectorDataTypesArgs dataTypes) {
             return dataTypes(Output.of(dataTypes));
         }
 
+        /**
+         * @param kind The kind of the data connector
+         * Expected value is &#39;AmazonWebServicesCloudTrail&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the data connector
+         * Expected value is &#39;AmazonWebServicesCloudTrail&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

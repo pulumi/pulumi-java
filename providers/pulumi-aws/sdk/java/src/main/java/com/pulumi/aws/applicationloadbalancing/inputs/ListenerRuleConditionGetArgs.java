@@ -28,6 +28,10 @@ public final class ListenerRuleConditionGetArgs extends com.pulumi.resources.Res
     @Import(name="hostHeader")
     private @Nullable Output<ListenerRuleConditionHostHeaderGetArgs> hostHeader;
 
+    /**
+     * @return Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
+     * 
+     */
     public Optional<Output<ListenerRuleConditionHostHeaderGetArgs>> hostHeader() {
         return Optional.ofNullable(this.hostHeader);
     }
@@ -39,6 +43,10 @@ public final class ListenerRuleConditionGetArgs extends com.pulumi.resources.Res
     @Import(name="httpHeader")
     private @Nullable Output<ListenerRuleConditionHttpHeaderGetArgs> httpHeader;
 
+    /**
+     * @return HTTP headers to match. HTTP Header block fields documented below.
+     * 
+     */
     public Optional<Output<ListenerRuleConditionHttpHeaderGetArgs>> httpHeader() {
         return Optional.ofNullable(this.httpHeader);
     }
@@ -50,6 +58,10 @@ public final class ListenerRuleConditionGetArgs extends com.pulumi.resources.Res
     @Import(name="httpRequestMethod")
     private @Nullable Output<ListenerRuleConditionHttpRequestMethodGetArgs> httpRequestMethod;
 
+    /**
+     * @return Contains a single `values` item which is a list of HTTP request methods or verbs to match. Maximum size is 40 characters. Only allowed characters are A-Z, hyphen (-) and underscore (\_). Comparison is case sensitive. Wildcards are not supported. Only one needs to match for the condition to be satisfied. AWS recommends that GET and HEAD requests are routed in the same way because the response to a HEAD request may be cached.
+     * 
+     */
     public Optional<Output<ListenerRuleConditionHttpRequestMethodGetArgs>> httpRequestMethod() {
         return Optional.ofNullable(this.httpRequestMethod);
     }
@@ -61,6 +73,10 @@ public final class ListenerRuleConditionGetArgs extends com.pulumi.resources.Res
     @Import(name="pathPattern")
     private @Nullable Output<ListenerRuleConditionPathPatternGetArgs> pathPattern;
 
+    /**
+     * @return Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query_string` condition.
+     * 
+     */
     public Optional<Output<ListenerRuleConditionPathPatternGetArgs>> pathPattern() {
         return Optional.ofNullable(this.pathPattern);
     }
@@ -72,6 +88,10 @@ public final class ListenerRuleConditionGetArgs extends com.pulumi.resources.Res
     @Import(name="queryStrings")
     private @Nullable Output<List<ListenerRuleConditionQueryStringGetArgs>> queryStrings;
 
+    /**
+     * @return Query strings to match. Query String block fields documented below.
+     * 
+     */
     public Optional<Output<List<ListenerRuleConditionQueryStringGetArgs>>> queryStrings() {
         return Optional.ofNullable(this.queryStrings);
     }
@@ -83,6 +103,10 @@ public final class ListenerRuleConditionGetArgs extends com.pulumi.resources.Res
     @Import(name="sourceIp")
     private @Nullable Output<ListenerRuleConditionSourceIpGetArgs> sourceIp;
 
+    /**
+     * @return Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
+     * 
+     */
     public Optional<Output<ListenerRuleConditionSourceIpGetArgs>> sourceIp() {
         return Optional.ofNullable(this.sourceIp);
     }
@@ -116,60 +140,138 @@ public final class ListenerRuleConditionGetArgs extends com.pulumi.resources.Res
             $ = new ListenerRuleConditionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostHeader Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostHeader(@Nullable Output<ListenerRuleConditionHostHeaderGetArgs> hostHeader) {
             $.hostHeader = hostHeader;
             return this;
         }
 
+        /**
+         * @param hostHeader Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostHeader(ListenerRuleConditionHostHeaderGetArgs hostHeader) {
             return hostHeader(Output.of(hostHeader));
         }
 
+        /**
+         * @param httpHeader HTTP headers to match. HTTP Header block fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeader(@Nullable Output<ListenerRuleConditionHttpHeaderGetArgs> httpHeader) {
             $.httpHeader = httpHeader;
             return this;
         }
 
+        /**
+         * @param httpHeader HTTP headers to match. HTTP Header block fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeader(ListenerRuleConditionHttpHeaderGetArgs httpHeader) {
             return httpHeader(Output.of(httpHeader));
         }
 
+        /**
+         * @param httpRequestMethod Contains a single `values` item which is a list of HTTP request methods or verbs to match. Maximum size is 40 characters. Only allowed characters are A-Z, hyphen (-) and underscore (\_). Comparison is case sensitive. Wildcards are not supported. Only one needs to match for the condition to be satisfied. AWS recommends that GET and HEAD requests are routed in the same way because the response to a HEAD request may be cached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpRequestMethod(@Nullable Output<ListenerRuleConditionHttpRequestMethodGetArgs> httpRequestMethod) {
             $.httpRequestMethod = httpRequestMethod;
             return this;
         }
 
+        /**
+         * @param httpRequestMethod Contains a single `values` item which is a list of HTTP request methods or verbs to match. Maximum size is 40 characters. Only allowed characters are A-Z, hyphen (-) and underscore (\_). Comparison is case sensitive. Wildcards are not supported. Only one needs to match for the condition to be satisfied. AWS recommends that GET and HEAD requests are routed in the same way because the response to a HEAD request may be cached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpRequestMethod(ListenerRuleConditionHttpRequestMethodGetArgs httpRequestMethod) {
             return httpRequestMethod(Output.of(httpRequestMethod));
         }
 
+        /**
+         * @param pathPattern Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query_string` condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathPattern(@Nullable Output<ListenerRuleConditionPathPatternGetArgs> pathPattern) {
             $.pathPattern = pathPattern;
             return this;
         }
 
+        /**
+         * @param pathPattern Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query_string` condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathPattern(ListenerRuleConditionPathPatternGetArgs pathPattern) {
             return pathPattern(Output.of(pathPattern));
         }
 
+        /**
+         * @param queryStrings Query strings to match. Query String block fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStrings(@Nullable Output<List<ListenerRuleConditionQueryStringGetArgs>> queryStrings) {
             $.queryStrings = queryStrings;
             return this;
         }
 
+        /**
+         * @param queryStrings Query strings to match. Query String block fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStrings(List<ListenerRuleConditionQueryStringGetArgs> queryStrings) {
             return queryStrings(Output.of(queryStrings));
         }
 
+        /**
+         * @param queryStrings Query strings to match. Query String block fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStrings(ListenerRuleConditionQueryStringGetArgs... queryStrings) {
             return queryStrings(List.of(queryStrings));
         }
 
+        /**
+         * @param sourceIp Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIp(@Nullable Output<ListenerRuleConditionSourceIpGetArgs> sourceIp) {
             $.sourceIp = sourceIp;
             return this;
         }
 
+        /**
+         * @param sourceIp Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIp(ListenerRuleConditionSourceIpGetArgs sourceIp) {
             return sourceIp(Output.of(sourceIp));
         }

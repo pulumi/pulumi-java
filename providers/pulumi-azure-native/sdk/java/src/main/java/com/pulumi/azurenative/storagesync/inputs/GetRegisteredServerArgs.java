@@ -19,6 +19,10 @@ public final class GetRegisteredServerArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetRegisteredServerArgs extends com.pulumi.resources.InvokeAr
     @Import(name="serverId", required=true)
     private String serverId;
 
+    /**
+     * @return GUID identifying the on-premises server.
+     * 
+     */
     public String serverId() {
         return this.serverId;
     }
@@ -41,6 +49,10 @@ public final class GetRegisteredServerArgs extends com.pulumi.resources.InvokeAr
     @Import(name="storageSyncServiceName", required=true)
     private String storageSyncServiceName;
 
+    /**
+     * @return Name of Storage Sync Service resource.
+     * 
+     */
     public String storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
@@ -71,16 +83,34 @@ public final class GetRegisteredServerArgs extends com.pulumi.resources.InvokeAr
             $ = new GetRegisteredServerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverId GUID identifying the on-premises server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverId(String serverId) {
             $.serverId = serverId;
             return this;
         }
 
+        /**
+         * @param storageSyncServiceName Name of Storage Sync Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSyncServiceName(String storageSyncServiceName) {
             $.storageSyncServiceName = storageSyncServiceName;
             return this;

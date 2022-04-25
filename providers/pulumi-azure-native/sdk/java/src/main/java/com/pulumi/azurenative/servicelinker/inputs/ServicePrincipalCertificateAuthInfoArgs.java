@@ -26,6 +26,11 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends com.pulumi.re
     @Import(name="authType", required=true)
     private Output<String> authType;
 
+    /**
+     * @return The authentication type.
+     * Expected value is &#39;servicePrincipalCertificate&#39;.
+     * 
+     */
     public Output<String> authType() {
         return this.authType;
     }
@@ -37,6 +42,10 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends com.pulumi.re
     @Import(name="certificate", required=true)
     private Output<String> certificate;
 
+    /**
+     * @return ServicePrincipal certificate for servicePrincipal auth.
+     * 
+     */
     public Output<String> certificate() {
         return this.certificate;
     }
@@ -48,6 +57,10 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends com.pulumi.re
     @Import(name="clientId", required=true)
     private Output<String> clientId;
 
+    /**
+     * @return Application clientId for servicePrincipal auth.
+     * 
+     */
     public Output<String> clientId() {
         return this.clientId;
     }
@@ -59,6 +72,10 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends com.pulumi.re
     @Import(name="principalId", required=true)
     private Output<String> principalId;
 
+    /**
+     * @return Principal Id for servicePrincipal auth.
+     * 
+     */
     public Output<String> principalId() {
         return this.principalId;
     }
@@ -90,38 +107,88 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends com.pulumi.re
             $ = new ServicePrincipalCertificateAuthInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authType The authentication type.
+         * Expected value is &#39;servicePrincipalCertificate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(Output<String> authType) {
             $.authType = authType;
             return this;
         }
 
+        /**
+         * @param authType The authentication type.
+         * Expected value is &#39;servicePrincipalCertificate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(String authType) {
             return authType(Output.of(authType));
         }
 
+        /**
+         * @param certificate ServicePrincipal certificate for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(Output<String> certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param certificate ServicePrincipal certificate for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String certificate) {
             return certificate(Output.of(certificate));
         }
 
+        /**
+         * @param clientId Application clientId for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId Application clientId for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param principalId Principal Id for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId Principal Id for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }

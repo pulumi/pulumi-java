@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class InstanceReferenceResponse {
     /**
-     * The name of the Cloud SQL instance being referenced. This does not include the project ID.
+     * @return The name of the Cloud SQL instance being referenced. This does not include the project ID.
      * 
      */
     private final String name;
     /**
-     * The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.
+     * @return The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.
      * 
      */
     private final String project;
     /**
-     * The region of the Cloud SQL instance being referenced.
+     * @return The region of the Cloud SQL instance being referenced.
      * 
      */
     private final String region;
@@ -36,23 +36,23 @@ public final class InstanceReferenceResponse {
     }
 
     /**
-     * The name of the Cloud SQL instance being referenced. This does not include the project ID.
+     * @return The name of the Cloud SQL instance being referenced. This does not include the project ID.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.
+     * @return The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * The region of the Cloud SQL instance being referenced.
+     * @return The region of the Cloud SQL instance being referenced.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }

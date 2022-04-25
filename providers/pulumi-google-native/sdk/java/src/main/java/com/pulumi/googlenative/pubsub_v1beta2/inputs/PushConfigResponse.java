@@ -25,6 +25,10 @@ public final class PushConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="attributes", required=true)
     private Map<String,String> attributes;
 
+    /**
+     * @return Endpoint configuration attributes. Every endpoint has a set of API supported attributes that can be used to control different aspects of the message delivery. The currently supported attribute is `x-goog-version`, which you can use to change the format of the push message. This attribute indicates the version of the data expected by the endpoint. This controls the shape of the envelope (i.e. its fields and metadata). The endpoint version is based on the version of the Pub/Sub API. If not present during the `CreateSubscription` call, it will default to the version of the API used to make such call. If not present during a `ModifyPushConfig` call, its value will not be changed. `GetSubscription` calls will always return a valid version, even if the subscription was created without this attribute. The possible values for this attribute are: * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API. * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API.
+     * 
+     */
     public Map<String,String> attributes() {
         return this.attributes;
     }
@@ -36,6 +40,10 @@ public final class PushConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="oidcToken", required=true)
     private OidcTokenResponse oidcToken;
 
+    /**
+     * @return If specified, Pub/Sub will generate and attach an OIDC JWT token as an `Authorization` header in the HTTP request for every pushed message.
+     * 
+     */
     public OidcTokenResponse oidcToken() {
         return this.oidcToken;
     }
@@ -47,6 +55,10 @@ public final class PushConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pushEndpoint", required=true)
     private String pushEndpoint;
 
+    /**
+     * @return A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use &#34;https://example.com/push&#34;.
+     * 
+     */
     public String pushEndpoint() {
         return this.pushEndpoint;
     }
@@ -77,16 +89,34 @@ public final class PushConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PushConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes Endpoint configuration attributes. Every endpoint has a set of API supported attributes that can be used to control different aspects of the message delivery. The currently supported attribute is `x-goog-version`, which you can use to change the format of the push message. This attribute indicates the version of the data expected by the endpoint. This controls the shape of the envelope (i.e. its fields and metadata). The endpoint version is based on the version of the Pub/Sub API. If not present during the `CreateSubscription` call, it will default to the version of the API used to make such call. If not present during a `ModifyPushConfig` call, its value will not be changed. `GetSubscription` calls will always return a valid version, even if the subscription was created without this attribute. The possible values for this attribute are: * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API. * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(Map<String,String> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param oidcToken If specified, Pub/Sub will generate and attach an OIDC JWT token as an `Authorization` header in the HTTP request for every pushed message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcToken(OidcTokenResponse oidcToken) {
             $.oidcToken = oidcToken;
             return this;
         }
 
+        /**
+         * @param pushEndpoint A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use &#34;https://example.com/push&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushEndpoint(String pushEndpoint) {
             $.pushEndpoint = pushEndpoint;
             return this;

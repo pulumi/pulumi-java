@@ -13,18 +13,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MediaGraphClearEndpointResponse {
     /**
-     * Polymorphic credentials to present to the endpoint.
+     * @return Polymorphic credentials to present to the endpoint.
      * 
      */
     private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.MediaGraphClearEndpoint&#39;.
      * 
      */
     private final String odataType;
     /**
-     * Url for the endpoint.
+     * @return Url for the endpoint.
      * 
      */
     private final String url;
@@ -40,24 +40,24 @@ public final class MediaGraphClearEndpointResponse {
     }
 
     /**
-     * Polymorphic credentials to present to the endpoint.
+     * @return Polymorphic credentials to present to the endpoint.
      * 
-    */
+     */
     public Optional<MediaGraphUsernamePasswordCredentialsResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.MediaGraphClearEndpoint&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * Url for the endpoint.
+     * @return Url for the endpoint.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

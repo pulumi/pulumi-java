@@ -19,6 +19,10 @@ public final class GetEnclaveCertificateIamRoleAssociationArgs extends com.pulum
     @Import(name="certificateArn", required=true)
     private String certificateArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the ACM certificate with which to associate the IAM role.
+     * 
+     */
     public String certificateArn() {
         return this.certificateArn;
     }
@@ -30,6 +34,10 @@ public final class GetEnclaveCertificateIamRoleAssociationArgs extends com.pulum
     @Import(name="roleArn", required=true)
     private String roleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the IAM role to associate with the ACM certificate. You can associate up to 16 IAM roles with an ACM certificate.
+     * 
+     */
     public String roleArn() {
         return this.roleArn;
     }
@@ -59,11 +67,23 @@ public final class GetEnclaveCertificateIamRoleAssociationArgs extends com.pulum
             $ = new GetEnclaveCertificateIamRoleAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateArn The Amazon Resource Name (ARN) of the ACM certificate with which to associate the IAM role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateArn(String certificateArn) {
             $.certificateArn = certificateArn;
             return this;
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of the IAM role to associate with the ACM certificate. You can associate up to 16 IAM roles with an ACM certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             $.roleArn = roleArn;
             return this;

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GrafeasV1beta1PackageDetailsResponse {
     /**
-     * Where the package was installed.
+     * @return Where the package was installed.
      * 
      */
     private final InstallationResponse installation;
@@ -21,9 +21,9 @@ public final class GrafeasV1beta1PackageDetailsResponse {
     }
 
     /**
-     * Where the package was installed.
+     * @return Where the package was installed.
      * 
-    */
+     */
     public InstallationResponse installation() {
         return this.installation;
     }

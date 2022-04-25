@@ -30,6 +30,10 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="monitoringStatus")
     private @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
+    /**
+     * @return Flag specifying if the resource monitoring is enabled or disabled.
+     * 
+     */
     public Optional<Output<Either<String,MonitoringStatus>>> monitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
@@ -41,6 +45,10 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="provisioningState")
     private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
+    /**
+     * @return Provisioning state of the monitor resource.
+     * 
+     */
     public Optional<Output<Either<String,ProvisioningState>>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -52,6 +60,10 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="userInfo")
     private @Nullable Output<UserInfoArgs> userInfo;
 
+    /**
+     * @return User information.
+     * 
+     */
     public Optional<Output<UserInfoArgs>> userInfo() {
         return Optional.ofNullable(this.userInfo);
     }
@@ -82,45 +94,105 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
             $ = new MonitorPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param monitoringStatus Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(@Nullable Output<Either<String,MonitoringStatus>> monitoringStatus) {
             $.monitoringStatus = monitoringStatus;
             return this;
         }
 
+        /**
+         * @param monitoringStatus Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(Either<String,MonitoringStatus> monitoringStatus) {
             return monitoringStatus(Output.of(monitoringStatus));
         }
 
+        /**
+         * @param monitoringStatus Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(String monitoringStatus) {
             return monitoringStatus(Either.ofLeft(monitoringStatus));
         }
 
+        /**
+         * @param monitoringStatus Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(MonitoringStatus monitoringStatus) {
             return monitoringStatus(Either.ofRight(monitoringStatus));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(Either<String,ProvisioningState> provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Either.ofLeft(provisioningState));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(ProvisioningState provisioningState) {
             return provisioningState(Either.ofRight(provisioningState));
         }
 
+        /**
+         * @param userInfo User information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userInfo(@Nullable Output<UserInfoArgs> userInfo) {
             $.userInfo = userInfo;
             return this;
         }
 
+        /**
+         * @param userInfo User information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userInfo(UserInfoArgs userInfo) {
             return userInfo(Output.of(userInfo));
         }

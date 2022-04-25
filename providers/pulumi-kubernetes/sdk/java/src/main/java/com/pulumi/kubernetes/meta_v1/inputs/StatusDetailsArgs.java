@@ -29,6 +29,10 @@ public final class StatusDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="causes")
     private @Nullable Output<List<StatusCauseArgs>> causes;
 
+    /**
+     * @return The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.
+     * 
+     */
     public Optional<Output<List<StatusCauseArgs>>> causes() {
         return Optional.ofNullable(this.causes);
     }
@@ -40,6 +44,10 @@ public final class StatusDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="group")
     private @Nullable Output<String> group;
 
+    /**
+     * @return The group attribute of the resource associated with the status StatusReason.
+     * 
+     */
     public Optional<Output<String>> group() {
         return Optional.ofNullable(this.group);
     }
@@ -51,6 +59,10 @@ public final class StatusDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -62,6 +74,10 @@ public final class StatusDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name attribute of the resource associated with the status StatusReason (when there is a single name which can be described).
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -73,6 +89,10 @@ public final class StatusDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retryAfterSeconds")
     private @Nullable Output<Integer> retryAfterSeconds;
 
+    /**
+     * @return If specified, the time in seconds before the operation should be retried. Some errors may indicate the client must take an alternate action - for those errors this field may indicate how long to wait before taking the alternate action.
+     * 
+     */
     public Optional<Output<Integer>> retryAfterSeconds() {
         return Optional.ofNullable(this.retryAfterSeconds);
     }
@@ -84,6 +104,10 @@ public final class StatusDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uid")
     private @Nullable Output<String> uid;
 
+    /**
+     * @return UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+     * 
+     */
     public Optional<Output<String>> uid() {
         return Optional.ofNullable(this.uid);
     }
@@ -117,60 +141,138 @@ public final class StatusDetailsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StatusDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param causes The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder causes(@Nullable Output<List<StatusCauseArgs>> causes) {
             $.causes = causes;
             return this;
         }
 
+        /**
+         * @param causes The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder causes(List<StatusCauseArgs> causes) {
             return causes(Output.of(causes));
         }
 
+        /**
+         * @param causes The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder causes(StatusCauseArgs... causes) {
             return causes(List.of(causes));
         }
 
+        /**
+         * @param group The group attribute of the resource associated with the status StatusReason.
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(@Nullable Output<String> group) {
             $.group = group;
             return this;
         }
 
+        /**
+         * @param group The group attribute of the resource associated with the status StatusReason.
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(String group) {
             return group(Output.of(group));
         }
 
+        /**
+         * @param kind The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name The name attribute of the resource associated with the status StatusReason (when there is a single name which can be described).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name attribute of the resource associated with the status StatusReason (when there is a single name which can be described).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param retryAfterSeconds If specified, the time in seconds before the operation should be retried. Some errors may indicate the client must take an alternate action - for those errors this field may indicate how long to wait before taking the alternate action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryAfterSeconds(@Nullable Output<Integer> retryAfterSeconds) {
             $.retryAfterSeconds = retryAfterSeconds;
             return this;
         }
 
+        /**
+         * @param retryAfterSeconds If specified, the time in seconds before the operation should be retried. Some errors may indicate the client must take an alternate action - for those errors this field may indicate how long to wait before taking the alternate action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryAfterSeconds(Integer retryAfterSeconds) {
             return retryAfterSeconds(Output.of(retryAfterSeconds));
         }
 
+        /**
+         * @param uid UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(@Nullable Output<String> uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param uid UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             return uid(Output.of(uid));
         }

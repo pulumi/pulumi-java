@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
     @Import(name="model")
     private @Nullable Output<String> model;
 
+    /**
+     * @return Conversation model resource name. Format: `projects//conversationModels/`.
+     * 
+     */
     public Optional<Output<String>> model() {
         return Optional.ofNullable(this.model);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
             $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param model Conversation model resource name. Format: `projects//conversationModels/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(@Nullable Output<String> model) {
             $.model = model;
             return this;
         }
 
+        /**
+         * @param model Conversation model resource name. Format: `projects//conversationModels/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(String model) {
             return model(Output.of(model));
         }

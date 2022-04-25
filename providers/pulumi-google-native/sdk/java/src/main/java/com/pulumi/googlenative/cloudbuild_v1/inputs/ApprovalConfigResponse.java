@@ -23,6 +23,10 @@ public final class ApprovalConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="approvalRequired", required=true)
     private Boolean approvalRequired;
 
+    /**
+     * @return Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.
+     * 
+     */
     public Boolean approvalRequired() {
         return this.approvalRequired;
     }
@@ -51,6 +55,12 @@ public final class ApprovalConfigResponse extends com.pulumi.resources.InvokeArg
             $ = new ApprovalConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param approvalRequired Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder approvalRequired(Boolean approvalRequired) {
             $.approvalRequired = approvalRequired;
             return this;

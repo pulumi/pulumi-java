@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EventSourceMappingSourceAccessConfiguration {
     /**
-     * The type of source access configuration.
+     * @return The type of source access configuration.
      * 
      */
     private final @Nullable EventSourceMappingSourceAccessConfigurationType type;
     /**
-     * The URI for the source access configuration resource.
+     * @return The URI for the source access configuration resource.
      * 
      */
     private final @Nullable String uRI;
@@ -32,16 +32,16 @@ public final class EventSourceMappingSourceAccessConfiguration {
     }
 
     /**
-     * The type of source access configuration.
+     * @return The type of source access configuration.
      * 
-    */
+     */
     public Optional<EventSourceMappingSourceAccessConfigurationType> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The URI for the source access configuration resource.
+     * @return The URI for the source access configuration resource.
      * 
-    */
+     */
     public Optional<String> uRI() {
         return Optional.ofNullable(this.uRI);
     }

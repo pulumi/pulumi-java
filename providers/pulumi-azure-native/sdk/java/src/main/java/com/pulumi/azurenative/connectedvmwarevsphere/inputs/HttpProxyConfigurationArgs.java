@@ -26,6 +26,10 @@ public final class HttpProxyConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="httpsProxy")
     private @Nullable Output<String> httpsProxy;
 
+    /**
+     * @return Gets or sets httpsProxy url.
+     * 
+     */
     public Optional<Output<String>> httpsProxy() {
         return Optional.ofNullable(this.httpsProxy);
     }
@@ -54,11 +58,23 @@ public final class HttpProxyConfigurationArgs extends com.pulumi.resources.Resou
             $ = new HttpProxyConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpsProxy Gets or sets httpsProxy url.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsProxy(@Nullable Output<String> httpsProxy) {
             $.httpsProxy = httpsProxy;
             return this;
         }
 
+        /**
+         * @param httpsProxy Gets or sets httpsProxy url.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsProxy(String httpsProxy) {
             return httpsProxy(Output.of(httpsProxy));
         }

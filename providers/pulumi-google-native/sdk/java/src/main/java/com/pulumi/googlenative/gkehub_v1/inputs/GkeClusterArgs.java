@@ -26,6 +26,10 @@ public final class GkeClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceLink")
     private @Nullable Output<String> resourceLink;
 
+    /**
+     * @return Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
+     * 
+     */
     public Optional<Output<String>> resourceLink() {
         return Optional.ofNullable(this.resourceLink);
     }
@@ -54,11 +58,23 @@ public final class GkeClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GkeClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceLink Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLink(@Nullable Output<String> resourceLink) {
             $.resourceLink = resourceLink;
             return this;
         }
 
+        /**
+         * @param resourceLink Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLink(String resourceLink) {
             return resourceLink(Output.of(resourceLink));
         }

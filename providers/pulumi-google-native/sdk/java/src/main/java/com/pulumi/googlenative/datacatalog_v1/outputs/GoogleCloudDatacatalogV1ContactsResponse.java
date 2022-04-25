@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDatacatalogV1ContactsResponse {
     /**
-     * The list of contact people for the entry.
+     * @return The list of contact people for the entry.
      * 
      */
     private final List<GoogleCloudDatacatalogV1ContactsPersonResponse> people;
@@ -22,9 +22,9 @@ public final class GoogleCloudDatacatalogV1ContactsResponse {
     }
 
     /**
-     * The list of contact people for the entry.
+     * @return The list of contact people for the entry.
      * 
-    */
+     */
     public List<GoogleCloudDatacatalogV1ContactsPersonResponse> people() {
         return this.people;
     }

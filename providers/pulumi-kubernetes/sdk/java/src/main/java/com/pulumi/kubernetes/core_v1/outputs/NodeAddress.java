@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class NodeAddress {
     /**
-     * The node address.
+     * @return The node address.
      * 
      */
     private final String address;
     /**
-     * Node address type, one of Hostname, ExternalIP or InternalIP.
+     * @return Node address type, one of Hostname, ExternalIP or InternalIP.
      * 
      * Possible enum values:
      *  - `&#34;ExternalDNS&#34;` identifies a DNS name which resolves to an IP address which has the characteristics of a NodeExternalIP. The IP it resolves to may or may not be a listed NodeExternalIP address.
@@ -36,14 +36,14 @@ public final class NodeAddress {
     }
 
     /**
-     * The node address.
+     * @return The node address.
      * 
-    */
+     */
     public String address() {
         return this.address;
     }
     /**
-     * Node address type, one of Hostname, ExternalIP or InternalIP.
+     * @return Node address type, one of Hostname, ExternalIP or InternalIP.
      * 
      * Possible enum values:
      *  - `&#34;ExternalDNS&#34;` identifies a DNS name which resolves to an IP address which has the characteristics of a NodeExternalIP. The IP it resolves to may or may not be a listed NodeExternalIP address.
@@ -52,7 +52,7 @@ public final class NodeAddress {
      *  - `&#34;InternalDNS&#34;` identifies a DNS name which resolves to an IP address which has the characteristics of a NodeInternalIP. The IP it resolves to may or may not be a listed NodeInternalIP address.
      *  - `&#34;InternalIP&#34;` identifies an IP address which is assigned to one of the node&#39;s network interfaces. Every node should have at least one address of this type. An internal IP is normally expected to be reachable from every other node, but may not be visible to hosts outside the cluster. By default it is assumed that kube-apiserver can reach node internal IPs, though it is possible to configure clusters where this is not the case. NodeInternalIP is the default type of node IP, and does not necessarily imply that the IP is ONLY reachable internally. If a node has multiple internal IPs, no specific semantics are assigned to the additional IPs.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

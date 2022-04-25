@@ -23,6 +23,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
     @Import(name="coreCount")
     private @Nullable Output<Integer> coreCount;
 
+    /**
+     * @return Count of cores of this accelerator.
+     * 
+     */
     public Optional<Output<Integer>> coreCount() {
         return Optional.ofNullable(this.coreCount);
     }
@@ -36,6 +40,12 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Accelerator model. For valid values, see
+     * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
+     * rest/v1/projects.locations.runtimes#AcceleratorType`
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -65,20 +75,48 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
             $ = new RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param coreCount Count of cores of this accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreCount(@Nullable Output<Integer> coreCount) {
             $.coreCount = coreCount;
             return this;
         }
 
+        /**
+         * @param coreCount Count of cores of this accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreCount(Integer coreCount) {
             return coreCount(Output.of(coreCount));
         }
 
+        /**
+         * @param type Accelerator model. For valid values, see
+         * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
+         * rest/v1/projects.locations.runtimes#AcceleratorType`
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Accelerator model. For valid values, see
+         * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
+         * rest/v1/projects.locations.runtimes#AcceleratorType`
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

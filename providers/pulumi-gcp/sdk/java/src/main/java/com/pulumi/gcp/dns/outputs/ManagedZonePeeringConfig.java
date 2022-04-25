@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ManagedZonePeeringConfig {
     /**
-     * The network with which to peer.
+     * @return The network with which to peer.
      * Structure is documented below.
      * 
      */
@@ -22,10 +22,10 @@ public final class ManagedZonePeeringConfig {
     }
 
     /**
-     * The network with which to peer.
+     * @return The network with which to peer.
      * Structure is documented below.
      * 
-    */
+     */
     public ManagedZonePeeringConfigTargetNetwork targetNetwork() {
         return this.targetNetwork;
     }

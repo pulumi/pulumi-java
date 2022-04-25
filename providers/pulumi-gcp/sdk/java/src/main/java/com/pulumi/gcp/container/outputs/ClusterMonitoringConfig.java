@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class ClusterMonitoringConfig {
     /**
-     * The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
+     * @return The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
      * 
      */
     private final List<String> enableComponents;
@@ -22,9 +22,9 @@ public final class ClusterMonitoringConfig {
     }
 
     /**
-     * The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
+     * @return The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
      * 
-    */
+     */
     public List<String> enableComponents() {
         return this.enableComponents;
     }

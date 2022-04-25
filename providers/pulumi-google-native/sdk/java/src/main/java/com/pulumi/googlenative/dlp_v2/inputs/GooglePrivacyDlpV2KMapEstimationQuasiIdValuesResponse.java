@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
     @Import(name="estimatedAnonymity", required=true)
     private String estimatedAnonymity;
 
+    /**
+     * @return The estimated anonymity for these quasi-identifier values.
+     * 
+     */
     public String estimatedAnonymity() {
         return this.estimatedAnonymity;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
     @Import(name="quasiIdsValues", required=true)
     private List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
+    /**
+     * @return The quasi-identifier values.
+     * 
+     */
     public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
     }
@@ -65,16 +73,34 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
             $ = new GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param estimatedAnonymity The estimated anonymity for these quasi-identifier values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder estimatedAnonymity(String estimatedAnonymity) {
             $.estimatedAnonymity = estimatedAnonymity;
             return this;
         }
 
+        /**
+         * @param quasiIdsValues The quasi-identifier values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
             $.quasiIdsValues = quasiIdsValues;
             return this;
         }
 
+        /**
+         * @param quasiIdsValues The quasi-identifier values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIdsValues(GooglePrivacyDlpV2ValueResponse... quasiIdsValues) {
             return quasiIdsValues(List.of(quasiIdsValues));
         }

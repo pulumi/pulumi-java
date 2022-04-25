@@ -29,6 +29,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
     @Import(name="appliesToGroups")
     private @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
 
+    /**
+     * @return Groups for configuration
+     * 
+     */
     public Optional<List<ConnectivityGroupItemResponse>> appliesToGroups() {
         return Optional.ofNullable(this.appliesToGroups);
     }
@@ -40,6 +44,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
     @Import(name="configurationGroups")
     private @Nullable List<ConfigurationGroupResponse> configurationGroups;
 
+    /**
+     * @return Effective configuration groups.
+     * 
+     */
     public Optional<List<ConfigurationGroupResponse>> configurationGroups() {
         return Optional.ofNullable(this.configurationGroups);
     }
@@ -51,6 +59,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
     @Import(name="connectivityTopology", required=true)
     private String connectivityTopology;
 
+    /**
+     * @return Connectivity topology type.
+     * 
+     */
     public String connectivityTopology() {
         return this.connectivityTopology;
     }
@@ -62,6 +74,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
     @Import(name="deleteExistingPeering")
     private @Nullable String deleteExistingPeering;
 
+    /**
+     * @return Flag if need to remove current existing peerings.
+     * 
+     */
     public Optional<String> deleteExistingPeering() {
         return Optional.ofNullable(this.deleteExistingPeering);
     }
@@ -73,6 +89,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return A description of the connectivity configuration.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -84,6 +104,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return A friendly name for the resource.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -95,6 +119,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
     @Import(name="hubs")
     private @Nullable List<HubResponse> hubs;
 
+    /**
+     * @return List of hubItems
+     * 
+     */
     public Optional<List<HubResponse>> hubs() {
         return Optional.ofNullable(this.hubs);
     }
@@ -106,6 +134,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -117,6 +149,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
     @Import(name="isGlobal")
     private @Nullable String isGlobal;
 
+    /**
+     * @return Flag if global mesh is supported.
+     * 
+     */
     public Optional<String> isGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
@@ -128,6 +164,10 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the connectivity configuration resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -165,63 +205,141 @@ public final class EffectiveConnectivityConfigurationResponse extends com.pulumi
             $ = new EffectiveConnectivityConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appliesToGroups Groups for configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder appliesToGroups(@Nullable List<ConnectivityGroupItemResponse> appliesToGroups) {
             $.appliesToGroups = appliesToGroups;
             return this;
         }
 
+        /**
+         * @param appliesToGroups Groups for configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder appliesToGroups(ConnectivityGroupItemResponse... appliesToGroups) {
             return appliesToGroups(List.of(appliesToGroups));
         }
 
+        /**
+         * @param configurationGroups Effective configuration groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationGroups(@Nullable List<ConfigurationGroupResponse> configurationGroups) {
             $.configurationGroups = configurationGroups;
             return this;
         }
 
+        /**
+         * @param configurationGroups Effective configuration groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationGroups(ConfigurationGroupResponse... configurationGroups) {
             return configurationGroups(List.of(configurationGroups));
         }
 
+        /**
+         * @param connectivityTopology Connectivity topology type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectivityTopology(String connectivityTopology) {
             $.connectivityTopology = connectivityTopology;
             return this;
         }
 
+        /**
+         * @param deleteExistingPeering Flag if need to remove current existing peerings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteExistingPeering(@Nullable String deleteExistingPeering) {
             $.deleteExistingPeering = deleteExistingPeering;
             return this;
         }
 
+        /**
+         * @param description A description of the connectivity configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName A friendly name for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param hubs List of hubItems
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubs(@Nullable List<HubResponse> hubs) {
             $.hubs = hubs;
             return this;
         }
 
+        /**
+         * @param hubs List of hubItems
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubs(HubResponse... hubs) {
             return hubs(List.of(hubs));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param isGlobal Flag if global mesh is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobal(@Nullable String isGlobal) {
             $.isGlobal = isGlobal;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the connectivity configuration resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

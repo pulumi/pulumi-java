@@ -34,6 +34,10 @@ public final class PolicyInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyParameters")
     private @Nullable Output<PolicyParametersArgs> policyParameters;
 
+    /**
+     * @return Policy parameters for the backup instance
+     * 
+     */
     public Optional<Output<PolicyParametersArgs>> policyParameters() {
         return Optional.ofNullable(this.policyParameters);
     }
@@ -72,11 +76,23 @@ public final class PolicyInfoArgs extends com.pulumi.resources.ResourceArgs {
             return policyId(Output.of(policyId));
         }
 
+        /**
+         * @param policyParameters Policy parameters for the backup instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyParameters(@Nullable Output<PolicyParametersArgs> policyParameters) {
             $.policyParameters = policyParameters;
             return this;
         }
 
+        /**
+         * @param policyParameters Policy parameters for the backup instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyParameters(PolicyParametersArgs policyParameters) {
             return policyParameters(Output.of(policyParameters));
         }

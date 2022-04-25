@@ -27,6 +27,10 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends com.pulumi.reso
     @Import(name="claimName", required=true)
     private Output<String> claimName;
 
+    /**
+     * @return ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * 
+     */
     public Output<String> claimName() {
         return this.claimName;
     }
@@ -38,6 +42,10 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends com.pulumi.reso
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return Will force the ReadOnly setting in VolumeMounts. Default false.
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -67,20 +75,44 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends com.pulumi.reso
             $ = new PersistentVolumeClaimVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param claimName ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+         * 
+         * @return builder
+         * 
+         */
         public Builder claimName(Output<String> claimName) {
             $.claimName = claimName;
             return this;
         }
 
+        /**
+         * @param claimName ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+         * 
+         * @return builder
+         * 
+         */
         public Builder claimName(String claimName) {
             return claimName(Output.of(claimName));
         }
 
+        /**
+         * @param readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }

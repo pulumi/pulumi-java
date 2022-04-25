@@ -23,6 +23,10 @@ public final class CdnCertificateSourceParametersResponse extends com.pulumi.res
     @Import(name="certificateType", required=true)
     private String certificateType;
 
+    /**
+     * @return Type of certificate used
+     * 
+     */
     public String certificateType() {
         return this.certificateType;
     }
@@ -59,6 +63,12 @@ public final class CdnCertificateSourceParametersResponse extends com.pulumi.res
             $ = new CdnCertificateSourceParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateType Type of certificate used
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateType(String certificateType) {
             $.certificateType = certificateType;
             return this;

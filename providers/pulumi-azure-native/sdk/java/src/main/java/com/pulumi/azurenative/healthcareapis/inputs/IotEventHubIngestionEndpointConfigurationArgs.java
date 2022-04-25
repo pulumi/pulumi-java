@@ -26,6 +26,10 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends com.pul
     @Import(name="consumerGroup")
     private @Nullable Output<String> consumerGroup;
 
+    /**
+     * @return Consumer group of the event hub to connected to.
+     * 
+     */
     public Optional<Output<String>> consumerGroup() {
         return Optional.ofNullable(this.consumerGroup);
     }
@@ -37,6 +41,10 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends com.pul
     @Import(name="eventHubName")
     private @Nullable Output<String> eventHubName;
 
+    /**
+     * @return Event Hub name to connect to.
+     * 
+     */
     public Optional<Output<String>> eventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
@@ -48,6 +56,10 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends com.pul
     @Import(name="fullyQualifiedEventHubNamespace")
     private @Nullable Output<String> fullyQualifiedEventHubNamespace;
 
+    /**
+     * @return Fully qualified namespace of the Event Hub to connect to.
+     * 
+     */
     public Optional<Output<String>> fullyQualifiedEventHubNamespace() {
         return Optional.ofNullable(this.fullyQualifiedEventHubNamespace);
     }
@@ -78,29 +90,65 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends com.pul
             $ = new IotEventHubIngestionEndpointConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumerGroup Consumer group of the event hub to connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerGroup(@Nullable Output<String> consumerGroup) {
             $.consumerGroup = consumerGroup;
             return this;
         }
 
+        /**
+         * @param consumerGroup Consumer group of the event hub to connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerGroup(String consumerGroup) {
             return consumerGroup(Output.of(consumerGroup));
         }
 
+        /**
+         * @param eventHubName Event Hub name to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
             $.eventHubName = eventHubName;
             return this;
         }
 
+        /**
+         * @param eventHubName Event Hub name to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(String eventHubName) {
             return eventHubName(Output.of(eventHubName));
         }
 
+        /**
+         * @param fullyQualifiedEventHubNamespace Fully qualified namespace of the Event Hub to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullyQualifiedEventHubNamespace(@Nullable Output<String> fullyQualifiedEventHubNamespace) {
             $.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
             return this;
         }
 
+        /**
+         * @param fullyQualifiedEventHubNamespace Fully qualified namespace of the Event Hub to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullyQualifiedEventHubNamespace(String fullyQualifiedEventHubNamespace) {
             return fullyQualifiedEventHubNamespace(Output.of(fullyQualifiedEventHubNamespace));
         }

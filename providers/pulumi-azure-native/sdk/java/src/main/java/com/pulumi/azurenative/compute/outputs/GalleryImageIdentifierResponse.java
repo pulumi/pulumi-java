@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class GalleryImageIdentifierResponse {
     /**
-     * The name of the gallery image definition offer.
+     * @return The name of the gallery image definition offer.
      * 
      */
     private final String offer;
     /**
-     * The name of the gallery image definition publisher.
+     * @return The name of the gallery image definition publisher.
      * 
      */
     private final String publisher;
     /**
-     * The name of the gallery image definition SKU.
+     * @return The name of the gallery image definition SKU.
      * 
      */
     private final String sku;
@@ -36,23 +36,23 @@ public final class GalleryImageIdentifierResponse {
     }
 
     /**
-     * The name of the gallery image definition offer.
+     * @return The name of the gallery image definition offer.
      * 
-    */
+     */
     public String offer() {
         return this.offer;
     }
     /**
-     * The name of the gallery image definition publisher.
+     * @return The name of the gallery image definition publisher.
      * 
-    */
+     */
     public String publisher() {
         return this.publisher;
     }
     /**
-     * The name of the gallery image definition SKU.
+     * @return The name of the gallery image definition SKU.
      * 
-    */
+     */
     public String sku() {
         return this.sku;
     }

@@ -26,6 +26,10 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse extends c
     @Import(name="diskEncryptionSet")
     private @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
 
+    /**
+     * @return Specifies the customer managed disk encryption set resource id for the managed disk.
+     * 
+     */
     public Optional<DiskEncryptionSetParametersResponse> diskEncryptionSet() {
         return Optional.ofNullable(this.diskEncryptionSet);
     }
@@ -37,6 +41,10 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse extends c
     @Import(name="storageAccountType")
     private @Nullable String storageAccountType;
 
+    /**
+     * @return Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+     * 
+     */
     public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
@@ -66,11 +74,23 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse extends c
             $ = new VirtualMachineScaleSetManagedDiskParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionSet Specifies the customer managed disk encryption set resource id for the managed disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersResponse diskEncryptionSet) {
             $.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(@Nullable String storageAccountType) {
             $.storageAccountType = storageAccountType;
             return this;

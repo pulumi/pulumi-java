@@ -13,32 +13,32 @@ import java.util.Objects;
 @CustomType
 public final class GetDistributionConfigurationDistributionAmiDistributionConfiguration {
     /**
-     * Key-value map of tags to apply to distributed AMI.
+     * @return Key-value map of tags to apply to distributed AMI.
      * 
      */
     private final Map<String,String> amiTags;
     /**
-     * Description to apply to distributed AMI.
+     * @return Description to apply to distributed AMI.
      * 
      */
     private final String description;
     /**
-     * Amazon Resource Name (ARN) of Key Management Service (KMS) Key to encrypt AMI.
+     * @return Amazon Resource Name (ARN) of Key Management Service (KMS) Key to encrypt AMI.
      * 
      */
     private final String kmsKeyId;
     /**
-     * Nested list of EC2 launch permissions.
+     * @return Nested list of EC2 launch permissions.
      * 
      */
     private final List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions;
     /**
-     * Name of the distribution configuration.
+     * @return Name of the distribution configuration.
      * 
      */
     private final String name;
     /**
-     * Set of target AWS Account identifiers.
+     * @return Set of target AWS Account identifiers.
      * 
      */
     private final List<String> targetAccountIds;
@@ -60,44 +60,44 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     }
 
     /**
-     * Key-value map of tags to apply to distributed AMI.
+     * @return Key-value map of tags to apply to distributed AMI.
      * 
-    */
+     */
     public Map<String,String> amiTags() {
         return this.amiTags;
     }
     /**
-     * Description to apply to distributed AMI.
+     * @return Description to apply to distributed AMI.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Amazon Resource Name (ARN) of Key Management Service (KMS) Key to encrypt AMI.
+     * @return Amazon Resource Name (ARN) of Key Management Service (KMS) Key to encrypt AMI.
      * 
-    */
+     */
     public String kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
-     * Nested list of EC2 launch permissions.
+     * @return Nested list of EC2 launch permissions.
      * 
-    */
+     */
     public List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions() {
         return this.launchPermissions;
     }
     /**
-     * Name of the distribution configuration.
+     * @return Name of the distribution configuration.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Set of target AWS Account identifiers.
+     * @return Set of target AWS Account identifiers.
      * 
-    */
+     */
     public List<String> targetAccountIds() {
         return this.targetAccountIds;
     }

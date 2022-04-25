@@ -44,6 +44,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="associations")
     private @Nullable Output<List<SecurityPolicyAssociationArgs>> associations;
 
+    /**
+     * @return A list of associations that belong to this policy.
+     * 
+     */
     public Optional<Output<List<SecurityPolicyAssociationArgs>>> associations() {
         return Optional.ofNullable(this.associations);
     }
@@ -55,6 +59,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -66,6 +74,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User-provided name of the Organization security plicy. The name should be unique in the organization in which the security policy is created. This should only be used when SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -77,6 +89,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -88,6 +104,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -120,6 +140,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="rules")
     private @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
 
+    /**
+     * @return A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match &#34;*&#34;). If no rules are provided when creating a security policy, a default rule with action &#34;allow&#34; will be added.
+     * 
+     */
     public Optional<Output<List<SecurityPolicyRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -131,6 +155,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type")
     private @Nullable Output<SecurityPolicyType> type;
 
+    /**
+     * @return The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache.
+     * 
+     */
     public Optional<Output<SecurityPolicyType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -196,51 +224,117 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
             return advancedOptionsConfig(Output.of(advancedOptionsConfig));
         }
 
+        /**
+         * @param associations A list of associations that belong to this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associations(@Nullable Output<List<SecurityPolicyAssociationArgs>> associations) {
             $.associations = associations;
             return this;
         }
 
+        /**
+         * @param associations A list of associations that belong to this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associations(List<SecurityPolicyAssociationArgs> associations) {
             return associations(Output.of(associations));
         }
 
+        /**
+         * @param associations A list of associations that belong to this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associations(SecurityPolicyAssociationArgs... associations) {
             return associations(List.of(associations));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName User-provided name of the Organization security plicy. The name should be unique in the organization in which the security policy is created. This should only be used when SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User-provided name of the Organization security plicy. The name should be unique in the organization in which the security policy is created. This should only be used when SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param labels Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -272,24 +366,54 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param rules A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match &#34;*&#34;). If no rules are provided when creating a security policy, a default rule with action &#34;allow&#34; will be added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<SecurityPolicyRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match &#34;*&#34;). If no rules are provided when creating a security policy, a default rule with action &#34;allow&#34; will be added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<SecurityPolicyRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match &#34;*&#34;). If no rules are provided when creating a security policy, a default rule with action &#34;allow&#34; will be added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(SecurityPolicyRuleArgs... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param type The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<SecurityPolicyType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(SecurityPolicyType type) {
             return type(Output.of(type));
         }

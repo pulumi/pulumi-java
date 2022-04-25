@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends c
     @Import(name="isControlGroup")
     private @Nullable Output<Boolean> isControlGroup;
 
+    /**
+     * @return Whether the variant is for the control group.
+     * 
+     */
     public Optional<Output<Boolean>> isControlGroup() {
         return Optional.ofNullable(this.isControlGroup);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends c
     @Import(name="trafficAllocation")
     private @Nullable Output<Double> trafficAllocation;
 
+    /**
+     * @return Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
+     * 
+     */
     public Optional<Output<Double>> trafficAllocation() {
         return Optional.ofNullable(this.trafficAllocation);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends c
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -80,29 +92,65 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantArgs extends c
             $ = new GoogleCloudDialogflowCxV3VersionVariantsVariantArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isControlGroup Whether the variant is for the control group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isControlGroup(@Nullable Output<Boolean> isControlGroup) {
             $.isControlGroup = isControlGroup;
             return this;
         }
 
+        /**
+         * @param isControlGroup Whether the variant is for the control group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isControlGroup(Boolean isControlGroup) {
             return isControlGroup(Output.of(isControlGroup));
         }
 
+        /**
+         * @param trafficAllocation Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficAllocation(@Nullable Output<Double> trafficAllocation) {
             $.trafficAllocation = trafficAllocation;
             return this;
         }
 
+        /**
+         * @param trafficAllocation Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficAllocation(Double trafficAllocation) {
             return trafficAllocation(Output.of(trafficAllocation));
         }
 
+        /**
+         * @param version The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

@@ -23,6 +23,10 @@ public final class RegistrationAssignmentArgs extends com.pulumi.resources.Resou
     @Import(name="properties")
     private @Nullable Output<RegistrationAssignmentPropertiesArgs> properties;
 
+    /**
+     * @return Properties of a registration assignment.
+     * 
+     */
     public Optional<Output<RegistrationAssignmentPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -34,6 +38,10 @@ public final class RegistrationAssignmentArgs extends com.pulumi.resources.Resou
     @Import(name="registrationAssignmentId")
     private @Nullable Output<String> registrationAssignmentId;
 
+    /**
+     * @return Guid of the registration assignment.
+     * 
+     */
     public Optional<Output<String>> registrationAssignmentId() {
         return Optional.ofNullable(this.registrationAssignmentId);
     }
@@ -45,6 +53,10 @@ public final class RegistrationAssignmentArgs extends com.pulumi.resources.Resou
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return Scope of the resource.
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -75,29 +87,65 @@ public final class RegistrationAssignmentArgs extends com.pulumi.resources.Resou
             $ = new RegistrationAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties Properties of a registration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<RegistrationAssignmentPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of a registration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(RegistrationAssignmentPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param registrationAssignmentId Guid of the registration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationAssignmentId(@Nullable Output<String> registrationAssignmentId) {
             $.registrationAssignmentId = registrationAssignmentId;
             return this;
         }
 
+        /**
+         * @param registrationAssignmentId Guid of the registration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationAssignmentId(String registrationAssignmentId) {
             return registrationAssignmentId(Output.of(registrationAssignmentId));
         }
 
+        /**
+         * @param scope Scope of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Scope of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }

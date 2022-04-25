@@ -26,6 +26,10 @@ public final class BucketDestination extends com.pulumi.resources.InvokeArgs {
     @Import(name="bucketAccountId")
     private @Nullable String bucketAccountId;
 
+    /**
+     * @return The account ID that owns the destination S3 bucket.
+     * 
+     */
     public Optional<String> bucketAccountId() {
         return Optional.ofNullable(this.bucketAccountId);
     }
@@ -37,6 +41,10 @@ public final class BucketDestination extends com.pulumi.resources.InvokeArgs {
     @Import(name="bucketArn", required=true)
     private String bucketArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the bucket to which data is exported.
+     * 
+     */
     public String bucketArn() {
         return this.bucketArn;
     }
@@ -48,6 +56,10 @@ public final class BucketDestination extends com.pulumi.resources.InvokeArgs {
     @Import(name="format", required=true)
     private BucketDestinationFormat format;
 
+    /**
+     * @return Specifies the file format used when exporting data to Amazon S3.
+     * 
+     */
     public BucketDestinationFormat format() {
         return this.format;
     }
@@ -59,6 +71,10 @@ public final class BucketDestination extends com.pulumi.resources.InvokeArgs {
     @Import(name="prefix")
     private @Nullable String prefix;
 
+    /**
+     * @return The prefix to use when exporting data. The prefix is prepended to all results.
+     * 
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -90,21 +106,45 @@ public final class BucketDestination extends com.pulumi.resources.InvokeArgs {
             $ = new BucketDestination(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketAccountId The account ID that owns the destination S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketAccountId(@Nullable String bucketAccountId) {
             $.bucketAccountId = bucketAccountId;
             return this;
         }
 
+        /**
+         * @param bucketArn The Amazon Resource Name (ARN) of the bucket to which data is exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketArn(String bucketArn) {
             $.bucketArn = bucketArn;
             return this;
         }
 
+        /**
+         * @param format Specifies the file format used when exporting data to Amazon S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(BucketDestinationFormat format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param prefix The prefix to use when exporting data. The prefix is prepended to all results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable String prefix) {
             $.prefix = prefix;
             return this;

@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListRegistryCredentialsResult {
     /**
-     * The list of passwords for a container registry.
+     * @return The list of passwords for a container registry.
      * 
      */
     private final @Nullable List<RegistryPasswordResponse> passwords;
     /**
-     * The username for a container registry.
+     * @return The username for a container registry.
      * 
      */
     private final @Nullable String username;
@@ -33,16 +33,16 @@ public final class ListRegistryCredentialsResult {
     }
 
     /**
-     * The list of passwords for a container registry.
+     * @return The list of passwords for a container registry.
      * 
-    */
+     */
     public List<RegistryPasswordResponse> passwords() {
         return this.passwords == null ? List.of() : this.passwords;
     }
     /**
-     * The username for a container registry.
+     * @return The username for a container registry.
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

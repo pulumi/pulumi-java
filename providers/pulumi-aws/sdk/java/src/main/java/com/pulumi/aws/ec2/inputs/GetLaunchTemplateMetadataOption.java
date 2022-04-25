@@ -20,6 +20,10 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
     @Import(name="httpEndpoint", required=true)
     private String httpEndpoint;
 
+    /**
+     * @return The state of the metadata service: `enabled`, `disabled`.
+     * 
+     */
     public String httpEndpoint() {
         return this.httpEndpoint;
     }
@@ -31,6 +35,10 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
     @Import(name="httpProtocolIpv6", required=true)
     private String httpProtocolIpv6;
 
+    /**
+     * @return The state of IPv6 endpoint for the instance metadata service: `enabled`, `disabled`.
+     * 
+     */
     public String httpProtocolIpv6() {
         return this.httpProtocolIpv6;
     }
@@ -42,6 +50,10 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
     @Import(name="httpPutResponseHopLimit", required=true)
     private Integer httpPutResponseHopLimit;
 
+    /**
+     * @return The desired HTTP PUT response hop limit for instance metadata requests.
+     * 
+     */
     public Integer httpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit;
     }
@@ -53,6 +65,10 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
     @Import(name="httpTokens", required=true)
     private String httpTokens;
 
+    /**
+     * @return If session tokens are required: `optional`, `required`.
+     * 
+     */
     public String httpTokens() {
         return this.httpTokens;
     }
@@ -64,6 +80,10 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
     @Import(name="instanceMetadataTags", required=true)
     private String instanceMetadataTags;
 
+    /**
+     * @return If access to instance tags is allowed from the metadata service: `enabled`, `disabled`.
+     * 
+     */
     public String instanceMetadataTags() {
         return this.instanceMetadataTags;
     }
@@ -96,26 +116,56 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
             $ = new GetLaunchTemplateMetadataOption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpEndpoint The state of the metadata service: `enabled`, `disabled`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpEndpoint(String httpEndpoint) {
             $.httpEndpoint = httpEndpoint;
             return this;
         }
 
+        /**
+         * @param httpProtocolIpv6 The state of IPv6 endpoint for the instance metadata service: `enabled`, `disabled`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpProtocolIpv6(String httpProtocolIpv6) {
             $.httpProtocolIpv6 = httpProtocolIpv6;
             return this;
         }
 
+        /**
+         * @param httpPutResponseHopLimit The desired HTTP PUT response hop limit for instance metadata requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             $.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
 
+        /**
+         * @param httpTokens If session tokens are required: `optional`, `required`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpTokens(String httpTokens) {
             $.httpTokens = httpTokens;
             return this;
         }
 
+        /**
+         * @param instanceMetadataTags If access to instance tags is allowed from the metadata service: `enabled`, `disabled`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceMetadataTags(String instanceMetadataTags) {
             $.instanceMetadataTags = instanceMetadataTags;
             return this;

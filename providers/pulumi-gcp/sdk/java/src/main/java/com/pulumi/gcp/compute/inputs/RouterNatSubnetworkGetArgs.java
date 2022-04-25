@@ -23,6 +23,10 @@ public final class RouterNatSubnetworkGetArgs extends com.pulumi.resources.Resou
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Self-link of subnetwork to NAT
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -37,6 +41,13 @@ public final class RouterNatSubnetworkGetArgs extends com.pulumi.resources.Resou
     @Import(name="secondaryIpRangeNames")
     private @Nullable Output<List<String>> secondaryIpRangeNames;
 
+    /**
+     * @return List of the secondary ranges of the subnetwork that are allowed
+     * to use NAT. This can be populated only if
+     * `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
+     * sourceIpRangesToNat
+     * 
+     */
     public Optional<Output<List<String>>> secondaryIpRangeNames() {
         return Optional.ofNullable(this.secondaryIpRangeNames);
     }
@@ -51,6 +62,13 @@ public final class RouterNatSubnetworkGetArgs extends com.pulumi.resources.Resou
     @Import(name="sourceIpRangesToNats", required=true)
     private Output<List<String>> sourceIpRangesToNats;
 
+    /**
+     * @return List of options for which source IPs in the subnetwork
+     * should have NAT enabled. Supported values include:
+     * `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
+     * `PRIMARY_IP_RANGE`.
+     * 
+     */
     public Output<List<String>> sourceIpRangesToNats() {
         return this.sourceIpRangesToNats;
     }
@@ -81,37 +99,103 @@ public final class RouterNatSubnetworkGetArgs extends com.pulumi.resources.Resou
             $ = new RouterNatSubnetworkGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Self-link of subnetwork to NAT
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Self-link of subnetwork to NAT
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param secondaryIpRangeNames List of the secondary ranges of the subnetwork that are allowed
+         * to use NAT. This can be populated only if
+         * `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
+         * sourceIpRangesToNat
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryIpRangeNames(@Nullable Output<List<String>> secondaryIpRangeNames) {
             $.secondaryIpRangeNames = secondaryIpRangeNames;
             return this;
         }
 
+        /**
+         * @param secondaryIpRangeNames List of the secondary ranges of the subnetwork that are allowed
+         * to use NAT. This can be populated only if
+         * `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
+         * sourceIpRangesToNat
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryIpRangeNames(List<String> secondaryIpRangeNames) {
             return secondaryIpRangeNames(Output.of(secondaryIpRangeNames));
         }
 
+        /**
+         * @param secondaryIpRangeNames List of the secondary ranges of the subnetwork that are allowed
+         * to use NAT. This can be populated only if
+         * `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
+         * sourceIpRangesToNat
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryIpRangeNames(String... secondaryIpRangeNames) {
             return secondaryIpRangeNames(List.of(secondaryIpRangeNames));
         }
 
+        /**
+         * @param sourceIpRangesToNats List of options for which source IPs in the subnetwork
+         * should have NAT enabled. Supported values include:
+         * `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
+         * `PRIMARY_IP_RANGE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpRangesToNats(Output<List<String>> sourceIpRangesToNats) {
             $.sourceIpRangesToNats = sourceIpRangesToNats;
             return this;
         }
 
+        /**
+         * @param sourceIpRangesToNats List of options for which source IPs in the subnetwork
+         * should have NAT enabled. Supported values include:
+         * `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
+         * `PRIMARY_IP_RANGE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpRangesToNats(List<String> sourceIpRangesToNats) {
             return sourceIpRangesToNats(Output.of(sourceIpRangesToNats));
         }
 
+        /**
+         * @param sourceIpRangesToNats List of options for which source IPs in the subnetwork
+         * should have NAT enabled. Supported values include:
+         * `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
+         * `PRIMARY_IP_RANGE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpRangesToNats(String... sourceIpRangesToNats) {
             return sourceIpRangesToNats(List.of(sourceIpRangesToNats));
         }

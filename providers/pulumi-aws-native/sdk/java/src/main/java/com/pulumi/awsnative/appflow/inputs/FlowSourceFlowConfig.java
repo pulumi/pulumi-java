@@ -28,6 +28,10 @@ public final class FlowSourceFlowConfig extends com.pulumi.resources.InvokeArgs 
     @Import(name="connectorProfileName")
     private @Nullable String connectorProfileName;
 
+    /**
+     * @return Name of source connector profile
+     * 
+     */
     public Optional<String> connectorProfileName() {
         return Optional.ofNullable(this.connectorProfileName);
     }
@@ -39,6 +43,10 @@ public final class FlowSourceFlowConfig extends com.pulumi.resources.InvokeArgs 
     @Import(name="connectorType", required=true)
     private FlowConnectorType connectorType;
 
+    /**
+     * @return Type of source connector
+     * 
+     */
     public FlowConnectorType connectorType() {
         return this.connectorType;
     }
@@ -50,6 +58,10 @@ public final class FlowSourceFlowConfig extends com.pulumi.resources.InvokeArgs 
     @Import(name="incrementalPullConfig")
     private @Nullable FlowIncrementalPullConfig incrementalPullConfig;
 
+    /**
+     * @return Configuration for scheduled incremental data pull
+     * 
+     */
     public Optional<FlowIncrementalPullConfig> incrementalPullConfig() {
         return Optional.ofNullable(this.incrementalPullConfig);
     }
@@ -61,6 +73,10 @@ public final class FlowSourceFlowConfig extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceConnectorProperties", required=true)
     private FlowSourceConnectorProperties sourceConnectorProperties;
 
+    /**
+     * @return Source connector details required to query a connector
+     * 
+     */
     public FlowSourceConnectorProperties sourceConnectorProperties() {
         return this.sourceConnectorProperties;
     }
@@ -92,21 +108,45 @@ public final class FlowSourceFlowConfig extends com.pulumi.resources.InvokeArgs 
             $ = new FlowSourceFlowConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectorProfileName Name of source connector profile
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorProfileName(@Nullable String connectorProfileName) {
             $.connectorProfileName = connectorProfileName;
             return this;
         }
 
+        /**
+         * @param connectorType Type of source connector
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorType(FlowConnectorType connectorType) {
             $.connectorType = connectorType;
             return this;
         }
 
+        /**
+         * @param incrementalPullConfig Configuration for scheduled incremental data pull
+         * 
+         * @return builder
+         * 
+         */
         public Builder incrementalPullConfig(@Nullable FlowIncrementalPullConfig incrementalPullConfig) {
             $.incrementalPullConfig = incrementalPullConfig;
             return this;
         }
 
+        /**
+         * @param sourceConnectorProperties Source connector details required to query a connector
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectorProperties(FlowSourceConnectorProperties sourceConnectorProperties) {
             $.sourceConnectorProperties = sourceConnectorProperties;
             return this;

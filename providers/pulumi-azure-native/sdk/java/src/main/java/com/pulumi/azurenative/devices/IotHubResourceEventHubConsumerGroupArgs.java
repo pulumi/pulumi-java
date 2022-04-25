@@ -23,6 +23,10 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
     @Import(name="eventHubEndpointName", required=true)
     private Output<String> eventHubEndpointName;
 
+    /**
+     * @return The name of the Event Hub-compatible endpoint in the IoT hub.
+     * 
+     */
     public Output<String> eventHubEndpointName() {
         return this.eventHubEndpointName;
     }
@@ -34,6 +38,10 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the consumer group to add.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -45,6 +53,10 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
     @Import(name="properties")
     private @Nullable Output<EventHubConsumerGroupNameArgs> properties;
 
+    /**
+     * @return The EventHub consumer group name.
+     * 
+     */
     public Optional<Output<EventHubConsumerGroupNameArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the IoT hub.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the IoT hub.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -99,47 +119,107 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
             $ = new IotHubResourceEventHubConsumerGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventHubEndpointName The name of the Event Hub-compatible endpoint in the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubEndpointName(Output<String> eventHubEndpointName) {
             $.eventHubEndpointName = eventHubEndpointName;
             return this;
         }
 
+        /**
+         * @param eventHubEndpointName The name of the Event Hub-compatible endpoint in the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubEndpointName(String eventHubEndpointName) {
             return eventHubEndpointName(Output.of(eventHubEndpointName));
         }
 
+        /**
+         * @param name The name of the consumer group to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the consumer group to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties The EventHub consumer group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<EventHubConsumerGroupNameArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The EventHub consumer group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(EventHubConsumerGroupNameArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }

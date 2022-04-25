@@ -27,6 +27,10 @@ public final class ModuleAssetParameterResponse extends com.pulumi.resources.Inv
     @Import(name="modeValuesInfo")
     private @Nullable Map<String,ModeValueInfoResponse> modeValuesInfo;
 
+    /**
+     * @return Definitions for nested interface parameters if this is a complex module parameter.
+     * 
+     */
     public Optional<Map<String,ModeValueInfoResponse>> modeValuesInfo() {
         return Optional.ofNullable(this.modeValuesInfo);
     }
@@ -38,6 +42,10 @@ public final class ModuleAssetParameterResponse extends com.pulumi.resources.Inv
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Parameter name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class ModuleAssetParameterResponse extends com.pulumi.resources.Inv
     @Import(name="parameterType")
     private @Nullable String parameterType;
 
+    /**
+     * @return Parameter type.
+     * 
+     */
     public Optional<String> parameterType() {
         return Optional.ofNullable(this.parameterType);
     }
@@ -79,16 +91,34 @@ public final class ModuleAssetParameterResponse extends com.pulumi.resources.Inv
             $ = new ModuleAssetParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param modeValuesInfo Definitions for nested interface parameters if this is a complex module parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modeValuesInfo(@Nullable Map<String,ModeValueInfoResponse> modeValuesInfo) {
             $.modeValuesInfo = modeValuesInfo;
             return this;
         }
 
+        /**
+         * @param name Parameter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameterType Parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterType(@Nullable String parameterType) {
             $.parameterType = parameterType;
             return this;

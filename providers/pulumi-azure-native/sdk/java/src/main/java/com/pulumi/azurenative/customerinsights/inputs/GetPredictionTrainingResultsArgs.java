@@ -19,6 +19,10 @@ public final class GetPredictionTrainingResultsArgs extends com.pulumi.resources
     @Import(name="hubName", required=true)
     private String hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public String hubName() {
         return this.hubName;
     }
@@ -30,6 +34,10 @@ public final class GetPredictionTrainingResultsArgs extends com.pulumi.resources
     @Import(name="predictionName", required=true)
     private String predictionName;
 
+    /**
+     * @return The name of the Prediction.
+     * 
+     */
     public String predictionName() {
         return this.predictionName;
     }
@@ -41,6 +49,10 @@ public final class GetPredictionTrainingResultsArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetPredictionTrainingResultsArgs extends com.pulumi.resources
             $ = new GetPredictionTrainingResultsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param predictionName The name of the Prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictionName(String predictionName) {
             $.predictionName = predictionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

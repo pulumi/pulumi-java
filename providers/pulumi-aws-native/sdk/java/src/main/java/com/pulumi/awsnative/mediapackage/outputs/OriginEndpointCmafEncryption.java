@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OriginEndpointCmafEncryption {
     /**
-     * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don&#39;t specify a value, then MediaPackage creates the constant initialization vector (IV).
+     * @return An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don&#39;t specify a value, then MediaPackage creates the constant initialization vector (IV).
      * 
      */
     private final @Nullable String constantInitializationVector;
     /**
-     * Time (in seconds) between each encryption key rotation.
+     * @return Time (in seconds) between each encryption key rotation.
      * 
      */
     private final @Nullable Integer keyRotationIntervalSeconds;
@@ -36,16 +36,16 @@ public final class OriginEndpointCmafEncryption {
     }
 
     /**
-     * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don&#39;t specify a value, then MediaPackage creates the constant initialization vector (IV).
+     * @return An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don&#39;t specify a value, then MediaPackage creates the constant initialization vector (IV).
      * 
-    */
+     */
     public Optional<String> constantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
     /**
-     * Time (in seconds) between each encryption key rotation.
+     * @return Time (in seconds) between each encryption key rotation.
      * 
-    */
+     */
     public Optional<Integer> keyRotationIntervalSeconds() {
         return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }

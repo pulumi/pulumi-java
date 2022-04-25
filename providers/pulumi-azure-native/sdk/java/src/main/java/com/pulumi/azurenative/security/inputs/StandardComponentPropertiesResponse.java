@@ -25,6 +25,10 @@ public final class StandardComponentPropertiesResponse extends com.pulumi.resour
     @Import(name="key")
     private @Nullable String key;
 
+    /**
+     * @return Component Key matching componentMetadata
+     * 
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -53,6 +57,12 @@ public final class StandardComponentPropertiesResponse extends com.pulumi.resour
             $ = new StandardComponentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Component Key matching componentMetadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable String key) {
             $.key = key;
             return this;

@@ -23,6 +23,10 @@ public final class AutoscalingPolicyLoadBalancingUtilizationResponse extends com
     @Import(name="utilizationTarget", required=true)
     private Double utilizationTarget;
 
+    /**
+     * @return Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that the autoscaler maintains. Must be a positive float value. If not defined, the default is 0.8.
+     * 
+     */
     public Double utilizationTarget() {
         return this.utilizationTarget;
     }
@@ -51,6 +55,12 @@ public final class AutoscalingPolicyLoadBalancingUtilizationResponse extends com
             $ = new AutoscalingPolicyLoadBalancingUtilizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param utilizationTarget Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that the autoscaler maintains. Must be a positive float value. If not defined, the default is 0.8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder utilizationTarget(Double utilizationTarget) {
             $.utilizationTarget = utilizationTarget;
             return this;

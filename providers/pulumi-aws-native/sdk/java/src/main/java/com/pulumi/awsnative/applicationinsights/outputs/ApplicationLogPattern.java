@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class ApplicationLogPattern {
     /**
-     * The log pattern.
+     * @return The log pattern.
      * 
      */
     private final String pattern;
     /**
-     * The name of the log pattern.
+     * @return The name of the log pattern.
      * 
      */
     private final String patternName;
     /**
-     * Rank of the log pattern.
+     * @return Rank of the log pattern.
      * 
      */
     private final Integer rank;
@@ -37,23 +37,23 @@ public final class ApplicationLogPattern {
     }
 
     /**
-     * The log pattern.
+     * @return The log pattern.
      * 
-    */
+     */
     public String pattern() {
         return this.pattern;
     }
     /**
-     * The name of the log pattern.
+     * @return The name of the log pattern.
      * 
-    */
+     */
     public String patternName() {
         return this.patternName;
     }
     /**
-     * Rank of the log pattern.
+     * @return Rank of the log pattern.
      * 
-    */
+     */
     public Integer rank() {
         return this.rank;
     }

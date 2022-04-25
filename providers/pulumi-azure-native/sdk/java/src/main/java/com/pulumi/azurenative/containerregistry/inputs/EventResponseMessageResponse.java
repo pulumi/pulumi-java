@@ -26,6 +26,10 @@ public final class EventResponseMessageResponse extends com.pulumi.resources.Inv
     @Import(name="content")
     private @Nullable String content;
 
+    /**
+     * @return The content of the event response message.
+     * 
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
@@ -37,6 +41,10 @@ public final class EventResponseMessageResponse extends com.pulumi.resources.Inv
     @Import(name="headers")
     private @Nullable Map<String,String> headers;
 
+    /**
+     * @return The headers of the event response message.
+     * 
+     */
     public Optional<Map<String,String>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -48,6 +56,10 @@ public final class EventResponseMessageResponse extends com.pulumi.resources.Inv
     @Import(name="reasonPhrase")
     private @Nullable String reasonPhrase;
 
+    /**
+     * @return The reason phrase of the event response message.
+     * 
+     */
     public Optional<String> reasonPhrase() {
         return Optional.ofNullable(this.reasonPhrase);
     }
@@ -59,6 +71,10 @@ public final class EventResponseMessageResponse extends com.pulumi.resources.Inv
     @Import(name="statusCode")
     private @Nullable String statusCode;
 
+    /**
+     * @return The status code of the event response message.
+     * 
+     */
     public Optional<String> statusCode() {
         return Optional.ofNullable(this.statusCode);
     }
@@ -70,6 +86,10 @@ public final class EventResponseMessageResponse extends com.pulumi.resources.Inv
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return The HTTP message version.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -102,26 +122,56 @@ public final class EventResponseMessageResponse extends com.pulumi.resources.Inv
             $ = new EventResponseMessageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The content of the event response message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param headers The headers of the event response message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Map<String,String> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param reasonPhrase The reason phrase of the event response message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reasonPhrase(@Nullable String reasonPhrase) {
             $.reasonPhrase = reasonPhrase;
             return this;
         }
 
+        /**
+         * @param statusCode The status code of the event response message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(@Nullable String statusCode) {
             $.statusCode = statusCode;
             return this;
         }
 
+        /**
+         * @param version The HTTP message version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

@@ -26,6 +26,10 @@ public final class ClientAccessRightArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accessPermission", required=true)
     private Output<Either<String,ClientPermissionType>> accessPermission;
 
+    /**
+     * @return Type of access to be allowed for the client.
+     * 
+     */
     public Output<Either<String,ClientPermissionType>> accessPermission() {
         return this.accessPermission;
     }
@@ -37,6 +41,10 @@ public final class ClientAccessRightArgs extends com.pulumi.resources.ResourceAr
     @Import(name="client", required=true)
     private Output<String> client;
 
+    /**
+     * @return IP of the client.
+     * 
+     */
     public Output<String> client() {
         return this.client;
     }
@@ -66,28 +74,64 @@ public final class ClientAccessRightArgs extends com.pulumi.resources.ResourceAr
             $ = new ClientAccessRightArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPermission Type of access to be allowed for the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPermission(Output<Either<String,ClientPermissionType>> accessPermission) {
             $.accessPermission = accessPermission;
             return this;
         }
 
+        /**
+         * @param accessPermission Type of access to be allowed for the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPermission(Either<String,ClientPermissionType> accessPermission) {
             return accessPermission(Output.of(accessPermission));
         }
 
+        /**
+         * @param accessPermission Type of access to be allowed for the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPermission(String accessPermission) {
             return accessPermission(Either.ofLeft(accessPermission));
         }
 
+        /**
+         * @param accessPermission Type of access to be allowed for the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPermission(ClientPermissionType accessPermission) {
             return accessPermission(Either.ofRight(accessPermission));
         }
 
+        /**
+         * @param client IP of the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder client(Output<String> client) {
             $.client = client;
             return this;
         }
 
+        /**
+         * @param client IP of the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder client(String client) {
             return client(Output.of(client));
         }

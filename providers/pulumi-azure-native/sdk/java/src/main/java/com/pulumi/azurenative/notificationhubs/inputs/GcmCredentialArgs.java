@@ -26,6 +26,10 @@ public final class GcmCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gcmEndpoint")
     private @Nullable Output<String> gcmEndpoint;
 
+    /**
+     * @return The FCM legacy endpoint. Default value is &#39;https://fcm.googleapis.com/fcm/send&#39;
+     * 
+     */
     public Optional<Output<String>> gcmEndpoint() {
         return Optional.ofNullable(this.gcmEndpoint);
     }
@@ -37,6 +41,10 @@ public final class GcmCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="googleApiKey")
     private @Nullable Output<String> googleApiKey;
 
+    /**
+     * @return The Google API key.
+     * 
+     */
     public Optional<Output<String>> googleApiKey() {
         return Optional.ofNullable(this.googleApiKey);
     }
@@ -66,20 +74,44 @@ public final class GcmCredentialArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GcmCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gcmEndpoint The FCM legacy endpoint. Default value is &#39;https://fcm.googleapis.com/fcm/send&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcmEndpoint(@Nullable Output<String> gcmEndpoint) {
             $.gcmEndpoint = gcmEndpoint;
             return this;
         }
 
+        /**
+         * @param gcmEndpoint The FCM legacy endpoint. Default value is &#39;https://fcm.googleapis.com/fcm/send&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcmEndpoint(String gcmEndpoint) {
             return gcmEndpoint(Output.of(gcmEndpoint));
         }
 
+        /**
+         * @param googleApiKey The Google API key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleApiKey(@Nullable Output<String> googleApiKey) {
             $.googleApiKey = googleApiKey;
             return this;
         }
 
+        /**
+         * @param googleApiKey The Google API key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleApiKey(String googleApiKey) {
             return googleApiKey(Output.of(googleApiKey));
         }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PeeringConnectionOptionsAccepter {
     /**
-     * Allow a local linked EC2-Classic instance to communicate
+     * @return Allow a local linked EC2-Classic instance to communicate
      * with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
      * to the remote VPC. This option is not supported for inter-region VPC peering.
      * 
      */
     private final @Nullable Boolean allowClassicLinkToRemoteVpc;
     /**
-     * Allow a local VPC to resolve public DNS hostnames to
+     * @return Allow a local VPC to resolve public DNS hostnames to
      * private IP addresses when queried from instances in the peer VPC.
      * 
      */
     private final @Nullable Boolean allowRemoteVpcDnsResolution;
     /**
-     * Allow a local VPC to communicate with a linked EC2-Classic
+     * @return Allow a local VPC to communicate with a linked EC2-Classic
      * instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
      * connection. This option is not supported for inter-region VPC peering.
      * 
@@ -43,28 +43,28 @@ public final class PeeringConnectionOptionsAccepter {
     }
 
     /**
-     * Allow a local linked EC2-Classic instance to communicate
+     * @return Allow a local linked EC2-Classic instance to communicate
      * with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
      * to the remote VPC. This option is not supported for inter-region VPC peering.
      * 
-    */
+     */
     public Optional<Boolean> allowClassicLinkToRemoteVpc() {
         return Optional.ofNullable(this.allowClassicLinkToRemoteVpc);
     }
     /**
-     * Allow a local VPC to resolve public DNS hostnames to
+     * @return Allow a local VPC to resolve public DNS hostnames to
      * private IP addresses when queried from instances in the peer VPC.
      * 
-    */
+     */
     public Optional<Boolean> allowRemoteVpcDnsResolution() {
         return Optional.ofNullable(this.allowRemoteVpcDnsResolution);
     }
     /**
-     * Allow a local VPC to communicate with a linked EC2-Classic
+     * @return Allow a local VPC to communicate with a linked EC2-Classic
      * instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
      * connection. This option is not supported for inter-region VPC peering.
      * 
-    */
+     */
     public Optional<Boolean> allowVpcToRemoteClassicLink() {
         return Optional.ofNullable(this.allowVpcToRemoteClassicLink);
     }

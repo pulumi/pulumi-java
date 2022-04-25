@@ -28,6 +28,10 @@ public final class SystemDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
     private @Nullable Output<String> createdAt;
 
+    /**
+     * @return The timestamp of resource creation (UTC)
+     * 
+     */
     public Optional<Output<String>> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -39,6 +43,10 @@ public final class SystemDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
     private @Nullable Output<String> createdBy;
 
+    /**
+     * @return An identifier for the identity that created the resource
+     * 
+     */
     public Optional<Output<String>> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
@@ -50,6 +58,10 @@ public final class SystemDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdByType")
     private @Nullable Output<Either<String,IdentityType>> createdByType;
 
+    /**
+     * @return The type of identity that created the resource
+     * 
+     */
     public Optional<Output<Either<String,IdentityType>>> createdByType() {
         return Optional.ofNullable(this.createdByType);
     }
@@ -61,6 +73,10 @@ public final class SystemDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedAt")
     private @Nullable Output<String> lastModifiedAt;
 
+    /**
+     * @return The timestamp of resource last modification (UTC)
+     * 
+     */
     public Optional<Output<String>> lastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
@@ -72,6 +88,10 @@ public final class SystemDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedBy")
     private @Nullable Output<String> lastModifiedBy;
 
+    /**
+     * @return An identifier for the identity that last modified the resource
+     * 
+     */
     public Optional<Output<String>> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
@@ -83,6 +103,10 @@ public final class SystemDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedByType")
     private @Nullable Output<Either<String,IdentityType>> lastModifiedByType;
 
+    /**
+     * @return The type of identity that last modified the resource
+     * 
+     */
     public Optional<Output<Either<String,IdentityType>>> lastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
@@ -116,72 +140,168 @@ public final class SystemDataArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SystemDataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdAt The timestamp of resource creation (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(@Nullable Output<String> createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param createdAt The timestamp of resource creation (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(String createdAt) {
             return createdAt(Output.of(createdAt));
         }
 
+        /**
+         * @param createdBy An identifier for the identity that created the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(@Nullable Output<String> createdBy) {
             $.createdBy = createdBy;
             return this;
         }
 
+        /**
+         * @param createdBy An identifier for the identity that created the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(String createdBy) {
             return createdBy(Output.of(createdBy));
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(@Nullable Output<Either<String,IdentityType>> createdByType) {
             $.createdByType = createdByType;
             return this;
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(Either<String,IdentityType> createdByType) {
             return createdByType(Output.of(createdByType));
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(String createdByType) {
             return createdByType(Either.ofLeft(createdByType));
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(IdentityType createdByType) {
             return createdByType(Either.ofRight(createdByType));
         }
 
+        /**
+         * @param lastModifiedAt The timestamp of resource last modification (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             $.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
+        /**
+         * @param lastModifiedAt The timestamp of resource last modification (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedAt(String lastModifiedAt) {
             return lastModifiedAt(Output.of(lastModifiedAt));
         }
 
+        /**
+         * @param lastModifiedBy An identifier for the identity that last modified the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
             $.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
+        /**
+         * @param lastModifiedBy An identifier for the identity that last modified the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedBy(String lastModifiedBy) {
             return lastModifiedBy(Output.of(lastModifiedBy));
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(@Nullable Output<Either<String,IdentityType>> lastModifiedByType) {
             $.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(Either<String,IdentityType> lastModifiedByType) {
             return lastModifiedByType(Output.of(lastModifiedByType));
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(String lastModifiedByType) {
             return lastModifiedByType(Either.ofLeft(lastModifiedByType));
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(IdentityType lastModifiedByType) {
             return lastModifiedByType(Either.ofRight(lastModifiedByType));
         }

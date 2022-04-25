@@ -19,6 +19,10 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="globalNetworkId", required=true)
     private String globalNetworkId;
 
+    /**
+     * @return The ID of the global network.
+     * 
+     */
     public String globalNetworkId() {
         return this.globalNetworkId;
     }
@@ -30,6 +34,10 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkId", required=true)
     private String linkId;
 
+    /**
+     * @return The ID of the link.
+     * 
+     */
     public String linkId() {
         return this.linkId;
     }
@@ -59,11 +67,23 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNetworkId(String globalNetworkId) {
             $.globalNetworkId = globalNetworkId;
             return this;
         }
 
+        /**
+         * @param linkId The ID of the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkId(String linkId) {
             $.linkId = linkId;
             return this;

@@ -24,6 +24,10 @@ public final class Gen2StorageConfigurationInputArgs extends com.pulumi.resource
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the storage account that will hold the environment&#39;s Gen2 data.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -35,6 +39,10 @@ public final class Gen2StorageConfigurationInputArgs extends com.pulumi.resource
     @Import(name="managementKey", required=true)
     private Output<String> managementKey;
 
+    /**
+     * @return The value of the management key that grants the Time Series Insights service write access to the storage account. This property is not shown in environment responses.
+     * 
+     */
     public Output<String> managementKey() {
         return this.managementKey;
     }
@@ -64,20 +72,44 @@ public final class Gen2StorageConfigurationInputArgs extends com.pulumi.resource
             $ = new Gen2StorageConfigurationInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account that will hold the environment&#39;s Gen2 data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the storage account that will hold the environment&#39;s Gen2 data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param managementKey The value of the management key that grants the Time Series Insights service write access to the storage account. This property is not shown in environment responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementKey(Output<String> managementKey) {
             $.managementKey = managementKey;
             return this;
         }
 
+        /**
+         * @param managementKey The value of the management key that grants the Time Series Insights service write access to the storage account. This property is not shown in environment responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementKey(String managementKey) {
             return managementKey(Output.of(managementKey));
         }

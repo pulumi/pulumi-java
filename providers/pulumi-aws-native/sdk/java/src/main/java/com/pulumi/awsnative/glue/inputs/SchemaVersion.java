@@ -26,6 +26,10 @@ public final class SchemaVersion extends com.pulumi.resources.InvokeArgs {
     @Import(name="isLatest")
     private @Nullable Boolean isLatest;
 
+    /**
+     * @return Indicates if the latest version needs to be updated.
+     * 
+     */
     public Optional<Boolean> isLatest() {
         return Optional.ofNullable(this.isLatest);
     }
@@ -37,6 +41,10 @@ public final class SchemaVersion extends com.pulumi.resources.InvokeArgs {
     @Import(name="versionNumber")
     private @Nullable Integer versionNumber;
 
+    /**
+     * @return Indicates the version number in the schema to update.
+     * 
+     */
     public Optional<Integer> versionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }
@@ -66,11 +74,23 @@ public final class SchemaVersion extends com.pulumi.resources.InvokeArgs {
             $ = new SchemaVersion(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isLatest Indicates if the latest version needs to be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLatest(@Nullable Boolean isLatest) {
             $.isLatest = isLatest;
             return this;
         }
 
+        /**
+         * @param versionNumber Indicates the version number in the schema to update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionNumber(@Nullable Integer versionNumber) {
             $.versionNumber = versionNumber;
             return this;

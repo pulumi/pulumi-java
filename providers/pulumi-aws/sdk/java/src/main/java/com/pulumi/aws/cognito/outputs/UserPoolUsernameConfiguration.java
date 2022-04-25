@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class UserPoolUsernameConfiguration {
     /**
-     * Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
+     * @return Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
      * 
      */
     private final Boolean caseSensitive;
@@ -21,9 +21,9 @@ public final class UserPoolUsernameConfiguration {
     }
 
     /**
-     * Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
+     * @return Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
      * 
-    */
+     */
     public Boolean caseSensitive() {
         return this.caseSensitive;
     }

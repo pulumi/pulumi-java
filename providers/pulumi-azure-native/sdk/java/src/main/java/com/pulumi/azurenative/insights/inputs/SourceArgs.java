@@ -29,6 +29,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizedResources")
     private @Nullable Output<List<String>> authorizedResources;
 
+    /**
+     * @return List of  Resource referred into query
+     * 
+     */
     public Optional<Output<List<String>>> authorizedResources() {
         return Optional.ofNullable(this.authorizedResources);
     }
@@ -40,6 +44,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSourceId", required=true)
     private Output<String> dataSourceId;
 
+    /**
+     * @return The resource uri over which log search query is to be run.
+     * 
+     */
     public Output<String> dataSourceId() {
         return this.dataSourceId;
     }
@@ -51,6 +59,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="query")
     private @Nullable Output<String> query;
 
+    /**
+     * @return Log search query. Required for action type - AlertingAction
+     * 
+     */
     public Optional<Output<String>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -62,6 +74,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryType")
     private @Nullable Output<Either<String,QueryType>> queryType;
 
+    /**
+     * @return Set value to &#39;ResultCount&#39; .
+     * 
+     */
     public Optional<Output<Either<String,QueryType>>> queryType() {
         return Optional.ofNullable(this.queryType);
     }
@@ -93,50 +109,116 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizedResources List of  Resource referred into query
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedResources(@Nullable Output<List<String>> authorizedResources) {
             $.authorizedResources = authorizedResources;
             return this;
         }
 
+        /**
+         * @param authorizedResources List of  Resource referred into query
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedResources(List<String> authorizedResources) {
             return authorizedResources(Output.of(authorizedResources));
         }
 
+        /**
+         * @param authorizedResources List of  Resource referred into query
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedResources(String... authorizedResources) {
             return authorizedResources(List.of(authorizedResources));
         }
 
+        /**
+         * @param dataSourceId The resource uri over which log search query is to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceId(Output<String> dataSourceId) {
             $.dataSourceId = dataSourceId;
             return this;
         }
 
+        /**
+         * @param dataSourceId The resource uri over which log search query is to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceId(String dataSourceId) {
             return dataSourceId(Output.of(dataSourceId));
         }
 
+        /**
+         * @param query Log search query. Required for action type - AlertingAction
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query Log search query. Required for action type - AlertingAction
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param queryType Set value to &#39;ResultCount&#39; .
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryType(@Nullable Output<Either<String,QueryType>> queryType) {
             $.queryType = queryType;
             return this;
         }
 
+        /**
+         * @param queryType Set value to &#39;ResultCount&#39; .
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryType(Either<String,QueryType> queryType) {
             return queryType(Output.of(queryType));
         }
 
+        /**
+         * @param queryType Set value to &#39;ResultCount&#39; .
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryType(String queryType) {
             return queryType(Either.ofLeft(queryType));
         }
 
+        /**
+         * @param queryType Set value to &#39;ResultCount&#39; .
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryType(QueryType queryType) {
             return queryType(Either.ofRight(queryType));
         }

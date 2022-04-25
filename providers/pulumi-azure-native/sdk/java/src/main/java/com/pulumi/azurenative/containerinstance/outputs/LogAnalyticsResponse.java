@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LogAnalyticsResponse {
     /**
-     * The log type to be used.
+     * @return The log type to be used.
      * 
      */
     private final @Nullable String logType;
     /**
-     * Metadata for log analytics.
+     * @return Metadata for log analytics.
      * 
      */
     private final @Nullable Map<String,String> metadata;
     /**
-     * The workspace id for log analytics
+     * @return The workspace id for log analytics
      * 
      */
     private final String workspaceId;
     /**
-     * The workspace key for log analytics
+     * @return The workspace key for log analytics
      * 
      */
     private final String workspaceKey;
     /**
-     * The workspace resource id for log analytics
+     * @return The workspace resource id for log analytics
      * 
      */
     private final @Nullable Map<String,String> workspaceResourceId;
@@ -53,37 +53,37 @@ public final class LogAnalyticsResponse {
     }
 
     /**
-     * The log type to be used.
+     * @return The log type to be used.
      * 
-    */
+     */
     public Optional<String> logType() {
         return Optional.ofNullable(this.logType);
     }
     /**
-     * Metadata for log analytics.
+     * @return Metadata for log analytics.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
-     * The workspace id for log analytics
+     * @return The workspace id for log analytics
      * 
-    */
+     */
     public String workspaceId() {
         return this.workspaceId;
     }
     /**
-     * The workspace key for log analytics
+     * @return The workspace key for log analytics
      * 
-    */
+     */
     public String workspaceKey() {
         return this.workspaceKey;
     }
     /**
-     * The workspace resource id for log analytics
+     * @return The workspace resource id for log analytics
      * 
-    */
+     */
     public Map<String,String> workspaceResourceId() {
         return this.workspaceResourceId == null ? Map.of() : this.workspaceResourceId;
     }

@@ -28,6 +28,10 @@ public final class ContainerRegistryResponse extends com.pulumi.resources.Invoke
     @Import(name="registryServer")
     private @Nullable String registryServer;
 
+    /**
+     * @return If omitted, the default is &#34;docker.io&#34;.
+     * 
+     */
     public Optional<String> registryServer() {
         return Optional.ofNullable(this.registryServer);
     }
@@ -70,6 +74,12 @@ public final class ContainerRegistryResponse extends com.pulumi.resources.Invoke
             return this;
         }
 
+        /**
+         * @param registryServer If omitted, the default is &#34;docker.io&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryServer(@Nullable String registryServer) {
             $.registryServer = registryServer;
             return this;

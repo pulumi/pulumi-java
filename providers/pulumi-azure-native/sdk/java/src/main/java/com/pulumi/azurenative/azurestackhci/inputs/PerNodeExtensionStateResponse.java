@@ -23,6 +23,10 @@ public final class PerNodeExtensionStateResponse extends com.pulumi.resources.In
     @Import(name="extension", required=true)
     private String extension;
 
+    /**
+     * @return Fully qualified resource ID for the particular Arc Extension on this node.
+     * 
+     */
     public String extension() {
         return this.extension;
     }
@@ -34,6 +38,10 @@ public final class PerNodeExtensionStateResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the node in HCI Cluster.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class PerNodeExtensionStateResponse extends com.pulumi.resources.In
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return State of Arc Extension in this node.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -75,16 +87,34 @@ public final class PerNodeExtensionStateResponse extends com.pulumi.resources.In
             $ = new PerNodeExtensionStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extension Fully qualified resource ID for the particular Arc Extension on this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extension(String extension) {
             $.extension = extension;
             return this;
         }
 
+        /**
+         * @param name Name of the node in HCI Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param state State of Arc Extension in this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

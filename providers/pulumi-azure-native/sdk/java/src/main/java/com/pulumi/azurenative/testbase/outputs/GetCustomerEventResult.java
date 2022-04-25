@@ -13,32 +13,32 @@ import java.util.Objects;
 @CustomType
 public final class GetCustomerEventResult {
     /**
-     * The name of the event subscribed to.
+     * @return The name of the event subscribed to.
      * 
      */
     private final String eventName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The notification event receivers.
+     * @return The notification event receivers.
      * 
      */
     private final List<NotificationEventReceiverResponse> receivers;
     /**
-     * The system metadata relating to this resource
+     * @return The system metadata relating to this resource
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -60,44 +60,44 @@ public final class GetCustomerEventResult {
     }
 
     /**
-     * The name of the event subscribed to.
+     * @return The name of the event subscribed to.
      * 
-    */
+     */
     public String eventName() {
         return this.eventName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The notification event receivers.
+     * @return The notification event receivers.
      * 
-    */
+     */
     public List<NotificationEventReceiverResponse> receivers() {
         return this.receivers;
     }
     /**
-     * The system metadata relating to this resource
+     * @return The system metadata relating to this resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

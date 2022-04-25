@@ -20,6 +20,10 @@ public final class QuickConnectQuickConnectConfigQueueConfigGetArgs extends com.
     @Import(name="contactFlowId", required=true)
     private Output<String> contactFlowId;
 
+    /**
+     * @return Specifies the identifier of the contact flow.
+     * 
+     */
     public Output<String> contactFlowId() {
         return this.contactFlowId;
     }
@@ -31,6 +35,10 @@ public final class QuickConnectQuickConnectConfigQueueConfigGetArgs extends com.
     @Import(name="queueId", required=true)
     private Output<String> queueId;
 
+    /**
+     * @return Specifies the identifier for the queue.
+     * 
+     */
     public Output<String> queueId() {
         return this.queueId;
     }
@@ -60,20 +68,44 @@ public final class QuickConnectQuickConnectConfigQueueConfigGetArgs extends com.
             $ = new QuickConnectQuickConnectConfigQueueConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactFlowId Specifies the identifier of the contact flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactFlowId(Output<String> contactFlowId) {
             $.contactFlowId = contactFlowId;
             return this;
         }
 
+        /**
+         * @param contactFlowId Specifies the identifier of the contact flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactFlowId(String contactFlowId) {
             return contactFlowId(Output.of(contactFlowId));
         }
 
+        /**
+         * @param queueId Specifies the identifier for the queue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueId(Output<String> queueId) {
             $.queueId = queueId;
             return this;
         }
 
+        /**
+         * @param queueId Specifies the identifier for the queue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueId(String queueId) {
             return queueId(Output.of(queueId));
         }

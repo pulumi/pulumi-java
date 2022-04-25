@@ -19,6 +19,10 @@ public final class GetQuickConnectQuickConnectConfigPhoneConfig extends com.pulu
     @Import(name="phoneNumber", required=true)
     private String phoneNumber;
 
+    /**
+     * @return Specifies the phone number in in E.164 format.
+     * 
+     */
     public String phoneNumber() {
         return this.phoneNumber;
     }
@@ -47,6 +51,12 @@ public final class GetQuickConnectQuickConnectConfigPhoneConfig extends com.pulu
             $ = new GetQuickConnectQuickConnectConfigPhoneConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param phoneNumber Specifies the phone number in in E.164 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(String phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;

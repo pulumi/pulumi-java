@@ -24,6 +24,10 @@ public final class GatewayDestinationArgs extends com.pulumi.resources.ResourceA
     @Import(name="applicationName", required=true)
     private Output<String> applicationName;
 
+    /**
+     * @return Name of the service fabric Mesh application.
+     * 
+     */
     public Output<String> applicationName() {
         return this.applicationName;
     }
@@ -35,6 +39,10 @@ public final class GatewayDestinationArgs extends com.pulumi.resources.ResourceA
     @Import(name="endpointName", required=true)
     private Output<String> endpointName;
 
+    /**
+     * @return name of the endpoint in the service.
+     * 
+     */
     public Output<String> endpointName() {
         return this.endpointName;
     }
@@ -46,6 +54,10 @@ public final class GatewayDestinationArgs extends com.pulumi.resources.ResourceA
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return service that contains the endpoint.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -76,29 +88,65 @@ public final class GatewayDestinationArgs extends com.pulumi.resources.ResourceA
             $ = new GatewayDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationName Name of the service fabric Mesh application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(Output<String> applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param applicationName Name of the service fabric Mesh application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(String applicationName) {
             return applicationName(Output.of(applicationName));
         }
 
+        /**
+         * @param endpointName name of the endpoint in the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(Output<String> endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param endpointName name of the endpoint in the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             return endpointName(Output.of(endpointName));
         }
 
+        /**
+         * @param serviceName service that contains the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName service that contains the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

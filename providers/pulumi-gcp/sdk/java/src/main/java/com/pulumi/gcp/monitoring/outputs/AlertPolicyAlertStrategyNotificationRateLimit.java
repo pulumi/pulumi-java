@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AlertPolicyAlertStrategyNotificationRateLimit {
     /**
-     * Not more than one notification per period.
+     * @return Not more than one notification per period.
      * 
      */
     private final @Nullable String period;
@@ -23,9 +23,9 @@ public final class AlertPolicyAlertStrategyNotificationRateLimit {
     }
 
     /**
-     * Not more than one notification per period.
+     * @return Not more than one notification per period.
      * 
-    */
+     */
     public Optional<String> period() {
         return Optional.ofNullable(this.period);
     }

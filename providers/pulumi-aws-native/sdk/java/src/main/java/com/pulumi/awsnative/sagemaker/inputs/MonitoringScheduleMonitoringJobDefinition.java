@@ -41,6 +41,10 @@ public final class MonitoringScheduleMonitoringJobDefinition extends com.pulumi.
     @Import(name="environment")
     private @Nullable Object environment;
 
+    /**
+     * @return Sets the environment variables in the Docker container
+     * 
+     */
     public Optional<Object> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -87,6 +91,10 @@ public final class MonitoringScheduleMonitoringJobDefinition extends com.pulumi.
     @Import(name="roleArn", required=true)
     private String roleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
+     * 
+     */
     public String roleArn() {
         return this.roleArn;
     }
@@ -135,6 +143,12 @@ public final class MonitoringScheduleMonitoringJobDefinition extends com.pulumi.
             return this;
         }
 
+        /**
+         * @param environment Sets the environment variables in the Docker container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Object environment) {
             $.environment = environment;
             return this;
@@ -169,6 +183,12 @@ public final class MonitoringScheduleMonitoringJobDefinition extends com.pulumi.
             return this;
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             $.roleArn = roleArn;
             return this;

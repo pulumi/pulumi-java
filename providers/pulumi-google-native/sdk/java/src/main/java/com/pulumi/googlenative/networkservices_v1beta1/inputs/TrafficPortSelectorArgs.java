@@ -27,6 +27,10 @@ public final class TrafficPortSelectorArgs extends com.pulumi.resources.Resource
     @Import(name="ports")
     private @Nullable Output<List<String>> ports;
 
+    /**
+     * @return Optional. A list of ports. Can be port numbers or port range (example, [80-90] specifies all ports from 80 to 90, including 80 and 90) or named ports or * to specify all ports. If the list is empty, all ports are selected.
+     * 
+     */
     public Optional<Output<List<String>>> ports() {
         return Optional.ofNullable(this.ports);
     }
@@ -55,15 +59,33 @@ public final class TrafficPortSelectorArgs extends com.pulumi.resources.Resource
             $ = new TrafficPortSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ports Optional. A list of ports. Can be port numbers or port range (example, [80-90] specifies all ports from 80 to 90, including 80 and 90) or named ports or * to specify all ports. If the list is empty, all ports are selected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(@Nullable Output<List<String>> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports Optional. A list of ports. Can be port numbers or port range (example, [80-90] specifies all ports from 80 to 90, including 80 and 90) or named ports or * to specify all ports. If the list is empty, all ports are selected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<String> ports) {
             return ports(Output.of(ports));
         }
 
+        /**
+         * @param ports Optional. A list of ports. Can be port numbers or port range (example, [80-90] specifies all ports from 80 to 90, including 80 and 90) or named ports or * to specify all ports. If the list is empty, all ports are selected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(String... ports) {
             return ports(List.of(ports));
         }

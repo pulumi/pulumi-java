@@ -25,6 +25,10 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="agentArns", required=true)
     private Output<List<String>> agentArns;
 
+    /**
+     * @return The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB) location.
+     * 
+     */
     public Output<List<String>> agentArns() {
         return this.agentArns;
     }
@@ -36,6 +40,10 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain")
     private @Nullable Output<String> domain;
 
+    /**
+     * @return The name of the Windows domain that the SMB server belongs to.
+     * 
+     */
     public Optional<Output<String>> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -54,6 +62,10 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return The password of the user who can mount the share and has the permissions to access files and folders in the SMB share.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -65,6 +77,10 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverHostname", required=true)
     private Output<String> serverHostname;
 
+    /**
+     * @return The name of the SMB server. This value is the IP address or Domain Name Service (DNS) name of the SMB server.
+     * 
+     */
     public Output<String> serverHostname() {
         return this.serverHostname;
     }
@@ -76,6 +92,10 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory", required=true)
     private Output<String> subdirectory;
 
+    /**
+     * @return The subdirectory in the SMB file system that is used to read data from the SMB source location or write data to the SMB destination
+     * 
+     */
     public Output<String> subdirectory() {
         return this.subdirectory;
     }
@@ -87,6 +107,10 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<LocationSMBTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<LocationSMBTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -98,6 +122,10 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="user", required=true)
     private Output<String> user;
 
+    /**
+     * @return The user who can mount the share, has the permissions to access files and folders in the SMB share.
+     * 
+     */
     public Output<String> user() {
         return this.user;
     }
@@ -133,24 +161,54 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LocationSMBArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentArns The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB) location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(Output<List<String>> agentArns) {
             $.agentArns = agentArns;
             return this;
         }
 
+        /**
+         * @param agentArns The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB) location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(List<String> agentArns) {
             return agentArns(Output.of(agentArns));
         }
 
+        /**
+         * @param agentArns The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB) location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(String... agentArns) {
             return agentArns(List.of(agentArns));
         }
 
+        /**
+         * @param domain The name of the Windows domain that the SMB server belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain The name of the Windows domain that the SMB server belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
@@ -164,51 +222,117 @@ public final class LocationSMBArgs extends com.pulumi.resources.ResourceArgs {
             return mountOptions(Output.of(mountOptions));
         }
 
+        /**
+         * @param password The password of the user who can mount the share and has the permissions to access files and folders in the SMB share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password of the user who can mount the share and has the permissions to access files and folders in the SMB share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param serverHostname The name of the SMB server. This value is the IP address or Domain Name Service (DNS) name of the SMB server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverHostname(Output<String> serverHostname) {
             $.serverHostname = serverHostname;
             return this;
         }
 
+        /**
+         * @param serverHostname The name of the SMB server. This value is the IP address or Domain Name Service (DNS) name of the SMB server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverHostname(String serverHostname) {
             return serverHostname(Output.of(serverHostname));
         }
 
+        /**
+         * @param subdirectory The subdirectory in the SMB file system that is used to read data from the SMB source location or write data to the SMB destination
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(Output<String> subdirectory) {
             $.subdirectory = subdirectory;
             return this;
         }
 
+        /**
+         * @param subdirectory The subdirectory in the SMB file system that is used to read data from the SMB source location or write data to the SMB destination
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(String subdirectory) {
             return subdirectory(Output.of(subdirectory));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<LocationSMBTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<LocationSMBTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(LocationSMBTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param user The user who can mount the share, has the permissions to access files and folders in the SMB share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(Output<String> user) {
             $.user = user;
             return this;
         }
 
+        /**
+         * @param user The user who can mount the share, has the permissions to access files and folders in the SMB share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(String user) {
             return user(Output.of(user));
         }

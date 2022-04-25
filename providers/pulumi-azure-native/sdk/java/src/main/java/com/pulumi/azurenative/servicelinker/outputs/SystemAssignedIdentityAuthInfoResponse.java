@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class SystemAssignedIdentityAuthInfoResponse {
     /**
-     * The authentication type.
+     * @return The authentication type.
      * Expected value is &#39;systemAssignedIdentity&#39;.
      * 
      */
@@ -22,10 +22,10 @@ public final class SystemAssignedIdentityAuthInfoResponse {
     }
 
     /**
-     * The authentication type.
+     * @return The authentication type.
      * Expected value is &#39;systemAssignedIdentity&#39;.
      * 
-    */
+     */
     public String authType() {
         return this.authType;
     }

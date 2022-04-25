@@ -29,6 +29,10 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="componentSeparator", required=true)
     private Output<Integer> componentSeparator;
 
+    /**
+     * @return The component separator.
+     * 
+     */
     public Output<Integer> componentSeparator() {
         return this.componentSeparator;
     }
@@ -40,6 +44,10 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="dataElementSeparator", required=true)
     private Output<Integer> dataElementSeparator;
 
+    /**
+     * @return The data element separator.
+     * 
+     */
     public Output<Integer> dataElementSeparator() {
         return this.dataElementSeparator;
     }
@@ -51,6 +59,10 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="decimalPointIndicator", required=true)
     private Output<EdifactDecimalIndicator> decimalPointIndicator;
 
+    /**
+     * @return The decimal point indicator.
+     * 
+     */
     public Output<EdifactDecimalIndicator> decimalPointIndicator() {
         return this.decimalPointIndicator;
     }
@@ -62,6 +74,10 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="messageAssociationAssignedCode")
     private @Nullable Output<String> messageAssociationAssignedCode;
 
+    /**
+     * @return The message association assigned code.
+     * 
+     */
     public Optional<Output<String>> messageAssociationAssignedCode() {
         return Optional.ofNullable(this.messageAssociationAssignedCode);
     }
@@ -73,6 +89,10 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="messageId")
     private @Nullable Output<String> messageId;
 
+    /**
+     * @return The message id.
+     * 
+     */
     public Optional<Output<String>> messageId() {
         return Optional.ofNullable(this.messageId);
     }
@@ -84,6 +104,10 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="messageRelease")
     private @Nullable Output<String> messageRelease;
 
+    /**
+     * @return The message release.
+     * 
+     */
     public Optional<Output<String>> messageRelease() {
         return Optional.ofNullable(this.messageRelease);
     }
@@ -95,6 +119,10 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="messageVersion")
     private @Nullable Output<String> messageVersion;
 
+    /**
+     * @return The message version.
+     * 
+     */
     public Optional<Output<String>> messageVersion() {
         return Optional.ofNullable(this.messageVersion);
     }
@@ -106,6 +134,10 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="releaseIndicator", required=true)
     private Output<Integer> releaseIndicator;
 
+    /**
+     * @return The release indicator.
+     * 
+     */
     public Output<Integer> releaseIndicator() {
         return this.releaseIndicator;
     }
@@ -117,6 +149,10 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="repetitionSeparator", required=true)
     private Output<Integer> repetitionSeparator;
 
+    /**
+     * @return The repetition separator.
+     * 
+     */
     public Output<Integer> repetitionSeparator() {
         return this.repetitionSeparator;
     }
@@ -128,6 +164,10 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="segmentTerminator", required=true)
     private Output<Integer> segmentTerminator;
 
+    /**
+     * @return The segment terminator.
+     * 
+     */
     public Output<Integer> segmentTerminator() {
         return this.segmentTerminator;
     }
@@ -139,6 +179,10 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="segmentTerminatorSuffix", required=true)
     private Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
+    /**
+     * @return The segment terminator suffix.
+     * 
+     */
     public Output<SegmentTerminatorSuffix> segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
@@ -150,6 +194,10 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="targetNamespace")
     private @Nullable Output<String> targetNamespace;
 
+    /**
+     * @return The target namespace on which this delimiter settings has to be applied.
+     * 
+     */
     public Optional<Output<String>> targetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }
@@ -189,110 +237,254 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
             $ = new EdifactDelimiterOverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentSeparator The component separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSeparator(Output<Integer> componentSeparator) {
             $.componentSeparator = componentSeparator;
             return this;
         }
 
+        /**
+         * @param componentSeparator The component separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSeparator(Integer componentSeparator) {
             return componentSeparator(Output.of(componentSeparator));
         }
 
+        /**
+         * @param dataElementSeparator The data element separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataElementSeparator(Output<Integer> dataElementSeparator) {
             $.dataElementSeparator = dataElementSeparator;
             return this;
         }
 
+        /**
+         * @param dataElementSeparator The data element separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataElementSeparator(Integer dataElementSeparator) {
             return dataElementSeparator(Output.of(dataElementSeparator));
         }
 
+        /**
+         * @param decimalPointIndicator The decimal point indicator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder decimalPointIndicator(Output<EdifactDecimalIndicator> decimalPointIndicator) {
             $.decimalPointIndicator = decimalPointIndicator;
             return this;
         }
 
+        /**
+         * @param decimalPointIndicator The decimal point indicator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder decimalPointIndicator(EdifactDecimalIndicator decimalPointIndicator) {
             return decimalPointIndicator(Output.of(decimalPointIndicator));
         }
 
+        /**
+         * @param messageAssociationAssignedCode The message association assigned code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageAssociationAssignedCode(@Nullable Output<String> messageAssociationAssignedCode) {
             $.messageAssociationAssignedCode = messageAssociationAssignedCode;
             return this;
         }
 
+        /**
+         * @param messageAssociationAssignedCode The message association assigned code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageAssociationAssignedCode(String messageAssociationAssignedCode) {
             return messageAssociationAssignedCode(Output.of(messageAssociationAssignedCode));
         }
 
+        /**
+         * @param messageId The message id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(@Nullable Output<String> messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param messageId The message id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(String messageId) {
             return messageId(Output.of(messageId));
         }
 
+        /**
+         * @param messageRelease The message release.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRelease(@Nullable Output<String> messageRelease) {
             $.messageRelease = messageRelease;
             return this;
         }
 
+        /**
+         * @param messageRelease The message release.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRelease(String messageRelease) {
             return messageRelease(Output.of(messageRelease));
         }
 
+        /**
+         * @param messageVersion The message version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageVersion(@Nullable Output<String> messageVersion) {
             $.messageVersion = messageVersion;
             return this;
         }
 
+        /**
+         * @param messageVersion The message version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageVersion(String messageVersion) {
             return messageVersion(Output.of(messageVersion));
         }
 
+        /**
+         * @param releaseIndicator The release indicator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseIndicator(Output<Integer> releaseIndicator) {
             $.releaseIndicator = releaseIndicator;
             return this;
         }
 
+        /**
+         * @param releaseIndicator The release indicator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseIndicator(Integer releaseIndicator) {
             return releaseIndicator(Output.of(releaseIndicator));
         }
 
+        /**
+         * @param repetitionSeparator The repetition separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repetitionSeparator(Output<Integer> repetitionSeparator) {
             $.repetitionSeparator = repetitionSeparator;
             return this;
         }
 
+        /**
+         * @param repetitionSeparator The repetition separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repetitionSeparator(Integer repetitionSeparator) {
             return repetitionSeparator(Output.of(repetitionSeparator));
         }
 
+        /**
+         * @param segmentTerminator The segment terminator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminator(Output<Integer> segmentTerminator) {
             $.segmentTerminator = segmentTerminator;
             return this;
         }
 
+        /**
+         * @param segmentTerminator The segment terminator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminator(Integer segmentTerminator) {
             return segmentTerminator(Output.of(segmentTerminator));
         }
 
+        /**
+         * @param segmentTerminatorSuffix The segment terminator suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminatorSuffix(Output<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
             $.segmentTerminatorSuffix = segmentTerminatorSuffix;
             return this;
         }
 
+        /**
+         * @param segmentTerminatorSuffix The segment terminator suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
             return segmentTerminatorSuffix(Output.of(segmentTerminatorSuffix));
         }
 
+        /**
+         * @param targetNamespace The target namespace on which this delimiter settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNamespace(@Nullable Output<String> targetNamespace) {
             $.targetNamespace = targetNamespace;
             return this;
         }
 
+        /**
+         * @param targetNamespace The target namespace on which this delimiter settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNamespace(String targetNamespace) {
             return targetNamespace(Output.of(targetNamespace));
         }

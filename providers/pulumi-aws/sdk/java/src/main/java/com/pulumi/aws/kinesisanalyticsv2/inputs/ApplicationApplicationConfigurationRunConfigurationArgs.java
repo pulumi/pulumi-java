@@ -23,6 +23,10 @@ public final class ApplicationApplicationConfigurationRunConfigurationArgs exten
     @Import(name="applicationRestoreConfiguration")
     private @Nullable Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration;
 
+    /**
+     * @return The restore behavior of a restarting application.
+     * 
+     */
     public Optional<Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs>> applicationRestoreConfiguration() {
         return Optional.ofNullable(this.applicationRestoreConfiguration);
     }
@@ -34,6 +38,10 @@ public final class ApplicationApplicationConfigurationRunConfigurationArgs exten
     @Import(name="flinkRunConfiguration")
     private @Nullable Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration;
 
+    /**
+     * @return The starting parameters for a Flink-based Kinesis Data Analytics application.
+     * 
+     */
     public Optional<Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs>> flinkRunConfiguration() {
         return Optional.ofNullable(this.flinkRunConfiguration);
     }
@@ -63,20 +71,44 @@ public final class ApplicationApplicationConfigurationRunConfigurationArgs exten
             $ = new ApplicationApplicationConfigurationRunConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationRestoreConfiguration The restore behavior of a restarting application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationRestoreConfiguration(@Nullable Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration) {
             $.applicationRestoreConfiguration = applicationRestoreConfiguration;
             return this;
         }
 
+        /**
+         * @param applicationRestoreConfiguration The restore behavior of a restarting application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationRestoreConfiguration(ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs applicationRestoreConfiguration) {
             return applicationRestoreConfiguration(Output.of(applicationRestoreConfiguration));
         }
 
+        /**
+         * @param flinkRunConfiguration The starting parameters for a Flink-based Kinesis Data Analytics application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flinkRunConfiguration(@Nullable Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration) {
             $.flinkRunConfiguration = flinkRunConfiguration;
             return this;
         }
 
+        /**
+         * @param flinkRunConfiguration The starting parameters for a Flink-based Kinesis Data Analytics application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flinkRunConfiguration(ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs flinkRunConfiguration) {
             return flinkRunConfiguration(Output.of(flinkRunConfiguration));
         }

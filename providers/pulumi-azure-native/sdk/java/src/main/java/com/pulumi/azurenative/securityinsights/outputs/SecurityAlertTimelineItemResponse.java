@@ -12,53 +12,53 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityAlertTimelineItemResponse {
     /**
-     * The name of the alert type.
+     * @return The name of the alert type.
      * 
      */
     private final String alertType;
     /**
-     * The alert azure resource id.
+     * @return The alert azure resource id.
      * 
      */
     private final String azureResourceId;
     /**
-     * The alert description.
+     * @return The alert description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The alert name.
+     * @return The alert name.
      * 
      */
     private final String displayName;
     /**
-     * The alert end time.
+     * @return The alert end time.
      * 
      */
     private final String endTimeUtc;
     /**
-     * The entity query kind
+     * @return The entity query kind
      * Expected value is &#39;SecurityAlert&#39;.
      * 
      */
     private final String kind;
     /**
-     * The alert product name.
+     * @return The alert product name.
      * 
      */
     private final @Nullable String productName;
     /**
-     * The alert severity.
+     * @return The alert severity.
      * 
      */
     private final String severity;
     /**
-     * The alert start time.
+     * @return The alert start time.
      * 
      */
     private final String startTimeUtc;
     /**
-     * The alert generated time.
+     * @return The alert generated time.
      * 
      */
     private final String timeGenerated;
@@ -88,73 +88,73 @@ public final class SecurityAlertTimelineItemResponse {
     }
 
     /**
-     * The name of the alert type.
+     * @return The name of the alert type.
      * 
-    */
+     */
     public String alertType() {
         return this.alertType;
     }
     /**
-     * The alert azure resource id.
+     * @return The alert azure resource id.
      * 
-    */
+     */
     public String azureResourceId() {
         return this.azureResourceId;
     }
     /**
-     * The alert description.
+     * @return The alert description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The alert name.
+     * @return The alert name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The alert end time.
+     * @return The alert end time.
      * 
-    */
+     */
     public String endTimeUtc() {
         return this.endTimeUtc;
     }
     /**
-     * The entity query kind
+     * @return The entity query kind
      * Expected value is &#39;SecurityAlert&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The alert product name.
+     * @return The alert product name.
      * 
-    */
+     */
     public Optional<String> productName() {
         return Optional.ofNullable(this.productName);
     }
     /**
-     * The alert severity.
+     * @return The alert severity.
      * 
-    */
+     */
     public String severity() {
         return this.severity;
     }
     /**
-     * The alert start time.
+     * @return The alert start time.
      * 
-    */
+     */
     public String startTimeUtc() {
         return this.startTimeUtc;
     }
     /**
-     * The alert generated time.
+     * @return The alert generated time.
      * 
-    */
+     */
     public String timeGenerated() {
         return this.timeGenerated;
     }

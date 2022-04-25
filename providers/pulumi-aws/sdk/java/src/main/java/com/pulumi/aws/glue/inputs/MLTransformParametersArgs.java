@@ -21,6 +21,10 @@ public final class MLTransformParametersArgs extends com.pulumi.resources.Resour
     @Import(name="findMatchesParameters", required=true)
     private Output<MLTransformParametersFindMatchesParametersArgs> findMatchesParameters;
 
+    /**
+     * @return The parameters for the find matches algorithm. see Find Matches Parameters.
+     * 
+     */
     public Output<MLTransformParametersFindMatchesParametersArgs> findMatchesParameters() {
         return this.findMatchesParameters;
     }
@@ -32,6 +36,10 @@ public final class MLTransformParametersArgs extends com.pulumi.resources.Resour
     @Import(name="transformType", required=true)
     private Output<String> transformType;
 
+    /**
+     * @return The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
+     * 
+     */
     public Output<String> transformType() {
         return this.transformType;
     }
@@ -61,20 +69,44 @@ public final class MLTransformParametersArgs extends com.pulumi.resources.Resour
             $ = new MLTransformParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param findMatchesParameters The parameters for the find matches algorithm. see Find Matches Parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findMatchesParameters(Output<MLTransformParametersFindMatchesParametersArgs> findMatchesParameters) {
             $.findMatchesParameters = findMatchesParameters;
             return this;
         }
 
+        /**
+         * @param findMatchesParameters The parameters for the find matches algorithm. see Find Matches Parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findMatchesParameters(MLTransformParametersFindMatchesParametersArgs findMatchesParameters) {
             return findMatchesParameters(Output.of(findMatchesParameters));
         }
 
+        /**
+         * @param transformType The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformType(Output<String> transformType) {
             $.transformType = transformType;
             return this;
         }
 
+        /**
+         * @param transformType The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformType(String transformType) {
             return transformType(Output.of(transformType));
         }

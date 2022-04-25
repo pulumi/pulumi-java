@@ -26,6 +26,10 @@ public final class NWRuleSetIpRulesResponse extends com.pulumi.resources.InvokeA
     @Import(name="action")
     private @Nullable String action;
 
+    /**
+     * @return The IP Filter Action
+     * 
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
@@ -37,6 +41,10 @@ public final class NWRuleSetIpRulesResponse extends com.pulumi.resources.InvokeA
     @Import(name="ipMask")
     private @Nullable String ipMask;
 
+    /**
+     * @return IP Mask
+     * 
+     */
     public Optional<String> ipMask() {
         return Optional.ofNullable(this.ipMask);
     }
@@ -66,11 +74,23 @@ public final class NWRuleSetIpRulesResponse extends com.pulumi.resources.InvokeA
             $ = new NWRuleSetIpRulesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The IP Filter Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param ipMask IP Mask
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipMask(@Nullable String ipMask) {
             $.ipMask = ipMask;
             return this;

@@ -23,6 +23,10 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maximumBackoff", required=true)
     private String maximumBackoff;
 
+    /**
+     * @return The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+     * 
+     */
     public String maximumBackoff() {
         return this.maximumBackoff;
     }
@@ -34,6 +38,10 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minimumBackoff", required=true)
     private String minimumBackoff;
 
+    /**
+     * @return The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+     * 
+     */
     public String minimumBackoff() {
         return this.minimumBackoff;
     }
@@ -63,11 +71,23 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RetryPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maximumBackoff The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumBackoff(String maximumBackoff) {
             $.maximumBackoff = maximumBackoff;
             return this;
         }
 
+        /**
+         * @param minimumBackoff The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumBackoff(String minimumBackoff) {
             $.minimumBackoff = minimumBackoff;
             return this;

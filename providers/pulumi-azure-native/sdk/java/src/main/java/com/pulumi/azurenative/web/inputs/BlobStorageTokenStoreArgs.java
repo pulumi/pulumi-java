@@ -26,6 +26,10 @@ public final class BlobStorageTokenStoreArgs extends com.pulumi.resources.Resour
     @Import(name="sasUrlSettingName")
     private @Nullable Output<String> sasUrlSettingName;
 
+    /**
+     * @return The name of the app setting containing the SAS URL of the blob storage containing the tokens.
+     * 
+     */
     public Optional<Output<String>> sasUrlSettingName() {
         return Optional.ofNullable(this.sasUrlSettingName);
     }
@@ -54,11 +58,23 @@ public final class BlobStorageTokenStoreArgs extends com.pulumi.resources.Resour
             $ = new BlobStorageTokenStoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sasUrlSettingName The name of the app setting containing the SAS URL of the blob storage containing the tokens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUrlSettingName(@Nullable Output<String> sasUrlSettingName) {
             $.sasUrlSettingName = sasUrlSettingName;
             return this;
         }
 
+        /**
+         * @param sasUrlSettingName The name of the app setting containing the SAS URL of the blob storage containing the tokens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUrlSettingName(String sasUrlSettingName) {
             return sasUrlSettingName(Output.of(sasUrlSettingName));
         }

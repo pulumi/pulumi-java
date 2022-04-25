@@ -26,6 +26,10 @@ public final class ManagedNetworkPeeringPolicyResponse extends com.pulumi.resour
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -37,6 +41,10 @@ public final class ManagedNetworkPeeringPolicyResponse extends com.pulumi.resour
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -48,6 +56,10 @@ public final class ManagedNetworkPeeringPolicyResponse extends com.pulumi.resour
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -59,6 +71,10 @@ public final class ManagedNetworkPeeringPolicyResponse extends com.pulumi.resour
     @Import(name="properties")
     private @Nullable ManagedNetworkPeeringPolicyPropertiesResponse properties;
 
+    /**
+     * @return Gets or sets the properties of a Managed Network Policy
+     * 
+     */
     public Optional<ManagedNetworkPeeringPolicyPropertiesResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -70,6 +86,10 @@ public final class ManagedNetworkPeeringPolicyResponse extends com.pulumi.resour
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -102,26 +122,56 @@ public final class ManagedNetworkPeeringPolicyResponse extends com.pulumi.resour
             $ = new ManagedNetworkPeeringPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name The name of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param properties Gets or sets the properties of a Managed Network Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable ManagedNetworkPeeringPolicyPropertiesResponse properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param type The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

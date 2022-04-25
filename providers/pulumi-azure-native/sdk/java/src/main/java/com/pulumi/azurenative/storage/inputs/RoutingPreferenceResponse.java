@@ -26,6 +26,10 @@ public final class RoutingPreferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="publishInternetEndpoints")
     private @Nullable Boolean publishInternetEndpoints;
 
+    /**
+     * @return A boolean flag which indicates whether internet routing storage endpoints are to be published
+     * 
+     */
     public Optional<Boolean> publishInternetEndpoints() {
         return Optional.ofNullable(this.publishInternetEndpoints);
     }
@@ -37,6 +41,10 @@ public final class RoutingPreferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="publishMicrosoftEndpoints")
     private @Nullable Boolean publishMicrosoftEndpoints;
 
+    /**
+     * @return A boolean flag which indicates whether microsoft routing storage endpoints are to be published
+     * 
+     */
     public Optional<Boolean> publishMicrosoftEndpoints() {
         return Optional.ofNullable(this.publishMicrosoftEndpoints);
     }
@@ -48,6 +56,10 @@ public final class RoutingPreferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="routingChoice")
     private @Nullable String routingChoice;
 
+    /**
+     * @return Routing Choice defines the kind of network routing opted by the user.
+     * 
+     */
     public Optional<String> routingChoice() {
         return Optional.ofNullable(this.routingChoice);
     }
@@ -78,16 +90,34 @@ public final class RoutingPreferenceResponse extends com.pulumi.resources.Invoke
             $ = new RoutingPreferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publishInternetEndpoints A boolean flag which indicates whether internet routing storage endpoints are to be published
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishInternetEndpoints(@Nullable Boolean publishInternetEndpoints) {
             $.publishInternetEndpoints = publishInternetEndpoints;
             return this;
         }
 
+        /**
+         * @param publishMicrosoftEndpoints A boolean flag which indicates whether microsoft routing storage endpoints are to be published
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishMicrosoftEndpoints(@Nullable Boolean publishMicrosoftEndpoints) {
             $.publishMicrosoftEndpoints = publishMicrosoftEndpoints;
             return this;
         }
 
+        /**
+         * @param routingChoice Routing Choice defines the kind of network routing opted by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingChoice(@Nullable String routingChoice) {
             $.routingChoice = routingChoice;
             return this;

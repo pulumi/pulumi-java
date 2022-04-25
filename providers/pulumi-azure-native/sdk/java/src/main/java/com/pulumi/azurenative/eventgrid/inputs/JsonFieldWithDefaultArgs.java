@@ -29,6 +29,10 @@ public final class JsonFieldWithDefaultArgs extends com.pulumi.resources.Resourc
     @Import(name="defaultValue")
     private @Nullable Output<String> defaultValue;
 
+    /**
+     * @return The default value to be used for mapping when a SourceField is not provided or if there&#39;s no property with the specified name in the published JSON event payload.
+     * 
+     */
     public Optional<Output<String>> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -40,6 +44,10 @@ public final class JsonFieldWithDefaultArgs extends com.pulumi.resources.Resourc
     @Import(name="sourceField")
     private @Nullable Output<String> sourceField;
 
+    /**
+     * @return Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
+     * 
+     */
     public Optional<Output<String>> sourceField() {
         return Optional.ofNullable(this.sourceField);
     }
@@ -69,20 +77,44 @@ public final class JsonFieldWithDefaultArgs extends com.pulumi.resources.Resourc
             $ = new JsonFieldWithDefaultArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue The default value to be used for mapping when a SourceField is not provided or if there&#39;s no property with the specified name in the published JSON event payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param defaultValue The default value to be used for mapping when a SourceField is not provided or if there&#39;s no property with the specified name in the published JSON event payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(String defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }
 
+        /**
+         * @param sourceField Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceField(@Nullable Output<String> sourceField) {
             $.sourceField = sourceField;
             return this;
         }
 
+        /**
+         * @param sourceField Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceField(String sourceField) {
             return sourceField(Output.of(sourceField));
         }

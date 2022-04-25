@@ -22,6 +22,10 @@ public final class EndpointNetworkInterfaceGetArgs extends com.pulumi.resources.
     @Import(name="networkInterfaceId")
     private @Nullable Output<String> networkInterfaceId;
 
+    /**
+     * @return Identifier of the Elastic Network Interface (ENI).
+     * 
+     */
     public Optional<Output<String>> networkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
@@ -50,11 +54,23 @@ public final class EndpointNetworkInterfaceGetArgs extends com.pulumi.resources.
             $ = new EndpointNetworkInterfaceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkInterfaceId Identifier of the Elastic Network Interface (ENI).
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
+        /**
+         * @param networkInterfaceId Identifier of the Elastic Network Interface (ENI).
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(String networkInterfaceId) {
             return networkInterfaceId(Output.of(networkInterfaceId));
         }

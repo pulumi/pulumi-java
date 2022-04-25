@@ -31,6 +31,10 @@ public final class DatasetFilterValueArgs extends com.pulumi.resources.ResourceA
     @Import(name="valueReference", required=true)
     private Output<String> valueReference;
 
+    /**
+     * @return Variable name
+     * 
+     */
     public Output<String> valueReference() {
         return this.valueReference;
     }
@@ -69,11 +73,23 @@ public final class DatasetFilterValueArgs extends com.pulumi.resources.ResourceA
             return value(Output.of(value));
         }
 
+        /**
+         * @param valueReference Variable name
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueReference(Output<String> valueReference) {
             $.valueReference = valueReference;
             return this;
         }
 
+        /**
+         * @param valueReference Variable name
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueReference(String valueReference) {
             return valueReference(Output.of(valueReference));
         }

@@ -14,45 +14,45 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FlexibleAppVersionHandler {
     /**
-     * Action to take when users access resources that require authentication.
+     * @return Action to take when users access resources that require authentication.
      * Default value is `AUTH_FAIL_ACTION_REDIRECT`.
      * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
      * 
      */
     private final @Nullable String authFailAction;
     /**
-     * Level of login required to access this resource.
+     * @return Level of login required to access this resource.
      * Default value is `LOGIN_OPTIONAL`.
      * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
      * 
      */
     private final @Nullable String login;
     /**
-     * 30x code to use when performing redirects for the secure field.
+     * @return 30x code to use when performing redirects for the secure field.
      * Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
      * 
      */
     private final @Nullable String redirectHttpResponseCode;
     /**
-     * Path to the script from the application root directory.
+     * @return Path to the script from the application root directory.
      * 
      */
     private final @Nullable FlexibleAppVersionHandlerScript script;
     /**
-     * Security (HTTPS) enforcement for this URL.
+     * @return Security (HTTPS) enforcement for this URL.
      * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
      * 
      */
     private final @Nullable String securityLevel;
     /**
-     * Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
+     * @return Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
      * Static file handlers describe which files in the application directory are static files, and which URLs serve them.
      * Structure is documented below.
      * 
      */
     private final @Nullable FlexibleAppVersionHandlerStaticFiles staticFiles;
     /**
-     * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
+     * @return URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
      * All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
      * 
      */
@@ -77,60 +77,60 @@ public final class FlexibleAppVersionHandler {
     }
 
     /**
-     * Action to take when users access resources that require authentication.
+     * @return Action to take when users access resources that require authentication.
      * Default value is `AUTH_FAIL_ACTION_REDIRECT`.
      * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
      * 
-    */
+     */
     public Optional<String> authFailAction() {
         return Optional.ofNullable(this.authFailAction);
     }
     /**
-     * Level of login required to access this resource.
+     * @return Level of login required to access this resource.
      * Default value is `LOGIN_OPTIONAL`.
      * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
      * 
-    */
+     */
     public Optional<String> login() {
         return Optional.ofNullable(this.login);
     }
     /**
-     * 30x code to use when performing redirects for the secure field.
+     * @return 30x code to use when performing redirects for the secure field.
      * Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
      * 
-    */
+     */
     public Optional<String> redirectHttpResponseCode() {
         return Optional.ofNullable(this.redirectHttpResponseCode);
     }
     /**
-     * Path to the script from the application root directory.
+     * @return Path to the script from the application root directory.
      * 
-    */
+     */
     public Optional<FlexibleAppVersionHandlerScript> script() {
         return Optional.ofNullable(this.script);
     }
     /**
-     * Security (HTTPS) enforcement for this URL.
+     * @return Security (HTTPS) enforcement for this URL.
      * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
      * 
-    */
+     */
     public Optional<String> securityLevel() {
         return Optional.ofNullable(this.securityLevel);
     }
     /**
-     * Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
+     * @return Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
      * Static file handlers describe which files in the application directory are static files, and which URLs serve them.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<FlexibleAppVersionHandlerStaticFiles> staticFiles() {
         return Optional.ofNullable(this.staticFiles);
     }
     /**
-     * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
+     * @return URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
      * All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
      * 
-    */
+     */
     public Optional<String> urlRegex() {
         return Optional.ofNullable(this.urlRegex);
     }

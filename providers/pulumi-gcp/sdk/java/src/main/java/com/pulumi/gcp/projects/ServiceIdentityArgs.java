@@ -23,6 +23,11 @@ public final class ServiceIdentityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -34,6 +39,10 @@ public final class ServiceIdentityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="service", required=true)
     private Output<String> service;
 
+    /**
+     * @return The service to generate identity for.
+     * 
+     */
     public Output<String> service() {
         return this.service;
     }
@@ -63,20 +72,46 @@ public final class ServiceIdentityArgs extends com.pulumi.resources.ResourceArgs
             $ = new ServiceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param service The service to generate identity for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The service to generate identity for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

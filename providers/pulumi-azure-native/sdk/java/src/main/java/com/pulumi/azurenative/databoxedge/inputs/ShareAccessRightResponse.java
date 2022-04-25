@@ -23,6 +23,10 @@ public final class ShareAccessRightResponse extends com.pulumi.resources.InvokeA
     @Import(name="accessType", required=true)
     private String accessType;
 
+    /**
+     * @return Type of access to be allowed on the share for this user.
+     * 
+     */
     public String accessType() {
         return this.accessType;
     }
@@ -34,6 +38,10 @@ public final class ShareAccessRightResponse extends com.pulumi.resources.InvokeA
     @Import(name="shareId", required=true)
     private String shareId;
 
+    /**
+     * @return The share ID.
+     * 
+     */
     public String shareId() {
         return this.shareId;
     }
@@ -63,11 +71,23 @@ public final class ShareAccessRightResponse extends com.pulumi.resources.InvokeA
             $ = new ShareAccessRightResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessType Type of access to be allowed on the share for this user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(String accessType) {
             $.accessType = accessType;
             return this;
         }
 
+        /**
+         * @param shareId The share ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareId(String shareId) {
             $.shareId = shareId;
             return this;

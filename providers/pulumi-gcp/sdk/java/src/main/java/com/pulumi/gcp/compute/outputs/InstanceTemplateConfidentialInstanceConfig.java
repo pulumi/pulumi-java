@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class InstanceTemplateConfidentialInstanceConfig {
     /**
-     * Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+     * @return Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
      * 
      */
     private final Boolean enableConfidentialCompute;
@@ -21,9 +21,9 @@ public final class InstanceTemplateConfidentialInstanceConfig {
     }
 
     /**
-     * Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
+     * @return Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
      * 
-    */
+     */
     public Boolean enableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }

@@ -32,6 +32,10 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Volume&#39;s name. In Cloud Run Fully Managed, the name &#39;cloudsql&#39; is reserved.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -74,6 +78,12 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param name Volume&#39;s name. In Cloud Run Fully Managed, the name &#39;cloudsql&#39; is reserved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -27,6 +27,10 @@ public final class NetworkRefResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointRefs")
     private @Nullable List<EndpointRefResponse> endpointRefs;
 
+    /**
+     * @return A list of endpoints that are exposed on this network.
+     * 
+     */
     public Optional<List<EndpointRefResponse>> endpointRefs() {
         return Optional.ofNullable(this.endpointRefs);
     }
@@ -38,6 +42,10 @@ public final class NetworkRefResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the network
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,15 +75,33 @@ public final class NetworkRefResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NetworkRefResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointRefs A list of endpoints that are exposed on this network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointRefs(@Nullable List<EndpointRefResponse> endpointRefs) {
             $.endpointRefs = endpointRefs;
             return this;
         }
 
+        /**
+         * @param endpointRefs A list of endpoints that are exposed on this network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointRefs(EndpointRefResponse... endpointRefs) {
             return endpointRefs(List.of(endpointRefs));
         }
 
+        /**
+         * @param name Name of the network
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

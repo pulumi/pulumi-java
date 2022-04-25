@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class MediaServiceIdentityResponse {
     /**
-     * The Principal ID of the identity.
+     * @return The Principal ID of the identity.
      * 
      */
     private final String principalId;
     /**
-     * The Tenant ID of the identity.
+     * @return The Tenant ID of the identity.
      * 
      */
     private final String tenantId;
     /**
-     * The identity type.
+     * @return The identity type.
      * 
      */
     private final String type;
@@ -36,23 +36,23 @@ public final class MediaServiceIdentityResponse {
     }
 
     /**
-     * The Principal ID of the identity.
+     * @return The Principal ID of the identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The Tenant ID of the identity.
+     * @return The Tenant ID of the identity.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The identity type.
+     * @return The identity type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

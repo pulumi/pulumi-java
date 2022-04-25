@@ -26,6 +26,10 @@ public final class ClusterKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the Cosmos DB Cassandra table cluster key
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class ClusterKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="orderBy")
     private @Nullable Output<String> orderBy;
 
+    /**
+     * @return Order of the Cosmos DB Cassandra table cluster key, only support &#34;Asc&#34; and &#34;Desc&#34;
+     * 
+     */
     public Optional<Output<String>> orderBy() {
         return Optional.ofNullable(this.orderBy);
     }
@@ -66,20 +74,44 @@ public final class ClusterKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the Cosmos DB Cassandra table cluster key
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the Cosmos DB Cassandra table cluster key
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param orderBy Order of the Cosmos DB Cassandra table cluster key, only support &#34;Asc&#34; and &#34;Desc&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderBy(@Nullable Output<String> orderBy) {
             $.orderBy = orderBy;
             return this;
         }
 
+        /**
+         * @param orderBy Order of the Cosmos DB Cassandra table cluster key, only support &#34;Asc&#34; and &#34;Desc&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderBy(String orderBy) {
             return orderBy(Output.of(orderBy));
         }

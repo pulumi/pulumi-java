@@ -21,6 +21,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupNames", required=true)
     private Output<List<String>> groupNames;
 
+    /**
+     * @return A list of AutoScaling Group Names
+     * 
+     */
     public Output<List<String>> groupNames() {
         return this.groupNames;
     }
@@ -33,6 +37,11 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notifications", required=true)
     private Output<List<String>> notifications;
 
+    /**
+     * @return A list of Notification Types that trigger
+     * notifications. Acceptable values are documented [in the AWS documentation here](https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_NotificationConfiguration.html)
+     * 
+     */
     public Output<List<String>> notifications() {
         return this.notifications;
     }
@@ -44,6 +53,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topicArn", required=true)
     private Output<String> topicArn;
 
+    /**
+     * @return The Topic ARN for notifications to be sent through
+     * 
+     */
     public Output<String> topicArn() {
         return this.topicArn;
     }
@@ -74,37 +87,88 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NotificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupNames A list of AutoScaling Group Names
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupNames(Output<List<String>> groupNames) {
             $.groupNames = groupNames;
             return this;
         }
 
+        /**
+         * @param groupNames A list of AutoScaling Group Names
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupNames(List<String> groupNames) {
             return groupNames(Output.of(groupNames));
         }
 
+        /**
+         * @param groupNames A list of AutoScaling Group Names
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupNames(String... groupNames) {
             return groupNames(List.of(groupNames));
         }
 
+        /**
+         * @param notifications A list of Notification Types that trigger
+         * notifications. Acceptable values are documented [in the AWS documentation here](https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_NotificationConfiguration.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(Output<List<String>> notifications) {
             $.notifications = notifications;
             return this;
         }
 
+        /**
+         * @param notifications A list of Notification Types that trigger
+         * notifications. Acceptable values are documented [in the AWS documentation here](https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_NotificationConfiguration.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(List<String> notifications) {
             return notifications(Output.of(notifications));
         }
 
+        /**
+         * @param notifications A list of Notification Types that trigger
+         * notifications. Acceptable values are documented [in the AWS documentation here](https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_NotificationConfiguration.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(String... notifications) {
             return notifications(List.of(notifications));
         }
 
+        /**
+         * @param topicArn The Topic ARN for notifications to be sent through
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(Output<String> topicArn) {
             $.topicArn = topicArn;
             return this;
         }
 
+        /**
+         * @param topicArn The Topic ARN for notifications to be sent through
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(String topicArn) {
             return topicArn(Output.of(topicArn));
         }

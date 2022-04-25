@@ -24,6 +24,10 @@ public final class OrganizationConfigurationState extends com.pulumi.resources.R
     @Import(name="autoEnable")
     private @Nullable Output<Boolean> autoEnable;
 
+    /**
+     * @return When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
+     * 
+     */
     public Optional<Output<Boolean>> autoEnable() {
         return Optional.ofNullable(this.autoEnable);
     }
@@ -35,6 +39,10 @@ public final class OrganizationConfigurationState extends com.pulumi.resources.R
     @Import(name="datasources")
     private @Nullable Output<OrganizationConfigurationDatasourcesGetArgs> datasources;
 
+    /**
+     * @return Configuration for the collected datasources.
+     * 
+     */
     public Optional<Output<OrganizationConfigurationDatasourcesGetArgs>> datasources() {
         return Optional.ofNullable(this.datasources);
     }
@@ -46,6 +54,10 @@ public final class OrganizationConfigurationState extends com.pulumi.resources.R
     @Import(name="detectorId")
     private @Nullable Output<String> detectorId;
 
+    /**
+     * @return The detector ID of the GuardDuty account.
+     * 
+     */
     public Optional<Output<String>> detectorId() {
         return Optional.ofNullable(this.detectorId);
     }
@@ -76,29 +88,65 @@ public final class OrganizationConfigurationState extends com.pulumi.resources.R
             $ = new OrganizationConfigurationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoEnable When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoEnable(@Nullable Output<Boolean> autoEnable) {
             $.autoEnable = autoEnable;
             return this;
         }
 
+        /**
+         * @param autoEnable When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoEnable(Boolean autoEnable) {
             return autoEnable(Output.of(autoEnable));
         }
 
+        /**
+         * @param datasources Configuration for the collected datasources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasources(@Nullable Output<OrganizationConfigurationDatasourcesGetArgs> datasources) {
             $.datasources = datasources;
             return this;
         }
 
+        /**
+         * @param datasources Configuration for the collected datasources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasources(OrganizationConfigurationDatasourcesGetArgs datasources) {
             return datasources(Output.of(datasources));
         }
 
+        /**
+         * @param detectorId The detector ID of the GuardDuty account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorId(@Nullable Output<String> detectorId) {
             $.detectorId = detectorId;
             return this;
         }
 
+        /**
+         * @param detectorId The detector ID of the GuardDuty account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorId(String detectorId) {
             return detectorId(Output.of(detectorId));
         }

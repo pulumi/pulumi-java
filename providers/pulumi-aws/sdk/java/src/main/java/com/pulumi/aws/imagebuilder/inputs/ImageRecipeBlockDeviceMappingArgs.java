@@ -24,6 +24,10 @@ public final class ImageRecipeBlockDeviceMappingArgs extends com.pulumi.resource
     @Import(name="deviceName")
     private @Nullable Output<String> deviceName;
 
+    /**
+     * @return Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
+     * 
+     */
     public Optional<Output<String>> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -35,6 +39,10 @@ public final class ImageRecipeBlockDeviceMappingArgs extends com.pulumi.resource
     @Import(name="ebs")
     private @Nullable Output<ImageRecipeBlockDeviceMappingEbsArgs> ebs;
 
+    /**
+     * @return Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.
+     * 
+     */
     public Optional<Output<ImageRecipeBlockDeviceMappingEbsArgs>> ebs() {
         return Optional.ofNullable(this.ebs);
     }
@@ -46,6 +54,10 @@ public final class ImageRecipeBlockDeviceMappingArgs extends com.pulumi.resource
     @Import(name="noDevice")
     private @Nullable Output<Boolean> noDevice;
 
+    /**
+     * @return Set to `true` to remove a mapping from the parent image.
+     * 
+     */
     public Optional<Output<Boolean>> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
@@ -57,6 +69,10 @@ public final class ImageRecipeBlockDeviceMappingArgs extends com.pulumi.resource
     @Import(name="virtualName")
     private @Nullable Output<String> virtualName;
 
+    /**
+     * @return Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
+     * 
+     */
     public Optional<Output<String>> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }
@@ -88,38 +104,86 @@ public final class ImageRecipeBlockDeviceMappingArgs extends com.pulumi.resource
             $ = new ImageRecipeBlockDeviceMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(@Nullable Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param ebs Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebs(@Nullable Output<ImageRecipeBlockDeviceMappingEbsArgs> ebs) {
             $.ebs = ebs;
             return this;
         }
 
+        /**
+         * @param ebs Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebs(ImageRecipeBlockDeviceMappingEbsArgs ebs) {
             return ebs(Output.of(ebs));
         }
 
+        /**
+         * @param noDevice Set to `true` to remove a mapping from the parent image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noDevice(@Nullable Output<Boolean> noDevice) {
             $.noDevice = noDevice;
             return this;
         }
 
+        /**
+         * @param noDevice Set to `true` to remove a mapping from the parent image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noDevice(Boolean noDevice) {
             return noDevice(Output.of(noDevice));
         }
 
+        /**
+         * @param virtualName Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualName(@Nullable Output<String> virtualName) {
             $.virtualName = virtualName;
             return this;
         }
 
+        /**
+         * @param virtualName Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualName(String virtualName) {
             return virtualName(Output.of(virtualName));
         }

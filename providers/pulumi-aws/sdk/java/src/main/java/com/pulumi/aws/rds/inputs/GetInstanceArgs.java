@@ -22,6 +22,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dbInstanceIdentifier", required=true)
     private String dbInstanceIdentifier;
 
+    /**
+     * @return The name of the RDS instance
+     * 
+     */
     public String dbInstanceIdentifier() {
         return this.dbInstanceIdentifier;
     }
@@ -58,6 +62,12 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dbInstanceIdentifier The name of the RDS instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
             $.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;

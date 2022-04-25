@@ -26,6 +26,10 @@ public final class SecretResourcePropertiesResponse extends com.pulumi.resources
     @Import(name="contentType")
     private @Nullable String contentType;
 
+    /**
+     * @return The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
+     * 
+     */
     public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -37,6 +41,10 @@ public final class SecretResourcePropertiesResponse extends com.pulumi.resources
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return User readable description of the secret.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,11 @@ public final class SecretResourcePropertiesResponse extends com.pulumi.resources
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Describes the kind of secret.
+     * Expected value is &#39;SecretResourceProperties&#39;.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -60,6 +73,10 @@ public final class SecretResourcePropertiesResponse extends com.pulumi.resources
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return State of the resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -71,6 +88,10 @@ public final class SecretResourcePropertiesResponse extends com.pulumi.resources
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the resource.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -82,6 +103,10 @@ public final class SecretResourcePropertiesResponse extends com.pulumi.resources
     @Import(name="statusDetails", required=true)
     private String statusDetails;
 
+    /**
+     * @return Gives additional information about the current status of the secret.
+     * 
+     */
     public String statusDetails() {
         return this.statusDetails;
     }
@@ -115,31 +140,68 @@ public final class SecretResourcePropertiesResponse extends com.pulumi.resources
             $ = new SecretResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentType The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable String contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param description User readable description of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param kind Describes the kind of secret.
+         * Expected value is &#39;SecretResourceProperties&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param provisioningState State of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param status Status of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param statusDetails Gives additional information about the current status of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusDetails(String statusDetails) {
             $.statusDetails = statusDetails;
             return this;

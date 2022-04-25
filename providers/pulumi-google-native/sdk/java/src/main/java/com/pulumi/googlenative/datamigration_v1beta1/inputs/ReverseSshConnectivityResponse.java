@@ -24,6 +24,10 @@ public final class ReverseSshConnectivityResponse extends com.pulumi.resources.I
     @Import(name="vm", required=true)
     private String vm;
 
+    /**
+     * @return The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+     * 
+     */
     public String vm() {
         return this.vm;
     }
@@ -35,6 +39,10 @@ public final class ReverseSshConnectivityResponse extends com.pulumi.resources.I
     @Import(name="vmIp", required=true)
     private String vmIp;
 
+    /**
+     * @return The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+     * 
+     */
     public String vmIp() {
         return this.vmIp;
     }
@@ -46,6 +54,10 @@ public final class ReverseSshConnectivityResponse extends com.pulumi.resources.I
     @Import(name="vmPort", required=true)
     private Integer vmPort;
 
+    /**
+     * @return The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+     * 
+     */
     public Integer vmPort() {
         return this.vmPort;
     }
@@ -57,6 +69,10 @@ public final class ReverseSshConnectivityResponse extends com.pulumi.resources.I
     @Import(name="vpc", required=true)
     private String vpc;
 
+    /**
+     * @return The name of the VPC to peer with the Cloud SQL private network.
+     * 
+     */
     public String vpc() {
         return this.vpc;
     }
@@ -88,21 +104,45 @@ public final class ReverseSshConnectivityResponse extends com.pulumi.resources.I
             $ = new ReverseSshConnectivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vm The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vm(String vm) {
             $.vm = vm;
             return this;
         }
 
+        /**
+         * @param vmIp The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmIp(String vmIp) {
             $.vmIp = vmIp;
             return this;
         }
 
+        /**
+         * @param vmPort The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmPort(Integer vmPort) {
             $.vmPort = vmPort;
             return this;
         }
 
+        /**
+         * @param vpc The name of the VPC to peer with the Cloud SQL private network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpc(String vpc) {
             $.vpc = vpc;
             return this;

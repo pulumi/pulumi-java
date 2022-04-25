@@ -27,6 +27,10 @@ public final class NodeKubeletConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cpuCfsQuota")
     private @Nullable Output<Boolean> cpuCfsQuota;
 
+    /**
+     * @return Enable CPU CFS quota enforcement for containers that specify CPU limits. This option is enabled by default which makes kubelet use CFS quota (https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) to enforce container CPU limits. Otherwise, CPU limits will not be enforced at all. Disable this option to mitigate CPU throttling problems while still having your pods to be in Guaranteed QoS class by specifying the CPU limits. The default value is &#39;true&#39; if unspecified.
+     * 
+     */
     public Optional<Output<Boolean>> cpuCfsQuota() {
         return Optional.ofNullable(this.cpuCfsQuota);
     }
@@ -38,6 +42,10 @@ public final class NodeKubeletConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cpuCfsQuotaPeriod")
     private @Nullable Output<String> cpuCfsQuotaPeriod;
 
+    /**
+     * @return Set the CPU CFS quota period value &#39;cpu.cfs_period_us&#39;. The string must be a sequence of decimal numbers, each with optional fraction and a unit suffix, such as &#34;300ms&#34;. Valid time units are &#34;ns&#34;, &#34;us&#34; (or &#34;µs&#34;), &#34;ms&#34;, &#34;s&#34;, &#34;m&#34;, &#34;h&#34;. The value must be a positive duration.
+     * 
+     */
     public Optional<Output<String>> cpuCfsQuotaPeriod() {
         return Optional.ofNullable(this.cpuCfsQuotaPeriod);
     }
@@ -49,6 +57,10 @@ public final class NodeKubeletConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cpuManagerPolicy")
     private @Nullable Output<String> cpuManagerPolicy;
 
+    /**
+     * @return Control the CPU management policy on the node. See https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/ The following values are allowed. * &#34;none&#34;: the default, which represents the existing scheduling behavior. * &#34;static&#34;: allows pods with certain resource characteristics to be granted increased CPU affinity and exclusivity on the node. The default value is &#39;none&#39; if unspecified.
+     * 
+     */
     public Optional<Output<String>> cpuManagerPolicy() {
         return Optional.ofNullable(this.cpuManagerPolicy);
     }
@@ -79,29 +91,65 @@ public final class NodeKubeletConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new NodeKubeletConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuCfsQuota Enable CPU CFS quota enforcement for containers that specify CPU limits. This option is enabled by default which makes kubelet use CFS quota (https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) to enforce container CPU limits. Otherwise, CPU limits will not be enforced at all. Disable this option to mitigate CPU throttling problems while still having your pods to be in Guaranteed QoS class by specifying the CPU limits. The default value is &#39;true&#39; if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCfsQuota(@Nullable Output<Boolean> cpuCfsQuota) {
             $.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
 
+        /**
+         * @param cpuCfsQuota Enable CPU CFS quota enforcement for containers that specify CPU limits. This option is enabled by default which makes kubelet use CFS quota (https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) to enforce container CPU limits. Otherwise, CPU limits will not be enforced at all. Disable this option to mitigate CPU throttling problems while still having your pods to be in Guaranteed QoS class by specifying the CPU limits. The default value is &#39;true&#39; if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCfsQuota(Boolean cpuCfsQuota) {
             return cpuCfsQuota(Output.of(cpuCfsQuota));
         }
 
+        /**
+         * @param cpuCfsQuotaPeriod Set the CPU CFS quota period value &#39;cpu.cfs_period_us&#39;. The string must be a sequence of decimal numbers, each with optional fraction and a unit suffix, such as &#34;300ms&#34;. Valid time units are &#34;ns&#34;, &#34;us&#34; (or &#34;µs&#34;), &#34;ms&#34;, &#34;s&#34;, &#34;m&#34;, &#34;h&#34;. The value must be a positive duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCfsQuotaPeriod(@Nullable Output<String> cpuCfsQuotaPeriod) {
             $.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
 
+        /**
+         * @param cpuCfsQuotaPeriod Set the CPU CFS quota period value &#39;cpu.cfs_period_us&#39;. The string must be a sequence of decimal numbers, each with optional fraction and a unit suffix, such as &#34;300ms&#34;. Valid time units are &#34;ns&#34;, &#34;us&#34; (or &#34;µs&#34;), &#34;ms&#34;, &#34;s&#34;, &#34;m&#34;, &#34;h&#34;. The value must be a positive duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCfsQuotaPeriod(String cpuCfsQuotaPeriod) {
             return cpuCfsQuotaPeriod(Output.of(cpuCfsQuotaPeriod));
         }
 
+        /**
+         * @param cpuManagerPolicy Control the CPU management policy on the node. See https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/ The following values are allowed. * &#34;none&#34;: the default, which represents the existing scheduling behavior. * &#34;static&#34;: allows pods with certain resource characteristics to be granted increased CPU affinity and exclusivity on the node. The default value is &#39;none&#39; if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuManagerPolicy(@Nullable Output<String> cpuManagerPolicy) {
             $.cpuManagerPolicy = cpuManagerPolicy;
             return this;
         }
 
+        /**
+         * @param cpuManagerPolicy Control the CPU management policy on the node. See https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/ The following values are allowed. * &#34;none&#34;: the default, which represents the existing scheduling behavior. * &#34;static&#34;: allows pods with certain resource characteristics to be granted increased CPU affinity and exclusivity on the node. The default value is &#39;none&#39; if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuManagerPolicy(String cpuManagerPolicy) {
             return cpuManagerPolicy(Output.of(cpuManagerPolicy));
         }

@@ -24,6 +24,10 @@ public final class ApplicationNotificationPolicyResponse extends com.pulumi.reso
     @Import(name="notificationEndpoints", required=true)
     private List<ApplicationNotificationEndpointResponse> notificationEndpoints;
 
+    /**
+     * @return The managed application notification endpoint.
+     * 
+     */
     public List<ApplicationNotificationEndpointResponse> notificationEndpoints() {
         return this.notificationEndpoints;
     }
@@ -52,11 +56,23 @@ public final class ApplicationNotificationPolicyResponse extends com.pulumi.reso
             $ = new ApplicationNotificationPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param notificationEndpoints The managed application notification endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEndpoints(List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
             $.notificationEndpoints = notificationEndpoints;
             return this;
         }
 
+        /**
+         * @param notificationEndpoints The managed application notification endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEndpoints(ApplicationNotificationEndpointResponse... notificationEndpoints) {
             return notificationEndpoints(List.of(notificationEndpoints));
         }

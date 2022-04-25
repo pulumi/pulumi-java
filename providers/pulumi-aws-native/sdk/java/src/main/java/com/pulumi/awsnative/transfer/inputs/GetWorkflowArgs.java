@@ -19,6 +19,10 @@ public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workflowId", required=true)
     private String workflowId;
 
+    /**
+     * @return A unique identifier for the workflow.
+     * 
+     */
     public String workflowId() {
         return this.workflowId;
     }
@@ -47,6 +51,12 @@ public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWorkflowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param workflowId A unique identifier for the workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowId(String workflowId) {
             $.workflowId = workflowId;
             return this;

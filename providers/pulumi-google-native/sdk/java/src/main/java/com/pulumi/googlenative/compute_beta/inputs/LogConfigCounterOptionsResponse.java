@@ -25,6 +25,10 @@ public final class LogConfigCounterOptionsResponse extends com.pulumi.resources.
     @Import(name="customFields", required=true)
     private List<LogConfigCounterOptionsCustomFieldResponse> customFields;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public List<LogConfigCounterOptionsCustomFieldResponse> customFields() {
         return this.customFields;
     }
@@ -36,6 +40,10 @@ public final class LogConfigCounterOptionsResponse extends com.pulumi.resources.
     @Import(name="field", required=true)
     private String field;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String field() {
         return this.field;
     }
@@ -47,6 +55,10 @@ public final class LogConfigCounterOptionsResponse extends com.pulumi.resources.
     @Import(name="metric", required=true)
     private String metric;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String metric() {
         return this.metric;
     }
@@ -77,20 +89,44 @@ public final class LogConfigCounterOptionsResponse extends com.pulumi.resources.
             $ = new LogConfigCounterOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customFields This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFields(List<LogConfigCounterOptionsCustomFieldResponse> customFields) {
             $.customFields = customFields;
             return this;
         }
 
+        /**
+         * @param customFields This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFields(LogConfigCounterOptionsCustomFieldResponse... customFields) {
             return customFields(List.of(customFields));
         }
 
+        /**
+         * @param field This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param metric This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(String metric) {
             $.metric = metric;
             return this;

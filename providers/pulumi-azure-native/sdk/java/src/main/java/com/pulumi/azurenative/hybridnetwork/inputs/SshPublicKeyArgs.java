@@ -26,6 +26,10 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyData")
     private @Nullable Output<String> keyData;
 
+    /**
+     * @return SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. &lt;br&gt;&lt;br&gt; For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+     * 
+     */
     public Optional<Output<String>> keyData() {
         return Optional.ofNullable(this.keyData);
     }
@@ -37,6 +41,10 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -66,20 +74,44 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SshPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyData SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. &lt;br&gt;&lt;br&gt; For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyData(@Nullable Output<String> keyData) {
             $.keyData = keyData;
             return this;
         }
 
+        /**
+         * @param keyData SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. &lt;br&gt;&lt;br&gt; For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyData(String keyData) {
             return keyData(Output.of(keyData));
         }
 
+        /**
+         * @param path Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

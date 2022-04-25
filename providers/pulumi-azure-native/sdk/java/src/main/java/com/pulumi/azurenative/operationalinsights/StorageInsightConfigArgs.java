@@ -25,6 +25,10 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="containers")
     private @Nullable Output<List<String>> containers;
 
+    /**
+     * @return The names of the blob containers that the workspace should read
+     * 
+     */
     public Optional<Output<List<String>>> containers() {
         return Optional.ofNullable(this.containers);
     }
@@ -36,6 +40,10 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="eTag")
     private @Nullable Output<String> eTag;
 
+    /**
+     * @return The ETag of the storage insight.
+     * 
+     */
     public Optional<Output<String>> eTag() {
         return Optional.ofNullable(this.eTag);
     }
@@ -47,6 +55,10 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -58,6 +70,10 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="storageAccount", required=true)
     private Output<StorageAccountArgs> storageAccount;
 
+    /**
+     * @return The storage account connection details
+     * 
+     */
     public Output<StorageAccountArgs> storageAccount() {
         return this.storageAccount;
     }
@@ -69,6 +85,10 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="storageInsightName")
     private @Nullable Output<String> storageInsightName;
 
+    /**
+     * @return Name of the storageInsightsConfigs resource
+     * 
+     */
     public Optional<Output<String>> storageInsightName() {
         return Optional.ofNullable(this.storageInsightName);
     }
@@ -80,6 +100,10 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="tables")
     private @Nullable Output<List<String>> tables;
 
+    /**
+     * @return The names of the Azure tables that the workspace should read
+     * 
+     */
     public Optional<Output<List<String>>> tables() {
         return Optional.ofNullable(this.tables);
     }
@@ -91,6 +115,10 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -102,6 +130,10 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -137,82 +169,190 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
             $ = new StorageInsightConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containers The names of the blob containers that the workspace should read
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(@Nullable Output<List<String>> containers) {
             $.containers = containers;
             return this;
         }
 
+        /**
+         * @param containers The names of the blob containers that the workspace should read
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(List<String> containers) {
             return containers(Output.of(containers));
         }
 
+        /**
+         * @param containers The names of the blob containers that the workspace should read
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(String... containers) {
             return containers(List.of(containers));
         }
 
+        /**
+         * @param eTag The ETag of the storage insight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(@Nullable Output<String> eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param eTag The ETag of the storage insight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(String eTag) {
             return eTag(Output.of(eTag));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageAccount The storage account connection details
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(Output<StorageAccountArgs> storageAccount) {
             $.storageAccount = storageAccount;
             return this;
         }
 
+        /**
+         * @param storageAccount The storage account connection details
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(StorageAccountArgs storageAccount) {
             return storageAccount(Output.of(storageAccount));
         }
 
+        /**
+         * @param storageInsightName Name of the storageInsightsConfigs resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageInsightName(@Nullable Output<String> storageInsightName) {
             $.storageInsightName = storageInsightName;
             return this;
         }
 
+        /**
+         * @param storageInsightName Name of the storageInsightsConfigs resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageInsightName(String storageInsightName) {
             return storageInsightName(Output.of(storageInsightName));
         }
 
+        /**
+         * @param tables The names of the Azure tables that the workspace should read
+         * 
+         * @return builder
+         * 
+         */
         public Builder tables(@Nullable Output<List<String>> tables) {
             $.tables = tables;
             return this;
         }
 
+        /**
+         * @param tables The names of the Azure tables that the workspace should read
+         * 
+         * @return builder
+         * 
+         */
         public Builder tables(List<String> tables) {
             return tables(Output.of(tables));
         }
 
+        /**
+         * @param tables The names of the Azure tables that the workspace should read
+         * 
+         * @return builder
+         * 
+         */
         public Builder tables(String... tables) {
             return tables(List.of(tables));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

@@ -34,6 +34,10 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="dependsOn")
     private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -45,6 +49,10 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -56,6 +64,10 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="libraries")
     private @Nullable Output<List<Map<String,Object>>> libraries;
 
+    /**
+     * @return A list of libraries to be installed on the cluster that will execute the job.
+     * 
+     */
     public Optional<Output<List<Map<String,Object>>>> libraries() {
         return Optional.ofNullable(this.libraries);
     }
@@ -67,6 +79,10 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="linkedServiceName")
     private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -78,6 +94,10 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="mainClassName", required=true)
     private Output<Object> mainClassName;
 
+    /**
+     * @return The full name of the class containing the main method to be executed. This class must be contained in a JAR provided as a library. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> mainClassName() {
         return this.mainClassName;
     }
@@ -89,6 +109,10 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -100,6 +124,10 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="parameters")
     private @Nullable Output<List<Object>> parameters;
 
+    /**
+     * @return Parameters that will be passed to the main method.
+     * 
+     */
     public Optional<Output<List<Object>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -111,6 +139,10 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="policy")
     private @Nullable Output<ActivityPolicyArgs> policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<Output<ActivityPolicyArgs>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -123,6 +155,11 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;DatabricksSparkJar&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -134,6 +171,10 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="userProperties")
     private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<Output<List<UserPropertyArgs>>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -171,108 +212,254 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
             $ = new DatabricksSparkJarActivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param libraries A list of libraries to be installed on the cluster that will execute the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder libraries(@Nullable Output<List<Map<String,Object>>> libraries) {
             $.libraries = libraries;
             return this;
         }
 
+        /**
+         * @param libraries A list of libraries to be installed on the cluster that will execute the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder libraries(List<Map<String,Object>> libraries) {
             return libraries(Output.of(libraries));
         }
 
+        /**
+         * @param libraries A list of libraries to be installed on the cluster that will execute the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder libraries(Map<String,Object>... libraries) {
             return libraries(List.of(libraries));
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param mainClassName The full name of the class containing the main method to be executed. This class must be contained in a JAR provided as a library. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainClassName(Output<Object> mainClassName) {
             $.mainClassName = mainClassName;
             return this;
         }
 
+        /**
+         * @param mainClassName The full name of the class containing the main method to be executed. This class must be contained in a JAR provided as a library. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainClassName(Object mainClassName) {
             return mainClassName(Output.of(mainClassName));
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters Parameters that will be passed to the main method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<Object>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters that will be passed to the main method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<Object> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters Parameters that will be passed to the main method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Object... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(ActivityPolicyArgs policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;DatabricksSparkJar&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;DatabricksSparkJar&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(List<UserPropertyArgs> userProperties) {
             return userProperties(Output.of(userProperties));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
         }

@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
     /**
-     * The location name.
+     * @return The location name.
      * 
      */
     private final String location;
     /**
-     * The regional service name.
+     * @return The regional service name.
      * 
      */
     private final String name;
     /**
-     * The regional endpoint for SqlDedicatedGateway.
+     * @return The regional endpoint for SqlDedicatedGateway.
      * 
      */
     private final String sqlDedicatedGatewayEndpoint;
     /**
-     * Describes the status of a service.
+     * @return Describes the status of a service.
      * 
      */
     private final String status;
@@ -43,30 +43,30 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
     }
 
     /**
-     * The location name.
+     * @return The location name.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The regional service name.
+     * @return The regional service name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The regional endpoint for SqlDedicatedGateway.
+     * @return The regional endpoint for SqlDedicatedGateway.
      * 
-    */
+     */
     public String sqlDedicatedGatewayEndpoint() {
         return this.sqlDedicatedGatewayEndpoint;
     }
     /**
-     * Describes the status of a service.
+     * @return Describes the status of a service.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

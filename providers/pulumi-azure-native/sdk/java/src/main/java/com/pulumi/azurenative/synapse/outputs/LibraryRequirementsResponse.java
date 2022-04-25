@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LibraryRequirementsResponse {
     /**
-     * The library requirements.
+     * @return The library requirements.
      * 
      */
     private final @Nullable String content;
     /**
-     * The filename of the library requirements file.
+     * @return The filename of the library requirements file.
      * 
      */
     private final @Nullable String filename;
     /**
-     * The last update time of the library requirements file.
+     * @return The last update time of the library requirements file.
      * 
      */
     private final String time;
@@ -38,23 +38,23 @@ public final class LibraryRequirementsResponse {
     }
 
     /**
-     * The library requirements.
+     * @return The library requirements.
      * 
-    */
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
-     * The filename of the library requirements file.
+     * @return The filename of the library requirements file.
      * 
-    */
+     */
     public Optional<String> filename() {
         return Optional.ofNullable(this.filename);
     }
     /**
-     * The last update time of the library requirements file.
+     * @return The last update time of the library requirements file.
      * 
-    */
+     */
     public String time() {
         return this.time;
     }

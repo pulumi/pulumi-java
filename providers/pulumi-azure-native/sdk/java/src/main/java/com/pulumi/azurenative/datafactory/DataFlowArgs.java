@@ -26,6 +26,10 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataFlowName")
     private @Nullable Output<String> dataFlowName;
 
+    /**
+     * @return The data flow name.
+     * 
+     */
     public Optional<Output<String>> dataFlowName() {
         return Optional.ofNullable(this.dataFlowName);
     }
@@ -37,6 +41,10 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="factoryName", required=true)
     private Output<String> factoryName;
 
+    /**
+     * @return The factory name.
+     * 
+     */
     public Output<String> factoryName() {
         return this.factoryName;
     }
@@ -48,6 +56,10 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<Object> properties;
 
+    /**
+     * @return Data flow properties.
+     * 
+     */
     public Output<Object> properties() {
         return this.properties;
     }
@@ -59,6 +71,10 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -90,38 +106,86 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataFlowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataFlowName The data flow name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFlowName(@Nullable Output<String> dataFlowName) {
             $.dataFlowName = dataFlowName;
             return this;
         }
 
+        /**
+         * @param dataFlowName The data flow name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFlowName(String dataFlowName) {
             return dataFlowName(Output.of(dataFlowName));
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(Output<String> factoryName) {
             $.factoryName = factoryName;
             return this;
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(String factoryName) {
             return factoryName(Output.of(factoryName));
         }
 
+        /**
+         * @param properties Data flow properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<Object> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Data flow properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Object properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetImageResult {
     /**
-     * The Amazon Resource Name (ARN) of the image.
+     * @return The Amazon Resource Name (ARN) of the image.
      * 
      */
     private final @Nullable String arn;
     /**
-     * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
+     * @return The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
      * 
      */
     private final @Nullable String containerRecipeArn;
     /**
-     * The AMI ID of the EC2 AMI in current region.
+     * @return The AMI ID of the EC2 AMI in current region.
      * 
      */
     private final @Nullable String imageId;
     /**
-     * The name of the image.
+     * @return The name of the image.
      * 
      */
     private final @Nullable String name;
@@ -45,30 +45,30 @@ public final class GetImageResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the image.
+     * @return The Amazon Resource Name (ARN) of the image.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
+     * @return The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
      * 
-    */
+     */
     public Optional<String> containerRecipeArn() {
         return Optional.ofNullable(this.containerRecipeArn);
     }
     /**
-     * The AMI ID of the EC2 AMI in current region.
+     * @return The AMI ID of the EC2 AMI in current region.
      * 
-    */
+     */
     public Optional<String> imageId() {
         return Optional.ofNullable(this.imageId);
     }
     /**
-     * The name of the image.
+     * @return The name of the image.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

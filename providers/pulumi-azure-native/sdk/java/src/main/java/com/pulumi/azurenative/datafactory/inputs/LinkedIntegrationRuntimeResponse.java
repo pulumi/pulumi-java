@@ -23,6 +23,10 @@ public final class LinkedIntegrationRuntimeResponse extends com.pulumi.resources
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The creating time of the linked integration runtime.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -34,6 +38,10 @@ public final class LinkedIntegrationRuntimeResponse extends com.pulumi.resources
     @Import(name="dataFactoryLocation", required=true)
     private String dataFactoryLocation;
 
+    /**
+     * @return The location of the data factory for which the linked integration runtime belong to.
+     * 
+     */
     public String dataFactoryLocation() {
         return this.dataFactoryLocation;
     }
@@ -45,6 +53,10 @@ public final class LinkedIntegrationRuntimeResponse extends com.pulumi.resources
     @Import(name="dataFactoryName", required=true)
     private String dataFactoryName;
 
+    /**
+     * @return The name of the data factory for which the linked integration runtime belong to.
+     * 
+     */
     public String dataFactoryName() {
         return this.dataFactoryName;
     }
@@ -56,6 +68,10 @@ public final class LinkedIntegrationRuntimeResponse extends com.pulumi.resources
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the linked integration runtime.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -67,6 +83,10 @@ public final class LinkedIntegrationRuntimeResponse extends com.pulumi.resources
     @Import(name="subscriptionId", required=true)
     private String subscriptionId;
 
+    /**
+     * @return The subscription ID for which the linked integration runtime belong to.
+     * 
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }
@@ -99,26 +119,56 @@ public final class LinkedIntegrationRuntimeResponse extends com.pulumi.resources
             $ = new LinkedIntegrationRuntimeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime The creating time of the linked integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param dataFactoryLocation The location of the data factory for which the linked integration runtime belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFactoryLocation(String dataFactoryLocation) {
             $.dataFactoryLocation = dataFactoryLocation;
             return this;
         }
 
+        /**
+         * @param dataFactoryName The name of the data factory for which the linked integration runtime belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFactoryName(String dataFactoryName) {
             $.dataFactoryName = dataFactoryName;
             return this;
         }
 
+        /**
+         * @param name The name of the linked integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param subscriptionId The subscription ID for which the linked integration runtime belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;

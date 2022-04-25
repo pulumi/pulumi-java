@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends com.pulumi.resources
     @Import(name="conditions")
     private @Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
 
+    /**
+     * @return A collection of conditions.
+     * 
+     */
     public Optional<Output<List<GooglePrivacyDlpV2ConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -55,15 +59,33 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends com.pulumi.resources
             $ = new GooglePrivacyDlpV2ConditionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions A collection of conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions A collection of conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<GooglePrivacyDlpV2ConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions A collection of conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(GooglePrivacyDlpV2ConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }

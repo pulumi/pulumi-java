@@ -12,17 +12,17 @@ import java.util.Objects;
 public final class GetApplicationResult {
     private final GetApplicationAppversionLifecycle appversionLifecycle;
     /**
-     * The Amazon Resource Name (ARN) of the application.
+     * @return The Amazon Resource Name (ARN) of the application.
      * 
      */
     private final String arn;
     /**
-     * Short description of the application
+     * @return Short description of the application
      * 
      */
     private final String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -46,23 +46,23 @@ public final class GetApplicationResult {
         return this.appversionLifecycle;
     }
     /**
-     * The Amazon Resource Name (ARN) of the application.
+     * @return The Amazon Resource Name (ARN) of the application.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Short description of the application
+     * @return Short description of the application
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

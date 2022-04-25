@@ -26,6 +26,10 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="credential", required=true)
     private String credential;
 
+    /**
+     * @return The resource ID of the credential to use to connect to the output destination.
+     * 
+     */
     public String credential() {
         return this.credential;
     }
@@ -37,6 +41,10 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return The output destination database.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -48,6 +56,10 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName")
     private @Nullable String resourceGroupName;
 
+    /**
+     * @return The output destination resource group.
+     * 
+     */
     public Optional<String> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
@@ -59,6 +71,10 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="schemaName")
     private @Nullable String schemaName;
 
+    /**
+     * @return The output destination schema.
+     * 
+     */
     public Optional<String> schemaName() {
         return Optional.ofNullable(this.schemaName);
     }
@@ -70,6 +86,10 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return The output destination server name.
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -81,6 +101,10 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="subscriptionId")
     private @Nullable String subscriptionId;
 
+    /**
+     * @return The output destination subscription id.
+     * 
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -92,6 +116,10 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="tableName", required=true)
     private String tableName;
 
+    /**
+     * @return The output destination table.
+     * 
+     */
     public String tableName() {
         return this.tableName;
     }
@@ -103,6 +131,10 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The output destination type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -138,41 +170,89 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
             $ = new JobStepOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credential The resource ID of the credential to use to connect to the output destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(String credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param databaseName The output destination database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The output destination resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param schemaName The output destination schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(@Nullable String schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param serverName The output destination server name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param subscriptionId The output destination subscription id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param tableName The output destination table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             $.tableName = tableName;
             return this;
         }
 
+        /**
+         * @param type The output destination type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

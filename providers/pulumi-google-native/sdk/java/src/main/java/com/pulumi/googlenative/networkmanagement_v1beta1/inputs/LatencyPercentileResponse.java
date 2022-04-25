@@ -24,6 +24,10 @@ public final class LatencyPercentileResponse extends com.pulumi.resources.Invoke
     @Import(name="latencyMicros", required=true)
     private String latencyMicros;
 
+    /**
+     * @return percent-th percentile of latency observed, in microseconds. Fraction of percent/100 of samples have latency lower or equal to the value of this field.
+     * 
+     */
     public String latencyMicros() {
         return this.latencyMicros;
     }
@@ -35,6 +39,10 @@ public final class LatencyPercentileResponse extends com.pulumi.resources.Invoke
     @Import(name="percent", required=true)
     private Integer percent;
 
+    /**
+     * @return Percentage of samples this data point applies to.
+     * 
+     */
     public Integer percent() {
         return this.percent;
     }
@@ -64,11 +72,23 @@ public final class LatencyPercentileResponse extends com.pulumi.resources.Invoke
             $ = new LatencyPercentileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param latencyMicros percent-th percentile of latency observed, in microseconds. Fraction of percent/100 of samples have latency lower or equal to the value of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latencyMicros(String latencyMicros) {
             $.latencyMicros = latencyMicros;
             return this;
         }
 
+        /**
+         * @param percent Percentage of samples this data point applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(Integer percent) {
             $.percent = percent;
             return this;

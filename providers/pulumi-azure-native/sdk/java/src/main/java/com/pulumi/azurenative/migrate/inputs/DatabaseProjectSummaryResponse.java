@@ -27,6 +27,10 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
     @Import(name="extendedSummary")
     private @Nullable Map<String,String> extendedSummary;
 
+    /**
+     * @return Gets or sets the extended summary.
+     * 
+     */
     public Optional<Map<String,String>> extendedSummary() {
         return Optional.ofNullable(this.extendedSummary);
     }
@@ -39,6 +43,11 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the Instance type.
+     * Expected value is &#39;Databases&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -50,6 +59,10 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
     @Import(name="lastSummaryRefreshedTime")
     private @Nullable String lastSummaryRefreshedTime;
 
+    /**
+     * @return Gets or sets the time when summary was last refreshed.
+     * 
+     */
     public Optional<String> lastSummaryRefreshedTime() {
         return Optional.ofNullable(this.lastSummaryRefreshedTime);
     }
@@ -61,6 +74,10 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
     @Import(name="refreshSummaryState")
     private @Nullable String refreshSummaryState;
 
+    /**
+     * @return Gets or sets the state of refresh summary.
+     * 
+     */
     public Optional<String> refreshSummaryState() {
         return Optional.ofNullable(this.refreshSummaryState);
     }
@@ -92,21 +109,46 @@ public final class DatabaseProjectSummaryResponse extends com.pulumi.resources.I
             $ = new DatabaseProjectSummaryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extendedSummary Gets or sets the extended summary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedSummary(@Nullable Map<String,String> extendedSummary) {
             $.extendedSummary = extendedSummary;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;Databases&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param lastSummaryRefreshedTime Gets or sets the time when summary was last refreshed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSummaryRefreshedTime(@Nullable String lastSummaryRefreshedTime) {
             $.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
             return this;
         }
 
+        /**
+         * @param refreshSummaryState Gets or sets the state of refresh summary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshSummaryState(@Nullable String refreshSummaryState) {
             $.refreshSummaryState = refreshSummaryState;
             return this;

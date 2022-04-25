@@ -27,6 +27,10 @@ public final class UserProfileUserSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="executionRole", required=true)
     private Output<String> executionRole;
 
+    /**
+     * @return The execution role ARN for the user.
+     * 
+     */
     public Output<String> executionRole() {
         return this.executionRole;
     }
@@ -38,6 +42,10 @@ public final class UserProfileUserSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="jupyterServerAppSettings")
     private @Nullable Output<UserProfileUserSettingsJupyterServerAppSettingsGetArgs> jupyterServerAppSettings;
 
+    /**
+     * @return The Jupyter server&#39;s app settings. See Jupyter Server App Settings below.
+     * 
+     */
     public Optional<Output<UserProfileUserSettingsJupyterServerAppSettingsGetArgs>> jupyterServerAppSettings() {
         return Optional.ofNullable(this.jupyterServerAppSettings);
     }
@@ -49,6 +57,10 @@ public final class UserProfileUserSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="kernelGatewayAppSettings")
     private @Nullable Output<UserProfileUserSettingsKernelGatewayAppSettingsGetArgs> kernelGatewayAppSettings;
 
+    /**
+     * @return The kernel gateway app settings. See Kernel Gateway App Settings below.
+     * 
+     */
     public Optional<Output<UserProfileUserSettingsKernelGatewayAppSettingsGetArgs>> kernelGatewayAppSettings() {
         return Optional.ofNullable(this.kernelGatewayAppSettings);
     }
@@ -60,6 +72,10 @@ public final class UserProfileUserSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="securityGroups")
     private @Nullable Output<List<String>> securityGroups;
 
+    /**
+     * @return The security groups.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroups() {
         return Optional.ofNullable(this.securityGroups);
     }
@@ -71,6 +87,10 @@ public final class UserProfileUserSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="sharingSettings")
     private @Nullable Output<UserProfileUserSettingsSharingSettingsGetArgs> sharingSettings;
 
+    /**
+     * @return The sharing settings. See Sharing Settings below.
+     * 
+     */
     public Optional<Output<UserProfileUserSettingsSharingSettingsGetArgs>> sharingSettings() {
         return Optional.ofNullable(this.sharingSettings);
     }
@@ -82,6 +102,10 @@ public final class UserProfileUserSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="tensorBoardAppSettings")
     private @Nullable Output<UserProfileUserSettingsTensorBoardAppSettingsGetArgs> tensorBoardAppSettings;
 
+    /**
+     * @return The TensorBoard app settings. See TensorBoard App Settings below.
+     * 
+     */
     public Optional<Output<UserProfileUserSettingsTensorBoardAppSettingsGetArgs>> tensorBoardAppSettings() {
         return Optional.ofNullable(this.tensorBoardAppSettings);
     }
@@ -115,60 +139,138 @@ public final class UserProfileUserSettingsGetArgs extends com.pulumi.resources.R
             $ = new UserProfileUserSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executionRole The execution role ARN for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRole(Output<String> executionRole) {
             $.executionRole = executionRole;
             return this;
         }
 
+        /**
+         * @param executionRole The execution role ARN for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRole(String executionRole) {
             return executionRole(Output.of(executionRole));
         }
 
+        /**
+         * @param jupyterServerAppSettings The Jupyter server&#39;s app settings. See Jupyter Server App Settings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jupyterServerAppSettings(@Nullable Output<UserProfileUserSettingsJupyterServerAppSettingsGetArgs> jupyterServerAppSettings) {
             $.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
 
+        /**
+         * @param jupyterServerAppSettings The Jupyter server&#39;s app settings. See Jupyter Server App Settings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jupyterServerAppSettings(UserProfileUserSettingsJupyterServerAppSettingsGetArgs jupyterServerAppSettings) {
             return jupyterServerAppSettings(Output.of(jupyterServerAppSettings));
         }
 
+        /**
+         * @param kernelGatewayAppSettings The kernel gateway app settings. See Kernel Gateway App Settings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelGatewayAppSettings(@Nullable Output<UserProfileUserSettingsKernelGatewayAppSettingsGetArgs> kernelGatewayAppSettings) {
             $.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
 
+        /**
+         * @param kernelGatewayAppSettings The kernel gateway app settings. See Kernel Gateway App Settings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelGatewayAppSettings(UserProfileUserSettingsKernelGatewayAppSettingsGetArgs kernelGatewayAppSettings) {
             return kernelGatewayAppSettings(Output.of(kernelGatewayAppSettings));
         }
 
+        /**
+         * @param securityGroups The security groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             $.securityGroups = securityGroups;
             return this;
         }
 
+        /**
+         * @param securityGroups The security groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(List<String> securityGroups) {
             return securityGroups(Output.of(securityGroups));
         }
 
+        /**
+         * @param securityGroups The security groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
 
+        /**
+         * @param sharingSettings The sharing settings. See Sharing Settings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharingSettings(@Nullable Output<UserProfileUserSettingsSharingSettingsGetArgs> sharingSettings) {
             $.sharingSettings = sharingSettings;
             return this;
         }
 
+        /**
+         * @param sharingSettings The sharing settings. See Sharing Settings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharingSettings(UserProfileUserSettingsSharingSettingsGetArgs sharingSettings) {
             return sharingSettings(Output.of(sharingSettings));
         }
 
+        /**
+         * @param tensorBoardAppSettings The TensorBoard app settings. See TensorBoard App Settings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tensorBoardAppSettings(@Nullable Output<UserProfileUserSettingsTensorBoardAppSettingsGetArgs> tensorBoardAppSettings) {
             $.tensorBoardAppSettings = tensorBoardAppSettings;
             return this;
         }
 
+        /**
+         * @param tensorBoardAppSettings The TensorBoard app settings. See TensorBoard App Settings below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tensorBoardAppSettings(UserProfileUserSettingsTensorBoardAppSettingsGetArgs tensorBoardAppSettings) {
             return tensorBoardAppSettings(Output.of(tensorBoardAppSettings));
         }

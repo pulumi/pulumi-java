@@ -23,6 +23,10 @@ public final class FleetConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fleetSpec", required=true)
     private String fleetSpec;
 
+    /**
+     * @return Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+     * 
+     */
     public String fleetSpec() {
         return this.fleetSpec;
     }
@@ -34,6 +38,10 @@ public final class FleetConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the FleetConfig.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class FleetConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new FleetConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fleetSpec Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetSpec(String fleetSpec) {
             $.fleetSpec = fleetSpec;
             return this;
         }
 
+        /**
+         * @param name The name of the FleetConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

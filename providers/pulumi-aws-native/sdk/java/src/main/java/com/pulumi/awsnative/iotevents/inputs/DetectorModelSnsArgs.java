@@ -34,6 +34,10 @@ public final class DetectorModelSnsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="targetArn", required=true)
     private Output<String> targetArn;
 
+    /**
+     * @return The ARN of the Amazon SNS target where the message is sent.
+     * 
+     */
     public Output<String> targetArn() {
         return this.targetArn;
     }
@@ -72,11 +76,23 @@ public final class DetectorModelSnsArgs extends com.pulumi.resources.ResourceArg
             return payload(Output.of(payload));
         }
 
+        /**
+         * @param targetArn The ARN of the Amazon SNS target where the message is sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArn(Output<String> targetArn) {
             $.targetArn = targetArn;
             return this;
         }
 
+        /**
+         * @param targetArn The ARN of the Amazon SNS target where the message is sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArn(String targetArn) {
             return targetArn(Output.of(targetArn));
         }

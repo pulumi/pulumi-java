@@ -20,6 +20,10 @@ public final class ClassifierJsonClassifierArgs extends com.pulumi.resources.Res
     @Import(name="jsonPath", required=true)
     private Output<String> jsonPath;
 
+    /**
+     * @return A `JsonPath` string defining the JSON data for the classifier to classify. AWS Glue supports a subset of `JsonPath`, as described in [Writing JsonPath Custom Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json).
+     * 
+     */
     public Output<String> jsonPath() {
         return this.jsonPath;
     }
@@ -48,11 +52,23 @@ public final class ClassifierJsonClassifierArgs extends com.pulumi.resources.Res
             $ = new ClassifierJsonClassifierArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jsonPath A `JsonPath` string defining the JSON data for the classifier to classify. AWS Glue supports a subset of `JsonPath`, as described in [Writing JsonPath Custom Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json).
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonPath(Output<String> jsonPath) {
             $.jsonPath = jsonPath;
             return this;
         }
 
+        /**
+         * @param jsonPath A `JsonPath` string defining the JSON data for the classifier to classify. AWS Glue supports a subset of `JsonPath`, as described in [Writing JsonPath Custom Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json).
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonPath(String jsonPath) {
             return jsonPath(Output.of(jsonPath));
         }

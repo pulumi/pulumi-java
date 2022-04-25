@@ -30,6 +30,10 @@ public final class DataCollectionRuleResponseDataSources extends com.pulumi.reso
     @Import(name="extensions")
     private @Nullable List<ExtensionDataSourceResponse> extensions;
 
+    /**
+     * @return The list of Azure VM extension data source configurations.
+     * 
+     */
     public Optional<List<ExtensionDataSourceResponse>> extensions() {
         return Optional.ofNullable(this.extensions);
     }
@@ -41,6 +45,10 @@ public final class DataCollectionRuleResponseDataSources extends com.pulumi.reso
     @Import(name="performanceCounters")
     private @Nullable List<PerfCounterDataSourceResponse> performanceCounters;
 
+    /**
+     * @return The list of performance counter data source configurations.
+     * 
+     */
     public Optional<List<PerfCounterDataSourceResponse>> performanceCounters() {
         return Optional.ofNullable(this.performanceCounters);
     }
@@ -52,6 +60,10 @@ public final class DataCollectionRuleResponseDataSources extends com.pulumi.reso
     @Import(name="syslog")
     private @Nullable List<SyslogDataSourceResponse> syslog;
 
+    /**
+     * @return The list of Syslog data source configurations.
+     * 
+     */
     public Optional<List<SyslogDataSourceResponse>> syslog() {
         return Optional.ofNullable(this.syslog);
     }
@@ -63,6 +75,10 @@ public final class DataCollectionRuleResponseDataSources extends com.pulumi.reso
     @Import(name="windowsEventLogs")
     private @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs;
 
+    /**
+     * @return The list of Windows Event Log data source configurations.
+     * 
+     */
     public Optional<List<WindowsEventLogDataSourceResponse>> windowsEventLogs() {
         return Optional.ofNullable(this.windowsEventLogs);
     }
@@ -94,38 +110,86 @@ public final class DataCollectionRuleResponseDataSources extends com.pulumi.reso
             $ = new DataCollectionRuleResponseDataSources(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extensions The list of Azure VM extension data source configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(@Nullable List<ExtensionDataSourceResponse> extensions) {
             $.extensions = extensions;
             return this;
         }
 
+        /**
+         * @param extensions The list of Azure VM extension data source configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(ExtensionDataSourceResponse... extensions) {
             return extensions(List.of(extensions));
         }
 
+        /**
+         * @param performanceCounters The list of performance counter data source configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder performanceCounters(@Nullable List<PerfCounterDataSourceResponse> performanceCounters) {
             $.performanceCounters = performanceCounters;
             return this;
         }
 
+        /**
+         * @param performanceCounters The list of performance counter data source configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder performanceCounters(PerfCounterDataSourceResponse... performanceCounters) {
             return performanceCounters(List.of(performanceCounters));
         }
 
+        /**
+         * @param syslog The list of Syslog data source configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syslog(@Nullable List<SyslogDataSourceResponse> syslog) {
             $.syslog = syslog;
             return this;
         }
 
+        /**
+         * @param syslog The list of Syslog data source configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syslog(SyslogDataSourceResponse... syslog) {
             return syslog(List.of(syslog));
         }
 
+        /**
+         * @param windowsEventLogs The list of Windows Event Log data source configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsEventLogs(@Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs) {
             $.windowsEventLogs = windowsEventLogs;
             return this;
         }
 
+        /**
+         * @param windowsEventLogs The list of Windows Event Log data source configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsEventLogs(WindowsEventLogDataSourceResponse... windowsEventLogs) {
             return windowsEventLogs(List.of(windowsEventLogs));
         }

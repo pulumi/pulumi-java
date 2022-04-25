@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterBootstrapAction {
     /**
-     * List of command line arguments passed to the JAR file&#39;s main function when executed.
+     * @return List of command line arguments passed to the JAR file&#39;s main function when executed.
      * 
      */
     private final @Nullable List<String> args;
     /**
-     * Name of the step.
+     * @return Name of the step.
      * 
      */
     private final String name;
     /**
-     * Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a local file system.
+     * @return Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a local file system.
      * 
      */
     private final String path;
@@ -38,23 +38,23 @@ public final class ClusterBootstrapAction {
     }
 
     /**
-     * List of command line arguments passed to the JAR file&#39;s main function when executed.
+     * @return List of command line arguments passed to the JAR file&#39;s main function when executed.
      * 
-    */
+     */
     public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
     /**
-     * Name of the step.
+     * @return Name of the step.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a local file system.
+     * @return Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a local file system.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }

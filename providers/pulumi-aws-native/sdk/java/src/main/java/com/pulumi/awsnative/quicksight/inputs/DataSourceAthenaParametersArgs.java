@@ -26,6 +26,10 @@ public final class DataSourceAthenaParametersArgs extends com.pulumi.resources.R
     @Import(name="workGroup")
     private @Nullable Output<String> workGroup;
 
+    /**
+     * @return &lt;p&gt;The workgroup that Amazon Athena uses.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> workGroup() {
         return Optional.ofNullable(this.workGroup);
     }
@@ -54,11 +58,23 @@ public final class DataSourceAthenaParametersArgs extends com.pulumi.resources.R
             $ = new DataSourceAthenaParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param workGroup &lt;p&gt;The workgroup that Amazon Athena uses.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder workGroup(@Nullable Output<String> workGroup) {
             $.workGroup = workGroup;
             return this;
         }
 
+        /**
+         * @param workGroup &lt;p&gt;The workgroup that Amazon Athena uses.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder workGroup(String workGroup) {
             return workGroup(Output.of(workGroup));
         }

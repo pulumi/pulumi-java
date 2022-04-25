@@ -21,6 +21,10 @@ public final class ProjectVpcConfigGetArgs extends com.pulumi.resources.Resource
     @Import(name="securityGroupIds", required=true)
     private Output<List<String>> securityGroupIds;
 
+    /**
+     * @return Security group IDs to assign to running builds.
+     * 
+     */
     public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
@@ -32,6 +36,10 @@ public final class ProjectVpcConfigGetArgs extends com.pulumi.resources.Resource
     @Import(name="subnets", required=true)
     private Output<List<String>> subnets;
 
+    /**
+     * @return Subnet IDs within which to run builds.
+     * 
+     */
     public Output<List<String>> subnets() {
         return this.subnets;
     }
@@ -43,6 +51,10 @@ public final class ProjectVpcConfigGetArgs extends com.pulumi.resources.Resource
     @Import(name="vpcId", required=true)
     private Output<String> vpcId;
 
+    /**
+     * @return ID of the VPC within which to run builds.
+     * 
+     */
     public Output<String> vpcId() {
         return this.vpcId;
     }
@@ -73,37 +85,85 @@ public final class ProjectVpcConfigGetArgs extends com.pulumi.resources.Resource
             $ = new ProjectVpcConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityGroupIds Security group IDs to assign to running builds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds Security group IDs to assign to running builds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             return securityGroupIds(Output.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupIds Security group IDs to assign to running builds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param subnets Subnet IDs within which to run builds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(Output<List<String>> subnets) {
             $.subnets = subnets;
             return this;
         }
 
+        /**
+         * @param subnets Subnet IDs within which to run builds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(List<String> subnets) {
             return subnets(Output.of(subnets));
         }
 
+        /**
+         * @param subnets Subnet IDs within which to run builds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
         }
 
+        /**
+         * @param vpcId ID of the VPC within which to run builds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId ID of the VPC within which to run builds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

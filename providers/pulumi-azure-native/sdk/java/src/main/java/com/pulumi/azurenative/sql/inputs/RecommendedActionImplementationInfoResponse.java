@@ -23,6 +23,10 @@ public final class RecommendedActionImplementationInfoResponse extends com.pulum
     @Import(name="method", required=true)
     private String method;
 
+    /**
+     * @return Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
+     * 
+     */
     public String method() {
         return this.method;
     }
@@ -34,6 +38,10 @@ public final class RecommendedActionImplementationInfoResponse extends com.pulum
     @Import(name="script", required=true)
     private String script;
 
+    /**
+     * @return Gets the manual implementation script. e.g., T-SQL script that could be executed on the database.
+     * 
+     */
     public String script() {
         return this.script;
     }
@@ -63,11 +71,23 @@ public final class RecommendedActionImplementationInfoResponse extends com.pulum
             $ = new RecommendedActionImplementationInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param method Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param script Gets the manual implementation script. e.g., T-SQL script that could be executed on the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             $.script = script;
             return this;

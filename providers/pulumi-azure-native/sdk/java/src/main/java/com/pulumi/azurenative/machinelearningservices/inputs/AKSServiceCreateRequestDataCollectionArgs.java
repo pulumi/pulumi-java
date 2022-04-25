@@ -26,6 +26,10 @@ public final class AKSServiceCreateRequestDataCollectionArgs extends com.pulumi.
     @Import(name="eventHubEnabled")
     private @Nullable Output<Boolean> eventHubEnabled;
 
+    /**
+     * @return Option for enabling/disabling Event Hub.
+     * 
+     */
     public Optional<Output<Boolean>> eventHubEnabled() {
         return Optional.ofNullable(this.eventHubEnabled);
     }
@@ -37,6 +41,10 @@ public final class AKSServiceCreateRequestDataCollectionArgs extends com.pulumi.
     @Import(name="storageEnabled")
     private @Nullable Output<Boolean> storageEnabled;
 
+    /**
+     * @return Option for enabling/disabling storage.
+     * 
+     */
     public Optional<Output<Boolean>> storageEnabled() {
         return Optional.ofNullable(this.storageEnabled);
     }
@@ -66,20 +74,44 @@ public final class AKSServiceCreateRequestDataCollectionArgs extends com.pulumi.
             $ = new AKSServiceCreateRequestDataCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventHubEnabled Option for enabling/disabling Event Hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubEnabled(@Nullable Output<Boolean> eventHubEnabled) {
             $.eventHubEnabled = eventHubEnabled;
             return this;
         }
 
+        /**
+         * @param eventHubEnabled Option for enabling/disabling Event Hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubEnabled(Boolean eventHubEnabled) {
             return eventHubEnabled(Output.of(eventHubEnabled));
         }
 
+        /**
+         * @param storageEnabled Option for enabling/disabling storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageEnabled(@Nullable Output<Boolean> storageEnabled) {
             $.storageEnabled = storageEnabled;
             return this;
         }
 
+        /**
+         * @param storageEnabled Option for enabling/disabling storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageEnabled(Boolean storageEnabled) {
             return storageEnabled(Output.of(storageEnabled));
         }

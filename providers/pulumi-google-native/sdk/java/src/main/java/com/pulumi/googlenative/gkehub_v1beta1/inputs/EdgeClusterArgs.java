@@ -26,6 +26,10 @@ public final class EdgeClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceLink")
     private @Nullable Output<String> resourceLink;
 
+    /**
+     * @return Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
+     * 
+     */
     public Optional<Output<String>> resourceLink() {
         return Optional.ofNullable(this.resourceLink);
     }
@@ -54,11 +58,23 @@ public final class EdgeClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EdgeClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceLink Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLink(@Nullable Output<String> resourceLink) {
             $.resourceLink = resourceLink;
             return this;
         }
 
+        /**
+         * @param resourceLink Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLink(String resourceLink) {
             return resourceLink(Output.of(resourceLink));
         }

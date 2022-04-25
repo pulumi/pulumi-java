@@ -25,6 +25,10 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
     @Import(name="branchName")
     private @Nullable String branchName;
 
+    /**
+     * @return The branch name in the repository.
+     * 
+     */
     public Optional<String> branchName() {
         return Optional.ofNullable(this.branchName);
     }
@@ -36,6 +40,10 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
     @Import(name="commitId")
     private @Nullable String commitId;
 
+    /**
+     * @return The unique ID that identifies a commit.
+     * 
+     */
     public Optional<String> commitId() {
         return Optional.ofNullable(this.commitId);
     }
@@ -47,6 +55,10 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
     @Import(name="eventType")
     private @Nullable String eventType;
 
+    /**
+     * @return The event type of the trigger.
+     * 
+     */
     public Optional<String> eventType() {
         return Optional.ofNullable(this.eventType);
     }
@@ -58,6 +70,10 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The unique ID of the trigger.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -69,6 +85,10 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
     @Import(name="providerType")
     private @Nullable String providerType;
 
+    /**
+     * @return The source control provider type.
+     * 
+     */
     public Optional<String> providerType() {
         return Optional.ofNullable(this.providerType);
     }
@@ -80,6 +100,10 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
     @Import(name="pullRequestId")
     private @Nullable String pullRequestId;
 
+    /**
+     * @return The unique ID that identifies pull request.
+     * 
+     */
     public Optional<String> pullRequestId() {
         return Optional.ofNullable(this.pullRequestId);
     }
@@ -91,6 +115,10 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
     @Import(name="repositoryUrl")
     private @Nullable String repositoryUrl;
 
+    /**
+     * @return The repository URL.
+     * 
+     */
     public Optional<String> repositoryUrl() {
         return Optional.ofNullable(this.repositoryUrl);
     }
@@ -125,36 +153,78 @@ public final class SourceTriggerDescriptorResponse extends com.pulumi.resources.
             $ = new SourceTriggerDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branchName The branch name in the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchName(@Nullable String branchName) {
             $.branchName = branchName;
             return this;
         }
 
+        /**
+         * @param commitId The unique ID that identifies a commit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitId(@Nullable String commitId) {
             $.commitId = commitId;
             return this;
         }
 
+        /**
+         * @param eventType The event type of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(@Nullable String eventType) {
             $.eventType = eventType;
             return this;
         }
 
+        /**
+         * @param id The unique ID of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param providerType The source control provider type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerType(@Nullable String providerType) {
             $.providerType = providerType;
             return this;
         }
 
+        /**
+         * @param pullRequestId The unique ID that identifies pull request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullRequestId(@Nullable String pullRequestId) {
             $.pullRequestId = pullRequestId;
             return this;
         }
 
+        /**
+         * @param repositoryUrl The repository URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUrl(@Nullable String repositoryUrl) {
             $.repositoryUrl = repositoryUrl;
             return this;

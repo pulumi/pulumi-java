@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class KafkaRestPropertiesResponse {
     /**
-     * The information of AAD security group.
+     * @return The information of AAD security group.
      * 
      */
     private final @Nullable ClientGroupInfoResponse clientGroupInfo;
     /**
-     * The configurations that need to be overriden.
+     * @return The configurations that need to be overriden.
      * 
      */
     private final @Nullable Map<String,String> configurationOverride;
@@ -33,16 +33,16 @@ public final class KafkaRestPropertiesResponse {
     }
 
     /**
-     * The information of AAD security group.
+     * @return The information of AAD security group.
      * 
-    */
+     */
     public Optional<ClientGroupInfoResponse> clientGroupInfo() {
         return Optional.ofNullable(this.clientGroupInfo);
     }
     /**
-     * The configurations that need to be overriden.
+     * @return The configurations that need to be overriden.
      * 
-    */
+     */
     public Map<String,String> configurationOverride() {
         return this.configurationOverride == null ? Map.of() : this.configurationOverride;
     }

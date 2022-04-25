@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class Oauth2ClientCredentialsResponse {
     /**
-     * The client identifier.
+     * @return The client identifier.
      * 
      */
     private final String clientId;
     /**
-     * Secret version reference containing the client secret.
+     * @return Secret version reference containing the client secret.
      * 
      */
     private final SecretResponse clientSecret;
@@ -30,16 +30,16 @@ public final class Oauth2ClientCredentialsResponse {
     }
 
     /**
-     * The client identifier.
+     * @return The client identifier.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * Secret version reference containing the client secret.
+     * @return Secret version reference containing the client secret.
      * 
-    */
+     */
     public SecretResponse clientSecret() {
         return this.clientSecret;
     }

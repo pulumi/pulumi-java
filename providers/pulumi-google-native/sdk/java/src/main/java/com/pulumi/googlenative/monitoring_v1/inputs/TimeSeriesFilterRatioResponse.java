@@ -25,6 +25,10 @@ public final class TimeSeriesFilterRatioResponse extends com.pulumi.resources.In
     @Import(name="denominator", required=true)
     private RatioPartResponse denominator;
 
+    /**
+     * @return The denominator of the ratio.
+     * 
+     */
     public RatioPartResponse denominator() {
         return this.denominator;
     }
@@ -36,6 +40,10 @@ public final class TimeSeriesFilterRatioResponse extends com.pulumi.resources.In
     @Import(name="numerator", required=true)
     private RatioPartResponse numerator;
 
+    /**
+     * @return The numerator of the ratio.
+     * 
+     */
     public RatioPartResponse numerator() {
         return this.numerator;
     }
@@ -47,6 +55,10 @@ public final class TimeSeriesFilterRatioResponse extends com.pulumi.resources.In
     @Import(name="pickTimeSeriesFilter", required=true)
     private PickTimeSeriesFilterResponse pickTimeSeriesFilter;
 
+    /**
+     * @return Ranking based time series filter.
+     * 
+     */
     public PickTimeSeriesFilterResponse pickTimeSeriesFilter() {
         return this.pickTimeSeriesFilter;
     }
@@ -58,6 +70,10 @@ public final class TimeSeriesFilterRatioResponse extends com.pulumi.resources.In
     @Import(name="secondaryAggregation", required=true)
     private AggregationResponse secondaryAggregation;
 
+    /**
+     * @return Apply a second aggregation after the ratio is computed.
+     * 
+     */
     public AggregationResponse secondaryAggregation() {
         return this.secondaryAggregation;
     }
@@ -89,21 +105,45 @@ public final class TimeSeriesFilterRatioResponse extends com.pulumi.resources.In
             $ = new TimeSeriesFilterRatioResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param denominator The denominator of the ratio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denominator(RatioPartResponse denominator) {
             $.denominator = denominator;
             return this;
         }
 
+        /**
+         * @param numerator The numerator of the ratio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numerator(RatioPartResponse numerator) {
             $.numerator = numerator;
             return this;
         }
 
+        /**
+         * @param pickTimeSeriesFilter Ranking based time series filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pickTimeSeriesFilter(PickTimeSeriesFilterResponse pickTimeSeriesFilter) {
             $.pickTimeSeriesFilter = pickTimeSeriesFilter;
             return this;
         }
 
+        /**
+         * @param secondaryAggregation Apply a second aggregation after the ratio is computed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryAggregation(AggregationResponse secondaryAggregation) {
             $.secondaryAggregation = secondaryAggregation;
             return this;

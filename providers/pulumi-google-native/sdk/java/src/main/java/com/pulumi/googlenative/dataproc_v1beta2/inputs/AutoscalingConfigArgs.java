@@ -26,6 +26,10 @@ public final class AutoscalingConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="policyUri")
     private @Nullable Output<String> policyUri;
 
+    /**
+     * @return Optional. The autoscaling policy used by the cluster.Only resource names including projectid and location (region) are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]Note that the policy must be in the same project and Dataproc region.
+     * 
+     */
     public Optional<Output<String>> policyUri() {
         return Optional.ofNullable(this.policyUri);
     }
@@ -54,11 +58,23 @@ public final class AutoscalingConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new AutoscalingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyUri Optional. The autoscaling policy used by the cluster.Only resource names including projectid and location (region) are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]Note that the policy must be in the same project and Dataproc region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyUri(@Nullable Output<String> policyUri) {
             $.policyUri = policyUri;
             return this;
         }
 
+        /**
+         * @param policyUri Optional. The autoscaling policy used by the cluster.Only resource names including projectid and location (region) are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]Note that the policy must be in the same project and Dataproc region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyUri(String policyUri) {
             return policyUri(Output.of(policyUri));
         }

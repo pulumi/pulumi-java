@@ -19,6 +19,10 @@ public final class ListControllerConnectionDetailsArgs extends com.pulumi.resour
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class ListControllerConnectionDetailsArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class ListControllerConnectionDetailsArgs extends com.pulumi.resour
     @Import(name="targetContainerHostResourceId", required=true)
     private String targetContainerHostResourceId;
 
+    /**
+     * @return Resource ID of the target container host mapped to the Azure Dev Spaces Controller.
+     * 
+     */
     public String targetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
     }
@@ -71,16 +83,34 @@ public final class ListControllerConnectionDetailsArgs extends com.pulumi.resour
             $ = new ListControllerConnectionDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param targetContainerHostResourceId Resource ID of the target container host mapped to the Azure Dev Spaces Controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetContainerHostResourceId(String targetContainerHostResourceId) {
             $.targetContainerHostResourceId = targetContainerHostResourceId;
             return this;

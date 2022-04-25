@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagementPolicyActionResponse {
     /**
-     * The management policy action for base blob
+     * @return The management policy action for base blob
      * 
      */
     private final @Nullable ManagementPolicyBaseBlobResponse baseBlob;
     /**
-     * The management policy action for snapshot
+     * @return The management policy action for snapshot
      * 
      */
     private final @Nullable ManagementPolicySnapShotResponse snapshot;
     /**
-     * The management policy action for version
+     * @return The management policy action for version
      * 
      */
     private final @Nullable ManagementPolicyVersionResponse version;
@@ -40,23 +40,23 @@ public final class ManagementPolicyActionResponse {
     }
 
     /**
-     * The management policy action for base blob
+     * @return The management policy action for base blob
      * 
-    */
+     */
     public Optional<ManagementPolicyBaseBlobResponse> baseBlob() {
         return Optional.ofNullable(this.baseBlob);
     }
     /**
-     * The management policy action for snapshot
+     * @return The management policy action for snapshot
      * 
-    */
+     */
     public Optional<ManagementPolicySnapShotResponse> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
     /**
-     * The management policy action for version
+     * @return The management policy action for version
      * 
-    */
+     */
     public Optional<ManagementPolicyVersionResponse> version() {
         return Optional.ofNullable(this.version);
     }

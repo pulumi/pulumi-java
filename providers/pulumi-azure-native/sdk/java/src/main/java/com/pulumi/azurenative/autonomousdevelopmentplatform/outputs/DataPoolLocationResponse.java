@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataPoolLocationResponse {
     /**
-     * Encryption properties of a Data Pool location
+     * @return Encryption properties of a Data Pool location
      * 
      */
     private final @Nullable DataPoolEncryptionResponse encryption;
     /**
-     * The location name
+     * @return The location name
      * 
      */
     private final String name;
@@ -32,16 +32,16 @@ public final class DataPoolLocationResponse {
     }
 
     /**
-     * Encryption properties of a Data Pool location
+     * @return Encryption properties of a Data Pool location
      * 
-    */
+     */
     public Optional<DataPoolEncryptionResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * The location name
+     * @return The location name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

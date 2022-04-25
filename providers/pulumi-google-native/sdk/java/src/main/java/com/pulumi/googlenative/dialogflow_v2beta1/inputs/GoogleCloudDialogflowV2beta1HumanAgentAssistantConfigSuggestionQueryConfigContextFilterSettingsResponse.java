@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="dropHandoffMessages", required=true)
     private Boolean dropHandoffMessages;
 
+    /**
+     * @return If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
+     * 
+     */
     public Boolean dropHandoffMessages() {
         return this.dropHandoffMessages;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="dropIvrMessages", required=true)
     private Boolean dropIvrMessages;
 
+    /**
+     * @return If set to true, all messages from ivr stage are dropped.
+     * 
+     */
     public Boolean dropIvrMessages() {
         return this.dropIvrMessages;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="dropVirtualAgentMessages", required=true)
     private Boolean dropVirtualAgentMessages;
 
+    /**
+     * @return If set to true, all messages from virtual agent are dropped.
+     * 
+     */
     public Boolean dropVirtualAgentMessages() {
         return this.dropVirtualAgentMessages;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dropHandoffMessages If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dropHandoffMessages(Boolean dropHandoffMessages) {
             $.dropHandoffMessages = dropHandoffMessages;
             return this;
         }
 
+        /**
+         * @param dropIvrMessages If set to true, all messages from ivr stage are dropped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dropIvrMessages(Boolean dropIvrMessages) {
             $.dropIvrMessages = dropIvrMessages;
             return this;
         }
 
+        /**
+         * @param dropVirtualAgentMessages If set to true, all messages from virtual agent are dropped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dropVirtualAgentMessages(Boolean dropVirtualAgentMessages) {
             $.dropVirtualAgentMessages = dropVirtualAgentMessages;
             return this;

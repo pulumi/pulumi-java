@@ -25,6 +25,10 @@ public final class BlobInventoryPolicyRuleResponse extends com.pulumi.resources.
     @Import(name="definition", required=true)
     private BlobInventoryPolicyDefinitionResponse definition;
 
+    /**
+     * @return An object that defines the blob inventory policy rule.
+     * 
+     */
     public BlobInventoryPolicyDefinitionResponse definition() {
         return this.definition;
     }
@@ -36,6 +40,10 @@ public final class BlobInventoryPolicyRuleResponse extends com.pulumi.resources.
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Rule is enabled when set to true.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -47,6 +55,10 @@ public final class BlobInventoryPolicyRuleResponse extends com.pulumi.resources.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -77,16 +89,34 @@ public final class BlobInventoryPolicyRuleResponse extends com.pulumi.resources.
             $ = new BlobInventoryPolicyRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param definition An object that defines the blob inventory policy rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(BlobInventoryPolicyDefinitionResponse definition) {
             $.definition = definition;
             return this;
         }
 
+        /**
+         * @param enabled Rule is enabled when set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param name A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

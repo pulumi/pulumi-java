@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class KeyVaultKeyReferenceResponse {
     /**
-     * The URL referencing a key encryption key in Key Vault.
+     * @return The URL referencing a key encryption key in Key Vault.
      * 
      */
     private final String keyUrl;
     /**
-     * The relative URL of the Key Vault containing the key.
+     * @return The relative URL of the Key Vault containing the key.
      * 
      */
     private final SubResourceResponse sourceVault;
@@ -30,16 +30,16 @@ public final class KeyVaultKeyReferenceResponse {
     }
 
     /**
-     * The URL referencing a key encryption key in Key Vault.
+     * @return The URL referencing a key encryption key in Key Vault.
      * 
-    */
+     */
     public String keyUrl() {
         return this.keyUrl;
     }
     /**
-     * The relative URL of the Key Vault containing the key.
+     * @return The relative URL of the Key Vault containing the key.
      * 
-    */
+     */
     public SubResourceResponse sourceVault() {
         return this.sourceVault;
     }

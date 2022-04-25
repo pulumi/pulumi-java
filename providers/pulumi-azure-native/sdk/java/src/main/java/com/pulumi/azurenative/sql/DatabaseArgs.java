@@ -35,6 +35,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoPauseDelay")
     private @Nullable Output<Integer> autoPauseDelay;
 
+    /**
+     * @return Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
+     * 
+     */
     public Optional<Output<Integer>> autoPauseDelay() {
         return Optional.ofNullable(this.autoPauseDelay);
     }
@@ -46,6 +50,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="catalogCollation")
     private @Nullable Output<Either<String,CatalogCollationType>> catalogCollation;
 
+    /**
+     * @return Collation of the metadata catalog.
+     * 
+     */
     public Optional<Output<Either<String,CatalogCollationType>>> catalogCollation() {
         return Optional.ofNullable(this.catalogCollation);
     }
@@ -57,6 +65,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="collation")
     private @Nullable Output<String> collation;
 
+    /**
+     * @return The collation of the database.
+     * 
+     */
     public Optional<Output<String>> collation() {
         return Optional.ofNullable(this.collation);
     }
@@ -84,6 +96,26 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createMode")
     private @Nullable Output<Either<String,CreateMode>> createMode;
 
+    /**
+     * @return Specifies the mode of database creation.
+     * 
+     * Default: regular database creation.
+     * 
+     * Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the source database.
+     * 
+     * Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the resource ID of the existing primary database.
+     * 
+     * PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId must be specified as the resource ID of the existing database, and restorePointInTime must be specified.
+     * 
+     * Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable database resource ID to restore.
+     * 
+     * Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If sourceDatabaseId is the database&#39;s original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored. restorePointInTime may also be specified to restore from an earlier point in time.
+     * 
+     * RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
+     * 
+     * Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
+     * 
+     */
     public Optional<Output<Either<String,CreateMode>>> createMode() {
         return Optional.ofNullable(this.createMode);
     }
@@ -95,6 +127,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return The name of the database.
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -106,6 +142,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="elasticPoolId")
     private @Nullable Output<String> elasticPoolId;
 
+    /**
+     * @return The resource identifier of the elastic pool containing this database.
+     * 
+     */
     public Optional<Output<String>> elasticPoolId() {
         return Optional.ofNullable(this.elasticPoolId);
     }
@@ -117,6 +157,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="highAvailabilityReplicaCount")
     private @Nullable Output<Integer> highAvailabilityReplicaCount;
 
+    /**
+     * @return The number of secondary replicas associated with the database that are used to provide high availability.
+     * 
+     */
     public Optional<Output<Integer>> highAvailabilityReplicaCount() {
         return Optional.ofNullable(this.highAvailabilityReplicaCount);
     }
@@ -128,6 +172,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenseType")
     private @Nullable Output<Either<String,DatabaseLicenseType>> licenseType;
 
+    /**
+     * @return The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
+     * 
+     */
     public Optional<Output<Either<String,DatabaseLicenseType>>> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
@@ -139,6 +187,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -150,6 +202,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="longTermRetentionBackupResourceId")
     private @Nullable Output<String> longTermRetentionBackupResourceId;
 
+    /**
+     * @return The resource identifier of the long term retention backup associated with create operation of this database.
+     * 
+     */
     public Optional<Output<String>> longTermRetentionBackupResourceId() {
         return Optional.ofNullable(this.longTermRetentionBackupResourceId);
     }
@@ -161,6 +217,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceConfigurationId")
     private @Nullable Output<String> maintenanceConfigurationId;
 
+    /**
+     * @return Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.
+     * 
+     */
     public Optional<Output<String>> maintenanceConfigurationId() {
         return Optional.ofNullable(this.maintenanceConfigurationId);
     }
@@ -172,6 +232,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxSizeBytes")
     private @Nullable Output<Double> maxSizeBytes;
 
+    /**
+     * @return The max size of the database expressed in bytes.
+     * 
+     */
     public Optional<Output<Double>> maxSizeBytes() {
         return Optional.ofNullable(this.maxSizeBytes);
     }
@@ -183,6 +247,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minCapacity")
     private @Nullable Output<Double> minCapacity;
 
+    /**
+     * @return Minimal capacity that database will always have allocated, if not paused
+     * 
+     */
     public Optional<Output<Double>> minCapacity() {
         return Optional.ofNullable(this.minCapacity);
     }
@@ -194,6 +262,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="readScale")
     private @Nullable Output<Either<String,DatabaseReadScale>> readScale;
 
+    /**
+     * @return The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
+     * 
+     */
     public Optional<Output<Either<String,DatabaseReadScale>>> readScale() {
         return Optional.ofNullable(this.readScale);
     }
@@ -205,6 +277,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recoverableDatabaseId")
     private @Nullable Output<String> recoverableDatabaseId;
 
+    /**
+     * @return The resource identifier of the recoverable database associated with create operation of this database.
+     * 
+     */
     public Optional<Output<String>> recoverableDatabaseId() {
         return Optional.ofNullable(this.recoverableDatabaseId);
     }
@@ -216,6 +292,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recoveryServicesRecoveryPointId")
     private @Nullable Output<String> recoveryServicesRecoveryPointId;
 
+    /**
+     * @return The resource identifier of the recovery point associated with create operation of this database.
+     * 
+     */
     public Optional<Output<String>> recoveryServicesRecoveryPointId() {
         return Optional.ofNullable(this.recoveryServicesRecoveryPointId);
     }
@@ -227,6 +307,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestedBackupStorageRedundancy")
     private @Nullable Output<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy;
 
+    /**
+     * @return The storage account type to be used to store backups for this database.
+     * 
+     */
     public Optional<Output<Either<String,RequestedBackupStorageRedundancy>>> requestedBackupStorageRedundancy() {
         return Optional.ofNullable(this.requestedBackupStorageRedundancy);
     }
@@ -238,6 +322,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -249,6 +337,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restorableDroppedDatabaseId")
     private @Nullable Output<String> restorableDroppedDatabaseId;
 
+    /**
+     * @return The resource identifier of the restorable dropped database associated with create operation of this database.
+     * 
+     */
     public Optional<Output<String>> restorableDroppedDatabaseId() {
         return Optional.ofNullable(this.restorableDroppedDatabaseId);
     }
@@ -260,6 +352,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restorePointInTime")
     private @Nullable Output<String> restorePointInTime;
 
+    /**
+     * @return Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
+     * 
+     */
     public Optional<Output<String>> restorePointInTime() {
         return Optional.ofNullable(this.restorePointInTime);
     }
@@ -271,6 +367,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sampleName")
     private @Nullable Output<Either<String,SampleName>> sampleName;
 
+    /**
+     * @return The name of the sample schema to apply when creating this database.
+     * 
+     */
     public Optional<Output<Either<String,SampleName>>> sampleName() {
         return Optional.ofNullable(this.sampleName);
     }
@@ -282,6 +382,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secondaryType")
     private @Nullable Output<Either<String,SecondaryType>> secondaryType;
 
+    /**
+     * @return The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
+     * 
+     */
     public Optional<Output<Either<String,SecondaryType>>> secondaryType() {
         return Optional.ofNullable(this.secondaryType);
     }
@@ -293,6 +397,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -306,6 +414,12 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return The database SKU.
+     * 
+     * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -317,6 +431,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDatabaseDeletionDate")
     private @Nullable Output<String> sourceDatabaseDeletionDate;
 
+    /**
+     * @return Specifies the time that the database was deleted.
+     * 
+     */
     public Optional<Output<String>> sourceDatabaseDeletionDate() {
         return Optional.ofNullable(this.sourceDatabaseDeletionDate);
     }
@@ -328,6 +446,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDatabaseId")
     private @Nullable Output<String> sourceDatabaseId;
 
+    /**
+     * @return The resource identifier of the source database associated with create operation of this database.
+     * 
+     */
     public Optional<Output<String>> sourceDatabaseId() {
         return Optional.ofNullable(this.sourceDatabaseId);
     }
@@ -339,6 +461,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -350,6 +476,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zoneRedundant")
     private @Nullable Output<Boolean> zoneRedundant;
 
+    /**
+     * @return Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
+     * 
+     */
     public Optional<Output<Boolean>> zoneRedundant() {
         return Optional.ofNullable(this.zoneRedundant);
     }
@@ -405,310 +535,798 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatabaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoPauseDelay Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoPauseDelay(@Nullable Output<Integer> autoPauseDelay) {
             $.autoPauseDelay = autoPauseDelay;
             return this;
         }
 
+        /**
+         * @param autoPauseDelay Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoPauseDelay(Integer autoPauseDelay) {
             return autoPauseDelay(Output.of(autoPauseDelay));
         }
 
+        /**
+         * @param catalogCollation Collation of the metadata catalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogCollation(@Nullable Output<Either<String,CatalogCollationType>> catalogCollation) {
             $.catalogCollation = catalogCollation;
             return this;
         }
 
+        /**
+         * @param catalogCollation Collation of the metadata catalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogCollation(Either<String,CatalogCollationType> catalogCollation) {
             return catalogCollation(Output.of(catalogCollation));
         }
 
+        /**
+         * @param catalogCollation Collation of the metadata catalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogCollation(String catalogCollation) {
             return catalogCollation(Either.ofLeft(catalogCollation));
         }
 
+        /**
+         * @param catalogCollation Collation of the metadata catalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogCollation(CatalogCollationType catalogCollation) {
             return catalogCollation(Either.ofRight(catalogCollation));
         }
 
+        /**
+         * @param collation The collation of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collation(@Nullable Output<String> collation) {
             $.collation = collation;
             return this;
         }
 
+        /**
+         * @param collation The collation of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collation(String collation) {
             return collation(Output.of(collation));
         }
 
+        /**
+         * @param createMode Specifies the mode of database creation.
+         * 
+         * Default: regular database creation.
+         * 
+         * Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the source database.
+         * 
+         * Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the resource ID of the existing primary database.
+         * 
+         * PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId must be specified as the resource ID of the existing database, and restorePointInTime must be specified.
+         * 
+         * Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable database resource ID to restore.
+         * 
+         * Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If sourceDatabaseId is the database&#39;s original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored. restorePointInTime may also be specified to restore from an earlier point in time.
+         * 
+         * RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
+         * 
+         * Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createMode(@Nullable Output<Either<String,CreateMode>> createMode) {
             $.createMode = createMode;
             return this;
         }
 
+        /**
+         * @param createMode Specifies the mode of database creation.
+         * 
+         * Default: regular database creation.
+         * 
+         * Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the source database.
+         * 
+         * Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the resource ID of the existing primary database.
+         * 
+         * PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId must be specified as the resource ID of the existing database, and restorePointInTime must be specified.
+         * 
+         * Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable database resource ID to restore.
+         * 
+         * Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If sourceDatabaseId is the database&#39;s original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored. restorePointInTime may also be specified to restore from an earlier point in time.
+         * 
+         * RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
+         * 
+         * Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createMode(Either<String,CreateMode> createMode) {
             return createMode(Output.of(createMode));
         }
 
+        /**
+         * @param createMode Specifies the mode of database creation.
+         * 
+         * Default: regular database creation.
+         * 
+         * Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the source database.
+         * 
+         * Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the resource ID of the existing primary database.
+         * 
+         * PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId must be specified as the resource ID of the existing database, and restorePointInTime must be specified.
+         * 
+         * Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable database resource ID to restore.
+         * 
+         * Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If sourceDatabaseId is the database&#39;s original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored. restorePointInTime may also be specified to restore from an earlier point in time.
+         * 
+         * RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
+         * 
+         * Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createMode(String createMode) {
             return createMode(Either.ofLeft(createMode));
         }
 
+        /**
+         * @param createMode Specifies the mode of database creation.
+         * 
+         * Default: regular database creation.
+         * 
+         * Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the source database.
+         * 
+         * Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the resource ID of the existing primary database.
+         * 
+         * PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId must be specified as the resource ID of the existing database, and restorePointInTime must be specified.
+         * 
+         * Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable database resource ID to restore.
+         * 
+         * Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If sourceDatabaseId is the database&#39;s original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored. restorePointInTime may also be specified to restore from an earlier point in time.
+         * 
+         * RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
+         * 
+         * Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createMode(CreateMode createMode) {
             return createMode(Either.ofRight(createMode));
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param elasticPoolId The resource identifier of the elastic pool containing this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticPoolId(@Nullable Output<String> elasticPoolId) {
             $.elasticPoolId = elasticPoolId;
             return this;
         }
 
+        /**
+         * @param elasticPoolId The resource identifier of the elastic pool containing this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticPoolId(String elasticPoolId) {
             return elasticPoolId(Output.of(elasticPoolId));
         }
 
+        /**
+         * @param highAvailabilityReplicaCount The number of secondary replicas associated with the database that are used to provide high availability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder highAvailabilityReplicaCount(@Nullable Output<Integer> highAvailabilityReplicaCount) {
             $.highAvailabilityReplicaCount = highAvailabilityReplicaCount;
             return this;
         }
 
+        /**
+         * @param highAvailabilityReplicaCount The number of secondary replicas associated with the database that are used to provide high availability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder highAvailabilityReplicaCount(Integer highAvailabilityReplicaCount) {
             return highAvailabilityReplicaCount(Output.of(highAvailabilityReplicaCount));
         }
 
+        /**
+         * @param licenseType The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(@Nullable Output<Either<String,DatabaseLicenseType>> licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param licenseType The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(Either<String,DatabaseLicenseType> licenseType) {
             return licenseType(Output.of(licenseType));
         }
 
+        /**
+         * @param licenseType The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(String licenseType) {
             return licenseType(Either.ofLeft(licenseType));
         }
 
+        /**
+         * @param licenseType The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(DatabaseLicenseType licenseType) {
             return licenseType(Either.ofRight(licenseType));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param longTermRetentionBackupResourceId The resource identifier of the long term retention backup associated with create operation of this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder longTermRetentionBackupResourceId(@Nullable Output<String> longTermRetentionBackupResourceId) {
             $.longTermRetentionBackupResourceId = longTermRetentionBackupResourceId;
             return this;
         }
 
+        /**
+         * @param longTermRetentionBackupResourceId The resource identifier of the long term retention backup associated with create operation of this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder longTermRetentionBackupResourceId(String longTermRetentionBackupResourceId) {
             return longTermRetentionBackupResourceId(Output.of(longTermRetentionBackupResourceId));
         }
 
+        /**
+         * @param maintenanceConfigurationId Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
             $.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
 
+        /**
+         * @param maintenanceConfigurationId Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceConfigurationId(String maintenanceConfigurationId) {
             return maintenanceConfigurationId(Output.of(maintenanceConfigurationId));
         }
 
+        /**
+         * @param maxSizeBytes The max size of the database expressed in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSizeBytes(@Nullable Output<Double> maxSizeBytes) {
             $.maxSizeBytes = maxSizeBytes;
             return this;
         }
 
+        /**
+         * @param maxSizeBytes The max size of the database expressed in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSizeBytes(Double maxSizeBytes) {
             return maxSizeBytes(Output.of(maxSizeBytes));
         }
 
+        /**
+         * @param minCapacity Minimal capacity that database will always have allocated, if not paused
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCapacity(@Nullable Output<Double> minCapacity) {
             $.minCapacity = minCapacity;
             return this;
         }
 
+        /**
+         * @param minCapacity Minimal capacity that database will always have allocated, if not paused
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCapacity(Double minCapacity) {
             return minCapacity(Output.of(minCapacity));
         }
 
+        /**
+         * @param readScale The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readScale(@Nullable Output<Either<String,DatabaseReadScale>> readScale) {
             $.readScale = readScale;
             return this;
         }
 
+        /**
+         * @param readScale The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readScale(Either<String,DatabaseReadScale> readScale) {
             return readScale(Output.of(readScale));
         }
 
+        /**
+         * @param readScale The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readScale(String readScale) {
             return readScale(Either.ofLeft(readScale));
         }
 
+        /**
+         * @param readScale The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readScale(DatabaseReadScale readScale) {
             return readScale(Either.ofRight(readScale));
         }
 
+        /**
+         * @param recoverableDatabaseId The resource identifier of the recoverable database associated with create operation of this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoverableDatabaseId(@Nullable Output<String> recoverableDatabaseId) {
             $.recoverableDatabaseId = recoverableDatabaseId;
             return this;
         }
 
+        /**
+         * @param recoverableDatabaseId The resource identifier of the recoverable database associated with create operation of this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoverableDatabaseId(String recoverableDatabaseId) {
             return recoverableDatabaseId(Output.of(recoverableDatabaseId));
         }
 
+        /**
+         * @param recoveryServicesRecoveryPointId The resource identifier of the recovery point associated with create operation of this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryServicesRecoveryPointId(@Nullable Output<String> recoveryServicesRecoveryPointId) {
             $.recoveryServicesRecoveryPointId = recoveryServicesRecoveryPointId;
             return this;
         }
 
+        /**
+         * @param recoveryServicesRecoveryPointId The resource identifier of the recovery point associated with create operation of this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryServicesRecoveryPointId(String recoveryServicesRecoveryPointId) {
             return recoveryServicesRecoveryPointId(Output.of(recoveryServicesRecoveryPointId));
         }
 
+        /**
+         * @param requestedBackupStorageRedundancy The storage account type to be used to store backups for this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedBackupStorageRedundancy(@Nullable Output<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy) {
             $.requestedBackupStorageRedundancy = requestedBackupStorageRedundancy;
             return this;
         }
 
+        /**
+         * @param requestedBackupStorageRedundancy The storage account type to be used to store backups for this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedBackupStorageRedundancy(Either<String,RequestedBackupStorageRedundancy> requestedBackupStorageRedundancy) {
             return requestedBackupStorageRedundancy(Output.of(requestedBackupStorageRedundancy));
         }
 
+        /**
+         * @param requestedBackupStorageRedundancy The storage account type to be used to store backups for this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedBackupStorageRedundancy(String requestedBackupStorageRedundancy) {
             return requestedBackupStorageRedundancy(Either.ofLeft(requestedBackupStorageRedundancy));
         }
 
+        /**
+         * @param requestedBackupStorageRedundancy The storage account type to be used to store backups for this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedBackupStorageRedundancy(RequestedBackupStorageRedundancy requestedBackupStorageRedundancy) {
             return requestedBackupStorageRedundancy(Either.ofRight(requestedBackupStorageRedundancy));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param restorableDroppedDatabaseId The resource identifier of the restorable dropped database associated with create operation of this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorableDroppedDatabaseId(@Nullable Output<String> restorableDroppedDatabaseId) {
             $.restorableDroppedDatabaseId = restorableDroppedDatabaseId;
             return this;
         }
 
+        /**
+         * @param restorableDroppedDatabaseId The resource identifier of the restorable dropped database associated with create operation of this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorableDroppedDatabaseId(String restorableDroppedDatabaseId) {
             return restorableDroppedDatabaseId(Output.of(restorableDroppedDatabaseId));
         }
 
+        /**
+         * @param restorePointInTime Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePointInTime(@Nullable Output<String> restorePointInTime) {
             $.restorePointInTime = restorePointInTime;
             return this;
         }
 
+        /**
+         * @param restorePointInTime Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePointInTime(String restorePointInTime) {
             return restorePointInTime(Output.of(restorePointInTime));
         }
 
+        /**
+         * @param sampleName The name of the sample schema to apply when creating this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleName(@Nullable Output<Either<String,SampleName>> sampleName) {
             $.sampleName = sampleName;
             return this;
         }
 
+        /**
+         * @param sampleName The name of the sample schema to apply when creating this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleName(Either<String,SampleName> sampleName) {
             return sampleName(Output.of(sampleName));
         }
 
+        /**
+         * @param sampleName The name of the sample schema to apply when creating this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleName(String sampleName) {
             return sampleName(Either.ofLeft(sampleName));
         }
 
+        /**
+         * @param sampleName The name of the sample schema to apply when creating this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleName(SampleName sampleName) {
             return sampleName(Either.ofRight(sampleName));
         }
 
+        /**
+         * @param secondaryType The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryType(@Nullable Output<Either<String,SecondaryType>> secondaryType) {
             $.secondaryType = secondaryType;
             return this;
         }
 
+        /**
+         * @param secondaryType The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryType(Either<String,SecondaryType> secondaryType) {
             return secondaryType(Output.of(secondaryType));
         }
 
+        /**
+         * @param secondaryType The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryType(String secondaryType) {
             return secondaryType(Either.ofLeft(secondaryType));
         }
 
+        /**
+         * @param secondaryType The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryType(SecondaryType secondaryType) {
             return secondaryType(Either.ofRight(secondaryType));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param sku The database SKU.
+         * 
+         * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The database SKU.
+         * 
+         * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param sourceDatabaseDeletionDate Specifies the time that the database was deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabaseDeletionDate(@Nullable Output<String> sourceDatabaseDeletionDate) {
             $.sourceDatabaseDeletionDate = sourceDatabaseDeletionDate;
             return this;
         }
 
+        /**
+         * @param sourceDatabaseDeletionDate Specifies the time that the database was deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabaseDeletionDate(String sourceDatabaseDeletionDate) {
             return sourceDatabaseDeletionDate(Output.of(sourceDatabaseDeletionDate));
         }
 
+        /**
+         * @param sourceDatabaseId The resource identifier of the source database associated with create operation of this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabaseId(@Nullable Output<String> sourceDatabaseId) {
             $.sourceDatabaseId = sourceDatabaseId;
             return this;
         }
 
+        /**
+         * @param sourceDatabaseId The resource identifier of the source database associated with create operation of this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabaseId(String sourceDatabaseId) {
             return sourceDatabaseId(Output.of(sourceDatabaseId));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param zoneRedundant Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneRedundant(@Nullable Output<Boolean> zoneRedundant) {
             $.zoneRedundant = zoneRedundant;
             return this;
         }
 
+        /**
+         * @param zoneRedundant Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneRedundant(Boolean zoneRedundant) {
             return zoneRedundant(Output.of(zoneRedundant));
         }

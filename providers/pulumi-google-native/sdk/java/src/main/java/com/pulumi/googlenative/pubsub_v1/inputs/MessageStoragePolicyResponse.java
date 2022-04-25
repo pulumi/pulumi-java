@@ -24,6 +24,10 @@ public final class MessageStoragePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="allowedPersistenceRegions", required=true)
     private List<String> allowedPersistenceRegions;
 
+    /**
+     * @return A list of IDs of GCP regions where messages that are published to the topic may be persisted in storage. Messages published by publishers running in non-allowed GCP regions (or running outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty list means that no regions are allowed, and is not a valid configuration.
+     * 
+     */
     public List<String> allowedPersistenceRegions() {
         return this.allowedPersistenceRegions;
     }
@@ -52,11 +56,23 @@ public final class MessageStoragePolicyResponse extends com.pulumi.resources.Inv
             $ = new MessageStoragePolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedPersistenceRegions A list of IDs of GCP regions where messages that are published to the topic may be persisted in storage. Messages published by publishers running in non-allowed GCP regions (or running outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty list means that no regions are allowed, and is not a valid configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPersistenceRegions(List<String> allowedPersistenceRegions) {
             $.allowedPersistenceRegions = allowedPersistenceRegions;
             return this;
         }
 
+        /**
+         * @param allowedPersistenceRegions A list of IDs of GCP regions where messages that are published to the topic may be persisted in storage. Messages published by publishers running in non-allowed GCP regions (or running outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty list means that no regions are allowed, and is not a valid configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPersistenceRegions(String... allowedPersistenceRegions) {
             return allowedPersistenceRegions(List.of(allowedPersistenceRegions));
         }

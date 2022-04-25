@@ -22,6 +22,10 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse exte
     @Import(name="privateEndpointConnections")
     private @Nullable List<String> privateEndpointConnections;
 
+    /**
+     * @return The private endpoint connections.
+     * 
+     */
     public Optional<List<String>> privateEndpointConnections() {
         return Optional.ofNullable(this.privateEndpointConnections);
     }
@@ -50,11 +54,23 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse exte
             $ = new ResourceManagementPrivateLinkEndpointConnectionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpointConnections The private endpoint connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(@Nullable List<String> privateEndpointConnections) {
             $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections The private endpoint connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(String... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }

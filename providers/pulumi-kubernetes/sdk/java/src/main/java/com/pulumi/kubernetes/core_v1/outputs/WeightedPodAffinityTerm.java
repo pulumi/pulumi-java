@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class WeightedPodAffinityTerm {
     /**
-     * Required. A pod affinity term, associated with the corresponding weight.
+     * @return Required. A pod affinity term, associated with the corresponding weight.
      * 
      */
     private final PodAffinityTerm podAffinityTerm;
     /**
-     * weight associated with matching the corresponding podAffinityTerm, in the range 1-100.
+     * @return weight associated with matching the corresponding podAffinityTerm, in the range 1-100.
      * 
      */
     private final Integer weight;
@@ -30,16 +30,16 @@ public final class WeightedPodAffinityTerm {
     }
 
     /**
-     * Required. A pod affinity term, associated with the corresponding weight.
+     * @return Required. A pod affinity term, associated with the corresponding weight.
      * 
-    */
+     */
     public PodAffinityTerm podAffinityTerm() {
         return this.podAffinityTerm;
     }
     /**
-     * weight associated with matching the corresponding podAffinityTerm, in the range 1-100.
+     * @return weight associated with matching the corresponding podAffinityTerm, in the range 1-100.
      * 
-    */
+     */
     public Integer weight() {
         return this.weight;
     }

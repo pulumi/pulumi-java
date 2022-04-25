@@ -26,6 +26,10 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Friendly Name to provide context on what this customization step does
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
     @Import(name="restartCheckCommand")
     private @Nullable String restartCheckCommand;
 
+    /**
+     * @return Command to check if restart succeeded [Default: &#39;&#39;]
+     * 
+     */
     public Optional<String> restartCheckCommand() {
         return Optional.ofNullable(this.restartCheckCommand);
     }
@@ -48,6 +56,10 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
     @Import(name="restartCommand")
     private @Nullable String restartCommand;
 
+    /**
+     * @return Command to execute the restart [Default: &#39;shutdown /r /f /t 0 /c &#34;packer restart&#34;&#39;]
+     * 
+     */
     public Optional<String> restartCommand() {
         return Optional.ofNullable(this.restartCommand);
     }
@@ -59,6 +71,10 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
     @Import(name="restartTimeout")
     private @Nullable String restartTimeout;
 
+    /**
+     * @return Restart timeout specified as a string of magnitude and unit, e.g. &#39;5m&#39; (5 minutes) or &#39;2h&#39; (2 hours) [Default: &#39;5m&#39;]
+     * 
+     */
     public Optional<String> restartTimeout() {
         return Optional.ofNullable(this.restartTimeout);
     }
@@ -71,6 +87,11 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;WindowsRestart&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -103,26 +124,57 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
             $ = new ImageTemplateRestartCustomizerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Friendly Name to provide context on what this customization step does
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param restartCheckCommand Command to check if restart succeeded [Default: &#39;&#39;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartCheckCommand(@Nullable String restartCheckCommand) {
             $.restartCheckCommand = restartCheckCommand;
             return this;
         }
 
+        /**
+         * @param restartCommand Command to execute the restart [Default: &#39;shutdown /r /f /t 0 /c &#34;packer restart&#34;&#39;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartCommand(@Nullable String restartCommand) {
             $.restartCommand = restartCommand;
             return this;
         }
 
+        /**
+         * @param restartTimeout Restart timeout specified as a string of magnitude and unit, e.g. &#39;5m&#39; (5 minutes) or &#39;2h&#39; (2 hours) [Default: &#39;5m&#39;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartTimeout(@Nullable String restartTimeout) {
             $.restartTimeout = restartTimeout;
             return this;
         }
 
+        /**
+         * @param type The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+         * Expected value is &#39;WindowsRestart&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

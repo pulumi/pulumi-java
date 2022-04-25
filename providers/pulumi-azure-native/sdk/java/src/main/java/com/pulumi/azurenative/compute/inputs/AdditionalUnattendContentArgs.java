@@ -29,6 +29,10 @@ public final class AdditionalUnattendContentArgs extends com.pulumi.resources.Re
     @Import(name="componentName")
     private @Nullable Output<ComponentNames> componentName;
 
+    /**
+     * @return The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
+     * 
+     */
     public Optional<Output<ComponentNames>> componentName() {
         return Optional.ofNullable(this.componentName);
     }
@@ -40,6 +44,10 @@ public final class AdditionalUnattendContentArgs extends com.pulumi.resources.Re
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -51,6 +59,10 @@ public final class AdditionalUnattendContentArgs extends com.pulumi.resources.Re
     @Import(name="passName")
     private @Nullable Output<PassNames> passName;
 
+    /**
+     * @return The pass name. Currently, the only allowable value is OobeSystem.
+     * 
+     */
     public Optional<Output<PassNames>> passName() {
         return Optional.ofNullable(this.passName);
     }
@@ -62,6 +74,10 @@ public final class AdditionalUnattendContentArgs extends com.pulumi.resources.Re
     @Import(name="settingName")
     private @Nullable Output<SettingNames> settingName;
 
+    /**
+     * @return Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
+     * 
+     */
     public Optional<Output<SettingNames>> settingName() {
         return Optional.ofNullable(this.settingName);
     }
@@ -93,38 +109,86 @@ public final class AdditionalUnattendContentArgs extends com.pulumi.resources.Re
             $ = new AdditionalUnattendContentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentName The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentName(@Nullable Output<ComponentNames> componentName) {
             $.componentName = componentName;
             return this;
         }
 
+        /**
+         * @param componentName The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentName(ComponentNames componentName) {
             return componentName(Output.of(componentName));
         }
 
+        /**
+         * @param content Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param passName The pass name. Currently, the only allowable value is OobeSystem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passName(@Nullable Output<PassNames> passName) {
             $.passName = passName;
             return this;
         }
 
+        /**
+         * @param passName The pass name. Currently, the only allowable value is OobeSystem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passName(PassNames passName) {
             return passName(Output.of(passName));
         }
 
+        /**
+         * @param settingName Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settingName(@Nullable Output<SettingNames> settingName) {
             $.settingName = settingName;
             return this;
         }
 
+        /**
+         * @param settingName Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settingName(SettingNames settingName) {
             return settingName(Output.of(settingName));
         }

@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2TimePartConfigArgs extends com.pulumi.resou
     @Import(name="partToExtract")
     private @Nullable Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract;
 
+    /**
+     * @return The part of the time to keep.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2TimePartConfigPartToExtract>> partToExtract() {
         return Optional.ofNullable(this.partToExtract);
     }
@@ -54,11 +58,23 @@ public final class GooglePrivacyDlpV2TimePartConfigArgs extends com.pulumi.resou
             $ = new GooglePrivacyDlpV2TimePartConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partToExtract The part of the time to keep.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partToExtract(@Nullable Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract) {
             $.partToExtract = partToExtract;
             return this;
         }
 
+        /**
+         * @param partToExtract The part of the time to keep.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partToExtract(GooglePrivacyDlpV2TimePartConfigPartToExtract partToExtract) {
             return partToExtract(Output.of(partToExtract));
         }

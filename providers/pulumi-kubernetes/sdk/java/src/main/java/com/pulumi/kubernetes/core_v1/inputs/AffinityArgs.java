@@ -28,6 +28,10 @@ public final class AffinityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeAffinity")
     private @Nullable Output<NodeAffinityArgs> nodeAffinity;
 
+    /**
+     * @return Describes node affinity scheduling rules for the pod.
+     * 
+     */
     public Optional<Output<NodeAffinityArgs>> nodeAffinity() {
         return Optional.ofNullable(this.nodeAffinity);
     }
@@ -39,6 +43,10 @@ public final class AffinityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="podAffinity")
     private @Nullable Output<PodAffinityArgs> podAffinity;
 
+    /**
+     * @return Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).
+     * 
+     */
     public Optional<Output<PodAffinityArgs>> podAffinity() {
         return Optional.ofNullable(this.podAffinity);
     }
@@ -50,6 +58,10 @@ public final class AffinityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="podAntiAffinity")
     private @Nullable Output<PodAntiAffinityArgs> podAntiAffinity;
 
+    /**
+     * @return Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).
+     * 
+     */
     public Optional<Output<PodAntiAffinityArgs>> podAntiAffinity() {
         return Optional.ofNullable(this.podAntiAffinity);
     }
@@ -80,29 +92,65 @@ public final class AffinityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AffinityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodeAffinity Describes node affinity scheduling rules for the pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinity(@Nullable Output<NodeAffinityArgs> nodeAffinity) {
             $.nodeAffinity = nodeAffinity;
             return this;
         }
 
+        /**
+         * @param nodeAffinity Describes node affinity scheduling rules for the pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAffinity(NodeAffinityArgs nodeAffinity) {
             return nodeAffinity(Output.of(nodeAffinity));
         }
 
+        /**
+         * @param podAffinity Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder podAffinity(@Nullable Output<PodAffinityArgs> podAffinity) {
             $.podAffinity = podAffinity;
             return this;
         }
 
+        /**
+         * @param podAffinity Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder podAffinity(PodAffinityArgs podAffinity) {
             return podAffinity(Output.of(podAffinity));
         }
 
+        /**
+         * @param podAntiAffinity Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder podAntiAffinity(@Nullable Output<PodAntiAffinityArgs> podAntiAffinity) {
             $.podAntiAffinity = podAntiAffinity;
             return this;
         }
 
+        /**
+         * @param podAntiAffinity Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder podAntiAffinity(PodAntiAffinityArgs podAntiAffinity) {
             return podAntiAffinity(Output.of(podAntiAffinity));
         }

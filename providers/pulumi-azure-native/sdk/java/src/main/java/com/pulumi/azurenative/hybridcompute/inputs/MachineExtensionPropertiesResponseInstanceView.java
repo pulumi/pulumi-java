@@ -26,6 +26,10 @@ public final class MachineExtensionPropertiesResponseInstanceView extends com.pu
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The machine extension name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class MachineExtensionPropertiesResponseInstanceView extends com.pu
     @Import(name="status")
     private @Nullable MachineExtensionInstanceViewResponseStatus status;
 
+    /**
+     * @return Instance view status.
+     * 
+     */
     public Optional<MachineExtensionInstanceViewResponseStatus> status() {
         return Optional.ofNullable(this.status);
     }
@@ -48,6 +56,10 @@ public final class MachineExtensionPropertiesResponseInstanceView extends com.pu
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -59,6 +71,10 @@ public final class MachineExtensionPropertiesResponseInstanceView extends com.pu
     @Import(name="typeHandlerVersion", required=true)
     private String typeHandlerVersion;
 
+    /**
+     * @return Specifies the version of the script handler.
+     * 
+     */
     public String typeHandlerVersion() {
         return this.typeHandlerVersion;
     }
@@ -90,21 +106,45 @@ public final class MachineExtensionPropertiesResponseInstanceView extends com.pu
             $ = new MachineExtensionPropertiesResponseInstanceView(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The machine extension name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param status Instance view status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable MachineExtensionInstanceViewResponseStatus status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param typeHandlerVersion Specifies the version of the script handler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeHandlerVersion(String typeHandlerVersion) {
             $.typeHandlerVersion = typeHandlerVersion;
             return this;

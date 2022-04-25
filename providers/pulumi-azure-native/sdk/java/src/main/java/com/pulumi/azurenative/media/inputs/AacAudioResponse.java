@@ -27,6 +27,10 @@ public final class AacAudioResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bitrate")
     private @Nullable Integer bitrate;
 
+    /**
+     * @return The bitrate, in bits per second, of the output encoded audio.
+     * 
+     */
     public Optional<Integer> bitrate() {
         return Optional.ofNullable(this.bitrate);
     }
@@ -38,6 +42,10 @@ public final class AacAudioResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="channels")
     private @Nullable Integer channels;
 
+    /**
+     * @return The number of channels in the audio.
+     * 
+     */
     public Optional<Integer> channels() {
         return Optional.ofNullable(this.channels);
     }
@@ -49,6 +57,10 @@ public final class AacAudioResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="label")
     private @Nullable String label;
 
+    /**
+     * @return An optional label for the codec. The label can be used to control muxing behavior.
+     * 
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
@@ -61,6 +73,11 @@ public final class AacAudioResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.AacAudio&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -72,6 +89,10 @@ public final class AacAudioResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="profile")
     private @Nullable String profile;
 
+    /**
+     * @return The encoding profile to be used when encoding audio with AAC.
+     * 
+     */
     public Optional<String> profile() {
         return Optional.ofNullable(this.profile);
     }
@@ -83,6 +104,10 @@ public final class AacAudioResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="samplingRate")
     private @Nullable Integer samplingRate;
 
+    /**
+     * @return The sampling rate to use for encoding in hertz.
+     * 
+     */
     public Optional<Integer> samplingRate() {
         return Optional.ofNullable(this.samplingRate);
     }
@@ -116,31 +141,68 @@ public final class AacAudioResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AacAudioResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bitrate The bitrate, in bits per second, of the output encoded audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrate(@Nullable Integer bitrate) {
             $.bitrate = bitrate;
             return this;
         }
 
+        /**
+         * @param channels The number of channels in the audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channels(@Nullable Integer channels) {
             $.channels = channels;
             return this;
         }
 
+        /**
+         * @param label An optional label for the codec. The label can be used to control muxing behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.AacAudio&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param profile The encoding profile to be used when encoding audio with AAC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(@Nullable String profile) {
             $.profile = profile;
             return this;
         }
 
+        /**
+         * @param samplingRate The sampling rate to use for encoding in hertz.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingRate(@Nullable Integer samplingRate) {
             $.samplingRate = samplingRate;
             return this;

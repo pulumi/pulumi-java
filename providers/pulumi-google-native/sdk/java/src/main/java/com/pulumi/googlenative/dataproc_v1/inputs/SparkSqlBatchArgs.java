@@ -28,6 +28,10 @@ public final class SparkSqlBatchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jarFileUris")
     private @Nullable Output<List<String>> jarFileUris;
 
+    /**
+     * @return Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * 
+     */
     public Optional<Output<List<String>>> jarFileUris() {
         return Optional.ofNullable(this.jarFileUris);
     }
@@ -39,6 +43,10 @@ public final class SparkSqlBatchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryFileUri", required=true)
     private Output<String> queryFileUri;
 
+    /**
+     * @return The HCFS URI of the script that contains Spark SQL queries to execute.
+     * 
+     */
     public Output<String> queryFileUri() {
         return this.queryFileUri;
     }
@@ -50,6 +58,10 @@ public final class SparkSqlBatchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryVariables")
     private @Nullable Output<Map<String,String>> queryVariables;
 
+    /**
+     * @return Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
+     * 
+     */
     public Optional<Output<Map<String,String>>> queryVariables() {
         return Optional.ofNullable(this.queryVariables);
     }
@@ -80,33 +92,75 @@ public final class SparkSqlBatchArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SparkSqlBatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
             $.jarFileUris = jarFileUris;
             return this;
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(List<String> jarFileUris) {
             return jarFileUris(Output.of(jarFileUris));
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
 
+        /**
+         * @param queryFileUri The HCFS URI of the script that contains Spark SQL queries to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryFileUri(Output<String> queryFileUri) {
             $.queryFileUri = queryFileUri;
             return this;
         }
 
+        /**
+         * @param queryFileUri The HCFS URI of the script that contains Spark SQL queries to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryFileUri(String queryFileUri) {
             return queryFileUri(Output.of(queryFileUri));
         }
 
+        /**
+         * @param queryVariables Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryVariables(@Nullable Output<Map<String,String>> queryVariables) {
             $.queryVariables = queryVariables;
             return this;
         }
 
+        /**
+         * @param queryVariables Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryVariables(Map<String,String> queryVariables) {
             return queryVariables(Output.of(queryVariables));
         }

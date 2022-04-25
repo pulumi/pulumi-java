@@ -23,6 +23,10 @@ public final class AS2AgreementContentResponse extends com.pulumi.resources.Invo
     @Import(name="receiveAgreement", required=true)
     private AS2OneWayAgreementResponse receiveAgreement;
 
+    /**
+     * @return The AS2 one-way receive agreement.
+     * 
+     */
     public AS2OneWayAgreementResponse receiveAgreement() {
         return this.receiveAgreement;
     }
@@ -34,6 +38,10 @@ public final class AS2AgreementContentResponse extends com.pulumi.resources.Invo
     @Import(name="sendAgreement", required=true)
     private AS2OneWayAgreementResponse sendAgreement;
 
+    /**
+     * @return The AS2 one-way send agreement.
+     * 
+     */
     public AS2OneWayAgreementResponse sendAgreement() {
         return this.sendAgreement;
     }
@@ -63,11 +71,23 @@ public final class AS2AgreementContentResponse extends com.pulumi.resources.Invo
             $ = new AS2AgreementContentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param receiveAgreement The AS2 one-way receive agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiveAgreement(AS2OneWayAgreementResponse receiveAgreement) {
             $.receiveAgreement = receiveAgreement;
             return this;
         }
 
+        /**
+         * @param sendAgreement The AS2 one-way send agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendAgreement(AS2OneWayAgreementResponse sendAgreement) {
             $.sendAgreement = sendAgreement;
             return this;

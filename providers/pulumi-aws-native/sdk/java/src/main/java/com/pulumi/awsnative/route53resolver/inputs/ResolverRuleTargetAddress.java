@@ -21,6 +21,10 @@ public final class ResolverRuleTargetAddress extends com.pulumi.resources.Invoke
     @Import(name="ip", required=true)
     private String ip;
 
+    /**
+     * @return One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+     * 
+     */
     public String ip() {
         return this.ip;
     }
@@ -32,6 +36,10 @@ public final class ResolverRuleTargetAddress extends com.pulumi.resources.Invoke
     @Import(name="port")
     private @Nullable String port;
 
+    /**
+     * @return The port at Ip that you want to forward DNS queries to.
+     * 
+     */
     public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
@@ -61,11 +69,23 @@ public final class ResolverRuleTargetAddress extends com.pulumi.resources.Invoke
             $ = new ResolverRuleTargetAddress(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ip One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(String ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param port The port at Ip that you want to forward DNS queries to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable String port) {
             $.port = port;
             return this;

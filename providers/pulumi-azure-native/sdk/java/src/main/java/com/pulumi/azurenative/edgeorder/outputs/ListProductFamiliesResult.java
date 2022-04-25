@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListProductFamiliesResult {
     /**
-     * Link for the next set of product families.
+     * @return Link for the next set of product families.
      * 
      */
     private final @Nullable String nextLink;
     /**
-     * List of product families.
+     * @return List of product families.
      * 
      */
     private final List<ProductFamilyResponse> value;
@@ -33,16 +33,16 @@ public final class ListProductFamiliesResult {
     }
 
     /**
-     * Link for the next set of product families.
+     * @return Link for the next set of product families.
      * 
-    */
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
-     * List of product families.
+     * @return List of product families.
      * 
-    */
+     */
     public List<ProductFamilyResponse> value() {
         return this.value;
     }

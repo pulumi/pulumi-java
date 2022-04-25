@@ -22,6 +22,10 @@ public final class SpatialSpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -33,6 +37,10 @@ public final class SpatialSpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="types")
     private @Nullable List<String> types;
 
+    /**
+     * @return List of path&#39;s spatial type
+     * 
+     */
     public Optional<List<String>> types() {
         return Optional.ofNullable(this.types);
     }
@@ -62,16 +70,34 @@ public final class SpatialSpecResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SpatialSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param types List of path&#39;s spatial type
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(@Nullable List<String> types) {
             $.types = types;
             return this;
         }
 
+        /**
+         * @param types List of path&#39;s spatial type
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(String... types) {
             return types(List.of(types));
         }

@@ -28,6 +28,10 @@ public final class StreamingPolicyContentKeyArgs extends com.pulumi.resources.Re
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return Label can be used to specify Content Key when creating a Streaming Locator
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -39,6 +43,10 @@ public final class StreamingPolicyContentKeyArgs extends com.pulumi.resources.Re
     @Import(name="policyName")
     private @Nullable Output<String> policyName;
 
+    /**
+     * @return Policy used by Content Key
+     * 
+     */
     public Optional<Output<String>> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -50,6 +58,10 @@ public final class StreamingPolicyContentKeyArgs extends com.pulumi.resources.Re
     @Import(name="tracks")
     private @Nullable Output<List<TrackSelectionArgs>> tracks;
 
+    /**
+     * @return Tracks which use this content key
+     * 
+     */
     public Optional<Output<List<TrackSelectionArgs>>> tracks() {
         return Optional.ofNullable(this.tracks);
     }
@@ -80,33 +92,75 @@ public final class StreamingPolicyContentKeyArgs extends com.pulumi.resources.Re
             $ = new StreamingPolicyContentKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param label Label can be used to specify Content Key when creating a Streaming Locator
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label Label can be used to specify Content Key when creating a Streaming Locator
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param policyName Policy used by Content Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable Output<String> policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyName Policy used by Content Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             return policyName(Output.of(policyName));
         }
 
+        /**
+         * @param tracks Tracks which use this content key
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracks(@Nullable Output<List<TrackSelectionArgs>> tracks) {
             $.tracks = tracks;
             return this;
         }
 
+        /**
+         * @param tracks Tracks which use this content key
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracks(List<TrackSelectionArgs> tracks) {
             return tracks(Output.of(tracks));
         }
 
+        /**
+         * @param tracks Tracks which use this content key
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracks(TrackSelectionArgs... tracks) {
             return tracks(List.of(tracks));
         }

@@ -25,6 +25,10 @@ public final class WsfcDomainCredentialsResponse extends com.pulumi.resources.In
     @Import(name="clusterBootstrapAccountPassword")
     private @Nullable String clusterBootstrapAccountPassword;
 
+    /**
+     * @return Cluster bootstrap account password.
+     * 
+     */
     public Optional<String> clusterBootstrapAccountPassword() {
         return Optional.ofNullable(this.clusterBootstrapAccountPassword);
     }
@@ -36,6 +40,10 @@ public final class WsfcDomainCredentialsResponse extends com.pulumi.resources.In
     @Import(name="clusterOperatorAccountPassword")
     private @Nullable String clusterOperatorAccountPassword;
 
+    /**
+     * @return Cluster operator account password.
+     * 
+     */
     public Optional<String> clusterOperatorAccountPassword() {
         return Optional.ofNullable(this.clusterOperatorAccountPassword);
     }
@@ -47,6 +55,10 @@ public final class WsfcDomainCredentialsResponse extends com.pulumi.resources.In
     @Import(name="sqlServiceAccountPassword")
     private @Nullable String sqlServiceAccountPassword;
 
+    /**
+     * @return SQL service account password.
+     * 
+     */
     public Optional<String> sqlServiceAccountPassword() {
         return Optional.ofNullable(this.sqlServiceAccountPassword);
     }
@@ -77,16 +89,34 @@ public final class WsfcDomainCredentialsResponse extends com.pulumi.resources.In
             $ = new WsfcDomainCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterBootstrapAccountPassword Cluster bootstrap account password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterBootstrapAccountPassword(@Nullable String clusterBootstrapAccountPassword) {
             $.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
             return this;
         }
 
+        /**
+         * @param clusterOperatorAccountPassword Cluster operator account password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterOperatorAccountPassword(@Nullable String clusterOperatorAccountPassword) {
             $.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
             return this;
         }
 
+        /**
+         * @param sqlServiceAccountPassword SQL service account password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServiceAccountPassword(@Nullable String sqlServiceAccountPassword) {
             $.sqlServiceAccountPassword = sqlServiceAccountPassword;
             return this;

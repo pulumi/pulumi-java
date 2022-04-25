@@ -24,6 +24,10 @@ public final class BotPlainTextMessageArgs extends com.pulumi.resources.Resource
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The message to send to the user.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -52,11 +56,23 @@ public final class BotPlainTextMessageArgs extends com.pulumi.resources.Resource
             $ = new BotPlainTextMessageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The message to send to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The message to send to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

@@ -31,6 +31,10 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="adaptiveBFrame")
     private @Nullable Output<Boolean> adaptiveBFrame;
 
+    /**
+     * @return Specifies whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.
+     * 
+     */
     public Optional<Output<Boolean>> adaptiveBFrame() {
         return Optional.ofNullable(this.adaptiveBFrame);
     }
@@ -42,6 +46,10 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bFrames")
     private @Nullable Output<Integer> bFrames;
 
+    /**
+     * @return The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.
+     * 
+     */
     public Optional<Output<Integer>> bFrames() {
         return Optional.ofNullable(this.bFrames);
     }
@@ -53,6 +61,10 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bitrate", required=true)
     private Output<Integer> bitrate;
 
+    /**
+     * @return The average bitrate in bits per second at which to encode the input video when generating this layer. For example: a target bitrate of 3000Kbps or 3Mbps means this value should be 3000000 This is a required field.
+     * 
+     */
     public Output<Integer> bitrate() {
         return this.bitrate;
     }
@@ -64,6 +76,10 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bufferWindow")
     private @Nullable Output<String> bufferWindow;
 
+    /**
+     * @return The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).
+     * 
+     */
     public Optional<Output<String>> bufferWindow() {
         return Optional.ofNullable(this.bufferWindow);
     }
@@ -75,6 +91,10 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frameRate")
     private @Nullable Output<String> frameRate;
 
+    /**
+     * @return The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.
+     * 
+     */
     public Optional<Output<String>> frameRate() {
         return Optional.ofNullable(this.frameRate);
     }
@@ -86,6 +106,10 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="height")
     private @Nullable Output<String> height;
 
+    /**
+     * @return The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
+     * 
+     */
     public Optional<Output<String>> height() {
         return Optional.ofNullable(this.height);
     }
@@ -97,6 +121,10 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -108,6 +136,10 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="level")
     private @Nullable Output<String> level;
 
+    /**
+     * @return We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.265 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.
+     * 
+     */
     public Optional<Output<String>> level() {
         return Optional.ofNullable(this.level);
     }
@@ -119,6 +151,10 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxBitrate")
     private @Nullable Output<Integer> maxBitrate;
 
+    /**
+     * @return The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.
+     * 
+     */
     public Optional<Output<Integer>> maxBitrate() {
         return Optional.ofNullable(this.maxBitrate);
     }
@@ -131,6 +167,11 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.H265Layer&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -142,6 +183,10 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profile")
     private @Nullable Output<Either<String,H265VideoProfile>> profile;
 
+    /**
+     * @return We currently support Main. Default is Auto.
+     * 
+     */
     public Optional<Output<Either<String,H265VideoProfile>>> profile() {
         return Optional.ofNullable(this.profile);
     }
@@ -153,6 +198,10 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="referenceFrames")
     private @Nullable Output<Integer> referenceFrames;
 
+    /**
+     * @return The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.
+     * 
+     */
     public Optional<Output<Integer>> referenceFrames() {
         return Optional.ofNullable(this.referenceFrames);
     }
@@ -164,6 +213,10 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="slices")
     private @Nullable Output<Integer> slices;
 
+    /**
+     * @return The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.
+     * 
+     */
     public Optional<Output<Integer>> slices() {
         return Optional.ofNullable(this.slices);
     }
@@ -175,6 +228,10 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="width")
     private @Nullable Output<String> width;
 
+    /**
+     * @return The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+     * 
+     */
     public Optional<Output<String>> width() {
         return Optional.ofNullable(this.width);
     }
@@ -216,136 +273,318 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new H265LayerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adaptiveBFrame Specifies whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adaptiveBFrame(@Nullable Output<Boolean> adaptiveBFrame) {
             $.adaptiveBFrame = adaptiveBFrame;
             return this;
         }
 
+        /**
+         * @param adaptiveBFrame Specifies whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adaptiveBFrame(Boolean adaptiveBFrame) {
             return adaptiveBFrame(Output.of(adaptiveBFrame));
         }
 
+        /**
+         * @param bFrames The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bFrames(@Nullable Output<Integer> bFrames) {
             $.bFrames = bFrames;
             return this;
         }
 
+        /**
+         * @param bFrames The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bFrames(Integer bFrames) {
             return bFrames(Output.of(bFrames));
         }
 
+        /**
+         * @param bitrate The average bitrate in bits per second at which to encode the input video when generating this layer. For example: a target bitrate of 3000Kbps or 3Mbps means this value should be 3000000 This is a required field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrate(Output<Integer> bitrate) {
             $.bitrate = bitrate;
             return this;
         }
 
+        /**
+         * @param bitrate The average bitrate in bits per second at which to encode the input video when generating this layer. For example: a target bitrate of 3000Kbps or 3Mbps means this value should be 3000000 This is a required field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrate(Integer bitrate) {
             return bitrate(Output.of(bitrate));
         }
 
+        /**
+         * @param bufferWindow The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bufferWindow(@Nullable Output<String> bufferWindow) {
             $.bufferWindow = bufferWindow;
             return this;
         }
 
+        /**
+         * @param bufferWindow The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bufferWindow(String bufferWindow) {
             return bufferWindow(Output.of(bufferWindow));
         }
 
+        /**
+         * @param frameRate The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameRate(@Nullable Output<String> frameRate) {
             $.frameRate = frameRate;
             return this;
         }
 
+        /**
+         * @param frameRate The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameRate(String frameRate) {
             return frameRate(Output.of(frameRate));
         }
 
+        /**
+         * @param height The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(@Nullable Output<String> height) {
             $.height = height;
             return this;
         }
 
+        /**
+         * @param height The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(String height) {
             return height(Output.of(height));
         }
 
+        /**
+         * @param label The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param level We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.265 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable Output<String> level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param level We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.265 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(String level) {
             return level(Output.of(level));
         }
 
+        /**
+         * @param maxBitrate The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBitrate(@Nullable Output<Integer> maxBitrate) {
             $.maxBitrate = maxBitrate;
             return this;
         }
 
+        /**
+         * @param maxBitrate The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBitrate(Integer maxBitrate) {
             return maxBitrate(Output.of(maxBitrate));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.H265Layer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.H265Layer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param profile We currently support Main. Default is Auto.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(@Nullable Output<Either<String,H265VideoProfile>> profile) {
             $.profile = profile;
             return this;
         }
 
+        /**
+         * @param profile We currently support Main. Default is Auto.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(Either<String,H265VideoProfile> profile) {
             return profile(Output.of(profile));
         }
 
+        /**
+         * @param profile We currently support Main. Default is Auto.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(String profile) {
             return profile(Either.ofLeft(profile));
         }
 
+        /**
+         * @param profile We currently support Main. Default is Auto.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(H265VideoProfile profile) {
             return profile(Either.ofRight(profile));
         }
 
+        /**
+         * @param referenceFrames The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceFrames(@Nullable Output<Integer> referenceFrames) {
             $.referenceFrames = referenceFrames;
             return this;
         }
 
+        /**
+         * @param referenceFrames The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceFrames(Integer referenceFrames) {
             return referenceFrames(Output.of(referenceFrames));
         }
 
+        /**
+         * @param slices The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slices(@Nullable Output<Integer> slices) {
             $.slices = slices;
             return this;
         }
 
+        /**
+         * @param slices The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slices(Integer slices) {
             return slices(Output.of(slices));
         }
 
+        /**
+         * @param width The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(@Nullable Output<String> width) {
             $.width = width;
             return this;
         }
 
+        /**
+         * @param width The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(String width) {
             return width(Output.of(width));
         }

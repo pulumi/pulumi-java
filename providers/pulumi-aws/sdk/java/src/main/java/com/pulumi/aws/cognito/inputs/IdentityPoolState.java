@@ -26,6 +26,10 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowClassicFlow")
     private @Nullable Output<Boolean> allowClassicFlow;
 
+    /**
+     * @return Enables or disables the classic / basic authentication flow. Default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> allowClassicFlow() {
         return Optional.ofNullable(this.allowClassicFlow);
     }
@@ -37,6 +41,10 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowUnauthenticatedIdentities")
     private @Nullable Output<Boolean> allowUnauthenticatedIdentities;
 
+    /**
+     * @return Whether the identity pool supports unauthenticated logins or not.
+     * 
+     */
     public Optional<Output<Boolean>> allowUnauthenticatedIdentities() {
         return Optional.ofNullable(this.allowUnauthenticatedIdentities);
     }
@@ -48,6 +56,10 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the identity pool.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -59,6 +71,10 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cognitoIdentityProviders")
     private @Nullable Output<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders;
 
+    /**
+     * @return An array of Amazon Cognito Identity user pools and their client IDs.
+     * 
+     */
     public Optional<Output<List<IdentityPoolCognitoIdentityProviderGetArgs>>> cognitoIdentityProviders() {
         return Optional.ofNullable(this.cognitoIdentityProviders);
     }
@@ -71,6 +87,11 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="developerProviderName")
     private @Nullable Output<String> developerProviderName;
 
+    /**
+     * @return The &#34;domain&#34; by which Cognito will refer to your users. This name acts as a placeholder that allows your
+     * backend and the Cognito service to communicate about the developer provider.
+     * 
+     */
     public Optional<Output<String>> developerProviderName() {
         return Optional.ofNullable(this.developerProviderName);
     }
@@ -82,6 +103,10 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="identityPoolName")
     private @Nullable Output<String> identityPoolName;
 
+    /**
+     * @return The Cognito Identity Pool name.
+     * 
+     */
     public Optional<Output<String>> identityPoolName() {
         return Optional.ofNullable(this.identityPoolName);
     }
@@ -93,6 +118,10 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="openidConnectProviderArns")
     private @Nullable Output<List<String>> openidConnectProviderArns;
 
+    /**
+     * @return Set of OpendID Connect provider ARNs.
+     * 
+     */
     public Optional<Output<List<String>>> openidConnectProviderArns() {
         return Optional.ofNullable(this.openidConnectProviderArns);
     }
@@ -104,6 +133,10 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="samlProviderArns")
     private @Nullable Output<List<String>> samlProviderArns;
 
+    /**
+     * @return An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
+     * 
+     */
     public Optional<Output<List<String>>> samlProviderArns() {
         return Optional.ofNullable(this.samlProviderArns);
     }
@@ -115,6 +148,10 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportedLoginProviders")
     private @Nullable Output<Map<String,String>> supportedLoginProviders;
 
+    /**
+     * @return Key-Value pairs mapping provider names to provider app IDs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> supportedLoginProviders() {
         return Optional.ofNullable(this.supportedLoginProviders);
     }
@@ -126,6 +163,10 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the Identity Pool. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -137,6 +178,10 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -175,113 +220,265 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
             $ = new IdentityPoolState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowClassicFlow Enables or disables the classic / basic authentication flow. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowClassicFlow(@Nullable Output<Boolean> allowClassicFlow) {
             $.allowClassicFlow = allowClassicFlow;
             return this;
         }
 
+        /**
+         * @param allowClassicFlow Enables or disables the classic / basic authentication flow. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowClassicFlow(Boolean allowClassicFlow) {
             return allowClassicFlow(Output.of(allowClassicFlow));
         }
 
+        /**
+         * @param allowUnauthenticatedIdentities Whether the identity pool supports unauthenticated logins or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowUnauthenticatedIdentities(@Nullable Output<Boolean> allowUnauthenticatedIdentities) {
             $.allowUnauthenticatedIdentities = allowUnauthenticatedIdentities;
             return this;
         }
 
+        /**
+         * @param allowUnauthenticatedIdentities Whether the identity pool supports unauthenticated logins or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowUnauthenticatedIdentities(Boolean allowUnauthenticatedIdentities) {
             return allowUnauthenticatedIdentities(Output.of(allowUnauthenticatedIdentities));
         }
 
+        /**
+         * @param arn The ARN of the identity pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the identity pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param cognitoIdentityProviders An array of Amazon Cognito Identity user pools and their client IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cognitoIdentityProviders(@Nullable Output<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders) {
             $.cognitoIdentityProviders = cognitoIdentityProviders;
             return this;
         }
 
+        /**
+         * @param cognitoIdentityProviders An array of Amazon Cognito Identity user pools and their client IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cognitoIdentityProviders(List<IdentityPoolCognitoIdentityProviderGetArgs> cognitoIdentityProviders) {
             return cognitoIdentityProviders(Output.of(cognitoIdentityProviders));
         }
 
+        /**
+         * @param cognitoIdentityProviders An array of Amazon Cognito Identity user pools and their client IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cognitoIdentityProviders(IdentityPoolCognitoIdentityProviderGetArgs... cognitoIdentityProviders) {
             return cognitoIdentityProviders(List.of(cognitoIdentityProviders));
         }
 
+        /**
+         * @param developerProviderName The &#34;domain&#34; by which Cognito will refer to your users. This name acts as a placeholder that allows your
+         * backend and the Cognito service to communicate about the developer provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerProviderName(@Nullable Output<String> developerProviderName) {
             $.developerProviderName = developerProviderName;
             return this;
         }
 
+        /**
+         * @param developerProviderName The &#34;domain&#34; by which Cognito will refer to your users. This name acts as a placeholder that allows your
+         * backend and the Cognito service to communicate about the developer provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerProviderName(String developerProviderName) {
             return developerProviderName(Output.of(developerProviderName));
         }
 
+        /**
+         * @param identityPoolName The Cognito Identity Pool name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityPoolName(@Nullable Output<String> identityPoolName) {
             $.identityPoolName = identityPoolName;
             return this;
         }
 
+        /**
+         * @param identityPoolName The Cognito Identity Pool name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityPoolName(String identityPoolName) {
             return identityPoolName(Output.of(identityPoolName));
         }
 
+        /**
+         * @param openidConnectProviderArns Set of OpendID Connect provider ARNs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openidConnectProviderArns(@Nullable Output<List<String>> openidConnectProviderArns) {
             $.openidConnectProviderArns = openidConnectProviderArns;
             return this;
         }
 
+        /**
+         * @param openidConnectProviderArns Set of OpendID Connect provider ARNs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openidConnectProviderArns(List<String> openidConnectProviderArns) {
             return openidConnectProviderArns(Output.of(openidConnectProviderArns));
         }
 
+        /**
+         * @param openidConnectProviderArns Set of OpendID Connect provider ARNs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openidConnectProviderArns(String... openidConnectProviderArns) {
             return openidConnectProviderArns(List.of(openidConnectProviderArns));
         }
 
+        /**
+         * @param samlProviderArns An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samlProviderArns(@Nullable Output<List<String>> samlProviderArns) {
             $.samlProviderArns = samlProviderArns;
             return this;
         }
 
+        /**
+         * @param samlProviderArns An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samlProviderArns(List<String> samlProviderArns) {
             return samlProviderArns(Output.of(samlProviderArns));
         }
 
+        /**
+         * @param samlProviderArns An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samlProviderArns(String... samlProviderArns) {
             return samlProviderArns(List.of(samlProviderArns));
         }
 
+        /**
+         * @param supportedLoginProviders Key-Value pairs mapping provider names to provider app IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedLoginProviders(@Nullable Output<Map<String,String>> supportedLoginProviders) {
             $.supportedLoginProviders = supportedLoginProviders;
             return this;
         }
 
+        /**
+         * @param supportedLoginProviders Key-Value pairs mapping provider names to provider app IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedLoginProviders(Map<String,String> supportedLoginProviders) {
             return supportedLoginProviders(Output.of(supportedLoginProviders));
         }
 
+        /**
+         * @param tags A map of tags to assign to the Identity Pool. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the Identity Pool. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

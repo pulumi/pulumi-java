@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse {
     /**
-     * The unique identifier of the followup intent. Format: `projects//agent/intents/`.
+     * @return The unique identifier of the followup intent. Format: `projects//agent/intents/`.
      * 
      */
     private final String followupIntentName;
     /**
-     * The unique identifier of the followup intent&#39;s parent. Format: `projects//agent/intents/`.
+     * @return The unique identifier of the followup intent&#39;s parent. Format: `projects//agent/intents/`.
      * 
      */
     private final String parentFollowupIntentName;
@@ -29,16 +29,16 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse {
     }
 
     /**
-     * The unique identifier of the followup intent. Format: `projects//agent/intents/`.
+     * @return The unique identifier of the followup intent. Format: `projects//agent/intents/`.
      * 
-    */
+     */
     public String followupIntentName() {
         return this.followupIntentName;
     }
     /**
-     * The unique identifier of the followup intent&#39;s parent. Format: `projects//agent/intents/`.
+     * @return The unique identifier of the followup intent&#39;s parent. Format: `projects//agent/intents/`.
      * 
-    */
+     */
     public String parentFollowupIntentName() {
         return this.parentFollowupIntentName;
     }

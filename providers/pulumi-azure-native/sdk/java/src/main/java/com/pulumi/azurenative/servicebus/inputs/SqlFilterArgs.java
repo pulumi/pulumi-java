@@ -29,6 +29,10 @@ public final class SqlFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="compatibilityLevel")
     private @Nullable Output<Integer> compatibilityLevel;
 
+    /**
+     * @return This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
+     * 
+     */
     public Optional<Output<Integer>> compatibilityLevel() {
         return Optional.ofNullable(this.compatibilityLevel);
     }
@@ -40,6 +44,10 @@ public final class SqlFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requiresPreprocessing")
     private @Nullable Output<Boolean> requiresPreprocessing;
 
+    /**
+     * @return Value that indicates whether the rule action requires preprocessing.
+     * 
+     */
     public Optional<Output<Boolean>> requiresPreprocessing() {
         return Optional.ofNullable(this.requiresPreprocessing);
     }
@@ -51,6 +59,10 @@ public final class SqlFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqlExpression")
     private @Nullable Output<String> sqlExpression;
 
+    /**
+     * @return The SQL expression. e.g. MyProperty=&#39;ABC&#39;
+     * 
+     */
     public Optional<Output<String>> sqlExpression() {
         return Optional.ofNullable(this.sqlExpression);
     }
@@ -81,29 +93,65 @@ public final class SqlFilterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SqlFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compatibilityLevel This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibilityLevel(@Nullable Output<Integer> compatibilityLevel) {
             $.compatibilityLevel = compatibilityLevel;
             return this;
         }
 
+        /**
+         * @param compatibilityLevel This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibilityLevel(Integer compatibilityLevel) {
             return compatibilityLevel(Output.of(compatibilityLevel));
         }
 
+        /**
+         * @param requiresPreprocessing Value that indicates whether the rule action requires preprocessing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresPreprocessing(@Nullable Output<Boolean> requiresPreprocessing) {
             $.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
 
+        /**
+         * @param requiresPreprocessing Value that indicates whether the rule action requires preprocessing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresPreprocessing(Boolean requiresPreprocessing) {
             return requiresPreprocessing(Output.of(requiresPreprocessing));
         }
 
+        /**
+         * @param sqlExpression The SQL expression. e.g. MyProperty=&#39;ABC&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlExpression(@Nullable Output<String> sqlExpression) {
             $.sqlExpression = sqlExpression;
             return this;
         }
 
+        /**
+         * @param sqlExpression The SQL expression. e.g. MyProperty=&#39;ABC&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlExpression(String sqlExpression) {
             return sqlExpression(Output.of(sqlExpression));
         }

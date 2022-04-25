@@ -28,6 +28,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="airflowConfigurationOptions")
     private @Nullable Output<Map<String,String>> airflowConfigurationOptions;
 
+    /**
+     * @return The `airflow_configuration_options` parameter specifies airflow override options. Check the [Official documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html#configuring-env-variables-reference) for all possible configuration options.
+     * 
+     */
     public Optional<Output<Map<String,String>>> airflowConfigurationOptions() {
         return Optional.ofNullable(this.airflowConfigurationOptions);
     }
@@ -39,6 +43,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="airflowVersion")
     private @Nullable Output<String> airflowVersion;
 
+    /**
+     * @return Airflow version of your environment, will be set by default to the latest version that MWAA supports.
+     * 
+     */
     public Optional<Output<String>> airflowVersion() {
         return Optional.ofNullable(this.airflowVersion);
     }
@@ -50,6 +58,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the MWAA Environment
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -62,6 +74,11 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
     private @Nullable Output<String> createdAt;
 
+    /**
+     * @return The Created At date of the MWAA Environment
+     * * `logging_configuration[0].&lt;LOG_CONFIGURATION_TYPE&gt;[0].cloud_watch_log_group_arn` - Provides the ARN for the CloudWatch group where the logs will be published
+     * 
+     */
     public Optional<Output<String>> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -73,6 +90,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dagS3Path")
     private @Nullable Output<String> dagS3Path;
 
+    /**
+     * @return The relative path to the DAG folder on your Amazon S3 storage bucket. For example, dags. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
+     * 
+     */
     public Optional<Output<String>> dagS3Path() {
         return Optional.ofNullable(this.dagS3Path);
     }
@@ -84,6 +105,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentClass")
     private @Nullable Output<String> environmentClass;
 
+    /**
+     * @return Environment class for the cluster. Possible options are `mw1.small`, `mw1.medium`, `mw1.large`. Will be set by default to `mw1.small`. Please check the [AWS Pricing](https://aws.amazon.com/de/managed-workflows-for-apache-airflow/pricing/) for more information about the environment classes.
+     * 
+     */
     public Optional<Output<String>> environmentClass() {
         return Optional.ofNullable(this.environmentClass);
     }
@@ -95,6 +120,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleArn")
     private @Nullable Output<String> executionRoleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the task execution role that the Amazon MWAA and its environment can assume. Check the [official AWS documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html) for the detailed role specification.
+     * 
+     */
     public Optional<Output<String>> executionRoleArn() {
         return Optional.ofNullable(this.executionRoleArn);
     }
@@ -106,6 +135,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKey")
     private @Nullable Output<String> kmsKey;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of your KMS key that you want to use for encryption. Will be set to the ARN of the managed KMS key `aws/airflow` by default. Please check the [Official Documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/custom-keys-certs.html) for more information.
+     * 
+     */
     public Optional<Output<String>> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }
@@ -124,6 +157,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfiguration")
     private @Nullable Output<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration;
 
+    /**
+     * @return The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
+     * 
+     */
     public Optional<Output<EnvironmentLoggingConfigurationGetArgs>> loggingConfiguration() {
         return Optional.ofNullable(this.loggingConfiguration);
     }
@@ -135,6 +172,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxWorkers")
     private @Nullable Output<Integer> maxWorkers;
 
+    /**
+     * @return The maximum number of workers that can be automatically scaled up. Value need to be between `1` and `25`. Will be `10` by default.
+     * 
+     */
     public Optional<Output<Integer>> maxWorkers() {
         return Optional.ofNullable(this.maxWorkers);
     }
@@ -146,6 +187,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="minWorkers")
     private @Nullable Output<Integer> minWorkers;
 
+    /**
+     * @return The minimum number of workers that you want to run in your environment. Will be `1` by default.
+     * 
+     */
     public Optional<Output<Integer>> minWorkers() {
         return Optional.ofNullable(this.minWorkers);
     }
@@ -157,6 +202,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Apache Airflow Environment
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -168,6 +217,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkConfiguration")
     private @Nullable Output<EnvironmentNetworkConfigurationGetArgs> networkConfiguration;
 
+    /**
+     * @return Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
+     * 
+     */
     public Optional<Output<EnvironmentNetworkConfigurationGetArgs>> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
@@ -179,6 +232,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pluginsS3ObjectVersion")
     private @Nullable Output<String> pluginsS3ObjectVersion;
 
+    /**
+     * @return The plugins.zip file version you want to use.
+     * 
+     */
     public Optional<Output<String>> pluginsS3ObjectVersion() {
         return Optional.ofNullable(this.pluginsS3ObjectVersion);
     }
@@ -190,6 +247,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pluginsS3Path")
     private @Nullable Output<String> pluginsS3Path;
 
+    /**
+     * @return The relative path to the plugins.zip file on your Amazon S3 storage bucket. For example, plugins.zip. If a relative path is provided in the request, then plugins_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
+     * 
+     */
     public Optional<Output<String>> pluginsS3Path() {
         return Optional.ofNullable(this.pluginsS3Path);
     }
@@ -201,6 +262,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="requirementsS3ObjectVersion")
     private @Nullable Output<String> requirementsS3ObjectVersion;
 
+    /**
+     * @return The requirements.txt file version you want to use.
+     * 
+     */
     public Optional<Output<String>> requirementsS3ObjectVersion() {
         return Optional.ofNullable(this.requirementsS3ObjectVersion);
     }
@@ -212,6 +277,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="requirementsS3Path")
     private @Nullable Output<String> requirementsS3Path;
 
+    /**
+     * @return The relative path to the requirements.txt file on your Amazon S3 storage bucket. For example, requirements.txt. If a relative path is provided in the request, then requirements_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
+     * 
+     */
     public Optional<Output<String>> requirementsS3Path() {
         return Optional.ofNullable(this.requirementsS3Path);
     }
@@ -223,6 +292,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceRoleArn")
     private @Nullable Output<String> serviceRoleArn;
 
+    /**
+     * @return The Service Role ARN of the Amazon MWAA Environment
+     * 
+     */
     public Optional<Output<String>> serviceRoleArn() {
         return Optional.ofNullable(this.serviceRoleArn);
     }
@@ -234,6 +307,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceBucketArn")
     private @Nullable Output<String> sourceBucketArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of your Amazon S3 storage bucket. For example, arn:aws:s3:::airflow-mybucketname.
+     * 
+     */
     public Optional<Output<String>> sourceBucketArn() {
         return Optional.ofNullable(this.sourceBucketArn);
     }
@@ -245,6 +322,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The status of the Amazon MWAA Environment
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -256,6 +337,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -267,6 +352,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -278,6 +367,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="webserverAccessMode")
     private @Nullable Output<String> webserverAccessMode;
 
+    /**
+     * @return Specifies whether the webserver should be accessible over the internet or via your specified VPC. Possible options: `PRIVATE_ONLY` (default) and `PUBLIC_ONLY`.
+     * 
+     */
     public Optional<Output<String>> webserverAccessMode() {
         return Optional.ofNullable(this.webserverAccessMode);
     }
@@ -289,6 +382,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="webserverUrl")
     private @Nullable Output<String> webserverUrl;
 
+    /**
+     * @return The webserver URL of the MWAA Environment
+     * 
+     */
     public Optional<Output<String>> webserverUrl() {
         return Optional.ofNullable(this.webserverUrl);
     }
@@ -300,6 +397,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="weeklyMaintenanceWindowStart")
     private @Nullable Output<String> weeklyMaintenanceWindowStart;
 
+    /**
+     * @return Specifies the start date for the weekly maintenance window.
+     * 
+     */
     public Optional<Output<String>> weeklyMaintenanceWindowStart() {
         return Optional.ofNullable(this.weeklyMaintenanceWindowStart);
     }
@@ -353,74 +454,172 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
             $ = new EnvironmentState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param airflowConfigurationOptions The `airflow_configuration_options` parameter specifies airflow override options. Check the [Official documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html#configuring-env-variables-reference) for all possible configuration options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder airflowConfigurationOptions(@Nullable Output<Map<String,String>> airflowConfigurationOptions) {
             $.airflowConfigurationOptions = airflowConfigurationOptions;
             return this;
         }
 
+        /**
+         * @param airflowConfigurationOptions The `airflow_configuration_options` parameter specifies airflow override options. Check the [Official documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html#configuring-env-variables-reference) for all possible configuration options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder airflowConfigurationOptions(Map<String,String> airflowConfigurationOptions) {
             return airflowConfigurationOptions(Output.of(airflowConfigurationOptions));
         }
 
+        /**
+         * @param airflowVersion Airflow version of your environment, will be set by default to the latest version that MWAA supports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder airflowVersion(@Nullable Output<String> airflowVersion) {
             $.airflowVersion = airflowVersion;
             return this;
         }
 
+        /**
+         * @param airflowVersion Airflow version of your environment, will be set by default to the latest version that MWAA supports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder airflowVersion(String airflowVersion) {
             return airflowVersion(Output.of(airflowVersion));
         }
 
+        /**
+         * @param arn The ARN of the MWAA Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the MWAA Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param createdAt The Created At date of the MWAA Environment
+         * * `logging_configuration[0].&lt;LOG_CONFIGURATION_TYPE&gt;[0].cloud_watch_log_group_arn` - Provides the ARN for the CloudWatch group where the logs will be published
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(@Nullable Output<String> createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param createdAt The Created At date of the MWAA Environment
+         * * `logging_configuration[0].&lt;LOG_CONFIGURATION_TYPE&gt;[0].cloud_watch_log_group_arn` - Provides the ARN for the CloudWatch group where the logs will be published
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(String createdAt) {
             return createdAt(Output.of(createdAt));
         }
 
+        /**
+         * @param dagS3Path The relative path to the DAG folder on your Amazon S3 storage bucket. For example, dags. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dagS3Path(@Nullable Output<String> dagS3Path) {
             $.dagS3Path = dagS3Path;
             return this;
         }
 
+        /**
+         * @param dagS3Path The relative path to the DAG folder on your Amazon S3 storage bucket. For example, dags. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dagS3Path(String dagS3Path) {
             return dagS3Path(Output.of(dagS3Path));
         }
 
+        /**
+         * @param environmentClass Environment class for the cluster. Possible options are `mw1.small`, `mw1.medium`, `mw1.large`. Will be set by default to `mw1.small`. Please check the [AWS Pricing](https://aws.amazon.com/de/managed-workflows-for-apache-airflow/pricing/) for more information about the environment classes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentClass(@Nullable Output<String> environmentClass) {
             $.environmentClass = environmentClass;
             return this;
         }
 
+        /**
+         * @param environmentClass Environment class for the cluster. Possible options are `mw1.small`, `mw1.medium`, `mw1.large`. Will be set by default to `mw1.small`. Please check the [AWS Pricing](https://aws.amazon.com/de/managed-workflows-for-apache-airflow/pricing/) for more information about the environment classes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentClass(String environmentClass) {
             return environmentClass(Output.of(environmentClass));
         }
 
+        /**
+         * @param executionRoleArn The Amazon Resource Name (ARN) of the task execution role that the Amazon MWAA and its environment can assume. Check the [official AWS documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html) for the detailed role specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             $.executionRoleArn = executionRoleArn;
             return this;
         }
 
+        /**
+         * @param executionRoleArn The Amazon Resource Name (ARN) of the task execution role that the Amazon MWAA and its environment can assume. Check the [official AWS documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html) for the detailed role specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleArn(String executionRoleArn) {
             return executionRoleArn(Output.of(executionRoleArn));
         }
 
+        /**
+         * @param kmsKey The Amazon Resource Name (ARN) of your KMS key that you want to use for encryption. Will be set to the ARN of the managed KMS key `aws/airflow` by default. Please check the [Official Documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/custom-keys-certs.html) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
             $.kmsKey = kmsKey;
             return this;
         }
 
+        /**
+         * @param kmsKey The Amazon Resource Name (ARN) of your KMS key that you want to use for encryption. Will be set to the ARN of the managed KMS key `aws/airflow` by default. Please check the [Official Documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/custom-keys-certs.html) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(String kmsKey) {
             return kmsKey(Output.of(kmsKey));
         }
@@ -438,155 +637,359 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
             return lastUpdateds(List.of(lastUpdateds));
         }
 
+        /**
+         * @param loggingConfiguration The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfiguration(@Nullable Output<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration) {
             $.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
+        /**
+         * @param loggingConfiguration The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfiguration(EnvironmentLoggingConfigurationGetArgs loggingConfiguration) {
             return loggingConfiguration(Output.of(loggingConfiguration));
         }
 
+        /**
+         * @param maxWorkers The maximum number of workers that can be automatically scaled up. Value need to be between `1` and `25`. Will be `10` by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxWorkers(@Nullable Output<Integer> maxWorkers) {
             $.maxWorkers = maxWorkers;
             return this;
         }
 
+        /**
+         * @param maxWorkers The maximum number of workers that can be automatically scaled up. Value need to be between `1` and `25`. Will be `10` by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxWorkers(Integer maxWorkers) {
             return maxWorkers(Output.of(maxWorkers));
         }
 
+        /**
+         * @param minWorkers The minimum number of workers that you want to run in your environment. Will be `1` by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minWorkers(@Nullable Output<Integer> minWorkers) {
             $.minWorkers = minWorkers;
             return this;
         }
 
+        /**
+         * @param minWorkers The minimum number of workers that you want to run in your environment. Will be `1` by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minWorkers(Integer minWorkers) {
             return minWorkers(Output.of(minWorkers));
         }
 
+        /**
+         * @param name The name of the Apache Airflow Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Apache Airflow Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkConfiguration Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfiguration(@Nullable Output<EnvironmentNetworkConfigurationGetArgs> networkConfiguration) {
             $.networkConfiguration = networkConfiguration;
             return this;
         }
 
+        /**
+         * @param networkConfiguration Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfiguration(EnvironmentNetworkConfigurationGetArgs networkConfiguration) {
             return networkConfiguration(Output.of(networkConfiguration));
         }
 
+        /**
+         * @param pluginsS3ObjectVersion The plugins.zip file version you want to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pluginsS3ObjectVersion(@Nullable Output<String> pluginsS3ObjectVersion) {
             $.pluginsS3ObjectVersion = pluginsS3ObjectVersion;
             return this;
         }
 
+        /**
+         * @param pluginsS3ObjectVersion The plugins.zip file version you want to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pluginsS3ObjectVersion(String pluginsS3ObjectVersion) {
             return pluginsS3ObjectVersion(Output.of(pluginsS3ObjectVersion));
         }
 
+        /**
+         * @param pluginsS3Path The relative path to the plugins.zip file on your Amazon S3 storage bucket. For example, plugins.zip. If a relative path is provided in the request, then plugins_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pluginsS3Path(@Nullable Output<String> pluginsS3Path) {
             $.pluginsS3Path = pluginsS3Path;
             return this;
         }
 
+        /**
+         * @param pluginsS3Path The relative path to the plugins.zip file on your Amazon S3 storage bucket. For example, plugins.zip. If a relative path is provided in the request, then plugins_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pluginsS3Path(String pluginsS3Path) {
             return pluginsS3Path(Output.of(pluginsS3Path));
         }
 
+        /**
+         * @param requirementsS3ObjectVersion The requirements.txt file version you want to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirementsS3ObjectVersion(@Nullable Output<String> requirementsS3ObjectVersion) {
             $.requirementsS3ObjectVersion = requirementsS3ObjectVersion;
             return this;
         }
 
+        /**
+         * @param requirementsS3ObjectVersion The requirements.txt file version you want to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirementsS3ObjectVersion(String requirementsS3ObjectVersion) {
             return requirementsS3ObjectVersion(Output.of(requirementsS3ObjectVersion));
         }
 
+        /**
+         * @param requirementsS3Path The relative path to the requirements.txt file on your Amazon S3 storage bucket. For example, requirements.txt. If a relative path is provided in the request, then requirements_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirementsS3Path(@Nullable Output<String> requirementsS3Path) {
             $.requirementsS3Path = requirementsS3Path;
             return this;
         }
 
+        /**
+         * @param requirementsS3Path The relative path to the requirements.txt file on your Amazon S3 storage bucket. For example, requirements.txt. If a relative path is provided in the request, then requirements_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirementsS3Path(String requirementsS3Path) {
             return requirementsS3Path(Output.of(requirementsS3Path));
         }
 
+        /**
+         * @param serviceRoleArn The Service Role ARN of the Amazon MWAA Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
             $.serviceRoleArn = serviceRoleArn;
             return this;
         }
 
+        /**
+         * @param serviceRoleArn The Service Role ARN of the Amazon MWAA Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRoleArn(String serviceRoleArn) {
             return serviceRoleArn(Output.of(serviceRoleArn));
         }
 
+        /**
+         * @param sourceBucketArn The Amazon Resource Name (ARN) of your Amazon S3 storage bucket. For example, arn:aws:s3:::airflow-mybucketname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceBucketArn(@Nullable Output<String> sourceBucketArn) {
             $.sourceBucketArn = sourceBucketArn;
             return this;
         }
 
+        /**
+         * @param sourceBucketArn The Amazon Resource Name (ARN) of your Amazon S3 storage bucket. For example, arn:aws:s3:::airflow-mybucketname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceBucketArn(String sourceBucketArn) {
             return sourceBucketArn(Output.of(sourceBucketArn));
         }
 
+        /**
+         * @param status The status of the Amazon MWAA Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the Amazon MWAA Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param tags A map of resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param webserverAccessMode Specifies whether the webserver should be accessible over the internet or via your specified VPC. Possible options: `PRIVATE_ONLY` (default) and `PUBLIC_ONLY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webserverAccessMode(@Nullable Output<String> webserverAccessMode) {
             $.webserverAccessMode = webserverAccessMode;
             return this;
         }
 
+        /**
+         * @param webserverAccessMode Specifies whether the webserver should be accessible over the internet or via your specified VPC. Possible options: `PRIVATE_ONLY` (default) and `PUBLIC_ONLY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webserverAccessMode(String webserverAccessMode) {
             return webserverAccessMode(Output.of(webserverAccessMode));
         }
 
+        /**
+         * @param webserverUrl The webserver URL of the MWAA Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder webserverUrl(@Nullable Output<String> webserverUrl) {
             $.webserverUrl = webserverUrl;
             return this;
         }
 
+        /**
+         * @param webserverUrl The webserver URL of the MWAA Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder webserverUrl(String webserverUrl) {
             return webserverUrl(Output.of(webserverUrl));
         }
 
+        /**
+         * @param weeklyMaintenanceWindowStart Specifies the start date for the weekly maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyMaintenanceWindowStart(@Nullable Output<String> weeklyMaintenanceWindowStart) {
             $.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
             return this;
         }
 
+        /**
+         * @param weeklyMaintenanceWindowStart Specifies the start date for the weekly maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyMaintenanceWindowStart(String weeklyMaintenanceWindowStart) {
             return weeklyMaintenanceWindowStart(Output.of(weeklyMaintenanceWindowStart));
         }

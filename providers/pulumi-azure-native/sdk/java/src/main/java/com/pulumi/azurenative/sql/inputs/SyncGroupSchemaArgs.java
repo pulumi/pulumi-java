@@ -28,6 +28,10 @@ public final class SyncGroupSchemaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="masterSyncMemberName")
     private @Nullable Output<String> masterSyncMemberName;
 
+    /**
+     * @return Name of master sync member where the schema is from.
+     * 
+     */
     public Optional<Output<String>> masterSyncMemberName() {
         return Optional.ofNullable(this.masterSyncMemberName);
     }
@@ -39,6 +43,10 @@ public final class SyncGroupSchemaArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tables")
     private @Nullable Output<List<SyncGroupSchemaTableArgs>> tables;
 
+    /**
+     * @return List of tables in sync group schema.
+     * 
+     */
     public Optional<Output<List<SyncGroupSchemaTableArgs>>> tables() {
         return Optional.ofNullable(this.tables);
     }
@@ -68,24 +76,54 @@ public final class SyncGroupSchemaArgs extends com.pulumi.resources.ResourceArgs
             $ = new SyncGroupSchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param masterSyncMemberName Name of master sync member where the schema is from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterSyncMemberName(@Nullable Output<String> masterSyncMemberName) {
             $.masterSyncMemberName = masterSyncMemberName;
             return this;
         }
 
+        /**
+         * @param masterSyncMemberName Name of master sync member where the schema is from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterSyncMemberName(String masterSyncMemberName) {
             return masterSyncMemberName(Output.of(masterSyncMemberName));
         }
 
+        /**
+         * @param tables List of tables in sync group schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tables(@Nullable Output<List<SyncGroupSchemaTableArgs>> tables) {
             $.tables = tables;
             return this;
         }
 
+        /**
+         * @param tables List of tables in sync group schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tables(List<SyncGroupSchemaTableArgs> tables) {
             return tables(Output.of(tables));
         }
 
+        /**
+         * @param tables List of tables in sync group schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tables(SyncGroupSchemaTableArgs... tables) {
             return tables(List.of(tables));
         }

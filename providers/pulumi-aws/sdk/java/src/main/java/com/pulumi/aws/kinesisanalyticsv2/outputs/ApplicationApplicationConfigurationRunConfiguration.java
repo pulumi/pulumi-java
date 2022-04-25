@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationApplicationConfigurationRunConfiguration {
     /**
-     * The restore behavior of a restarting application.
+     * @return The restore behavior of a restarting application.
      * 
      */
     private final @Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration applicationRestoreConfiguration;
     /**
-     * The starting parameters for a Flink-based Kinesis Data Analytics application.
+     * @return The starting parameters for a Flink-based Kinesis Data Analytics application.
      * 
      */
     private final @Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration;
@@ -32,16 +32,16 @@ public final class ApplicationApplicationConfigurationRunConfiguration {
     }
 
     /**
-     * The restore behavior of a restarting application.
+     * @return The restore behavior of a restarting application.
      * 
-    */
+     */
     public Optional<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration> applicationRestoreConfiguration() {
         return Optional.ofNullable(this.applicationRestoreConfiguration);
     }
     /**
-     * The starting parameters for a Flink-based Kinesis Data Analytics application.
+     * @return The starting parameters for a Flink-based Kinesis Data Analytics application.
      * 
-    */
+     */
     public Optional<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration> flinkRunConfiguration() {
         return Optional.ofNullable(this.flinkRunConfiguration);
     }

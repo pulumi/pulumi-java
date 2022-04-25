@@ -14,42 +14,42 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2ValueResponse {
     /**
-     * boolean
+     * @return boolean
      * 
      */
     private final Boolean booleanValue;
     /**
-     * date
+     * @return date
      * 
      */
     private final GoogleTypeDateResponse dateValue;
     /**
-     * day of week
+     * @return day of week
      * 
      */
     private final String dayOfWeekValue;
     /**
-     * float
+     * @return float
      * 
      */
     private final Double floatValue;
     /**
-     * integer
+     * @return integer
      * 
      */
     private final String integerValue;
     /**
-     * string
+     * @return string
      * 
      */
     private final String stringValue;
     /**
-     * time of day
+     * @return time of day
      * 
      */
     private final GoogleTypeTimeOfDayResponse timeValue;
     /**
-     * timestamp
+     * @return timestamp
      * 
      */
     private final String timestampValue;
@@ -75,58 +75,58 @@ public final class GooglePrivacyDlpV2ValueResponse {
     }
 
     /**
-     * boolean
+     * @return boolean
      * 
-    */
+     */
     public Boolean booleanValue() {
         return this.booleanValue;
     }
     /**
-     * date
+     * @return date
      * 
-    */
+     */
     public GoogleTypeDateResponse dateValue() {
         return this.dateValue;
     }
     /**
-     * day of week
+     * @return day of week
      * 
-    */
+     */
     public String dayOfWeekValue() {
         return this.dayOfWeekValue;
     }
     /**
-     * float
+     * @return float
      * 
-    */
+     */
     public Double floatValue() {
         return this.floatValue;
     }
     /**
-     * integer
+     * @return integer
      * 
-    */
+     */
     public String integerValue() {
         return this.integerValue;
     }
     /**
-     * string
+     * @return string
      * 
-    */
+     */
     public String stringValue() {
         return this.stringValue;
     }
     /**
-     * time of day
+     * @return time of day
      * 
-    */
+     */
     public GoogleTypeTimeOfDayResponse timeValue() {
         return this.timeValue;
     }
     /**
-     * timestamp
+     * @return timestamp
      * 
-    */
+     */
     public String timestampValue() {
         return this.timestampValue;
     }

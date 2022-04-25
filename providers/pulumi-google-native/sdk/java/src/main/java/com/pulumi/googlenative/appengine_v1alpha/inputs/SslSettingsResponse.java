@@ -24,6 +24,10 @@ public final class SslSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="certificateId", required=true)
     private String certificateId;
 
+    /**
+     * @return ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify no_managed_certificate on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.
+     * 
+     */
     public String certificateId() {
         return this.certificateId;
     }
@@ -35,6 +39,10 @@ public final class SslSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isManagedCertificate", required=true)
     private Boolean isManagedCertificate;
 
+    /**
+     * @return Whether the mapped certificate is an App Engine managed certificate. Managed certificates are created by default with a domain mapping. To opt out, specify no_managed_certificate on a CREATE or UPDATE request.
+     * 
+     */
     public Boolean isManagedCertificate() {
         return this.isManagedCertificate;
     }
@@ -64,11 +72,23 @@ public final class SslSettingsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SslSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateId ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify no_managed_certificate on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(String certificateId) {
             $.certificateId = certificateId;
             return this;
         }
 
+        /**
+         * @param isManagedCertificate Whether the mapped certificate is an App Engine managed certificate. Managed certificates are created by default with a domain mapping. To opt out, specify no_managed_certificate on a CREATE or UPDATE request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isManagedCertificate(Boolean isManagedCertificate) {
             $.isManagedCertificate = isManagedCertificate;
             return this;

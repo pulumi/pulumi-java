@@ -19,6 +19,10 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
     @Import(name="lockName", required=true)
     private String lockName;
 
+    /**
+     * @return The name of lock.
+     * 
+     */
     public String lockName() {
         return this.lockName;
     }
@@ -30,6 +34,10 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
     @Import(name="parentResourcePath", required=true)
     private String parentResourcePath;
 
+    /**
+     * @return An extra path parameter needed in some services, like SQL Databases.
+     * 
+     */
     public String parentResourcePath() {
         return this.parentResourcePath;
     }
@@ -41,6 +49,10 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -63,6 +79,10 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
     @Import(name="resourceProviderNamespace", required=true)
     private String resourceProviderNamespace;
 
+    /**
+     * @return The namespace of the resource provider.
+     * 
+     */
     public String resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
@@ -74,6 +94,10 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -107,31 +131,67 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
             $ = new GetManagementLockAtResourceLevelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lockName The name of lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockName(String lockName) {
             $.lockName = lockName;
             return this;
         }
 
+        /**
+         * @param parentResourcePath An extra path parameter needed in some services, like SQL Databases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourcePath(String parentResourcePath) {
             $.parentResourcePath = parentResourcePath;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceProviderNamespace The namespace of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             $.resourceProviderNamespace = resourceProviderNamespace;
             return this;
         }
 
+        /**
+         * @param resourceType The type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;

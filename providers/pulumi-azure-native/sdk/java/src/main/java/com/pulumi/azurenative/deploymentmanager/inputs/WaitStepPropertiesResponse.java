@@ -25,6 +25,10 @@ public final class WaitStepPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="attributes", required=true)
     private WaitStepAttributesResponse attributes;
 
+    /**
+     * @return The Wait attributes
+     * 
+     */
     public WaitStepAttributesResponse attributes() {
         return this.attributes;
     }
@@ -37,6 +41,11 @@ public final class WaitStepPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="stepType", required=true)
     private String stepType;
 
+    /**
+     * @return The type of step.
+     * Expected value is &#39;Wait&#39;.
+     * 
+     */
     public String stepType() {
         return this.stepType;
     }
@@ -66,11 +75,24 @@ public final class WaitStepPropertiesResponse extends com.pulumi.resources.Invok
             $ = new WaitStepPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes The Wait attributes
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(WaitStepAttributesResponse attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param stepType The type of step.
+         * Expected value is &#39;Wait&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepType(String stepType) {
             $.stepType = stepType;
             return this;

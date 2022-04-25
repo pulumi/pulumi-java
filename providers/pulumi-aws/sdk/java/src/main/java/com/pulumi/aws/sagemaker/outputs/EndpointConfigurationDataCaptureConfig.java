@@ -17,32 +17,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EndpointConfigurationDataCaptureConfig {
     /**
-     * The content type headers to capture. Fields are documented below.
+     * @return The content type headers to capture. Fields are documented below.
      * 
      */
     private final @Nullable EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader captureContentTypeHeader;
     /**
-     * Specifies what data to capture. Fields are documented below.
+     * @return Specifies what data to capture. Fields are documented below.
      * 
      */
     private final List<EndpointConfigurationDataCaptureConfigCaptureOption> captureOptions;
     /**
-     * The URL for S3 location where the captured data is stored.
+     * @return The URL for S3 location where the captured data is stored.
      * 
      */
     private final String destinationS3Uri;
     /**
-     * Flag to enable data capture. Defaults to `false`.
+     * @return Flag to enable data capture. Defaults to `false`.
      * 
      */
     private final @Nullable Boolean enableCapture;
     /**
-     * Portion of data to capture. Should be between 0 and 100.
+     * @return Portion of data to capture. Should be between 0 and 100.
      * 
      */
     private final Integer initialSamplingPercentage;
     /**
-     * The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
+     * @return The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
      * 
      */
     private final @Nullable String kmsKeyId;
@@ -64,44 +64,44 @@ public final class EndpointConfigurationDataCaptureConfig {
     }
 
     /**
-     * The content type headers to capture. Fields are documented below.
+     * @return The content type headers to capture. Fields are documented below.
      * 
-    */
+     */
     public Optional<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader> captureContentTypeHeader() {
         return Optional.ofNullable(this.captureContentTypeHeader);
     }
     /**
-     * Specifies what data to capture. Fields are documented below.
+     * @return Specifies what data to capture. Fields are documented below.
      * 
-    */
+     */
     public List<EndpointConfigurationDataCaptureConfigCaptureOption> captureOptions() {
         return this.captureOptions;
     }
     /**
-     * The URL for S3 location where the captured data is stored.
+     * @return The URL for S3 location where the captured data is stored.
      * 
-    */
+     */
     public String destinationS3Uri() {
         return this.destinationS3Uri;
     }
     /**
-     * Flag to enable data capture. Defaults to `false`.
+     * @return Flag to enable data capture. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> enableCapture() {
         return Optional.ofNullable(this.enableCapture);
     }
     /**
-     * Portion of data to capture. Should be between 0 and 100.
+     * @return Portion of data to capture. Should be between 0 and 100.
      * 
-    */
+     */
     public Integer initialSamplingPercentage() {
         return this.initialSamplingPercentage;
     }
     /**
-     * The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
+     * @return The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
      * 
-    */
+     */
     public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }

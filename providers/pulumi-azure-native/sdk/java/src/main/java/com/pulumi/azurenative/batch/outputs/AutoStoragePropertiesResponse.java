@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AutoStoragePropertiesResponse {
     /**
-     * The UTC time at which storage keys were last synchronized with the Batch account.
+     * @return The UTC time at which storage keys were last synchronized with the Batch account.
      * 
      */
     private final String lastKeySync;
     /**
-     * The resource ID of the storage account to be used for auto-storage account.
+     * @return The resource ID of the storage account to be used for auto-storage account.
      * 
      */
     private final String storageAccountId;
@@ -29,16 +29,16 @@ public final class AutoStoragePropertiesResponse {
     }
 
     /**
-     * The UTC time at which storage keys were last synchronized with the Batch account.
+     * @return The UTC time at which storage keys were last synchronized with the Batch account.
      * 
-    */
+     */
     public String lastKeySync() {
         return this.lastKeySync;
     }
     /**
-     * The resource ID of the storage account to be used for auto-storage account.
+     * @return The resource ID of the storage account to be used for auto-storage account.
      * 
-    */
+     */
     public String storageAccountId() {
         return this.storageAccountId;
     }

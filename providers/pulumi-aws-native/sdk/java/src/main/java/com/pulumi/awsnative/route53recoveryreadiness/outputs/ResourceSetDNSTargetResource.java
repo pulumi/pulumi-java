@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourceSetDNSTargetResource {
     /**
-     * The domain name that acts as an ingress point to a portion of the customer application.
+     * @return The domain name that acts as an ingress point to a portion of the customer application.
      * 
      */
     private final @Nullable String domainName;
     /**
-     * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target resource.
+     * @return The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target resource.
      * 
      */
     private final @Nullable String hostedZoneArn;
     /**
-     * The Route 53 record set ID that will uniquely identify a DNS record, given a name and a type.
+     * @return The Route 53 record set ID that will uniquely identify a DNS record, given a name and a type.
      * 
      */
     private final @Nullable String recordSetId;
     /**
-     * The type of DNS record of the target resource.
+     * @return The type of DNS record of the target resource.
      * 
      */
     private final @Nullable String recordType;
@@ -49,30 +49,30 @@ public final class ResourceSetDNSTargetResource {
     }
 
     /**
-     * The domain name that acts as an ingress point to a portion of the customer application.
+     * @return The domain name that acts as an ingress point to a portion of the customer application.
      * 
-    */
+     */
     public Optional<String> domainName() {
         return Optional.ofNullable(this.domainName);
     }
     /**
-     * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target resource.
+     * @return The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target resource.
      * 
-    */
+     */
     public Optional<String> hostedZoneArn() {
         return Optional.ofNullable(this.hostedZoneArn);
     }
     /**
-     * The Route 53 record set ID that will uniquely identify a DNS record, given a name and a type.
+     * @return The Route 53 record set ID that will uniquely identify a DNS record, given a name and a type.
      * 
-    */
+     */
     public Optional<String> recordSetId() {
         return Optional.ofNullable(this.recordSetId);
     }
     /**
-     * The type of DNS record of the target resource.
+     * @return The type of DNS record of the target resource.
      * 
-    */
+     */
     public Optional<String> recordType() {
         return Optional.ofNullable(this.recordType);
     }

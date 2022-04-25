@@ -22,6 +22,10 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsArgs extends co
     @Import(name="masterUserArn")
     private @Nullable Output<String> masterUserArn;
 
+    /**
+     * @return ARN for the main user. Only specify if `internal_user_database_enabled` is not set or set to `false`.
+     * 
+     */
     public Optional<Output<String>> masterUserArn() {
         return Optional.ofNullable(this.masterUserArn);
     }
@@ -33,6 +37,10 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsArgs extends co
     @Import(name="masterUserName")
     private @Nullable Output<String> masterUserName;
 
+    /**
+     * @return Main user&#39;s username, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+     * 
+     */
     public Optional<Output<String>> masterUserName() {
         return Optional.ofNullable(this.masterUserName);
     }
@@ -44,6 +52,10 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsArgs extends co
     @Import(name="masterUserPassword")
     private @Nullable Output<String> masterUserPassword;
 
+    /**
+     * @return Main user&#39;s password, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+     * 
+     */
     public Optional<Output<String>> masterUserPassword() {
         return Optional.ofNullable(this.masterUserPassword);
     }
@@ -74,29 +86,65 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsArgs extends co
             $ = new DomainAdvancedSecurityOptionsMasterUserOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param masterUserArn ARN for the main user. Only specify if `internal_user_database_enabled` is not set or set to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterUserArn(@Nullable Output<String> masterUserArn) {
             $.masterUserArn = masterUserArn;
             return this;
         }
 
+        /**
+         * @param masterUserArn ARN for the main user. Only specify if `internal_user_database_enabled` is not set or set to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterUserArn(String masterUserArn) {
             return masterUserArn(Output.of(masterUserArn));
         }
 
+        /**
+         * @param masterUserName Main user&#39;s username, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterUserName(@Nullable Output<String> masterUserName) {
             $.masterUserName = masterUserName;
             return this;
         }
 
+        /**
+         * @param masterUserName Main user&#39;s username, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterUserName(String masterUserName) {
             return masterUserName(Output.of(masterUserName));
         }
 
+        /**
+         * @param masterUserPassword Main user&#39;s password, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterUserPassword(@Nullable Output<String> masterUserPassword) {
             $.masterUserPassword = masterUserPassword;
             return this;
         }
 
+        /**
+         * @param masterUserPassword Main user&#39;s password, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterUserPassword(String masterUserPassword) {
             return masterUserPassword(Output.of(masterUserPassword));
         }

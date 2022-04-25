@@ -24,6 +24,10 @@ public final class BucketEncryption extends com.pulumi.resources.InvokeArgs {
     @Import(name="serverSideEncryptionConfiguration", required=true)
     private List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration;
 
+    /**
+     * @return Specifies the default server-side-encryption configuration.
+     * 
+     */
     public List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
@@ -52,11 +56,23 @@ public final class BucketEncryption extends com.pulumi.resources.InvokeArgs {
             $ = new BucketEncryption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serverSideEncryptionConfiguration Specifies the default server-side-encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideEncryptionConfiguration(List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration) {
             $.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param serverSideEncryptionConfiguration Specifies the default server-side-encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideEncryptionConfiguration(BucketServerSideEncryptionRule... serverSideEncryptionConfiguration) {
             return serverSideEncryptionConfiguration(List.of(serverSideEncryptionConfiguration));
         }

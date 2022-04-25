@@ -22,6 +22,10 @@ public final class PartnerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partnerId")
     private @Nullable Output<String> partnerId;
 
+    /**
+     * @return Id of the Partner
+     * 
+     */
     public Optional<Output<String>> partnerId() {
         return Optional.ofNullable(this.partnerId);
     }
@@ -50,11 +54,23 @@ public final class PartnerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PartnerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partnerId Id of the Partner
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerId(@Nullable Output<String> partnerId) {
             $.partnerId = partnerId;
             return this;
         }
 
+        /**
+         * @param partnerId Id of the Partner
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerId(String partnerId) {
             return partnerId(Output.of(partnerId));
         }

@@ -25,6 +25,10 @@ public final class ApplicationCustomComponentArgs extends com.pulumi.resources.R
     @Import(name="componentName", required=true)
     private Output<String> componentName;
 
+    /**
+     * @return The name of the component.
+     * 
+     */
     public Output<String> componentName() {
         return this.componentName;
     }
@@ -36,6 +40,10 @@ public final class ApplicationCustomComponentArgs extends com.pulumi.resources.R
     @Import(name="resourceList", required=true)
     private Output<List<String>> resourceList;
 
+    /**
+     * @return The list of resource ARNs that belong to the component.
+     * 
+     */
     public Output<List<String>> resourceList() {
         return this.resourceList;
     }
@@ -65,24 +73,54 @@ public final class ApplicationCustomComponentArgs extends com.pulumi.resources.R
             $ = new ApplicationCustomComponentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentName The name of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentName(Output<String> componentName) {
             $.componentName = componentName;
             return this;
         }
 
+        /**
+         * @param componentName The name of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentName(String componentName) {
             return componentName(Output.of(componentName));
         }
 
+        /**
+         * @param resourceList The list of resource ARNs that belong to the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceList(Output<List<String>> resourceList) {
             $.resourceList = resourceList;
             return this;
         }
 
+        /**
+         * @param resourceList The list of resource ARNs that belong to the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceList(List<String> resourceList) {
             return resourceList(Output.of(resourceList));
         }
 
+        /**
+         * @param resourceList The list of resource ARNs that belong to the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceList(String... resourceList) {
             return resourceList(List.of(resourceList));
         }

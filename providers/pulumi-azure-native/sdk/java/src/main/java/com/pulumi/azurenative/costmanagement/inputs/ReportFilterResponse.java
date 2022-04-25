@@ -26,6 +26,10 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="and")
     private @Nullable List<ReportFilterResponse> and;
 
+    /**
+     * @return The logical &#34;AND&#34; expression. Must have at least 2 items.
+     * 
+     */
     public Optional<List<ReportFilterResponse>> and() {
         return Optional.ofNullable(this.and);
     }
@@ -37,6 +41,10 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dimension")
     private @Nullable ReportComparisonExpressionResponse dimension;
 
+    /**
+     * @return Has comparison expression for a dimension
+     * 
+     */
     public Optional<ReportComparisonExpressionResponse> dimension() {
         return Optional.ofNullable(this.dimension);
     }
@@ -48,6 +56,10 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="not")
     private @Nullable ReportFilterResponse not;
 
+    /**
+     * @return The logical &#34;NOT&#34; expression.
+     * 
+     */
     public Optional<ReportFilterResponse> not() {
         return Optional.ofNullable(this.not);
     }
@@ -59,6 +71,10 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="or")
     private @Nullable List<ReportFilterResponse> or;
 
+    /**
+     * @return The logical &#34;OR&#34; expression. Must have at least 2 items.
+     * 
+     */
     public Optional<List<ReportFilterResponse>> or() {
         return Optional.ofNullable(this.or);
     }
@@ -70,6 +86,10 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tag")
     private @Nullable ReportComparisonExpressionResponse tag;
 
+    /**
+     * @return Has comparison expression for a tag
+     * 
+     */
     public Optional<ReportComparisonExpressionResponse> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -102,34 +122,76 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ReportFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param and The logical &#34;AND&#34; expression. Must have at least 2 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder and(@Nullable List<ReportFilterResponse> and) {
             $.and = and;
             return this;
         }
 
+        /**
+         * @param and The logical &#34;AND&#34; expression. Must have at least 2 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder and(ReportFilterResponse... and) {
             return and(List.of(and));
         }
 
+        /**
+         * @param dimension Has comparison expression for a dimension
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimension(@Nullable ReportComparisonExpressionResponse dimension) {
             $.dimension = dimension;
             return this;
         }
 
+        /**
+         * @param not The logical &#34;NOT&#34; expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder not(@Nullable ReportFilterResponse not) {
             $.not = not;
             return this;
         }
 
+        /**
+         * @param or The logical &#34;OR&#34; expression. Must have at least 2 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder or(@Nullable List<ReportFilterResponse> or) {
             $.or = or;
             return this;
         }
 
+        /**
+         * @param or The logical &#34;OR&#34; expression. Must have at least 2 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder or(ReportFilterResponse... or) {
             return or(List.of(or));
         }
 
+        /**
+         * @param tag Has comparison expression for a tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable ReportComparisonExpressionResponse tag) {
             $.tag = tag;
             return this;

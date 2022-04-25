@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class IntegrationAccountSkuResponse {
     /**
-     * The sku name.
+     * @return The sku name.
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class IntegrationAccountSkuResponse {
     }
 
     /**
-     * The sku name.
+     * @return The sku name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

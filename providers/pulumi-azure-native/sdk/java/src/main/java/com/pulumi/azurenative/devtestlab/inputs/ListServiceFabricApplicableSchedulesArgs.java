@@ -19,6 +19,10 @@ public final class ListServiceFabricApplicableSchedulesArgs extends com.pulumi.r
     @Import(name="labName", required=true)
     private String labName;
 
+    /**
+     * @return The name of the lab.
+     * 
+     */
     public String labName() {
         return this.labName;
     }
@@ -30,6 +34,10 @@ public final class ListServiceFabricApplicableSchedulesArgs extends com.pulumi.r
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the service fabric.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -41,6 +49,10 @@ public final class ListServiceFabricApplicableSchedulesArgs extends com.pulumi.r
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class ListServiceFabricApplicableSchedulesArgs extends com.pulumi.r
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return The name of the user profile.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -83,21 +99,45 @@ public final class ListServiceFabricApplicableSchedulesArgs extends com.pulumi.r
             $ = new ListServiceFabricApplicableSchedulesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(String labName) {
             $.labName = labName;
             return this;
         }
 
+        /**
+         * @param name The name of the service fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param userName The name of the user profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

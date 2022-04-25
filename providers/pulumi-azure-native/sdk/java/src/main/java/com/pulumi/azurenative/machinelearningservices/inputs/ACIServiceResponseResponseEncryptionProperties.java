@@ -23,6 +23,10 @@ public final class ACIServiceResponseResponseEncryptionProperties extends com.pu
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return Encryption Key name
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -34,6 +38,10 @@ public final class ACIServiceResponseResponseEncryptionProperties extends com.pu
     @Import(name="keyVersion", required=true)
     private String keyVersion;
 
+    /**
+     * @return Encryption Key Version
+     * 
+     */
     public String keyVersion() {
         return this.keyVersion;
     }
@@ -45,6 +53,10 @@ public final class ACIServiceResponseResponseEncryptionProperties extends com.pu
     @Import(name="vaultBaseUrl", required=true)
     private String vaultBaseUrl;
 
+    /**
+     * @return vault base Url
+     * 
+     */
     public String vaultBaseUrl() {
         return this.vaultBaseUrl;
     }
@@ -75,16 +87,34 @@ public final class ACIServiceResponseResponseEncryptionProperties extends com.pu
             $ = new ACIServiceResponseResponseEncryptionProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName Encryption Key name
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyVersion Encryption Key Version
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(String keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param vaultBaseUrl vault base Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultBaseUrl(String vaultBaseUrl) {
             $.vaultBaseUrl = vaultBaseUrl;
             return this;

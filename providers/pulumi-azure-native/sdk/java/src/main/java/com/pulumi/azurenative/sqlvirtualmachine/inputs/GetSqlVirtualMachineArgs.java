@@ -21,6 +21,10 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The child resources to include in the response.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
     @Import(name="sqlVirtualMachineName", required=true)
     private String sqlVirtualMachineName;
 
+    /**
+     * @return Name of the SQL virtual machine.
+     * 
+     */
     public String sqlVirtualMachineName() {
         return this.sqlVirtualMachineName;
     }
@@ -73,16 +85,34 @@ public final class GetSqlVirtualMachineArgs extends com.pulumi.resources.InvokeA
             $ = new GetSqlVirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand The child resources to include in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sqlVirtualMachineName Name of the SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineName(String sqlVirtualMachineName) {
             $.sqlVirtualMachineName = sqlVirtualMachineName;
             return this;

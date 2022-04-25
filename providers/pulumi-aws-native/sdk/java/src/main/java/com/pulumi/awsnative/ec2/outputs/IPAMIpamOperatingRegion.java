@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class IPAMIpamOperatingRegion {
     /**
-     * The name of the region.
+     * @return The name of the region.
      * 
      */
     private final String regionName;
@@ -21,9 +21,9 @@ public final class IPAMIpamOperatingRegion {
     }
 
     /**
-     * The name of the region.
+     * @return The name of the region.
      * 
-    */
+     */
     public String regionName() {
         return this.regionName;
     }

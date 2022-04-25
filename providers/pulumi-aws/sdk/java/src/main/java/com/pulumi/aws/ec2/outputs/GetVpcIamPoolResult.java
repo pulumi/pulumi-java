@@ -17,47 +17,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVpcIamPoolResult {
     /**
-     * The IP protocol assigned to this pool.
+     * @return The IP protocol assigned to this pool.
      * 
      */
     private final String addressFamily;
     /**
-     * A default netmask length for allocations added to this pool. If, for example, the CIDR assigned to this pool is 10.0.0.0/8 and you enter 16 here, new allocations will default to 10.0.0.0/16.
+     * @return A default netmask length for allocations added to this pool. If, for example, the CIDR assigned to this pool is 10.0.0.0/8 and you enter 16 here, new allocations will default to 10.0.0.0/16.
      * 
      */
     private final Integer allocationDefaultNetmaskLength;
     /**
-     * The maximum netmask length that will be required for CIDR allocations in this pool.
+     * @return The maximum netmask length that will be required for CIDR allocations in this pool.
      * 
      */
     private final Integer allocationMaxNetmaskLength;
     /**
-     * The minimum netmask length that will be required for CIDR allocations in this pool.
+     * @return The minimum netmask length that will be required for CIDR allocations in this pool.
      * 
      */
     private final Integer allocationMinNetmaskLength;
     /**
-     * Tags that are required to create resources in using this pool.
+     * @return Tags that are required to create resources in using this pool.
      * 
      */
     private final Map<String,String> allocationResourceTags;
     /**
-     * Amazon Resource Name (ARN) of the pool
+     * @return Amazon Resource Name (ARN) of the pool
      * 
      */
     private final String arn;
     /**
-     * If enabled, IPAM will continuously look for resources within the CIDR range of this pool and automatically import them as allocations into your IPAM.
+     * @return If enabled, IPAM will continuously look for resources within the CIDR range of this pool and automatically import them as allocations into your IPAM.
      * 
      */
     private final Boolean autoImport;
     /**
-     * Limits which service in AWS that the pool can be used in. &#34;ec2&#34;, for example, allows users to use space for Elastic IP addresses and VPCs.
+     * @return Limits which service in AWS that the pool can be used in. &#34;ec2&#34;, for example, allows users to use space for Elastic IP addresses and VPCs.
      * 
      */
     private final String awsService;
     /**
-     * A description for the IPAM pool.
+     * @return A description for the IPAM pool.
      * 
      */
     private final String description;
@@ -65,30 +65,30 @@ public final class GetVpcIamPoolResult {
     private final @Nullable String id;
     private final @Nullable String ipamPoolId;
     /**
-     * The ID of the scope the pool belongs to.
+     * @return The ID of the scope the pool belongs to.
      * 
      */
     private final String ipamScopeId;
     private final String ipamScopeType;
     /**
-     * Locale is the Region where your pool is available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region.
+     * @return Locale is the Region where your pool is available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region.
      * 
      */
     private final String locale;
     private final Integer poolDepth;
     /**
-     * Defines whether or not IPv6 pool space is publicly ∂advertisable over the internet.
+     * @return Defines whether or not IPv6 pool space is publicly ∂advertisable over the internet.
      * 
      */
     private final Boolean publiclyAdvertisable;
     /**
-     * The ID of the source IPAM pool.
+     * @return The ID of the source IPAM pool.
      * 
      */
     private final String sourceIpamPoolId;
     private final String state;
     /**
-     * A map of tags to assigned to the resource.
+     * @return A map of tags to assigned to the resource.
      * 
      */
     private final Map<String,String> tags;
@@ -138,65 +138,65 @@ public final class GetVpcIamPoolResult {
     }
 
     /**
-     * The IP protocol assigned to this pool.
+     * @return The IP protocol assigned to this pool.
      * 
-    */
+     */
     public String addressFamily() {
         return this.addressFamily;
     }
     /**
-     * A default netmask length for allocations added to this pool. If, for example, the CIDR assigned to this pool is 10.0.0.0/8 and you enter 16 here, new allocations will default to 10.0.0.0/16.
+     * @return A default netmask length for allocations added to this pool. If, for example, the CIDR assigned to this pool is 10.0.0.0/8 and you enter 16 here, new allocations will default to 10.0.0.0/16.
      * 
-    */
+     */
     public Integer allocationDefaultNetmaskLength() {
         return this.allocationDefaultNetmaskLength;
     }
     /**
-     * The maximum netmask length that will be required for CIDR allocations in this pool.
+     * @return The maximum netmask length that will be required for CIDR allocations in this pool.
      * 
-    */
+     */
     public Integer allocationMaxNetmaskLength() {
         return this.allocationMaxNetmaskLength;
     }
     /**
-     * The minimum netmask length that will be required for CIDR allocations in this pool.
+     * @return The minimum netmask length that will be required for CIDR allocations in this pool.
      * 
-    */
+     */
     public Integer allocationMinNetmaskLength() {
         return this.allocationMinNetmaskLength;
     }
     /**
-     * Tags that are required to create resources in using this pool.
+     * @return Tags that are required to create resources in using this pool.
      * 
-    */
+     */
     public Map<String,String> allocationResourceTags() {
         return this.allocationResourceTags;
     }
     /**
-     * Amazon Resource Name (ARN) of the pool
+     * @return Amazon Resource Name (ARN) of the pool
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * If enabled, IPAM will continuously look for resources within the CIDR range of this pool and automatically import them as allocations into your IPAM.
+     * @return If enabled, IPAM will continuously look for resources within the CIDR range of this pool and automatically import them as allocations into your IPAM.
      * 
-    */
+     */
     public Boolean autoImport() {
         return this.autoImport;
     }
     /**
-     * Limits which service in AWS that the pool can be used in. &#34;ec2&#34;, for example, allows users to use space for Elastic IP addresses and VPCs.
+     * @return Limits which service in AWS that the pool can be used in. &#34;ec2&#34;, for example, allows users to use space for Elastic IP addresses and VPCs.
      * 
-    */
+     */
     public String awsService() {
         return this.awsService;
     }
     /**
-     * A description for the IPAM pool.
+     * @return A description for the IPAM pool.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
@@ -210,9 +210,9 @@ public final class GetVpcIamPoolResult {
         return Optional.ofNullable(this.ipamPoolId);
     }
     /**
-     * The ID of the scope the pool belongs to.
+     * @return The ID of the scope the pool belongs to.
      * 
-    */
+     */
     public String ipamScopeId() {
         return this.ipamScopeId;
     }
@@ -220,9 +220,9 @@ public final class GetVpcIamPoolResult {
         return this.ipamScopeType;
     }
     /**
-     * Locale is the Region where your pool is available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region.
+     * @return Locale is the Region where your pool is available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region.
      * 
-    */
+     */
     public String locale() {
         return this.locale;
     }
@@ -230,16 +230,16 @@ public final class GetVpcIamPoolResult {
         return this.poolDepth;
     }
     /**
-     * Defines whether or not IPv6 pool space is publicly ∂advertisable over the internet.
+     * @return Defines whether or not IPv6 pool space is publicly ∂advertisable over the internet.
      * 
-    */
+     */
     public Boolean publiclyAdvertisable() {
         return this.publiclyAdvertisable;
     }
     /**
-     * The ID of the source IPAM pool.
+     * @return The ID of the source IPAM pool.
      * 
-    */
+     */
     public String sourceIpamPoolId() {
         return this.sourceIpamPoolId;
     }
@@ -247,9 +247,9 @@ public final class GetVpcIamPoolResult {
         return this.state;
     }
     /**
-     * A map of tags to assigned to the resource.
+     * @return A map of tags to assigned to the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

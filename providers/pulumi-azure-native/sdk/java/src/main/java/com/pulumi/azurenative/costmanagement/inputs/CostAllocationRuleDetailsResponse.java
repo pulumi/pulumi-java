@@ -27,6 +27,10 @@ public final class CostAllocationRuleDetailsResponse extends com.pulumi.resource
     @Import(name="sourceResources")
     private @Nullable List<SourceCostAllocationResourceResponse> sourceResources;
 
+    /**
+     * @return Source resources for cost allocation. At this time, this list can contain no more than one element.
+     * 
+     */
     public Optional<List<SourceCostAllocationResourceResponse>> sourceResources() {
         return Optional.ofNullable(this.sourceResources);
     }
@@ -38,6 +42,10 @@ public final class CostAllocationRuleDetailsResponse extends com.pulumi.resource
     @Import(name="targetResources")
     private @Nullable List<TargetCostAllocationResourceResponse> targetResources;
 
+    /**
+     * @return Target resources for cost allocation. At this time, this list can contain no more than one element.
+     * 
+     */
     public Optional<List<TargetCostAllocationResourceResponse>> targetResources() {
         return Optional.ofNullable(this.targetResources);
     }
@@ -67,20 +75,44 @@ public final class CostAllocationRuleDetailsResponse extends com.pulumi.resource
             $ = new CostAllocationRuleDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceResources Source resources for cost allocation. At this time, this list can contain no more than one element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResources(@Nullable List<SourceCostAllocationResourceResponse> sourceResources) {
             $.sourceResources = sourceResources;
             return this;
         }
 
+        /**
+         * @param sourceResources Source resources for cost allocation. At this time, this list can contain no more than one element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResources(SourceCostAllocationResourceResponse... sourceResources) {
             return sourceResources(List.of(sourceResources));
         }
 
+        /**
+         * @param targetResources Target resources for cost allocation. At this time, this list can contain no more than one element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResources(@Nullable List<TargetCostAllocationResourceResponse> targetResources) {
             $.targetResources = targetResources;
             return this;
         }
 
+        /**
+         * @param targetResources Target resources for cost allocation. At this time, this list can contain no more than one element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResources(TargetCostAllocationResourceResponse... targetResources) {
             return targetResources(List.of(targetResources));
         }

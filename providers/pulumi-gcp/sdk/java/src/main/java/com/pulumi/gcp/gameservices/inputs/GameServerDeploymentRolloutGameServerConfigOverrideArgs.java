@@ -23,6 +23,10 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideArgs exten
     @Import(name="configVersion")
     private @Nullable Output<String> configVersion;
 
+    /**
+     * @return Version of the configuration.
+     * 
+     */
     public Optional<Output<String>> configVersion() {
         return Optional.ofNullable(this.configVersion);
     }
@@ -35,6 +39,11 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideArgs exten
     @Import(name="realmsSelector")
     private @Nullable Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> realmsSelector;
 
+    /**
+     * @return Selection by realms.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs>> realmsSelector() {
         return Optional.ofNullable(this.realmsSelector);
     }
@@ -64,20 +73,46 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideArgs exten
             $ = new GameServerDeploymentRolloutGameServerConfigOverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configVersion Version of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configVersion(@Nullable Output<String> configVersion) {
             $.configVersion = configVersion;
             return this;
         }
 
+        /**
+         * @param configVersion Version of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configVersion(String configVersion) {
             return configVersion(Output.of(configVersion));
         }
 
+        /**
+         * @param realmsSelector Selection by realms.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder realmsSelector(@Nullable Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs> realmsSelector) {
             $.realmsSelector = realmsSelector;
             return this;
         }
 
+        /**
+         * @param realmsSelector Selection by realms.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder realmsSelector(GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs realmsSelector) {
             return realmsSelector(Output.of(realmsSelector));
         }

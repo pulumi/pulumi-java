@@ -28,6 +28,10 @@ public final class ServiceLevelIndicatorArgs extends com.pulumi.resources.Resour
     @Import(name="basicSli")
     private @Nullable Output<BasicSliArgs> basicSli;
 
+    /**
+     * @return Basic SLI on a well-known service type.
+     * 
+     */
     public Optional<Output<BasicSliArgs>> basicSli() {
         return Optional.ofNullable(this.basicSli);
     }
@@ -39,6 +43,10 @@ public final class ServiceLevelIndicatorArgs extends com.pulumi.resources.Resour
     @Import(name="requestBased")
     private @Nullable Output<RequestBasedSliArgs> requestBased;
 
+    /**
+     * @return Request-based SLIs
+     * 
+     */
     public Optional<Output<RequestBasedSliArgs>> requestBased() {
         return Optional.ofNullable(this.requestBased);
     }
@@ -50,6 +58,10 @@ public final class ServiceLevelIndicatorArgs extends com.pulumi.resources.Resour
     @Import(name="windowsBased")
     private @Nullable Output<WindowsBasedSliArgs> windowsBased;
 
+    /**
+     * @return Windows-based SLIs
+     * 
+     */
     public Optional<Output<WindowsBasedSliArgs>> windowsBased() {
         return Optional.ofNullable(this.windowsBased);
     }
@@ -80,29 +92,65 @@ public final class ServiceLevelIndicatorArgs extends com.pulumi.resources.Resour
             $ = new ServiceLevelIndicatorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicSli Basic SLI on a well-known service type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicSli(@Nullable Output<BasicSliArgs> basicSli) {
             $.basicSli = basicSli;
             return this;
         }
 
+        /**
+         * @param basicSli Basic SLI on a well-known service type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicSli(BasicSliArgs basicSli) {
             return basicSli(Output.of(basicSli));
         }
 
+        /**
+         * @param requestBased Request-based SLIs
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBased(@Nullable Output<RequestBasedSliArgs> requestBased) {
             $.requestBased = requestBased;
             return this;
         }
 
+        /**
+         * @param requestBased Request-based SLIs
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBased(RequestBasedSliArgs requestBased) {
             return requestBased(Output.of(requestBased));
         }
 
+        /**
+         * @param windowsBased Windows-based SLIs
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsBased(@Nullable Output<WindowsBasedSliArgs> windowsBased) {
             $.windowsBased = windowsBased;
             return this;
         }
 
+        /**
+         * @param windowsBased Windows-based SLIs
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsBased(WindowsBasedSliArgs windowsBased) {
             return windowsBased(Output.of(windowsBased));
         }

@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetArgs extends com.pulumi.
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -54,11 +58,23 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetArgs extends com.pulumi.
             $ = new GooglePrivacyDlpV2CloudStorageFileSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param url The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

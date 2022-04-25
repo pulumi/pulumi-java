@@ -28,6 +28,10 @@ public final class ImageRecipeComponentConfigurationArgs extends com.pulumi.reso
     @Import(name="componentArn")
     private @Nullable Output<String> componentArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the component.
+     * 
+     */
     public Optional<Output<String>> componentArn() {
         return Optional.ofNullable(this.componentArn);
     }
@@ -39,6 +43,10 @@ public final class ImageRecipeComponentConfigurationArgs extends com.pulumi.reso
     @Import(name="parameters")
     private @Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters;
 
+    /**
+     * @return A group of parameter settings that are used to configure the component for a specific recipe.
+     * 
+     */
     public Optional<Output<List<ImageRecipeComponentParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -68,24 +76,54 @@ public final class ImageRecipeComponentConfigurationArgs extends com.pulumi.reso
             $ = new ImageRecipeComponentConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentArn The Amazon Resource Name (ARN) of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentArn(@Nullable Output<String> componentArn) {
             $.componentArn = componentArn;
             return this;
         }
 
+        /**
+         * @param componentArn The Amazon Resource Name (ARN) of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentArn(String componentArn) {
             return componentArn(Output.of(componentArn));
         }
 
+        /**
+         * @param parameters A group of parameter settings that are used to configure the component for a specific recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters A group of parameter settings that are used to configure the component for a specific recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<ImageRecipeComponentParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters A group of parameter settings that are used to configure the component for a specific recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ImageRecipeComponentParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }

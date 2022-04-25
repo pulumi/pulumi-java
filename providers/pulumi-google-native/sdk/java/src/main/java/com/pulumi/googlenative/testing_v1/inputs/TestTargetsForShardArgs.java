@@ -27,6 +27,10 @@ public final class TestTargetsForShardArgs extends com.pulumi.resources.Resource
     @Import(name="testTargets")
     private @Nullable Output<List<String>> testTargets;
 
+    /**
+     * @return Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of shard_test_targets must be greater than 0.
+     * 
+     */
     public Optional<Output<List<String>>> testTargets() {
         return Optional.ofNullable(this.testTargets);
     }
@@ -55,15 +59,33 @@ public final class TestTargetsForShardArgs extends com.pulumi.resources.Resource
             $ = new TestTargetsForShardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param testTargets Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of shard_test_targets must be greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargets(@Nullable Output<List<String>> testTargets) {
             $.testTargets = testTargets;
             return this;
         }
 
+        /**
+         * @param testTargets Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of shard_test_targets must be greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargets(List<String> testTargets) {
             return testTargets(Output.of(testTargets));
         }
 
+        /**
+         * @param testTargets Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of shard_test_targets must be greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargets(String... testTargets) {
             return testTargets(List.of(testTargets));
         }

@@ -14,77 +14,77 @@ import javax.annotation.Nullable;
 @CustomType
 public final class X12AcknowledgementSettingsResponse {
     /**
-     * The acknowledgement control number lower bound.
+     * @return The acknowledgement control number lower bound.
      * 
      */
     private final Integer acknowledgementControlNumberLowerBound;
     /**
-     * The acknowledgement control number prefix.
+     * @return The acknowledgement control number prefix.
      * 
      */
     private final @Nullable String acknowledgementControlNumberPrefix;
     /**
-     * The acknowledgement control number suffix.
+     * @return The acknowledgement control number suffix.
      * 
      */
     private final @Nullable String acknowledgementControlNumberSuffix;
     /**
-     * The acknowledgement control number upper bound.
+     * @return The acknowledgement control number upper bound.
      * 
      */
     private final Integer acknowledgementControlNumberUpperBound;
     /**
-     * The value indicating whether to batch functional acknowledgements.
+     * @return The value indicating whether to batch functional acknowledgements.
      * 
      */
     private final Boolean batchFunctionalAcknowledgements;
     /**
-     * The value indicating whether to batch implementation acknowledgements.
+     * @return The value indicating whether to batch implementation acknowledgements.
      * 
      */
     private final Boolean batchImplementationAcknowledgements;
     /**
-     * The value indicating whether to batch the technical acknowledgements.
+     * @return The value indicating whether to batch the technical acknowledgements.
      * 
      */
     private final Boolean batchTechnicalAcknowledgements;
     /**
-     * The functional acknowledgement version.
+     * @return The functional acknowledgement version.
      * 
      */
     private final @Nullable String functionalAcknowledgementVersion;
     /**
-     * The implementation acknowledgement version.
+     * @return The implementation acknowledgement version.
      * 
      */
     private final @Nullable String implementationAcknowledgementVersion;
     /**
-     * The value indicating whether functional acknowledgement is needed.
+     * @return The value indicating whether functional acknowledgement is needed.
      * 
      */
     private final Boolean needFunctionalAcknowledgement;
     /**
-     * The value indicating whether implementation acknowledgement is needed.
+     * @return The value indicating whether implementation acknowledgement is needed.
      * 
      */
     private final Boolean needImplementationAcknowledgement;
     /**
-     * The value indicating whether a loop is needed for valid messages.
+     * @return The value indicating whether a loop is needed for valid messages.
      * 
      */
     private final Boolean needLoopForValidMessages;
     /**
-     * The value indicating whether technical acknowledgement is needed.
+     * @return The value indicating whether technical acknowledgement is needed.
      * 
      */
     private final Boolean needTechnicalAcknowledgement;
     /**
-     * The value indicating whether to rollover acknowledgement control number.
+     * @return The value indicating whether to rollover acknowledgement control number.
      * 
      */
     private final Boolean rolloverAcknowledgementControlNumber;
     /**
-     * The value indicating whether to send synchronous acknowledgement.
+     * @return The value indicating whether to send synchronous acknowledgement.
      * 
      */
     private final Boolean sendSynchronousAcknowledgement;
@@ -124,107 +124,107 @@ public final class X12AcknowledgementSettingsResponse {
     }
 
     /**
-     * The acknowledgement control number lower bound.
+     * @return The acknowledgement control number lower bound.
      * 
-    */
+     */
     public Integer acknowledgementControlNumberLowerBound() {
         return this.acknowledgementControlNumberLowerBound;
     }
     /**
-     * The acknowledgement control number prefix.
+     * @return The acknowledgement control number prefix.
      * 
-    */
+     */
     public Optional<String> acknowledgementControlNumberPrefix() {
         return Optional.ofNullable(this.acknowledgementControlNumberPrefix);
     }
     /**
-     * The acknowledgement control number suffix.
+     * @return The acknowledgement control number suffix.
      * 
-    */
+     */
     public Optional<String> acknowledgementControlNumberSuffix() {
         return Optional.ofNullable(this.acknowledgementControlNumberSuffix);
     }
     /**
-     * The acknowledgement control number upper bound.
+     * @return The acknowledgement control number upper bound.
      * 
-    */
+     */
     public Integer acknowledgementControlNumberUpperBound() {
         return this.acknowledgementControlNumberUpperBound;
     }
     /**
-     * The value indicating whether to batch functional acknowledgements.
+     * @return The value indicating whether to batch functional acknowledgements.
      * 
-    */
+     */
     public Boolean batchFunctionalAcknowledgements() {
         return this.batchFunctionalAcknowledgements;
     }
     /**
-     * The value indicating whether to batch implementation acknowledgements.
+     * @return The value indicating whether to batch implementation acknowledgements.
      * 
-    */
+     */
     public Boolean batchImplementationAcknowledgements() {
         return this.batchImplementationAcknowledgements;
     }
     /**
-     * The value indicating whether to batch the technical acknowledgements.
+     * @return The value indicating whether to batch the technical acknowledgements.
      * 
-    */
+     */
     public Boolean batchTechnicalAcknowledgements() {
         return this.batchTechnicalAcknowledgements;
     }
     /**
-     * The functional acknowledgement version.
+     * @return The functional acknowledgement version.
      * 
-    */
+     */
     public Optional<String> functionalAcknowledgementVersion() {
         return Optional.ofNullable(this.functionalAcknowledgementVersion);
     }
     /**
-     * The implementation acknowledgement version.
+     * @return The implementation acknowledgement version.
      * 
-    */
+     */
     public Optional<String> implementationAcknowledgementVersion() {
         return Optional.ofNullable(this.implementationAcknowledgementVersion);
     }
     /**
-     * The value indicating whether functional acknowledgement is needed.
+     * @return The value indicating whether functional acknowledgement is needed.
      * 
-    */
+     */
     public Boolean needFunctionalAcknowledgement() {
         return this.needFunctionalAcknowledgement;
     }
     /**
-     * The value indicating whether implementation acknowledgement is needed.
+     * @return The value indicating whether implementation acknowledgement is needed.
      * 
-    */
+     */
     public Boolean needImplementationAcknowledgement() {
         return this.needImplementationAcknowledgement;
     }
     /**
-     * The value indicating whether a loop is needed for valid messages.
+     * @return The value indicating whether a loop is needed for valid messages.
      * 
-    */
+     */
     public Boolean needLoopForValidMessages() {
         return this.needLoopForValidMessages;
     }
     /**
-     * The value indicating whether technical acknowledgement is needed.
+     * @return The value indicating whether technical acknowledgement is needed.
      * 
-    */
+     */
     public Boolean needTechnicalAcknowledgement() {
         return this.needTechnicalAcknowledgement;
     }
     /**
-     * The value indicating whether to rollover acknowledgement control number.
+     * @return The value indicating whether to rollover acknowledgement control number.
      * 
-    */
+     */
     public Boolean rolloverAcknowledgementControlNumber() {
         return this.rolloverAcknowledgementControlNumber;
     }
     /**
-     * The value indicating whether to send synchronous acknowledgement.
+     * @return The value indicating whether to send synchronous acknowledgement.
      * 
-    */
+     */
     public Boolean sendSynchronousAcknowledgement() {
         return this.sendSynchronousAcknowledgement;
     }

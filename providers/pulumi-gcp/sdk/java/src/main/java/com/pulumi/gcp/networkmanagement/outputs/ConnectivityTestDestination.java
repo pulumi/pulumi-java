@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConnectivityTestDestination {
     /**
-     * A Compute Engine instance URI.
+     * @return A Compute Engine instance URI.
      * 
      */
     private final @Nullable String instance;
     /**
-     * The IP address of the endpoint, which can be an external or
+     * @return The IP address of the endpoint, which can be an external or
      * internal IP. An IPv6 address is only allowed when the test&#39;s
      * destination is a global load balancer VIP.
      * 
      */
     private final @Nullable String ipAddress;
     /**
-     * A Compute Engine network URI.
+     * @return A Compute Engine network URI.
      * 
      */
     private final @Nullable String network;
     /**
-     * The IP protocol port of the endpoint. Only applicable when
+     * @return The IP protocol port of the endpoint. Only applicable when
      * protocol is TCP or UDP.
      * 
      */
     private final @Nullable Integer port;
     /**
-     * Project ID where the endpoint is located. The Project ID can be
+     * @return Project ID where the endpoint is located. The Project ID can be
      * derived from the URI if you provide a VM instance or network URI.
      * The following are two cases where you must provide the project ID:
      * 1. Only the IP address is specified, and the IP address is within
@@ -63,38 +63,38 @@ public final class ConnectivityTestDestination {
     }
 
     /**
-     * A Compute Engine instance URI.
+     * @return A Compute Engine instance URI.
      * 
-    */
+     */
     public Optional<String> instance() {
         return Optional.ofNullable(this.instance);
     }
     /**
-     * The IP address of the endpoint, which can be an external or
+     * @return The IP address of the endpoint, which can be an external or
      * internal IP. An IPv6 address is only allowed when the test&#39;s
      * destination is a global load balancer VIP.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * A Compute Engine network URI.
+     * @return A Compute Engine network URI.
      * 
-    */
+     */
     public Optional<String> network() {
         return Optional.ofNullable(this.network);
     }
     /**
-     * The IP protocol port of the endpoint. Only applicable when
+     * @return The IP protocol port of the endpoint. Only applicable when
      * protocol is TCP or UDP.
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * Project ID where the endpoint is located. The Project ID can be
+     * @return Project ID where the endpoint is located. The Project ID can be
      * derived from the URI if you provide a VM instance or network URI.
      * The following are two cases where you must provide the project ID:
      * 1. Only the IP address is specified, and the IP address is within
@@ -103,7 +103,7 @@ public final class ConnectivityTestDestination {
      *    network that the IP address resides in is defined in the host
      *    project.
      * 
-    */
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }

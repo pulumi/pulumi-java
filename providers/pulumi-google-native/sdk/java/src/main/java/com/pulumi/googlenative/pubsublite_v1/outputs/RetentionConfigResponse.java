@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class RetentionConfigResponse {
     /**
-     * The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic&#39;s partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
+     * @return The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic&#39;s partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
      * 
      */
     private final String perPartitionBytes;
     /**
-     * How long a published message is retained. If unset, messages will be retained as long as the bytes retained for each partition is below `per_partition_bytes`.
+     * @return How long a published message is retained. If unset, messages will be retained as long as the bytes retained for each partition is below `per_partition_bytes`.
      * 
      */
     private final String period;
@@ -29,16 +29,16 @@ public final class RetentionConfigResponse {
     }
 
     /**
-     * The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic&#39;s partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
+     * @return The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic&#39;s partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
      * 
-    */
+     */
     public String perPartitionBytes() {
         return this.perPartitionBytes;
     }
     /**
-     * How long a published message is retained. If unset, messages will be retained as long as the bytes retained for each partition is below `per_partition_bytes`.
+     * @return How long a published message is retained. If unset, messages will be retained as long as the bytes retained for each partition is below `per_partition_bytes`.
      * 
-    */
+     */
     public String period() {
         return this.period;
     }

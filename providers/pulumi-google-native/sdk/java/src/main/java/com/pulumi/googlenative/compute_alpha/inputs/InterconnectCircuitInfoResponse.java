@@ -23,6 +23,10 @@ public final class InterconnectCircuitInfoResponse extends com.pulumi.resources.
     @Import(name="customerDemarcId", required=true)
     private String customerDemarcId;
 
+    /**
+     * @return Customer-side demarc ID for this circuit.
+     * 
+     */
     public String customerDemarcId() {
         return this.customerDemarcId;
     }
@@ -34,6 +38,10 @@ public final class InterconnectCircuitInfoResponse extends com.pulumi.resources.
     @Import(name="googleCircuitId", required=true)
     private String googleCircuitId;
 
+    /**
+     * @return Google-assigned unique ID for this circuit. Assigned at circuit turn-up.
+     * 
+     */
     public String googleCircuitId() {
         return this.googleCircuitId;
     }
@@ -45,6 +53,10 @@ public final class InterconnectCircuitInfoResponse extends com.pulumi.resources.
     @Import(name="googleDemarcId", required=true)
     private String googleDemarcId;
 
+    /**
+     * @return Google-side demarc ID for this circuit. Assigned at circuit turn-up and provided by Google to the customer in the LOA.
+     * 
+     */
     public String googleDemarcId() {
         return this.googleDemarcId;
     }
@@ -75,16 +87,34 @@ public final class InterconnectCircuitInfoResponse extends com.pulumi.resources.
             $ = new InterconnectCircuitInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerDemarcId Customer-side demarc ID for this circuit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerDemarcId(String customerDemarcId) {
             $.customerDemarcId = customerDemarcId;
             return this;
         }
 
+        /**
+         * @param googleCircuitId Google-assigned unique ID for this circuit. Assigned at circuit turn-up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleCircuitId(String googleCircuitId) {
             $.googleCircuitId = googleCircuitId;
             return this;
         }
 
+        /**
+         * @param googleDemarcId Google-side demarc ID for this circuit. Assigned at circuit turn-up and provided by Google to the customer in the LOA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleDemarcId(String googleDemarcId) {
             $.googleDemarcId = googleDemarcId;
             return this;

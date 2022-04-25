@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DetectorModelSetTimer {
     /**
-     * The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.&lt;variable-name&gt;`), and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
+     * @return The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.&lt;variable-name&gt;`), and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
      * 
      */
     private final @Nullable String durationExpression;
     /**
-     * The number of seconds until the timer expires. The minimum value is `60` seconds to ensure accuracy. The maximum value is `31622400` seconds.
+     * @return The number of seconds until the timer expires. The minimum value is `60` seconds to ensure accuracy. The maximum value is `31622400` seconds.
      * 
      */
     private final @Nullable Integer seconds;
     /**
-     * The name of the timer.
+     * @return The name of the timer.
      * 
      */
     private final String timerName;
@@ -39,23 +39,23 @@ public final class DetectorModelSetTimer {
     }
 
     /**
-     * The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.&lt;variable-name&gt;`), and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
+     * @return The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.&lt;variable-name&gt;`), and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
      * 
-    */
+     */
     public Optional<String> durationExpression() {
         return Optional.ofNullable(this.durationExpression);
     }
     /**
-     * The number of seconds until the timer expires. The minimum value is `60` seconds to ensure accuracy. The maximum value is `31622400` seconds.
+     * @return The number of seconds until the timer expires. The minimum value is `60` seconds to ensure accuracy. The maximum value is `31622400` seconds.
      * 
-    */
+     */
     public Optional<Integer> seconds() {
         return Optional.ofNullable(this.seconds);
     }
     /**
-     * The name of the timer.
+     * @return The name of the timer.
      * 
-    */
+     */
     public String timerName() {
         return this.timerName;
     }

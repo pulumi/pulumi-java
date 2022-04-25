@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionAutoscalerAutoscalingPolicyMetric {
     /**
-     * A filter string to be used as the filter string for
+     * @return A filter string to be used as the filter string for
      * a Stackdriver Monitoring TimeSeries.list API call.
      * This filter is used to select a specific TimeSeries for
      * the purpose of autoscaling and to determine whether the metric
@@ -44,12 +44,12 @@ public final class RegionAutoscalerAutoscalingPolicyMetric {
      */
     private final @Nullable String filter;
     /**
-     * The identifier for this object. Format specified above.
+     * @return The identifier for this object. Format specified above.
      * 
      */
     private final String name;
     /**
-     * If scaling is based on a per-group metric value that represents the
+     * @return If scaling is based on a per-group metric value that represents the
      * total amount of work to be done or resource usage, set this value to
      * an amount assigned for a single instance of the scaled group.
      * The autoscaler will keep the number of instances proportional to the
@@ -67,14 +67,14 @@ public final class RegionAutoscalerAutoscalingPolicyMetric {
      */
     private final @Nullable Double singleInstanceAssignment;
     /**
-     * Fraction of backend capacity utilization (set in HTTP(s) load
+     * @return Fraction of backend capacity utilization (set in HTTP(s) load
      * balancing configuration) that autoscaler should maintain. Must
      * be a positive float value. If not defined, the default is 0.8.
      * 
      */
     private final @Nullable Double target;
     /**
-     * Defines how target utilization value is expressed for a
+     * @return Defines how target utilization value is expressed for a
      * Stackdriver Monitoring metric.
      * Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
      * 
@@ -96,7 +96,7 @@ public final class RegionAutoscalerAutoscalingPolicyMetric {
     }
 
     /**
-     * A filter string to be used as the filter string for
+     * @return A filter string to be used as the filter string for
      * a Stackdriver Monitoring TimeSeries.list API call.
      * This filter is used to select a specific TimeSeries for
      * the purpose of autoscaling and to determine whether the metric
@@ -124,19 +124,19 @@ public final class RegionAutoscalerAutoscalingPolicyMetric {
      * TimeSeries are returned upon the query execution, the autoscaler
      * will sum their respective values to obtain its scaling value.
      * 
-    */
+     */
     public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * The identifier for this object. Format specified above.
+     * @return The identifier for this object. Format specified above.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * If scaling is based on a per-group metric value that represents the
+     * @return If scaling is based on a per-group metric value that represents the
      * total amount of work to be done or resource usage, set this value to
      * an amount assigned for a single instance of the scaled group.
      * The autoscaler will keep the number of instances proportional to the
@@ -151,25 +151,25 @@ public final class RegionAutoscalerAutoscalingPolicyMetric {
      * single instance, it could be better used with utilization_target
      * instead.
      * 
-    */
+     */
     public Optional<Double> singleInstanceAssignment() {
         return Optional.ofNullable(this.singleInstanceAssignment);
     }
     /**
-     * Fraction of backend capacity utilization (set in HTTP(s) load
+     * @return Fraction of backend capacity utilization (set in HTTP(s) load
      * balancing configuration) that autoscaler should maintain. Must
      * be a positive float value. If not defined, the default is 0.8.
      * 
-    */
+     */
     public Optional<Double> target() {
         return Optional.ofNullable(this.target);
     }
     /**
-     * Defines how target utilization value is expressed for a
+     * @return Defines how target utilization value is expressed for a
      * Stackdriver Monitoring metric.
      * Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

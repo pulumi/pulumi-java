@@ -26,6 +26,10 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the plan.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
     @Import(name="product")
     private @Nullable Output<String> product;
 
+    /**
+     * @return Product name.
+     * 
+     */
     public Optional<Output<String>> product() {
         return Optional.ofNullable(this.product);
     }
@@ -48,6 +56,10 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
     @Import(name="promotionCode")
     private @Nullable Output<String> promotionCode;
 
+    /**
+     * @return Optional: the promotion code associated with the plan.
+     * 
+     */
     public Optional<Output<String>> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
@@ -59,6 +71,10 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
     @Import(name="publisher")
     private @Nullable Output<String> publisher;
 
+    /**
+     * @return Name of the extension publisher.
+     * 
+     */
     public Optional<Output<String>> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -70,6 +86,10 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return A string that uniquely identifies the plan version.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -102,47 +122,107 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
             $ = new ExtensionResourcePlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param product Product name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(@Nullable Output<String> product) {
             $.product = product;
             return this;
         }
 
+        /**
+         * @param product Product name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(String product) {
             return product(Output.of(product));
         }
 
+        /**
+         * @param promotionCode Optional: the promotion code associated with the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionCode(@Nullable Output<String> promotionCode) {
             $.promotionCode = promotionCode;
             return this;
         }
 
+        /**
+         * @param promotionCode Optional: the promotion code associated with the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionCode(String promotionCode) {
             return promotionCode(Output.of(promotionCode));
         }
 
+        /**
+         * @param publisher Name of the extension publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher Name of the extension publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }
 
+        /**
+         * @param version A string that uniquely identifies the plan version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version A string that uniquely identifies the plan version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

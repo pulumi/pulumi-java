@@ -23,6 +23,10 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
     @Import(name="certificateExpirationDate")
     private @Nullable Output<String> certificateExpirationDate;
 
+    /**
+     * @return Gets or sets the certificate expiration date.
+     * 
+     */
     public Optional<Output<String>> certificateExpirationDate() {
         return Optional.ofNullable(this.certificateExpirationDate);
     }
@@ -34,6 +38,10 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
     @Import(name="certificateSubjectName")
     private @Nullable Output<String> certificateSubjectName;
 
+    /**
+     * @return Gets or sets the certificate subject name.
+     * 
+     */
     public Optional<Output<String>> certificateSubjectName() {
         return Optional.ofNullable(this.certificateSubjectName);
     }
@@ -45,6 +53,10 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
     @Import(name="certificateThumbprint")
     private @Nullable Output<String> certificateThumbprint;
 
+    /**
+     * @return Gets or sets the certificate thumbprint.
+     * 
+     */
     public Optional<Output<String>> certificateThumbprint() {
         return Optional.ofNullable(this.certificateThumbprint);
     }
@@ -56,6 +68,10 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Gets or sets the certificate password, return value will always be empty.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -67,6 +83,10 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
     @Import(name="pfx")
     private @Nullable Output<String> pfx;
 
+    /**
+     * @return Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty.
+     * 
+     */
     public Optional<Output<String>> pfx() {
         return Optional.ofNullable(this.pfx);
     }
@@ -79,6 +99,11 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Gets or sets the HTTP authentication type.
+     * Expected value is &#39;ClientCertificate&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -112,56 +137,130 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
             $ = new ClientCertAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateExpirationDate Gets or sets the certificate expiration date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateExpirationDate(@Nullable Output<String> certificateExpirationDate) {
             $.certificateExpirationDate = certificateExpirationDate;
             return this;
         }
 
+        /**
+         * @param certificateExpirationDate Gets or sets the certificate expiration date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateExpirationDate(String certificateExpirationDate) {
             return certificateExpirationDate(Output.of(certificateExpirationDate));
         }
 
+        /**
+         * @param certificateSubjectName Gets or sets the certificate subject name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSubjectName(@Nullable Output<String> certificateSubjectName) {
             $.certificateSubjectName = certificateSubjectName;
             return this;
         }
 
+        /**
+         * @param certificateSubjectName Gets or sets the certificate subject name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSubjectName(String certificateSubjectName) {
             return certificateSubjectName(Output.of(certificateSubjectName));
         }
 
+        /**
+         * @param certificateThumbprint Gets or sets the certificate thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateThumbprint(@Nullable Output<String> certificateThumbprint) {
             $.certificateThumbprint = certificateThumbprint;
             return this;
         }
 
+        /**
+         * @param certificateThumbprint Gets or sets the certificate thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateThumbprint(String certificateThumbprint) {
             return certificateThumbprint(Output.of(certificateThumbprint));
         }
 
+        /**
+         * @param password Gets or sets the certificate password, return value will always be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Gets or sets the certificate password, return value will always be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param pfx Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfx(@Nullable Output<String> pfx) {
             $.pfx = pfx;
             return this;
         }
 
+        /**
+         * @param pfx Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfx(String pfx) {
             return pfx(Output.of(pfx));
         }
 
+        /**
+         * @param type Gets or sets the HTTP authentication type.
+         * Expected value is &#39;ClientCertificate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the HTTP authentication type.
+         * Expected value is &#39;ClientCertificate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

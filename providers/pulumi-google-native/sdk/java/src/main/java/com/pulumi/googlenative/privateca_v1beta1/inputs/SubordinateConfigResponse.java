@@ -24,6 +24,10 @@ public final class SubordinateConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="certificateAuthority", required=true)
     private String certificateAuthority;
 
+    /**
+     * @return This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*`.
+     * 
+     */
     public String certificateAuthority() {
         return this.certificateAuthority;
     }
@@ -35,6 +39,10 @@ public final class SubordinateConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="pemIssuerChain", required=true)
     private SubordinateConfigChainResponse pemIssuerChain;
 
+    /**
+     * @return Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.
+     * 
+     */
     public SubordinateConfigChainResponse pemIssuerChain() {
         return this.pemIssuerChain;
     }
@@ -64,11 +72,23 @@ public final class SubordinateConfigResponse extends com.pulumi.resources.Invoke
             $ = new SubordinateConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAuthority This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthority(String certificateAuthority) {
             $.certificateAuthority = certificateAuthority;
             return this;
         }
 
+        /**
+         * @param pemIssuerChain Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pemIssuerChain(SubordinateConfigChainResponse pemIssuerChain) {
             $.pemIssuerChain = pemIssuerChain;
             return this;

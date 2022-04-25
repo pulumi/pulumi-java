@@ -25,6 +25,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
     private @Nullable Output<JobConfigurationArgs> configuration;
 
+    /**
+     * @return [Required] Describes the job configuration.
+     * 
+     */
     public Optional<Output<JobConfigurationArgs>> configuration() {
         return Optional.ofNullable(this.configuration);
     }
@@ -36,6 +40,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobReference")
     private @Nullable Output<JobReferenceArgs> jobReference;
 
+    /**
+     * @return [Optional] Reference describing the unique-per-user name of the job.
+     * 
+     */
     public Optional<Output<JobReferenceArgs>> jobReference() {
         return Optional.ofNullable(this.jobReference);
     }
@@ -81,20 +89,44 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configuration [Required] Describes the job configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(@Nullable Output<JobConfigurationArgs> configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param configuration [Required] Describes the job configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(JobConfigurationArgs configuration) {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param jobReference [Optional] Reference describing the unique-per-user name of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobReference(@Nullable Output<JobReferenceArgs> jobReference) {
             $.jobReference = jobReference;
             return this;
         }
 
+        /**
+         * @param jobReference [Optional] Reference describing the unique-per-user name of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobReference(JobReferenceArgs jobReference) {
             return jobReference(Output.of(jobReference));
         }

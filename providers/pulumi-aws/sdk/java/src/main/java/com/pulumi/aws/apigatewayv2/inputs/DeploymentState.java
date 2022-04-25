@@ -24,6 +24,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
     private @Nullable Output<String> apiId;
 
+    /**
+     * @return The API identifier.
+     * 
+     */
     public Optional<Output<String>> apiId() {
         return Optional.ofNullable(this.apiId);
     }
@@ -35,6 +39,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoDeployed")
     private @Nullable Output<Boolean> autoDeployed;
 
+    /**
+     * @return Whether the deployment was automatically released.
+     * 
+     */
     public Optional<Output<Boolean>> autoDeployed() {
         return Optional.ofNullable(this.autoDeployed);
     }
@@ -46,6 +54,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description for the deployment resource. Must be less than or equal to 1024 characters in length.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -57,6 +69,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="triggers")
     private @Nullable Output<Map<String,String>> triggers;
 
+    /**
+     * @return A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+     * 
+     */
     public Optional<Output<Map<String,String>>> triggers() {
         return Optional.ofNullable(this.triggers);
     }
@@ -88,38 +104,86 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
             $ = new DeploymentState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId The API identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(@Nullable Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId The API identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param autoDeployed Whether the deployment was automatically released.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeployed(@Nullable Output<Boolean> autoDeployed) {
             $.autoDeployed = autoDeployed;
             return this;
         }
 
+        /**
+         * @param autoDeployed Whether the deployment was automatically released.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeployed(Boolean autoDeployed) {
             return autoDeployed(Output.of(autoDeployed));
         }
 
+        /**
+         * @param description The description for the deployment resource. Must be less than or equal to 1024 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description for the deployment resource. Must be less than or equal to 1024 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param triggers A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
             $.triggers = triggers;
             return this;
         }
 
+        /**
+         * @param triggers A map of arbitrary keys and values that, when changed, will trigger a redeployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggers(Map<String,String> triggers) {
             return triggers(Output.of(triggers));
         }

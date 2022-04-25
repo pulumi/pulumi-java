@@ -24,6 +24,10 @@ public final class HostedZoneVPCArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vPCId", required=true)
     private Output<String> vPCId;
 
+    /**
+     * @return The ID of an Amazon VPC.
+     * 
+     */
     public Output<String> vPCId() {
         return this.vPCId;
     }
@@ -35,6 +39,10 @@ public final class HostedZoneVPCArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vPCRegion", required=true)
     private Output<String> vPCRegion;
 
+    /**
+     * @return The region that an Amazon VPC was created in. See https://docs.aws.amazon.com/general/latest/gr/rande.html for a list of up to date regions.
+     * 
+     */
     public Output<String> vPCRegion() {
         return this.vPCRegion;
     }
@@ -64,20 +72,44 @@ public final class HostedZoneVPCArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HostedZoneVPCArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vPCId The ID of an Amazon VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vPCId(Output<String> vPCId) {
             $.vPCId = vPCId;
             return this;
         }
 
+        /**
+         * @param vPCId The ID of an Amazon VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vPCId(String vPCId) {
             return vPCId(Output.of(vPCId));
         }
 
+        /**
+         * @param vPCRegion The region that an Amazon VPC was created in. See https://docs.aws.amazon.com/general/latest/gr/rande.html for a list of up to date regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vPCRegion(Output<String> vPCRegion) {
             $.vPCRegion = vPCRegion;
             return this;
         }
 
+        /**
+         * @param vPCRegion The region that an Amazon VPC was created in. See https://docs.aws.amazon.com/general/latest/gr/rande.html for a list of up to date regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vPCRegion(String vPCRegion) {
             return vPCRegion(Output.of(vPCRegion));
         }

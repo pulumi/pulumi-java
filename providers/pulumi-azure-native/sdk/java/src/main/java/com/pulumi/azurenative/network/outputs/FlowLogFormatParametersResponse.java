@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FlowLogFormatParametersResponse {
     /**
-     * The file type of flow log.
+     * @return The file type of flow log.
      * 
      */
     private final @Nullable String type;
     /**
-     * The version (revision) of the flow log.
+     * @return The version (revision) of the flow log.
      * 
      */
     private final @Nullable Integer version;
@@ -32,16 +32,16 @@ public final class FlowLogFormatParametersResponse {
     }
 
     /**
-     * The file type of flow log.
+     * @return The file type of flow log.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The version (revision) of the flow log.
+     * @return The version (revision) of the flow log.
      * 
-    */
+     */
     public Optional<Integer> version() {
         return Optional.ofNullable(this.version);
     }

@@ -26,6 +26,10 @@ public final class EcKeyTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="signatureAlgorithm")
     private @Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm;
 
+    /**
+     * @return Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
+     * 
+     */
     public Optional<Output<EcKeyTypeSignatureAlgorithm>> signatureAlgorithm() {
         return Optional.ofNullable(this.signatureAlgorithm);
     }
@@ -54,11 +58,23 @@ public final class EcKeyTypeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EcKeyTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param signatureAlgorithm Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureAlgorithm(@Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm) {
             $.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
 
+        /**
+         * @param signatureAlgorithm Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureAlgorithm(EcKeyTypeSignatureAlgorithm signatureAlgorithm) {
             return signatureAlgorithm(Output.of(signatureAlgorithm));
         }

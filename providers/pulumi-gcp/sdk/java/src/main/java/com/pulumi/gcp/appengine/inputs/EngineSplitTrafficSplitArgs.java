@@ -23,6 +23,10 @@ public final class EngineSplitTrafficSplitArgs extends com.pulumi.resources.Reso
     @Import(name="allocations", required=true)
     private Output<Map<String,String>> allocations;
 
+    /**
+     * @return Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
+     * 
+     */
     public Output<Map<String,String>> allocations() {
         return this.allocations;
     }
@@ -35,6 +39,11 @@ public final class EngineSplitTrafficSplitArgs extends com.pulumi.resources.Reso
     @Import(name="shardBy")
     private @Nullable Output<String> shardBy;
 
+    /**
+     * @return Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+     * Possible values are `UNSPECIFIED`, `COOKIE`, `IP`, and `RANDOM`.
+     * 
+     */
     public Optional<Output<String>> shardBy() {
         return Optional.ofNullable(this.shardBy);
     }
@@ -64,20 +73,46 @@ public final class EngineSplitTrafficSplitArgs extends com.pulumi.resources.Reso
             $ = new EngineSplitTrafficSplitArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocations Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocations(Output<Map<String,String>> allocations) {
             $.allocations = allocations;
             return this;
         }
 
+        /**
+         * @param allocations Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocations(Map<String,String> allocations) {
             return allocations(Output.of(allocations));
         }
 
+        /**
+         * @param shardBy Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+         * Possible values are `UNSPECIFIED`, `COOKIE`, `IP`, and `RANDOM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardBy(@Nullable Output<String> shardBy) {
             $.shardBy = shardBy;
             return this;
         }
 
+        /**
+         * @param shardBy Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+         * Possible values are `UNSPECIFIED`, `COOKIE`, `IP`, and `RANDOM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardBy(String shardBy) {
             return shardBy(Output.of(shardBy));
         }

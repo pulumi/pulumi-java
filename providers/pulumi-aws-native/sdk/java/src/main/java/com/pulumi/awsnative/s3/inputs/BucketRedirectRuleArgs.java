@@ -27,6 +27,10 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="hostName")
     private @Nullable Output<String> hostName;
 
+    /**
+     * @return The host name to use in the redirect request.
+     * 
+     */
     public Optional<Output<String>> hostName() {
         return Optional.ofNullable(this.hostName);
     }
@@ -38,6 +42,10 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="httpRedirectCode")
     private @Nullable Output<String> httpRedirectCode;
 
+    /**
+     * @return The HTTP redirect code to use on the response. Not required if one of the siblings is present.
+     * 
+     */
     public Optional<Output<String>> httpRedirectCode() {
         return Optional.ofNullable(this.httpRedirectCode);
     }
@@ -49,6 +57,10 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="protocol")
     private @Nullable Output<BucketRedirectRuleProtocol> protocol;
 
+    /**
+     * @return Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
+     * 
+     */
     public Optional<Output<BucketRedirectRuleProtocol>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -60,6 +72,10 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="replaceKeyPrefixWith")
     private @Nullable Output<String> replaceKeyPrefixWith;
 
+    /**
+     * @return The object key prefix to use in the redirect request.
+     * 
+     */
     public Optional<Output<String>> replaceKeyPrefixWith() {
         return Optional.ofNullable(this.replaceKeyPrefixWith);
     }
@@ -71,6 +87,10 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="replaceKeyWith")
     private @Nullable Output<String> replaceKeyWith;
 
+    /**
+     * @return The specific object key to use in the redirect request.d
+     * 
+     */
     public Optional<Output<String>> replaceKeyWith() {
         return Optional.ofNullable(this.replaceKeyWith);
     }
@@ -103,47 +123,107 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
             $ = new BucketRedirectRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostName The host name to use in the redirect request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(@Nullable Output<String> hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param hostName The host name to use in the redirect request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             return hostName(Output.of(hostName));
         }
 
+        /**
+         * @param httpRedirectCode The HTTP redirect code to use on the response. Not required if one of the siblings is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpRedirectCode(@Nullable Output<String> httpRedirectCode) {
             $.httpRedirectCode = httpRedirectCode;
             return this;
         }
 
+        /**
+         * @param httpRedirectCode The HTTP redirect code to use on the response. Not required if one of the siblings is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpRedirectCode(String httpRedirectCode) {
             return httpRedirectCode(Output.of(httpRedirectCode));
         }
 
+        /**
+         * @param protocol Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<BucketRedirectRuleProtocol> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(BucketRedirectRuleProtocol protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param replaceKeyPrefixWith The object key prefix to use in the redirect request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceKeyPrefixWith(@Nullable Output<String> replaceKeyPrefixWith) {
             $.replaceKeyPrefixWith = replaceKeyPrefixWith;
             return this;
         }
 
+        /**
+         * @param replaceKeyPrefixWith The object key prefix to use in the redirect request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceKeyPrefixWith(String replaceKeyPrefixWith) {
             return replaceKeyPrefixWith(Output.of(replaceKeyPrefixWith));
         }
 
+        /**
+         * @param replaceKeyWith The specific object key to use in the redirect request.d
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceKeyWith(@Nullable Output<String> replaceKeyWith) {
             $.replaceKeyWith = replaceKeyWith;
             return this;
         }
 
+        /**
+         * @param replaceKeyWith The specific object key to use in the redirect request.d
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceKeyWith(String replaceKeyWith) {
             return replaceKeyWith(Output.of(replaceKeyWith));
         }

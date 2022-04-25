@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2ExpressionsResponse extends com.pulumi.reso
     @Import(name="conditions", required=true)
     private GooglePrivacyDlpV2ConditionsResponse conditions;
 
+    /**
+     * @return Conditions to apply to the expression.
+     * 
+     */
     public GooglePrivacyDlpV2ConditionsResponse conditions() {
         return this.conditions;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2ExpressionsResponse extends com.pulumi.reso
     @Import(name="logicalOperator", required=true)
     private String logicalOperator;
 
+    /**
+     * @return The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
+     * 
+     */
     public String logicalOperator() {
         return this.logicalOperator;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2ExpressionsResponse extends com.pulumi.reso
             $ = new GooglePrivacyDlpV2ExpressionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions Conditions to apply to the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(GooglePrivacyDlpV2ConditionsResponse conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param logicalOperator The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalOperator(String logicalOperator) {
             $.logicalOperator = logicalOperator;
             return this;

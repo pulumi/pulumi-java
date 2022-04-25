@@ -19,6 +19,10 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return Channel ARN is automatically generated on creation and assigned as the unique identifier.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Channel ARN is automatically generated on creation and assigned as the unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConfigurationProfileResourcePropertiesResponse {
     /**
-     * Settings of change notification configuration for a subscription.
+     * @return Settings of change notification configuration for a subscription.
      * 
      */
     private final @Nullable NotificationSettingsResponse notifications;
@@ -23,9 +23,9 @@ public final class ConfigurationProfileResourcePropertiesResponse {
     }
 
     /**
-     * Settings of change notification configuration for a subscription.
+     * @return Settings of change notification configuration for a subscription.
      * 
-    */
+     */
     public Optional<NotificationSettingsResponse> notifications() {
         return Optional.ofNullable(this.notifications);
     }

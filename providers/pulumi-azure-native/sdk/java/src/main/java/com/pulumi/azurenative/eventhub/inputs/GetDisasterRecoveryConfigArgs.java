@@ -19,6 +19,10 @@ public final class GetDisasterRecoveryConfigArgs extends com.pulumi.resources.In
     @Import(name="alias", required=true)
     private String alias;
 
+    /**
+     * @return The Disaster Recovery configuration name
+     * 
+     */
     public String alias() {
         return this.alias;
     }
@@ -30,6 +34,10 @@ public final class GetDisasterRecoveryConfigArgs extends com.pulumi.resources.In
     @Import(name="namespaceName", required=true)
     private String namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public String namespaceName() {
         return this.namespaceName;
     }
@@ -41,6 +49,10 @@ public final class GetDisasterRecoveryConfigArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetDisasterRecoveryConfigArgs extends com.pulumi.resources.In
             $ = new GetDisasterRecoveryConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias The Disaster Recovery configuration name
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

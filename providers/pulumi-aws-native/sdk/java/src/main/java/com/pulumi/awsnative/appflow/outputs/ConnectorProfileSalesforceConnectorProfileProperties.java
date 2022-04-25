@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConnectorProfileSalesforceConnectorProfileProperties {
     /**
-     * The location of the Salesforce resource
+     * @return The location of the Salesforce resource
      * 
      */
     private final @Nullable String instanceUrl;
@@ -28,9 +28,9 @@ public final class ConnectorProfileSalesforceConnectorProfileProperties {
     }
 
     /**
-     * The location of the Salesforce resource
+     * @return The location of the Salesforce resource
      * 
-    */
+     */
     public Optional<String> instanceUrl() {
         return Optional.ofNullable(this.instanceUrl);
     }

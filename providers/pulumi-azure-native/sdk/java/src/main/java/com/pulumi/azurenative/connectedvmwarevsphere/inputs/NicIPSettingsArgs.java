@@ -29,6 +29,10 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allocationMethod")
     private @Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod;
 
+    /**
+     * @return Gets or sets the nic allocation method.
+     * 
+     */
     public Optional<Output<Either<String,IPAddressAllocationMethod>>> allocationMethod() {
         return Optional.ofNullable(this.allocationMethod);
     }
@@ -40,6 +44,10 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsServers")
     private @Nullable Output<List<String>> dnsServers;
 
+    /**
+     * @return Gets or sets the dns servers.
+     * 
+     */
     public Optional<Output<List<String>>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -51,6 +59,10 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gateway")
     private @Nullable Output<List<String>> gateway;
 
+    /**
+     * @return Gets or sets the gateway.
+     * 
+     */
     public Optional<Output<List<String>>> gateway() {
         return Optional.ofNullable(this.gateway);
     }
@@ -62,6 +74,10 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return Gets or sets the ip address for the nic.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -73,6 +89,10 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetMask")
     private @Nullable Output<String> subnetMask;
 
+    /**
+     * @return Gets or sets the mask.
+     * 
+     */
     public Optional<Output<String>> subnetMask() {
         return Optional.ofNullable(this.subnetMask);
     }
@@ -105,63 +125,147 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NicIPSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocationMethod Gets or sets the nic allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationMethod(@Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod) {
             $.allocationMethod = allocationMethod;
             return this;
         }
 
+        /**
+         * @param allocationMethod Gets or sets the nic allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationMethod(Either<String,IPAddressAllocationMethod> allocationMethod) {
             return allocationMethod(Output.of(allocationMethod));
         }
 
+        /**
+         * @param allocationMethod Gets or sets the nic allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationMethod(String allocationMethod) {
             return allocationMethod(Either.ofLeft(allocationMethod));
         }
 
+        /**
+         * @param allocationMethod Gets or sets the nic allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationMethod(IPAddressAllocationMethod allocationMethod) {
             return allocationMethod(Either.ofRight(allocationMethod));
         }
 
+        /**
+         * @param dnsServers Gets or sets the dns servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers Gets or sets the dns servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(List<String> dnsServers) {
             return dnsServers(Output.of(dnsServers));
         }
 
+        /**
+         * @param dnsServers Gets or sets the dns servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
 
+        /**
+         * @param gateway Gets or sets the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gateway(@Nullable Output<List<String>> gateway) {
             $.gateway = gateway;
             return this;
         }
 
+        /**
+         * @param gateway Gets or sets the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gateway(List<String> gateway) {
             return gateway(Output.of(gateway));
         }
 
+        /**
+         * @param gateway Gets or sets the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gateway(String... gateway) {
             return gateway(List.of(gateway));
         }
 
+        /**
+         * @param ipAddress Gets or sets the ip address for the nic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress Gets or sets the ip address for the nic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param subnetMask Gets or sets the mask.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetMask(@Nullable Output<String> subnetMask) {
             $.subnetMask = subnetMask;
             return this;
         }
 
+        /**
+         * @param subnetMask Gets or sets the mask.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetMask(String subnetMask) {
             return subnetMask(Output.of(subnetMask));
         }

@@ -12,43 +12,43 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetIntentResult {
     /**
-     * The ARN of the Lex intent.
+     * @return The ARN of the Lex intent.
      * 
      */
     private final String arn;
     /**
-     * Checksum identifying the version of the intent that was created. The checksum is not
+     * @return Checksum identifying the version of the intent that was created. The checksum is not
      * included as an argument because the resource will add it automatically when updating the intent.
      * 
      */
     private final String checksum;
     /**
-     * The date when the intent version was created.
+     * @return The date when the intent version was created.
      * 
      */
     private final String createdDate;
     /**
-     * A description of the intent.
+     * @return A description of the intent.
      * 
      */
     private final String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The date when the $LATEST version of this intent was updated.
+     * @return The date when the $LATEST version of this intent was updated.
      * 
      */
     private final String lastUpdatedDate;
     /**
-     * The name of the intent, not case sensitive.
+     * @return The name of the intent, not case sensitive.
      * 
      */
     private final String name;
     /**
-     * A unique identifier for the built-in intent to base this
+     * @return A unique identifier for the built-in intent to base this
      * intent on. To find the signature for an intent, see
      * [Standard Built-in Intents](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/standard-intents)
      * in the Alexa Skills Kit.
@@ -56,7 +56,7 @@ public final class GetIntentResult {
      */
     private final String parentIntentSignature;
     /**
-     * The version of the bot.
+     * @return The version of the bot.
      * 
      */
     private final @Nullable String version;
@@ -84,69 +84,69 @@ public final class GetIntentResult {
     }
 
     /**
-     * The ARN of the Lex intent.
+     * @return The ARN of the Lex intent.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Checksum identifying the version of the intent that was created. The checksum is not
+     * @return Checksum identifying the version of the intent that was created. The checksum is not
      * included as an argument because the resource will add it automatically when updating the intent.
      * 
-    */
+     */
     public String checksum() {
         return this.checksum;
     }
     /**
-     * The date when the intent version was created.
+     * @return The date when the intent version was created.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * A description of the intent.
+     * @return A description of the intent.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The date when the $LATEST version of this intent was updated.
+     * @return The date when the $LATEST version of this intent was updated.
      * 
-    */
+     */
     public String lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
-     * The name of the intent, not case sensitive.
+     * @return The name of the intent, not case sensitive.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A unique identifier for the built-in intent to base this
+     * @return A unique identifier for the built-in intent to base this
      * intent on. To find the signature for an intent, see
      * [Standard Built-in Intents](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/standard-intents)
      * in the Alexa Skills Kit.
      * 
-    */
+     */
     public String parentIntentSignature() {
         return this.parentIntentSignature;
     }
     /**
-     * The version of the bot.
+     * @return The version of the bot.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

@@ -31,6 +31,10 @@ public final class IamPolicyAnalysisQueryArgs extends com.pulumi.resources.Resou
     @Import(name="accessSelector")
     private @Nullable Output<AccessSelectorArgs> accessSelector;
 
+    /**
+     * @return Optional. Specifies roles or permissions for analysis. This is optional.
+     * 
+     */
     public Optional<Output<AccessSelectorArgs>> accessSelector() {
         return Optional.ofNullable(this.accessSelector);
     }
@@ -42,6 +46,10 @@ public final class IamPolicyAnalysisQueryArgs extends com.pulumi.resources.Resou
     @Import(name="conditionContext")
     private @Nullable Output<ConditionContextArgs> conditionContext;
 
+    /**
+     * @return Optional. The hypothetical context for IAM conditions evaluation.
+     * 
+     */
     public Optional<Output<ConditionContextArgs>> conditionContext() {
         return Optional.ofNullable(this.conditionContext);
     }
@@ -53,6 +61,10 @@ public final class IamPolicyAnalysisQueryArgs extends com.pulumi.resources.Resou
     @Import(name="identitySelector")
     private @Nullable Output<IdentitySelectorArgs> identitySelector;
 
+    /**
+     * @return Optional. Specifies an identity for analysis.
+     * 
+     */
     public Optional<Output<IdentitySelectorArgs>> identitySelector() {
         return Optional.ofNullable(this.identitySelector);
     }
@@ -64,6 +76,10 @@ public final class IamPolicyAnalysisQueryArgs extends com.pulumi.resources.Resou
     @Import(name="options")
     private @Nullable Output<OptionsArgs> options;
 
+    /**
+     * @return Optional. The query options.
+     * 
+     */
     public Optional<Output<OptionsArgs>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -75,6 +91,10 @@ public final class IamPolicyAnalysisQueryArgs extends com.pulumi.resources.Resou
     @Import(name="resourceSelector")
     private @Nullable Output<ResourceSelectorArgs> resourceSelector;
 
+    /**
+     * @return Optional. Specifies a resource for analysis.
+     * 
+     */
     public Optional<Output<ResourceSelectorArgs>> resourceSelector() {
         return Optional.ofNullable(this.resourceSelector);
     }
@@ -86,6 +106,10 @@ public final class IamPolicyAnalysisQueryArgs extends com.pulumi.resources.Resou
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as &#34;organizations/123&#34;), a folder number (such as &#34;folders/123&#34;), a project ID (such as &#34;projects/my-project-id&#34;), or a project number (such as &#34;projects/12345&#34;). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -119,56 +143,128 @@ public final class IamPolicyAnalysisQueryArgs extends com.pulumi.resources.Resou
             $ = new IamPolicyAnalysisQueryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessSelector Optional. Specifies roles or permissions for analysis. This is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessSelector(@Nullable Output<AccessSelectorArgs> accessSelector) {
             $.accessSelector = accessSelector;
             return this;
         }
 
+        /**
+         * @param accessSelector Optional. Specifies roles or permissions for analysis. This is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessSelector(AccessSelectorArgs accessSelector) {
             return accessSelector(Output.of(accessSelector));
         }
 
+        /**
+         * @param conditionContext Optional. The hypothetical context for IAM conditions evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionContext(@Nullable Output<ConditionContextArgs> conditionContext) {
             $.conditionContext = conditionContext;
             return this;
         }
 
+        /**
+         * @param conditionContext Optional. The hypothetical context for IAM conditions evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionContext(ConditionContextArgs conditionContext) {
             return conditionContext(Output.of(conditionContext));
         }
 
+        /**
+         * @param identitySelector Optional. Specifies an identity for analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identitySelector(@Nullable Output<IdentitySelectorArgs> identitySelector) {
             $.identitySelector = identitySelector;
             return this;
         }
 
+        /**
+         * @param identitySelector Optional. Specifies an identity for analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identitySelector(IdentitySelectorArgs identitySelector) {
             return identitySelector(Output.of(identitySelector));
         }
 
+        /**
+         * @param options Optional. The query options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<OptionsArgs> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Optional. The query options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionsArgs options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param resourceSelector Optional. Specifies a resource for analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSelector(@Nullable Output<ResourceSelectorArgs> resourceSelector) {
             $.resourceSelector = resourceSelector;
             return this;
         }
 
+        /**
+         * @param resourceSelector Optional. Specifies a resource for analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSelector(ResourceSelectorArgs resourceSelector) {
             return resourceSelector(Output.of(resourceSelector));
         }
 
+        /**
+         * @param scope The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as &#34;organizations/123&#34;), a folder number (such as &#34;folders/123&#34;), a project ID (such as &#34;projects/my-project-id&#34;), or a project number (such as &#34;projects/12345&#34;). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as &#34;organizations/123&#34;), a folder number (such as &#34;folders/123&#34;), a project ID (such as &#34;projects/my-project-id&#34;), or a project number (such as &#34;projects/12345&#34;). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }

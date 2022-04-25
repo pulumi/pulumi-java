@@ -27,6 +27,10 @@ public final class JpgLayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="height")
     private @Nullable String height;
 
+    /**
+     * @return The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
+     * 
+     */
     public Optional<String> height() {
         return Optional.ofNullable(this.height);
     }
@@ -38,6 +42,10 @@ public final class JpgLayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="label")
     private @Nullable String label;
 
+    /**
+     * @return The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
+     * 
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
@@ -50,6 +58,11 @@ public final class JpgLayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.JpgLayer&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -61,6 +74,10 @@ public final class JpgLayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="quality")
     private @Nullable Integer quality;
 
+    /**
+     * @return The compression quality of the JPEG output. Range is from 0-100 and the default is 70.
+     * 
+     */
     public Optional<Integer> quality() {
         return Optional.ofNullable(this.quality);
     }
@@ -72,6 +89,10 @@ public final class JpgLayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="width")
     private @Nullable String width;
 
+    /**
+     * @return The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+     * 
+     */
     public Optional<String> width() {
         return Optional.ofNullable(this.width);
     }
@@ -104,26 +125,57 @@ public final class JpgLayerResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JpgLayerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param height The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(@Nullable String height) {
             $.height = height;
             return this;
         }
 
+        /**
+         * @param label The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.JpgLayer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param quality The compression quality of the JPEG output. Range is from 0-100 and the default is 70.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quality(@Nullable Integer quality) {
             $.quality = quality;
             return this;
         }
 
+        /**
+         * @param width The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(@Nullable String width) {
             $.width = width;
             return this;

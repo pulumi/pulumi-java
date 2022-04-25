@@ -20,87 +20,87 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEventSourceMappingResult {
     /**
-     * The maximum number of items to retrieve in a single batch.
+     * @return The maximum number of items to retrieve in a single batch.
      * 
      */
     private final @Nullable Integer batchSize;
     /**
-     * (Streams) If the function returns an error, split the batch in two and retry.
+     * @return (Streams) If the function returns an error, split the batch in two and retry.
      * 
      */
     private final @Nullable Boolean bisectBatchOnFunctionError;
     /**
-     * (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * @return (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      * 
      */
     private final @Nullable EventSourceMappingDestinationConfig destinationConfig;
     /**
-     * Disables the event source mapping to pause polling and invocation.
+     * @return Disables the event source mapping to pause polling and invocation.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * The filter criteria to control event filtering.
+     * @return The filter criteria to control event filtering.
      * 
      */
     private final @Nullable FilterCriteriaProperties filterCriteria;
     /**
-     * The name of the Lambda function.
+     * @return The name of the Lambda function.
      * 
      */
     private final @Nullable String functionName;
     /**
-     * (Streams) A list of response types supported by the function.
+     * @return (Streams) A list of response types supported by the function.
      * 
      */
     private final @Nullable List<EventSourceMappingFunctionResponseTypesItem> functionResponseTypes;
     /**
-     * Event Source Mapping Identifier UUID.
+     * @return Event Source Mapping Identifier UUID.
      * 
      */
     private final @Nullable String id;
     /**
-     * (Streams) The maximum amount of time to gather records before invoking the function, in seconds.
+     * @return (Streams) The maximum amount of time to gather records before invoking the function, in seconds.
      * 
      */
     private final @Nullable Integer maximumBatchingWindowInSeconds;
     /**
-     * (Streams) The maximum age of a record that Lambda sends to a function for processing.
+     * @return (Streams) The maximum age of a record that Lambda sends to a function for processing.
      * 
      */
     private final @Nullable Integer maximumRecordAgeInSeconds;
     /**
-     * (Streams) The maximum number of times to retry when the function returns an error.
+     * @return (Streams) The maximum number of times to retry when the function returns an error.
      * 
      */
     private final @Nullable Integer maximumRetryAttempts;
     /**
-     * (Streams) The number of batches to process from each shard concurrently.
+     * @return (Streams) The number of batches to process from each shard concurrently.
      * 
      */
     private final @Nullable Integer parallelizationFactor;
     /**
-     * (ActiveMQ) A list of ActiveMQ queues.
+     * @return (ActiveMQ) A list of ActiveMQ queues.
      * 
      */
     private final @Nullable List<String> queues;
     /**
-     * A list of SourceAccessConfiguration.
+     * @return A list of SourceAccessConfiguration.
      * 
      */
     private final @Nullable List<EventSourceMappingSourceAccessConfiguration> sourceAccessConfigurations;
     /**
-     * With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
+     * @return With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
      * 
      */
     private final @Nullable Double startingPositionTimestamp;
     /**
-     * (Kafka) A list of Kafka topics.
+     * @return (Kafka) A list of Kafka topics.
      * 
      */
     private final @Nullable List<String> topics;
     /**
-     * (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
+     * @return (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
      * 
      */
     private final @Nullable Integer tumblingWindowInSeconds;
@@ -144,121 +144,121 @@ public final class GetEventSourceMappingResult {
     }
 
     /**
-     * The maximum number of items to retrieve in a single batch.
+     * @return The maximum number of items to retrieve in a single batch.
      * 
-    */
+     */
     public Optional<Integer> batchSize() {
         return Optional.ofNullable(this.batchSize);
     }
     /**
-     * (Streams) If the function returns an error, split the batch in two and retry.
+     * @return (Streams) If the function returns an error, split the batch in two and retry.
      * 
-    */
+     */
     public Optional<Boolean> bisectBatchOnFunctionError() {
         return Optional.ofNullable(this.bisectBatchOnFunctionError);
     }
     /**
-     * (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * @return (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      * 
-    */
+     */
     public Optional<EventSourceMappingDestinationConfig> destinationConfig() {
         return Optional.ofNullable(this.destinationConfig);
     }
     /**
-     * Disables the event source mapping to pause polling and invocation.
+     * @return Disables the event source mapping to pause polling and invocation.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The filter criteria to control event filtering.
+     * @return The filter criteria to control event filtering.
      * 
-    */
+     */
     public Optional<FilterCriteriaProperties> filterCriteria() {
         return Optional.ofNullable(this.filterCriteria);
     }
     /**
-     * The name of the Lambda function.
+     * @return The name of the Lambda function.
      * 
-    */
+     */
     public Optional<String> functionName() {
         return Optional.ofNullable(this.functionName);
     }
     /**
-     * (Streams) A list of response types supported by the function.
+     * @return (Streams) A list of response types supported by the function.
      * 
-    */
+     */
     public List<EventSourceMappingFunctionResponseTypesItem> functionResponseTypes() {
         return this.functionResponseTypes == null ? List.of() : this.functionResponseTypes;
     }
     /**
-     * Event Source Mapping Identifier UUID.
+     * @return Event Source Mapping Identifier UUID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * (Streams) The maximum amount of time to gather records before invoking the function, in seconds.
+     * @return (Streams) The maximum amount of time to gather records before invoking the function, in seconds.
      * 
-    */
+     */
     public Optional<Integer> maximumBatchingWindowInSeconds() {
         return Optional.ofNullable(this.maximumBatchingWindowInSeconds);
     }
     /**
-     * (Streams) The maximum age of a record that Lambda sends to a function for processing.
+     * @return (Streams) The maximum age of a record that Lambda sends to a function for processing.
      * 
-    */
+     */
     public Optional<Integer> maximumRecordAgeInSeconds() {
         return Optional.ofNullable(this.maximumRecordAgeInSeconds);
     }
     /**
-     * (Streams) The maximum number of times to retry when the function returns an error.
+     * @return (Streams) The maximum number of times to retry when the function returns an error.
      * 
-    */
+     */
     public Optional<Integer> maximumRetryAttempts() {
         return Optional.ofNullable(this.maximumRetryAttempts);
     }
     /**
-     * (Streams) The number of batches to process from each shard concurrently.
+     * @return (Streams) The number of batches to process from each shard concurrently.
      * 
-    */
+     */
     public Optional<Integer> parallelizationFactor() {
         return Optional.ofNullable(this.parallelizationFactor);
     }
     /**
-     * (ActiveMQ) A list of ActiveMQ queues.
+     * @return (ActiveMQ) A list of ActiveMQ queues.
      * 
-    */
+     */
     public List<String> queues() {
         return this.queues == null ? List.of() : this.queues;
     }
     /**
-     * A list of SourceAccessConfiguration.
+     * @return A list of SourceAccessConfiguration.
      * 
-    */
+     */
     public List<EventSourceMappingSourceAccessConfiguration> sourceAccessConfigurations() {
         return this.sourceAccessConfigurations == null ? List.of() : this.sourceAccessConfigurations;
     }
     /**
-     * With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
+     * @return With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
      * 
-    */
+     */
     public Optional<Double> startingPositionTimestamp() {
         return Optional.ofNullable(this.startingPositionTimestamp);
     }
     /**
-     * (Kafka) A list of Kafka topics.
+     * @return (Kafka) A list of Kafka topics.
      * 
-    */
+     */
     public List<String> topics() {
         return this.topics == null ? List.of() : this.topics;
     }
     /**
-     * (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
+     * @return (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
      * 
-    */
+     */
     public Optional<Integer> tumblingWindowInSeconds() {
         return Optional.ofNullable(this.tumblingWindowInSeconds);
     }

@@ -21,6 +21,10 @@ public final class SuppressionAlertsScopeArgs extends com.pulumi.resources.Resou
     @Import(name="allOf", required=true)
     private Output<List<ScopeElementArgs>> allOf;
 
+    /**
+     * @return All the conditions inside need to be true in order to suppress the alert
+     * 
+     */
     public Output<List<ScopeElementArgs>> allOf() {
         return this.allOf;
     }
@@ -49,15 +53,33 @@ public final class SuppressionAlertsScopeArgs extends com.pulumi.resources.Resou
             $ = new SuppressionAlertsScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allOf All the conditions inside need to be true in order to suppress the alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder allOf(Output<List<ScopeElementArgs>> allOf) {
             $.allOf = allOf;
             return this;
         }
 
+        /**
+         * @param allOf All the conditions inside need to be true in order to suppress the alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder allOf(List<ScopeElementArgs> allOf) {
             return allOf(Output.of(allOf));
         }
 
+        /**
+         * @param allOf All the conditions inside need to be true in order to suppress the alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder allOf(ScopeElementArgs... allOf) {
             return allOf(List.of(allOf));
         }

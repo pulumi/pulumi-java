@@ -30,6 +30,10 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aofEnabled")
     private @Nullable Output<Boolean> aofEnabled;
 
+    /**
+     * @return Sets whether AOF is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> aofEnabled() {
         return Optional.ofNullable(this.aofEnabled);
     }
@@ -41,6 +45,10 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aofFrequency")
     private @Nullable Output<Either<String,AofFrequency>> aofFrequency;
 
+    /**
+     * @return Sets the frequency at which data is written to disk.
+     * 
+     */
     public Optional<Output<Either<String,AofFrequency>>> aofFrequency() {
         return Optional.ofNullable(this.aofFrequency);
     }
@@ -52,6 +60,10 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rdbEnabled")
     private @Nullable Output<Boolean> rdbEnabled;
 
+    /**
+     * @return Sets whether RDB is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> rdbEnabled() {
         return Optional.ofNullable(this.rdbEnabled);
     }
@@ -63,6 +75,10 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rdbFrequency")
     private @Nullable Output<Either<String,RdbFrequency>> rdbFrequency;
 
+    /**
+     * @return Sets the frequency at which a snapshot of the database is created.
+     * 
+     */
     public Optional<Output<Either<String,RdbFrequency>>> rdbFrequency() {
         return Optional.ofNullable(this.rdbFrequency);
     }
@@ -94,54 +110,126 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PersistenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aofEnabled Sets whether AOF is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aofEnabled(@Nullable Output<Boolean> aofEnabled) {
             $.aofEnabled = aofEnabled;
             return this;
         }
 
+        /**
+         * @param aofEnabled Sets whether AOF is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aofEnabled(Boolean aofEnabled) {
             return aofEnabled(Output.of(aofEnabled));
         }
 
+        /**
+         * @param aofFrequency Sets the frequency at which data is written to disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aofFrequency(@Nullable Output<Either<String,AofFrequency>> aofFrequency) {
             $.aofFrequency = aofFrequency;
             return this;
         }
 
+        /**
+         * @param aofFrequency Sets the frequency at which data is written to disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aofFrequency(Either<String,AofFrequency> aofFrequency) {
             return aofFrequency(Output.of(aofFrequency));
         }
 
+        /**
+         * @param aofFrequency Sets the frequency at which data is written to disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aofFrequency(String aofFrequency) {
             return aofFrequency(Either.ofLeft(aofFrequency));
         }
 
+        /**
+         * @param aofFrequency Sets the frequency at which data is written to disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aofFrequency(AofFrequency aofFrequency) {
             return aofFrequency(Either.ofRight(aofFrequency));
         }
 
+        /**
+         * @param rdbEnabled Sets whether RDB is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbEnabled(@Nullable Output<Boolean> rdbEnabled) {
             $.rdbEnabled = rdbEnabled;
             return this;
         }
 
+        /**
+         * @param rdbEnabled Sets whether RDB is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbEnabled(Boolean rdbEnabled) {
             return rdbEnabled(Output.of(rdbEnabled));
         }
 
+        /**
+         * @param rdbFrequency Sets the frequency at which a snapshot of the database is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbFrequency(@Nullable Output<Either<String,RdbFrequency>> rdbFrequency) {
             $.rdbFrequency = rdbFrequency;
             return this;
         }
 
+        /**
+         * @param rdbFrequency Sets the frequency at which a snapshot of the database is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbFrequency(Either<String,RdbFrequency> rdbFrequency) {
             return rdbFrequency(Output.of(rdbFrequency));
         }
 
+        /**
+         * @param rdbFrequency Sets the frequency at which a snapshot of the database is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbFrequency(String rdbFrequency) {
             return rdbFrequency(Either.ofLeft(rdbFrequency));
         }
 
+        /**
+         * @param rdbFrequency Sets the frequency at which a snapshot of the database is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbFrequency(RdbFrequency rdbFrequency) {
             return rdbFrequency(Either.ofRight(rdbFrequency));
         }

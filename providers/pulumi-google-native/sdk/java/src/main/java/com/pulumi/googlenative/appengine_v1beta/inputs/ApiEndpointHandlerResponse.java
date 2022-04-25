@@ -23,6 +23,10 @@ public final class ApiEndpointHandlerResponse extends com.pulumi.resources.Invok
     @Import(name="scriptPath", required=true)
     private String scriptPath;
 
+    /**
+     * @return Path to the script from the application root directory.
+     * 
+     */
     public String scriptPath() {
         return this.scriptPath;
     }
@@ -51,6 +55,12 @@ public final class ApiEndpointHandlerResponse extends com.pulumi.resources.Invok
             $ = new ApiEndpointHandlerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scriptPath Path to the script from the application root directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptPath(String scriptPath) {
             $.scriptPath = scriptPath;
             return this;

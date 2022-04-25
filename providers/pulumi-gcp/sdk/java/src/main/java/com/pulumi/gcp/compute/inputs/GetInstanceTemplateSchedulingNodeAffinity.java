@@ -20,6 +20,10 @@ public final class GetInstanceTemplateSchedulingNodeAffinity extends com.pulumi.
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The key for the node affinity label.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -32,6 +36,11 @@ public final class GetInstanceTemplateSchedulingNodeAffinity extends com.pulumi.
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return The operator. Can be `IN` for node-affinities
+     * or `NOT_IN` for anti-affinities.
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -69,11 +78,24 @@ public final class GetInstanceTemplateSchedulingNodeAffinity extends com.pulumi.
             $ = new GetInstanceTemplateSchedulingNodeAffinity(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key for the node affinity label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param operator The operator. Can be `IN` for node-affinities
+         * or `NOT_IN` for anti-affinities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;

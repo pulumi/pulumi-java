@@ -29,6 +29,10 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
     @Import(name="parent")
     private @Nullable ParentGroupInfoResponse parent;
 
+    /**
+     * @return (Optional) The ID of the parent management group.
+     * 
+     */
     public Optional<ParentGroupInfoResponse> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -40,6 +44,10 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
     @Import(name="path")
     private @Nullable List<ManagementGroupPathElementResponse> path;
 
+    /**
+     * @return The path from the root to the current group.
+     * 
+     */
     public Optional<List<ManagementGroupPathElementResponse>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -51,6 +59,10 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
     @Import(name="updatedBy")
     private @Nullable String updatedBy;
 
+    /**
+     * @return The identity of the principal or process that updated the object.
+     * 
+     */
     public Optional<String> updatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
@@ -62,6 +74,10 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
     @Import(name="updatedTime")
     private @Nullable String updatedTime;
 
+    /**
+     * @return The date and time when this object was last updated.
+     * 
+     */
     public Optional<String> updatedTime() {
         return Optional.ofNullable(this.updatedTime);
     }
@@ -73,6 +89,10 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
     @Import(name="version")
     private @Nullable Double version;
 
+    /**
+     * @return The version number of the object.
+     * 
+     */
     public Optional<Double> version() {
         return Optional.ofNullable(this.version);
     }
@@ -105,30 +125,66 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
             $ = new ManagementGroupDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parent (Optional) The ID of the parent management group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable ParentGroupInfoResponse parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param path The path from the root to the current group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable List<ManagementGroupPathElementResponse> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path from the root to the current group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(ManagementGroupPathElementResponse... path) {
             return path(List.of(path));
         }
 
+        /**
+         * @param updatedBy The identity of the principal or process that updated the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedBy(@Nullable String updatedBy) {
             $.updatedBy = updatedBy;
             return this;
         }
 
+        /**
+         * @param updatedTime The date and time when this object was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedTime(@Nullable String updatedTime) {
             $.updatedTime = updatedTime;
             return this;
         }
 
+        /**
+         * @param version The version number of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Double version) {
             $.version = version;
             return this;

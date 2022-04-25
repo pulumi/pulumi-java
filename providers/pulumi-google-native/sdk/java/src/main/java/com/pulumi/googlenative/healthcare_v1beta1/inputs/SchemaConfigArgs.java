@@ -27,6 +27,10 @@ public final class SchemaConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recursiveStructureDepth")
     private @Nullable Output<String> recursiveStructureDepth;
 
+    /**
+     * @return The depth for all recursive structures in the output analytics schema. For example, `concept` in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called `concept.concept` but not `concept.concept.concept`. If not specified or set to 0, the server will use the default value 2. The maximum depth allowed is 5.
+     * 
+     */
     public Optional<Output<String>> recursiveStructureDepth() {
         return Optional.ofNullable(this.recursiveStructureDepth);
     }
@@ -38,6 +42,10 @@ public final class SchemaConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaType")
     private @Nullable Output<SchemaConfigSchemaType> schemaType;
 
+    /**
+     * @return Specifies the output schema type. Schema type is required.
+     * 
+     */
     public Optional<Output<SchemaConfigSchemaType>> schemaType() {
         return Optional.ofNullable(this.schemaType);
     }
@@ -67,20 +75,44 @@ public final class SchemaConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SchemaConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recursiveStructureDepth The depth for all recursive structures in the output analytics schema. For example, `concept` in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called `concept.concept` but not `concept.concept.concept`. If not specified or set to 0, the server will use the default value 2. The maximum depth allowed is 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recursiveStructureDepth(@Nullable Output<String> recursiveStructureDepth) {
             $.recursiveStructureDepth = recursiveStructureDepth;
             return this;
         }
 
+        /**
+         * @param recursiveStructureDepth The depth for all recursive structures in the output analytics schema. For example, `concept` in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called `concept.concept` but not `concept.concept.concept`. If not specified or set to 0, the server will use the default value 2. The maximum depth allowed is 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recursiveStructureDepth(String recursiveStructureDepth) {
             return recursiveStructureDepth(Output.of(recursiveStructureDepth));
         }
 
+        /**
+         * @param schemaType Specifies the output schema type. Schema type is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaType(@Nullable Output<SchemaConfigSchemaType> schemaType) {
             $.schemaType = schemaType;
             return this;
         }
 
+        /**
+         * @param schemaType Specifies the output schema type. Schema type is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaType(SchemaConfigSchemaType schemaType) {
             return schemaType(Output.of(schemaType));
         }

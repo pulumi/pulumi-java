@@ -24,6 +24,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="certificate", required=true)
     private String certificate;
 
+    /**
+     * @return base-64 representation of X509 certificate .cer file or just .pem file content.
+     * 
+     */
     public String certificate() {
         return this.certificate;
     }
@@ -35,6 +39,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="created", required=true)
     private String created;
 
+    /**
+     * @return The certificate&#39;s creation date and time.
+     * 
+     */
     public String created() {
         return this.created;
     }
@@ -46,6 +54,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="expiry", required=true)
     private String expiry;
 
+    /**
+     * @return The certificate&#39;s expiration date and time.
+     * 
+     */
     public String expiry() {
         return this.expiry;
     }
@@ -57,6 +69,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="isVerified", required=true)
     private Boolean isVerified;
 
+    /**
+     * @return Determines whether certificate has been verified.
+     * 
+     */
     public Boolean isVerified() {
         return this.isVerified;
     }
@@ -68,6 +84,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="subject", required=true)
     private String subject;
 
+    /**
+     * @return The certificate&#39;s subject name.
+     * 
+     */
     public String subject() {
         return this.subject;
     }
@@ -79,6 +99,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="thumbprint", required=true)
     private String thumbprint;
 
+    /**
+     * @return The certificate&#39;s thumbprint.
+     * 
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
@@ -90,6 +114,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
     @Import(name="updated", required=true)
     private String updated;
 
+    /**
+     * @return The certificate&#39;s last update date and time.
+     * 
+     */
     public String updated() {
         return this.updated;
     }
@@ -124,36 +152,78 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
             $ = new CertificatePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificate base-64 representation of X509 certificate .cer file or just .pem file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param created The certificate&#39;s creation date and time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder created(String created) {
             $.created = created;
             return this;
         }
 
+        /**
+         * @param expiry The certificate&#39;s expiration date and time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiry(String expiry) {
             $.expiry = expiry;
             return this;
         }
 
+        /**
+         * @param isVerified Determines whether certificate has been verified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isVerified(Boolean isVerified) {
             $.isVerified = isVerified;
             return this;
         }
 
+        /**
+         * @param subject The certificate&#39;s subject name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(String subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param thumbprint The certificate&#39;s thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param updated The certificate&#39;s last update date and time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updated(String updated) {
             $.updated = updated;
             return this;

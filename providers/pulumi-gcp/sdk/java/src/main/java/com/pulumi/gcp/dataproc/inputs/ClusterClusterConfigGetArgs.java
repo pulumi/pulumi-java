@@ -38,6 +38,13 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="autoscalingConfig")
     private @Nullable Output<ClusterClusterConfigAutoscalingConfigGetArgs> autoscalingConfig;
 
+    /**
+     * @return The autoscaling policy config associated with the cluster.
+     * Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
+     * only be removed by setting `policy_uri = &#34;&#34;`, rather than removing the whole block.
+     * Structure defined below.
+     * 
+     */
     public Optional<Output<ClusterClusterConfigAutoscalingConfigGetArgs>> autoscalingConfig() {
         return Optional.ofNullable(this.autoscalingConfig);
     }
@@ -57,6 +64,11 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="encryptionConfig")
     private @Nullable Output<ClusterClusterConfigEncryptionConfigGetArgs> encryptionConfig;
 
+    /**
+     * @return The Customer managed encryption keys settings for the cluster.
+     * Structure defined below.
+     * 
+     */
     public Optional<Output<ClusterClusterConfigEncryptionConfigGetArgs>> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
@@ -69,6 +81,11 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="endpointConfig")
     private @Nullable Output<ClusterClusterConfigEndpointConfigGetArgs> endpointConfig;
 
+    /**
+     * @return The config settings for port access on the cluster.
+     * Structure defined below.
+     * 
+     */
     public Optional<Output<ClusterClusterConfigEndpointConfigGetArgs>> endpointConfig() {
         return Optional.ofNullable(this.endpointConfig);
     }
@@ -81,6 +98,11 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="gceClusterConfig")
     private @Nullable Output<ClusterClusterConfigGceClusterConfigGetArgs> gceClusterConfig;
 
+    /**
+     * @return Common config settings for resources of Google Compute Engine cluster
+     * instances, applicable to all instances in the cluster. Structure defined below.
+     * 
+     */
     public Optional<Output<ClusterClusterConfigGceClusterConfigGetArgs>> gceClusterConfig() {
         return Optional.ofNullable(this.gceClusterConfig);
     }
@@ -93,6 +115,11 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="initializationActions")
     private @Nullable Output<List<ClusterClusterConfigInitializationActionGetArgs>> initializationActions;
 
+    /**
+     * @return Commands to execute on each node after config is completed.
+     * You can specify multiple versions of these. Structure defined below.
+     * 
+     */
     public Optional<Output<List<ClusterClusterConfigInitializationActionGetArgs>>> initializationActions() {
         return Optional.ofNullable(this.initializationActions);
     }
@@ -105,6 +132,11 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="lifecycleConfig")
     private @Nullable Output<ClusterClusterConfigLifecycleConfigGetArgs> lifecycleConfig;
 
+    /**
+     * @return The settings for auto deletion cluster schedule.
+     * Structure defined below.
+     * 
+     */
     public Optional<Output<ClusterClusterConfigLifecycleConfigGetArgs>> lifecycleConfig() {
         return Optional.ofNullable(this.lifecycleConfig);
     }
@@ -117,6 +149,11 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="masterConfig")
     private @Nullable Output<ClusterClusterConfigMasterConfigGetArgs> masterConfig;
 
+    /**
+     * @return The Google Compute Engine config settings for the master instances
+     * in a cluster. Structure defined below.
+     * 
+     */
     public Optional<Output<ClusterClusterConfigMasterConfigGetArgs>> masterConfig() {
         return Optional.ofNullable(this.masterConfig);
     }
@@ -130,6 +167,12 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="metastoreConfig")
     private @Nullable Output<ClusterClusterConfigMetastoreConfigGetArgs> metastoreConfig;
 
+    /**
+     * @return The config setting for metastore service with the cluster.
+     * Structure defined below.
+     * ***
+     * 
+     */
     public Optional<Output<ClusterClusterConfigMetastoreConfigGetArgs>> metastoreConfig() {
         return Optional.ofNullable(this.metastoreConfig);
     }
@@ -145,6 +188,14 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="preemptibleWorkerConfig")
     private @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigGetArgs> preemptibleWorkerConfig;
 
+    /**
+     * @return The Google Compute Engine config settings for the additional
+     * instances in a cluster. Structure defined below.
+     * * **NOTE** : `preemptible_worker_config` is
+     *   an alias for the api&#39;s [secondaryWorkerConfig](https://cloud.google.com/dataproc/docs/reference/rest/v1/ClusterConfig#InstanceGroupConfig). The name doesn&#39;t necessarily mean it is preemptible and is named as
+     *   such for legacy/compatibility reasons.
+     * 
+     */
     public Optional<Output<ClusterClusterConfigPreemptibleWorkerConfigGetArgs>> preemptibleWorkerConfig() {
         return Optional.ofNullable(this.preemptibleWorkerConfig);
     }
@@ -156,6 +207,10 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="securityConfig")
     private @Nullable Output<ClusterClusterConfigSecurityConfigGetArgs> securityConfig;
 
+    /**
+     * @return Security related configuration. Structure defined below.
+     * 
+     */
     public Optional<Output<ClusterClusterConfigSecurityConfigGetArgs>> securityConfig() {
         return Optional.ofNullable(this.securityConfig);
     }
@@ -168,6 +223,11 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="softwareConfig")
     private @Nullable Output<ClusterClusterConfigSoftwareConfigGetArgs> softwareConfig;
 
+    /**
+     * @return The config settings for software inside the cluster.
+     * Structure defined below.
+     * 
+     */
     public Optional<Output<ClusterClusterConfigSoftwareConfigGetArgs>> softwareConfig() {
         return Optional.ofNullable(this.softwareConfig);
     }
@@ -185,6 +245,16 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="stagingBucket")
     private @Nullable Output<String> stagingBucket;
 
+    /**
+     * @return The Cloud Storage staging bucket used to stage files,
+     * such as Hadoop jars, between client machines and the cluster.
+     * Note: If you don&#39;t explicitly specify a `staging_bucket`
+     * then GCP will auto create / assign one for you. However, you are not guaranteed
+     * an auto generated bucket which is solely dedicated to your cluster; it may be shared
+     * with other clusters in the same region/zone also choosing to use the auto generation
+     * option.
+     * 
+     */
     public Optional<Output<String>> stagingBucket() {
         return Optional.ofNullable(this.stagingBucket);
     }
@@ -198,6 +268,12 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="tempBucket")
     private @Nullable Output<String> tempBucket;
 
+    /**
+     * @return The Cloud Storage temp bucket used to store ephemeral cluster
+     * and jobs data, such as Spark and MapReduce history files.
+     * Note: If you don&#39;t explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
+     * 
+     */
     public Optional<Output<String>> tempBucket() {
         return Optional.ofNullable(this.tempBucket);
     }
@@ -210,6 +286,11 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="workerConfig")
     private @Nullable Output<ClusterClusterConfigWorkerConfigGetArgs> workerConfig;
 
+    /**
+     * @return The Google Compute Engine config settings for the worker instances
+     * in a cluster. Structure defined below.
+     * 
+     */
     public Optional<Output<ClusterClusterConfigWorkerConfigGetArgs>> workerConfig() {
         return Optional.ofNullable(this.workerConfig);
     }
@@ -252,11 +333,29 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
             $ = new ClusterClusterConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscalingConfig The autoscaling policy config associated with the cluster.
+         * Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
+         * only be removed by setting `policy_uri = &#34;&#34;`, rather than removing the whole block.
+         * Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingConfig(@Nullable Output<ClusterClusterConfigAutoscalingConfigGetArgs> autoscalingConfig) {
             $.autoscalingConfig = autoscalingConfig;
             return this;
         }
 
+        /**
+         * @param autoscalingConfig The autoscaling policy config associated with the cluster.
+         * Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
+         * only be removed by setting `policy_uri = &#34;&#34;`, rather than removing the whole block.
+         * Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingConfig(ClusterClusterConfigAutoscalingConfigGetArgs autoscalingConfig) {
             return autoscalingConfig(Output.of(autoscalingConfig));
         }
@@ -270,123 +369,330 @@ public final class ClusterClusterConfigGetArgs extends com.pulumi.resources.Reso
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param encryptionConfig The Customer managed encryption keys settings for the cluster.
+         * Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(@Nullable Output<ClusterClusterConfigEncryptionConfigGetArgs> encryptionConfig) {
             $.encryptionConfig = encryptionConfig;
             return this;
         }
 
+        /**
+         * @param encryptionConfig The Customer managed encryption keys settings for the cluster.
+         * Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(ClusterClusterConfigEncryptionConfigGetArgs encryptionConfig) {
             return encryptionConfig(Output.of(encryptionConfig));
         }
 
+        /**
+         * @param endpointConfig The config settings for port access on the cluster.
+         * Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfig(@Nullable Output<ClusterClusterConfigEndpointConfigGetArgs> endpointConfig) {
             $.endpointConfig = endpointConfig;
             return this;
         }
 
+        /**
+         * @param endpointConfig The config settings for port access on the cluster.
+         * Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfig(ClusterClusterConfigEndpointConfigGetArgs endpointConfig) {
             return endpointConfig(Output.of(endpointConfig));
         }
 
+        /**
+         * @param gceClusterConfig Common config settings for resources of Google Compute Engine cluster
+         * instances, applicable to all instances in the cluster. Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gceClusterConfig(@Nullable Output<ClusterClusterConfigGceClusterConfigGetArgs> gceClusterConfig) {
             $.gceClusterConfig = gceClusterConfig;
             return this;
         }
 
+        /**
+         * @param gceClusterConfig Common config settings for resources of Google Compute Engine cluster
+         * instances, applicable to all instances in the cluster. Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gceClusterConfig(ClusterClusterConfigGceClusterConfigGetArgs gceClusterConfig) {
             return gceClusterConfig(Output.of(gceClusterConfig));
         }
 
+        /**
+         * @param initializationActions Commands to execute on each node after config is completed.
+         * You can specify multiple versions of these. Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializationActions(@Nullable Output<List<ClusterClusterConfigInitializationActionGetArgs>> initializationActions) {
             $.initializationActions = initializationActions;
             return this;
         }
 
+        /**
+         * @param initializationActions Commands to execute on each node after config is completed.
+         * You can specify multiple versions of these. Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializationActions(List<ClusterClusterConfigInitializationActionGetArgs> initializationActions) {
             return initializationActions(Output.of(initializationActions));
         }
 
+        /**
+         * @param initializationActions Commands to execute on each node after config is completed.
+         * You can specify multiple versions of these. Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializationActions(ClusterClusterConfigInitializationActionGetArgs... initializationActions) {
             return initializationActions(List.of(initializationActions));
         }
 
+        /**
+         * @param lifecycleConfig The settings for auto deletion cluster schedule.
+         * Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleConfig(@Nullable Output<ClusterClusterConfigLifecycleConfigGetArgs> lifecycleConfig) {
             $.lifecycleConfig = lifecycleConfig;
             return this;
         }
 
+        /**
+         * @param lifecycleConfig The settings for auto deletion cluster schedule.
+         * Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleConfig(ClusterClusterConfigLifecycleConfigGetArgs lifecycleConfig) {
             return lifecycleConfig(Output.of(lifecycleConfig));
         }
 
+        /**
+         * @param masterConfig The Google Compute Engine config settings for the master instances
+         * in a cluster. Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterConfig(@Nullable Output<ClusterClusterConfigMasterConfigGetArgs> masterConfig) {
             $.masterConfig = masterConfig;
             return this;
         }
 
+        /**
+         * @param masterConfig The Google Compute Engine config settings for the master instances
+         * in a cluster. Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterConfig(ClusterClusterConfigMasterConfigGetArgs masterConfig) {
             return masterConfig(Output.of(masterConfig));
         }
 
+        /**
+         * @param metastoreConfig The config setting for metastore service with the cluster.
+         * Structure defined below.
+         * ***
+         * 
+         * @return builder
+         * 
+         */
         public Builder metastoreConfig(@Nullable Output<ClusterClusterConfigMetastoreConfigGetArgs> metastoreConfig) {
             $.metastoreConfig = metastoreConfig;
             return this;
         }
 
+        /**
+         * @param metastoreConfig The config setting for metastore service with the cluster.
+         * Structure defined below.
+         * ***
+         * 
+         * @return builder
+         * 
+         */
         public Builder metastoreConfig(ClusterClusterConfigMetastoreConfigGetArgs metastoreConfig) {
             return metastoreConfig(Output.of(metastoreConfig));
         }
 
+        /**
+         * @param preemptibleWorkerConfig The Google Compute Engine config settings for the additional
+         * instances in a cluster. Structure defined below.
+         * * **NOTE** : `preemptible_worker_config` is
+         *   an alias for the api&#39;s [secondaryWorkerConfig](https://cloud.google.com/dataproc/docs/reference/rest/v1/ClusterConfig#InstanceGroupConfig). The name doesn&#39;t necessarily mean it is preemptible and is named as
+         *   such for legacy/compatibility reasons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptibleWorkerConfig(@Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigGetArgs> preemptibleWorkerConfig) {
             $.preemptibleWorkerConfig = preemptibleWorkerConfig;
             return this;
         }
 
+        /**
+         * @param preemptibleWorkerConfig The Google Compute Engine config settings for the additional
+         * instances in a cluster. Structure defined below.
+         * * **NOTE** : `preemptible_worker_config` is
+         *   an alias for the api&#39;s [secondaryWorkerConfig](https://cloud.google.com/dataproc/docs/reference/rest/v1/ClusterConfig#InstanceGroupConfig). The name doesn&#39;t necessarily mean it is preemptible and is named as
+         *   such for legacy/compatibility reasons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptibleWorkerConfig(ClusterClusterConfigPreemptibleWorkerConfigGetArgs preemptibleWorkerConfig) {
             return preemptibleWorkerConfig(Output.of(preemptibleWorkerConfig));
         }
 
+        /**
+         * @param securityConfig Security related configuration. Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityConfig(@Nullable Output<ClusterClusterConfigSecurityConfigGetArgs> securityConfig) {
             $.securityConfig = securityConfig;
             return this;
         }
 
+        /**
+         * @param securityConfig Security related configuration. Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityConfig(ClusterClusterConfigSecurityConfigGetArgs securityConfig) {
             return securityConfig(Output.of(securityConfig));
         }
 
+        /**
+         * @param softwareConfig The config settings for software inside the cluster.
+         * Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softwareConfig(@Nullable Output<ClusterClusterConfigSoftwareConfigGetArgs> softwareConfig) {
             $.softwareConfig = softwareConfig;
             return this;
         }
 
+        /**
+         * @param softwareConfig The config settings for software inside the cluster.
+         * Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder softwareConfig(ClusterClusterConfigSoftwareConfigGetArgs softwareConfig) {
             return softwareConfig(Output.of(softwareConfig));
         }
 
+        /**
+         * @param stagingBucket The Cloud Storage staging bucket used to stage files,
+         * such as Hadoop jars, between client machines and the cluster.
+         * Note: If you don&#39;t explicitly specify a `staging_bucket`
+         * then GCP will auto create / assign one for you. However, you are not guaranteed
+         * an auto generated bucket which is solely dedicated to your cluster; it may be shared
+         * with other clusters in the same region/zone also choosing to use the auto generation
+         * option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stagingBucket(@Nullable Output<String> stagingBucket) {
             $.stagingBucket = stagingBucket;
             return this;
         }
 
+        /**
+         * @param stagingBucket The Cloud Storage staging bucket used to stage files,
+         * such as Hadoop jars, between client machines and the cluster.
+         * Note: If you don&#39;t explicitly specify a `staging_bucket`
+         * then GCP will auto create / assign one for you. However, you are not guaranteed
+         * an auto generated bucket which is solely dedicated to your cluster; it may be shared
+         * with other clusters in the same region/zone also choosing to use the auto generation
+         * option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stagingBucket(String stagingBucket) {
             return stagingBucket(Output.of(stagingBucket));
         }
 
+        /**
+         * @param tempBucket The Cloud Storage temp bucket used to store ephemeral cluster
+         * and jobs data, such as Spark and MapReduce history files.
+         * Note: If you don&#39;t explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tempBucket(@Nullable Output<String> tempBucket) {
             $.tempBucket = tempBucket;
             return this;
         }
 
+        /**
+         * @param tempBucket The Cloud Storage temp bucket used to store ephemeral cluster
+         * and jobs data, such as Spark and MapReduce history files.
+         * Note: If you don&#39;t explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tempBucket(String tempBucket) {
             return tempBucket(Output.of(tempBucket));
         }
 
+        /**
+         * @param workerConfig The Google Compute Engine config settings for the worker instances
+         * in a cluster. Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(@Nullable Output<ClusterClusterConfigWorkerConfigGetArgs> workerConfig) {
             $.workerConfig = workerConfig;
             return this;
         }
 
+        /**
+         * @param workerConfig The Google Compute Engine config settings for the worker instances
+         * in a cluster. Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(ClusterClusterConfigWorkerConfigGetArgs workerConfig) {
             return workerConfig(Output.of(workerConfig));
         }

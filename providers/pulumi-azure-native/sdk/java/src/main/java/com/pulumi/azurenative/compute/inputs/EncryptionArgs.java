@@ -28,6 +28,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionSetId")
     private @Nullable Output<String> diskEncryptionSetId;
 
+    /**
+     * @return ResourceId of the disk encryption set to use for enabling encryption at rest.
+     * 
+     */
     public Optional<Output<String>> diskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
@@ -39,6 +43,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<Either<String,EncryptionType>> type;
 
+    /**
+     * @return The type of key used to encrypt the data of the disk.
+     * 
+     */
     public Optional<Output<Either<String,EncryptionType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -68,28 +76,64 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionSetId ResourceId of the disk encryption set to use for enabling encryption at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetId(@Nullable Output<String> diskEncryptionSetId) {
             $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
+        /**
+         * @param diskEncryptionSetId ResourceId of the disk encryption set to use for enabling encryption at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetId(String diskEncryptionSetId) {
             return diskEncryptionSetId(Output.of(diskEncryptionSetId));
         }
 
+        /**
+         * @param type The type of key used to encrypt the data of the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,EncryptionType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of key used to encrypt the data of the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,EncryptionType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of key used to encrypt the data of the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of key used to encrypt the data of the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(EncryptionType type) {
             return type(Either.ofRight(type));
         }

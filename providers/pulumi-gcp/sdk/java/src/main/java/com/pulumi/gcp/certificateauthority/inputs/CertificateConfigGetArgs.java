@@ -23,6 +23,11 @@ public final class CertificateConfigGetArgs extends com.pulumi.resources.Resourc
     @Import(name="publicKey", required=true)
     private Output<CertificateConfigPublicKeyGetArgs> publicKey;
 
+    /**
+     * @return A PublicKey describes a public key.
+     * Structure is documented below.
+     * 
+     */
     public Output<CertificateConfigPublicKeyGetArgs> publicKey() {
         return this.publicKey;
     }
@@ -35,6 +40,11 @@ public final class CertificateConfigGetArgs extends com.pulumi.resources.Resourc
     @Import(name="subjectConfig", required=true)
     private Output<CertificateConfigSubjectConfigGetArgs> subjectConfig;
 
+    /**
+     * @return Specifies some of the values in a certificate that are related to the subject.
+     * Structure is documented below.
+     * 
+     */
     public Output<CertificateConfigSubjectConfigGetArgs> subjectConfig() {
         return this.subjectConfig;
     }
@@ -47,6 +57,11 @@ public final class CertificateConfigGetArgs extends com.pulumi.resources.Resourc
     @Import(name="x509Config", required=true)
     private Output<CertificateConfigX509ConfigGetArgs> x509Config;
 
+    /**
+     * @return Describes how some of the technical X.509 fields in a certificate should be populated.
+     * Structure is documented below.
+     * 
+     */
     public Output<CertificateConfigX509ConfigGetArgs> x509Config() {
         return this.x509Config;
     }
@@ -77,29 +92,71 @@ public final class CertificateConfigGetArgs extends com.pulumi.resources.Resourc
             $ = new CertificateConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicKey A PublicKey describes a public key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(Output<CertificateConfigPublicKeyGetArgs> publicKey) {
             $.publicKey = publicKey;
             return this;
         }
 
+        /**
+         * @param publicKey A PublicKey describes a public key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(CertificateConfigPublicKeyGetArgs publicKey) {
             return publicKey(Output.of(publicKey));
         }
 
+        /**
+         * @param subjectConfig Specifies some of the values in a certificate that are related to the subject.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectConfig(Output<CertificateConfigSubjectConfigGetArgs> subjectConfig) {
             $.subjectConfig = subjectConfig;
             return this;
         }
 
+        /**
+         * @param subjectConfig Specifies some of the values in a certificate that are related to the subject.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectConfig(CertificateConfigSubjectConfigGetArgs subjectConfig) {
             return subjectConfig(Output.of(subjectConfig));
         }
 
+        /**
+         * @param x509Config Describes how some of the technical X.509 fields in a certificate should be populated.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509Config(Output<CertificateConfigX509ConfigGetArgs> x509Config) {
             $.x509Config = x509Config;
             return this;
         }
 
+        /**
+         * @param x509Config Describes how some of the technical X.509 fields in a certificate should be populated.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509Config(CertificateConfigX509ConfigGetArgs x509Config) {
             return x509Config(Output.of(x509Config));
         }

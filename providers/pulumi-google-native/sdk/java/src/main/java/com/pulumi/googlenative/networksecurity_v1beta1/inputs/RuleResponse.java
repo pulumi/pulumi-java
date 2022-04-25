@@ -25,6 +25,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="destinations", required=true)
     private List<DestinationResponse> destinations;
 
+    /**
+     * @return Optional. List of attributes for the traffic destination. All of the destinations must match. A destination is a match if a request matches all the specified hosts, ports, methods and headers. If not set, the action specified in the &#39;action&#39; field will be applied without any rule checks for the destination.
+     * 
+     */
     public List<DestinationResponse> destinations() {
         return this.destinations;
     }
@@ -36,6 +40,10 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sources", required=true)
     private List<SourceResponse> sources;
 
+    /**
+     * @return Optional. List of attributes for the traffic source. All of the sources must match. A source is a match if both principals and ip_blocks match. If not set, the action specified in the &#39;action&#39; field will be applied without any rule checks for the source.
+     * 
+     */
     public List<SourceResponse> sources() {
         return this.sources;
     }
@@ -65,20 +73,44 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinations Optional. List of attributes for the traffic destination. All of the destinations must match. A destination is a match if a request matches all the specified hosts, ports, methods and headers. If not set, the action specified in the &#39;action&#39; field will be applied without any rule checks for the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(List<DestinationResponse> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations Optional. List of attributes for the traffic destination. All of the destinations must match. A destination is a match if a request matches all the specified hosts, ports, methods and headers. If not set, the action specified in the &#39;action&#39; field will be applied without any rule checks for the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(DestinationResponse... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param sources Optional. List of attributes for the traffic source. All of the sources must match. A source is a match if both principals and ip_blocks match. If not set, the action specified in the &#39;action&#39; field will be applied without any rule checks for the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<SourceResponse> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources Optional. List of attributes for the traffic source. All of the sources must match. A source is a match if both principals and ip_blocks match. If not set, the action specified in the &#39;action&#39; field will be applied without any rule checks for the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(SourceResponse... sources) {
             return sources(List.of(sources));
         }

@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NetworkConfigurationResponse {
     /**
-     * The access endpoint.
+     * @return The access endpoint.
      * 
      */
     private final @Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint;
     /**
-     * The subnets.
+     * @return The subnets.
      * 
      */
     private final @Nullable List<ResourceReferenceResponse> subnets;
     /**
-     * Gets the virtual network address space.
+     * @return Gets the virtual network address space.
      * 
      */
     private final @Nullable String virtualNetworkAddressSpace;
@@ -41,23 +41,23 @@ public final class NetworkConfigurationResponse {
     }
 
     /**
-     * The access endpoint.
+     * @return The access endpoint.
      * 
-    */
+     */
     public Optional<IntegrationServiceEnvironmentAccessEndpointResponse> accessEndpoint() {
         return Optional.ofNullable(this.accessEndpoint);
     }
     /**
-     * The subnets.
+     * @return The subnets.
      * 
-    */
+     */
     public List<ResourceReferenceResponse> subnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
     /**
-     * Gets the virtual network address space.
+     * @return Gets the virtual network address space.
      * 
-    */
+     */
     public Optional<String> virtualNetworkAddressSpace() {
         return Optional.ofNullable(this.virtualNetworkAddressSpace);
     }

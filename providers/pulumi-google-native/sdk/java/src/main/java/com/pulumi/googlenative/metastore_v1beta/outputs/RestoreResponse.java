@@ -10,32 +10,32 @@ import java.util.Objects;
 @CustomType
 public final class RestoreResponse {
     /**
-     * The relative resource name of the metastore service backup to restore from, in the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
+     * @return The relative resource name of the metastore service backup to restore from, in the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
      * 
      */
     private final String backup;
     /**
-     * The restore details containing the revision of the service to be restored to, in format of JSON.
+     * @return The restore details containing the revision of the service to be restored to, in format of JSON.
      * 
      */
     private final String details;
     /**
-     * The time when the restore ended.
+     * @return The time when the restore ended.
      * 
      */
     private final String endTime;
     /**
-     * The time when the restore started.
+     * @return The time when the restore started.
      * 
      */
     private final String startTime;
     /**
-     * The current state of the restore.
+     * @return The current state of the restore.
      * 
      */
     private final String state;
     /**
-     * The type of restore.
+     * @return The type of restore.
      * 
      */
     private final String type;
@@ -57,44 +57,44 @@ public final class RestoreResponse {
     }
 
     /**
-     * The relative resource name of the metastore service backup to restore from, in the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
+     * @return The relative resource name of the metastore service backup to restore from, in the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
      * 
-    */
+     */
     public String backup() {
         return this.backup;
     }
     /**
-     * The restore details containing the revision of the service to be restored to, in format of JSON.
+     * @return The restore details containing the revision of the service to be restored to, in format of JSON.
      * 
-    */
+     */
     public String details() {
         return this.details;
     }
     /**
-     * The time when the restore ended.
+     * @return The time when the restore ended.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The time when the restore started.
+     * @return The time when the restore started.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The current state of the restore.
+     * @return The current state of the restore.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The type of restore.
+     * @return The type of restore.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

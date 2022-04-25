@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse {
     /**
-     * If set to true, enables CAAP for L7 DDoS detection.
+     * @return If set to true, enables CAAP for L7 DDoS detection.
      * 
      */
     private final Boolean enable;
     /**
-     * Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+     * @return Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
      * 
      */
     private final String ruleVisibility;
@@ -30,16 +30,16 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     }
 
     /**
-     * If set to true, enables CAAP for L7 DDoS detection.
+     * @return If set to true, enables CAAP for L7 DDoS detection.
      * 
-    */
+     */
     public Boolean enable() {
         return this.enable;
     }
     /**
-     * Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+     * @return Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
      * 
-    */
+     */
     public String ruleVisibility() {
         return this.ruleVisibility;
     }

@@ -23,6 +23,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Source name for content indexed by the Indexing API.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="predefinedSource", required=true)
     private String predefinedSource;
 
+    /**
+     * @return Predefined content source for Google Apps.
+     * 
+     */
     public String predefinedSource() {
         return this.predefinedSource;
     }
@@ -63,11 +71,23 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Source name for content indexed by the Indexing API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param predefinedSource Predefined content source for Google Apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedSource(String predefinedSource) {
             $.predefinedSource = predefinedSource;
             return this;

@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LoadBalancerConfigurationResponse {
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final @Nullable String id;
     /**
-     * The name of the Load balancer
+     * @return The name of the Load balancer
      * 
      */
     private final String name;
     /**
-     * Properties of the load balancer configuration.
+     * @return Properties of the load balancer configuration.
      * 
      */
     private final LoadBalancerConfigurationPropertiesResponse properties;
@@ -39,23 +39,23 @@ public final class LoadBalancerConfigurationResponse {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the Load balancer
+     * @return The name of the Load balancer
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the load balancer configuration.
+     * @return Properties of the load balancer configuration.
      * 
-    */
+     */
     public LoadBalancerConfigurationPropertiesResponse properties() {
         return this.properties;
     }

@@ -26,6 +26,10 @@ public final class TrailDataResource extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The resource type in which you want to log data events. You can specify AWS::S3::Object or AWS::Lambda::Function resources.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -37,6 +41,10 @@ public final class TrailDataResource extends com.pulumi.resources.InvokeArgs {
     @Import(name="values")
     private @Nullable List<String> values;
 
+    /**
+     * @return An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
+     * 
+     */
     public Optional<List<String>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -66,16 +74,34 @@ public final class TrailDataResource extends com.pulumi.resources.InvokeArgs {
             $ = new TrailDataResource(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The resource type in which you want to log data events. You can specify AWS::S3::Object or AWS::Lambda::Function resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param values An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NameIdentifierResponse {
     /**
-     * Name of the object.
+     * @return Name of the object.
      * 
      */
     private final @Nullable String name;
@@ -23,9 +23,9 @@ public final class NameIdentifierResponse {
     }
 
     /**
-     * Name of the object.
+     * @return Name of the object.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

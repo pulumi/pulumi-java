@@ -19,6 +19,10 @@ public final class GetEventSubscriptionArgs extends com.pulumi.resources.InvokeA
     @Import(name="eventSubscriptionName", required=true)
     private String eventSubscriptionName;
 
+    /**
+     * @return Name of the event subscription.
+     * 
+     */
     public String eventSubscriptionName() {
         return this.eventSubscriptionName;
     }
@@ -30,6 +34,10 @@ public final class GetEventSubscriptionArgs extends com.pulumi.resources.InvokeA
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return The scope of the event subscription. The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic. For example, use &#39;/subscriptions/{subscriptionId}/&#39; for a subscription, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for a resource group, and &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}&#39; for a resource, and &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}&#39; for an EventGrid topic.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -59,11 +67,23 @@ public final class GetEventSubscriptionArgs extends com.pulumi.resources.InvokeA
             $ = new GetEventSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventSubscriptionName Name of the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSubscriptionName(String eventSubscriptionName) {
             $.eventSubscriptionName = eventSubscriptionName;
             return this;
         }
 
+        /**
+         * @param scope The scope of the event subscription. The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic. For example, use &#39;/subscriptions/{subscriptionId}/&#39; for a subscription, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for a resource group, and &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}&#39; for a resource, and &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}&#39; for an EventGrid topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

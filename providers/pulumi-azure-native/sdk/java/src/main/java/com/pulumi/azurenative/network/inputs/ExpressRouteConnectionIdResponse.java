@@ -23,6 +23,10 @@ public final class ExpressRouteConnectionIdResponse extends com.pulumi.resources
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The ID of the ExpressRouteConnection.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class ExpressRouteConnectionIdResponse extends com.pulumi.resources
             $ = new ExpressRouteConnectionIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the ExpressRouteConnection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

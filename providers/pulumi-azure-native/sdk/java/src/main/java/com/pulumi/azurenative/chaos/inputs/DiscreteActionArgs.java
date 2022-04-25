@@ -27,6 +27,10 @@ public final class DiscreteActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return String that represents a Capability URN.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class DiscreteActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="parameters", required=true)
     private Output<List<KeyValuePairArgs>> parameters;
 
+    /**
+     * @return List of key value pairs.
+     * 
+     */
     public Output<List<KeyValuePairArgs>> parameters() {
         return this.parameters;
     }
@@ -49,6 +57,10 @@ public final class DiscreteActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="selectorId", required=true)
     private Output<String> selectorId;
 
+    /**
+     * @return String that represents a selector.
+     * 
+     */
     public Output<String> selectorId() {
         return this.selectorId;
     }
@@ -61,6 +73,11 @@ public final class DiscreteActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Enum that discriminates between action models.
+     * Expected value is &#39;discrete&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -92,42 +109,98 @@ public final class DiscreteActionArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DiscreteActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name String that represents a Capability URN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name String that represents a Capability URN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters List of key value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Output<List<KeyValuePairArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters List of key value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<KeyValuePairArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters List of key value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(KeyValuePairArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param selectorId String that represents a selector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectorId(Output<String> selectorId) {
             $.selectorId = selectorId;
             return this;
         }
 
+        /**
+         * @param selectorId String that represents a selector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectorId(String selectorId) {
             return selectorId(Output.of(selectorId));
         }
 
+        /**
+         * @param type Enum that discriminates between action models.
+         * Expected value is &#39;discrete&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Enum that discriminates between action models.
+         * Expected value is &#39;discrete&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

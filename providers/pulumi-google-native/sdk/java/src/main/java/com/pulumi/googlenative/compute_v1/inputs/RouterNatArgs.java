@@ -34,6 +34,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="drainNatIps")
     private @Nullable Output<List<String>> drainNatIps;
 
+    /**
+     * @return A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
+     * 
+     */
     public Optional<Output<List<String>>> drainNatIps() {
         return Optional.ofNullable(this.drainNatIps);
     }
@@ -45,6 +49,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableDynamicPortAllocation")
     private @Nullable Output<Boolean> enableDynamicPortAllocation;
 
+    /**
+     * @return Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true, - Dynamic Port Allocation will be enabled on this NAT config. - enableEndpointIndependentMapping cannot be set to true. - If minPorts is set, minPortsPerVm must be set to a power of two greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be allocated to a VM from this NAT config.
+     * 
+     */
     public Optional<Output<Boolean>> enableDynamicPortAllocation() {
         return Optional.ofNullable(this.enableDynamicPortAllocation);
     }
@@ -63,6 +71,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="icmpIdleTimeoutSec")
     private @Nullable Output<Integer> icmpIdleTimeoutSec;
 
+    /**
+     * @return Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
+     * 
+     */
     public Optional<Output<Integer>> icmpIdleTimeoutSec() {
         return Optional.ofNullable(this.icmpIdleTimeoutSec);
     }
@@ -74,6 +86,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logConfig")
     private @Nullable Output<RouterNatLogConfigArgs> logConfig;
 
+    /**
+     * @return Configure logging on this NAT.
+     * 
+     */
     public Optional<Output<RouterNatLogConfigArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
@@ -85,6 +101,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxPortsPerVm")
     private @Nullable Output<Integer> maxPortsPerVm;
 
+    /**
+     * @return Maximum number of ports allocated to a VM from this NAT config when Dynamic Port Allocation is enabled. If Dynamic Port Allocation is not enabled, this field has no effect. If Dynamic Port Allocation is enabled, and this field is set, it must be set to a power of two greater than minPortsPerVm, or 64 if minPortsPerVm is not set. If Dynamic Port Allocation is enabled and this field is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
+     * 
+     */
     public Optional<Output<Integer>> maxPortsPerVm() {
         return Optional.ofNullable(this.maxPortsPerVm);
     }
@@ -96,6 +116,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minPortsPerVm")
     private @Nullable Output<Integer> minPortsPerVm;
 
+    /**
+     * @return Minimum number of ports allocated to a VM from this NAT config. If not set, a default number of ports is allocated to a VM. This is rounded up to the nearest power of 2. For example, if the value of this field is 50, at least 64 ports are allocated to a VM.
+     * 
+     */
     public Optional<Output<Integer>> minPortsPerVm() {
         return Optional.ofNullable(this.minPortsPerVm);
     }
@@ -107,6 +131,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique name of this Nat service. The name must be 1-63 characters long and comply with RFC1035.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -118,6 +146,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="natIpAllocateOption")
     private @Nullable Output<RouterNatNatIpAllocateOption> natIpAllocateOption;
 
+    /**
+     * @return Specify the NatIpAllocateOption, which can take one of the following values: - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. - AUTO_ONLY: Nat IPs are allocated by Google Cloud Platform; customers can&#39;t specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should be empty.
+     * 
+     */
     public Optional<Output<RouterNatNatIpAllocateOption>> natIpAllocateOption() {
         return Optional.ofNullable(this.natIpAllocateOption);
     }
@@ -129,6 +161,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="natIps")
     private @Nullable Output<List<String>> natIps;
 
+    /**
+     * @return A list of URLs of the IP resources used for this Nat service. These IP addresses must be valid static external IP addresses assigned to the project.
+     * 
+     */
     public Optional<Output<List<String>>> natIps() {
         return Optional.ofNullable(this.natIps);
     }
@@ -140,6 +176,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<List<RouterNatRuleArgs>> rules;
 
+    /**
+     * @return A list of rules associated with this NAT.
+     * 
+     */
     public Optional<Output<List<RouterNatRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -151,6 +191,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceSubnetworkIpRangesToNat")
     private @Nullable Output<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat;
 
+    /**
+     * @return Specify the Nat option, which can take one of the following values: - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. - ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are allowed to Nat. - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in the field subnetwork below) The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED. Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other Router.Nat section in any Router for this network in this region.
+     * 
+     */
     public Optional<Output<RouterNatSourceSubnetworkIpRangesToNat>> sourceSubnetworkIpRangesToNat() {
         return Optional.ofNullable(this.sourceSubnetworkIpRangesToNat);
     }
@@ -162,6 +206,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetworks")
     private @Nullable Output<List<RouterNatSubnetworkToNatArgs>> subnetworks;
 
+    /**
+     * @return A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above.
+     * 
+     */
     public Optional<Output<List<RouterNatSubnetworkToNatArgs>>> subnetworks() {
         return Optional.ofNullable(this.subnetworks);
     }
@@ -173,6 +221,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tcpEstablishedIdleTimeoutSec")
     private @Nullable Output<Integer> tcpEstablishedIdleTimeoutSec;
 
+    /**
+     * @return Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
+     * 
+     */
     public Optional<Output<Integer>> tcpEstablishedIdleTimeoutSec() {
         return Optional.ofNullable(this.tcpEstablishedIdleTimeoutSec);
     }
@@ -184,6 +236,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tcpTimeWaitTimeoutSec")
     private @Nullable Output<Integer> tcpTimeWaitTimeoutSec;
 
+    /**
+     * @return Timeout (in seconds) for TCP connections that are in TIME_WAIT state. Defaults to 120s if not set.
+     * 
+     */
     public Optional<Output<Integer>> tcpTimeWaitTimeoutSec() {
         return Optional.ofNullable(this.tcpTimeWaitTimeoutSec);
     }
@@ -195,6 +251,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tcpTransitoryIdleTimeoutSec")
     private @Nullable Output<Integer> tcpTransitoryIdleTimeoutSec;
 
+    /**
+     * @return Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
+     * 
+     */
     public Optional<Output<Integer>> tcpTransitoryIdleTimeoutSec() {
         return Optional.ofNullable(this.tcpTransitoryIdleTimeoutSec);
     }
@@ -206,6 +266,10 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="udpIdleTimeoutSec")
     private @Nullable Output<Integer> udpIdleTimeoutSec;
 
+    /**
+     * @return Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
+     * 
+     */
     public Optional<Output<Integer>> udpIdleTimeoutSec() {
         return Optional.ofNullable(this.udpIdleTimeoutSec);
     }
@@ -250,24 +314,54 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RouterNatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param drainNatIps A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder drainNatIps(@Nullable Output<List<String>> drainNatIps) {
             $.drainNatIps = drainNatIps;
             return this;
         }
 
+        /**
+         * @param drainNatIps A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder drainNatIps(List<String> drainNatIps) {
             return drainNatIps(Output.of(drainNatIps));
         }
 
+        /**
+         * @param drainNatIps A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder drainNatIps(String... drainNatIps) {
             return drainNatIps(List.of(drainNatIps));
         }
 
+        /**
+         * @param enableDynamicPortAllocation Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true, - Dynamic Port Allocation will be enabled on this NAT config. - enableEndpointIndependentMapping cannot be set to true. - If minPorts is set, minPortsPerVm must be set to a power of two greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be allocated to a VM from this NAT config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDynamicPortAllocation(@Nullable Output<Boolean> enableDynamicPortAllocation) {
             $.enableDynamicPortAllocation = enableDynamicPortAllocation;
             return this;
         }
 
+        /**
+         * @param enableDynamicPortAllocation Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true, - Dynamic Port Allocation will be enabled on this NAT config. - enableEndpointIndependentMapping cannot be set to true. - If minPorts is set, minPortsPerVm must be set to a power of two greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be allocated to a VM from this NAT config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDynamicPortAllocation(Boolean enableDynamicPortAllocation) {
             return enableDynamicPortAllocation(Output.of(enableDynamicPortAllocation));
         }
@@ -281,140 +375,326 @@ public final class RouterNatArgs extends com.pulumi.resources.ResourceArgs {
             return enableEndpointIndependentMapping(Output.of(enableEndpointIndependentMapping));
         }
 
+        /**
+         * @param icmpIdleTimeoutSec Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder icmpIdleTimeoutSec(@Nullable Output<Integer> icmpIdleTimeoutSec) {
             $.icmpIdleTimeoutSec = icmpIdleTimeoutSec;
             return this;
         }
 
+        /**
+         * @param icmpIdleTimeoutSec Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder icmpIdleTimeoutSec(Integer icmpIdleTimeoutSec) {
             return icmpIdleTimeoutSec(Output.of(icmpIdleTimeoutSec));
         }
 
+        /**
+         * @param logConfig Configure logging on this NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(@Nullable Output<RouterNatLogConfigArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
 
+        /**
+         * @param logConfig Configure logging on this NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(RouterNatLogConfigArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
+        /**
+         * @param maxPortsPerVm Maximum number of ports allocated to a VM from this NAT config when Dynamic Port Allocation is enabled. If Dynamic Port Allocation is not enabled, this field has no effect. If Dynamic Port Allocation is enabled, and this field is set, it must be set to a power of two greater than minPortsPerVm, or 64 if minPortsPerVm is not set. If Dynamic Port Allocation is enabled and this field is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPortsPerVm(@Nullable Output<Integer> maxPortsPerVm) {
             $.maxPortsPerVm = maxPortsPerVm;
             return this;
         }
 
+        /**
+         * @param maxPortsPerVm Maximum number of ports allocated to a VM from this NAT config when Dynamic Port Allocation is enabled. If Dynamic Port Allocation is not enabled, this field has no effect. If Dynamic Port Allocation is enabled, and this field is set, it must be set to a power of two greater than minPortsPerVm, or 64 if minPortsPerVm is not set. If Dynamic Port Allocation is enabled and this field is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPortsPerVm(Integer maxPortsPerVm) {
             return maxPortsPerVm(Output.of(maxPortsPerVm));
         }
 
+        /**
+         * @param minPortsPerVm Minimum number of ports allocated to a VM from this NAT config. If not set, a default number of ports is allocated to a VM. This is rounded up to the nearest power of 2. For example, if the value of this field is 50, at least 64 ports are allocated to a VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minPortsPerVm(@Nullable Output<Integer> minPortsPerVm) {
             $.minPortsPerVm = minPortsPerVm;
             return this;
         }
 
+        /**
+         * @param minPortsPerVm Minimum number of ports allocated to a VM from this NAT config. If not set, a default number of ports is allocated to a VM. This is rounded up to the nearest power of 2. For example, if the value of this field is 50, at least 64 ports are allocated to a VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minPortsPerVm(Integer minPortsPerVm) {
             return minPortsPerVm(Output.of(minPortsPerVm));
         }
 
+        /**
+         * @param name Unique name of this Nat service. The name must be 1-63 characters long and comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique name of this Nat service. The name must be 1-63 characters long and comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param natIpAllocateOption Specify the NatIpAllocateOption, which can take one of the following values: - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. - AUTO_ONLY: Nat IPs are allocated by Google Cloud Platform; customers can&#39;t specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natIpAllocateOption(@Nullable Output<RouterNatNatIpAllocateOption> natIpAllocateOption) {
             $.natIpAllocateOption = natIpAllocateOption;
             return this;
         }
 
+        /**
+         * @param natIpAllocateOption Specify the NatIpAllocateOption, which can take one of the following values: - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. - AUTO_ONLY: Nat IPs are allocated by Google Cloud Platform; customers can&#39;t specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natIpAllocateOption(RouterNatNatIpAllocateOption natIpAllocateOption) {
             return natIpAllocateOption(Output.of(natIpAllocateOption));
         }
 
+        /**
+         * @param natIps A list of URLs of the IP resources used for this Nat service. These IP addresses must be valid static external IP addresses assigned to the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natIps(@Nullable Output<List<String>> natIps) {
             $.natIps = natIps;
             return this;
         }
 
+        /**
+         * @param natIps A list of URLs of the IP resources used for this Nat service. These IP addresses must be valid static external IP addresses assigned to the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natIps(List<String> natIps) {
             return natIps(Output.of(natIps));
         }
 
+        /**
+         * @param natIps A list of URLs of the IP resources used for this Nat service. These IP addresses must be valid static external IP addresses assigned to the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natIps(String... natIps) {
             return natIps(List.of(natIps));
         }
 
+        /**
+         * @param rules A list of rules associated with this NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<RouterNatRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of rules associated with this NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<RouterNatRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules A list of rules associated with this NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(RouterNatRuleArgs... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param sourceSubnetworkIpRangesToNat Specify the Nat option, which can take one of the following values: - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. - ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are allowed to Nat. - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in the field subnetwork below) The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED. Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other Router.Nat section in any Router for this network in this region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSubnetworkIpRangesToNat(@Nullable Output<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat) {
             $.sourceSubnetworkIpRangesToNat = sourceSubnetworkIpRangesToNat;
             return this;
         }
 
+        /**
+         * @param sourceSubnetworkIpRangesToNat Specify the Nat option, which can take one of the following values: - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. - ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are allowed to Nat. - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in the field subnetwork below) The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED. Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other Router.Nat section in any Router for this network in this region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSubnetworkIpRangesToNat(RouterNatSourceSubnetworkIpRangesToNat sourceSubnetworkIpRangesToNat) {
             return sourceSubnetworkIpRangesToNat(Output.of(sourceSubnetworkIpRangesToNat));
         }
 
+        /**
+         * @param subnetworks A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworks(@Nullable Output<List<RouterNatSubnetworkToNatArgs>> subnetworks) {
             $.subnetworks = subnetworks;
             return this;
         }
 
+        /**
+         * @param subnetworks A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworks(List<RouterNatSubnetworkToNatArgs> subnetworks) {
             return subnetworks(Output.of(subnetworks));
         }
 
+        /**
+         * @param subnetworks A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworks(RouterNatSubnetworkToNatArgs... subnetworks) {
             return subnetworks(List.of(subnetworks));
         }
 
+        /**
+         * @param tcpEstablishedIdleTimeoutSec Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpEstablishedIdleTimeoutSec(@Nullable Output<Integer> tcpEstablishedIdleTimeoutSec) {
             $.tcpEstablishedIdleTimeoutSec = tcpEstablishedIdleTimeoutSec;
             return this;
         }
 
+        /**
+         * @param tcpEstablishedIdleTimeoutSec Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpEstablishedIdleTimeoutSec(Integer tcpEstablishedIdleTimeoutSec) {
             return tcpEstablishedIdleTimeoutSec(Output.of(tcpEstablishedIdleTimeoutSec));
         }
 
+        /**
+         * @param tcpTimeWaitTimeoutSec Timeout (in seconds) for TCP connections that are in TIME_WAIT state. Defaults to 120s if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpTimeWaitTimeoutSec(@Nullable Output<Integer> tcpTimeWaitTimeoutSec) {
             $.tcpTimeWaitTimeoutSec = tcpTimeWaitTimeoutSec;
             return this;
         }
 
+        /**
+         * @param tcpTimeWaitTimeoutSec Timeout (in seconds) for TCP connections that are in TIME_WAIT state. Defaults to 120s if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpTimeWaitTimeoutSec(Integer tcpTimeWaitTimeoutSec) {
             return tcpTimeWaitTimeoutSec(Output.of(tcpTimeWaitTimeoutSec));
         }
 
+        /**
+         * @param tcpTransitoryIdleTimeoutSec Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpTransitoryIdleTimeoutSec(@Nullable Output<Integer> tcpTransitoryIdleTimeoutSec) {
             $.tcpTransitoryIdleTimeoutSec = tcpTransitoryIdleTimeoutSec;
             return this;
         }
 
+        /**
+         * @param tcpTransitoryIdleTimeoutSec Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpTransitoryIdleTimeoutSec(Integer tcpTransitoryIdleTimeoutSec) {
             return tcpTransitoryIdleTimeoutSec(Output.of(tcpTransitoryIdleTimeoutSec));
         }
 
+        /**
+         * @param udpIdleTimeoutSec Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder udpIdleTimeoutSec(@Nullable Output<Integer> udpIdleTimeoutSec) {
             $.udpIdleTimeoutSec = udpIdleTimeoutSec;
             return this;
         }
 
+        /**
+         * @param udpIdleTimeoutSec Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder udpIdleTimeoutSec(Integer udpIdleTimeoutSec) {
             return udpIdleTimeoutSec(Output.of(udpIdleTimeoutSec));
         }

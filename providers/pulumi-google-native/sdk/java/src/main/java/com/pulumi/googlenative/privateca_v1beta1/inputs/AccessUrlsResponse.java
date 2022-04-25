@@ -23,6 +23,10 @@ public final class AccessUrlsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="caCertificateAccessUrl", required=true)
     private String caCertificateAccessUrl;
 
+    /**
+     * @return The URL where this CertificateAuthority&#39;s CA certificate is published. This will only be set for CAs that have been activated.
+     * 
+     */
     public String caCertificateAccessUrl() {
         return this.caCertificateAccessUrl;
     }
@@ -34,6 +38,10 @@ public final class AccessUrlsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="crlAccessUrl", required=true)
     private String crlAccessUrl;
 
+    /**
+     * @return The URL where this CertificateAuthority&#39;s CRLs are published. This will only be set for CAs that have been activated.
+     * 
+     */
     public String crlAccessUrl() {
         return this.crlAccessUrl;
     }
@@ -63,11 +71,23 @@ public final class AccessUrlsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AccessUrlsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caCertificateAccessUrl The URL where this CertificateAuthority&#39;s CA certificate is published. This will only be set for CAs that have been activated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificateAccessUrl(String caCertificateAccessUrl) {
             $.caCertificateAccessUrl = caCertificateAccessUrl;
             return this;
         }
 
+        /**
+         * @param crlAccessUrl The URL where this CertificateAuthority&#39;s CRLs are published. This will only be set for CAs that have been activated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crlAccessUrl(String crlAccessUrl) {
             $.crlAccessUrl = crlAccessUrl;
             return this;

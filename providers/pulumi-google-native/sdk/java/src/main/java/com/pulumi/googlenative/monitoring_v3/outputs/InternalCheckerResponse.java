@@ -10,32 +10,32 @@ import java.util.Objects;
 @CustomType
 public final class InternalCheckerResponse {
     /**
-     * The checker&#39;s human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+     * @return The checker&#39;s human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
      * 
      */
     private final String displayName;
     /**
-     * The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.
+     * @return The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.
      * 
      */
     private final String gcpZone;
     /**
-     * A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.
+     * @return A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.
      * 
      */
     private final String name;
     /**
-     * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: &#34;default&#34;).
+     * @return The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: &#34;default&#34;).
      * 
      */
     private final String network;
     /**
-     * The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.
+     * @return The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.
      * 
      */
     private final String peerProjectId;
     /**
-     * The current operational state of the internal checker.
+     * @return The current operational state of the internal checker.
      * 
      */
     private final String state;
@@ -57,44 +57,44 @@ public final class InternalCheckerResponse {
     }
 
     /**
-     * The checker&#39;s human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
+     * @return The checker&#39;s human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.
+     * @return The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.
      * 
-    */
+     */
     public String gcpZone() {
         return this.gcpZone;
     }
     /**
-     * A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.
+     * @return A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: &#34;default&#34;).
+     * @return The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: &#34;default&#34;).
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.
+     * @return The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.
      * 
-    */
+     */
     public String peerProjectId() {
         return this.peerProjectId;
     }
     /**
-     * The current operational state of the internal checker.
+     * @return The current operational state of the internal checker.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

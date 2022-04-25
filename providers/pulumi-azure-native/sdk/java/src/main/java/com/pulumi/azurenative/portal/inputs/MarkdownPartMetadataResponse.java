@@ -29,6 +29,10 @@ public final class MarkdownPartMetadataResponse extends com.pulumi.resources.Inv
     @Import(name="inputs")
     private @Nullable List<Object> inputs;
 
+    /**
+     * @return Input to dashboard part.
+     * 
+     */
     public Optional<List<Object>> inputs() {
         return Optional.ofNullable(this.inputs);
     }
@@ -40,6 +44,10 @@ public final class MarkdownPartMetadataResponse extends com.pulumi.resources.Inv
     @Import(name="settings")
     private @Nullable MarkdownPartMetadataResponseSettings settings;
 
+    /**
+     * @return Markdown part settings.
+     * 
+     */
     public Optional<MarkdownPartMetadataResponseSettings> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -52,6 +60,11 @@ public final class MarkdownPartMetadataResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of dashboard part.
+     * Expected value is &#39;Extension/HubsExtension/PartType/MarkdownPart&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -82,20 +95,45 @@ public final class MarkdownPartMetadataResponse extends com.pulumi.resources.Inv
             $ = new MarkdownPartMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputs Input to dashboard part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(@Nullable List<Object> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs Input to dashboard part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(Object... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param settings Markdown part settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable MarkdownPartMetadataResponseSettings settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param type The type of dashboard part.
+         * Expected value is &#39;Extension/HubsExtension/PartType/MarkdownPart&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

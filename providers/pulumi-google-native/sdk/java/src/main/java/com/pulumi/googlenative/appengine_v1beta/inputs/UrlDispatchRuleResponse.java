@@ -23,6 +23,10 @@ public final class UrlDispatchRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="domain", required=true)
     private String domain;
 
+    /**
+     * @return Domain name to match against. The wildcard &#34;*&#34; is supported if specified before a period: &#34;*.&#34;.Defaults to matching all domains: &#34;*&#34;.
+     * 
+     */
     public String domain() {
         return this.domain;
     }
@@ -34,6 +38,10 @@ public final class UrlDispatchRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return Pathname within the host. Must start with a &#34;/&#34;. A single &#34;*&#34; can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -45,6 +53,10 @@ public final class UrlDispatchRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="service", required=true)
     private String service;
 
+    /**
+     * @return Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.
+     * 
+     */
     public String service() {
         return this.service;
     }
@@ -75,16 +87,34 @@ public final class UrlDispatchRuleResponse extends com.pulumi.resources.InvokeAr
             $ = new UrlDispatchRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain Domain name to match against. The wildcard &#34;*&#34; is supported if specified before a period: &#34;*.&#34;.Defaults to matching all domains: &#34;*&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param path Pathname within the host. Must start with a &#34;/&#34;. A single &#34;*&#34; can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param service Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             $.service = service;
             return this;

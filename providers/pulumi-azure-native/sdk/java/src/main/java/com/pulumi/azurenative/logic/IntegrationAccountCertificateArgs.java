@@ -25,6 +25,10 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="certificateName")
     private @Nullable Output<String> certificateName;
 
+    /**
+     * @return The integration account certificate name.
+     * 
+     */
     public Optional<Output<String>> certificateName() {
         return Optional.ofNullable(this.certificateName);
     }
@@ -36,6 +40,10 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="integrationAccountName", required=true)
     private Output<String> integrationAccountName;
 
+    /**
+     * @return The integration account name.
+     * 
+     */
     public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
@@ -47,6 +55,10 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="key")
     private @Nullable Output<KeyVaultKeyReferenceArgs> key;
 
+    /**
+     * @return The key details in the key vault.
+     * 
+     */
     public Optional<Output<KeyVaultKeyReferenceArgs>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -58,6 +70,10 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -69,6 +85,10 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="metadata")
     private @Nullable Output<Object> metadata;
 
+    /**
+     * @return The metadata.
+     * 
+     */
     public Optional<Output<Object>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -80,6 +100,10 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="publicCertificate")
     private @Nullable Output<String> publicCertificate;
 
+    /**
+     * @return The public certificate.
+     * 
+     */
     public Optional<Output<String>> publicCertificate() {
         return Optional.ofNullable(this.publicCertificate);
     }
@@ -91,6 +115,10 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -102,6 +130,10 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -137,74 +169,170 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
             $ = new IntegrationAccountCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateName The integration account certificate name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(@Nullable Output<String> certificateName) {
             $.certificateName = certificateName;
             return this;
         }
 
+        /**
+         * @param certificateName The integration account certificate name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             return certificateName(Output.of(certificateName));
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(Output<String> integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
             return this;
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(String integrationAccountName) {
             return integrationAccountName(Output.of(integrationAccountName));
         }
 
+        /**
+         * @param key The key details in the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<KeyVaultKeyReferenceArgs> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The key details in the key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(KeyVaultKeyReferenceArgs key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param metadata The metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Object> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Object metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param publicCertificate The public certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicCertificate(@Nullable Output<String> publicCertificate) {
             $.publicCertificate = publicCertificate;
             return this;
         }
 
+        /**
+         * @param publicCertificate The public certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicCertificate(String publicCertificate) {
             return publicCertificate(Output.of(publicCertificate));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

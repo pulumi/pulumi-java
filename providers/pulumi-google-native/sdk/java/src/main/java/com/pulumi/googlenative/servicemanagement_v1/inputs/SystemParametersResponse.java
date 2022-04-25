@@ -24,6 +24,10 @@ public final class SystemParametersResponse extends com.pulumi.resources.InvokeA
     @Import(name="rules", required=true)
     private List<SystemParameterRuleResponse> rules;
 
+    /**
+     * @return Define system parameters. The parameters defined here will override the default parameters implemented by the system. If this field is missing from the service config, default system parameters will be used. Default system parameters and names is implementation-dependent. Example: define api key for all methods system_parameters rules: - selector: &#34;*&#34; parameters: - name: api_key url_query_parameter: api_key Example: define 2 api key names for a specific method. system_parameters rules: - selector: &#34;/ListShelves&#34; parameters: - name: api_key http_header: Api-Key1 - name: api_key http_header: Api-Key2 **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * 
+     */
     public List<SystemParameterRuleResponse> rules() {
         return this.rules;
     }
@@ -52,11 +56,23 @@ public final class SystemParametersResponse extends com.pulumi.resources.InvokeA
             $ = new SystemParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules Define system parameters. The parameters defined here will override the default parameters implemented by the system. If this field is missing from the service config, default system parameters will be used. Default system parameters and names is implementation-dependent. Example: define api key for all methods system_parameters rules: - selector: &#34;*&#34; parameters: - name: api_key url_query_parameter: api_key Example: define 2 api key names for a specific method. system_parameters rules: - selector: &#34;/ListShelves&#34; parameters: - name: api_key http_header: Api-Key1 - name: api_key http_header: Api-Key2 **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<SystemParameterRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Define system parameters. The parameters defined here will override the default parameters implemented by the system. If this field is missing from the service config, default system parameters will be used. Default system parameters and names is implementation-dependent. Example: define api key for all methods system_parameters rules: - selector: &#34;*&#34; parameters: - name: api_key url_query_parameter: api_key Example: define 2 api key names for a specific method. system_parameters rules: - selector: &#34;/ListShelves&#34; parameters: - name: api_key http_header: Api-Key1 - name: api_key http_header: Api-Key2 **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(SystemParameterRuleResponse... rules) {
             return rules(List.of(rules));
         }

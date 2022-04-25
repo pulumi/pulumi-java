@@ -21,6 +21,10 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountId", required=true)
     private String accountId;
 
+    /**
+     * @return The Google service account ID. This be one of:
+     * 
+     */
     public String accountId() {
         return this.accountId;
     }
@@ -33,6 +37,11 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project that the service account is present in.
+     * Defaults to the provider project configuration.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -62,11 +71,24 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The Google service account ID. This be one of:
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param project The ID of the project that the service account is present in.
+         * Defaults to the provider project configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;

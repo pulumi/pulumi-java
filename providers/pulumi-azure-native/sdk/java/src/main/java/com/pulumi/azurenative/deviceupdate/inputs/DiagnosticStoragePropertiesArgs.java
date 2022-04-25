@@ -28,6 +28,10 @@ public final class DiagnosticStoragePropertiesArgs extends com.pulumi.resources.
     @Import(name="authenticationType", required=true)
     private Output<Either<String,AuthenticationType>> authenticationType;
 
+    /**
+     * @return Authentication Type
+     * 
+     */
     public Output<Either<String,AuthenticationType>> authenticationType() {
         return this.authenticationType;
     }
@@ -39,6 +43,10 @@ public final class DiagnosticStoragePropertiesArgs extends com.pulumi.resources.
     @Import(name="connectionString")
     private @Nullable Output<String> connectionString;
 
+    /**
+     * @return ConnectionString of the diagnostic storage account
+     * 
+     */
     public Optional<Output<String>> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -50,6 +58,10 @@ public final class DiagnosticStoragePropertiesArgs extends com.pulumi.resources.
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return ResourceId of the diagnostic storage account
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -80,37 +92,85 @@ public final class DiagnosticStoragePropertiesArgs extends com.pulumi.resources.
             $ = new DiagnosticStoragePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType Authentication Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Output<Either<String,AuthenticationType>> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType Authentication Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Either<String,AuthenticationType> authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param authenticationType Authentication Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Either.ofLeft(authenticationType));
         }
 
+        /**
+         * @param authenticationType Authentication Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(AuthenticationType authenticationType) {
             return authenticationType(Either.ofRight(authenticationType));
         }
 
+        /**
+         * @param connectionString ConnectionString of the diagnostic storage account
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable Output<String> connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionString ConnectionString of the diagnostic storage account
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(String connectionString) {
             return connectionString(Output.of(connectionString));
         }
 
+        /**
+         * @param resourceId ResourceId of the diagnostic storage account
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId ResourceId of the diagnostic storage account
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

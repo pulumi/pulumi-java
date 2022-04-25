@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetACLResult {
     /**
-     * The Amazon Resource Name (ARN) of the acl.
+     * @return The Amazon Resource Name (ARN) of the acl.
      * 
      */
     private final @Nullable String arn;
     /**
-     * Indicates acl status. Can be &#34;creating&#34;, &#34;active&#34;, &#34;modifying&#34;, &#34;deleting&#34;.
+     * @return Indicates acl status. Can be &#34;creating&#34;, &#34;active&#34;, &#34;modifying&#34;, &#34;deleting&#34;.
      * 
      */
     private final @Nullable String status;
     /**
-     * An array of key-value pairs to apply to this cluster.
+     * @return An array of key-value pairs to apply to this cluster.
      * 
      */
     private final @Nullable List<ACLTag> tags;
     /**
-     * List of users associated to this acl.
+     * @return List of users associated to this acl.
      * 
      */
     private final @Nullable List<String> userNames;
@@ -47,30 +47,30 @@ public final class GetACLResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the acl.
+     * @return The Amazon Resource Name (ARN) of the acl.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Indicates acl status. Can be &#34;creating&#34;, &#34;active&#34;, &#34;modifying&#34;, &#34;deleting&#34;.
+     * @return Indicates acl status. Can be &#34;creating&#34;, &#34;active&#34;, &#34;modifying&#34;, &#34;deleting&#34;.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * An array of key-value pairs to apply to this cluster.
+     * @return An array of key-value pairs to apply to this cluster.
      * 
-    */
+     */
     public List<ACLTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * List of users associated to this acl.
+     * @return List of users associated to this acl.
      * 
-    */
+     */
     public List<String> userNames() {
         return this.userNames == null ? List.of() : this.userNames;
     }

@@ -23,6 +23,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     @Import(name="bucketName", required=true)
     private Output<String> bucketName;
 
+    /**
+     * @return The name of a Cloud Storage bucket.
+     * 
+     */
     public Output<String> bucketName() {
         return this.bucketName;
     }
@@ -35,6 +39,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     @Import(name="excludeRegexes")
     private @Nullable Output<List<String>> excludeRegexes;
 
+    /**
+     * @return A list of regular expressions matching file paths to exclude. All files in the bucket that match at
+     * least one of these regular expressions will be excluded from the scan.
+     * 
+     */
     public Optional<Output<List<String>>> excludeRegexes() {
         return Optional.ofNullable(this.excludeRegexes);
     }
@@ -49,6 +58,13 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     @Import(name="includeRegexes")
     private @Nullable Output<List<String>> includeRegexes;
 
+    /**
+     * @return A list of regular expressions matching file paths to include. All files in the bucket
+     * that match at least one of these regular expressions will be included in the set of files,
+     * except for those that also match an item in excludeRegex. Leaving this field empty will
+     * match all files by default (this is equivalent to including .* in the list)
+     * 
+     */
     public Optional<Output<List<String>>> includeRegexes() {
         return Optional.ofNullable(this.includeRegexes);
     }
@@ -79,37 +95,97 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             $ = new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName The name of a Cloud Storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName The name of a Cloud Storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param excludeRegexes A list of regular expressions matching file paths to exclude. All files in the bucket that match at
+         * least one of these regular expressions will be excluded from the scan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeRegexes(@Nullable Output<List<String>> excludeRegexes) {
             $.excludeRegexes = excludeRegexes;
             return this;
         }
 
+        /**
+         * @param excludeRegexes A list of regular expressions matching file paths to exclude. All files in the bucket that match at
+         * least one of these regular expressions will be excluded from the scan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeRegexes(List<String> excludeRegexes) {
             return excludeRegexes(Output.of(excludeRegexes));
         }
 
+        /**
+         * @param excludeRegexes A list of regular expressions matching file paths to exclude. All files in the bucket that match at
+         * least one of these regular expressions will be excluded from the scan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeRegexes(String... excludeRegexes) {
             return excludeRegexes(List.of(excludeRegexes));
         }
 
+        /**
+         * @param includeRegexes A list of regular expressions matching file paths to include. All files in the bucket
+         * that match at least one of these regular expressions will be included in the set of files,
+         * except for those that also match an item in excludeRegex. Leaving this field empty will
+         * match all files by default (this is equivalent to including .* in the list)
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeRegexes(@Nullable Output<List<String>> includeRegexes) {
             $.includeRegexes = includeRegexes;
             return this;
         }
 
+        /**
+         * @param includeRegexes A list of regular expressions matching file paths to include. All files in the bucket
+         * that match at least one of these regular expressions will be included in the set of files,
+         * except for those that also match an item in excludeRegex. Leaving this field empty will
+         * match all files by default (this is equivalent to including .* in the list)
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeRegexes(List<String> includeRegexes) {
             return includeRegexes(Output.of(includeRegexes));
         }
 
+        /**
+         * @param includeRegexes A list of regular expressions matching file paths to include. All files in the bucket
+         * that match at least one of these regular expressions will be included in the set of files,
+         * except for those that also match an item in excludeRegex. Leaving this field empty will
+         * match all files by default (this is equivalent to including .* in the list)
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeRegexes(String... includeRegexes) {
             return includeRegexes(List.of(includeRegexes));
         }

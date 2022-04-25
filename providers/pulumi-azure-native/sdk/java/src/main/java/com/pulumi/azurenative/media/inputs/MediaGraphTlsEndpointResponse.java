@@ -29,6 +29,10 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
     @Import(name="credentials")
     private @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
 
+    /**
+     * @return Polymorphic credentials to present to the endpoint.
+     * 
+     */
     public Optional<MediaGraphUsernamePasswordCredentialsResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -41,6 +45,11 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphTlsEndpoint&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -52,6 +61,10 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
     @Import(name="trustedCertificates")
     private @Nullable MediaGraphPemCertificateListResponse trustedCertificates;
 
+    /**
+     * @return What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media&#39;s source of trust should be used.
+     * 
+     */
     public Optional<MediaGraphPemCertificateListResponse> trustedCertificates() {
         return Optional.ofNullable(this.trustedCertificates);
     }
@@ -63,6 +76,10 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return Url for the endpoint.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -74,6 +91,10 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
     @Import(name="validationOptions")
     private @Nullable MediaGraphTlsValidationOptionsResponse validationOptions;
 
+    /**
+     * @return Validation options to use when authenticating a TLS connection. By default, strict validation is used.
+     * 
+     */
     public Optional<MediaGraphTlsValidationOptionsResponse> validationOptions() {
         return Optional.ofNullable(this.validationOptions);
     }
@@ -106,26 +127,57 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
             $ = new MediaGraphTlsEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credentials Polymorphic credentials to present to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable MediaGraphUsernamePasswordCredentialsResponse credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphTlsEndpoint&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param trustedCertificates What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media&#39;s source of trust should be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedCertificates(@Nullable MediaGraphPemCertificateListResponse trustedCertificates) {
             $.trustedCertificates = trustedCertificates;
             return this;
         }
 
+        /**
+         * @param url Url for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param validationOptions Validation options to use when authenticating a TLS connection. By default, strict validation is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOptions(@Nullable MediaGraphTlsValidationOptionsResponse validationOptions) {
             $.validationOptions = validationOptions;
             return this;

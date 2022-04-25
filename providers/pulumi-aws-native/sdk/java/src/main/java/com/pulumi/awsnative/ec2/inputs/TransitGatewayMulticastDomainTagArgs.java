@@ -22,6 +22,10 @@ public final class TransitGatewayMulticastDomainTagArgs extends com.pulumi.resou
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return The key of the tag. Constraints: Tag keys are case-sensitive and accept a maximum of 127 Unicode characters. May not begin with aws:.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -33,6 +37,10 @@ public final class TransitGatewayMulticastDomainTagArgs extends com.pulumi.resou
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The value of the tag. Constraints: Tag values are case-sensitive and accept a maximum of 255 Unicode characters.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -62,20 +70,44 @@ public final class TransitGatewayMulticastDomainTagArgs extends com.pulumi.resou
             $ = new TransitGatewayMulticastDomainTagArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key of the tag. Constraints: Tag keys are case-sensitive and accept a maximum of 127 Unicode characters. May not begin with aws:.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The key of the tag. Constraints: Tag keys are case-sensitive and accept a maximum of 127 Unicode characters. May not begin with aws:.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param value The value of the tag. Constraints: Tag values are case-sensitive and accept a maximum of 255 Unicode characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of the tag. Constraints: Tag values are case-sensitive and accept a maximum of 255 Unicode characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

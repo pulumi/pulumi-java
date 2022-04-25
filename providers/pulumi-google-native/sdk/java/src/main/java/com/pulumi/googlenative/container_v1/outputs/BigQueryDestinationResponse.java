@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class BigQueryDestinationResponse {
     /**
-     * The ID of a BigQuery Dataset.
+     * @return The ID of a BigQuery Dataset.
      * 
      */
     private final String datasetId;
@@ -21,9 +21,9 @@ public final class BigQueryDestinationResponse {
     }
 
     /**
-     * The ID of a BigQuery Dataset.
+     * @return The ID of a BigQuery Dataset.
      * 
-    */
+     */
     public String datasetId() {
         return this.datasetId;
     }

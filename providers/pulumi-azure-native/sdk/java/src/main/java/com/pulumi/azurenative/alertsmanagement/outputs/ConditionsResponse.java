@@ -12,37 +12,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConditionsResponse {
     /**
-     * filter alerts by alert context (payload)
+     * @return filter alerts by alert context (payload)
      * 
      */
     private final @Nullable ConditionResponse alertContext;
     /**
-     * filter alerts by alert rule id
+     * @return filter alerts by alert rule id
      * 
      */
     private final @Nullable ConditionResponse alertRuleId;
     /**
-     * filter alerts by alert rule description
+     * @return filter alerts by alert rule description
      * 
      */
     private final @Nullable ConditionResponse description;
     /**
-     * filter alerts by monitor condition
+     * @return filter alerts by monitor condition
      * 
      */
     private final @Nullable ConditionResponse monitorCondition;
     /**
-     * filter alerts by monitor service
+     * @return filter alerts by monitor service
      * 
      */
     private final @Nullable ConditionResponse monitorService;
     /**
-     * filter alerts by severity
+     * @return filter alerts by severity
      * 
      */
     private final @Nullable ConditionResponse severity;
     /**
-     * filter alerts by target resource type
+     * @return filter alerts by target resource type
      * 
      */
     private final @Nullable ConditionResponse targetResourceType;
@@ -66,51 +66,51 @@ public final class ConditionsResponse {
     }
 
     /**
-     * filter alerts by alert context (payload)
+     * @return filter alerts by alert context (payload)
      * 
-    */
+     */
     public Optional<ConditionResponse> alertContext() {
         return Optional.ofNullable(this.alertContext);
     }
     /**
-     * filter alerts by alert rule id
+     * @return filter alerts by alert rule id
      * 
-    */
+     */
     public Optional<ConditionResponse> alertRuleId() {
         return Optional.ofNullable(this.alertRuleId);
     }
     /**
-     * filter alerts by alert rule description
+     * @return filter alerts by alert rule description
      * 
-    */
+     */
     public Optional<ConditionResponse> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * filter alerts by monitor condition
+     * @return filter alerts by monitor condition
      * 
-    */
+     */
     public Optional<ConditionResponse> monitorCondition() {
         return Optional.ofNullable(this.monitorCondition);
     }
     /**
-     * filter alerts by monitor service
+     * @return filter alerts by monitor service
      * 
-    */
+     */
     public Optional<ConditionResponse> monitorService() {
         return Optional.ofNullable(this.monitorService);
     }
     /**
-     * filter alerts by severity
+     * @return filter alerts by severity
      * 
-    */
+     */
     public Optional<ConditionResponse> severity() {
         return Optional.ofNullable(this.severity);
     }
     /**
-     * filter alerts by target resource type
+     * @return filter alerts by target resource type
      * 
-    */
+     */
     public Optional<ConditionResponse> targetResourceType() {
         return Optional.ofNullable(this.targetResourceType);
     }

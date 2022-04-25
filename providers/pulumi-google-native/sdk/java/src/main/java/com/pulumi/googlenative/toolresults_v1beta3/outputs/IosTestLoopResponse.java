@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class IosTestLoopResponse {
     /**
-     * Bundle ID of the app.
+     * @return Bundle ID of the app.
      * 
      */
     private final String bundleId;
@@ -21,9 +21,9 @@ public final class IosTestLoopResponse {
     }
 
     /**
-     * Bundle ID of the app.
+     * @return Bundle ID of the app.
      * 
-    */
+     */
     public String bundleId() {
         return this.bundleId;
     }

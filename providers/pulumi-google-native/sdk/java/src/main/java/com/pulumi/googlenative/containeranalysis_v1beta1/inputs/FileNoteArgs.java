@@ -28,6 +28,10 @@ public final class FileNoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="checksum")
     private @Nullable Output<List<String>> checksum;
 
+    /**
+     * @return Provide a unique identifier to match analysis information on each specific file in a package
+     * 
+     */
     public Optional<Output<List<String>>> checksum() {
         return Optional.ofNullable(this.checksum);
     }
@@ -39,6 +43,10 @@ public final class FileNoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileType")
     private @Nullable Output<FileNoteFileType> fileType;
 
+    /**
+     * @return This field provides information about the type of file identified
+     * 
+     */
     public Optional<Output<FileNoteFileType>> fileType() {
         return Optional.ofNullable(this.fileType);
     }
@@ -50,6 +58,10 @@ public final class FileNoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Identify the full path and filename that corresponds to the file information in this section
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -80,33 +92,75 @@ public final class FileNoteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FileNoteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checksum Provide a unique identifier to match analysis information on each specific file in a package
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksum(@Nullable Output<List<String>> checksum) {
             $.checksum = checksum;
             return this;
         }
 
+        /**
+         * @param checksum Provide a unique identifier to match analysis information on each specific file in a package
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksum(List<String> checksum) {
             return checksum(Output.of(checksum));
         }
 
+        /**
+         * @param checksum Provide a unique identifier to match analysis information on each specific file in a package
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksum(String... checksum) {
             return checksum(List.of(checksum));
         }
 
+        /**
+         * @param fileType This field provides information about the type of file identified
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileType(@Nullable Output<FileNoteFileType> fileType) {
             $.fileType = fileType;
             return this;
         }
 
+        /**
+         * @param fileType This field provides information about the type of file identified
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileType(FileNoteFileType fileType) {
             return fileType(Output.of(fileType));
         }
 
+        /**
+         * @param title Identify the full path and filename that corresponds to the file information in this section
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Identify the full path and filename that corresponds to the file information in this section
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

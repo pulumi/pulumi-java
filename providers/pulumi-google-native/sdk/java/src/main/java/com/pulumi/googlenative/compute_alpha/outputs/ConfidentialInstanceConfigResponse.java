@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ConfidentialInstanceConfigResponse {
     /**
-     * Defines whether the instance should have confidential compute enabled.
+     * @return Defines whether the instance should have confidential compute enabled.
      * 
      */
     private final Boolean enableConfidentialCompute;
@@ -21,9 +21,9 @@ public final class ConfidentialInstanceConfigResponse {
     }
 
     /**
-     * Defines whether the instance should have confidential compute enabled.
+     * @return Defines whether the instance should have confidential compute enabled.
      * 
-    */
+     */
     public Boolean enableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }

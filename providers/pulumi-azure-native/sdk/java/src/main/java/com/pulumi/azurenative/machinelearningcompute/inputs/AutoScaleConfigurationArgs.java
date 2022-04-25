@@ -31,6 +31,10 @@ public final class AutoScaleConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="maxReplicas")
     private @Nullable Output<Integer> maxReplicas;
 
+    /**
+     * @return The maximum number of replicas for each service.
+     * 
+     */
     public Optional<Output<Integer>> maxReplicas() {
         return Optional.ofNullable(this.maxReplicas);
     }
@@ -42,6 +46,10 @@ public final class AutoScaleConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="minReplicas")
     private @Nullable Output<Integer> minReplicas;
 
+    /**
+     * @return The minimum number of replicas for each service.
+     * 
+     */
     public Optional<Output<Integer>> minReplicas() {
         return Optional.ofNullable(this.minReplicas);
     }
@@ -53,6 +61,10 @@ public final class AutoScaleConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="refreshPeriodInSeconds")
     private @Nullable Output<Integer> refreshPeriodInSeconds;
 
+    /**
+     * @return Refresh period in seconds.
+     * 
+     */
     public Optional<Output<Integer>> refreshPeriodInSeconds() {
         return Optional.ofNullable(this.refreshPeriodInSeconds);
     }
@@ -64,6 +76,10 @@ public final class AutoScaleConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="status")
     private @Nullable Output<Either<String,Status>> status;
 
+    /**
+     * @return If auto-scale is enabled for all services. Each service can turn it off individually.
+     * 
+     */
     public Optional<Output<Either<String,Status>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -75,6 +91,10 @@ public final class AutoScaleConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="targetUtilization")
     private @Nullable Output<Double> targetUtilization;
 
+    /**
+     * @return The target utilization.
+     * 
+     */
     public Optional<Output<Double>> targetUtilization() {
         return Optional.ofNullable(this.targetUtilization);
     }
@@ -107,55 +127,127 @@ public final class AutoScaleConfigurationArgs extends com.pulumi.resources.Resou
             $ = new AutoScaleConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxReplicas The maximum number of replicas for each service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxReplicas(@Nullable Output<Integer> maxReplicas) {
             $.maxReplicas = maxReplicas;
             return this;
         }
 
+        /**
+         * @param maxReplicas The maximum number of replicas for each service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxReplicas(Integer maxReplicas) {
             return maxReplicas(Output.of(maxReplicas));
         }
 
+        /**
+         * @param minReplicas The minimum number of replicas for each service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
             $.minReplicas = minReplicas;
             return this;
         }
 
+        /**
+         * @param minReplicas The minimum number of replicas for each service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReplicas(Integer minReplicas) {
             return minReplicas(Output.of(minReplicas));
         }
 
+        /**
+         * @param refreshPeriodInSeconds Refresh period in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshPeriodInSeconds(@Nullable Output<Integer> refreshPeriodInSeconds) {
             $.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
 
+        /**
+         * @param refreshPeriodInSeconds Refresh period in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshPeriodInSeconds(Integer refreshPeriodInSeconds) {
             return refreshPeriodInSeconds(Output.of(refreshPeriodInSeconds));
         }
 
+        /**
+         * @param status If auto-scale is enabled for all services. Each service can turn it off individually.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,Status>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status If auto-scale is enabled for all services. Each service can turn it off individually.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,Status> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status If auto-scale is enabled for all services. Each service can turn it off individually.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status If auto-scale is enabled for all services. Each service can turn it off individually.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Status status) {
             return status(Either.ofRight(status));
         }
 
+        /**
+         * @param targetUtilization The target utilization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilization(@Nullable Output<Double> targetUtilization) {
             $.targetUtilization = targetUtilization;
             return this;
         }
 
+        /**
+         * @param targetUtilization The target utilization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilization(Double targetUtilization) {
             return targetUtilization(Output.of(targetUtilization));
         }

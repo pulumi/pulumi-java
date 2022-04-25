@@ -26,6 +26,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dashboardName")
     private @Nullable Output<String> dashboardName;
 
+    /**
+     * @return The name of the dashboard.
+     * 
+     */
     public Optional<Output<String>> dashboardName() {
         return Optional.ofNullable(this.dashboardName);
     }
@@ -37,6 +41,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lenses")
     private @Nullable Output<List<DashboardLensArgs>> lenses;
 
+    /**
+     * @return The dashboard lenses.
+     * 
+     */
     public Optional<Output<List<DashboardLensArgs>>> lenses() {
         return Optional.ofNullable(this.lenses);
     }
@@ -48,6 +56,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -59,6 +71,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,Object>> metadata;
 
+    /**
+     * @return The dashboard metadata.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -70,6 +86,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -81,6 +101,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -114,60 +138,138 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DashboardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dashboardName The name of the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashboardName(@Nullable Output<String> dashboardName) {
             $.dashboardName = dashboardName;
             return this;
         }
 
+        /**
+         * @param dashboardName The name of the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashboardName(String dashboardName) {
             return dashboardName(Output.of(dashboardName));
         }
 
+        /**
+         * @param lenses The dashboard lenses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lenses(@Nullable Output<List<DashboardLensArgs>> lenses) {
             $.lenses = lenses;
             return this;
         }
 
+        /**
+         * @param lenses The dashboard lenses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lenses(List<DashboardLensArgs> lenses) {
             return lenses(Output.of(lenses));
         }
 
+        /**
+         * @param lenses The dashboard lenses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lenses(DashboardLensArgs... lenses) {
             return lenses(List.of(lenses));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param metadata The dashboard metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,Object>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The dashboard metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,Object> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

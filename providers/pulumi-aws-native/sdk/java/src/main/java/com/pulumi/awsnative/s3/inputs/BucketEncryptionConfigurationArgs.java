@@ -24,6 +24,10 @@ public final class BucketEncryptionConfigurationArgs extends com.pulumi.resource
     @Import(name="replicaKmsKeyID", required=true)
     private Output<String> replicaKmsKeyID;
 
+    /**
+     * @return Specifies the ID (Key ARN or Alias ARN) of the customer managed customer master key (CMK) stored in AWS Key Management Service (KMS) for the destination bucket.
+     * 
+     */
     public Output<String> replicaKmsKeyID() {
         return this.replicaKmsKeyID;
     }
@@ -52,11 +56,23 @@ public final class BucketEncryptionConfigurationArgs extends com.pulumi.resource
             $ = new BucketEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param replicaKmsKeyID Specifies the ID (Key ARN or Alias ARN) of the customer managed customer master key (CMK) stored in AWS Key Management Service (KMS) for the destination bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaKmsKeyID(Output<String> replicaKmsKeyID) {
             $.replicaKmsKeyID = replicaKmsKeyID;
             return this;
         }
 
+        /**
+         * @param replicaKmsKeyID Specifies the ID (Key ARN or Alias ARN) of the customer managed customer master key (CMK) stored in AWS Key Management Service (KMS) for the destination bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaKmsKeyID(String replicaKmsKeyID) {
             return replicaKmsKeyID(Output.of(replicaKmsKeyID));
         }

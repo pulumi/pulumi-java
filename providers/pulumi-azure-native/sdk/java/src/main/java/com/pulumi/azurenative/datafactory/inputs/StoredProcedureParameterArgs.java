@@ -29,6 +29,10 @@ public final class StoredProcedureParameterArgs extends com.pulumi.resources.Res
     @Import(name="type")
     private @Nullable Output<Either<String,StoredProcedureParameterType>> type;
 
+    /**
+     * @return Stored procedure parameter type.
+     * 
+     */
     public Optional<Output<Either<String,StoredProcedureParameterType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -40,6 +44,10 @@ public final class StoredProcedureParameterArgs extends com.pulumi.resources.Res
     @Import(name="value")
     private @Nullable Output<Object> value;
 
+    /**
+     * @return Stored procedure parameter value. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -69,28 +77,64 @@ public final class StoredProcedureParameterArgs extends com.pulumi.resources.Res
             $ = new StoredProcedureParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Stored procedure parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,StoredProcedureParameterType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Stored procedure parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,StoredProcedureParameterType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Stored procedure parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Stored procedure parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(StoredProcedureParameterType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param value Stored procedure parameter value. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<Object> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Stored procedure parameter value. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Object value) {
             return value(Output.of(value));
         }

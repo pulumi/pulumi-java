@@ -29,6 +29,10 @@ public final class CollectorPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="createdTimestamp", required=true)
     private String createdTimestamp;
 
+    /**
+     * @return Time when this collector was created. Date-Time represented in ISO-8601 format.
+     * 
+     */
     public String createdTimestamp() {
         return this.createdTimestamp;
     }
@@ -40,6 +44,10 @@ public final class CollectorPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="discoverySiteId")
     private @Nullable String discoverySiteId;
 
+    /**
+     * @return The ARM id of the discovery service site.
+     * 
+     */
     public Optional<String> discoverySiteId() {
         return Optional.ofNullable(this.discoverySiteId);
     }
@@ -51,6 +59,10 @@ public final class CollectorPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="updatedTimestamp", required=true)
     private String updatedTimestamp;
 
+    /**
+     * @return Time when this collector was updated. Date-Time represented in ISO-8601 format.
+     * 
+     */
     public String updatedTimestamp() {
         return this.updatedTimestamp;
     }
@@ -87,16 +99,34 @@ public final class CollectorPropertiesResponse extends com.pulumi.resources.Invo
             return this;
         }
 
+        /**
+         * @param createdTimestamp Time when this collector was created. Date-Time represented in ISO-8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTimestamp(String createdTimestamp) {
             $.createdTimestamp = createdTimestamp;
             return this;
         }
 
+        /**
+         * @param discoverySiteId The ARM id of the discovery service site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoverySiteId(@Nullable String discoverySiteId) {
             $.discoverySiteId = discoverySiteId;
             return this;
         }
 
+        /**
+         * @param updatedTimestamp Time when this collector was updated. Date-Time represented in ISO-8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedTimestamp(String updatedTimestamp) {
             $.updatedTimestamp = updatedTimestamp;
             return this;

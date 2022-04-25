@@ -13,32 +13,32 @@ import java.util.Objects;
 @CustomType
 public final class GetTaxonomyResult {
     /**
-     * Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
+     * @return Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
      * 
      */
     private final List<String> activatedPolicyTypes;
     /**
-     * Optional. Description of this taxonomy. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description.
+     * @return Optional. Description of this taxonomy. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description.
      * 
      */
     private final String description;
     /**
-     * User defined name of this taxonomy. It must: contain only unicode letters, numbers, underscores, dashes and spaces; not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
+     * @return User defined name of this taxonomy. It must: contain only unicode letters, numbers, underscores, dashes and spaces; not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
      * 
      */
     private final String displayName;
     /**
-     * Resource name of this taxonomy, whose format is: &#34;projects/{project_number}/locations/{location_id}/taxonomies/{id}&#34;.
+     * @return Resource name of this taxonomy, whose format is: &#34;projects/{project_number}/locations/{location_id}/taxonomies/{id}&#34;.
      * 
      */
     private final String name;
     /**
-     * Number of policy tags contained in this taxonomy.
+     * @return Number of policy tags contained in this taxonomy.
      * 
      */
     private final Integer policyTagCount;
     /**
-     * Timestamps about this taxonomy. Only create_time and update_time are used.
+     * @return Timestamps about this taxonomy. Only create_time and update_time are used.
      * 
      */
     private final GoogleCloudDatacatalogV1beta1SystemTimestampsResponse taxonomyTimestamps;
@@ -60,44 +60,44 @@ public final class GetTaxonomyResult {
     }
 
     /**
-     * Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
+     * @return Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
      * 
-    */
+     */
     public List<String> activatedPolicyTypes() {
         return this.activatedPolicyTypes;
     }
     /**
-     * Optional. Description of this taxonomy. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description.
+     * @return Optional. Description of this taxonomy. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * User defined name of this taxonomy. It must: contain only unicode letters, numbers, underscores, dashes and spaces; not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
+     * @return User defined name of this taxonomy. It must: contain only unicode letters, numbers, underscores, dashes and spaces; not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Resource name of this taxonomy, whose format is: &#34;projects/{project_number}/locations/{location_id}/taxonomies/{id}&#34;.
+     * @return Resource name of this taxonomy, whose format is: &#34;projects/{project_number}/locations/{location_id}/taxonomies/{id}&#34;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Number of policy tags contained in this taxonomy.
+     * @return Number of policy tags contained in this taxonomy.
      * 
-    */
+     */
     public Integer policyTagCount() {
         return this.policyTagCount;
     }
     /**
-     * Timestamps about this taxonomy. Only create_time and update_time are used.
+     * @return Timestamps about this taxonomy. Only create_time and update_time are used.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1beta1SystemTimestampsResponse taxonomyTimestamps() {
         return this.taxonomyTimestamps;
     }

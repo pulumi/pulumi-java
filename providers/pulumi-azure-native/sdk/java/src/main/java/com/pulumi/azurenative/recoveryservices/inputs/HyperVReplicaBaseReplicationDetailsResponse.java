@@ -30,6 +30,10 @@ public final class HyperVReplicaBaseReplicationDetailsResponse extends com.pulum
     @Import(name="initialReplicationDetails")
     private @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
 
+    /**
+     * @return Initial replication details.
+     * 
+     */
     public Optional<InitialReplicationDetailsResponse> initialReplicationDetails() {
         return Optional.ofNullable(this.initialReplicationDetails);
     }
@@ -42,6 +46,11 @@ public final class HyperVReplicaBaseReplicationDetailsResponse extends com.pulum
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the Instance type.
+     * Expected value is &#39;HyperVReplicaBaseReplicationDetails&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -53,6 +62,10 @@ public final class HyperVReplicaBaseReplicationDetailsResponse extends com.pulum
     @Import(name="lastReplicatedTime")
     private @Nullable String lastReplicatedTime;
 
+    /**
+     * @return The Last replication time.
+     * 
+     */
     public Optional<String> lastReplicatedTime() {
         return Optional.ofNullable(this.lastReplicatedTime);
     }
@@ -64,6 +77,10 @@ public final class HyperVReplicaBaseReplicationDetailsResponse extends com.pulum
     @Import(name="vMDiskDetails")
     private @Nullable List<DiskDetailsResponse> vMDiskDetails;
 
+    /**
+     * @return VM disk details.
+     * 
+     */
     public Optional<List<DiskDetailsResponse>> vMDiskDetails() {
         return Optional.ofNullable(this.vMDiskDetails);
     }
@@ -75,6 +92,10 @@ public final class HyperVReplicaBaseReplicationDetailsResponse extends com.pulum
     @Import(name="vmId")
     private @Nullable String vmId;
 
+    /**
+     * @return The virtual machine Id.
+     * 
+     */
     public Optional<String> vmId() {
         return Optional.ofNullable(this.vmId);
     }
@@ -86,6 +107,10 @@ public final class HyperVReplicaBaseReplicationDetailsResponse extends com.pulum
     @Import(name="vmNics")
     private @Nullable List<VMNicDetailsResponse> vmNics;
 
+    /**
+     * @return The PE Network details.
+     * 
+     */
     public Optional<List<VMNicDetailsResponse>> vmNics() {
         return Optional.ofNullable(this.vmNics);
     }
@@ -97,6 +122,10 @@ public final class HyperVReplicaBaseReplicationDetailsResponse extends com.pulum
     @Import(name="vmProtectionState")
     private @Nullable String vmProtectionState;
 
+    /**
+     * @return The protection state for the vm.
+     * 
+     */
     public Optional<String> vmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
@@ -108,6 +137,10 @@ public final class HyperVReplicaBaseReplicationDetailsResponse extends com.pulum
     @Import(name="vmProtectionStateDescription")
     private @Nullable String vmProtectionStateDescription;
 
+    /**
+     * @return The protection state description for the vm.
+     * 
+     */
     public Optional<String> vmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);
     }
@@ -143,49 +176,110 @@ public final class HyperVReplicaBaseReplicationDetailsResponse extends com.pulum
             $ = new HyperVReplicaBaseReplicationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param initialReplicationDetails Initial replication details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialReplicationDetails(@Nullable InitialReplicationDetailsResponse initialReplicationDetails) {
             $.initialReplicationDetails = initialReplicationDetails;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;HyperVReplicaBaseReplicationDetails&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param lastReplicatedTime The Last replication time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastReplicatedTime(@Nullable String lastReplicatedTime) {
             $.lastReplicatedTime = lastReplicatedTime;
             return this;
         }
 
+        /**
+         * @param vMDiskDetails VM disk details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vMDiskDetails(@Nullable List<DiskDetailsResponse> vMDiskDetails) {
             $.vMDiskDetails = vMDiskDetails;
             return this;
         }
 
+        /**
+         * @param vMDiskDetails VM disk details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vMDiskDetails(DiskDetailsResponse... vMDiskDetails) {
             return vMDiskDetails(List.of(vMDiskDetails));
         }
 
+        /**
+         * @param vmId The virtual machine Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmId(@Nullable String vmId) {
             $.vmId = vmId;
             return this;
         }
 
+        /**
+         * @param vmNics The PE Network details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
             $.vmNics = vmNics;
             return this;
         }
 
+        /**
+         * @param vmNics The PE Network details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmNics(VMNicDetailsResponse... vmNics) {
             return vmNics(List.of(vmNics));
         }
 
+        /**
+         * @param vmProtectionState The protection state for the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmProtectionState(@Nullable String vmProtectionState) {
             $.vmProtectionState = vmProtectionState;
             return this;
         }
 
+        /**
+         * @param vmProtectionStateDescription The protection state description for the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
             $.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;

@@ -31,6 +31,10 @@ public final class LedgerPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="aadBasedSecurityPrincipals")
     private @Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
 
+    /**
+     * @return Array of all AAD based Security Principals.
+     * 
+     */
     public Optional<Output<List<AADBasedSecurityPrincipalArgs>>> aadBasedSecurityPrincipals() {
         return Optional.ofNullable(this.aadBasedSecurityPrincipals);
     }
@@ -42,6 +46,10 @@ public final class LedgerPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="certBasedSecurityPrincipals")
     private @Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
 
+    /**
+     * @return Array of all cert based Security Principals.
+     * 
+     */
     public Optional<Output<List<CertBasedSecurityPrincipalArgs>>> certBasedSecurityPrincipals() {
         return Optional.ofNullable(this.certBasedSecurityPrincipals);
     }
@@ -53,6 +61,10 @@ public final class LedgerPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ledgerStorageAccount")
     private @Nullable Output<String> ledgerStorageAccount;
 
+    /**
+     * @return Name of the Blob Storage Account for saving ledger files
+     * 
+     */
     public Optional<Output<String>> ledgerStorageAccount() {
         return Optional.ofNullable(this.ledgerStorageAccount);
     }
@@ -64,6 +76,10 @@ public final class LedgerPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ledgerType")
     private @Nullable Output<Either<String,LedgerType>> ledgerType;
 
+    /**
+     * @return Type of Confidential Ledger
+     * 
+     */
     public Optional<Output<Either<String,LedgerType>>> ledgerType() {
         return Optional.ofNullable(this.ledgerType);
     }
@@ -95,54 +111,126 @@ public final class LedgerPropertiesArgs extends com.pulumi.resources.ResourceArg
             $ = new LedgerPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadBasedSecurityPrincipals Array of all AAD based Security Principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadBasedSecurityPrincipals(@Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals) {
             $.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
             return this;
         }
 
+        /**
+         * @param aadBasedSecurityPrincipals Array of all AAD based Security Principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadBasedSecurityPrincipals(List<AADBasedSecurityPrincipalArgs> aadBasedSecurityPrincipals) {
             return aadBasedSecurityPrincipals(Output.of(aadBasedSecurityPrincipals));
         }
 
+        /**
+         * @param aadBasedSecurityPrincipals Array of all AAD based Security Principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadBasedSecurityPrincipals(AADBasedSecurityPrincipalArgs... aadBasedSecurityPrincipals) {
             return aadBasedSecurityPrincipals(List.of(aadBasedSecurityPrincipals));
         }
 
+        /**
+         * @param certBasedSecurityPrincipals Array of all cert based Security Principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certBasedSecurityPrincipals(@Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals) {
             $.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
             return this;
         }
 
+        /**
+         * @param certBasedSecurityPrincipals Array of all cert based Security Principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certBasedSecurityPrincipals(List<CertBasedSecurityPrincipalArgs> certBasedSecurityPrincipals) {
             return certBasedSecurityPrincipals(Output.of(certBasedSecurityPrincipals));
         }
 
+        /**
+         * @param certBasedSecurityPrincipals Array of all cert based Security Principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certBasedSecurityPrincipals(CertBasedSecurityPrincipalArgs... certBasedSecurityPrincipals) {
             return certBasedSecurityPrincipals(List.of(certBasedSecurityPrincipals));
         }
 
+        /**
+         * @param ledgerStorageAccount Name of the Blob Storage Account for saving ledger files
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerStorageAccount(@Nullable Output<String> ledgerStorageAccount) {
             $.ledgerStorageAccount = ledgerStorageAccount;
             return this;
         }
 
+        /**
+         * @param ledgerStorageAccount Name of the Blob Storage Account for saving ledger files
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerStorageAccount(String ledgerStorageAccount) {
             return ledgerStorageAccount(Output.of(ledgerStorageAccount));
         }
 
+        /**
+         * @param ledgerType Type of Confidential Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerType(@Nullable Output<Either<String,LedgerType>> ledgerType) {
             $.ledgerType = ledgerType;
             return this;
         }
 
+        /**
+         * @param ledgerType Type of Confidential Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerType(Either<String,LedgerType> ledgerType) {
             return ledgerType(Output.of(ledgerType));
         }
 
+        /**
+         * @param ledgerType Type of Confidential Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerType(String ledgerType) {
             return ledgerType(Either.ofLeft(ledgerType));
         }
 
+        /**
+         * @param ledgerType Type of Confidential Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerType(LedgerType ledgerType) {
             return ledgerType(Either.ofRight(ledgerType));
         }

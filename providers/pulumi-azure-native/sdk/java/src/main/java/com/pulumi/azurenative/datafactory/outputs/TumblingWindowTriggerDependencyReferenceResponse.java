@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TumblingWindowTriggerDependencyReferenceResponse {
     /**
-     * Timespan applied to the start time of a tumbling window when evaluating dependency.
+     * @return Timespan applied to the start time of a tumbling window when evaluating dependency.
      * 
      */
     private final @Nullable String offset;
     /**
-     * Referenced trigger.
+     * @return Referenced trigger.
      * 
      */
     private final TriggerReferenceResponse referenceTrigger;
     /**
-     * The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
+     * @return The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
      * 
      */
     private final @Nullable String size;
     /**
-     * The type of dependency reference.
+     * @return The type of dependency reference.
      * Expected value is &#39;TumblingWindowTriggerDependencyReference&#39;.
      * 
      */
@@ -47,31 +47,31 @@ public final class TumblingWindowTriggerDependencyReferenceResponse {
     }
 
     /**
-     * Timespan applied to the start time of a tumbling window when evaluating dependency.
+     * @return Timespan applied to the start time of a tumbling window when evaluating dependency.
      * 
-    */
+     */
     public Optional<String> offset() {
         return Optional.ofNullable(this.offset);
     }
     /**
-     * Referenced trigger.
+     * @return Referenced trigger.
      * 
-    */
+     */
     public TriggerReferenceResponse referenceTrigger() {
         return this.referenceTrigger;
     }
     /**
-     * The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
+     * @return The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
      * 
-    */
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
     /**
-     * The type of dependency reference.
+     * @return The type of dependency reference.
      * Expected value is &#39;TumblingWindowTriggerDependencyReference&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

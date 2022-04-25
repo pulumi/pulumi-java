@@ -25,6 +25,10 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
     @Import(name="controllerDetails")
     private @Nullable Output<ControllerDetailsArgs> controllerDetails;
 
+    /**
+     * @return Properties of the controller.
+     * 
+     */
     public Optional<Output<ControllerDetailsArgs>> controllerDetails() {
         return Optional.ofNullable(this.controllerDetails);
     }
@@ -36,6 +40,10 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -47,6 +55,10 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -58,6 +70,10 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -69,6 +85,10 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
     @Import(name="subnetDetails")
     private @Nullable Output<SubnetDetailsArgs> subnetDetails;
 
+    /**
+     * @return subnet details
+     * 
+     */
     public Optional<Output<SubnetDetailsArgs>> subnetDetails() {
         return Optional.ofNullable(this.subnetDetails);
     }
@@ -80,6 +100,10 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,56 +137,128 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
             $ = new DelegatedSubnetServiceDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param controllerDetails Properties of the controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controllerDetails(@Nullable Output<ControllerDetailsArgs> controllerDetails) {
             $.controllerDetails = controllerDetails;
             return this;
         }
 
+        /**
+         * @param controllerDetails Properties of the controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controllerDetails(ControllerDetailsArgs controllerDetails) {
             return controllerDetails(Output.of(controllerDetails));
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param subnetDetails subnet details
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetDetails(@Nullable Output<SubnetDetailsArgs> subnetDetails) {
             $.subnetDetails = subnetDetails;
             return this;
         }
 
+        /**
+         * @param subnetDetails subnet details
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetDetails(SubnetDetailsArgs subnetDetails) {
             return subnetDetails(Output.of(subnetDetails));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -29,6 +29,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
     @Import(name="dial")
     private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial;
 
+    /**
+     * @return Suggested client side action: Dial a phone number
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs>> dial() {
         return Optional.ofNullable(this.dial);
     }
@@ -40,6 +44,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
     @Import(name="openUrl")
     private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl;
 
+    /**
+     * @return Suggested client side action: Open a URI on device
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs>> openUrl() {
         return Optional.ofNullable(this.openUrl);
     }
@@ -51,6 +59,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
     @Import(name="postbackData")
     private @Nullable Output<String> postbackData;
 
+    /**
+     * @return Opaque payload that the Dialogflow receives in a user event when the user taps the suggested action. This data will be also forwarded to webhook to allow performing custom business logic.
+     * 
+     */
     public Optional<Output<String>> postbackData() {
         return Optional.ofNullable(this.postbackData);
     }
@@ -62,6 +74,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
     @Import(name="shareLocation")
     private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation;
 
+    /**
+     * @return Suggested client side action: Share user location
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs>> shareLocation() {
         return Optional.ofNullable(this.shareLocation);
     }
@@ -73,6 +89,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
     @Import(name="text")
     private @Nullable Output<String> text;
 
+    /**
+     * @return Text to display alongside the action.
+     * 
+     */
     public Optional<Output<String>> text() {
         return Optional.ofNullable(this.text);
     }
@@ -105,47 +125,107 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dial Suggested client side action: Dial a phone number
+         * 
+         * @return builder
+         * 
+         */
         public Builder dial(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial) {
             $.dial = dial;
             return this;
         }
 
+        /**
+         * @param dial Suggested client side action: Dial a phone number
+         * 
+         * @return builder
+         * 
+         */
         public Builder dial(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs dial) {
             return dial(Output.of(dial));
         }
 
+        /**
+         * @param openUrl Suggested client side action: Open a URI on device
+         * 
+         * @return builder
+         * 
+         */
         public Builder openUrl(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl) {
             $.openUrl = openUrl;
             return this;
         }
 
+        /**
+         * @param openUrl Suggested client side action: Open a URI on device
+         * 
+         * @return builder
+         * 
+         */
         public Builder openUrl(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs openUrl) {
             return openUrl(Output.of(openUrl));
         }
 
+        /**
+         * @param postbackData Opaque payload that the Dialogflow receives in a user event when the user taps the suggested action. This data will be also forwarded to webhook to allow performing custom business logic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postbackData(@Nullable Output<String> postbackData) {
             $.postbackData = postbackData;
             return this;
         }
 
+        /**
+         * @param postbackData Opaque payload that the Dialogflow receives in a user event when the user taps the suggested action. This data will be also forwarded to webhook to allow performing custom business logic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postbackData(String postbackData) {
             return postbackData(Output.of(postbackData));
         }
 
+        /**
+         * @param shareLocation Suggested client side action: Share user location
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareLocation(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation) {
             $.shareLocation = shareLocation;
             return this;
         }
 
+        /**
+         * @param shareLocation Suggested client side action: Share user location
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareLocation(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs shareLocation) {
             return shareLocation(Output.of(shareLocation));
         }
 
+        /**
+         * @param text Text to display alongside the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable Output<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text Text to display alongside the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             return text(Output.of(text));
         }

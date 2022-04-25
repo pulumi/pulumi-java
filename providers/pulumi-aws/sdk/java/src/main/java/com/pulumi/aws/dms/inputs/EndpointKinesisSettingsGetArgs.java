@@ -23,6 +23,10 @@ public final class EndpointKinesisSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="includeControlDetails")
     private @Nullable Output<Boolean> includeControlDetails;
 
+    /**
+     * @return Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> includeControlDetails() {
         return Optional.ofNullable(this.includeControlDetails);
     }
@@ -34,6 +38,10 @@ public final class EndpointKinesisSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="includeNullAndEmpty")
     private @Nullable Output<Boolean> includeNullAndEmpty;
 
+    /**
+     * @return Include NULL and empty columns in the target. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> includeNullAndEmpty() {
         return Optional.ofNullable(this.includeNullAndEmpty);
     }
@@ -45,6 +53,10 @@ public final class EndpointKinesisSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="includePartitionValue")
     private @Nullable Output<Boolean> includePartitionValue;
 
+    /**
+     * @return Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> includePartitionValue() {
         return Optional.ofNullable(this.includePartitionValue);
     }
@@ -56,6 +68,10 @@ public final class EndpointKinesisSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="includeTableAlterOperations")
     private @Nullable Output<Boolean> includeTableAlterOperations;
 
+    /**
+     * @return Includes any data definition language (DDL) operations that change the table in the control data. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> includeTableAlterOperations() {
         return Optional.ofNullable(this.includeTableAlterOperations);
     }
@@ -67,6 +83,10 @@ public final class EndpointKinesisSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="includeTransactionDetails")
     private @Nullable Output<Boolean> includeTransactionDetails;
 
+    /**
+     * @return Provides detailed transaction information from the source database. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> includeTransactionDetails() {
         return Optional.ofNullable(this.includeTransactionDetails);
     }
@@ -78,6 +98,10 @@ public final class EndpointKinesisSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="messageFormat")
     private @Nullable Output<String> messageFormat;
 
+    /**
+     * @return Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+     * 
+     */
     public Optional<Output<String>> messageFormat() {
         return Optional.ofNullable(this.messageFormat);
     }
@@ -89,6 +113,10 @@ public final class EndpointKinesisSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="partitionIncludeSchemaTable")
     private @Nullable Output<Boolean> partitionIncludeSchemaTable;
 
+    /**
+     * @return Prefixes schema and table names to partition values, when the partition type is primary-key-type. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> partitionIncludeSchemaTable() {
         return Optional.ofNullable(this.partitionIncludeSchemaTable);
     }
@@ -100,6 +128,10 @@ public final class EndpointKinesisSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="serviceAccessRoleArn")
     private @Nullable Output<String> serviceAccessRoleArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
+     * 
+     */
     public Optional<Output<String>> serviceAccessRoleArn() {
         return Optional.ofNullable(this.serviceAccessRoleArn);
     }
@@ -111,6 +143,10 @@ public final class EndpointKinesisSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="streamArn")
     private @Nullable Output<String> streamArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Kinesis data stream.
+     * 
+     */
     public Optional<Output<String>> streamArn() {
         return Optional.ofNullable(this.streamArn);
     }
@@ -147,83 +183,191 @@ public final class EndpointKinesisSettingsGetArgs extends com.pulumi.resources.R
             $ = new EndpointKinesisSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param includeControlDetails Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeControlDetails(@Nullable Output<Boolean> includeControlDetails) {
             $.includeControlDetails = includeControlDetails;
             return this;
         }
 
+        /**
+         * @param includeControlDetails Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeControlDetails(Boolean includeControlDetails) {
             return includeControlDetails(Output.of(includeControlDetails));
         }
 
+        /**
+         * @param includeNullAndEmpty Include NULL and empty columns in the target. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeNullAndEmpty(@Nullable Output<Boolean> includeNullAndEmpty) {
             $.includeNullAndEmpty = includeNullAndEmpty;
             return this;
         }
 
+        /**
+         * @param includeNullAndEmpty Include NULL and empty columns in the target. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeNullAndEmpty(Boolean includeNullAndEmpty) {
             return includeNullAndEmpty(Output.of(includeNullAndEmpty));
         }
 
+        /**
+         * @param includePartitionValue Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includePartitionValue(@Nullable Output<Boolean> includePartitionValue) {
             $.includePartitionValue = includePartitionValue;
             return this;
         }
 
+        /**
+         * @param includePartitionValue Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includePartitionValue(Boolean includePartitionValue) {
             return includePartitionValue(Output.of(includePartitionValue));
         }
 
+        /**
+         * @param includeTableAlterOperations Includes any data definition language (DDL) operations that change the table in the control data. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeTableAlterOperations(@Nullable Output<Boolean> includeTableAlterOperations) {
             $.includeTableAlterOperations = includeTableAlterOperations;
             return this;
         }
 
+        /**
+         * @param includeTableAlterOperations Includes any data definition language (DDL) operations that change the table in the control data. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeTableAlterOperations(Boolean includeTableAlterOperations) {
             return includeTableAlterOperations(Output.of(includeTableAlterOperations));
         }
 
+        /**
+         * @param includeTransactionDetails Provides detailed transaction information from the source database. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeTransactionDetails(@Nullable Output<Boolean> includeTransactionDetails) {
             $.includeTransactionDetails = includeTransactionDetails;
             return this;
         }
 
+        /**
+         * @param includeTransactionDetails Provides detailed transaction information from the source database. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeTransactionDetails(Boolean includeTransactionDetails) {
             return includeTransactionDetails(Output.of(includeTransactionDetails));
         }
 
+        /**
+         * @param messageFormat Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFormat(@Nullable Output<String> messageFormat) {
             $.messageFormat = messageFormat;
             return this;
         }
 
+        /**
+         * @param messageFormat Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFormat(String messageFormat) {
             return messageFormat(Output.of(messageFormat));
         }
 
+        /**
+         * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values, when the partition type is primary-key-type. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionIncludeSchemaTable(@Nullable Output<Boolean> partitionIncludeSchemaTable) {
             $.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
             return this;
         }
 
+        /**
+         * @param partitionIncludeSchemaTable Prefixes schema and table names to partition values, when the partition type is primary-key-type. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionIncludeSchemaTable(Boolean partitionIncludeSchemaTable) {
             return partitionIncludeSchemaTable(Output.of(partitionIncludeSchemaTable));
         }
 
+        /**
+         * @param serviceAccessRoleArn Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccessRoleArn(@Nullable Output<String> serviceAccessRoleArn) {
             $.serviceAccessRoleArn = serviceAccessRoleArn;
             return this;
         }
 
+        /**
+         * @param serviceAccessRoleArn Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccessRoleArn(String serviceAccessRoleArn) {
             return serviceAccessRoleArn(Output.of(serviceAccessRoleArn));
         }
 
+        /**
+         * @param streamArn Amazon Resource Name (ARN) of the Kinesis data stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamArn(@Nullable Output<String> streamArn) {
             $.streamArn = streamArn;
             return this;
         }
 
+        /**
+         * @param streamArn Amazon Resource Name (ARN) of the Kinesis data stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamArn(String streamArn) {
             return streamArn(Output.of(streamArn));
         }

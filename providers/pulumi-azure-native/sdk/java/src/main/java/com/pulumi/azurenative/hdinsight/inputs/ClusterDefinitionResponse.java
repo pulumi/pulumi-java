@@ -27,6 +27,10 @@ public final class ClusterDefinitionResponse extends com.pulumi.resources.Invoke
     @Import(name="blueprint")
     private @Nullable String blueprint;
 
+    /**
+     * @return The link to the blueprint.
+     * 
+     */
     public Optional<String> blueprint() {
         return Optional.ofNullable(this.blueprint);
     }
@@ -38,6 +42,10 @@ public final class ClusterDefinitionResponse extends com.pulumi.resources.Invoke
     @Import(name="componentVersion")
     private @Nullable Map<String,String> componentVersion;
 
+    /**
+     * @return The versions of different services in the cluster.
+     * 
+     */
     public Optional<Map<String,String>> componentVersion() {
         return Optional.ofNullable(this.componentVersion);
     }
@@ -49,6 +57,10 @@ public final class ClusterDefinitionResponse extends com.pulumi.resources.Invoke
     @Import(name="configurations")
     private @Nullable Object configurations;
 
+    /**
+     * @return The cluster configurations.
+     * 
+     */
     public Optional<Object> configurations() {
         return Optional.ofNullable(this.configurations);
     }
@@ -60,6 +72,10 @@ public final class ClusterDefinitionResponse extends com.pulumi.resources.Invoke
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return The type of cluster.
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -91,21 +107,45 @@ public final class ClusterDefinitionResponse extends com.pulumi.resources.Invoke
             $ = new ClusterDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blueprint The link to the blueprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blueprint(@Nullable String blueprint) {
             $.blueprint = blueprint;
             return this;
         }
 
+        /**
+         * @param componentVersion The versions of different services in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentVersion(@Nullable Map<String,String> componentVersion) {
             $.componentVersion = componentVersion;
             return this;
         }
 
+        /**
+         * @param configurations The cluster configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurations(@Nullable Object configurations) {
             $.configurations = configurations;
             return this;
         }
 
+        /**
+         * @param kind The type of cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;

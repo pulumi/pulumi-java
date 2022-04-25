@@ -21,6 +21,10 @@ public final class ServiceTemplateSpecVolumeArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Volume&#39;s name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -35,6 +39,13 @@ public final class ServiceTemplateSpecVolumeArgs extends com.pulumi.resources.Re
     @Import(name="secret", required=true)
     private Output<ServiceTemplateSpecVolumeSecretArgs> secret;
 
+    /**
+     * @return The secret&#39;s value will be presented as the content of a file whose
+     * name is defined in the item path. If no items are defined, the name of
+     * the file is the secret_name.
+     * Structure is documented below.
+     * 
+     */
     public Output<ServiceTemplateSpecVolumeSecretArgs> secret() {
         return this.secret;
     }
@@ -64,20 +75,50 @@ public final class ServiceTemplateSpecVolumeArgs extends com.pulumi.resources.Re
             $ = new ServiceTemplateSpecVolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param secret The secret&#39;s value will be presented as the content of a file whose
+         * name is defined in the item path. If no items are defined, the name of
+         * the file is the secret_name.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(Output<ServiceTemplateSpecVolumeSecretArgs> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret The secret&#39;s value will be presented as the content of a file whose
+         * name is defined in the item path. If no items are defined, the name of
+         * the file is the secret_name.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(ServiceTemplateSpecVolumeSecretArgs secret) {
             return secret(Output.of(secret));
         }

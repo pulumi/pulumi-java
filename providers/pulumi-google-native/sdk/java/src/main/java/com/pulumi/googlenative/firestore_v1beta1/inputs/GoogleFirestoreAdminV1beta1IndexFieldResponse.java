@@ -23,6 +23,10 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse extends com.pul
     @Import(name="fieldPath", required=true)
     private String fieldPath;
 
+    /**
+     * @return The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
+     * 
+     */
     public String fieldPath() {
         return this.fieldPath;
     }
@@ -34,6 +38,10 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse extends com.pul
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return The field&#39;s mode.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -63,11 +71,23 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse extends com.pul
             $ = new GoogleFirestoreAdminV1beta1IndexFieldResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fieldPath The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldPath(String fieldPath) {
             $.fieldPath = fieldPath;
             return this;
         }
 
+        /**
+         * @param mode The field&#39;s mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;

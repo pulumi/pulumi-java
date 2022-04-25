@@ -28,6 +28,15 @@ public final class FirewallAllowGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ports")
     private @Nullable Output<List<String>> ports;
 
+    /**
+     * @return An optional list of ports to which this rule applies. This field
+     * is only applicable for UDP or TCP protocol. Each entry must be
+     * either an integer or a range. If not specified, this rule
+     * applies to connections through any port.
+     * Example inputs include: [&#34;22&#34;], [&#34;80&#34;,&#34;443&#34;], and
+     * [&#34;12345-12349&#34;].
+     * 
+     */
     public Optional<Output<List<String>>> ports() {
         return Optional.ofNullable(this.ports);
     }
@@ -42,6 +51,13 @@ public final class FirewallAllowGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="protocol", required=true)
     private Output<String> protocol;
 
+    /**
+     * @return The IP protocol to which this rule applies. The protocol type is
+     * required when creating a firewall rule. This value can either be
+     * one of the following well known protocol strings (tcp, udp,
+     * icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
+     * 
+     */
     public Output<String> protocol() {
         return this.protocol;
     }
@@ -71,24 +87,75 @@ public final class FirewallAllowGetArgs extends com.pulumi.resources.ResourceArg
             $ = new FirewallAllowGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ports An optional list of ports to which this rule applies. This field
+         * is only applicable for UDP or TCP protocol. Each entry must be
+         * either an integer or a range. If not specified, this rule
+         * applies to connections through any port.
+         * Example inputs include: [&#34;22&#34;], [&#34;80&#34;,&#34;443&#34;], and
+         * [&#34;12345-12349&#34;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(@Nullable Output<List<String>> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports An optional list of ports to which this rule applies. This field
+         * is only applicable for UDP or TCP protocol. Each entry must be
+         * either an integer or a range. If not specified, this rule
+         * applies to connections through any port.
+         * Example inputs include: [&#34;22&#34;], [&#34;80&#34;,&#34;443&#34;], and
+         * [&#34;12345-12349&#34;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<String> ports) {
             return ports(Output.of(ports));
         }
 
+        /**
+         * @param ports An optional list of ports to which this rule applies. This field
+         * is only applicable for UDP or TCP protocol. Each entry must be
+         * either an integer or a range. If not specified, this rule
+         * applies to connections through any port.
+         * Example inputs include: [&#34;22&#34;], [&#34;80&#34;,&#34;443&#34;], and
+         * [&#34;12345-12349&#34;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(String... ports) {
             return ports(List.of(ports));
         }
 
+        /**
+         * @param protocol The IP protocol to which this rule applies. The protocol type is
+         * required when creating a firewall rule. This value can either be
+         * one of the following well known protocol strings (tcp, udp,
+         * icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The IP protocol to which this rule applies. The protocol type is
+         * required when creating a firewall rule. This value can either be
+         * one of the following well known protocol strings (tcp, udp,
+         * icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }

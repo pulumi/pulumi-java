@@ -25,6 +25,10 @@ public final class TransferConfigurationResponseTransferAllDetails extends com.p
     @Import(name="include")
     private @Nullable TransferAllDetailsResponse include;
 
+    /**
+     * @return Details to transfer all data.
+     * 
+     */
     public Optional<TransferAllDetailsResponse> include() {
         return Optional.ofNullable(this.include);
     }
@@ -53,6 +57,12 @@ public final class TransferConfigurationResponseTransferAllDetails extends com.p
             $ = new TransferConfigurationResponseTransferAllDetails(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param include Details to transfer all data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder include(@Nullable TransferAllDetailsResponse include) {
             $.include = include;
             return this;

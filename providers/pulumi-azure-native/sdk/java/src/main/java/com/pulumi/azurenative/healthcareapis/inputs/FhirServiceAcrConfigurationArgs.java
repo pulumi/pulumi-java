@@ -27,6 +27,10 @@ public final class FhirServiceAcrConfigurationArgs extends com.pulumi.resources.
     @Import(name="loginServers")
     private @Nullable Output<List<String>> loginServers;
 
+    /**
+     * @return The list of the Azure container registry login servers.
+     * 
+     */
     public Optional<Output<List<String>>> loginServers() {
         return Optional.ofNullable(this.loginServers);
     }
@@ -55,15 +59,33 @@ public final class FhirServiceAcrConfigurationArgs extends com.pulumi.resources.
             $ = new FhirServiceAcrConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loginServers The list of the Azure container registry login servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginServers(@Nullable Output<List<String>> loginServers) {
             $.loginServers = loginServers;
             return this;
         }
 
+        /**
+         * @param loginServers The list of the Azure container registry login servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginServers(List<String> loginServers) {
             return loginServers(Output.of(loginServers));
         }
 
+        /**
+         * @param loginServers The list of the Azure container registry login servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginServers(String... loginServers) {
             return loginServers(List.of(loginServers));
         }

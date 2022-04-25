@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse {
     /**
-     * The resource name of the KMS CryptoKey to use for unwrapping.
+     * @return The resource name of the KMS CryptoKey to use for unwrapping.
      * 
      */
     private final String cryptoKeyName;
     /**
-     * The wrapped data crypto key.
+     * @return The wrapped data crypto key.
      * 
      */
     private final String wrappedKey;
@@ -29,16 +29,16 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse {
     }
 
     /**
-     * The resource name of the KMS CryptoKey to use for unwrapping.
+     * @return The resource name of the KMS CryptoKey to use for unwrapping.
      * 
-    */
+     */
     public String cryptoKeyName() {
         return this.cryptoKeyName;
     }
     /**
-     * The wrapped data crypto key.
+     * @return The wrapped data crypto key.
      * 
-    */
+     */
     public String wrappedKey() {
         return this.wrappedKey;
     }

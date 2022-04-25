@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IncidentInfoResponse {
     /**
-     * Incident Id
+     * @return Incident Id
      * 
      */
     private final @Nullable String incidentId;
     /**
-     * Relation Name
+     * @return Relation Name
      * 
      */
     private final @Nullable String relationName;
     /**
-     * The severity of the incident
+     * @return The severity of the incident
      * 
      */
     private final @Nullable String severity;
     /**
-     * The title of the incident
+     * @return The title of the incident
      * 
      */
     private final @Nullable String title;
@@ -45,30 +45,30 @@ public final class IncidentInfoResponse {
     }
 
     /**
-     * Incident Id
+     * @return Incident Id
      * 
-    */
+     */
     public Optional<String> incidentId() {
         return Optional.ofNullable(this.incidentId);
     }
     /**
-     * Relation Name
+     * @return Relation Name
      * 
-    */
+     */
     public Optional<String> relationName() {
         return Optional.ofNullable(this.relationName);
     }
     /**
-     * The severity of the incident
+     * @return The severity of the incident
      * 
-    */
+     */
     public Optional<String> severity() {
         return Optional.ofNullable(this.severity);
     }
     /**
-     * The title of the incident
+     * @return The title of the incident
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }

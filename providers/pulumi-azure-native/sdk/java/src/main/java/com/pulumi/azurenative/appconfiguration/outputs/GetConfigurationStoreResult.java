@@ -18,67 +18,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetConfigurationStoreResult {
     /**
-     * The creation date of configuration store.
+     * @return The creation date of configuration store.
      * 
      */
     private final String creationDate;
     /**
-     * The encryption settings of the configuration store.
+     * @return The encryption settings of the configuration store.
      * 
      */
     private final @Nullable EncryptionPropertiesResponse encryption;
     /**
-     * The DNS endpoint where the configuration store API will be available.
+     * @return The DNS endpoint where the configuration store API will be available.
      * 
      */
     private final String endpoint;
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
      */
     private final String id;
     /**
-     * The managed identity information, if configured.
+     * @return The managed identity information, if configured.
      * 
      */
     private final @Nullable ResourceIdentityResponse identity;
     /**
-     * The location of the resource. This cannot be changed after the resource is created.
+     * @return The location of the resource. This cannot be changed after the resource is created.
      * 
      */
     private final String location;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The list of private endpoint connections that are set up for this resource.
+     * @return The list of private endpoint connections that are set up for this resource.
      * 
      */
     private final List<PrivateEndpointConnectionReferenceResponse> privateEndpointConnections;
     /**
-     * The provisioning state of the configuration store.
+     * @return The provisioning state of the configuration store.
      * 
      */
     private final String provisioningState;
     /**
-     * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
      * 
      */
     private final @Nullable String publicNetworkAccess;
     /**
-     * The sku of the configuration store.
+     * @return The sku of the configuration store.
      * 
      */
     private final SkuResponse sku;
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -114,93 +114,93 @@ public final class GetConfigurationStoreResult {
     }
 
     /**
-     * The creation date of configuration store.
+     * @return The creation date of configuration store.
      * 
-    */
+     */
     public String creationDate() {
         return this.creationDate;
     }
     /**
-     * The encryption settings of the configuration store.
+     * @return The encryption settings of the configuration store.
      * 
-    */
+     */
     public Optional<EncryptionPropertiesResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * The DNS endpoint where the configuration store API will be available.
+     * @return The DNS endpoint where the configuration store API will be available.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The managed identity information, if configured.
+     * @return The managed identity information, if configured.
      * 
-    */
+     */
     public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The location of the resource. This cannot be changed after the resource is created.
+     * @return The location of the resource. This cannot be changed after the resource is created.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The list of private endpoint connections that are set up for this resource.
+     * @return The list of private endpoint connections that are set up for this resource.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionReferenceResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
-     * The provisioning state of the configuration store.
+     * @return The provisioning state of the configuration store.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
      * 
-    */
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
-     * The sku of the configuration store.
+     * @return The sku of the configuration store.
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

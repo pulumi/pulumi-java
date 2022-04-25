@@ -26,6 +26,10 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="ipamPoolAllocationId", required=true)
     private String ipamPoolAllocationId;
 
+    /**
+     * @return Id of the allocation.
+     * 
+     */
     public String ipamPoolAllocationId() {
         return this.ipamPoolAllocationId;
     }
@@ -37,6 +41,10 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="ipamPoolId", required=true)
     private String ipamPoolId;
 
+    /**
+     * @return Id of the IPAM Pool.
+     * 
+     */
     public String ipamPoolId() {
         return this.ipamPoolId;
     }
@@ -72,11 +80,23 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
             return this;
         }
 
+        /**
+         * @param ipamPoolAllocationId Id of the allocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamPoolAllocationId(String ipamPoolAllocationId) {
             $.ipamPoolAllocationId = ipamPoolAllocationId;
             return this;
         }
 
+        /**
+         * @param ipamPoolId Id of the IPAM Pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamPoolId(String ipamPoolId) {
             $.ipamPoolId = ipamPoolId;
             return this;

@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetManagementGroupResult {
     /**
-     * The list of children.
+     * @return The list of children.
      * 
      */
     private final @Nullable List<ManagementGroupChildInfoResponse> children;
     /**
-     * The details of a management group.
+     * @return The details of a management group.
      * 
      */
     private final @Nullable ManagementGroupDetailsResponse details;
     /**
-     * The friendly name of the management group.
+     * @return The friendly name of the management group.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * The fully qualified ID for the management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+     * @return The fully qualified ID for the management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
      * 
      */
     private final String id;
     /**
-     * The name of the management group. For example, 00000000-0000-0000-0000-000000000000
+     * @return The name of the management group. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
     private final String name;
     /**
-     * The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
+     * @return The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
     private final @Nullable String tenantId;
     /**
-     * The type of the resource.  For example, Microsoft.Management/managementGroups
+     * @return The type of the resource.  For example, Microsoft.Management/managementGroups
      * 
      */
     private final String type;
@@ -69,51 +69,51 @@ public final class GetManagementGroupResult {
     }
 
     /**
-     * The list of children.
+     * @return The list of children.
      * 
-    */
+     */
     public List<ManagementGroupChildInfoResponse> children() {
         return this.children == null ? List.of() : this.children;
     }
     /**
-     * The details of a management group.
+     * @return The details of a management group.
      * 
-    */
+     */
     public Optional<ManagementGroupDetailsResponse> details() {
         return Optional.ofNullable(this.details);
     }
     /**
-     * The friendly name of the management group.
+     * @return The friendly name of the management group.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The fully qualified ID for the management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+     * @return The fully qualified ID for the management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the management group. For example, 00000000-0000-0000-0000-000000000000
+     * @return The name of the management group. For example, 00000000-0000-0000-0000-000000000000
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
+     * @return The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * The type of the resource.  For example, Microsoft.Management/managementGroups
+     * @return The type of the resource.  For example, Microsoft.Management/managementGroups
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

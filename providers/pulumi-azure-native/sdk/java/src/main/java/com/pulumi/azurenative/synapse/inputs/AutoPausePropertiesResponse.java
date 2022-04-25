@@ -26,6 +26,10 @@ public final class AutoPausePropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="delayInMinutes")
     private @Nullable Integer delayInMinutes;
 
+    /**
+     * @return Number of minutes of idle time before the Big Data pool is automatically paused.
+     * 
+     */
     public Optional<Integer> delayInMinutes() {
         return Optional.ofNullable(this.delayInMinutes);
     }
@@ -37,6 +41,10 @@ public final class AutoPausePropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Whether auto-pausing is enabled for the Big Data pool.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -66,11 +74,23 @@ public final class AutoPausePropertiesResponse extends com.pulumi.resources.Invo
             $ = new AutoPausePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delayInMinutes Number of minutes of idle time before the Big Data pool is automatically paused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delayInMinutes(@Nullable Integer delayInMinutes) {
             $.delayInMinutes = delayInMinutes;
             return this;
         }
 
+        /**
+         * @param enabled Whether auto-pausing is enabled for the Big Data pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;

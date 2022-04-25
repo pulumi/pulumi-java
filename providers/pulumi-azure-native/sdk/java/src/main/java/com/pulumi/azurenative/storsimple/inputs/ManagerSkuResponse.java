@@ -23,6 +23,10 @@ public final class ManagerSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Refers to the sku name which should be &#34;Standard&#34;
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -51,6 +55,12 @@ public final class ManagerSkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ManagerSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Refers to the sku name which should be &#34;Standard&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

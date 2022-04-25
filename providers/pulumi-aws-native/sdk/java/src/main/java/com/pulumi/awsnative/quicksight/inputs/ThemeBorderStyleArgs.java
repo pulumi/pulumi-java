@@ -26,6 +26,10 @@ public final class ThemeBorderStyleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="show")
     private @Nullable Output<Boolean> show;
 
+    /**
+     * @return &lt;p&gt;The option to enable display of borders for visuals.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<Boolean>> show() {
         return Optional.ofNullable(this.show);
     }
@@ -54,11 +58,23 @@ public final class ThemeBorderStyleArgs extends com.pulumi.resources.ResourceArg
             $ = new ThemeBorderStyleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param show &lt;p&gt;The option to enable display of borders for visuals.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder show(@Nullable Output<Boolean> show) {
             $.show = show;
             return this;
         }
 
+        /**
+         * @param show &lt;p&gt;The option to enable display of borders for visuals.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder show(Boolean show) {
             return show(Output.of(show));
         }

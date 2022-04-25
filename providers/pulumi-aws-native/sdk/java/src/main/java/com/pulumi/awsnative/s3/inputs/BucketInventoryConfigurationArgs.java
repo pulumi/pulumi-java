@@ -35,6 +35,10 @@ public final class BucketInventoryConfigurationArgs extends com.pulumi.resources
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Specifies whether the inventory is enabled or disabled.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -46,6 +50,10 @@ public final class BucketInventoryConfigurationArgs extends com.pulumi.resources
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The ID used to identify the inventory configuration.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -57,6 +65,10 @@ public final class BucketInventoryConfigurationArgs extends com.pulumi.resources
     @Import(name="includedObjectVersions", required=true)
     private Output<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions;
 
+    /**
+     * @return Object versions to include in the inventory list.
+     * 
+     */
     public Output<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions() {
         return this.includedObjectVersions;
     }
@@ -68,6 +80,10 @@ public final class BucketInventoryConfigurationArgs extends com.pulumi.resources
     @Import(name="optionalFields")
     private @Nullable Output<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields;
 
+    /**
+     * @return Contains the optional fields that are included in the inventory results.
+     * 
+     */
     public Optional<Output<List<BucketInventoryConfigurationOptionalFieldsItem>>> optionalFields() {
         return Optional.ofNullable(this.optionalFields);
     }
@@ -79,6 +95,10 @@ public final class BucketInventoryConfigurationArgs extends com.pulumi.resources
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return The prefix that is prepended to all inventory results.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -90,6 +110,10 @@ public final class BucketInventoryConfigurationArgs extends com.pulumi.resources
     @Import(name="scheduleFrequency", required=true)
     private Output<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency;
 
+    /**
+     * @return Specifies the schedule for generating inventory results.
+     * 
+     */
     public Output<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency() {
         return this.scheduleFrequency;
     }
@@ -133,60 +157,138 @@ public final class BucketInventoryConfigurationArgs extends com.pulumi.resources
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param enabled Specifies whether the inventory is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Specifies whether the inventory is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param id The ID used to identify the inventory configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ID used to identify the inventory configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param includedObjectVersions Object versions to include in the inventory list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedObjectVersions(Output<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions) {
             $.includedObjectVersions = includedObjectVersions;
             return this;
         }
 
+        /**
+         * @param includedObjectVersions Object versions to include in the inventory list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedObjectVersions(BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions) {
             return includedObjectVersions(Output.of(includedObjectVersions));
         }
 
+        /**
+         * @param optionalFields Contains the optional fields that are included in the inventory results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optionalFields(@Nullable Output<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields) {
             $.optionalFields = optionalFields;
             return this;
         }
 
+        /**
+         * @param optionalFields Contains the optional fields that are included in the inventory results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optionalFields(List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields) {
             return optionalFields(Output.of(optionalFields));
         }
 
+        /**
+         * @param optionalFields Contains the optional fields that are included in the inventory results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optionalFields(BucketInventoryConfigurationOptionalFieldsItem... optionalFields) {
             return optionalFields(List.of(optionalFields));
         }
 
+        /**
+         * @param prefix The prefix that is prepended to all inventory results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix The prefix that is prepended to all inventory results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param scheduleFrequency Specifies the schedule for generating inventory results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleFrequency(Output<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency) {
             $.scheduleFrequency = scheduleFrequency;
             return this;
         }
 
+        /**
+         * @param scheduleFrequency Specifies the schedule for generating inventory results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleFrequency(BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
             return scheduleFrequency(Output.of(scheduleFrequency));
         }

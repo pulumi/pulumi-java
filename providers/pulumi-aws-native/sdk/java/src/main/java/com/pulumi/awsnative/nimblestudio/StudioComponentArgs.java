@@ -36,6 +36,10 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return &lt;p&gt;The description.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +51,10 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ec2SecurityGroupIds")
     private @Nullable Output<List<String>> ec2SecurityGroupIds;
 
+    /**
+     * @return &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<String>>> ec2SecurityGroupIds() {
         return Optional.ofNullable(this.ec2SecurityGroupIds);
     }
@@ -58,6 +66,10 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="initializationScripts")
     private @Nullable Output<List<StudioComponentInitializationScriptArgs>> initializationScripts;
 
+    /**
+     * @return &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<StudioComponentInitializationScriptArgs>>> initializationScripts() {
         return Optional.ofNullable(this.initializationScripts);
     }
@@ -69,6 +81,10 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return &lt;p&gt;The name for the studio component.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +96,10 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scriptParameters")
     private @Nullable Output<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters;
 
+    /**
+     * @return &lt;p&gt;Parameters for the studio component scripts.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<StudioComponentScriptParameterKeyValueArgs>>> scriptParameters() {
         return Optional.ofNullable(this.scriptParameters);
     }
@@ -91,6 +111,10 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="studioId", required=true)
     private Output<String> studioId;
 
+    /**
+     * @return &lt;p&gt;The studioId. &lt;/p&gt;
+     * 
+     */
     public Output<String> studioId() {
         return this.studioId;
     }
@@ -158,68 +182,158 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param description &lt;p&gt;The description.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description &lt;p&gt;The description.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ec2SecurityGroupIds &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2SecurityGroupIds(@Nullable Output<List<String>> ec2SecurityGroupIds) {
             $.ec2SecurityGroupIds = ec2SecurityGroupIds;
             return this;
         }
 
+        /**
+         * @param ec2SecurityGroupIds &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2SecurityGroupIds(List<String> ec2SecurityGroupIds) {
             return ec2SecurityGroupIds(Output.of(ec2SecurityGroupIds));
         }
 
+        /**
+         * @param ec2SecurityGroupIds &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2SecurityGroupIds(String... ec2SecurityGroupIds) {
             return ec2SecurityGroupIds(List.of(ec2SecurityGroupIds));
         }
 
+        /**
+         * @param initializationScripts &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializationScripts(@Nullable Output<List<StudioComponentInitializationScriptArgs>> initializationScripts) {
             $.initializationScripts = initializationScripts;
             return this;
         }
 
+        /**
+         * @param initializationScripts &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializationScripts(List<StudioComponentInitializationScriptArgs> initializationScripts) {
             return initializationScripts(Output.of(initializationScripts));
         }
 
+        /**
+         * @param initializationScripts &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializationScripts(StudioComponentInitializationScriptArgs... initializationScripts) {
             return initializationScripts(List.of(initializationScripts));
         }
 
+        /**
+         * @param name &lt;p&gt;The name for the studio component.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;The name for the studio component.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param scriptParameters &lt;p&gt;Parameters for the studio component scripts.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptParameters(@Nullable Output<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters) {
             $.scriptParameters = scriptParameters;
             return this;
         }
 
+        /**
+         * @param scriptParameters &lt;p&gt;Parameters for the studio component scripts.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptParameters(List<StudioComponentScriptParameterKeyValueArgs> scriptParameters) {
             return scriptParameters(Output.of(scriptParameters));
         }
 
+        /**
+         * @param scriptParameters &lt;p&gt;Parameters for the studio component scripts.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptParameters(StudioComponentScriptParameterKeyValueArgs... scriptParameters) {
             return scriptParameters(List.of(scriptParameters));
         }
 
+        /**
+         * @param studioId &lt;p&gt;The studioId. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioId(Output<String> studioId) {
             $.studioId = studioId;
             return this;
         }
 
+        /**
+         * @param studioId &lt;p&gt;The studioId. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioId(String studioId) {
             return studioId(Output.of(studioId));
         }

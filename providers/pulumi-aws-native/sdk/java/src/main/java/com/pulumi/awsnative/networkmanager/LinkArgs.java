@@ -25,6 +25,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bandwidth", required=true)
     private Output<LinkBandwidthArgs> bandwidth;
 
+    /**
+     * @return The Bandwidth for the link.
+     * 
+     */
     public Output<LinkBandwidthArgs> bandwidth() {
         return this.bandwidth;
     }
@@ -36,6 +40,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the link.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="globalNetworkId", required=true)
     private Output<String> globalNetworkId;
 
+    /**
+     * @return The ID of the global network.
+     * 
+     */
     public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
@@ -58,6 +70,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provider")
     private @Nullable Output<String> provider;
 
+    /**
+     * @return The provider of the link.
+     * 
+     */
     public Optional<Output<String>> provider() {
         return Optional.ofNullable(this.provider);
     }
@@ -69,6 +85,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="siteId", required=true)
     private Output<String> siteId;
 
+    /**
+     * @return The ID of the site
+     * 
+     */
     public Output<String> siteId() {
         return this.siteId;
     }
@@ -80,6 +100,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<LinkTagArgs>> tags;
 
+    /**
+     * @return The tags for the link.
+     * 
+     */
     public Optional<Output<List<LinkTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -91,6 +115,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of the link.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -125,69 +153,159 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bandwidth The Bandwidth for the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidth(Output<LinkBandwidthArgs> bandwidth) {
             $.bandwidth = bandwidth;
             return this;
         }
 
+        /**
+         * @param bandwidth The Bandwidth for the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidth(LinkBandwidthArgs bandwidth) {
             return bandwidth(Output.of(bandwidth));
         }
 
+        /**
+         * @param description The description of the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNetworkId(Output<String> globalNetworkId) {
             $.globalNetworkId = globalNetworkId;
             return this;
         }
 
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNetworkId(String globalNetworkId) {
             return globalNetworkId(Output.of(globalNetworkId));
         }
 
+        /**
+         * @param provider The provider of the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(@Nullable Output<String> provider) {
             $.provider = provider;
             return this;
         }
 
+        /**
+         * @param provider The provider of the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(String provider) {
             return provider(Output.of(provider));
         }
 
+        /**
+         * @param siteId The ID of the site
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteId(Output<String> siteId) {
             $.siteId = siteId;
             return this;
         }
 
+        /**
+         * @param siteId The ID of the site
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteId(String siteId) {
             return siteId(Output.of(siteId));
         }
 
+        /**
+         * @param tags The tags for the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<LinkTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags for the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<LinkTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags for the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(LinkTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param type The type of the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

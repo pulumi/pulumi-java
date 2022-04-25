@@ -24,6 +24,10 @@ public final class BitbucketServerSecretsArgs extends com.pulumi.resources.Resou
     @Import(name="adminAccessTokenVersionName", required=true)
     private Output<String> adminAccessTokenVersionName;
 
+    /**
+     * @return The resource name for the admin access token&#39;s secret version.
+     * 
+     */
     public Output<String> adminAccessTokenVersionName() {
         return this.adminAccessTokenVersionName;
     }
@@ -35,6 +39,10 @@ public final class BitbucketServerSecretsArgs extends com.pulumi.resources.Resou
     @Import(name="readAccessTokenVersionName", required=true)
     private Output<String> readAccessTokenVersionName;
 
+    /**
+     * @return The resource name for the read access token&#39;s secret version.
+     * 
+     */
     public Output<String> readAccessTokenVersionName() {
         return this.readAccessTokenVersionName;
     }
@@ -46,6 +54,10 @@ public final class BitbucketServerSecretsArgs extends com.pulumi.resources.Resou
     @Import(name="webhookSecretVersionName", required=true)
     private Output<String> webhookSecretVersionName;
 
+    /**
+     * @return Immutable. The resource name for the webhook secret&#39;s secret version. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
+     * 
+     */
     public Output<String> webhookSecretVersionName() {
         return this.webhookSecretVersionName;
     }
@@ -76,29 +88,65 @@ public final class BitbucketServerSecretsArgs extends com.pulumi.resources.Resou
             $ = new BitbucketServerSecretsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminAccessTokenVersionName The resource name for the admin access token&#39;s secret version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminAccessTokenVersionName(Output<String> adminAccessTokenVersionName) {
             $.adminAccessTokenVersionName = adminAccessTokenVersionName;
             return this;
         }
 
+        /**
+         * @param adminAccessTokenVersionName The resource name for the admin access token&#39;s secret version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminAccessTokenVersionName(String adminAccessTokenVersionName) {
             return adminAccessTokenVersionName(Output.of(adminAccessTokenVersionName));
         }
 
+        /**
+         * @param readAccessTokenVersionName The resource name for the read access token&#39;s secret version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readAccessTokenVersionName(Output<String> readAccessTokenVersionName) {
             $.readAccessTokenVersionName = readAccessTokenVersionName;
             return this;
         }
 
+        /**
+         * @param readAccessTokenVersionName The resource name for the read access token&#39;s secret version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readAccessTokenVersionName(String readAccessTokenVersionName) {
             return readAccessTokenVersionName(Output.of(readAccessTokenVersionName));
         }
 
+        /**
+         * @param webhookSecretVersionName Immutable. The resource name for the webhook secret&#39;s secret version. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookSecretVersionName(Output<String> webhookSecretVersionName) {
             $.webhookSecretVersionName = webhookSecretVersionName;
             return this;
         }
 
+        /**
+         * @param webhookSecretVersionName Immutable. The resource name for the webhook secret&#39;s secret version. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookSecretVersionName(String webhookSecretVersionName) {
             return webhookSecretVersionName(Output.of(webhookSecretVersionName));
         }

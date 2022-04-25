@@ -20,6 +20,10 @@ public final class TagOptionResourceAssociationArgs extends com.pulumi.resources
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return Resource identifier.
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -31,6 +35,10 @@ public final class TagOptionResourceAssociationArgs extends com.pulumi.resources
     @Import(name="tagOptionId", required=true)
     private Output<String> tagOptionId;
 
+    /**
+     * @return Tag Option identifier.
+     * 
+     */
     public Output<String> tagOptionId() {
         return this.tagOptionId;
     }
@@ -60,20 +68,44 @@ public final class TagOptionResourceAssociationArgs extends com.pulumi.resources
             $ = new TagOptionResourceAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId Resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param tagOptionId Tag Option identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagOptionId(Output<String> tagOptionId) {
             $.tagOptionId = tagOptionId;
             return this;
         }
 
+        /**
+         * @param tagOptionId Tag Option identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagOptionId(String tagOptionId) {
             return tagOptionId(Output.of(tagOptionId));
         }

@@ -25,6 +25,10 @@ public final class StudioComponentActiveDirectoryComputerAttribute extends com.p
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return &lt;p&gt;The name for the LDAP attribute.&lt;/p&gt;
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class StudioComponentActiveDirectoryComputerAttribute extends com.p
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return &lt;p&gt;The value for the LDAP attribute.&lt;/p&gt;
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class StudioComponentActiveDirectoryComputerAttribute extends com.p
             $ = new StudioComponentActiveDirectoryComputerAttribute(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name &lt;p&gt;The name for the LDAP attribute.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value &lt;p&gt;The value for the LDAP attribute.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DeploymentConfigTrafficRoutingConfigTimeBasedCanary {
     /**
-     * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
+     * @return The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
      * 
      */
     private final @Nullable Integer interval;
     /**
-     * The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
+     * @return The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
      * 
      */
     private final @Nullable Integer percentage;
@@ -31,16 +31,16 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedCanary {
     }
 
     /**
-     * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
+     * @return The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
      * 
-    */
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
-     * The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
+     * @return The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
      * 
-    */
+     */
     public Optional<Integer> percentage() {
         return Optional.ofNullable(this.percentage);
     }

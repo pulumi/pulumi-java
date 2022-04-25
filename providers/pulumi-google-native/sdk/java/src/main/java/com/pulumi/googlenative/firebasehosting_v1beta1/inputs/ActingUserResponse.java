@@ -23,6 +23,10 @@ public final class ActingUserResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return The email address of the user when the user performed the action.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -34,6 +38,10 @@ public final class ActingUserResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="imageUrl", required=true)
     private String imageUrl;
 
+    /**
+     * @return A profile image URL for the user. May not be present if the user has changed their email address or deleted their account.
+     * 
+     */
     public String imageUrl() {
         return this.imageUrl;
     }
@@ -63,11 +71,23 @@ public final class ActingUserResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ActingUserResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The email address of the user when the user performed the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param imageUrl A profile image URL for the user. May not be present if the user has changed their email address or deleted their account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUrl(String imageUrl) {
             $.imageUrl = imageUrl;
             return this;

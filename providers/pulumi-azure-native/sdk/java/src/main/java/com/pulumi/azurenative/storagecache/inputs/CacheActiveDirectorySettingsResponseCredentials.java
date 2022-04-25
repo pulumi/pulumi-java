@@ -23,6 +23,10 @@ public final class CacheActiveDirectorySettingsResponseCredentials extends com.p
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -34,6 +38,10 @@ public final class CacheActiveDirectorySettingsResponseCredentials extends com.p
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -63,11 +71,23 @@ public final class CacheActiveDirectorySettingsResponseCredentials extends com.p
             $ = new CacheActiveDirectorySettingsResponseCredentials(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param username Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

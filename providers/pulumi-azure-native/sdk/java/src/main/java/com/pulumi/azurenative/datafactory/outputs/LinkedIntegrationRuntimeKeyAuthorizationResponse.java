@@ -11,13 +11,13 @@ import java.util.Objects;
 @CustomType
 public final class LinkedIntegrationRuntimeKeyAuthorizationResponse {
     /**
-     * The authorization type for integration runtime sharing.
+     * @return The authorization type for integration runtime sharing.
      * Expected value is &#39;Key&#39;.
      * 
      */
     private final String authorizationType;
     /**
-     * The key used for authorization.
+     * @return The key used for authorization.
      * 
      */
     private final SecureStringResponse key;
@@ -31,17 +31,17 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse {
     }
 
     /**
-     * The authorization type for integration runtime sharing.
+     * @return The authorization type for integration runtime sharing.
      * Expected value is &#39;Key&#39;.
      * 
-    */
+     */
     public String authorizationType() {
         return this.authorizationType;
     }
     /**
-     * The key used for authorization.
+     * @return The key used for authorization.
      * 
-    */
+     */
     public SecureStringResponse key() {
         return this.key;
     }

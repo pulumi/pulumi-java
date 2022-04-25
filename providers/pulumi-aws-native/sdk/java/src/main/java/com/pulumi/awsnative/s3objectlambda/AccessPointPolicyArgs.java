@@ -21,6 +21,10 @@ public final class AccessPointPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="objectLambdaAccessPoint", required=true)
     private Output<String> objectLambdaAccessPoint;
 
+    /**
+     * @return The name of the Amazon S3 ObjectLambdaAccessPoint to which the policy applies.
+     * 
+     */
     public Output<String> objectLambdaAccessPoint() {
         return this.objectLambdaAccessPoint;
     }
@@ -32,6 +36,10 @@ public final class AccessPointPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="policyDocument", required=true)
     private Output<Object> policyDocument;
 
+    /**
+     * @return A policy document containing permissions to add to the specified ObjectLambdaAccessPoint. For more information, see Access Policy Language Overview (https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the Amazon Simple Storage Service Developer Guide.
+     * 
+     */
     public Output<Object> policyDocument() {
         return this.policyDocument;
     }
@@ -61,20 +69,44 @@ public final class AccessPointPolicyArgs extends com.pulumi.resources.ResourceAr
             $ = new AccessPointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectLambdaAccessPoint The name of the Amazon S3 ObjectLambdaAccessPoint to which the policy applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectLambdaAccessPoint(Output<String> objectLambdaAccessPoint) {
             $.objectLambdaAccessPoint = objectLambdaAccessPoint;
             return this;
         }
 
+        /**
+         * @param objectLambdaAccessPoint The name of the Amazon S3 ObjectLambdaAccessPoint to which the policy applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectLambdaAccessPoint(String objectLambdaAccessPoint) {
             return objectLambdaAccessPoint(Output.of(objectLambdaAccessPoint));
         }
 
+        /**
+         * @param policyDocument A policy document containing permissions to add to the specified ObjectLambdaAccessPoint. For more information, see Access Policy Language Overview (https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the Amazon Simple Storage Service Developer Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDocument(Output<Object> policyDocument) {
             $.policyDocument = policyDocument;
             return this;
         }
 
+        /**
+         * @param policyDocument A policy document containing permissions to add to the specified ObjectLambdaAccessPoint. For more information, see Access Policy Language Overview (https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the Amazon Simple Storage Service Developer Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDocument(Object policyDocument) {
             return policyDocument(Output.of(policyDocument));
         }

@@ -24,6 +24,10 @@ public final class TargetConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="config")
     private @Nullable Output<ConfigFileArgs> config;
 
+    /**
+     * @return The configuration to use for this deployment.
+     * 
+     */
     public Optional<Output<ConfigFileArgs>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -35,6 +39,10 @@ public final class TargetConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="imports")
     private @Nullable Output<List<ImportFileArgs>> imports;
 
+    /**
+     * @return Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
+     * 
+     */
     public Optional<Output<List<ImportFileArgs>>> imports() {
         return Optional.ofNullable(this.imports);
     }
@@ -64,24 +72,54 @@ public final class TargetConfigurationArgs extends com.pulumi.resources.Resource
             $ = new TargetConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config The configuration to use for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<ConfigFileArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config The configuration to use for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(ConfigFileArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param imports Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imports(@Nullable Output<List<ImportFileArgs>> imports) {
             $.imports = imports;
             return this;
         }
 
+        /**
+         * @param imports Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imports(List<ImportFileArgs> imports) {
             return imports(Output.of(imports));
         }
 
+        /**
+         * @param imports Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imports(ImportFileArgs... imports) {
             return imports(List.of(imports));
         }

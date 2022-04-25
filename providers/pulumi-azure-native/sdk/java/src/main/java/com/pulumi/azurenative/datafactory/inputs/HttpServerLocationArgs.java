@@ -28,6 +28,10 @@ public final class HttpServerLocationArgs extends com.pulumi.resources.ResourceA
     @Import(name="fileName")
     private @Nullable Output<Object> fileName;
 
+    /**
+     * @return Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> fileName() {
         return Optional.ofNullable(this.fileName);
     }
@@ -39,6 +43,10 @@ public final class HttpServerLocationArgs extends com.pulumi.resources.ResourceA
     @Import(name="folderPath")
     private @Nullable Output<Object> folderPath;
 
+    /**
+     * @return Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Output<Object>> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -50,6 +58,10 @@ public final class HttpServerLocationArgs extends com.pulumi.resources.ResourceA
     @Import(name="relativeUrl")
     private @Nullable Output<Object> relativeUrl;
 
+    /**
+     * @return Specify the relativeUrl of http server. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Output<Object>> relativeUrl() {
         return Optional.ofNullable(this.relativeUrl);
     }
@@ -62,6 +74,11 @@ public final class HttpServerLocationArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of dataset storage location.
+     * Expected value is &#39;HttpServerLocation&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -93,38 +110,88 @@ public final class HttpServerLocationArgs extends com.pulumi.resources.ResourceA
             $ = new HttpServerLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileName Specify the file name of dataset. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(@Nullable Output<Object> fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param fileName Specify the file name of dataset. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(Object fileName) {
             return fileName(Output.of(fileName));
         }
 
+        /**
+         * @param folderPath Specify the folder path of dataset. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable Output<Object> folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param folderPath Specify the folder path of dataset. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(Object folderPath) {
             return folderPath(Output.of(folderPath));
         }
 
+        /**
+         * @param relativeUrl Specify the relativeUrl of http server. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeUrl(@Nullable Output<Object> relativeUrl) {
             $.relativeUrl = relativeUrl;
             return this;
         }
 
+        /**
+         * @param relativeUrl Specify the relativeUrl of http server. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeUrl(Object relativeUrl) {
             return relativeUrl(Output.of(relativeUrl));
         }
 
+        /**
+         * @param type Type of dataset storage location.
+         * Expected value is &#39;HttpServerLocation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of dataset storage location.
+         * Expected value is &#39;HttpServerLocation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

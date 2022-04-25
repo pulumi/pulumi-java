@@ -27,6 +27,10 @@ public final class PeeringPropertiesExchangeResponse extends com.pulumi.resource
     @Import(name="connections")
     private @Nullable List<ExchangeConnectionResponse> connections;
 
+    /**
+     * @return The set of connections that constitute an exchange peering.
+     * 
+     */
     public Optional<List<ExchangeConnectionResponse>> connections() {
         return Optional.ofNullable(this.connections);
     }
@@ -38,6 +42,10 @@ public final class PeeringPropertiesExchangeResponse extends com.pulumi.resource
     @Import(name="peerAsn")
     private @Nullable SubResourceResponse peerAsn;
 
+    /**
+     * @return The reference of the peer ASN.
+     * 
+     */
     public Optional<SubResourceResponse> peerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
@@ -67,15 +75,33 @@ public final class PeeringPropertiesExchangeResponse extends com.pulumi.resource
             $ = new PeeringPropertiesExchangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connections The set of connections that constitute an exchange peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(@Nullable List<ExchangeConnectionResponse> connections) {
             $.connections = connections;
             return this;
         }
 
+        /**
+         * @param connections The set of connections that constitute an exchange peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(ExchangeConnectionResponse... connections) {
             return connections(List.of(connections));
         }
 
+        /**
+         * @param peerAsn The reference of the peer ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(@Nullable SubResourceResponse peerAsn) {
             $.peerAsn = peerAsn;
             return this;

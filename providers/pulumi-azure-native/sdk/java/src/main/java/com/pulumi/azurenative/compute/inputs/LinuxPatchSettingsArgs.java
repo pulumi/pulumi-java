@@ -29,6 +29,10 @@ public final class LinuxPatchSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="assessmentMode")
     private @Nullable Output<Either<String,LinuxPatchAssessmentMode>> assessmentMode;
 
+    /**
+     * @return Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - You control the timing of patch assessments on a virtual machine. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
+     * 
+     */
     public Optional<Output<Either<String,LinuxPatchAssessmentMode>>> assessmentMode() {
         return Optional.ofNullable(this.assessmentMode);
     }
@@ -40,6 +44,10 @@ public final class LinuxPatchSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="patchMode")
     private @Nullable Output<Either<String,LinuxVMGuestPatchMode>> patchMode;
 
+    /**
+     * @return Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - The virtual machine&#39;s default patching configuration is used. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true
+     * 
+     */
     public Optional<Output<Either<String,LinuxVMGuestPatchMode>>> patchMode() {
         return Optional.ofNullable(this.patchMode);
     }
@@ -69,36 +77,84 @@ public final class LinuxPatchSettingsArgs extends com.pulumi.resources.ResourceA
             $ = new LinuxPatchSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assessmentMode Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - You control the timing of patch assessments on a virtual machine. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentMode(@Nullable Output<Either<String,LinuxPatchAssessmentMode>> assessmentMode) {
             $.assessmentMode = assessmentMode;
             return this;
         }
 
+        /**
+         * @param assessmentMode Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - You control the timing of patch assessments on a virtual machine. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentMode(Either<String,LinuxPatchAssessmentMode> assessmentMode) {
             return assessmentMode(Output.of(assessmentMode));
         }
 
+        /**
+         * @param assessmentMode Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - You control the timing of patch assessments on a virtual machine. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentMode(String assessmentMode) {
             return assessmentMode(Either.ofLeft(assessmentMode));
         }
 
+        /**
+         * @param assessmentMode Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - You control the timing of patch assessments on a virtual machine. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentMode(LinuxPatchAssessmentMode assessmentMode) {
             return assessmentMode(Either.ofRight(assessmentMode));
         }
 
+        /**
+         * @param patchMode Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - The virtual machine&#39;s default patching configuration is used. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchMode(@Nullable Output<Either<String,LinuxVMGuestPatchMode>> patchMode) {
             $.patchMode = patchMode;
             return this;
         }
 
+        /**
+         * @param patchMode Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - The virtual machine&#39;s default patching configuration is used. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchMode(Either<String,LinuxVMGuestPatchMode> patchMode) {
             return patchMode(Output.of(patchMode));
         }
 
+        /**
+         * @param patchMode Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - The virtual machine&#39;s default patching configuration is used. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchMode(String patchMode) {
             return patchMode(Either.ofLeft(patchMode));
         }
 
+        /**
+         * @param patchMode Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - The virtual machine&#39;s default patching configuration is used. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchMode(LinuxVMGuestPatchMode patchMode) {
             return patchMode(Either.ofRight(patchMode));
         }

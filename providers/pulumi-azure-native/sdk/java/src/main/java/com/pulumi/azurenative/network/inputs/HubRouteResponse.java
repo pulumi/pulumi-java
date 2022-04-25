@@ -24,6 +24,10 @@ public final class HubRouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="destinationType", required=true)
     private String destinationType;
 
+    /**
+     * @return The type of destinations (eg: CIDR, ResourceId, Service).
+     * 
+     */
     public String destinationType() {
         return this.destinationType;
     }
@@ -35,6 +39,10 @@ public final class HubRouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="destinations", required=true)
     private List<String> destinations;
 
+    /**
+     * @return List of all destinations.
+     * 
+     */
     public List<String> destinations() {
         return this.destinations;
     }
@@ -46,6 +54,10 @@ public final class HubRouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the Route that is unique within a RouteTable. This name can be used to access this route.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -57,6 +69,10 @@ public final class HubRouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nextHop", required=true)
     private String nextHop;
 
+    /**
+     * @return NextHop resource ID.
+     * 
+     */
     public String nextHop() {
         return this.nextHop;
     }
@@ -68,6 +84,10 @@ public final class HubRouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nextHopType", required=true)
     private String nextHopType;
 
+    /**
+     * @return The type of next hop (eg: ResourceId).
+     * 
+     */
     public String nextHopType() {
         return this.nextHopType;
     }
@@ -100,30 +120,66 @@ public final class HubRouteResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HubRouteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationType The type of destinations (eg: CIDR, ResourceId, Service).
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationType(String destinationType) {
             $.destinationType = destinationType;
             return this;
         }
 
+        /**
+         * @param destinations List of all destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(List<String> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations List of all destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param name The name of the Route that is unique within a RouteTable. This name can be used to access this route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param nextHop NextHop resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHop(String nextHop) {
             $.nextHop = nextHop;
             return this;
         }
 
+        /**
+         * @param nextHopType The type of next hop (eg: ResourceId).
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopType(String nextHopType) {
             $.nextHopType = nextHopType;
             return this;

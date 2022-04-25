@@ -22,6 +22,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
     @Import(name="body")
     private @Nullable String body;
 
+    /**
+     * @return Body of the Trigger
+     * 
+     */
     public Optional<String> body() {
         return Optional.ofNullable(this.body);
     }
@@ -33,6 +37,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A system generated property representing the resource etag required for optimistic concurrency control.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -44,6 +52,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Name of the Cosmos DB SQL trigger
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -55,6 +67,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
     @Import(name="rid", required=true)
     private String rid;
 
+    /**
+     * @return A system generated property. A unique identifier.
+     * 
+     */
     public String rid() {
         return this.rid;
     }
@@ -66,6 +82,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
     @Import(name="triggerOperation")
     private @Nullable String triggerOperation;
 
+    /**
+     * @return The operation the trigger is associated with
+     * 
+     */
     public Optional<String> triggerOperation() {
         return Optional.ofNullable(this.triggerOperation);
     }
@@ -77,6 +97,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
     @Import(name="triggerType")
     private @Nullable String triggerType;
 
+    /**
+     * @return Type of the Trigger
+     * 
+     */
     public Optional<String> triggerType() {
         return Optional.ofNullable(this.triggerType);
     }
@@ -88,6 +112,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
     @Import(name="ts", required=true)
     private Double ts;
 
+    /**
+     * @return A system generated property that denotes the last updated timestamp of the resource.
+     * 
+     */
     public Double ts() {
         return this.ts;
     }
@@ -122,36 +150,78 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
             $ = new SqlTriggerGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param body Body of the Trigger
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable String body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param etag A system generated property representing the resource etag required for optimistic concurrency control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Name of the Cosmos DB SQL trigger
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param rid A system generated property. A unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rid(String rid) {
             $.rid = rid;
             return this;
         }
 
+        /**
+         * @param triggerOperation The operation the trigger is associated with
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerOperation(@Nullable String triggerOperation) {
             $.triggerOperation = triggerOperation;
             return this;
         }
 
+        /**
+         * @param triggerType Type of the Trigger
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerType(@Nullable String triggerType) {
             $.triggerType = triggerType;
             return this;
         }
 
+        /**
+         * @param ts A system generated property that denotes the last updated timestamp of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ts(Double ts) {
             $.ts = ts;
             return this;

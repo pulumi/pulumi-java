@@ -31,6 +31,10 @@ public final class SchedulingPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of Scheduling Policy.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -42,6 +46,10 @@ public final class SchedulingPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Object> tags;
 
+    /**
+     * @return A key-value pair to associate with a resource.
+     * 
+     */
     public Optional<Output<Object>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -81,20 +89,44 @@ public final class SchedulingPolicyArgs extends com.pulumi.resources.ResourceArg
             return fairsharePolicy(Output.of(fairsharePolicy));
         }
 
+        /**
+         * @param name Name of Scheduling Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of Scheduling Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A key-value pair to associate with a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Object> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A key-value pair to associate with a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Object tags) {
             return tags(Output.of(tags));
         }

@@ -25,6 +25,10 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="addressLine1")
     private @Nullable String addressLine1;
 
+    /**
+     * @return The address line1.
+     * 
+     */
     public Optional<String> addressLine1() {
         return Optional.ofNullable(this.addressLine1);
     }
@@ -36,6 +40,10 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="addressLine2")
     private @Nullable String addressLine2;
 
+    /**
+     * @return The address line2.
+     * 
+     */
     public Optional<String> addressLine2() {
         return Optional.ofNullable(this.addressLine2);
     }
@@ -47,6 +55,10 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="addressLine3")
     private @Nullable String addressLine3;
 
+    /**
+     * @return The address line3.
+     * 
+     */
     public Optional<String> addressLine3() {
         return Optional.ofNullable(this.addressLine3);
     }
@@ -58,6 +70,10 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="city")
     private @Nullable String city;
 
+    /**
+     * @return The city name.
+     * 
+     */
     public Optional<String> city() {
         return Optional.ofNullable(this.city);
     }
@@ -69,6 +85,10 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="country", required=true)
     private String country;
 
+    /**
+     * @return The country name.
+     * 
+     */
     public String country() {
         return this.country;
     }
@@ -80,6 +100,10 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="postalCode")
     private @Nullable String postalCode;
 
+    /**
+     * @return The postal code.
+     * 
+     */
     public Optional<String> postalCode() {
         return Optional.ofNullable(this.postalCode);
     }
@@ -91,6 +115,10 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return The state name.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -125,36 +153,78 @@ public final class AddressResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AddressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressLine1 The address line1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressLine1(@Nullable String addressLine1) {
             $.addressLine1 = addressLine1;
             return this;
         }
 
+        /**
+         * @param addressLine2 The address line2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressLine2(@Nullable String addressLine2) {
             $.addressLine2 = addressLine2;
             return this;
         }
 
+        /**
+         * @param addressLine3 The address line3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressLine3(@Nullable String addressLine3) {
             $.addressLine3 = addressLine3;
             return this;
         }
 
+        /**
+         * @param city The city name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder city(@Nullable String city) {
             $.city = city;
             return this;
         }
 
+        /**
+         * @param country The country name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder country(String country) {
             $.country = country;
             return this;
         }
 
+        /**
+         * @param postalCode The postal code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalCode(@Nullable String postalCode) {
             $.postalCode = postalCode;
             return this;
         }
 
+        /**
+         * @param state The state name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

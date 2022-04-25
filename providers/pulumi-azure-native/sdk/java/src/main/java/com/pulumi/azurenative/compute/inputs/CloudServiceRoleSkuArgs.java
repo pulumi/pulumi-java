@@ -27,6 +27,10 @@ public final class CloudServiceRoleSkuArgs extends com.pulumi.resources.Resource
     @Import(name="capacity")
     private @Nullable Output<Double> capacity;
 
+    /**
+     * @return Specifies the number of role instances in the cloud service.
+     * 
+     */
     public Optional<Output<Double>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -38,6 +42,10 @@ public final class CloudServiceRoleSkuArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class CloudServiceRoleSkuArgs extends com.pulumi.resources.Resource
     @Import(name="tier")
     private @Nullable Output<String> tier;
 
+    /**
+     * @return Specifies the tier of the cloud service. Possible Values are &lt;br /&gt;&lt;br /&gt; **Standard** &lt;br /&gt;&lt;br /&gt; **Basic**
+     * 
+     */
     public Optional<Output<String>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -79,29 +91,65 @@ public final class CloudServiceRoleSkuArgs extends com.pulumi.resources.Resource
             $ = new CloudServiceRoleSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Specifies the number of role instances in the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Double> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity Specifies the number of role instances in the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Double capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tier Specifies the tier of the cloud service. Possible Values are &lt;br /&gt;&lt;br /&gt; **Standard** &lt;br /&gt;&lt;br /&gt; **Basic**
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<String> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Specifies the tier of the cloud service. Possible Values are &lt;br /&gt;&lt;br /&gt; **Standard** &lt;br /&gt;&lt;br /&gt; **Basic**
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Output.of(tier));
         }

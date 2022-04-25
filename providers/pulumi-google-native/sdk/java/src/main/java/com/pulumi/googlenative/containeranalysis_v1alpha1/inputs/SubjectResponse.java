@@ -24,6 +24,10 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="digest", required=true)
     private Map<String,String> digest;
 
+    /**
+     * @return &#34;&#34;: &#34;&#34; Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
+     * 
+     */
     public Map<String,String> digest() {
         return this.digest;
     }
@@ -35,6 +39,10 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return name is the name of the Subject used here
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -64,11 +72,23 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SubjectResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param digest &#34;&#34;: &#34;&#34; Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
+         * 
+         * @return builder
+         * 
+         */
         public Builder digest(Map<String,String> digest) {
             $.digest = digest;
             return this;
         }
 
+        /**
+         * @param name name is the name of the Subject used here
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -27,6 +27,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="applicationReferenceId")
     private @Nullable String applicationReferenceId;
 
+    /**
+     * @return The application reference id.
+     * 
+     */
     public Optional<String> applicationReferenceId() {
         return Optional.ofNullable(this.applicationReferenceId);
     }
@@ -38,6 +42,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="applyDelimiterStringAdvice", required=true)
     private Boolean applyDelimiterStringAdvice;
 
+    /**
+     * @return The value indicating whether to apply delimiter string advice.
+     * 
+     */
     public Boolean applyDelimiterStringAdvice() {
         return this.applyDelimiterStringAdvice;
     }
@@ -49,6 +57,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="communicationAgreementId")
     private @Nullable String communicationAgreementId;
 
+    /**
+     * @return The communication agreement id.
+     * 
+     */
     public Optional<String> communicationAgreementId() {
         return Optional.ofNullable(this.communicationAgreementId);
     }
@@ -60,6 +72,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="createGroupingSegments", required=true)
     private Boolean createGroupingSegments;
 
+    /**
+     * @return The value indicating whether to create grouping segments.
+     * 
+     */
     public Boolean createGroupingSegments() {
         return this.createGroupingSegments;
     }
@@ -71,6 +87,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="enableDefaultGroupHeaders", required=true)
     private Boolean enableDefaultGroupHeaders;
 
+    /**
+     * @return The value indicating whether to enable default group headers.
+     * 
+     */
     public Boolean enableDefaultGroupHeaders() {
         return this.enableDefaultGroupHeaders;
     }
@@ -82,6 +102,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="functionalGroupId")
     private @Nullable String functionalGroupId;
 
+    /**
+     * @return The functional group id.
+     * 
+     */
     public Optional<String> functionalGroupId() {
         return Optional.ofNullable(this.functionalGroupId);
     }
@@ -93,6 +117,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="groupApplicationPassword")
     private @Nullable String groupApplicationPassword;
 
+    /**
+     * @return The group application password.
+     * 
+     */
     public Optional<String> groupApplicationPassword() {
         return Optional.ofNullable(this.groupApplicationPassword);
     }
@@ -104,6 +132,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="groupApplicationReceiverId")
     private @Nullable String groupApplicationReceiverId;
 
+    /**
+     * @return The group application receiver id.
+     * 
+     */
     public Optional<String> groupApplicationReceiverId() {
         return Optional.ofNullable(this.groupApplicationReceiverId);
     }
@@ -115,6 +147,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="groupApplicationReceiverQualifier")
     private @Nullable String groupApplicationReceiverQualifier;
 
+    /**
+     * @return The group application receiver qualifier.
+     * 
+     */
     public Optional<String> groupApplicationReceiverQualifier() {
         return Optional.ofNullable(this.groupApplicationReceiverQualifier);
     }
@@ -126,6 +162,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="groupApplicationSenderId")
     private @Nullable String groupApplicationSenderId;
 
+    /**
+     * @return The group application sender id.
+     * 
+     */
     public Optional<String> groupApplicationSenderId() {
         return Optional.ofNullable(this.groupApplicationSenderId);
     }
@@ -137,6 +177,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="groupApplicationSenderQualifier")
     private @Nullable String groupApplicationSenderQualifier;
 
+    /**
+     * @return The group application sender qualifier.
+     * 
+     */
     public Optional<String> groupApplicationSenderQualifier() {
         return Optional.ofNullable(this.groupApplicationSenderQualifier);
     }
@@ -148,6 +192,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="groupAssociationAssignedCode")
     private @Nullable String groupAssociationAssignedCode;
 
+    /**
+     * @return The group association assigned code.
+     * 
+     */
     public Optional<String> groupAssociationAssignedCode() {
         return Optional.ofNullable(this.groupAssociationAssignedCode);
     }
@@ -159,6 +207,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="groupControlNumberLowerBound", required=true)
     private Double groupControlNumberLowerBound;
 
+    /**
+     * @return The group control number lower bound.
+     * 
+     */
     public Double groupControlNumberLowerBound() {
         return this.groupControlNumberLowerBound;
     }
@@ -170,6 +222,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="groupControlNumberPrefix")
     private @Nullable String groupControlNumberPrefix;
 
+    /**
+     * @return The group control number prefix.
+     * 
+     */
     public Optional<String> groupControlNumberPrefix() {
         return Optional.ofNullable(this.groupControlNumberPrefix);
     }
@@ -181,6 +237,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="groupControlNumberSuffix")
     private @Nullable String groupControlNumberSuffix;
 
+    /**
+     * @return The group control number suffix.
+     * 
+     */
     public Optional<String> groupControlNumberSuffix() {
         return Optional.ofNullable(this.groupControlNumberSuffix);
     }
@@ -192,6 +252,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="groupControlNumberUpperBound", required=true)
     private Double groupControlNumberUpperBound;
 
+    /**
+     * @return The group control number upper bound.
+     * 
+     */
     public Double groupControlNumberUpperBound() {
         return this.groupControlNumberUpperBound;
     }
@@ -203,6 +267,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="groupControllingAgencyCode")
     private @Nullable String groupControllingAgencyCode;
 
+    /**
+     * @return The group controlling agency code.
+     * 
+     */
     public Optional<String> groupControllingAgencyCode() {
         return Optional.ofNullable(this.groupControllingAgencyCode);
     }
@@ -214,6 +282,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="groupMessageRelease")
     private @Nullable String groupMessageRelease;
 
+    /**
+     * @return The group message release.
+     * 
+     */
     public Optional<String> groupMessageRelease() {
         return Optional.ofNullable(this.groupMessageRelease);
     }
@@ -225,6 +297,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="groupMessageVersion")
     private @Nullable String groupMessageVersion;
 
+    /**
+     * @return The group message version.
+     * 
+     */
     public Optional<String> groupMessageVersion() {
         return Optional.ofNullable(this.groupMessageVersion);
     }
@@ -236,6 +312,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="interchangeControlNumberLowerBound", required=true)
     private Double interchangeControlNumberLowerBound;
 
+    /**
+     * @return The interchange control number lower bound.
+     * 
+     */
     public Double interchangeControlNumberLowerBound() {
         return this.interchangeControlNumberLowerBound;
     }
@@ -247,6 +327,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="interchangeControlNumberPrefix")
     private @Nullable String interchangeControlNumberPrefix;
 
+    /**
+     * @return The interchange control number prefix.
+     * 
+     */
     public Optional<String> interchangeControlNumberPrefix() {
         return Optional.ofNullable(this.interchangeControlNumberPrefix);
     }
@@ -258,6 +342,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="interchangeControlNumberSuffix")
     private @Nullable String interchangeControlNumberSuffix;
 
+    /**
+     * @return The interchange control number suffix.
+     * 
+     */
     public Optional<String> interchangeControlNumberSuffix() {
         return Optional.ofNullable(this.interchangeControlNumberSuffix);
     }
@@ -269,6 +357,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="interchangeControlNumberUpperBound", required=true)
     private Double interchangeControlNumberUpperBound;
 
+    /**
+     * @return The interchange control number upper bound.
+     * 
+     */
     public Double interchangeControlNumberUpperBound() {
         return this.interchangeControlNumberUpperBound;
     }
@@ -280,6 +372,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="isTestInterchange", required=true)
     private Boolean isTestInterchange;
 
+    /**
+     * @return The value indicating whether the message is a test interchange.
+     * 
+     */
     public Boolean isTestInterchange() {
         return this.isTestInterchange;
     }
@@ -291,6 +387,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="overwriteExistingTransactionSetControlNumber", required=true)
     private Boolean overwriteExistingTransactionSetControlNumber;
 
+    /**
+     * @return The value indicating whether to overwrite existing transaction set control number.
+     * 
+     */
     public Boolean overwriteExistingTransactionSetControlNumber() {
         return this.overwriteExistingTransactionSetControlNumber;
     }
@@ -302,6 +402,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="processingPriorityCode")
     private @Nullable String processingPriorityCode;
 
+    /**
+     * @return The processing priority code.
+     * 
+     */
     public Optional<String> processingPriorityCode() {
         return Optional.ofNullable(this.processingPriorityCode);
     }
@@ -313,6 +417,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="receiverInternalIdentification")
     private @Nullable String receiverInternalIdentification;
 
+    /**
+     * @return The receiver internal identification.
+     * 
+     */
     public Optional<String> receiverInternalIdentification() {
         return Optional.ofNullable(this.receiverInternalIdentification);
     }
@@ -324,6 +432,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="receiverInternalSubIdentification")
     private @Nullable String receiverInternalSubIdentification;
 
+    /**
+     * @return The receiver internal sub identification.
+     * 
+     */
     public Optional<String> receiverInternalSubIdentification() {
         return Optional.ofNullable(this.receiverInternalSubIdentification);
     }
@@ -335,6 +447,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="receiverReverseRoutingAddress")
     private @Nullable String receiverReverseRoutingAddress;
 
+    /**
+     * @return The receiver reverse routing address.
+     * 
+     */
     public Optional<String> receiverReverseRoutingAddress() {
         return Optional.ofNullable(this.receiverReverseRoutingAddress);
     }
@@ -346,6 +462,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="recipientReferencePasswordQualifier")
     private @Nullable String recipientReferencePasswordQualifier;
 
+    /**
+     * @return The recipient reference password qualifier.
+     * 
+     */
     public Optional<String> recipientReferencePasswordQualifier() {
         return Optional.ofNullable(this.recipientReferencePasswordQualifier);
     }
@@ -357,6 +477,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="recipientReferencePasswordValue")
     private @Nullable String recipientReferencePasswordValue;
 
+    /**
+     * @return The recipient reference password value.
+     * 
+     */
     public Optional<String> recipientReferencePasswordValue() {
         return Optional.ofNullable(this.recipientReferencePasswordValue);
     }
@@ -368,6 +492,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="rolloverGroupControlNumber", required=true)
     private Boolean rolloverGroupControlNumber;
 
+    /**
+     * @return The value indicating whether to rollover group control number.
+     * 
+     */
     public Boolean rolloverGroupControlNumber() {
         return this.rolloverGroupControlNumber;
     }
@@ -379,6 +507,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="rolloverInterchangeControlNumber", required=true)
     private Boolean rolloverInterchangeControlNumber;
 
+    /**
+     * @return The value indicating whether to rollover interchange control number.
+     * 
+     */
     public Boolean rolloverInterchangeControlNumber() {
         return this.rolloverInterchangeControlNumber;
     }
@@ -390,6 +522,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="rolloverTransactionSetControlNumber", required=true)
     private Boolean rolloverTransactionSetControlNumber;
 
+    /**
+     * @return The value indicating whether to rollover transaction set control number.
+     * 
+     */
     public Boolean rolloverTransactionSetControlNumber() {
         return this.rolloverTransactionSetControlNumber;
     }
@@ -401,6 +537,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="senderInternalIdentification")
     private @Nullable String senderInternalIdentification;
 
+    /**
+     * @return The sender internal identification.
+     * 
+     */
     public Optional<String> senderInternalIdentification() {
         return Optional.ofNullable(this.senderInternalIdentification);
     }
@@ -412,6 +552,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="senderInternalSubIdentification")
     private @Nullable String senderInternalSubIdentification;
 
+    /**
+     * @return The sender internal sub identification.
+     * 
+     */
     public Optional<String> senderInternalSubIdentification() {
         return Optional.ofNullable(this.senderInternalSubIdentification);
     }
@@ -423,6 +567,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="senderReverseRoutingAddress")
     private @Nullable String senderReverseRoutingAddress;
 
+    /**
+     * @return The sender reverse routing address.
+     * 
+     */
     public Optional<String> senderReverseRoutingAddress() {
         return Optional.ofNullable(this.senderReverseRoutingAddress);
     }
@@ -434,6 +582,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="transactionSetControlNumberLowerBound", required=true)
     private Double transactionSetControlNumberLowerBound;
 
+    /**
+     * @return The transaction set control number lower bound.
+     * 
+     */
     public Double transactionSetControlNumberLowerBound() {
         return this.transactionSetControlNumberLowerBound;
     }
@@ -445,6 +597,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="transactionSetControlNumberPrefix")
     private @Nullable String transactionSetControlNumberPrefix;
 
+    /**
+     * @return The transaction set control number prefix.
+     * 
+     */
     public Optional<String> transactionSetControlNumberPrefix() {
         return Optional.ofNullable(this.transactionSetControlNumberPrefix);
     }
@@ -456,6 +612,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="transactionSetControlNumberSuffix")
     private @Nullable String transactionSetControlNumberSuffix;
 
+    /**
+     * @return The transaction set control number suffix.
+     * 
+     */
     public Optional<String> transactionSetControlNumberSuffix() {
         return Optional.ofNullable(this.transactionSetControlNumberSuffix);
     }
@@ -467,6 +627,10 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
     @Import(name="transactionSetControlNumberUpperBound", required=true)
     private Double transactionSetControlNumberUpperBound;
 
+    /**
+     * @return The transaction set control number upper bound.
+     * 
+     */
     public Double transactionSetControlNumberUpperBound() {
         return this.transactionSetControlNumberUpperBound;
     }
@@ -535,206 +699,452 @@ public final class EdifactEnvelopeSettingsResponse extends com.pulumi.resources.
             $ = new EdifactEnvelopeSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationReferenceId The application reference id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationReferenceId(@Nullable String applicationReferenceId) {
             $.applicationReferenceId = applicationReferenceId;
             return this;
         }
 
+        /**
+         * @param applyDelimiterStringAdvice The value indicating whether to apply delimiter string advice.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyDelimiterStringAdvice(Boolean applyDelimiterStringAdvice) {
             $.applyDelimiterStringAdvice = applyDelimiterStringAdvice;
             return this;
         }
 
+        /**
+         * @param communicationAgreementId The communication agreement id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder communicationAgreementId(@Nullable String communicationAgreementId) {
             $.communicationAgreementId = communicationAgreementId;
             return this;
         }
 
+        /**
+         * @param createGroupingSegments The value indicating whether to create grouping segments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createGroupingSegments(Boolean createGroupingSegments) {
             $.createGroupingSegments = createGroupingSegments;
             return this;
         }
 
+        /**
+         * @param enableDefaultGroupHeaders The value indicating whether to enable default group headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDefaultGroupHeaders(Boolean enableDefaultGroupHeaders) {
             $.enableDefaultGroupHeaders = enableDefaultGroupHeaders;
             return this;
         }
 
+        /**
+         * @param functionalGroupId The functional group id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionalGroupId(@Nullable String functionalGroupId) {
             $.functionalGroupId = functionalGroupId;
             return this;
         }
 
+        /**
+         * @param groupApplicationPassword The group application password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationPassword(@Nullable String groupApplicationPassword) {
             $.groupApplicationPassword = groupApplicationPassword;
             return this;
         }
 
+        /**
+         * @param groupApplicationReceiverId The group application receiver id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationReceiverId(@Nullable String groupApplicationReceiverId) {
             $.groupApplicationReceiverId = groupApplicationReceiverId;
             return this;
         }
 
+        /**
+         * @param groupApplicationReceiverQualifier The group application receiver qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationReceiverQualifier(@Nullable String groupApplicationReceiverQualifier) {
             $.groupApplicationReceiverQualifier = groupApplicationReceiverQualifier;
             return this;
         }
 
+        /**
+         * @param groupApplicationSenderId The group application sender id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationSenderId(@Nullable String groupApplicationSenderId) {
             $.groupApplicationSenderId = groupApplicationSenderId;
             return this;
         }
 
+        /**
+         * @param groupApplicationSenderQualifier The group application sender qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupApplicationSenderQualifier(@Nullable String groupApplicationSenderQualifier) {
             $.groupApplicationSenderQualifier = groupApplicationSenderQualifier;
             return this;
         }
 
+        /**
+         * @param groupAssociationAssignedCode The group association assigned code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupAssociationAssignedCode(@Nullable String groupAssociationAssignedCode) {
             $.groupAssociationAssignedCode = groupAssociationAssignedCode;
             return this;
         }
 
+        /**
+         * @param groupControlNumberLowerBound The group control number lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControlNumberLowerBound(Double groupControlNumberLowerBound) {
             $.groupControlNumberLowerBound = groupControlNumberLowerBound;
             return this;
         }
 
+        /**
+         * @param groupControlNumberPrefix The group control number prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControlNumberPrefix(@Nullable String groupControlNumberPrefix) {
             $.groupControlNumberPrefix = groupControlNumberPrefix;
             return this;
         }
 
+        /**
+         * @param groupControlNumberSuffix The group control number suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControlNumberSuffix(@Nullable String groupControlNumberSuffix) {
             $.groupControlNumberSuffix = groupControlNumberSuffix;
             return this;
         }
 
+        /**
+         * @param groupControlNumberUpperBound The group control number upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControlNumberUpperBound(Double groupControlNumberUpperBound) {
             $.groupControlNumberUpperBound = groupControlNumberUpperBound;
             return this;
         }
 
+        /**
+         * @param groupControllingAgencyCode The group controlling agency code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControllingAgencyCode(@Nullable String groupControllingAgencyCode) {
             $.groupControllingAgencyCode = groupControllingAgencyCode;
             return this;
         }
 
+        /**
+         * @param groupMessageRelease The group message release.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupMessageRelease(@Nullable String groupMessageRelease) {
             $.groupMessageRelease = groupMessageRelease;
             return this;
         }
 
+        /**
+         * @param groupMessageVersion The group message version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupMessageVersion(@Nullable String groupMessageVersion) {
             $.groupMessageVersion = groupMessageVersion;
             return this;
         }
 
+        /**
+         * @param interchangeControlNumberLowerBound The interchange control number lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberLowerBound(Double interchangeControlNumberLowerBound) {
             $.interchangeControlNumberLowerBound = interchangeControlNumberLowerBound;
             return this;
         }
 
+        /**
+         * @param interchangeControlNumberPrefix The interchange control number prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberPrefix(@Nullable String interchangeControlNumberPrefix) {
             $.interchangeControlNumberPrefix = interchangeControlNumberPrefix;
             return this;
         }
 
+        /**
+         * @param interchangeControlNumberSuffix The interchange control number suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberSuffix(@Nullable String interchangeControlNumberSuffix) {
             $.interchangeControlNumberSuffix = interchangeControlNumberSuffix;
             return this;
         }
 
+        /**
+         * @param interchangeControlNumberUpperBound The interchange control number upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberUpperBound(Double interchangeControlNumberUpperBound) {
             $.interchangeControlNumberUpperBound = interchangeControlNumberUpperBound;
             return this;
         }
 
+        /**
+         * @param isTestInterchange The value indicating whether the message is a test interchange.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isTestInterchange(Boolean isTestInterchange) {
             $.isTestInterchange = isTestInterchange;
             return this;
         }
 
+        /**
+         * @param overwriteExistingTransactionSetControlNumber The value indicating whether to overwrite existing transaction set control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overwriteExistingTransactionSetControlNumber(Boolean overwriteExistingTransactionSetControlNumber) {
             $.overwriteExistingTransactionSetControlNumber = overwriteExistingTransactionSetControlNumber;
             return this;
         }
 
+        /**
+         * @param processingPriorityCode The processing priority code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingPriorityCode(@Nullable String processingPriorityCode) {
             $.processingPriorityCode = processingPriorityCode;
             return this;
         }
 
+        /**
+         * @param receiverInternalIdentification The receiver internal identification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverInternalIdentification(@Nullable String receiverInternalIdentification) {
             $.receiverInternalIdentification = receiverInternalIdentification;
             return this;
         }
 
+        /**
+         * @param receiverInternalSubIdentification The receiver internal sub identification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverInternalSubIdentification(@Nullable String receiverInternalSubIdentification) {
             $.receiverInternalSubIdentification = receiverInternalSubIdentification;
             return this;
         }
 
+        /**
+         * @param receiverReverseRoutingAddress The receiver reverse routing address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverReverseRoutingAddress(@Nullable String receiverReverseRoutingAddress) {
             $.receiverReverseRoutingAddress = receiverReverseRoutingAddress;
             return this;
         }
 
+        /**
+         * @param recipientReferencePasswordQualifier The recipient reference password qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipientReferencePasswordQualifier(@Nullable String recipientReferencePasswordQualifier) {
             $.recipientReferencePasswordQualifier = recipientReferencePasswordQualifier;
             return this;
         }
 
+        /**
+         * @param recipientReferencePasswordValue The recipient reference password value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipientReferencePasswordValue(@Nullable String recipientReferencePasswordValue) {
             $.recipientReferencePasswordValue = recipientReferencePasswordValue;
             return this;
         }
 
+        /**
+         * @param rolloverGroupControlNumber The value indicating whether to rollover group control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloverGroupControlNumber(Boolean rolloverGroupControlNumber) {
             $.rolloverGroupControlNumber = rolloverGroupControlNumber;
             return this;
         }
 
+        /**
+         * @param rolloverInterchangeControlNumber The value indicating whether to rollover interchange control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloverInterchangeControlNumber(Boolean rolloverInterchangeControlNumber) {
             $.rolloverInterchangeControlNumber = rolloverInterchangeControlNumber;
             return this;
         }
 
+        /**
+         * @param rolloverTransactionSetControlNumber The value indicating whether to rollover transaction set control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloverTransactionSetControlNumber(Boolean rolloverTransactionSetControlNumber) {
             $.rolloverTransactionSetControlNumber = rolloverTransactionSetControlNumber;
             return this;
         }
 
+        /**
+         * @param senderInternalIdentification The sender internal identification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderInternalIdentification(@Nullable String senderInternalIdentification) {
             $.senderInternalIdentification = senderInternalIdentification;
             return this;
         }
 
+        /**
+         * @param senderInternalSubIdentification The sender internal sub identification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderInternalSubIdentification(@Nullable String senderInternalSubIdentification) {
             $.senderInternalSubIdentification = senderInternalSubIdentification;
             return this;
         }
 
+        /**
+         * @param senderReverseRoutingAddress The sender reverse routing address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderReverseRoutingAddress(@Nullable String senderReverseRoutingAddress) {
             $.senderReverseRoutingAddress = senderReverseRoutingAddress;
             return this;
         }
 
+        /**
+         * @param transactionSetControlNumberLowerBound The transaction set control number lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberLowerBound(Double transactionSetControlNumberLowerBound) {
             $.transactionSetControlNumberLowerBound = transactionSetControlNumberLowerBound;
             return this;
         }
 
+        /**
+         * @param transactionSetControlNumberPrefix The transaction set control number prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberPrefix(@Nullable String transactionSetControlNumberPrefix) {
             $.transactionSetControlNumberPrefix = transactionSetControlNumberPrefix;
             return this;
         }
 
+        /**
+         * @param transactionSetControlNumberSuffix The transaction set control number suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberSuffix(@Nullable String transactionSetControlNumberSuffix) {
             $.transactionSetControlNumberSuffix = transactionSetControlNumberSuffix;
             return this;
         }
 
+        /**
+         * @param transactionSetControlNumberUpperBound The transaction set control number upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberUpperBound(Double transactionSetControlNumberUpperBound) {
             $.transactionSetControlNumberUpperBound = transactionSetControlNumberUpperBound;
             return this;

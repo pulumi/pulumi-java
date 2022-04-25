@@ -28,6 +28,10 @@ public final class PropertiesLockboxArgs extends com.pulumi.resources.ResourceAr
     @Import(name="state")
     private @Nullable Output<Either<String,State>> state;
 
+    /**
+     * @return lockbox configuration
+     * 
+     */
     public Optional<Output<Either<String,State>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -56,19 +60,43 @@ public final class PropertiesLockboxArgs extends com.pulumi.resources.ResourceAr
             $ = new PropertiesLockboxArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param state lockbox configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,State>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state lockbox configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,State> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state lockbox configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state lockbox configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(State state) {
             return state(Either.ofRight(state));
         }

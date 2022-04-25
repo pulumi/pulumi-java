@@ -18,47 +18,47 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse {
     /**
-     * Categorical stats result
+     * @return Categorical stats result
      * 
      */
     private final GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult;
     /**
-     * Delta-presence result
+     * @return Delta-presence result
      * 
      */
     private final GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult;
     /**
-     * K-anonymity result
+     * @return K-anonymity result
      * 
      */
     private final GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult;
     /**
-     * K-map result
+     * @return K-map result
      * 
      */
     private final GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult;
     /**
-     * L-divesity result
+     * @return L-divesity result
      * 
      */
     private final GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult;
     /**
-     * Numerical stats result
+     * @return Numerical stats result
      * 
      */
     private final GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult;
     /**
-     * The configuration used for this job.
+     * @return The configuration used for this job.
      * 
      */
     private final GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions;
     /**
-     * Privacy metric to compute.
+     * @return Privacy metric to compute.
      * 
      */
     private final GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric;
     /**
-     * Input dataset to compute metrics over.
+     * @return Input dataset to compute metrics over.
      * 
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable;
@@ -86,65 +86,65 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse {
     }
 
     /**
-     * Categorical stats result
+     * @return Categorical stats result
      * 
-    */
+     */
     public GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult() {
         return this.categoricalStatsResult;
     }
     /**
-     * Delta-presence result
+     * @return Delta-presence result
      * 
-    */
+     */
     public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult() {
         return this.deltaPresenceEstimationResult;
     }
     /**
-     * K-anonymity result
+     * @return K-anonymity result
      * 
-    */
+     */
     public GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult() {
         return this.kAnonymityResult;
     }
     /**
-     * K-map result
+     * @return K-map result
      * 
-    */
+     */
     public GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult() {
         return this.kMapEstimationResult;
     }
     /**
-     * L-divesity result
+     * @return L-divesity result
      * 
-    */
+     */
     public GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult() {
         return this.lDiversityResult;
     }
     /**
-     * Numerical stats result
+     * @return Numerical stats result
      * 
-    */
+     */
     public GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult() {
         return this.numericalStatsResult;
     }
     /**
-     * The configuration used for this job.
+     * @return The configuration used for this job.
      * 
-    */
+     */
     public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions() {
         return this.requestedOptions;
     }
     /**
-     * Privacy metric to compute.
+     * @return Privacy metric to compute.
      * 
-    */
+     */
     public GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric() {
         return this.requestedPrivacyMetric;
     }
     /**
-     * Input dataset to compute metrics over.
+     * @return Input dataset to compute metrics over.
      * 
-    */
+     */
     public GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable() {
         return this.requestedSourceTable;
     }

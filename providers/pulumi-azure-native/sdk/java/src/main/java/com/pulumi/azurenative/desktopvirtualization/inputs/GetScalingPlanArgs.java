@@ -19,6 +19,10 @@ public final class GetScalingPlanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetScalingPlanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="scalingPlanName", required=true)
     private String scalingPlanName;
 
+    /**
+     * @return The name of the scaling plan.
+     * 
+     */
     public String scalingPlanName() {
         return this.scalingPlanName;
     }
@@ -59,11 +67,23 @@ public final class GetScalingPlanArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetScalingPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param scalingPlanName The name of the scaling plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingPlanName(String scalingPlanName) {
             $.scalingPlanName = scalingPlanName;
             return this;

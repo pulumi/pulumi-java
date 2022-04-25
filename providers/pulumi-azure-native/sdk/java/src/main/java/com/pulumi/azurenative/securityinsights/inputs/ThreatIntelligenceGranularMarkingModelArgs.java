@@ -28,6 +28,10 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends com.pulumi
     @Import(name="language")
     private @Nullable Output<String> language;
 
+    /**
+     * @return Language granular marking model
+     * 
+     */
     public Optional<Output<String>> language() {
         return Optional.ofNullable(this.language);
     }
@@ -39,6 +43,10 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends com.pulumi
     @Import(name="markingRef")
     private @Nullable Output<Integer> markingRef;
 
+    /**
+     * @return marking reference granular marking model
+     * 
+     */
     public Optional<Output<Integer>> markingRef() {
         return Optional.ofNullable(this.markingRef);
     }
@@ -50,6 +58,10 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends com.pulumi
     @Import(name="selectors")
     private @Nullable Output<List<String>> selectors;
 
+    /**
+     * @return granular marking model selectors
+     * 
+     */
     public Optional<Output<List<String>>> selectors() {
         return Optional.ofNullable(this.selectors);
     }
@@ -80,33 +92,75 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends com.pulumi
             $ = new ThreatIntelligenceGranularMarkingModelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param language Language granular marking model
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(@Nullable Output<String> language) {
             $.language = language;
             return this;
         }
 
+        /**
+         * @param language Language granular marking model
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(String language) {
             return language(Output.of(language));
         }
 
+        /**
+         * @param markingRef marking reference granular marking model
+         * 
+         * @return builder
+         * 
+         */
         public Builder markingRef(@Nullable Output<Integer> markingRef) {
             $.markingRef = markingRef;
             return this;
         }
 
+        /**
+         * @param markingRef marking reference granular marking model
+         * 
+         * @return builder
+         * 
+         */
         public Builder markingRef(Integer markingRef) {
             return markingRef(Output.of(markingRef));
         }
 
+        /**
+         * @param selectors granular marking model selectors
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(@Nullable Output<List<String>> selectors) {
             $.selectors = selectors;
             return this;
         }
 
+        /**
+         * @param selectors granular marking model selectors
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(List<String> selectors) {
             return selectors(Output.of(selectors));
         }
 
+        /**
+         * @param selectors granular marking model selectors
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(String... selectors) {
             return selectors(List.of(selectors));
         }

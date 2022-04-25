@@ -25,6 +25,10 @@ public final class WaitStatisticsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="waitCount", required=true)
     private Double waitCount;
 
+    /**
+     * @return Total no. of waits
+     * 
+     */
     public Double waitCount() {
         return this.waitCount;
     }
@@ -36,6 +40,10 @@ public final class WaitStatisticsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="waitTimeMs", required=true)
     private Double waitTimeMs;
 
+    /**
+     * @return Total wait time in millisecond(s)
+     * 
+     */
     public Double waitTimeMs() {
         return this.waitTimeMs;
     }
@@ -47,6 +55,10 @@ public final class WaitStatisticsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="waitType", required=true)
     private String waitType;
 
+    /**
+     * @return Type of the Wait
+     * 
+     */
     public String waitType() {
         return this.waitType;
     }
@@ -77,16 +89,34 @@ public final class WaitStatisticsResponse extends com.pulumi.resources.InvokeArg
             $ = new WaitStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param waitCount Total no. of waits
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitCount(Double waitCount) {
             $.waitCount = waitCount;
             return this;
         }
 
+        /**
+         * @param waitTimeMs Total wait time in millisecond(s)
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitTimeMs(Double waitTimeMs) {
             $.waitTimeMs = waitTimeMs;
             return this;
         }
 
+        /**
+         * @param waitType Type of the Wait
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitType(String waitType) {
             $.waitType = waitType;
             return this;

@@ -26,6 +26,10 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
     @Import(name="caseSensitive")
     private @Nullable Output<Boolean> caseSensitive;
 
+    /**
+     * @return Whether to consider case sensitivity when performing an exact match.
+     * 
+     */
     public Optional<Output<Boolean>> caseSensitive() {
         return Optional.ofNullable(this.caseSensitive);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
             $ = new GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caseSensitive Whether to consider case sensitivity when performing an exact match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caseSensitive(@Nullable Output<Boolean> caseSensitive) {
             $.caseSensitive = caseSensitive;
             return this;
         }
 
+        /**
+         * @param caseSensitive Whether to consider case sensitivity when performing an exact match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caseSensitive(Boolean caseSensitive) {
             return caseSensitive(Output.of(caseSensitive));
         }

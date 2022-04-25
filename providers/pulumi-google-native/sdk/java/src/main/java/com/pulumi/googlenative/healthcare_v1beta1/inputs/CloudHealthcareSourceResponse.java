@@ -23,6 +23,10 @@ public final class CloudHealthcareSourceResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Full path of a Cloud Healthcare API resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -51,6 +55,12 @@ public final class CloudHealthcareSourceResponse extends com.pulumi.resources.In
             $ = new CloudHealthcareSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Full path of a Cloud Healthcare API resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

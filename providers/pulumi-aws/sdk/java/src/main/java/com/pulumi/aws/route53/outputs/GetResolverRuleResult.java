@@ -11,19 +11,19 @@ import java.util.Objects;
 @CustomType
 public final class GetResolverRuleResult {
     /**
-     * The ARN (Amazon Resource Name) for the resolver rule.
+     * @return The ARN (Amazon Resource Name) for the resolver rule.
      * 
      */
     private final String arn;
     private final String domainName;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String name;
     /**
-     * When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.
+     * @return When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.
      * 
      */
     private final String ownerId;
@@ -31,13 +31,13 @@ public final class GetResolverRuleResult {
     private final String resolverRuleId;
     private final String ruleType;
     /**
-     * Whether the rules is shared and, if so, whether the current account is sharing the rule with another account, or another account is sharing the rule with the current account.
+     * @return Whether the rules is shared and, if so, whether the current account is sharing the rule with another account, or another account is sharing the rule with the current account.
      * Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
      * 
      */
     private final String shareStatus;
     /**
-     * A map of tags assigned to the resolver rule.
+     * @return A map of tags assigned to the resolver rule.
      * 
      */
     private final Map<String,String> tags;
@@ -67,9 +67,9 @@ public final class GetResolverRuleResult {
     }
 
     /**
-     * The ARN (Amazon Resource Name) for the resolver rule.
+     * @return The ARN (Amazon Resource Name) for the resolver rule.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
@@ -77,9 +77,9 @@ public final class GetResolverRuleResult {
         return this.domainName;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -87,9 +87,9 @@ public final class GetResolverRuleResult {
         return this.name;
     }
     /**
-     * When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.
+     * @return When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.
      * 
-    */
+     */
     public String ownerId() {
         return this.ownerId;
     }
@@ -103,17 +103,17 @@ public final class GetResolverRuleResult {
         return this.ruleType;
     }
     /**
-     * Whether the rules is shared and, if so, whether the current account is sharing the rule with another account, or another account is sharing the rule with the current account.
+     * @return Whether the rules is shared and, if so, whether the current account is sharing the rule with another account, or another account is sharing the rule with the current account.
      * Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
      * 
-    */
+     */
     public String shareStatus() {
         return this.shareStatus;
     }
     /**
-     * A map of tags assigned to the resolver rule.
+     * @return A map of tags assigned to the resolver rule.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

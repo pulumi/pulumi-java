@@ -25,6 +25,10 @@ public final class SiteLimitsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxDiskSizeInMb")
     private @Nullable Double maxDiskSizeInMb;
 
+    /**
+     * @return Maximum allowed disk size usage in MB.
+     * 
+     */
     public Optional<Double> maxDiskSizeInMb() {
         return Optional.ofNullable(this.maxDiskSizeInMb);
     }
@@ -36,6 +40,10 @@ public final class SiteLimitsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxMemoryInMb")
     private @Nullable Double maxMemoryInMb;
 
+    /**
+     * @return Maximum allowed memory usage in MB.
+     * 
+     */
     public Optional<Double> maxMemoryInMb() {
         return Optional.ofNullable(this.maxMemoryInMb);
     }
@@ -47,6 +55,10 @@ public final class SiteLimitsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxPercentageCpu")
     private @Nullable Double maxPercentageCpu;
 
+    /**
+     * @return Maximum allowed CPU usage percentage.
+     * 
+     */
     public Optional<Double> maxPercentageCpu() {
         return Optional.ofNullable(this.maxPercentageCpu);
     }
@@ -77,16 +89,34 @@ public final class SiteLimitsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SiteLimitsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxDiskSizeInMb Maximum allowed disk size usage in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDiskSizeInMb(@Nullable Double maxDiskSizeInMb) {
             $.maxDiskSizeInMb = maxDiskSizeInMb;
             return this;
         }
 
+        /**
+         * @param maxMemoryInMb Maximum allowed memory usage in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxMemoryInMb(@Nullable Double maxMemoryInMb) {
             $.maxMemoryInMb = maxMemoryInMb;
             return this;
         }
 
+        /**
+         * @param maxPercentageCpu Maximum allowed CPU usage percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentageCpu(@Nullable Double maxPercentageCpu) {
             $.maxPercentageCpu = maxPercentageCpu;
             return this;

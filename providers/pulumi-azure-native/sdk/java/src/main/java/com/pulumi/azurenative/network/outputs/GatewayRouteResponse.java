@@ -11,37 +11,37 @@ import java.util.Objects;
 @CustomType
 public final class GatewayRouteResponse {
     /**
-     * The route&#39;s AS path sequence.
+     * @return The route&#39;s AS path sequence.
      * 
      */
     private final String asPath;
     /**
-     * The gateway&#39;s local address.
+     * @return The gateway&#39;s local address.
      * 
      */
     private final String localAddress;
     /**
-     * The route&#39;s network prefix.
+     * @return The route&#39;s network prefix.
      * 
      */
     private final String network;
     /**
-     * The route&#39;s next hop.
+     * @return The route&#39;s next hop.
      * 
      */
     private final String nextHop;
     /**
-     * The source this route was learned from.
+     * @return The source this route was learned from.
      * 
      */
     private final String origin;
     /**
-     * The peer this route was learned from.
+     * @return The peer this route was learned from.
      * 
      */
     private final String sourcePeer;
     /**
-     * The route&#39;s weight.
+     * @return The route&#39;s weight.
      * 
      */
     private final Integer weight;
@@ -65,51 +65,51 @@ public final class GatewayRouteResponse {
     }
 
     /**
-     * The route&#39;s AS path sequence.
+     * @return The route&#39;s AS path sequence.
      * 
-    */
+     */
     public String asPath() {
         return this.asPath;
     }
     /**
-     * The gateway&#39;s local address.
+     * @return The gateway&#39;s local address.
      * 
-    */
+     */
     public String localAddress() {
         return this.localAddress;
     }
     /**
-     * The route&#39;s network prefix.
+     * @return The route&#39;s network prefix.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * The route&#39;s next hop.
+     * @return The route&#39;s next hop.
      * 
-    */
+     */
     public String nextHop() {
         return this.nextHop;
     }
     /**
-     * The source this route was learned from.
+     * @return The source this route was learned from.
      * 
-    */
+     */
     public String origin() {
         return this.origin;
     }
     /**
-     * The peer this route was learned from.
+     * @return The peer this route was learned from.
      * 
-    */
+     */
     public String sourcePeer() {
         return this.sourcePeer;
     }
     /**
-     * The route&#39;s weight.
+     * @return The route&#39;s weight.
      * 
-    */
+     */
     public Integer weight() {
         return this.weight;
     }

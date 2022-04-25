@@ -25,6 +25,10 @@ public final class DatasetReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The id of the dataset reference.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class DatasetReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the dataset reference.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -65,11 +73,23 @@ public final class DatasetReferenceResponse extends com.pulumi.resources.InvokeA
             $ = new DatasetReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The id of the dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

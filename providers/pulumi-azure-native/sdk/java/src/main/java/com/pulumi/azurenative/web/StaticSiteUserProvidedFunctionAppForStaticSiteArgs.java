@@ -23,6 +23,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     @Import(name="functionAppName")
     private @Nullable Output<String> functionAppName;
 
+    /**
+     * @return Name of the function app to register with the static site.
+     * 
+     */
     public Optional<Output<String>> functionAppName() {
         return Optional.ofNullable(this.functionAppName);
     }
@@ -34,6 +38,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     @Import(name="functionAppRegion")
     private @Nullable Output<String> functionAppRegion;
 
+    /**
+     * @return The region of the function app registered with the static site
+     * 
+     */
     public Optional<Output<String>> functionAppRegion() {
         return Optional.ofNullable(this.functionAppRegion);
     }
@@ -45,6 +53,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     @Import(name="functionAppResourceId")
     private @Nullable Output<String> functionAppResourceId;
 
+    /**
+     * @return The resource id of the function app registered with the static site
+     * 
+     */
     public Optional<Output<String>> functionAppResourceId() {
         return Optional.ofNullable(this.functionAppResourceId);
     }
@@ -56,6 +68,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     @Import(name="isForced")
     private @Nullable Output<Boolean> isForced;
 
+    /**
+     * @return Specify &lt;code&gt;true&lt;/code&gt; to force the update of the auth configuration on the function app even if an AzureStaticWebApps provider is already configured on the function app. The default is &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> isForced() {
         return Optional.ofNullable(this.isForced);
     }
@@ -67,6 +83,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -78,6 +98,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the static site.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -89,6 +113,10 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -123,65 +151,149 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends co
             $ = new StaticSiteUserProvidedFunctionAppForStaticSiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionAppName Name of the function app to register with the static site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppName(@Nullable Output<String> functionAppName) {
             $.functionAppName = functionAppName;
             return this;
         }
 
+        /**
+         * @param functionAppName Name of the function app to register with the static site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppName(String functionAppName) {
             return functionAppName(Output.of(functionAppName));
         }
 
+        /**
+         * @param functionAppRegion The region of the function app registered with the static site
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppRegion(@Nullable Output<String> functionAppRegion) {
             $.functionAppRegion = functionAppRegion;
             return this;
         }
 
+        /**
+         * @param functionAppRegion The region of the function app registered with the static site
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppRegion(String functionAppRegion) {
             return functionAppRegion(Output.of(functionAppRegion));
         }
 
+        /**
+         * @param functionAppResourceId The resource id of the function app registered with the static site
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppResourceId(@Nullable Output<String> functionAppResourceId) {
             $.functionAppResourceId = functionAppResourceId;
             return this;
         }
 
+        /**
+         * @param functionAppResourceId The resource id of the function app registered with the static site
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppResourceId(String functionAppResourceId) {
             return functionAppResourceId(Output.of(functionAppResourceId));
         }
 
+        /**
+         * @param isForced Specify &lt;code&gt;true&lt;/code&gt; to force the update of the auth configuration on the function app even if an AzureStaticWebApps provider is already configured on the function app. The default is &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isForced(@Nullable Output<Boolean> isForced) {
             $.isForced = isForced;
             return this;
         }
 
+        /**
+         * @param isForced Specify &lt;code&gt;true&lt;/code&gt; to force the update of the auth configuration on the function app even if an AzureStaticWebApps provider is already configured on the function app. The default is &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isForced(Boolean isForced) {
             return isForced(Output.of(isForced));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name Name of the static site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the static site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

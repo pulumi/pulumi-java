@@ -25,6 +25,10 @@ public final class HttpRouteMatchPathResponse extends com.pulumi.resources.Invok
     @Import(name="rewrite")
     private @Nullable String rewrite;
 
+    /**
+     * @return replacement string for matched part of the Uri.
+     * 
+     */
     public Optional<String> rewrite() {
         return Optional.ofNullable(this.rewrite);
     }
@@ -36,6 +40,10 @@ public final class HttpRouteMatchPathResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return how to match value in the Uri
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -47,6 +55,10 @@ public final class HttpRouteMatchPathResponse extends com.pulumi.resources.Invok
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Uri path to match for request.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -77,16 +89,34 @@ public final class HttpRouteMatchPathResponse extends com.pulumi.resources.Invok
             $ = new HttpRouteMatchPathResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rewrite replacement string for matched part of the Uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewrite(@Nullable String rewrite) {
             $.rewrite = rewrite;
             return this;
         }
 
+        /**
+         * @param type how to match value in the Uri
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value Uri path to match for request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

@@ -25,6 +25,10 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse extends com.
     @Import(name="protectFromScaleIn")
     private @Nullable Boolean protectFromScaleIn;
 
+    /**
+     * @return Indicates that the virtual machine scale set VM shouldn&#39;t be considered for deletion during a scale-in operation.
+     * 
+     */
     public Optional<Boolean> protectFromScaleIn() {
         return Optional.ofNullable(this.protectFromScaleIn);
     }
@@ -36,6 +40,10 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse extends com.
     @Import(name="protectFromScaleSetActions")
     private @Nullable Boolean protectFromScaleSetActions;
 
+    /**
+     * @return Indicates that model updates or actions (including scale-in) initiated on the virtual machine scale set should not be applied to the virtual machine scale set VM.
+     * 
+     */
     public Optional<Boolean> protectFromScaleSetActions() {
         return Optional.ofNullable(this.protectFromScaleSetActions);
     }
@@ -65,11 +73,23 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse extends com.
             $ = new VirtualMachineScaleSetVMProtectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param protectFromScaleIn Indicates that the virtual machine scale set VM shouldn&#39;t be considered for deletion during a scale-in operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
             $.protectFromScaleIn = protectFromScaleIn;
             return this;
         }
 
+        /**
+         * @param protectFromScaleSetActions Indicates that model updates or actions (including scale-in) initiated on the virtual machine scale set should not be applied to the virtual machine scale set VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectFromScaleSetActions(@Nullable Boolean protectFromScaleSetActions) {
             $.protectFromScaleSetActions = protectFromScaleSetActions;
             return this;

@@ -32,6 +32,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
     @Import(name="availableQuantity")
     private @Nullable Output<String> availableQuantity;
 
+    /**
+     * @return Optional. The available quantity of the item.
+     * 
+     */
     public Optional<Output<String>> availableQuantity() {
         return Optional.ofNullable(this.availableQuantity);
     }
@@ -43,6 +47,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
     @Import(name="canonicalProductUri")
     private @Nullable Output<String> canonicalProductUri;
 
+    /**
+     * @return Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
+     * 
+     */
     public Optional<Output<String>> canonicalProductUri() {
         return Optional.ofNullable(this.canonicalProductUri);
     }
@@ -54,6 +62,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
     @Import(name="costs")
     private @Nullable Output<Map<String,String>> costs;
 
+    /**
+     * @return Optional. A map to pass the costs associated with the product. For example: {&#34;manufacturing&#34;: 45.5} The profit of selling this item is computed like so: * If &#39;exactPrice&#39; is provided, profit = displayPrice - sum(costs) * If &#39;priceRange&#39; is provided, profit = minPrice - sum(costs)
+     * 
+     */
     public Optional<Output<Map<String,String>>> costs() {
         return Optional.ofNullable(this.costs);
     }
@@ -65,6 +77,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
     @Import(name="currencyCode")
     private @Nullable Output<String> currencyCode;
 
+    /**
+     * @return Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
+     * 
+     */
     public Optional<Output<String>> currencyCode() {
         return Optional.ofNullable(this.currencyCode);
     }
@@ -76,6 +92,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
     @Import(name="exactPrice")
     private @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs> exactPrice;
 
+    /**
+     * @return Optional. The exact product price.
+     * 
+     */
     public Optional<Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs>> exactPrice() {
         return Optional.ofNullable(this.exactPrice);
     }
@@ -87,6 +107,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
     @Import(name="images")
     private @Nullable Output<List<GoogleCloudRecommendationengineV1beta1ImageArgs>> images;
 
+    /**
+     * @return Optional. Product images for the catalog item.
+     * 
+     */
     public Optional<Output<List<GoogleCloudRecommendationengineV1beta1ImageArgs>>> images() {
         return Optional.ofNullable(this.images);
     }
@@ -98,6 +122,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
     @Import(name="priceRange")
     private @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs> priceRange;
 
+    /**
+     * @return Optional. The product price range.
+     * 
+     */
     public Optional<Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs>> priceRange() {
         return Optional.ofNullable(this.priceRange);
     }
@@ -109,6 +137,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
     @Import(name="stockState")
     private @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState> stockState;
 
+    /**
+     * @return Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
+     * 
+     */
     public Optional<Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState>> stockState() {
         return Optional.ofNullable(this.stockState);
     }
@@ -144,78 +176,180 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
             $ = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availableQuantity Optional. The available quantity of the item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableQuantity(@Nullable Output<String> availableQuantity) {
             $.availableQuantity = availableQuantity;
             return this;
         }
 
+        /**
+         * @param availableQuantity Optional. The available quantity of the item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableQuantity(String availableQuantity) {
             return availableQuantity(Output.of(availableQuantity));
         }
 
+        /**
+         * @param canonicalProductUri Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalProductUri(@Nullable Output<String> canonicalProductUri) {
             $.canonicalProductUri = canonicalProductUri;
             return this;
         }
 
+        /**
+         * @param canonicalProductUri Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalProductUri(String canonicalProductUri) {
             return canonicalProductUri(Output.of(canonicalProductUri));
         }
 
+        /**
+         * @param costs Optional. A map to pass the costs associated with the product. For example: {&#34;manufacturing&#34;: 45.5} The profit of selling this item is computed like so: * If &#39;exactPrice&#39; is provided, profit = displayPrice - sum(costs) * If &#39;priceRange&#39; is provided, profit = minPrice - sum(costs)
+         * 
+         * @return builder
+         * 
+         */
         public Builder costs(@Nullable Output<Map<String,String>> costs) {
             $.costs = costs;
             return this;
         }
 
+        /**
+         * @param costs Optional. A map to pass the costs associated with the product. For example: {&#34;manufacturing&#34;: 45.5} The profit of selling this item is computed like so: * If &#39;exactPrice&#39; is provided, profit = displayPrice - sum(costs) * If &#39;priceRange&#39; is provided, profit = minPrice - sum(costs)
+         * 
+         * @return builder
+         * 
+         */
         public Builder costs(Map<String,String> costs) {
             return costs(Output.of(costs));
         }
 
+        /**
+         * @param currencyCode Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currencyCode(@Nullable Output<String> currencyCode) {
             $.currencyCode = currencyCode;
             return this;
         }
 
+        /**
+         * @param currencyCode Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currencyCode(String currencyCode) {
             return currencyCode(Output.of(currencyCode));
         }
 
+        /**
+         * @param exactPrice Optional. The exact product price.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exactPrice(@Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs> exactPrice) {
             $.exactPrice = exactPrice;
             return this;
         }
 
+        /**
+         * @param exactPrice Optional. The exact product price.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exactPrice(GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs exactPrice) {
             return exactPrice(Output.of(exactPrice));
         }
 
+        /**
+         * @param images Optional. Product images for the catalog item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(@Nullable Output<List<GoogleCloudRecommendationengineV1beta1ImageArgs>> images) {
             $.images = images;
             return this;
         }
 
+        /**
+         * @param images Optional. Product images for the catalog item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(List<GoogleCloudRecommendationengineV1beta1ImageArgs> images) {
             return images(Output.of(images));
         }
 
+        /**
+         * @param images Optional. Product images for the catalog item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(GoogleCloudRecommendationengineV1beta1ImageArgs... images) {
             return images(List.of(images));
         }
 
+        /**
+         * @param priceRange Optional. The product price range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priceRange(@Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs> priceRange) {
             $.priceRange = priceRange;
             return this;
         }
 
+        /**
+         * @param priceRange Optional. The product price range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priceRange(GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs priceRange) {
             return priceRange(Output.of(priceRange));
         }
 
+        /**
+         * @param stockState Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stockState(@Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState> stockState) {
             $.stockState = stockState;
             return this;
         }
 
+        /**
+         * @param stockState Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stockState(GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState stockState) {
             return stockState(Output.of(stockState));
         }

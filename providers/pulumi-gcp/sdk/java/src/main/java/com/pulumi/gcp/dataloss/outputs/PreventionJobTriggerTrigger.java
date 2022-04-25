@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PreventionJobTriggerTrigger {
     /**
-     * Schedule for triggered jobs
+     * @return Schedule for triggered jobs
      * Structure is documented below.
      * 
      */
@@ -24,10 +24,10 @@ public final class PreventionJobTriggerTrigger {
     }
 
     /**
-     * Schedule for triggered jobs
+     * @return Schedule for triggered jobs
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionJobTriggerTriggerSchedule> schedule() {
         return Optional.ofNullable(this.schedule);
     }

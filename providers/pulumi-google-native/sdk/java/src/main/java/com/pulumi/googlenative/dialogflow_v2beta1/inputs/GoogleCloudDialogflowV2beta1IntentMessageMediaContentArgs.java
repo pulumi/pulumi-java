@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs ext
     @Import(name="mediaObjects", required=true)
     private Output<List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects;
 
+    /**
+     * @return List of media objects.
+     * 
+     */
     public Output<List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects() {
         return this.mediaObjects;
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs ext
     @Import(name="mediaType")
     private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageMediaContentMediaType> mediaType;
 
+    /**
+     * @return Optional. What type of media is the content (ie &#34;audio&#34;).
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageMediaContentMediaType>> mediaType() {
         return Optional.ofNullable(this.mediaType);
     }
@@ -68,24 +76,54 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs ext
             $ = new GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mediaObjects List of media objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaObjects(Output<List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects) {
             $.mediaObjects = mediaObjects;
             return this;
         }
 
+        /**
+         * @param mediaObjects List of media objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaObjects(List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs> mediaObjects) {
             return mediaObjects(Output.of(mediaObjects));
         }
 
+        /**
+         * @param mediaObjects List of media objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaObjects(GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs... mediaObjects) {
             return mediaObjects(List.of(mediaObjects));
         }
 
+        /**
+         * @param mediaType Optional. What type of media is the content (ie &#34;audio&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaType(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageMediaContentMediaType> mediaType) {
             $.mediaType = mediaType;
             return this;
         }
 
+        /**
+         * @param mediaType Optional. What type of media is the content (ie &#34;audio&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaType(GoogleCloudDialogflowV2beta1IntentMessageMediaContentMediaType mediaType) {
             return mediaType(Output.of(mediaType));
         }

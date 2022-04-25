@@ -26,6 +26,10 @@ public final class RotationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nextRotationTime")
     private @Nullable Output<String> nextRotationTime;
 
+    /**
+     * @return Optional. Timestamp in UTC at which the Secret is scheduled to rotate. Cannot be set to less than 300s (5 min) in the future and at most 3153600000s (100 years). next_rotation_time MUST be set if rotation_period is set.
+     * 
+     */
     public Optional<Output<String>> nextRotationTime() {
         return Optional.ofNullable(this.nextRotationTime);
     }
@@ -37,6 +41,10 @@ public final class RotationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rotationPeriod")
     private @Nullable Output<String> rotationPeriod;
 
+    /**
+     * @return Input only. The Duration between rotation notifications. Must be in seconds and at least 3600s (1h) and at most 3153600000s (100 years). If rotation_period is set, next_rotation_time must be set. next_rotation_time will be advanced by this period when the service automatically sends rotation notifications.
+     * 
+     */
     public Optional<Output<String>> rotationPeriod() {
         return Optional.ofNullable(this.rotationPeriod);
     }
@@ -66,20 +74,44 @@ public final class RotationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RotationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nextRotationTime Optional. Timestamp in UTC at which the Secret is scheduled to rotate. Cannot be set to less than 300s (5 min) in the future and at most 3153600000s (100 years). next_rotation_time MUST be set if rotation_period is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextRotationTime(@Nullable Output<String> nextRotationTime) {
             $.nextRotationTime = nextRotationTime;
             return this;
         }
 
+        /**
+         * @param nextRotationTime Optional. Timestamp in UTC at which the Secret is scheduled to rotate. Cannot be set to less than 300s (5 min) in the future and at most 3153600000s (100 years). next_rotation_time MUST be set if rotation_period is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextRotationTime(String nextRotationTime) {
             return nextRotationTime(Output.of(nextRotationTime));
         }
 
+        /**
+         * @param rotationPeriod Input only. The Duration between rotation notifications. Must be in seconds and at least 3600s (1h) and at most 3153600000s (100 years). If rotation_period is set, next_rotation_time must be set. next_rotation_time will be advanced by this period when the service automatically sends rotation notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationPeriod(@Nullable Output<String> rotationPeriod) {
             $.rotationPeriod = rotationPeriod;
             return this;
         }
 
+        /**
+         * @param rotationPeriod Input only. The Duration between rotation notifications. Must be in seconds and at least 3600s (1h) and at most 3153600000s (100 years). If rotation_period is set, next_rotation_time must be set. next_rotation_time will be advanced by this period when the service automatically sends rotation notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationPeriod(String rotationPeriod) {
             return rotationPeriod(Output.of(rotationPeriod));
         }

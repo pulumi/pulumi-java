@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListSpacecraftAvailableContactsResult {
     /**
-     * The URL to get the next set of results.
+     * @return The URL to get the next set of results.
      * 
      */
     private final String nextLink;
     /**
-     * A list of available contacts
+     * @return A list of available contacts
      * 
      */
     private final @Nullable List<AvailableContactsResponse> value;
@@ -32,16 +32,16 @@ public final class ListSpacecraftAvailableContactsResult {
     }
 
     /**
-     * The URL to get the next set of results.
+     * @return The URL to get the next set of results.
      * 
-    */
+     */
     public String nextLink() {
         return this.nextLink;
     }
     /**
-     * A list of available contacts
+     * @return A list of available contacts
      * 
-    */
+     */
     public List<AvailableContactsResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

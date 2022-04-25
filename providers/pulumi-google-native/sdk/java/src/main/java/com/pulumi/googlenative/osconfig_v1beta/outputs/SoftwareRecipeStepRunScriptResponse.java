@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class SoftwareRecipeStepRunScriptResponse {
     /**
-     * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * @return Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
      */
     private final List<Integer> allowedExitCodes;
     /**
-     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](&lt;https://en.wikipedia.org/wiki/Shebang_\(Unix\)&gt;).
+     * @return The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](&lt;https://en.wikipedia.org/wiki/Shebang_\(Unix\)&gt;).
      * 
      */
     private final String interpreter;
     /**
-     * The shell script to be executed.
+     * @return The shell script to be executed.
      * 
      */
     private final String script;
@@ -38,23 +38,23 @@ public final class SoftwareRecipeStepRunScriptResponse {
     }
 
     /**
-     * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * @return Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
-    */
+     */
     public List<Integer> allowedExitCodes() {
         return this.allowedExitCodes;
     }
     /**
-     * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](&lt;https://en.wikipedia.org/wiki/Shebang_\(Unix\)&gt;).
+     * @return The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](&lt;https://en.wikipedia.org/wiki/Shebang_\(Unix\)&gt;).
      * 
-    */
+     */
     public String interpreter() {
         return this.interpreter;
     }
     /**
-     * The shell script to be executed.
+     * @return The shell script to be executed.
      * 
-    */
+     */
     public String script() {
         return this.script;
     }

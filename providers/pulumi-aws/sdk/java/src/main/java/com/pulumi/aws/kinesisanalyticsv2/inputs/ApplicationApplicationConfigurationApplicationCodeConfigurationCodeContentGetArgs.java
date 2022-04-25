@@ -23,6 +23,10 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     @Import(name="s3ContentLocation")
     private @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs> s3ContentLocation;
 
+    /**
+     * @return Information about the Amazon S3 bucket containing the application code.
+     * 
+     */
     public Optional<Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs>> s3ContentLocation() {
         return Optional.ofNullable(this.s3ContentLocation);
     }
@@ -34,6 +38,10 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     @Import(name="textContent")
     private @Nullable Output<String> textContent;
 
+    /**
+     * @return The text-format code for the application.
+     * 
+     */
     public Optional<Output<String>> textContent() {
         return Optional.ofNullable(this.textContent);
     }
@@ -63,20 +71,44 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
             $ = new ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3ContentLocation Information about the Amazon S3 bucket containing the application code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3ContentLocation(@Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs> s3ContentLocation) {
             $.s3ContentLocation = s3ContentLocation;
             return this;
         }
 
+        /**
+         * @param s3ContentLocation Information about the Amazon S3 bucket containing the application code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3ContentLocation(ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs s3ContentLocation) {
             return s3ContentLocation(Output.of(s3ContentLocation));
         }
 
+        /**
+         * @param textContent The text-format code for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textContent(@Nullable Output<String> textContent) {
             $.textContent = textContent;
             return this;
         }
 
+        /**
+         * @param textContent The text-format code for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textContent(String textContent) {
             return textContent(Output.of(textContent));
         }

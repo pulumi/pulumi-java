@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class PatientIdResponse {
     /**
-     * ID type. For example, MRN or NHS.
+     * @return ID type. For example, MRN or NHS.
      * 
      */
     private final String type;
     /**
-     * The patient&#39;s unique identifier.
+     * @return The patient&#39;s unique identifier.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class PatientIdResponse {
     }
 
     /**
-     * ID type. For example, MRN or NHS.
+     * @return ID type. For example, MRN or NHS.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The patient&#39;s unique identifier.
+     * @return The patient&#39;s unique identifier.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

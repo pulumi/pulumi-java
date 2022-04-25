@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TargetGroupStickiness {
     /**
-     * Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
+     * @return Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
      * 
      */
     private final @Nullable Integer cookieDuration;
     /**
-     * Name of the application based cookie. AWSALB, AWSALBAPP, and AWSALBTG prefixes are reserved and cannot be used. Only needed when type is `app_cookie`.
+     * @return Name of the application based cookie. AWSALB, AWSALBAPP, and AWSALBTG prefixes are reserved and cannot be used. Only needed when type is `app_cookie`.
      * 
      */
     private final @Nullable String cookieName;
     /**
-     * Boolean to enable / disable `stickiness`. Default is `true`.
+     * @return Boolean to enable / disable `stickiness`. Default is `true`.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * The type of sticky sessions. The only current possible values are `lb_cookie`, `app_cookie` for ALBs, and `source_ip` for NLBs.
+     * @return The type of sticky sessions. The only current possible values are `lb_cookie`, `app_cookie` for ALBs, and `source_ip` for NLBs.
      * 
      */
     private final String type;
@@ -47,30 +47,30 @@ public final class TargetGroupStickiness {
     }
 
     /**
-     * Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
+     * @return Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
      * 
-    */
+     */
     public Optional<Integer> cookieDuration() {
         return Optional.ofNullable(this.cookieDuration);
     }
     /**
-     * Name of the application based cookie. AWSALB, AWSALBAPP, and AWSALBTG prefixes are reserved and cannot be used. Only needed when type is `app_cookie`.
+     * @return Name of the application based cookie. AWSALB, AWSALBAPP, and AWSALBTG prefixes are reserved and cannot be used. Only needed when type is `app_cookie`.
      * 
-    */
+     */
     public Optional<String> cookieName() {
         return Optional.ofNullable(this.cookieName);
     }
     /**
-     * Boolean to enable / disable `stickiness`. Default is `true`.
+     * @return Boolean to enable / disable `stickiness`. Default is `true`.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The type of sticky sessions. The only current possible values are `lb_cookie`, `app_cookie` for ALBs, and `source_ip` for NLBs.
+     * @return The type of sticky sessions. The only current possible values are `lb_cookie`, `app_cookie` for ALBs, and `source_ip` for NLBs.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class JobStatistics3Response {
     /**
-     * The number of bad records encountered. Note that if the job has failed because of more bad records encountered than the maximum allowed in the load job configuration, then this number can be less than the total number of bad records present in the input data.
+     * @return The number of bad records encountered. Note that if the job has failed because of more bad records encountered than the maximum allowed in the load job configuration, then this number can be less than the total number of bad records present in the input data.
      * 
      */
     private final String badRecords;
     /**
-     * Number of bytes of source data in a load job.
+     * @return Number of bytes of source data in a load job.
      * 
      */
     private final String inputFileBytes;
     /**
-     * Number of source files in a load job.
+     * @return Number of source files in a load job.
      * 
      */
     private final String inputFiles;
     /**
-     * Size of the loaded data in bytes. Note that while a load job is in the running state, this value may change.
+     * @return Size of the loaded data in bytes. Note that while a load job is in the running state, this value may change.
      * 
      */
     private final String outputBytes;
     /**
-     * Number of rows imported in a load job. Note that while an import job is in the running state, this value may change.
+     * @return Number of rows imported in a load job. Note that while an import job is in the running state, this value may change.
      * 
      */
     private final String outputRows;
@@ -50,37 +50,37 @@ public final class JobStatistics3Response {
     }
 
     /**
-     * The number of bad records encountered. Note that if the job has failed because of more bad records encountered than the maximum allowed in the load job configuration, then this number can be less than the total number of bad records present in the input data.
+     * @return The number of bad records encountered. Note that if the job has failed because of more bad records encountered than the maximum allowed in the load job configuration, then this number can be less than the total number of bad records present in the input data.
      * 
-    */
+     */
     public String badRecords() {
         return this.badRecords;
     }
     /**
-     * Number of bytes of source data in a load job.
+     * @return Number of bytes of source data in a load job.
      * 
-    */
+     */
     public String inputFileBytes() {
         return this.inputFileBytes;
     }
     /**
-     * Number of source files in a load job.
+     * @return Number of source files in a load job.
      * 
-    */
+     */
     public String inputFiles() {
         return this.inputFiles;
     }
     /**
-     * Size of the loaded data in bytes. Note that while a load job is in the running state, this value may change.
+     * @return Size of the loaded data in bytes. Note that while a load job is in the running state, this value may change.
      * 
-    */
+     */
     public String outputBytes() {
         return this.outputBytes;
     }
     /**
-     * Number of rows imported in a load job. Note that while an import job is in the running state, this value may change.
+     * @return Number of rows imported in a load job. Note that while an import job is in the running state, this value may change.
      * 
-    */
+     */
     public String outputRows() {
         return this.outputRows;
     }

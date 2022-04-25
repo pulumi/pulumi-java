@@ -29,6 +29,10 @@ public final class SamplingSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="percentage")
     private @Nullable Output<Double> percentage;
 
+    /**
+     * @return Rate of sampling for fixed-rate sampling.
+     * 
+     */
     public Optional<Output<Double>> percentage() {
         return Optional.ofNullable(this.percentage);
     }
@@ -40,6 +44,10 @@ public final class SamplingSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="samplingType")
     private @Nullable Output<Either<String,SamplingType>> samplingType;
 
+    /**
+     * @return Sampling type.
+     * 
+     */
     public Optional<Output<Either<String,SamplingType>>> samplingType() {
         return Optional.ofNullable(this.samplingType);
     }
@@ -69,28 +77,64 @@ public final class SamplingSettingsArgs extends com.pulumi.resources.ResourceArg
             $ = new SamplingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param percentage Rate of sampling for fixed-rate sampling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(@Nullable Output<Double> percentage) {
             $.percentage = percentage;
             return this;
         }
 
+        /**
+         * @param percentage Rate of sampling for fixed-rate sampling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(Double percentage) {
             return percentage(Output.of(percentage));
         }
 
+        /**
+         * @param samplingType Sampling type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingType(@Nullable Output<Either<String,SamplingType>> samplingType) {
             $.samplingType = samplingType;
             return this;
         }
 
+        /**
+         * @param samplingType Sampling type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingType(Either<String,SamplingType> samplingType) {
             return samplingType(Output.of(samplingType));
         }
 
+        /**
+         * @param samplingType Sampling type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingType(String samplingType) {
             return samplingType(Either.ofLeft(samplingType));
         }
 
+        /**
+         * @param samplingType Sampling type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingType(SamplingType samplingType) {
             return samplingType(Either.ofRight(samplingType));
         }

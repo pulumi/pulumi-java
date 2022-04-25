@@ -22,6 +22,10 @@ public final class SyncAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -33,6 +37,10 @@ public final class SyncAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server on which the sync agent is hosted.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -44,6 +52,10 @@ public final class SyncAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncAgentName")
     private @Nullable Output<String> syncAgentName;
 
+    /**
+     * @return The name of the sync agent.
+     * 
+     */
     public Optional<Output<String>> syncAgentName() {
         return Optional.ofNullable(this.syncAgentName);
     }
@@ -55,6 +67,10 @@ public final class SyncAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncDatabaseId")
     private @Nullable Output<String> syncDatabaseId;
 
+    /**
+     * @return ARM resource id of the sync database in the sync agent.
+     * 
+     */
     public Optional<Output<String>> syncDatabaseId() {
         return Optional.ofNullable(this.syncDatabaseId);
     }
@@ -86,38 +102,86 @@ public final class SyncAgentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SyncAgentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server on which the sync agent is hosted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server on which the sync agent is hosted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param syncAgentName The name of the sync agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncAgentName(@Nullable Output<String> syncAgentName) {
             $.syncAgentName = syncAgentName;
             return this;
         }
 
+        /**
+         * @param syncAgentName The name of the sync agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncAgentName(String syncAgentName) {
             return syncAgentName(Output.of(syncAgentName));
         }
 
+        /**
+         * @param syncDatabaseId ARM resource id of the sync database in the sync agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncDatabaseId(@Nullable Output<String> syncDatabaseId) {
             $.syncDatabaseId = syncDatabaseId;
             return this;
         }
 
+        /**
+         * @param syncDatabaseId ARM resource id of the sync database in the sync agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncDatabaseId(String syncDatabaseId) {
             return syncDatabaseId(Output.of(syncDatabaseId));
         }

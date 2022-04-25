@@ -30,6 +30,10 @@ public final class RouteTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="disableBgpRoutePropagation")
     private @Nullable Boolean disableBgpRoutePropagation;
 
+    /**
+     * @return Whether to disable the routes learned by BGP on that route table. True means disable.
+     * 
+     */
     public Optional<Boolean> disableBgpRoutePropagation() {
         return Optional.ofNullable(this.disableBgpRoutePropagation);
     }
@@ -41,6 +45,10 @@ public final class RouteTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -52,6 +60,10 @@ public final class RouteTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -63,6 +75,10 @@ public final class RouteTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -74,6 +90,10 @@ public final class RouteTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -85,6 +105,10 @@ public final class RouteTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the route table resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -96,6 +120,10 @@ public final class RouteTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGuid", required=true)
     private String resourceGuid;
 
+    /**
+     * @return The resource GUID property of the route table.
+     * 
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
@@ -107,6 +135,10 @@ public final class RouteTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="routes")
     private @Nullable List<RouteResponse> routes;
 
+    /**
+     * @return Collection of routes contained within a route table.
+     * 
+     */
     public Optional<List<RouteResponse>> routes() {
         return Optional.ofNullable(this.routes);
     }
@@ -118,6 +150,10 @@ public final class RouteTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnets", required=true)
     private List<SubnetResponse> subnets;
 
+    /**
+     * @return A collection of references to subnets.
+     * 
+     */
     public List<SubnetResponse> subnets() {
         return this.subnets;
     }
@@ -129,6 +165,10 @@ public final class RouteTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -140,6 +180,10 @@ public final class RouteTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -178,64 +222,142 @@ public final class RouteTableResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RouteTableResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableBgpRoutePropagation Whether to disable the routes learned by BGP on that route table. True means disable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableBgpRoutePropagation(@Nullable Boolean disableBgpRoutePropagation) {
             $.disableBgpRoutePropagation = disableBgpRoutePropagation;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the route table resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param resourceGuid The resource GUID property of the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGuid(String resourceGuid) {
             $.resourceGuid = resourceGuid;
             return this;
         }
 
+        /**
+         * @param routes Collection of routes contained within a route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(@Nullable List<RouteResponse> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes Collection of routes contained within a route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(RouteResponse... routes) {
             return routes(List.of(routes));
         }
 
+        /**
+         * @param subnets A collection of references to subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(List<SubnetResponse> subnets) {
             $.subnets = subnets;
             return this;
         }
 
+        /**
+         * @param subnets A collection of references to subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(SubnetResponse... subnets) {
             return subnets(List.of(subnets));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

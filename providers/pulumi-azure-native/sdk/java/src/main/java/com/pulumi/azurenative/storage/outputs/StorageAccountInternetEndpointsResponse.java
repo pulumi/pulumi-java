@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class StorageAccountInternetEndpointsResponse {
     /**
-     * Gets the blob endpoint.
+     * @return Gets the blob endpoint.
      * 
      */
     private final String blob;
     /**
-     * Gets the dfs endpoint.
+     * @return Gets the dfs endpoint.
      * 
      */
     private final String dfs;
     /**
-     * Gets the file endpoint.
+     * @return Gets the file endpoint.
      * 
      */
     private final String file;
     /**
-     * Gets the web endpoint.
+     * @return Gets the web endpoint.
      * 
      */
     private final String web;
@@ -43,30 +43,30 @@ public final class StorageAccountInternetEndpointsResponse {
     }
 
     /**
-     * Gets the blob endpoint.
+     * @return Gets the blob endpoint.
      * 
-    */
+     */
     public String blob() {
         return this.blob;
     }
     /**
-     * Gets the dfs endpoint.
+     * @return Gets the dfs endpoint.
      * 
-    */
+     */
     public String dfs() {
         return this.dfs;
     }
     /**
-     * Gets the file endpoint.
+     * @return Gets the file endpoint.
      * 
-    */
+     */
     public String file() {
         return this.file;
     }
     /**
-     * Gets the web endpoint.
+     * @return Gets the web endpoint.
      * 
-    */
+     */
     public String web() {
         return this.web;
     }

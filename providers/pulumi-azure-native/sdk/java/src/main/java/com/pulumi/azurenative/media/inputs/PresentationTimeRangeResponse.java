@@ -26,6 +26,10 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
     @Import(name="endTimestamp")
     private @Nullable Double endTimestamp;
 
+    /**
+     * @return The absolute end time boundary.
+     * 
+     */
     public Optional<Double> endTimestamp() {
         return Optional.ofNullable(this.endTimestamp);
     }
@@ -37,6 +41,10 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
     @Import(name="forceEndTimestamp")
     private @Nullable Boolean forceEndTimestamp;
 
+    /**
+     * @return The indicator of forcing existing of end time stamp.
+     * 
+     */
     public Optional<Boolean> forceEndTimestamp() {
         return Optional.ofNullable(this.forceEndTimestamp);
     }
@@ -48,6 +56,10 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
     @Import(name="liveBackoffDuration")
     private @Nullable Double liveBackoffDuration;
 
+    /**
+     * @return The relative to end right edge.
+     * 
+     */
     public Optional<Double> liveBackoffDuration() {
         return Optional.ofNullable(this.liveBackoffDuration);
     }
@@ -59,6 +71,10 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
     @Import(name="presentationWindowDuration")
     private @Nullable Double presentationWindowDuration;
 
+    /**
+     * @return The relative to end sliding window.
+     * 
+     */
     public Optional<Double> presentationWindowDuration() {
         return Optional.ofNullable(this.presentationWindowDuration);
     }
@@ -70,6 +86,10 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
     @Import(name="startTimestamp")
     private @Nullable Double startTimestamp;
 
+    /**
+     * @return The absolute start time boundary.
+     * 
+     */
     public Optional<Double> startTimestamp() {
         return Optional.ofNullable(this.startTimestamp);
     }
@@ -81,6 +101,10 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
     @Import(name="timescale")
     private @Nullable Double timescale;
 
+    /**
+     * @return The time scale of time stamps.
+     * 
+     */
     public Optional<Double> timescale() {
         return Optional.ofNullable(this.timescale);
     }
@@ -114,31 +138,67 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
             $ = new PresentationTimeRangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTimestamp The absolute end time boundary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimestamp(@Nullable Double endTimestamp) {
             $.endTimestamp = endTimestamp;
             return this;
         }
 
+        /**
+         * @param forceEndTimestamp The indicator of forcing existing of end time stamp.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceEndTimestamp(@Nullable Boolean forceEndTimestamp) {
             $.forceEndTimestamp = forceEndTimestamp;
             return this;
         }
 
+        /**
+         * @param liveBackoffDuration The relative to end right edge.
+         * 
+         * @return builder
+         * 
+         */
         public Builder liveBackoffDuration(@Nullable Double liveBackoffDuration) {
             $.liveBackoffDuration = liveBackoffDuration;
             return this;
         }
 
+        /**
+         * @param presentationWindowDuration The relative to end sliding window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presentationWindowDuration(@Nullable Double presentationWindowDuration) {
             $.presentationWindowDuration = presentationWindowDuration;
             return this;
         }
 
+        /**
+         * @param startTimestamp The absolute start time boundary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimestamp(@Nullable Double startTimestamp) {
             $.startTimestamp = startTimestamp;
             return this;
         }
 
+        /**
+         * @param timescale The time scale of time stamps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timescale(@Nullable Double timescale) {
             $.timescale = timescale;
             return this;

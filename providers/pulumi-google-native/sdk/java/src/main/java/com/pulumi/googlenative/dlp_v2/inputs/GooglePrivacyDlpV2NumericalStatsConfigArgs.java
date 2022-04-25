@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigArgs extends com.pulumi
     @Import(name="field")
     private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
+    /**
+     * @return Field to compute numerical stats on. Supported types are integer, float, date, datetime, timestamp, time.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2FieldIdArgs>> field() {
         return Optional.ofNullable(this.field);
     }
@@ -54,11 +58,23 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigArgs extends com.pulumi
             $ = new GooglePrivacyDlpV2NumericalStatsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field Field to compute numerical stats on. Supported types are integer, float, date, datetime, timestamp, time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field Field to compute numerical stats on. Supported types are integer, float, date, datetime, timestamp, time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
             return field(Output.of(field));
         }

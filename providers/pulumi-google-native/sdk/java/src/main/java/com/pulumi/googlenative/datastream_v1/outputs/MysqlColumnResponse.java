@@ -12,37 +12,37 @@ import java.util.Objects;
 @CustomType
 public final class MysqlColumnResponse {
     /**
-     * Column collation.
+     * @return Column collation.
      * 
      */
     private final String collation;
     /**
-     * Column name.
+     * @return Column name.
      * 
      */
     private final String column;
     /**
-     * The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+     * @return The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
      * 
      */
     private final String dataType;
     /**
-     * Column length.
+     * @return Column length.
      * 
      */
     private final Integer length;
     /**
-     * Whether or not the column can accept a null value.
+     * @return Whether or not the column can accept a null value.
      * 
      */
     private final Boolean nullable;
     /**
-     * The ordinal position of the column in the table.
+     * @return The ordinal position of the column in the table.
      * 
      */
     private final Integer ordinalPosition;
     /**
-     * Whether or not the column represents a primary key.
+     * @return Whether or not the column represents a primary key.
      * 
      */
     private final Boolean primaryKey;
@@ -66,51 +66,51 @@ public final class MysqlColumnResponse {
     }
 
     /**
-     * Column collation.
+     * @return Column collation.
      * 
-    */
+     */
     public String collation() {
         return this.collation;
     }
     /**
-     * Column name.
+     * @return Column name.
      * 
-    */
+     */
     public String column() {
         return this.column;
     }
     /**
-     * The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+     * @return The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
      * 
-    */
+     */
     public String dataType() {
         return this.dataType;
     }
     /**
-     * Column length.
+     * @return Column length.
      * 
-    */
+     */
     public Integer length() {
         return this.length;
     }
     /**
-     * Whether or not the column can accept a null value.
+     * @return Whether or not the column can accept a null value.
      * 
-    */
+     */
     public Boolean nullable() {
         return this.nullable;
     }
     /**
-     * The ordinal position of the column in the table.
+     * @return The ordinal position of the column in the table.
      * 
-    */
+     */
     public Integer ordinalPosition() {
         return this.ordinalPosition;
     }
     /**
-     * Whether or not the column represents a primary key.
+     * @return Whether or not the column represents a primary key.
      * 
-    */
+     */
     public Boolean primaryKey() {
         return this.primaryKey;
     }

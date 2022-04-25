@@ -23,6 +23,10 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="kmsKey", required=true)
     private String kmsKey;
 
+    /**
+     * @return The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a disks. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
+     * 
+     */
     public String kmsKey() {
         return this.kmsKey;
     }
@@ -51,6 +55,12 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
             $ = new EncryptionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKey The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a disks. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(String kmsKey) {
             $.kmsKey = kmsKey;
             return this;

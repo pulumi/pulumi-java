@@ -24,6 +24,10 @@ public final class InstanceDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="administration")
     private @Nullable Output<DFPInstanceAdministratorsArgs> administration;
 
+    /**
+     * @return A collection of DFP instance administrators
+     * 
+     */
     public Optional<Output<DFPInstanceAdministratorsArgs>> administration() {
         return Optional.ofNullable(this.administration);
     }
@@ -35,6 +39,10 @@ public final class InstanceDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceName")
     private @Nullable Output<String> instanceName;
 
+    /**
+     * @return The name of the DFP instances. It must be a minimum of 3 characters, and a maximum of 63.
+     * 
+     */
     public Optional<Output<String>> instanceName() {
         return Optional.ofNullable(this.instanceName);
     }
@@ -46,6 +54,10 @@ public final class InstanceDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the DFP resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -57,6 +69,10 @@ public final class InstanceDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the Azure Resource group of which a given DFP instance is part. This name must be at least 1 character in length, and no more than 90.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class InstanceDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value pairs of additional resource provisioning properties.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class InstanceDetailsArgs extends com.pulumi.resources.ResourceArgs
             $ = new InstanceDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param administration A collection of DFP instance administrators
+         * 
+         * @return builder
+         * 
+         */
         public Builder administration(@Nullable Output<DFPInstanceAdministratorsArgs> administration) {
             $.administration = administration;
             return this;
         }
 
+        /**
+         * @param administration A collection of DFP instance administrators
+         * 
+         * @return builder
+         * 
+         */
         public Builder administration(DFPInstanceAdministratorsArgs administration) {
             return administration(Output.of(administration));
         }
 
+        /**
+         * @param instanceName The name of the DFP instances. It must be a minimum of 3 characters, and a maximum of 63.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(@Nullable Output<String> instanceName) {
             $.instanceName = instanceName;
             return this;
         }
 
+        /**
+         * @param instanceName The name of the DFP instances. It must be a minimum of 3 characters, and a maximum of 63.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(String instanceName) {
             return instanceName(Output.of(instanceName));
         }
 
+        /**
+         * @param location Location of the DFP resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the DFP resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure Resource group of which a given DFP instance is part. This name must be at least 1 character in length, and no more than 90.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure Resource group of which a given DFP instance is part. This name must be at least 1 character in length, and no more than 90.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Key-value pairs of additional resource provisioning properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value pairs of additional resource provisioning properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

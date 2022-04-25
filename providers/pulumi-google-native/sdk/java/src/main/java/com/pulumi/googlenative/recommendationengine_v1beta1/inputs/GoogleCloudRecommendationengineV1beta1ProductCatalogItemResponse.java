@@ -28,6 +28,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="availableQuantity", required=true)
     private String availableQuantity;
 
+    /**
+     * @return Optional. The available quantity of the item.
+     * 
+     */
     public String availableQuantity() {
         return this.availableQuantity;
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="canonicalProductUri", required=true)
     private String canonicalProductUri;
 
+    /**
+     * @return Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
+     * 
+     */
     public String canonicalProductUri() {
         return this.canonicalProductUri;
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="costs", required=true)
     private Map<String,String> costs;
 
+    /**
+     * @return Optional. A map to pass the costs associated with the product. For example: {&#34;manufacturing&#34;: 45.5} The profit of selling this item is computed like so: * If &#39;exactPrice&#39; is provided, profit = displayPrice - sum(costs) * If &#39;priceRange&#39; is provided, profit = minPrice - sum(costs)
+     * 
+     */
     public Map<String,String> costs() {
         return this.costs;
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="currencyCode", required=true)
     private String currencyCode;
 
+    /**
+     * @return Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
+     * 
+     */
     public String currencyCode() {
         return this.currencyCode;
     }
@@ -72,6 +88,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="exactPrice", required=true)
     private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice;
 
+    /**
+     * @return Optional. The exact product price.
+     * 
+     */
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice() {
         return this.exactPrice;
     }
@@ -83,6 +103,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="images", required=true)
     private List<GoogleCloudRecommendationengineV1beta1ImageResponse> images;
 
+    /**
+     * @return Optional. Product images for the catalog item.
+     * 
+     */
     public List<GoogleCloudRecommendationengineV1beta1ImageResponse> images() {
         return this.images;
     }
@@ -94,6 +118,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="priceRange", required=true)
     private GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange;
 
+    /**
+     * @return Optional. The product price range.
+     * 
+     */
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange() {
         return this.priceRange;
     }
@@ -105,6 +133,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="stockState", required=true)
     private String stockState;
 
+    /**
+     * @return Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
+     * 
+     */
     public String stockState() {
         return this.stockState;
     }
@@ -140,45 +172,99 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
             $ = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availableQuantity Optional. The available quantity of the item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableQuantity(String availableQuantity) {
             $.availableQuantity = availableQuantity;
             return this;
         }
 
+        /**
+         * @param canonicalProductUri Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalProductUri(String canonicalProductUri) {
             $.canonicalProductUri = canonicalProductUri;
             return this;
         }
 
+        /**
+         * @param costs Optional. A map to pass the costs associated with the product. For example: {&#34;manufacturing&#34;: 45.5} The profit of selling this item is computed like so: * If &#39;exactPrice&#39; is provided, profit = displayPrice - sum(costs) * If &#39;priceRange&#39; is provided, profit = minPrice - sum(costs)
+         * 
+         * @return builder
+         * 
+         */
         public Builder costs(Map<String,String> costs) {
             $.costs = costs;
             return this;
         }
 
+        /**
+         * @param currencyCode Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currencyCode(String currencyCode) {
             $.currencyCode = currencyCode;
             return this;
         }
 
+        /**
+         * @param exactPrice Optional. The exact product price.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exactPrice(GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice) {
             $.exactPrice = exactPrice;
             return this;
         }
 
+        /**
+         * @param images Optional. Product images for the catalog item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(List<GoogleCloudRecommendationengineV1beta1ImageResponse> images) {
             $.images = images;
             return this;
         }
 
+        /**
+         * @param images Optional. Product images for the catalog item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(GoogleCloudRecommendationengineV1beta1ImageResponse... images) {
             return images(List.of(images));
         }
 
+        /**
+         * @param priceRange Optional. The product price range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priceRange(GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange) {
             $.priceRange = priceRange;
             return this;
         }
 
+        /**
+         * @param stockState Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stockState(String stockState) {
             $.stockState = stockState;
             return this;

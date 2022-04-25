@@ -14,18 +14,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TableMaterializedView {
     /**
-     * Specifies whether to use BigQuery&#39;s automatic refresh for this materialized view when the base table is updated.
+     * @return Specifies whether to use BigQuery&#39;s automatic refresh for this materialized view when the base table is updated.
      * The default value is true.
      * 
      */
     private final @Nullable Boolean enableRefresh;
     /**
-     * A query whose result is persisted.
+     * @return A query whose result is persisted.
      * 
      */
     private final String query;
     /**
-     * The maximum frequency at which this materialized view will be refreshed.
+     * @return The maximum frequency at which this materialized view will be refreshed.
      * The default value is 1800000
      * 
      */
@@ -42,25 +42,25 @@ public final class TableMaterializedView {
     }
 
     /**
-     * Specifies whether to use BigQuery&#39;s automatic refresh for this materialized view when the base table is updated.
+     * @return Specifies whether to use BigQuery&#39;s automatic refresh for this materialized view when the base table is updated.
      * The default value is true.
      * 
-    */
+     */
     public Optional<Boolean> enableRefresh() {
         return Optional.ofNullable(this.enableRefresh);
     }
     /**
-     * A query whose result is persisted.
+     * @return A query whose result is persisted.
      * 
-    */
+     */
     public String query() {
         return this.query;
     }
     /**
-     * The maximum frequency at which this materialized view will be refreshed.
+     * @return The maximum frequency at which this materialized view will be refreshed.
      * The default value is 1800000
      * 
-    */
+     */
     public Optional<Integer> refreshIntervalMs() {
         return Optional.ofNullable(this.refreshIntervalMs);
     }

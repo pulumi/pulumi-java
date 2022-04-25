@@ -29,6 +29,10 @@ public final class QueueScaleRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="auth")
     private @Nullable Output<List<ScaleRuleAuthArgs>> auth;
 
+    /**
+     * @return Authentication secrets for the queue scale rule.
+     * 
+     */
     public Optional<Output<List<ScaleRuleAuthArgs>>> auth() {
         return Optional.ofNullable(this.auth);
     }
@@ -40,6 +44,10 @@ public final class QueueScaleRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="queueLength")
     private @Nullable Output<Integer> queueLength;
 
+    /**
+     * @return Queue length.
+     * 
+     */
     public Optional<Output<Integer>> queueLength() {
         return Optional.ofNullable(this.queueLength);
     }
@@ -51,6 +59,10 @@ public final class QueueScaleRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="queueName")
     private @Nullable Output<String> queueName;
 
+    /**
+     * @return Queue name.
+     * 
+     */
     public Optional<Output<String>> queueName() {
         return Optional.ofNullable(this.queueName);
     }
@@ -81,33 +93,75 @@ public final class QueueScaleRuleArgs extends com.pulumi.resources.ResourceArgs 
             $ = new QueueScaleRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auth Authentication secrets for the queue scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(@Nullable Output<List<ScaleRuleAuthArgs>> auth) {
             $.auth = auth;
             return this;
         }
 
+        /**
+         * @param auth Authentication secrets for the queue scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(List<ScaleRuleAuthArgs> auth) {
             return auth(Output.of(auth));
         }
 
+        /**
+         * @param auth Authentication secrets for the queue scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(ScaleRuleAuthArgs... auth) {
             return auth(List.of(auth));
         }
 
+        /**
+         * @param queueLength Queue length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueLength(@Nullable Output<Integer> queueLength) {
             $.queueLength = queueLength;
             return this;
         }
 
+        /**
+         * @param queueLength Queue length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueLength(Integer queueLength) {
             return queueLength(Output.of(queueLength));
         }
 
+        /**
+         * @param queueName Queue name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueName(@Nullable Output<String> queueName) {
             $.queueName = queueName;
             return this;
         }
 
+        /**
+         * @param queueName Queue name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueName(String queueName) {
             return queueName(Output.of(queueName));
         }

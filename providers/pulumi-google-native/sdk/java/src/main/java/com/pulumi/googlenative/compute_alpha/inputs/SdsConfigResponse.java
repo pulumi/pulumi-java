@@ -23,6 +23,10 @@ public final class SdsConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="grpcServiceConfig", required=true)
     private GrpcServiceConfigResponse grpcServiceConfig;
 
+    /**
+     * @return The configuration to access the SDS server over GRPC.
+     * 
+     */
     public GrpcServiceConfigResponse grpcServiceConfig() {
         return this.grpcServiceConfig;
     }
@@ -51,6 +55,12 @@ public final class SdsConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SdsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param grpcServiceConfig The configuration to access the SDS server over GRPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grpcServiceConfig(GrpcServiceConfigResponse grpcServiceConfig) {
             $.grpcServiceConfig = grpcServiceConfig;
             return this;

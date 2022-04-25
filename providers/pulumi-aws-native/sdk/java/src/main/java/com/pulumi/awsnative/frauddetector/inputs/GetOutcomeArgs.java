@@ -19,6 +19,10 @@ public final class GetOutcomeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The outcome ARN.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetOutcomeArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetOutcomeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The outcome ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

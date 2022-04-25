@@ -20,6 +20,10 @@ public final class ApplicationTypeVersionsCleanupPolicyArgs extends com.pulumi.r
     @Import(name="maxUnusedVersionsToKeep", required=true)
     private Output<Double> maxUnusedVersionsToKeep;
 
+    /**
+     * @return Number of unused versions per application type to keep.
+     * 
+     */
     public Output<Double> maxUnusedVersionsToKeep() {
         return this.maxUnusedVersionsToKeep;
     }
@@ -48,11 +52,23 @@ public final class ApplicationTypeVersionsCleanupPolicyArgs extends com.pulumi.r
             $ = new ApplicationTypeVersionsCleanupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxUnusedVersionsToKeep Number of unused versions per application type to keep.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnusedVersionsToKeep(Output<Double> maxUnusedVersionsToKeep) {
             $.maxUnusedVersionsToKeep = maxUnusedVersionsToKeep;
             return this;
         }
 
+        /**
+         * @param maxUnusedVersionsToKeep Number of unused versions per application type to keep.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnusedVersionsToKeep(Double maxUnusedVersionsToKeep) {
             return maxUnusedVersionsToKeep(Output.of(maxUnusedVersionsToKeep));
         }

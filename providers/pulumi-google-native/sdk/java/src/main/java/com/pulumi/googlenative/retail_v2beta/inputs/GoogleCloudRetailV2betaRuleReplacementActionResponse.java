@@ -24,6 +24,10 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse extends 
     @Import(name="queryTerms", required=true)
     private List<String> queryTerms;
 
+    /**
+     * @return Terms from the search query. Will be replaced by replacement term. Can specify up to 100 terms.
+     * 
+     */
     public List<String> queryTerms() {
         return this.queryTerms;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse extends 
     @Import(name="replacementTerm", required=true)
     private String replacementTerm;
 
+    /**
+     * @return Term that will be used for replacement.
+     * 
+     */
     public String replacementTerm() {
         return this.replacementTerm;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse extends 
     @Import(name="term", required=true)
     private String term;
 
+    /**
+     * @return Will be [deprecated = true] post migration;
+     * 
+     */
     public String term() {
         return this.term;
     }
@@ -76,20 +88,44 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse extends 
             $ = new GoogleCloudRetailV2betaRuleReplacementActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queryTerms Terms from the search query. Will be replaced by replacement term. Can specify up to 100 terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(List<String> queryTerms) {
             $.queryTerms = queryTerms;
             return this;
         }
 
+        /**
+         * @param queryTerms Terms from the search query. Will be replaced by replacement term. Can specify up to 100 terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(String... queryTerms) {
             return queryTerms(List.of(queryTerms));
         }
 
+        /**
+         * @param replacementTerm Term that will be used for replacement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replacementTerm(String replacementTerm) {
             $.replacementTerm = replacementTerm;
             return this;
         }
 
+        /**
+         * @param term Will be [deprecated = true] post migration;
+         * 
+         * @return builder
+         * 
+         */
         public Builder term(String term) {
             $.term = term;
             return this;

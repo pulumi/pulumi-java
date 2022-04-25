@@ -26,6 +26,10 @@ public final class RecipeConditionExpressionArgs extends com.pulumi.resources.Re
     @Import(name="condition", required=true)
     private Output<String> condition;
 
+    /**
+     * @return Input condition to be applied to the target column
+     * 
+     */
     public Output<String> condition() {
         return this.condition;
     }
@@ -37,6 +41,10 @@ public final class RecipeConditionExpressionArgs extends com.pulumi.resources.Re
     @Import(name="targetColumn", required=true)
     private Output<String> targetColumn;
 
+    /**
+     * @return Name of the target column
+     * 
+     */
     public Output<String> targetColumn() {
         return this.targetColumn;
     }
@@ -48,6 +56,10 @@ public final class RecipeConditionExpressionArgs extends com.pulumi.resources.Re
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Value of the condition
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -78,29 +90,65 @@ public final class RecipeConditionExpressionArgs extends com.pulumi.resources.Re
             $ = new RecipeConditionExpressionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition Input condition to be applied to the target column
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(Output<String> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition Input condition to be applied to the target column
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(String condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param targetColumn Name of the target column
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetColumn(Output<String> targetColumn) {
             $.targetColumn = targetColumn;
             return this;
         }
 
+        /**
+         * @param targetColumn Name of the target column
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetColumn(String targetColumn) {
             return targetColumn(Output.of(targetColumn));
         }
 
+        /**
+         * @param value Value of the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value of the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

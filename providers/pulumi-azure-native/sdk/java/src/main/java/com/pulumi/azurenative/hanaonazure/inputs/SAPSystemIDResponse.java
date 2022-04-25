@@ -25,6 +25,10 @@ public final class SAPSystemIDResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="gid")
     private @Nullable String gid;
 
+    /**
+     * @return Group ID of the HANA database user.
+     * 
+     */
     public Optional<String> gid() {
         return Optional.ofNullable(this.gid);
     }
@@ -36,6 +40,10 @@ public final class SAPSystemIDResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="memoryAllocation", required=true)
     private String memoryAllocation;
 
+    /**
+     * @return Percent of memory to allocate to this SID.
+     * 
+     */
     public String memoryAllocation() {
         return this.memoryAllocation;
     }
@@ -47,6 +55,10 @@ public final class SAPSystemIDResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sid")
     private @Nullable String sid;
 
+    /**
+     * @return SAP system ID as database identifier.
+     * 
+     */
     public Optional<String> sid() {
         return Optional.ofNullable(this.sid);
     }
@@ -58,6 +70,10 @@ public final class SAPSystemIDResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uid")
     private @Nullable String uid;
 
+    /**
+     * @return User ID of the HANA database user.
+     * 
+     */
     public Optional<String> uid() {
         return Optional.ofNullable(this.uid);
     }
@@ -69,6 +85,10 @@ public final class SAPSystemIDResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return Name of the HANA database user.
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -101,26 +121,56 @@ public final class SAPSystemIDResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SAPSystemIDResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gid Group ID of the HANA database user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gid(@Nullable String gid) {
             $.gid = gid;
             return this;
         }
 
+        /**
+         * @param memoryAllocation Percent of memory to allocate to this SID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryAllocation(String memoryAllocation) {
             $.memoryAllocation = memoryAllocation;
             return this;
         }
 
+        /**
+         * @param sid SAP system ID as database identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sid(@Nullable String sid) {
             $.sid = sid;
             return this;
         }
 
+        /**
+         * @param uid User ID of the HANA database user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(@Nullable String uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param username Name of the HANA database user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

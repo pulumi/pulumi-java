@@ -28,6 +28,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="groupIds")
     private @Nullable Output<List<String>> groupIds;
 
+    /**
+     * @return The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to.
+     * 
+     */
     public Optional<Output<List<String>>> groupIds() {
         return Optional.ofNullable(this.groupIds);
     }
@@ -39,6 +43,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -50,6 +58,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +73,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
+    /**
+     * @return A collection of read-only information about the state of the connection to the remote resource.
+     * 
+     */
     public Optional<Output<PrivateLinkServiceConnectionStateArgs>> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -72,6 +88,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="privateLinkServiceId")
     private @Nullable Output<String> privateLinkServiceId;
 
+    /**
+     * @return The resource id of private link service.
+     * 
+     */
     public Optional<Output<String>> privateLinkServiceId() {
         return Optional.ofNullable(this.privateLinkServiceId);
     }
@@ -83,6 +103,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="requestMessage")
     private @Nullable Output<String> requestMessage;
 
+    /**
+     * @return A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
+     * 
+     */
     public Optional<Output<String>> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
@@ -116,60 +140,138 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
             $ = new PrivateLinkServiceConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupIds The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(@Nullable Output<List<String>> groupIds) {
             $.groupIds = groupIds;
             return this;
         }
 
+        /**
+         * @param groupIds The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(List<String> groupIds) {
             return groupIds(Output.of(groupIds));
         }
 
+        /**
+         * @param groupIds The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param privateLinkServiceConnectionState A collection of read-only information about the state of the connection to the remote resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState A collection of read-only information about the state of the connection to the remote resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
 
+        /**
+         * @param privateLinkServiceId The resource id of private link service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceId(@Nullable Output<String> privateLinkServiceId) {
             $.privateLinkServiceId = privateLinkServiceId;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceId The resource id of private link service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceId(String privateLinkServiceId) {
             return privateLinkServiceId(Output.of(privateLinkServiceId));
         }
 
+        /**
+         * @param requestMessage A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
             $.requestMessage = requestMessage;
             return this;
         }
 
+        /**
+         * @param requestMessage A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(String requestMessage) {
             return requestMessage(Output.of(requestMessage));
         }

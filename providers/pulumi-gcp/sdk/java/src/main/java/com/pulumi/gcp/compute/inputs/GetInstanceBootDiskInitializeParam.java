@@ -22,6 +22,10 @@ public final class GetInstanceBootDiskInitializeParam extends com.pulumi.resourc
     @Import(name="image", required=true)
     private String image;
 
+    /**
+     * @return The image from which this disk was initialised.
+     * 
+     */
     public String image() {
         return this.image;
     }
@@ -33,6 +37,10 @@ public final class GetInstanceBootDiskInitializeParam extends com.pulumi.resourc
     @Import(name="labels", required=true)
     private Map<String,Object> labels;
 
+    /**
+     * @return A set of key/value label pairs assigned to the instance.
+     * 
+     */
     public Map<String,Object> labels() {
         return this.labels;
     }
@@ -44,6 +52,10 @@ public final class GetInstanceBootDiskInitializeParam extends com.pulumi.resourc
     @Import(name="size", required=true)
     private Integer size;
 
+    /**
+     * @return The size of the image in gigabytes.
+     * 
+     */
     public Integer size() {
         return this.size;
     }
@@ -55,6 +67,10 @@ public final class GetInstanceBootDiskInitializeParam extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -86,21 +102,45 @@ public final class GetInstanceBootDiskInitializeParam extends com.pulumi.resourc
             $ = new GetInstanceBootDiskInitializeParam(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param image The image from which this disk was initialised.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param labels A set of key/value label pairs assigned to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,Object> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param size The size of the image in gigabytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Integer size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param type The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

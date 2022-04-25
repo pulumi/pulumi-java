@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2InspectionRuleArgs extends com.pulumi.resou
     @Import(name="exclusionRule")
     private @Nullable Output<GooglePrivacyDlpV2ExclusionRuleArgs> exclusionRule;
 
+    /**
+     * @return Exclusion rule.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ExclusionRuleArgs>> exclusionRule() {
         return Optional.ofNullable(this.exclusionRule);
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2InspectionRuleArgs extends com.pulumi.resou
     @Import(name="hotwordRule")
     private @Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
 
+    /**
+     * @return Hotword-based detection rule.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2HotwordRuleArgs>> hotwordRule() {
         return Optional.ofNullable(this.hotwordRule);
     }
@@ -67,20 +75,44 @@ public final class GooglePrivacyDlpV2InspectionRuleArgs extends com.pulumi.resou
             $ = new GooglePrivacyDlpV2InspectionRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exclusionRule Exclusion rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusionRule(@Nullable Output<GooglePrivacyDlpV2ExclusionRuleArgs> exclusionRule) {
             $.exclusionRule = exclusionRule;
             return this;
         }
 
+        /**
+         * @param exclusionRule Exclusion rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusionRule(GooglePrivacyDlpV2ExclusionRuleArgs exclusionRule) {
             return exclusionRule(Output.of(exclusionRule));
         }
 
+        /**
+         * @param hotwordRule Hotword-based detection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hotwordRule(@Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule) {
             $.hotwordRule = hotwordRule;
             return this;
         }
 
+        /**
+         * @param hotwordRule Hotword-based detection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hotwordRule(GooglePrivacyDlpV2HotwordRuleArgs hotwordRule) {
             return hotwordRule(Output.of(hotwordRule));
         }

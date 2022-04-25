@@ -26,6 +26,10 @@ public final class LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="arguments")
     private @Nullable Output<String> arguments;
 
+    /**
+     * @return The recovered arguments to the Dockerfile directive.
+     * 
+     */
     public Optional<Output<String>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -37,6 +41,10 @@ public final class LayerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="directive", required=true)
     private Output<String> directive;
 
+    /**
+     * @return The recovered Dockerfile directive used to construct this layer. See https://docs.docker.com/engine/reference/builder/ for more information.
+     * 
+     */
     public Output<String> directive() {
         return this.directive;
     }
@@ -66,20 +74,44 @@ public final class LayerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LayerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments The recovered arguments to the Dockerfile directive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable Output<String> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments The recovered arguments to the Dockerfile directive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(String arguments) {
             return arguments(Output.of(arguments));
         }
 
+        /**
+         * @param directive The recovered Dockerfile directive used to construct this layer. See https://docs.docker.com/engine/reference/builder/ for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directive(Output<String> directive) {
             $.directive = directive;
             return this;
         }
 
+        /**
+         * @param directive The recovered Dockerfile directive used to construct this layer. See https://docs.docker.com/engine/reference/builder/ for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directive(String directive) {
             return directive(Output.of(directive));
         }

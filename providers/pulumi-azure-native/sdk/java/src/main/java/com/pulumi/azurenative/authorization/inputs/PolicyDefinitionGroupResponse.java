@@ -25,6 +25,10 @@ public final class PolicyDefinitionGroupResponse extends com.pulumi.resources.In
     @Import(name="additionalMetadataId")
     private @Nullable String additionalMetadataId;
 
+    /**
+     * @return A resource ID of a resource that contains additional metadata about the group.
+     * 
+     */
     public Optional<String> additionalMetadataId() {
         return Optional.ofNullable(this.additionalMetadataId);
     }
@@ -36,6 +40,10 @@ public final class PolicyDefinitionGroupResponse extends com.pulumi.resources.In
     @Import(name="category")
     private @Nullable String category;
 
+    /**
+     * @return The group&#39;s category.
+     * 
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
@@ -47,6 +55,10 @@ public final class PolicyDefinitionGroupResponse extends com.pulumi.resources.In
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The group&#39;s description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -58,6 +70,10 @@ public final class PolicyDefinitionGroupResponse extends com.pulumi.resources.In
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The group&#39;s display name.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -69,6 +85,10 @@ public final class PolicyDefinitionGroupResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -101,26 +121,56 @@ public final class PolicyDefinitionGroupResponse extends com.pulumi.resources.In
             $ = new PolicyDefinitionGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalMetadataId A resource ID of a resource that contains additional metadata about the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalMetadataId(@Nullable String additionalMetadataId) {
             $.additionalMetadataId = additionalMetadataId;
             return this;
         }
 
+        /**
+         * @param category The group&#39;s category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(@Nullable String category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param description The group&#39;s description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The group&#39;s display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param name The name of the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

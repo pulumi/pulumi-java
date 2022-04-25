@@ -26,6 +26,10 @@ public final class IotHubSkuInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="capacity")
     private @Nullable Double capacity;
 
+    /**
+     * @return The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
+     * 
+     */
     public Optional<Double> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class IotHubSkuInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the SKU.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -48,6 +56,10 @@ public final class IotHubSkuInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="tier", required=true)
     private String tier;
 
+    /**
+     * @return The billing tier for the IoT hub.
+     * 
+     */
     public String tier() {
         return this.tier;
     }
@@ -78,16 +90,34 @@ public final class IotHubSkuInfoResponse extends com.pulumi.resources.InvokeArgs
             $ = new IotHubSkuInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Double capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier The billing tier for the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             $.tier = tier;
             return this;

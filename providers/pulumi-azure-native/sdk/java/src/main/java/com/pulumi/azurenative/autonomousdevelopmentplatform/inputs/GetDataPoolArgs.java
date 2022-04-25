@@ -19,6 +19,10 @@ public final class GetDataPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the ADP account
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetDataPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataPoolName", required=true)
     private String dataPoolName;
 
+    /**
+     * @return The name of the Data Pool
+     * 
+     */
     public String dataPoolName() {
         return this.dataPoolName;
     }
@@ -41,6 +49,10 @@ public final class GetDataPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetDataPoolArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDataPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the ADP account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param dataPoolName The name of the Data Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPoolName(String dataPoolName) {
             $.dataPoolName = dataPoolName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

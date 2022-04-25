@@ -24,6 +24,10 @@ public final class FhirServiceAccessPolicyEntryArgs extends com.pulumi.resources
     @Import(name="objectId", required=true)
     private Output<String> objectId;
 
+    /**
+     * @return An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
+     * 
+     */
     public Output<String> objectId() {
         return this.objectId;
     }
@@ -52,11 +56,23 @@ public final class FhirServiceAccessPolicyEntryArgs extends com.pulumi.resources
             $ = new FhirServiceAccessPolicyEntryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectId An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }

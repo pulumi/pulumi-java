@@ -23,6 +23,10 @@ public final class WorkflowTemplateParameterValidationArgs extends com.pulumi.re
     @Import(name="regex")
     private @Nullable Output<WorkflowTemplateParameterValidationRegexArgs> regex;
 
+    /**
+     * @return Validation based on regular expressions.
+     * 
+     */
     public Optional<Output<WorkflowTemplateParameterValidationRegexArgs>> regex() {
         return Optional.ofNullable(this.regex);
     }
@@ -34,6 +38,10 @@ public final class WorkflowTemplateParameterValidationArgs extends com.pulumi.re
     @Import(name="values")
     private @Nullable Output<WorkflowTemplateParameterValidationValuesArgs> values;
 
+    /**
+     * @return Optional. Corresponds to the label values of reservation resource.
+     * 
+     */
     public Optional<Output<WorkflowTemplateParameterValidationValuesArgs>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -63,20 +71,44 @@ public final class WorkflowTemplateParameterValidationArgs extends com.pulumi.re
             $ = new WorkflowTemplateParameterValidationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param regex Validation based on regular expressions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(@Nullable Output<WorkflowTemplateParameterValidationRegexArgs> regex) {
             $.regex = regex;
             return this;
         }
 
+        /**
+         * @param regex Validation based on regular expressions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(WorkflowTemplateParameterValidationRegexArgs regex) {
             return regex(Output.of(regex));
         }
 
+        /**
+         * @param values Optional. Corresponds to the label values of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<WorkflowTemplateParameterValidationValuesArgs> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Optional. Corresponds to the label values of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(WorkflowTemplateParameterValidationValuesArgs values) {
             return values(Output.of(values));
         }

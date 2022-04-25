@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 public final class MonitoringScheduleConfig {
     private final @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition;
     /**
-     * Name of the job definition
+     * @return Name of the job definition
      * 
      */
     private final @Nullable String monitoringJobDefinitionName;
@@ -39,9 +39,9 @@ public final class MonitoringScheduleConfig {
         return Optional.ofNullable(this.monitoringJobDefinition);
     }
     /**
-     * Name of the job definition
+     * @return Name of the job definition
      * 
-    */
+     */
     public Optional<String> monitoringJobDefinitionName() {
         return Optional.ofNullable(this.monitoringJobDefinitionName);
     }

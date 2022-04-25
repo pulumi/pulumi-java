@@ -27,6 +27,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="defaultCores")
     private @Nullable Integer defaultCores;
 
+    /**
+     * @return The default number of cores for the instance type.
+     * 
+     */
     public Optional<Integer> defaultCores() {
         return Optional.ofNullable(this.defaultCores);
     }
@@ -38,6 +42,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="defaultThreadsPerCore")
     private @Nullable Integer defaultThreadsPerCore;
 
+    /**
+     * @return The  default  number of threads per core for the instance type.
+     * 
+     */
     public Optional<Integer> defaultThreadsPerCore() {
         return Optional.ofNullable(this.defaultThreadsPerCore);
     }
@@ -53,6 +61,14 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="fpgas")
     private @Nullable List<GetInstanceTypeFpga> fpgas;
 
+    /**
+     * @return Describes the FPGA accelerator settings for the instance type.
+     * * `fpgas.#.count` - The count of FPGA accelerators for the instance type.
+     * * `fpgas.#.manufacturer` - The manufacturer of the FPGA accelerator.
+     * * `fpgas.#.memory_size` - The size (in MiB) for the memory available to the FPGA accelerator.
+     * * `fpgas.#.name` - The name of the FPGA accelerator.
+     * 
+     */
     public Optional<List<GetInstanceTypeFpga>> fpgas() {
         return Optional.ofNullable(this.fpgas);
     }
@@ -68,6 +84,14 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="gpuses")
     private @Nullable List<GetInstanceTypeGpus> gpuses;
 
+    /**
+     * @return Describes the GPU accelerators for the instance type.
+     * * `gpus.#.count` - The number of GPUs for the instance type.
+     * * `gpus.#.manufacturer` - The manufacturer of the GPU accelerator.
+     * * `gpus.#.memory_size` - The size (in MiB) for the memory available to the GPU accelerator.
+     * * `gpus.#.name` - The name of the GPU accelerator.
+     * 
+     */
     public Optional<List<GetInstanceTypeGpus>> gpuses() {
         return Optional.ofNullable(this.gpuses);
     }
@@ -83,6 +107,14 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="hypervisor")
     private @Nullable String hypervisor;
 
+    /**
+     * @return Indicates the hypervisor used for the instance type.
+     * * `inference_accelerators` Describes the Inference accelerators for the instance type.
+     * * `inference_accelerators.#.count` - The number of Inference accelerators for the instance type.
+     * * `inference_accelerators.#.manufacturer` - The manufacturer of the Inference accelerator.
+     * * `inference_accelerators.#.name` - The name of the Inference accelerator.
+     * 
+     */
     public Optional<String> hypervisor() {
         return Optional.ofNullable(this.hypervisor);
     }
@@ -104,6 +136,13 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceDisks")
     private @Nullable List<GetInstanceTypeInstanceDisk> instanceDisks;
 
+    /**
+     * @return Describes the disks for the instance type.
+     * * `instance_disks.#.count` - The number of disks with this configuration.
+     * * `instance_disks.#.size` - The size of the disk in GB.
+     * * `instance_disks.#.type` - The type of disk.
+     * 
+     */
     public Optional<List<GetInstanceTypeInstanceDisk>> instanceDisks() {
         return Optional.ofNullable(this.instanceDisks);
     }
@@ -115,6 +154,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Instance
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -126,6 +169,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="maximumIpv6AddressesPerInterface")
     private @Nullable Integer maximumIpv6AddressesPerInterface;
 
+    /**
+     * @return The maximum number of IPv6 addresses per network interface.
+     * 
+     */
     public Optional<Integer> maximumIpv6AddressesPerInterface() {
         return Optional.ofNullable(this.maximumIpv6AddressesPerInterface);
     }
@@ -137,6 +184,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="totalFpgaMemory")
     private @Nullable Integer totalFpgaMemory;
 
+    /**
+     * @return The total memory of all FPGA accelerators for the instance type (in MiB).
+     * 
+     */
     public Optional<Integer> totalFpgaMemory() {
         return Optional.ofNullable(this.totalFpgaMemory);
     }
@@ -148,6 +199,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="totalGpuMemory")
     private @Nullable Integer totalGpuMemory;
 
+    /**
+     * @return The total size of the memory for the GPU accelerators for the instance type (in MiB).
+     * 
+     */
     public Optional<Integer> totalGpuMemory() {
         return Optional.ofNullable(this.totalGpuMemory);
     }
@@ -159,6 +214,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="totalInstanceStorage")
     private @Nullable Integer totalInstanceStorage;
 
+    /**
+     * @return The total size of the instance disks, in GB.
+     * 
+     */
     public Optional<Integer> totalInstanceStorage() {
         return Optional.ofNullable(this.totalInstanceStorage);
     }
@@ -198,34 +257,96 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetInstanceTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultCores The default number of cores for the instance type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultCores(@Nullable Integer defaultCores) {
             $.defaultCores = defaultCores;
             return this;
         }
 
+        /**
+         * @param defaultThreadsPerCore The  default  number of threads per core for the instance type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultThreadsPerCore(@Nullable Integer defaultThreadsPerCore) {
             $.defaultThreadsPerCore = defaultThreadsPerCore;
             return this;
         }
 
+        /**
+         * @param fpgas Describes the FPGA accelerator settings for the instance type.
+         * * `fpgas.#.count` - The count of FPGA accelerators for the instance type.
+         * * `fpgas.#.manufacturer` - The manufacturer of the FPGA accelerator.
+         * * `fpgas.#.memory_size` - The size (in MiB) for the memory available to the FPGA accelerator.
+         * * `fpgas.#.name` - The name of the FPGA accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fpgas(@Nullable List<GetInstanceTypeFpga> fpgas) {
             $.fpgas = fpgas;
             return this;
         }
 
+        /**
+         * @param fpgas Describes the FPGA accelerator settings for the instance type.
+         * * `fpgas.#.count` - The count of FPGA accelerators for the instance type.
+         * * `fpgas.#.manufacturer` - The manufacturer of the FPGA accelerator.
+         * * `fpgas.#.memory_size` - The size (in MiB) for the memory available to the FPGA accelerator.
+         * * `fpgas.#.name` - The name of the FPGA accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fpgas(GetInstanceTypeFpga... fpgas) {
             return fpgas(List.of(fpgas));
         }
 
+        /**
+         * @param gpuses Describes the GPU accelerators for the instance type.
+         * * `gpus.#.count` - The number of GPUs for the instance type.
+         * * `gpus.#.manufacturer` - The manufacturer of the GPU accelerator.
+         * * `gpus.#.memory_size` - The size (in MiB) for the memory available to the GPU accelerator.
+         * * `gpus.#.name` - The name of the GPU accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpuses(@Nullable List<GetInstanceTypeGpus> gpuses) {
             $.gpuses = gpuses;
             return this;
         }
 
+        /**
+         * @param gpuses Describes the GPU accelerators for the instance type.
+         * * `gpus.#.count` - The number of GPUs for the instance type.
+         * * `gpus.#.manufacturer` - The manufacturer of the GPU accelerator.
+         * * `gpus.#.memory_size` - The size (in MiB) for the memory available to the GPU accelerator.
+         * * `gpus.#.name` - The name of the GPU accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpuses(GetInstanceTypeGpus... gpuses) {
             return gpuses(List.of(gpuses));
         }
 
+        /**
+         * @param hypervisor Indicates the hypervisor used for the instance type.
+         * * `inference_accelerators` Describes the Inference accelerators for the instance type.
+         * * `inference_accelerators.#.count` - The number of Inference accelerators for the instance type.
+         * * `inference_accelerators.#.manufacturer` - The manufacturer of the Inference accelerator.
+         * * `inference_accelerators.#.name` - The name of the Inference accelerator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hypervisor(@Nullable String hypervisor) {
             $.hypervisor = hypervisor;
             return this;
@@ -240,35 +361,83 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
             return inferenceAccelerators(List.of(inferenceAccelerators));
         }
 
+        /**
+         * @param instanceDisks Describes the disks for the instance type.
+         * * `instance_disks.#.count` - The number of disks with this configuration.
+         * * `instance_disks.#.size` - The size of the disk in GB.
+         * * `instance_disks.#.type` - The type of disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceDisks(@Nullable List<GetInstanceTypeInstanceDisk> instanceDisks) {
             $.instanceDisks = instanceDisks;
             return this;
         }
 
+        /**
+         * @param instanceDisks Describes the disks for the instance type.
+         * * `instance_disks.#.count` - The number of disks with this configuration.
+         * * `instance_disks.#.size` - The size of the disk in GB.
+         * * `instance_disks.#.type` - The type of disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceDisks(GetInstanceTypeInstanceDisk... instanceDisks) {
             return instanceDisks(List.of(instanceDisks));
         }
 
+        /**
+         * @param instanceType Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param maximumIpv6AddressesPerInterface The maximum number of IPv6 addresses per network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumIpv6AddressesPerInterface(@Nullable Integer maximumIpv6AddressesPerInterface) {
             $.maximumIpv6AddressesPerInterface = maximumIpv6AddressesPerInterface;
             return this;
         }
 
+        /**
+         * @param totalFpgaMemory The total memory of all FPGA accelerators for the instance type (in MiB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalFpgaMemory(@Nullable Integer totalFpgaMemory) {
             $.totalFpgaMemory = totalFpgaMemory;
             return this;
         }
 
+        /**
+         * @param totalGpuMemory The total size of the memory for the GPU accelerators for the instance type (in MiB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalGpuMemory(@Nullable Integer totalGpuMemory) {
             $.totalGpuMemory = totalGpuMemory;
             return this;
         }
 
+        /**
+         * @param totalInstanceStorage The total size of the instance disks, in GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalInstanceStorage(@Nullable Integer totalInstanceStorage) {
             $.totalInstanceStorage = totalInstanceStorage;
             return this;

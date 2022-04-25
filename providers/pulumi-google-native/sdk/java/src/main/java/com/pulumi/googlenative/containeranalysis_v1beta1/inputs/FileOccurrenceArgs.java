@@ -28,6 +28,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="attributions")
     private @Nullable Output<List<String>> attributions;
 
+    /**
+     * @return This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts
+     * 
+     */
     public Optional<Output<List<String>>> attributions() {
         return Optional.ofNullable(this.attributions);
     }
@@ -39,6 +43,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="comment")
     private @Nullable Output<String> comment;
 
+    /**
+     * @return This field provides a place for the SPDX file creator to record any general comments about the file
+     * 
+     */
     public Optional<Output<String>> comment() {
         return Optional.ofNullable(this.comment);
     }
@@ -50,6 +58,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contributors")
     private @Nullable Output<List<String>> contributors;
 
+    /**
+     * @return This field provides a place for the SPDX file creator to record file contributors
+     * 
+     */
     public Optional<Output<List<String>>> contributors() {
         return Optional.ofNullable(this.contributors);
     }
@@ -61,6 +73,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="copyright")
     private @Nullable Output<String> copyright;
 
+    /**
+     * @return Identify the copyright holder of the file, as well as any dates present
+     * 
+     */
     public Optional<Output<String>> copyright() {
         return Optional.ofNullable(this.copyright);
     }
@@ -72,6 +88,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="filesLicenseInfo")
     private @Nullable Output<List<String>> filesLicenseInfo;
 
+    /**
+     * @return This field contains the license information actually found in the file, if any
+     * 
+     */
     public Optional<Output<List<String>>> filesLicenseInfo() {
         return Optional.ofNullable(this.filesLicenseInfo);
     }
@@ -83,6 +103,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Uniquely identify any element in an SPDX document which may be referenced by other elements
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -94,6 +118,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="licenseConcluded")
     private @Nullable Output<LicenseArgs> licenseConcluded;
 
+    /**
+     * @return This field contains the license the SPDX file creator has concluded as governing the file or alternative values if the governing license cannot be determined
+     * 
+     */
     public Optional<Output<LicenseArgs>> licenseConcluded() {
         return Optional.ofNullable(this.licenseConcluded);
     }
@@ -105,6 +133,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="notice")
     private @Nullable Output<String> notice;
 
+    /**
+     * @return This field provides a place for the SPDX file creator to record license notices or other such related notices found in the file
+     * 
+     */
     public Optional<Output<String>> notice() {
         return Optional.ofNullable(this.notice);
     }
@@ -140,86 +172,200 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new FileOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributions This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributions(@Nullable Output<List<String>> attributions) {
             $.attributions = attributions;
             return this;
         }
 
+        /**
+         * @param attributions This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributions(List<String> attributions) {
             return attributions(Output.of(attributions));
         }
 
+        /**
+         * @param attributions This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributions(String... attributions) {
             return attributions(List.of(attributions));
         }
 
+        /**
+         * @param comment This field provides a place for the SPDX file creator to record any general comments about the file
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(@Nullable Output<String> comment) {
             $.comment = comment;
             return this;
         }
 
+        /**
+         * @param comment This field provides a place for the SPDX file creator to record any general comments about the file
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(String comment) {
             return comment(Output.of(comment));
         }
 
+        /**
+         * @param contributors This field provides a place for the SPDX file creator to record file contributors
+         * 
+         * @return builder
+         * 
+         */
         public Builder contributors(@Nullable Output<List<String>> contributors) {
             $.contributors = contributors;
             return this;
         }
 
+        /**
+         * @param contributors This field provides a place for the SPDX file creator to record file contributors
+         * 
+         * @return builder
+         * 
+         */
         public Builder contributors(List<String> contributors) {
             return contributors(Output.of(contributors));
         }
 
+        /**
+         * @param contributors This field provides a place for the SPDX file creator to record file contributors
+         * 
+         * @return builder
+         * 
+         */
         public Builder contributors(String... contributors) {
             return contributors(List.of(contributors));
         }
 
+        /**
+         * @param copyright Identify the copyright holder of the file, as well as any dates present
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyright(@Nullable Output<String> copyright) {
             $.copyright = copyright;
             return this;
         }
 
+        /**
+         * @param copyright Identify the copyright holder of the file, as well as any dates present
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyright(String copyright) {
             return copyright(Output.of(copyright));
         }
 
+        /**
+         * @param filesLicenseInfo This field contains the license information actually found in the file, if any
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesLicenseInfo(@Nullable Output<List<String>> filesLicenseInfo) {
             $.filesLicenseInfo = filesLicenseInfo;
             return this;
         }
 
+        /**
+         * @param filesLicenseInfo This field contains the license information actually found in the file, if any
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesLicenseInfo(List<String> filesLicenseInfo) {
             return filesLicenseInfo(Output.of(filesLicenseInfo));
         }
 
+        /**
+         * @param filesLicenseInfo This field contains the license information actually found in the file, if any
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesLicenseInfo(String... filesLicenseInfo) {
             return filesLicenseInfo(List.of(filesLicenseInfo));
         }
 
+        /**
+         * @param id Uniquely identify any element in an SPDX document which may be referenced by other elements
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Uniquely identify any element in an SPDX document which may be referenced by other elements
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param licenseConcluded This field contains the license the SPDX file creator has concluded as governing the file or alternative values if the governing license cannot be determined
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConcluded(@Nullable Output<LicenseArgs> licenseConcluded) {
             $.licenseConcluded = licenseConcluded;
             return this;
         }
 
+        /**
+         * @param licenseConcluded This field contains the license the SPDX file creator has concluded as governing the file or alternative values if the governing license cannot be determined
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConcluded(LicenseArgs licenseConcluded) {
             return licenseConcluded(Output.of(licenseConcluded));
         }
 
+        /**
+         * @param notice This field provides a place for the SPDX file creator to record license notices or other such related notices found in the file
+         * 
+         * @return builder
+         * 
+         */
         public Builder notice(@Nullable Output<String> notice) {
             $.notice = notice;
             return this;
         }
 
+        /**
+         * @param notice This field provides a place for the SPDX file creator to record license notices or other such related notices found in the file
+         * 
+         * @return builder
+         * 
+         */
         public Builder notice(String notice) {
             return notice(Output.of(notice));
         }

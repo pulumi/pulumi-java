@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AttestationEvidenceResponse {
     /**
-     * The description for this piece of evidence.
+     * @return The description for this piece of evidence.
      * 
      */
     private final @Nullable String description;
     /**
-     * The URI location of the evidence.
+     * @return The URI location of the evidence.
      * 
      */
     private final @Nullable String sourceUri;
@@ -31,16 +31,16 @@ public final class AttestationEvidenceResponse {
     }
 
     /**
-     * The description for this piece of evidence.
+     * @return The description for this piece of evidence.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The URI location of the evidence.
+     * @return The URI location of the evidence.
      * 
-    */
+     */
     public Optional<String> sourceUri() {
         return Optional.ofNullable(this.sourceUri);
     }

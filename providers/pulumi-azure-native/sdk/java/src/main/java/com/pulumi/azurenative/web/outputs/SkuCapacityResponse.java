@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SkuCapacityResponse {
     /**
-     * Default number of workers for this App Service plan SKU.
+     * @return Default number of workers for this App Service plan SKU.
      * 
      */
     private final @Nullable Integer default_;
     /**
-     * Maximum number of Elastic workers for this App Service plan SKU.
+     * @return Maximum number of Elastic workers for this App Service plan SKU.
      * 
      */
     private final @Nullable Integer elasticMaximum;
     /**
-     * Maximum number of workers for this App Service plan SKU.
+     * @return Maximum number of workers for this App Service plan SKU.
      * 
      */
     private final @Nullable Integer maximum;
     /**
-     * Minimum number of workers for this App Service plan SKU.
+     * @return Minimum number of workers for this App Service plan SKU.
      * 
      */
     private final @Nullable Integer minimum;
     /**
-     * Available scale configurations for an App Service plan.
+     * @return Available scale configurations for an App Service plan.
      * 
      */
     private final @Nullable String scaleType;
@@ -53,37 +53,37 @@ public final class SkuCapacityResponse {
     }
 
     /**
-     * Default number of workers for this App Service plan SKU.
+     * @return Default number of workers for this App Service plan SKU.
      * 
-    */
+     */
     public Optional<Integer> default_() {
         return Optional.ofNullable(this.default_);
     }
     /**
-     * Maximum number of Elastic workers for this App Service plan SKU.
+     * @return Maximum number of Elastic workers for this App Service plan SKU.
      * 
-    */
+     */
     public Optional<Integer> elasticMaximum() {
         return Optional.ofNullable(this.elasticMaximum);
     }
     /**
-     * Maximum number of workers for this App Service plan SKU.
+     * @return Maximum number of workers for this App Service plan SKU.
      * 
-    */
+     */
     public Optional<Integer> maximum() {
         return Optional.ofNullable(this.maximum);
     }
     /**
-     * Minimum number of workers for this App Service plan SKU.
+     * @return Minimum number of workers for this App Service plan SKU.
      * 
-    */
+     */
     public Optional<Integer> minimum() {
         return Optional.ofNullable(this.minimum);
     }
     /**
-     * Available scale configurations for an App Service plan.
+     * @return Available scale configurations for an App Service plan.
      * 
-    */
+     */
     public Optional<String> scaleType() {
         return Optional.ofNullable(this.scaleType);
     }

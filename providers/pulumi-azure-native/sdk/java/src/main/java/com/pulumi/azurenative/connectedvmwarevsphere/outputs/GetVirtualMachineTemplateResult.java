@@ -20,139 +20,139 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVirtualMachineTemplateResult {
     /**
-     * Gets the name of the corresponding resource in Kubernetes.
+     * @return Gets the name of the corresponding resource in Kubernetes.
      * 
      */
     private final String customResourceName;
     /**
-     * Gets or sets the disks the template.
+     * @return Gets or sets the disks the template.
      * 
      */
     private final List<VirtualDiskResponse> disks;
     /**
-     * Gets or sets the extended location.
+     * @return Gets or sets the extended location.
      * 
      */
     private final @Nullable ExtendedLocationResponse extendedLocation;
     /**
-     * Firmware type
+     * @return Firmware type
      * 
      */
     private final String firmwareType;
     /**
-     * Gets or sets the folder path of the template.
+     * @return Gets or sets the folder path of the template.
      * 
      */
     private final String folderPath;
     /**
-     * Gets or sets the Id.
+     * @return Gets or sets the Id.
      * 
      */
     private final String id;
     /**
-     * Gets or sets the inventory Item ID for the virtual machine template.
+     * @return Gets or sets the inventory Item ID for the virtual machine template.
      * 
      */
     private final @Nullable String inventoryItemId;
     /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Gets or sets the location.
+     * @return Gets or sets the location.
      * 
      */
     private final String location;
     /**
-     * Gets or sets memory size in MBs for the template.
+     * @return Gets or sets memory size in MBs for the template.
      * 
      */
     private final Integer memorySizeMB;
     /**
-     * Gets or sets the vCenter Managed Object name for the virtual machine template.
+     * @return Gets or sets the vCenter Managed Object name for the virtual machine template.
      * 
      */
     private final String moName;
     /**
-     * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine
+     * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine
      * template.
      * 
      */
     private final @Nullable String moRefId;
     /**
-     * Gets or sets the name.
+     * @return Gets or sets the name.
      * 
      */
     private final String name;
     /**
-     * Gets or sets the network interfaces of the template.
+     * @return Gets or sets the network interfaces of the template.
      * 
      */
     private final List<NetworkInterfaceResponse> networkInterfaces;
     /**
-     * Gets or sets the number of vCPUs for the template.
+     * @return Gets or sets the number of vCPUs for the template.
      * 
      */
     private final Integer numCPUs;
     /**
-     * Gets or sets the number of cores per socket for the template.
+     * @return Gets or sets the number of cores per socket for the template.
      * Defaults to 1 if unspecified.
      * 
      */
     private final Integer numCoresPerSocket;
     /**
-     * Gets or sets os name.
+     * @return Gets or sets os name.
      * 
      */
     private final String osName;
     /**
-     * Gets or sets the type of the os.
+     * @return Gets or sets the type of the os.
      * 
      */
     private final String osType;
     /**
-     * Gets or sets the provisioning state.
+     * @return Gets or sets the provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
      */
     private final List<ResourceStatusResponse> statuses;
     /**
-     * The system data.
+     * @return The system data.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Gets or sets the Resource tags.
+     * @return Gets or sets the Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Gets or sets the current version of VMware Tools.
+     * @return Gets or sets the current version of VMware Tools.
      * 
      */
     private final String toolsVersion;
     /**
-     * Gets or sets the current version status of VMware Tools installed in the guest operating system.
+     * @return Gets or sets the current version status of VMware Tools installed in the guest operating system.
      * 
      */
     private final String toolsVersionStatus;
     /**
-     * Gets or sets the type of the resource.
+     * @return Gets or sets the type of the resource.
      * 
      */
     private final String type;
     /**
-     * Gets or sets a unique identifier for this resource.
+     * @return Gets or sets a unique identifier for this resource.
      * 
      */
     private final String uuid;
     /**
-     * Gets or sets the ARM Id of the vCenter resource in which this template resides.
+     * @return Gets or sets the ARM Id of the vCenter resource in which this template resides.
      * 
      */
     private final @Nullable String vCenterId;
@@ -216,193 +216,193 @@ public final class GetVirtualMachineTemplateResult {
     }
 
     /**
-     * Gets the name of the corresponding resource in Kubernetes.
+     * @return Gets the name of the corresponding resource in Kubernetes.
      * 
-    */
+     */
     public String customResourceName() {
         return this.customResourceName;
     }
     /**
-     * Gets or sets the disks the template.
+     * @return Gets or sets the disks the template.
      * 
-    */
+     */
     public List<VirtualDiskResponse> disks() {
         return this.disks;
     }
     /**
-     * Gets or sets the extended location.
+     * @return Gets or sets the extended location.
      * 
-    */
+     */
     public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
-     * Firmware type
+     * @return Firmware type
      * 
-    */
+     */
     public String firmwareType() {
         return this.firmwareType;
     }
     /**
-     * Gets or sets the folder path of the template.
+     * @return Gets or sets the folder path of the template.
      * 
-    */
+     */
     public String folderPath() {
         return this.folderPath;
     }
     /**
-     * Gets or sets the Id.
+     * @return Gets or sets the Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets or sets the inventory Item ID for the virtual machine template.
+     * @return Gets or sets the inventory Item ID for the virtual machine template.
      * 
-    */
+     */
     public Optional<String> inventoryItemId() {
         return Optional.ofNullable(this.inventoryItemId);
     }
     /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Gets or sets the location.
+     * @return Gets or sets the location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Gets or sets memory size in MBs for the template.
+     * @return Gets or sets memory size in MBs for the template.
      * 
-    */
+     */
     public Integer memorySizeMB() {
         return this.memorySizeMB;
     }
     /**
-     * Gets or sets the vCenter Managed Object name for the virtual machine template.
+     * @return Gets or sets the vCenter Managed Object name for the virtual machine template.
      * 
-    */
+     */
     public String moName() {
         return this.moName;
     }
     /**
-     * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine
+     * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine
      * template.
      * 
-    */
+     */
     public Optional<String> moRefId() {
         return Optional.ofNullable(this.moRefId);
     }
     /**
-     * Gets or sets the name.
+     * @return Gets or sets the name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets or sets the network interfaces of the template.
+     * @return Gets or sets the network interfaces of the template.
      * 
-    */
+     */
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
-     * Gets or sets the number of vCPUs for the template.
+     * @return Gets or sets the number of vCPUs for the template.
      * 
-    */
+     */
     public Integer numCPUs() {
         return this.numCPUs;
     }
     /**
-     * Gets or sets the number of cores per socket for the template.
+     * @return Gets or sets the number of cores per socket for the template.
      * Defaults to 1 if unspecified.
      * 
-    */
+     */
     public Integer numCoresPerSocket() {
         return this.numCoresPerSocket;
     }
     /**
-     * Gets or sets os name.
+     * @return Gets or sets os name.
      * 
-    */
+     */
     public String osName() {
         return this.osName;
     }
     /**
-     * Gets or sets the type of the os.
+     * @return Gets or sets the type of the os.
      * 
-    */
+     */
     public String osType() {
         return this.osType;
     }
     /**
-     * Gets or sets the provisioning state.
+     * @return Gets or sets the provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
-    */
+     */
     public List<ResourceStatusResponse> statuses() {
         return this.statuses;
     }
     /**
-     * The system data.
+     * @return The system data.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Gets or sets the Resource tags.
+     * @return Gets or sets the Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Gets or sets the current version of VMware Tools.
+     * @return Gets or sets the current version of VMware Tools.
      * 
-    */
+     */
     public String toolsVersion() {
         return this.toolsVersion;
     }
     /**
-     * Gets or sets the current version status of VMware Tools installed in the guest operating system.
+     * @return Gets or sets the current version status of VMware Tools installed in the guest operating system.
      * 
-    */
+     */
     public String toolsVersionStatus() {
         return this.toolsVersionStatus;
     }
     /**
-     * Gets or sets the type of the resource.
+     * @return Gets or sets the type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Gets or sets a unique identifier for this resource.
+     * @return Gets or sets a unique identifier for this resource.
      * 
-    */
+     */
     public String uuid() {
         return this.uuid;
     }
     /**
-     * Gets or sets the ARM Id of the vCenter resource in which this template resides.
+     * @return Gets or sets the ARM Id of the vCenter resource in which this template resides.
      * 
-    */
+     */
     public Optional<String> vCenterId() {
         return Optional.ofNullable(this.vCenterId);
     }

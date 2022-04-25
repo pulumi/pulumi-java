@@ -26,6 +26,10 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="accessKey")
     private @Nullable Output<String> accessKey;
 
+    /**
+     * @return Optional. The access key is used if credentials are required to access the self-managed object storage server.
+     * 
+     */
     public Optional<Output<String>> accessKey() {
         return Optional.ofNullable(this.accessKey);
     }
@@ -37,6 +41,10 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="agentArns", required=true)
     private Output<List<String>> agentArns;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
+     * 
+     */
     public Output<List<String>> agentArns() {
         return this.agentArns;
     }
@@ -48,6 +56,10 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="bucketName", required=true)
     private Output<String> bucketName;
 
+    /**
+     * @return The name of the bucket on the self-managed object storage server.
+     * 
+     */
     public Output<String> bucketName() {
         return this.bucketName;
     }
@@ -59,6 +71,10 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="secretKey")
     private @Nullable Output<String> secretKey;
 
+    /**
+     * @return Optional. The secret key is used if credentials are required to access the self-managed object storage server.
+     * 
+     */
     public Optional<Output<String>> secretKey() {
         return Optional.ofNullable(this.secretKey);
     }
@@ -70,6 +86,10 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="serverHostname", required=true)
     private Output<String> serverHostname;
 
+    /**
+     * @return The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS) name of the object storage server.
+     * 
+     */
     public Output<String> serverHostname() {
         return this.serverHostname;
     }
@@ -81,6 +101,10 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="serverPort")
     private @Nullable Output<Integer> serverPort;
 
+    /**
+     * @return The port that your self-managed server accepts inbound network traffic on.
+     * 
+     */
     public Optional<Output<Integer>> serverPort() {
         return Optional.ofNullable(this.serverPort);
     }
@@ -92,6 +116,10 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="serverProtocol")
     private @Nullable Output<LocationObjectStorageServerProtocol> serverProtocol;
 
+    /**
+     * @return The protocol that the object storage server uses to communicate.
+     * 
+     */
     public Optional<Output<LocationObjectStorageServerProtocol>> serverProtocol() {
         return Optional.ofNullable(this.serverProtocol);
     }
@@ -103,6 +131,10 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="subdirectory")
     private @Nullable Output<String> subdirectory;
 
+    /**
+     * @return The subdirectory in the self-managed object storage server that is used to read data from.
+     * 
+     */
     public Optional<Output<String>> subdirectory() {
         return Optional.ofNullable(this.subdirectory);
     }
@@ -114,6 +146,10 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<List<LocationObjectStorageTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<LocationObjectStorageTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -150,91 +186,211 @@ public final class LocationObjectStorageArgs extends com.pulumi.resources.Resour
             $ = new LocationObjectStorageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKey Optional. The access key is used if credentials are required to access the self-managed object storage server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey(@Nullable Output<String> accessKey) {
             $.accessKey = accessKey;
             return this;
         }
 
+        /**
+         * @param accessKey Optional. The access key is used if credentials are required to access the self-managed object storage server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey(String accessKey) {
             return accessKey(Output.of(accessKey));
         }
 
+        /**
+         * @param agentArns The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(Output<List<String>> agentArns) {
             $.agentArns = agentArns;
             return this;
         }
 
+        /**
+         * @param agentArns The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(List<String> agentArns) {
             return agentArns(Output.of(agentArns));
         }
 
+        /**
+         * @param agentArns The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(String... agentArns) {
             return agentArns(List.of(agentArns));
         }
 
+        /**
+         * @param bucketName The name of the bucket on the self-managed object storage server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName The name of the bucket on the self-managed object storage server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param secretKey Optional. The secret key is used if credentials are required to access the self-managed object storage server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKey(@Nullable Output<String> secretKey) {
             $.secretKey = secretKey;
             return this;
         }
 
+        /**
+         * @param secretKey Optional. The secret key is used if credentials are required to access the self-managed object storage server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKey(String secretKey) {
             return secretKey(Output.of(secretKey));
         }
 
+        /**
+         * @param serverHostname The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS) name of the object storage server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverHostname(Output<String> serverHostname) {
             $.serverHostname = serverHostname;
             return this;
         }
 
+        /**
+         * @param serverHostname The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS) name of the object storage server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverHostname(String serverHostname) {
             return serverHostname(Output.of(serverHostname));
         }
 
+        /**
+         * @param serverPort The port that your self-managed server accepts inbound network traffic on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverPort(@Nullable Output<Integer> serverPort) {
             $.serverPort = serverPort;
             return this;
         }
 
+        /**
+         * @param serverPort The port that your self-managed server accepts inbound network traffic on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverPort(Integer serverPort) {
             return serverPort(Output.of(serverPort));
         }
 
+        /**
+         * @param serverProtocol The protocol that the object storage server uses to communicate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverProtocol(@Nullable Output<LocationObjectStorageServerProtocol> serverProtocol) {
             $.serverProtocol = serverProtocol;
             return this;
         }
 
+        /**
+         * @param serverProtocol The protocol that the object storage server uses to communicate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverProtocol(LocationObjectStorageServerProtocol serverProtocol) {
             return serverProtocol(Output.of(serverProtocol));
         }
 
+        /**
+         * @param subdirectory The subdirectory in the self-managed object storage server that is used to read data from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             $.subdirectory = subdirectory;
             return this;
         }
 
+        /**
+         * @param subdirectory The subdirectory in the self-managed object storage server that is used to read data from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(String subdirectory) {
             return subdirectory(Output.of(subdirectory));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<LocationObjectStorageTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<LocationObjectStorageTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(LocationObjectStorageTagArgs... tags) {
             return tags(List.of(tags));
         }

@@ -25,6 +25,10 @@ public final class NfsAccessPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="accessRules", required=true)
     private List<NfsAccessRuleResponse> accessRules;
 
+    /**
+     * @return The set of rules describing client accesses allowed under this policy.
+     * 
+     */
     public List<NfsAccessRuleResponse> accessRules() {
         return this.accessRules;
     }
@@ -36,6 +40,10 @@ public final class NfsAccessPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name identifying this policy. Access Policy names are not case sensitive.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -65,15 +73,33 @@ public final class NfsAccessPolicyResponse extends com.pulumi.resources.InvokeAr
             $ = new NfsAccessPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessRules The set of rules describing client accesses allowed under this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessRules(List<NfsAccessRuleResponse> accessRules) {
             $.accessRules = accessRules;
             return this;
         }
 
+        /**
+         * @param accessRules The set of rules describing client accesses allowed under this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessRules(NfsAccessRuleResponse... accessRules) {
             return accessRules(List.of(accessRules));
         }
 
+        /**
+         * @param name Name identifying this policy. Access Policy names are not case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

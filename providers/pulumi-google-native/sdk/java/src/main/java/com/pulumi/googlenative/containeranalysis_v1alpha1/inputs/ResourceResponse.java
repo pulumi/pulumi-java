@@ -24,6 +24,10 @@ public final class ResourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="contentHash", required=true)
     private HashResponse contentHash;
 
+    /**
+     * @return The hash of the resource content. E.g., the Docker digest.
+     * 
+     */
     public HashResponse contentHash() {
         return this.contentHash;
     }
@@ -35,6 +39,10 @@ public final class ResourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the resource. E.g., the name of a Docker image - &#34;Debian&#34;.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -46,6 +54,10 @@ public final class ResourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return The unique URI of the resource. E.g., &#34;https://gcr.io/project/image@sha256:foo&#34; for a Docker image.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -76,16 +88,34 @@ public final class ResourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentHash The hash of the resource content. E.g., the Docker digest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHash(HashResponse contentHash) {
             $.contentHash = contentHash;
             return this;
         }
 
+        /**
+         * @param name The name of the resource. E.g., the name of a Docker image - &#34;Debian&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param uri The unique URI of the resource. E.g., &#34;https://gcr.io/project/image@sha256:foo&#34; for a Docker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

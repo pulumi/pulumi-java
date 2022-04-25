@@ -27,6 +27,10 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends com.pulumi
     @Import(name="additionalExtensions")
     private @Nullable Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions;
 
+    /**
+     * @return Optional. Describes custom X.509 extensions.
+     * 
+     */
     public Optional<Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>>> additionalExtensions() {
         return Optional.ofNullable(this.additionalExtensions);
     }
@@ -38,6 +42,10 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends com.pulumi
     @Import(name="aiaOcspServers")
     private @Nullable Output<List<String>> aiaOcspServers;
 
+    /**
+     * @return Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+     * 
+     */
     public Optional<Output<List<String>>> aiaOcspServers() {
         return Optional.ofNullable(this.aiaOcspServers);
     }
@@ -49,6 +57,10 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends com.pulumi
     @Import(name="caOptions")
     private @Nullable Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions;
 
+    /**
+     * @return Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+     * 
+     */
     public Optional<Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs>> caOptions() {
         return Optional.ofNullable(this.caOptions);
     }
@@ -60,6 +72,10 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends com.pulumi
     @Import(name="keyUsage")
     private @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage;
 
+    /**
+     * @return Optional. Indicates the intended use for keys that correspond to a certificate.
+     * 
+     */
     public Optional<Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs>> keyUsage() {
         return Optional.ofNullable(this.keyUsage);
     }
@@ -71,6 +87,10 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends com.pulumi
     @Import(name="policyIds")
     private @Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds;
 
+    /**
+     * @return Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+     * 
+     */
     public Optional<Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>>> policyIds() {
         return Optional.ofNullable(this.policyIds);
     }
@@ -103,59 +123,137 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends com.pulumi
             $ = new CertificateTemplatePredefinedValuesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalExtensions Optional. Describes custom X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(@Nullable Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions) {
             $.additionalExtensions = additionalExtensions;
             return this;
         }
 
+        /**
+         * @param additionalExtensions Optional. Describes custom X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs> additionalExtensions) {
             return additionalExtensions(Output.of(additionalExtensions));
         }
 
+        /**
+         * @param additionalExtensions Optional. Describes custom X.509 extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs... additionalExtensions) {
             return additionalExtensions(List.of(additionalExtensions));
         }
 
+        /**
+         * @param aiaOcspServers Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aiaOcspServers(@Nullable Output<List<String>> aiaOcspServers) {
             $.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
+        /**
+         * @param aiaOcspServers Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aiaOcspServers(List<String> aiaOcspServers) {
             return aiaOcspServers(Output.of(aiaOcspServers));
         }
 
+        /**
+         * @param aiaOcspServers Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aiaOcspServers(String... aiaOcspServers) {
             return aiaOcspServers(List.of(aiaOcspServers));
         }
 
+        /**
+         * @param caOptions Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caOptions(@Nullable Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions) {
             $.caOptions = caOptions;
             return this;
         }
 
+        /**
+         * @param caOptions Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caOptions(CertificateTemplatePredefinedValuesCaOptionsGetArgs caOptions) {
             return caOptions(Output.of(caOptions));
         }
 
+        /**
+         * @param keyUsage Optional. Indicates the intended use for keys that correspond to a certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUsage(@Nullable Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage) {
             $.keyUsage = keyUsage;
             return this;
         }
 
+        /**
+         * @param keyUsage Optional. Indicates the intended use for keys that correspond to a certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUsage(CertificateTemplatePredefinedValuesKeyUsageGetArgs keyUsage) {
             return keyUsage(Output.of(keyUsage));
         }
 
+        /**
+         * @param policyIds Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyIds(@Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds) {
             $.policyIds = policyIds;
             return this;
         }
 
+        /**
+         * @param policyIds Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyIds(List<CertificateTemplatePredefinedValuesPolicyIdGetArgs> policyIds) {
             return policyIds(Output.of(policyIds));
         }
 
+        /**
+         * @param policyIds Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyIds(CertificateTemplatePredefinedValuesPolicyIdGetArgs... policyIds) {
             return policyIds(List.of(policyIds));
         }

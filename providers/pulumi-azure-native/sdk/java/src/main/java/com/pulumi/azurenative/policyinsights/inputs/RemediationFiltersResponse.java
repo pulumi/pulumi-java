@@ -26,6 +26,10 @@ public final class RemediationFiltersResponse extends com.pulumi.resources.Invok
     @Import(name="locations")
     private @Nullable List<String> locations;
 
+    /**
+     * @return The resource locations that will be remediated.
+     * 
+     */
     public Optional<List<String>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -54,11 +58,23 @@ public final class RemediationFiltersResponse extends com.pulumi.resources.Invok
             $ = new RemediationFiltersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locations The resource locations that will be remediated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(@Nullable List<String> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations The resource locations that will be remediated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }

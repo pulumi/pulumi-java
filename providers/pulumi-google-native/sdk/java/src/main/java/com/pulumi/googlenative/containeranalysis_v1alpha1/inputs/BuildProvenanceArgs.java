@@ -31,6 +31,10 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="buildOptions")
     private @Nullable Output<Map<String,String>> buildOptions;
 
+    /**
+     * @return Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details.
+     * 
+     */
     public Optional<Output<Map<String,String>>> buildOptions() {
         return Optional.ofNullable(this.buildOptions);
     }
@@ -42,6 +46,10 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="builderVersion")
     private @Nullable Output<String> builderVersion;
 
+    /**
+     * @return Version string of the builder at the time this build was executed.
+     * 
+     */
     public Optional<Output<String>> builderVersion() {
         return Optional.ofNullable(this.builderVersion);
     }
@@ -53,6 +61,10 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="builtArtifacts")
     private @Nullable Output<List<ArtifactArgs>> builtArtifacts;
 
+    /**
+     * @return Output of the build.
+     * 
+     */
     public Optional<Output<List<ArtifactArgs>>> builtArtifacts() {
         return Optional.ofNullable(this.builtArtifacts);
     }
@@ -64,6 +76,10 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="commands")
     private @Nullable Output<List<CommandArgs>> commands;
 
+    /**
+     * @return Commands requested by the build.
+     * 
+     */
     public Optional<Output<List<CommandArgs>>> commands() {
         return Optional.ofNullable(this.commands);
     }
@@ -75,6 +91,10 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return Time at which the build was created.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -86,6 +106,10 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="creator")
     private @Nullable Output<String> creator;
 
+    /**
+     * @return E-mail address of the user who initiated this build. Note that this was the user&#39;s e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
+     * 
+     */
     public Optional<Output<String>> creator() {
         return Optional.ofNullable(this.creator);
     }
@@ -97,6 +121,10 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="finishTime")
     private @Nullable Output<String> finishTime;
 
+    /**
+     * @return Time at which execution of the build was finished.
+     * 
+     */
     public Optional<Output<String>> finishTime() {
         return Optional.ofNullable(this.finishTime);
     }
@@ -108,6 +136,10 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Unique identifier of the build.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -119,6 +151,10 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="logsBucket")
     private @Nullable Output<String> logsBucket;
 
+    /**
+     * @return Google Cloud Storage bucket where logs were written.
+     * 
+     */
     public Optional<Output<String>> logsBucket() {
         return Optional.ofNullable(this.logsBucket);
     }
@@ -130,6 +166,10 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return ID of the project.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -141,6 +181,10 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourceProvenance")
     private @Nullable Output<SourceArgs> sourceProvenance;
 
+    /**
+     * @return Details of the Source input to the build.
+     * 
+     */
     public Optional<Output<SourceArgs>> sourceProvenance() {
         return Optional.ofNullable(this.sourceProvenance);
     }
@@ -152,6 +196,10 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return Time at which execution of the build was started.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -163,6 +211,10 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="triggerId")
     private @Nullable Output<String> triggerId;
 
+    /**
+     * @return Trigger identifier if the build was triggered automatically; empty if not.
+     * 
+     */
     public Optional<Output<String>> triggerId() {
         return Optional.ofNullable(this.triggerId);
     }
@@ -203,127 +255,295 @@ public final class BuildProvenanceArgs extends com.pulumi.resources.ResourceArgs
             $ = new BuildProvenanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buildOptions Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildOptions(@Nullable Output<Map<String,String>> buildOptions) {
             $.buildOptions = buildOptions;
             return this;
         }
 
+        /**
+         * @param buildOptions Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildOptions(Map<String,String> buildOptions) {
             return buildOptions(Output.of(buildOptions));
         }
 
+        /**
+         * @param builderVersion Version string of the builder at the time this build was executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builderVersion(@Nullable Output<String> builderVersion) {
             $.builderVersion = builderVersion;
             return this;
         }
 
+        /**
+         * @param builderVersion Version string of the builder at the time this build was executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builderVersion(String builderVersion) {
             return builderVersion(Output.of(builderVersion));
         }
 
+        /**
+         * @param builtArtifacts Output of the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builtArtifacts(@Nullable Output<List<ArtifactArgs>> builtArtifacts) {
             $.builtArtifacts = builtArtifacts;
             return this;
         }
 
+        /**
+         * @param builtArtifacts Output of the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builtArtifacts(List<ArtifactArgs> builtArtifacts) {
             return builtArtifacts(Output.of(builtArtifacts));
         }
 
+        /**
+         * @param builtArtifacts Output of the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builtArtifacts(ArtifactArgs... builtArtifacts) {
             return builtArtifacts(List.of(builtArtifacts));
         }
 
+        /**
+         * @param commands Commands requested by the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commands(@Nullable Output<List<CommandArgs>> commands) {
             $.commands = commands;
             return this;
         }
 
+        /**
+         * @param commands Commands requested by the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commands(List<CommandArgs> commands) {
             return commands(Output.of(commands));
         }
 
+        /**
+         * @param commands Commands requested by the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commands(CommandArgs... commands) {
             return commands(List.of(commands));
         }
 
+        /**
+         * @param createTime Time at which the build was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime Time at which the build was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param creator E-mail address of the user who initiated this build. Note that this was the user&#39;s e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creator(@Nullable Output<String> creator) {
             $.creator = creator;
             return this;
         }
 
+        /**
+         * @param creator E-mail address of the user who initiated this build. Note that this was the user&#39;s e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creator(String creator) {
             return creator(Output.of(creator));
         }
 
+        /**
+         * @param finishTime Time at which execution of the build was finished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finishTime(@Nullable Output<String> finishTime) {
             $.finishTime = finishTime;
             return this;
         }
 
+        /**
+         * @param finishTime Time at which execution of the build was finished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finishTime(String finishTime) {
             return finishTime(Output.of(finishTime));
         }
 
+        /**
+         * @param id Unique identifier of the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Unique identifier of the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param logsBucket Google Cloud Storage bucket where logs were written.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logsBucket(@Nullable Output<String> logsBucket) {
             $.logsBucket = logsBucket;
             return this;
         }
 
+        /**
+         * @param logsBucket Google Cloud Storage bucket where logs were written.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logsBucket(String logsBucket) {
             return logsBucket(Output.of(logsBucket));
         }
 
+        /**
+         * @param project ID of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project ID of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param sourceProvenance Details of the Source input to the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceProvenance(@Nullable Output<SourceArgs> sourceProvenance) {
             $.sourceProvenance = sourceProvenance;
             return this;
         }
 
+        /**
+         * @param sourceProvenance Details of the Source input to the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceProvenance(SourceArgs sourceProvenance) {
             return sourceProvenance(Output.of(sourceProvenance));
         }
 
+        /**
+         * @param startTime Time at which execution of the build was started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Time at which execution of the build was started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param triggerId Trigger identifier if the build was triggered automatically; empty if not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerId(@Nullable Output<String> triggerId) {
             $.triggerId = triggerId;
             return this;
         }
 
+        /**
+         * @param triggerId Trigger identifier if the build was triggered automatically; empty if not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerId(String triggerId) {
             return triggerId(Output.of(triggerId));
         }

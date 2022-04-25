@@ -28,6 +28,10 @@ public final class VMwareCbtDiskInputArgs extends com.pulumi.resources.ResourceA
     @Import(name="diskId", required=true)
     private Output<String> diskId;
 
+    /**
+     * @return The disk Id.
+     * 
+     */
     public Output<String> diskId() {
         return this.diskId;
     }
@@ -39,6 +43,10 @@ public final class VMwareCbtDiskInputArgs extends com.pulumi.resources.ResourceA
     @Import(name="diskType")
     private @Nullable Output<Either<String,DiskAccountType>> diskType;
 
+    /**
+     * @return The disk type.
+     * 
+     */
     public Optional<Output<Either<String,DiskAccountType>>> diskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -50,6 +58,10 @@ public final class VMwareCbtDiskInputArgs extends com.pulumi.resources.ResourceA
     @Import(name="isOSDisk", required=true)
     private Output<String> isOSDisk;
 
+    /**
+     * @return A value indicating whether the disk is the OS disk.
+     * 
+     */
     public Output<String> isOSDisk() {
         return this.isOSDisk;
     }
@@ -61,6 +73,10 @@ public final class VMwareCbtDiskInputArgs extends com.pulumi.resources.ResourceA
     @Import(name="logStorageAccountId", required=true)
     private Output<String> logStorageAccountId;
 
+    /**
+     * @return The log storage account ARM Id.
+     * 
+     */
     public Output<String> logStorageAccountId() {
         return this.logStorageAccountId;
     }
@@ -72,6 +88,10 @@ public final class VMwareCbtDiskInputArgs extends com.pulumi.resources.ResourceA
     @Import(name="logStorageAccountSasSecretName", required=true)
     private Output<String> logStorageAccountSasSecretName;
 
+    /**
+     * @return The key vault secret name of the log storage account.
+     * 
+     */
     public Output<String> logStorageAccountSasSecretName() {
         return this.logStorageAccountSasSecretName;
     }
@@ -104,55 +124,127 @@ public final class VMwareCbtDiskInputArgs extends com.pulumi.resources.ResourceA
             $ = new VMwareCbtDiskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskId The disk Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskId(Output<String> diskId) {
             $.diskId = diskId;
             return this;
         }
 
+        /**
+         * @param diskId The disk Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskId(String diskId) {
             return diskId(Output.of(diskId));
         }
 
+        /**
+         * @param diskType The disk type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(@Nullable Output<Either<String,DiskAccountType>> diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param diskType The disk type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(Either<String,DiskAccountType> diskType) {
             return diskType(Output.of(diskType));
         }
 
+        /**
+         * @param diskType The disk type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             return diskType(Either.ofLeft(diskType));
         }
 
+        /**
+         * @param diskType The disk type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(DiskAccountType diskType) {
             return diskType(Either.ofRight(diskType));
         }
 
+        /**
+         * @param isOSDisk A value indicating whether the disk is the OS disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isOSDisk(Output<String> isOSDisk) {
             $.isOSDisk = isOSDisk;
             return this;
         }
 
+        /**
+         * @param isOSDisk A value indicating whether the disk is the OS disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isOSDisk(String isOSDisk) {
             return isOSDisk(Output.of(isOSDisk));
         }
 
+        /**
+         * @param logStorageAccountId The log storage account ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageAccountId(Output<String> logStorageAccountId) {
             $.logStorageAccountId = logStorageAccountId;
             return this;
         }
 
+        /**
+         * @param logStorageAccountId The log storage account ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageAccountId(String logStorageAccountId) {
             return logStorageAccountId(Output.of(logStorageAccountId));
         }
 
+        /**
+         * @param logStorageAccountSasSecretName The key vault secret name of the log storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageAccountSasSecretName(Output<String> logStorageAccountSasSecretName) {
             $.logStorageAccountSasSecretName = logStorageAccountSasSecretName;
             return this;
         }
 
+        /**
+         * @param logStorageAccountSasSecretName The key vault secret name of the log storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageAccountSasSecretName(String logStorageAccountSasSecretName) {
             return logStorageAccountSasSecretName(Output.of(logStorageAccountSasSecretName));
         }

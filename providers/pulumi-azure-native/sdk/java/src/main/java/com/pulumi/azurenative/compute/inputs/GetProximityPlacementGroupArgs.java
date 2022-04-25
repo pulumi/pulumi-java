@@ -21,6 +21,10 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
     @Import(name="includeColocationStatus")
     private @Nullable String includeColocationStatus;
 
+    /**
+     * @return includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.
+     * 
+     */
     public Optional<String> includeColocationStatus() {
         return Optional.ofNullable(this.includeColocationStatus);
     }
@@ -32,6 +36,10 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
     @Import(name="proximityPlacementGroupName", required=true)
     private String proximityPlacementGroupName;
 
+    /**
+     * @return The name of the proximity placement group.
+     * 
+     */
     public String proximityPlacementGroupName() {
         return this.proximityPlacementGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
             $ = new GetProximityPlacementGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param includeColocationStatus includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeColocationStatus(@Nullable String includeColocationStatus) {
             $.includeColocationStatus = includeColocationStatus;
             return this;
         }
 
+        /**
+         * @param proximityPlacementGroupName The name of the proximity placement group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximityPlacementGroupName(String proximityPlacementGroupName) {
             $.proximityPlacementGroupName = proximityPlacementGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

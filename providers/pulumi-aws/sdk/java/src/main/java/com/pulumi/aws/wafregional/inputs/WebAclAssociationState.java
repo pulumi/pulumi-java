@@ -22,6 +22,10 @@ public final class WebAclAssociationState extends com.pulumi.resources.ResourceA
     @Import(name="resourceArn")
     private @Nullable Output<String> resourceArn;
 
+    /**
+     * @return ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
+     * 
+     */
     public Optional<Output<String>> resourceArn() {
         return Optional.ofNullable(this.resourceArn);
     }
@@ -33,6 +37,10 @@ public final class WebAclAssociationState extends com.pulumi.resources.ResourceA
     @Import(name="webAclId")
     private @Nullable Output<String> webAclId;
 
+    /**
+     * @return The ID of the WAF Regional WebACL to create an association.
+     * 
+     */
     public Optional<Output<String>> webAclId() {
         return Optional.ofNullable(this.webAclId);
     }
@@ -62,20 +70,44 @@ public final class WebAclAssociationState extends com.pulumi.resources.ResourceA
             $ = new WebAclAssociationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceArn ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
             $.resourceArn = resourceArn;
             return this;
         }
 
+        /**
+         * @param resourceArn ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(String resourceArn) {
             return resourceArn(Output.of(resourceArn));
         }
 
+        /**
+         * @param webAclId The ID of the WAF Regional WebACL to create an association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webAclId(@Nullable Output<String> webAclId) {
             $.webAclId = webAclId;
             return this;
         }
 
+        /**
+         * @param webAclId The ID of the WAF Regional WebACL to create an association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webAclId(String webAclId) {
             return webAclId(Output.of(webAclId));
         }

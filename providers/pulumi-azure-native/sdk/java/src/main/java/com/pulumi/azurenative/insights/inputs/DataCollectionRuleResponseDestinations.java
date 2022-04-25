@@ -27,6 +27,10 @@ public final class DataCollectionRuleResponseDestinations extends com.pulumi.res
     @Import(name="azureMonitorMetrics")
     private @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics;
 
+    /**
+     * @return Azure Monitor Metrics destination.
+     * 
+     */
     public Optional<DestinationsSpecResponseAzureMonitorMetrics> azureMonitorMetrics() {
         return Optional.ofNullable(this.azureMonitorMetrics);
     }
@@ -38,6 +42,10 @@ public final class DataCollectionRuleResponseDestinations extends com.pulumi.res
     @Import(name="logAnalytics")
     private @Nullable List<LogAnalyticsDestinationResponse> logAnalytics;
 
+    /**
+     * @return List of Log Analytics destinations.
+     * 
+     */
     public Optional<List<LogAnalyticsDestinationResponse>> logAnalytics() {
         return Optional.ofNullable(this.logAnalytics);
     }
@@ -67,16 +75,34 @@ public final class DataCollectionRuleResponseDestinations extends com.pulumi.res
             $ = new DataCollectionRuleResponseDestinations(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureMonitorMetrics Azure Monitor Metrics destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureMonitorMetrics(@Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics) {
             $.azureMonitorMetrics = azureMonitorMetrics;
             return this;
         }
 
+        /**
+         * @param logAnalytics List of Log Analytics destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalytics(@Nullable List<LogAnalyticsDestinationResponse> logAnalytics) {
             $.logAnalytics = logAnalytics;
             return this;
         }
 
+        /**
+         * @param logAnalytics List of Log Analytics destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalytics(LogAnalyticsDestinationResponse... logAnalytics) {
             return logAnalytics(List.of(logAnalytics));
         }

@@ -14,62 +14,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetExperimentResult {
     /**
-     * The description of the details or intents of the Experiment
+     * @return The description of the details or intents of the Experiment
      * 
      */
     private final @Nullable String description;
     /**
-     * The state of the Experiment
+     * @return The state of the Experiment
      * 
      */
     private final @Nullable String enabledState;
     /**
-     * The endpoint A of an experiment
+     * @return The endpoint A of an experiment
      * 
      */
     private final @Nullable ExperimentEndpointResponse endpointA;
     /**
-     * The endpoint B of an experiment
+     * @return The endpoint B of an experiment
      * 
      */
     private final @Nullable ExperimentEndpointResponse endpointB;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Resource status.
+     * @return Resource status.
      * 
      */
     private final String resourceState;
     /**
-     * The uri to the Script used in the Experiment
+     * @return The uri to the Script used in the Experiment
      * 
      */
     private final String scriptFileUri;
     /**
-     * The description of Experiment status from the server side
+     * @return The description of Experiment status from the server side
      * 
      */
     private final String status;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -103,86 +103,86 @@ public final class GetExperimentResult {
     }
 
     /**
-     * The description of the details or intents of the Experiment
+     * @return The description of the details or intents of the Experiment
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The state of the Experiment
+     * @return The state of the Experiment
      * 
-    */
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
-     * The endpoint A of an experiment
+     * @return The endpoint A of an experiment
      * 
-    */
+     */
     public Optional<ExperimentEndpointResponse> endpointA() {
         return Optional.ofNullable(this.endpointA);
     }
     /**
-     * The endpoint B of an experiment
+     * @return The endpoint B of an experiment
      * 
-    */
+     */
     public Optional<ExperimentEndpointResponse> endpointB() {
         return Optional.ofNullable(this.endpointB);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource status.
+     * @return Resource status.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * The uri to the Script used in the Experiment
+     * @return The uri to the Script used in the Experiment
      * 
-    */
+     */
     public String scriptFileUri() {
         return this.scriptFileUri;
     }
     /**
-     * The description of Experiment status from the server side
+     * @return The description of Experiment status from the server side
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

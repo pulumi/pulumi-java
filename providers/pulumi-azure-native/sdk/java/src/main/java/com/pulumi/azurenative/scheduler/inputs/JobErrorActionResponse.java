@@ -26,6 +26,10 @@ public final class JobErrorActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="queueMessage")
     private @Nullable StorageQueueMessageResponse queueMessage;
 
+    /**
+     * @return Gets or sets the storage queue message.
+     * 
+     */
     public Optional<StorageQueueMessageResponse> queueMessage() {
         return Optional.ofNullable(this.queueMessage);
     }
@@ -37,6 +41,10 @@ public final class JobErrorActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="request")
     private @Nullable HttpRequestResponse request;
 
+    /**
+     * @return Gets or sets the http requests.
+     * 
+     */
     public Optional<HttpRequestResponse> request() {
         return Optional.ofNullable(this.request);
     }
@@ -48,6 +56,10 @@ public final class JobErrorActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="retryPolicy")
     private @Nullable RetryPolicyResponse retryPolicy;
 
+    /**
+     * @return Gets or sets the retry policy.
+     * 
+     */
     public Optional<RetryPolicyResponse> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
@@ -59,6 +71,10 @@ public final class JobErrorActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="serviceBusQueueMessage")
     private @Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage;
 
+    /**
+     * @return Gets or sets the service bus queue message.
+     * 
+     */
     public Optional<ServiceBusQueueMessageResponse> serviceBusQueueMessage() {
         return Optional.ofNullable(this.serviceBusQueueMessage);
     }
@@ -70,6 +86,10 @@ public final class JobErrorActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="serviceBusTopicMessage")
     private @Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage;
 
+    /**
+     * @return Gets or sets the service bus topic message.
+     * 
+     */
     public Optional<ServiceBusTopicMessageResponse> serviceBusTopicMessage() {
         return Optional.ofNullable(this.serviceBusTopicMessage);
     }
@@ -81,6 +101,10 @@ public final class JobErrorActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Gets or sets the job error action type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -114,31 +138,67 @@ public final class JobErrorActionResponse extends com.pulumi.resources.InvokeArg
             $ = new JobErrorActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queueMessage Gets or sets the storage queue message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueMessage(@Nullable StorageQueueMessageResponse queueMessage) {
             $.queueMessage = queueMessage;
             return this;
         }
 
+        /**
+         * @param request Gets or sets the http requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(@Nullable HttpRequestResponse request) {
             $.request = request;
             return this;
         }
 
+        /**
+         * @param retryPolicy Gets or sets the retry policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(@Nullable RetryPolicyResponse retryPolicy) {
             $.retryPolicy = retryPolicy;
             return this;
         }
 
+        /**
+         * @param serviceBusQueueMessage Gets or sets the service bus queue message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusQueueMessage(@Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage) {
             $.serviceBusQueueMessage = serviceBusQueueMessage;
             return this;
         }
 
+        /**
+         * @param serviceBusTopicMessage Gets or sets the service bus topic message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusTopicMessage(@Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage) {
             $.serviceBusTopicMessage = serviceBusTopicMessage;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the job error action type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

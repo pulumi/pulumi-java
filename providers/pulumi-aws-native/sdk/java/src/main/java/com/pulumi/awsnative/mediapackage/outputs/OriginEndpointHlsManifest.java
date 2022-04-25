@@ -19,48 +19,48 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OriginEndpointHlsManifest {
     /**
-     * This setting controls how ad markers are included in the packaged OriginEndpoint. &#34;NONE&#34; will omit all SCTE-35 ad markers from the output. &#34;PASSTHROUGH&#34; causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. &#34;SCTE35_ENHANCED&#34; generates ad markers and blackout tags based on SCTE-35 messages in the input source. &#34;DATERANGE&#34; inserts EXT-X-DATERANGE tags to signal ad and program transition events in HLS and CMAF manifests. For this option, you must set a programDateTimeIntervalSeconds value that is greater than 0.
+     * @return This setting controls how ad markers are included in the packaged OriginEndpoint. &#34;NONE&#34; will omit all SCTE-35 ad markers from the output. &#34;PASSTHROUGH&#34; causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. &#34;SCTE35_ENHANCED&#34; generates ad markers and blackout tags based on SCTE-35 messages in the input source. &#34;DATERANGE&#34; inserts EXT-X-DATERANGE tags to signal ad and program transition events in HLS and CMAF manifests. For this option, you must set a programDateTimeIntervalSeconds value that is greater than 0.
      * 
      */
     private final @Nullable OriginEndpointHlsManifestAdMarkers adMarkers;
     /**
-     * A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
+     * @return A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
      * 
      */
     private final @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers;
     private final @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions;
     /**
-     * The ID of the manifest. The ID must be unique within the OriginEndpoint and it cannot be changed after it is created.
+     * @return The ID of the manifest. The ID must be unique within the OriginEndpoint and it cannot be changed after it is created.
      * 
      */
     private final String id;
     /**
-     * When enabled, an I-Frame only stream will be included in the output.
+     * @return When enabled, an I-Frame only stream will be included in the output.
      * 
      */
     private final @Nullable Boolean includeIframeOnlyStream;
     /**
-     * An optional short string appended to the end of the OriginEndpoint URL. If not specified, defaults to the manifestName for the OriginEndpoint.
+     * @return An optional short string appended to the end of the OriginEndpoint URL. If not specified, defaults to the manifestName for the OriginEndpoint.
      * 
      */
     private final @Nullable String manifestName;
     /**
-     * The HTTP Live Streaming (HLS) playlist type. When either &#34;EVENT&#34; or &#34;VOD&#34; is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
+     * @return The HTTP Live Streaming (HLS) playlist type. When either &#34;EVENT&#34; or &#34;VOD&#34; is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
      * 
      */
     private final @Nullable OriginEndpointHlsManifestPlaylistType playlistType;
     /**
-     * Time window (in seconds) contained in each parent manifest.
+     * @return Time window (in seconds) contained in each parent manifest.
      * 
      */
     private final @Nullable Integer playlistWindowSeconds;
     /**
-     * The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
+     * @return The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
      * 
      */
     private final @Nullable Integer programDateTimeIntervalSeconds;
     /**
-     * The URL of the packaged OriginEndpoint for consumption.
+     * @return The URL of the packaged OriginEndpoint for consumption.
      * 
      */
     private final @Nullable String url;
@@ -90,16 +90,16 @@ public final class OriginEndpointHlsManifest {
     }
 
     /**
-     * This setting controls how ad markers are included in the packaged OriginEndpoint. &#34;NONE&#34; will omit all SCTE-35 ad markers from the output. &#34;PASSTHROUGH&#34; causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. &#34;SCTE35_ENHANCED&#34; generates ad markers and blackout tags based on SCTE-35 messages in the input source. &#34;DATERANGE&#34; inserts EXT-X-DATERANGE tags to signal ad and program transition events in HLS and CMAF manifests. For this option, you must set a programDateTimeIntervalSeconds value that is greater than 0.
+     * @return This setting controls how ad markers are included in the packaged OriginEndpoint. &#34;NONE&#34; will omit all SCTE-35 ad markers from the output. &#34;PASSTHROUGH&#34; causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. &#34;SCTE35_ENHANCED&#34; generates ad markers and blackout tags based on SCTE-35 messages in the input source. &#34;DATERANGE&#34; inserts EXT-X-DATERANGE tags to signal ad and program transition events in HLS and CMAF manifests. For this option, you must set a programDateTimeIntervalSeconds value that is greater than 0.
      * 
-    */
+     */
     public Optional<OriginEndpointHlsManifestAdMarkers> adMarkers() {
         return Optional.ofNullable(this.adMarkers);
     }
     /**
-     * A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
+     * @return A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
      * 
-    */
+     */
     public List<OriginEndpointHlsManifestAdTriggersItem> adTriggers() {
         return this.adTriggers == null ? List.of() : this.adTriggers;
     }
@@ -107,51 +107,51 @@ public final class OriginEndpointHlsManifest {
         return Optional.ofNullable(this.adsOnDeliveryRestrictions);
     }
     /**
-     * The ID of the manifest. The ID must be unique within the OriginEndpoint and it cannot be changed after it is created.
+     * @return The ID of the manifest. The ID must be unique within the OriginEndpoint and it cannot be changed after it is created.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * When enabled, an I-Frame only stream will be included in the output.
+     * @return When enabled, an I-Frame only stream will be included in the output.
      * 
-    */
+     */
     public Optional<Boolean> includeIframeOnlyStream() {
         return Optional.ofNullable(this.includeIframeOnlyStream);
     }
     /**
-     * An optional short string appended to the end of the OriginEndpoint URL. If not specified, defaults to the manifestName for the OriginEndpoint.
+     * @return An optional short string appended to the end of the OriginEndpoint URL. If not specified, defaults to the manifestName for the OriginEndpoint.
      * 
-    */
+     */
     public Optional<String> manifestName() {
         return Optional.ofNullable(this.manifestName);
     }
     /**
-     * The HTTP Live Streaming (HLS) playlist type. When either &#34;EVENT&#34; or &#34;VOD&#34; is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
+     * @return The HTTP Live Streaming (HLS) playlist type. When either &#34;EVENT&#34; or &#34;VOD&#34; is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
      * 
-    */
+     */
     public Optional<OriginEndpointHlsManifestPlaylistType> playlistType() {
         return Optional.ofNullable(this.playlistType);
     }
     /**
-     * Time window (in seconds) contained in each parent manifest.
+     * @return Time window (in seconds) contained in each parent manifest.
      * 
-    */
+     */
     public Optional<Integer> playlistWindowSeconds() {
         return Optional.ofNullable(this.playlistWindowSeconds);
     }
     /**
-     * The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
+     * @return The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
      * 
-    */
+     */
     public Optional<Integer> programDateTimeIntervalSeconds() {
         return Optional.ofNullable(this.programDateTimeIntervalSeconds);
     }
     /**
-     * The URL of the packaged OriginEndpoint for consumption.
+     * @return The URL of the packaged OriginEndpoint for consumption.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }

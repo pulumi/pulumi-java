@@ -24,6 +24,10 @@ public final class EnterpriseKeyAndroidSettingsArgs extends com.pulumi.resources
     @Import(name="allowAllPackageNames")
     private @Nullable Output<Boolean> allowAllPackageNames;
 
+    /**
+     * @return If set to true, it means allowed_package_names will not be enforced.
+     * 
+     */
     public Optional<Output<Boolean>> allowAllPackageNames() {
         return Optional.ofNullable(this.allowAllPackageNames);
     }
@@ -35,6 +39,10 @@ public final class EnterpriseKeyAndroidSettingsArgs extends com.pulumi.resources
     @Import(name="allowedPackageNames")
     private @Nullable Output<List<String>> allowedPackageNames;
 
+    /**
+     * @return Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
+     * 
+     */
     public Optional<Output<List<String>>> allowedPackageNames() {
         return Optional.ofNullable(this.allowedPackageNames);
     }
@@ -64,24 +72,54 @@ public final class EnterpriseKeyAndroidSettingsArgs extends com.pulumi.resources
             $ = new EnterpriseKeyAndroidSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowAllPackageNames If set to true, it means allowed_package_names will not be enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowAllPackageNames(@Nullable Output<Boolean> allowAllPackageNames) {
             $.allowAllPackageNames = allowAllPackageNames;
             return this;
         }
 
+        /**
+         * @param allowAllPackageNames If set to true, it means allowed_package_names will not be enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowAllPackageNames(Boolean allowAllPackageNames) {
             return allowAllPackageNames(Output.of(allowAllPackageNames));
         }
 
+        /**
+         * @param allowedPackageNames Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPackageNames(@Nullable Output<List<String>> allowedPackageNames) {
             $.allowedPackageNames = allowedPackageNames;
             return this;
         }
 
+        /**
+         * @param allowedPackageNames Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPackageNames(List<String> allowedPackageNames) {
             return allowedPackageNames(Output.of(allowedPackageNames));
         }
 
+        /**
+         * @param allowedPackageNames Android package names of apps allowed to use the key. Example: &#39;com.companyname.appname&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPackageNames(String... allowedPackageNames) {
             return allowedPackageNames(List.of(allowedPackageNames));
         }

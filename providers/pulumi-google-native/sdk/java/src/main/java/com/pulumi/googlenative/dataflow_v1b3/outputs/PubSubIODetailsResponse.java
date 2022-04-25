@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class PubSubIODetailsResponse {
     /**
-     * Subscription used in the connection.
+     * @return Subscription used in the connection.
      * 
      */
     private final String subscription;
     /**
-     * Topic accessed in the connection.
+     * @return Topic accessed in the connection.
      * 
      */
     private final String topic;
@@ -29,16 +29,16 @@ public final class PubSubIODetailsResponse {
     }
 
     /**
-     * Subscription used in the connection.
+     * @return Subscription used in the connection.
      * 
-    */
+     */
     public String subscription() {
         return this.subscription;
     }
     /**
-     * Topic accessed in the connection.
+     * @return Topic accessed in the connection.
      * 
-    */
+     */
     public String topic() {
         return this.topic;
     }

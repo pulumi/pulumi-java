@@ -23,6 +23,10 @@ public final class VirtualMachineResponseProperties extends com.pulumi.resources
     @Import(name="address")
     private @Nullable String address;
 
+    /**
+     * @return Public IP address of the virtual machine.
+     * 
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
@@ -34,6 +38,10 @@ public final class VirtualMachineResponseProperties extends com.pulumi.resources
     @Import(name="administratorAccount")
     private @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
 
+    /**
+     * @return Admin credentials for virtual machine
+     * 
+     */
     public Optional<VirtualMachineSshCredentialsResponse> administratorAccount() {
         return Optional.ofNullable(this.administratorAccount);
     }
@@ -45,6 +53,10 @@ public final class VirtualMachineResponseProperties extends com.pulumi.resources
     @Import(name="sshPort")
     private @Nullable Integer sshPort;
 
+    /**
+     * @return Port open for ssh connections.
+     * 
+     */
     public Optional<Integer> sshPort() {
         return Optional.ofNullable(this.sshPort);
     }
@@ -56,6 +68,10 @@ public final class VirtualMachineResponseProperties extends com.pulumi.resources
     @Import(name="virtualMachineSize")
     private @Nullable String virtualMachineSize;
 
+    /**
+     * @return Virtual Machine size
+     * 
+     */
     public Optional<String> virtualMachineSize() {
         return Optional.ofNullable(this.virtualMachineSize);
     }
@@ -87,21 +103,45 @@ public final class VirtualMachineResponseProperties extends com.pulumi.resources
             $ = new VirtualMachineResponseProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address Public IP address of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable String address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param administratorAccount Admin credentials for virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorAccount(@Nullable VirtualMachineSshCredentialsResponse administratorAccount) {
             $.administratorAccount = administratorAccount;
             return this;
         }
 
+        /**
+         * @param sshPort Port open for ssh connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPort(@Nullable Integer sshPort) {
             $.sshPort = sshPort;
             return this;
         }
 
+        /**
+         * @param virtualMachineSize Virtual Machine size
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineSize(@Nullable String virtualMachineSize) {
             $.virtualMachineSize = virtualMachineSize;
             return this;

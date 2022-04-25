@@ -25,6 +25,10 @@ public final class AccessPolicyIamUser extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn")
     private @Nullable String arn;
 
+    /**
+     * @return The ARN of the IAM user.
+     * 
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -53,6 +57,12 @@ public final class AccessPolicyIamUser extends com.pulumi.resources.InvokeArgs {
             $ = new AccessPolicyIamUser(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the IAM user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable String arn) {
             $.arn = arn;
             return this;

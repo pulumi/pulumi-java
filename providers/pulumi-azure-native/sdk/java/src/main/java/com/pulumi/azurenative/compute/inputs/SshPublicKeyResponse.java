@@ -25,6 +25,10 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="keyData")
     private @Nullable String keyData;
 
+    /**
+     * @return SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. &lt;br&gt;&lt;br&gt; For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure]https://docs.microsoft.com/azure/virtual-machines/linux/create-ssh-keys-detailed).
+     * 
+     */
     public Optional<String> keyData() {
         return Optional.ofNullable(this.keyData);
     }
@@ -36,6 +40,10 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -65,11 +73,23 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SshPublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyData SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. &lt;br&gt;&lt;br&gt; For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure]https://docs.microsoft.com/azure/virtual-machines/linux/create-ssh-keys-detailed).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyData(@Nullable String keyData) {
             $.keyData = keyData;
             return this;
         }
 
+        /**
+         * @param path Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;

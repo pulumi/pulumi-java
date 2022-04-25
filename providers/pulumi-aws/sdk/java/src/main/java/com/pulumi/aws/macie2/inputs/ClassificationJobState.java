@@ -29,6 +29,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="createdAt")
     private @Nullable Output<String> createdAt;
 
+    /**
+     * @return The date and time, in UTC and extended RFC 3339 format, when the job was created.
+     * 
+     */
     public Optional<Output<String>> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -40,6 +44,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="customDataIdentifierIds")
     private @Nullable Output<List<String>> customDataIdentifierIds;
 
+    /**
+     * @return The custom data identifiers to use for data analysis and classification.
+     * 
+     */
     public Optional<Output<List<String>>> customDataIdentifierIds() {
         return Optional.ofNullable(this.customDataIdentifierIds);
     }
@@ -51,6 +59,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A custom description of the job. The description can contain as many as 200 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -62,6 +74,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="initialRun")
     private @Nullable Output<Boolean> initialRun;
 
+    /**
+     * @return Specifies whether to analyze all existing, eligible objects immediately after the job is created.
+     * 
+     */
     public Optional<Output<Boolean>> initialRun() {
         return Optional.ofNullable(this.initialRun);
     }
@@ -87,6 +103,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="jobStatus")
     private @Nullable Output<String> jobStatus;
 
+    /**
+     * @return The status for the job. Valid values are: `CANCELLED`, `RUNNING` and `USER_PAUSED`
+     * 
+     */
     public Optional<Output<String>> jobStatus() {
         return Optional.ofNullable(this.jobStatus);
     }
@@ -98,6 +118,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="jobType")
     private @Nullable Output<String> jobType;
 
+    /**
+     * @return The schedule for running the job. Valid values are: `ONE_TIME` - Run the job only once. If you specify this value, don&#39;t specify a value for the `schedule_frequency` property. `SCHEDULED` - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the `schedule_frequency` property to define the recurrence pattern for the job.
+     * 
+     */
     public Optional<Output<String>> jobType() {
         return Optional.ofNullable(this.jobType);
     }
@@ -116,6 +140,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -127,6 +155,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="s3JobDefinition")
     private @Nullable Output<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition;
 
+    /**
+     * @return The S3 buckets that contain the objects to analyze, and the scope of that analysis. (documented below)
+     * 
+     */
     public Optional<Output<ClassificationJobS3JobDefinitionGetArgs>> s3JobDefinition() {
         return Optional.ofNullable(this.s3JobDefinition);
     }
@@ -138,6 +170,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="samplingPercentage")
     private @Nullable Output<Integer> samplingPercentage;
 
+    /**
+     * @return The sampling depth, as a percentage, to apply when processing objects. This value determines the percentage of eligible objects that the job analyzes. If this value is less than 100, Amazon Macie selects the objects to analyze at random, up to the specified percentage, and analyzes all the data in those objects.
+     * 
+     */
     public Optional<Output<Integer>> samplingPercentage() {
         return Optional.ofNullable(this.samplingPercentage);
     }
@@ -149,6 +185,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="scheduleFrequency")
     private @Nullable Output<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency;
 
+    /**
+     * @return The recurrence pattern for running the job. To run the job only once, don&#39;t specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
+     * 
+     */
     public Optional<Output<ClassificationJobScheduleFrequencyGetArgs>> scheduleFrequency() {
         return Optional.ofNullable(this.scheduleFrequency);
     }
@@ -160,6 +200,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of key-value pairs that specifies the tags to associate with the job. A job can have a maximum of 50 tags. Each tag consists of a tag key and an associated tag value. The maximum length of a tag key is 128 characters. The maximum length of a tag value is 256 characters.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -178,6 +222,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
     @Import(name="userPausedDetails")
     private @Nullable Output<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails;
 
+    /**
+     * @return If the current status of the job is `USER_PAUSED`, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn&#39;t resumed. This value is present only if the value for `job-status` is `USER_PAUSED`.
+     * 
+     */
     public Optional<Output<List<ClassificationJobUserPausedDetailGetArgs>>> userPausedDetails() {
         return Optional.ofNullable(this.userPausedDetails);
     }
@@ -221,42 +269,96 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
             $ = new ClassificationJobState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdAt The date and time, in UTC and extended RFC 3339 format, when the job was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(@Nullable Output<String> createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param createdAt The date and time, in UTC and extended RFC 3339 format, when the job was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(String createdAt) {
             return createdAt(Output.of(createdAt));
         }
 
+        /**
+         * @param customDataIdentifierIds The custom data identifiers to use for data analysis and classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDataIdentifierIds(@Nullable Output<List<String>> customDataIdentifierIds) {
             $.customDataIdentifierIds = customDataIdentifierIds;
             return this;
         }
 
+        /**
+         * @param customDataIdentifierIds The custom data identifiers to use for data analysis and classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDataIdentifierIds(List<String> customDataIdentifierIds) {
             return customDataIdentifierIds(Output.of(customDataIdentifierIds));
         }
 
+        /**
+         * @param customDataIdentifierIds The custom data identifiers to use for data analysis and classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDataIdentifierIds(String... customDataIdentifierIds) {
             return customDataIdentifierIds(List.of(customDataIdentifierIds));
         }
 
+        /**
+         * @param description A custom description of the job. The description can contain as many as 200 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A custom description of the job. The description can contain as many as 200 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param initialRun Specifies whether to analyze all existing, eligible objects immediately after the job is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialRun(@Nullable Output<Boolean> initialRun) {
             $.initialRun = initialRun;
             return this;
         }
 
+        /**
+         * @param initialRun Specifies whether to analyze all existing, eligible objects immediately after the job is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialRun(Boolean initialRun) {
             return initialRun(Output.of(initialRun));
         }
@@ -279,20 +381,44 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
             return jobId(Output.of(jobId));
         }
 
+        /**
+         * @param jobStatus The status for the job. Valid values are: `CANCELLED`, `RUNNING` and `USER_PAUSED`
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobStatus(@Nullable Output<String> jobStatus) {
             $.jobStatus = jobStatus;
             return this;
         }
 
+        /**
+         * @param jobStatus The status for the job. Valid values are: `CANCELLED`, `RUNNING` and `USER_PAUSED`
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobStatus(String jobStatus) {
             return jobStatus(Output.of(jobStatus));
         }
 
+        /**
+         * @param jobType The schedule for running the job. Valid values are: `ONE_TIME` - Run the job only once. If you specify this value, don&#39;t specify a value for the `schedule_frequency` property. `SCHEDULED` - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the `schedule_frequency` property to define the recurrence pattern for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobType(@Nullable Output<String> jobType) {
             $.jobType = jobType;
             return this;
         }
 
+        /**
+         * @param jobType The schedule for running the job. Valid values are: `ONE_TIME` - Run the job only once. If you specify this value, don&#39;t specify a value for the `schedule_frequency` property. `SCHEDULED` - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the `schedule_frequency` property to define the recurrence pattern for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobType(String jobType) {
             return jobType(Output.of(jobType));
         }
@@ -306,47 +432,107 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param s3JobDefinition The S3 buckets that contain the objects to analyze, and the scope of that analysis. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3JobDefinition(@Nullable Output<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition) {
             $.s3JobDefinition = s3JobDefinition;
             return this;
         }
 
+        /**
+         * @param s3JobDefinition The S3 buckets that contain the objects to analyze, and the scope of that analysis. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3JobDefinition(ClassificationJobS3JobDefinitionGetArgs s3JobDefinition) {
             return s3JobDefinition(Output.of(s3JobDefinition));
         }
 
+        /**
+         * @param samplingPercentage The sampling depth, as a percentage, to apply when processing objects. This value determines the percentage of eligible objects that the job analyzes. If this value is less than 100, Amazon Macie selects the objects to analyze at random, up to the specified percentage, and analyzes all the data in those objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingPercentage(@Nullable Output<Integer> samplingPercentage) {
             $.samplingPercentage = samplingPercentage;
             return this;
         }
 
+        /**
+         * @param samplingPercentage The sampling depth, as a percentage, to apply when processing objects. This value determines the percentage of eligible objects that the job analyzes. If this value is less than 100, Amazon Macie selects the objects to analyze at random, up to the specified percentage, and analyzes all the data in those objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingPercentage(Integer samplingPercentage) {
             return samplingPercentage(Output.of(samplingPercentage));
         }
 
+        /**
+         * @param scheduleFrequency The recurrence pattern for running the job. To run the job only once, don&#39;t specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleFrequency(@Nullable Output<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency) {
             $.scheduleFrequency = scheduleFrequency;
             return this;
         }
 
+        /**
+         * @param scheduleFrequency The recurrence pattern for running the job. To run the job only once, don&#39;t specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleFrequency(ClassificationJobScheduleFrequencyGetArgs scheduleFrequency) {
             return scheduleFrequency(Output.of(scheduleFrequency));
         }
 
+        /**
+         * @param tags A map of key-value pairs that specifies the tags to associate with the job. A job can have a maximum of 50 tags. Each tag consists of a tag key and an associated tag value. The maximum length of a tag key is 128 characters. The maximum length of a tag value is 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of key-value pairs that specifies the tags to associate with the job. A job can have a maximum of 50 tags. Each tag consists of a tag key and an associated tag value. The maximum length of a tag key is 128 characters. The maximum length of a tag value is 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
@@ -360,15 +546,33 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param userPausedDetails If the current status of the job is `USER_PAUSED`, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn&#39;t resumed. This value is present only if the value for `job-status` is `USER_PAUSED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPausedDetails(@Nullable Output<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails) {
             $.userPausedDetails = userPausedDetails;
             return this;
         }
 
+        /**
+         * @param userPausedDetails If the current status of the job is `USER_PAUSED`, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn&#39;t resumed. This value is present only if the value for `job-status` is `USER_PAUSED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPausedDetails(List<ClassificationJobUserPausedDetailGetArgs> userPausedDetails) {
             return userPausedDetails(Output.of(userPausedDetails));
         }
 
+        /**
+         * @param userPausedDetails If the current status of the job is `USER_PAUSED`, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn&#39;t resumed. This value is present only if the value for `job-status` is `USER_PAUSED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPausedDetails(ClassificationJobUserPausedDetailGetArgs... userPausedDetails) {
             return userPausedDetails(List.of(userPausedDetails));
         }

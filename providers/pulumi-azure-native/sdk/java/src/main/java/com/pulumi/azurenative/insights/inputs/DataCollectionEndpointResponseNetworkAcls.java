@@ -25,6 +25,10 @@ public final class DataCollectionEndpointResponseNetworkAcls extends com.pulumi.
     @Import(name="publicNetworkAccess")
     private @Nullable String publicNetworkAccess;
 
+    /**
+     * @return The configuration to set whether network access from public internet to the endpoints are allowed.
+     * 
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -53,6 +57,12 @@ public final class DataCollectionEndpointResponseNetworkAcls extends com.pulumi.
             $ = new DataCollectionEndpointResponseNetworkAcls(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicNetworkAccess The configuration to set whether network access from public internet to the endpoints are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;

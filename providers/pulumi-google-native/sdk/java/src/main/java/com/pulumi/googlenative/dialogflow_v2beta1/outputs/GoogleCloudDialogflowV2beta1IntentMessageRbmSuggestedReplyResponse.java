@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse {
     /**
-     * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested reply. This data will be also forwarded to webhook to allow performing custom business logic.
+     * @return Opaque payload that the Dialogflow receives in a user event when the user taps the suggested reply. This data will be also forwarded to webhook to allow performing custom business logic.
      * 
      */
     private final String postbackData;
     /**
-     * Suggested reply text.
+     * @return Suggested reply text.
      * 
      */
     private final String text;
@@ -29,16 +29,16 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
     }
 
     /**
-     * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested reply. This data will be also forwarded to webhook to allow performing custom business logic.
+     * @return Opaque payload that the Dialogflow receives in a user event when the user taps the suggested reply. This data will be also forwarded to webhook to allow performing custom business logic.
      * 
-    */
+     */
     public String postbackData() {
         return this.postbackData;
     }
     /**
-     * Suggested reply text.
+     * @return Suggested reply text.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }

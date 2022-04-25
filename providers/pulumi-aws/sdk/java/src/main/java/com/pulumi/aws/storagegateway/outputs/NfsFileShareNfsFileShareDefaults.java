@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NfsFileShareNfsFileShareDefaults {
     /**
-     * The Unix directory mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0777&#34;`.
+     * @return The Unix directory mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0777&#34;`.
      * 
      */
     private final @Nullable String directoryMode;
     /**
-     * The Unix file mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0666&#34;`.
+     * @return The Unix file mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0666&#34;`.
      * 
      */
     private final @Nullable String fileMode;
     /**
-     * The default group ID for the file share (unless the files have another group ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
+     * @return The default group ID for the file share (unless the files have another group ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
      * 
      */
     private final @Nullable String groupId;
     /**
-     * The default owner ID for the file share (unless the files have another owner ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
+     * @return The default owner ID for the file share (unless the files have another owner ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
      * 
      */
     private final @Nullable String ownerId;
@@ -45,30 +45,30 @@ public final class NfsFileShareNfsFileShareDefaults {
     }
 
     /**
-     * The Unix directory mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0777&#34;`.
+     * @return The Unix directory mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0777&#34;`.
      * 
-    */
+     */
     public Optional<String> directoryMode() {
         return Optional.ofNullable(this.directoryMode);
     }
     /**
-     * The Unix file mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0666&#34;`.
+     * @return The Unix file mode in the string form &#34;nnnn&#34;. Defaults to `&#34;0666&#34;`.
      * 
-    */
+     */
     public Optional<String> fileMode() {
         return Optional.ofNullable(this.fileMode);
     }
     /**
-     * The default group ID for the file share (unless the files have another group ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
+     * @return The default group ID for the file share (unless the files have another group ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
      * 
-    */
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
-     * The default owner ID for the file share (unless the files have another owner ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
+     * @return The default owner ID for the file share (unless the files have another owner ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
      * 
-    */
+     */
     public Optional<String> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }

@@ -24,6 +24,10 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
     @Import(name="comment", required=true)
     private String comment;
 
+    /**
+     * @return A place for the SPDX file creator to record any general comments about the package being described
+     * 
+     */
     public String comment() {
         return this.comment;
     }
@@ -35,6 +39,10 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
     @Import(name="filename", required=true)
     private String filename;
 
+    /**
+     * @return Provide the actual file name of the package, or path of the directory being treated as a package
+     * 
+     */
     public String filename() {
         return this.filename;
     }
@@ -46,6 +54,10 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
     @Import(name="homePage", required=true)
     private String homePage;
 
+    /**
+     * @return Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
+     * 
+     */
     public String homePage() {
         return this.homePage;
     }
@@ -57,6 +69,10 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
     @Import(name="licenseConcluded", required=true)
     private LicenseResponse licenseConcluded;
 
+    /**
+     * @return package or alternative values, if the governing license cannot be determined
+     * 
+     */
     public LicenseResponse licenseConcluded() {
         return this.licenseConcluded;
     }
@@ -68,6 +84,10 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
     @Import(name="packageType", required=true)
     private String packageType;
 
+    /**
+     * @return The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
+     * 
+     */
     public String packageType() {
         return this.packageType;
     }
@@ -79,6 +99,10 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
     @Import(name="sourceInfo", required=true)
     private String sourceInfo;
 
+    /**
+     * @return Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package
+     * 
+     */
     public String sourceInfo() {
         return this.sourceInfo;
     }
@@ -90,6 +114,10 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
     @Import(name="summaryDescription", required=true)
     private String summaryDescription;
 
+    /**
+     * @return A short description of the package
+     * 
+     */
     public String summaryDescription() {
         return this.summaryDescription;
     }
@@ -101,6 +129,10 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Identify the full name of the package as given by the Package Originator
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -112,6 +144,10 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Identify the version of the package
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -148,46 +184,100 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
             $ = new PackageInfoOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param comment A place for the SPDX file creator to record any general comments about the package being described
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(String comment) {
             $.comment = comment;
             return this;
         }
 
+        /**
+         * @param filename Provide the actual file name of the package, or path of the directory being treated as a package
+         * 
+         * @return builder
+         * 
+         */
         public Builder filename(String filename) {
             $.filename = filename;
             return this;
         }
 
+        /**
+         * @param homePage Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
+         * 
+         * @return builder
+         * 
+         */
         public Builder homePage(String homePage) {
             $.homePage = homePage;
             return this;
         }
 
+        /**
+         * @param licenseConcluded package or alternative values, if the governing license cannot be determined
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConcluded(LicenseResponse licenseConcluded) {
             $.licenseConcluded = licenseConcluded;
             return this;
         }
 
+        /**
+         * @param packageType The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(String packageType) {
             $.packageType = packageType;
             return this;
         }
 
+        /**
+         * @param sourceInfo Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInfo(String sourceInfo) {
             $.sourceInfo = sourceInfo;
             return this;
         }
 
+        /**
+         * @param summaryDescription A short description of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder summaryDescription(String summaryDescription) {
             $.summaryDescription = summaryDescription;
             return this;
         }
 
+        /**
+         * @param title Identify the full name of the package as given by the Package Originator
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param version Identify the version of the package
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

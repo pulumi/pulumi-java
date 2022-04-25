@@ -28,6 +28,10 @@ public final class AzureActiveDirectoryLoginArgs extends com.pulumi.resources.Re
     @Import(name="disableWWWAuthenticate")
     private @Nullable Output<Boolean> disableWWWAuthenticate;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if the www-authenticate provider should be omitted from the request; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> disableWWWAuthenticate() {
         return Optional.ofNullable(this.disableWWWAuthenticate);
     }
@@ -40,6 +44,11 @@ public final class AzureActiveDirectoryLoginArgs extends com.pulumi.resources.Re
     @Import(name="loginParameters")
     private @Nullable Output<List<String>> loginParameters;
 
+    /**
+     * @return Login parameters to send to the OpenID Connect authorization endpoint when
+     * a user logs in. Each parameter must be in the form &#34;key=value&#34;.
+     * 
+     */
     public Optional<Output<List<String>>> loginParameters() {
         return Optional.ofNullable(this.loginParameters);
     }
@@ -69,24 +78,57 @@ public final class AzureActiveDirectoryLoginArgs extends com.pulumi.resources.Re
             $ = new AzureActiveDirectoryLoginArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableWWWAuthenticate &lt;code&gt;true&lt;/code&gt; if the www-authenticate provider should be omitted from the request; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableWWWAuthenticate(@Nullable Output<Boolean> disableWWWAuthenticate) {
             $.disableWWWAuthenticate = disableWWWAuthenticate;
             return this;
         }
 
+        /**
+         * @param disableWWWAuthenticate &lt;code&gt;true&lt;/code&gt; if the www-authenticate provider should be omitted from the request; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableWWWAuthenticate(Boolean disableWWWAuthenticate) {
             return disableWWWAuthenticate(Output.of(disableWWWAuthenticate));
         }
 
+        /**
+         * @param loginParameters Login parameters to send to the OpenID Connect authorization endpoint when
+         * a user logs in. Each parameter must be in the form &#34;key=value&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginParameters(@Nullable Output<List<String>> loginParameters) {
             $.loginParameters = loginParameters;
             return this;
         }
 
+        /**
+         * @param loginParameters Login parameters to send to the OpenID Connect authorization endpoint when
+         * a user logs in. Each parameter must be in the form &#34;key=value&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginParameters(List<String> loginParameters) {
             return loginParameters(Output.of(loginParameters));
         }
 
+        /**
+         * @param loginParameters Login parameters to send to the OpenID Connect authorization endpoint when
+         * a user logs in. Each parameter must be in the form &#34;key=value&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginParameters(String... loginParameters) {
             return loginParameters(List.of(loginParameters));
         }

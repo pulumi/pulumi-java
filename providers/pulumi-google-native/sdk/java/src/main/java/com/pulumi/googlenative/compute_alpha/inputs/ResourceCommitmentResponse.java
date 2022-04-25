@@ -23,6 +23,10 @@ public final class ResourceCommitmentResponse extends com.pulumi.resources.Invok
     @Import(name="acceleratorType", required=true)
     private String acceleratorType;
 
+    /**
+     * @return Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
+     * 
+     */
     public String acceleratorType() {
         return this.acceleratorType;
     }
@@ -34,6 +38,10 @@ public final class ResourceCommitmentResponse extends com.pulumi.resources.Invok
     @Import(name="amount", required=true)
     private String amount;
 
+    /**
+     * @return The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.
+     * 
+     */
     public String amount() {
         return this.amount;
     }
@@ -45,6 +53,10 @@ public final class ResourceCommitmentResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -75,16 +87,34 @@ public final class ResourceCommitmentResponse extends com.pulumi.resources.Invok
             $ = new ResourceCommitmentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorType Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(String acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;
         }
 
+        /**
+         * @param amount The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(String amount) {
             $.amount = amount;
             return this;
         }
 
+        /**
+         * @param type Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

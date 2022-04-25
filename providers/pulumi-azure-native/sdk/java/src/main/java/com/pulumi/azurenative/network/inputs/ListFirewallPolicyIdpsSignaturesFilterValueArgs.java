@@ -21,6 +21,10 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
     @Import(name="filterName")
     private @Nullable String filterName;
 
+    /**
+     * @return Describes the name of the column which values will be returned
+     * 
+     */
     public Optional<String> filterName() {
         return Optional.ofNullable(this.filterName);
     }
@@ -32,6 +36,10 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
     @Import(name="firewallPolicyName", required=true)
     private String firewallPolicyName;
 
+    /**
+     * @return The name of the Firewall Policy.
+     * 
+     */
     public String firewallPolicyName() {
         return this.firewallPolicyName;
     }
@@ -43,6 +51,10 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
             $ = new ListFirewallPolicyIdpsSignaturesFilterValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filterName Describes the name of the column which values will be returned
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterName(@Nullable String filterName) {
             $.filterName = filterName;
             return this;
         }
 
+        /**
+         * @param firewallPolicyName The name of the Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallPolicyName(String firewallPolicyName) {
             $.firewallPolicyName = firewallPolicyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -27,6 +27,10 @@ public final class WebhookConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secret", required=true)
     private Output<String> secret;
 
+    /**
+     * @return Resource name for the secret required as a URL parameter.
+     * 
+     */
     public Output<String> secret() {
         return this.secret;
     }
@@ -38,6 +42,10 @@ public final class WebhookConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<WebhookConfigState> state;
 
+    /**
+     * @return Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+     * 
+     */
     public Optional<Output<WebhookConfigState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -67,20 +75,44 @@ public final class WebhookConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WebhookConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secret Resource name for the secret required as a URL parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret Resource name for the secret required as a URL parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }
 
+        /**
+         * @param state Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<WebhookConfigState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(WebhookConfigState state) {
             return state(Output.of(state));
         }

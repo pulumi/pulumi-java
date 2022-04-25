@@ -25,6 +25,10 @@ public final class RuleGroupRuleActionBlockCustomResponseArgs extends com.pulumi
     @Import(name="customResponseBodyKey")
     private @Nullable Output<String> customResponseBodyKey;
 
+    /**
+     * @return References the response body that you want AWS WAF to return to the web request client. This must reference a `key` defined in a `custom_response_body` block of this resource.
+     * 
+     */
     public Optional<Output<String>> customResponseBodyKey() {
         return Optional.ofNullable(this.customResponseBodyKey);
     }
@@ -36,6 +40,10 @@ public final class RuleGroupRuleActionBlockCustomResponseArgs extends com.pulumi
     @Import(name="responseCode", required=true)
     private Output<Integer> responseCode;
 
+    /**
+     * @return The HTTP status code to return to the client.
+     * 
+     */
     public Output<Integer> responseCode() {
         return this.responseCode;
     }
@@ -47,6 +55,10 @@ public final class RuleGroupRuleActionBlockCustomResponseArgs extends com.pulumi
     @Import(name="responseHeaders")
     private @Nullable Output<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs>> responseHeaders;
 
+    /**
+     * @return The `response_header` blocks used to define the HTTP response headers added to the response. See Custom HTTP Header below for details.
+     * 
+     */
     public Optional<Output<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs>>> responseHeaders() {
         return Optional.ofNullable(this.responseHeaders);
     }
@@ -77,33 +89,75 @@ public final class RuleGroupRuleActionBlockCustomResponseArgs extends com.pulumi
             $ = new RuleGroupRuleActionBlockCustomResponseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customResponseBodyKey References the response body that you want AWS WAF to return to the web request client. This must reference a `key` defined in a `custom_response_body` block of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseBodyKey(@Nullable Output<String> customResponseBodyKey) {
             $.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
 
+        /**
+         * @param customResponseBodyKey References the response body that you want AWS WAF to return to the web request client. This must reference a `key` defined in a `custom_response_body` block of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseBodyKey(String customResponseBodyKey) {
             return customResponseBodyKey(Output.of(customResponseBodyKey));
         }
 
+        /**
+         * @param responseCode The HTTP status code to return to the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseCode(Output<Integer> responseCode) {
             $.responseCode = responseCode;
             return this;
         }
 
+        /**
+         * @param responseCode The HTTP status code to return to the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseCode(Integer responseCode) {
             return responseCode(Output.of(responseCode));
         }
 
+        /**
+         * @param responseHeaders The `response_header` blocks used to define the HTTP response headers added to the response. See Custom HTTP Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaders(@Nullable Output<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs>> responseHeaders) {
             $.responseHeaders = responseHeaders;
             return this;
         }
 
+        /**
+         * @param responseHeaders The `response_header` blocks used to define the HTTP response headers added to the response. See Custom HTTP Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaders(List<RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs> responseHeaders) {
             return responseHeaders(Output.of(responseHeaders));
         }
 
+        /**
+         * @param responseHeaders The `response_header` blocks used to define the HTTP response headers added to the response. See Custom HTTP Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaders(RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs... responseHeaders) {
             return responseHeaders(List.of(responseHeaders));
         }

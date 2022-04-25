@@ -28,6 +28,16 @@ public final class GameServerConfigFleetConfigGetArgs extends com.pulumi.resourc
     @Import(name="fleetSpec", required=true)
     private Output<String> fleetSpec;
 
+    /**
+     * @return The fleet spec, which is sent to Agones to configure fleet.
+     * The spec can be passed as inline json but it is recommended to use a file reference
+     * instead. File references can contain the json or yaml format of the fleet spec. Eg:
+     * * fleet_spec = jsonencode(yamldecode(file(&#34;fleet_configs.yaml&#34;)))
+     * * fleet_spec = file(&#34;fleet_configs.json&#34;)
+     *   The format of the spec can be found :
+     *   `https://agones.dev/site/docs/reference/fleet/`.
+     * 
+     */
     public Output<String> fleetSpec() {
         return this.fleetSpec;
     }
@@ -39,6 +49,10 @@ public final class GameServerConfigFleetConfigGetArgs extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the ScalingConfig
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,20 +82,56 @@ public final class GameServerConfigFleetConfigGetArgs extends com.pulumi.resourc
             $ = new GameServerConfigFleetConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fleetSpec The fleet spec, which is sent to Agones to configure fleet.
+         * The spec can be passed as inline json but it is recommended to use a file reference
+         * instead. File references can contain the json or yaml format of the fleet spec. Eg:
+         * * fleet_spec = jsonencode(yamldecode(file(&#34;fleet_configs.yaml&#34;)))
+         * * fleet_spec = file(&#34;fleet_configs.json&#34;)
+         *   The format of the spec can be found :
+         *   `https://agones.dev/site/docs/reference/fleet/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetSpec(Output<String> fleetSpec) {
             $.fleetSpec = fleetSpec;
             return this;
         }
 
+        /**
+         * @param fleetSpec The fleet spec, which is sent to Agones to configure fleet.
+         * The spec can be passed as inline json but it is recommended to use a file reference
+         * instead. File references can contain the json or yaml format of the fleet spec. Eg:
+         * * fleet_spec = jsonencode(yamldecode(file(&#34;fleet_configs.yaml&#34;)))
+         * * fleet_spec = file(&#34;fleet_configs.json&#34;)
+         *   The format of the spec can be found :
+         *   `https://agones.dev/site/docs/reference/fleet/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetSpec(String fleetSpec) {
             return fleetSpec(Output.of(fleetSpec));
         }
 
+        /**
+         * @param name The name of the ScalingConfig
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the ScalingConfig
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

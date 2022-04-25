@@ -19,6 +19,10 @@ public final class JobReferenceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="jobId", required=true)
     private String jobId;
 
+    /**
+     * @return [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
+     * 
+     */
     public String jobId() {
         return this.jobId;
     }
@@ -30,6 +34,10 @@ public final class JobReferenceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -41,6 +49,10 @@ public final class JobReferenceResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return [Required] The ID of the project containing this job.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -71,16 +83,34 @@ public final class JobReferenceResponse extends com.pulumi.resources.InvokeArgs 
             $ = new JobReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobId [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(String jobId) {
             $.jobId = jobId;
             return this;
         }
 
+        /**
+         * @param location The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param project [Required] The ID of the project containing this job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;

@@ -12,67 +12,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWebAppHostNameBindingResult {
     /**
-     * Azure resource name.
+     * @return Azure resource name.
      * 
      */
     private final @Nullable String azureResourceName;
     /**
-     * Azure resource type.
+     * @return Azure resource type.
      * 
      */
     private final @Nullable String azureResourceType;
     /**
-     * Custom DNS record type.
+     * @return Custom DNS record type.
      * 
      */
     private final @Nullable String customHostNameDnsRecordType;
     /**
-     * Fully qualified ARM domain resource URI.
+     * @return Fully qualified ARM domain resource URI.
      * 
      */
     private final @Nullable String domainId;
     /**
-     * Hostname type.
+     * @return Hostname type.
      * 
      */
     private final @Nullable String hostNameType;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * App Service app name.
+     * @return App Service app name.
      * 
      */
     private final @Nullable String siteName;
     /**
-     * SSL type
+     * @return SSL type
      * 
      */
     private final @Nullable String sslState;
     /**
-     * SSL certificate thumbprint
+     * @return SSL certificate thumbprint
      * 
      */
     private final @Nullable String thumbprint;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Virtual IP address assigned to the hostname if IP based SSL is enabled.
+     * @return Virtual IP address assigned to the hostname if IP based SSL is enabled.
      * 
      */
     private final String virtualIP;
@@ -108,93 +108,93 @@ public final class GetWebAppHostNameBindingResult {
     }
 
     /**
-     * Azure resource name.
+     * @return Azure resource name.
      * 
-    */
+     */
     public Optional<String> azureResourceName() {
         return Optional.ofNullable(this.azureResourceName);
     }
     /**
-     * Azure resource type.
+     * @return Azure resource type.
      * 
-    */
+     */
     public Optional<String> azureResourceType() {
         return Optional.ofNullable(this.azureResourceType);
     }
     /**
-     * Custom DNS record type.
+     * @return Custom DNS record type.
      * 
-    */
+     */
     public Optional<String> customHostNameDnsRecordType() {
         return Optional.ofNullable(this.customHostNameDnsRecordType);
     }
     /**
-     * Fully qualified ARM domain resource URI.
+     * @return Fully qualified ARM domain resource URI.
      * 
-    */
+     */
     public Optional<String> domainId() {
         return Optional.ofNullable(this.domainId);
     }
     /**
-     * Hostname type.
+     * @return Hostname type.
      * 
-    */
+     */
     public Optional<String> hostNameType() {
         return Optional.ofNullable(this.hostNameType);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * App Service app name.
+     * @return App Service app name.
      * 
-    */
+     */
     public Optional<String> siteName() {
         return Optional.ofNullable(this.siteName);
     }
     /**
-     * SSL type
+     * @return SSL type
      * 
-    */
+     */
     public Optional<String> sslState() {
         return Optional.ofNullable(this.sslState);
     }
     /**
-     * SSL certificate thumbprint
+     * @return SSL certificate thumbprint
      * 
-    */
+     */
     public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Virtual IP address assigned to the hostname if IP based SSL is enabled.
+     * @return Virtual IP address assigned to the hostname if IP based SSL is enabled.
      * 
-    */
+     */
     public String virtualIP() {
         return this.virtualIP;
     }

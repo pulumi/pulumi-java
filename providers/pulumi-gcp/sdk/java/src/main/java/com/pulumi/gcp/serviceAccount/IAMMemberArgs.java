@@ -24,6 +24,11 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="condition")
     private @Nullable Output<IAMMemberConditionArgs> condition;
 
+    /**
+     * @return An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<IAMMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -44,6 +49,12 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.serviceAccount.IAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -55,6 +66,10 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountId", required=true)
     private Output<String> serviceAccountId;
 
+    /**
+     * @return The fully-qualified name of the service account to apply policy to.
+     * 
+     */
     public Output<String> serviceAccountId() {
         return this.serviceAccountId;
     }
@@ -86,11 +101,25 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IAMMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<IAMMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(IAMMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
@@ -104,20 +133,48 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
             return member(Output.of(member));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.serviceAccount.IAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.serviceAccount.IAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param serviceAccountId The fully-qualified name of the service account to apply policy to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountId(Output<String> serviceAccountId) {
             $.serviceAccountId = serviceAccountId;
             return this;
         }
 
+        /**
+         * @param serviceAccountId The fully-qualified name of the service account to apply policy to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountId(String serviceAccountId) {
             return serviceAccountId(Output.of(serviceAccountId));
         }

@@ -13,7 +13,7 @@ public final class GetDatabaseInstanceRestoreBackupContext {
     private final Integer backupRunId;
     private final String instanceId;
     /**
-     * The ID of the project in which the resource belongs.
+     * @return The ID of the project in which the resource belongs.
      * 
      */
     private final String project;
@@ -35,9 +35,9 @@ public final class GetDatabaseInstanceRestoreBackupContext {
         return this.instanceId;
     }
     /**
-     * The ID of the project in which the resource belongs.
+     * @return The ID of the project in which the resource belongs.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }

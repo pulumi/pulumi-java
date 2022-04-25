@@ -24,6 +24,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="args", required=true)
     private List<String> args;
 
+    /**
+     * @return Command-line arguments used when executing this command.
+     * 
+     */
     public List<String> args() {
         return this.args;
     }
@@ -35,6 +39,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dir", required=true)
     private String dir;
 
+    /**
+     * @return Working directory (relative to project source root) used when running this command.
+     * 
+     */
     public String dir() {
         return this.dir;
     }
@@ -46,6 +54,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="env", required=true)
     private List<String> env;
 
+    /**
+     * @return Environment variables set before running this command.
+     * 
+     */
     public List<String> env() {
         return this.env;
     }
@@ -57,6 +69,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the command, as presented on the command line, or if the command is packaged as a Docker container, as presented to `docker pull`.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -68,6 +84,10 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="waitFor", required=true)
     private List<String> waitFor;
 
+    /**
+     * @return The ID(s) of the command(s) that this command depends on.
+     * 
+     */
     public List<String> waitFor() {
         return this.waitFor;
     }
@@ -100,39 +120,87 @@ public final class CommandResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CommandResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args Command-line arguments used when executing this command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Command-line arguments used when executing this command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param dir Working directory (relative to project source root) used when running this command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dir(String dir) {
             $.dir = dir;
             return this;
         }
 
+        /**
+         * @param env Environment variables set before running this command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(List<String> env) {
             $.env = env;
             return this;
         }
 
+        /**
+         * @param env Environment variables set before running this command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(String... env) {
             return env(List.of(env));
         }
 
+        /**
+         * @param name Name of the command, as presented on the command line, or if the command is packaged as a Docker container, as presented to `docker pull`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param waitFor The ID(s) of the command(s) that this command depends on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitFor(List<String> waitFor) {
             $.waitFor = waitFor;
             return this;
         }
 
+        /**
+         * @param waitFor The ID(s) of the command(s) that this command depends on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitFor(String... waitFor) {
             return waitFor(List.of(waitFor));
         }

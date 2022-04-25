@@ -24,6 +24,10 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse extends com.pulum
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return The end timestamp of the duration of usage statistics.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse extends com.pulum
     @Import(name="usageWithinTimeRange", required=true)
     private Map<String,String> usageWithinTimeRange;
 
+    /**
+     * @return Usage statistics over each of the predefined time ranges. Supported time ranges are `{&#34;24H&#34;, &#34;7D&#34;, &#34;30D&#34;}`.
+     * 
+     */
     public Map<String,String> usageWithinTimeRange() {
         return this.usageWithinTimeRange;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse extends com.pulum
             $ = new GoogleCloudDatacatalogV1UsageSignalResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param updateTime The end timestamp of the duration of usage statistics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param usageWithinTimeRange Usage statistics over each of the predefined time ranges. Supported time ranges are `{&#34;24H&#34;, &#34;7D&#34;, &#34;30D&#34;}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usageWithinTimeRange(Map<String,String> usageWithinTimeRange) {
             $.usageWithinTimeRange = usageWithinTimeRange;
             return this;

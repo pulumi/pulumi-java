@@ -26,6 +26,10 @@ public final class BucketRoutingRuleConditionArgs extends com.pulumi.resources.R
     @Import(name="httpErrorCodeReturnedEquals")
     private @Nullable Output<String> httpErrorCodeReturnedEquals;
 
+    /**
+     * @return The HTTP error code when the redirect is applied.
+     * 
+     */
     public Optional<Output<String>> httpErrorCodeReturnedEquals() {
         return Optional.ofNullable(this.httpErrorCodeReturnedEquals);
     }
@@ -37,6 +41,10 @@ public final class BucketRoutingRuleConditionArgs extends com.pulumi.resources.R
     @Import(name="keyPrefixEquals")
     private @Nullable Output<String> keyPrefixEquals;
 
+    /**
+     * @return The object key name prefix when the redirect is applied.
+     * 
+     */
     public Optional<Output<String>> keyPrefixEquals() {
         return Optional.ofNullable(this.keyPrefixEquals);
     }
@@ -66,20 +74,44 @@ public final class BucketRoutingRuleConditionArgs extends com.pulumi.resources.R
             $ = new BucketRoutingRuleConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpErrorCodeReturnedEquals The HTTP error code when the redirect is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpErrorCodeReturnedEquals(@Nullable Output<String> httpErrorCodeReturnedEquals) {
             $.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
             return this;
         }
 
+        /**
+         * @param httpErrorCodeReturnedEquals The HTTP error code when the redirect is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpErrorCodeReturnedEquals(String httpErrorCodeReturnedEquals) {
             return httpErrorCodeReturnedEquals(Output.of(httpErrorCodeReturnedEquals));
         }
 
+        /**
+         * @param keyPrefixEquals The object key name prefix when the redirect is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPrefixEquals(@Nullable Output<String> keyPrefixEquals) {
             $.keyPrefixEquals = keyPrefixEquals;
             return this;
         }
 
+        /**
+         * @param keyPrefixEquals The object key name prefix when the redirect is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPrefixEquals(String keyPrefixEquals) {
             return keyPrefixEquals(Output.of(keyPrefixEquals));
         }

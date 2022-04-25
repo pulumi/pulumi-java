@@ -23,6 +23,10 @@ public final class SamplingRuleRecordArgs extends com.pulumi.resources.ResourceA
     @Import(name="createdAt")
     private @Nullable Output<String> createdAt;
 
+    /**
+     * @return When the rule was created, in Unix time seconds.
+     * 
+     */
     public Optional<Output<String>> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -34,6 +38,10 @@ public final class SamplingRuleRecordArgs extends com.pulumi.resources.ResourceA
     @Import(name="modifiedAt")
     private @Nullable Output<String> modifiedAt;
 
+    /**
+     * @return When the rule was modified, in Unix time seconds.
+     * 
+     */
     public Optional<Output<String>> modifiedAt() {
         return Optional.ofNullable(this.modifiedAt);
     }
@@ -71,20 +79,44 @@ public final class SamplingRuleRecordArgs extends com.pulumi.resources.ResourceA
             $ = new SamplingRuleRecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdAt When the rule was created, in Unix time seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(@Nullable Output<String> createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param createdAt When the rule was created, in Unix time seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(String createdAt) {
             return createdAt(Output.of(createdAt));
         }
 
+        /**
+         * @param modifiedAt When the rule was modified, in Unix time seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedAt(@Nullable Output<String> modifiedAt) {
             $.modifiedAt = modifiedAt;
             return this;
         }
 
+        /**
+         * @param modifiedAt When the rule was modified, in Unix time seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedAt(String modifiedAt) {
             return modifiedAt(Output.of(modifiedAt));
         }

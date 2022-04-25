@@ -28,6 +28,10 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="aadBasedSecurityPrincipals")
     private @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals;
 
+    /**
+     * @return Array of all AAD based Security Principals.
+     * 
+     */
     public Optional<List<AADBasedSecurityPrincipalResponse>> aadBasedSecurityPrincipals() {
         return Optional.ofNullable(this.aadBasedSecurityPrincipals);
     }
@@ -39,6 +43,10 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="certBasedSecurityPrincipals")
     private @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals;
 
+    /**
+     * @return Array of all cert based Security Principals.
+     * 
+     */
     public Optional<List<CertBasedSecurityPrincipalResponse>> certBasedSecurityPrincipals() {
         return Optional.ofNullable(this.certBasedSecurityPrincipals);
     }
@@ -50,6 +58,10 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="identityServiceUri", required=true)
     private String identityServiceUri;
 
+    /**
+     * @return Endpoint for accessing network identity.
+     * 
+     */
     public String identityServiceUri() {
         return this.identityServiceUri;
     }
@@ -61,6 +73,10 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="ledgerInternalNamespace", required=true)
     private String ledgerInternalNamespace;
 
+    /**
+     * @return Internal namespace for the Ledger
+     * 
+     */
     public String ledgerInternalNamespace() {
         return this.ledgerInternalNamespace;
     }
@@ -72,6 +88,10 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="ledgerName", required=true)
     private String ledgerName;
 
+    /**
+     * @return Unique name for the Confidential Ledger.
+     * 
+     */
     public String ledgerName() {
         return this.ledgerName;
     }
@@ -83,6 +103,10 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="ledgerStorageAccount")
     private @Nullable String ledgerStorageAccount;
 
+    /**
+     * @return Name of the Blob Storage Account for saving ledger files
+     * 
+     */
     public Optional<String> ledgerStorageAccount() {
         return Optional.ofNullable(this.ledgerStorageAccount);
     }
@@ -94,6 +118,10 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="ledgerType")
     private @Nullable String ledgerType;
 
+    /**
+     * @return Type of Confidential Ledger
+     * 
+     */
     public Optional<String> ledgerType() {
         return Optional.ofNullable(this.ledgerType);
     }
@@ -105,6 +133,10 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="ledgerUri", required=true)
     private String ledgerUri;
 
+    /**
+     * @return Endpoint for calling Ledger Service.
+     * 
+     */
     public String ledgerUri() {
         return this.ledgerUri;
     }
@@ -116,6 +148,10 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of Ledger Resource
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -152,54 +188,120 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
             $ = new LedgerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadBasedSecurityPrincipals Array of all AAD based Security Principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadBasedSecurityPrincipals(@Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals) {
             $.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
             return this;
         }
 
+        /**
+         * @param aadBasedSecurityPrincipals Array of all AAD based Security Principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadBasedSecurityPrincipals(AADBasedSecurityPrincipalResponse... aadBasedSecurityPrincipals) {
             return aadBasedSecurityPrincipals(List.of(aadBasedSecurityPrincipals));
         }
 
+        /**
+         * @param certBasedSecurityPrincipals Array of all cert based Security Principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certBasedSecurityPrincipals(@Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals) {
             $.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
             return this;
         }
 
+        /**
+         * @param certBasedSecurityPrincipals Array of all cert based Security Principals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certBasedSecurityPrincipals(CertBasedSecurityPrincipalResponse... certBasedSecurityPrincipals) {
             return certBasedSecurityPrincipals(List.of(certBasedSecurityPrincipals));
         }
 
+        /**
+         * @param identityServiceUri Endpoint for accessing network identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityServiceUri(String identityServiceUri) {
             $.identityServiceUri = identityServiceUri;
             return this;
         }
 
+        /**
+         * @param ledgerInternalNamespace Internal namespace for the Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerInternalNamespace(String ledgerInternalNamespace) {
             $.ledgerInternalNamespace = ledgerInternalNamespace;
             return this;
         }
 
+        /**
+         * @param ledgerName Unique name for the Confidential Ledger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerName(String ledgerName) {
             $.ledgerName = ledgerName;
             return this;
         }
 
+        /**
+         * @param ledgerStorageAccount Name of the Blob Storage Account for saving ledger files
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerStorageAccount(@Nullable String ledgerStorageAccount) {
             $.ledgerStorageAccount = ledgerStorageAccount;
             return this;
         }
 
+        /**
+         * @param ledgerType Type of Confidential Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerType(@Nullable String ledgerType) {
             $.ledgerType = ledgerType;
             return this;
         }
 
+        /**
+         * @param ledgerUri Endpoint for calling Ledger Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerUri(String ledgerUri) {
             $.ledgerUri = ledgerUri;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of Ledger Resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

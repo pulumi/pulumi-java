@@ -28,6 +28,10 @@ public final class BucketIamConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="bucketPolicyOnly")
     private @Nullable Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly;
 
+    /**
+     * @return The bucket&#39;s uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
+     * 
+     */
     public Optional<Output<BucketIamConfigurationBucketPolicyOnlyArgs>> bucketPolicyOnly() {
         return Optional.ofNullable(this.bucketPolicyOnly);
     }
@@ -39,6 +43,10 @@ public final class BucketIamConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="publicAccessPrevention")
     private @Nullable Output<String> publicAccessPrevention;
 
+    /**
+     * @return The bucket&#39;s Public Access Prevention configuration. Currently, &#39;inherited&#39; and &#39;enforced&#39; are supported.
+     * 
+     */
     public Optional<Output<String>> publicAccessPrevention() {
         return Optional.ofNullable(this.publicAccessPrevention);
     }
@@ -50,6 +58,10 @@ public final class BucketIamConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="uniformBucketLevelAccess")
     private @Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess;
 
+    /**
+     * @return The bucket&#39;s uniform bucket-level access configuration.
+     * 
+     */
     public Optional<Output<BucketIamConfigurationUniformBucketLevelAccessArgs>> uniformBucketLevelAccess() {
         return Optional.ofNullable(this.uniformBucketLevelAccess);
     }
@@ -80,29 +92,65 @@ public final class BucketIamConfigurationArgs extends com.pulumi.resources.Resou
             $ = new BucketIamConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketPolicyOnly The bucket&#39;s uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketPolicyOnly(@Nullable Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly) {
             $.bucketPolicyOnly = bucketPolicyOnly;
             return this;
         }
 
+        /**
+         * @param bucketPolicyOnly The bucket&#39;s uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketPolicyOnly(BucketIamConfigurationBucketPolicyOnlyArgs bucketPolicyOnly) {
             return bucketPolicyOnly(Output.of(bucketPolicyOnly));
         }
 
+        /**
+         * @param publicAccessPrevention The bucket&#39;s Public Access Prevention configuration. Currently, &#39;inherited&#39; and &#39;enforced&#39; are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccessPrevention(@Nullable Output<String> publicAccessPrevention) {
             $.publicAccessPrevention = publicAccessPrevention;
             return this;
         }
 
+        /**
+         * @param publicAccessPrevention The bucket&#39;s Public Access Prevention configuration. Currently, &#39;inherited&#39; and &#39;enforced&#39; are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccessPrevention(String publicAccessPrevention) {
             return publicAccessPrevention(Output.of(publicAccessPrevention));
         }
 
+        /**
+         * @param uniformBucketLevelAccess The bucket&#39;s uniform bucket-level access configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniformBucketLevelAccess(@Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess) {
             $.uniformBucketLevelAccess = uniformBucketLevelAccess;
             return this;
         }
 
+        /**
+         * @param uniformBucketLevelAccess The bucket&#39;s uniform bucket-level access configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniformBucketLevelAccess(BucketIamConfigurationUniformBucketLevelAccessArgs uniformBucketLevelAccess) {
             return uniformBucketLevelAccess(Output.of(uniformBucketLevelAccess));
         }

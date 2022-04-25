@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EnterpriseChannelPropertiesResponse {
     /**
-     * The nodes associated with the Enterprise Channel.
+     * @return The nodes associated with the Enterprise Channel.
      * 
      */
     private final List<EnterpriseChannelNodeResponse> nodes;
     /**
-     * The current state of the Enterprise Channel.
+     * @return The current state of the Enterprise Channel.
      * 
      */
     private final @Nullable String state;
@@ -33,16 +33,16 @@ public final class EnterpriseChannelPropertiesResponse {
     }
 
     /**
-     * The nodes associated with the Enterprise Channel.
+     * @return The nodes associated with the Enterprise Channel.
      * 
-    */
+     */
     public List<EnterpriseChannelNodeResponse> nodes() {
         return this.nodes;
     }
     /**
-     * The current state of the Enterprise Channel.
+     * @return The current state of the Enterprise Channel.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

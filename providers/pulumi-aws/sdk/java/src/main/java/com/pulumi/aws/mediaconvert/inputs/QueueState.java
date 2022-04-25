@@ -24,6 +24,10 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Arn of the queue
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the queue
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A unique identifier describing the queue
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,10 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pricingPlan")
     private @Nullable Output<String> pricingPlan;
 
+    /**
+     * @return Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
+     * 
+     */
     public Optional<Output<String>> pricingPlan() {
         return Optional.ofNullable(this.pricingPlan);
     }
@@ -68,6 +84,10 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservationPlanSettings")
     private @Nullable Output<QueueReservationPlanSettingsGetArgs> reservationPlanSettings;
 
+    /**
+     * @return A detail pricing plan of the  reserved queue. See below.
+     * 
+     */
     public Optional<Output<QueueReservationPlanSettingsGetArgs>> reservationPlanSettings() {
         return Optional.ofNullable(this.reservationPlanSettings);
     }
@@ -79,6 +99,10 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -90,6 +114,10 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,6 +129,10 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -136,74 +168,170 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
             $ = new QueueState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Arn of the queue
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Arn of the queue
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description A description of the queue
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the queue
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name A unique identifier describing the queue
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique identifier describing the queue
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param pricingPlan Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pricingPlan(@Nullable Output<String> pricingPlan) {
             $.pricingPlan = pricingPlan;
             return this;
         }
 
+        /**
+         * @param pricingPlan Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pricingPlan(String pricingPlan) {
             return pricingPlan(Output.of(pricingPlan));
         }
 
+        /**
+         * @param reservationPlanSettings A detail pricing plan of the  reserved queue. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationPlanSettings(@Nullable Output<QueueReservationPlanSettingsGetArgs> reservationPlanSettings) {
             $.reservationPlanSettings = reservationPlanSettings;
             return this;
         }
 
+        /**
+         * @param reservationPlanSettings A detail pricing plan of the  reserved queue. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationPlanSettings(QueueReservationPlanSettingsGetArgs reservationPlanSettings) {
             return reservationPlanSettings(Output.of(reservationPlanSettings));
         }
 
+        /**
+         * @param status A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

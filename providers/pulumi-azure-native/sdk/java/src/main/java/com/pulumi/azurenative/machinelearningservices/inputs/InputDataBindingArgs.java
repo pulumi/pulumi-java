@@ -24,6 +24,10 @@ public final class InputDataBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataId")
     private @Nullable Output<String> dataId;
 
+    /**
+     * @return ARM resource ID of the registered dataVersion.
+     * 
+     */
     public Optional<Output<String>> dataId() {
         return Optional.ofNullable(this.dataId);
     }
@@ -35,6 +39,10 @@ public final class InputDataBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="mode")
     private @Nullable Output<Either<String,DataBindingMode>> mode;
 
+    /**
+     * @return Mechanism for accessing the data artifact.
+     * 
+     */
     public Optional<Output<Either<String,DataBindingMode>>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -46,6 +54,10 @@ public final class InputDataBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="pathOnCompute")
     private @Nullable Output<String> pathOnCompute;
 
+    /**
+     * @return Location of data inside the container process.
+     * 
+     */
     public Optional<Output<String>> pathOnCompute() {
         return Optional.ofNullable(this.pathOnCompute);
     }
@@ -76,37 +88,85 @@ public final class InputDataBindingArgs extends com.pulumi.resources.ResourceArg
             $ = new InputDataBindingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataId ARM resource ID of the registered dataVersion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataId(@Nullable Output<String> dataId) {
             $.dataId = dataId;
             return this;
         }
 
+        /**
+         * @param dataId ARM resource ID of the registered dataVersion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataId(String dataId) {
             return dataId(Output.of(dataId));
         }
 
+        /**
+         * @param mode Mechanism for accessing the data artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<Either<String,DataBindingMode>> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Mechanism for accessing the data artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Either<String,DataBindingMode> mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param mode Mechanism for accessing the data artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Either.ofLeft(mode));
         }
 
+        /**
+         * @param mode Mechanism for accessing the data artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(DataBindingMode mode) {
             return mode(Either.ofRight(mode));
         }
 
+        /**
+         * @param pathOnCompute Location of data inside the container process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathOnCompute(@Nullable Output<String> pathOnCompute) {
             $.pathOnCompute = pathOnCompute;
             return this;
         }
 
+        /**
+         * @param pathOnCompute Location of data inside the container process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathOnCompute(String pathOnCompute) {
             return pathOnCompute(Output.of(pathOnCompute));
         }

@@ -23,6 +23,10 @@ public final class GatewayAssociationProposalState extends com.pulumi.resources.
     @Import(name="allowedPrefixes")
     private @Nullable Output<List<String>> allowedPrefixes;
 
+    /**
+     * @return VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
+     * 
+     */
     public Optional<Output<List<String>>> allowedPrefixes() {
         return Optional.ofNullable(this.allowedPrefixes);
     }
@@ -34,6 +38,10 @@ public final class GatewayAssociationProposalState extends com.pulumi.resources.
     @Import(name="associatedGatewayId")
     private @Nullable Output<String> associatedGatewayId;
 
+    /**
+     * @return The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
+     * 
+     */
     public Optional<Output<String>> associatedGatewayId() {
         return Optional.ofNullable(this.associatedGatewayId);
     }
@@ -45,6 +53,10 @@ public final class GatewayAssociationProposalState extends com.pulumi.resources.
     @Import(name="associatedGatewayOwnerAccountId")
     private @Nullable Output<String> associatedGatewayOwnerAccountId;
 
+    /**
+     * @return The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
+     * 
+     */
     public Optional<Output<String>> associatedGatewayOwnerAccountId() {
         return Optional.ofNullable(this.associatedGatewayOwnerAccountId);
     }
@@ -56,6 +68,10 @@ public final class GatewayAssociationProposalState extends com.pulumi.resources.
     @Import(name="associatedGatewayType")
     private @Nullable Output<String> associatedGatewayType;
 
+    /**
+     * @return The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
+     * 
+     */
     public Optional<Output<String>> associatedGatewayType() {
         return Optional.ofNullable(this.associatedGatewayType);
     }
@@ -67,6 +83,10 @@ public final class GatewayAssociationProposalState extends com.pulumi.resources.
     @Import(name="dxGatewayId")
     private @Nullable Output<String> dxGatewayId;
 
+    /**
+     * @return Direct Connect Gateway identifier.
+     * 
+     */
     public Optional<Output<String>> dxGatewayId() {
         return Optional.ofNullable(this.dxGatewayId);
     }
@@ -78,6 +98,10 @@ public final class GatewayAssociationProposalState extends com.pulumi.resources.
     @Import(name="dxGatewayOwnerAccountId")
     private @Nullable Output<String> dxGatewayOwnerAccountId;
 
+    /**
+     * @return AWS Account identifier of the Direct Connect Gateway&#39;s owner.
+     * 
+     */
     public Optional<Output<String>> dxGatewayOwnerAccountId() {
         return Optional.ofNullable(this.dxGatewayOwnerAccountId);
     }
@@ -111,60 +135,138 @@ public final class GatewayAssociationProposalState extends com.pulumi.resources.
             $ = new GatewayAssociationProposalState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedPrefixes VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPrefixes(@Nullable Output<List<String>> allowedPrefixes) {
             $.allowedPrefixes = allowedPrefixes;
             return this;
         }
 
+        /**
+         * @param allowedPrefixes VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPrefixes(List<String> allowedPrefixes) {
             return allowedPrefixes(Output.of(allowedPrefixes));
         }
 
+        /**
+         * @param allowedPrefixes VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPrefixes(String... allowedPrefixes) {
             return allowedPrefixes(List.of(allowedPrefixes));
         }
 
+        /**
+         * @param associatedGatewayId The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedGatewayId(@Nullable Output<String> associatedGatewayId) {
             $.associatedGatewayId = associatedGatewayId;
             return this;
         }
 
+        /**
+         * @param associatedGatewayId The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedGatewayId(String associatedGatewayId) {
             return associatedGatewayId(Output.of(associatedGatewayId));
         }
 
+        /**
+         * @param associatedGatewayOwnerAccountId The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedGatewayOwnerAccountId(@Nullable Output<String> associatedGatewayOwnerAccountId) {
             $.associatedGatewayOwnerAccountId = associatedGatewayOwnerAccountId;
             return this;
         }
 
+        /**
+         * @param associatedGatewayOwnerAccountId The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedGatewayOwnerAccountId(String associatedGatewayOwnerAccountId) {
             return associatedGatewayOwnerAccountId(Output.of(associatedGatewayOwnerAccountId));
         }
 
+        /**
+         * @param associatedGatewayType The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedGatewayType(@Nullable Output<String> associatedGatewayType) {
             $.associatedGatewayType = associatedGatewayType;
             return this;
         }
 
+        /**
+         * @param associatedGatewayType The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedGatewayType(String associatedGatewayType) {
             return associatedGatewayType(Output.of(associatedGatewayType));
         }
 
+        /**
+         * @param dxGatewayId Direct Connect Gateway identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dxGatewayId(@Nullable Output<String> dxGatewayId) {
             $.dxGatewayId = dxGatewayId;
             return this;
         }
 
+        /**
+         * @param dxGatewayId Direct Connect Gateway identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dxGatewayId(String dxGatewayId) {
             return dxGatewayId(Output.of(dxGatewayId));
         }
 
+        /**
+         * @param dxGatewayOwnerAccountId AWS Account identifier of the Direct Connect Gateway&#39;s owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dxGatewayOwnerAccountId(@Nullable Output<String> dxGatewayOwnerAccountId) {
             $.dxGatewayOwnerAccountId = dxGatewayOwnerAccountId;
             return this;
         }
 
+        /**
+         * @param dxGatewayOwnerAccountId AWS Account identifier of the Direct Connect Gateway&#39;s owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dxGatewayOwnerAccountId(String dxGatewayOwnerAccountId) {
             return dxGatewayOwnerAccountId(Output.of(dxGatewayOwnerAccountId));
         }

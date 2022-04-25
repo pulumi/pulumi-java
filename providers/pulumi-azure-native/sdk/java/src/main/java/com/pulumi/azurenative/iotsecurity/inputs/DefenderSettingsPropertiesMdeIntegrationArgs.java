@@ -26,6 +26,10 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends com.pulu
     @Import(name="status", required=true)
     private Output<Either<String,MdeIntegration>> status;
 
+    /**
+     * @return Integration status
+     * 
+     */
     public Output<Either<String,MdeIntegration>> status() {
         return this.status;
     }
@@ -54,19 +58,43 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends com.pulu
             $ = new DefenderSettingsPropertiesMdeIntegrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status Integration status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<Either<String,MdeIntegration>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Integration status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,MdeIntegration> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status Integration status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status Integration status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(MdeIntegration status) {
             return status(Either.ofRight(status));
         }

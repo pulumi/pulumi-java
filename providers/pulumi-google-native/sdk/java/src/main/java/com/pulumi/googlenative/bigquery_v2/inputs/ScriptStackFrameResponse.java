@@ -20,6 +20,10 @@ public final class ScriptStackFrameResponse extends com.pulumi.resources.InvokeA
     @Import(name="endColumn", required=true)
     private Integer endColumn;
 
+    /**
+     * @return One-based end column.
+     * 
+     */
     public Integer endColumn() {
         return this.endColumn;
     }
@@ -31,6 +35,10 @@ public final class ScriptStackFrameResponse extends com.pulumi.resources.InvokeA
     @Import(name="endLine", required=true)
     private Integer endLine;
 
+    /**
+     * @return One-based end line.
+     * 
+     */
     public Integer endLine() {
         return this.endLine;
     }
@@ -42,6 +50,10 @@ public final class ScriptStackFrameResponse extends com.pulumi.resources.InvokeA
     @Import(name="procedureId", required=true)
     private String procedureId;
 
+    /**
+     * @return Name of the active procedure, empty if in a top-level script.
+     * 
+     */
     public String procedureId() {
         return this.procedureId;
     }
@@ -53,6 +65,10 @@ public final class ScriptStackFrameResponse extends com.pulumi.resources.InvokeA
     @Import(name="startColumn", required=true)
     private Integer startColumn;
 
+    /**
+     * @return One-based start column.
+     * 
+     */
     public Integer startColumn() {
         return this.startColumn;
     }
@@ -64,6 +80,10 @@ public final class ScriptStackFrameResponse extends com.pulumi.resources.InvokeA
     @Import(name="startLine", required=true)
     private Integer startLine;
 
+    /**
+     * @return One-based start line.
+     * 
+     */
     public Integer startLine() {
         return this.startLine;
     }
@@ -75,6 +95,10 @@ public final class ScriptStackFrameResponse extends com.pulumi.resources.InvokeA
     @Import(name="text", required=true)
     private String text;
 
+    /**
+     * @return Text of the current statement/expression.
+     * 
+     */
     public String text() {
         return this.text;
     }
@@ -108,31 +132,67 @@ public final class ScriptStackFrameResponse extends com.pulumi.resources.InvokeA
             $ = new ScriptStackFrameResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endColumn One-based end column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endColumn(Integer endColumn) {
             $.endColumn = endColumn;
             return this;
         }
 
+        /**
+         * @param endLine One-based end line.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endLine(Integer endLine) {
             $.endLine = endLine;
             return this;
         }
 
+        /**
+         * @param procedureId Name of the active procedure, empty if in a top-level script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder procedureId(String procedureId) {
             $.procedureId = procedureId;
             return this;
         }
 
+        /**
+         * @param startColumn One-based start column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startColumn(Integer startColumn) {
             $.startColumn = startColumn;
             return this;
         }
 
+        /**
+         * @param startLine One-based start line.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startLine(Integer startLine) {
             $.startLine = startLine;
             return this;
         }
 
+        /**
+         * @param text Text of the current statement/expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             $.text = text;
             return this;

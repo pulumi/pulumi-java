@@ -29,6 +29,10 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="contactEmails", required=true)
     private List<String> contactEmails;
 
+    /**
+     * @return Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
+     * 
+     */
     public List<String> contactEmails() {
         return this.contactEmails;
     }
@@ -40,6 +44,10 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="contactGroups")
     private @Nullable List<String> contactGroups;
 
+    /**
+     * @return Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
+     * 
+     */
     public Optional<List<String>> contactGroups() {
         return Optional.ofNullable(this.contactGroups);
     }
@@ -51,6 +59,10 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="contactRoles")
     private @Nullable List<String> contactRoles;
 
+    /**
+     * @return Contact roles to send the budget notification to when the threshold is exceeded.
+     * 
+     */
     public Optional<List<String>> contactRoles() {
         return Optional.ofNullable(this.contactRoles);
     }
@@ -62,6 +74,10 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return The notification is enabled or not.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -73,6 +89,10 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="locale")
     private @Nullable String locale;
 
+    /**
+     * @return Language in which the recipient will receive the notification
+     * 
+     */
     public Optional<String> locale() {
         return Optional.ofNullable(this.locale);
     }
@@ -84,6 +104,10 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return The comparison operator.
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -95,6 +119,10 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="threshold", required=true)
     private Double threshold;
 
+    /**
+     * @return Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
+     * 
+     */
     public Double threshold() {
         return this.threshold;
     }
@@ -106,6 +134,10 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="thresholdType")
     private @Nullable String thresholdType;
 
+    /**
+     * @return The type of threshold
+     * 
+     */
     public Optional<String> thresholdType() {
         return Optional.ofNullable(this.thresholdType);
     }
@@ -141,53 +173,119 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
             $ = new NotificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactEmails Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactEmails(List<String> contactEmails) {
             $.contactEmails = contactEmails;
             return this;
         }
 
+        /**
+         * @param contactEmails Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactEmails(String... contactEmails) {
             return contactEmails(List.of(contactEmails));
         }
 
+        /**
+         * @param contactGroups Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactGroups(@Nullable List<String> contactGroups) {
             $.contactGroups = contactGroups;
             return this;
         }
 
+        /**
+         * @param contactGroups Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactGroups(String... contactGroups) {
             return contactGroups(List.of(contactGroups));
         }
 
+        /**
+         * @param contactRoles Contact roles to send the budget notification to when the threshold is exceeded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactRoles(@Nullable List<String> contactRoles) {
             $.contactRoles = contactRoles;
             return this;
         }
 
+        /**
+         * @param contactRoles Contact roles to send the budget notification to when the threshold is exceeded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactRoles(String... contactRoles) {
             return contactRoles(List.of(contactRoles));
         }
 
+        /**
+         * @param enabled The notification is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param locale Language in which the recipient will receive the notification
+         * 
+         * @return builder
+         * 
+         */
         public Builder locale(@Nullable String locale) {
             $.locale = locale;
             return this;
         }
 
+        /**
+         * @param operator The comparison operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param threshold Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Double threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param thresholdType The type of threshold
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdType(@Nullable String thresholdType) {
             $.thresholdType = thresholdType;
             return this;

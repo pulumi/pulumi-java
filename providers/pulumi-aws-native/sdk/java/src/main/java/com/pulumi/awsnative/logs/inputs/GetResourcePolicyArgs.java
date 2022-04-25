@@ -19,6 +19,10 @@ public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="policyName", required=true)
     private String policyName;
 
+    /**
+     * @return A name for resource policy
+     * 
+     */
     public String policyName() {
         return this.policyName;
     }
@@ -47,6 +51,12 @@ public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetResourcePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyName A name for resource policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             $.policyName = policyName;
             return this;

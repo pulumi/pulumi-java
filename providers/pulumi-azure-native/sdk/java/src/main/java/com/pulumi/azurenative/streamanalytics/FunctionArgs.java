@@ -23,6 +23,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionName")
     private @Nullable Output<String> functionName;
 
+    /**
+     * @return The name of the function.
+     * 
+     */
     public Optional<Output<String>> functionName() {
         return Optional.ofNullable(this.functionName);
     }
@@ -34,6 +38,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobName", required=true)
     private Output<String> jobName;
 
+    /**
+     * @return The name of the streaming job.
+     * 
+     */
     public Output<String> jobName() {
         return this.jobName;
     }
@@ -45,6 +53,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +68,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<ScalarFunctionPropertiesArgs> properties;
 
+    /**
+     * @return The properties that are associated with a function.
+     * 
+     */
     public Optional<Output<ScalarFunctionPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -67,6 +83,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -99,47 +119,107 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FunctionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionName The name of the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(@Nullable Output<String> functionName) {
             $.functionName = functionName;
             return this;
         }
 
+        /**
+         * @param functionName The name of the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(String functionName) {
             return functionName(Output.of(functionName));
         }
 
+        /**
+         * @param jobName The name of the streaming job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(Output<String> jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param jobName The name of the streaming job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             return jobName(Output.of(jobName));
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties The properties that are associated with a function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ScalarFunctionPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The properties that are associated with a function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ScalarFunctionPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

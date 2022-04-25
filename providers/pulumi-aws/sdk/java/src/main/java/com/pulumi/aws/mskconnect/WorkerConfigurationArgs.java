@@ -22,6 +22,10 @@ public final class WorkerConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A summary description of the worker configuration.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -33,6 +37,10 @@ public final class WorkerConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the worker configuration.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -44,6 +52,10 @@ public final class WorkerConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="propertiesFileContent", required=true)
     private Output<String> propertiesFileContent;
 
+    /**
+     * @return Contents of connect-distributed.properties file. The value can be either base64 encoded or in raw format.
+     * 
+     */
     public Output<String> propertiesFileContent() {
         return this.propertiesFileContent;
     }
@@ -74,29 +86,65 @@ public final class WorkerConfigurationArgs extends com.pulumi.resources.Resource
             $ = new WorkerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A summary description of the worker configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A summary description of the worker configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the worker configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the worker configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param propertiesFileContent Contents of connect-distributed.properties file. The value can be either base64 encoded or in raw format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertiesFileContent(Output<String> propertiesFileContent) {
             $.propertiesFileContent = propertiesFileContent;
             return this;
         }
 
+        /**
+         * @param propertiesFileContent Contents of connect-distributed.properties file. The value can be either base64 encoded or in raw format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertiesFileContent(String propertiesFileContent) {
             return propertiesFileContent(Output.of(propertiesFileContent));
         }

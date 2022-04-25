@@ -23,6 +23,10 @@ public final class WaitStepAttributesResponse extends com.pulumi.resources.Invok
     @Import(name="duration", required=true)
     private String duration;
 
+    /**
+     * @return The duration in ISO 8601 format of how long the wait should be.
+     * 
+     */
     public String duration() {
         return this.duration;
     }
@@ -51,6 +55,12 @@ public final class WaitStepAttributesResponse extends com.pulumi.resources.Invok
             $ = new WaitStepAttributesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param duration The duration in ISO 8601 format of how long the wait should be.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             $.duration = duration;
             return this;

@@ -23,6 +23,10 @@ public final class ContainerRegistryCredentialsResponse extends com.pulumi.resou
     @Import(name="loginServer", required=true)
     private String loginServer;
 
+    /**
+     * @return The ACR login server name. User name is the first part of the FQDN.
+     * 
+     */
     public String loginServer() {
         return this.loginServer;
     }
@@ -34,6 +38,10 @@ public final class ContainerRegistryCredentialsResponse extends com.pulumi.resou
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return The ACR primary password.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -45,6 +53,10 @@ public final class ContainerRegistryCredentialsResponse extends com.pulumi.resou
     @Import(name="password2", required=true)
     private String password2;
 
+    /**
+     * @return The ACR secondary password.
+     * 
+     */
     public String password2() {
         return this.password2;
     }
@@ -56,6 +68,10 @@ public final class ContainerRegistryCredentialsResponse extends com.pulumi.resou
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return The ACR login username.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -87,21 +103,45 @@ public final class ContainerRegistryCredentialsResponse extends com.pulumi.resou
             $ = new ContainerRegistryCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loginServer The ACR login server name. User name is the first part of the FQDN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginServer(String loginServer) {
             $.loginServer = loginServer;
             return this;
         }
 
+        /**
+         * @param password The ACR primary password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password2 The ACR secondary password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password2(String password2) {
             $.password2 = password2;
             return this;
         }
 
+        /**
+         * @param username The ACR login username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

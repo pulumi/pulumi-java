@@ -25,6 +25,12 @@ public final class ServiceTemplateSpecContainerResourcesGetArgs extends com.pulu
     @Import(name="limits")
     private @Nullable Output<Map<String,String>> limits;
 
+    /**
+     * @return Limits describes the maximum amount of compute resources allowed.
+     * The values of the map is string form of the &#39;quantity&#39; k8s type:
+     * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+     * 
+     */
     public Optional<Output<Map<String,String>>> limits() {
         return Optional.ofNullable(this.limits);
     }
@@ -40,6 +46,14 @@ public final class ServiceTemplateSpecContainerResourcesGetArgs extends com.pulu
     @Import(name="requests")
     private @Nullable Output<Map<String,String>> requests;
 
+    /**
+     * @return Requests describes the minimum amount of compute resources required.
+     * If Requests is omitted for a container, it defaults to Limits if that is
+     * explicitly specified, otherwise to an implementation-defined value.
+     * The values of the map is string form of the &#39;quantity&#39; k8s type:
+     * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+     * 
+     */
     public Optional<Output<Map<String,String>>> requests() {
         return Optional.ofNullable(this.requests);
     }
@@ -69,20 +83,56 @@ public final class ServiceTemplateSpecContainerResourcesGetArgs extends com.pulu
             $ = new ServiceTemplateSpecContainerResourcesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param limits Limits describes the maximum amount of compute resources allowed.
+         * The values of the map is string form of the &#39;quantity&#39; k8s type:
+         * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(@Nullable Output<Map<String,String>> limits) {
             $.limits = limits;
             return this;
         }
 
+        /**
+         * @param limits Limits describes the maximum amount of compute resources allowed.
+         * The values of the map is string form of the &#39;quantity&#39; k8s type:
+         * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(Map<String,String> limits) {
             return limits(Output.of(limits));
         }
 
+        /**
+         * @param requests Requests describes the minimum amount of compute resources required.
+         * If Requests is omitted for a container, it defaults to Limits if that is
+         * explicitly specified, otherwise to an implementation-defined value.
+         * The values of the map is string form of the &#39;quantity&#39; k8s type:
+         * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+         * 
+         * @return builder
+         * 
+         */
         public Builder requests(@Nullable Output<Map<String,String>> requests) {
             $.requests = requests;
             return this;
         }
 
+        /**
+         * @param requests Requests describes the minimum amount of compute resources required.
+         * If Requests is omitted for a container, it defaults to Limits if that is
+         * explicitly specified, otherwise to an implementation-defined value.
+         * The values of the map is string form of the &#39;quantity&#39; k8s type:
+         * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+         * 
+         * @return builder
+         * 
+         */
         public Builder requests(Map<String,String> requests) {
             return requests(Output.of(requests));
         }

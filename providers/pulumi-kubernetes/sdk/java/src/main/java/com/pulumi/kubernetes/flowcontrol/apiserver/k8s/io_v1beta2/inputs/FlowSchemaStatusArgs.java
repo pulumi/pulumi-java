@@ -27,6 +27,10 @@ public final class FlowSchemaStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="conditions")
     private @Nullable Output<List<FlowSchemaConditionArgs>> conditions;
 
+    /**
+     * @return `conditions` is a list of the current states of FlowSchema.
+     * 
+     */
     public Optional<Output<List<FlowSchemaConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -55,15 +59,33 @@ public final class FlowSchemaStatusArgs extends com.pulumi.resources.ResourceArg
             $ = new FlowSchemaStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions `conditions` is a list of the current states of FlowSchema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<FlowSchemaConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions `conditions` is a list of the current states of FlowSchema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<FlowSchemaConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions `conditions` is a list of the current states of FlowSchema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(FlowSchemaConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }

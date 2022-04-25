@@ -32,6 +32,10 @@ public final class ApplicationGatewaySslPolicyArgs extends com.pulumi.resources.
     @Import(name="cipherSuites")
     private @Nullable Output<List<Either<String,ApplicationGatewaySslCipherSuite>>> cipherSuites;
 
+    /**
+     * @return Ssl cipher suites to be enabled in the specified order to application gateway.
+     * 
+     */
     public Optional<Output<List<Either<String,ApplicationGatewaySslCipherSuite>>>> cipherSuites() {
         return Optional.ofNullable(this.cipherSuites);
     }
@@ -43,6 +47,10 @@ public final class ApplicationGatewaySslPolicyArgs extends com.pulumi.resources.
     @Import(name="disabledSslProtocols")
     private @Nullable Output<List<Either<String,ApplicationGatewaySslProtocol>>> disabledSslProtocols;
 
+    /**
+     * @return Ssl protocols to be disabled on application gateway.
+     * 
+     */
     public Optional<Output<List<Either<String,ApplicationGatewaySslProtocol>>>> disabledSslProtocols() {
         return Optional.ofNullable(this.disabledSslProtocols);
     }
@@ -54,6 +62,10 @@ public final class ApplicationGatewaySslPolicyArgs extends com.pulumi.resources.
     @Import(name="minProtocolVersion")
     private @Nullable Output<Either<String,ApplicationGatewaySslProtocol>> minProtocolVersion;
 
+    /**
+     * @return Minimum version of Ssl protocol to be supported on application gateway.
+     * 
+     */
     public Optional<Output<Either<String,ApplicationGatewaySslProtocol>>> minProtocolVersion() {
         return Optional.ofNullable(this.minProtocolVersion);
     }
@@ -65,6 +77,10 @@ public final class ApplicationGatewaySslPolicyArgs extends com.pulumi.resources.
     @Import(name="policyName")
     private @Nullable Output<Either<String,ApplicationGatewaySslPolicyName>> policyName;
 
+    /**
+     * @return Name of Ssl predefined policy.
+     * 
+     */
     public Optional<Output<Either<String,ApplicationGatewaySslPolicyName>>> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -76,6 +92,10 @@ public final class ApplicationGatewaySslPolicyArgs extends com.pulumi.resources.
     @Import(name="policyType")
     private @Nullable Output<Either<String,ApplicationGatewaySslPolicyType>> policyType;
 
+    /**
+     * @return Type of Ssl Policy.
+     * 
+     */
     public Optional<Output<Either<String,ApplicationGatewaySslPolicyType>>> policyType() {
         return Optional.ofNullable(this.policyType);
     }
@@ -108,79 +128,187 @@ public final class ApplicationGatewaySslPolicyArgs extends com.pulumi.resources.
             $ = new ApplicationGatewaySslPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cipherSuites Ssl cipher suites to be enabled in the specified order to application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cipherSuites(@Nullable Output<List<Either<String,ApplicationGatewaySslCipherSuite>>> cipherSuites) {
             $.cipherSuites = cipherSuites;
             return this;
         }
 
+        /**
+         * @param cipherSuites Ssl cipher suites to be enabled in the specified order to application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cipherSuites(List<Either<String,ApplicationGatewaySslCipherSuite>> cipherSuites) {
             return cipherSuites(Output.of(cipherSuites));
         }
 
+        /**
+         * @param cipherSuites Ssl cipher suites to be enabled in the specified order to application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cipherSuites(Either<String,ApplicationGatewaySslCipherSuite>... cipherSuites) {
             return cipherSuites(List.of(cipherSuites));
         }
 
+        /**
+         * @param disabledSslProtocols Ssl protocols to be disabled on application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledSslProtocols(@Nullable Output<List<Either<String,ApplicationGatewaySslProtocol>>> disabledSslProtocols) {
             $.disabledSslProtocols = disabledSslProtocols;
             return this;
         }
 
+        /**
+         * @param disabledSslProtocols Ssl protocols to be disabled on application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledSslProtocols(List<Either<String,ApplicationGatewaySslProtocol>> disabledSslProtocols) {
             return disabledSslProtocols(Output.of(disabledSslProtocols));
         }
 
+        /**
+         * @param disabledSslProtocols Ssl protocols to be disabled on application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledSslProtocols(Either<String,ApplicationGatewaySslProtocol>... disabledSslProtocols) {
             return disabledSslProtocols(List.of(disabledSslProtocols));
         }
 
+        /**
+         * @param minProtocolVersion Minimum version of Ssl protocol to be supported on application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minProtocolVersion(@Nullable Output<Either<String,ApplicationGatewaySslProtocol>> minProtocolVersion) {
             $.minProtocolVersion = minProtocolVersion;
             return this;
         }
 
+        /**
+         * @param minProtocolVersion Minimum version of Ssl protocol to be supported on application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minProtocolVersion(Either<String,ApplicationGatewaySslProtocol> minProtocolVersion) {
             return minProtocolVersion(Output.of(minProtocolVersion));
         }
 
+        /**
+         * @param minProtocolVersion Minimum version of Ssl protocol to be supported on application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minProtocolVersion(String minProtocolVersion) {
             return minProtocolVersion(Either.ofLeft(minProtocolVersion));
         }
 
+        /**
+         * @param minProtocolVersion Minimum version of Ssl protocol to be supported on application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minProtocolVersion(ApplicationGatewaySslProtocol minProtocolVersion) {
             return minProtocolVersion(Either.ofRight(minProtocolVersion));
         }
 
+        /**
+         * @param policyName Name of Ssl predefined policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable Output<Either<String,ApplicationGatewaySslPolicyName>> policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyName Name of Ssl predefined policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(Either<String,ApplicationGatewaySslPolicyName> policyName) {
             return policyName(Output.of(policyName));
         }
 
+        /**
+         * @param policyName Name of Ssl predefined policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             return policyName(Either.ofLeft(policyName));
         }
 
+        /**
+         * @param policyName Name of Ssl predefined policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(ApplicationGatewaySslPolicyName policyName) {
             return policyName(Either.ofRight(policyName));
         }
 
+        /**
+         * @param policyType Type of Ssl Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(@Nullable Output<Either<String,ApplicationGatewaySslPolicyType>> policyType) {
             $.policyType = policyType;
             return this;
         }
 
+        /**
+         * @param policyType Type of Ssl Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(Either<String,ApplicationGatewaySslPolicyType> policyType) {
             return policyType(Output.of(policyType));
         }
 
+        /**
+         * @param policyType Type of Ssl Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(String policyType) {
             return policyType(Either.ofLeft(policyType));
         }
 
+        /**
+         * @param policyType Type of Ssl Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(ApplicationGatewaySslPolicyType policyType) {
             return policyType(Either.ofRight(policyType));
         }

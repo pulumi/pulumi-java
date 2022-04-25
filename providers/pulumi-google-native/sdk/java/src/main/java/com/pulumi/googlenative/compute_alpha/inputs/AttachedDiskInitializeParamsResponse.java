@@ -28,6 +28,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="architecture", required=true)
     private String architecture;
 
+    /**
+     * @return The architecture of the attached disk. Valid values are arm64 or x86_64.
+     * 
+     */
     public String architecture() {
         return this.architecture;
     }
@@ -39,6 +43,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return An optional description. Provide this property when creating the disk.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -50,6 +58,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="diskName", required=true)
     private String diskName;
 
+    /**
+     * @return Specifies the disk name. If not specified, the default is to use the name of the instance. If a disk with the same name already exists in the given region, the existing disk is attached to the new instance and the new disk is not created.
+     * 
+     */
     public String diskName() {
         return this.diskName;
     }
@@ -61,6 +73,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="diskSizeGb", required=true)
     private String diskSizeGb;
 
+    /**
+     * @return Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a sourceImage, which is required for boot disks, the default size is the size of the sourceImage. If you do not specify a sourceImage, the default disk size is 500 GB.
+     * 
+     */
     public String diskSizeGb() {
         return this.diskSizeGb;
     }
@@ -72,6 +88,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="diskType", required=true)
     private String diskType;
 
+    /**
+     * @return Specifies the disk type to use to create the instance. If not specified, the default is pd-standard, specified using the full URL. For example: https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/pd-standard For a full list of acceptable values, see Persistent disk types. If you define this field, you can provide either the full or partial URL. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/diskType - projects/project/zones/zone/diskTypes/diskType - zones/zone/diskTypes/diskType Note that for InstanceTemplate, this is the name of the disk type, not URL.
+     * 
+     */
     public String diskType() {
         return this.diskType;
     }
@@ -83,6 +103,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="guestOsFeatures", required=true)
     private List<GuestOsFeatureResponse> guestOsFeatures;
 
+    /**
+     * @return A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options. Guest OS features are applied by merging initializeParams.guestOsFeatures and disks.guestOsFeatures
+     * 
+     */
     public List<GuestOsFeatureResponse> guestOsFeatures() {
         return this.guestOsFeatures;
     }
@@ -94,6 +118,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -105,6 +133,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="licenseCodes", required=true)
     private List<String> licenseCodes;
 
+    /**
+     * @return Integer license codes indicating which licenses are attached to this disk.
+     * 
+     */
     public List<String> licenseCodes() {
         return this.licenseCodes;
     }
@@ -116,6 +148,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="licenses", required=true)
     private List<String> licenses;
 
+    /**
+     * @return A list of publicly visible licenses. Reserved for Google&#39;s use.
+     * 
+     */
     public List<String> licenses() {
         return this.licenses;
     }
@@ -127,6 +163,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="multiWriter", required=true)
     private Boolean multiWriter;
 
+    /**
+     * @return Indicates whether or not the disk can be read/write attached to more than one instance.
+     * 
+     */
     public Boolean multiWriter() {
         return this.multiWriter;
     }
@@ -138,6 +178,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="onUpdateAction", required=true)
     private String onUpdateAction;
 
+    /**
+     * @return Specifies which action to take on instance update with this disk. Default is to use the existing disk.
+     * 
+     */
     public String onUpdateAction() {
         return this.onUpdateAction;
     }
@@ -149,6 +193,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="provisionedIops", required=true)
     private String provisionedIops;
 
+    /**
+     * @return Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. For more details, see the Extreme persistent disk documentation.
+     * 
+     */
     public String provisionedIops() {
         return this.provisionedIops;
     }
@@ -160,6 +208,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="replicaZones", required=true)
     private List<String> replicaZones;
 
+    /**
+     * @return URLs of the zones where the disk should be replicated to. Only applicable for regional resources.
+     * 
+     */
     public List<String> replicaZones() {
         return this.replicaZones;
     }
@@ -171,6 +223,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="resourcePolicies", required=true)
     private List<String> resourcePolicies;
 
+    /**
+     * @return Resource policies applied to this disk for automatic snapshot creations. Specified using the full or partial URL. For instance template, specify only the resource policy name.
+     * 
+     */
     public List<String> resourcePolicies() {
         return this.resourcePolicies;
     }
@@ -182,6 +238,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="sourceImage", required=true)
     private String sourceImage;
 
+    /**
+     * @return The source image to create this disk. When creating a new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required except for local SSD. To create a disk with one of the public operating system images, specify the image by its family name. For example, specify family/debian-9 to use the latest Debian 9 image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific version of a public operating system image: projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image name in the following format: global/images/my-custom-image You can also specify a custom image by its image family, which returns the latest version of the image in that family. Replace the image name with family/family-name: global/images/family/my-image-family If the source image is deleted later, this field will not be set.
+     * 
+     */
     public String sourceImage() {
         return this.sourceImage;
     }
@@ -193,6 +253,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="sourceImageEncryptionKey", required=true)
     private CustomerEncryptionKeyResponse sourceImageEncryptionKey;
 
+    /**
+     * @return The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key. Instance templates do not store customer-supplied encryption keys, so you cannot create disks for instances in a managed instance group if the source images are encrypted with your own keys.
+     * 
+     */
     public CustomerEncryptionKeyResponse sourceImageEncryptionKey() {
         return this.sourceImageEncryptionKey;
     }
@@ -204,6 +268,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="sourceInstantSnapshot", required=true)
     private String sourceInstantSnapshot;
 
+    /**
+     * @return The source instant-snapshot to create this disk. When creating a new instance, one of initializeParams.sourceSnapshot or initializeParams.sourceInstantSnapshot initializeParams.sourceImage or disks.source is required except for local SSD. To create a disk with a snapshot that you created, specify the snapshot name in the following format: us-central1-a/instantSnapshots/my-backup If the source instant-snapshot is deleted later, this field will not be set.
+     * 
+     */
     public String sourceInstantSnapshot() {
         return this.sourceInstantSnapshot;
     }
@@ -215,6 +283,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="sourceSnapshot", required=true)
     private String sourceSnapshot;
 
+    /**
+     * @return The source snapshot to create this disk. When creating a new instance, one of initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required except for local SSD. To create a disk with a snapshot that you created, specify the snapshot name in the following format: global/snapshots/my-backup If the source snapshot is deleted later, this field will not be set.
+     * 
+     */
     public String sourceSnapshot() {
         return this.sourceSnapshot;
     }
@@ -226,6 +298,10 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
     @Import(name="sourceSnapshotEncryptionKey", required=true)
     private CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey;
 
+    /**
+     * @return The customer-supplied encryption key of the source snapshot.
+     * 
+     */
     public CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey() {
         return this.sourceSnapshotEncryptionKey;
     }
@@ -272,116 +348,260 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
             $ = new AttachedDiskInitializeParamsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param architecture The architecture of the attached disk. Valid values are arm64 or x86_64.
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(String architecture) {
             $.architecture = architecture;
             return this;
         }
 
+        /**
+         * @param description An optional description. Provide this property when creating the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param diskName Specifies the disk name. If not specified, the default is to use the name of the instance. If a disk with the same name already exists in the given region, the existing disk is attached to the new instance and the new disk is not created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(String diskName) {
             $.diskName = diskName;
             return this;
         }
 
+        /**
+         * @param diskSizeGb Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a sourceImage, which is required for boot disks, the default size is the size of the sourceImage. If you do not specify a sourceImage, the default disk size is 500 GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(String diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskType Specifies the disk type to use to create the instance. If not specified, the default is pd-standard, specified using the full URL. For example: https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/pd-standard For a full list of acceptable values, see Persistent disk types. If you define this field, you can provide either the full or partial URL. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/diskType - projects/project/zones/zone/diskTypes/diskType - zones/zone/diskTypes/diskType Note that for InstanceTemplate, this is the name of the disk type, not URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param guestOsFeatures A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options. Guest OS features are applied by merging initializeParams.guestOsFeatures and disks.guestOsFeatures
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
             $.guestOsFeatures = guestOsFeatures;
             return this;
         }
 
+        /**
+         * @param guestOsFeatures A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options. Guest OS features are applied by merging initializeParams.guestOsFeatures and disks.guestOsFeatures
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestOsFeatures(GuestOsFeatureResponse... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
         }
 
+        /**
+         * @param labels Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param licenseCodes Integer license codes indicating which licenses are attached to this disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseCodes(List<String> licenseCodes) {
             $.licenseCodes = licenseCodes;
             return this;
         }
 
+        /**
+         * @param licenseCodes Integer license codes indicating which licenses are attached to this disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseCodes(String... licenseCodes) {
             return licenseCodes(List.of(licenseCodes));
         }
 
+        /**
+         * @param licenses A list of publicly visible licenses. Reserved for Google&#39;s use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(List<String> licenses) {
             $.licenses = licenses;
             return this;
         }
 
+        /**
+         * @param licenses A list of publicly visible licenses. Reserved for Google&#39;s use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(String... licenses) {
             return licenses(List.of(licenses));
         }
 
+        /**
+         * @param multiWriter Indicates whether or not the disk can be read/write attached to more than one instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiWriter(Boolean multiWriter) {
             $.multiWriter = multiWriter;
             return this;
         }
 
+        /**
+         * @param onUpdateAction Specifies which action to take on instance update with this disk. Default is to use the existing disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onUpdateAction(String onUpdateAction) {
             $.onUpdateAction = onUpdateAction;
             return this;
         }
 
+        /**
+         * @param provisionedIops Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. For more details, see the Extreme persistent disk documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionedIops(String provisionedIops) {
             $.provisionedIops = provisionedIops;
             return this;
         }
 
+        /**
+         * @param replicaZones URLs of the zones where the disk should be replicated to. Only applicable for regional resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaZones(List<String> replicaZones) {
             $.replicaZones = replicaZones;
             return this;
         }
 
+        /**
+         * @param replicaZones URLs of the zones where the disk should be replicated to. Only applicable for regional resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaZones(String... replicaZones) {
             return replicaZones(List.of(replicaZones));
         }
 
+        /**
+         * @param resourcePolicies Resource policies applied to this disk for automatic snapshot creations. Specified using the full or partial URL. For instance template, specify only the resource policy name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(List<String> resourcePolicies) {
             $.resourcePolicies = resourcePolicies;
             return this;
         }
 
+        /**
+         * @param resourcePolicies Resource policies applied to this disk for automatic snapshot creations. Specified using the full or partial URL. For instance template, specify only the resource policy name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(String... resourcePolicies) {
             return resourcePolicies(List.of(resourcePolicies));
         }
 
+        /**
+         * @param sourceImage The source image to create this disk. When creating a new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required except for local SSD. To create a disk with one of the public operating system images, specify the image by its family name. For example, specify family/debian-9 to use the latest Debian 9 image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific version of a public operating system image: projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image name in the following format: global/images/my-custom-image You can also specify a custom image by its image family, which returns the latest version of the image in that family. Replace the image name with family/family-name: global/images/family/my-image-family If the source image is deleted later, this field will not be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImage(String sourceImage) {
             $.sourceImage = sourceImage;
             return this;
         }
 
+        /**
+         * @param sourceImageEncryptionKey The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key. Instance templates do not store customer-supplied encryption keys, so you cannot create disks for instances in a managed instance group if the source images are encrypted with your own keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImageEncryptionKey(CustomerEncryptionKeyResponse sourceImageEncryptionKey) {
             $.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
 
+        /**
+         * @param sourceInstantSnapshot The source instant-snapshot to create this disk. When creating a new instance, one of initializeParams.sourceSnapshot or initializeParams.sourceInstantSnapshot initializeParams.sourceImage or disks.source is required except for local SSD. To create a disk with a snapshot that you created, specify the snapshot name in the following format: us-central1-a/instantSnapshots/my-backup If the source instant-snapshot is deleted later, this field will not be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstantSnapshot(String sourceInstantSnapshot) {
             $.sourceInstantSnapshot = sourceInstantSnapshot;
             return this;
         }
 
+        /**
+         * @param sourceSnapshot The source snapshot to create this disk. When creating a new instance, one of initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required except for local SSD. To create a disk with a snapshot that you created, specify the snapshot name in the following format: global/snapshots/my-backup If the source snapshot is deleted later, this field will not be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshot(String sourceSnapshot) {
             $.sourceSnapshot = sourceSnapshot;
             return this;
         }
 
+        /**
+         * @param sourceSnapshotEncryptionKey The customer-supplied encryption key of the source snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshotEncryptionKey(CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
             $.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;

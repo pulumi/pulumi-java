@@ -24,6 +24,10 @@ public final class AbsoluteDeleteOptionResponse extends com.pulumi.resources.Inv
     @Import(name="duration", required=true)
     private String duration;
 
+    /**
+     * @return Duration of deletion after given timespan
+     * 
+     */
     public String duration() {
         return this.duration;
     }
@@ -36,6 +40,11 @@ public final class AbsoluteDeleteOptionResponse extends com.pulumi.resources.Inv
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;AbsoluteDeleteOption&#39;.
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -65,11 +74,24 @@ public final class AbsoluteDeleteOptionResponse extends com.pulumi.resources.Inv
             $ = new AbsoluteDeleteOptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param duration Duration of deletion after given timespan
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;AbsoluteDeleteOption&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;

@@ -34,6 +34,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -45,6 +49,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="authenticationType")
     private @Nullable String authenticationType;
 
+    /**
+     * @return The authentication type to be used to connect to the FTP server.
+     * 
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -56,6 +64,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -67,6 +79,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -78,6 +94,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -89,6 +109,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="host", required=true)
     private Object host;
 
+    /**
+     * @return The SFTP server host name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object host() {
         return this.host;
     }
@@ -100,6 +124,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="hostKeyFingerprint")
     private @Nullable Object hostKeyFingerprint;
 
+    /**
+     * @return The host key finger-print of the SFTP server. When SkipHostKeyValidation is false, HostKeyFingerprint should be specified. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> hostKeyFingerprint() {
         return Optional.ofNullable(this.hostKeyFingerprint);
     }
@@ -111,6 +139,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -122,6 +154,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="passPhrase")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase;
 
+    /**
+     * @return The password to decrypt the SSH private key if the SSH private key is encrypted.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> passPhrase() {
         return Optional.ofNullable(this.passPhrase);
     }
@@ -133,6 +169,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="password")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return Password to logon the SFTP server for Basic authentication.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -144,6 +184,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="port")
     private @Nullable Object port;
 
+    /**
+     * @return The TCP port number that the SFTP server uses to listen for client connections. Default value is 22. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Object> port() {
         return Optional.ofNullable(this.port);
     }
@@ -155,6 +199,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="privateKeyContent")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent;
 
+    /**
+     * @return Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> privateKeyContent() {
         return Optional.ofNullable(this.privateKeyContent);
     }
@@ -166,6 +214,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="privateKeyPath")
     private @Nullable Object privateKeyPath;
 
+    /**
+     * @return The SSH private key file path for SshPublicKey authentication. Only valid for on-premises copy. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> privateKeyPath() {
         return Optional.ofNullable(this.privateKeyPath);
     }
@@ -177,6 +229,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="skipHostKeyValidation")
     private @Nullable Object skipHostKeyValidation;
 
+    /**
+     * @return If true, skip the SSH host key validation. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> skipHostKeyValidation() {
         return Optional.ofNullable(this.skipHostKeyValidation);
     }
@@ -189,6 +245,11 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;Sftp&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -200,6 +261,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="userName")
     private @Nullable Object userName;
 
+    /**
+     * @return The username used to log on to the SFTP server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -243,109 +308,248 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
             $ = new SftpServerLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param authenticationType The authentication type to be used to connect to the FTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param host The SFTP server host name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(Object host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param hostKeyFingerprint The host key finger-print of the SFTP server. When SkipHostKeyValidation is false, HostKeyFingerprint should be specified. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostKeyFingerprint(@Nullable Object hostKeyFingerprint) {
             $.hostKeyFingerprint = hostKeyFingerprint;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param passPhrase The password to decrypt the SSH private key if the SSH private key is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passPhrase(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase) {
             $.passPhrase = passPhrase;
             return this;
         }
 
+        /**
+         * @param passPhrase The password to decrypt the SSH private key if the SSH private key is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passPhrase(AzureKeyVaultSecretReferenceResponse passPhrase) {
             return passPhrase(Either.ofLeft(passPhrase));
         }
 
+        /**
+         * @param passPhrase The password to decrypt the SSH private key if the SSH private key is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passPhrase(SecureStringResponse passPhrase) {
             return passPhrase(Either.ofRight(passPhrase));
         }
 
+        /**
+         * @param password Password to logon the SFTP server for Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password to logon the SFTP server for Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password to logon the SFTP server for Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param port The TCP port number that the SFTP server uses to listen for client connections. Default value is 22. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Object port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param privateKeyContent Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyContent(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent) {
             $.privateKeyContent = privateKeyContent;
             return this;
         }
 
+        /**
+         * @param privateKeyContent Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyContent(AzureKeyVaultSecretReferenceResponse privateKeyContent) {
             return privateKeyContent(Either.ofLeft(privateKeyContent));
         }
 
+        /**
+         * @param privateKeyContent Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyContent(SecureStringResponse privateKeyContent) {
             return privateKeyContent(Either.ofRight(privateKeyContent));
         }
 
+        /**
+         * @param privateKeyPath The SSH private key file path for SshPublicKey authentication. Only valid for on-premises copy. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyPath(@Nullable Object privateKeyPath) {
             $.privateKeyPath = privateKeyPath;
             return this;
         }
 
+        /**
+         * @param skipHostKeyValidation If true, skip the SSH host key validation. Default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipHostKeyValidation(@Nullable Object skipHostKeyValidation) {
             $.skipHostKeyValidation = skipHostKeyValidation;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;Sftp&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userName The username used to log on to the SFTP server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Object userName) {
             $.userName = userName;
             return this;

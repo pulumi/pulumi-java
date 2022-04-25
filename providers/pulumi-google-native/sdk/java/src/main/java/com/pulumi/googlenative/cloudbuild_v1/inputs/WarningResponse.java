@@ -23,6 +23,10 @@ public final class WarningResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="priority", required=true)
     private String priority;
 
+    /**
+     * @return The priority for this warning.
+     * 
+     */
     public String priority() {
         return this.priority;
     }
@@ -34,6 +38,10 @@ public final class WarningResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="text", required=true)
     private String text;
 
+    /**
+     * @return Explanation of the warning generated.
+     * 
+     */
     public String text() {
         return this.text;
     }
@@ -63,11 +71,23 @@ public final class WarningResponse extends com.pulumi.resources.InvokeArgs {
             $ = new WarningResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param priority The priority for this warning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(String priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param text Explanation of the warning generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             $.text = text;
             return this;

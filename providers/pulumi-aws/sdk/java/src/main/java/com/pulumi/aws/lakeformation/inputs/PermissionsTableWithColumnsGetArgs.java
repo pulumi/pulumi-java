@@ -24,6 +24,10 @@ public final class PermissionsTableWithColumnsGetArgs extends com.pulumi.resourc
     @Import(name="catalogId")
     private @Nullable Output<String> catalogId;
 
+    /**
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * 
+     */
     public Optional<Output<String>> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
@@ -35,6 +39,10 @@ public final class PermissionsTableWithColumnsGetArgs extends com.pulumi.resourc
     @Import(name="columnNames")
     private @Nullable Output<List<String>> columnNames;
 
+    /**
+     * @return Set of column names for the table.
+     * 
+     */
     public Optional<Output<List<String>>> columnNames() {
         return Optional.ofNullable(this.columnNames);
     }
@@ -46,6 +54,10 @@ public final class PermissionsTableWithColumnsGetArgs extends com.pulumi.resourc
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
 
+    /**
+     * @return Name of the database for the table with columns resource. Unique to the Data Catalog.
+     * 
+     */
     public Output<String> databaseName() {
         return this.databaseName;
     }
@@ -64,6 +76,10 @@ public final class PermissionsTableWithColumnsGetArgs extends com.pulumi.resourc
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the table resource.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -104,33 +120,75 @@ public final class PermissionsTableWithColumnsGetArgs extends com.pulumi.resourc
             $ = new PermissionsTableWithColumnsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogId Identifier for the Data Catalog. By default, it is the account ID of the caller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(@Nullable Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
         }
 
+        /**
+         * @param catalogId Identifier for the Data Catalog. By default, it is the account ID of the caller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(String catalogId) {
             return catalogId(Output.of(catalogId));
         }
 
+        /**
+         * @param columnNames Set of column names for the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnNames(@Nullable Output<List<String>> columnNames) {
             $.columnNames = columnNames;
             return this;
         }
 
+        /**
+         * @param columnNames Set of column names for the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnNames(List<String> columnNames) {
             return columnNames(Output.of(columnNames));
         }
 
+        /**
+         * @param columnNames Set of column names for the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnNames(String... columnNames) {
             return columnNames(List.of(columnNames));
         }
 
+        /**
+         * @param databaseName Name of the database for the table with columns resource. Unique to the Data Catalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName Name of the database for the table with columns resource. Unique to the Data Catalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
@@ -148,11 +206,23 @@ public final class PermissionsTableWithColumnsGetArgs extends com.pulumi.resourc
             return excludedColumnNames(List.of(excludedColumnNames));
         }
 
+        /**
+         * @param name Name of the table resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the table resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

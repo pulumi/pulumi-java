@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class AndroidDeviceResponse {
     /**
-     * The id of the Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return The id of the Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
     private final String androidModelId;
     /**
-     * The id of the Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return The id of the Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
     private final String androidVersionId;
     /**
-     * The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
     private final String locale;
     /**
-     * How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
     private final String orientation;
@@ -43,30 +43,30 @@ public final class AndroidDeviceResponse {
     }
 
     /**
-     * The id of the Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return The id of the Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
-    */
+     */
     public String androidModelId() {
         return this.androidModelId;
     }
     /**
-     * The id of the Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return The id of the Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
-    */
+     */
     public String androidVersionId() {
         return this.androidVersionId;
     }
     /**
-     * The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
-    */
+     */
     public String locale() {
         return this.locale;
     }
     /**
-     * How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+     * @return How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
-    */
+     */
     public String orientation() {
         return this.orientation;
     }

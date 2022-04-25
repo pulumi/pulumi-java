@@ -25,6 +25,10 @@ public final class FilterTrackSelectionArgs extends com.pulumi.resources.Resourc
     @Import(name="trackSelections", required=true)
     private Output<List<FilterTrackPropertyConditionArgs>> trackSelections;
 
+    /**
+     * @return The track selections.
+     * 
+     */
     public Output<List<FilterTrackPropertyConditionArgs>> trackSelections() {
         return this.trackSelections;
     }
@@ -53,15 +57,33 @@ public final class FilterTrackSelectionArgs extends com.pulumi.resources.Resourc
             $ = new FilterTrackSelectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param trackSelections The track selections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackSelections(Output<List<FilterTrackPropertyConditionArgs>> trackSelections) {
             $.trackSelections = trackSelections;
             return this;
         }
 
+        /**
+         * @param trackSelections The track selections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackSelections(List<FilterTrackPropertyConditionArgs> trackSelections) {
             return trackSelections(Output.of(trackSelections));
         }
 
+        /**
+         * @param trackSelections The track selections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackSelections(FilterTrackPropertyConditionArgs... trackSelections) {
             return trackSelections(List.of(trackSelections));
         }

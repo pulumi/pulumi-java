@@ -25,6 +25,10 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends com.pulu
     @Import(name="commandId")
     private @Nullable String commandId;
 
+    /**
+     * @return Specifies a commandId of predefined built-in script.
+     * 
+     */
     public Optional<String> commandId() {
         return Optional.ofNullable(this.commandId);
     }
@@ -36,6 +40,10 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends com.pulu
     @Import(name="script")
     private @Nullable String script;
 
+    /**
+     * @return Specifies the script content to be executed on the VM.
+     * 
+     */
     public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
@@ -47,6 +55,10 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends com.pulu
     @Import(name="scriptUri")
     private @Nullable String scriptUri;
 
+    /**
+     * @return Specifies the script download location.
+     * 
+     */
     public Optional<String> scriptUri() {
         return Optional.ofNullable(this.scriptUri);
     }
@@ -77,16 +89,34 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends com.pulu
             $ = new VirtualMachineRunCommandScriptSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commandId Specifies a commandId of predefined built-in script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandId(@Nullable String commandId) {
             $.commandId = commandId;
             return this;
         }
 
+        /**
+         * @param script Specifies the script content to be executed on the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(@Nullable String script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param scriptUri Specifies the script download location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptUri(@Nullable String scriptUri) {
             $.scriptUri = scriptUri;
             return this;

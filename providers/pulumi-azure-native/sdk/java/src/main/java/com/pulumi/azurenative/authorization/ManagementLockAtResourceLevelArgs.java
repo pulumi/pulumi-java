@@ -26,6 +26,10 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
     @Import(name="level", required=true)
     private Output<Either<String,LockLevel>> level;
 
+    /**
+     * @return The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
+     * 
+     */
     public Output<Either<String,LockLevel>> level() {
         return this.level;
     }
@@ -37,6 +41,10 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
     @Import(name="lockName")
     private @Nullable Output<String> lockName;
 
+    /**
+     * @return The name of lock. The lock name can be a maximum of 260 characters. It cannot contain &lt;, &gt; %, &amp;, :, \, ?, /, or any control characters.
+     * 
+     */
     public Optional<Output<String>> lockName() {
         return Optional.ofNullable(this.lockName);
     }
@@ -48,6 +56,10 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
     @Import(name="notes")
     private @Nullable Output<String> notes;
 
+    /**
+     * @return Notes about the lock. Maximum of 512 characters.
+     * 
+     */
     public Optional<Output<String>> notes() {
         return Optional.ofNullable(this.notes);
     }
@@ -59,6 +71,10 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
     @Import(name="owners")
     private @Nullable Output<List<ManagementLockOwnerArgs>> owners;
 
+    /**
+     * @return The owners of the lock.
+     * 
+     */
     public Optional<Output<List<ManagementLockOwnerArgs>>> owners() {
         return Optional.ofNullable(this.owners);
     }
@@ -70,6 +86,10 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
     @Import(name="parentResourcePath", required=true)
     private Output<String> parentResourcePath;
 
+    /**
+     * @return The parent resource identity.
+     * 
+     */
     public Output<String> parentResourcePath() {
         return this.parentResourcePath;
     }
@@ -81,6 +101,10 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing the resource to lock.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -92,6 +116,10 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the resource to lock.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -103,6 +131,10 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
     @Import(name="resourceProviderNamespace", required=true)
     private Output<String> resourceProviderNamespace;
 
+    /**
+     * @return The resource provider namespace of the resource to lock.
+     * 
+     */
     public Output<String> resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
@@ -114,6 +146,10 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The resource type of the resource to lock.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -150,95 +186,221 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
             $ = new ManagementLockAtResourceLevelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param level The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(Output<Either<String,LockLevel>> level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param level The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(Either<String,LockLevel> level) {
             return level(Output.of(level));
         }
 
+        /**
+         * @param level The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(String level) {
             return level(Either.ofLeft(level));
         }
 
+        /**
+         * @param level The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(LockLevel level) {
             return level(Either.ofRight(level));
         }
 
+        /**
+         * @param lockName The name of lock. The lock name can be a maximum of 260 characters. It cannot contain &lt;, &gt; %, &amp;, :, \, ?, /, or any control characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockName(@Nullable Output<String> lockName) {
             $.lockName = lockName;
             return this;
         }
 
+        /**
+         * @param lockName The name of lock. The lock name can be a maximum of 260 characters. It cannot contain &lt;, &gt; %, &amp;, :, \, ?, /, or any control characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockName(String lockName) {
             return lockName(Output.of(lockName));
         }
 
+        /**
+         * @param notes Notes about the lock. Maximum of 512 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(@Nullable Output<String> notes) {
             $.notes = notes;
             return this;
         }
 
+        /**
+         * @param notes Notes about the lock. Maximum of 512 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(String notes) {
             return notes(Output.of(notes));
         }
 
+        /**
+         * @param owners The owners of the lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(@Nullable Output<List<ManagementLockOwnerArgs>> owners) {
             $.owners = owners;
             return this;
         }
 
+        /**
+         * @param owners The owners of the lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(List<ManagementLockOwnerArgs> owners) {
             return owners(Output.of(owners));
         }
 
+        /**
+         * @param owners The owners of the lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(ManagementLockOwnerArgs... owners) {
             return owners(List.of(owners));
         }
 
+        /**
+         * @param parentResourcePath The parent resource identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourcePath(Output<String> parentResourcePath) {
             $.parentResourcePath = parentResourcePath;
             return this;
         }
 
+        /**
+         * @param parentResourcePath The parent resource identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourcePath(String parentResourcePath) {
             return parentResourcePath(Output.of(parentResourcePath));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the resource to lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the resource to lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the resource to lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the resource to lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param resourceProviderNamespace The resource provider namespace of the resource to lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderNamespace(Output<String> resourceProviderNamespace) {
             $.resourceProviderNamespace = resourceProviderNamespace;
             return this;
         }
 
+        /**
+         * @param resourceProviderNamespace The resource provider namespace of the resource to lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             return resourceProviderNamespace(Output.of(resourceProviderNamespace));
         }
 
+        /**
+         * @param resourceType The resource type of the resource to lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type of the resource to lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }

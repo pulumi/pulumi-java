@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs 
     @Import(name="caseContent")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs>> caseContent;
 
+    /**
+     * @return A list of case content.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs>>> caseContent() {
         return Optional.ofNullable(this.caseContent);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs 
     @Import(name="condition")
     private @Nullable Output<String> condition;
 
+    /**
+     * @return The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+     * 
+     */
     public Optional<Output<String>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -68,24 +76,54 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs 
             $ = new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caseContent A list of case content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caseContent(@Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs>> caseContent) {
             $.caseContent = caseContent;
             return this;
         }
 
+        /**
+         * @param caseContent A list of case content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caseContent(List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs> caseContent) {
             return caseContent(Output.of(caseContent));
         }
 
+        /**
+         * @param caseContent A list of case content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caseContent(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs... caseContent) {
             return caseContent(List.of(caseContent));
         }
 
+        /**
+         * @param condition The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<String> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(String condition) {
             return condition(Output.of(condition));
         }

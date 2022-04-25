@@ -20,6 +20,10 @@ public final class TransitGatewayMulticastGroupMemberArgs extends com.pulumi.res
     @Import(name="groupIpAddress", required=true)
     private Output<String> groupIpAddress;
 
+    /**
+     * @return The IP address assigned to the transit gateway multicast group.
+     * 
+     */
     public Output<String> groupIpAddress() {
         return this.groupIpAddress;
     }
@@ -31,6 +35,10 @@ public final class TransitGatewayMulticastGroupMemberArgs extends com.pulumi.res
     @Import(name="networkInterfaceId", required=true)
     private Output<String> networkInterfaceId;
 
+    /**
+     * @return The ID of the transit gateway attachment.
+     * 
+     */
     public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
@@ -42,6 +50,10 @@ public final class TransitGatewayMulticastGroupMemberArgs extends com.pulumi.res
     @Import(name="transitGatewayMulticastDomainId", required=true)
     private Output<String> transitGatewayMulticastDomainId;
 
+    /**
+     * @return The ID of the transit gateway multicast domain.
+     * 
+     */
     public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
@@ -72,29 +84,65 @@ public final class TransitGatewayMulticastGroupMemberArgs extends com.pulumi.res
             $ = new TransitGatewayMulticastGroupMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupIpAddress The IP address assigned to the transit gateway multicast group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIpAddress(Output<String> groupIpAddress) {
             $.groupIpAddress = groupIpAddress;
             return this;
         }
 
+        /**
+         * @param groupIpAddress The IP address assigned to the transit gateway multicast group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIpAddress(String groupIpAddress) {
             return groupIpAddress(Output.of(groupIpAddress));
         }
 
+        /**
+         * @param networkInterfaceId The ID of the transit gateway attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(Output<String> networkInterfaceId) {
             $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
+        /**
+         * @param networkInterfaceId The ID of the transit gateway attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(String networkInterfaceId) {
             return networkInterfaceId(Output.of(networkInterfaceId));
         }
 
+        /**
+         * @param transitGatewayMulticastDomainId The ID of the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayMulticastDomainId(Output<String> transitGatewayMulticastDomainId) {
             $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;
         }
 
+        /**
+         * @param transitGatewayMulticastDomainId The ID of the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
             return transitGatewayMulticastDomainId(Output.of(transitGatewayMulticastDomainId));
         }

@@ -25,6 +25,10 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="issuer", required=true)
     private String issuer;
 
+    /**
+     * @return The issuer distinguished name in RFC 2253 format. Only present if parsed is true.
+     * 
+     */
     public String issuer() {
         return this.issuer;
     }
@@ -36,6 +40,10 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="notAfterTime", required=true)
     private String notAfterTime;
 
+    /**
+     * @return The certificate is not valid after this time. Only present if parsed is true.
+     * 
+     */
     public String notAfterTime() {
         return this.notAfterTime;
     }
@@ -47,6 +55,10 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="notBeforeTime", required=true)
     private String notBeforeTime;
 
+    /**
+     * @return The certificate is not valid before this time. Only present if parsed is true.
+     * 
+     */
     public String notBeforeTime() {
         return this.notBeforeTime;
     }
@@ -58,6 +70,10 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parsed", required=true)
     private Boolean parsed;
 
+    /**
+     * @return True if the certificate was parsed successfully.
+     * 
+     */
     public Boolean parsed() {
         return this.parsed;
     }
@@ -69,6 +85,10 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rawDer", required=true)
     private String rawDer;
 
+    /**
+     * @return The raw certificate bytes in DER format.
+     * 
+     */
     public String rawDer() {
         return this.rawDer;
     }
@@ -80,6 +100,10 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serialNumber", required=true)
     private String serialNumber;
 
+    /**
+     * @return The certificate serial number as a hex string. Only present if parsed is true.
+     * 
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
@@ -91,6 +115,10 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sha256Fingerprint", required=true)
     private String sha256Fingerprint;
 
+    /**
+     * @return The SHA-256 certificate fingerprint as a hex string. Only present if parsed is true.
+     * 
+     */
     public String sha256Fingerprint() {
         return this.sha256Fingerprint;
     }
@@ -102,6 +130,10 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subject", required=true)
     private String subject;
 
+    /**
+     * @return The subject distinguished name in RFC 2253 format. Only present if parsed is true.
+     * 
+     */
     public String subject() {
         return this.subject;
     }
@@ -113,6 +145,10 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subjectAlternativeDnsNames", required=true)
     private List<String> subjectAlternativeDnsNames;
 
+    /**
+     * @return The subject Alternative DNS names. Only present if parsed is true.
+     * 
+     */
     public List<String> subjectAlternativeDnsNames() {
         return this.subjectAlternativeDnsNames;
     }
@@ -149,51 +185,111 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CertificateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param issuer The issuer distinguished name in RFC 2253 format. Only present if parsed is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
             $.issuer = issuer;
             return this;
         }
 
+        /**
+         * @param notAfterTime The certificate is not valid after this time. Only present if parsed is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notAfterTime(String notAfterTime) {
             $.notAfterTime = notAfterTime;
             return this;
         }
 
+        /**
+         * @param notBeforeTime The certificate is not valid before this time. Only present if parsed is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notBeforeTime(String notBeforeTime) {
             $.notBeforeTime = notBeforeTime;
             return this;
         }
 
+        /**
+         * @param parsed True if the certificate was parsed successfully.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parsed(Boolean parsed) {
             $.parsed = parsed;
             return this;
         }
 
+        /**
+         * @param rawDer The raw certificate bytes in DER format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawDer(String rawDer) {
             $.rawDer = rawDer;
             return this;
         }
 
+        /**
+         * @param serialNumber The certificate serial number as a hex string. Only present if parsed is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialNumber(String serialNumber) {
             $.serialNumber = serialNumber;
             return this;
         }
 
+        /**
+         * @param sha256Fingerprint The SHA-256 certificate fingerprint as a hex string. Only present if parsed is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha256Fingerprint(String sha256Fingerprint) {
             $.sha256Fingerprint = sha256Fingerprint;
             return this;
         }
 
+        /**
+         * @param subject The subject distinguished name in RFC 2253 format. Only present if parsed is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(String subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subjectAlternativeDnsNames The subject Alternative DNS names. Only present if parsed is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeDnsNames(List<String> subjectAlternativeDnsNames) {
             $.subjectAlternativeDnsNames = subjectAlternativeDnsNames;
             return this;
         }
 
+        /**
+         * @param subjectAlternativeDnsNames The subject Alternative DNS names. Only present if parsed is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeDnsNames(String... subjectAlternativeDnsNames) {
             return subjectAlternativeDnsNames(List.of(subjectAlternativeDnsNames));
         }

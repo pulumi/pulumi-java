@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2BigQueryTableResponse {
     /**
-     * Dataset ID of the table.
+     * @return Dataset ID of the table.
      * 
      */
     private final String datasetId;
     /**
-     * The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
+     * @return The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
      * 
      */
     private final String project;
     /**
-     * Name of the table.
+     * @return Name of the table.
      * 
      */
     private final String tableId;
@@ -36,23 +36,23 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse {
     }
 
     /**
-     * Dataset ID of the table.
+     * @return Dataset ID of the table.
      * 
-    */
+     */
     public String datasetId() {
         return this.datasetId;
     }
     /**
-     * The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
+     * @return The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * Name of the table.
+     * @return Name of the table.
      * 
-    */
+     */
     public String tableId() {
         return this.tableId;
     }

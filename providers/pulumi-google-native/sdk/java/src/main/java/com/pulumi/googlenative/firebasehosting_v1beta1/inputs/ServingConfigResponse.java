@@ -29,6 +29,10 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="appAssociation", required=true)
     private String appAssociation;
 
+    /**
+     * @return How to handle well known App Association files.
+     * 
+     */
     public String appAssociation() {
         return this.appAssociation;
     }
@@ -40,6 +44,10 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="cleanUrls", required=true)
     private Boolean cleanUrls;
 
+    /**
+     * @return Defines whether to drop the file extension from uploaded files.
+     * 
+     */
     public Boolean cleanUrls() {
         return this.cleanUrls;
     }
@@ -51,6 +59,10 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="headers", required=true)
     private List<HeaderResponse> headers;
 
+    /**
+     * @return An array of objects, where each object specifies a URL pattern that, if matched to the request URL path, triggers Hosting to apply the specified custom response headers.
+     * 
+     */
     public List<HeaderResponse> headers() {
         return this.headers;
     }
@@ -62,6 +74,10 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="i18n", required=true)
     private I18nConfigResponse i18n;
 
+    /**
+     * @return Optional. Defines i18n rewrite behavior.
+     * 
+     */
     public I18nConfigResponse i18n() {
         return this.i18n;
     }
@@ -73,6 +89,10 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="redirects", required=true)
     private List<RedirectResponse> redirects;
 
+    /**
+     * @return An array of objects (called redirect rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond with a redirect to the specified destination path.
+     * 
+     */
     public List<RedirectResponse> redirects() {
         return this.redirects;
     }
@@ -84,6 +104,10 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="rewrites", required=true)
     private List<RewriteResponse> rewrites;
 
+    /**
+     * @return An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond as if the service were given the specified destination URL.
+     * 
+     */
     public List<RewriteResponse> rewrites() {
         return this.rewrites;
     }
@@ -95,6 +119,10 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="trailingSlashBehavior", required=true)
     private String trailingSlashBehavior;
 
+    /**
+     * @return Defines how to handle a trailing slash in the URL path.
+     * 
+     */
     public String trailingSlashBehavior() {
         return this.trailingSlashBehavior;
     }
@@ -129,48 +157,108 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new ServingConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appAssociation How to handle well known App Association files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appAssociation(String appAssociation) {
             $.appAssociation = appAssociation;
             return this;
         }
 
+        /**
+         * @param cleanUrls Defines whether to drop the file extension from uploaded files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cleanUrls(Boolean cleanUrls) {
             $.cleanUrls = cleanUrls;
             return this;
         }
 
+        /**
+         * @param headers An array of objects, where each object specifies a URL pattern that, if matched to the request URL path, triggers Hosting to apply the specified custom response headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(List<HeaderResponse> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers An array of objects, where each object specifies a URL pattern that, if matched to the request URL path, triggers Hosting to apply the specified custom response headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(HeaderResponse... headers) {
             return headers(List.of(headers));
         }
 
+        /**
+         * @param i18n Optional. Defines i18n rewrite behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder i18n(I18nConfigResponse i18n) {
             $.i18n = i18n;
             return this;
         }
 
+        /**
+         * @param redirects An array of objects (called redirect rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond with a redirect to the specified destination path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirects(List<RedirectResponse> redirects) {
             $.redirects = redirects;
             return this;
         }
 
+        /**
+         * @param redirects An array of objects (called redirect rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond with a redirect to the specified destination path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirects(RedirectResponse... redirects) {
             return redirects(List.of(redirects));
         }
 
+        /**
+         * @param rewrites An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond as if the service were given the specified destination URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewrites(List<RewriteResponse> rewrites) {
             $.rewrites = rewrites;
             return this;
         }
 
+        /**
+         * @param rewrites An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond as if the service were given the specified destination URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewrites(RewriteResponse... rewrites) {
             return rewrites(List.of(rewrites));
         }
 
+        /**
+         * @param trailingSlashBehavior Defines how to handle a trailing slash in the URL path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trailingSlashBehavior(String trailingSlashBehavior) {
             $.trailingSlashBehavior = trailingSlashBehavior;
             return this;

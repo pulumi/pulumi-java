@@ -24,6 +24,10 @@ public final class DataplexConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="lakeResources", required=true)
     private Map<String,String> lakeResources;
 
+    /**
+     * @return A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
+     * 
+     */
     public Map<String,String> lakeResources() {
         return this.lakeResources;
     }
@@ -52,6 +56,12 @@ public final class DataplexConfigResponse extends com.pulumi.resources.InvokeArg
             $ = new DataplexConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lakeResources A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lakeResources(Map<String,String> lakeResources) {
             $.lakeResources = lakeResources;
             return this;

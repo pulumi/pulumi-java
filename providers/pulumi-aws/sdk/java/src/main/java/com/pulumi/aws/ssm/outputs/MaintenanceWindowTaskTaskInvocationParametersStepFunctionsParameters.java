@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters {
     /**
-     * The inputs for the STEP_FUNCTION task.
+     * @return The inputs for the STEP_FUNCTION task.
      * 
      */
     private final @Nullable String input;
     /**
-     * The name of the STEP_FUNCTION task.
+     * @return The name of the STEP_FUNCTION task.
      * 
      */
     private final @Nullable String name;
@@ -31,16 +31,16 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
     }
 
     /**
-     * The inputs for the STEP_FUNCTION task.
+     * @return The inputs for the STEP_FUNCTION task.
      * 
-    */
+     */
     public Optional<String> input() {
         return Optional.ofNullable(this.input);
     }
     /**
-     * The name of the STEP_FUNCTION task.
+     * @return The name of the STEP_FUNCTION task.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

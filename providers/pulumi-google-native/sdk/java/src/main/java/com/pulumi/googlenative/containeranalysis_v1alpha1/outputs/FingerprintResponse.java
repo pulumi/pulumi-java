@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class FingerprintResponse {
     /**
-     * The layer-id of the final layer in the Docker image&#39;s v1 representation. This field can be used as a filter in list requests.
+     * @return The layer-id of the final layer in the Docker image&#39;s v1 representation. This field can be used as a filter in list requests.
      * 
      */
     private final String v1Name;
     /**
-     * The ordered list of v2 blobs that represent a given image.
+     * @return The ordered list of v2 blobs that represent a given image.
      * 
      */
     private final List<String> v2Blob;
     /**
-     * The name of the image&#39;s v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + &#34; &#34; + v2_name[N+1]) Only the name of the final blob is kept. This field can be used as a filter in list requests.
+     * @return The name of the image&#39;s v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + &#34; &#34; + v2_name[N+1]) Only the name of the final blob is kept. This field can be used as a filter in list requests.
      * 
      */
     private final String v2Name;
@@ -37,23 +37,23 @@ public final class FingerprintResponse {
     }
 
     /**
-     * The layer-id of the final layer in the Docker image&#39;s v1 representation. This field can be used as a filter in list requests.
+     * @return The layer-id of the final layer in the Docker image&#39;s v1 representation. This field can be used as a filter in list requests.
      * 
-    */
+     */
     public String v1Name() {
         return this.v1Name;
     }
     /**
-     * The ordered list of v2 blobs that represent a given image.
+     * @return The ordered list of v2 blobs that represent a given image.
      * 
-    */
+     */
     public List<String> v2Blob() {
         return this.v2Blob;
     }
     /**
-     * The name of the image&#39;s v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + &#34; &#34; + v2_name[N+1]) Only the name of the final blob is kept. This field can be used as a filter in list requests.
+     * @return The name of the image&#39;s v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + &#34; &#34; + v2_name[N+1]) Only the name of the final blob is kept. This field can be used as a filter in list requests.
      * 
-    */
+     */
     public String v2Name() {
         return this.v2Name;
     }

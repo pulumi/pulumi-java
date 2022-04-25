@@ -31,6 +31,12 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends com.p
     @Import(name="corsPolicy")
     private @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyArgs> corsPolicy;
 
+    /**
+     * @return The specification for allowing client side cross-origin requests. Please see W3C
+     * Recommendation for Cross Origin Resource Sharing
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyArgs>> corsPolicy() {
         return Optional.ofNullable(this.corsPolicy);
     }
@@ -49,6 +55,17 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends com.p
     @Import(name="faultInjectionPolicy")
     private @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs> faultInjectionPolicy;
 
+    /**
+     * @return The specification for fault injection introduced into traffic to test the
+     * resiliency of clients to backend service failure. As part of fault injection,
+     * when clients send requests to a backend service, delays can be introduced by
+     * Loadbalancer on a percentage of requests before sending those request to the
+     * backend service. Similarly requests from clients can be aborted by the
+     * Loadbalancer for a percentage of requests. timeout and retry_policy will be
+     * ignored by clients that are configured with a fault_injection_policy.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs>> faultInjectionPolicy() {
         return Optional.ofNullable(this.faultInjectionPolicy);
     }
@@ -64,6 +81,14 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends com.p
     @Import(name="requestMirrorPolicy")
     private @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs> requestMirrorPolicy;
 
+    /**
+     * @return Specifies the policy on how requests intended for the route&#39;s backends are
+     * shadowed to a separate mirrored backend service. Loadbalancer does not wait for
+     * responses from the shadow service. Prior to sending traffic to the shadow
+     * service, the host / authority header is suffixed with -shadow.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs>> requestMirrorPolicy() {
         return Optional.ofNullable(this.requestMirrorPolicy);
     }
@@ -76,6 +101,11 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends com.p
     @Import(name="retryPolicy")
     private @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs> retryPolicy;
 
+    /**
+     * @return Specifies the retry policy associated with this route.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs>> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
@@ -91,6 +121,14 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends com.p
     @Import(name="timeout")
     private @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionTimeoutArgs> timeout;
 
+    /**
+     * @return Specifies the timeout for the selected route. Timeout is computed from the time
+     * the request is has been fully processed (i.e. end-of-stream) up until the
+     * response has been completely processed. Timeout includes all retries. If not
+     * specified, the default value is 15 seconds.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionUrlMapPathMatcherRouteRuleRouteActionTimeoutArgs>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -104,6 +142,12 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends com.p
     @Import(name="urlRewrite")
     private @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewriteArgs> urlRewrite;
 
+    /**
+     * @return The spec to modify the URL of the request, prior to forwarding the request to
+     * the matched service
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewriteArgs>> urlRewrite() {
         return Optional.ofNullable(this.urlRewrite);
     }
@@ -123,6 +167,18 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends com.p
     @Import(name="weightedBackendServices")
     private @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceArgs>> weightedBackendServices;
 
+    /**
+     * @return A list of weighted backend services to send traffic to when a route match
+     * occurs. The weights determine the fraction of traffic that flows to their
+     * corresponding backend service. If all traffic needs to go to a single backend
+     * service, there must be one  weightedBackendService with weight set to a non 0
+     * number. Once a backendService is identified and before forwarding the request to
+     * the backend service, advanced routing actions like Url rewrites and header
+     * transformations are applied depending on additional settings specified in this
+     * HttpRouteAction.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceArgs>>> weightedBackendServices() {
         return Optional.ofNullable(this.weightedBackendServices);
     }
@@ -157,69 +213,223 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends com.p
             $ = new RegionUrlMapPathMatcherRouteRuleRouteActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param corsPolicy The specification for allowing client side cross-origin requests. Please see W3C
+         * Recommendation for Cross Origin Resource Sharing
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsPolicy(@Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyArgs> corsPolicy) {
             $.corsPolicy = corsPolicy;
             return this;
         }
 
+        /**
+         * @param corsPolicy The specification for allowing client side cross-origin requests. Please see W3C
+         * Recommendation for Cross Origin Resource Sharing
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsPolicy(RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyArgs corsPolicy) {
             return corsPolicy(Output.of(corsPolicy));
         }
 
+        /**
+         * @param faultInjectionPolicy The specification for fault injection introduced into traffic to test the
+         * resiliency of clients to backend service failure. As part of fault injection,
+         * when clients send requests to a backend service, delays can be introduced by
+         * Loadbalancer on a percentage of requests before sending those request to the
+         * backend service. Similarly requests from clients can be aborted by the
+         * Loadbalancer for a percentage of requests. timeout and retry_policy will be
+         * ignored by clients that are configured with a fault_injection_policy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder faultInjectionPolicy(@Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs> faultInjectionPolicy) {
             $.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
 
+        /**
+         * @param faultInjectionPolicy The specification for fault injection introduced into traffic to test the
+         * resiliency of clients to backend service failure. As part of fault injection,
+         * when clients send requests to a backend service, delays can be introduced by
+         * Loadbalancer on a percentage of requests before sending those request to the
+         * backend service. Similarly requests from clients can be aborted by the
+         * Loadbalancer for a percentage of requests. timeout and retry_policy will be
+         * ignored by clients that are configured with a fault_injection_policy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder faultInjectionPolicy(RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs faultInjectionPolicy) {
             return faultInjectionPolicy(Output.of(faultInjectionPolicy));
         }
 
+        /**
+         * @param requestMirrorPolicy Specifies the policy on how requests intended for the route&#39;s backends are
+         * shadowed to a separate mirrored backend service. Loadbalancer does not wait for
+         * responses from the shadow service. Prior to sending traffic to the shadow
+         * service, the host / authority header is suffixed with -shadow.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMirrorPolicy(@Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs> requestMirrorPolicy) {
             $.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
 
+        /**
+         * @param requestMirrorPolicy Specifies the policy on how requests intended for the route&#39;s backends are
+         * shadowed to a separate mirrored backend service. Loadbalancer does not wait for
+         * responses from the shadow service. Prior to sending traffic to the shadow
+         * service, the host / authority header is suffixed with -shadow.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMirrorPolicy(RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs requestMirrorPolicy) {
             return requestMirrorPolicy(Output.of(requestMirrorPolicy));
         }
 
+        /**
+         * @param retryPolicy Specifies the retry policy associated with this route.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(@Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs> retryPolicy) {
             $.retryPolicy = retryPolicy;
             return this;
         }
 
+        /**
+         * @param retryPolicy Specifies the retry policy associated with this route.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs retryPolicy) {
             return retryPolicy(Output.of(retryPolicy));
         }
 
+        /**
+         * @param timeout Specifies the timeout for the selected route. Timeout is computed from the time
+         * the request is has been fully processed (i.e. end-of-stream) up until the
+         * response has been completely processed. Timeout includes all retries. If not
+         * specified, the default value is 15 seconds.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionTimeoutArgs> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Specifies the timeout for the selected route. Timeout is computed from the time
+         * the request is has been fully processed (i.e. end-of-stream) up until the
+         * response has been completely processed. Timeout includes all retries. If not
+         * specified, the default value is 15 seconds.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(RegionUrlMapPathMatcherRouteRuleRouteActionTimeoutArgs timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param urlRewrite The spec to modify the URL of the request, prior to forwarding the request to
+         * the matched service
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRewrite(@Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewriteArgs> urlRewrite) {
             $.urlRewrite = urlRewrite;
             return this;
         }
 
+        /**
+         * @param urlRewrite The spec to modify the URL of the request, prior to forwarding the request to
+         * the matched service
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRewrite(RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewriteArgs urlRewrite) {
             return urlRewrite(Output.of(urlRewrite));
         }
 
+        /**
+         * @param weightedBackendServices A list of weighted backend services to send traffic to when a route match
+         * occurs. The weights determine the fraction of traffic that flows to their
+         * corresponding backend service. If all traffic needs to go to a single backend
+         * service, there must be one  weightedBackendService with weight set to a non 0
+         * number. Once a backendService is identified and before forwarding the request to
+         * the backend service, advanced routing actions like Url rewrites and header
+         * transformations are applied depending on additional settings specified in this
+         * HttpRouteAction.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedBackendServices(@Nullable Output<List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceArgs>> weightedBackendServices) {
             $.weightedBackendServices = weightedBackendServices;
             return this;
         }
 
+        /**
+         * @param weightedBackendServices A list of weighted backend services to send traffic to when a route match
+         * occurs. The weights determine the fraction of traffic that flows to their
+         * corresponding backend service. If all traffic needs to go to a single backend
+         * service, there must be one  weightedBackendService with weight set to a non 0
+         * number. Once a backendService is identified and before forwarding the request to
+         * the backend service, advanced routing actions like Url rewrites and header
+         * transformations are applied depending on additional settings specified in this
+         * HttpRouteAction.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedBackendServices(List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceArgs> weightedBackendServices) {
             return weightedBackendServices(Output.of(weightedBackendServices));
         }
 
+        /**
+         * @param weightedBackendServices A list of weighted backend services to send traffic to when a route match
+         * occurs. The weights determine the fraction of traffic that flows to their
+         * corresponding backend service. If all traffic needs to go to a single backend
+         * service, there must be one  weightedBackendService with weight set to a non 0
+         * number. Once a backendService is identified and before forwarding the request to
+         * the backend service, advanced routing actions like Url rewrites and header
+         * transformations are applied depending on additional settings specified in this
+         * HttpRouteAction.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedBackendServices(RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceArgs... weightedBackendServices) {
             return weightedBackendServices(List.of(weightedBackendServices));
         }

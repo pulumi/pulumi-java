@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class QueryParameterTypeStructTypesItemResponse {
     /**
-     * [Optional] Human-oriented description of the field.
+     * @return [Optional] Human-oriented description of the field.
      * 
      */
     private final String description;
     /**
-     * [Optional] The name of this field.
+     * @return [Optional] The name of this field.
      * 
      */
     private final String name;
     /**
-     * [Required] The type of this field.
+     * @return [Required] The type of this field.
      * 
      */
     private final QueryParameterTypeResponse type;
@@ -37,23 +37,23 @@ public final class QueryParameterTypeStructTypesItemResponse {
     }
 
     /**
-     * [Optional] Human-oriented description of the field.
+     * @return [Optional] Human-oriented description of the field.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * [Optional] The name of this field.
+     * @return [Optional] The name of this field.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * [Required] The type of this field.
+     * @return [Required] The type of this field.
      * 
-    */
+     */
     public QueryParameterTypeResponse type() {
         return this.type;
     }

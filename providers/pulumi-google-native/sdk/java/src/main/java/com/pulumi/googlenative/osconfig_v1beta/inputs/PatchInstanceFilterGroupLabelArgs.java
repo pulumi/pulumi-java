@@ -27,6 +27,10 @@ public final class PatchInstanceFilterGroupLabelArgs extends com.pulumi.resource
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -55,11 +59,23 @@ public final class PatchInstanceFilterGroupLabelArgs extends com.pulumi.resource
             $ = new PatchInstanceFilterGroupLabelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }

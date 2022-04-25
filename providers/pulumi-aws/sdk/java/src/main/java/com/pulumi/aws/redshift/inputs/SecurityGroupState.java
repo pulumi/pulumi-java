@@ -25,6 +25,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the Redshift security group. Defaults to &#34;Managed by Pulumi&#34;.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="ingress")
     private @Nullable Output<List<SecurityGroupIngressGetArgs>> ingress;
 
+    /**
+     * @return A list of ingress rules.
+     * 
+     */
     public Optional<Output<List<SecurityGroupIngressGetArgs>>> ingress() {
         return Optional.ofNullable(this.ingress);
     }
@@ -47,6 +55,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Redshift security group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -77,33 +89,75 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
             $ = new SecurityGroupState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the Redshift security group. Defaults to &#34;Managed by Pulumi&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the Redshift security group. Defaults to &#34;Managed by Pulumi&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ingress A list of ingress rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(@Nullable Output<List<SecurityGroupIngressGetArgs>> ingress) {
             $.ingress = ingress;
             return this;
         }
 
+        /**
+         * @param ingress A list of ingress rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(List<SecurityGroupIngressGetArgs> ingress) {
             return ingress(Output.of(ingress));
         }
 
+        /**
+         * @param ingress A list of ingress rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(SecurityGroupIngressGetArgs... ingress) {
             return ingress(List.of(ingress));
         }
 
+        /**
+         * @param name The name of the Redshift security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Redshift security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

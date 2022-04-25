@@ -32,6 +32,10 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends com.pulumi.res
     @Import(name="azureApp", required=true)
     private Output<AzureActiveDirectoryAppArgs> azureApp;
 
+    /**
+     * @return Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+     * 
+     */
     public Output<AzureActiveDirectoryAppArgs> azureApp() {
         return this.azureApp;
     }
@@ -43,6 +47,10 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends com.pulumi.res
     @Import(name="backupFileShare")
     private @Nullable Output<FileShareArgs> backupFileShare;
 
+    /**
+     * @return Backup file share information for all selected databases.
+     * 
+     */
     public Optional<Output<FileShareArgs>> backupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
@@ -54,6 +62,10 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends com.pulumi.res
     @Import(name="selectedDatabases", required=true)
     private Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
 
+    /**
+     * @return Databases to migrate
+     * 
+     */
     public Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
     }
@@ -65,6 +77,10 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends com.pulumi.res
     @Import(name="sourceConnectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
+    /**
+     * @return Connection information for source SQL Server
+     * 
+     */
     public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -76,6 +92,10 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends com.pulumi.res
     @Import(name="storageResourceId", required=true)
     private Output<String> storageResourceId;
 
+    /**
+     * @return Fully qualified resourceId of storage
+     * 
+     */
     public Output<String> storageResourceId() {
         return this.storageResourceId;
     }
@@ -87,6 +107,10 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends com.pulumi.res
     @Import(name="targetConnectionInfo", required=true)
     private Output<MiSqlConnectionInfoArgs> targetConnectionInfo;
 
+    /**
+     * @return Connection information for Azure SQL Database Managed Instance
+     * 
+     */
     public Output<MiSqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -120,60 +144,138 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends com.pulumi.res
             $ = new MigrateSqlServerSqlMISyncTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureApp Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureApp(Output<AzureActiveDirectoryAppArgs> azureApp) {
             $.azureApp = azureApp;
             return this;
         }
 
+        /**
+         * @param azureApp Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureApp(AzureActiveDirectoryAppArgs azureApp) {
             return azureApp(Output.of(azureApp));
         }
 
+        /**
+         * @param backupFileShare Backup file share information for all selected databases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFileShare(@Nullable Output<FileShareArgs> backupFileShare) {
             $.backupFileShare = backupFileShare;
             return this;
         }
 
+        /**
+         * @param backupFileShare Backup file share information for all selected databases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFileShare(FileShareArgs backupFileShare) {
             return backupFileShare(Output.of(backupFileShare));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases) {
             $.selectedDatabases = selectedDatabases;
             return this;
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputArgs> selectedDatabases) {
             return selectedDatabases(Output.of(selectedDatabases));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(MigrateSqlServerSqlMIDatabaseInputArgs... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
 
+        /**
+         * @param storageResourceId Fully qualified resourceId of storage
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageResourceId(Output<String> storageResourceId) {
             $.storageResourceId = storageResourceId;
             return this;
         }
 
+        /**
+         * @param storageResourceId Fully qualified resourceId of storage
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageResourceId(String storageResourceId) {
             return storageResourceId(Output.of(storageResourceId));
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for Azure SQL Database Managed Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(Output<MiSqlConnectionInfoArgs> targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for Azure SQL Database Managed Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(MiSqlConnectionInfoArgs targetConnectionInfo) {
             return targetConnectionInfo(Output.of(targetConnectionInfo));
         }

@@ -26,6 +26,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="additionalContexts", required=true)
     private List<SourceContextResponse> additionalContexts;
 
+    /**
+     * @return If provided, some of the source code used for the build may be found in these locations, in the case where the source repository had multiple remotes or submodules. This list will not include the context specified in the context field.
+     * 
+     */
     public List<SourceContextResponse> additionalContexts() {
         return this.additionalContexts;
     }
@@ -37,6 +41,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="artifactStorageSourceUri", required=true)
     private String artifactStorageSourceUri;
 
+    /**
+     * @return If provided, the input binary artifacts for the build came from this location.
+     * 
+     */
     public String artifactStorageSourceUri() {
         return this.artifactStorageSourceUri;
     }
@@ -48,6 +56,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="context", required=true)
     private SourceContextResponse context;
 
+    /**
+     * @return If provided, the source code used for the build came from this location.
+     * 
+     */
     public SourceContextResponse context() {
         return this.context;
     }
@@ -59,6 +71,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fileHashes", required=true)
     private Map<String,String> fileHashes;
 
+    /**
+     * @return Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (.tar.gz), the FileHash will be for the single path to that file.
+     * 
+     */
     public Map<String,String> fileHashes() {
         return this.fileHashes;
     }
@@ -90,25 +106,55 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalContexts If provided, some of the source code used for the build may be found in these locations, in the case where the source repository had multiple remotes or submodules. This list will not include the context specified in the context field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalContexts(List<SourceContextResponse> additionalContexts) {
             $.additionalContexts = additionalContexts;
             return this;
         }
 
+        /**
+         * @param additionalContexts If provided, some of the source code used for the build may be found in these locations, in the case where the source repository had multiple remotes or submodules. This list will not include the context specified in the context field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalContexts(SourceContextResponse... additionalContexts) {
             return additionalContexts(List.of(additionalContexts));
         }
 
+        /**
+         * @param artifactStorageSourceUri If provided, the input binary artifacts for the build came from this location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactStorageSourceUri(String artifactStorageSourceUri) {
             $.artifactStorageSourceUri = artifactStorageSourceUri;
             return this;
         }
 
+        /**
+         * @param context If provided, the source code used for the build came from this location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(SourceContextResponse context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param fileHashes Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (.tar.gz), the FileHash will be for the single path to that file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileHashes(Map<String,String> fileHashes) {
             $.fileHashes = fileHashes;
             return this;

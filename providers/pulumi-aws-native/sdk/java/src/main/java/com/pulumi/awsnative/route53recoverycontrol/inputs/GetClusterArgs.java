@@ -19,6 +19,10 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterArn", required=true)
     private String clusterArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the cluster.
+     * 
+     */
     public String clusterArn() {
         return this.clusterArn;
     }
@@ -47,6 +51,12 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterArn The Amazon Resource Name (ARN) of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterArn(String clusterArn) {
             $.clusterArn = clusterArn;
             return this;

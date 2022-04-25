@@ -19,6 +19,10 @@ public final class GetPartnerRegistrationArgs extends com.pulumi.resources.Invok
     @Import(name="partnerRegistrationName", required=true)
     private String partnerRegistrationName;
 
+    /**
+     * @return Name of the partner registration.
+     * 
+     */
     public String partnerRegistrationName() {
         return this.partnerRegistrationName;
     }
@@ -30,6 +34,10 @@ public final class GetPartnerRegistrationArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetPartnerRegistrationArgs extends com.pulumi.resources.Invok
             $ = new GetPartnerRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partnerRegistrationName Name of the partner registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerRegistrationName(String partnerRegistrationName) {
             $.partnerRegistrationName = partnerRegistrationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

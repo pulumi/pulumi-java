@@ -24,6 +24,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Describes what is the signature enforces
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="destinationPorts")
     private @Nullable List<String> destinationPorts;
 
+    /**
+     * @return Describes the list of destination ports related to this signature
+     * 
+     */
     public Optional<List<String>> destinationPorts() {
         return Optional.ofNullable(this.destinationPorts);
     }
@@ -46,6 +54,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="direction")
     private @Nullable Integer direction;
 
+    /**
+     * @return Describes in which direction signature is being enforced: 0 - Inbound, 1 - OutBound, 2 - Bidirectional
+     * 
+     */
     public Optional<Integer> direction() {
         return Optional.ofNullable(this.direction);
     }
@@ -57,6 +69,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="group")
     private @Nullable String group;
 
+    /**
+     * @return Describes the groups the signature belongs to
+     * 
+     */
     public Optional<String> group() {
         return Optional.ofNullable(this.group);
     }
@@ -68,6 +84,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="inheritedFromParentPolicy")
     private @Nullable Boolean inheritedFromParentPolicy;
 
+    /**
+     * @return Describes if this override is inherited from base policy or not
+     * 
+     */
     public Optional<Boolean> inheritedFromParentPolicy() {
         return Optional.ofNullable(this.inheritedFromParentPolicy);
     }
@@ -79,6 +99,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="lastUpdated")
     private @Nullable String lastUpdated;
 
+    /**
+     * @return Describes the last updated time of the signature (provided from 3rd party vendor)
+     * 
+     */
     public Optional<String> lastUpdated() {
         return Optional.ofNullable(this.lastUpdated);
     }
@@ -90,6 +114,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="mode")
     private @Nullable Integer mode;
 
+    /**
+     * @return The current mode enforced, 0 - Disabled, 1 - Alert, 2 -Deny
+     * 
+     */
     public Optional<Integer> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -101,6 +129,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="protocol")
     private @Nullable String protocol;
 
+    /**
+     * @return Describes the protocol the signatures is being enforced in
+     * 
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -112,6 +144,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="severity")
     private @Nullable Integer severity;
 
+    /**
+     * @return Describes the severity of signature: 1 - Low, 2 - Medium, 3 - High
+     * 
+     */
     public Optional<Integer> severity() {
         return Optional.ofNullable(this.severity);
     }
@@ -123,6 +159,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="signatureId")
     private @Nullable Integer signatureId;
 
+    /**
+     * @return The ID of the signature
+     * 
+     */
     public Optional<Integer> signatureId() {
         return Optional.ofNullable(this.signatureId);
     }
@@ -134,6 +174,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="sourcePorts")
     private @Nullable List<String> sourcePorts;
 
+    /**
+     * @return Describes the list of source ports related to this signature
+     * 
+     */
     public Optional<List<String>> sourcePorts() {
         return Optional.ofNullable(this.sourcePorts);
     }
@@ -172,65 +216,143 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
             $ = new SingleQueryResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Describes what is the signature enforces
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param destinationPorts Describes the list of destination ports related to this signature
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             $.destinationPorts = destinationPorts;
             return this;
         }
 
+        /**
+         * @param destinationPorts Describes the list of destination ports related to this signature
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPorts(String... destinationPorts) {
             return destinationPorts(List.of(destinationPorts));
         }
 
+        /**
+         * @param direction Describes in which direction signature is being enforced: 0 - Inbound, 1 - OutBound, 2 - Bidirectional
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(@Nullable Integer direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param group Describes the groups the signature belongs to
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(@Nullable String group) {
             $.group = group;
             return this;
         }
 
+        /**
+         * @param inheritedFromParentPolicy Describes if this override is inherited from base policy or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder inheritedFromParentPolicy(@Nullable Boolean inheritedFromParentPolicy) {
             $.inheritedFromParentPolicy = inheritedFromParentPolicy;
             return this;
         }
 
+        /**
+         * @param lastUpdated Describes the last updated time of the signature (provided from 3rd party vendor)
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdated(@Nullable String lastUpdated) {
             $.lastUpdated = lastUpdated;
             return this;
         }
 
+        /**
+         * @param mode The current mode enforced, 0 - Disabled, 1 - Alert, 2 -Deny
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Integer mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param protocol Describes the protocol the signatures is being enforced in
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param severity Describes the severity of signature: 1 - Low, 2 - Medium, 3 - High
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(@Nullable Integer severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param signatureId The ID of the signature
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureId(@Nullable Integer signatureId) {
             $.signatureId = signatureId;
             return this;
         }
 
+        /**
+         * @param sourcePorts Describes the list of source ports related to this signature
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePorts(@Nullable List<String> sourcePorts) {
             $.sourcePorts = sourcePorts;
             return this;
         }
 
+        /**
+         * @param sourcePorts Describes the list of source ports related to this signature
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePorts(String... sourcePorts) {
             return sourcePorts(List.of(sourcePorts));
         }

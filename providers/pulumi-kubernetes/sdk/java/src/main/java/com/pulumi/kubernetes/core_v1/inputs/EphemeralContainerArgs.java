@@ -41,6 +41,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="args")
     private @Nullable Output<List<String>> args;
 
+    /**
+     * @return Arguments to the entrypoint. The docker image&#39;s CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * 
+     */
     public Optional<Output<List<String>>> args() {
         return Optional.ofNullable(this.args);
     }
@@ -52,6 +56,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="command")
     private @Nullable Output<List<String>> command;
 
+    /**
+     * @return Entrypoint array. Not executed within a shell. The docker image&#39;s ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * 
+     */
     public Optional<Output<List<String>>> command() {
         return Optional.ofNullable(this.command);
     }
@@ -63,6 +71,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="env")
     private @Nullable Output<List<EnvVarArgs>> env;
 
+    /**
+     * @return List of environment variables to set in the container. Cannot be updated.
+     * 
+     */
     public Optional<Output<List<EnvVarArgs>>> env() {
         return Optional.ofNullable(this.env);
     }
@@ -74,6 +86,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="envFrom")
     private @Nullable Output<List<EnvFromSourceArgs>> envFrom;
 
+    /**
+     * @return List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.
+     * 
+     */
     public Optional<Output<List<EnvFromSourceArgs>>> envFrom() {
         return Optional.ofNullable(this.envFrom);
     }
@@ -85,6 +101,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="image")
     private @Nullable Output<String> image;
 
+    /**
+     * @return Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images
+     * 
+     */
     public Optional<Output<String>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -101,6 +121,15 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="imagePullPolicy")
     private @Nullable Output<String> imagePullPolicy;
 
+    /**
+     * @return Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
+     * 
+     * Possible enum values:
+     *  - `&#34;Always&#34;` means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.
+     *  - `&#34;IfNotPresent&#34;` means that kubelet pulls if the image isn&#39;t present on disk. Container will fail if the image isn&#39;t present and the pull fails.
+     *  - `&#34;Never&#34;` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn&#39;t present
+     * 
+     */
     public Optional<Output<String>> imagePullPolicy() {
         return Optional.ofNullable(this.imagePullPolicy);
     }
@@ -112,6 +141,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="lifecycle")
     private @Nullable Output<LifecycleArgs> lifecycle;
 
+    /**
+     * @return Lifecycle is not allowed for ephemeral containers.
+     * 
+     */
     public Optional<Output<LifecycleArgs>> lifecycle() {
         return Optional.ofNullable(this.lifecycle);
     }
@@ -123,6 +156,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="livenessProbe")
     private @Nullable Output<ProbeArgs> livenessProbe;
 
+    /**
+     * @return Probes are not allowed for ephemeral containers.
+     * 
+     */
     public Optional<Output<ProbeArgs>> livenessProbe() {
         return Optional.ofNullable(this.livenessProbe);
     }
@@ -134,6 +171,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the ephemeral container specified as a DNS_LABEL. This name must be unique among all containers, init containers and ephemeral containers.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -145,6 +186,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="ports")
     private @Nullable Output<List<ContainerPortArgs>> ports;
 
+    /**
+     * @return Ports are not allowed for ephemeral containers.
+     * 
+     */
     public Optional<Output<List<ContainerPortArgs>>> ports() {
         return Optional.ofNullable(this.ports);
     }
@@ -156,6 +201,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="readinessProbe")
     private @Nullable Output<ProbeArgs> readinessProbe;
 
+    /**
+     * @return Probes are not allowed for ephemeral containers.
+     * 
+     */
     public Optional<Output<ProbeArgs>> readinessProbe() {
         return Optional.ofNullable(this.readinessProbe);
     }
@@ -167,6 +216,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="resources")
     private @Nullable Output<ResourceRequirementsArgs> resources;
 
+    /**
+     * @return Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.
+     * 
+     */
     public Optional<Output<ResourceRequirementsArgs>> resources() {
         return Optional.ofNullable(this.resources);
     }
@@ -178,6 +231,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="securityContext")
     private @Nullable Output<SecurityContextArgs> securityContext;
 
+    /**
+     * @return Optional: SecurityContext defines the security options the ephemeral container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.
+     * 
+     */
     public Optional<Output<SecurityContextArgs>> securityContext() {
         return Optional.ofNullable(this.securityContext);
     }
@@ -189,6 +246,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="startupProbe")
     private @Nullable Output<ProbeArgs> startupProbe;
 
+    /**
+     * @return Probes are not allowed for ephemeral containers.
+     * 
+     */
     public Optional<Output<ProbeArgs>> startupProbe() {
         return Optional.ofNullable(this.startupProbe);
     }
@@ -200,6 +261,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="stdin")
     private @Nullable Output<Boolean> stdin;
 
+    /**
+     * @return Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false.
+     * 
+     */
     public Optional<Output<Boolean>> stdin() {
         return Optional.ofNullable(this.stdin);
     }
@@ -211,6 +276,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="stdinOnce")
     private @Nullable Output<Boolean> stdinOnce;
 
+    /**
+     * @return Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false
+     * 
+     */
     public Optional<Output<Boolean>> stdinOnce() {
         return Optional.ofNullable(this.stdinOnce);
     }
@@ -224,6 +293,12 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetContainerName")
     private @Nullable Output<String> targetContainerName;
 
+    /**
+     * @return If set, the name of the container from PodSpec that this ephemeral container targets. The ephemeral container will be run in the namespaces (IPC, PID, etc) of this container. If not set then the ephemeral container uses the namespaces configured in the Pod spec.
+     * 
+     * The container runtime must implement support for this feature. If the runtime does not support namespace targeting then the result of setting this field is undefined.
+     * 
+     */
     public Optional<Output<String>> targetContainerName() {
         return Optional.ofNullable(this.targetContainerName);
     }
@@ -235,6 +310,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="terminationMessagePath")
     private @Nullable Output<String> terminationMessagePath;
 
+    /**
+     * @return Optional: Path at which the file to which the container&#39;s termination message will be written is mounted into the container&#39;s filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated.
+     * 
+     */
     public Optional<Output<String>> terminationMessagePath() {
         return Optional.ofNullable(this.terminationMessagePath);
     }
@@ -250,6 +329,14 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="terminationMessagePolicy")
     private @Nullable Output<String> terminationMessagePolicy;
 
+    /**
+     * @return Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.
+     * 
+     * Possible enum values:
+     *  - `&#34;FallbackToLogsOnError&#34;` will read the most recent contents of the container logs for the container status message when the container exits with an error and the terminationMessagePath has no contents.
+     *  - `&#34;File&#34;` is the default behavior and will set the container status message to the contents of the container&#39;s terminationMessagePath when the container exits.
+     * 
+     */
     public Optional<Output<String>> terminationMessagePolicy() {
         return Optional.ofNullable(this.terminationMessagePolicy);
     }
@@ -261,6 +348,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="tty")
     private @Nullable Output<Boolean> tty;
 
+    /**
+     * @return Whether this container should allocate a TTY for itself, also requires &#39;stdin&#39; to be true. Default is false.
+     * 
+     */
     public Optional<Output<Boolean>> tty() {
         return Optional.ofNullable(this.tty);
     }
@@ -272,6 +363,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="volumeDevices")
     private @Nullable Output<List<VolumeDeviceArgs>> volumeDevices;
 
+    /**
+     * @return volumeDevices is the list of block devices to be used by the container.
+     * 
+     */
     public Optional<Output<List<VolumeDeviceArgs>>> volumeDevices() {
         return Optional.ofNullable(this.volumeDevices);
     }
@@ -283,6 +378,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="volumeMounts")
     private @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
+    /**
+     * @return Pod volumes to mount into the container&#39;s filesystem. Subpath mounts are not allowed for ephemeral containers. Cannot be updated.
+     * 
+     */
     public Optional<Output<List<VolumeMountArgs>>> volumeMounts() {
         return Optional.ofNullable(this.volumeMounts);
     }
@@ -294,6 +393,10 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     @Import(name="workingDir")
     private @Nullable Output<String> workingDir;
 
+    /**
+     * @return Container&#39;s working directory. If not specified, the container runtime&#39;s default will be used, which might be configured in the container image. Cannot be updated.
+     * 
+     */
     public Optional<Output<String>> workingDir() {
         return Optional.ofNullable(this.workingDir);
     }
@@ -344,237 +447,577 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
             $ = new EphemeralContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args Arguments to the entrypoint. The docker image&#39;s CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(@Nullable Output<List<String>> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Arguments to the entrypoint. The docker image&#39;s CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             return args(Output.of(args));
         }
 
+        /**
+         * @param args Arguments to the entrypoint. The docker image&#39;s CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param command Entrypoint array. Not executed within a shell. The docker image&#39;s ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(@Nullable Output<List<String>> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command Entrypoint array. Not executed within a shell. The docker image&#39;s ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(List<String> command) {
             return command(Output.of(command));
         }
 
+        /**
+         * @param command Entrypoint array. Not executed within a shell. The docker image&#39;s ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }
 
+        /**
+         * @param env List of environment variables to set in the container. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(@Nullable Output<List<EnvVarArgs>> env) {
             $.env = env;
             return this;
         }
 
+        /**
+         * @param env List of environment variables to set in the container. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(List<EnvVarArgs> env) {
             return env(Output.of(env));
         }
 
+        /**
+         * @param env List of environment variables to set in the container. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(EnvVarArgs... env) {
             return env(List.of(env));
         }
 
+        /**
+         * @param envFrom List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envFrom(@Nullable Output<List<EnvFromSourceArgs>> envFrom) {
             $.envFrom = envFrom;
             return this;
         }
 
+        /**
+         * @param envFrom List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envFrom(List<EnvFromSourceArgs> envFrom) {
             return envFrom(Output.of(envFrom));
         }
 
+        /**
+         * @param envFrom List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envFrom(EnvFromSourceArgs... envFrom) {
             return envFrom(List.of(envFrom));
         }
 
+        /**
+         * @param image Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<String> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param imagePullPolicy Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
+         * 
+         * Possible enum values:
+         *  - `&#34;Always&#34;` means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.
+         *  - `&#34;IfNotPresent&#34;` means that kubelet pulls if the image isn&#39;t present on disk. Container will fail if the image isn&#39;t present and the pull fails.
+         *  - `&#34;Never&#34;` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn&#39;t present
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePullPolicy(@Nullable Output<String> imagePullPolicy) {
             $.imagePullPolicy = imagePullPolicy;
             return this;
         }
 
+        /**
+         * @param imagePullPolicy Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
+         * 
+         * Possible enum values:
+         *  - `&#34;Always&#34;` means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.
+         *  - `&#34;IfNotPresent&#34;` means that kubelet pulls if the image isn&#39;t present on disk. Container will fail if the image isn&#39;t present and the pull fails.
+         *  - `&#34;Never&#34;` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn&#39;t present
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePullPolicy(String imagePullPolicy) {
             return imagePullPolicy(Output.of(imagePullPolicy));
         }
 
+        /**
+         * @param lifecycle Lifecycle is not allowed for ephemeral containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycle(@Nullable Output<LifecycleArgs> lifecycle) {
             $.lifecycle = lifecycle;
             return this;
         }
 
+        /**
+         * @param lifecycle Lifecycle is not allowed for ephemeral containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycle(LifecycleArgs lifecycle) {
             return lifecycle(Output.of(lifecycle));
         }
 
+        /**
+         * @param livenessProbe Probes are not allowed for ephemeral containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livenessProbe(@Nullable Output<ProbeArgs> livenessProbe) {
             $.livenessProbe = livenessProbe;
             return this;
         }
 
+        /**
+         * @param livenessProbe Probes are not allowed for ephemeral containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livenessProbe(ProbeArgs livenessProbe) {
             return livenessProbe(Output.of(livenessProbe));
         }
 
+        /**
+         * @param name Name of the ephemeral container specified as a DNS_LABEL. This name must be unique among all containers, init containers and ephemeral containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the ephemeral container specified as a DNS_LABEL. This name must be unique among all containers, init containers and ephemeral containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param ports Ports are not allowed for ephemeral containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(@Nullable Output<List<ContainerPortArgs>> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports Ports are not allowed for ephemeral containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<ContainerPortArgs> ports) {
             return ports(Output.of(ports));
         }
 
+        /**
+         * @param ports Ports are not allowed for ephemeral containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(ContainerPortArgs... ports) {
             return ports(List.of(ports));
         }
 
+        /**
+         * @param readinessProbe Probes are not allowed for ephemeral containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessProbe(@Nullable Output<ProbeArgs> readinessProbe) {
             $.readinessProbe = readinessProbe;
             return this;
         }
 
+        /**
+         * @param readinessProbe Probes are not allowed for ephemeral containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessProbe(ProbeArgs readinessProbe) {
             return readinessProbe(Output.of(readinessProbe));
         }
 
+        /**
+         * @param resources Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(@Nullable Output<ResourceRequirementsArgs> resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param resources Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(ResourceRequirementsArgs resources) {
             return resources(Output.of(resources));
         }
 
+        /**
+         * @param securityContext Optional: SecurityContext defines the security options the ephemeral container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityContext(@Nullable Output<SecurityContextArgs> securityContext) {
             $.securityContext = securityContext;
             return this;
         }
 
+        /**
+         * @param securityContext Optional: SecurityContext defines the security options the ephemeral container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityContext(SecurityContextArgs securityContext) {
             return securityContext(Output.of(securityContext));
         }
 
+        /**
+         * @param startupProbe Probes are not allowed for ephemeral containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startupProbe(@Nullable Output<ProbeArgs> startupProbe) {
             $.startupProbe = startupProbe;
             return this;
         }
 
+        /**
+         * @param startupProbe Probes are not allowed for ephemeral containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startupProbe(ProbeArgs startupProbe) {
             return startupProbe(Output.of(startupProbe));
         }
 
+        /**
+         * @param stdin Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stdin(@Nullable Output<Boolean> stdin) {
             $.stdin = stdin;
             return this;
         }
 
+        /**
+         * @param stdin Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stdin(Boolean stdin) {
             return stdin(Output.of(stdin));
         }
 
+        /**
+         * @param stdinOnce Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false
+         * 
+         * @return builder
+         * 
+         */
         public Builder stdinOnce(@Nullable Output<Boolean> stdinOnce) {
             $.stdinOnce = stdinOnce;
             return this;
         }
 
+        /**
+         * @param stdinOnce Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false
+         * 
+         * @return builder
+         * 
+         */
         public Builder stdinOnce(Boolean stdinOnce) {
             return stdinOnce(Output.of(stdinOnce));
         }
 
+        /**
+         * @param targetContainerName If set, the name of the container from PodSpec that this ephemeral container targets. The ephemeral container will be run in the namespaces (IPC, PID, etc) of this container. If not set then the ephemeral container uses the namespaces configured in the Pod spec.
+         * 
+         * The container runtime must implement support for this feature. If the runtime does not support namespace targeting then the result of setting this field is undefined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetContainerName(@Nullable Output<String> targetContainerName) {
             $.targetContainerName = targetContainerName;
             return this;
         }
 
+        /**
+         * @param targetContainerName If set, the name of the container from PodSpec that this ephemeral container targets. The ephemeral container will be run in the namespaces (IPC, PID, etc) of this container. If not set then the ephemeral container uses the namespaces configured in the Pod spec.
+         * 
+         * The container runtime must implement support for this feature. If the runtime does not support namespace targeting then the result of setting this field is undefined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetContainerName(String targetContainerName) {
             return targetContainerName(Output.of(targetContainerName));
         }
 
+        /**
+         * @param terminationMessagePath Optional: Path at which the file to which the container&#39;s termination message will be written is mounted into the container&#39;s filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminationMessagePath(@Nullable Output<String> terminationMessagePath) {
             $.terminationMessagePath = terminationMessagePath;
             return this;
         }
 
+        /**
+         * @param terminationMessagePath Optional: Path at which the file to which the container&#39;s termination message will be written is mounted into the container&#39;s filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminationMessagePath(String terminationMessagePath) {
             return terminationMessagePath(Output.of(terminationMessagePath));
         }
 
+        /**
+         * @param terminationMessagePolicy Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.
+         * 
+         * Possible enum values:
+         *  - `&#34;FallbackToLogsOnError&#34;` will read the most recent contents of the container logs for the container status message when the container exits with an error and the terminationMessagePath has no contents.
+         *  - `&#34;File&#34;` is the default behavior and will set the container status message to the contents of the container&#39;s terminationMessagePath when the container exits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminationMessagePolicy(@Nullable Output<String> terminationMessagePolicy) {
             $.terminationMessagePolicy = terminationMessagePolicy;
             return this;
         }
 
+        /**
+         * @param terminationMessagePolicy Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.
+         * 
+         * Possible enum values:
+         *  - `&#34;FallbackToLogsOnError&#34;` will read the most recent contents of the container logs for the container status message when the container exits with an error and the terminationMessagePath has no contents.
+         *  - `&#34;File&#34;` is the default behavior and will set the container status message to the contents of the container&#39;s terminationMessagePath when the container exits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminationMessagePolicy(String terminationMessagePolicy) {
             return terminationMessagePolicy(Output.of(terminationMessagePolicy));
         }
 
+        /**
+         * @param tty Whether this container should allocate a TTY for itself, also requires &#39;stdin&#39; to be true. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tty(@Nullable Output<Boolean> tty) {
             $.tty = tty;
             return this;
         }
 
+        /**
+         * @param tty Whether this container should allocate a TTY for itself, also requires &#39;stdin&#39; to be true. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tty(Boolean tty) {
             return tty(Output.of(tty));
         }
 
+        /**
+         * @param volumeDevices volumeDevices is the list of block devices to be used by the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeDevices(@Nullable Output<List<VolumeDeviceArgs>> volumeDevices) {
             $.volumeDevices = volumeDevices;
             return this;
         }
 
+        /**
+         * @param volumeDevices volumeDevices is the list of block devices to be used by the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeDevices(List<VolumeDeviceArgs> volumeDevices) {
             return volumeDevices(Output.of(volumeDevices));
         }
 
+        /**
+         * @param volumeDevices volumeDevices is the list of block devices to be used by the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeDevices(VolumeDeviceArgs... volumeDevices) {
             return volumeDevices(List.of(volumeDevices));
         }
 
+        /**
+         * @param volumeMounts Pod volumes to mount into the container&#39;s filesystem. Subpath mounts are not allowed for ephemeral containers. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(@Nullable Output<List<VolumeMountArgs>> volumeMounts) {
             $.volumeMounts = volumeMounts;
             return this;
         }
 
+        /**
+         * @param volumeMounts Pod volumes to mount into the container&#39;s filesystem. Subpath mounts are not allowed for ephemeral containers. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(List<VolumeMountArgs> volumeMounts) {
             return volumeMounts(Output.of(volumeMounts));
         }
 
+        /**
+         * @param volumeMounts Pod volumes to mount into the container&#39;s filesystem. Subpath mounts are not allowed for ephemeral containers. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(VolumeMountArgs... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
         }
 
+        /**
+         * @param workingDir Container&#39;s working directory. If not specified, the container runtime&#39;s default will be used, which might be configured in the container image. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workingDir(@Nullable Output<String> workingDir) {
             $.workingDir = workingDir;
             return this;
         }
 
+        /**
+         * @param workingDir Container&#39;s working directory. If not specified, the container runtime&#39;s default will be used, which might be configured in the container image. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workingDir(String workingDir) {
             return workingDir(Output.of(workingDir));
         }

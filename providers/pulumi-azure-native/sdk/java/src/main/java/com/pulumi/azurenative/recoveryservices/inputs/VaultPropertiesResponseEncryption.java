@@ -27,6 +27,10 @@ public final class VaultPropertiesResponseEncryption extends com.pulumi.resource
     @Import(name="infrastructureEncryption")
     private @Nullable String infrastructureEncryption;
 
+    /**
+     * @return Enabling/Disabling the Double Encryption state
+     * 
+     */
     public Optional<String> infrastructureEncryption() {
         return Optional.ofNullable(this.infrastructureEncryption);
     }
@@ -38,6 +42,10 @@ public final class VaultPropertiesResponseEncryption extends com.pulumi.resource
     @Import(name="kekIdentity")
     private @Nullable CmkKekIdentityResponse kekIdentity;
 
+    /**
+     * @return The details of the identity used for CMK
+     * 
+     */
     public Optional<CmkKekIdentityResponse> kekIdentity() {
         return Optional.ofNullable(this.kekIdentity);
     }
@@ -49,6 +57,10 @@ public final class VaultPropertiesResponseEncryption extends com.pulumi.resource
     @Import(name="keyVaultProperties")
     private @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties;
 
+    /**
+     * @return The properties of the Key Vault which hosts CMK
+     * 
+     */
     public Optional<CmkKeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -79,16 +91,34 @@ public final class VaultPropertiesResponseEncryption extends com.pulumi.resource
             $ = new VaultPropertiesResponseEncryption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param infrastructureEncryption Enabling/Disabling the Double Encryption state
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureEncryption(@Nullable String infrastructureEncryption) {
             $.infrastructureEncryption = infrastructureEncryption;
             return this;
         }
 
+        /**
+         * @param kekIdentity The details of the identity used for CMK
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekIdentity(@Nullable CmkKekIdentityResponse kekIdentity) {
             $.kekIdentity = kekIdentity;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties The properties of the Key Vault which hosts CMK
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable CmkKeyVaultPropertiesResponse keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;

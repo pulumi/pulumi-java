@@ -25,6 +25,10 @@ public final class ManagementPolicySchemaArgs extends com.pulumi.resources.Resou
     @Import(name="rules", required=true)
     private Output<List<ManagementPolicyRuleArgs>> rules;
 
+    /**
+     * @return The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
+     * 
+     */
     public Output<List<ManagementPolicyRuleArgs>> rules() {
         return this.rules;
     }
@@ -53,15 +57,33 @@ public final class ManagementPolicySchemaArgs extends com.pulumi.resources.Resou
             $ = new ManagementPolicySchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Output<List<ManagementPolicyRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<ManagementPolicyRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(ManagementPolicyRuleArgs... rules) {
             return rules(List.of(rules));
         }

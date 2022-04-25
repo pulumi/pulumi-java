@@ -24,6 +24,10 @@ public final class InlineSecretResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="envMap", required=true)
     private Map<String,String> envMap;
 
+    /**
+     * @return Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build&#39;s secrets.
+     * 
+     */
     public Map<String,String> envMap() {
         return this.envMap;
     }
@@ -35,6 +39,10 @@ public final class InlineSecretResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="kmsKeyName", required=true)
     private String kmsKeyName;
 
+    /**
+     * @return Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
+     * 
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -64,11 +72,23 @@ public final class InlineSecretResponse extends com.pulumi.resources.InvokeArgs 
             $ = new InlineSecretResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param envMap Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build&#39;s secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envMap(Map<String,String> envMap) {
             $.envMap = envMap;
             return this;
         }
 
+        /**
+         * @param kmsKeyName Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;

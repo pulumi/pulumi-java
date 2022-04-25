@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedServiceIdentityResponse {
     /**
-     * The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * @return The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
      */
     private final String principalId;
     /**
-     * The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * @return The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
      */
     private final String tenantId;
     /**
-     * Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+     * @return Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
      * 
      */
     private final String type;
     /**
-     * The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+     * @return The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
      * 
      */
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
@@ -46,30 +46,30 @@ public final class ManagedServiceIdentityResponse {
     }
 
     /**
-     * The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * @return The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * @return The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+     * @return Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+     * @return The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
      * 
-    */
+     */
     public Map<String,UserAssignedIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

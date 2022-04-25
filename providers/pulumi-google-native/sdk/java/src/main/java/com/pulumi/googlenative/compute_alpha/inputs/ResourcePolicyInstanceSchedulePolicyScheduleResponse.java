@@ -23,6 +23,10 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse extends 
     @Import(name="schedule", required=true)
     private String schedule;
 
+    /**
+     * @return Specifies the frequency for the operation, using the unix-cron format.
+     * 
+     */
     public String schedule() {
         return this.schedule;
     }
@@ -51,6 +55,12 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse extends 
             $ = new ResourcePolicyInstanceSchedulePolicyScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schedule Specifies the frequency for the operation, using the unix-cron format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             $.schedule = schedule;
             return this;

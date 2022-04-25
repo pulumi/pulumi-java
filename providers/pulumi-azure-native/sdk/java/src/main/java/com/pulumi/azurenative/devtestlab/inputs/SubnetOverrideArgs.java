@@ -29,6 +29,10 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="labSubnetName")
     private @Nullable Output<String> labSubnetName;
 
+    /**
+     * @return The name given to the subnet within the lab.
+     * 
+     */
     public Optional<Output<String>> labSubnetName() {
         return Optional.ofNullable(this.labSubnetName);
     }
@@ -40,6 +44,10 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The resource ID of the subnet.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -51,6 +59,10 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sharedPublicIpAddressConfiguration")
     private @Nullable Output<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration;
 
+    /**
+     * @return Properties that virtual machines on this subnet will share.
+     * 
+     */
     public Optional<Output<SubnetSharedPublicIpAddressConfigurationArgs>> sharedPublicIpAddressConfiguration() {
         return Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
     }
@@ -62,6 +74,10 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="useInVmCreationPermission")
     private @Nullable Output<Either<String,UsagePermissionType>> useInVmCreationPermission;
 
+    /**
+     * @return Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).
+     * 
+     */
     public Optional<Output<Either<String,UsagePermissionType>>> useInVmCreationPermission() {
         return Optional.ofNullable(this.useInVmCreationPermission);
     }
@@ -73,6 +89,10 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="usePublicIpAddressPermission")
     private @Nullable Output<Either<String,UsagePermissionType>> usePublicIpAddressPermission;
 
+    /**
+     * @return Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).
+     * 
+     */
     public Optional<Output<Either<String,UsagePermissionType>>> usePublicIpAddressPermission() {
         return Optional.ofNullable(this.usePublicIpAddressPermission);
     }
@@ -84,6 +104,10 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="virtualNetworkPoolName")
     private @Nullable Output<String> virtualNetworkPoolName;
 
+    /**
+     * @return The virtual network pool associated with this subnet.
+     * 
+     */
     public Optional<Output<String>> virtualNetworkPoolName() {
         return Optional.ofNullable(this.virtualNetworkPoolName);
     }
@@ -117,72 +141,168 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SubnetOverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labSubnetName The name given to the subnet within the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labSubnetName(@Nullable Output<String> labSubnetName) {
             $.labSubnetName = labSubnetName;
             return this;
         }
 
+        /**
+         * @param labSubnetName The name given to the subnet within the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labSubnetName(String labSubnetName) {
             return labSubnetName(Output.of(labSubnetName));
         }
 
+        /**
+         * @param resourceId The resource ID of the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The resource ID of the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param sharedPublicIpAddressConfiguration Properties that virtual machines on this subnet will share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedPublicIpAddressConfiguration(@Nullable Output<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration) {
             $.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
             return this;
         }
 
+        /**
+         * @param sharedPublicIpAddressConfiguration Properties that virtual machines on this subnet will share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedPublicIpAddressConfiguration(SubnetSharedPublicIpAddressConfigurationArgs sharedPublicIpAddressConfiguration) {
             return sharedPublicIpAddressConfiguration(Output.of(sharedPublicIpAddressConfiguration));
         }
 
+        /**
+         * @param useInVmCreationPermission Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).
+         * 
+         * @return builder
+         * 
+         */
         public Builder useInVmCreationPermission(@Nullable Output<Either<String,UsagePermissionType>> useInVmCreationPermission) {
             $.useInVmCreationPermission = useInVmCreationPermission;
             return this;
         }
 
+        /**
+         * @param useInVmCreationPermission Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).
+         * 
+         * @return builder
+         * 
+         */
         public Builder useInVmCreationPermission(Either<String,UsagePermissionType> useInVmCreationPermission) {
             return useInVmCreationPermission(Output.of(useInVmCreationPermission));
         }
 
+        /**
+         * @param useInVmCreationPermission Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).
+         * 
+         * @return builder
+         * 
+         */
         public Builder useInVmCreationPermission(String useInVmCreationPermission) {
             return useInVmCreationPermission(Either.ofLeft(useInVmCreationPermission));
         }
 
+        /**
+         * @param useInVmCreationPermission Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).
+         * 
+         * @return builder
+         * 
+         */
         public Builder useInVmCreationPermission(UsagePermissionType useInVmCreationPermission) {
             return useInVmCreationPermission(Either.ofRight(useInVmCreationPermission));
         }
 
+        /**
+         * @param usePublicIpAddressPermission Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePublicIpAddressPermission(@Nullable Output<Either<String,UsagePermissionType>> usePublicIpAddressPermission) {
             $.usePublicIpAddressPermission = usePublicIpAddressPermission;
             return this;
         }
 
+        /**
+         * @param usePublicIpAddressPermission Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePublicIpAddressPermission(Either<String,UsagePermissionType> usePublicIpAddressPermission) {
             return usePublicIpAddressPermission(Output.of(usePublicIpAddressPermission));
         }
 
+        /**
+         * @param usePublicIpAddressPermission Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePublicIpAddressPermission(String usePublicIpAddressPermission) {
             return usePublicIpAddressPermission(Either.ofLeft(usePublicIpAddressPermission));
         }
 
+        /**
+         * @param usePublicIpAddressPermission Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePublicIpAddressPermission(UsagePermissionType usePublicIpAddressPermission) {
             return usePublicIpAddressPermission(Either.ofRight(usePublicIpAddressPermission));
         }
 
+        /**
+         * @param virtualNetworkPoolName The virtual network pool associated with this subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkPoolName(@Nullable Output<String> virtualNetworkPoolName) {
             $.virtualNetworkPoolName = virtualNetworkPoolName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkPoolName The virtual network pool associated with this subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkPoolName(String virtualNetworkPoolName) {
             return virtualNetworkPoolName(Output.of(virtualNetworkPoolName));
         }

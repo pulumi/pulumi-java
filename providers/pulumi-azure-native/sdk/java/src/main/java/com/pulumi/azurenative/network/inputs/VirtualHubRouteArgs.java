@@ -27,6 +27,10 @@ public final class VirtualHubRouteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="addressPrefixes")
     private @Nullable Output<List<String>> addressPrefixes;
 
+    /**
+     * @return List of all addressPrefixes.
+     * 
+     */
     public Optional<Output<List<String>>> addressPrefixes() {
         return Optional.ofNullable(this.addressPrefixes);
     }
@@ -38,6 +42,10 @@ public final class VirtualHubRouteArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="nextHopIpAddress")
     private @Nullable Output<String> nextHopIpAddress;
 
+    /**
+     * @return NextHop ip address.
+     * 
+     */
     public Optional<Output<String>> nextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }
@@ -67,24 +75,54 @@ public final class VirtualHubRouteArgs extends com.pulumi.resources.ResourceArgs
             $ = new VirtualHubRouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefixes List of all addressPrefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixes(@Nullable Output<List<String>> addressPrefixes) {
             $.addressPrefixes = addressPrefixes;
             return this;
         }
 
+        /**
+         * @param addressPrefixes List of all addressPrefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixes(List<String> addressPrefixes) {
             return addressPrefixes(Output.of(addressPrefixes));
         }
 
+        /**
+         * @param addressPrefixes List of all addressPrefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixes(String... addressPrefixes) {
             return addressPrefixes(List.of(addressPrefixes));
         }
 
+        /**
+         * @param nextHopIpAddress NextHop ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopIpAddress(@Nullable Output<String> nextHopIpAddress) {
             $.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
 
+        /**
+         * @param nextHopIpAddress NextHop ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopIpAddress(String nextHopIpAddress) {
             return nextHopIpAddress(Output.of(nextHopIpAddress));
         }

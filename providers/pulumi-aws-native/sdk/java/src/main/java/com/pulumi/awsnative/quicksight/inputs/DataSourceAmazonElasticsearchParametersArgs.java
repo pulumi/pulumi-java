@@ -24,6 +24,10 @@ public final class DataSourceAmazonElasticsearchParametersArgs extends com.pulum
     @Import(name="domain", required=true)
     private Output<String> domain;
 
+    /**
+     * @return &lt;p&gt;The Amazon Elasticsearch Service domain.&lt;/p&gt;
+     * 
+     */
     public Output<String> domain() {
         return this.domain;
     }
@@ -52,11 +56,23 @@ public final class DataSourceAmazonElasticsearchParametersArgs extends com.pulum
             $ = new DataSourceAmazonElasticsearchParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain &lt;p&gt;The Amazon Elasticsearch Service domain.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain &lt;p&gt;The Amazon Elasticsearch Service domain.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }

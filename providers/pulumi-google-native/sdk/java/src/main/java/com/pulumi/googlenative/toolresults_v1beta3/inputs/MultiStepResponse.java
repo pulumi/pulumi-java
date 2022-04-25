@@ -25,6 +25,10 @@ public final class MultiStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="multistepNumber", required=true)
     private Integer multistepNumber;
 
+    /**
+     * @return Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
+     * 
+     */
     public Integer multistepNumber() {
         return this.multistepNumber;
     }
@@ -36,6 +40,10 @@ public final class MultiStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="primaryStep", required=true)
     private PrimaryStepResponse primaryStep;
 
+    /**
+     * @return Present if it is a primary (original) step.
+     * 
+     */
     public PrimaryStepResponse primaryStep() {
         return this.primaryStep;
     }
@@ -47,6 +55,10 @@ public final class MultiStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="primaryStepId", required=true)
     private String primaryStepId;
 
+    /**
+     * @return Step Id of the primary (original) step, which might be this step.
+     * 
+     */
     public String primaryStepId() {
         return this.primaryStepId;
     }
@@ -77,16 +89,34 @@ public final class MultiStepResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MultiStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param multistepNumber Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multistepNumber(Integer multistepNumber) {
             $.multistepNumber = multistepNumber;
             return this;
         }
 
+        /**
+         * @param primaryStep Present if it is a primary (original) step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryStep(PrimaryStepResponse primaryStep) {
             $.primaryStep = primaryStep;
             return this;
         }
 
+        /**
+         * @param primaryStepId Step Id of the primary (original) step, which might be this step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryStepId(String primaryStepId) {
             $.primaryStepId = primaryStepId;
             return this;

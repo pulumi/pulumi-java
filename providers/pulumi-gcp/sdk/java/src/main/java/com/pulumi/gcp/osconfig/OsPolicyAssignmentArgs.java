@@ -26,6 +26,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return OS policy assignment description. Length of the description is limited to 1024 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="instanceFilter", required=true)
     private Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter;
 
+    /**
+     * @return Required. Filter to select VMs.
+     * 
+     */
     public Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter() {
         return this.instanceFilter;
     }
@@ -48,6 +56,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The location for the resource
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -59,6 +71,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Required. The name of the repository.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="osPolicies", required=true)
     private Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies;
 
+    /**
+     * @return Required. List of OS policies to be applied to the VMs.
+     * 
+     */
     public Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies() {
         return this.osPolicies;
     }
@@ -81,6 +101,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project for the resource
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -92,6 +116,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="rollout", required=true)
     private Output<OsPolicyAssignmentRolloutArgs> rollout;
 
+    /**
+     * @return Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
+     * 
+     */
     public Output<OsPolicyAssignmentRolloutArgs> rollout() {
         return this.rollout;
     }
@@ -126,69 +154,159 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
             $ = new OsPolicyAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description OS policy assignment description. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description OS policy assignment description. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param instanceFilter Required. Filter to select VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceFilter(Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter) {
             $.instanceFilter = instanceFilter;
             return this;
         }
 
+        /**
+         * @param instanceFilter Required. Filter to select VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceFilter(OsPolicyAssignmentInstanceFilterArgs instanceFilter) {
             return instanceFilter(Output.of(instanceFilter));
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Required. The name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Required. The name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param osPolicies Required. List of OS policies to be applied to the VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osPolicies(Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies) {
             $.osPolicies = osPolicies;
             return this;
         }
 
+        /**
+         * @param osPolicies Required. List of OS policies to be applied to the VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osPolicies(List<OsPolicyAssignmentOsPolicyArgs> osPolicies) {
             return osPolicies(Output.of(osPolicies));
         }
 
+        /**
+         * @param osPolicies Required. List of OS policies to be applied to the VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osPolicies(OsPolicyAssignmentOsPolicyArgs... osPolicies) {
             return osPolicies(List.of(osPolicies));
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param rollout Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollout(Output<OsPolicyAssignmentRolloutArgs> rollout) {
             $.rollout = rollout;
             return this;
         }
 
+        /**
+         * @param rollout Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollout(OsPolicyAssignmentRolloutArgs rollout) {
             return rollout(Output.of(rollout));
         }

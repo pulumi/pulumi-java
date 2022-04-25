@@ -25,6 +25,13 @@ public final class ManagedZoneForwardingConfigTargetNameServerArgs extends com.p
     @Import(name="forwardingPath")
     private @Nullable Output<String> forwardingPath;
 
+    /**
+     * @return Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
+     * decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
+     * to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
+     * Possible values are `default` and `private`.
+     * 
+     */
     public Optional<Output<String>> forwardingPath() {
         return Optional.ofNullable(this.forwardingPath);
     }
@@ -36,6 +43,10 @@ public final class ManagedZoneForwardingConfigTargetNameServerArgs extends com.p
     @Import(name="ipv4Address", required=true)
     private Output<String> ipv4Address;
 
+    /**
+     * @return IPv4 address of a target name server.
+     * 
+     */
     public Output<String> ipv4Address() {
         return this.ipv4Address;
     }
@@ -65,20 +76,50 @@ public final class ManagedZoneForwardingConfigTargetNameServerArgs extends com.p
             $ = new ManagedZoneForwardingConfigTargetNameServerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param forwardingPath Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
+         * decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
+         * to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
+         * Possible values are `default` and `private`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingPath(@Nullable Output<String> forwardingPath) {
             $.forwardingPath = forwardingPath;
             return this;
         }
 
+        /**
+         * @param forwardingPath Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
+         * decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
+         * to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
+         * Possible values are `default` and `private`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingPath(String forwardingPath) {
             return forwardingPath(Output.of(forwardingPath));
         }
 
+        /**
+         * @param ipv4Address IPv4 address of a target name server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Address(Output<String> ipv4Address) {
             $.ipv4Address = ipv4Address;
             return this;
         }
 
+        /**
+         * @param ipv4Address IPv4 address of a target name server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Address(String ipv4Address) {
             return ipv4Address(Output.of(ipv4Address));
         }

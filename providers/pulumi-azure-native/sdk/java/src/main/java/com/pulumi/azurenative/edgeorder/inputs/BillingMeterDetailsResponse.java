@@ -26,6 +26,10 @@ public final class BillingMeterDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="frequency", required=true)
     private String frequency;
 
+    /**
+     * @return Frequency of recurrence
+     * 
+     */
     public String frequency() {
         return this.frequency;
     }
@@ -37,6 +41,10 @@ public final class BillingMeterDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="meterDetails", required=true)
     private Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails;
 
+    /**
+     * @return Represents MeterDetails
+     * 
+     */
     public Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails() {
         return this.meterDetails;
     }
@@ -48,6 +56,10 @@ public final class BillingMeterDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="meteringType", required=true)
     private String meteringType;
 
+    /**
+     * @return Represents Metering type (eg one-time or recurrent)
+     * 
+     */
     public String meteringType() {
         return this.meteringType;
     }
@@ -59,6 +71,10 @@ public final class BillingMeterDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Represents Billing type name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -90,29 +106,65 @@ public final class BillingMeterDetailsResponse extends com.pulumi.resources.Invo
             $ = new BillingMeterDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frequency Frequency of recurrence
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(String frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param meterDetails Represents MeterDetails
+         * 
+         * @return builder
+         * 
+         */
         public Builder meterDetails(Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails) {
             $.meterDetails = meterDetails;
             return this;
         }
 
+        /**
+         * @param meterDetails Represents MeterDetails
+         * 
+         * @return builder
+         * 
+         */
         public Builder meterDetails(Pav2MeterDetailsResponse meterDetails) {
             return meterDetails(Either.ofLeft(meterDetails));
         }
 
+        /**
+         * @param meterDetails Represents MeterDetails
+         * 
+         * @return builder
+         * 
+         */
         public Builder meterDetails(PurchaseMeterDetailsResponse meterDetails) {
             return meterDetails(Either.ofRight(meterDetails));
         }
 
+        /**
+         * @param meteringType Represents Metering type (eg one-time or recurrent)
+         * 
+         * @return builder
+         * 
+         */
         public Builder meteringType(String meteringType) {
             $.meteringType = meteringType;
             return this;
         }
 
+        /**
+         * @param name Represents Billing type name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -15,28 +15,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AlertingActionResponse {
     /**
-     * Azure action group reference.
+     * @return Azure action group reference.
      * 
      */
     private final @Nullable AzNsActionGroupResponse aznsAction;
     /**
-     * Specifies the action. Supported values - AlertingAction, LogToMetricAction
+     * @return Specifies the action. Supported values - AlertingAction, LogToMetricAction
      * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction&#39;.
      * 
      */
     private final String odataType;
     /**
-     * Severity of the alert
+     * @return Severity of the alert
      * 
      */
     private final String severity;
     /**
-     * time (in minutes) for which Alerts should be throttled or suppressed.
+     * @return time (in minutes) for which Alerts should be throttled or suppressed.
      * 
      */
     private final @Nullable Integer throttlingInMin;
     /**
-     * The trigger condition that results in the alert rule being.
+     * @return The trigger condition that results in the alert rule being.
      * 
      */
     private final TriggerConditionResponse trigger;
@@ -56,38 +56,38 @@ public final class AlertingActionResponse {
     }
 
     /**
-     * Azure action group reference.
+     * @return Azure action group reference.
      * 
-    */
+     */
     public Optional<AzNsActionGroupResponse> aznsAction() {
         return Optional.ofNullable(this.aznsAction);
     }
     /**
-     * Specifies the action. Supported values - AlertingAction, LogToMetricAction
+     * @return Specifies the action. Supported values - AlertingAction, LogToMetricAction
      * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * Severity of the alert
+     * @return Severity of the alert
      * 
-    */
+     */
     public String severity() {
         return this.severity;
     }
     /**
-     * time (in minutes) for which Alerts should be throttled or suppressed.
+     * @return time (in minutes) for which Alerts should be throttled or suppressed.
      * 
-    */
+     */
     public Optional<Integer> throttlingInMin() {
         return Optional.ofNullable(this.throttlingInMin);
     }
     /**
-     * The trigger condition that results in the alert rule being.
+     * @return The trigger condition that results in the alert rule being.
      * 
-    */
+     */
     public TriggerConditionResponse trigger() {
         return this.trigger;
     }

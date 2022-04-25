@@ -25,6 +25,10 @@ public final class SupportInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="email")
     private @Nullable String email;
 
+    /**
+     * @return Support contact email address.
+     * 
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
@@ -36,6 +40,10 @@ public final class SupportInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instructions")
     private @Nullable String instructions;
 
+    /**
+     * @return Support instructions.
+     * 
+     */
     public Optional<String> instructions() {
         return Optional.ofNullable(this.instructions);
     }
@@ -47,6 +55,10 @@ public final class SupportInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="phone")
     private @Nullable String phone;
 
+    /**
+     * @return Support contact phone number.
+     * 
+     */
     public Optional<String> phone() {
         return Optional.ofNullable(this.phone);
     }
@@ -58,6 +70,10 @@ public final class SupportInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return Support web address.
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -89,21 +105,45 @@ public final class SupportInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SupportInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email Support contact email address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param instructions Support instructions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instructions(@Nullable String instructions) {
             $.instructions = instructions;
             return this;
         }
 
+        /**
+         * @param phone Support contact phone number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(@Nullable String phone) {
             $.phone = phone;
             return this;
         }
 
+        /**
+         * @param url Support web address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;

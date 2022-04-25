@@ -23,6 +23,10 @@ public final class IngestionConnectionStringResponse extends com.pulumi.resource
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The region where ingested logs and data resides
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -34,6 +38,10 @@ public final class IngestionConnectionStringResponse extends com.pulumi.resource
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Connection string value
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class IngestionConnectionStringResponse extends com.pulumi.resource
             $ = new IngestionConnectionStringResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The region where ingested logs and data resides
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param value Connection string value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

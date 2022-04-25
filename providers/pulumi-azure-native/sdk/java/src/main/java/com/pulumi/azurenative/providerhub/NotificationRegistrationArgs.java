@@ -23,6 +23,10 @@ public final class NotificationRegistrationArgs extends com.pulumi.resources.Res
     @Import(name="notificationRegistrationName")
     private @Nullable Output<String> notificationRegistrationName;
 
+    /**
+     * @return The notification registration.
+     * 
+     */
     public Optional<Output<String>> notificationRegistrationName() {
         return Optional.ofNullable(this.notificationRegistrationName);
     }
@@ -41,6 +45,10 @@ public final class NotificationRegistrationArgs extends com.pulumi.resources.Res
     @Import(name="providerNamespace", required=true)
     private Output<String> providerNamespace;
 
+    /**
+     * @return The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
@@ -71,11 +79,23 @@ public final class NotificationRegistrationArgs extends com.pulumi.resources.Res
             $ = new NotificationRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param notificationRegistrationName The notification registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationRegistrationName(@Nullable Output<String> notificationRegistrationName) {
             $.notificationRegistrationName = notificationRegistrationName;
             return this;
         }
 
+        /**
+         * @param notificationRegistrationName The notification registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationRegistrationName(String notificationRegistrationName) {
             return notificationRegistrationName(Output.of(notificationRegistrationName));
         }
@@ -89,11 +109,23 @@ public final class NotificationRegistrationArgs extends com.pulumi.resources.Res
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(Output<String> providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             return providerNamespace(Output.of(providerNamespace));
         }

@@ -20,6 +20,10 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueArgs extends com.pulu
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The display name for this template.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -48,11 +52,23 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueArgs extends com.pulu
             $ = new TagTemplateFieldTypeEnumTypeAllowedValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name for this template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name for this template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }

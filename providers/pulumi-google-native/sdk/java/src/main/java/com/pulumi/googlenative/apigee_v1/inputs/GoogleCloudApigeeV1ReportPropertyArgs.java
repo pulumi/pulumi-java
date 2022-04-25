@@ -24,6 +24,10 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends com.pulumi.reso
     @Import(name="property")
     private @Nullable Output<String> property;
 
+    /**
+     * @return name of the property
+     * 
+     */
     public Optional<Output<String>> property() {
         return Optional.ofNullable(this.property);
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends com.pulumi.reso
     @Import(name="value")
     private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> value;
 
+    /**
+     * @return property values
+     * 
+     */
     public Optional<Output<List<GoogleCloudApigeeV1AttributeArgs>>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -64,24 +72,54 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends com.pulumi.reso
             $ = new GoogleCloudApigeeV1ReportPropertyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param property name of the property
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(@Nullable Output<String> property) {
             $.property = property;
             return this;
         }
 
+        /**
+         * @param property name of the property
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(String property) {
             return property(Output.of(property));
         }
 
+        /**
+         * @param value property values
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value property values
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(List<GoogleCloudApigeeV1AttributeArgs> value) {
             return value(Output.of(value));
         }
 
+        /**
+         * @param value property values
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(GoogleCloudApigeeV1AttributeArgs... value) {
             return value(List.of(value));
         }

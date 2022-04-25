@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ApplicationSubComponentTypeConfiguration {
     /**
-     * The configuration settings of sub components.
+     * @return The configuration settings of sub components.
      * 
      */
     private final ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails;
     /**
-     * The sub component type.
+     * @return The sub component type.
      * 
      */
     private final ApplicationSubComponentTypeConfigurationSubComponentType subComponentType;
@@ -30,16 +30,16 @@ public final class ApplicationSubComponentTypeConfiguration {
     }
 
     /**
-     * The configuration settings of sub components.
+     * @return The configuration settings of sub components.
      * 
-    */
+     */
     public ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails() {
         return this.subComponentConfigurationDetails;
     }
     /**
-     * The sub component type.
+     * @return The sub component type.
      * 
-    */
+     */
     public ApplicationSubComponentTypeConfigurationSubComponentType subComponentType() {
         return this.subComponentType;
     }

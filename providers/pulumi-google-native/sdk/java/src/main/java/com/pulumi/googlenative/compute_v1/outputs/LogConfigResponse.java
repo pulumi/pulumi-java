@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class LogConfigResponse {
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
      */
     private final LogConfigCloudAuditOptionsResponse cloudAudit;
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
      */
     private final LogConfigCounterOptionsResponse counter;
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
      */
     private final LogConfigDataAccessOptionsResponse dataAccess;
@@ -38,23 +38,23 @@ public final class LogConfigResponse {
     }
 
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public LogConfigCloudAuditOptionsResponse cloudAudit() {
         return this.cloudAudit;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public LogConfigCounterOptionsResponse counter() {
         return this.counter;
     }
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public LogConfigDataAccessOptionsResponse dataAccess() {
         return this.dataAccess;
     }

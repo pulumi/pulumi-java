@@ -22,6 +22,10 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerArgs exte
     @Import(name="enableHierarchicalResourceQuota")
     private @Nullable Output<Boolean> enableHierarchicalResourceQuota;
 
+    /**
+     * @return Whether hierarchical resource quota is enabled in this cluster.
+     * 
+     */
     public Optional<Output<Boolean>> enableHierarchicalResourceQuota() {
         return Optional.ofNullable(this.enableHierarchicalResourceQuota);
     }
@@ -33,6 +37,10 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerArgs exte
     @Import(name="enablePodTreeLabels")
     private @Nullable Output<Boolean> enablePodTreeLabels;
 
+    /**
+     * @return Whether pod tree labels are enabled in this cluster.
+     * 
+     */
     public Optional<Output<Boolean>> enablePodTreeLabels() {
         return Optional.ofNullable(this.enablePodTreeLabels);
     }
@@ -44,6 +52,10 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerArgs exte
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -74,29 +86,65 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerArgs exte
             $ = new FeatureMembershipConfigmanagementHierarchyControllerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableHierarchicalResourceQuota Whether hierarchical resource quota is enabled in this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHierarchicalResourceQuota(@Nullable Output<Boolean> enableHierarchicalResourceQuota) {
             $.enableHierarchicalResourceQuota = enableHierarchicalResourceQuota;
             return this;
         }
 
+        /**
+         * @param enableHierarchicalResourceQuota Whether hierarchical resource quota is enabled in this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHierarchicalResourceQuota(Boolean enableHierarchicalResourceQuota) {
             return enableHierarchicalResourceQuota(Output.of(enableHierarchicalResourceQuota));
         }
 
+        /**
+         * @param enablePodTreeLabels Whether pod tree labels are enabled in this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePodTreeLabels(@Nullable Output<Boolean> enablePodTreeLabels) {
             $.enablePodTreeLabels = enablePodTreeLabels;
             return this;
         }
 
+        /**
+         * @param enablePodTreeLabels Whether pod tree labels are enabled in this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePodTreeLabels(Boolean enablePodTreeLabels) {
             return enablePodTreeLabels(Output.of(enablePodTreeLabels));
         }
 
+        /**
+         * @param enabled Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

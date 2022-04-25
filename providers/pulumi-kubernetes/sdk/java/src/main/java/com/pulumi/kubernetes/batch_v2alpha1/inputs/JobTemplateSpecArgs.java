@@ -27,6 +27,10 @@ public final class JobTemplateSpecArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="metadata")
     private @Nullable Output<ObjectMetaArgs> metadata;
 
+    /**
+     * @return Standard object&#39;s metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     public Optional<Output<ObjectMetaArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -38,6 +42,10 @@ public final class JobTemplateSpecArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="spec")
     private @Nullable Output<JobSpecArgs> spec;
 
+    /**
+     * @return Specification of the desired behavior of the job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * 
+     */
     public Optional<Output<JobSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
@@ -67,20 +75,44 @@ public final class JobTemplateSpecArgs extends com.pulumi.resources.ResourceArgs
             $ = new JobTemplateSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadata Standard object&#39;s metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Standard object&#39;s metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(ObjectMetaArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param spec Specification of the desired behavior of the job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(@Nullable Output<JobSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec Specification of the desired behavior of the job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(JobSpecArgs spec) {
             return spec(Output.of(spec));
         }

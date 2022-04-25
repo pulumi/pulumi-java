@@ -24,6 +24,10 @@ public final class BusinessIdentityArgs extends com.pulumi.resources.ResourceArg
     @Import(name="qualifier", required=true)
     private Output<String> qualifier;
 
+    /**
+     * @return The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
+     * 
+     */
     public Output<String> qualifier() {
         return this.qualifier;
     }
@@ -35,6 +39,10 @@ public final class BusinessIdentityArgs extends com.pulumi.resources.ResourceArg
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The user defined business identity value.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -64,20 +72,44 @@ public final class BusinessIdentityArgs extends com.pulumi.resources.ResourceArg
             $ = new BusinessIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param qualifier The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
+         * 
+         * @return builder
+         * 
+         */
         public Builder qualifier(Output<String> qualifier) {
             $.qualifier = qualifier;
             return this;
         }
 
+        /**
+         * @param qualifier The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
+         * 
+         * @return builder
+         * 
+         */
         public Builder qualifier(String qualifier) {
             return qualifier(Output.of(qualifier));
         }
 
+        /**
+         * @param value The user defined business identity value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The user defined business identity value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

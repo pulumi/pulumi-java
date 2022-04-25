@@ -26,6 +26,10 @@ public final class GoogleCloudApigeeV1MonetizationConfigArgs extends com.pulumi.
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Flag that specifies whether the Monetization add-on is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudApigeeV1MonetizationConfigArgs extends com.pulumi.
             $ = new GoogleCloudApigeeV1MonetizationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Flag that specifies whether the Monetization add-on is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Flag that specifies whether the Monetization add-on is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

@@ -28,6 +28,10 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="copy")
     private @Nullable Output<JobConfigurationTableCopyArgs> copy;
 
+    /**
+     * @return [Pick one] Copies a table.
+     * 
+     */
     public Optional<Output<JobConfigurationTableCopyArgs>> copy() {
         return Optional.ofNullable(this.copy);
     }
@@ -39,6 +43,10 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dryRun")
     private @Nullable Output<Boolean> dryRun;
 
+    /**
+     * @return [Optional] If set, don&#39;t actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn&#39;t a dry run. Behavior of non-query jobs is undefined.
+     * 
+     */
     public Optional<Output<Boolean>> dryRun() {
         return Optional.ofNullable(this.dryRun);
     }
@@ -50,6 +58,10 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="extract")
     private @Nullable Output<JobConfigurationExtractArgs> extract;
 
+    /**
+     * @return [Pick one] Configures an extract job.
+     * 
+     */
     public Optional<Output<JobConfigurationExtractArgs>> extract() {
         return Optional.ofNullable(this.extract);
     }
@@ -61,6 +73,10 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="jobTimeoutMs")
     private @Nullable Output<String> jobTimeoutMs;
 
+    /**
+     * @return [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
+     * 
+     */
     public Optional<Output<String>> jobTimeoutMs() {
         return Optional.ofNullable(this.jobTimeoutMs);
     }
@@ -72,6 +88,10 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The labels associated with this job. You can use these to organize and group your jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -83,6 +103,10 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="load")
     private @Nullable Output<JobConfigurationLoadArgs> load;
 
+    /**
+     * @return [Pick one] Configures a load job.
+     * 
+     */
     public Optional<Output<JobConfigurationLoadArgs>> load() {
         return Optional.ofNullable(this.load);
     }
@@ -94,6 +118,10 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="query")
     private @Nullable Output<JobConfigurationQueryArgs> query;
 
+    /**
+     * @return [Pick one] Configures a query job.
+     * 
+     */
     public Optional<Output<JobConfigurationQueryArgs>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -128,65 +156,149 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
             $ = new JobConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copy [Pick one] Copies a table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copy(@Nullable Output<JobConfigurationTableCopyArgs> copy) {
             $.copy = copy;
             return this;
         }
 
+        /**
+         * @param copy [Pick one] Copies a table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copy(JobConfigurationTableCopyArgs copy) {
             return copy(Output.of(copy));
         }
 
+        /**
+         * @param dryRun [Optional] If set, don&#39;t actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn&#39;t a dry run. Behavior of non-query jobs is undefined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dryRun(@Nullable Output<Boolean> dryRun) {
             $.dryRun = dryRun;
             return this;
         }
 
+        /**
+         * @param dryRun [Optional] If set, don&#39;t actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn&#39;t a dry run. Behavior of non-query jobs is undefined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dryRun(Boolean dryRun) {
             return dryRun(Output.of(dryRun));
         }
 
+        /**
+         * @param extract [Pick one] Configures an extract job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extract(@Nullable Output<JobConfigurationExtractArgs> extract) {
             $.extract = extract;
             return this;
         }
 
+        /**
+         * @param extract [Pick one] Configures an extract job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extract(JobConfigurationExtractArgs extract) {
             return extract(Output.of(extract));
         }
 
+        /**
+         * @param jobTimeoutMs [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobTimeoutMs(@Nullable Output<String> jobTimeoutMs) {
             $.jobTimeoutMs = jobTimeoutMs;
             return this;
         }
 
+        /**
+         * @param jobTimeoutMs [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobTimeoutMs(String jobTimeoutMs) {
             return jobTimeoutMs(Output.of(jobTimeoutMs));
         }
 
+        /**
+         * @param labels The labels associated with this job. You can use these to organize and group your jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The labels associated with this job. You can use these to organize and group your jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param load [Pick one] Configures a load job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder load(@Nullable Output<JobConfigurationLoadArgs> load) {
             $.load = load;
             return this;
         }
 
+        /**
+         * @param load [Pick one] Configures a load job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder load(JobConfigurationLoadArgs load) {
             return load(Output.of(load));
         }
 
+        /**
+         * @param query [Pick one] Configures a query job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<JobConfigurationQueryArgs> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query [Pick one] Configures a query job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(JobConfigurationQueryArgs query) {
             return query(Output.of(query));
         }

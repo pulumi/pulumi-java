@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class LoggingConfigurationLogDestinationConfig {
     /**
-     * A key-value pair to configure the logDestinations.
+     * @return A key-value pair to configure the logDestinations.
      * 
      */
     private final Object logDestination;
@@ -30,9 +30,9 @@ public final class LoggingConfigurationLogDestinationConfig {
     }
 
     /**
-     * A key-value pair to configure the logDestinations.
+     * @return A key-value pair to configure the logDestinations.
      * 
-    */
+     */
     public Object logDestination() {
         return this.logDestination;
     }

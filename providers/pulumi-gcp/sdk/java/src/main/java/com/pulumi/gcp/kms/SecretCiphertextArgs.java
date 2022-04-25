@@ -23,6 +23,11 @@ public final class SecretCiphertextArgs extends com.pulumi.resources.ResourceArg
     @Import(name="additionalAuthenticatedData")
     private @Nullable Output<String> additionalAuthenticatedData;
 
+    /**
+     * @return The additional authenticated data used for integrity checks during encryption and decryption.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<Output<String>> additionalAuthenticatedData() {
         return Optional.ofNullable(this.additionalAuthenticatedData);
     }
@@ -35,6 +40,11 @@ public final class SecretCiphertextArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cryptoKey", required=true)
     private Output<String> cryptoKey;
 
+    /**
+     * @return The full name of the CryptoKey that will be used to encrypt the provided plaintext.
+     * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}&#39;`
+     * 
+     */
     public Output<String> cryptoKey() {
         return this.cryptoKey;
     }
@@ -47,6 +57,11 @@ public final class SecretCiphertextArgs extends com.pulumi.resources.ResourceArg
     @Import(name="plaintext", required=true)
     private Output<String> plaintext;
 
+    /**
+     * @return The plaintext to be encrypted.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Output<String> plaintext() {
         return this.plaintext;
     }
@@ -77,29 +92,71 @@ public final class SecretCiphertextArgs extends com.pulumi.resources.ResourceArg
             $ = new SecretCiphertextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalAuthenticatedData The additional authenticated data used for integrity checks during encryption and decryption.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalAuthenticatedData(@Nullable Output<String> additionalAuthenticatedData) {
             $.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
 
+        /**
+         * @param additionalAuthenticatedData The additional authenticated data used for integrity checks during encryption and decryption.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalAuthenticatedData(String additionalAuthenticatedData) {
             return additionalAuthenticatedData(Output.of(additionalAuthenticatedData));
         }
 
+        /**
+         * @param cryptoKey The full name of the CryptoKey that will be used to encrypt the provided plaintext.
+         * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}&#39;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKey(Output<String> cryptoKey) {
             $.cryptoKey = cryptoKey;
             return this;
         }
 
+        /**
+         * @param cryptoKey The full name of the CryptoKey that will be used to encrypt the provided plaintext.
+         * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}&#39;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKey(String cryptoKey) {
             return cryptoKey(Output.of(cryptoKey));
         }
 
+        /**
+         * @param plaintext The plaintext to be encrypted.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plaintext(Output<String> plaintext) {
             $.plaintext = plaintext;
             return this;
         }
 
+        /**
+         * @param plaintext The plaintext to be encrypted.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plaintext(String plaintext) {
             return plaintext(Output.of(plaintext));
         }

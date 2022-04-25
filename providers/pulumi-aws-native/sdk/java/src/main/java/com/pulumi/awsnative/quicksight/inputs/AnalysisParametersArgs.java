@@ -30,6 +30,10 @@ public final class AnalysisParametersArgs extends com.pulumi.resources.ResourceA
     @Import(name="dateTimeParameters")
     private @Nullable Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
 
+    /**
+     * @return &lt;p&gt;Date-time parameters.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<AnalysisDateTimeParameterArgs>>> dateTimeParameters() {
         return Optional.ofNullable(this.dateTimeParameters);
     }
@@ -41,6 +45,10 @@ public final class AnalysisParametersArgs extends com.pulumi.resources.ResourceA
     @Import(name="decimalParameters")
     private @Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters;
 
+    /**
+     * @return &lt;p&gt;Decimal parameters.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<AnalysisDecimalParameterArgs>>> decimalParameters() {
         return Optional.ofNullable(this.decimalParameters);
     }
@@ -52,6 +60,10 @@ public final class AnalysisParametersArgs extends com.pulumi.resources.ResourceA
     @Import(name="integerParameters")
     private @Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters;
 
+    /**
+     * @return &lt;p&gt;Integer parameters.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<AnalysisIntegerParameterArgs>>> integerParameters() {
         return Optional.ofNullable(this.integerParameters);
     }
@@ -63,6 +75,10 @@ public final class AnalysisParametersArgs extends com.pulumi.resources.ResourceA
     @Import(name="stringParameters")
     private @Nullable Output<List<AnalysisStringParameterArgs>> stringParameters;
 
+    /**
+     * @return &lt;p&gt;String parameters.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<AnalysisStringParameterArgs>>> stringParameters() {
         return Optional.ofNullable(this.stringParameters);
     }
@@ -94,54 +110,126 @@ public final class AnalysisParametersArgs extends com.pulumi.resources.ResourceA
             $ = new AnalysisParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dateTimeParameters &lt;p&gt;Date-time parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateTimeParameters(@Nullable Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters) {
             $.dateTimeParameters = dateTimeParameters;
             return this;
         }
 
+        /**
+         * @param dateTimeParameters &lt;p&gt;Date-time parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateTimeParameters(List<AnalysisDateTimeParameterArgs> dateTimeParameters) {
             return dateTimeParameters(Output.of(dateTimeParameters));
         }
 
+        /**
+         * @param dateTimeParameters &lt;p&gt;Date-time parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateTimeParameters(AnalysisDateTimeParameterArgs... dateTimeParameters) {
             return dateTimeParameters(List.of(dateTimeParameters));
         }
 
+        /**
+         * @param decimalParameters &lt;p&gt;Decimal parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder decimalParameters(@Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters) {
             $.decimalParameters = decimalParameters;
             return this;
         }
 
+        /**
+         * @param decimalParameters &lt;p&gt;Decimal parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder decimalParameters(List<AnalysisDecimalParameterArgs> decimalParameters) {
             return decimalParameters(Output.of(decimalParameters));
         }
 
+        /**
+         * @param decimalParameters &lt;p&gt;Decimal parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder decimalParameters(AnalysisDecimalParameterArgs... decimalParameters) {
             return decimalParameters(List.of(decimalParameters));
         }
 
+        /**
+         * @param integerParameters &lt;p&gt;Integer parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder integerParameters(@Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters) {
             $.integerParameters = integerParameters;
             return this;
         }
 
+        /**
+         * @param integerParameters &lt;p&gt;Integer parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder integerParameters(List<AnalysisIntegerParameterArgs> integerParameters) {
             return integerParameters(Output.of(integerParameters));
         }
 
+        /**
+         * @param integerParameters &lt;p&gt;Integer parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder integerParameters(AnalysisIntegerParameterArgs... integerParameters) {
             return integerParameters(List.of(integerParameters));
         }
 
+        /**
+         * @param stringParameters &lt;p&gt;String parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringParameters(@Nullable Output<List<AnalysisStringParameterArgs>> stringParameters) {
             $.stringParameters = stringParameters;
             return this;
         }
 
+        /**
+         * @param stringParameters &lt;p&gt;String parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringParameters(List<AnalysisStringParameterArgs> stringParameters) {
             return stringParameters(Output.of(stringParameters));
         }
 
+        /**
+         * @param stringParameters &lt;p&gt;String parameters.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringParameters(AnalysisStringParameterArgs... stringParameters) {
             return stringParameters(List.of(stringParameters));
         }

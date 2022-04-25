@@ -23,6 +23,10 @@ public final class ClusterIdentityGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="oidcs")
     private @Nullable Output<List<ClusterIdentityOidcGetArgs>> oidcs;
 
+    /**
+     * @return Nested block containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
+     * 
+     */
     public Optional<Output<List<ClusterIdentityOidcGetArgs>>> oidcs() {
         return Optional.ofNullable(this.oidcs);
     }
@@ -51,15 +55,33 @@ public final class ClusterIdentityGetArgs extends com.pulumi.resources.ResourceA
             $ = new ClusterIdentityGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oidcs Nested block containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcs(@Nullable Output<List<ClusterIdentityOidcGetArgs>> oidcs) {
             $.oidcs = oidcs;
             return this;
         }
 
+        /**
+         * @param oidcs Nested block containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcs(List<ClusterIdentityOidcGetArgs> oidcs) {
             return oidcs(Output.of(oidcs));
         }
 
+        /**
+         * @param oidcs Nested block containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcs(ClusterIdentityOidcGetArgs... oidcs) {
             return oidcs(List.of(oidcs));
         }

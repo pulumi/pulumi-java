@@ -26,6 +26,10 @@ public final class ClientGroupInfoArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="groupId")
     private @Nullable Output<String> groupId;
 
+    /**
+     * @return The AAD security group id.
+     * 
+     */
     public Optional<Output<String>> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -37,6 +41,10 @@ public final class ClientGroupInfoArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="groupName")
     private @Nullable Output<String> groupName;
 
+    /**
+     * @return The AAD security group name.
+     * 
+     */
     public Optional<Output<String>> groupName() {
         return Optional.ofNullable(this.groupName);
     }
@@ -66,20 +74,44 @@ public final class ClientGroupInfoArgs extends com.pulumi.resources.ResourceArgs
             $ = new ClientGroupInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The AAD security group id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupId The AAD security group id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
+        /**
+         * @param groupName The AAD security group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(@Nullable Output<String> groupName) {
             $.groupName = groupName;
             return this;
         }
 
+        /**
+         * @param groupName The AAD security group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(String groupName) {
             return groupName(Output.of(groupName));
         }

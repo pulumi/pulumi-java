@@ -25,6 +25,10 @@ public final class RedshiftUnloadSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="bucketName", required=true)
     private Output<Object> bucketName;
 
+    /**
+     * @return The bucket of the interim Amazon S3 which will be used to store the unloaded data from Amazon Redshift source. The bucket must be in the same region as the Amazon Redshift source. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> bucketName() {
         return this.bucketName;
     }
@@ -36,6 +40,10 @@ public final class RedshiftUnloadSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="s3LinkedServiceName", required=true)
     private Output<LinkedServiceReferenceArgs> s3LinkedServiceName;
 
+    /**
+     * @return The name of the Amazon S3 linked service which will be used for the unload operation when copying from the Amazon Redshift source.
+     * 
+     */
     public Output<LinkedServiceReferenceArgs> s3LinkedServiceName() {
         return this.s3LinkedServiceName;
     }
@@ -65,20 +73,44 @@ public final class RedshiftUnloadSettingsArgs extends com.pulumi.resources.Resou
             $ = new RedshiftUnloadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName The bucket of the interim Amazon S3 which will be used to store the unloaded data from Amazon Redshift source. The bucket must be in the same region as the Amazon Redshift source. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Output<Object> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName The bucket of the interim Amazon S3 which will be used to store the unloaded data from Amazon Redshift source. The bucket must be in the same region as the Amazon Redshift source. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Object bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param s3LinkedServiceName The name of the Amazon S3 linked service which will be used for the unload operation when copying from the Amazon Redshift source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3LinkedServiceName(Output<LinkedServiceReferenceArgs> s3LinkedServiceName) {
             $.s3LinkedServiceName = s3LinkedServiceName;
             return this;
         }
 
+        /**
+         * @param s3LinkedServiceName The name of the Amazon S3 linked service which will be used for the unload operation when copying from the Amazon Redshift source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3LinkedServiceName(LinkedServiceReferenceArgs s3LinkedServiceName) {
             return s3LinkedServiceName(Output.of(s3LinkedServiceName));
         }

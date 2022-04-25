@@ -22,6 +22,10 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="bucket", required=true)
     private String bucket;
 
+    /**
+     * @return The name of the bucket to read the object from. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
+     * 
+     */
     public String bucket() {
         return this.bucket;
     }
@@ -33,6 +37,10 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The full path to the object inside the bucket
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -51,6 +59,10 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags assigned to the object.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -62,6 +74,10 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="versionId")
     private @Nullable String versionId;
 
+    /**
+     * @return Specific version ID of the object returned (defaults to latest version)
+     * 
+     */
     public Optional<String> versionId() {
         return Optional.ofNullable(this.versionId);
     }
@@ -94,11 +110,23 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBucketObjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the bucket to read the object from. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param key The full path to the object inside the bucket
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
@@ -109,11 +137,23 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param tags A map of tags assigned to the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param versionId Specific version ID of the object returned (defaults to latest version)
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionId(@Nullable String versionId) {
             $.versionId = versionId;
             return this;

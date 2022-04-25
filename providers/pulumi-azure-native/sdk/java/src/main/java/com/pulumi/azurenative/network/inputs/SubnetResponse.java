@@ -39,6 +39,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="addressPrefix")
     private @Nullable String addressPrefix;
 
+    /**
+     * @return The address prefix for the subnet.
+     * 
+     */
     public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
@@ -50,6 +54,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="addressPrefixes")
     private @Nullable List<String> addressPrefixes;
 
+    /**
+     * @return List of address prefixes for the subnet.
+     * 
+     */
     public Optional<List<String>> addressPrefixes() {
         return Optional.ofNullable(this.addressPrefixes);
     }
@@ -61,6 +69,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="applicationGatewayIpConfigurations")
     private @Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations;
 
+    /**
+     * @return Application gateway IP configurations of virtual network resource.
+     * 
+     */
     public Optional<List<ApplicationGatewayIPConfigurationResponse>> applicationGatewayIpConfigurations() {
         return Optional.ofNullable(this.applicationGatewayIpConfigurations);
     }
@@ -72,6 +84,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="delegations")
     private @Nullable List<DelegationResponse> delegations;
 
+    /**
+     * @return An array of references to the delegations on the subnet.
+     * 
+     */
     public Optional<List<DelegationResponse>> delegations() {
         return Optional.ofNullable(this.delegations);
     }
@@ -83,6 +99,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -94,6 +114,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -105,6 +129,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipAllocations")
     private @Nullable List<SubResourceResponse> ipAllocations;
 
+    /**
+     * @return Array of IpAllocation which reference this subnet.
+     * 
+     */
     public Optional<List<SubResourceResponse>> ipAllocations() {
         return Optional.ofNullable(this.ipAllocations);
     }
@@ -116,6 +144,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipConfigurationProfiles", required=true)
     private List<IPConfigurationProfileResponse> ipConfigurationProfiles;
 
+    /**
+     * @return Array of IP configuration profiles which reference this subnet.
+     * 
+     */
     public List<IPConfigurationProfileResponse> ipConfigurationProfiles() {
         return this.ipConfigurationProfiles;
     }
@@ -127,6 +159,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipConfigurations", required=true)
     private List<IPConfigurationResponse> ipConfigurations;
 
+    /**
+     * @return An array of references to the network interface IP configurations using subnet.
+     * 
+     */
     public List<IPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations;
     }
@@ -138,6 +174,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -149,6 +189,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="natGateway")
     private @Nullable SubResourceResponse natGateway;
 
+    /**
+     * @return Nat gateway associated with this subnet.
+     * 
+     */
     public Optional<SubResourceResponse> natGateway() {
         return Optional.ofNullable(this.natGateway);
     }
@@ -160,6 +204,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="networkSecurityGroup")
     private @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
 
+    /**
+     * @return The reference to the NetworkSecurityGroup resource.
+     * 
+     */
     public Optional<NetworkSecurityGroupResponse> networkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }
@@ -171,6 +219,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="privateEndpointNetworkPolicies")
     private @Nullable String privateEndpointNetworkPolicies;
 
+    /**
+     * @return Enable or Disable apply network policies on private end point in the subnet.
+     * 
+     */
     public Optional<String> privateEndpointNetworkPolicies() {
         return Optional.ofNullable(this.privateEndpointNetworkPolicies);
     }
@@ -182,6 +234,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="privateEndpoints", required=true)
     private List<PrivateEndpointResponse> privateEndpoints;
 
+    /**
+     * @return An array of references to private endpoints.
+     * 
+     */
     public List<PrivateEndpointResponse> privateEndpoints() {
         return this.privateEndpoints;
     }
@@ -193,6 +249,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="privateLinkServiceNetworkPolicies")
     private @Nullable String privateLinkServiceNetworkPolicies;
 
+    /**
+     * @return Enable or Disable apply network policies on private link service in the subnet.
+     * 
+     */
     public Optional<String> privateLinkServiceNetworkPolicies() {
         return Optional.ofNullable(this.privateLinkServiceNetworkPolicies);
     }
@@ -204,6 +264,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the subnet resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -215,6 +279,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="purpose", required=true)
     private String purpose;
 
+    /**
+     * @return A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
+     * 
+     */
     public String purpose() {
         return this.purpose;
     }
@@ -226,6 +294,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceNavigationLinks", required=true)
     private List<ResourceNavigationLinkResponse> resourceNavigationLinks;
 
+    /**
+     * @return An array of references to the external resources using subnet.
+     * 
+     */
     public List<ResourceNavigationLinkResponse> resourceNavigationLinks() {
         return this.resourceNavigationLinks;
     }
@@ -237,6 +309,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="routeTable")
     private @Nullable RouteTableResponse routeTable;
 
+    /**
+     * @return The reference to the RouteTable resource.
+     * 
+     */
     public Optional<RouteTableResponse> routeTable() {
         return Optional.ofNullable(this.routeTable);
     }
@@ -248,6 +324,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceAssociationLinks", required=true)
     private List<ServiceAssociationLinkResponse> serviceAssociationLinks;
 
+    /**
+     * @return An array of references to services injecting into this subnet.
+     * 
+     */
     public List<ServiceAssociationLinkResponse> serviceAssociationLinks() {
         return this.serviceAssociationLinks;
     }
@@ -259,6 +339,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceEndpointPolicies")
     private @Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies;
 
+    /**
+     * @return An array of service endpoint policies.
+     * 
+     */
     public Optional<List<ServiceEndpointPolicyResponse>> serviceEndpointPolicies() {
         return Optional.ofNullable(this.serviceEndpointPolicies);
     }
@@ -270,6 +354,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceEndpoints")
     private @Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints;
 
+    /**
+     * @return An array of service endpoints.
+     * 
+     */
     public Optional<List<ServiceEndpointPropertiesFormatResponse>> serviceEndpoints() {
         return Optional.ofNullable(this.serviceEndpoints);
     }
@@ -281,6 +369,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -331,160 +423,364 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SubnetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefix The address prefix for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefix(@Nullable String addressPrefix) {
             $.addressPrefix = addressPrefix;
             return this;
         }
 
+        /**
+         * @param addressPrefixes List of address prefixes for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             $.addressPrefixes = addressPrefixes;
             return this;
         }
 
+        /**
+         * @param addressPrefixes List of address prefixes for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixes(String... addressPrefixes) {
             return addressPrefixes(List.of(addressPrefixes));
         }
 
+        /**
+         * @param applicationGatewayIpConfigurations Application gateway IP configurations of virtual network resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGatewayIpConfigurations(@Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations) {
             $.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;
             return this;
         }
 
+        /**
+         * @param applicationGatewayIpConfigurations Application gateway IP configurations of virtual network resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGatewayIpConfigurations(ApplicationGatewayIPConfigurationResponse... applicationGatewayIpConfigurations) {
             return applicationGatewayIpConfigurations(List.of(applicationGatewayIpConfigurations));
         }
 
+        /**
+         * @param delegations An array of references to the delegations on the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegations(@Nullable List<DelegationResponse> delegations) {
             $.delegations = delegations;
             return this;
         }
 
+        /**
+         * @param delegations An array of references to the delegations on the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegations(DelegationResponse... delegations) {
             return delegations(List.of(delegations));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ipAllocations Array of IpAllocation which reference this subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocations(@Nullable List<SubResourceResponse> ipAllocations) {
             $.ipAllocations = ipAllocations;
             return this;
         }
 
+        /**
+         * @param ipAllocations Array of IpAllocation which reference this subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocations(SubResourceResponse... ipAllocations) {
             return ipAllocations(List.of(ipAllocations));
         }
 
+        /**
+         * @param ipConfigurationProfiles Array of IP configuration profiles which reference this subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurationProfiles(List<IPConfigurationProfileResponse> ipConfigurationProfiles) {
             $.ipConfigurationProfiles = ipConfigurationProfiles;
             return this;
         }
 
+        /**
+         * @param ipConfigurationProfiles Array of IP configuration profiles which reference this subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurationProfiles(IPConfigurationProfileResponse... ipConfigurationProfiles) {
             return ipConfigurationProfiles(List.of(ipConfigurationProfiles));
         }
 
+        /**
+         * @param ipConfigurations An array of references to the network interface IP configurations using subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(List<IPConfigurationResponse> ipConfigurations) {
             $.ipConfigurations = ipConfigurations;
             return this;
         }
 
+        /**
+         * @param ipConfigurations An array of references to the network interface IP configurations using subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(IPConfigurationResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param natGateway Nat gateway associated with this subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natGateway(@Nullable SubResourceResponse natGateway) {
             $.natGateway = natGateway;
             return this;
         }
 
+        /**
+         * @param networkSecurityGroup The reference to the NetworkSecurityGroup resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupResponse networkSecurityGroup) {
             $.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
 
+        /**
+         * @param privateEndpointNetworkPolicies Enable or Disable apply network policies on private end point in the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointNetworkPolicies(@Nullable String privateEndpointNetworkPolicies) {
             $.privateEndpointNetworkPolicies = privateEndpointNetworkPolicies;
             return this;
         }
 
+        /**
+         * @param privateEndpoints An array of references to private endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoints(List<PrivateEndpointResponse> privateEndpoints) {
             $.privateEndpoints = privateEndpoints;
             return this;
         }
 
+        /**
+         * @param privateEndpoints An array of references to private endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoints(PrivateEndpointResponse... privateEndpoints) {
             return privateEndpoints(List.of(privateEndpoints));
         }
 
+        /**
+         * @param privateLinkServiceNetworkPolicies Enable or Disable apply network policies on private link service in the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceNetworkPolicies(@Nullable String privateLinkServiceNetworkPolicies) {
             $.privateLinkServiceNetworkPolicies = privateLinkServiceNetworkPolicies;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param purpose A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder purpose(String purpose) {
             $.purpose = purpose;
             return this;
         }
 
+        /**
+         * @param resourceNavigationLinks An array of references to the external resources using subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceNavigationLinks(List<ResourceNavigationLinkResponse> resourceNavigationLinks) {
             $.resourceNavigationLinks = resourceNavigationLinks;
             return this;
         }
 
+        /**
+         * @param resourceNavigationLinks An array of references to the external resources using subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceNavigationLinks(ResourceNavigationLinkResponse... resourceNavigationLinks) {
             return resourceNavigationLinks(List.of(resourceNavigationLinks));
         }
 
+        /**
+         * @param routeTable The reference to the RouteTable resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTable(@Nullable RouteTableResponse routeTable) {
             $.routeTable = routeTable;
             return this;
         }
 
+        /**
+         * @param serviceAssociationLinks An array of references to services injecting into this subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAssociationLinks(List<ServiceAssociationLinkResponse> serviceAssociationLinks) {
             $.serviceAssociationLinks = serviceAssociationLinks;
             return this;
         }
 
+        /**
+         * @param serviceAssociationLinks An array of references to services injecting into this subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAssociationLinks(ServiceAssociationLinkResponse... serviceAssociationLinks) {
             return serviceAssociationLinks(List.of(serviceAssociationLinks));
         }
 
+        /**
+         * @param serviceEndpointPolicies An array of service endpoint policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpointPolicies(@Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies) {
             $.serviceEndpointPolicies = serviceEndpointPolicies;
             return this;
         }
 
+        /**
+         * @param serviceEndpointPolicies An array of service endpoint policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpointPolicies(ServiceEndpointPolicyResponse... serviceEndpointPolicies) {
             return serviceEndpointPolicies(List.of(serviceEndpointPolicies));
         }
 
+        /**
+         * @param serviceEndpoints An array of service endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpoints(@Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints) {
             $.serviceEndpoints = serviceEndpoints;
             return this;
         }
 
+        /**
+         * @param serviceEndpoints An array of service endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpoints(ServiceEndpointPropertiesFormatResponse... serviceEndpoints) {
             return serviceEndpoints(List.of(serviceEndpoints));
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

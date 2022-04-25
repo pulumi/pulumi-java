@@ -25,6 +25,10 @@ public final class SparkSqlBatchResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="jarFileUris", required=true)
     private List<String> jarFileUris;
 
+    /**
+     * @return Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * 
+     */
     public List<String> jarFileUris() {
         return this.jarFileUris;
     }
@@ -36,6 +40,10 @@ public final class SparkSqlBatchResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="queryFileUri", required=true)
     private String queryFileUri;
 
+    /**
+     * @return The HCFS URI of the script that contains Spark SQL queries to execute.
+     * 
+     */
     public String queryFileUri() {
         return this.queryFileUri;
     }
@@ -47,6 +55,10 @@ public final class SparkSqlBatchResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="queryVariables", required=true)
     private Map<String,String> queryVariables;
 
+    /**
+     * @return Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
+     * 
+     */
     public Map<String,String> queryVariables() {
         return this.queryVariables;
     }
@@ -77,20 +89,44 @@ public final class SparkSqlBatchResponse extends com.pulumi.resources.InvokeArgs
             $ = new SparkSqlBatchResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(List<String> jarFileUris) {
             $.jarFileUris = jarFileUris;
             return this;
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
 
+        /**
+         * @param queryFileUri The HCFS URI of the script that contains Spark SQL queries to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryFileUri(String queryFileUri) {
             $.queryFileUri = queryFileUri;
             return this;
         }
 
+        /**
+         * @param queryVariables Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryVariables(Map<String,String> queryVariables) {
             $.queryVariables = queryVariables;
             return this;

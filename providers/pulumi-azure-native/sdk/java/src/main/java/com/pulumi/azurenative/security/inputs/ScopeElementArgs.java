@@ -26,6 +26,10 @@ public final class ScopeElementArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="field")
     private @Nullable Output<String> field;
 
+    /**
+     * @return The alert entity type to suppress by.
+     * 
+     */
     public Optional<Output<String>> field() {
         return Optional.ofNullable(this.field);
     }
@@ -54,11 +58,23 @@ public final class ScopeElementArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScopeElementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field The alert entity type to suppress by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable Output<String> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field The alert entity type to suppress by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             return field(Output.of(field));
         }

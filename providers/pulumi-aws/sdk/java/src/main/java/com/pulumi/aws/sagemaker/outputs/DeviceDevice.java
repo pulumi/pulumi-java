@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DeviceDevice {
     /**
-     * A description for the device.
+     * @return A description for the device.
      * 
      */
     private final @Nullable String description;
     /**
-     * The name of the device.
+     * @return The name of the device.
      * 
      */
     private final String deviceName;
     /**
-     * Amazon Web Services Internet of Things (IoT) object name.
+     * @return Amazon Web Services Internet of Things (IoT) object name.
      * 
      */
     private final @Nullable String iotThingName;
@@ -38,23 +38,23 @@ public final class DeviceDevice {
     }
 
     /**
-     * A description for the device.
+     * @return A description for the device.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The name of the device.
+     * @return The name of the device.
      * 
-    */
+     */
     public String deviceName() {
         return this.deviceName;
     }
     /**
-     * Amazon Web Services Internet of Things (IoT) object name.
+     * @return Amazon Web Services Internet of Things (IoT) object name.
      * 
-    */
+     */
     public Optional<String> iotThingName() {
         return Optional.ofNullable(this.iotThingName);
     }

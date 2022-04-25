@@ -24,6 +24,10 @@ public final class DataSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="legendTemplate", required=true)
     private String legendTemplate;
 
+    /**
+     * @return A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label&#39;s value.
+     * 
+     */
     public String legendTemplate() {
         return this.legendTemplate;
     }
@@ -35,6 +39,10 @@ public final class DataSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minAlignmentPeriod", required=true)
     private String minAlignmentPeriod;
 
+    /**
+     * @return Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.
+     * 
+     */
     public String minAlignmentPeriod() {
         return this.minAlignmentPeriod;
     }
@@ -46,6 +54,10 @@ public final class DataSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="plotType", required=true)
     private String plotType;
 
+    /**
+     * @return How this data should be plotted on the chart.
+     * 
+     */
     public String plotType() {
         return this.plotType;
     }
@@ -57,6 +69,10 @@ public final class DataSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetAxis", required=true)
     private String targetAxis;
 
+    /**
+     * @return Optional. The target axis to use for plotting the metric.
+     * 
+     */
     public String targetAxis() {
         return this.targetAxis;
     }
@@ -68,6 +84,10 @@ public final class DataSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeSeriesQuery", required=true)
     private TimeSeriesQueryResponse timeSeriesQuery;
 
+    /**
+     * @return Fields for querying time series data from the Stackdriver metrics API.
+     * 
+     */
     public TimeSeriesQueryResponse timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
@@ -100,26 +120,56 @@ public final class DataSetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DataSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param legendTemplate A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label&#39;s value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder legendTemplate(String legendTemplate) {
             $.legendTemplate = legendTemplate;
             return this;
         }
 
+        /**
+         * @param minAlignmentPeriod Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAlignmentPeriod(String minAlignmentPeriod) {
             $.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
 
+        /**
+         * @param plotType How this data should be plotted on the chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plotType(String plotType) {
             $.plotType = plotType;
             return this;
         }
 
+        /**
+         * @param targetAxis Optional. The target axis to use for plotting the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAxis(String targetAxis) {
             $.targetAxis = targetAxis;
             return this;
         }
 
+        /**
+         * @param timeSeriesQuery Fields for querying time series data from the Stackdriver metrics API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
             $.timeSeriesQuery = timeSeriesQuery;
             return this;

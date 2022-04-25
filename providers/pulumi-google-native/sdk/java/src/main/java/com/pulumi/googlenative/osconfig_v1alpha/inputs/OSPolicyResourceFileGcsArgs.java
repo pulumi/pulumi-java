@@ -26,6 +26,10 @@ public final class OSPolicyResourceFileGcsArgs extends com.pulumi.resources.Reso
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return Bucket of the Cloud Storage object.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -37,6 +41,10 @@ public final class OSPolicyResourceFileGcsArgs extends com.pulumi.resources.Reso
     @Import(name="generation")
     private @Nullable Output<String> generation;
 
+    /**
+     * @return Generation number of the Cloud Storage object.
+     * 
+     */
     public Optional<Output<String>> generation() {
         return Optional.ofNullable(this.generation);
     }
@@ -48,6 +56,10 @@ public final class OSPolicyResourceFileGcsArgs extends com.pulumi.resources.Reso
     @Import(name="object", required=true)
     private Output<String> object;
 
+    /**
+     * @return Name of the Cloud Storage object.
+     * 
+     */
     public Output<String> object() {
         return this.object;
     }
@@ -78,29 +90,65 @@ public final class OSPolicyResourceFileGcsArgs extends com.pulumi.resources.Reso
             $ = new OSPolicyResourceFileGcsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Bucket of the Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket Bucket of the Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param generation Generation number of the Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generation(@Nullable Output<String> generation) {
             $.generation = generation;
             return this;
         }
 
+        /**
+         * @param generation Generation number of the Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generation(String generation) {
             return generation(Output.of(generation));
         }
 
+        /**
+         * @param object Name of the Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(Output<String> object) {
             $.object = object;
             return this;
         }
 
+        /**
+         * @param object Name of the Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(String object) {
             return object(Output.of(object));
         }

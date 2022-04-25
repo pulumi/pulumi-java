@@ -25,6 +25,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
     private @Nullable Output<String> apiVersion;
 
+    /**
+     * @return The API version for this call such as &#34;serving.knative.dev/v1&#34;.
+     * 
+     */
     public Optional<Output<String>> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -43,6 +47,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The kind of resource, in this case &#34;Service&#34;.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -61,6 +69,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<ObjectMetaArgs> metadata;
 
+    /**
+     * @return Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
+     * 
+     */
     public Optional<Output<ObjectMetaArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -79,6 +91,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spec")
     private @Nullable Output<ServiceSpecArgs> spec;
 
+    /**
+     * @return Spec holds the desired state of the Service (from the client).
+     * 
+     */
     public Optional<Output<ServiceSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
@@ -90,6 +106,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<ServiceStatusArgs> status;
 
+    /**
+     * @return Status communicates the observed state of the Service (from the controller).
+     * 
+     */
     public Optional<Output<ServiceStatusArgs>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -125,11 +145,23 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion The API version for this call such as &#34;serving.knative.dev/v1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion The API version for this call such as &#34;serving.knative.dev/v1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
@@ -143,11 +175,23 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             return dryRun(Output.of(dryRun));
         }
 
+        /**
+         * @param kind The kind of resource, in this case &#34;Service&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of resource, in this case &#34;Service&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
@@ -161,11 +205,23 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param metadata Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(ObjectMetaArgs metadata) {
             return metadata(Output.of(metadata));
         }
@@ -179,20 +235,44 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param spec Spec holds the desired state of the Service (from the client).
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(@Nullable Output<ServiceSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec Spec holds the desired state of the Service (from the client).
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(ServiceSpecArgs spec) {
             return spec(Output.of(spec));
         }
 
+        /**
+         * @param status Status communicates the observed state of the Service (from the controller).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<ServiceStatusArgs> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status communicates the observed state of the Service (from the controller).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(ServiceStatusArgs status) {
             return status(Output.of(status));
         }

@@ -31,6 +31,10 @@ public final class PreprocessingConfigArgs extends com.pulumi.resources.Resource
     @Import(name="audio")
     private @Nullable Output<AudioArgs> audio;
 
+    /**
+     * @return Audio preprocessing configuration.
+     * 
+     */
     public Optional<Output<AudioArgs>> audio() {
         return Optional.ofNullable(this.audio);
     }
@@ -42,6 +46,10 @@ public final class PreprocessingConfigArgs extends com.pulumi.resources.Resource
     @Import(name="color")
     private @Nullable Output<ColorArgs> color;
 
+    /**
+     * @return Color preprocessing configuration.
+     * 
+     */
     public Optional<Output<ColorArgs>> color() {
         return Optional.ofNullable(this.color);
     }
@@ -53,6 +61,10 @@ public final class PreprocessingConfigArgs extends com.pulumi.resources.Resource
     @Import(name="crop")
     private @Nullable Output<CropArgs> crop;
 
+    /**
+     * @return Specify the video cropping configuration.
+     * 
+     */
     public Optional<Output<CropArgs>> crop() {
         return Optional.ofNullable(this.crop);
     }
@@ -64,6 +76,10 @@ public final class PreprocessingConfigArgs extends com.pulumi.resources.Resource
     @Import(name="deblock")
     private @Nullable Output<DeblockArgs> deblock;
 
+    /**
+     * @return Deblock preprocessing configuration.
+     * 
+     */
     public Optional<Output<DeblockArgs>> deblock() {
         return Optional.ofNullable(this.deblock);
     }
@@ -75,6 +91,10 @@ public final class PreprocessingConfigArgs extends com.pulumi.resources.Resource
     @Import(name="denoise")
     private @Nullable Output<DenoiseArgs> denoise;
 
+    /**
+     * @return Denoise preprocessing configuration.
+     * 
+     */
     public Optional<Output<DenoiseArgs>> denoise() {
         return Optional.ofNullable(this.denoise);
     }
@@ -86,6 +106,10 @@ public final class PreprocessingConfigArgs extends com.pulumi.resources.Resource
     @Import(name="pad")
     private @Nullable Output<PadArgs> pad;
 
+    /**
+     * @return Specify the video pad filter configuration.
+     * 
+     */
     public Optional<Output<PadArgs>> pad() {
         return Optional.ofNullable(this.pad);
     }
@@ -119,56 +143,128 @@ public final class PreprocessingConfigArgs extends com.pulumi.resources.Resource
             $ = new PreprocessingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audio Audio preprocessing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audio(@Nullable Output<AudioArgs> audio) {
             $.audio = audio;
             return this;
         }
 
+        /**
+         * @param audio Audio preprocessing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audio(AudioArgs audio) {
             return audio(Output.of(audio));
         }
 
+        /**
+         * @param color Color preprocessing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder color(@Nullable Output<ColorArgs> color) {
             $.color = color;
             return this;
         }
 
+        /**
+         * @param color Color preprocessing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder color(ColorArgs color) {
             return color(Output.of(color));
         }
 
+        /**
+         * @param crop Specify the video cropping configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crop(@Nullable Output<CropArgs> crop) {
             $.crop = crop;
             return this;
         }
 
+        /**
+         * @param crop Specify the video cropping configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crop(CropArgs crop) {
             return crop(Output.of(crop));
         }
 
+        /**
+         * @param deblock Deblock preprocessing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deblock(@Nullable Output<DeblockArgs> deblock) {
             $.deblock = deblock;
             return this;
         }
 
+        /**
+         * @param deblock Deblock preprocessing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deblock(DeblockArgs deblock) {
             return deblock(Output.of(deblock));
         }
 
+        /**
+         * @param denoise Denoise preprocessing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denoise(@Nullable Output<DenoiseArgs> denoise) {
             $.denoise = denoise;
             return this;
         }
 
+        /**
+         * @param denoise Denoise preprocessing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denoise(DenoiseArgs denoise) {
             return denoise(Output.of(denoise));
         }
 
+        /**
+         * @param pad Specify the video pad filter configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pad(@Nullable Output<PadArgs> pad) {
             $.pad = pad;
             return this;
         }
 
+        /**
+         * @param pad Specify the video pad filter configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pad(PadArgs pad) {
             return pad(Output.of(pad));
         }

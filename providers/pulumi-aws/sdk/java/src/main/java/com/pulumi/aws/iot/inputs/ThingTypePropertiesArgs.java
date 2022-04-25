@@ -23,6 +23,10 @@ public final class ThingTypePropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the thing type.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class ThingTypePropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="searchableAttributes")
     private @Nullable Output<List<String>> searchableAttributes;
 
+    /**
+     * @return A list of searchable thing attribute names.
+     * 
+     */
     public Optional<Output<List<String>>> searchableAttributes() {
         return Optional.ofNullable(this.searchableAttributes);
     }
@@ -63,24 +71,54 @@ public final class ThingTypePropertiesArgs extends com.pulumi.resources.Resource
             $ = new ThingTypePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the thing type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the thing type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param searchableAttributes A list of searchable thing attribute names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchableAttributes(@Nullable Output<List<String>> searchableAttributes) {
             $.searchableAttributes = searchableAttributes;
             return this;
         }
 
+        /**
+         * @param searchableAttributes A list of searchable thing attribute names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchableAttributes(List<String> searchableAttributes) {
             return searchableAttributes(Output.of(searchableAttributes));
         }
 
+        /**
+         * @param searchableAttributes A list of searchable thing attribute names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchableAttributes(String... searchableAttributes) {
             return searchableAttributes(List.of(searchableAttributes));
         }

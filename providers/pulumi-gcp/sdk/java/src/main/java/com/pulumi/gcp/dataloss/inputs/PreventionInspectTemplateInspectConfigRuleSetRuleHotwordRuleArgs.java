@@ -23,6 +23,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleA
     @Import(name="hotwordRegex", required=true)
     private Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs> hotwordRegex;
 
+    /**
+     * @return Regular expression pattern defining what qualifies as a hotword.
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs> hotwordRegex() {
         return this.hotwordRegex;
     }
@@ -35,6 +40,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleA
     @Import(name="likelihoodAdjustment", required=true)
     private Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs> likelihoodAdjustment;
 
+    /**
+     * @return Likelihood adjustment to apply to all matching findings.
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs> likelihoodAdjustment() {
         return this.likelihoodAdjustment;
     }
@@ -51,6 +61,15 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleA
     @Import(name="proximity", required=true)
     private Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs> proximity;
 
+    /**
+     * @return Proximity of the finding within which the entire hotword must reside. The total length of the window cannot
+     * exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be
+     * used to match substrings of the finding itself. For example, the certainty of a phone number regex
+     * `(\d{3}) \d{3}-\d{4}` could be adjusted upwards if the area code is known to be the local area code of a company
+     * office using the hotword regex `(xxx)`, where `xxx` is the area code in question.
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs> proximity() {
         return this.proximity;
     }
@@ -81,29 +100,79 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleA
             $ = new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hotwordRegex Regular expression pattern defining what qualifies as a hotword.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hotwordRegex(Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs> hotwordRegex) {
             $.hotwordRegex = hotwordRegex;
             return this;
         }
 
+        /**
+         * @param hotwordRegex Regular expression pattern defining what qualifies as a hotword.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hotwordRegex(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs hotwordRegex) {
             return hotwordRegex(Output.of(hotwordRegex));
         }
 
+        /**
+         * @param likelihoodAdjustment Likelihood adjustment to apply to all matching findings.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder likelihoodAdjustment(Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs> likelihoodAdjustment) {
             $.likelihoodAdjustment = likelihoodAdjustment;
             return this;
         }
 
+        /**
+         * @param likelihoodAdjustment Likelihood adjustment to apply to all matching findings.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder likelihoodAdjustment(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs likelihoodAdjustment) {
             return likelihoodAdjustment(Output.of(likelihoodAdjustment));
         }
 
+        /**
+         * @param proximity Proximity of the finding within which the entire hotword must reside. The total length of the window cannot
+         * exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be
+         * used to match substrings of the finding itself. For example, the certainty of a phone number regex
+         * `(\d{3}) \d{3}-\d{4}` could be adjusted upwards if the area code is known to be the local area code of a company
+         * office using the hotword regex `(xxx)`, where `xxx` is the area code in question.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximity(Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs> proximity) {
             $.proximity = proximity;
             return this;
         }
 
+        /**
+         * @param proximity Proximity of the finding within which the entire hotword must reside. The total length of the window cannot
+         * exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be
+         * used to match substrings of the finding itself. For example, the certainty of a phone number regex
+         * `(\d{3}) \d{3}-\d{4}` could be adjusted upwards if the area code is known to be the local area code of a company
+         * office using the hotword regex `(xxx)`, where `xxx` is the area code in question.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximity(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs proximity) {
             return proximity(Output.of(proximity));
         }

@@ -13,17 +13,17 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2StatisticalTableResponse {
     /**
-     * Quasi-identifier columns.
+     * @return Quasi-identifier columns.
      * 
      */
     private final List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> quasiIds;
     /**
-     * The relative frequency column must contain a floating-point number between 0 and 1 (inclusive). Null values are assumed to be zero.
+     * @return The relative frequency column must contain a floating-point number between 0 and 1 (inclusive). Null values are assumed to be zero.
      * 
      */
     private final GooglePrivacyDlpV2FieldIdResponse relativeFrequency;
     /**
-     * Auxiliary table location.
+     * @return Auxiliary table location.
      * 
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse table;
@@ -39,23 +39,23 @@ public final class GooglePrivacyDlpV2StatisticalTableResponse {
     }
 
     /**
-     * Quasi-identifier columns.
+     * @return Quasi-identifier columns.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> quasiIds() {
         return this.quasiIds;
     }
     /**
-     * The relative frequency column must contain a floating-point number between 0 and 1 (inclusive). Null values are assumed to be zero.
+     * @return The relative frequency column must contain a floating-point number between 0 and 1 (inclusive). Null values are assumed to be zero.
      * 
-    */
+     */
     public GooglePrivacyDlpV2FieldIdResponse relativeFrequency() {
         return this.relativeFrequency;
     }
     /**
-     * Auxiliary table location.
+     * @return Auxiliary table location.
      * 
-    */
+     */
     public GooglePrivacyDlpV2BigQueryTableResponse table() {
         return this.table;
     }

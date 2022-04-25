@@ -10,37 +10,37 @@ import java.util.Objects;
 @CustomType
 public final class GetOrganizationMuteConfigResult {
     /**
-     * The time at which the mute config was created. This field is set by the server and will be ignored if provided on config creation.
+     * @return The time at which the mute config was created. This field is set by the server and will be ignored if provided on config creation.
      * 
      */
     private final String createTime;
     /**
-     * A description of the mute config.
+     * @return A description of the mute config.
      * 
      */
     private final String description;
     /**
-     * The human readable name to be displayed for the mute config.
+     * @return The human readable name to be displayed for the mute config.
      * 
      */
     private final String displayName;
     /**
-     * An expression that defines the filter to apply across create/update events of findings. While creating a filter string, be mindful of the scope in which the mute configuration is being created. E.g., If a filter contains project = X but is created under the project = Y scope, it might not match any findings. The following field and operator combinations are supported: * severity: `=`, `:` * category: `=`, `:` * resource.name: `=`, `:` * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.folders.resource_folder: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` * resource.type: `=`, `:` * finding_class: `=`, `:` * indicator.ip_addresses: `=`, `:` * indicator.domains: `=`, `:`
+     * @return An expression that defines the filter to apply across create/update events of findings. While creating a filter string, be mindful of the scope in which the mute configuration is being created. E.g., If a filter contains project = X but is created under the project = Y scope, it might not match any findings. The following field and operator combinations are supported: * severity: `=`, `:` * category: `=`, `:` * resource.name: `=`, `:` * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.folders.resource_folder: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` * resource.type: `=`, `:` * finding_class: `=`, `:` * indicator.ip_addresses: `=`, `:` * indicator.domains: `=`, `:`
      * 
      */
     private final String filter;
     /**
-     * Email address of the user who last edited the mute config. This field is set by the server and will be ignored if provided on config creation or update.
+     * @return Email address of the user who last edited the mute config. This field is set by the server and will be ignored if provided on config creation or update.
      * 
      */
     private final String mostRecentEditor;
     /**
-     * This field will be ignored if provided on config creation. Format &#34;organizations/{organization}/muteConfigs/{mute_config}&#34; &#34;folders/{folder}/muteConfigs/{mute_config}&#34; &#34;projects/{project}/muteConfigs/{mute_config}&#34;
+     * @return This field will be ignored if provided on config creation. Format &#34;organizations/{organization}/muteConfigs/{mute_config}&#34; &#34;folders/{folder}/muteConfigs/{mute_config}&#34; &#34;projects/{project}/muteConfigs/{mute_config}&#34;
      * 
      */
     private final String name;
     /**
-     * The most recent time at which the mute config was updated. This field is set by the server and will be ignored if provided on config creation or update.
+     * @return The most recent time at which the mute config was updated. This field is set by the server and will be ignored if provided on config creation or update.
      * 
      */
     private final String updateTime;
@@ -64,51 +64,51 @@ public final class GetOrganizationMuteConfigResult {
     }
 
     /**
-     * The time at which the mute config was created. This field is set by the server and will be ignored if provided on config creation.
+     * @return The time at which the mute config was created. This field is set by the server and will be ignored if provided on config creation.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * A description of the mute config.
+     * @return A description of the mute config.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The human readable name to be displayed for the mute config.
+     * @return The human readable name to be displayed for the mute config.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * An expression that defines the filter to apply across create/update events of findings. While creating a filter string, be mindful of the scope in which the mute configuration is being created. E.g., If a filter contains project = X but is created under the project = Y scope, it might not match any findings. The following field and operator combinations are supported: * severity: `=`, `:` * category: `=`, `:` * resource.name: `=`, `:` * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.folders.resource_folder: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` * resource.type: `=`, `:` * finding_class: `=`, `:` * indicator.ip_addresses: `=`, `:` * indicator.domains: `=`, `:`
+     * @return An expression that defines the filter to apply across create/update events of findings. While creating a filter string, be mindful of the scope in which the mute configuration is being created. E.g., If a filter contains project = X but is created under the project = Y scope, it might not match any findings. The following field and operator combinations are supported: * severity: `=`, `:` * category: `=`, `:` * resource.name: `=`, `:` * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.folders.resource_folder: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` * resource.type: `=`, `:` * finding_class: `=`, `:` * indicator.ip_addresses: `=`, `:` * indicator.domains: `=`, `:`
      * 
-    */
+     */
     public String filter() {
         return this.filter;
     }
     /**
-     * Email address of the user who last edited the mute config. This field is set by the server and will be ignored if provided on config creation or update.
+     * @return Email address of the user who last edited the mute config. This field is set by the server and will be ignored if provided on config creation or update.
      * 
-    */
+     */
     public String mostRecentEditor() {
         return this.mostRecentEditor;
     }
     /**
-     * This field will be ignored if provided on config creation. Format &#34;organizations/{organization}/muteConfigs/{mute_config}&#34; &#34;folders/{folder}/muteConfigs/{mute_config}&#34; &#34;projects/{project}/muteConfigs/{mute_config}&#34;
+     * @return This field will be ignored if provided on config creation. Format &#34;organizations/{organization}/muteConfigs/{mute_config}&#34; &#34;folders/{folder}/muteConfigs/{mute_config}&#34; &#34;projects/{project}/muteConfigs/{mute_config}&#34;
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The most recent time at which the mute config was updated. This field is set by the server and will be ignored if provided on config creation or update.
+     * @return The most recent time at which the mute config was updated. This field is set by the server and will be ignored if provided on config creation or update.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

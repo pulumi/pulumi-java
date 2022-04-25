@@ -12,19 +12,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AutoscalingPolicyWorkerConfig {
     /**
-     * Maximum number of instances for this group. Note that by default, clusters will not use
+     * @return Maximum number of instances for this group. Note that by default, clusters will not use
      * secondary workers. Required for secondary workers if the minimum secondary instances is set.
      * Bounds: [minInstances, ). Defaults to 0.
      * 
      */
     private final Integer maxInstances;
     /**
-     * Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
+     * @return Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
      * 
      */
     private final @Nullable Integer minInstances;
     /**
-     * Weight for the instance group, which is used to determine the fraction of total workers
+     * @return Weight for the instance group, which is used to determine the fraction of total workers
      * in the cluster from this instance group. For example, if primary workers have weight 2,
      * and secondary workers have weight 1, the cluster will have approximately 2 primary workers
      * for each secondary worker.
@@ -51,23 +51,23 @@ public final class AutoscalingPolicyWorkerConfig {
     }
 
     /**
-     * Maximum number of instances for this group. Note that by default, clusters will not use
+     * @return Maximum number of instances for this group. Note that by default, clusters will not use
      * secondary workers. Required for secondary workers if the minimum secondary instances is set.
      * Bounds: [minInstances, ). Defaults to 0.
      * 
-    */
+     */
     public Integer maxInstances() {
         return this.maxInstances;
     }
     /**
-     * Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
+     * @return Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
      * 
-    */
+     */
     public Optional<Integer> minInstances() {
         return Optional.ofNullable(this.minInstances);
     }
     /**
-     * Weight for the instance group, which is used to determine the fraction of total workers
+     * @return Weight for the instance group, which is used to determine the fraction of total workers
      * in the cluster from this instance group. For example, if primary workers have weight 2,
      * and secondary workers have weight 1, the cluster will have approximately 2 primary workers
      * for each secondary worker.
@@ -80,7 +80,7 @@ public final class AutoscalingPolicyWorkerConfig {
      * the cluster will default to zero weight on the unset group. For example if weight is set
      * only on primary workers, the cluster will use primary workers only and no secondary workers.
      * 
-    */
+     */
     public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }

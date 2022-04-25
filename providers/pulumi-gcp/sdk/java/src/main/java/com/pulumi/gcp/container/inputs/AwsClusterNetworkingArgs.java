@@ -21,6 +21,10 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
     @Import(name="podAddressCidrBlocks", required=true)
     private Output<List<String>> podAddressCidrBlocks;
 
+    /**
+     * @return Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+     * 
+     */
     public Output<List<String>> podAddressCidrBlocks() {
         return this.podAddressCidrBlocks;
     }
@@ -32,6 +36,10 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
     @Import(name="serviceAddressCidrBlocks", required=true)
     private Output<List<String>> serviceAddressCidrBlocks;
 
+    /**
+     * @return Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+     * 
+     */
     public Output<List<String>> serviceAddressCidrBlocks() {
         return this.serviceAddressCidrBlocks;
     }
@@ -43,6 +51,10 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
     @Import(name="vpcId", required=true)
     private Output<String> vpcId;
 
+    /**
+     * @return Required. The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
+     * 
+     */
     public Output<String> vpcId() {
         return this.vpcId;
     }
@@ -73,37 +85,85 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
             $ = new AwsClusterNetworkingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param podAddressCidrBlocks Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podAddressCidrBlocks(Output<List<String>> podAddressCidrBlocks) {
             $.podAddressCidrBlocks = podAddressCidrBlocks;
             return this;
         }
 
+        /**
+         * @param podAddressCidrBlocks Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podAddressCidrBlocks(List<String> podAddressCidrBlocks) {
             return podAddressCidrBlocks(Output.of(podAddressCidrBlocks));
         }
 
+        /**
+         * @param podAddressCidrBlocks Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podAddressCidrBlocks(String... podAddressCidrBlocks) {
             return podAddressCidrBlocks(List.of(podAddressCidrBlocks));
         }
 
+        /**
+         * @param serviceAddressCidrBlocks Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAddressCidrBlocks(Output<List<String>> serviceAddressCidrBlocks) {
             $.serviceAddressCidrBlocks = serviceAddressCidrBlocks;
             return this;
         }
 
+        /**
+         * @param serviceAddressCidrBlocks Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
             return serviceAddressCidrBlocks(Output.of(serviceAddressCidrBlocks));
         }
 
+        /**
+         * @param serviceAddressCidrBlocks Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAddressCidrBlocks(String... serviceAddressCidrBlocks) {
             return serviceAddressCidrBlocks(List.of(serviceAddressCidrBlocks));
         }
 
+        /**
+         * @param vpcId Required. The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId Required. The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

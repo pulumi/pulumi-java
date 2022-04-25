@@ -24,6 +24,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<SecretPropertiesArgs> properties;
 
+    /**
+     * @return Properties of the secret
+     * 
+     */
     public Output<SecretPropertiesArgs> properties() {
         return this.properties;
     }
@@ -35,6 +39,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the Resource Group to which the vault belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -46,6 +54,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretName")
     private @Nullable Output<String> secretName;
 
+    /**
+     * @return Name of the secret
+     * 
+     */
     public Optional<Output<String>> secretName() {
         return Optional.ofNullable(this.secretName);
     }
@@ -57,6 +69,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags that will be assigned to the secret.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -68,6 +84,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vaultName", required=true)
     private Output<String> vaultName;
 
+    /**
+     * @return Name of the vault
+     * 
+     */
     public Output<String> vaultName() {
         return this.vaultName;
     }
@@ -100,47 +120,107 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties Properties of the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<SecretPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(SecretPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the Resource Group to which the vault belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Resource Group to which the vault belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param secretName Name of the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(@Nullable Output<String> secretName) {
             $.secretName = secretName;
             return this;
         }
 
+        /**
+         * @param secretName Name of the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(String secretName) {
             return secretName(Output.of(secretName));
         }
 
+        /**
+         * @param tags The tags that will be assigned to the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags that will be assigned to the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vaultName Name of the vault
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(Output<String> vaultName) {
             $.vaultName = vaultName;
             return this;
         }
 
+        /**
+         * @param vaultName Name of the vault
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             return vaultName(Output.of(vaultName));
         }

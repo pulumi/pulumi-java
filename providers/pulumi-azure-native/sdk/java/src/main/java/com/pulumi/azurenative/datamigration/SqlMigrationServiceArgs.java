@@ -30,6 +30,10 @@ public final class SqlMigrationServiceArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +45,10 @@ public final class SqlMigrationServiceArgs extends com.pulumi.resources.Resource
     @Import(name="sqlMigrationServiceName")
     private @Nullable Output<String> sqlMigrationServiceName;
 
+    /**
+     * @return Name of the SQL Migration Service.
+     * 
+     */
     public Optional<Output<String>> sqlMigrationServiceName() {
         return Optional.ofNullable(this.sqlMigrationServiceName);
     }
@@ -88,20 +96,44 @@ public final class SqlMigrationServiceArgs extends com.pulumi.resources.Resource
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sqlMigrationServiceName Name of the SQL Migration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlMigrationServiceName(@Nullable Output<String> sqlMigrationServiceName) {
             $.sqlMigrationServiceName = sqlMigrationServiceName;
             return this;
         }
 
+        /**
+         * @param sqlMigrationServiceName Name of the SQL Migration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlMigrationServiceName(String sqlMigrationServiceName) {
             return sqlMigrationServiceName(Output.of(sqlMigrationServiceName));
         }

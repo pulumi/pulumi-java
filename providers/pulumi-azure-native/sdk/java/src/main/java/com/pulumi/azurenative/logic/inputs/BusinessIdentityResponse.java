@@ -23,6 +23,10 @@ public final class BusinessIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="qualifier", required=true)
     private String qualifier;
 
+    /**
+     * @return The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
+     * 
+     */
     public String qualifier() {
         return this.qualifier;
     }
@@ -34,6 +38,10 @@ public final class BusinessIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The user defined business identity value.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class BusinessIdentityResponse extends com.pulumi.resources.InvokeA
             $ = new BusinessIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param qualifier The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
+         * 
+         * @return builder
+         * 
+         */
         public Builder qualifier(String qualifier) {
             $.qualifier = qualifier;
             return this;
         }
 
+        /**
+         * @param value The user defined business identity value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

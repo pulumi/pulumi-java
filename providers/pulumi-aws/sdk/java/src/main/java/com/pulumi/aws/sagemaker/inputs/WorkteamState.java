@@ -26,6 +26,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) assigned by AWS to this Workteam.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -37,6 +41,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the work team.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="memberDefinitions")
     private @Nullable Output<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions;
 
+    /**
+     * @return A list of Member Definitions that contains objects that identify the workers that make up the work team. Workforces can be created using Amazon Cognito or your own OIDC Identity Provider (IdP). For private workforces created using Amazon Cognito use `cognito_member_definition`. For workforces created using your own OIDC identity provider (IdP) use `oidc_member_definition`. Do not provide input for both of these parameters in a single request. see Member Definition details below.
+     * 
+     */
     public Optional<Output<List<WorkteamMemberDefinitionGetArgs>>> memberDefinitions() {
         return Optional.ofNullable(this.memberDefinitions);
     }
@@ -59,6 +71,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfiguration")
     private @Nullable Output<WorkteamNotificationConfigurationGetArgs> notificationConfiguration;
 
+    /**
+     * @return Configures notification of workers regarding available or expiring work items. see Notification Configuration details below.
+     * 
+     */
     public Optional<Output<WorkteamNotificationConfigurationGetArgs>> notificationConfiguration() {
         return Optional.ofNullable(this.notificationConfiguration);
     }
@@ -70,6 +86,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdomain")
     private @Nullable Output<String> subdomain;
 
+    /**
+     * @return The subdomain for your OIDC Identity Provider.
+     * 
+     */
     public Optional<Output<String>> subdomain() {
         return Optional.ofNullable(this.subdomain);
     }
@@ -81,6 +101,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -92,6 +116,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -103,6 +131,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workforceName")
     private @Nullable Output<String> workforceName;
 
+    /**
+     * @return The name of the Workteam (must be unique).
+     * 
+     */
     public Optional<Output<String>> workforceName() {
         return Optional.ofNullable(this.workforceName);
     }
@@ -114,6 +146,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workteamName")
     private @Nullable Output<String> workteamName;
 
+    /**
+     * @return The name of the workforce.
+     * 
+     */
     public Optional<Output<String>> workteamName() {
         return Optional.ofNullable(this.workteamName);
     }
@@ -150,87 +186,201 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
             $ = new WorkteamState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) assigned by AWS to this Workteam.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) assigned by AWS to this Workteam.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description A description of the work team.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the work team.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param memberDefinitions A list of Member Definitions that contains objects that identify the workers that make up the work team. Workforces can be created using Amazon Cognito or your own OIDC Identity Provider (IdP). For private workforces created using Amazon Cognito use `cognito_member_definition`. For workforces created using your own OIDC identity provider (IdP) use `oidc_member_definition`. Do not provide input for both of these parameters in a single request. see Member Definition details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberDefinitions(@Nullable Output<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions) {
             $.memberDefinitions = memberDefinitions;
             return this;
         }
 
+        /**
+         * @param memberDefinitions A list of Member Definitions that contains objects that identify the workers that make up the work team. Workforces can be created using Amazon Cognito or your own OIDC Identity Provider (IdP). For private workforces created using Amazon Cognito use `cognito_member_definition`. For workforces created using your own OIDC identity provider (IdP) use `oidc_member_definition`. Do not provide input for both of these parameters in a single request. see Member Definition details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberDefinitions(List<WorkteamMemberDefinitionGetArgs> memberDefinitions) {
             return memberDefinitions(Output.of(memberDefinitions));
         }
 
+        /**
+         * @param memberDefinitions A list of Member Definitions that contains objects that identify the workers that make up the work team. Workforces can be created using Amazon Cognito or your own OIDC Identity Provider (IdP). For private workforces created using Amazon Cognito use `cognito_member_definition`. For workforces created using your own OIDC identity provider (IdP) use `oidc_member_definition`. Do not provide input for both of these parameters in a single request. see Member Definition details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberDefinitions(WorkteamMemberDefinitionGetArgs... memberDefinitions) {
             return memberDefinitions(List.of(memberDefinitions));
         }
 
+        /**
+         * @param notificationConfiguration Configures notification of workers regarding available or expiring work items. see Notification Configuration details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfiguration(@Nullable Output<WorkteamNotificationConfigurationGetArgs> notificationConfiguration) {
             $.notificationConfiguration = notificationConfiguration;
             return this;
         }
 
+        /**
+         * @param notificationConfiguration Configures notification of workers regarding available or expiring work items. see Notification Configuration details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfiguration(WorkteamNotificationConfigurationGetArgs notificationConfiguration) {
             return notificationConfiguration(Output.of(notificationConfiguration));
         }
 
+        /**
+         * @param subdomain The subdomain for your OIDC Identity Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdomain(@Nullable Output<String> subdomain) {
             $.subdomain = subdomain;
             return this;
         }
 
+        /**
+         * @param subdomain The subdomain for your OIDC Identity Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdomain(String subdomain) {
             return subdomain(Output.of(subdomain));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param workforceName The name of the Workteam (must be unique).
+         * 
+         * @return builder
+         * 
+         */
         public Builder workforceName(@Nullable Output<String> workforceName) {
             $.workforceName = workforceName;
             return this;
         }
 
+        /**
+         * @param workforceName The name of the Workteam (must be unique).
+         * 
+         * @return builder
+         * 
+         */
         public Builder workforceName(String workforceName) {
             return workforceName(Output.of(workforceName));
         }
 
+        /**
+         * @param workteamName The name of the workforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workteamName(@Nullable Output<String> workteamName) {
             $.workteamName = workteamName;
             return this;
         }
 
+        /**
+         * @param workteamName The name of the workforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workteamName(String workteamName) {
             return workteamName(Output.of(workteamName));
         }

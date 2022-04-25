@@ -26,6 +26,10 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedHeaders")
     private @Nullable String allowedHeaders;
 
+    /**
+     * @return The request headers that the origin domain may specify on the CORS request.
+     * 
+     */
     public Optional<String> allowedHeaders() {
         return Optional.ofNullable(this.allowedHeaders);
     }
@@ -37,6 +41,10 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedMethods")
     private @Nullable String allowedMethods;
 
+    /**
+     * @return The methods (HTTP request verbs) that the origin domain may use for a CORS request.
+     * 
+     */
     public Optional<String> allowedMethods() {
         return Optional.ofNullable(this.allowedMethods);
     }
@@ -48,6 +56,10 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedOrigins", required=true)
     private String allowedOrigins;
 
+    /**
+     * @return The origin domains that are permitted to make a request against the service via CORS.
+     * 
+     */
     public String allowedOrigins() {
         return this.allowedOrigins;
     }
@@ -59,6 +71,10 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="exposedHeaders")
     private @Nullable String exposedHeaders;
 
+    /**
+     * @return The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.
+     * 
+     */
     public Optional<String> exposedHeaders() {
         return Optional.ofNullable(this.exposedHeaders);
     }
@@ -70,6 +86,10 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxAgeInSeconds")
     private @Nullable Double maxAgeInSeconds;
 
+    /**
+     * @return The maximum amount time that a browser should cache the preflight OPTIONS request.
+     * 
+     */
     public Optional<Double> maxAgeInSeconds() {
         return Optional.ofNullable(this.maxAgeInSeconds);
     }
@@ -102,26 +122,56 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CorsPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedHeaders The request headers that the origin domain may specify on the CORS request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHeaders(@Nullable String allowedHeaders) {
             $.allowedHeaders = allowedHeaders;
             return this;
         }
 
+        /**
+         * @param allowedMethods The methods (HTTP request verbs) that the origin domain may use for a CORS request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMethods(@Nullable String allowedMethods) {
             $.allowedMethods = allowedMethods;
             return this;
         }
 
+        /**
+         * @param allowedOrigins The origin domains that are permitted to make a request against the service via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(String allowedOrigins) {
             $.allowedOrigins = allowedOrigins;
             return this;
         }
 
+        /**
+         * @param exposedHeaders The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposedHeaders(@Nullable String exposedHeaders) {
             $.exposedHeaders = exposedHeaders;
             return this;
         }
 
+        /**
+         * @param maxAgeInSeconds The maximum amount time that a browser should cache the preflight OPTIONS request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAgeInSeconds(@Nullable Double maxAgeInSeconds) {
             $.maxAgeInSeconds = maxAgeInSeconds;
             return this;

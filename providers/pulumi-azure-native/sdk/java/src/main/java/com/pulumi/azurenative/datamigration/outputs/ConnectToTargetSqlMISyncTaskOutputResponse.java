@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class ConnectToTargetSqlMISyncTaskOutputResponse {
     /**
-     * Target server brand version
+     * @return Target server brand version
      * 
      */
     private final String targetServerBrandVersion;
     /**
-     * Target server version
+     * @return Target server version
      * 
      */
     private final String targetServerVersion;
     /**
-     * Validation errors
+     * @return Validation errors
      * 
      */
     private final List<ReportableExceptionResponse> validationErrors;
@@ -38,23 +38,23 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse {
     }
 
     /**
-     * Target server brand version
+     * @return Target server brand version
      * 
-    */
+     */
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
-     * Target server version
+     * @return Target server version
      * 
-    */
+     */
     public String targetServerVersion() {
         return this.targetServerVersion;
     }
     /**
-     * Validation errors
+     * @return Validation errors
      * 
-    */
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }

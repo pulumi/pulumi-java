@@ -22,6 +22,10 @@ public final class DataMaskingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="headers")
     private @Nullable List<DataMaskingEntityResponse> headers;
 
+    /**
+     * @return Masking settings for headers
+     * 
+     */
     public Optional<List<DataMaskingEntityResponse>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -33,6 +37,10 @@ public final class DataMaskingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="queryParams")
     private @Nullable List<DataMaskingEntityResponse> queryParams;
 
+    /**
+     * @return Masking settings for Url query parameters
+     * 
+     */
     public Optional<List<DataMaskingEntityResponse>> queryParams() {
         return Optional.ofNullable(this.queryParams);
     }
@@ -62,20 +70,44 @@ public final class DataMaskingResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DataMaskingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headers Masking settings for headers
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable List<DataMaskingEntityResponse> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers Masking settings for headers
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(DataMaskingEntityResponse... headers) {
             return headers(List.of(headers));
         }
 
+        /**
+         * @param queryParams Masking settings for Url query parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParams(@Nullable List<DataMaskingEntityResponse> queryParams) {
             $.queryParams = queryParams;
             return this;
         }
 
+        /**
+         * @param queryParams Masking settings for Url query parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParams(DataMaskingEntityResponse... queryParams) {
             return queryParams(List.of(queryParams));
         }

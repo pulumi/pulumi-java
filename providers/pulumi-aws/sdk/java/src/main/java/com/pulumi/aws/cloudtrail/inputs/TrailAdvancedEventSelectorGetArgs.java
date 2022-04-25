@@ -24,6 +24,10 @@ public final class TrailAdvancedEventSelectorGetArgs extends com.pulumi.resource
     @Import(name="fieldSelectors", required=true)
     private Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors;
 
+    /**
+     * @return Specifies the selector statements in an advanced event selector. Fields documented below.
+     * 
+     */
     public Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors() {
         return this.fieldSelectors;
     }
@@ -35,6 +39,10 @@ public final class TrailAdvancedEventSelectorGetArgs extends com.pulumi.resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Specifies the name of the advanced event selector.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -64,24 +72,54 @@ public final class TrailAdvancedEventSelectorGetArgs extends com.pulumi.resource
             $ = new TrailAdvancedEventSelectorGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fieldSelectors Specifies the selector statements in an advanced event selector. Fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldSelectors(Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors) {
             $.fieldSelectors = fieldSelectors;
             return this;
         }
 
+        /**
+         * @param fieldSelectors Specifies the selector statements in an advanced event selector. Fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldSelectors(List<TrailAdvancedEventSelectorFieldSelectorGetArgs> fieldSelectors) {
             return fieldSelectors(Output.of(fieldSelectors));
         }
 
+        /**
+         * @param fieldSelectors Specifies the selector statements in an advanced event selector. Fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldSelectors(TrailAdvancedEventSelectorFieldSelectorGetArgs... fieldSelectors) {
             return fieldSelectors(List.of(fieldSelectors));
         }
 
+        /**
+         * @param name Specifies the name of the advanced event selector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Specifies the name of the advanced event selector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

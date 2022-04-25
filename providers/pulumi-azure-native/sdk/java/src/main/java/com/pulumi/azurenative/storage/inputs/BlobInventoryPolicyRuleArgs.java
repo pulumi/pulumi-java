@@ -26,6 +26,10 @@ public final class BlobInventoryPolicyRuleArgs extends com.pulumi.resources.Reso
     @Import(name="definition", required=true)
     private Output<BlobInventoryPolicyDefinitionArgs> definition;
 
+    /**
+     * @return An object that defines the blob inventory policy rule.
+     * 
+     */
     public Output<BlobInventoryPolicyDefinitionArgs> definition() {
         return this.definition;
     }
@@ -37,6 +41,10 @@ public final class BlobInventoryPolicyRuleArgs extends com.pulumi.resources.Reso
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Rule is enabled when set to true.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -48,6 +56,10 @@ public final class BlobInventoryPolicyRuleArgs extends com.pulumi.resources.Reso
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -78,29 +90,65 @@ public final class BlobInventoryPolicyRuleArgs extends com.pulumi.resources.Reso
             $ = new BlobInventoryPolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param definition An object that defines the blob inventory policy rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(Output<BlobInventoryPolicyDefinitionArgs> definition) {
             $.definition = definition;
             return this;
         }
 
+        /**
+         * @param definition An object that defines the blob inventory policy rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(BlobInventoryPolicyDefinitionArgs definition) {
             return definition(Output.of(definition));
         }
 
+        /**
+         * @param enabled Rule is enabled when set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Rule is enabled when set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param name A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -26,6 +26,10 @@ public final class OSPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowNoResourceGroupMatch", required=true)
     private Boolean allowNoResourceGroupMatch;
 
+    /**
+     * @return This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
+     * 
+     */
     public Boolean allowNoResourceGroupMatch() {
         return this.allowNoResourceGroupMatch;
     }
@@ -37,6 +41,10 @@ public final class OSPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Policy description. Length of the description is limited to 1024 characters.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -48,6 +56,10 @@ public final class OSPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return Policy mode
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -59,6 +71,10 @@ public final class OSPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroups", required=true)
     private List<OSPolicyResourceGroupResponse> resourceGroups;
 
+    /**
+     * @return List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
+     * 
+     */
     public List<OSPolicyResourceGroupResponse> resourceGroups() {
         return this.resourceGroups;
     }
@@ -90,26 +106,56 @@ public final class OSPolicyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OSPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowNoResourceGroupMatch This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowNoResourceGroupMatch(Boolean allowNoResourceGroupMatch) {
             $.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
             return this;
         }
 
+        /**
+         * @param description Policy description. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param mode Policy mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param resourceGroups List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroups(List<OSPolicyResourceGroupResponse> resourceGroups) {
             $.resourceGroups = resourceGroups;
             return this;
         }
 
+        /**
+         * @param resourceGroups List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroups(OSPolicyResourceGroupResponse... resourceGroups) {
             return resourceGroups(List.of(resourceGroups));
         }

@@ -26,6 +26,10 @@ public final class CertificateDescriptionArgs extends com.pulumi.resources.Resou
     @Import(name="thumbprint", required=true)
     private Output<String> thumbprint;
 
+    /**
+     * @return Thumbprint of the primary certificate.
+     * 
+     */
     public Output<String> thumbprint() {
         return this.thumbprint;
     }
@@ -37,6 +41,10 @@ public final class CertificateDescriptionArgs extends com.pulumi.resources.Resou
     @Import(name="thumbprintSecondary")
     private @Nullable Output<String> thumbprintSecondary;
 
+    /**
+     * @return Thumbprint of the secondary certificate.
+     * 
+     */
     public Optional<Output<String>> thumbprintSecondary() {
         return Optional.ofNullable(this.thumbprintSecondary);
     }
@@ -48,6 +56,10 @@ public final class CertificateDescriptionArgs extends com.pulumi.resources.Resou
     @Import(name="x509StoreName")
     private @Nullable Output<String> x509StoreName;
 
+    /**
+     * @return The local certificate store location.
+     * 
+     */
     public Optional<Output<String>> x509StoreName() {
         return Optional.ofNullable(this.x509StoreName);
     }
@@ -78,29 +90,65 @@ public final class CertificateDescriptionArgs extends com.pulumi.resources.Resou
             $ = new CertificateDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param thumbprint Thumbprint of the primary certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(Output<String> thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param thumbprint Thumbprint of the primary certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             return thumbprint(Output.of(thumbprint));
         }
 
+        /**
+         * @param thumbprintSecondary Thumbprint of the secondary certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprintSecondary(@Nullable Output<String> thumbprintSecondary) {
             $.thumbprintSecondary = thumbprintSecondary;
             return this;
         }
 
+        /**
+         * @param thumbprintSecondary Thumbprint of the secondary certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprintSecondary(String thumbprintSecondary) {
             return thumbprintSecondary(Output.of(thumbprintSecondary));
         }
 
+        /**
+         * @param x509StoreName The local certificate store location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509StoreName(@Nullable Output<String> x509StoreName) {
             $.x509StoreName = x509StoreName;
             return this;
         }
 
+        /**
+         * @param x509StoreName The local certificate store location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509StoreName(String x509StoreName) {
             return x509StoreName(Output.of(x509StoreName));
         }

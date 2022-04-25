@@ -23,6 +23,10 @@ public final class TagRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitorName", required=true)
     private Output<String> monitorName;
 
+    /**
+     * @return Monitor resource name
+     * 
+     */
     public Output<String> monitorName() {
         return this.monitorName;
     }
@@ -34,6 +38,10 @@ public final class TagRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
 
+    /**
+     * @return Definition of the properties for a TagRules resource.
+     * 
+     */
     public Optional<Output<MonitoringTagRulesPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class TagRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,29 +95,65 @@ public final class TagRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TagRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorName(Output<String> monitorName) {
             $.monitorName = monitorName;
             return this;
         }
 
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorName(String monitorName) {
             return monitorName(Output.of(monitorName));
         }
 
+        /**
+         * @param properties Definition of the properties for a TagRules resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<MonitoringTagRulesPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Definition of the properties for a TagRules resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(MonitoringTagRulesPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

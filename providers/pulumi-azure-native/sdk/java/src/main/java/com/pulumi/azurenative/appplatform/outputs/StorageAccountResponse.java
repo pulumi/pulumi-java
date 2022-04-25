@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class StorageAccountResponse {
     /**
-     * The account name of the Azure Storage Account.
+     * @return The account name of the Azure Storage Account.
      * 
      */
     private final String accountName;
     /**
-     * The type of the storage.
+     * @return The type of the storage.
      * Expected value is &#39;StorageAccount&#39;.
      * 
      */
@@ -30,17 +30,17 @@ public final class StorageAccountResponse {
     }
 
     /**
-     * The account name of the Azure Storage Account.
+     * @return The account name of the Azure Storage Account.
      * 
-    */
+     */
     public String accountName() {
         return this.accountName;
     }
     /**
-     * The type of the storage.
+     * @return The type of the storage.
      * Expected value is &#39;StorageAccount&#39;.
      * 
-    */
+     */
     public String storageType() {
         return this.storageType;
     }

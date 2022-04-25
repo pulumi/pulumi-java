@@ -23,6 +23,10 @@ public final class SkusNestedResourceTypeFirstArgs extends com.pulumi.resources.
     @Import(name="nestedResourceTypeFirst", required=true)
     private Output<String> nestedResourceTypeFirst;
 
+    /**
+     * @return The first child resource type.
+     * 
+     */
     public Output<String> nestedResourceTypeFirst() {
         return this.nestedResourceTypeFirst;
     }
@@ -41,6 +45,10 @@ public final class SkusNestedResourceTypeFirstArgs extends com.pulumi.resources.
     @Import(name="providerNamespace", required=true)
     private Output<String> providerNamespace;
 
+    /**
+     * @return The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
@@ -52,6 +60,10 @@ public final class SkusNestedResourceTypeFirstArgs extends com.pulumi.resources.
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -63,6 +75,10 @@ public final class SkusNestedResourceTypeFirstArgs extends com.pulumi.resources.
     @Import(name="sku")
     private @Nullable Output<String> sku;
 
+    /**
+     * @return The SKU.
+     * 
+     */
     public Optional<Output<String>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -95,11 +111,23 @@ public final class SkusNestedResourceTypeFirstArgs extends com.pulumi.resources.
             $ = new SkusNestedResourceTypeFirstArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nestedResourceTypeFirst The first child resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nestedResourceTypeFirst(Output<String> nestedResourceTypeFirst) {
             $.nestedResourceTypeFirst = nestedResourceTypeFirst;
             return this;
         }
 
+        /**
+         * @param nestedResourceTypeFirst The first child resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nestedResourceTypeFirst(String nestedResourceTypeFirst) {
             return nestedResourceTypeFirst(Output.of(nestedResourceTypeFirst));
         }
@@ -113,29 +141,65 @@ public final class SkusNestedResourceTypeFirstArgs extends com.pulumi.resources.
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(Output<String> providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             return providerNamespace(Output.of(providerNamespace));
         }
 
+        /**
+         * @param resourceType The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param sku The SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<String> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Output.of(sku));
         }

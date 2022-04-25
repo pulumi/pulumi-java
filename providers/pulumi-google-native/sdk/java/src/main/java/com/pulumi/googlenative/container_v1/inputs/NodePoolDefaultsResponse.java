@@ -23,6 +23,10 @@ public final class NodePoolDefaultsResponse extends com.pulumi.resources.InvokeA
     @Import(name="nodeConfigDefaults", required=true)
     private NodeConfigDefaultsResponse nodeConfigDefaults;
 
+    /**
+     * @return Subset of NodeConfig message that has defaults.
+     * 
+     */
     public NodeConfigDefaultsResponse nodeConfigDefaults() {
         return this.nodeConfigDefaults;
     }
@@ -51,6 +55,12 @@ public final class NodePoolDefaultsResponse extends com.pulumi.resources.InvokeA
             $ = new NodePoolDefaultsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodeConfigDefaults Subset of NodeConfig message that has defaults.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeConfigDefaults(NodeConfigDefaultsResponse nodeConfigDefaults) {
             $.nodeConfigDefaults = nodeConfigDefaults;
             return this;

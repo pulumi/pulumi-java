@@ -22,6 +22,10 @@ public final class SecurityPolicyAssociationArgs extends com.pulumi.resources.Re
     @Import(name="attachmentId")
     private @Nullable Output<String> attachmentId;
 
+    /**
+     * @return The resource that the security policy is attached to.
+     * 
+     */
     public Optional<Output<String>> attachmentId() {
         return Optional.ofNullable(this.attachmentId);
     }
@@ -33,6 +37,10 @@ public final class SecurityPolicyAssociationArgs extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for an association.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -62,20 +70,44 @@ public final class SecurityPolicyAssociationArgs extends com.pulumi.resources.Re
             $ = new SecurityPolicyAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachmentId The resource that the security policy is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentId(@Nullable Output<String> attachmentId) {
             $.attachmentId = attachmentId;
             return this;
         }
 
+        /**
+         * @param attachmentId The resource that the security policy is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentId(String attachmentId) {
             return attachmentId(Output.of(attachmentId));
         }
 
+        /**
+         * @param name The name for an association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for an association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

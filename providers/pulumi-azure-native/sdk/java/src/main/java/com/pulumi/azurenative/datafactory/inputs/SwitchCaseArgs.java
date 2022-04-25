@@ -66,6 +66,10 @@ public final class SwitchCaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="activities")
     private @Nullable Output<List<Object>> activities;
 
+    /**
+     * @return List of activities to execute for satisfied case condition.
+     * 
+     */
     public Optional<Output<List<Object>>> activities() {
         return Optional.ofNullable(this.activities);
     }
@@ -77,6 +81,10 @@ public final class SwitchCaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Expected value that satisfies the expression result of the &#39;on&#39; property.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -106,24 +114,54 @@ public final class SwitchCaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SwitchCaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activities List of activities to execute for satisfied case condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(@Nullable Output<List<Object>> activities) {
             $.activities = activities;
             return this;
         }
 
+        /**
+         * @param activities List of activities to execute for satisfied case condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(List<Object> activities) {
             return activities(Output.of(activities));
         }
 
+        /**
+         * @param activities List of activities to execute for satisfied case condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(Object... activities) {
             return activities(List.of(activities));
         }
 
+        /**
+         * @param value Expected value that satisfies the expression result of the &#39;on&#39; property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Expected value that satisfies the expression result of the &#39;on&#39; property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

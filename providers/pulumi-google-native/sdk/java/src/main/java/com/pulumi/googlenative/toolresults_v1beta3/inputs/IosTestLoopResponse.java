@@ -23,6 +23,10 @@ public final class IosTestLoopResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bundleId", required=true)
     private String bundleId;
 
+    /**
+     * @return Bundle ID of the app.
+     * 
+     */
     public String bundleId() {
         return this.bundleId;
     }
@@ -51,6 +55,12 @@ public final class IosTestLoopResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IosTestLoopResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bundleId Bundle ID of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(String bundleId) {
             $.bundleId = bundleId;
             return this;

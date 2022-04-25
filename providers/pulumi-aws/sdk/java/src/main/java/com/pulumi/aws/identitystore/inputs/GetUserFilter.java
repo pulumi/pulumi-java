@@ -19,6 +19,10 @@ public final class GetUserFilter extends com.pulumi.resources.InvokeArgs {
     @Import(name="attributePath", required=true)
     private String attributePath;
 
+    /**
+     * @return The attribute path that is used to specify which attribute name to search. Currently, `UserName` is the only valid attribute path.
+     * 
+     */
     public String attributePath() {
         return this.attributePath;
     }
@@ -30,6 +34,10 @@ public final class GetUserFilter extends com.pulumi.resources.InvokeArgs {
     @Import(name="attributeValue", required=true)
     private String attributeValue;
 
+    /**
+     * @return The value for an attribute.
+     * 
+     */
     public String attributeValue() {
         return this.attributeValue;
     }
@@ -59,11 +67,23 @@ public final class GetUserFilter extends com.pulumi.resources.InvokeArgs {
             $ = new GetUserFilter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributePath The attribute path that is used to specify which attribute name to search. Currently, `UserName` is the only valid attribute path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributePath(String attributePath) {
             $.attributePath = attributePath;
             return this;
         }
 
+        /**
+         * @param attributeValue The value for an attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeValue(String attributeValue) {
             $.attributeValue = attributeValue;
             return this;

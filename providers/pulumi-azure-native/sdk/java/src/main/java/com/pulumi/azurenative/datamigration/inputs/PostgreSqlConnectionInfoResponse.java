@@ -27,6 +27,10 @@ public final class PostgreSqlConnectionInfoResponse extends com.pulumi.resources
     @Import(name="databaseName")
     private @Nullable String databaseName;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -38,6 +42,10 @@ public final class PostgreSqlConnectionInfoResponse extends com.pulumi.resources
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return Password credential.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -49,6 +57,10 @@ public final class PostgreSqlConnectionInfoResponse extends com.pulumi.resources
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return Port for Server
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -60,6 +72,10 @@ public final class PostgreSqlConnectionInfoResponse extends com.pulumi.resources
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return Name of the server
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -72,6 +88,11 @@ public final class PostgreSqlConnectionInfoResponse extends com.pulumi.resources
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of connection info
+     * Expected value is &#39;PostgreSqlConnectionInfo&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -83,6 +104,10 @@ public final class PostgreSqlConnectionInfoResponse extends com.pulumi.resources
     @Import(name="userName")
     private @Nullable String userName;
 
+    /**
+     * @return User name
+     * 
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -116,31 +141,68 @@ public final class PostgreSqlConnectionInfoResponse extends com.pulumi.resources
             $ = new PostgreSqlConnectionInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param password Password credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param port Port for Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param serverName Name of the server
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param type Type of connection info
+         * Expected value is &#39;PostgreSqlConnectionInfo&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userName User name
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable String userName) {
             $.userName = userName;
             return this;

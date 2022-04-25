@@ -28,6 +28,10 @@ public final class MuxStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="container")
     private @Nullable Output<String> container;
 
+    /**
+     * @return The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
+     * 
+     */
     public Optional<Output<String>> container() {
         return Optional.ofNullable(this.container);
     }
@@ -39,6 +43,10 @@ public final class MuxStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="elementaryStreams")
     private @Nullable Output<List<String>> elementaryStreams;
 
+    /**
+     * @return List of `ElementaryStream.key`s multiplexed in this stream.
+     * 
+     */
     public Optional<Output<List<String>>> elementaryStreams() {
         return Optional.ofNullable(this.elementaryStreams);
     }
@@ -50,6 +58,10 @@ public final class MuxStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileName")
     private @Nullable Output<String> fileName;
 
+    /**
+     * @return The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
+     * 
+     */
     public Optional<Output<String>> fileName() {
         return Optional.ofNullable(this.fileName);
     }
@@ -61,6 +73,10 @@ public final class MuxStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `.m3u8` extension suffix.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -72,6 +88,10 @@ public final class MuxStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="segmentSettings")
     private @Nullable Output<SegmentSettingsArgs> segmentSettings;
 
+    /**
+     * @return Segment settings for `ts`, `fmp4` and `vtt`.
+     * 
+     */
     public Optional<Output<SegmentSettingsArgs>> segmentSettings() {
         return Optional.ofNullable(this.segmentSettings);
     }
@@ -104,51 +124,117 @@ public final class MuxStreamArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MuxStreamArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param container The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(@Nullable Output<String> container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param container The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(String container) {
             return container(Output.of(container));
         }
 
+        /**
+         * @param elementaryStreams List of `ElementaryStream.key`s multiplexed in this stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elementaryStreams(@Nullable Output<List<String>> elementaryStreams) {
             $.elementaryStreams = elementaryStreams;
             return this;
         }
 
+        /**
+         * @param elementaryStreams List of `ElementaryStream.key`s multiplexed in this stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elementaryStreams(List<String> elementaryStreams) {
             return elementaryStreams(Output.of(elementaryStreams));
         }
 
+        /**
+         * @param elementaryStreams List of `ElementaryStream.key`s multiplexed in this stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elementaryStreams(String... elementaryStreams) {
             return elementaryStreams(List.of(elementaryStreams));
         }
 
+        /**
+         * @param fileName The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(@Nullable Output<String> fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param fileName The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(String fileName) {
             return fileName(Output.of(fileName));
         }
 
+        /**
+         * @param key A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `.m3u8` extension suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `.m3u8` extension suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param segmentSettings Segment settings for `ts`, `fmp4` and `vtt`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentSettings(@Nullable Output<SegmentSettingsArgs> segmentSettings) {
             $.segmentSettings = segmentSettings;
             return this;
         }
 
+        /**
+         * @param segmentSettings Segment settings for `ts`, `fmp4` and `vtt`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentSettings(SegmentSettingsArgs segmentSettings) {
             return segmentSettings(Output.of(segmentSettings));
         }

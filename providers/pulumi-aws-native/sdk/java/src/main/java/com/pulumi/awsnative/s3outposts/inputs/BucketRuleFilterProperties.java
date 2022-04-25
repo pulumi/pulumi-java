@@ -27,6 +27,10 @@ public final class BucketRuleFilterProperties extends com.pulumi.resources.Invok
     @Import(name="andOperator")
     private @Nullable BucketFilterAndOperator andOperator;
 
+    /**
+     * @return The container for the AND condition for the lifecycle rule. A combination of Prefix and 1 or more Tags OR a minimum of 2 or more tags.
+     * 
+     */
     public Optional<BucketFilterAndOperator> andOperator() {
         return Optional.ofNullable(this.andOperator);
     }
@@ -38,6 +42,10 @@ public final class BucketRuleFilterProperties extends com.pulumi.resources.Invok
     @Import(name="prefix")
     private @Nullable String prefix;
 
+    /**
+     * @return Object key prefix that identifies one or more objects to which this rule applies.
+     * 
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -49,6 +57,10 @@ public final class BucketRuleFilterProperties extends com.pulumi.resources.Invok
     @Import(name="tag")
     private @Nullable BucketFilterTag tag;
 
+    /**
+     * @return Specifies a tag used to identify a subset of objects for an Amazon S3Outposts bucket.
+     * 
+     */
     public Optional<BucketFilterTag> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -79,16 +91,34 @@ public final class BucketRuleFilterProperties extends com.pulumi.resources.Invok
             $ = new BucketRuleFilterProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param andOperator The container for the AND condition for the lifecycle rule. A combination of Prefix and 1 or more Tags OR a minimum of 2 or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder andOperator(@Nullable BucketFilterAndOperator andOperator) {
             $.andOperator = andOperator;
             return this;
         }
 
+        /**
+         * @param prefix Object key prefix that identifies one or more objects to which this rule applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable String prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param tag Specifies a tag used to identify a subset of objects for an Amazon S3Outposts bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable BucketFilterTag tag) {
             $.tag = tag;
             return this;

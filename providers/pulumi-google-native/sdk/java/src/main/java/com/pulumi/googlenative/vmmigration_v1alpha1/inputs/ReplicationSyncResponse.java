@@ -23,6 +23,10 @@ public final class ReplicationSyncResponse extends com.pulumi.resources.InvokeAr
     @Import(name="lastSyncTime", required=true)
     private String lastSyncTime;
 
+    /**
+     * @return The most updated snapshot created time in the source that finished replication.
+     * 
+     */
     public String lastSyncTime() {
         return this.lastSyncTime;
     }
@@ -51,6 +55,12 @@ public final class ReplicationSyncResponse extends com.pulumi.resources.InvokeAr
             $ = new ReplicationSyncResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastSyncTime The most updated snapshot created time in the source that finished replication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSyncTime(String lastSyncTime) {
             $.lastSyncTime = lastSyncTime;
             return this;

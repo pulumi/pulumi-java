@@ -28,6 +28,10 @@ public final class PrivilegeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions")
     private @Nullable Output<List<String>> actions;
 
+    /**
+     * @return An array of actions that are allowed.
+     * 
+     */
     public Optional<Output<List<String>>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -39,6 +43,10 @@ public final class PrivilegeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resource")
     private @Nullable Output<PrivilegeResourceArgs> resource;
 
+    /**
+     * @return An Azure Cosmos DB Mongo DB Resource.
+     * 
+     */
     public Optional<Output<PrivilegeResourceArgs>> resource() {
         return Optional.ofNullable(this.resource);
     }
@@ -68,24 +76,54 @@ public final class PrivilegeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PrivilegeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions An array of actions that are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable Output<List<String>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions An array of actions that are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<String> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions An array of actions that are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param resource An Azure Cosmos DB Mongo DB Resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(@Nullable Output<PrivilegeResourceArgs> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource An Azure Cosmos DB Mongo DB Resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(PrivilegeResourceArgs resource) {
             return resource(Output.of(resource));
         }

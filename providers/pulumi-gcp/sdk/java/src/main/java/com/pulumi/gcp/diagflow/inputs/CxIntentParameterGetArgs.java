@@ -24,6 +24,11 @@ public final class CxIntentParameterGetArgs extends com.pulumi.resources.Resourc
     @Import(name="entityType", required=true)
     private Output<String> entityType;
 
+    /**
+     * @return The entity type of the parameter.
+     * Format: projects/-/locations/-/agents/-/entityTypes/&lt;System Entity Type ID&gt; for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/entityTypes/&lt;Entity Type ID&gt; for developer entity types.
+     * 
+     */
     public Output<String> entityType() {
         return this.entityType;
     }
@@ -35,6 +40,10 @@ public final class CxIntentParameterGetArgs extends com.pulumi.resources.Resourc
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The unique identifier of the parameter. This field is used by training phrases to annotate their parts.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -46,6 +55,10 @@ public final class CxIntentParameterGetArgs extends com.pulumi.resources.Resourc
     @Import(name="isList")
     private @Nullable Output<Boolean> isList;
 
+    /**
+     * @return Indicates whether the parameter represents a list of values.
+     * 
+     */
     public Optional<Output<Boolean>> isList() {
         return Optional.ofNullable(this.isList);
     }
@@ -58,6 +71,11 @@ public final class CxIntentParameterGetArgs extends com.pulumi.resources.Resourc
     @Import(name="redact")
     private @Nullable Output<Boolean> redact;
 
+    /**
+     * @return Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging.
+     * Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> redact() {
         return Optional.ofNullable(this.redact);
     }
@@ -89,38 +107,90 @@ public final class CxIntentParameterGetArgs extends com.pulumi.resources.Resourc
             $ = new CxIntentParameterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param entityType The entity type of the parameter.
+         * Format: projects/-/locations/-/agents/-/entityTypes/&lt;System Entity Type ID&gt; for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/entityTypes/&lt;Entity Type ID&gt; for developer entity types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityType(Output<String> entityType) {
             $.entityType = entityType;
             return this;
         }
 
+        /**
+         * @param entityType The entity type of the parameter.
+         * Format: projects/-/locations/-/agents/-/entityTypes/&lt;System Entity Type ID&gt; for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/entityTypes/&lt;Entity Type ID&gt; for developer entity types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityType(String entityType) {
             return entityType(Output.of(entityType));
         }
 
+        /**
+         * @param id The unique identifier of the parameter. This field is used by training phrases to annotate their parts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The unique identifier of the parameter. This field is used by training phrases to annotate their parts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param isList Indicates whether the parameter represents a list of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isList(@Nullable Output<Boolean> isList) {
             $.isList = isList;
             return this;
         }
 
+        /**
+         * @param isList Indicates whether the parameter represents a list of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isList(Boolean isList) {
             return isList(Output.of(isList));
         }
 
+        /**
+         * @param redact Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging.
+         * Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redact(@Nullable Output<Boolean> redact) {
             $.redact = redact;
             return this;
         }
 
+        /**
+         * @param redact Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging.
+         * Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redact(Boolean redact) {
             return redact(Output.of(redact));
         }

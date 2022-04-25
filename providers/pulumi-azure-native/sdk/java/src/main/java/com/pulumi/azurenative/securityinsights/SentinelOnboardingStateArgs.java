@@ -23,6 +23,10 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
     @Import(name="customerManagedKey")
     private @Nullable Output<Boolean> customerManagedKey;
 
+    /**
+     * @return Flag that indicates the status of the CMK setting
+     * 
+     */
     public Optional<Output<Boolean>> customerManagedKey() {
         return Optional.ofNullable(this.customerManagedKey);
     }
@@ -34,6 +38,10 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
     @Import(name="operationalInsightsResourceProvider", required=true)
     private Output<String> operationalInsightsResourceProvider;
 
+    /**
+     * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
@@ -45,6 +53,10 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
     @Import(name="sentinelOnboardingStateName")
     private @Nullable Output<String> sentinelOnboardingStateName;
 
+    /**
+     * @return The Sentinel onboarding state name. Supports - default
+     * 
+     */
     public Optional<Output<String>> sentinelOnboardingStateName() {
         return Optional.ofNullable(this.sentinelOnboardingStateName);
     }
@@ -67,6 +83,10 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -99,47 +119,107 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
             $ = new SentinelOnboardingStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerManagedKey Flag that indicates the status of the CMK setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerManagedKey(@Nullable Output<Boolean> customerManagedKey) {
             $.customerManagedKey = customerManagedKey;
             return this;
         }
 
+        /**
+         * @param customerManagedKey Flag that indicates the status of the CMK setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerManagedKey(Boolean customerManagedKey) {
             return customerManagedKey(Output.of(customerManagedKey));
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sentinelOnboardingStateName The Sentinel onboarding state name. Supports - default
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentinelOnboardingStateName(@Nullable Output<String> sentinelOnboardingStateName) {
             $.sentinelOnboardingStateName = sentinelOnboardingStateName;
             return this;
         }
 
+        /**
+         * @param sentinelOnboardingStateName The Sentinel onboarding state name. Supports - default
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentinelOnboardingStateName(String sentinelOnboardingStateName) {
             return sentinelOnboardingStateName(Output.of(sentinelOnboardingStateName));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

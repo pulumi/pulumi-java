@@ -24,6 +24,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoscale")
     private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale;
 
+    /**
+     * @return The autoscale policy to apply on a pool.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs>> autoscale() {
         return Optional.ofNullable(this.autoscale);
     }
@@ -35,6 +39,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="channel")
     private @Nullable Output<String> channel;
 
+    /**
+     * @return Channel specifies the release channel of the pool.
+     * 
+     */
     public Optional<Output<String>> channel() {
         return Optional.ofNullable(this.channel);
     }
@@ -53,6 +61,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -64,6 +76,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return Resource name of the instance in which to create the new worker pool. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -75,6 +91,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="poolId")
     private @Nullable Output<String> poolId;
 
+    /**
+     * @return ID of the created worker pool. A valid pool ID must: be 6-50 characters long, contain only lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with a lowercase letter or a digit.
+     * 
+     */
     public Optional<Output<String>> poolId() {
         return Optional.ofNullable(this.poolId);
     }
@@ -93,6 +113,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workerConfig")
     private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig;
 
+    /**
+     * @return Specifies the properties, such as machine type and disk size, used for creating workers in a worker pool.
+     * 
+     */
     public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs>> workerConfig() {
         return Optional.ofNullable(this.workerConfig);
     }
@@ -104,6 +128,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workerCount")
     private @Nullable Output<String> workerCount;
 
+    /**
+     * @return The desired number of workers in the worker pool. Must be a value between 0 and 15000.
+     * 
+     */
     public Optional<Output<String>> workerCount() {
         return Optional.ofNullable(this.workerCount);
     }
@@ -140,20 +168,44 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkerPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscale The autoscale policy to apply on a pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscale(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale) {
             $.autoscale = autoscale;
             return this;
         }
 
+        /**
+         * @param autoscale The autoscale policy to apply on a pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscale(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs autoscale) {
             return autoscale(Output.of(autoscale));
         }
 
+        /**
+         * @param channel Channel specifies the release channel of the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channel(@Nullable Output<String> channel) {
             $.channel = channel;
             return this;
         }
 
+        /**
+         * @param channel Channel specifies the release channel of the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channel(String channel) {
             return channel(Output.of(channel));
         }
@@ -167,29 +219,65 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param name WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parent Resource name of the instance in which to create the new worker pool. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent Resource name of the instance in which to create the new worker pool. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param poolId ID of the created worker pool. A valid pool ID must: be 6-50 characters long, contain only lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with a lowercase letter or a digit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolId(@Nullable Output<String> poolId) {
             $.poolId = poolId;
             return this;
         }
 
+        /**
+         * @param poolId ID of the created worker pool. A valid pool ID must: be 6-50 characters long, contain only lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with a lowercase letter or a digit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolId(String poolId) {
             return poolId(Output.of(poolId));
         }
@@ -203,20 +291,44 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param workerConfig Specifies the properties, such as machine type and disk size, used for creating workers in a worker pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig) {
             $.workerConfig = workerConfig;
             return this;
         }
 
+        /**
+         * @param workerConfig Specifies the properties, such as machine type and disk size, used for creating workers in a worker pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs workerConfig) {
             return workerConfig(Output.of(workerConfig));
         }
 
+        /**
+         * @param workerCount The desired number of workers in the worker pool. Must be a value between 0 and 15000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerCount(@Nullable Output<String> workerCount) {
             $.workerCount = workerCount;
             return this;
         }
 
+        /**
+         * @param workerCount The desired number of workers in the worker pool. Must be a value between 0 and 15000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerCount(String workerCount) {
             return workerCount(Output.of(workerCount));
         }

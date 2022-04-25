@@ -25,6 +25,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appEngineHttpRequest")
     private @Nullable Output<AppEngineHttpRequestArgs> appEngineHttpRequest;
 
+    /**
+     * @return App Engine HTTP request that is sent to the task&#39;s target. Can be set only if app_engine_http_target is set on the queue. An App Engine task is a task that has AppEngineHttpRequest set.
+     * 
+     */
     public Optional<Output<AppEngineHttpRequestArgs>> appEngineHttpRequest() {
         return Optional.ofNullable(this.appEngineHttpRequest);
     }
@@ -43,6 +47,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Optionally caller-specified in CreateTask. The task name. The task name must have the following format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID` * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the task&#39;s location. The list of available locations can be obtained by calling ListLocations. For more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100 characters. * `TASK_ID` can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum length is 500 characters.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +69,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pullMessage")
     private @Nullable Output<PullMessageArgs> pullMessage;
 
+    /**
+     * @return LeaseTasks to process the task. Can be set only if pull_target is set on the queue. A pull task is a task that has PullMessage set.
+     * 
+     */
     public Optional<Output<PullMessageArgs>> pullMessage() {
         return Optional.ofNullable(this.pullMessage);
     }
@@ -79,6 +91,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseView")
     private @Nullable Output<TaskResponseView> responseView;
 
+    /**
+     * @return The response_view specifies which subset of the Task will be returned. By default response_view is BASIC; not all information is retrieved by default because some data, such as payloads, might be desirable to return only when needed because of its large size or because of the sensitivity of data that it contains. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task resource.
+     * 
+     */
     public Optional<Output<TaskResponseView>> responseView() {
         return Optional.ofNullable(this.responseView);
     }
@@ -90,6 +106,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheduleTime")
     private @Nullable Output<String> scheduleTime;
 
+    /**
+     * @return The time when the task is scheduled to be attempted. For App Engine queues, this is when the task will be attempted or retried. For pull queues, this is the time when the task is available to be leased; if a task is currently leased, this is the time when the current lease expires, that is, the time that the task was leased plus the lease_duration. `schedule_time` will be truncated to the nearest microsecond.
+     * 
+     */
     public Optional<Output<String>> scheduleTime() {
         return Optional.ofNullable(this.scheduleTime);
     }
@@ -125,11 +145,23 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TaskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appEngineHttpRequest App Engine HTTP request that is sent to the task&#39;s target. Can be set only if app_engine_http_target is set on the queue. An App Engine task is a task that has AppEngineHttpRequest set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appEngineHttpRequest(@Nullable Output<AppEngineHttpRequestArgs> appEngineHttpRequest) {
             $.appEngineHttpRequest = appEngineHttpRequest;
             return this;
         }
 
+        /**
+         * @param appEngineHttpRequest App Engine HTTP request that is sent to the task&#39;s target. Can be set only if app_engine_http_target is set on the queue. An App Engine task is a task that has AppEngineHttpRequest set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appEngineHttpRequest(AppEngineHttpRequestArgs appEngineHttpRequest) {
             return appEngineHttpRequest(Output.of(appEngineHttpRequest));
         }
@@ -143,11 +175,23 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Optionally caller-specified in CreateTask. The task name. The task name must have the following format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID` * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the task&#39;s location. The list of available locations can be obtained by calling ListLocations. For more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100 characters. * `TASK_ID` can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum length is 500 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Optionally caller-specified in CreateTask. The task name. The task name must have the following format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID` * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the task&#39;s location. The list of available locations can be obtained by calling ListLocations. For more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100 characters. * `TASK_ID` can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum length is 500 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -161,11 +205,23 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param pullMessage LeaseTasks to process the task. Can be set only if pull_target is set on the queue. A pull task is a task that has PullMessage set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullMessage(@Nullable Output<PullMessageArgs> pullMessage) {
             $.pullMessage = pullMessage;
             return this;
         }
 
+        /**
+         * @param pullMessage LeaseTasks to process the task. Can be set only if pull_target is set on the queue. A pull task is a task that has PullMessage set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullMessage(PullMessageArgs pullMessage) {
             return pullMessage(Output.of(pullMessage));
         }
@@ -179,20 +235,44 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
             return queueId(Output.of(queueId));
         }
 
+        /**
+         * @param responseView The response_view specifies which subset of the Task will be returned. By default response_view is BASIC; not all information is retrieved by default because some data, such as payloads, might be desirable to return only when needed because of its large size or because of the sensitivity of data that it contains. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseView(@Nullable Output<TaskResponseView> responseView) {
             $.responseView = responseView;
             return this;
         }
 
+        /**
+         * @param responseView The response_view specifies which subset of the Task will be returned. By default response_view is BASIC; not all information is retrieved by default because some data, such as payloads, might be desirable to return only when needed because of its large size or because of the sensitivity of data that it contains. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseView(TaskResponseView responseView) {
             return responseView(Output.of(responseView));
         }
 
+        /**
+         * @param scheduleTime The time when the task is scheduled to be attempted. For App Engine queues, this is when the task will be attempted or retried. For pull queues, this is the time when the task is available to be leased; if a task is currently leased, this is the time when the current lease expires, that is, the time that the task was leased plus the lease_duration. `schedule_time` will be truncated to the nearest microsecond.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleTime(@Nullable Output<String> scheduleTime) {
             $.scheduleTime = scheduleTime;
             return this;
         }
 
+        /**
+         * @param scheduleTime The time when the task is scheduled to be attempted. For App Engine queues, this is when the task will be attempted or retried. For pull queues, this is the time when the task is available to be leased; if a task is currently leased, this is the time when the current lease expires, that is, the time that the task was leased plus the lease_duration. `schedule_time` will be truncated to the nearest microsecond.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleTime(String scheduleTime) {
             return scheduleTime(Output.of(scheduleTime));
         }

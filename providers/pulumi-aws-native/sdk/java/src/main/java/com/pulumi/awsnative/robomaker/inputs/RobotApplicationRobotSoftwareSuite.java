@@ -26,6 +26,10 @@ public final class RobotApplicationRobotSoftwareSuite extends com.pulumi.resourc
     @Import(name="name", required=true)
     private RobotApplicationRobotSoftwareSuiteName name;
 
+    /**
+     * @return The name of robot software suite.
+     * 
+     */
     public RobotApplicationRobotSoftwareSuiteName name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class RobotApplicationRobotSoftwareSuite extends com.pulumi.resourc
     @Import(name="version")
     private @Nullable RobotApplicationRobotSoftwareSuiteVersion version;
 
+    /**
+     * @return The version of robot software suite.
+     * 
+     */
     public Optional<RobotApplicationRobotSoftwareSuiteVersion> version() {
         return Optional.ofNullable(this.version);
     }
@@ -66,11 +74,23 @@ public final class RobotApplicationRobotSoftwareSuite extends com.pulumi.resourc
             $ = new RobotApplicationRobotSoftwareSuite(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of robot software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(RobotApplicationRobotSoftwareSuiteName name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version The version of robot software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
             $.version = version;
             return this;

@@ -11,62 +11,62 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudMlV1__PredictionInputResponse {
     /**
-     * Optional. Number of records per batch, defaults to 64. The service will buffer batch_size number of records in memory before invoking one Tensorflow prediction call internally. So take the record size and memory available into consideration when setting this parameter.
+     * @return Optional. Number of records per batch, defaults to 64. The service will buffer batch_size number of records in memory before invoking one Tensorflow prediction call internally. So take the record size and memory available into consideration when setting this parameter.
      * 
      */
     private final String batchSize;
     /**
-     * The format of the input data files.
+     * @return The format of the input data files.
      * 
      */
     private final String dataFormat;
     /**
-     * The Cloud Storage location of the input data files. May contain wildcards.
+     * @return The Cloud Storage location of the input data files. May contain wildcards.
      * 
      */
     private final List<String> inputPaths;
     /**
-     * Optional. The maximum number of workers to be used for parallel processing. Defaults to 10 if not specified.
+     * @return Optional. The maximum number of workers to be used for parallel processing. Defaults to 10 if not specified.
      * 
      */
     private final String maxWorkerCount;
     /**
-     * Use this field if you want to use the default version for the specified model. The string must use the following format: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL&#34;`
+     * @return Use this field if you want to use the default version for the specified model. The string must use the following format: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL&#34;`
      * 
      */
     private final String modelName;
     /**
-     * Optional. Format of the output data files, defaults to JSON.
+     * @return Optional. Format of the output data files, defaults to JSON.
      * 
      */
     private final String outputDataFormat;
     /**
-     * The output Google Cloud Storage location.
+     * @return The output Google Cloud Storage location.
      * 
      */
     private final String outputPath;
     /**
-     * The Google Compute Engine region to run the prediction job in. See the available regions for AI Platform services.
+     * @return The Google Compute Engine region to run the prediction job in. See the available regions for AI Platform services.
      * 
      */
     private final String region;
     /**
-     * Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI Platform will pick the runtime version used during the CreateVersion request for this model version, or choose the latest stable version when model version information is not available such as when the model is specified by uri.
+     * @return Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI Platform will pick the runtime version used during the CreateVersion request for this model version, or choose the latest stable version when model version information is not available such as when the model is specified by uri.
      * 
      */
     private final String runtimeVersion;
     /**
-     * Optional. The name of the signature defined in the SavedModel to use for this job. Please refer to [SavedModel](https://tensorflow.github.io/serving/serving_basic.html) for information about how to use signatures. Defaults to [DEFAULT_SERVING_SIGNATURE_DEF_KEY](https://www.tensorflow.org/api_docs/python/tf/saved_model/signature_constants) , which is &#34;serving_default&#34;.
+     * @return Optional. The name of the signature defined in the SavedModel to use for this job. Please refer to [SavedModel](https://tensorflow.github.io/serving/serving_basic.html) for information about how to use signatures. Defaults to [DEFAULT_SERVING_SIGNATURE_DEF_KEY](https://www.tensorflow.org/api_docs/python/tf/saved_model/signature_constants) , which is &#34;serving_default&#34;.
      * 
      */
     private final String signatureName;
     /**
-     * Use this field if you want to specify a Google Cloud Storage path for the model to use.
+     * @return Use this field if you want to specify a Google Cloud Storage path for the model to use.
      * 
      */
     private final String uri;
     /**
-     * Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION&#34;`
+     * @return Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION&#34;`
      * 
      */
     private final String versionName;
@@ -100,86 +100,86 @@ public final class GoogleCloudMlV1__PredictionInputResponse {
     }
 
     /**
-     * Optional. Number of records per batch, defaults to 64. The service will buffer batch_size number of records in memory before invoking one Tensorflow prediction call internally. So take the record size and memory available into consideration when setting this parameter.
+     * @return Optional. Number of records per batch, defaults to 64. The service will buffer batch_size number of records in memory before invoking one Tensorflow prediction call internally. So take the record size and memory available into consideration when setting this parameter.
      * 
-    */
+     */
     public String batchSize() {
         return this.batchSize;
     }
     /**
-     * The format of the input data files.
+     * @return The format of the input data files.
      * 
-    */
+     */
     public String dataFormat() {
         return this.dataFormat;
     }
     /**
-     * The Cloud Storage location of the input data files. May contain wildcards.
+     * @return The Cloud Storage location of the input data files. May contain wildcards.
      * 
-    */
+     */
     public List<String> inputPaths() {
         return this.inputPaths;
     }
     /**
-     * Optional. The maximum number of workers to be used for parallel processing. Defaults to 10 if not specified.
+     * @return Optional. The maximum number of workers to be used for parallel processing. Defaults to 10 if not specified.
      * 
-    */
+     */
     public String maxWorkerCount() {
         return this.maxWorkerCount;
     }
     /**
-     * Use this field if you want to use the default version for the specified model. The string must use the following format: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL&#34;`
+     * @return Use this field if you want to use the default version for the specified model. The string must use the following format: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL&#34;`
      * 
-    */
+     */
     public String modelName() {
         return this.modelName;
     }
     /**
-     * Optional. Format of the output data files, defaults to JSON.
+     * @return Optional. Format of the output data files, defaults to JSON.
      * 
-    */
+     */
     public String outputDataFormat() {
         return this.outputDataFormat;
     }
     /**
-     * The output Google Cloud Storage location.
+     * @return The output Google Cloud Storage location.
      * 
-    */
+     */
     public String outputPath() {
         return this.outputPath;
     }
     /**
-     * The Google Compute Engine region to run the prediction job in. See the available regions for AI Platform services.
+     * @return The Google Compute Engine region to run the prediction job in. See the available regions for AI Platform services.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI Platform will pick the runtime version used during the CreateVersion request for this model version, or choose the latest stable version when model version information is not available such as when the model is specified by uri.
+     * @return Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI Platform will pick the runtime version used during the CreateVersion request for this model version, or choose the latest stable version when model version information is not available such as when the model is specified by uri.
      * 
-    */
+     */
     public String runtimeVersion() {
         return this.runtimeVersion;
     }
     /**
-     * Optional. The name of the signature defined in the SavedModel to use for this job. Please refer to [SavedModel](https://tensorflow.github.io/serving/serving_basic.html) for information about how to use signatures. Defaults to [DEFAULT_SERVING_SIGNATURE_DEF_KEY](https://www.tensorflow.org/api_docs/python/tf/saved_model/signature_constants) , which is &#34;serving_default&#34;.
+     * @return Optional. The name of the signature defined in the SavedModel to use for this job. Please refer to [SavedModel](https://tensorflow.github.io/serving/serving_basic.html) for information about how to use signatures. Defaults to [DEFAULT_SERVING_SIGNATURE_DEF_KEY](https://www.tensorflow.org/api_docs/python/tf/saved_model/signature_constants) , which is &#34;serving_default&#34;.
      * 
-    */
+     */
     public String signatureName() {
         return this.signatureName;
     }
     /**
-     * Use this field if you want to specify a Google Cloud Storage path for the model to use.
+     * @return Use this field if you want to specify a Google Cloud Storage path for the model to use.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }
     /**
-     * Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION&#34;`
+     * @return Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `&#34;projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION&#34;`
      * 
-    */
+     */
     public String versionName() {
         return this.versionName;
     }

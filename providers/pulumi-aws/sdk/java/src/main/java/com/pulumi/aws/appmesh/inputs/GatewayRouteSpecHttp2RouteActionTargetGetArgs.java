@@ -20,6 +20,10 @@ public final class GatewayRouteSpecHttp2RouteActionTargetGetArgs extends com.pul
     @Import(name="virtualService", required=true)
     private Output<GatewayRouteSpecHttp2RouteActionTargetVirtualServiceGetArgs> virtualService;
 
+    /**
+     * @return The virtual service gateway route target.
+     * 
+     */
     public Output<GatewayRouteSpecHttp2RouteActionTargetVirtualServiceGetArgs> virtualService() {
         return this.virtualService;
     }
@@ -48,11 +52,23 @@ public final class GatewayRouteSpecHttp2RouteActionTargetGetArgs extends com.pul
             $ = new GatewayRouteSpecHttp2RouteActionTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param virtualService The virtual service gateway route target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualService(Output<GatewayRouteSpecHttp2RouteActionTargetVirtualServiceGetArgs> virtualService) {
             $.virtualService = virtualService;
             return this;
         }
 
+        /**
+         * @param virtualService The virtual service gateway route target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualService(GatewayRouteSpecHttp2RouteActionTargetVirtualServiceGetArgs virtualService) {
             return virtualService(Output.of(virtualService));
         }

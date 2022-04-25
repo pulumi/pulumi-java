@@ -26,6 +26,10 @@ public final class VirtualNetworkConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return Resource id of a pre-existing subnet.
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -54,11 +58,23 @@ public final class VirtualNetworkConfigArgs extends com.pulumi.resources.Resourc
             $ = new VirtualNetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subnetId Resource id of a pre-existing subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId Resource id of a pre-existing subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }

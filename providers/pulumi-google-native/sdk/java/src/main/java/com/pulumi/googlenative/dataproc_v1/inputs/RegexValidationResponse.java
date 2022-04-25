@@ -24,6 +24,10 @@ public final class RegexValidationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="regexes", required=true)
     private List<String> regexes;
 
+    /**
+     * @return RE2 regular expressions used to validate the parameter&#39;s value. The value must match the regex in its entirety (substring matches are not sufficient).
+     * 
+     */
     public List<String> regexes() {
         return this.regexes;
     }
@@ -52,11 +56,23 @@ public final class RegexValidationResponse extends com.pulumi.resources.InvokeAr
             $ = new RegexValidationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param regexes RE2 regular expressions used to validate the parameter&#39;s value. The value must match the regex in its entirety (substring matches are not sufficient).
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexes(List<String> regexes) {
             $.regexes = regexes;
             return this;
         }
 
+        /**
+         * @param regexes RE2 regular expressions used to validate the parameter&#39;s value. The value must match the regex in its entirety (substring matches are not sufficient).
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexes(String... regexes) {
             return regexes(List.of(regexes));
         }

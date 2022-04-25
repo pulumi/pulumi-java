@@ -26,6 +26,10 @@ public final class DayDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="time")
     private @Nullable Output<String> time;
 
+    /**
+     * @return The time of day the schedule will occur.
+     * 
+     */
     public Optional<Output<String>> time() {
         return Optional.ofNullable(this.time);
     }
@@ -54,11 +58,23 @@ public final class DayDetailsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DayDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param time The time of day the schedule will occur.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(@Nullable Output<String> time) {
             $.time = time;
             return this;
         }
 
+        /**
+         * @param time The time of day the schedule will occur.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             return time(Output.of(time));
         }

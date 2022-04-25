@@ -12,18 +12,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DatabaseBackupSettingResponse {
     /**
-     * Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
+     * @return Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
      * 
      */
     private final @Nullable String connectionString;
     /**
-     * Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
+     * @return Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
      * This is used during restore with overwrite connection strings options.
      * 
      */
     private final @Nullable String connectionStringName;
     /**
-     * Database type (e.g. SqlAzure / MySql).
+     * @return Database type (e.g. SqlAzure / MySql).
      * 
      */
     private final String databaseType;
@@ -42,24 +42,24 @@ public final class DatabaseBackupSettingResponse {
     }
 
     /**
-     * Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
+     * @return Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
      * 
-    */
+     */
     public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
-     * Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
+     * @return Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
      * This is used during restore with overwrite connection strings options.
      * 
-    */
+     */
     public Optional<String> connectionStringName() {
         return Optional.ofNullable(this.connectionStringName);
     }
     /**
-     * Database type (e.g. SqlAzure / MySql).
+     * @return Database type (e.g. SqlAzure / MySql).
      * 
-    */
+     */
     public String databaseType() {
         return this.databaseType;
     }

@@ -28,6 +28,10 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="clientTags", required=true)
     private List<String> clientTags;
 
+    /**
+     * @return Optional. Presto client tags to attach to this query
+     * 
+     */
     public List<String> clientTags() {
         return this.clientTags;
     }
@@ -39,6 +43,10 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="continueOnFailure", required=true)
     private Boolean continueOnFailure;
 
+    /**
+     * @return Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
+     * 
+     */
     public Boolean continueOnFailure() {
         return this.continueOnFailure;
     }
@@ -50,6 +58,10 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="loggingConfig", required=true)
     private LoggingConfigResponse loggingConfig;
 
+    /**
+     * @return Optional. The runtime log config for job execution.
+     * 
+     */
     public LoggingConfigResponse loggingConfig() {
         return this.loggingConfig;
     }
@@ -61,6 +73,10 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="outputFormat", required=true)
     private String outputFormat;
 
+    /**
+     * @return Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats
+     * 
+     */
     public String outputFormat() {
         return this.outputFormat;
     }
@@ -72,6 +88,10 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties", required=true)
     private Map<String,String> properties;
 
+    /**
+     * @return Optional. A mapping of property names to values. Used to set Presto session properties (https://prestodb.io/docs/current/sql/set-session.html) Equivalent to using the --session flag in the Presto CLI
+     * 
+     */
     public Map<String,String> properties() {
         return this.properties;
     }
@@ -83,6 +103,10 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="queryFileUri", required=true)
     private String queryFileUri;
 
+    /**
+     * @return The HCFS URI of the script that contains SQL queries.
+     * 
+     */
     public String queryFileUri() {
         return this.queryFileUri;
     }
@@ -94,6 +118,10 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="queryList", required=true)
     private QueryListResponse queryList;
 
+    /**
+     * @return A list of queries.
+     * 
+     */
     public QueryListResponse queryList() {
         return this.queryList;
     }
@@ -128,40 +156,88 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PrestoJobResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientTags Optional. Presto client tags to attach to this query
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientTags(List<String> clientTags) {
             $.clientTags = clientTags;
             return this;
         }
 
+        /**
+         * @param clientTags Optional. Presto client tags to attach to this query
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientTags(String... clientTags) {
             return clientTags(List.of(clientTags));
         }
 
+        /**
+         * @param continueOnFailure Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continueOnFailure(Boolean continueOnFailure) {
             $.continueOnFailure = continueOnFailure;
             return this;
         }
 
+        /**
+         * @param loggingConfig Optional. The runtime log config for job execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
             $.loggingConfig = loggingConfig;
             return this;
         }
 
+        /**
+         * @param outputFormat Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputFormat(String outputFormat) {
             $.outputFormat = outputFormat;
             return this;
         }
 
+        /**
+         * @param properties Optional. A mapping of property names to values. Used to set Presto session properties (https://prestodb.io/docs/current/sql/set-session.html) Equivalent to using the --session flag in the Presto CLI
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param queryFileUri The HCFS URI of the script that contains SQL queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryFileUri(String queryFileUri) {
             $.queryFileUri = queryFileUri;
             return this;
         }
 
+        /**
+         * @param queryList A list of queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryList(QueryListResponse queryList) {
             $.queryList = queryList;
             return this;

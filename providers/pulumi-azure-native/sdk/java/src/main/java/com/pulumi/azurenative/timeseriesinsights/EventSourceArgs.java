@@ -26,6 +26,10 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentName", required=true)
     private Output<String> environmentName;
 
+    /**
+     * @return The name of the Time Series Insights environment associated with the specified resource group.
+     * 
+     */
     public Output<String> environmentName() {
         return this.environmentName;
     }
@@ -37,6 +41,10 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventSourceName")
     private @Nullable Output<String> eventSourceName;
 
+    /**
+     * @return Name of the event source.
+     * 
+     */
     public Optional<Output<String>> eventSourceName() {
         return Optional.ofNullable(this.eventSourceName);
     }
@@ -48,6 +56,10 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<Either<String,EventSourceKind>> kind;
 
+    /**
+     * @return The kind of the event source.
+     * 
+     */
     public Output<Either<String,EventSourceKind>> kind() {
         return this.kind;
     }
@@ -59,6 +71,10 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="localTimestamp")
     private @Nullable Output<LocalTimestampArgs> localTimestamp;
 
+    /**
+     * @return An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn&#39;t specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+     * 
+     */
     public Optional<Output<LocalTimestampArgs>> localTimestamp() {
         return Optional.ofNullable(this.localTimestamp);
     }
@@ -70,6 +86,10 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -81,6 +101,10 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -92,6 +116,10 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value pairs of additional properties for the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -126,73 +154,169 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EventSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environmentName The name of the Time Series Insights environment associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(Output<String> environmentName) {
             $.environmentName = environmentName;
             return this;
         }
 
+        /**
+         * @param environmentName The name of the Time Series Insights environment associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(String environmentName) {
             return environmentName(Output.of(environmentName));
         }
 
+        /**
+         * @param eventSourceName Name of the event source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSourceName(@Nullable Output<String> eventSourceName) {
             $.eventSourceName = eventSourceName;
             return this;
         }
 
+        /**
+         * @param eventSourceName Name of the event source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSourceName(String eventSourceName) {
             return eventSourceName(Output.of(eventSourceName));
         }
 
+        /**
+         * @param kind The kind of the event source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,EventSourceKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the event source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,EventSourceKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind The kind of the event source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind The kind of the event source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(EventSourceKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param localTimestamp An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn&#39;t specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localTimestamp(@Nullable Output<LocalTimestampArgs> localTimestamp) {
             $.localTimestamp = localTimestamp;
             return this;
         }
 
+        /**
+         * @param localTimestamp An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn&#39;t specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localTimestamp(LocalTimestampArgs localTimestamp) {
             return localTimestamp(Output.of(localTimestamp));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Key-value pairs of additional properties for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value pairs of additional properties for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

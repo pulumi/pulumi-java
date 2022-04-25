@@ -26,6 +26,10 @@ public final class SecurityProfileMetricDimension extends com.pulumi.resources.I
     @Import(name="dimensionName", required=true)
     private String dimensionName;
 
+    /**
+     * @return A unique identifier for the dimension.
+     * 
+     */
     public String dimensionName() {
         return this.dimensionName;
     }
@@ -37,6 +41,10 @@ public final class SecurityProfileMetricDimension extends com.pulumi.resources.I
     @Import(name="operator")
     private @Nullable SecurityProfileMetricDimensionOperator operator;
 
+    /**
+     * @return Defines how the dimensionValues of a dimension are interpreted.
+     * 
+     */
     public Optional<SecurityProfileMetricDimensionOperator> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -66,11 +74,23 @@ public final class SecurityProfileMetricDimension extends com.pulumi.resources.I
             $ = new SecurityProfileMetricDimension(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dimensionName A unique identifier for the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionName(String dimensionName) {
             $.dimensionName = dimensionName;
             return this;
         }
 
+        /**
+         * @param operator Defines how the dimensionValues of a dimension are interpreted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable SecurityProfileMetricDimensionOperator operator) {
             $.operator = operator;
             return this;

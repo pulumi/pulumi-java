@@ -28,6 +28,10 @@ public final class ResourceUsageExportConfigArgs extends com.pulumi.resources.Re
     @Import(name="bigqueryDestination")
     private @Nullable Output<BigQueryDestinationArgs> bigqueryDestination;
 
+    /**
+     * @return Configuration to use BigQuery as usage export destination.
+     * 
+     */
     public Optional<Output<BigQueryDestinationArgs>> bigqueryDestination() {
         return Optional.ofNullable(this.bigqueryDestination);
     }
@@ -39,6 +43,10 @@ public final class ResourceUsageExportConfigArgs extends com.pulumi.resources.Re
     @Import(name="consumptionMeteringConfig")
     private @Nullable Output<ConsumptionMeteringConfigArgs> consumptionMeteringConfig;
 
+    /**
+     * @return Configuration to enable resource consumption metering.
+     * 
+     */
     public Optional<Output<ConsumptionMeteringConfigArgs>> consumptionMeteringConfig() {
         return Optional.ofNullable(this.consumptionMeteringConfig);
     }
@@ -50,6 +58,10 @@ public final class ResourceUsageExportConfigArgs extends com.pulumi.resources.Re
     @Import(name="enableNetworkEgressMetering")
     private @Nullable Output<Boolean> enableNetworkEgressMetering;
 
+    /**
+     * @return Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
+     * 
+     */
     public Optional<Output<Boolean>> enableNetworkEgressMetering() {
         return Optional.ofNullable(this.enableNetworkEgressMetering);
     }
@@ -80,29 +92,65 @@ public final class ResourceUsageExportConfigArgs extends com.pulumi.resources.Re
             $ = new ResourceUsageExportConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigqueryDestination Configuration to use BigQuery as usage export destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryDestination(@Nullable Output<BigQueryDestinationArgs> bigqueryDestination) {
             $.bigqueryDestination = bigqueryDestination;
             return this;
         }
 
+        /**
+         * @param bigqueryDestination Configuration to use BigQuery as usage export destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryDestination(BigQueryDestinationArgs bigqueryDestination) {
             return bigqueryDestination(Output.of(bigqueryDestination));
         }
 
+        /**
+         * @param consumptionMeteringConfig Configuration to enable resource consumption metering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumptionMeteringConfig(@Nullable Output<ConsumptionMeteringConfigArgs> consumptionMeteringConfig) {
             $.consumptionMeteringConfig = consumptionMeteringConfig;
             return this;
         }
 
+        /**
+         * @param consumptionMeteringConfig Configuration to enable resource consumption metering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumptionMeteringConfig(ConsumptionMeteringConfigArgs consumptionMeteringConfig) {
             return consumptionMeteringConfig(Output.of(consumptionMeteringConfig));
         }
 
+        /**
+         * @param enableNetworkEgressMetering Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNetworkEgressMetering(@Nullable Output<Boolean> enableNetworkEgressMetering) {
             $.enableNetworkEgressMetering = enableNetworkEgressMetering;
             return this;
         }
 
+        /**
+         * @param enableNetworkEgressMetering Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
             return enableNetworkEgressMetering(Output.of(enableNetworkEgressMetering));
         }

@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSqlResourceSqlRoleAssignmentResult {
     /**
-     * The unique resource identifier of the database account.
+     * @return The unique resource identifier of the database account.
      * 
      */
     private final String id;
     /**
-     * The name of the database account.
+     * @return The name of the database account.
      * 
      */
     private final String name;
     /**
-     * The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
+     * @return The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
      * 
      */
     private final @Nullable String principalId;
     /**
-     * The unique identifier for the associated Role Definition.
+     * @return The unique identifier for the associated Role Definition.
      * 
      */
     private final @Nullable String roleDefinitionId;
     /**
-     * The data plane resource path for which access is being granted through this Role Assignment.
+     * @return The data plane resource path for which access is being granted through this Role Assignment.
      * 
      */
     private final @Nullable String scope;
     /**
-     * The type of Azure resource.
+     * @return The type of Azure resource.
      * 
      */
     private final String type;
@@ -59,44 +59,44 @@ public final class GetSqlResourceSqlRoleAssignmentResult {
     }
 
     /**
-     * The unique resource identifier of the database account.
+     * @return The unique resource identifier of the database account.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the database account.
+     * @return The name of the database account.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
+     * @return The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
      * 
-    */
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
-     * The unique identifier for the associated Role Definition.
+     * @return The unique identifier for the associated Role Definition.
      * 
-    */
+     */
     public Optional<String> roleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }
     /**
-     * The data plane resource path for which access is being granted through this Role Assignment.
+     * @return The data plane resource path for which access is being granted through this Role Assignment.
      * 
-    */
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
-     * The type of Azure resource.
+     * @return The type of Azure resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

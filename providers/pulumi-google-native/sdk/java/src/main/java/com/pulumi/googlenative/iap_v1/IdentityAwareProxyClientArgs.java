@@ -29,6 +29,10 @@ public final class IdentityAwareProxyClientArgs extends com.pulumi.resources.Res
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Human-friendly name given to the OAuth client.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -75,11 +79,23 @@ public final class IdentityAwareProxyClientArgs extends com.pulumi.resources.Res
             return brandId(Output.of(brandId));
         }
 
+        /**
+         * @param displayName Human-friendly name given to the OAuth client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Human-friendly name given to the OAuth client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }

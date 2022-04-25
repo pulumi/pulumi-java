@@ -27,6 +27,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="additionalMetricsToRetainV2")
     private @Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
 
+    /**
+     * @return A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile&#39;s behaviors, but it is also retained for any metric specified here.
+     * 
+     */
     public Optional<Output<List<SecurityProfileMetricToRetainArgs>>> additionalMetricsToRetainV2() {
         return Optional.ofNullable(this.additionalMetricsToRetainV2);
     }
@@ -38,6 +42,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="alertTargets")
     private @Nullable Output<Object> alertTargets;
 
+    /**
+     * @return Specifies the destinations to which alerts are sent.
+     * 
+     */
     public Optional<Output<Object>> alertTargets() {
         return Optional.ofNullable(this.alertTargets);
     }
@@ -49,6 +57,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="behaviors")
     private @Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors;
 
+    /**
+     * @return Specifies the behaviors that, when violated by a device (thing), cause an alert.
+     * 
+     */
     public Optional<Output<List<SecurityProfileBehaviorArgs>>> behaviors() {
         return Optional.ofNullable(this.behaviors);
     }
@@ -60,6 +72,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="securityProfileDescription")
     private @Nullable Output<String> securityProfileDescription;
 
+    /**
+     * @return A description of the security profile.
+     * 
+     */
     public Optional<Output<String>> securityProfileDescription() {
         return Optional.ofNullable(this.securityProfileDescription);
     }
@@ -71,6 +87,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="securityProfileName")
     private @Nullable Output<String> securityProfileName;
 
+    /**
+     * @return A unique identifier for the security profile.
+     * 
+     */
     public Optional<Output<String>> securityProfileName() {
         return Optional.ofNullable(this.securityProfileName);
     }
@@ -82,6 +102,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<List<SecurityProfileTagArgs>> tags;
 
+    /**
+     * @return Metadata that can be used to manage the security profile.
+     * 
+     */
     public Optional<Output<List<SecurityProfileTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -93,6 +117,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="targetArns")
     private @Nullable Output<List<String>> targetArns;
 
+    /**
+     * @return A set of target ARNs that the security profile is attached to.
+     * 
+     */
     public Optional<Output<List<String>>> targetArns() {
         return Optional.ofNullable(this.targetArns);
     }
@@ -127,81 +155,189 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
             $ = new SecurityProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalMetricsToRetainV2 A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile&#39;s behaviors, but it is also retained for any metric specified here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalMetricsToRetainV2(@Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2) {
             $.additionalMetricsToRetainV2 = additionalMetricsToRetainV2;
             return this;
         }
 
+        /**
+         * @param additionalMetricsToRetainV2 A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile&#39;s behaviors, but it is also retained for any metric specified here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalMetricsToRetainV2(List<SecurityProfileMetricToRetainArgs> additionalMetricsToRetainV2) {
             return additionalMetricsToRetainV2(Output.of(additionalMetricsToRetainV2));
         }
 
+        /**
+         * @param additionalMetricsToRetainV2 A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile&#39;s behaviors, but it is also retained for any metric specified here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalMetricsToRetainV2(SecurityProfileMetricToRetainArgs... additionalMetricsToRetainV2) {
             return additionalMetricsToRetainV2(List.of(additionalMetricsToRetainV2));
         }
 
+        /**
+         * @param alertTargets Specifies the destinations to which alerts are sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertTargets(@Nullable Output<Object> alertTargets) {
             $.alertTargets = alertTargets;
             return this;
         }
 
+        /**
+         * @param alertTargets Specifies the destinations to which alerts are sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertTargets(Object alertTargets) {
             return alertTargets(Output.of(alertTargets));
         }
 
+        /**
+         * @param behaviors Specifies the behaviors that, when violated by a device (thing), cause an alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder behaviors(@Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors) {
             $.behaviors = behaviors;
             return this;
         }
 
+        /**
+         * @param behaviors Specifies the behaviors that, when violated by a device (thing), cause an alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder behaviors(List<SecurityProfileBehaviorArgs> behaviors) {
             return behaviors(Output.of(behaviors));
         }
 
+        /**
+         * @param behaviors Specifies the behaviors that, when violated by a device (thing), cause an alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder behaviors(SecurityProfileBehaviorArgs... behaviors) {
             return behaviors(List.of(behaviors));
         }
 
+        /**
+         * @param securityProfileDescription A description of the security profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityProfileDescription(@Nullable Output<String> securityProfileDescription) {
             $.securityProfileDescription = securityProfileDescription;
             return this;
         }
 
+        /**
+         * @param securityProfileDescription A description of the security profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityProfileDescription(String securityProfileDescription) {
             return securityProfileDescription(Output.of(securityProfileDescription));
         }
 
+        /**
+         * @param securityProfileName A unique identifier for the security profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityProfileName(@Nullable Output<String> securityProfileName) {
             $.securityProfileName = securityProfileName;
             return this;
         }
 
+        /**
+         * @param securityProfileName A unique identifier for the security profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityProfileName(String securityProfileName) {
             return securityProfileName(Output.of(securityProfileName));
         }
 
+        /**
+         * @param tags Metadata that can be used to manage the security profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<SecurityProfileTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Metadata that can be used to manage the security profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<SecurityProfileTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Metadata that can be used to manage the security profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(SecurityProfileTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param targetArns A set of target ARNs that the security profile is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArns(@Nullable Output<List<String>> targetArns) {
             $.targetArns = targetArns;
             return this;
         }
 
+        /**
+         * @param targetArns A set of target ARNs that the security profile is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArns(List<String> targetArns) {
             return targetArns(Output.of(targetArns));
         }
 
+        /**
+         * @param targetArns A set of target ARNs that the security profile is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArns(String... targetArns) {
             return targetArns(List.of(targetArns));
         }

@@ -32,6 +32,10 @@ public final class IPAMArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operatingRegions")
     private @Nullable Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions;
 
+    /**
+     * @return The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
+     * 
+     */
     public Optional<Output<List<IPAMIpamOperatingRegionArgs>>> operatingRegions() {
         return Optional.ofNullable(this.operatingRegions);
     }
@@ -43,6 +47,10 @@ public final class IPAMArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<IPAMTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<IPAMTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -82,28 +90,64 @@ public final class IPAMArgs extends com.pulumi.resources.ResourceArgs {
             return description(Output.of(description));
         }
 
+        /**
+         * @param operatingRegions The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingRegions(@Nullable Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions) {
             $.operatingRegions = operatingRegions;
             return this;
         }
 
+        /**
+         * @param operatingRegions The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingRegions(List<IPAMIpamOperatingRegionArgs> operatingRegions) {
             return operatingRegions(Output.of(operatingRegions));
         }
 
+        /**
+         * @param operatingRegions The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingRegions(IPAMIpamOperatingRegionArgs... operatingRegions) {
             return operatingRegions(List.of(operatingRegions));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<IPAMTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<IPAMTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(IPAMTagArgs... tags) {
             return tags(List.of(tags));
         }

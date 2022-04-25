@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QuickConnectQuickConnectConfig {
     /**
-     * Specifies the phone configuration of the Quick Connect. This is required only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
+     * @return Specifies the phone configuration of the Quick Connect. This is required only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
      * 
      */
     private final @Nullable List<QuickConnectQuickConnectConfigPhoneConfig> phoneConfigs;
     /**
-     * Specifies the queue configuration of the Quick Connect. This is required only if `quick_connect_type` is `QUEUE`. The `queue_config` block is documented below.
+     * @return Specifies the queue configuration of the Quick Connect. This is required only if `quick_connect_type` is `QUEUE`. The `queue_config` block is documented below.
      * 
      */
     private final @Nullable List<QuickConnectQuickConnectConfigQueueConfig> queueConfigs;
     /**
-     * Specifies the configuration type of the quick connect. valid values are `PHONE_NUMBER`, `QUEUE`, `USER`.
+     * @return Specifies the configuration type of the quick connect. valid values are `PHONE_NUMBER`, `QUEUE`, `USER`.
      * 
      */
     private final String quickConnectType;
     /**
-     * Specifies the user configuration of the Quick Connect. This is required only if `quick_connect_type` is `USER`. The `user_config` block is documented below.
+     * @return Specifies the user configuration of the Quick Connect. This is required only if `quick_connect_type` is `USER`. The `user_config` block is documented below.
      * 
      */
     private final @Nullable List<QuickConnectQuickConnectConfigUserConfig> userConfigs;
@@ -48,30 +48,30 @@ public final class QuickConnectQuickConnectConfig {
     }
 
     /**
-     * Specifies the phone configuration of the Quick Connect. This is required only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
+     * @return Specifies the phone configuration of the Quick Connect. This is required only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
      * 
-    */
+     */
     public List<QuickConnectQuickConnectConfigPhoneConfig> phoneConfigs() {
         return this.phoneConfigs == null ? List.of() : this.phoneConfigs;
     }
     /**
-     * Specifies the queue configuration of the Quick Connect. This is required only if `quick_connect_type` is `QUEUE`. The `queue_config` block is documented below.
+     * @return Specifies the queue configuration of the Quick Connect. This is required only if `quick_connect_type` is `QUEUE`. The `queue_config` block is documented below.
      * 
-    */
+     */
     public List<QuickConnectQuickConnectConfigQueueConfig> queueConfigs() {
         return this.queueConfigs == null ? List.of() : this.queueConfigs;
     }
     /**
-     * Specifies the configuration type of the quick connect. valid values are `PHONE_NUMBER`, `QUEUE`, `USER`.
+     * @return Specifies the configuration type of the quick connect. valid values are `PHONE_NUMBER`, `QUEUE`, `USER`.
      * 
-    */
+     */
     public String quickConnectType() {
         return this.quickConnectType;
     }
     /**
-     * Specifies the user configuration of the Quick Connect. This is required only if `quick_connect_type` is `USER`. The `user_config` block is documented below.
+     * @return Specifies the user configuration of the Quick Connect. This is required only if `quick_connect_type` is `USER`. The `user_config` block is documented below.
      * 
-    */
+     */
     public List<QuickConnectQuickConnectConfigUserConfig> userConfigs() {
         return this.userConfigs == null ? List.of() : this.userConfigs;
     }

@@ -28,6 +28,10 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="providers")
     private @Nullable Output<List<AuthProviderArgs>> providers;
 
+    /**
+     * @return Defines a set of authentication providers that a service supports.
+     * 
+     */
     public Optional<Output<List<AuthProviderArgs>>> providers() {
         return Optional.ofNullable(this.providers);
     }
@@ -39,6 +43,10 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="rules")
     private @Nullable Output<List<AuthenticationRuleArgs>> rules;
 
+    /**
+     * @return A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * 
+     */
     public Optional<Output<List<AuthenticationRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -68,28 +76,64 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param providers Defines a set of authentication providers that a service supports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(@Nullable Output<List<AuthProviderArgs>> providers) {
             $.providers = providers;
             return this;
         }
 
+        /**
+         * @param providers Defines a set of authentication providers that a service supports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(List<AuthProviderArgs> providers) {
             return providers(Output.of(providers));
         }
 
+        /**
+         * @param providers Defines a set of authentication providers that a service supports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(AuthProviderArgs... providers) {
             return providers(List.of(providers));
         }
 
+        /**
+         * @param rules A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<AuthenticationRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<AuthenticationRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(AuthenticationRuleArgs... rules) {
             return rules(List.of(rules));
         }

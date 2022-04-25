@@ -27,6 +27,10 @@ public final class WorkbookTemplateLocalizedGalleryResponse extends com.pulumi.r
     @Import(name="galleries")
     private @Nullable List<WorkbookTemplateGalleryResponse> galleries;
 
+    /**
+     * @return Workbook galleries supported by the template.
+     * 
+     */
     public Optional<List<WorkbookTemplateGalleryResponse>> galleries() {
         return Optional.ofNullable(this.galleries);
     }
@@ -38,6 +42,10 @@ public final class WorkbookTemplateLocalizedGalleryResponse extends com.pulumi.r
     @Import(name="templateData")
     private @Nullable Object templateData;
 
+    /**
+     * @return Valid JSON object containing workbook template payload.
+     * 
+     */
     public Optional<Object> templateData() {
         return Optional.ofNullable(this.templateData);
     }
@@ -67,15 +75,33 @@ public final class WorkbookTemplateLocalizedGalleryResponse extends com.pulumi.r
             $ = new WorkbookTemplateLocalizedGalleryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param galleries Workbook galleries supported by the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleries(@Nullable List<WorkbookTemplateGalleryResponse> galleries) {
             $.galleries = galleries;
             return this;
         }
 
+        /**
+         * @param galleries Workbook galleries supported by the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleries(WorkbookTemplateGalleryResponse... galleries) {
             return galleries(List.of(galleries));
         }
 
+        /**
+         * @param templateData Valid JSON object containing workbook template payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateData(@Nullable Object templateData) {
             $.templateData = templateData;
             return this;

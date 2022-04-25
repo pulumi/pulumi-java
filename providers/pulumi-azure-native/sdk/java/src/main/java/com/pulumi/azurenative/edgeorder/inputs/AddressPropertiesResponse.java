@@ -27,6 +27,10 @@ public final class AddressPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="addressValidationStatus", required=true)
     private String addressValidationStatus;
 
+    /**
+     * @return Status of address validation
+     * 
+     */
     public String addressValidationStatus() {
         return this.addressValidationStatus;
     }
@@ -38,6 +42,10 @@ public final class AddressPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="contactDetails", required=true)
     private ContactDetailsResponse contactDetails;
 
+    /**
+     * @return Contact details for the address
+     * 
+     */
     public ContactDetailsResponse contactDetails() {
         return this.contactDetails;
     }
@@ -49,6 +57,10 @@ public final class AddressPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="shippingAddress")
     private @Nullable ShippingAddressResponse shippingAddress;
 
+    /**
+     * @return Shipping details for the address
+     * 
+     */
     public Optional<ShippingAddressResponse> shippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
@@ -79,16 +91,34 @@ public final class AddressPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new AddressPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressValidationStatus Status of address validation
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressValidationStatus(String addressValidationStatus) {
             $.addressValidationStatus = addressValidationStatus;
             return this;
         }
 
+        /**
+         * @param contactDetails Contact details for the address
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactDetails(ContactDetailsResponse contactDetails) {
             $.contactDetails = contactDetails;
             return this;
         }
 
+        /**
+         * @param shippingAddress Shipping details for the address
+         * 
+         * @return builder
+         * 
+         */
         public Builder shippingAddress(@Nullable ShippingAddressResponse shippingAddress) {
             $.shippingAddress = shippingAddress;
             return this;

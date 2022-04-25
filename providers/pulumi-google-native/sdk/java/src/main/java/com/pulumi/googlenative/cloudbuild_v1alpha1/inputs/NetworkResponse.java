@@ -23,6 +23,10 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return Network on which the workers are created. &#34;default&#34; network is used if empty.
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -34,6 +38,10 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -45,6 +53,10 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnetwork", required=true)
     private String subnetwork;
 
+    /**
+     * @return Subnetwork on which the workers are created. &#34;default&#34; subnetwork is used if empty.
+     * 
+     */
     public String subnetwork() {
         return this.subnetwork;
     }
@@ -75,16 +87,34 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NetworkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param network Network on which the workers are created. &#34;default&#34; network is used if empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param project Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param subnetwork Subnetwork on which the workers are created. &#34;default&#34; subnetwork is used if empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             $.subnetwork = subnetwork;
             return this;

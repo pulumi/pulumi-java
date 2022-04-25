@@ -19,6 +19,10 @@ public final class GetNamespaceIpFilterRuleArgs extends com.pulumi.resources.Inv
     @Import(name="ipFilterRuleName", required=true)
     private String ipFilterRuleName;
 
+    /**
+     * @return The IP Filter Rule name.
+     * 
+     */
     public String ipFilterRuleName() {
         return this.ipFilterRuleName;
     }
@@ -30,6 +34,10 @@ public final class GetNamespaceIpFilterRuleArgs extends com.pulumi.resources.Inv
     @Import(name="namespaceName", required=true)
     private String namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public String namespaceName() {
         return this.namespaceName;
     }
@@ -41,6 +49,10 @@ public final class GetNamespaceIpFilterRuleArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetNamespaceIpFilterRuleArgs extends com.pulumi.resources.Inv
             $ = new GetNamespaceIpFilterRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipFilterRuleName The IP Filter Rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFilterRuleName(String ipFilterRuleName) {
             $.ipFilterRuleName = ipFilterRuleName;
             return this;
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

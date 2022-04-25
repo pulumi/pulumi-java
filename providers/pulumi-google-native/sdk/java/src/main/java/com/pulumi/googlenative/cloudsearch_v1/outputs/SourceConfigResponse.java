@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class SourceConfigResponse {
     /**
-     * The crowding configuration for the source.
+     * @return The crowding configuration for the source.
      * 
      */
     private final SourceCrowdingConfigResponse crowdingConfig;
     /**
-     * The scoring configuration for the source.
+     * @return The scoring configuration for the source.
      * 
      */
     private final SourceScoringConfigResponse scoringConfig;
     /**
-     * The source for which this configuration is to be used.
+     * @return The source for which this configuration is to be used.
      * 
      */
     private final SourceResponse source;
@@ -38,23 +38,23 @@ public final class SourceConfigResponse {
     }
 
     /**
-     * The crowding configuration for the source.
+     * @return The crowding configuration for the source.
      * 
-    */
+     */
     public SourceCrowdingConfigResponse crowdingConfig() {
         return this.crowdingConfig;
     }
     /**
-     * The scoring configuration for the source.
+     * @return The scoring configuration for the source.
      * 
-    */
+     */
     public SourceScoringConfigResponse scoringConfig() {
         return this.scoringConfig;
     }
     /**
-     * The source for which this configuration is to be used.
+     * @return The source for which this configuration is to be used.
      * 
-    */
+     */
     public SourceResponse source() {
         return this.source;
     }

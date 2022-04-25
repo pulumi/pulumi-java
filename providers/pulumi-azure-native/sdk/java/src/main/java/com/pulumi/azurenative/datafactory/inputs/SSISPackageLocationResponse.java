@@ -32,6 +32,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
     @Import(name="accessCredential")
     private @Nullable SSISAccessCredentialResponse accessCredential;
 
+    /**
+     * @return The package access credential.
+     * 
+     */
     public Optional<SSISAccessCredentialResponse> accessCredential() {
         return Optional.ofNullable(this.accessCredential);
     }
@@ -43,6 +47,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
     @Import(name="childPackages")
     private @Nullable List<SSISChildPackageResponse> childPackages;
 
+    /**
+     * @return The embedded child package list.
+     * 
+     */
     public Optional<List<SSISChildPackageResponse>> childPackages() {
         return Optional.ofNullable(this.childPackages);
     }
@@ -54,6 +62,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
     @Import(name="configurationAccessCredential")
     private @Nullable SSISAccessCredentialResponse configurationAccessCredential;
 
+    /**
+     * @return The configuration file access credential.
+     * 
+     */
     public Optional<SSISAccessCredentialResponse> configurationAccessCredential() {
         return Optional.ofNullable(this.configurationAccessCredential);
     }
@@ -65,6 +77,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
     @Import(name="configurationPath")
     private @Nullable Object configurationPath;
 
+    /**
+     * @return The configuration file of the package execution. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> configurationPath() {
         return Optional.ofNullable(this.configurationPath);
     }
@@ -76,6 +92,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
     @Import(name="packageContent")
     private @Nullable Object packageContent;
 
+    /**
+     * @return The embedded package content. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> packageContent() {
         return Optional.ofNullable(this.packageContent);
     }
@@ -87,6 +107,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
     @Import(name="packageLastModifiedDate")
     private @Nullable String packageLastModifiedDate;
 
+    /**
+     * @return The embedded package last modified date.
+     * 
+     */
     public Optional<String> packageLastModifiedDate() {
         return Optional.ofNullable(this.packageLastModifiedDate);
     }
@@ -98,6 +122,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
     @Import(name="packageName")
     private @Nullable String packageName;
 
+    /**
+     * @return The package name.
+     * 
+     */
     public Optional<String> packageName() {
         return Optional.ofNullable(this.packageName);
     }
@@ -109,6 +137,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
     @Import(name="packagePassword")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword;
 
+    /**
+     * @return Password of the package.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> packagePassword() {
         return Optional.ofNullable(this.packagePassword);
     }
@@ -120,6 +152,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
     @Import(name="packagePath")
     private @Nullable Object packagePath;
 
+    /**
+     * @return The SSIS package path. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> packagePath() {
         return Optional.ofNullable(this.packagePath);
     }
@@ -131,6 +167,10 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of SSIS package location.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -168,63 +208,141 @@ public final class SSISPackageLocationResponse extends com.pulumi.resources.Invo
             $ = new SSISPackageLocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessCredential The package access credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessCredential(@Nullable SSISAccessCredentialResponse accessCredential) {
             $.accessCredential = accessCredential;
             return this;
         }
 
+        /**
+         * @param childPackages The embedded child package list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder childPackages(@Nullable List<SSISChildPackageResponse> childPackages) {
             $.childPackages = childPackages;
             return this;
         }
 
+        /**
+         * @param childPackages The embedded child package list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder childPackages(SSISChildPackageResponse... childPackages) {
             return childPackages(List.of(childPackages));
         }
 
+        /**
+         * @param configurationAccessCredential The configuration file access credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationAccessCredential(@Nullable SSISAccessCredentialResponse configurationAccessCredential) {
             $.configurationAccessCredential = configurationAccessCredential;
             return this;
         }
 
+        /**
+         * @param configurationPath The configuration file of the package execution. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationPath(@Nullable Object configurationPath) {
             $.configurationPath = configurationPath;
             return this;
         }
 
+        /**
+         * @param packageContent The embedded package content. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageContent(@Nullable Object packageContent) {
             $.packageContent = packageContent;
             return this;
         }
 
+        /**
+         * @param packageLastModifiedDate The embedded package last modified date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
             $.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
 
+        /**
+         * @param packageName The package name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(@Nullable String packageName) {
             $.packageName = packageName;
             return this;
         }
 
+        /**
+         * @param packagePassword Password of the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packagePassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword) {
             $.packagePassword = packagePassword;
             return this;
         }
 
+        /**
+         * @param packagePassword Password of the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packagePassword(AzureKeyVaultSecretReferenceResponse packagePassword) {
             return packagePassword(Either.ofLeft(packagePassword));
         }
 
+        /**
+         * @param packagePassword Password of the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packagePassword(SecureStringResponse packagePassword) {
             return packagePassword(Either.ofRight(packagePassword));
         }
 
+        /**
+         * @param packagePath The SSIS package path. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packagePath(@Nullable Object packagePath) {
             $.packagePath = packagePath;
             return this;
         }
 
+        /**
+         * @param type The type of SSIS package location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

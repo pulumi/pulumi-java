@@ -19,6 +19,10 @@ public final class GetSubscriptionFeatureRegistrationArgs extends com.pulumi.res
     @Import(name="featureName", required=true)
     private String featureName;
 
+    /**
+     * @return The feature name.
+     * 
+     */
     public String featureName() {
         return this.featureName;
     }
@@ -30,6 +34,10 @@ public final class GetSubscriptionFeatureRegistrationArgs extends com.pulumi.res
     @Import(name="providerNamespace", required=true)
     private String providerNamespace;
 
+    /**
+     * @return The provider namespace.
+     * 
+     */
     public String providerNamespace() {
         return this.providerNamespace;
     }
@@ -59,11 +67,23 @@ public final class GetSubscriptionFeatureRegistrationArgs extends com.pulumi.res
             $ = new GetSubscriptionFeatureRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param featureName The feature name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureName(String featureName) {
             $.featureName = featureName;
             return this;
         }
 
+        /**
+         * @param providerNamespace The provider namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;

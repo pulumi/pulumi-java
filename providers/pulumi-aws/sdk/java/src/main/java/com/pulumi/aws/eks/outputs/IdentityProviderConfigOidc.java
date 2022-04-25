@@ -13,42 +13,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IdentityProviderConfigOidc {
     /**
-     * Client ID for the OpenID Connect identity provider.
+     * @return Client ID for the OpenID Connect identity provider.
      * 
      */
     private final String clientId;
     /**
-     * The JWT claim that the provider will use to return groups.
+     * @return The JWT claim that the provider will use to return groups.
      * 
      */
     private final @Nullable String groupsClaim;
     /**
-     * A prefix that is prepended to group claims e.g., `oidc:`.
+     * @return A prefix that is prepended to group claims e.g., `oidc:`.
      * 
      */
     private final @Nullable String groupsPrefix;
     /**
-     * The name of the identity provider config.
+     * @return The name of the identity provider config.
      * 
      */
     private final String identityProviderConfigName;
     /**
-     * Issuer URL for the OpenID Connect identity provider.
+     * @return Issuer URL for the OpenID Connect identity provider.
      * 
      */
     private final String issuerUrl;
     /**
-     * The key value pairs that describe required claims in the identity token.
+     * @return The key value pairs that describe required claims in the identity token.
      * 
      */
     private final @Nullable Map<String,String> requiredClaims;
     /**
-     * The JWT claim that the provider will use as the username.
+     * @return The JWT claim that the provider will use as the username.
      * 
      */
     private final @Nullable String usernameClaim;
     /**
-     * A prefix that is prepended to username claims.
+     * @return A prefix that is prepended to username claims.
      * 
      */
     private final @Nullable String usernamePrefix;
@@ -74,58 +74,58 @@ public final class IdentityProviderConfigOidc {
     }
 
     /**
-     * Client ID for the OpenID Connect identity provider.
+     * @return Client ID for the OpenID Connect identity provider.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * The JWT claim that the provider will use to return groups.
+     * @return The JWT claim that the provider will use to return groups.
      * 
-    */
+     */
     public Optional<String> groupsClaim() {
         return Optional.ofNullable(this.groupsClaim);
     }
     /**
-     * A prefix that is prepended to group claims e.g., `oidc:`.
+     * @return A prefix that is prepended to group claims e.g., `oidc:`.
      * 
-    */
+     */
     public Optional<String> groupsPrefix() {
         return Optional.ofNullable(this.groupsPrefix);
     }
     /**
-     * The name of the identity provider config.
+     * @return The name of the identity provider config.
      * 
-    */
+     */
     public String identityProviderConfigName() {
         return this.identityProviderConfigName;
     }
     /**
-     * Issuer URL for the OpenID Connect identity provider.
+     * @return Issuer URL for the OpenID Connect identity provider.
      * 
-    */
+     */
     public String issuerUrl() {
         return this.issuerUrl;
     }
     /**
-     * The key value pairs that describe required claims in the identity token.
+     * @return The key value pairs that describe required claims in the identity token.
      * 
-    */
+     */
     public Map<String,String> requiredClaims() {
         return this.requiredClaims == null ? Map.of() : this.requiredClaims;
     }
     /**
-     * The JWT claim that the provider will use as the username.
+     * @return The JWT claim that the provider will use as the username.
      * 
-    */
+     */
     public Optional<String> usernameClaim() {
         return Optional.ofNullable(this.usernameClaim);
     }
     /**
-     * A prefix that is prepended to username claims.
+     * @return A prefix that is prepended to username claims.
      * 
-    */
+     */
     public Optional<String> usernamePrefix() {
         return Optional.ofNullable(this.usernamePrefix);
     }

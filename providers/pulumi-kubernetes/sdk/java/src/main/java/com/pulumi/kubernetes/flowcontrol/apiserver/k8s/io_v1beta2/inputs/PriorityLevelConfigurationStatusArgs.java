@@ -27,6 +27,10 @@ public final class PriorityLevelConfigurationStatusArgs extends com.pulumi.resou
     @Import(name="conditions")
     private @Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions;
 
+    /**
+     * @return `conditions` is the current state of &#34;request-priority&#34;.
+     * 
+     */
     public Optional<Output<List<PriorityLevelConfigurationConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -55,15 +59,33 @@ public final class PriorityLevelConfigurationStatusArgs extends com.pulumi.resou
             $ = new PriorityLevelConfigurationStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions `conditions` is the current state of &#34;request-priority&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions `conditions` is the current state of &#34;request-priority&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<PriorityLevelConfigurationConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions `conditions` is the current state of &#34;request-priority&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(PriorityLevelConfigurationConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }

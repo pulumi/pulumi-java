@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedNetworkPeeringPolicyPropertiesResponse {
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Gets or sets the hub virtual network ID
+     * @return Gets or sets the hub virtual network ID
      * 
      */
     private final @Nullable ResourceIdResponse hub;
     /**
-     * Gets or sets the mesh group IDs
+     * @return Gets or sets the mesh group IDs
      * 
      */
     private final @Nullable List<ResourceIdResponse> mesh;
     /**
-     * Provisioning state of the ManagedNetwork resource.
+     * @return Provisioning state of the ManagedNetwork resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Gets or sets the spokes group IDs
+     * @return Gets or sets the spokes group IDs
      * 
      */
     private final @Nullable List<ResourceIdResponse> spokes;
     /**
-     * Gets or sets the connectivity type of a network structure policy
+     * @return Gets or sets the connectivity type of a network structure policy
      * 
      */
     private final String type;
@@ -61,44 +61,44 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Gets or sets the hub virtual network ID
+     * @return Gets or sets the hub virtual network ID
      * 
-    */
+     */
     public Optional<ResourceIdResponse> hub() {
         return Optional.ofNullable(this.hub);
     }
     /**
-     * Gets or sets the mesh group IDs
+     * @return Gets or sets the mesh group IDs
      * 
-    */
+     */
     public List<ResourceIdResponse> mesh() {
         return this.mesh == null ? List.of() : this.mesh;
     }
     /**
-     * Provisioning state of the ManagedNetwork resource.
+     * @return Provisioning state of the ManagedNetwork resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Gets or sets the spokes group IDs
+     * @return Gets or sets the spokes group IDs
      * 
-    */
+     */
     public List<ResourceIdResponse> spokes() {
         return this.spokes == null ? List.of() : this.spokes;
     }
     /**
-     * Gets or sets the connectivity type of a network structure policy
+     * @return Gets or sets the connectivity type of a network structure policy
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -23,6 +23,10 @@ public final class ObjectiveResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="goal", required=true)
     private String goal;
 
+    /**
+     * @return Defines supported metric goals for hyperparameter tuning
+     * 
+     */
     public String goal() {
         return this.goal;
     }
@@ -34,6 +38,10 @@ public final class ObjectiveResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="primaryMetric", required=true)
     private String primaryMetric;
 
+    /**
+     * @return Name of the metric to optimize.
+     * 
+     */
     public String primaryMetric() {
         return this.primaryMetric;
     }
@@ -63,11 +71,23 @@ public final class ObjectiveResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ObjectiveResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param goal Defines supported metric goals for hyperparameter tuning
+         * 
+         * @return builder
+         * 
+         */
         public Builder goal(String goal) {
             $.goal = goal;
             return this;
         }
 
+        /**
+         * @param primaryMetric Name of the metric to optimize.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryMetric(String primaryMetric) {
             $.primaryMetric = primaryMetric;
             return this;

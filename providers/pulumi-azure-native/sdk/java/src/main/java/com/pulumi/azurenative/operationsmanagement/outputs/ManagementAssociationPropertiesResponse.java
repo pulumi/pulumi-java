@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ManagementAssociationPropertiesResponse {
     /**
-     * The applicationId of the appliance for this association.
+     * @return The applicationId of the appliance for this association.
      * 
      */
     private final String applicationId;
@@ -21,9 +21,9 @@ public final class ManagementAssociationPropertiesResponse {
     }
 
     /**
-     * The applicationId of the appliance for this association.
+     * @return The applicationId of the appliance for this association.
      * 
-    */
+     */
     public String applicationId() {
         return this.applicationId;
     }

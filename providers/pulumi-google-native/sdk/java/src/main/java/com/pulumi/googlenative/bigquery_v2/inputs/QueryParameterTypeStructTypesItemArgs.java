@@ -23,6 +23,10 @@ public final class QueryParameterTypeStructTypesItemArgs extends com.pulumi.reso
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return [Optional] Human-oriented description of the field.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class QueryParameterTypeStructTypesItemArgs extends com.pulumi.reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return [Optional] The name of this field.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -45,6 +53,10 @@ public final class QueryParameterTypeStructTypesItemArgs extends com.pulumi.reso
     @Import(name="type")
     private @Nullable Output<QueryParameterTypeArgs> type;
 
+    /**
+     * @return [Required] The type of this field.
+     * 
+     */
     public Optional<Output<QueryParameterTypeArgs>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -75,29 +87,65 @@ public final class QueryParameterTypeStructTypesItemArgs extends com.pulumi.reso
             $ = new QueryParameterTypeStructTypesItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description [Optional] Human-oriented description of the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description [Optional] Human-oriented description of the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name [Optional] The name of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name [Optional] The name of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type [Required] The type of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<QueryParameterTypeArgs> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type [Required] The type of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(QueryParameterTypeArgs type) {
             return type(Output.of(type));
         }

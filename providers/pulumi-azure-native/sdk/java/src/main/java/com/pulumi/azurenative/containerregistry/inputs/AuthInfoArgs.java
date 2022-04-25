@@ -29,6 +29,10 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expiresIn")
     private @Nullable Output<Integer> expiresIn;
 
+    /**
+     * @return Time in seconds that the token remains valid
+     * 
+     */
     public Optional<Output<Integer>> expiresIn() {
         return Optional.ofNullable(this.expiresIn);
     }
@@ -40,6 +44,10 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="refreshToken")
     private @Nullable Output<String> refreshToken;
 
+    /**
+     * @return The refresh token used to refresh the access token.
+     * 
+     */
     public Optional<Output<String>> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
@@ -51,6 +59,10 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
     private @Nullable Output<String> scope;
 
+    /**
+     * @return The scope of the access token.
+     * 
+     */
     public Optional<Output<String>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -62,6 +74,10 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="token", required=true)
     private Output<String> token;
 
+    /**
+     * @return The access token used to access the source control provider.
+     * 
+     */
     public Output<String> token() {
         return this.token;
     }
@@ -73,6 +89,10 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tokenType", required=true)
     private Output<Either<String,TokenType>> tokenType;
 
+    /**
+     * @return The type of Auth token.
+     * 
+     */
     public Output<Either<String,TokenType>> tokenType() {
         return this.tokenType;
     }
@@ -105,55 +125,127 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AuthInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expiresIn Time in seconds that the token remains valid
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiresIn(@Nullable Output<Integer> expiresIn) {
             $.expiresIn = expiresIn;
             return this;
         }
 
+        /**
+         * @param expiresIn Time in seconds that the token remains valid
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiresIn(Integer expiresIn) {
             return expiresIn(Output.of(expiresIn));
         }
 
+        /**
+         * @param refreshToken The refresh token used to refresh the access token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
             $.refreshToken = refreshToken;
             return this;
         }
 
+        /**
+         * @param refreshToken The refresh token used to refresh the access token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(String refreshToken) {
             return refreshToken(Output.of(refreshToken));
         }
 
+        /**
+         * @param scope The scope of the access token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The scope of the access token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param token The access token used to access the source control provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder token(Output<String> token) {
             $.token = token;
             return this;
         }
 
+        /**
+         * @param token The access token used to access the source control provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder token(String token) {
             return token(Output.of(token));
         }
 
+        /**
+         * @param tokenType The type of Auth token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenType(Output<Either<String,TokenType>> tokenType) {
             $.tokenType = tokenType;
             return this;
         }
 
+        /**
+         * @param tokenType The type of Auth token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenType(Either<String,TokenType> tokenType) {
             return tokenType(Output.of(tokenType));
         }
 
+        /**
+         * @param tokenType The type of Auth token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenType(String tokenType) {
             return tokenType(Either.ofLeft(tokenType));
         }
 
+        /**
+         * @param tokenType The type of Auth token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenType(TokenType tokenType) {
             return tokenType(Either.ofRight(tokenType));
         }

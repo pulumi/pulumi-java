@@ -22,6 +22,10 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArg
     @Import(name="enableIntegrityMonitoring")
     private @Nullable Output<Boolean> enableIntegrityMonitoring;
 
+    /**
+     * @return Defines whether instances have integrity monitoring enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
@@ -33,6 +37,10 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArg
     @Import(name="enableSecureBoot")
     private @Nullable Output<Boolean> enableSecureBoot;
 
+    /**
+     * @return Defines whether instances have Secure Boot enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
@@ -44,6 +52,10 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArg
     @Import(name="enableVtpm")
     private @Nullable Output<Boolean> enableVtpm;
 
+    /**
+     * @return Defines whether instances have the [vTPM](https://cloud.google.com/security/shielded-cloud/shielded-vm#vtpm) enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }
@@ -74,29 +86,65 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArg
             $ = new ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableIntegrityMonitoring Defines whether instances have integrity monitoring enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntegrityMonitoring(@Nullable Output<Boolean> enableIntegrityMonitoring) {
             $.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
 
+        /**
+         * @param enableIntegrityMonitoring Defines whether instances have integrity monitoring enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
             return enableIntegrityMonitoring(Output.of(enableIntegrityMonitoring));
         }
 
+        /**
+         * @param enableSecureBoot Defines whether instances have Secure Boot enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
             $.enableSecureBoot = enableSecureBoot;
             return this;
         }
 
+        /**
+         * @param enableSecureBoot Defines whether instances have Secure Boot enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSecureBoot(Boolean enableSecureBoot) {
             return enableSecureBoot(Output.of(enableSecureBoot));
         }
 
+        /**
+         * @param enableVtpm Defines whether instances have the [vTPM](https://cloud.google.com/security/shielded-cloud/shielded-vm#vtpm) enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableVtpm(@Nullable Output<Boolean> enableVtpm) {
             $.enableVtpm = enableVtpm;
             return this;
         }
 
+        /**
+         * @param enableVtpm Defines whether instances have the [vTPM](https://cloud.google.com/security/shielded-cloud/shielded-vm#vtpm) enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableVtpm(Boolean enableVtpm) {
             return enableVtpm(Output.of(enableVtpm));
         }

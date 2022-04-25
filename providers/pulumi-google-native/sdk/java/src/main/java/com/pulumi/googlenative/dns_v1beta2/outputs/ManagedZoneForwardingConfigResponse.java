@@ -13,7 +13,7 @@ import java.util.Objects;
 public final class ManagedZoneForwardingConfigResponse {
     private final String kind;
     /**
-     * List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
+     * @return List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
      * 
      */
     private final List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers;
@@ -30,9 +30,9 @@ public final class ManagedZoneForwardingConfigResponse {
         return this.kind;
     }
     /**
-     * List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
+     * @return List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
      * 
-    */
+     */
     public List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers() {
         return this.targetNameServers;
     }

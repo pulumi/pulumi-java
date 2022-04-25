@@ -27,6 +27,10 @@ public final class NamedPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class NamedPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The port number, which can be a value between 1 and 65535.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -67,20 +75,44 @@ public final class NamedPortArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NamedPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param port The port number, which can be a value between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port number, which can be a value between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

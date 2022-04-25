@@ -24,6 +24,10 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends com.pulu
     @Import(name="expirationTime", required=true)
     private String expirationTime;
 
+    /**
+     * @return The expiration time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     public String expirationTime() {
         return this.expirationTime;
     }
@@ -35,6 +39,10 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends com.pulu
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The start time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -46,6 +54,10 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends com.pulu
     @Import(name="timeZone", required=true)
     private String timeZone;
 
+    /**
+     * @return Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+     * 
+     */
     public String timeZone() {
         return this.timeZone;
     }
@@ -57,6 +69,10 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends com.pulu
     @Import(name="vmStartSchedule", required=true)
     private ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule;
 
+    /**
+     * @return Specifies the schedule for starting instances.
+     * 
+     */
     public ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule() {
         return this.vmStartSchedule;
     }
@@ -68,6 +84,10 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends com.pulu
     @Import(name="vmStopSchedule", required=true)
     private ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule;
 
+    /**
+     * @return Specifies the schedule for stopping instances.
+     * 
+     */
     public ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule() {
         return this.vmStopSchedule;
     }
@@ -100,26 +120,56 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends com.pulu
             $ = new ResourcePolicyInstanceSchedulePolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationTime The expiration time of the schedule. The timestamp is an RFC3339 string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param startTime The start time of the schedule. The timestamp is an RFC3339 string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param timeZone Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param vmStartSchedule Specifies the schedule for starting instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmStartSchedule(ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule) {
             $.vmStartSchedule = vmStartSchedule;
             return this;
         }
 
+        /**
+         * @param vmStopSchedule Specifies the schedule for stopping instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmStopSchedule(ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule) {
             $.vmStopSchedule = vmStopSchedule;
             return this;

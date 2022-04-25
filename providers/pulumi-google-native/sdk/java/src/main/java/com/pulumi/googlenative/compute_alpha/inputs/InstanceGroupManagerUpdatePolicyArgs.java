@@ -28,6 +28,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
     @Import(name="instanceRedistributionType")
     private @Nullable Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType;
 
+    /**
+     * @return The instance redistribution policy for regional managed instance groups. Valid values are: - PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across zones in the region. - NONE: For non-autoscaled groups, proactive redistribution is disabled.
+     * 
+     */
     public Optional<Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType>> instanceRedistributionType() {
         return Optional.ofNullable(this.instanceRedistributionType);
     }
@@ -39,6 +43,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
     @Import(name="maxSurge")
     private @Nullable Output<FixedOrPercentArgs> maxSurge;
 
+    /**
+     * @return The maximum number of instances that can be created above the specified targetSize during the update process. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for maxSurge is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either maxSurge or maxUnavailable must be greater than 0. Learn more about maxSurge.
+     * 
+     */
     public Optional<Output<FixedOrPercentArgs>> maxSurge() {
         return Optional.ofNullable(this.maxSurge);
     }
@@ -50,6 +58,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
     @Import(name="maxUnavailable")
     private @Nullable Output<FixedOrPercentArgs> maxUnavailable;
 
+    /**
+     * @return The maximum number of instances that can be unavailable during the update process. An instance is considered available if all of the following conditions are satisfied: - The instance&#39;s status is RUNNING. - If there is a health check on the instance group, the instance&#39;s health check status must be HEALTHY at least once. If there is no health check on the group, then the instance only needs to have a status of RUNNING to be considered available. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for maxUnavailable is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either maxSurge or maxUnavailable must be greater than 0. Learn more about maxUnavailable.
+     * 
+     */
     public Optional<Output<FixedOrPercentArgs>> maxUnavailable() {
         return Optional.ofNullable(this.maxUnavailable);
     }
@@ -61,6 +73,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
     @Import(name="minReadySec")
     private @Nullable Output<Integer> minReadySec;
 
+    /**
+     * @return Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600].
+     * 
+     */
     public Optional<Output<Integer>> minReadySec() {
         return Optional.ofNullable(this.minReadySec);
     }
@@ -72,6 +88,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
     @Import(name="minimalAction")
     private @Nullable Output<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction;
 
+    /**
+     * @return Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.
+     * 
+     */
     public Optional<Output<InstanceGroupManagerUpdatePolicyMinimalAction>> minimalAction() {
         return Optional.ofNullable(this.minimalAction);
     }
@@ -83,6 +103,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
     @Import(name="mostDisruptiveAllowedAction")
     private @Nullable Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction;
 
+    /**
+     * @return Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.
+     * 
+     */
     public Optional<Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction>> mostDisruptiveAllowedAction() {
         return Optional.ofNullable(this.mostDisruptiveAllowedAction);
     }
@@ -94,6 +118,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
     @Import(name="replacementMethod")
     private @Nullable Output<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod;
 
+    /**
+     * @return What action should be used to replace instances. See minimal_action.REPLACE
+     * 
+     */
     public Optional<Output<InstanceGroupManagerUpdatePolicyReplacementMethod>> replacementMethod() {
         return Optional.ofNullable(this.replacementMethod);
     }
@@ -105,6 +133,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
     @Import(name="type")
     private @Nullable Output<InstanceGroupManagerUpdatePolicyType> type;
 
+    /**
+     * @return The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).
+     * 
+     */
     public Optional<Output<InstanceGroupManagerUpdatePolicyType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -140,74 +172,170 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
             $ = new InstanceGroupManagerUpdatePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceRedistributionType The instance redistribution policy for regional managed instance groups. Valid values are: - PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across zones in the region. - NONE: For non-autoscaled groups, proactive redistribution is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceRedistributionType(@Nullable Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType) {
             $.instanceRedistributionType = instanceRedistributionType;
             return this;
         }
 
+        /**
+         * @param instanceRedistributionType The instance redistribution policy for regional managed instance groups. Valid values are: - PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across zones in the region. - NONE: For non-autoscaled groups, proactive redistribution is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceRedistributionType(InstanceGroupManagerUpdatePolicyInstanceRedistributionType instanceRedistributionType) {
             return instanceRedistributionType(Output.of(instanceRedistributionType));
         }
 
+        /**
+         * @param maxSurge The maximum number of instances that can be created above the specified targetSize during the update process. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for maxSurge is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either maxSurge or maxUnavailable must be greater than 0. Learn more about maxSurge.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSurge(@Nullable Output<FixedOrPercentArgs> maxSurge) {
             $.maxSurge = maxSurge;
             return this;
         }
 
+        /**
+         * @param maxSurge The maximum number of instances that can be created above the specified targetSize during the update process. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for maxSurge is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either maxSurge or maxUnavailable must be greater than 0. Learn more about maxSurge.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSurge(FixedOrPercentArgs maxSurge) {
             return maxSurge(Output.of(maxSurge));
         }
 
+        /**
+         * @param maxUnavailable The maximum number of instances that can be unavailable during the update process. An instance is considered available if all of the following conditions are satisfied: - The instance&#39;s status is RUNNING. - If there is a health check on the instance group, the instance&#39;s health check status must be HEALTHY at least once. If there is no health check on the group, then the instance only needs to have a status of RUNNING to be considered available. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for maxUnavailable is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either maxSurge or maxUnavailable must be greater than 0. Learn more about maxUnavailable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnavailable(@Nullable Output<FixedOrPercentArgs> maxUnavailable) {
             $.maxUnavailable = maxUnavailable;
             return this;
         }
 
+        /**
+         * @param maxUnavailable The maximum number of instances that can be unavailable during the update process. An instance is considered available if all of the following conditions are satisfied: - The instance&#39;s status is RUNNING. - If there is a health check on the instance group, the instance&#39;s health check status must be HEALTHY at least once. If there is no health check on the group, then the instance only needs to have a status of RUNNING to be considered available. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for maxUnavailable is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either maxSurge or maxUnavailable must be greater than 0. Learn more about maxUnavailable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnavailable(FixedOrPercentArgs maxUnavailable) {
             return maxUnavailable(Output.of(maxUnavailable));
         }
 
+        /**
+         * @param minReadySec Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600].
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReadySec(@Nullable Output<Integer> minReadySec) {
             $.minReadySec = minReadySec;
             return this;
         }
 
+        /**
+         * @param minReadySec Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600].
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReadySec(Integer minReadySec) {
             return minReadySec(Output.of(minReadySec));
         }
 
+        /**
+         * @param minimalAction Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimalAction(@Nullable Output<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction) {
             $.minimalAction = minimalAction;
             return this;
         }
 
+        /**
+         * @param minimalAction Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimalAction(InstanceGroupManagerUpdatePolicyMinimalAction minimalAction) {
             return minimalAction(Output.of(minimalAction));
         }
 
+        /**
+         * @param mostDisruptiveAllowedAction Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mostDisruptiveAllowedAction(@Nullable Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction) {
             $.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
             return this;
         }
 
+        /**
+         * @param mostDisruptiveAllowedAction Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mostDisruptiveAllowedAction(InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction mostDisruptiveAllowedAction) {
             return mostDisruptiveAllowedAction(Output.of(mostDisruptiveAllowedAction));
         }
 
+        /**
+         * @param replacementMethod What action should be used to replace instances. See minimal_action.REPLACE
+         * 
+         * @return builder
+         * 
+         */
         public Builder replacementMethod(@Nullable Output<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod) {
             $.replacementMethod = replacementMethod;
             return this;
         }
 
+        /**
+         * @param replacementMethod What action should be used to replace instances. See minimal_action.REPLACE
+         * 
+         * @return builder
+         * 
+         */
         public Builder replacementMethod(InstanceGroupManagerUpdatePolicyReplacementMethod replacementMethod) {
             return replacementMethod(Output.of(replacementMethod));
         }
 
+        /**
+         * @param type The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<InstanceGroupManagerUpdatePolicyType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(InstanceGroupManagerUpdatePolicyType type) {
             return type(Output.of(type));
         }

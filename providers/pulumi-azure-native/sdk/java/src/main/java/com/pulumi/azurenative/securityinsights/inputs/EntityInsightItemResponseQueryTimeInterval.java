@@ -25,6 +25,10 @@ public final class EntityInsightItemResponseQueryTimeInterval extends com.pulumi
     @Import(name="endTime")
     private @Nullable String endTime;
 
+    /**
+     * @return Insight query end time
+     * 
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -36,6 +40,10 @@ public final class EntityInsightItemResponseQueryTimeInterval extends com.pulumi
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return Insight query start time
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -65,11 +73,23 @@ public final class EntityInsightItemResponseQueryTimeInterval extends com.pulumi
             $ = new EntityInsightItemResponseQueryTimeInterval(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime Insight query end time
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param startTime Insight query start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;

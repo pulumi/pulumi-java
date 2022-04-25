@@ -26,6 +26,10 @@ public final class BlockchainMemberNodesSkuArgs extends com.pulumi.resources.Res
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return Gets or sets the nodes capacity.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -54,11 +58,23 @@ public final class BlockchainMemberNodesSkuArgs extends com.pulumi.resources.Res
             $ = new BlockchainMemberNodesSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Gets or sets the nodes capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity Gets or sets the nodes capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }

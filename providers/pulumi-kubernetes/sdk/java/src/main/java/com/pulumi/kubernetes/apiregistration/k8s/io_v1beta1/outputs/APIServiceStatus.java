@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class APIServiceStatus {
     /**
-     * Current service state of apiService.
+     * @return Current service state of apiService.
      * 
      */
     private final @Nullable List<APIServiceCondition> conditions;
@@ -23,9 +23,9 @@ public final class APIServiceStatus {
     }
 
     /**
-     * Current service state of apiService.
+     * @return Current service state of apiService.
      * 
-    */
+     */
     public List<APIServiceCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }

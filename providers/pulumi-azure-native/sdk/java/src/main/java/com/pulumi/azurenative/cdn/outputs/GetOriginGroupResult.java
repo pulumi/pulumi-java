@@ -18,52 +18,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetOriginGroupResult {
     /**
-     * Health probe settings to the origin that is used to determine the health of the origin.
+     * @return Health probe settings to the origin that is used to determine the health of the origin.
      * 
      */
     private final @Nullable HealthProbeParametersResponse healthProbeSettings;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The source of the content being delivered via CDN within given origin group.
+     * @return The source of the content being delivered via CDN within given origin group.
      * 
      */
     private final List<ResourceReferenceResponse> origins;
     /**
-     * Provisioning status of the origin group.
+     * @return Provisioning status of the origin group.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource status of the origin group.
+     * @return Resource status of the origin group.
      * 
      */
     private final String resourceState;
     /**
-     * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+     * @return The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
      * 
      */
     private final @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings;
     /**
-     * Read only system data
+     * @return Read only system data
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+     * @return Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
      */
     private final @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -93,72 +93,72 @@ public final class GetOriginGroupResult {
     }
 
     /**
-     * Health probe settings to the origin that is used to determine the health of the origin.
+     * @return Health probe settings to the origin that is used to determine the health of the origin.
      * 
-    */
+     */
     public Optional<HealthProbeParametersResponse> healthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The source of the content being delivered via CDN within given origin group.
+     * @return The source of the content being delivered via CDN within given origin group.
      * 
-    */
+     */
     public List<ResourceReferenceResponse> origins() {
         return this.origins;
     }
     /**
-     * Provisioning status of the origin group.
+     * @return Provisioning status of the origin group.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource status of the origin group.
+     * @return Resource status of the origin group.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+     * @return The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
      * 
-    */
+     */
     public Optional<ResponseBasedOriginErrorDetectionParametersResponse> responseBasedOriginErrorDetectionSettings() {
         return Optional.ofNullable(this.responseBasedOriginErrorDetectionSettings);
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+     * @return Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
-    */
+     */
     public Optional<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

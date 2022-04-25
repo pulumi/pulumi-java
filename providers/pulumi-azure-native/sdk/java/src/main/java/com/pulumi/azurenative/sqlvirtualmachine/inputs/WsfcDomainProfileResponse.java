@@ -25,6 +25,10 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
     @Import(name="clusterBootstrapAccount")
     private @Nullable String clusterBootstrapAccount;
 
+    /**
+     * @return Account name used for creating cluster (at minimum needs permissions to &#39;Create Computer Objects&#39; in domain).
+     * 
+     */
     public Optional<String> clusterBootstrapAccount() {
         return Optional.ofNullable(this.clusterBootstrapAccount);
     }
@@ -36,6 +40,10 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
     @Import(name="clusterOperatorAccount")
     private @Nullable String clusterOperatorAccount;
 
+    /**
+     * @return Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.
+     * 
+     */
     public Optional<String> clusterOperatorAccount() {
         return Optional.ofNullable(this.clusterOperatorAccount);
     }
@@ -47,6 +55,10 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
     @Import(name="domainFqdn")
     private @Nullable String domainFqdn;
 
+    /**
+     * @return Fully qualified name of the domain.
+     * 
+     */
     public Optional<String> domainFqdn() {
         return Optional.ofNullable(this.domainFqdn);
     }
@@ -58,6 +70,10 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
     @Import(name="fileShareWitnessPath")
     private @Nullable String fileShareWitnessPath;
 
+    /**
+     * @return Optional path for fileshare witness.
+     * 
+     */
     public Optional<String> fileShareWitnessPath() {
         return Optional.ofNullable(this.fileShareWitnessPath);
     }
@@ -69,6 +85,10 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
     @Import(name="ouPath")
     private @Nullable String ouPath;
 
+    /**
+     * @return Organizational Unit path in which the nodes and cluster will be present.
+     * 
+     */
     public Optional<String> ouPath() {
         return Optional.ofNullable(this.ouPath);
     }
@@ -80,6 +100,10 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
     @Import(name="sqlServiceAccount")
     private @Nullable String sqlServiceAccount;
 
+    /**
+     * @return Account name under which SQL service will run on all participating SQL virtual machines in the cluster.
+     * 
+     */
     public Optional<String> sqlServiceAccount() {
         return Optional.ofNullable(this.sqlServiceAccount);
     }
@@ -91,6 +115,10 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
     @Import(name="storageAccountUrl")
     private @Nullable String storageAccountUrl;
 
+    /**
+     * @return Fully qualified ARM resource id of the witness storage account.
+     * 
+     */
     public Optional<String> storageAccountUrl() {
         return Optional.ofNullable(this.storageAccountUrl);
     }
@@ -125,36 +153,78 @@ public final class WsfcDomainProfileResponse extends com.pulumi.resources.Invoke
             $ = new WsfcDomainProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterBootstrapAccount Account name used for creating cluster (at minimum needs permissions to &#39;Create Computer Objects&#39; in domain).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterBootstrapAccount(@Nullable String clusterBootstrapAccount) {
             $.clusterBootstrapAccount = clusterBootstrapAccount;
             return this;
         }
 
+        /**
+         * @param clusterOperatorAccount Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterOperatorAccount(@Nullable String clusterOperatorAccount) {
             $.clusterOperatorAccount = clusterOperatorAccount;
             return this;
         }
 
+        /**
+         * @param domainFqdn Fully qualified name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainFqdn(@Nullable String domainFqdn) {
             $.domainFqdn = domainFqdn;
             return this;
         }
 
+        /**
+         * @param fileShareWitnessPath Optional path for fileshare witness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShareWitnessPath(@Nullable String fileShareWitnessPath) {
             $.fileShareWitnessPath = fileShareWitnessPath;
             return this;
         }
 
+        /**
+         * @param ouPath Organizational Unit path in which the nodes and cluster will be present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ouPath(@Nullable String ouPath) {
             $.ouPath = ouPath;
             return this;
         }
 
+        /**
+         * @param sqlServiceAccount Account name under which SQL service will run on all participating SQL virtual machines in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServiceAccount(@Nullable String sqlServiceAccount) {
             $.sqlServiceAccount = sqlServiceAccount;
             return this;
         }
 
+        /**
+         * @param storageAccountUrl Fully qualified ARM resource id of the witness storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountUrl(@Nullable String storageAccountUrl) {
             $.storageAccountUrl = storageAccountUrl;
             return this;

@@ -27,6 +27,10 @@ public final class ActionRuleByNameArgs extends com.pulumi.resources.ResourceArg
     @Import(name="actionRuleName")
     private @Nullable Output<String> actionRuleName;
 
+    /**
+     * @return The name of action rule that needs to be created/updated
+     * 
+     */
     public Optional<Output<String>> actionRuleName() {
         return Optional.ofNullable(this.actionRuleName);
     }
@@ -38,6 +42,10 @@ public final class ActionRuleByNameArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -49,6 +57,10 @@ public final class ActionRuleByNameArgs extends com.pulumi.resources.ResourceArg
     @Import(name="properties")
     private @Nullable Output<Object> properties;
 
+    /**
+     * @return action rule properties
+     * 
+     */
     public Optional<Output<Object>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -60,6 +72,10 @@ public final class ActionRuleByNameArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Resource group name where the resource is created.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,6 +87,10 @@ public final class ActionRuleByNameArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -103,47 +123,107 @@ public final class ActionRuleByNameArgs extends com.pulumi.resources.ResourceArg
             $ = new ActionRuleByNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionRuleName The name of action rule that needs to be created/updated
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionRuleName(@Nullable Output<String> actionRuleName) {
             $.actionRuleName = actionRuleName;
             return this;
         }
 
+        /**
+         * @param actionRuleName The name of action rule that needs to be created/updated
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionRuleName(String actionRuleName) {
             return actionRuleName(Output.of(actionRuleName));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties action rule properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Object> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties action rule properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Object properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Resource group name where the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group name where the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

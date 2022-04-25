@@ -34,6 +34,10 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataRefreshWindowDays")
     private @Nullable Output<Integer> dataRefreshWindowDays;
 
+    /**
+     * @return The number of days to look back to automatically refresh the data. For example, if `data_refresh_window_days = 10`, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.
+     * 
+     */
     public Optional<Output<Integer>> dataRefreshWindowDays() {
         return Optional.ofNullable(this.dataRefreshWindowDays);
     }
@@ -45,6 +49,10 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataSourceId")
     private @Nullable Output<String> dataSourceId;
 
+    /**
+     * @return Data source id. Cannot be changed once data transfer is created.
+     * 
+     */
     public Optional<Output<String>> dataSourceId() {
         return Optional.ofNullable(this.dataSourceId);
     }
@@ -56,6 +64,10 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="destinationDatasetId")
     private @Nullable Output<String> destinationDatasetId;
 
+    /**
+     * @return The BigQuery target dataset id.
+     * 
+     */
     public Optional<Output<String>> destinationDatasetId() {
         return Optional.ofNullable(this.destinationDatasetId);
     }
@@ -67,6 +79,10 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
+    /**
+     * @return Is this config disabled. When set to true, no runs are scheduled for a given transfer.
+     * 
+     */
     public Optional<Output<Boolean>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -78,6 +94,10 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User specified display name for the data transfer.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -89,6 +109,10 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="emailPreferences")
     private @Nullable Output<EmailPreferencesArgs> emailPreferences;
 
+    /**
+     * @return Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config.
+     * 
+     */
     public Optional<Output<EmailPreferencesArgs>> emailPreferences() {
         return Optional.ofNullable(this.emailPreferences);
     }
@@ -107,6 +131,10 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the transfer config. Transfer config names have the form `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id` is usually a uuid, even though it is not guaranteed or required. The name is ignored when creating a transfer config.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -118,6 +146,10 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="notificationPubsubTopic")
     private @Nullable Output<String> notificationPubsubTopic;
 
+    /**
+     * @return Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish. The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`
+     * 
+     */
     public Optional<Output<String>> notificationPubsubTopic() {
         return Optional.ofNullable(this.notificationPubsubTopic);
     }
@@ -129,6 +161,10 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="params")
     private @Nullable Output<Map<String,String>> params;
 
+    /**
+     * @return Parameters specific to each data source. For more information see the bq tab in the &#39;Setting up a data transfer&#39; section for each data source. For example the parameters for Cloud Storage transfers are listed here: https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
+     * 
+     */
     public Optional<Output<Map<String,String>>> params() {
         return Optional.ofNullable(this.params);
     }
@@ -147,6 +183,10 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="schedule")
     private @Nullable Output<String> schedule;
 
+    /**
+     * @return Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the default value for the data source will be used. The specified times are in UTC. Examples of valid format: `1st,3rd monday of month 15:30`, `every wed,fri of jan,jun 13:15`, and `first sunday of quarter 00:00`. See more explanation about the format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format NOTE: The minimum interval time between recurring transfers depends on the data source; refer to the documentation for your data source.
+     * 
+     */
     public Optional<Output<String>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -158,6 +198,10 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="scheduleOptions")
     private @Nullable Output<ScheduleOptionsArgs> scheduleOptions;
 
+    /**
+     * @return Options customizing the data transfer schedule.
+     * 
+     */
     public Optional<Output<ScheduleOptionsArgs>> scheduleOptions() {
         return Optional.ofNullable(this.scheduleOptions);
     }
@@ -224,56 +268,128 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
             return authorizationCode(Output.of(authorizationCode));
         }
 
+        /**
+         * @param dataRefreshWindowDays The number of days to look back to automatically refresh the data. For example, if `data_refresh_window_days = 10`, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataRefreshWindowDays(@Nullable Output<Integer> dataRefreshWindowDays) {
             $.dataRefreshWindowDays = dataRefreshWindowDays;
             return this;
         }
 
+        /**
+         * @param dataRefreshWindowDays The number of days to look back to automatically refresh the data. For example, if `data_refresh_window_days = 10`, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataRefreshWindowDays(Integer dataRefreshWindowDays) {
             return dataRefreshWindowDays(Output.of(dataRefreshWindowDays));
         }
 
+        /**
+         * @param dataSourceId Data source id. Cannot be changed once data transfer is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceId(@Nullable Output<String> dataSourceId) {
             $.dataSourceId = dataSourceId;
             return this;
         }
 
+        /**
+         * @param dataSourceId Data source id. Cannot be changed once data transfer is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceId(String dataSourceId) {
             return dataSourceId(Output.of(dataSourceId));
         }
 
+        /**
+         * @param destinationDatasetId The BigQuery target dataset id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationDatasetId(@Nullable Output<String> destinationDatasetId) {
             $.destinationDatasetId = destinationDatasetId;
             return this;
         }
 
+        /**
+         * @param destinationDatasetId The BigQuery target dataset id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationDatasetId(String destinationDatasetId) {
             return destinationDatasetId(Output.of(destinationDatasetId));
         }
 
+        /**
+         * @param disabled Is this config disabled. When set to true, no runs are scheduled for a given transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled Is this config disabled. When set to true, no runs are scheduled for a given transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }
 
+        /**
+         * @param displayName User specified display name for the data transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User specified display name for the data transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param emailPreferences Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailPreferences(@Nullable Output<EmailPreferencesArgs> emailPreferences) {
             $.emailPreferences = emailPreferences;
             return this;
         }
 
+        /**
+         * @param emailPreferences Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailPreferences(EmailPreferencesArgs emailPreferences) {
             return emailPreferences(Output.of(emailPreferences));
         }
@@ -287,29 +403,65 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the transfer config. Transfer config names have the form `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id` is usually a uuid, even though it is not guaranteed or required. The name is ignored when creating a transfer config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the transfer config. Transfer config names have the form `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id` is usually a uuid, even though it is not guaranteed or required. The name is ignored when creating a transfer config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param notificationPubsubTopic Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish. The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationPubsubTopic(@Nullable Output<String> notificationPubsubTopic) {
             $.notificationPubsubTopic = notificationPubsubTopic;
             return this;
         }
 
+        /**
+         * @param notificationPubsubTopic Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish. The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationPubsubTopic(String notificationPubsubTopic) {
             return notificationPubsubTopic(Output.of(notificationPubsubTopic));
         }
 
+        /**
+         * @param params Parameters specific to each data source. For more information see the bq tab in the &#39;Setting up a data transfer&#39; section for each data source. For example the parameters for Cloud Storage transfers are listed here: https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
+         * 
+         * @return builder
+         * 
+         */
         public Builder params(@Nullable Output<Map<String,String>> params) {
             $.params = params;
             return this;
         }
 
+        /**
+         * @param params Parameters specific to each data source. For more information see the bq tab in the &#39;Setting up a data transfer&#39; section for each data source. For example the parameters for Cloud Storage transfers are listed here: https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
+         * 
+         * @return builder
+         * 
+         */
         public Builder params(Map<String,String> params) {
             return params(Output.of(params));
         }
@@ -323,20 +475,44 @@ public final class TransferConfigArgs extends com.pulumi.resources.ResourceArgs 
             return project(Output.of(project));
         }
 
+        /**
+         * @param schedule Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the default value for the data source will be used. The specified times are in UTC. Examples of valid format: `1st,3rd monday of month 15:30`, `every wed,fri of jan,jun 13:15`, and `first sunday of quarter 00:00`. See more explanation about the format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format NOTE: The minimum interval time between recurring transfers depends on the data source; refer to the documentation for your data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the default value for the data source will be used. The specified times are in UTC. Examples of valid format: `1st,3rd monday of month 15:30`, `every wed,fri of jan,jun 13:15`, and `first sunday of quarter 00:00`. See more explanation about the format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format NOTE: The minimum interval time between recurring transfers depends on the data source; refer to the documentation for your data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param scheduleOptions Options customizing the data transfer schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleOptions(@Nullable Output<ScheduleOptionsArgs> scheduleOptions) {
             $.scheduleOptions = scheduleOptions;
             return this;
         }
 
+        /**
+         * @param scheduleOptions Options customizing the data transfer schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleOptions(ScheduleOptionsArgs scheduleOptions) {
             return scheduleOptions(Output.of(scheduleOptions));
         }

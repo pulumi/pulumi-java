@@ -29,6 +29,10 @@ public final class DataCenterResourcePropertiesArgs extends com.pulumi.resources
     @Import(name="base64EncodedCassandraYamlFragment")
     private @Nullable Output<String> base64EncodedCassandraYamlFragment;
 
+    /**
+     * @return A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.
+     * 
+     */
     public Optional<Output<String>> base64EncodedCassandraYamlFragment() {
         return Optional.ofNullable(this.base64EncodedCassandraYamlFragment);
     }
@@ -40,6 +44,10 @@ public final class DataCenterResourcePropertiesArgs extends com.pulumi.resources
     @Import(name="dataCenterLocation")
     private @Nullable Output<String> dataCenterLocation;
 
+    /**
+     * @return The region this data center should be created in.
+     * 
+     */
     public Optional<Output<String>> dataCenterLocation() {
         return Optional.ofNullable(this.dataCenterLocation);
     }
@@ -51,6 +59,10 @@ public final class DataCenterResourcePropertiesArgs extends com.pulumi.resources
     @Import(name="delegatedSubnetId")
     private @Nullable Output<String> delegatedSubnetId;
 
+    /**
+     * @return Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in &#39;dataCenterLocation&#39; and must be able to route to the subnet specified in the cluster&#39;s &#39;delegatedManagementSubnetId&#39; property. This resource id will be of the form &#39;/subscriptions/&lt;subscription id&gt;/resourceGroups/&lt;resource group&gt;/providers/Microsoft.Network/virtualNetworks/&lt;virtual network&gt;/subnets/&lt;subnet&gt;&#39;.
+     * 
+     */
     public Optional<Output<String>> delegatedSubnetId() {
         return Optional.ofNullable(this.delegatedSubnetId);
     }
@@ -62,6 +74,10 @@ public final class DataCenterResourcePropertiesArgs extends com.pulumi.resources
     @Import(name="nodeCount")
     private @Nullable Output<Integer> nodeCount;
 
+    /**
+     * @return The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.
+     * 
+     */
     public Optional<Output<Integer>> nodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
@@ -73,6 +89,10 @@ public final class DataCenterResourcePropertiesArgs extends com.pulumi.resources
     @Import(name="provisioningState")
     private @Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState;
 
+    /**
+     * @return The status of the resource at the time the operation was called.
+     * 
+     */
     public Optional<Output<Either<String,ManagedCassandraProvisioningState>>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -105,55 +125,127 @@ public final class DataCenterResourcePropertiesArgs extends com.pulumi.resources
             $ = new DataCenterResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param base64EncodedCassandraYamlFragment A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder base64EncodedCassandraYamlFragment(@Nullable Output<String> base64EncodedCassandraYamlFragment) {
             $.base64EncodedCassandraYamlFragment = base64EncodedCassandraYamlFragment;
             return this;
         }
 
+        /**
+         * @param base64EncodedCassandraYamlFragment A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder base64EncodedCassandraYamlFragment(String base64EncodedCassandraYamlFragment) {
             return base64EncodedCassandraYamlFragment(Output.of(base64EncodedCassandraYamlFragment));
         }
 
+        /**
+         * @param dataCenterLocation The region this data center should be created in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCenterLocation(@Nullable Output<String> dataCenterLocation) {
             $.dataCenterLocation = dataCenterLocation;
             return this;
         }
 
+        /**
+         * @param dataCenterLocation The region this data center should be created in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCenterLocation(String dataCenterLocation) {
             return dataCenterLocation(Output.of(dataCenterLocation));
         }
 
+        /**
+         * @param delegatedSubnetId Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in &#39;dataCenterLocation&#39; and must be able to route to the subnet specified in the cluster&#39;s &#39;delegatedManagementSubnetId&#39; property. This resource id will be of the form &#39;/subscriptions/&lt;subscription id&gt;/resourceGroups/&lt;resource group&gt;/providers/Microsoft.Network/virtualNetworks/&lt;virtual network&gt;/subnets/&lt;subnet&gt;&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegatedSubnetId(@Nullable Output<String> delegatedSubnetId) {
             $.delegatedSubnetId = delegatedSubnetId;
             return this;
         }
 
+        /**
+         * @param delegatedSubnetId Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in &#39;dataCenterLocation&#39; and must be able to route to the subnet specified in the cluster&#39;s &#39;delegatedManagementSubnetId&#39; property. This resource id will be of the form &#39;/subscriptions/&lt;subscription id&gt;/resourceGroups/&lt;resource group&gt;/providers/Microsoft.Network/virtualNetworks/&lt;virtual network&gt;/subnets/&lt;subnet&gt;&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegatedSubnetId(String delegatedSubnetId) {
             return delegatedSubnetId(Output.of(delegatedSubnetId));
         }
 
+        /**
+         * @param nodeCount The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
             $.nodeCount = nodeCount;
             return this;
         }
 
+        /**
+         * @param nodeCount The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeCount(Integer nodeCount) {
             return nodeCount(Output.of(nodeCount));
         }
 
+        /**
+         * @param provisioningState The status of the resource at the time the operation was called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState The status of the resource at the time the operation was called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(Either<String,ManagedCassandraProvisioningState> provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param provisioningState The status of the resource at the time the operation was called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Either.ofLeft(provisioningState));
         }
 
+        /**
+         * @param provisioningState The status of the resource at the time the operation was called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(ManagedCassandraProvisioningState provisioningState) {
             return provisioningState(Either.ofRight(provisioningState));
         }

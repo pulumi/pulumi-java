@@ -28,6 +28,10 @@ public final class CassandraSchemaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="clusterKeys")
     private @Nullable List<ClusterKeyResponse> clusterKeys;
 
+    /**
+     * @return List of cluster key.
+     * 
+     */
     public Optional<List<ClusterKeyResponse>> clusterKeys() {
         return Optional.ofNullable(this.clusterKeys);
     }
@@ -39,6 +43,10 @@ public final class CassandraSchemaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="columns")
     private @Nullable List<ColumnResponse> columns;
 
+    /**
+     * @return List of Cassandra table columns.
+     * 
+     */
     public Optional<List<ColumnResponse>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -50,6 +58,10 @@ public final class CassandraSchemaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="partitionKeys")
     private @Nullable List<CassandraPartitionKeyResponse> partitionKeys;
 
+    /**
+     * @return List of partition key.
+     * 
+     */
     public Optional<List<CassandraPartitionKeyResponse>> partitionKeys() {
         return Optional.ofNullable(this.partitionKeys);
     }
@@ -80,29 +92,65 @@ public final class CassandraSchemaResponse extends com.pulumi.resources.InvokeAr
             $ = new CassandraSchemaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterKeys List of cluster key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterKeys(@Nullable List<ClusterKeyResponse> clusterKeys) {
             $.clusterKeys = clusterKeys;
             return this;
         }
 
+        /**
+         * @param clusterKeys List of cluster key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterKeys(ClusterKeyResponse... clusterKeys) {
             return clusterKeys(List.of(clusterKeys));
         }
 
+        /**
+         * @param columns List of Cassandra table columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable List<ColumnResponse> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns List of Cassandra table columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(ColumnResponse... columns) {
             return columns(List.of(columns));
         }
 
+        /**
+         * @param partitionKeys List of partition key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeys(@Nullable List<CassandraPartitionKeyResponse> partitionKeys) {
             $.partitionKeys = partitionKeys;
             return this;
         }
 
+        /**
+         * @param partitionKeys List of partition key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeys(CassandraPartitionKeyResponse... partitionKeys) {
             return partitionKeys(List.of(partitionKeys));
         }

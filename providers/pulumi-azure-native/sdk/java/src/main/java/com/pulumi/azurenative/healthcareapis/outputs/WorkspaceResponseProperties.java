@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class WorkspaceResponseProperties {
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
      */
     private final String provisioningState;
@@ -21,9 +21,9 @@ public final class WorkspaceResponseProperties {
     }
 
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

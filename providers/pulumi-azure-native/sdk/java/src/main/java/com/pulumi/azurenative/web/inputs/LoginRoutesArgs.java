@@ -26,6 +26,10 @@ public final class LoginRoutesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logoutEndpoint")
     private @Nullable Output<String> logoutEndpoint;
 
+    /**
+     * @return The endpoint at which a logout request should be made.
+     * 
+     */
     public Optional<Output<String>> logoutEndpoint() {
         return Optional.ofNullable(this.logoutEndpoint);
     }
@@ -54,11 +58,23 @@ public final class LoginRoutesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LoginRoutesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logoutEndpoint The endpoint at which a logout request should be made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logoutEndpoint(@Nullable Output<String> logoutEndpoint) {
             $.logoutEndpoint = logoutEndpoint;
             return this;
         }
 
+        /**
+         * @param logoutEndpoint The endpoint at which a logout request should be made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logoutEndpoint(String logoutEndpoint) {
             return logoutEndpoint(Output.of(logoutEndpoint));
         }

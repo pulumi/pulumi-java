@@ -32,6 +32,10 @@ public final class AutomationRuleTriggeringLogicArgs extends com.pulumi.resource
     @Import(name="conditions")
     private @Nullable Output<List<AutomationRulePropertyValuesConditionArgs>> conditions;
 
+    /**
+     * @return The conditions to evaluate to determine if the automation rule should be triggered on a given object
+     * 
+     */
     public Optional<Output<List<AutomationRulePropertyValuesConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -43,6 +47,10 @@ public final class AutomationRuleTriggeringLogicArgs extends com.pulumi.resource
     @Import(name="expirationTimeUtc")
     private @Nullable Output<String> expirationTimeUtc;
 
+    /**
+     * @return Determines when the automation rule should automatically expire and be disabled.
+     * 
+     */
     public Optional<Output<String>> expirationTimeUtc() {
         return Optional.ofNullable(this.expirationTimeUtc);
     }
@@ -54,6 +62,10 @@ public final class AutomationRuleTriggeringLogicArgs extends com.pulumi.resource
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Determines whether the automation rule is enabled or disabled.
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -65,6 +77,10 @@ public final class AutomationRuleTriggeringLogicArgs extends com.pulumi.resource
     @Import(name="triggersOn", required=true)
     private Output<Either<String,TriggersOn>> triggersOn;
 
+    /**
+     * @return The type of object the automation rule triggers on
+     * 
+     */
     public Output<Either<String,TriggersOn>> triggersOn() {
         return this.triggersOn;
     }
@@ -76,6 +92,10 @@ public final class AutomationRuleTriggeringLogicArgs extends com.pulumi.resource
     @Import(name="triggersWhen", required=true)
     private Output<Either<String,TriggersWhen>> triggersWhen;
 
+    /**
+     * @return The type of event the automation rule triggers on
+     * 
+     */
     public Output<Either<String,TriggersWhen>> triggersWhen() {
         return this.triggersWhen;
     }
@@ -108,67 +128,157 @@ public final class AutomationRuleTriggeringLogicArgs extends com.pulumi.resource
             $ = new AutomationRuleTriggeringLogicArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions The conditions to evaluate to determine if the automation rule should be triggered on a given object
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<AutomationRulePropertyValuesConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions The conditions to evaluate to determine if the automation rule should be triggered on a given object
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<AutomationRulePropertyValuesConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions The conditions to evaluate to determine if the automation rule should be triggered on a given object
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(AutomationRulePropertyValuesConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param expirationTimeUtc Determines when the automation rule should automatically expire and be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTimeUtc(@Nullable Output<String> expirationTimeUtc) {
             $.expirationTimeUtc = expirationTimeUtc;
             return this;
         }
 
+        /**
+         * @param expirationTimeUtc Determines when the automation rule should automatically expire and be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTimeUtc(String expirationTimeUtc) {
             return expirationTimeUtc(Output.of(expirationTimeUtc));
         }
 
+        /**
+         * @param isEnabled Determines whether the automation rule is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Determines whether the automation rule is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param triggersOn The type of object the automation rule triggers on
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggersOn(Output<Either<String,TriggersOn>> triggersOn) {
             $.triggersOn = triggersOn;
             return this;
         }
 
+        /**
+         * @param triggersOn The type of object the automation rule triggers on
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggersOn(Either<String,TriggersOn> triggersOn) {
             return triggersOn(Output.of(triggersOn));
         }
 
+        /**
+         * @param triggersOn The type of object the automation rule triggers on
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggersOn(String triggersOn) {
             return triggersOn(Either.ofLeft(triggersOn));
         }
 
+        /**
+         * @param triggersOn The type of object the automation rule triggers on
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggersOn(TriggersOn triggersOn) {
             return triggersOn(Either.ofRight(triggersOn));
         }
 
+        /**
+         * @param triggersWhen The type of event the automation rule triggers on
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggersWhen(Output<Either<String,TriggersWhen>> triggersWhen) {
             $.triggersWhen = triggersWhen;
             return this;
         }
 
+        /**
+         * @param triggersWhen The type of event the automation rule triggers on
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggersWhen(Either<String,TriggersWhen> triggersWhen) {
             return triggersWhen(Output.of(triggersWhen));
         }
 
+        /**
+         * @param triggersWhen The type of event the automation rule triggers on
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggersWhen(String triggersWhen) {
             return triggersWhen(Either.ofLeft(triggersWhen));
         }
 
+        /**
+         * @param triggersWhen The type of event the automation rule triggers on
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggersWhen(TriggersWhen triggersWhen) {
             return triggersWhen(Either.ofRight(triggersWhen));
         }

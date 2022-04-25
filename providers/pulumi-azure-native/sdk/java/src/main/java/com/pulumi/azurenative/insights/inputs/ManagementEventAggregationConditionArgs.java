@@ -28,6 +28,10 @@ public final class ManagementEventAggregationConditionArgs extends com.pulumi.re
     @Import(name="operator")
     private @Nullable Output<ConditionOperator> operator;
 
+    /**
+     * @return the condition operator.
+     * 
+     */
     public Optional<Output<ConditionOperator>> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -39,6 +43,10 @@ public final class ManagementEventAggregationConditionArgs extends com.pulumi.re
     @Import(name="threshold")
     private @Nullable Output<Double> threshold;
 
+    /**
+     * @return The threshold value that activates the alert.
+     * 
+     */
     public Optional<Output<Double>> threshold() {
         return Optional.ofNullable(this.threshold);
     }
@@ -50,6 +58,10 @@ public final class ManagementEventAggregationConditionArgs extends com.pulumi.re
     @Import(name="windowSize")
     private @Nullable Output<String> windowSize;
 
+    /**
+     * @return the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+     * 
+     */
     public Optional<Output<String>> windowSize() {
         return Optional.ofNullable(this.windowSize);
     }
@@ -80,29 +92,65 @@ public final class ManagementEventAggregationConditionArgs extends com.pulumi.re
             $ = new ManagementEventAggregationConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operator the condition operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable Output<ConditionOperator> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator the condition operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(ConditionOperator operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param threshold The threshold value that activates the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(@Nullable Output<Double> threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param threshold The threshold value that activates the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Double threshold) {
             return threshold(Output.of(threshold));
         }
 
+        /**
+         * @param windowSize the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowSize(@Nullable Output<String> windowSize) {
             $.windowSize = windowSize;
             return this;
         }
 
+        /**
+         * @param windowSize the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowSize(String windowSize) {
             return windowSize(Output.of(windowSize));
         }

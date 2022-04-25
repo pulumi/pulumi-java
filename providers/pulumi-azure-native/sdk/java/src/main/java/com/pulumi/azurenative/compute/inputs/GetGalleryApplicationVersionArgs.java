@@ -21,6 +21,10 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The expand expression to apply on the operation.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
     @Import(name="galleryApplicationName", required=true)
     private String galleryApplicationName;
 
+    /**
+     * @return The name of the gallery Application Definition in which the Application Version resides.
+     * 
+     */
     public String galleryApplicationName() {
         return this.galleryApplicationName;
     }
@@ -43,6 +51,10 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
     @Import(name="galleryApplicationVersionName", required=true)
     private String galleryApplicationVersionName;
 
+    /**
+     * @return The name of the gallery Application Version to be retrieved.
+     * 
+     */
     public String galleryApplicationVersionName() {
         return this.galleryApplicationVersionName;
     }
@@ -54,6 +66,10 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
     @Import(name="galleryName", required=true)
     private String galleryName;
 
+    /**
+     * @return The name of the Shared Application Gallery in which the Application Definition resides.
+     * 
+     */
     public String galleryName() {
         return this.galleryName;
     }
@@ -65,6 +81,10 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -97,26 +117,56 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
             $ = new GetGalleryApplicationVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand The expand expression to apply on the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param galleryApplicationName The name of the gallery Application Definition in which the Application Version resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryApplicationName(String galleryApplicationName) {
             $.galleryApplicationName = galleryApplicationName;
             return this;
         }
 
+        /**
+         * @param galleryApplicationVersionName The name of the gallery Application Version to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryApplicationVersionName(String galleryApplicationVersionName) {
             $.galleryApplicationVersionName = galleryApplicationVersionName;
             return this;
         }
 
+        /**
+         * @param galleryName The name of the Shared Application Gallery in which the Application Definition resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryName(String galleryName) {
             $.galleryName = galleryName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

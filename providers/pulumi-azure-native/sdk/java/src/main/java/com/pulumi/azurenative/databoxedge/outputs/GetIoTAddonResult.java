@@ -12,58 +12,58 @@ import java.util.Objects;
 @CustomType
 public final class GetIoTAddonResult {
     /**
-     * Host OS supported by the IoT addon.
+     * @return Host OS supported by the IoT addon.
      * 
      */
     private final String hostPlatform;
     /**
-     * Platform where the runtime is hosted.
+     * @return Platform where the runtime is hosted.
      * 
      */
     private final String hostPlatformType;
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
      */
     private final String id;
     /**
-     * IoT device metadata to which appliance needs to be connected.
+     * @return IoT device metadata to which appliance needs to be connected.
      * 
      */
     private final IoTDeviceInfoResponse ioTDeviceDetails;
     /**
-     * IoT edge device to which the IoT Addon needs to be configured.
+     * @return IoT edge device to which the IoT Addon needs to be configured.
      * 
      */
     private final IoTDeviceInfoResponse ioTEdgeDeviceDetails;
     /**
-     * Addon type.
+     * @return Addon type.
      * Expected value is &#39;IotEdge&#39;.
      * 
      */
     private final String kind;
     /**
-     * The object name.
+     * @return The object name.
      * 
      */
     private final String name;
     /**
-     * Addon Provisioning State
+     * @return Addon Provisioning State
      * 
      */
     private final String provisioningState;
     /**
-     * Addon type
+     * @return Addon type
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
      */
     private final String type;
     /**
-     * Version of IoT running on the appliance.
+     * @return Version of IoT running on the appliance.
      * 
      */
     private final String version;
@@ -95,80 +95,80 @@ public final class GetIoTAddonResult {
     }
 
     /**
-     * Host OS supported by the IoT addon.
+     * @return Host OS supported by the IoT addon.
      * 
-    */
+     */
     public String hostPlatform() {
         return this.hostPlatform;
     }
     /**
-     * Platform where the runtime is hosted.
+     * @return Platform where the runtime is hosted.
      * 
-    */
+     */
     public String hostPlatformType() {
         return this.hostPlatformType;
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * IoT device metadata to which appliance needs to be connected.
+     * @return IoT device metadata to which appliance needs to be connected.
      * 
-    */
+     */
     public IoTDeviceInfoResponse ioTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
     /**
-     * IoT edge device to which the IoT Addon needs to be configured.
+     * @return IoT edge device to which the IoT Addon needs to be configured.
      * 
-    */
+     */
     public IoTDeviceInfoResponse ioTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
     /**
-     * Addon type.
+     * @return Addon type.
      * Expected value is &#39;IotEdge&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Addon Provisioning State
+     * @return Addon Provisioning State
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Addon type
+     * @return Addon type
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Version of IoT running on the appliance.
+     * @return Version of IoT running on the appliance.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

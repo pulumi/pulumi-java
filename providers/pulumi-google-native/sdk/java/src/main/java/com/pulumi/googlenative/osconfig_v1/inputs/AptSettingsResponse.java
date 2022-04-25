@@ -24,6 +24,10 @@ public final class AptSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="excludes", required=true)
     private List<String> excludes;
 
+    /**
+     * @return List of packages to exclude from update. These packages will be excluded
+     * 
+     */
     public List<String> excludes() {
         return this.excludes;
     }
@@ -35,6 +39,10 @@ public final class AptSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="exclusivePackages", required=true)
     private List<String> exclusivePackages;
 
+    /**
+     * @return An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.
+     * 
+     */
     public List<String> exclusivePackages() {
         return this.exclusivePackages;
     }
@@ -46,6 +54,10 @@ public final class AptSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -76,24 +88,54 @@ public final class AptSettingsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AptSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludes List of packages to exclude from update. These packages will be excluded
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(List<String> excludes) {
             $.excludes = excludes;
             return this;
         }
 
+        /**
+         * @param excludes List of packages to exclude from update. These packages will be excluded
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(String... excludes) {
             return excludes(List.of(excludes));
         }
 
+        /**
+         * @param exclusivePackages An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePackages(List<String> exclusivePackages) {
             $.exclusivePackages = exclusivePackages;
             return this;
         }
 
+        /**
+         * @param exclusivePackages An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePackages(String... exclusivePackages) {
             return exclusivePackages(List.of(exclusivePackages));
         }
 
+        /**
+         * @param type By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

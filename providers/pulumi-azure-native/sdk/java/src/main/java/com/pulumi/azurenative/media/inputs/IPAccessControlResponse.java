@@ -26,6 +26,10 @@ public final class IPAccessControlResponse extends com.pulumi.resources.InvokeAr
     @Import(name="allow")
     private @Nullable List<IPRangeResponse> allow;
 
+    /**
+     * @return The IP allow list.
+     * 
+     */
     public Optional<List<IPRangeResponse>> allow() {
         return Optional.ofNullable(this.allow);
     }
@@ -54,11 +58,23 @@ public final class IPAccessControlResponse extends com.pulumi.resources.InvokeAr
             $ = new IPAccessControlResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allow The IP allow list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(@Nullable List<IPRangeResponse> allow) {
             $.allow = allow;
             return this;
         }
 
+        /**
+         * @param allow The IP allow list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(IPRangeResponse... allow) {
             return allow(List.of(allow));
         }

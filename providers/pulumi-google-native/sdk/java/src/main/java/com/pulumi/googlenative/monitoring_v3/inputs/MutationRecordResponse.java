@@ -23,6 +23,10 @@ public final class MutationRecordResponse extends com.pulumi.resources.InvokeArg
     @Import(name="mutateTime", required=true)
     private String mutateTime;
 
+    /**
+     * @return When the change occurred.
+     * 
+     */
     public String mutateTime() {
         return this.mutateTime;
     }
@@ -34,6 +38,10 @@ public final class MutationRecordResponse extends com.pulumi.resources.InvokeArg
     @Import(name="mutatedBy", required=true)
     private String mutatedBy;
 
+    /**
+     * @return The email address of the user making the change.
+     * 
+     */
     public String mutatedBy() {
         return this.mutatedBy;
     }
@@ -63,11 +71,23 @@ public final class MutationRecordResponse extends com.pulumi.resources.InvokeArg
             $ = new MutationRecordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mutateTime When the change occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutateTime(String mutateTime) {
             $.mutateTime = mutateTime;
             return this;
         }
 
+        /**
+         * @param mutatedBy The email address of the user making the change.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutatedBy(String mutatedBy) {
             $.mutatedBy = mutatedBy;
             return this;

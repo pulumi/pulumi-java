@@ -31,6 +31,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseUrl")
     private @Nullable Output<String> databaseUrl;
 
+    /**
+     * @return Immutable. The globally unique hostname of the database.
+     * 
+     */
     public Optional<Output<String>> databaseUrl() {
         return Optional.ofNullable(this.databaseUrl);
     }
@@ -49,6 +53,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -60,6 +68,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -71,6 +83,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<InstanceState> state;
 
+    /**
+     * @return The database&#39;s lifecycle state. Read-only.
+     * 
+     */
     public Optional<Output<InstanceState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -82,6 +98,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<InstanceType> type;
 
+    /**
+     * @return The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
+     * 
+     */
     public Optional<Output<InstanceType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -133,11 +153,23 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return databaseId(Output.of(databaseId));
         }
 
+        /**
+         * @param databaseUrl Immutable. The globally unique hostname of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseUrl(@Nullable Output<String> databaseUrl) {
             $.databaseUrl = databaseUrl;
             return this;
         }
 
+        /**
+         * @param databaseUrl Immutable. The globally unique hostname of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseUrl(String databaseUrl) {
             return databaseUrl(Output.of(databaseUrl));
         }
@@ -151,38 +183,86 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param state The database&#39;s lifecycle state. Read-only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<InstanceState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The database&#39;s lifecycle state. Read-only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(InstanceState state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param type The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<InstanceType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(InstanceType type) {
             return type(Output.of(type));
         }

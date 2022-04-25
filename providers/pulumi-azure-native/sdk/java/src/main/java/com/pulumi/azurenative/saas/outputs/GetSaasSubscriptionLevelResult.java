@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSaasSubscriptionLevelResult {
     /**
-     * The resource uri
+     * @return The resource uri
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * saas properties
+     * @return saas properties
      * 
      */
     private final SaasResourceResponseProperties properties;
     /**
-     * the resource tags.
+     * @return the resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -53,37 +53,37 @@ public final class GetSaasSubscriptionLevelResult {
     }
 
     /**
-     * The resource uri
+     * @return The resource uri
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * saas properties
+     * @return saas properties
      * 
-    */
+     */
     public SaasResourceResponseProperties properties() {
         return this.properties;
     }
     /**
-     * the resource tags.
+     * @return the resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

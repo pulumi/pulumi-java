@@ -26,6 +26,10 @@ public final class ContentLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return The content link URI.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -54,11 +58,23 @@ public final class ContentLinkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContentLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uri The content link URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The content link URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

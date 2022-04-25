@@ -27,6 +27,10 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
     @Import(name="autoProvision", required=true)
     private String autoProvision;
 
+    /**
+     * @return Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
+     * 
+     */
     public String autoProvision() {
         return this.autoProvision;
     }
@@ -38,6 +42,10 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
     @Import(name="hybridComputeProvisioningState", required=true)
     private String hybridComputeProvisioningState;
 
+    /**
+     * @return State of the service principal and its secret
+     * 
+     */
     public String hybridComputeProvisioningState() {
         return this.hybridComputeProvisioningState;
     }
@@ -49,6 +57,10 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
     @Import(name="proxyServer")
     private @Nullable ProxyServerPropertiesResponse proxyServer;
 
+    /**
+     * @return For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
+     * 
+     */
     public Optional<ProxyServerPropertiesResponse> proxyServer() {
         return Optional.ofNullable(this.proxyServer);
     }
@@ -60,6 +72,10 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
     @Import(name="region")
     private @Nullable String region;
 
+    /**
+     * @return The location where the metadata of machines will be stored
+     * 
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
@@ -71,6 +87,10 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
     @Import(name="resourceGroupName")
     private @Nullable String resourceGroupName;
 
+    /**
+     * @return The name of the resource group where Arc (Hybrid Compute) connectors are connected.
+     * 
+     */
     public Optional<String> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
@@ -82,6 +102,10 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
     @Import(name="servicePrincipal")
     private @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
+    /**
+     * @return An object to access resources that are secured by an Azure AD tenant.
+     * 
+     */
     public Optional<ServicePrincipalPropertiesResponse> servicePrincipal() {
         return Optional.ofNullable(this.servicePrincipal);
     }
@@ -115,31 +139,67 @@ public final class HybridComputeSettingsPropertiesResponse extends com.pulumi.re
             $ = new HybridComputeSettingsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoProvision Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoProvision(String autoProvision) {
             $.autoProvision = autoProvision;
             return this;
         }
 
+        /**
+         * @param hybridComputeProvisioningState State of the service principal and its secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridComputeProvisioningState(String hybridComputeProvisioningState) {
             $.hybridComputeProvisioningState = hybridComputeProvisioningState;
             return this;
         }
 
+        /**
+         * @param proxyServer For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyServer(@Nullable ProxyServerPropertiesResponse proxyServer) {
             $.proxyServer = proxyServer;
             return this;
         }
 
+        /**
+         * @param region The location where the metadata of machines will be stored
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where Arc (Hybrid Compute) connectors are connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param servicePrincipal An object to access resources that are secured by an Azure AD tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
             $.servicePrincipal = servicePrincipal;
             return this;

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ParametersLinkResponse {
     /**
-     * If included, must match the ContentVersion in the template.
+     * @return If included, must match the ContentVersion in the template.
      * 
      */
     private final @Nullable String contentVersion;
     /**
-     * The URI of the parameters file.
+     * @return The URI of the parameters file.
      * 
      */
     private final String uri;
@@ -31,16 +31,16 @@ public final class ParametersLinkResponse {
     }
 
     /**
-     * If included, must match the ContentVersion in the template.
+     * @return If included, must match the ContentVersion in the template.
      * 
-    */
+     */
     public Optional<String> contentVersion() {
         return Optional.ofNullable(this.contentVersion);
     }
     /**
-     * The URI of the parameters file.
+     * @return The URI of the parameters file.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

@@ -28,6 +28,10 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="day")
     private @Nullable Output<String> day;
 
+    /**
+     * @return Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english
+     * 
+     */
     public Optional<Output<String>> day() {
         return Optional.ofNullable(this.day);
     }
@@ -39,6 +43,10 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hour")
     private @Nullable Output<Integer> hour;
 
+    /**
+     * @return Indicates which hour in UTC timezone a snapshot should be taken
+     * 
+     */
     public Optional<Output<Integer>> hour() {
         return Optional.ofNullable(this.hour);
     }
@@ -50,6 +58,10 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="minute")
     private @Nullable Output<Integer> minute;
 
+    /**
+     * @return Indicates which minute snapshot should be taken
+     * 
+     */
     public Optional<Output<Integer>> minute() {
         return Optional.ofNullable(this.minute);
     }
@@ -61,6 +73,10 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="snapshotsToKeep")
     private @Nullable Output<Integer> snapshotsToKeep;
 
+    /**
+     * @return Weekly snapshot count to keep
+     * 
+     */
     public Optional<Output<Integer>> snapshotsToKeep() {
         return Optional.ofNullable(this.snapshotsToKeep);
     }
@@ -72,6 +88,10 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="usedBytes")
     private @Nullable Output<Double> usedBytes;
 
+    /**
+     * @return Resource size in bytes, current storage usage for the volume in bytes
+     * 
+     */
     public Optional<Output<Double>> usedBytes() {
         return Optional.ofNullable(this.usedBytes);
     }
@@ -104,47 +124,107 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
             $ = new WeeklyScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(@Nullable Output<String> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(String day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param hour Indicates which hour in UTC timezone a snapshot should be taken
+         * 
+         * @return builder
+         * 
+         */
         public Builder hour(@Nullable Output<Integer> hour) {
             $.hour = hour;
             return this;
         }
 
+        /**
+         * @param hour Indicates which hour in UTC timezone a snapshot should be taken
+         * 
+         * @return builder
+         * 
+         */
         public Builder hour(Integer hour) {
             return hour(Output.of(hour));
         }
 
+        /**
+         * @param minute Indicates which minute snapshot should be taken
+         * 
+         * @return builder
+         * 
+         */
         public Builder minute(@Nullable Output<Integer> minute) {
             $.minute = minute;
             return this;
         }
 
+        /**
+         * @param minute Indicates which minute snapshot should be taken
+         * 
+         * @return builder
+         * 
+         */
         public Builder minute(Integer minute) {
             return minute(Output.of(minute));
         }
 
+        /**
+         * @param snapshotsToKeep Weekly snapshot count to keep
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotsToKeep(@Nullable Output<Integer> snapshotsToKeep) {
             $.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
 
+        /**
+         * @param snapshotsToKeep Weekly snapshot count to keep
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotsToKeep(Integer snapshotsToKeep) {
             return snapshotsToKeep(Output.of(snapshotsToKeep));
         }
 
+        /**
+         * @param usedBytes Resource size in bytes, current storage usage for the volume in bytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder usedBytes(@Nullable Output<Double> usedBytes) {
             $.usedBytes = usedBytes;
             return this;
         }
 
+        /**
+         * @param usedBytes Resource size in bytes, current storage usage for the volume in bytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder usedBytes(Double usedBytes) {
             return usedBytes(Output.of(usedBytes));
         }

@@ -29,6 +29,10 @@ public final class IntegrationRuntimeComputePropertiesArgs extends com.pulumi.re
     @Import(name="dataFlowProperties")
     private @Nullable Output<IntegrationRuntimeDataFlowPropertiesArgs> dataFlowProperties;
 
+    /**
+     * @return Data flow properties for managed integration runtime.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeDataFlowPropertiesArgs>> dataFlowProperties() {
         return Optional.ofNullable(this.dataFlowProperties);
     }
@@ -40,6 +44,10 @@ public final class IntegrationRuntimeComputePropertiesArgs extends com.pulumi.re
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -51,6 +59,10 @@ public final class IntegrationRuntimeComputePropertiesArgs extends com.pulumi.re
     @Import(name="maxParallelExecutionsPerNode")
     private @Nullable Output<Integer> maxParallelExecutionsPerNode;
 
+    /**
+     * @return Maximum parallel executions count per node for managed integration runtime.
+     * 
+     */
     public Optional<Output<Integer>> maxParallelExecutionsPerNode() {
         return Optional.ofNullable(this.maxParallelExecutionsPerNode);
     }
@@ -62,6 +74,10 @@ public final class IntegrationRuntimeComputePropertiesArgs extends com.pulumi.re
     @Import(name="nodeSize")
     private @Nullable Output<String> nodeSize;
 
+    /**
+     * @return The node size requirement to managed integration runtime.
+     * 
+     */
     public Optional<Output<String>> nodeSize() {
         return Optional.ofNullable(this.nodeSize);
     }
@@ -73,6 +89,10 @@ public final class IntegrationRuntimeComputePropertiesArgs extends com.pulumi.re
     @Import(name="numberOfNodes")
     private @Nullable Output<Integer> numberOfNodes;
 
+    /**
+     * @return The required number of nodes for managed integration runtime.
+     * 
+     */
     public Optional<Output<Integer>> numberOfNodes() {
         return Optional.ofNullable(this.numberOfNodes);
     }
@@ -84,6 +104,10 @@ public final class IntegrationRuntimeComputePropertiesArgs extends com.pulumi.re
     @Import(name="vNetProperties")
     private @Nullable Output<IntegrationRuntimeVNetPropertiesArgs> vNetProperties;
 
+    /**
+     * @return VNet properties for managed integration runtime.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeVNetPropertiesArgs>> vNetProperties() {
         return Optional.ofNullable(this.vNetProperties);
     }
@@ -117,56 +141,128 @@ public final class IntegrationRuntimeComputePropertiesArgs extends com.pulumi.re
             $ = new IntegrationRuntimeComputePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataFlowProperties Data flow properties for managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFlowProperties(@Nullable Output<IntegrationRuntimeDataFlowPropertiesArgs> dataFlowProperties) {
             $.dataFlowProperties = dataFlowProperties;
             return this;
         }
 
+        /**
+         * @param dataFlowProperties Data flow properties for managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFlowProperties(IntegrationRuntimeDataFlowPropertiesArgs dataFlowProperties) {
             return dataFlowProperties(Output.of(dataFlowProperties));
         }
 
+        /**
+         * @param location The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param maxParallelExecutionsPerNode Maximum parallel executions count per node for managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxParallelExecutionsPerNode(@Nullable Output<Integer> maxParallelExecutionsPerNode) {
             $.maxParallelExecutionsPerNode = maxParallelExecutionsPerNode;
             return this;
         }
 
+        /**
+         * @param maxParallelExecutionsPerNode Maximum parallel executions count per node for managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxParallelExecutionsPerNode(Integer maxParallelExecutionsPerNode) {
             return maxParallelExecutionsPerNode(Output.of(maxParallelExecutionsPerNode));
         }
 
+        /**
+         * @param nodeSize The node size requirement to managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeSize(@Nullable Output<String> nodeSize) {
             $.nodeSize = nodeSize;
             return this;
         }
 
+        /**
+         * @param nodeSize The node size requirement to managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeSize(String nodeSize) {
             return nodeSize(Output.of(nodeSize));
         }
 
+        /**
+         * @param numberOfNodes The required number of nodes for managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfNodes(@Nullable Output<Integer> numberOfNodes) {
             $.numberOfNodes = numberOfNodes;
             return this;
         }
 
+        /**
+         * @param numberOfNodes The required number of nodes for managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfNodes(Integer numberOfNodes) {
             return numberOfNodes(Output.of(numberOfNodes));
         }
 
+        /**
+         * @param vNetProperties VNet properties for managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vNetProperties(@Nullable Output<IntegrationRuntimeVNetPropertiesArgs> vNetProperties) {
             $.vNetProperties = vNetProperties;
             return this;
         }
 
+        /**
+         * @param vNetProperties VNet properties for managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vNetProperties(IntegrationRuntimeVNetPropertiesArgs vNetProperties) {
             return vNetProperties(Output.of(vNetProperties));
         }

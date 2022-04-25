@@ -36,6 +36,10 @@ public final class PackagingConfigurationHlsPackage extends com.pulumi.resources
     @Import(name="hlsManifests", required=true)
     private List<PackagingConfigurationHlsManifest> hlsManifests;
 
+    /**
+     * @return A list of HLS manifest configurations.
+     * 
+     */
     public List<PackagingConfigurationHlsManifest> hlsManifests() {
         return this.hlsManifests;
     }
@@ -54,6 +58,10 @@ public final class PackagingConfigurationHlsPackage extends com.pulumi.resources
     @Import(name="useAudioRenditionGroup")
     private @Nullable Boolean useAudioRenditionGroup;
 
+    /**
+     * @return When enabled, audio streams will be placed in rendition groups in the output.
+     * 
+     */
     public Optional<Boolean> useAudioRenditionGroup() {
         return Optional.ofNullable(this.useAudioRenditionGroup);
     }
@@ -90,11 +98,23 @@ public final class PackagingConfigurationHlsPackage extends com.pulumi.resources
             return this;
         }
 
+        /**
+         * @param hlsManifests A list of HLS manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hlsManifests(List<PackagingConfigurationHlsManifest> hlsManifests) {
             $.hlsManifests = hlsManifests;
             return this;
         }
 
+        /**
+         * @param hlsManifests A list of HLS manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hlsManifests(PackagingConfigurationHlsManifest... hlsManifests) {
             return hlsManifests(List.of(hlsManifests));
         }
@@ -104,6 +124,12 @@ public final class PackagingConfigurationHlsPackage extends com.pulumi.resources
             return this;
         }
 
+        /**
+         * @param useAudioRenditionGroup When enabled, audio streams will be placed in rendition groups in the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
             $.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;

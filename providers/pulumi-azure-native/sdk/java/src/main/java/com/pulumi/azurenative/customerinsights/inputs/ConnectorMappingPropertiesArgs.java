@@ -33,6 +33,10 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="availability", required=true)
     private Output<ConnectorMappingAvailabilityArgs> availability;
 
+    /**
+     * @return The availability of mapping property.
+     * 
+     */
     public Output<ConnectorMappingAvailabilityArgs> availability() {
         return this.availability;
     }
@@ -44,6 +48,10 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="completeOperation", required=true)
     private Output<ConnectorMappingCompleteOperationArgs> completeOperation;
 
+    /**
+     * @return The operation after import is done.
+     * 
+     */
     public Output<ConnectorMappingCompleteOperationArgs> completeOperation() {
         return this.completeOperation;
     }
@@ -55,6 +63,10 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="errorManagement", required=true)
     private Output<ConnectorMappingErrorManagementArgs> errorManagement;
 
+    /**
+     * @return The error management setting for the mapping.
+     * 
+     */
     public Output<ConnectorMappingErrorManagementArgs> errorManagement() {
         return this.errorManagement;
     }
@@ -66,6 +78,10 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="fileFilter")
     private @Nullable Output<String> fileFilter;
 
+    /**
+     * @return The file filter for the mapping.
+     * 
+     */
     public Optional<Output<String>> fileFilter() {
         return Optional.ofNullable(this.fileFilter);
     }
@@ -77,6 +93,10 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="folderPath")
     private @Nullable Output<String> folderPath;
 
+    /**
+     * @return The folder path for the mapping.
+     * 
+     */
     public Optional<Output<String>> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -88,6 +108,10 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="format", required=true)
     private Output<ConnectorMappingFormatArgs> format;
 
+    /**
+     * @return The format of mapping property.
+     * 
+     */
     public Output<ConnectorMappingFormatArgs> format() {
         return this.format;
     }
@@ -99,6 +123,10 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="hasHeader")
     private @Nullable Output<Boolean> hasHeader;
 
+    /**
+     * @return If the file contains a header or not.
+     * 
+     */
     public Optional<Output<Boolean>> hasHeader() {
         return Optional.ofNullable(this.hasHeader);
     }
@@ -110,6 +138,10 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="structure", required=true)
     private Output<List<ConnectorMappingStructureArgs>> structure;
 
+    /**
+     * @return Ingestion mapping information at property level.
+     * 
+     */
     public Output<List<ConnectorMappingStructureArgs>> structure() {
         return this.structure;
     }
@@ -145,78 +177,180 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
             $ = new ConnectorMappingPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availability The availability of mapping property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availability(Output<ConnectorMappingAvailabilityArgs> availability) {
             $.availability = availability;
             return this;
         }
 
+        /**
+         * @param availability The availability of mapping property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availability(ConnectorMappingAvailabilityArgs availability) {
             return availability(Output.of(availability));
         }
 
+        /**
+         * @param completeOperation The operation after import is done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completeOperation(Output<ConnectorMappingCompleteOperationArgs> completeOperation) {
             $.completeOperation = completeOperation;
             return this;
         }
 
+        /**
+         * @param completeOperation The operation after import is done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completeOperation(ConnectorMappingCompleteOperationArgs completeOperation) {
             return completeOperation(Output.of(completeOperation));
         }
 
+        /**
+         * @param errorManagement The error management setting for the mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorManagement(Output<ConnectorMappingErrorManagementArgs> errorManagement) {
             $.errorManagement = errorManagement;
             return this;
         }
 
+        /**
+         * @param errorManagement The error management setting for the mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorManagement(ConnectorMappingErrorManagementArgs errorManagement) {
             return errorManagement(Output.of(errorManagement));
         }
 
+        /**
+         * @param fileFilter The file filter for the mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileFilter(@Nullable Output<String> fileFilter) {
             $.fileFilter = fileFilter;
             return this;
         }
 
+        /**
+         * @param fileFilter The file filter for the mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileFilter(String fileFilter) {
             return fileFilter(Output.of(fileFilter));
         }
 
+        /**
+         * @param folderPath The folder path for the mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable Output<String> folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param folderPath The folder path for the mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(String folderPath) {
             return folderPath(Output.of(folderPath));
         }
 
+        /**
+         * @param format The format of mapping property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(Output<ConnectorMappingFormatArgs> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format The format of mapping property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(ConnectorMappingFormatArgs format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param hasHeader If the file contains a header or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasHeader(@Nullable Output<Boolean> hasHeader) {
             $.hasHeader = hasHeader;
             return this;
         }
 
+        /**
+         * @param hasHeader If the file contains a header or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasHeader(Boolean hasHeader) {
             return hasHeader(Output.of(hasHeader));
         }
 
+        /**
+         * @param structure Ingestion mapping information at property level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structure(Output<List<ConnectorMappingStructureArgs>> structure) {
             $.structure = structure;
             return this;
         }
 
+        /**
+         * @param structure Ingestion mapping information at property level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structure(List<ConnectorMappingStructureArgs> structure) {
             return structure(Output.of(structure));
         }
 
+        /**
+         * @param structure Ingestion mapping information at property level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structure(ConnectorMappingStructureArgs... structure) {
             return structure(List.of(structure));
         }

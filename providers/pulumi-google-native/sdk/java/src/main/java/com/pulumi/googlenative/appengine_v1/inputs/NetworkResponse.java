@@ -25,6 +25,10 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="forwardedPorts", required=true)
     private List<String> forwardedPorts;
 
+    /**
+     * @return List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.
+     * 
+     */
     public List<String> forwardedPorts() {
         return this.forwardedPorts;
     }
@@ -36,6 +40,10 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceTag", required=true)
     private String instanceTag;
 
+    /**
+     * @return Tag to apply to the instance during creation. Only applicable in the App Engine flexible environment.
+     * 
+     */
     public String instanceTag() {
         return this.instanceTag;
     }
@@ -47,6 +55,10 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Google Compute Engine network where the virtual machines are created. Specify the short name, not the resource path.Defaults to default.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -58,6 +70,10 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sessionAffinity", required=true)
     private Boolean sessionAffinity;
 
+    /**
+     * @return Enable session affinity. Only applicable in the App Engine flexible environment.
+     * 
+     */
     public Boolean sessionAffinity() {
         return this.sessionAffinity;
     }
@@ -69,6 +85,10 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnetworkName", required=true)
     private String subnetworkName;
 
+    /**
+     * @return Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.If a subnetwork name is specified, a network name will also be required unless it is for the default network. If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range. If the network that the instance is being created in is an auto Subnet Mode Network, then only network name should be specified (not the subnetwork_name) and the IP address is created from the IPCidrRange of the subnetwork that exists in that zone for that network. If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetwork_name must be specified and the IP address is created from the IPCidrRange of the subnetwork.If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
+     * 
+     */
     public String subnetworkName() {
         return this.subnetworkName;
     }
@@ -101,30 +121,66 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NetworkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param forwardedPorts List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardedPorts(List<String> forwardedPorts) {
             $.forwardedPorts = forwardedPorts;
             return this;
         }
 
+        /**
+         * @param forwardedPorts List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardedPorts(String... forwardedPorts) {
             return forwardedPorts(List.of(forwardedPorts));
         }
 
+        /**
+         * @param instanceTag Tag to apply to the instance during creation. Only applicable in the App Engine flexible environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTag(String instanceTag) {
             $.instanceTag = instanceTag;
             return this;
         }
 
+        /**
+         * @param name Google Compute Engine network where the virtual machines are created. Specify the short name, not the resource path.Defaults to default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sessionAffinity Enable session affinity. Only applicable in the App Engine flexible environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinity(Boolean sessionAffinity) {
             $.sessionAffinity = sessionAffinity;
             return this;
         }
 
+        /**
+         * @param subnetworkName Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.If a subnetwork name is specified, a network name will also be required unless it is for the default network. If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range. If the network that the instance is being created in is an auto Subnet Mode Network, then only network name should be specified (not the subnetwork_name) and the IP address is created from the IPCidrRange of the subnetwork that exists in that zone for that network. If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetwork_name must be specified and the IP address is created from the IPCidrRange of the subnetwork.If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkName(String subnetworkName) {
             $.subnetworkName = subnetworkName;
             return this;

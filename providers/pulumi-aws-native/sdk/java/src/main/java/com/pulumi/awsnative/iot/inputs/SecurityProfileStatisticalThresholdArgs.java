@@ -26,6 +26,10 @@ public final class SecurityProfileStatisticalThresholdArgs extends com.pulumi.re
     @Import(name="statistic")
     private @Nullable Output<SecurityProfileStatisticalThresholdStatistic> statistic;
 
+    /**
+     * @return The percentile which resolves to a threshold value by which compliance with a behavior is determined
+     * 
+     */
     public Optional<Output<SecurityProfileStatisticalThresholdStatistic>> statistic() {
         return Optional.ofNullable(this.statistic);
     }
@@ -54,11 +58,23 @@ public final class SecurityProfileStatisticalThresholdArgs extends com.pulumi.re
             $ = new SecurityProfileStatisticalThresholdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param statistic The percentile which resolves to a threshold value by which compliance with a behavior is determined
+         * 
+         * @return builder
+         * 
+         */
         public Builder statistic(@Nullable Output<SecurityProfileStatisticalThresholdStatistic> statistic) {
             $.statistic = statistic;
             return this;
         }
 
+        /**
+         * @param statistic The percentile which resolves to a threshold value by which compliance with a behavior is determined
+         * 
+         * @return builder
+         * 
+         */
         public Builder statistic(SecurityProfileStatisticalThresholdStatistic statistic) {
             return statistic(Output.of(statistic));
         }

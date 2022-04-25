@@ -22,6 +22,10 @@ public final class BackendServiceIapGetArgs extends com.pulumi.resources.Resourc
     @Import(name="oauth2ClientId", required=true)
     private Output<String> oauth2ClientId;
 
+    /**
+     * @return OAuth2 Client ID for IAP
+     * 
+     */
     public Output<String> oauth2ClientId() {
         return this.oauth2ClientId;
     }
@@ -34,6 +38,11 @@ public final class BackendServiceIapGetArgs extends com.pulumi.resources.Resourc
     @Import(name="oauth2ClientSecret", required=true)
     private Output<String> oauth2ClientSecret;
 
+    /**
+     * @return OAuth2 Client Secret for IAP
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Output<String> oauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
@@ -47,6 +56,12 @@ public final class BackendServiceIapGetArgs extends com.pulumi.resources.Resourc
     @Import(name="oauth2ClientSecretSha256")
     private @Nullable Output<String> oauth2ClientSecretSha256;
 
+    /**
+     * @return -
+     * OAuth2 Client Secret SHA-256 for IAP
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<Output<String>> oauth2ClientSecretSha256() {
         return Optional.ofNullable(this.oauth2ClientSecretSha256);
     }
@@ -77,29 +92,71 @@ public final class BackendServiceIapGetArgs extends com.pulumi.resources.Resourc
             $ = new BackendServiceIapGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oauth2ClientId OAuth2 Client ID for IAP
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientId(Output<String> oauth2ClientId) {
             $.oauth2ClientId = oauth2ClientId;
             return this;
         }
 
+        /**
+         * @param oauth2ClientId OAuth2 Client ID for IAP
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientId(String oauth2ClientId) {
             return oauth2ClientId(Output.of(oauth2ClientId));
         }
 
+        /**
+         * @param oauth2ClientSecret OAuth2 Client Secret for IAP
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientSecret(Output<String> oauth2ClientSecret) {
             $.oauth2ClientSecret = oauth2ClientSecret;
             return this;
         }
 
+        /**
+         * @param oauth2ClientSecret OAuth2 Client Secret for IAP
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientSecret(String oauth2ClientSecret) {
             return oauth2ClientSecret(Output.of(oauth2ClientSecret));
         }
 
+        /**
+         * @param oauth2ClientSecretSha256 -
+         * OAuth2 Client Secret SHA-256 for IAP
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientSecretSha256(@Nullable Output<String> oauth2ClientSecretSha256) {
             $.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
             return this;
         }
 
+        /**
+         * @param oauth2ClientSecretSha256 -
+         * OAuth2 Client Secret SHA-256 for IAP
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientSecretSha256(String oauth2ClientSecretSha256) {
             return oauth2ClientSecretSha256(Output.of(oauth2ClientSecretSha256));
         }

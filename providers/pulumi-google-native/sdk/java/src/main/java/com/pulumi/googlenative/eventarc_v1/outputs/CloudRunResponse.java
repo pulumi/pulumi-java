@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class CloudRunResponse {
     /**
-     * Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: &#34;/route&#34;, &#34;route&#34;, &#34;route/subroute&#34;.
+     * @return Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: &#34;/route&#34;, &#34;route&#34;, &#34;route/subroute&#34;.
      * 
      */
     private final String path;
     /**
-     * The region the Cloud Run service is deployed in.
+     * @return The region the Cloud Run service is deployed in.
      * 
      */
     private final String region;
     /**
-     * The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project as the trigger object can be addressed.
+     * @return The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project as the trigger object can be addressed.
      * 
      */
     private final String service;
@@ -36,23 +36,23 @@ public final class CloudRunResponse {
     }
 
     /**
-     * Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: &#34;/route&#34;, &#34;route&#34;, &#34;route/subroute&#34;.
+     * @return Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: &#34;/route&#34;, &#34;route&#34;, &#34;route/subroute&#34;.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * The region the Cloud Run service is deployed in.
+     * @return The region the Cloud Run service is deployed in.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project as the trigger object can be addressed.
+     * @return The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project as the trigger object can be addressed.
      * 
-    */
+     */
     public String service() {
         return this.service;
     }

@@ -26,6 +26,10 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dynamicTagsJson")
     private @Nullable String dynamicTagsJson;
 
+    /**
+     * @return Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
+     * 
+     */
     public Optional<String> dynamicTagsJson() {
         return Optional.ofNullable(this.dynamicTagsJson);
     }
@@ -37,6 +41,10 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource Id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -48,6 +56,10 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="isPushEnabled", required=true)
     private Boolean isPushEnabled;
 
+    /**
+     * @return Gets or sets a flag indicating whether the Push endpoint is enabled.
+     * 
+     */
     public Boolean isPushEnabled() {
         return this.isPushEnabled;
     }
@@ -59,6 +71,10 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -70,6 +86,10 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource Name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -81,6 +101,10 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tagWhitelistJson")
     private @Nullable String tagWhitelistJson;
 
+    /**
+     * @return Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
+     * 
+     */
     public Optional<String> tagWhitelistJson() {
         return Optional.ofNullable(this.tagWhitelistJson);
     }
@@ -95,6 +119,13 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tagsRequiringAuth")
     private @Nullable String tagsRequiringAuth;
 
+    /**
+     * @return Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
+     * Tags can consist of alphanumeric characters and the following:
+     * &#39;_&#39;, &#39;@&#39;, &#39;#&#39;, &#39;.&#39;, &#39;:&#39;, &#39;-&#39;.
+     * Validation should be performed at the PushRequestHandler.
+     * 
+     */
     public Optional<String> tagsRequiringAuth() {
         return Optional.ofNullable(this.tagsRequiringAuth);
     }
@@ -106,6 +137,10 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -141,41 +176,92 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new PushSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dynamicTagsJson Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamicTagsJson(@Nullable String dynamicTagsJson) {
             $.dynamicTagsJson = dynamicTagsJson;
             return this;
         }
 
+        /**
+         * @param id Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param isPushEnabled Gets or sets a flag indicating whether the Push endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPushEnabled(Boolean isPushEnabled) {
             $.isPushEnabled = isPushEnabled;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Resource Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tagWhitelistJson Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagWhitelistJson(@Nullable String tagWhitelistJson) {
             $.tagWhitelistJson = tagWhitelistJson;
             return this;
         }
 
+        /**
+         * @param tagsRequiringAuth Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
+         * Tags can consist of alphanumeric characters and the following:
+         * &#39;_&#39;, &#39;@&#39;, &#39;#&#39;, &#39;.&#39;, &#39;:&#39;, &#39;-&#39;.
+         * Validation should be performed at the PushRequestHandler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsRequiringAuth(@Nullable String tagsRequiringAuth) {
             $.tagsRequiringAuth = tagsRequiringAuth;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

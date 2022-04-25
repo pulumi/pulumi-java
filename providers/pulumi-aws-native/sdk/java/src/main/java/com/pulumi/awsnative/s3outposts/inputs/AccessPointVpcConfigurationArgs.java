@@ -22,6 +22,10 @@ public final class AccessPointVpcConfigurationArgs extends com.pulumi.resources.
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
+    /**
+     * @return Virtual Private Cloud (VPC) Id from which AccessPoint will allow requests.
+     * 
+     */
     public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -50,11 +54,23 @@ public final class AccessPointVpcConfigurationArgs extends com.pulumi.resources.
             $ = new AccessPointVpcConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vpcId Virtual Private Cloud (VPC) Id from which AccessPoint will allow requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId Virtual Private Cloud (VPC) Id from which AccessPoint will allow requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

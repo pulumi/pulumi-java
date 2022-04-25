@@ -20,6 +20,10 @@ public final class DatabaseInstanceSettingsDatabaseFlagGetArgs extends com.pulum
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return A name for this whitelist entry.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -33,6 +37,12 @@ public final class DatabaseInstanceSettingsDatabaseFlagGetArgs extends com.pulum
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return A CIDR notation IPv4 or IPv6 address that is allowed to
+     * access this instance. Must be set even if other two attributes are not for
+     * the whitelist to become active.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -62,20 +72,48 @@ public final class DatabaseInstanceSettingsDatabaseFlagGetArgs extends com.pulum
             $ = new DatabaseInstanceSettingsDatabaseFlagGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A name for this whitelist entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name for this whitelist entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value A CIDR notation IPv4 or IPv6 address that is allowed to
+         * access this instance. Must be set even if other two attributes are not for
+         * the whitelist to become active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value A CIDR notation IPv4 or IPv6 address that is allowed to
+         * access this instance. Must be set even if other two attributes are not for
+         * the whitelist to become active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

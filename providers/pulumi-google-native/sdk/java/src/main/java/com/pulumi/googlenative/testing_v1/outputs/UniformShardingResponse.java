@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class UniformShardingResponse {
     /**
-     * Total number of shards. When any physical devices are selected, the number must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
+     * @return Total number of shards. When any physical devices are selected, the number must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
      * 
      */
     private final Integer numShards;
@@ -21,9 +21,9 @@ public final class UniformShardingResponse {
     }
 
     /**
-     * Total number of shards. When any physical devices are selected, the number must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
+     * @return Total number of shards. When any physical devices are selected, the number must be &gt;= 1 and &lt;= 50. When no physical devices are selected, the number must be &gt;= 1 and &lt;= 500.
      * 
-    */
+     */
     public Integer numShards() {
         return this.numShards;
     }

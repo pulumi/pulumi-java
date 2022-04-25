@@ -26,6 +26,10 @@ public final class HttpConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hosts", required=true)
     private List<HttpHostConfigResponse> hosts;
 
+    /**
+     * @return description for routing.
+     * 
+     */
     public List<HttpHostConfigResponse> hosts() {
         return this.hosts;
     }
@@ -37,6 +41,10 @@ public final class HttpConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return http gateway config name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -48,6 +56,10 @@ public final class HttpConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return Specifies the port at which the service endpoint below needs to be exposed.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -78,20 +90,44 @@ public final class HttpConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HttpConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hosts description for routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(List<HttpHostConfigResponse> hosts) {
             $.hosts = hosts;
             return this;
         }
 
+        /**
+         * @param hosts description for routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(HttpHostConfigResponse... hosts) {
             return hosts(List.of(hosts));
         }
 
+        /**
+         * @param name http gateway config name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param port Specifies the port at which the service endpoint below needs to be exposed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;

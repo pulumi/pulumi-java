@@ -30,6 +30,10 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="grantName")
     private @Nullable Output<String> grantName;
 
+    /**
+     * @return Name for the created Grant.
+     * 
+     */
     public Optional<Output<String>> grantName() {
         return Optional.ofNullable(this.grantName);
     }
@@ -41,6 +45,10 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="homeRegion")
     private @Nullable Output<String> homeRegion;
 
+    /**
+     * @return Home region for the created grant.
+     * 
+     */
     public Optional<Output<String>> homeRegion() {
         return Optional.ofNullable(this.homeRegion);
     }
@@ -52,6 +60,10 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenseArn")
     private @Nullable Output<String> licenseArn;
 
+    /**
+     * @return License Arn for the grant.
+     * 
+     */
     public Optional<Output<String>> licenseArn() {
         return Optional.ofNullable(this.licenseArn);
     }
@@ -112,29 +124,65 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
             return allowedOperations(List.of(allowedOperations));
         }
 
+        /**
+         * @param grantName Name for the created Grant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grantName(@Nullable Output<String> grantName) {
             $.grantName = grantName;
             return this;
         }
 
+        /**
+         * @param grantName Name for the created Grant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grantName(String grantName) {
             return grantName(Output.of(grantName));
         }
 
+        /**
+         * @param homeRegion Home region for the created grant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder homeRegion(@Nullable Output<String> homeRegion) {
             $.homeRegion = homeRegion;
             return this;
         }
 
+        /**
+         * @param homeRegion Home region for the created grant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder homeRegion(String homeRegion) {
             return homeRegion(Output.of(homeRegion));
         }
 
+        /**
+         * @param licenseArn License Arn for the grant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseArn(@Nullable Output<String> licenseArn) {
             $.licenseArn = licenseArn;
             return this;
         }
 
+        /**
+         * @param licenseArn License Arn for the grant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseArn(String licenseArn) {
             return licenseArn(Output.of(licenseArn));
         }

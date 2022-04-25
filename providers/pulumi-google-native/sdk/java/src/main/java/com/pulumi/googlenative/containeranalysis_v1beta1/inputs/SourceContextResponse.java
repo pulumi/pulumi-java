@@ -27,6 +27,10 @@ public final class SourceContextResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="cloudRepo", required=true)
     private CloudRepoSourceContextResponse cloudRepo;
 
+    /**
+     * @return A SourceContext referring to a revision in a Google Cloud Source Repo.
+     * 
+     */
     public CloudRepoSourceContextResponse cloudRepo() {
         return this.cloudRepo;
     }
@@ -38,6 +42,10 @@ public final class SourceContextResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="gerrit", required=true)
     private GerritSourceContextResponse gerrit;
 
+    /**
+     * @return A SourceContext referring to a Gerrit project.
+     * 
+     */
     public GerritSourceContextResponse gerrit() {
         return this.gerrit;
     }
@@ -49,6 +57,10 @@ public final class SourceContextResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="git", required=true)
     private GitSourceContextResponse git;
 
+    /**
+     * @return A SourceContext referring to any third party Git repo (e.g., GitHub).
+     * 
+     */
     public GitSourceContextResponse git() {
         return this.git;
     }
@@ -60,6 +72,10 @@ public final class SourceContextResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Labels with user defined metadata.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -91,21 +107,45 @@ public final class SourceContextResponse extends com.pulumi.resources.InvokeArgs
             $ = new SourceContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudRepo A SourceContext referring to a revision in a Google Cloud Source Repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRepo(CloudRepoSourceContextResponse cloudRepo) {
             $.cloudRepo = cloudRepo;
             return this;
         }
 
+        /**
+         * @param gerrit A SourceContext referring to a Gerrit project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gerrit(GerritSourceContextResponse gerrit) {
             $.gerrit = gerrit;
             return this;
         }
 
+        /**
+         * @param git A SourceContext referring to any third party Git repo (e.g., GitHub).
+         * 
+         * @return builder
+         * 
+         */
         public Builder git(GitSourceContextResponse git) {
             $.git = git;
             return this;
         }
 
+        /**
+         * @param labels Labels with user defined metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;

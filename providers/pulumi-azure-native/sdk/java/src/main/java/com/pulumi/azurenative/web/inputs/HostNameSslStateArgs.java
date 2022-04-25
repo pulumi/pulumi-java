@@ -29,6 +29,10 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="hostType")
     private @Nullable Output<HostType> hostType;
 
+    /**
+     * @return Indicates whether the hostname is a standard or repository hostname.
+     * 
+     */
     public Optional<Output<HostType>> hostType() {
         return Optional.ofNullable(this.hostType);
     }
@@ -40,6 +44,10 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Hostname.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -51,6 +59,10 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sslState")
     private @Nullable Output<SslState> sslState;
 
+    /**
+     * @return SSL type.
+     * 
+     */
     public Optional<Output<SslState>> sslState() {
         return Optional.ofNullable(this.sslState);
     }
@@ -62,6 +74,10 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="thumbprint")
     private @Nullable Output<String> thumbprint;
 
+    /**
+     * @return SSL certificate thumbprint.
+     * 
+     */
     public Optional<Output<String>> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -73,6 +89,10 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="toUpdate")
     private @Nullable Output<Boolean> toUpdate;
 
+    /**
+     * @return Set to &lt;code&gt;true&lt;/code&gt; to update existing hostname.
+     * 
+     */
     public Optional<Output<Boolean>> toUpdate() {
         return Optional.ofNullable(this.toUpdate);
     }
@@ -84,6 +104,10 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="virtualIP")
     private @Nullable Output<String> virtualIP;
 
+    /**
+     * @return Virtual IP address assigned to the hostname if IP based SSL is enabled.
+     * 
+     */
     public Optional<Output<String>> virtualIP() {
         return Optional.ofNullable(this.virtualIP);
     }
@@ -117,56 +141,128 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
             $ = new HostNameSslStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostType Indicates whether the hostname is a standard or repository hostname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostType(@Nullable Output<HostType> hostType) {
             $.hostType = hostType;
             return this;
         }
 
+        /**
+         * @param hostType Indicates whether the hostname is a standard or repository hostname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostType(HostType hostType) {
             return hostType(Output.of(hostType));
         }
 
+        /**
+         * @param name Hostname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Hostname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param sslState SSL type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslState(@Nullable Output<SslState> sslState) {
             $.sslState = sslState;
             return this;
         }
 
+        /**
+         * @param sslState SSL type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslState(SslState sslState) {
             return sslState(Output.of(sslState));
         }
 
+        /**
+         * @param thumbprint SSL certificate thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param thumbprint SSL certificate thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             return thumbprint(Output.of(thumbprint));
         }
 
+        /**
+         * @param toUpdate Set to &lt;code&gt;true&lt;/code&gt; to update existing hostname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toUpdate(@Nullable Output<Boolean> toUpdate) {
             $.toUpdate = toUpdate;
             return this;
         }
 
+        /**
+         * @param toUpdate Set to &lt;code&gt;true&lt;/code&gt; to update existing hostname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toUpdate(Boolean toUpdate) {
             return toUpdate(Output.of(toUpdate));
         }
 
+        /**
+         * @param virtualIP Virtual IP address assigned to the hostname if IP based SSL is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualIP(@Nullable Output<String> virtualIP) {
             $.virtualIP = virtualIP;
             return this;
         }
 
+        /**
+         * @param virtualIP Virtual IP address assigned to the hostname if IP based SSL is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualIP(String virtualIP) {
             return virtualIP(Output.of(virtualIP));
         }

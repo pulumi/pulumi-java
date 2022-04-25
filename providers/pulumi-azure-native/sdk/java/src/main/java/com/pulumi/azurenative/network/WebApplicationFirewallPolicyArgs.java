@@ -27,6 +27,10 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="customRules")
     private @Nullable Output<List<WebApplicationFirewallCustomRuleArgs>> customRules;
 
+    /**
+     * @return The custom rules inside the policy.
+     * 
+     */
     public Optional<Output<List<WebApplicationFirewallCustomRuleArgs>>> customRules() {
         return Optional.ofNullable(this.customRules);
     }
@@ -38,6 +42,10 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -49,6 +57,10 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -60,6 +72,10 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="managedRules", required=true)
     private Output<ManagedRulesDefinitionArgs> managedRules;
 
+    /**
+     * @return Describes the managedRules structure.
+     * 
+     */
     public Output<ManagedRulesDefinitionArgs> managedRules() {
         return this.managedRules;
     }
@@ -71,6 +87,10 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="policyName")
     private @Nullable Output<String> policyName;
 
+    /**
+     * @return The name of the policy.
+     * 
+     */
     public Optional<Output<String>> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -82,6 +102,10 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="policySettings")
     private @Nullable Output<PolicySettingsArgs> policySettings;
 
+    /**
+     * @return The PolicySettings for policy.
+     * 
+     */
     public Optional<Output<PolicySettingsArgs>> policySettings() {
         return Optional.ofNullable(this.policySettings);
     }
@@ -93,6 +117,10 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -104,6 +132,10 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -139,78 +171,180 @@ public final class WebApplicationFirewallPolicyArgs extends com.pulumi.resources
             $ = new WebApplicationFirewallPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customRules The custom rules inside the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRules(@Nullable Output<List<WebApplicationFirewallCustomRuleArgs>> customRules) {
             $.customRules = customRules;
             return this;
         }
 
+        /**
+         * @param customRules The custom rules inside the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRules(List<WebApplicationFirewallCustomRuleArgs> customRules) {
             return customRules(Output.of(customRules));
         }
 
+        /**
+         * @param customRules The custom rules inside the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRules(WebApplicationFirewallCustomRuleArgs... customRules) {
             return customRules(List.of(customRules));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managedRules Describes the managedRules structure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedRules(Output<ManagedRulesDefinitionArgs> managedRules) {
             $.managedRules = managedRules;
             return this;
         }
 
+        /**
+         * @param managedRules Describes the managedRules structure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedRules(ManagedRulesDefinitionArgs managedRules) {
             return managedRules(Output.of(managedRules));
         }
 
+        /**
+         * @param policyName The name of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable Output<String> policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyName The name of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             return policyName(Output.of(policyName));
         }
 
+        /**
+         * @param policySettings The PolicySettings for policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policySettings(@Nullable Output<PolicySettingsArgs> policySettings) {
             $.policySettings = policySettings;
             return this;
         }
 
+        /**
+         * @param policySettings The PolicySettings for policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policySettings(PolicySettingsArgs policySettings) {
             return policySettings(Output.of(policySettings));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

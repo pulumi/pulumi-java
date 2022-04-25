@@ -26,6 +26,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="backendPort", required=true)
     private Integer backendPort;
 
+    /**
+     * @return The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
+     * 
+     */
     public Integer backendPort() {
         return this.backendPort;
     }
@@ -37,6 +41,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="frontendPort", required=true)
     private Integer frontendPort;
 
+    /**
+     * @return The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
+     * 
+     */
     public Integer frontendPort() {
         return this.frontendPort;
     }
@@ -48,6 +56,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="probeProtocol", required=true)
     private String probeProtocol;
 
+    /**
+     * @return the reference to the load balancer probe used by the load balancing rule.
+     * 
+     */
     public String probeProtocol() {
         return this.probeProtocol;
     }
@@ -59,6 +71,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="probeRequestPath")
     private @Nullable String probeRequestPath;
 
+    /**
+     * @return The probe request path. Only supported for HTTP/HTTPS probes.
+     * 
+     */
     public Optional<String> probeRequestPath() {
         return Optional.ofNullable(this.probeRequestPath);
     }
@@ -70,6 +86,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
     @Import(name="protocol", required=true)
     private String protocol;
 
+    /**
+     * @return The reference to the transport protocol used by the load balancing rule.
+     * 
+     */
     public String protocol() {
         return this.protocol;
     }
@@ -102,26 +122,56 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
             $ = new LoadBalancingRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendPort The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPort(Integer backendPort) {
             $.backendPort = backendPort;
             return this;
         }
 
+        /**
+         * @param frontendPort The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendPort(Integer frontendPort) {
             $.frontendPort = frontendPort;
             return this;
         }
 
+        /**
+         * @param probeProtocol the reference to the load balancer probe used by the load balancing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeProtocol(String probeProtocol) {
             $.probeProtocol = probeProtocol;
             return this;
         }
 
+        /**
+         * @param probeRequestPath The probe request path. Only supported for HTTP/HTTPS probes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeRequestPath(@Nullable String probeRequestPath) {
             $.probeRequestPath = probeRequestPath;
             return this;
         }
 
+        /**
+         * @param protocol The reference to the transport protocol used by the load balancing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             $.protocol = protocol;
             return this;

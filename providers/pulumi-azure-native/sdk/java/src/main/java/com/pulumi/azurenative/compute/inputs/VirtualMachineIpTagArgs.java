@@ -26,6 +26,10 @@ public final class VirtualMachineIpTagArgs extends com.pulumi.resources.Resource
     @Import(name="ipTagType")
     private @Nullable Output<String> ipTagType;
 
+    /**
+     * @return IP tag type. Example: FirstPartyUsage.
+     * 
+     */
     public Optional<Output<String>> ipTagType() {
         return Optional.ofNullable(this.ipTagType);
     }
@@ -37,6 +41,10 @@ public final class VirtualMachineIpTagArgs extends com.pulumi.resources.Resource
     @Import(name="tag")
     private @Nullable Output<String> tag;
 
+    /**
+     * @return IP tag associated with the public IP. Example: SQL, Storage etc.
+     * 
+     */
     public Optional<Output<String>> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -66,20 +74,44 @@ public final class VirtualMachineIpTagArgs extends com.pulumi.resources.Resource
             $ = new VirtualMachineIpTagArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipTagType IP tag type. Example: FirstPartyUsage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipTagType(@Nullable Output<String> ipTagType) {
             $.ipTagType = ipTagType;
             return this;
         }
 
+        /**
+         * @param ipTagType IP tag type. Example: FirstPartyUsage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipTagType(String ipTagType) {
             return ipTagType(Output.of(ipTagType));
         }
 
+        /**
+         * @param tag IP tag associated with the public IP. Example: SQL, Storage etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable Output<String> tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param tag IP tag associated with the public IP. Example: SQL, Storage etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             return tag(Output.of(tag));
         }

@@ -23,6 +23,10 @@ public final class VpcPeeringConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="subnet", required=true)
     private String subnet;
 
+    /**
+     * @return A free subnet for peering. (CIDR of /29) TODO(b/172995841) add validators.
+     * 
+     */
     public String subnet() {
         return this.subnet;
     }
@@ -34,6 +38,10 @@ public final class VpcPeeringConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="vpc", required=true)
     private String vpc;
 
+    /**
+     * @return Fully qualified name of the VPC that Datastream will peer to. Format: `projects/{project}/global/{networks}/{name}`
+     * 
+     */
     public String vpc() {
         return this.vpc;
     }
@@ -63,11 +71,23 @@ public final class VpcPeeringConfigResponse extends com.pulumi.resources.InvokeA
             $ = new VpcPeeringConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subnet A free subnet for peering. (CIDR of /29) TODO(b/172995841) add validators.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(String subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param vpc Fully qualified name of the VPC that Datastream will peer to. Format: `projects/{project}/global/{networks}/{name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpc(String vpc) {
             $.vpc = vpc;
             return this;

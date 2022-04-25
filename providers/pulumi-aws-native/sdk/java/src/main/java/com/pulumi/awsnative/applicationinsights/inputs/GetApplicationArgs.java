@@ -19,6 +19,10 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="applicationARN", required=true)
     private String applicationARN;
 
+    /**
+     * @return The ARN of the ApplicationInsights application.
+     * 
+     */
     public String applicationARN() {
         return this.applicationARN;
     }
@@ -47,6 +51,12 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationARN The ARN of the ApplicationInsights application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationARN(String applicationARN) {
             $.applicationARN = applicationARN;
             return this;

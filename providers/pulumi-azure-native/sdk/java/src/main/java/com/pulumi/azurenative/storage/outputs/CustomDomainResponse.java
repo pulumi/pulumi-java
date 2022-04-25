@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomDomainResponse {
     /**
-     * Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.
+     * @return Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.
      * 
      */
     private final String name;
     /**
-     * Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates.
+     * @return Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates.
      * 
      */
     private final @Nullable Boolean useSubDomainName;
@@ -32,16 +32,16 @@ public final class CustomDomainResponse {
     }
 
     /**
-     * Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.
+     * @return Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates.
+     * @return Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates.
      * 
-    */
+     */
     public Optional<Boolean> useSubDomainName() {
         return Optional.ofNullable(this.useSubDomainName);
     }

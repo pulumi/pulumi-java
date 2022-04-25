@@ -27,6 +27,10 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends com.pulumi
     @Import(name="apiSource", required=true)
     private String apiSource;
 
+    /**
+     * @return Name of the API proxy or remote service with which the resources, methods, and quota are associated.
+     * 
+     */
     public String apiSource() {
         return this.apiSource;
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends com.pulumi
     @Import(name="attributes", required=true)
     private List<GoogleCloudApigeeV1AttributeResponse> attributes;
 
+    /**
+     * @return Custom attributes associated with the operation.
+     * 
+     */
     public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends com.pulumi
     @Import(name="operations", required=true)
     private List<GoogleCloudApigeeV1OperationResponse> operations;
 
+    /**
+     * @return List of resource/method pairs for the API proxy or remote service to which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.
+     * 
+     */
     public List<GoogleCloudApigeeV1OperationResponse> operations() {
         return this.operations;
     }
@@ -60,6 +72,10 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends com.pulumi
     @Import(name="quota", required=true)
     private GoogleCloudApigeeV1QuotaResponse quota;
 
+    /**
+     * @return Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
+     * 
+     */
     public GoogleCloudApigeeV1QuotaResponse quota() {
         return this.quota;
     }
@@ -91,29 +107,65 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends com.pulumi
             $ = new GoogleCloudApigeeV1OperationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiSource Name of the API proxy or remote service with which the resources, methods, and quota are associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiSource(String apiSource) {
             $.apiSource = apiSource;
             return this;
         }
 
+        /**
+         * @param attributes Custom attributes associated with the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes Custom attributes associated with the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(GoogleCloudApigeeV1AttributeResponse... attributes) {
             return attributes(List.of(attributes));
         }
 
+        /**
+         * @param operations List of resource/method pairs for the API proxy or remote service to which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operations(List<GoogleCloudApigeeV1OperationResponse> operations) {
             $.operations = operations;
             return this;
         }
 
+        /**
+         * @param operations List of resource/method pairs for the API proxy or remote service to which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operations(GoogleCloudApigeeV1OperationResponse... operations) {
             return operations(List.of(operations));
         }
 
+        /**
+         * @param quota Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quota(GoogleCloudApigeeV1QuotaResponse quota) {
             $.quota = quota;
             return this;

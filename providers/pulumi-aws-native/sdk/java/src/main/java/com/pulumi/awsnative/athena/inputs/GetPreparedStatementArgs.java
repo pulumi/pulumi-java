@@ -19,6 +19,10 @@ public final class GetPreparedStatementArgs extends com.pulumi.resources.InvokeA
     @Import(name="statementName", required=true)
     private String statementName;
 
+    /**
+     * @return The name of the prepared statement.
+     * 
+     */
     public String statementName() {
         return this.statementName;
     }
@@ -30,6 +34,10 @@ public final class GetPreparedStatementArgs extends com.pulumi.resources.InvokeA
     @Import(name="workGroup", required=true)
     private String workGroup;
 
+    /**
+     * @return The name of the workgroup to which the prepared statement belongs.
+     * 
+     */
     public String workGroup() {
         return this.workGroup;
     }
@@ -59,11 +67,23 @@ public final class GetPreparedStatementArgs extends com.pulumi.resources.InvokeA
             $ = new GetPreparedStatementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param statementName The name of the prepared statement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statementName(String statementName) {
             $.statementName = statementName;
             return this;
         }
 
+        /**
+         * @param workGroup The name of the workgroup to which the prepared statement belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workGroup(String workGroup) {
             $.workGroup = workGroup;
             return this;

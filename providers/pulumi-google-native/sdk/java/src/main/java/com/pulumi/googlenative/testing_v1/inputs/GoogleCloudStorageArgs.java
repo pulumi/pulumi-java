@@ -24,6 +24,10 @@ public final class GoogleCloudStorageArgs extends com.pulumi.resources.ResourceA
     @Import(name="gcsPath", required=true)
     private Output<String> gcsPath;
 
+    /**
+     * @return The path to a directory in GCS that will eventually contain the results for this test. The requesting user must have write access on the bucket in the supplied path.
+     * 
+     */
     public Output<String> gcsPath() {
         return this.gcsPath;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudStorageArgs extends com.pulumi.resources.ResourceA
             $ = new GoogleCloudStorageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gcsPath The path to a directory in GCS that will eventually contain the results for this test. The requesting user must have write access on the bucket in the supplied path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsPath(Output<String> gcsPath) {
             $.gcsPath = gcsPath;
             return this;
         }
 
+        /**
+         * @param gcsPath The path to a directory in GCS that will eventually contain the results for this test. The requesting user must have write access on the bucket in the supplied path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsPath(String gcsPath) {
             return gcsPath(Output.of(gcsPath));
         }

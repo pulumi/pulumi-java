@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class DiagnosticConditionResponse {
     /**
-     * The opaque diagnostic code.
+     * @return The opaque diagnostic code.
      * 
      */
     private final String code;
     /**
-     * The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.
+     * @return The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.
      * 
      */
     private final String message;
     /**
-     * The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.
+     * @return The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.
      * 
      */
     private final String since;
@@ -36,23 +36,23 @@ public final class DiagnosticConditionResponse {
     }
 
     /**
-     * The opaque diagnostic code.
+     * @return The opaque diagnostic code.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.
+     * @return The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.
+     * @return The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.
      * 
-    */
+     */
     public String since() {
         return this.since;
     }

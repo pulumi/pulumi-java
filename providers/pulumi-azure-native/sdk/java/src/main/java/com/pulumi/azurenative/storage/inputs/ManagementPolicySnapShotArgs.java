@@ -26,6 +26,10 @@ public final class ManagementPolicySnapShotArgs extends com.pulumi.resources.Res
     @Import(name="delete")
     private @Nullable Output<DateAfterCreationArgs> delete;
 
+    /**
+     * @return The function to delete the blob snapshot
+     * 
+     */
     public Optional<Output<DateAfterCreationArgs>> delete() {
         return Optional.ofNullable(this.delete);
     }
@@ -37,6 +41,10 @@ public final class ManagementPolicySnapShotArgs extends com.pulumi.resources.Res
     @Import(name="tierToArchive")
     private @Nullable Output<DateAfterCreationArgs> tierToArchive;
 
+    /**
+     * @return The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier
+     * 
+     */
     public Optional<Output<DateAfterCreationArgs>> tierToArchive() {
         return Optional.ofNullable(this.tierToArchive);
     }
@@ -48,6 +56,10 @@ public final class ManagementPolicySnapShotArgs extends com.pulumi.resources.Res
     @Import(name="tierToCool")
     private @Nullable Output<DateAfterCreationArgs> tierToCool;
 
+    /**
+     * @return The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier
+     * 
+     */
     public Optional<Output<DateAfterCreationArgs>> tierToCool() {
         return Optional.ofNullable(this.tierToCool);
     }
@@ -78,29 +90,65 @@ public final class ManagementPolicySnapShotArgs extends com.pulumi.resources.Res
             $ = new ManagementPolicySnapShotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delete The function to delete the blob snapshot
+         * 
+         * @return builder
+         * 
+         */
         public Builder delete(@Nullable Output<DateAfterCreationArgs> delete) {
             $.delete = delete;
             return this;
         }
 
+        /**
+         * @param delete The function to delete the blob snapshot
+         * 
+         * @return builder
+         * 
+         */
         public Builder delete(DateAfterCreationArgs delete) {
             return delete(Output.of(delete));
         }
 
+        /**
+         * @param tierToArchive The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tierToArchive(@Nullable Output<DateAfterCreationArgs> tierToArchive) {
             $.tierToArchive = tierToArchive;
             return this;
         }
 
+        /**
+         * @param tierToArchive The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tierToArchive(DateAfterCreationArgs tierToArchive) {
             return tierToArchive(Output.of(tierToArchive));
         }
 
+        /**
+         * @param tierToCool The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tierToCool(@Nullable Output<DateAfterCreationArgs> tierToCool) {
             $.tierToCool = tierToCool;
             return this;
         }
 
+        /**
+         * @param tierToCool The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tierToCool(DateAfterCreationArgs tierToCool) {
             return tierToCool(Output.of(tierToCool));
         }

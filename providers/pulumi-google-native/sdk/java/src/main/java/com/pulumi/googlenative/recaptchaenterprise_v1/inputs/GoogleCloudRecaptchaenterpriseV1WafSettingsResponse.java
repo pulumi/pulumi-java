@@ -23,6 +23,10 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse extends c
     @Import(name="wafFeature", required=true)
     private String wafFeature;
 
+    /**
+     * @return The WAF feature for which this key is enabled.
+     * 
+     */
     public String wafFeature() {
         return this.wafFeature;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse extends c
     @Import(name="wafService", required=true)
     private String wafService;
 
+    /**
+     * @return The WAF service that uses this key.
+     * 
+     */
     public String wafService() {
         return this.wafService;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse extends c
             $ = new GoogleCloudRecaptchaenterpriseV1WafSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param wafFeature The WAF feature for which this key is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wafFeature(String wafFeature) {
             $.wafFeature = wafFeature;
             return this;
         }
 
+        /**
+         * @param wafService The WAF service that uses this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wafService(String wafService) {
             $.wafService = wafService;
             return this;

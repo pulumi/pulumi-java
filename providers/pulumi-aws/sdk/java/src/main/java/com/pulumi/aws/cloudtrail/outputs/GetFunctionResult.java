@@ -10,44 +10,44 @@ import java.util.Objects;
 @CustomType
 public final class GetFunctionResult {
     /**
-     * Amazon Resource Name (ARN) identifying your CloudFront Function.
+     * @return Amazon Resource Name (ARN) identifying your CloudFront Function.
      * 
      */
     private final String arn;
     /**
-     * Source code of the function
+     * @return Source code of the function
      * 
      */
     private final String code;
     /**
-     * Comment.
+     * @return Comment.
      * 
      */
     private final String comment;
     /**
-     * ETag hash of the function
+     * @return ETag hash of the function
      * 
      */
     private final String etag;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * When this resource was last modified.
+     * @return When this resource was last modified.
      * 
      */
     private final String lastModifiedTime;
     private final String name;
     /**
-     * Identifier of the function&#39;s runtime.
+     * @return Identifier of the function&#39;s runtime.
      * 
      */
     private final String runtime;
     private final String stage;
     /**
-     * Status of the function. Can be `UNPUBLISHED`, `UNASSOCIATED` or `ASSOCIATED`.
+     * @return Status of the function. Can be `UNPUBLISHED`, `UNASSOCIATED` or `ASSOCIATED`.
      * 
      */
     private final String status;
@@ -77,44 +77,44 @@ public final class GetFunctionResult {
     }
 
     /**
-     * Amazon Resource Name (ARN) identifying your CloudFront Function.
+     * @return Amazon Resource Name (ARN) identifying your CloudFront Function.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Source code of the function
+     * @return Source code of the function
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Comment.
+     * @return Comment.
      * 
-    */
+     */
     public String comment() {
         return this.comment;
     }
     /**
-     * ETag hash of the function
+     * @return ETag hash of the function
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * When this resource was last modified.
+     * @return When this resource was last modified.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
@@ -122,9 +122,9 @@ public final class GetFunctionResult {
         return this.name;
     }
     /**
-     * Identifier of the function&#39;s runtime.
+     * @return Identifier of the function&#39;s runtime.
      * 
-    */
+     */
     public String runtime() {
         return this.runtime;
     }
@@ -132,9 +132,9 @@ public final class GetFunctionResult {
         return this.stage;
     }
     /**
-     * Status of the function. Can be `UNPUBLISHED`, `UNASSOCIATED` or `ASSOCIATED`.
+     * @return Status of the function. Can be `UNPUBLISHED`, `UNASSOCIATED` or `ASSOCIATED`.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

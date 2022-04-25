@@ -34,6 +34,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="advancedMachineFeatures")
     private @Nullable Output<InstanceFromMachineImageAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
+    /**
+     * @return Controls for advanced machine-related behavior features.
+     * 
+     */
     public Optional<Output<InstanceFromMachineImageAdvancedMachineFeaturesArgs>> advancedMachineFeatures() {
         return Optional.ofNullable(this.advancedMachineFeatures);
     }
@@ -46,6 +50,11 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="allowStoppingForUpdate")
     private @Nullable Output<Boolean> allowStoppingForUpdate;
 
+    /**
+     * @return If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
+     * stopping the instance without setting this field, the update will fail.
+     * 
+     */
     public Optional<Output<Boolean>> allowStoppingForUpdate() {
         return Optional.ofNullable(this.allowStoppingForUpdate);
     }
@@ -57,6 +66,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="canIpForward")
     private @Nullable Output<Boolean> canIpForward;
 
+    /**
+     * @return Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+     * 
+     */
     public Optional<Output<Boolean>> canIpForward() {
         return Optional.ofNullable(this.canIpForward);
     }
@@ -69,6 +82,11 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="confidentialInstanceConfig")
     private @Nullable Output<InstanceFromMachineImageConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
+    /**
+     * @return The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
+     * to create.
+     * 
+     */
     public Optional<Output<InstanceFromMachineImageConfidentialInstanceConfigArgs>> confidentialInstanceConfig() {
         return Optional.ofNullable(this.confidentialInstanceConfig);
     }
@@ -80,6 +98,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="deletionProtection")
     private @Nullable Output<Boolean> deletionProtection;
 
+    /**
+     * @return Whether deletion protection is enabled on this instance.
+     * 
+     */
     public Optional<Output<Boolean>> deletionProtection() {
         return Optional.ofNullable(this.deletionProtection);
     }
@@ -91,6 +113,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A brief description of the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -102,6 +128,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="desiredStatus")
     private @Nullable Output<String> desiredStatus;
 
+    /**
+     * @return Desired status of the instance. Either &#34;RUNNING&#34; or &#34;TERMINATED&#34;.
+     * 
+     */
     public Optional<Output<String>> desiredStatus() {
         return Optional.ofNullable(this.desiredStatus);
     }
@@ -113,6 +143,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="enableDisplay")
     private @Nullable Output<Boolean> enableDisplay;
 
+    /**
+     * @return Whether the instance has virtual displays enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableDisplay() {
         return Optional.ofNullable(this.enableDisplay);
     }
@@ -124,6 +158,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="guestAccelerators")
     private @Nullable Output<List<InstanceFromMachineImageGuestAcceleratorArgs>> guestAccelerators;
 
+    /**
+     * @return List of the type and count of accelerator cards attached to the instance.
+     * 
+     */
     public Optional<Output<List<InstanceFromMachineImageGuestAcceleratorArgs>>> guestAccelerators() {
         return Optional.ofNullable(this.guestAccelerators);
     }
@@ -137,6 +175,12 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="hostname")
     private @Nullable Output<String> hostname;
 
+    /**
+     * @return A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
+     * labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
+     * entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+     * 
+     */
     public Optional<Output<String>> hostname() {
         return Optional.ofNullable(this.hostname);
     }
@@ -148,6 +192,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return A set of key/value label pairs assigned to the instance.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -159,6 +207,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="machineType")
     private @Nullable Output<String> machineType;
 
+    /**
+     * @return The machine type to create.
+     * 
+     */
     public Optional<Output<String>> machineType() {
         return Optional.ofNullable(this.machineType);
     }
@@ -170,6 +222,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return Metadata key/value pairs made available within the instance.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -181,6 +237,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="metadataStartupScript")
     private @Nullable Output<String> metadataStartupScript;
 
+    /**
+     * @return Metadata startup scripts made available within the instance.
+     * 
+     */
     public Optional<Output<String>> metadataStartupScript() {
         return Optional.ofNullable(this.metadataStartupScript);
     }
@@ -192,6 +252,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="minCpuPlatform")
     private @Nullable Output<String> minCpuPlatform;
 
+    /**
+     * @return The minimum CPU platform specified for the VM instance.
+     * 
+     */
     public Optional<Output<String>> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
@@ -204,6 +268,11 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A unique name for the resource, required by GCE.
+     * Changing this forces a new resource to be created.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -215,6 +284,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="networkInterfaces")
     private @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceArgs>> networkInterfaces;
 
+    /**
+     * @return The networks attached to the instance.
+     * 
+     */
     public Optional<Output<List<InstanceFromMachineImageNetworkInterfaceArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -227,6 +300,11 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="networkPerformanceConfig")
     private @Nullable Output<InstanceFromMachineImageNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
+    /**
+     * @return Configures network performance settings for the instance. If not specified, the instance will be created with its
+     * default network performance configuration.
+     * 
+     */
     public Optional<Output<InstanceFromMachineImageNetworkPerformanceConfigArgs>> networkPerformanceConfig() {
         return Optional.ofNullable(this.networkPerformanceConfig);
     }
@@ -239,6 +317,11 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
+     * self_link nor project are provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -250,6 +333,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="reservationAffinity")
     private @Nullable Output<InstanceFromMachineImageReservationAffinityArgs> reservationAffinity;
 
+    /**
+     * @return Specifies the reservations that this instance can consume from.
+     * 
+     */
     public Optional<Output<InstanceFromMachineImageReservationAffinityArgs>> reservationAffinity() {
         return Optional.ofNullable(this.reservationAffinity);
     }
@@ -262,6 +349,11 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="resourcePolicies")
     private @Nullable Output<String> resourcePolicies;
 
+    /**
+     * @return A list of short names or self_links of resource policies to attach to the instance. Currently a max of 1 resource policy
+     * is supported.
+     * 
+     */
     public Optional<Output<String>> resourcePolicies() {
         return Optional.ofNullable(this.resourcePolicies);
     }
@@ -273,6 +365,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="scheduling")
     private @Nullable Output<InstanceFromMachineImageSchedulingArgs> scheduling;
 
+    /**
+     * @return The scheduling strategy being used by the instance.
+     * 
+     */
     public Optional<Output<InstanceFromMachineImageSchedulingArgs>> scheduling() {
         return Optional.ofNullable(this.scheduling);
     }
@@ -284,6 +380,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="serviceAccount")
     private @Nullable Output<InstanceFromMachineImageServiceAccountArgs> serviceAccount;
 
+    /**
+     * @return The service account to attach to the instance.
+     * 
+     */
     public Optional<Output<InstanceFromMachineImageServiceAccountArgs>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -295,6 +395,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="shieldedInstanceConfig")
     private @Nullable Output<InstanceFromMachineImageShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
+    /**
+     * @return The shielded vm config being used by the instance.
+     * 
+     */
     public Optional<Output<InstanceFromMachineImageShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
@@ -307,6 +411,11 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="sourceMachineImage", required=true)
     private Output<String> sourceMachineImage;
 
+    /**
+     * @return Name or self link of a machine
+     * image to create the instance based on.
+     * 
+     */
     public Output<String> sourceMachineImage() {
         return this.sourceMachineImage;
     }
@@ -318,6 +427,10 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
+    /**
+     * @return The list of tags attached to the instance.
+     * 
+     */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -330,6 +443,11 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return The zone that the machine should be created in. If not
+     * set, the provider zone is used.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -384,257 +502,619 @@ public final class InstanceFromMachineImageArgs extends com.pulumi.resources.Res
             $ = new InstanceFromMachineImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advancedMachineFeatures Controls for advanced machine-related behavior features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedMachineFeatures(@Nullable Output<InstanceFromMachineImageAdvancedMachineFeaturesArgs> advancedMachineFeatures) {
             $.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
 
+        /**
+         * @param advancedMachineFeatures Controls for advanced machine-related behavior features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedMachineFeatures(InstanceFromMachineImageAdvancedMachineFeaturesArgs advancedMachineFeatures) {
             return advancedMachineFeatures(Output.of(advancedMachineFeatures));
         }
 
+        /**
+         * @param allowStoppingForUpdate If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
+         * stopping the instance without setting this field, the update will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowStoppingForUpdate(@Nullable Output<Boolean> allowStoppingForUpdate) {
             $.allowStoppingForUpdate = allowStoppingForUpdate;
             return this;
         }
 
+        /**
+         * @param allowStoppingForUpdate If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
+         * stopping the instance without setting this field, the update will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowStoppingForUpdate(Boolean allowStoppingForUpdate) {
             return allowStoppingForUpdate(Output.of(allowStoppingForUpdate));
         }
 
+        /**
+         * @param canIpForward Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
             $.canIpForward = canIpForward;
             return this;
         }
 
+        /**
+         * @param canIpForward Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(Boolean canIpForward) {
             return canIpForward(Output.of(canIpForward));
         }
 
+        /**
+         * @param confidentialInstanceConfig The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
+         * to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidentialInstanceConfig(@Nullable Output<InstanceFromMachineImageConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
             $.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
 
+        /**
+         * @param confidentialInstanceConfig The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
+         * to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidentialInstanceConfig(InstanceFromMachineImageConfidentialInstanceConfigArgs confidentialInstanceConfig) {
             return confidentialInstanceConfig(Output.of(confidentialInstanceConfig));
         }
 
+        /**
+         * @param deletionProtection Whether deletion protection is enabled on this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             $.deletionProtection = deletionProtection;
             return this;
         }
 
+        /**
+         * @param deletionProtection Whether deletion protection is enabled on this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(Boolean deletionProtection) {
             return deletionProtection(Output.of(deletionProtection));
         }
 
+        /**
+         * @param description A brief description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A brief description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param desiredStatus Desired status of the instance. Either &#34;RUNNING&#34; or &#34;TERMINATED&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredStatus(@Nullable Output<String> desiredStatus) {
             $.desiredStatus = desiredStatus;
             return this;
         }
 
+        /**
+         * @param desiredStatus Desired status of the instance. Either &#34;RUNNING&#34; or &#34;TERMINATED&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredStatus(String desiredStatus) {
             return desiredStatus(Output.of(desiredStatus));
         }
 
+        /**
+         * @param enableDisplay Whether the instance has virtual displays enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDisplay(@Nullable Output<Boolean> enableDisplay) {
             $.enableDisplay = enableDisplay;
             return this;
         }
 
+        /**
+         * @param enableDisplay Whether the instance has virtual displays enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDisplay(Boolean enableDisplay) {
             return enableDisplay(Output.of(enableDisplay));
         }
 
+        /**
+         * @param guestAccelerators List of the type and count of accelerator cards attached to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(@Nullable Output<List<InstanceFromMachineImageGuestAcceleratorArgs>> guestAccelerators) {
             $.guestAccelerators = guestAccelerators;
             return this;
         }
 
+        /**
+         * @param guestAccelerators List of the type and count of accelerator cards attached to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(List<InstanceFromMachineImageGuestAcceleratorArgs> guestAccelerators) {
             return guestAccelerators(Output.of(guestAccelerators));
         }
 
+        /**
+         * @param guestAccelerators List of the type and count of accelerator cards attached to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(InstanceFromMachineImageGuestAcceleratorArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
 
+        /**
+         * @param hostname A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
+         * labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
+         * entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(@Nullable Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
+         * labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
+         * entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param labels A set of key/value label pairs assigned to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels A set of key/value label pairs assigned to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param machineType The machine type to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(@Nullable Output<String> machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineType The machine type to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             return machineType(Output.of(machineType));
         }
 
+        /**
+         * @param metadata Metadata key/value pairs made available within the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Metadata key/value pairs made available within the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param metadataStartupScript Metadata startup scripts made available within the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataStartupScript(@Nullable Output<String> metadataStartupScript) {
             $.metadataStartupScript = metadataStartupScript;
             return this;
         }
 
+        /**
+         * @param metadataStartupScript Metadata startup scripts made available within the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataStartupScript(String metadataStartupScript) {
             return metadataStartupScript(Output.of(metadataStartupScript));
         }
 
+        /**
+         * @param minCpuPlatform The minimum CPU platform specified for the VM instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform The minimum CPU platform specified for the VM instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             return minCpuPlatform(Output.of(minCpuPlatform));
         }
 
+        /**
+         * @param name A unique name for the resource, required by GCE.
+         * Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique name for the resource, required by GCE.
+         * Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkInterfaces The networks attached to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable Output<List<InstanceFromMachineImageNetworkInterfaceArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces The networks attached to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<InstanceFromMachineImageNetworkInterfaceArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
+        /**
+         * @param networkInterfaces The networks attached to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(InstanceFromMachineImageNetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param networkPerformanceConfig Configures network performance settings for the instance. If not specified, the instance will be created with its
+         * default network performance configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPerformanceConfig(@Nullable Output<InstanceFromMachineImageNetworkPerformanceConfigArgs> networkPerformanceConfig) {
             $.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
 
+        /**
+         * @param networkPerformanceConfig Configures network performance settings for the instance. If not specified, the instance will be created with its
+         * default network performance configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPerformanceConfig(InstanceFromMachineImageNetworkPerformanceConfigArgs networkPerformanceConfig) {
             return networkPerformanceConfig(Output.of(networkPerformanceConfig));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
+         * self_link nor project are provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
+         * self_link nor project are provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param reservationAffinity Specifies the reservations that this instance can consume from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(@Nullable Output<InstanceFromMachineImageReservationAffinityArgs> reservationAffinity) {
             $.reservationAffinity = reservationAffinity;
             return this;
         }
 
+        /**
+         * @param reservationAffinity Specifies the reservations that this instance can consume from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(InstanceFromMachineImageReservationAffinityArgs reservationAffinity) {
             return reservationAffinity(Output.of(reservationAffinity));
         }
 
+        /**
+         * @param resourcePolicies A list of short names or self_links of resource policies to attach to the instance. Currently a max of 1 resource policy
+         * is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(@Nullable Output<String> resourcePolicies) {
             $.resourcePolicies = resourcePolicies;
             return this;
         }
 
+        /**
+         * @param resourcePolicies A list of short names or self_links of resource policies to attach to the instance. Currently a max of 1 resource policy
+         * is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(String resourcePolicies) {
             return resourcePolicies(Output.of(resourcePolicies));
         }
 
+        /**
+         * @param scheduling The scheduling strategy being used by the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(@Nullable Output<InstanceFromMachineImageSchedulingArgs> scheduling) {
             $.scheduling = scheduling;
             return this;
         }
 
+        /**
+         * @param scheduling The scheduling strategy being used by the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(InstanceFromMachineImageSchedulingArgs scheduling) {
             return scheduling(Output.of(scheduling));
         }
 
+        /**
+         * @param serviceAccount The service account to attach to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<InstanceFromMachineImageServiceAccountArgs> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount The service account to attach to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(InstanceFromMachineImageServiceAccountArgs serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param shieldedInstanceConfig The shielded vm config being used by the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(@Nullable Output<InstanceFromMachineImageShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
+        /**
+         * @param shieldedInstanceConfig The shielded vm config being used by the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(InstanceFromMachineImageShieldedInstanceConfigArgs shieldedInstanceConfig) {
             return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
 
+        /**
+         * @param sourceMachineImage Name or self link of a machine
+         * image to create the instance based on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceMachineImage(Output<String> sourceMachineImage) {
             $.sourceMachineImage = sourceMachineImage;
             return this;
         }
 
+        /**
+         * @param sourceMachineImage Name or self link of a machine
+         * image to create the instance based on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceMachineImage(String sourceMachineImage) {
             return sourceMachineImage(Output.of(sourceMachineImage));
         }
 
+        /**
+         * @param tags The list of tags attached to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The list of tags attached to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The list of tags attached to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param zone The zone that the machine should be created in. If not
+         * set, the provider zone is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone The zone that the machine should be created in. If not
+         * set, the provider zone is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

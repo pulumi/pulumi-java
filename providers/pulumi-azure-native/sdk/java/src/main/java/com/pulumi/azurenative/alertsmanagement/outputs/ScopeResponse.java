@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScopeResponse {
     /**
-     * type of target scope
+     * @return type of target scope
      * 
      */
     private final @Nullable String scopeType;
     /**
-     * list of ARM IDs of the given scope type which will be the target of the given action rule.
+     * @return list of ARM IDs of the given scope type which will be the target of the given action rule.
      * 
      */
     private final @Nullable List<String> values;
@@ -32,16 +32,16 @@ public final class ScopeResponse {
     }
 
     /**
-     * type of target scope
+     * @return type of target scope
      * 
-    */
+     */
     public Optional<String> scopeType() {
         return Optional.ofNullable(this.scopeType);
     }
     /**
-     * list of ARM IDs of the given scope type which will be the target of the given action rule.
+     * @return list of ARM IDs of the given scope type which will be the target of the given action rule.
      * 
-    */
+     */
     public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }

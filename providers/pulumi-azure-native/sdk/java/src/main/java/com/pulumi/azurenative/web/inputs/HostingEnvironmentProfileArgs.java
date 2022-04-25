@@ -26,6 +26,10 @@ public final class HostingEnvironmentProfileArgs extends com.pulumi.resources.Re
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID of the App Service Environment.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -54,11 +58,23 @@ public final class HostingEnvironmentProfileArgs extends com.pulumi.resources.Re
             $ = new HostingEnvironmentProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID of the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID of the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

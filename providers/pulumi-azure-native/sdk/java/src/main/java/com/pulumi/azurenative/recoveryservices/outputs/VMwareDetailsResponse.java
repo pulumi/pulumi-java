@@ -19,168 +19,168 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VMwareDetailsResponse {
     /**
-     * The number of source and target servers configured to talk to this CS.
+     * @return The number of source and target servers configured to talk to this CS.
      * 
      */
     private final @Nullable String agentCount;
     /**
-     * Agent expiry date.
+     * @return Agent expiry date.
      * 
      */
     private final @Nullable String agentExpiryDate;
     /**
-     * The agent Version.
+     * @return The agent Version.
      * 
      */
     private final @Nullable String agentVersion;
     /**
-     * The agent version details.
+     * @return The agent version details.
      * 
      */
     private final @Nullable VersionDetailsResponse agentVersionDetails;
     /**
-     * The available memory.
+     * @return The available memory.
      * 
      */
     private final @Nullable Double availableMemoryInBytes;
     /**
-     * The available space.
+     * @return The available space.
      * 
      */
     private final @Nullable Double availableSpaceInBytes;
     /**
-     * The percentage of the CPU load.
+     * @return The percentage of the CPU load.
      * 
      */
     private final @Nullable String cpuLoad;
     /**
-     * The CPU load status.
+     * @return The CPU load status.
      * 
      */
     private final @Nullable String cpuLoadStatus;
     /**
-     * The CS service status.
+     * @return The CS service status.
      * 
      */
     private final @Nullable String csServiceStatus;
     /**
-     * The database server load.
+     * @return The database server load.
      * 
      */
     private final @Nullable String databaseServerLoad;
     /**
-     * The database server load status.
+     * @return The database server load status.
      * 
      */
     private final @Nullable String databaseServerLoadStatus;
     /**
-     * The host name.
+     * @return The host name.
      * 
      */
     private final @Nullable String hostName;
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;VMware&#39;.
      * 
      */
     private final String instanceType;
     /**
-     * The IP address.
+     * @return The IP address.
      * 
      */
     private final @Nullable String ipAddress;
     /**
-     * The last heartbeat received from CS server.
+     * @return The last heartbeat received from CS server.
      * 
      */
     private final @Nullable String lastHeartbeat;
     /**
-     * The list of Master Target servers associated with the fabric.
+     * @return The list of Master Target servers associated with the fabric.
      * 
      */
     private final @Nullable List<MasterTargetServerResponse> masterTargetServers;
     /**
-     * The memory usage status.
+     * @return The memory usage status.
      * 
      */
     private final @Nullable String memoryUsageStatus;
     /**
-     * The number of process servers.
+     * @return The number of process servers.
      * 
      */
     private final @Nullable String processServerCount;
     /**
-     * The list of Process Servers associated with the fabric.
+     * @return The list of Process Servers associated with the fabric.
      * 
      */
     private final @Nullable List<ProcessServerResponse> processServers;
     /**
-     * The number of protected servers.
+     * @return The number of protected servers.
      * 
      */
     private final @Nullable String protectedServers;
     /**
-     * PS template version.
+     * @return PS template version.
      * 
      */
     private final @Nullable String psTemplateVersion;
     /**
-     * The number of replication pairs configured in this CS.
+     * @return The number of replication pairs configured in this CS.
      * 
      */
     private final @Nullable String replicationPairCount;
     /**
-     * The list of run as accounts created on the server.
+     * @return The list of run as accounts created on the server.
      * 
      */
     private final @Nullable List<RunAsAccountResponse> runAsAccounts;
     /**
-     * The space usage status.
+     * @return The space usage status.
      * 
      */
     private final @Nullable String spaceUsageStatus;
     /**
-     * CS SSL cert expiry date.
+     * @return CS SSL cert expiry date.
      * 
      */
     private final @Nullable String sslCertExpiryDate;
     /**
-     * CS SSL cert expiry date.
+     * @return CS SSL cert expiry date.
      * 
      */
     private final @Nullable Integer sslCertExpiryRemainingDays;
     /**
-     * The percentage of the system load.
+     * @return The percentage of the system load.
      * 
      */
     private final @Nullable String systemLoad;
     /**
-     * The system load status.
+     * @return The system load status.
      * 
      */
     private final @Nullable String systemLoadStatus;
     /**
-     * The total memory.
+     * @return The total memory.
      * 
      */
     private final @Nullable Double totalMemoryInBytes;
     /**
-     * The total space.
+     * @return The total space.
      * 
      */
     private final @Nullable Double totalSpaceInBytes;
     /**
-     * Version status
+     * @return Version status
      * 
      */
     private final @Nullable String versionStatus;
     /**
-     * The web load.
+     * @return The web load.
      * 
      */
     private final @Nullable String webLoad;
     /**
-     * The web load status.
+     * @return The web load status.
      * 
      */
     private final @Nullable String webLoadStatus;
@@ -256,234 +256,234 @@ public final class VMwareDetailsResponse {
     }
 
     /**
-     * The number of source and target servers configured to talk to this CS.
+     * @return The number of source and target servers configured to talk to this CS.
      * 
-    */
+     */
     public Optional<String> agentCount() {
         return Optional.ofNullable(this.agentCount);
     }
     /**
-     * Agent expiry date.
+     * @return Agent expiry date.
      * 
-    */
+     */
     public Optional<String> agentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
     /**
-     * The agent Version.
+     * @return The agent Version.
      * 
-    */
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
-     * The agent version details.
+     * @return The agent version details.
      * 
-    */
+     */
     public Optional<VersionDetailsResponse> agentVersionDetails() {
         return Optional.ofNullable(this.agentVersionDetails);
     }
     /**
-     * The available memory.
+     * @return The available memory.
      * 
-    */
+     */
     public Optional<Double> availableMemoryInBytes() {
         return Optional.ofNullable(this.availableMemoryInBytes);
     }
     /**
-     * The available space.
+     * @return The available space.
      * 
-    */
+     */
     public Optional<Double> availableSpaceInBytes() {
         return Optional.ofNullable(this.availableSpaceInBytes);
     }
     /**
-     * The percentage of the CPU load.
+     * @return The percentage of the CPU load.
      * 
-    */
+     */
     public Optional<String> cpuLoad() {
         return Optional.ofNullable(this.cpuLoad);
     }
     /**
-     * The CPU load status.
+     * @return The CPU load status.
      * 
-    */
+     */
     public Optional<String> cpuLoadStatus() {
         return Optional.ofNullable(this.cpuLoadStatus);
     }
     /**
-     * The CS service status.
+     * @return The CS service status.
      * 
-    */
+     */
     public Optional<String> csServiceStatus() {
         return Optional.ofNullable(this.csServiceStatus);
     }
     /**
-     * The database server load.
+     * @return The database server load.
      * 
-    */
+     */
     public Optional<String> databaseServerLoad() {
         return Optional.ofNullable(this.databaseServerLoad);
     }
     /**
-     * The database server load status.
+     * @return The database server load status.
      * 
-    */
+     */
     public Optional<String> databaseServerLoadStatus() {
         return Optional.ofNullable(this.databaseServerLoadStatus);
     }
     /**
-     * The host name.
+     * @return The host name.
      * 
-    */
+     */
     public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;VMware&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The IP address.
+     * @return The IP address.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * The last heartbeat received from CS server.
+     * @return The last heartbeat received from CS server.
      * 
-    */
+     */
     public Optional<String> lastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
     /**
-     * The list of Master Target servers associated with the fabric.
+     * @return The list of Master Target servers associated with the fabric.
      * 
-    */
+     */
     public List<MasterTargetServerResponse> masterTargetServers() {
         return this.masterTargetServers == null ? List.of() : this.masterTargetServers;
     }
     /**
-     * The memory usage status.
+     * @return The memory usage status.
      * 
-    */
+     */
     public Optional<String> memoryUsageStatus() {
         return Optional.ofNullable(this.memoryUsageStatus);
     }
     /**
-     * The number of process servers.
+     * @return The number of process servers.
      * 
-    */
+     */
     public Optional<String> processServerCount() {
         return Optional.ofNullable(this.processServerCount);
     }
     /**
-     * The list of Process Servers associated with the fabric.
+     * @return The list of Process Servers associated with the fabric.
      * 
-    */
+     */
     public List<ProcessServerResponse> processServers() {
         return this.processServers == null ? List.of() : this.processServers;
     }
     /**
-     * The number of protected servers.
+     * @return The number of protected servers.
      * 
-    */
+     */
     public Optional<String> protectedServers() {
         return Optional.ofNullable(this.protectedServers);
     }
     /**
-     * PS template version.
+     * @return PS template version.
      * 
-    */
+     */
     public Optional<String> psTemplateVersion() {
         return Optional.ofNullable(this.psTemplateVersion);
     }
     /**
-     * The number of replication pairs configured in this CS.
+     * @return The number of replication pairs configured in this CS.
      * 
-    */
+     */
     public Optional<String> replicationPairCount() {
         return Optional.ofNullable(this.replicationPairCount);
     }
     /**
-     * The list of run as accounts created on the server.
+     * @return The list of run as accounts created on the server.
      * 
-    */
+     */
     public List<RunAsAccountResponse> runAsAccounts() {
         return this.runAsAccounts == null ? List.of() : this.runAsAccounts;
     }
     /**
-     * The space usage status.
+     * @return The space usage status.
      * 
-    */
+     */
     public Optional<String> spaceUsageStatus() {
         return Optional.ofNullable(this.spaceUsageStatus);
     }
     /**
-     * CS SSL cert expiry date.
+     * @return CS SSL cert expiry date.
      * 
-    */
+     */
     public Optional<String> sslCertExpiryDate() {
         return Optional.ofNullable(this.sslCertExpiryDate);
     }
     /**
-     * CS SSL cert expiry date.
+     * @return CS SSL cert expiry date.
      * 
-    */
+     */
     public Optional<Integer> sslCertExpiryRemainingDays() {
         return Optional.ofNullable(this.sslCertExpiryRemainingDays);
     }
     /**
-     * The percentage of the system load.
+     * @return The percentage of the system load.
      * 
-    */
+     */
     public Optional<String> systemLoad() {
         return Optional.ofNullable(this.systemLoad);
     }
     /**
-     * The system load status.
+     * @return The system load status.
      * 
-    */
+     */
     public Optional<String> systemLoadStatus() {
         return Optional.ofNullable(this.systemLoadStatus);
     }
     /**
-     * The total memory.
+     * @return The total memory.
      * 
-    */
+     */
     public Optional<Double> totalMemoryInBytes() {
         return Optional.ofNullable(this.totalMemoryInBytes);
     }
     /**
-     * The total space.
+     * @return The total space.
      * 
-    */
+     */
     public Optional<Double> totalSpaceInBytes() {
         return Optional.ofNullable(this.totalSpaceInBytes);
     }
     /**
-     * Version status
+     * @return Version status
      * 
-    */
+     */
     public Optional<String> versionStatus() {
         return Optional.ofNullable(this.versionStatus);
     }
     /**
-     * The web load.
+     * @return The web load.
      * 
-    */
+     */
     public Optional<String> webLoad() {
         return Optional.ofNullable(this.webLoad);
     }
     /**
-     * The web load status.
+     * @return The web load status.
      * 
-    */
+     */
     public Optional<String> webLoadStatus() {
         return Optional.ofNullable(this.webLoadStatus);
     }

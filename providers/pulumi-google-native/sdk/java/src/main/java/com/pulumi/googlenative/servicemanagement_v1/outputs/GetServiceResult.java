@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceResult {
     /**
-     * ID of the project that produces and owns this service.
+     * @return ID of the project that produces and owns this service.
      * 
      */
     private final String producerProjectId;
     /**
-     * The name of the service. See the [overview](/service-management/overview) for naming requirements.
+     * @return The name of the service. See the [overview](/service-management/overview) for naming requirements.
      * 
      */
     private final String serviceName;
@@ -29,16 +29,16 @@ public final class GetServiceResult {
     }
 
     /**
-     * ID of the project that produces and owns this service.
+     * @return ID of the project that produces and owns this service.
      * 
-    */
+     */
     public String producerProjectId() {
         return this.producerProjectId;
     }
     /**
-     * The name of the service. See the [overview](/service-management/overview) for naming requirements.
+     * @return The name of the service. See the [overview](/service-management/overview) for naming requirements.
      * 
-    */
+     */
     public String serviceName() {
         return this.serviceName;
     }

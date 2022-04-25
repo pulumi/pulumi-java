@@ -27,6 +27,10 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends com.pulumi.res
     @Import(name="connections")
     private @Nullable Output<List<String>> connections;
 
+    /**
+     * @return The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
+     * 
+     */
     public Optional<Output<List<String>>> connections() {
         return Optional.ofNullable(this.connections);
     }
@@ -55,15 +59,33 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends com.pulumi.res
             $ = new GoogleCloudRunOpV2CloudSqlInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connections The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(@Nullable Output<List<String>> connections) {
             $.connections = connections;
             return this;
         }
 
+        /**
+         * @param connections The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(List<String> connections) {
             return connections(Output.of(connections));
         }
 
+        /**
+         * @param connections The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(String... connections) {
             return connections(List.of(connections));
         }

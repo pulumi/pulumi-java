@@ -19,6 +19,10 @@ public final class GetUsagePlanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The provider-assigned unique ID for this managed resource.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetUsagePlanArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetUsagePlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The provider-assigned unique ID for this managed resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

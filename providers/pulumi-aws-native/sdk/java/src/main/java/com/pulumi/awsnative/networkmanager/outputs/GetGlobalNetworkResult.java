@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetGlobalNetworkResult {
     /**
-     * The Amazon Resource Name (ARN) of the global network.
+     * @return The Amazon Resource Name (ARN) of the global network.
      * 
      */
     private final @Nullable String arn;
     /**
-     * The description of the global network.
+     * @return The description of the global network.
      * 
      */
     private final @Nullable String description;
     /**
-     * The ID of the global network.
+     * @return The ID of the global network.
      * 
      */
     private final @Nullable String id;
     /**
-     * The tags for the global network.
+     * @return The tags for the global network.
      * 
      */
     private final @Nullable List<GlobalNetworkTag> tags;
@@ -47,30 +47,30 @@ public final class GetGlobalNetworkResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the global network.
+     * @return The Amazon Resource Name (ARN) of the global network.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The description of the global network.
+     * @return The description of the global network.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The ID of the global network.
+     * @return The ID of the global network.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The tags for the global network.
+     * @return The tags for the global network.
      * 
-    */
+     */
     public List<GlobalNetworkTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EncryptionConfigResponse {
     /**
-     * The Key Vault information for connecting to user managed encryption keys.
+     * @return The Key Vault information for connecting to user managed encryption keys.
      * 
      */
     private final @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo;
     /**
-     * The type of encryption configuration being used. Currently the only supported types are &#39;UserManaged&#39; and &#39;ServiceManaged&#39;.
+     * @return The type of encryption configuration being used. Currently the only supported types are &#39;UserManaged&#39; and &#39;ServiceManaged&#39;.
      * 
      */
     private final String type;
@@ -32,16 +32,16 @@ public final class EncryptionConfigResponse {
     }
 
     /**
-     * The Key Vault information for connecting to user managed encryption keys.
+     * @return The Key Vault information for connecting to user managed encryption keys.
      * 
-    */
+     */
     public Optional<KeyVaultMetaInfoResponse> keyVaultMetaInfo() {
         return Optional.ofNullable(this.keyVaultMetaInfo);
     }
     /**
-     * The type of encryption configuration being used. Currently the only supported types are &#39;UserManaged&#39; and &#39;ServiceManaged&#39;.
+     * @return The type of encryption configuration being used. Currently the only supported types are &#39;UserManaged&#39; and &#39;ServiceManaged&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

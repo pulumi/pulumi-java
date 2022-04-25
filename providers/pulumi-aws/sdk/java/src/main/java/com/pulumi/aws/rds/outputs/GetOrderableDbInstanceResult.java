@@ -16,69 +16,69 @@ import javax.annotation.Nullable;
 public final class GetOrderableDbInstanceResult {
     private final String availabilityZoneGroup;
     /**
-     * Availability zones where the instance is available.
+     * @return Availability zones where the instance is available.
      * 
      */
     private final List<String> availabilityZones;
     private final String engine;
     private final String engineVersion;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String instanceClass;
     private final String licenseModel;
     /**
-     * Maximum total provisioned IOPS for a DB instance.
+     * @return Maximum total provisioned IOPS for a DB instance.
      * 
      */
     private final Integer maxIopsPerDbInstance;
     /**
-     * Maximum provisioned IOPS per GiB for a DB instance.
+     * @return Maximum provisioned IOPS per GiB for a DB instance.
      * 
      */
     private final Double maxIopsPerGib;
     /**
-     * Maximum storage size for a DB instance.
+     * @return Maximum storage size for a DB instance.
      * 
      */
     private final Integer maxStorageSize;
     /**
-     * Minimum total provisioned IOPS for a DB instance.
+     * @return Minimum total provisioned IOPS for a DB instance.
      * 
      */
     private final Integer minIopsPerDbInstance;
     /**
-     * Minimum provisioned IOPS per GiB for a DB instance.
+     * @return Minimum provisioned IOPS per GiB for a DB instance.
      * 
      */
     private final Double minIopsPerGib;
     /**
-     * Minimum storage size for a DB instance.
+     * @return Minimum storage size for a DB instance.
      * 
      */
     private final Integer minStorageSize;
     /**
-     * Whether a DB instance is Multi-AZ capable.
+     * @return Whether a DB instance is Multi-AZ capable.
      * 
      */
     private final Boolean multiAzCapable;
     /**
-     * Whether a DB instance supports RDS on Outposts.
+     * @return Whether a DB instance supports RDS on Outposts.
      * 
      */
     private final Boolean outpostCapable;
     private final @Nullable List<String> preferredEngineVersions;
     private final @Nullable List<String> preferredInstanceClasses;
     /**
-     * Whether a DB instance can have a read replica.
+     * @return Whether a DB instance can have a read replica.
      * 
      */
     private final Boolean readReplicaCapable;
     private final String storageType;
     /**
-     * A list of the supported DB engine modes.
+     * @return A list of the supported DB engine modes.
      * 
      */
     private final List<String> supportedEngineModes;
@@ -158,9 +158,9 @@ public final class GetOrderableDbInstanceResult {
         return this.availabilityZoneGroup;
     }
     /**
-     * Availability zones where the instance is available.
+     * @return Availability zones where the instance is available.
      * 
-    */
+     */
     public List<String> availabilityZones() {
         return this.availabilityZones;
     }
@@ -171,9 +171,9 @@ public final class GetOrderableDbInstanceResult {
         return this.engineVersion;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -184,58 +184,58 @@ public final class GetOrderableDbInstanceResult {
         return this.licenseModel;
     }
     /**
-     * Maximum total provisioned IOPS for a DB instance.
+     * @return Maximum total provisioned IOPS for a DB instance.
      * 
-    */
+     */
     public Integer maxIopsPerDbInstance() {
         return this.maxIopsPerDbInstance;
     }
     /**
-     * Maximum provisioned IOPS per GiB for a DB instance.
+     * @return Maximum provisioned IOPS per GiB for a DB instance.
      * 
-    */
+     */
     public Double maxIopsPerGib() {
         return this.maxIopsPerGib;
     }
     /**
-     * Maximum storage size for a DB instance.
+     * @return Maximum storage size for a DB instance.
      * 
-    */
+     */
     public Integer maxStorageSize() {
         return this.maxStorageSize;
     }
     /**
-     * Minimum total provisioned IOPS for a DB instance.
+     * @return Minimum total provisioned IOPS for a DB instance.
      * 
-    */
+     */
     public Integer minIopsPerDbInstance() {
         return this.minIopsPerDbInstance;
     }
     /**
-     * Minimum provisioned IOPS per GiB for a DB instance.
+     * @return Minimum provisioned IOPS per GiB for a DB instance.
      * 
-    */
+     */
     public Double minIopsPerGib() {
         return this.minIopsPerGib;
     }
     /**
-     * Minimum storage size for a DB instance.
+     * @return Minimum storage size for a DB instance.
      * 
-    */
+     */
     public Integer minStorageSize() {
         return this.minStorageSize;
     }
     /**
-     * Whether a DB instance is Multi-AZ capable.
+     * @return Whether a DB instance is Multi-AZ capable.
      * 
-    */
+     */
     public Boolean multiAzCapable() {
         return this.multiAzCapable;
     }
     /**
-     * Whether a DB instance supports RDS on Outposts.
+     * @return Whether a DB instance supports RDS on Outposts.
      * 
-    */
+     */
     public Boolean outpostCapable() {
         return this.outpostCapable;
     }
@@ -246,9 +246,9 @@ public final class GetOrderableDbInstanceResult {
         return this.preferredInstanceClasses == null ? List.of() : this.preferredInstanceClasses;
     }
     /**
-     * Whether a DB instance can have a read replica.
+     * @return Whether a DB instance can have a read replica.
      * 
-    */
+     */
     public Boolean readReplicaCapable() {
         return this.readReplicaCapable;
     }
@@ -256,9 +256,9 @@ public final class GetOrderableDbInstanceResult {
         return this.storageType;
     }
     /**
-     * A list of the supported DB engine modes.
+     * @return A list of the supported DB engine modes.
      * 
-    */
+     */
     public List<String> supportedEngineModes() {
         return this.supportedEngineModes;
     }

@@ -25,6 +25,10 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="dateFormat", required=true)
     private String dateFormat;
 
+    /**
+     * @return The date format.
+     * 
+     */
     public String dateFormat() {
         return this.dateFormat;
     }
@@ -36,6 +40,10 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="functionalIdentifierCode")
     private @Nullable String functionalIdentifierCode;
 
+    /**
+     * @return The functional identifier code.
+     * 
+     */
     public Optional<String> functionalIdentifierCode() {
         return Optional.ofNullable(this.functionalIdentifierCode);
     }
@@ -47,6 +55,10 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="headerVersion", required=true)
     private String headerVersion;
 
+    /**
+     * @return The header version.
+     * 
+     */
     public String headerVersion() {
         return this.headerVersion;
     }
@@ -58,6 +70,10 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="messageId", required=true)
     private String messageId;
 
+    /**
+     * @return The message id on which this envelope settings has to be applied.
+     * 
+     */
     public String messageId() {
         return this.messageId;
     }
@@ -69,6 +85,10 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="protocolVersion", required=true)
     private String protocolVersion;
 
+    /**
+     * @return The protocol version on which this envelope settings has to be applied.
+     * 
+     */
     public String protocolVersion() {
         return this.protocolVersion;
     }
@@ -80,6 +100,10 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="receiverApplicationId", required=true)
     private String receiverApplicationId;
 
+    /**
+     * @return The receiver application id.
+     * 
+     */
     public String receiverApplicationId() {
         return this.receiverApplicationId;
     }
@@ -91,6 +115,10 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="responsibleAgencyCode", required=true)
     private String responsibleAgencyCode;
 
+    /**
+     * @return The responsible agency code.
+     * 
+     */
     public String responsibleAgencyCode() {
         return this.responsibleAgencyCode;
     }
@@ -102,6 +130,10 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="senderApplicationId", required=true)
     private String senderApplicationId;
 
+    /**
+     * @return The sender application id.
+     * 
+     */
     public String senderApplicationId() {
         return this.senderApplicationId;
     }
@@ -113,6 +145,10 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="targetNamespace", required=true)
     private String targetNamespace;
 
+    /**
+     * @return The target namespace on which this envelope settings has to be applied.
+     * 
+     */
     public String targetNamespace() {
         return this.targetNamespace;
     }
@@ -124,6 +160,10 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="timeFormat", required=true)
     private String timeFormat;
 
+    /**
+     * @return The time format.
+     * 
+     */
     public String timeFormat() {
         return this.timeFormat;
     }
@@ -161,51 +201,111 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
             $ = new X12EnvelopeOverrideResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dateFormat The date format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateFormat(String dateFormat) {
             $.dateFormat = dateFormat;
             return this;
         }
 
+        /**
+         * @param functionalIdentifierCode The functional identifier code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionalIdentifierCode(@Nullable String functionalIdentifierCode) {
             $.functionalIdentifierCode = functionalIdentifierCode;
             return this;
         }
 
+        /**
+         * @param headerVersion The header version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerVersion(String headerVersion) {
             $.headerVersion = headerVersion;
             return this;
         }
 
+        /**
+         * @param messageId The message id on which this envelope settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(String messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param protocolVersion The protocol version on which this envelope settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolVersion(String protocolVersion) {
             $.protocolVersion = protocolVersion;
             return this;
         }
 
+        /**
+         * @param receiverApplicationId The receiver application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverApplicationId(String receiverApplicationId) {
             $.receiverApplicationId = receiverApplicationId;
             return this;
         }
 
+        /**
+         * @param responsibleAgencyCode The responsible agency code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responsibleAgencyCode(String responsibleAgencyCode) {
             $.responsibleAgencyCode = responsibleAgencyCode;
             return this;
         }
 
+        /**
+         * @param senderApplicationId The sender application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationId(String senderApplicationId) {
             $.senderApplicationId = senderApplicationId;
             return this;
         }
 
+        /**
+         * @param targetNamespace The target namespace on which this envelope settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNamespace(String targetNamespace) {
             $.targetNamespace = targetNamespace;
             return this;
         }
 
+        /**
+         * @param timeFormat The time format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeFormat(String timeFormat) {
             $.timeFormat = timeFormat;
             return this;

@@ -25,6 +25,10 @@ public final class UserPropertyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return User property name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -36,6 +40,10 @@ public final class UserPropertyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<Object> value;
 
+    /**
+     * @return User property value. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> value() {
         return this.value;
     }
@@ -65,20 +73,44 @@ public final class UserPropertyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserPropertyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name User property name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name User property name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value User property value. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<Object> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value User property value. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Object value) {
             return value(Output.of(value));
         }

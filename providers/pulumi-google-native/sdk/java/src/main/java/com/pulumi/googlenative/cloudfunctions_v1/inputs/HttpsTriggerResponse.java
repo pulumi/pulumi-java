@@ -23,6 +23,10 @@ public final class HttpsTriggerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="securityLevel", required=true)
     private String securityLevel;
 
+    /**
+     * @return The security level for the function.
+     * 
+     */
     public String securityLevel() {
         return this.securityLevel;
     }
@@ -34,6 +38,10 @@ public final class HttpsTriggerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return The deployed url for the function.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -63,11 +71,23 @@ public final class HttpsTriggerResponse extends com.pulumi.resources.InvokeArgs 
             $ = new HttpsTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityLevel The security level for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityLevel(String securityLevel) {
             $.securityLevel = securityLevel;
             return this;
         }
 
+        /**
+         * @param url The deployed url for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

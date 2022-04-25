@@ -26,6 +26,10 @@ public final class AutomaticRepairsPolicyResponse extends com.pulumi.resources.I
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Specifies whether automatic repairs should be enabled on the virtual machine scale set. The default value is false.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -37,6 +41,10 @@ public final class AutomaticRepairsPolicyResponse extends com.pulumi.resources.I
     @Import(name="gracePeriod")
     private @Nullable String gracePeriod;
 
+    /**
+     * @return The amount of time for which automatic repairs are suspended due to a state change on VM. The grace time starts after the state change has completed. This helps avoid premature or accidental repairs. The time duration should be specified in ISO 8601 format. The minimum allowed grace period is 30 minutes (PT30M), which is also the default value. The maximum allowed grace period is 90 minutes (PT90M).
+     * 
+     */
     public Optional<String> gracePeriod() {
         return Optional.ofNullable(this.gracePeriod);
     }
@@ -66,11 +74,23 @@ public final class AutomaticRepairsPolicyResponse extends com.pulumi.resources.I
             $ = new AutomaticRepairsPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Specifies whether automatic repairs should be enabled on the virtual machine scale set. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param gracePeriod The amount of time for which automatic repairs are suspended due to a state change on VM. The grace time starts after the state change has completed. This helps avoid premature or accidental repairs. The time duration should be specified in ISO 8601 format. The minimum allowed grace period is 30 minutes (PT30M), which is also the default value. The maximum allowed grace period is 90 minutes (PT90M).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gracePeriod(@Nullable String gracePeriod) {
             $.gracePeriod = gracePeriod;
             return this;

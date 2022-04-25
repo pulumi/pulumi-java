@@ -26,6 +26,10 @@ public final class ARecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipv4Address")
     private @Nullable Output<String> ipv4Address;
 
+    /**
+     * @return The IPv4 address of this A record.
+     * 
+     */
     public Optional<Output<String>> ipv4Address() {
         return Optional.ofNullable(this.ipv4Address);
     }
@@ -54,11 +58,23 @@ public final class ARecordArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ARecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipv4Address The IPv4 address of this A record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Address(@Nullable Output<String> ipv4Address) {
             $.ipv4Address = ipv4Address;
             return this;
         }
 
+        /**
+         * @param ipv4Address The IPv4 address of this A record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Address(String ipv4Address) {
             return ipv4Address(Output.of(ipv4Address));
         }

@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class PackageResponse {
     /**
-     * The various channels by which a package is distributed.
+     * @return The various channels by which a package is distributed.
      * 
      */
     private final List<DistributionResponse> distribution;
     /**
-     * Immutable. The name of the package.
+     * @return Immutable. The name of the package.
      * 
      */
     private final String name;
@@ -31,16 +31,16 @@ public final class PackageResponse {
     }
 
     /**
-     * The various channels by which a package is distributed.
+     * @return The various channels by which a package is distributed.
      * 
-    */
+     */
     public List<DistributionResponse> distribution() {
         return this.distribution;
     }
     /**
-     * Immutable. The name of the package.
+     * @return Immutable. The name of the package.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

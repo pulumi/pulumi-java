@@ -13,58 +13,58 @@ import java.util.Objects;
 @CustomType
 public final class GetKubernetesRoleResult {
     /**
-     * Host OS supported by the Kubernetes role.
+     * @return Host OS supported by the Kubernetes role.
      * 
      */
     private final String hostPlatform;
     /**
-     * Platform where the runtime is hosted.
+     * @return Platform where the runtime is hosted.
      * 
      */
     private final String hostPlatformType;
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
      */
     private final String id;
     /**
-     * Role type.
+     * @return Role type.
      * Expected value is &#39;Kubernetes&#39;.
      * 
      */
     private final String kind;
     /**
-     * Kubernetes cluster configuration
+     * @return Kubernetes cluster configuration
      * 
      */
     private final KubernetesClusterInfoResponse kubernetesClusterInfo;
     /**
-     * Kubernetes role resources
+     * @return Kubernetes role resources
      * 
      */
     private final KubernetesRoleResourcesResponse kubernetesRoleResources;
     /**
-     * The object name.
+     * @return The object name.
      * 
      */
     private final String name;
     /**
-     * State of Kubernetes deployment
+     * @return State of Kubernetes deployment
      * 
      */
     private final String provisioningState;
     /**
-     * Role status.
+     * @return Role status.
      * 
      */
     private final String roleStatus;
     /**
-     * Role configured on ASE resource
+     * @return Role configured on ASE resource
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
      */
     private final String type;
@@ -96,80 +96,80 @@ public final class GetKubernetesRoleResult {
     }
 
     /**
-     * Host OS supported by the Kubernetes role.
+     * @return Host OS supported by the Kubernetes role.
      * 
-    */
+     */
     public String hostPlatform() {
         return this.hostPlatform;
     }
     /**
-     * Platform where the runtime is hosted.
+     * @return Platform where the runtime is hosted.
      * 
-    */
+     */
     public String hostPlatformType() {
         return this.hostPlatformType;
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Role type.
+     * @return Role type.
      * Expected value is &#39;Kubernetes&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Kubernetes cluster configuration
+     * @return Kubernetes cluster configuration
      * 
-    */
+     */
     public KubernetesClusterInfoResponse kubernetesClusterInfo() {
         return this.kubernetesClusterInfo;
     }
     /**
-     * Kubernetes role resources
+     * @return Kubernetes role resources
      * 
-    */
+     */
     public KubernetesRoleResourcesResponse kubernetesRoleResources() {
         return this.kubernetesRoleResources;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * State of Kubernetes deployment
+     * @return State of Kubernetes deployment
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Role status.
+     * @return Role status.
      * 
-    */
+     */
     public String roleStatus() {
         return this.roleStatus;
     }
     /**
-     * Role configured on ASE resource
+     * @return Role configured on ASE resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

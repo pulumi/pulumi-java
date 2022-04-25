@@ -27,6 +27,10 @@ public final class TypePropertiesMappingArgs extends com.pulumi.resources.Resour
     @Import(name="linkType")
     private @Nullable Output<LinkTypes> linkType;
 
+    /**
+     * @return Link type.
+     * 
+     */
     public Optional<Output<LinkTypes>> linkType() {
         return Optional.ofNullable(this.linkType);
     }
@@ -38,6 +42,10 @@ public final class TypePropertiesMappingArgs extends com.pulumi.resources.Resour
     @Import(name="sourcePropertyName", required=true)
     private Output<String> sourcePropertyName;
 
+    /**
+     * @return  Property name on the source Entity Type.
+     * 
+     */
     public Output<String> sourcePropertyName() {
         return this.sourcePropertyName;
     }
@@ -49,6 +57,10 @@ public final class TypePropertiesMappingArgs extends com.pulumi.resources.Resour
     @Import(name="targetPropertyName", required=true)
     private Output<String> targetPropertyName;
 
+    /**
+     * @return Property name on the target Entity Type.
+     * 
+     */
     public Output<String> targetPropertyName() {
         return this.targetPropertyName;
     }
@@ -79,29 +91,65 @@ public final class TypePropertiesMappingArgs extends com.pulumi.resources.Resour
             $ = new TypePropertiesMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkType Link type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkType(@Nullable Output<LinkTypes> linkType) {
             $.linkType = linkType;
             return this;
         }
 
+        /**
+         * @param linkType Link type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkType(LinkTypes linkType) {
             return linkType(Output.of(linkType));
         }
 
+        /**
+         * @param sourcePropertyName  Property name on the source Entity Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePropertyName(Output<String> sourcePropertyName) {
             $.sourcePropertyName = sourcePropertyName;
             return this;
         }
 
+        /**
+         * @param sourcePropertyName  Property name on the source Entity Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePropertyName(String sourcePropertyName) {
             return sourcePropertyName(Output.of(sourcePropertyName));
         }
 
+        /**
+         * @param targetPropertyName Property name on the target Entity Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPropertyName(Output<String> targetPropertyName) {
             $.targetPropertyName = targetPropertyName;
             return this;
         }
 
+        /**
+         * @param targetPropertyName Property name on the target Entity Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPropertyName(String targetPropertyName) {
             return targetPropertyName(Output.of(targetPropertyName));
         }

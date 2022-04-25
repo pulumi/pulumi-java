@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AutoscalingLimitsResponse {
     /**
-     * Maximum number of nodes to scale up to.
+     * @return Maximum number of nodes to scale up to.
      * 
      */
     private final Integer maxServeNodes;
     /**
-     * Minimum number of nodes to scale down to.
+     * @return Minimum number of nodes to scale down to.
      * 
      */
     private final Integer minServeNodes;
@@ -29,16 +29,16 @@ public final class AutoscalingLimitsResponse {
     }
 
     /**
-     * Maximum number of nodes to scale up to.
+     * @return Maximum number of nodes to scale up to.
      * 
-    */
+     */
     public Integer maxServeNodes() {
         return this.maxServeNodes;
     }
     /**
-     * Minimum number of nodes to scale down to.
+     * @return Minimum number of nodes to scale down to.
      * 
-    */
+     */
     public Integer minServeNodes() {
         return this.minServeNodes;
     }

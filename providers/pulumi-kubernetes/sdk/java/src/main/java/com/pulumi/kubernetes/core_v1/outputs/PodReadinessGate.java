@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PodReadinessGate {
     /**
-     * ConditionType refers to a condition in the pod&#39;s condition list with matching type.
+     * @return ConditionType refers to a condition in the pod&#39;s condition list with matching type.
      * 
      * Possible enum values:
      *  - `&#34;ContainersReady&#34;` indicates whether all containers in the pod are ready.
@@ -27,7 +27,7 @@ public final class PodReadinessGate {
     }
 
     /**
-     * ConditionType refers to a condition in the pod&#39;s condition list with matching type.
+     * @return ConditionType refers to a condition in the pod&#39;s condition list with matching type.
      * 
      * Possible enum values:
      *  - `&#34;ContainersReady&#34;` indicates whether all containers in the pod are ready.
@@ -35,7 +35,7 @@ public final class PodReadinessGate {
      *  - `&#34;PodScheduled&#34;` represents status of the scheduling process for this pod.
      *  - `&#34;Ready&#34;` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
      * 
-    */
+     */
     public String conditionType() {
         return this.conditionType;
     }

@@ -26,6 +26,10 @@ public final class DeleteRetentionPolicyResponse extends com.pulumi.resources.In
     @Import(name="days")
     private @Nullable Integer days;
 
+    /**
+     * @return Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.
+     * 
+     */
     public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
@@ -37,6 +41,10 @@ public final class DeleteRetentionPolicyResponse extends com.pulumi.resources.In
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Indicates whether DeleteRetentionPolicy is enabled.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -66,11 +74,23 @@ public final class DeleteRetentionPolicyResponse extends com.pulumi.resources.In
             $ = new DeleteRetentionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param days Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(@Nullable Integer days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param enabled Indicates whether DeleteRetentionPolicy is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;

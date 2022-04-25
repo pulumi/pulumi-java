@@ -27,6 +27,10 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse ex
     @Import(name="privateEndpoint")
     private @Nullable ManagedInstancePrivateEndpointPropertyResponse privateEndpoint;
 
+    /**
+     * @return Private endpoint which the connection belongs to.
+     * 
+     */
     public Optional<ManagedInstancePrivateEndpointPropertyResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -38,6 +42,10 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse ex
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
 
+    /**
+     * @return Connection State of the Private Endpoint Connection.
+     * 
+     */
     public Optional<ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -49,6 +57,10 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse ex
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return State of the Private Endpoint Connection.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -79,16 +91,34 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse ex
             $ = new ManagedInstancePrivateEndpointConnectionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpoint Private endpoint which the connection belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable ManagedInstancePrivateEndpointPropertyResponse privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Connection State of the Private Endpoint Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param provisioningState State of the Private Endpoint Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

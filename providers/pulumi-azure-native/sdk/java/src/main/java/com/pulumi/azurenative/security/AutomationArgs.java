@@ -31,6 +31,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions")
     private @Nullable Output<List<Object>> actions;
 
+    /**
+     * @return A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
+     * 
+     */
     public Optional<Output<List<Object>>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -42,6 +46,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationName")
     private @Nullable Output<String> automationName;
 
+    /**
+     * @return The security automation name.
+     * 
+     */
     public Optional<Output<String>> automationName() {
         return Optional.ofNullable(this.automationName);
     }
@@ -53,6 +61,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The security automation description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -64,6 +76,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled")
     private @Nullable Output<Boolean> isEnabled;
 
+    /**
+     * @return Indicates whether the security automation is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
@@ -75,6 +91,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of the resource
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -86,6 +106,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location where the resource is stored
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -97,6 +121,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -108,6 +136,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scopes")
     private @Nullable Output<List<AutomationScopeArgs>> scopes;
 
+    /**
+     * @return A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
+     * 
+     */
     public Optional<Output<List<AutomationScopeArgs>>> scopes() {
         return Optional.ofNullable(this.scopes);
     }
@@ -119,6 +151,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sources")
     private @Nullable Output<List<AutomationSourceArgs>> sources;
 
+    /**
+     * @return A collection of the source event types which evaluate the security automation set of rules.
+     * 
+     */
     public Optional<Output<List<AutomationSourceArgs>>> sources() {
         return Optional.ofNullable(this.sources);
     }
@@ -130,6 +166,10 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A list of key value pairs that describe the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -167,104 +207,242 @@ public final class AutomationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AutomationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable Output<List<Object>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<Object> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Object... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param automationName The security automation name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationName(@Nullable Output<String> automationName) {
             $.automationName = automationName;
             return this;
         }
 
+        /**
+         * @param automationName The security automation name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationName(String automationName) {
             return automationName(Output.of(automationName));
         }
 
+        /**
+         * @param description The security automation description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The security automation description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param isEnabled Indicates whether the security automation is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Indicates whether the security automation is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param kind Kind of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Location where the resource is stored
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location where the resource is stored
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scopes A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(@Nullable Output<List<AutomationScopeArgs>> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(List<AutomationScopeArgs> scopes) {
             return scopes(Output.of(scopes));
         }
 
+        /**
+         * @param scopes A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(AutomationScopeArgs... scopes) {
             return scopes(List.of(scopes));
         }
 
+        /**
+         * @param sources A collection of the source event types which evaluate the security automation set of rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(@Nullable Output<List<AutomationSourceArgs>> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources A collection of the source event types which evaluate the security automation set of rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<AutomationSourceArgs> sources) {
             return sources(Output.of(sources));
         }
 
+        /**
+         * @param sources A collection of the source event types which evaluate the security automation set of rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(AutomationSourceArgs... sources) {
             return sources(List.of(sources));
         }
 
+        /**
+         * @param tags A list of key value pairs that describe the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key value pairs that describe the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

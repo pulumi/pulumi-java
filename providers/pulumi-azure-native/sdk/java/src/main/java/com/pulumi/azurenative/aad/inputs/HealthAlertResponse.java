@@ -23,6 +23,10 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Health Alert Id
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -34,6 +38,10 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="issue", required=true)
     private String issue;
 
+    /**
+     * @return Health Alert Issue
+     * 
+     */
     public String issue() {
         return this.issue;
     }
@@ -45,6 +53,10 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastDetected", required=true)
     private String lastDetected;
 
+    /**
+     * @return Health Alert Last Detected DateTime
+     * 
+     */
     public String lastDetected() {
         return this.lastDetected;
     }
@@ -56,6 +68,10 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Health Alert Name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -67,6 +83,10 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="raised", required=true)
     private String raised;
 
+    /**
+     * @return Health Alert Raised DateTime
+     * 
+     */
     public String raised() {
         return this.raised;
     }
@@ -78,6 +98,10 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resolutionUri", required=true)
     private String resolutionUri;
 
+    /**
+     * @return Health Alert TSG Link
+     * 
+     */
     public String resolutionUri() {
         return this.resolutionUri;
     }
@@ -89,6 +113,10 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="severity", required=true)
     private String severity;
 
+    /**
+     * @return Health Alert Severity
+     * 
+     */
     public String severity() {
         return this.severity;
     }
@@ -123,36 +151,78 @@ public final class HealthAlertResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HealthAlertResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Health Alert Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param issue Health Alert Issue
+         * 
+         * @return builder
+         * 
+         */
         public Builder issue(String issue) {
             $.issue = issue;
             return this;
         }
 
+        /**
+         * @param lastDetected Health Alert Last Detected DateTime
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastDetected(String lastDetected) {
             $.lastDetected = lastDetected;
             return this;
         }
 
+        /**
+         * @param name Health Alert Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param raised Health Alert Raised DateTime
+         * 
+         * @return builder
+         * 
+         */
         public Builder raised(String raised) {
             $.raised = raised;
             return this;
         }
 
+        /**
+         * @param resolutionUri Health Alert TSG Link
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolutionUri(String resolutionUri) {
             $.resolutionUri = resolutionUri;
             return this;
         }
 
+        /**
+         * @param severity Health Alert Severity
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             $.severity = severity;
             return this;

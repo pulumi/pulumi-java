@@ -27,6 +27,10 @@ public final class HubPublicIPAddressesResponse extends com.pulumi.resources.Inv
     @Import(name="addresses")
     private @Nullable List<AzureFirewallPublicIPAddressResponse> addresses;
 
+    /**
+     * @return The list of Public IP addresses associated with azure firewall or IP addresses to be retained.
+     * 
+     */
     public Optional<List<AzureFirewallPublicIPAddressResponse>> addresses() {
         return Optional.ofNullable(this.addresses);
     }
@@ -38,6 +42,10 @@ public final class HubPublicIPAddressesResponse extends com.pulumi.resources.Inv
     @Import(name="count")
     private @Nullable Integer count;
 
+    /**
+     * @return The number of Public IP addresses associated with azure firewall.
+     * 
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
@@ -67,15 +75,33 @@ public final class HubPublicIPAddressesResponse extends com.pulumi.resources.Inv
             $ = new HubPublicIPAddressesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addresses The list of Public IP addresses associated with azure firewall or IP addresses to be retained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addresses(@Nullable List<AzureFirewallPublicIPAddressResponse> addresses) {
             $.addresses = addresses;
             return this;
         }
 
+        /**
+         * @param addresses The list of Public IP addresses associated with azure firewall or IP addresses to be retained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addresses(AzureFirewallPublicIPAddressResponse... addresses) {
             return addresses(List.of(addresses));
         }
 
+        /**
+         * @param count The number of Public IP addresses associated with azure firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Integer count) {
             $.count = count;
             return this;

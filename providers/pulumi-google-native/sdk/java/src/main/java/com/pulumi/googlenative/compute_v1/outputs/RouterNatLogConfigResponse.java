@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class RouterNatLogConfigResponse {
     /**
-     * Indicates whether or not to export logs. This is false by default.
+     * @return Indicates whether or not to export logs. This is false by default.
      * 
      */
     private final Boolean enable;
     /**
-     * Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: - ERRORS_ONLY: Export logs only for connection failures. - TRANSLATIONS_ONLY: Export logs only for successful connections. - ALL: Export logs for all connections, successful and unsuccessful.
+     * @return Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: - ERRORS_ONLY: Export logs only for connection failures. - TRANSLATIONS_ONLY: Export logs only for successful connections. - ALL: Export logs for all connections, successful and unsuccessful.
      * 
      */
     private final String filter;
@@ -30,16 +30,16 @@ public final class RouterNatLogConfigResponse {
     }
 
     /**
-     * Indicates whether or not to export logs. This is false by default.
+     * @return Indicates whether or not to export logs. This is false by default.
      * 
-    */
+     */
     public Boolean enable() {
         return this.enable;
     }
     /**
-     * Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: - ERRORS_ONLY: Export logs only for connection failures. - TRANSLATIONS_ONLY: Export logs only for successful connections. - ALL: Export logs for all connections, successful and unsuccessful.
+     * @return Specify the desired filtering of logs on this NAT. If unspecified, logs are exported for all connections handled by this NAT. This option can take one of the following values: - ERRORS_ONLY: Export logs only for connection failures. - TRANSLATIONS_ONLY: Export logs only for successful connections. - ALL: Export logs for all connections, successful and unsuccessful.
      * 
-    */
+     */
     public String filter() {
         return this.filter;
     }

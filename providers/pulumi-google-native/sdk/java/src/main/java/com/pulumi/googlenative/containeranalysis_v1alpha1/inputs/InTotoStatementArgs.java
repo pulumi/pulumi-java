@@ -30,6 +30,10 @@ public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="predicateType")
     private @Nullable Output<String> predicateType;
 
+    /**
+     * @return &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
+     * 
+     */
     public Optional<Output<String>> predicateType() {
         return Optional.ofNullable(this.predicateType);
     }
@@ -41,6 +45,10 @@ public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="provenance")
     private @Nullable Output<InTotoProvenanceArgs> provenance;
 
+    /**
+     * @return provenance is a predicate of type intotoprovenance
+     * 
+     */
     public Optional<Output<InTotoProvenanceArgs>> provenance() {
         return Optional.ofNullable(this.provenance);
     }
@@ -52,6 +60,10 @@ public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="slsaProvenance")
     private @Nullable Output<SlsaProvenanceArgs> slsaProvenance;
 
+    /**
+     * @return slsa_provenance is a predicate of type slsaProvenance
+     * 
+     */
     public Optional<Output<SlsaProvenanceArgs>> slsaProvenance() {
         return Optional.ofNullable(this.slsaProvenance);
     }
@@ -63,6 +75,10 @@ public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="subject")
     private @Nullable Output<List<SubjectArgs>> subject;
 
+    /**
+     * @return subject is the subjects of the intoto statement
+     * 
+     */
     public Optional<Output<List<SubjectArgs>>> subject() {
         return Optional.ofNullable(this.subject);
     }
@@ -74,6 +90,10 @@ public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Always &#34;https://in-toto.io/Statement/v0.1&#34;.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -106,51 +126,117 @@ public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs
             $ = new InTotoStatementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param predicateType &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predicateType(@Nullable Output<String> predicateType) {
             $.predicateType = predicateType;
             return this;
         }
 
+        /**
+         * @param predicateType &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predicateType(String predicateType) {
             return predicateType(Output.of(predicateType));
         }
 
+        /**
+         * @param provenance provenance is a predicate of type intotoprovenance
+         * 
+         * @return builder
+         * 
+         */
         public Builder provenance(@Nullable Output<InTotoProvenanceArgs> provenance) {
             $.provenance = provenance;
             return this;
         }
 
+        /**
+         * @param provenance provenance is a predicate of type intotoprovenance
+         * 
+         * @return builder
+         * 
+         */
         public Builder provenance(InTotoProvenanceArgs provenance) {
             return provenance(Output.of(provenance));
         }
 
+        /**
+         * @param slsaProvenance slsa_provenance is a predicate of type slsaProvenance
+         * 
+         * @return builder
+         * 
+         */
         public Builder slsaProvenance(@Nullable Output<SlsaProvenanceArgs> slsaProvenance) {
             $.slsaProvenance = slsaProvenance;
             return this;
         }
 
+        /**
+         * @param slsaProvenance slsa_provenance is a predicate of type slsaProvenance
+         * 
+         * @return builder
+         * 
+         */
         public Builder slsaProvenance(SlsaProvenanceArgs slsaProvenance) {
             return slsaProvenance(Output.of(slsaProvenance));
         }
 
+        /**
+         * @param subject subject is the subjects of the intoto statement
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(@Nullable Output<List<SubjectArgs>> subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subject subject is the subjects of the intoto statement
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(List<SubjectArgs> subject) {
             return subject(Output.of(subject));
         }
 
+        /**
+         * @param subject subject is the subjects of the intoto statement
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(SubjectArgs... subject) {
             return subject(List.of(subject));
         }
 
+        /**
+         * @param type Always &#34;https://in-toto.io/Statement/v0.1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Always &#34;https://in-toto.io/Statement/v0.1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

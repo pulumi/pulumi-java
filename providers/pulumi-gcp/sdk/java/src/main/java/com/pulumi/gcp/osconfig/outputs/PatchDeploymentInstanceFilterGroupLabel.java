@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class PatchDeploymentInstanceFilterGroupLabel {
     /**
-     * Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
+     * @return Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
      * 
      */
     private final Map<String,String> labels;
@@ -22,9 +22,9 @@ public final class PatchDeploymentInstanceFilterGroupLabel {
     }
 
     /**
-     * Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
+     * @return Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }

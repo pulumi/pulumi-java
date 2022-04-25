@@ -19,6 +19,10 @@ public final class GetResourceCollectionArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceCollectionType", required=true)
     private ResourceCollectionType resourceCollectionType;
 
+    /**
+     * @return The type of ResourceCollection
+     * 
+     */
     public ResourceCollectionType resourceCollectionType() {
         return this.resourceCollectionType;
     }
@@ -47,6 +51,12 @@ public final class GetResourceCollectionArgs extends com.pulumi.resources.Invoke
             $ = new GetResourceCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceCollectionType The type of ResourceCollection
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceCollectionType(ResourceCollectionType resourceCollectionType) {
             $.resourceCollectionType = resourceCollectionType;
             return this;

@@ -21,6 +21,10 @@ public final class RegionSslPolicyWarningsItemResponse extends com.pulumi.resour
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -32,6 +36,10 @@ public final class RegionSslPolicyWarningsItemResponse extends com.pulumi.resour
     @Import(name="data", required=true)
     private List<RegionSslPolicyWarningsItemDataItemResponse> data;
 
+    /**
+     * @return Metadata about this warning in key: value format. For example: &#34;data&#34;: [ { &#34;key&#34;: &#34;scope&#34;, &#34;value&#34;: &#34;zones/us-east1-d&#34; }
+     * 
+     */
     public List<RegionSslPolicyWarningsItemDataItemResponse> data() {
         return this.data;
     }
@@ -43,6 +51,10 @@ public final class RegionSslPolicyWarningsItemResponse extends com.pulumi.resour
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return A human-readable description of the warning code.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -73,20 +85,44 @@ public final class RegionSslPolicyWarningsItemResponse extends com.pulumi.resour
             $ = new RegionSslPolicyWarningsItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param data Metadata about this warning in key: value format. For example: &#34;data&#34;: [ { &#34;key&#34;: &#34;scope&#34;, &#34;value&#34;: &#34;zones/us-east1-d&#34; }
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(List<RegionSslPolicyWarningsItemDataItemResponse> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data Metadata about this warning in key: value format. For example: &#34;data&#34;: [ { &#34;key&#34;: &#34;scope&#34;, &#34;value&#34;: &#34;zones/us-east1-d&#34; }
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(RegionSslPolicyWarningsItemDataItemResponse... data) {
             return data(List.of(data));
         }
 
+        /**
+         * @param message A human-readable description of the warning code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;

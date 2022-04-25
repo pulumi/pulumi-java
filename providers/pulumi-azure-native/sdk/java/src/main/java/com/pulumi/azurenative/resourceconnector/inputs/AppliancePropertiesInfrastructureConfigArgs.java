@@ -28,6 +28,10 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends com.pulum
     @Import(name="provider")
     private @Nullable Output<Either<String,Provider>> provider;
 
+    /**
+     * @return Information about the connected appliance.
+     * 
+     */
     public Optional<Output<Either<String,Provider>>> provider() {
         return Optional.ofNullable(this.provider);
     }
@@ -56,19 +60,43 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends com.pulum
             $ = new AppliancePropertiesInfrastructureConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param provider Information about the connected appliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(@Nullable Output<Either<String,Provider>> provider) {
             $.provider = provider;
             return this;
         }
 
+        /**
+         * @param provider Information about the connected appliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(Either<String,Provider> provider) {
             return provider(Output.of(provider));
         }
 
+        /**
+         * @param provider Information about the connected appliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(String provider) {
             return provider(Either.ofLeft(provider));
         }
 
+        /**
+         * @param provider Information about the connected appliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(Provider provider) {
             return provider(Either.ofRight(provider));
         }

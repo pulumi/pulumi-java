@@ -23,6 +23,10 @@ public final class ValidationOptionsResponse extends com.pulumi.resources.Invoke
     @Import(name="schemaValidation", required=true)
     private String schemaValidation;
 
+    /**
+     * @return Customize how deployment manager will validate the resource against schema errors.
+     * 
+     */
     public String schemaValidation() {
         return this.schemaValidation;
     }
@@ -34,6 +38,10 @@ public final class ValidationOptionsResponse extends com.pulumi.resources.Invoke
     @Import(name="undeclaredProperties", required=true)
     private String undeclaredProperties;
 
+    /**
+     * @return Specify what to do with extra properties when executing a request.
+     * 
+     */
     public String undeclaredProperties() {
         return this.undeclaredProperties;
     }
@@ -63,11 +71,23 @@ public final class ValidationOptionsResponse extends com.pulumi.resources.Invoke
             $ = new ValidationOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schemaValidation Customize how deployment manager will validate the resource against schema errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaValidation(String schemaValidation) {
             $.schemaValidation = schemaValidation;
             return this;
         }
 
+        /**
+         * @param undeclaredProperties Specify what to do with extra properties when executing a request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder undeclaredProperties(String undeclaredProperties) {
             $.undeclaredProperties = undeclaredProperties;
             return this;

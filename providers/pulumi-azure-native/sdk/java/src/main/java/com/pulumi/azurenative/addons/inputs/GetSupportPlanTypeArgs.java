@@ -19,6 +19,10 @@ public final class GetSupportPlanTypeArgs extends com.pulumi.resources.InvokeArg
     @Import(name="planTypeName", required=true)
     private String planTypeName;
 
+    /**
+     * @return The Canonical support plan type.
+     * 
+     */
     public String planTypeName() {
         return this.planTypeName;
     }
@@ -30,6 +34,10 @@ public final class GetSupportPlanTypeArgs extends com.pulumi.resources.InvokeArg
     @Import(name="providerName", required=true)
     private String providerName;
 
+    /**
+     * @return The support plan type. For now the only valid type is &#34;canonical&#34;.
+     * 
+     */
     public String providerName() {
         return this.providerName;
     }
@@ -59,11 +67,23 @@ public final class GetSupportPlanTypeArgs extends com.pulumi.resources.InvokeArg
             $ = new GetSupportPlanTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param planTypeName The Canonical support plan type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planTypeName(String planTypeName) {
             $.planTypeName = planTypeName;
             return this;
         }
 
+        /**
+         * @param providerName The support plan type. For now the only valid type is &#34;canonical&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(String providerName) {
             $.providerName = providerName;
             return this;

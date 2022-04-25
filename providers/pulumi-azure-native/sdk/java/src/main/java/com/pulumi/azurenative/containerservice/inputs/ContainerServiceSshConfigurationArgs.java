@@ -25,6 +25,10 @@ public final class ContainerServiceSshConfigurationArgs extends com.pulumi.resou
     @Import(name="publicKeys", required=true)
     private Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys;
 
+    /**
+     * @return The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
+     * 
+     */
     public Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys() {
         return this.publicKeys;
     }
@@ -53,15 +57,33 @@ public final class ContainerServiceSshConfigurationArgs extends com.pulumi.resou
             $ = new ContainerServiceSshConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicKeys The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys) {
             $.publicKeys = publicKeys;
             return this;
         }
 
+        /**
+         * @param publicKeys The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(List<ContainerServiceSshPublicKeyArgs> publicKeys) {
             return publicKeys(Output.of(publicKeys));
         }
 
+        /**
+         * @param publicKeys The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(ContainerServiceSshPublicKeyArgs... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }

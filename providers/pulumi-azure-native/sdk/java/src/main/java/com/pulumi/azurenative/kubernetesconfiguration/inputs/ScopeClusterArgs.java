@@ -26,6 +26,10 @@ public final class ScopeClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="releaseNamespace")
     private @Nullable Output<String> releaseNamespace;
 
+    /**
+     * @return Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created
+     * 
+     */
     public Optional<Output<String>> releaseNamespace() {
         return Optional.ofNullable(this.releaseNamespace);
     }
@@ -54,11 +58,23 @@ public final class ScopeClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScopeClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param releaseNamespace Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseNamespace(@Nullable Output<String> releaseNamespace) {
             $.releaseNamespace = releaseNamespace;
             return this;
         }
 
+        /**
+         * @param releaseNamespace Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseNamespace(String releaseNamespace) {
             return releaseNamespace(Output.of(releaseNamespace));
         }

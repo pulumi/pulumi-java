@@ -23,6 +23,10 @@ public final class IscsiLunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="managedDiskAzureResourceId", required=true)
     private String managedDiskAzureResourceId;
 
+    /**
+     * @return Azure Resource ID of the Managed Disk.
+     * 
+     */
     public String managedDiskAzureResourceId() {
         return this.managedDiskAzureResourceId;
     }
@@ -34,6 +38,10 @@ public final class IscsiLunResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return User defined name for iSCSI LUN; example: &#34;lun0&#34;
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class IscsiLunResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IscsiLunResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managedDiskAzureResourceId Azure Resource ID of the Managed Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDiskAzureResourceId(String managedDiskAzureResourceId) {
             $.managedDiskAzureResourceId = managedDiskAzureResourceId;
             return this;
         }
 
+        /**
+         * @param name User defined name for iSCSI LUN; example: &#34;lun0&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -24,6 +24,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -35,6 +39,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Share description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareKind")
     private @Nullable Output<Either<String,ShareKind>> shareKind;
 
+    /**
+     * @return Share kind.
+     * 
+     */
     public Optional<Output<Either<String,ShareKind>>> shareKind() {
         return Optional.ofNullable(this.shareKind);
     }
@@ -68,6 +84,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareName")
     private @Nullable Output<String> shareName;
 
+    /**
+     * @return The name of the share.
+     * 
+     */
     public Optional<Output<String>> shareName() {
         return Optional.ofNullable(this.shareName);
     }
@@ -79,6 +99,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="terms")
     private @Nullable Output<String> terms;
 
+    /**
+     * @return Share terms.
+     * 
+     */
     public Optional<Output<String>> terms() {
         return Optional.ofNullable(this.terms);
     }
@@ -112,64 +136,148 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ShareArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param description Share description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Share description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param shareKind Share kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareKind(@Nullable Output<Either<String,ShareKind>> shareKind) {
             $.shareKind = shareKind;
             return this;
         }
 
+        /**
+         * @param shareKind Share kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareKind(Either<String,ShareKind> shareKind) {
             return shareKind(Output.of(shareKind));
         }
 
+        /**
+         * @param shareKind Share kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareKind(String shareKind) {
             return shareKind(Either.ofLeft(shareKind));
         }
 
+        /**
+         * @param shareKind Share kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareKind(ShareKind shareKind) {
             return shareKind(Either.ofRight(shareKind));
         }
 
+        /**
+         * @param shareName The name of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(@Nullable Output<String> shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param shareName The name of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             return shareName(Output.of(shareName));
         }
 
+        /**
+         * @param terms Share terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terms(@Nullable Output<String> terms) {
             $.terms = terms;
             return this;
         }
 
+        /**
+         * @param terms Share terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terms(String terms) {
             return terms(Output.of(terms));
         }

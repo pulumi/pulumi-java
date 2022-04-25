@@ -13,46 +13,46 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LaunchTemplateBlockDeviceMappingEbs {
     /**
-     * Whether the volume should be destroyed on instance termination. Defaults to `false` if not set. See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
+     * @return Whether the volume should be destroyed on instance termination. Defaults to `false` if not set. See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
      * 
      */
     private final @Nullable String deleteOnTermination;
     /**
-     * Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
+     * @return Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
      * on the volume (Default: `false`). Cannot be used with `snapshot_id`.
      * 
      */
     private final @Nullable String encrypted;
     /**
-     * The amount of provisioned
+     * @return The amount of provisioned
      * [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
      * This must be set with a `volume_type` of `&#34;io1/io2&#34;`.
      * 
      */
     private final @Nullable Integer iops;
     /**
-     * The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
+     * @return The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
      * `encrypted` must be set to `true` when this is set.
      * 
      */
     private final @Nullable String kmsKeyId;
     /**
-     * The Snapshot ID to mount.
+     * @return The Snapshot ID to mount.
      * 
      */
     private final @Nullable String snapshotId;
     /**
-     * The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g., 500), with a maximum of 1,000 MiB/s.
+     * @return The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g., 500), with a maximum of 1,000 MiB/s.
      * 
      */
     private final @Nullable Integer throughput;
     /**
-     * The size of the volume in gigabytes.
+     * @return The size of the volume in gigabytes.
      * 
      */
     private final @Nullable Integer volumeSize;
     /**
-     * The volume type. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
+     * @return The volume type. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
      * 
      */
     private final @Nullable String volumeType;
@@ -78,62 +78,62 @@ public final class LaunchTemplateBlockDeviceMappingEbs {
     }
 
     /**
-     * Whether the volume should be destroyed on instance termination. Defaults to `false` if not set. See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
+     * @return Whether the volume should be destroyed on instance termination. Defaults to `false` if not set. See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
      * 
-    */
+     */
     public Optional<String> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
     /**
-     * Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
+     * @return Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
      * on the volume (Default: `false`). Cannot be used with `snapshot_id`.
      * 
-    */
+     */
     public Optional<String> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
     /**
-     * The amount of provisioned
+     * @return The amount of provisioned
      * [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
      * This must be set with a `volume_type` of `&#34;io1/io2&#34;`.
      * 
-    */
+     */
     public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
-     * The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
+     * @return The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
      * `encrypted` must be set to `true` when this is set.
      * 
-    */
+     */
     public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
-     * The Snapshot ID to mount.
+     * @return The Snapshot ID to mount.
      * 
-    */
+     */
     public Optional<String> snapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
     /**
-     * The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g., 500), with a maximum of 1,000 MiB/s.
+     * @return The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g., 500), with a maximum of 1,000 MiB/s.
      * 
-    */
+     */
     public Optional<Integer> throughput() {
         return Optional.ofNullable(this.throughput);
     }
     /**
-     * The size of the volume in gigabytes.
+     * @return The size of the volume in gigabytes.
      * 
-    */
+     */
     public Optional<Integer> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
     /**
-     * The volume type. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
+     * @return The volume type. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
      * 
-    */
+     */
     public Optional<String> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }

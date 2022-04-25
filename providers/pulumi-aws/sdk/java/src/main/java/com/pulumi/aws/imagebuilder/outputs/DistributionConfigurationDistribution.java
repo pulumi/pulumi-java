@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DistributionConfigurationDistribution {
     /**
-     * Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.
+     * @return Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.
      * 
      */
     private final @Nullable DistributionConfigurationDistributionAmiDistributionConfiguration amiDistributionConfiguration;
     /**
-     * Configuration block with container distribution settings. Detailed below.
+     * @return Configuration block with container distribution settings. Detailed below.
      * 
      */
     private final @Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration;
     /**
-     * Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
+     * @return Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
      * 
      */
     private final @Nullable List<String> licenseConfigurationArns;
     /**
-     * AWS Region for the distribution.
+     * @return AWS Region for the distribution.
      * 
      */
     private final String region;
@@ -48,30 +48,30 @@ public final class DistributionConfigurationDistribution {
     }
 
     /**
-     * Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.
+     * @return Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.
      * 
-    */
+     */
     public Optional<DistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfiguration() {
         return Optional.ofNullable(this.amiDistributionConfiguration);
     }
     /**
-     * Configuration block with container distribution settings. Detailed below.
+     * @return Configuration block with container distribution settings. Detailed below.
      * 
-    */
+     */
     public Optional<DistributionConfigurationDistributionContainerDistributionConfiguration> containerDistributionConfiguration() {
         return Optional.ofNullable(this.containerDistributionConfiguration);
     }
     /**
-     * Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
+     * @return Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
      * 
-    */
+     */
     public List<String> licenseConfigurationArns() {
         return this.licenseConfigurationArns == null ? List.of() : this.licenseConfigurationArns;
     }
     /**
-     * AWS Region for the distribution.
+     * @return AWS Region for the distribution.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }

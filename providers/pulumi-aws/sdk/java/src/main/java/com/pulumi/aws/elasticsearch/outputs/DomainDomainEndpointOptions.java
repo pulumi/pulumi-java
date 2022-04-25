@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DomainDomainEndpointOptions {
     /**
-     * Fully qualified domain for your custom endpoint.
+     * @return Fully qualified domain for your custom endpoint.
      * 
      */
     private final @Nullable String customEndpoint;
     /**
-     * ACM certificate ARN for your custom endpoint.
+     * @return ACM certificate ARN for your custom endpoint.
      * 
      */
     private final @Nullable String customEndpointCertificateArn;
     /**
-     * Whether to enable custom endpoint for the Elasticsearch domain.
+     * @return Whether to enable custom endpoint for the Elasticsearch domain.
      * 
      */
     private final @Nullable Boolean customEndpointEnabled;
     /**
-     * Whether or not to require HTTPS. Defaults to `true`.
+     * @return Whether or not to require HTTPS. Defaults to `true`.
      * 
      */
     private final @Nullable Boolean enforceHttps;
@@ -49,30 +49,30 @@ public final class DomainDomainEndpointOptions {
     }
 
     /**
-     * Fully qualified domain for your custom endpoint.
+     * @return Fully qualified domain for your custom endpoint.
      * 
-    */
+     */
     public Optional<String> customEndpoint() {
         return Optional.ofNullable(this.customEndpoint);
     }
     /**
-     * ACM certificate ARN for your custom endpoint.
+     * @return ACM certificate ARN for your custom endpoint.
      * 
-    */
+     */
     public Optional<String> customEndpointCertificateArn() {
         return Optional.ofNullable(this.customEndpointCertificateArn);
     }
     /**
-     * Whether to enable custom endpoint for the Elasticsearch domain.
+     * @return Whether to enable custom endpoint for the Elasticsearch domain.
      * 
-    */
+     */
     public Optional<Boolean> customEndpointEnabled() {
         return Optional.ofNullable(this.customEndpointEnabled);
     }
     /**
-     * Whether or not to require HTTPS. Defaults to `true`.
+     * @return Whether or not to require HTTPS. Defaults to `true`.
      * 
-    */
+     */
     public Optional<Boolean> enforceHttps() {
         return Optional.ofNullable(this.enforceHttps);
     }

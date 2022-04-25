@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HostNameResponse {
     /**
-     * Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
+     * @return Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
      * 
      */
     private final @Nullable String azureResourceName;
     /**
-     * Type of the Azure resource the hostname is assigned to.
+     * @return Type of the Azure resource the hostname is assigned to.
      * 
      */
     private final @Nullable String azureResourceType;
     /**
-     * Type of the DNS record.
+     * @return Type of the DNS record.
      * 
      */
     private final @Nullable String customHostNameDnsRecordType;
     /**
-     * Type of the hostname.
+     * @return Type of the hostname.
      * 
      */
     private final @Nullable String hostNameType;
     /**
-     * Name of the hostname.
+     * @return Name of the hostname.
      * 
      */
     private final @Nullable String name;
     /**
-     * List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
+     * @return List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
      * 
      */
     private final @Nullable List<String> siteNames;
@@ -60,44 +60,44 @@ public final class HostNameResponse {
     }
 
     /**
-     * Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
+     * @return Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
      * 
-    */
+     */
     public Optional<String> azureResourceName() {
         return Optional.ofNullable(this.azureResourceName);
     }
     /**
-     * Type of the Azure resource the hostname is assigned to.
+     * @return Type of the Azure resource the hostname is assigned to.
      * 
-    */
+     */
     public Optional<String> azureResourceType() {
         return Optional.ofNullable(this.azureResourceType);
     }
     /**
-     * Type of the DNS record.
+     * @return Type of the DNS record.
      * 
-    */
+     */
     public Optional<String> customHostNameDnsRecordType() {
         return Optional.ofNullable(this.customHostNameDnsRecordType);
     }
     /**
-     * Type of the hostname.
+     * @return Type of the hostname.
      * 
-    */
+     */
     public Optional<String> hostNameType() {
         return Optional.ofNullable(this.hostNameType);
     }
     /**
-     * Name of the hostname.
+     * @return Name of the hostname.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
+     * @return List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
      * 
-    */
+     */
     public List<String> siteNames() {
         return this.siteNames == null ? List.of() : this.siteNames;
     }

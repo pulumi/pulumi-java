@@ -28,6 +28,10 @@ public final class NatGatewaySkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<Either<String,NatGatewaySkuName>> name;
 
+    /**
+     * @return Name of Nat Gateway SKU.
+     * 
+     */
     public Optional<Output<Either<String,NatGatewaySkuName>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,19 +60,43 @@ public final class NatGatewaySkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NatGatewaySkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of Nat Gateway SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,NatGatewaySkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of Nat Gateway SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,NatGatewaySkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Name of Nat Gateway SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Name of Nat Gateway SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(NatGatewaySkuName name) {
             return name(Either.ofRight(name));
         }

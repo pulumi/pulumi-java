@@ -26,6 +26,10 @@ public final class ConfigurationProfilePreferencePropertiesResponse extends com.
     @Import(name="antiMalware")
     private @Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware;
 
+    /**
+     * @return The custom preferences for Azure Antimalware.
+     * 
+     */
     public Optional<ConfigurationProfilePreferenceAntiMalwareResponse> antiMalware() {
         return Optional.ofNullable(this.antiMalware);
     }
@@ -37,6 +41,10 @@ public final class ConfigurationProfilePreferencePropertiesResponse extends com.
     @Import(name="vmBackup")
     private @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup;
 
+    /**
+     * @return The custom preferences for Azure VM Backup.
+     * 
+     */
     public Optional<ConfigurationProfilePreferenceVmBackupResponse> vmBackup() {
         return Optional.ofNullable(this.vmBackup);
     }
@@ -66,11 +74,23 @@ public final class ConfigurationProfilePreferencePropertiesResponse extends com.
             $ = new ConfigurationProfilePreferencePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param antiMalware The custom preferences for Azure Antimalware.
+         * 
+         * @return builder
+         * 
+         */
         public Builder antiMalware(@Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware) {
             $.antiMalware = antiMalware;
             return this;
         }
 
+        /**
+         * @param vmBackup The custom preferences for Azure VM Backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmBackup(@Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup) {
             $.vmBackup = vmBackup;
             return this;

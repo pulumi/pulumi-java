@@ -24,6 +24,10 @@ public final class VirtualGatewaySpecListenerTlsCertificateGetArgs extends com.p
     @Import(name="acm")
     private @Nullable Output<VirtualGatewaySpecListenerTlsCertificateAcmGetArgs> acm;
 
+    /**
+     * @return An AWS Certificate Manager (ACM) certificate.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecListenerTlsCertificateAcmGetArgs>> acm() {
         return Optional.ofNullable(this.acm);
     }
@@ -35,6 +39,10 @@ public final class VirtualGatewaySpecListenerTlsCertificateGetArgs extends com.p
     @Import(name="file")
     private @Nullable Output<VirtualGatewaySpecListenerTlsCertificateFileGetArgs> file;
 
+    /**
+     * @return A local file certificate.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecListenerTlsCertificateFileGetArgs>> file() {
         return Optional.ofNullable(this.file);
     }
@@ -46,6 +54,10 @@ public final class VirtualGatewaySpecListenerTlsCertificateGetArgs extends com.p
     @Import(name="sds")
     private @Nullable Output<VirtualGatewaySpecListenerTlsCertificateSdsGetArgs> sds;
 
+    /**
+     * @return A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecListenerTlsCertificateSdsGetArgs>> sds() {
         return Optional.ofNullable(this.sds);
     }
@@ -76,29 +88,65 @@ public final class VirtualGatewaySpecListenerTlsCertificateGetArgs extends com.p
             $ = new VirtualGatewaySpecListenerTlsCertificateGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acm An AWS Certificate Manager (ACM) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acm(@Nullable Output<VirtualGatewaySpecListenerTlsCertificateAcmGetArgs> acm) {
             $.acm = acm;
             return this;
         }
 
+        /**
+         * @param acm An AWS Certificate Manager (ACM) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acm(VirtualGatewaySpecListenerTlsCertificateAcmGetArgs acm) {
             return acm(Output.of(acm));
         }
 
+        /**
+         * @param file A local file certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(@Nullable Output<VirtualGatewaySpecListenerTlsCertificateFileGetArgs> file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param file A local file certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(VirtualGatewaySpecListenerTlsCertificateFileGetArgs file) {
             return file(Output.of(file));
         }
 
+        /**
+         * @param sds A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sds(@Nullable Output<VirtualGatewaySpecListenerTlsCertificateSdsGetArgs> sds) {
             $.sds = sds;
             return this;
         }
 
+        /**
+         * @param sds A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sds(VirtualGatewaySpecListenerTlsCertificateSdsGetArgs sds) {
             return sds(Output.of(sds));
         }

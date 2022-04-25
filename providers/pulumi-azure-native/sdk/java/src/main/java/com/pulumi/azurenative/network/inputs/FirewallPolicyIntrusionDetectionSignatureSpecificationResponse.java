@@ -25,6 +25,10 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Signature id.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return The signature state.
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -65,11 +73,23 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
             $ = new FirewallPolicyIntrusionDetectionSignatureSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Signature id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param mode The signature state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;

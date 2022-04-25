@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2EntityIdResponse {
     /**
-     * Composite key indicating which field contains the entity identifier.
+     * @return Composite key indicating which field contains the entity identifier.
      * 
      */
     private final GooglePrivacyDlpV2FieldIdResponse field;
@@ -21,9 +21,9 @@ public final class GooglePrivacyDlpV2EntityIdResponse {
     }
 
     /**
-     * Composite key indicating which field contains the entity identifier.
+     * @return Composite key indicating which field contains the entity identifier.
      * 
-    */
+     */
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }

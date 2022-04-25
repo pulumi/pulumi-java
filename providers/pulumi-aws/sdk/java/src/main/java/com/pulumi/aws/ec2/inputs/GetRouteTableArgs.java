@@ -24,6 +24,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
     private @Nullable List<GetRouteTableFilter> filters;
 
+    /**
+     * @return Configuration block. Detailed below.
+     * 
+     */
     public Optional<List<GetRouteTableFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -35,6 +39,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="gatewayId")
     private @Nullable String gatewayId;
 
+    /**
+     * @return ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+     * 
+     */
     public Optional<String> gatewayId() {
         return Optional.ofNullable(this.gatewayId);
     }
@@ -46,6 +54,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="routeTableId")
     private @Nullable String routeTableId;
 
+    /**
+     * @return ID of the specific Route Table to retrieve.
+     * 
+     */
     public Optional<String> routeTableId() {
         return Optional.ofNullable(this.routeTableId);
     }
@@ -57,6 +69,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnetId")
     private @Nullable String subnetId;
 
+    /**
+     * @return ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
+     * 
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -68,6 +84,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Map of tags, each pair of which must exactly match a pair on the desired Route Table.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -79,6 +99,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpcId")
     private @Nullable String vpcId;
 
+    /**
+     * @return ID of the VPC that the desired Route Table belongs to.
+     * 
+     */
     public Optional<String> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -112,35 +136,77 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetRouteTableFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetRouteTableFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param gatewayId ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(@Nullable String gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
 
+        /**
+         * @param routeTableId ID of the specific Route Table to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableId(@Nullable String routeTableId) {
             $.routeTableId = routeTableId;
             return this;
         }
 
+        /**
+         * @param subnetId ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable String subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param tags Map of tags, each pair of which must exactly match a pair on the desired Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param vpcId ID of the VPC that the desired Route Table belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable String vpcId) {
             $.vpcId = vpcId;
             return this;

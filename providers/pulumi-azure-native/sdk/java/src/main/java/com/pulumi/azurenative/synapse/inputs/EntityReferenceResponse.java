@@ -25,6 +25,10 @@ public final class EntityReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="referenceName")
     private @Nullable String referenceName;
 
+    /**
+     * @return The name of this referenced entity.
+     * 
+     */
     public Optional<String> referenceName() {
         return Optional.ofNullable(this.referenceName);
     }
@@ -36,6 +40,10 @@ public final class EntityReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of this referenced entity.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -65,11 +73,23 @@ public final class EntityReferenceResponse extends com.pulumi.resources.InvokeAr
             $ = new EntityReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param referenceName The name of this referenced entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(@Nullable String referenceName) {
             $.referenceName = referenceName;
             return this;
         }
 
+        /**
+         * @param type The type of this referenced entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

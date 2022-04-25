@@ -80,6 +80,10 @@ public final class DataQualityJobDefinitionArgs extends com.pulumi.resources.Res
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -98,6 +102,10 @@ public final class DataQualityJobDefinitionArgs extends com.pulumi.resources.Res
     @Import(name="tags")
     private @Nullable Output<List<DataQualityJobDefinitionTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<DataQualityJobDefinitionTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -198,11 +206,23 @@ public final class DataQualityJobDefinitionArgs extends com.pulumi.resources.Res
             return networkConfig(Output.of(networkConfig));
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
@@ -216,15 +236,33 @@ public final class DataQualityJobDefinitionArgs extends com.pulumi.resources.Res
             return stoppingCondition(Output.of(stoppingCondition));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DataQualityJobDefinitionTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DataQualityJobDefinitionTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DataQualityJobDefinitionTagArgs... tags) {
             return tags(List.of(tags));
         }

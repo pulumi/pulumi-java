@@ -21,6 +21,11 @@ public final class ServiceTemplateSpecContainerEnvValueFromArgs extends com.pulu
     @Import(name="secretKeyRef", required=true)
     private Output<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> secretKeyRef;
 
+    /**
+     * @return Selects a key (version) of a secret in Secret Manager.
+     * Structure is documented below.
+     * 
+     */
     public Output<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> secretKeyRef() {
         return this.secretKeyRef;
     }
@@ -49,11 +54,25 @@ public final class ServiceTemplateSpecContainerEnvValueFromArgs extends com.pulu
             $ = new ServiceTemplateSpecContainerEnvValueFromArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secretKeyRef Selects a key (version) of a secret in Secret Manager.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKeyRef(Output<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> secretKeyRef) {
             $.secretKeyRef = secretKeyRef;
             return this;
         }
 
+        /**
+         * @param secretKeyRef Selects a key (version) of a secret in Secret Manager.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKeyRef(ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs secretKeyRef) {
             return secretKeyRef(Output.of(secretKeyRef));
         }

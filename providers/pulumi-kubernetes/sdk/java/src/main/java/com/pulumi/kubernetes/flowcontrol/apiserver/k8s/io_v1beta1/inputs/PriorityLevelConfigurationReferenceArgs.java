@@ -24,6 +24,10 @@ public final class PriorityLevelConfigurationReferenceArgs extends com.pulumi.re
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return `name` is the name of the priority level configuration being referenced Required.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -52,11 +56,23 @@ public final class PriorityLevelConfigurationReferenceArgs extends com.pulumi.re
             $ = new PriorityLevelConfigurationReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name `name` is the name of the priority level configuration being referenced Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name `name` is the name of the priority level configuration being referenced Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

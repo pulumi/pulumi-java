@@ -28,6 +28,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="customDnsConfigs")
     private @Nullable Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs;
 
+    /**
+     * @return An array of custom dns configurations.
+     * 
+     */
     public Optional<Output<List<CustomDnsConfigPropertiesFormatArgs>>> customDnsConfigs() {
         return Optional.ofNullable(this.customDnsConfigs);
     }
@@ -39,6 +43,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="extendedLocation")
     private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
+    /**
+     * @return The extended location of the load balancer.
+     * 
+     */
     public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -50,6 +58,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -61,6 +73,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -72,6 +88,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="manualPrivateLinkServiceConnections")
     private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
+    /**
+     * @return A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
+     * 
+     */
     public Optional<Output<List<PrivateLinkServiceConnectionArgs>>> manualPrivateLinkServiceConnections() {
         return Optional.ofNullable(this.manualPrivateLinkServiceConnections);
     }
@@ -83,6 +103,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="privateEndpointName")
     private @Nullable Output<String> privateEndpointName;
 
+    /**
+     * @return The name of the private endpoint.
+     * 
+     */
     public Optional<Output<String>> privateEndpointName() {
         return Optional.ofNullable(this.privateEndpointName);
     }
@@ -94,6 +118,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="privateLinkServiceConnections")
     private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
 
+    /**
+     * @return A grouping of information about the connection to the remote resource.
+     * 
+     */
     public Optional<Output<List<PrivateLinkServiceConnectionArgs>>> privateLinkServiceConnections() {
         return Optional.ofNullable(this.privateLinkServiceConnections);
     }
@@ -105,6 +133,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -116,6 +148,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="subnet")
     private @Nullable Output<SubnetArgs> subnet;
 
+    /**
+     * @return The ID of the subnet from which the private IP will be allocated.
+     * 
+     */
     public Optional<Output<SubnetArgs>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -127,6 +163,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -164,104 +204,242 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
             $ = new PrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customDnsConfigs An array of custom dns configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDnsConfigs(@Nullable Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs) {
             $.customDnsConfigs = customDnsConfigs;
             return this;
         }
 
+        /**
+         * @param customDnsConfigs An array of custom dns configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDnsConfigs(List<CustomDnsConfigPropertiesFormatArgs> customDnsConfigs) {
             return customDnsConfigs(Output.of(customDnsConfigs));
         }
 
+        /**
+         * @param customDnsConfigs An array of custom dns configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDnsConfigs(CustomDnsConfigPropertiesFormatArgs... customDnsConfigs) {
             return customDnsConfigs(List.of(customDnsConfigs));
         }
 
+        /**
+         * @param extendedLocation The extended location of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param extendedLocation The extended location of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
             return extendedLocation(Output.of(extendedLocation));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
             $.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(Output.of(manualPrivateLinkServiceConnections));
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionArgs... manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
         }
 
+        /**
+         * @param privateEndpointName The name of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointName(@Nullable Output<String> privateEndpointName) {
             $.privateEndpointName = privateEndpointName;
             return this;
         }
 
+        /**
+         * @param privateEndpointName The name of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointName(String privateEndpointName) {
             return privateEndpointName(Output.of(privateEndpointName));
         }
 
+        /**
+         * @param privateLinkServiceConnections A grouping of information about the connection to the remote resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections) {
             $.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnections A grouping of information about the connection to the remote resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnections(List<PrivateLinkServiceConnectionArgs> privateLinkServiceConnections) {
             return privateLinkServiceConnections(Output.of(privateLinkServiceConnections));
         }
 
+        /**
+         * @param privateLinkServiceConnections A grouping of information about the connection to the remote resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnections(PrivateLinkServiceConnectionArgs... privateLinkServiceConnections) {
             return privateLinkServiceConnections(List.of(privateLinkServiceConnections));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param subnet The ID of the subnet from which the private IP will be allocated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet The ID of the subnet from which the private IP will be allocated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(SubnetArgs subnet) {
             return subnet(Output.of(subnet));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

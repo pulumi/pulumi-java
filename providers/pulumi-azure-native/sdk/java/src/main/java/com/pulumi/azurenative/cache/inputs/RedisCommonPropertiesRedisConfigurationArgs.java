@@ -26,6 +26,10 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends com.pulum
     @Import(name="aofStorageConnectionString0")
     private @Nullable Output<String> aofStorageConnectionString0;
 
+    /**
+     * @return First storage account connection string
+     * 
+     */
     public Optional<Output<String>> aofStorageConnectionString0() {
         return Optional.ofNullable(this.aofStorageConnectionString0);
     }
@@ -37,6 +41,10 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends com.pulum
     @Import(name="aofStorageConnectionString1")
     private @Nullable Output<String> aofStorageConnectionString1;
 
+    /**
+     * @return Second storage account connection string
+     * 
+     */
     public Optional<Output<String>> aofStorageConnectionString1() {
         return Optional.ofNullable(this.aofStorageConnectionString1);
     }
@@ -48,6 +56,10 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends com.pulum
     @Import(name="maxfragmentationmemoryReserved")
     private @Nullable Output<String> maxfragmentationmemoryReserved;
 
+    /**
+     * @return Value in megabytes reserved for fragmentation per shard
+     * 
+     */
     public Optional<Output<String>> maxfragmentationmemoryReserved() {
         return Optional.ofNullable(this.maxfragmentationmemoryReserved);
     }
@@ -59,6 +71,10 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends com.pulum
     @Import(name="maxmemoryDelta")
     private @Nullable Output<String> maxmemoryDelta;
 
+    /**
+     * @return Value in megabytes reserved for non-cache usage per shard e.g. failover.
+     * 
+     */
     public Optional<Output<String>> maxmemoryDelta() {
         return Optional.ofNullable(this.maxmemoryDelta);
     }
@@ -70,6 +86,10 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends com.pulum
     @Import(name="maxmemoryPolicy")
     private @Nullable Output<String> maxmemoryPolicy;
 
+    /**
+     * @return The eviction strategy used when your data won&#39;t fit within its memory limit.
+     * 
+     */
     public Optional<Output<String>> maxmemoryPolicy() {
         return Optional.ofNullable(this.maxmemoryPolicy);
     }
@@ -81,6 +101,10 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends com.pulum
     @Import(name="maxmemoryReserved")
     private @Nullable Output<String> maxmemoryReserved;
 
+    /**
+     * @return Value in megabytes reserved for non-cache usage per shard e.g. failover.
+     * 
+     */
     public Optional<Output<String>> maxmemoryReserved() {
         return Optional.ofNullable(this.maxmemoryReserved);
     }
@@ -92,6 +116,10 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends com.pulum
     @Import(name="rdbBackupEnabled")
     private @Nullable Output<String> rdbBackupEnabled;
 
+    /**
+     * @return Specifies whether the rdb backup is enabled
+     * 
+     */
     public Optional<Output<String>> rdbBackupEnabled() {
         return Optional.ofNullable(this.rdbBackupEnabled);
     }
@@ -103,6 +131,10 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends com.pulum
     @Import(name="rdbBackupFrequency")
     private @Nullable Output<String> rdbBackupFrequency;
 
+    /**
+     * @return Specifies the frequency for creating rdb backup
+     * 
+     */
     public Optional<Output<String>> rdbBackupFrequency() {
         return Optional.ofNullable(this.rdbBackupFrequency);
     }
@@ -114,6 +146,10 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends com.pulum
     @Import(name="rdbBackupMaxSnapshotCount")
     private @Nullable Output<String> rdbBackupMaxSnapshotCount;
 
+    /**
+     * @return Specifies the maximum number of snapshots for rdb backup
+     * 
+     */
     public Optional<Output<String>> rdbBackupMaxSnapshotCount() {
         return Optional.ofNullable(this.rdbBackupMaxSnapshotCount);
     }
@@ -125,6 +161,10 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends com.pulum
     @Import(name="rdbStorageConnectionString")
     private @Nullable Output<String> rdbStorageConnectionString;
 
+    /**
+     * @return The storage account connection string for storing rdb file
+     * 
+     */
     public Optional<Output<String>> rdbStorageConnectionString() {
         return Optional.ofNullable(this.rdbStorageConnectionString);
     }
@@ -162,92 +202,212 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends com.pulum
             $ = new RedisCommonPropertiesRedisConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aofStorageConnectionString0 First storage account connection string
+         * 
+         * @return builder
+         * 
+         */
         public Builder aofStorageConnectionString0(@Nullable Output<String> aofStorageConnectionString0) {
             $.aofStorageConnectionString0 = aofStorageConnectionString0;
             return this;
         }
 
+        /**
+         * @param aofStorageConnectionString0 First storage account connection string
+         * 
+         * @return builder
+         * 
+         */
         public Builder aofStorageConnectionString0(String aofStorageConnectionString0) {
             return aofStorageConnectionString0(Output.of(aofStorageConnectionString0));
         }
 
+        /**
+         * @param aofStorageConnectionString1 Second storage account connection string
+         * 
+         * @return builder
+         * 
+         */
         public Builder aofStorageConnectionString1(@Nullable Output<String> aofStorageConnectionString1) {
             $.aofStorageConnectionString1 = aofStorageConnectionString1;
             return this;
         }
 
+        /**
+         * @param aofStorageConnectionString1 Second storage account connection string
+         * 
+         * @return builder
+         * 
+         */
         public Builder aofStorageConnectionString1(String aofStorageConnectionString1) {
             return aofStorageConnectionString1(Output.of(aofStorageConnectionString1));
         }
 
+        /**
+         * @param maxfragmentationmemoryReserved Value in megabytes reserved for fragmentation per shard
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxfragmentationmemoryReserved(@Nullable Output<String> maxfragmentationmemoryReserved) {
             $.maxfragmentationmemoryReserved = maxfragmentationmemoryReserved;
             return this;
         }
 
+        /**
+         * @param maxfragmentationmemoryReserved Value in megabytes reserved for fragmentation per shard
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxfragmentationmemoryReserved(String maxfragmentationmemoryReserved) {
             return maxfragmentationmemoryReserved(Output.of(maxfragmentationmemoryReserved));
         }
 
+        /**
+         * @param maxmemoryDelta Value in megabytes reserved for non-cache usage per shard e.g. failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxmemoryDelta(@Nullable Output<String> maxmemoryDelta) {
             $.maxmemoryDelta = maxmemoryDelta;
             return this;
         }
 
+        /**
+         * @param maxmemoryDelta Value in megabytes reserved for non-cache usage per shard e.g. failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxmemoryDelta(String maxmemoryDelta) {
             return maxmemoryDelta(Output.of(maxmemoryDelta));
         }
 
+        /**
+         * @param maxmemoryPolicy The eviction strategy used when your data won&#39;t fit within its memory limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxmemoryPolicy(@Nullable Output<String> maxmemoryPolicy) {
             $.maxmemoryPolicy = maxmemoryPolicy;
             return this;
         }
 
+        /**
+         * @param maxmemoryPolicy The eviction strategy used when your data won&#39;t fit within its memory limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxmemoryPolicy(String maxmemoryPolicy) {
             return maxmemoryPolicy(Output.of(maxmemoryPolicy));
         }
 
+        /**
+         * @param maxmemoryReserved Value in megabytes reserved for non-cache usage per shard e.g. failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxmemoryReserved(@Nullable Output<String> maxmemoryReserved) {
             $.maxmemoryReserved = maxmemoryReserved;
             return this;
         }
 
+        /**
+         * @param maxmemoryReserved Value in megabytes reserved for non-cache usage per shard e.g. failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxmemoryReserved(String maxmemoryReserved) {
             return maxmemoryReserved(Output.of(maxmemoryReserved));
         }
 
+        /**
+         * @param rdbBackupEnabled Specifies whether the rdb backup is enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbBackupEnabled(@Nullable Output<String> rdbBackupEnabled) {
             $.rdbBackupEnabled = rdbBackupEnabled;
             return this;
         }
 
+        /**
+         * @param rdbBackupEnabled Specifies whether the rdb backup is enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbBackupEnabled(String rdbBackupEnabled) {
             return rdbBackupEnabled(Output.of(rdbBackupEnabled));
         }
 
+        /**
+         * @param rdbBackupFrequency Specifies the frequency for creating rdb backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbBackupFrequency(@Nullable Output<String> rdbBackupFrequency) {
             $.rdbBackupFrequency = rdbBackupFrequency;
             return this;
         }
 
+        /**
+         * @param rdbBackupFrequency Specifies the frequency for creating rdb backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbBackupFrequency(String rdbBackupFrequency) {
             return rdbBackupFrequency(Output.of(rdbBackupFrequency));
         }
 
+        /**
+         * @param rdbBackupMaxSnapshotCount Specifies the maximum number of snapshots for rdb backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbBackupMaxSnapshotCount(@Nullable Output<String> rdbBackupMaxSnapshotCount) {
             $.rdbBackupMaxSnapshotCount = rdbBackupMaxSnapshotCount;
             return this;
         }
 
+        /**
+         * @param rdbBackupMaxSnapshotCount Specifies the maximum number of snapshots for rdb backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbBackupMaxSnapshotCount(String rdbBackupMaxSnapshotCount) {
             return rdbBackupMaxSnapshotCount(Output.of(rdbBackupMaxSnapshotCount));
         }
 
+        /**
+         * @param rdbStorageConnectionString The storage account connection string for storing rdb file
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbStorageConnectionString(@Nullable Output<String> rdbStorageConnectionString) {
             $.rdbStorageConnectionString = rdbStorageConnectionString;
             return this;
         }
 
+        /**
+         * @param rdbStorageConnectionString The storage account connection string for storing rdb file
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbStorageConnectionString(String rdbStorageConnectionString) {
             return rdbStorageConnectionString(Output.of(rdbStorageConnectionString));
         }

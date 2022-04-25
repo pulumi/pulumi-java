@@ -28,6 +28,10 @@ public final class CSINodeDriverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allocatable")
     private @Nullable Output<VolumeNodeResourcesArgs> allocatable;
 
+    /**
+     * @return allocatable represents the volume resources of a node that are available for scheduling.
+     * 
+     */
     public Optional<Output<VolumeNodeResourcesArgs>> allocatable() {
         return Optional.ofNullable(this.allocatable);
     }
@@ -39,6 +43,10 @@ public final class CSINodeDriverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return This is the name of the CSI driver that this object refers to. This MUST be the same name returned by the CSI GetPluginName() call for that driver.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -50,6 +58,10 @@ public final class CSINodeDriverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeID", required=true)
     private Output<String> nodeID;
 
+    /**
+     * @return nodeID of the node from the driver point of view. This field enables Kubernetes to communicate with storage systems that do not share the same nomenclature for nodes. For example, Kubernetes may refer to a given node as &#34;node1&#34;, but the storage system may refer to the same node as &#34;nodeA&#34;. When Kubernetes issues a command to the storage system to attach a volume to a specific node, it can use this field to refer to the node name using the ID that the storage system will understand, e.g. &#34;nodeA&#34; instead of &#34;node1&#34;. This field is required.
+     * 
+     */
     public Output<String> nodeID() {
         return this.nodeID;
     }
@@ -61,6 +73,10 @@ public final class CSINodeDriverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topologyKeys")
     private @Nullable Output<List<String>> topologyKeys;
 
+    /**
+     * @return topologyKeys is the list of keys supported by the driver. When a driver is initialized on a cluster, it provides a set of topology keys that it understands (e.g. &#34;company.com/zone&#34;, &#34;company.com/region&#34;). When a driver is initialized on a node, it provides the same topology keys along with values. Kubelet will expose these topology keys as labels on its own node object. When Kubernetes does topology aware provisioning, it can use this list to determine which labels it should retrieve from the node object and pass back to the driver. It is possible for different nodes to use different topology keys. This can be empty if driver does not support topology.
+     * 
+     */
     public Optional<Output<List<String>>> topologyKeys() {
         return Optional.ofNullable(this.topologyKeys);
     }
@@ -92,42 +108,96 @@ public final class CSINodeDriverArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CSINodeDriverArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocatable allocatable represents the volume resources of a node that are available for scheduling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocatable(@Nullable Output<VolumeNodeResourcesArgs> allocatable) {
             $.allocatable = allocatable;
             return this;
         }
 
+        /**
+         * @param allocatable allocatable represents the volume resources of a node that are available for scheduling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocatable(VolumeNodeResourcesArgs allocatable) {
             return allocatable(Output.of(allocatable));
         }
 
+        /**
+         * @param name This is the name of the CSI driver that this object refers to. This MUST be the same name returned by the CSI GetPluginName() call for that driver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name This is the name of the CSI driver that this object refers to. This MUST be the same name returned by the CSI GetPluginName() call for that driver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nodeID nodeID of the node from the driver point of view. This field enables Kubernetes to communicate with storage systems that do not share the same nomenclature for nodes. For example, Kubernetes may refer to a given node as &#34;node1&#34;, but the storage system may refer to the same node as &#34;nodeA&#34;. When Kubernetes issues a command to the storage system to attach a volume to a specific node, it can use this field to refer to the node name using the ID that the storage system will understand, e.g. &#34;nodeA&#34; instead of &#34;node1&#34;. This field is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeID(Output<String> nodeID) {
             $.nodeID = nodeID;
             return this;
         }
 
+        /**
+         * @param nodeID nodeID of the node from the driver point of view. This field enables Kubernetes to communicate with storage systems that do not share the same nomenclature for nodes. For example, Kubernetes may refer to a given node as &#34;node1&#34;, but the storage system may refer to the same node as &#34;nodeA&#34;. When Kubernetes issues a command to the storage system to attach a volume to a specific node, it can use this field to refer to the node name using the ID that the storage system will understand, e.g. &#34;nodeA&#34; instead of &#34;node1&#34;. This field is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeID(String nodeID) {
             return nodeID(Output.of(nodeID));
         }
 
+        /**
+         * @param topologyKeys topologyKeys is the list of keys supported by the driver. When a driver is initialized on a cluster, it provides a set of topology keys that it understands (e.g. &#34;company.com/zone&#34;, &#34;company.com/region&#34;). When a driver is initialized on a node, it provides the same topology keys along with values. Kubelet will expose these topology keys as labels on its own node object. When Kubernetes does topology aware provisioning, it can use this list to determine which labels it should retrieve from the node object and pass back to the driver. It is possible for different nodes to use different topology keys. This can be empty if driver does not support topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologyKeys(@Nullable Output<List<String>> topologyKeys) {
             $.topologyKeys = topologyKeys;
             return this;
         }
 
+        /**
+         * @param topologyKeys topologyKeys is the list of keys supported by the driver. When a driver is initialized on a cluster, it provides a set of topology keys that it understands (e.g. &#34;company.com/zone&#34;, &#34;company.com/region&#34;). When a driver is initialized on a node, it provides the same topology keys along with values. Kubelet will expose these topology keys as labels on its own node object. When Kubernetes does topology aware provisioning, it can use this list to determine which labels it should retrieve from the node object and pass back to the driver. It is possible for different nodes to use different topology keys. This can be empty if driver does not support topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologyKeys(List<String> topologyKeys) {
             return topologyKeys(Output.of(topologyKeys));
         }
 
+        /**
+         * @param topologyKeys topologyKeys is the list of keys supported by the driver. When a driver is initialized on a cluster, it provides a set of topology keys that it understands (e.g. &#34;company.com/zone&#34;, &#34;company.com/region&#34;). When a driver is initialized on a node, it provides the same topology keys along with values. Kubelet will expose these topology keys as labels on its own node object. When Kubernetes does topology aware provisioning, it can use this list to determine which labels it should retrieve from the node object and pass back to the driver. It is possible for different nodes to use different topology keys. This can be empty if driver does not support topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologyKeys(String... topologyKeys) {
             return topologyKeys(List.of(topologyKeys));
         }

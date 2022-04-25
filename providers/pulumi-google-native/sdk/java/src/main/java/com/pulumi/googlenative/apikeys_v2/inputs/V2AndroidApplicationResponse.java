@@ -23,6 +23,10 @@ public final class V2AndroidApplicationResponse extends com.pulumi.resources.Inv
     @Import(name="packageName", required=true)
     private String packageName;
 
+    /**
+     * @return The package name of the application.
+     * 
+     */
     public String packageName() {
         return this.packageName;
     }
@@ -34,6 +38,10 @@ public final class V2AndroidApplicationResponse extends com.pulumi.resources.Inv
     @Import(name="sha1Fingerprint", required=true)
     private String sha1Fingerprint;
 
+    /**
+     * @return The SHA1 fingerprint of the application. For example, both sha1 formats are acceptable : DA:39:A3:EE:5E:6B:4B:0D:32:55:BF:EF:95:60:18:90:AF:D8:07:09 or DA39A3EE5E6B4B0D3255BFEF95601890AFD80709. Output format is the latter.
+     * 
+     */
     public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
@@ -63,11 +71,23 @@ public final class V2AndroidApplicationResponse extends com.pulumi.resources.Inv
             $ = new V2AndroidApplicationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param packageName The package name of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(String packageName) {
             $.packageName = packageName;
             return this;
         }
 
+        /**
+         * @param sha1Fingerprint The SHA1 fingerprint of the application. For example, both sha1 formats are acceptable : DA:39:A3:EE:5E:6B:4B:0D:32:55:BF:EF:95:60:18:90:AF:D8:07:09 or DA39A3EE5E6B4B0D3255BFEF95601890AFD80709. Output format is the latter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha1Fingerprint(String sha1Fingerprint) {
             $.sha1Fingerprint = sha1Fingerprint;
             return this;

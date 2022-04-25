@@ -50,6 +50,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acrUseManagedIdentityCreds")
     private @Nullable Output<Boolean> acrUseManagedIdentityCreds;
 
+    /**
+     * @return Flag to use Managed Identity Creds for ACR pull
+     * 
+     */
     public Optional<Output<Boolean>> acrUseManagedIdentityCreds() {
         return Optional.ofNullable(this.acrUseManagedIdentityCreds);
     }
@@ -61,6 +65,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acrUserManagedIdentityID")
     private @Nullable Output<String> acrUserManagedIdentityID;
 
+    /**
+     * @return If using user managed identity, the user managed identity ClientId
+     * 
+     */
     public Optional<Output<String>> acrUserManagedIdentityID() {
         return Optional.ofNullable(this.acrUserManagedIdentityID);
     }
@@ -72,6 +80,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alwaysOn")
     private @Nullable Output<Boolean> alwaysOn;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if Always On is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> alwaysOn() {
         return Optional.ofNullable(this.alwaysOn);
     }
@@ -83,6 +95,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiDefinition")
     private @Nullable Output<ApiDefinitionInfoArgs> apiDefinition;
 
+    /**
+     * @return Information about the formal API definition for the app.
+     * 
+     */
     public Optional<Output<ApiDefinitionInfoArgs>> apiDefinition() {
         return Optional.ofNullable(this.apiDefinition);
     }
@@ -94,6 +110,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiManagementConfig")
     private @Nullable Output<ApiManagementConfigArgs> apiManagementConfig;
 
+    /**
+     * @return Azure API management settings linked to the app.
+     * 
+     */
     public Optional<Output<ApiManagementConfigArgs>> apiManagementConfig() {
         return Optional.ofNullable(this.apiManagementConfig);
     }
@@ -105,6 +125,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appCommandLine")
     private @Nullable Output<String> appCommandLine;
 
+    /**
+     * @return App command line to launch.
+     * 
+     */
     public Optional<Output<String>> appCommandLine() {
         return Optional.ofNullable(this.appCommandLine);
     }
@@ -116,6 +140,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appSettings")
     private @Nullable Output<List<NameValuePairArgs>> appSettings;
 
+    /**
+     * @return Application settings.
+     * 
+     */
     public Optional<Output<List<NameValuePairArgs>>> appSettings() {
         return Optional.ofNullable(this.appSettings);
     }
@@ -127,6 +155,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoHealEnabled")
     private @Nullable Output<Boolean> autoHealEnabled;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if Auto Heal is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> autoHealEnabled() {
         return Optional.ofNullable(this.autoHealEnabled);
     }
@@ -138,6 +170,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoHealRules")
     private @Nullable Output<AutoHealRulesArgs> autoHealRules;
 
+    /**
+     * @return Auto Heal rules.
+     * 
+     */
     public Optional<Output<AutoHealRulesArgs>> autoHealRules() {
         return Optional.ofNullable(this.autoHealRules);
     }
@@ -149,6 +185,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoSwapSlotName")
     private @Nullable Output<String> autoSwapSlotName;
 
+    /**
+     * @return Auto-swap slot name.
+     * 
+     */
     public Optional<Output<String>> autoSwapSlotName() {
         return Optional.ofNullable(this.autoSwapSlotName);
     }
@@ -160,6 +200,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureStorageAccounts")
     private @Nullable Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts;
 
+    /**
+     * @return List of Azure Storage Accounts.
+     * 
+     */
     public Optional<Output<Map<String,AzureStorageInfoValueArgs>>> azureStorageAccounts() {
         return Optional.ofNullable(this.azureStorageAccounts);
     }
@@ -171,6 +215,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionStrings")
     private @Nullable Output<List<ConnStringInfoArgs>> connectionStrings;
 
+    /**
+     * @return Connection strings.
+     * 
+     */
     public Optional<Output<List<ConnStringInfoArgs>>> connectionStrings() {
         return Optional.ofNullable(this.connectionStrings);
     }
@@ -182,6 +230,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cors")
     private @Nullable Output<CorsSettingsArgs> cors;
 
+    /**
+     * @return Cross-Origin Resource Sharing (CORS) settings.
+     * 
+     */
     public Optional<Output<CorsSettingsArgs>> cors() {
         return Optional.ofNullable(this.cors);
     }
@@ -193,6 +245,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultDocuments")
     private @Nullable Output<List<String>> defaultDocuments;
 
+    /**
+     * @return Default documents.
+     * 
+     */
     public Optional<Output<List<String>>> defaultDocuments() {
         return Optional.ofNullable(this.defaultDocuments);
     }
@@ -204,6 +260,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="detailedErrorLoggingEnabled")
     private @Nullable Output<Boolean> detailedErrorLoggingEnabled;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if detailed error logging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> detailedErrorLoggingEnabled() {
         return Optional.ofNullable(this.detailedErrorLoggingEnabled);
     }
@@ -215,6 +275,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentRoot")
     private @Nullable Output<String> documentRoot;
 
+    /**
+     * @return Document root.
+     * 
+     */
     public Optional<Output<String>> documentRoot() {
         return Optional.ofNullable(this.documentRoot);
     }
@@ -226,6 +290,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="experiments")
     private @Nullable Output<ExperimentsArgs> experiments;
 
+    /**
+     * @return This is work around for polymorphic types.
+     * 
+     */
     public Optional<Output<ExperimentsArgs>> experiments() {
         return Optional.ofNullable(this.experiments);
     }
@@ -237,6 +305,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ftpsState")
     private @Nullable Output<Either<String,FtpsState>> ftpsState;
 
+    /**
+     * @return State of FTP / FTPS service
+     * 
+     */
     public Optional<Output<Either<String,FtpsState>>> ftpsState() {
         return Optional.ofNullable(this.ftpsState);
     }
@@ -249,6 +321,11 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionAppScaleLimit")
     private @Nullable Output<Integer> functionAppScaleLimit;
 
+    /**
+     * @return Maximum number of workers that a site can scale out to.
+     * This setting only applies to the Consumption and Elastic Premium Plans
+     * 
+     */
     public Optional<Output<Integer>> functionAppScaleLimit() {
         return Optional.ofNullable(this.functionAppScaleLimit);
     }
@@ -262,6 +339,12 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionsRuntimeScaleMonitoringEnabled")
     private @Nullable Output<Boolean> functionsRuntimeScaleMonitoringEnabled;
 
+    /**
+     * @return Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
+     * the ScaleController will not monitor event sources directly, but will instead call to the
+     * runtime to get scale status.
+     * 
+     */
     public Optional<Output<Boolean>> functionsRuntimeScaleMonitoringEnabled() {
         return Optional.ofNullable(this.functionsRuntimeScaleMonitoringEnabled);
     }
@@ -273,6 +356,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="handlerMappings")
     private @Nullable Output<List<HandlerMappingArgs>> handlerMappings;
 
+    /**
+     * @return Handler mappings.
+     * 
+     */
     public Optional<Output<List<HandlerMappingArgs>>> handlerMappings() {
         return Optional.ofNullable(this.handlerMappings);
     }
@@ -284,6 +371,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckPath")
     private @Nullable Output<String> healthCheckPath;
 
+    /**
+     * @return Health check path
+     * 
+     */
     public Optional<Output<String>> healthCheckPath() {
         return Optional.ofNullable(this.healthCheckPath);
     }
@@ -295,6 +386,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="http20Enabled")
     private @Nullable Output<Boolean> http20Enabled;
 
+    /**
+     * @return Http20Enabled: configures a web site to allow clients to connect over http2.0
+     * 
+     */
     public Optional<Output<Boolean>> http20Enabled() {
         return Optional.ofNullable(this.http20Enabled);
     }
@@ -306,6 +401,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpLoggingEnabled")
     private @Nullable Output<Boolean> httpLoggingEnabled;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if HTTP logging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> httpLoggingEnabled() {
         return Optional.ofNullable(this.httpLoggingEnabled);
     }
@@ -317,6 +416,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipSecurityRestrictions")
     private @Nullable Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions;
 
+    /**
+     * @return IP security restrictions for main.
+     * 
+     */
     public Optional<Output<List<IpSecurityRestrictionArgs>>> ipSecurityRestrictions() {
         return Optional.ofNullable(this.ipSecurityRestrictions);
     }
@@ -328,6 +431,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="javaContainer")
     private @Nullable Output<String> javaContainer;
 
+    /**
+     * @return Java container.
+     * 
+     */
     public Optional<Output<String>> javaContainer() {
         return Optional.ofNullable(this.javaContainer);
     }
@@ -339,6 +446,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="javaContainerVersion")
     private @Nullable Output<String> javaContainerVersion;
 
+    /**
+     * @return Java container version.
+     * 
+     */
     public Optional<Output<String>> javaContainerVersion() {
         return Optional.ofNullable(this.javaContainerVersion);
     }
@@ -350,6 +461,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="javaVersion")
     private @Nullable Output<String> javaVersion;
 
+    /**
+     * @return Java version.
+     * 
+     */
     public Optional<Output<String>> javaVersion() {
         return Optional.ofNullable(this.javaVersion);
     }
@@ -361,6 +476,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultReferenceIdentity")
     private @Nullable Output<String> keyVaultReferenceIdentity;
 
+    /**
+     * @return Identity to use for Key Vault Reference authentication.
+     * 
+     */
     public Optional<Output<String>> keyVaultReferenceIdentity() {
         return Optional.ofNullable(this.keyVaultReferenceIdentity);
     }
@@ -372,6 +491,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="limits")
     private @Nullable Output<SiteLimitsArgs> limits;
 
+    /**
+     * @return Site limits.
+     * 
+     */
     public Optional<Output<SiteLimitsArgs>> limits() {
         return Optional.ofNullable(this.limits);
     }
@@ -383,6 +506,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linuxFxVersion")
     private @Nullable Output<String> linuxFxVersion;
 
+    /**
+     * @return Linux App Framework and version
+     * 
+     */
     public Optional<Output<String>> linuxFxVersion() {
         return Optional.ofNullable(this.linuxFxVersion);
     }
@@ -394,6 +521,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancing")
     private @Nullable Output<SiteLoadBalancing> loadBalancing;
 
+    /**
+     * @return Site load balancing.
+     * 
+     */
     public Optional<Output<SiteLoadBalancing>> loadBalancing() {
         return Optional.ofNullable(this.loadBalancing);
     }
@@ -405,6 +536,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="localMySqlEnabled")
     private @Nullable Output<Boolean> localMySqlEnabled;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; to enable local MySQL; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> localMySqlEnabled() {
         return Optional.ofNullable(this.localMySqlEnabled);
     }
@@ -416,6 +551,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logsDirectorySizeLimit")
     private @Nullable Output<Integer> logsDirectorySizeLimit;
 
+    /**
+     * @return HTTP logs directory size limit.
+     * 
+     */
     public Optional<Output<Integer>> logsDirectorySizeLimit() {
         return Optional.ofNullable(this.logsDirectorySizeLimit);
     }
@@ -427,6 +566,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedPipelineMode")
     private @Nullable Output<ManagedPipelineMode> managedPipelineMode;
 
+    /**
+     * @return Managed pipeline mode.
+     * 
+     */
     public Optional<Output<ManagedPipelineMode>> managedPipelineMode() {
         return Optional.ofNullable(this.managedPipelineMode);
     }
@@ -438,6 +581,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedServiceIdentityId")
     private @Nullable Output<Integer> managedServiceIdentityId;
 
+    /**
+     * @return Managed Service Identity Id
+     * 
+     */
     public Optional<Output<Integer>> managedServiceIdentityId() {
         return Optional.ofNullable(this.managedServiceIdentityId);
     }
@@ -449,6 +596,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minTlsVersion")
     private @Nullable Output<Either<String,SupportedTlsVersions>> minTlsVersion;
 
+    /**
+     * @return MinTlsVersion: configures the minimum version of TLS required for SSL requests
+     * 
+     */
     public Optional<Output<Either<String,SupportedTlsVersions>>> minTlsVersion() {
         return Optional.ofNullable(this.minTlsVersion);
     }
@@ -461,6 +612,11 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minimumElasticInstanceCount")
     private @Nullable Output<Integer> minimumElasticInstanceCount;
 
+    /**
+     * @return Number of minimum instance count for a site
+     * This setting only applies to the Elastic Plans
+     * 
+     */
     public Optional<Output<Integer>> minimumElasticInstanceCount() {
         return Optional.ofNullable(this.minimumElasticInstanceCount);
     }
@@ -472,6 +628,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="netFrameworkVersion")
     private @Nullable Output<String> netFrameworkVersion;
 
+    /**
+     * @return .NET Framework version.
+     * 
+     */
     public Optional<Output<String>> netFrameworkVersion() {
         return Optional.ofNullable(this.netFrameworkVersion);
     }
@@ -483,6 +643,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeVersion")
     private @Nullable Output<String> nodeVersion;
 
+    /**
+     * @return Version of Node.js.
+     * 
+     */
     public Optional<Output<String>> nodeVersion() {
         return Optional.ofNullable(this.nodeVersion);
     }
@@ -494,6 +658,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="numberOfWorkers")
     private @Nullable Output<Integer> numberOfWorkers;
 
+    /**
+     * @return Number of workers.
+     * 
+     */
     public Optional<Output<Integer>> numberOfWorkers() {
         return Optional.ofNullable(this.numberOfWorkers);
     }
@@ -505,6 +673,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phpVersion")
     private @Nullable Output<String> phpVersion;
 
+    /**
+     * @return Version of PHP.
+     * 
+     */
     public Optional<Output<String>> phpVersion() {
         return Optional.ofNullable(this.phpVersion);
     }
@@ -516,6 +688,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="powerShellVersion")
     private @Nullable Output<String> powerShellVersion;
 
+    /**
+     * @return Version of PowerShell.
+     * 
+     */
     public Optional<Output<String>> powerShellVersion() {
         return Optional.ofNullable(this.powerShellVersion);
     }
@@ -528,6 +704,11 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preWarmedInstanceCount")
     private @Nullable Output<Integer> preWarmedInstanceCount;
 
+    /**
+     * @return Number of preWarmed instances.
+     * This setting only applies to the Consumption and Elastic Plans
+     * 
+     */
     public Optional<Output<Integer>> preWarmedInstanceCount() {
         return Optional.ofNullable(this.preWarmedInstanceCount);
     }
@@ -539,6 +720,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
     private @Nullable Output<String> publicNetworkAccess;
 
+    /**
+     * @return Property to allow or block all public traffic.
+     * 
+     */
     public Optional<Output<String>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -550,6 +735,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publishingUsername")
     private @Nullable Output<String> publishingUsername;
 
+    /**
+     * @return Publishing user name.
+     * 
+     */
     public Optional<Output<String>> publishingUsername() {
         return Optional.ofNullable(this.publishingUsername);
     }
@@ -561,6 +750,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="push")
     private @Nullable Output<PushSettingsArgs> push;
 
+    /**
+     * @return Push endpoint settings.
+     * 
+     */
     public Optional<Output<PushSettingsArgs>> push() {
         return Optional.ofNullable(this.push);
     }
@@ -572,6 +765,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pythonVersion")
     private @Nullable Output<String> pythonVersion;
 
+    /**
+     * @return Version of Python.
+     * 
+     */
     public Optional<Output<String>> pythonVersion() {
         return Optional.ofNullable(this.pythonVersion);
     }
@@ -583,6 +780,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="remoteDebuggingEnabled")
     private @Nullable Output<Boolean> remoteDebuggingEnabled;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if remote debugging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> remoteDebuggingEnabled() {
         return Optional.ofNullable(this.remoteDebuggingEnabled);
     }
@@ -594,6 +795,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="remoteDebuggingVersion")
     private @Nullable Output<String> remoteDebuggingVersion;
 
+    /**
+     * @return Remote debugging version.
+     * 
+     */
     public Optional<Output<String>> remoteDebuggingVersion() {
         return Optional.ofNullable(this.remoteDebuggingVersion);
     }
@@ -605,6 +810,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestTracingEnabled")
     private @Nullable Output<Boolean> requestTracingEnabled;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if request tracing is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> requestTracingEnabled() {
         return Optional.ofNullable(this.requestTracingEnabled);
     }
@@ -616,6 +825,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestTracingExpirationTime")
     private @Nullable Output<String> requestTracingExpirationTime;
 
+    /**
+     * @return Request tracing expiration time.
+     * 
+     */
     public Optional<Output<String>> requestTracingExpirationTime() {
         return Optional.ofNullable(this.requestTracingExpirationTime);
     }
@@ -627,6 +840,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scmIpSecurityRestrictions")
     private @Nullable Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions;
 
+    /**
+     * @return IP security restrictions for scm.
+     * 
+     */
     public Optional<Output<List<IpSecurityRestrictionArgs>>> scmIpSecurityRestrictions() {
         return Optional.ofNullable(this.scmIpSecurityRestrictions);
     }
@@ -638,6 +855,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scmIpSecurityRestrictionsUseMain")
     private @Nullable Output<Boolean> scmIpSecurityRestrictionsUseMain;
 
+    /**
+     * @return IP security restrictions for scm to use main.
+     * 
+     */
     public Optional<Output<Boolean>> scmIpSecurityRestrictionsUseMain() {
         return Optional.ofNullable(this.scmIpSecurityRestrictionsUseMain);
     }
@@ -649,6 +870,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scmMinTlsVersion")
     private @Nullable Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion;
 
+    /**
+     * @return ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site
+     * 
+     */
     public Optional<Output<Either<String,SupportedTlsVersions>>> scmMinTlsVersion() {
         return Optional.ofNullable(this.scmMinTlsVersion);
     }
@@ -660,6 +885,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scmType")
     private @Nullable Output<Either<String,ScmType>> scmType;
 
+    /**
+     * @return SCM type.
+     * 
+     */
     public Optional<Output<Either<String,ScmType>>> scmType() {
         return Optional.ofNullable(this.scmType);
     }
@@ -671,6 +900,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tracingOptions")
     private @Nullable Output<String> tracingOptions;
 
+    /**
+     * @return Tracing options.
+     * 
+     */
     public Optional<Output<String>> tracingOptions() {
         return Optional.ofNullable(this.tracingOptions);
     }
@@ -682,6 +915,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="use32BitWorkerProcess")
     private @Nullable Output<Boolean> use32BitWorkerProcess;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; to use 32-bit worker process; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> use32BitWorkerProcess() {
         return Optional.ofNullable(this.use32BitWorkerProcess);
     }
@@ -693,6 +930,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualApplications")
     private @Nullable Output<List<VirtualApplicationArgs>> virtualApplications;
 
+    /**
+     * @return Virtual applications.
+     * 
+     */
     public Optional<Output<List<VirtualApplicationArgs>>> virtualApplications() {
         return Optional.ofNullable(this.virtualApplications);
     }
@@ -704,6 +945,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vnetName")
     private @Nullable Output<String> vnetName;
 
+    /**
+     * @return Virtual Network name.
+     * 
+     */
     public Optional<Output<String>> vnetName() {
         return Optional.ofNullable(this.vnetName);
     }
@@ -715,6 +960,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vnetPrivatePortsCount")
     private @Nullable Output<Integer> vnetPrivatePortsCount;
 
+    /**
+     * @return The number of private ports assigned to this app. These will be assigned dynamically on runtime.
+     * 
+     */
     public Optional<Output<Integer>> vnetPrivatePortsCount() {
         return Optional.ofNullable(this.vnetPrivatePortsCount);
     }
@@ -726,6 +975,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vnetRouteAllEnabled")
     private @Nullable Output<Boolean> vnetRouteAllEnabled;
 
+    /**
+     * @return Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.
+     * 
+     */
     public Optional<Output<Boolean>> vnetRouteAllEnabled() {
         return Optional.ofNullable(this.vnetRouteAllEnabled);
     }
@@ -737,6 +990,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webSocketsEnabled")
     private @Nullable Output<Boolean> webSocketsEnabled;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if WebSocket is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> webSocketsEnabled() {
         return Optional.ofNullable(this.webSocketsEnabled);
     }
@@ -748,6 +1005,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="websiteTimeZone")
     private @Nullable Output<String> websiteTimeZone;
 
+    /**
+     * @return Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones
+     * 
+     */
     public Optional<Output<String>> websiteTimeZone() {
         return Optional.ofNullable(this.websiteTimeZone);
     }
@@ -759,6 +1020,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="windowsFxVersion")
     private @Nullable Output<String> windowsFxVersion;
 
+    /**
+     * @return Xenon App Framework and version
+     * 
+     */
     public Optional<Output<String>> windowsFxVersion() {
         return Optional.ofNullable(this.windowsFxVersion);
     }
@@ -770,6 +1035,10 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="xManagedServiceIdentityId")
     private @Nullable Output<Integer> xManagedServiceIdentityId;
 
+    /**
+     * @return Explicit Managed Service Identity Id
+     * 
+     */
     public Optional<Output<Integer>> xManagedServiceIdentityId() {
         return Optional.ofNullable(this.xManagedServiceIdentityId);
     }
@@ -863,656 +1132,1548 @@ public final class SiteConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SiteConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acrUseManagedIdentityCreds Flag to use Managed Identity Creds for ACR pull
+         * 
+         * @return builder
+         * 
+         */
         public Builder acrUseManagedIdentityCreds(@Nullable Output<Boolean> acrUseManagedIdentityCreds) {
             $.acrUseManagedIdentityCreds = acrUseManagedIdentityCreds;
             return this;
         }
 
+        /**
+         * @param acrUseManagedIdentityCreds Flag to use Managed Identity Creds for ACR pull
+         * 
+         * @return builder
+         * 
+         */
         public Builder acrUseManagedIdentityCreds(Boolean acrUseManagedIdentityCreds) {
             return acrUseManagedIdentityCreds(Output.of(acrUseManagedIdentityCreds));
         }
 
+        /**
+         * @param acrUserManagedIdentityID If using user managed identity, the user managed identity ClientId
+         * 
+         * @return builder
+         * 
+         */
         public Builder acrUserManagedIdentityID(@Nullable Output<String> acrUserManagedIdentityID) {
             $.acrUserManagedIdentityID = acrUserManagedIdentityID;
             return this;
         }
 
+        /**
+         * @param acrUserManagedIdentityID If using user managed identity, the user managed identity ClientId
+         * 
+         * @return builder
+         * 
+         */
         public Builder acrUserManagedIdentityID(String acrUserManagedIdentityID) {
             return acrUserManagedIdentityID(Output.of(acrUserManagedIdentityID));
         }
 
+        /**
+         * @param alwaysOn &lt;code&gt;true&lt;/code&gt; if Always On is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alwaysOn(@Nullable Output<Boolean> alwaysOn) {
             $.alwaysOn = alwaysOn;
             return this;
         }
 
+        /**
+         * @param alwaysOn &lt;code&gt;true&lt;/code&gt; if Always On is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alwaysOn(Boolean alwaysOn) {
             return alwaysOn(Output.of(alwaysOn));
         }
 
+        /**
+         * @param apiDefinition Information about the formal API definition for the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiDefinition(@Nullable Output<ApiDefinitionInfoArgs> apiDefinition) {
             $.apiDefinition = apiDefinition;
             return this;
         }
 
+        /**
+         * @param apiDefinition Information about the formal API definition for the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiDefinition(ApiDefinitionInfoArgs apiDefinition) {
             return apiDefinition(Output.of(apiDefinition));
         }
 
+        /**
+         * @param apiManagementConfig Azure API management settings linked to the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiManagementConfig(@Nullable Output<ApiManagementConfigArgs> apiManagementConfig) {
             $.apiManagementConfig = apiManagementConfig;
             return this;
         }
 
+        /**
+         * @param apiManagementConfig Azure API management settings linked to the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiManagementConfig(ApiManagementConfigArgs apiManagementConfig) {
             return apiManagementConfig(Output.of(apiManagementConfig));
         }
 
+        /**
+         * @param appCommandLine App command line to launch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appCommandLine(@Nullable Output<String> appCommandLine) {
             $.appCommandLine = appCommandLine;
             return this;
         }
 
+        /**
+         * @param appCommandLine App command line to launch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appCommandLine(String appCommandLine) {
             return appCommandLine(Output.of(appCommandLine));
         }
 
+        /**
+         * @param appSettings Application settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appSettings(@Nullable Output<List<NameValuePairArgs>> appSettings) {
             $.appSettings = appSettings;
             return this;
         }
 
+        /**
+         * @param appSettings Application settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appSettings(List<NameValuePairArgs> appSettings) {
             return appSettings(Output.of(appSettings));
         }
 
+        /**
+         * @param appSettings Application settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appSettings(NameValuePairArgs... appSettings) {
             return appSettings(List.of(appSettings));
         }
 
+        /**
+         * @param autoHealEnabled &lt;code&gt;true&lt;/code&gt; if Auto Heal is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoHealEnabled(@Nullable Output<Boolean> autoHealEnabled) {
             $.autoHealEnabled = autoHealEnabled;
             return this;
         }
 
+        /**
+         * @param autoHealEnabled &lt;code&gt;true&lt;/code&gt; if Auto Heal is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoHealEnabled(Boolean autoHealEnabled) {
             return autoHealEnabled(Output.of(autoHealEnabled));
         }
 
+        /**
+         * @param autoHealRules Auto Heal rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoHealRules(@Nullable Output<AutoHealRulesArgs> autoHealRules) {
             $.autoHealRules = autoHealRules;
             return this;
         }
 
+        /**
+         * @param autoHealRules Auto Heal rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoHealRules(AutoHealRulesArgs autoHealRules) {
             return autoHealRules(Output.of(autoHealRules));
         }
 
+        /**
+         * @param autoSwapSlotName Auto-swap slot name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoSwapSlotName(@Nullable Output<String> autoSwapSlotName) {
             $.autoSwapSlotName = autoSwapSlotName;
             return this;
         }
 
+        /**
+         * @param autoSwapSlotName Auto-swap slot name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoSwapSlotName(String autoSwapSlotName) {
             return autoSwapSlotName(Output.of(autoSwapSlotName));
         }
 
+        /**
+         * @param azureStorageAccounts List of Azure Storage Accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureStorageAccounts(@Nullable Output<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts) {
             $.azureStorageAccounts = azureStorageAccounts;
             return this;
         }
 
+        /**
+         * @param azureStorageAccounts List of Azure Storage Accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureStorageAccounts(Map<String,AzureStorageInfoValueArgs> azureStorageAccounts) {
             return azureStorageAccounts(Output.of(azureStorageAccounts));
         }
 
+        /**
+         * @param connectionStrings Connection strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionStrings(@Nullable Output<List<ConnStringInfoArgs>> connectionStrings) {
             $.connectionStrings = connectionStrings;
             return this;
         }
 
+        /**
+         * @param connectionStrings Connection strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionStrings(List<ConnStringInfoArgs> connectionStrings) {
             return connectionStrings(Output.of(connectionStrings));
         }
 
+        /**
+         * @param connectionStrings Connection strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionStrings(ConnStringInfoArgs... connectionStrings) {
             return connectionStrings(List.of(connectionStrings));
         }
 
+        /**
+         * @param cors Cross-Origin Resource Sharing (CORS) settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(@Nullable Output<CorsSettingsArgs> cors) {
             $.cors = cors;
             return this;
         }
 
+        /**
+         * @param cors Cross-Origin Resource Sharing (CORS) settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(CorsSettingsArgs cors) {
             return cors(Output.of(cors));
         }
 
+        /**
+         * @param defaultDocuments Default documents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultDocuments(@Nullable Output<List<String>> defaultDocuments) {
             $.defaultDocuments = defaultDocuments;
             return this;
         }
 
+        /**
+         * @param defaultDocuments Default documents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultDocuments(List<String> defaultDocuments) {
             return defaultDocuments(Output.of(defaultDocuments));
         }
 
+        /**
+         * @param defaultDocuments Default documents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultDocuments(String... defaultDocuments) {
             return defaultDocuments(List.of(defaultDocuments));
         }
 
+        /**
+         * @param detailedErrorLoggingEnabled &lt;code&gt;true&lt;/code&gt; if detailed error logging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailedErrorLoggingEnabled(@Nullable Output<Boolean> detailedErrorLoggingEnabled) {
             $.detailedErrorLoggingEnabled = detailedErrorLoggingEnabled;
             return this;
         }
 
+        /**
+         * @param detailedErrorLoggingEnabled &lt;code&gt;true&lt;/code&gt; if detailed error logging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailedErrorLoggingEnabled(Boolean detailedErrorLoggingEnabled) {
             return detailedErrorLoggingEnabled(Output.of(detailedErrorLoggingEnabled));
         }
 
+        /**
+         * @param documentRoot Document root.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentRoot(@Nullable Output<String> documentRoot) {
             $.documentRoot = documentRoot;
             return this;
         }
 
+        /**
+         * @param documentRoot Document root.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentRoot(String documentRoot) {
             return documentRoot(Output.of(documentRoot));
         }
 
+        /**
+         * @param experiments This is work around for polymorphic types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder experiments(@Nullable Output<ExperimentsArgs> experiments) {
             $.experiments = experiments;
             return this;
         }
 
+        /**
+         * @param experiments This is work around for polymorphic types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder experiments(ExperimentsArgs experiments) {
             return experiments(Output.of(experiments));
         }
 
+        /**
+         * @param ftpsState State of FTP / FTPS service
+         * 
+         * @return builder
+         * 
+         */
         public Builder ftpsState(@Nullable Output<Either<String,FtpsState>> ftpsState) {
             $.ftpsState = ftpsState;
             return this;
         }
 
+        /**
+         * @param ftpsState State of FTP / FTPS service
+         * 
+         * @return builder
+         * 
+         */
         public Builder ftpsState(Either<String,FtpsState> ftpsState) {
             return ftpsState(Output.of(ftpsState));
         }
 
+        /**
+         * @param ftpsState State of FTP / FTPS service
+         * 
+         * @return builder
+         * 
+         */
         public Builder ftpsState(String ftpsState) {
             return ftpsState(Either.ofLeft(ftpsState));
         }
 
+        /**
+         * @param ftpsState State of FTP / FTPS service
+         * 
+         * @return builder
+         * 
+         */
         public Builder ftpsState(FtpsState ftpsState) {
             return ftpsState(Either.ofRight(ftpsState));
         }
 
+        /**
+         * @param functionAppScaleLimit Maximum number of workers that a site can scale out to.
+         * This setting only applies to the Consumption and Elastic Premium Plans
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppScaleLimit(@Nullable Output<Integer> functionAppScaleLimit) {
             $.functionAppScaleLimit = functionAppScaleLimit;
             return this;
         }
 
+        /**
+         * @param functionAppScaleLimit Maximum number of workers that a site can scale out to.
+         * This setting only applies to the Consumption and Elastic Premium Plans
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppScaleLimit(Integer functionAppScaleLimit) {
             return functionAppScaleLimit(Output.of(functionAppScaleLimit));
         }
 
+        /**
+         * @param functionsRuntimeScaleMonitoringEnabled Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
+         * the ScaleController will not monitor event sources directly, but will instead call to the
+         * runtime to get scale status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionsRuntimeScaleMonitoringEnabled(@Nullable Output<Boolean> functionsRuntimeScaleMonitoringEnabled) {
             $.functionsRuntimeScaleMonitoringEnabled = functionsRuntimeScaleMonitoringEnabled;
             return this;
         }
 
+        /**
+         * @param functionsRuntimeScaleMonitoringEnabled Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
+         * the ScaleController will not monitor event sources directly, but will instead call to the
+         * runtime to get scale status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionsRuntimeScaleMonitoringEnabled(Boolean functionsRuntimeScaleMonitoringEnabled) {
             return functionsRuntimeScaleMonitoringEnabled(Output.of(functionsRuntimeScaleMonitoringEnabled));
         }
 
+        /**
+         * @param handlerMappings Handler mappings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder handlerMappings(@Nullable Output<List<HandlerMappingArgs>> handlerMappings) {
             $.handlerMappings = handlerMappings;
             return this;
         }
 
+        /**
+         * @param handlerMappings Handler mappings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder handlerMappings(List<HandlerMappingArgs> handlerMappings) {
             return handlerMappings(Output.of(handlerMappings));
         }
 
+        /**
+         * @param handlerMappings Handler mappings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder handlerMappings(HandlerMappingArgs... handlerMappings) {
             return handlerMappings(List.of(handlerMappings));
         }
 
+        /**
+         * @param healthCheckPath Health check path
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckPath(@Nullable Output<String> healthCheckPath) {
             $.healthCheckPath = healthCheckPath;
             return this;
         }
 
+        /**
+         * @param healthCheckPath Health check path
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckPath(String healthCheckPath) {
             return healthCheckPath(Output.of(healthCheckPath));
         }
 
+        /**
+         * @param http20Enabled Http20Enabled: configures a web site to allow clients to connect over http2.0
+         * 
+         * @return builder
+         * 
+         */
         public Builder http20Enabled(@Nullable Output<Boolean> http20Enabled) {
             $.http20Enabled = http20Enabled;
             return this;
         }
 
+        /**
+         * @param http20Enabled Http20Enabled: configures a web site to allow clients to connect over http2.0
+         * 
+         * @return builder
+         * 
+         */
         public Builder http20Enabled(Boolean http20Enabled) {
             return http20Enabled(Output.of(http20Enabled));
         }
 
+        /**
+         * @param httpLoggingEnabled &lt;code&gt;true&lt;/code&gt; if HTTP logging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpLoggingEnabled(@Nullable Output<Boolean> httpLoggingEnabled) {
             $.httpLoggingEnabled = httpLoggingEnabled;
             return this;
         }
 
+        /**
+         * @param httpLoggingEnabled &lt;code&gt;true&lt;/code&gt; if HTTP logging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpLoggingEnabled(Boolean httpLoggingEnabled) {
             return httpLoggingEnabled(Output.of(httpLoggingEnabled));
         }
 
+        /**
+         * @param ipSecurityRestrictions IP security restrictions for main.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSecurityRestrictions(@Nullable Output<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions) {
             $.ipSecurityRestrictions = ipSecurityRestrictions;
             return this;
         }
 
+        /**
+         * @param ipSecurityRestrictions IP security restrictions for main.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSecurityRestrictions(List<IpSecurityRestrictionArgs> ipSecurityRestrictions) {
             return ipSecurityRestrictions(Output.of(ipSecurityRestrictions));
         }
 
+        /**
+         * @param ipSecurityRestrictions IP security restrictions for main.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSecurityRestrictions(IpSecurityRestrictionArgs... ipSecurityRestrictions) {
             return ipSecurityRestrictions(List.of(ipSecurityRestrictions));
         }
 
+        /**
+         * @param javaContainer Java container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder javaContainer(@Nullable Output<String> javaContainer) {
             $.javaContainer = javaContainer;
             return this;
         }
 
+        /**
+         * @param javaContainer Java container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder javaContainer(String javaContainer) {
             return javaContainer(Output.of(javaContainer));
         }
 
+        /**
+         * @param javaContainerVersion Java container version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder javaContainerVersion(@Nullable Output<String> javaContainerVersion) {
             $.javaContainerVersion = javaContainerVersion;
             return this;
         }
 
+        /**
+         * @param javaContainerVersion Java container version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder javaContainerVersion(String javaContainerVersion) {
             return javaContainerVersion(Output.of(javaContainerVersion));
         }
 
+        /**
+         * @param javaVersion Java version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder javaVersion(@Nullable Output<String> javaVersion) {
             $.javaVersion = javaVersion;
             return this;
         }
 
+        /**
+         * @param javaVersion Java version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder javaVersion(String javaVersion) {
             return javaVersion(Output.of(javaVersion));
         }
 
+        /**
+         * @param keyVaultReferenceIdentity Identity to use for Key Vault Reference authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultReferenceIdentity(@Nullable Output<String> keyVaultReferenceIdentity) {
             $.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
             return this;
         }
 
+        /**
+         * @param keyVaultReferenceIdentity Identity to use for Key Vault Reference authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultReferenceIdentity(String keyVaultReferenceIdentity) {
             return keyVaultReferenceIdentity(Output.of(keyVaultReferenceIdentity));
         }
 
+        /**
+         * @param limits Site limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(@Nullable Output<SiteLimitsArgs> limits) {
             $.limits = limits;
             return this;
         }
 
+        /**
+         * @param limits Site limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(SiteLimitsArgs limits) {
             return limits(Output.of(limits));
         }
 
+        /**
+         * @param linuxFxVersion Linux App Framework and version
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxFxVersion(@Nullable Output<String> linuxFxVersion) {
             $.linuxFxVersion = linuxFxVersion;
             return this;
         }
 
+        /**
+         * @param linuxFxVersion Linux App Framework and version
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxFxVersion(String linuxFxVersion) {
             return linuxFxVersion(Output.of(linuxFxVersion));
         }
 
+        /**
+         * @param loadBalancing Site load balancing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancing(@Nullable Output<SiteLoadBalancing> loadBalancing) {
             $.loadBalancing = loadBalancing;
             return this;
         }
 
+        /**
+         * @param loadBalancing Site load balancing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancing(SiteLoadBalancing loadBalancing) {
             return loadBalancing(Output.of(loadBalancing));
         }
 
+        /**
+         * @param localMySqlEnabled &lt;code&gt;true&lt;/code&gt; to enable local MySQL; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localMySqlEnabled(@Nullable Output<Boolean> localMySqlEnabled) {
             $.localMySqlEnabled = localMySqlEnabled;
             return this;
         }
 
+        /**
+         * @param localMySqlEnabled &lt;code&gt;true&lt;/code&gt; to enable local MySQL; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localMySqlEnabled(Boolean localMySqlEnabled) {
             return localMySqlEnabled(Output.of(localMySqlEnabled));
         }
 
+        /**
+         * @param logsDirectorySizeLimit HTTP logs directory size limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logsDirectorySizeLimit(@Nullable Output<Integer> logsDirectorySizeLimit) {
             $.logsDirectorySizeLimit = logsDirectorySizeLimit;
             return this;
         }
 
+        /**
+         * @param logsDirectorySizeLimit HTTP logs directory size limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logsDirectorySizeLimit(Integer logsDirectorySizeLimit) {
             return logsDirectorySizeLimit(Output.of(logsDirectorySizeLimit));
         }
 
+        /**
+         * @param managedPipelineMode Managed pipeline mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedPipelineMode(@Nullable Output<ManagedPipelineMode> managedPipelineMode) {
             $.managedPipelineMode = managedPipelineMode;
             return this;
         }
 
+        /**
+         * @param managedPipelineMode Managed pipeline mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedPipelineMode(ManagedPipelineMode managedPipelineMode) {
             return managedPipelineMode(Output.of(managedPipelineMode));
         }
 
+        /**
+         * @param managedServiceIdentityId Managed Service Identity Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedServiceIdentityId(@Nullable Output<Integer> managedServiceIdentityId) {
             $.managedServiceIdentityId = managedServiceIdentityId;
             return this;
         }
 
+        /**
+         * @param managedServiceIdentityId Managed Service Identity Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedServiceIdentityId(Integer managedServiceIdentityId) {
             return managedServiceIdentityId(Output.of(managedServiceIdentityId));
         }
 
+        /**
+         * @param minTlsVersion MinTlsVersion: configures the minimum version of TLS required for SSL requests
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTlsVersion(@Nullable Output<Either<String,SupportedTlsVersions>> minTlsVersion) {
             $.minTlsVersion = minTlsVersion;
             return this;
         }
 
+        /**
+         * @param minTlsVersion MinTlsVersion: configures the minimum version of TLS required for SSL requests
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTlsVersion(Either<String,SupportedTlsVersions> minTlsVersion) {
             return minTlsVersion(Output.of(minTlsVersion));
         }
 
+        /**
+         * @param minTlsVersion MinTlsVersion: configures the minimum version of TLS required for SSL requests
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTlsVersion(String minTlsVersion) {
             return minTlsVersion(Either.ofLeft(minTlsVersion));
         }
 
+        /**
+         * @param minTlsVersion MinTlsVersion: configures the minimum version of TLS required for SSL requests
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTlsVersion(SupportedTlsVersions minTlsVersion) {
             return minTlsVersion(Either.ofRight(minTlsVersion));
         }
 
+        /**
+         * @param minimumElasticInstanceCount Number of minimum instance count for a site
+         * This setting only applies to the Elastic Plans
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumElasticInstanceCount(@Nullable Output<Integer> minimumElasticInstanceCount) {
             $.minimumElasticInstanceCount = minimumElasticInstanceCount;
             return this;
         }
 
+        /**
+         * @param minimumElasticInstanceCount Number of minimum instance count for a site
+         * This setting only applies to the Elastic Plans
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumElasticInstanceCount(Integer minimumElasticInstanceCount) {
             return minimumElasticInstanceCount(Output.of(minimumElasticInstanceCount));
         }
 
+        /**
+         * @param netFrameworkVersion .NET Framework version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netFrameworkVersion(@Nullable Output<String> netFrameworkVersion) {
             $.netFrameworkVersion = netFrameworkVersion;
             return this;
         }
 
+        /**
+         * @param netFrameworkVersion .NET Framework version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netFrameworkVersion(String netFrameworkVersion) {
             return netFrameworkVersion(Output.of(netFrameworkVersion));
         }
 
+        /**
+         * @param nodeVersion Version of Node.js.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeVersion(@Nullable Output<String> nodeVersion) {
             $.nodeVersion = nodeVersion;
             return this;
         }
 
+        /**
+         * @param nodeVersion Version of Node.js.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeVersion(String nodeVersion) {
             return nodeVersion(Output.of(nodeVersion));
         }
 
+        /**
+         * @param numberOfWorkers Number of workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
             $.numberOfWorkers = numberOfWorkers;
             return this;
         }
 
+        /**
+         * @param numberOfWorkers Number of workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfWorkers(Integer numberOfWorkers) {
             return numberOfWorkers(Output.of(numberOfWorkers));
         }
 
+        /**
+         * @param phpVersion Version of PHP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phpVersion(@Nullable Output<String> phpVersion) {
             $.phpVersion = phpVersion;
             return this;
         }
 
+        /**
+         * @param phpVersion Version of PHP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phpVersion(String phpVersion) {
             return phpVersion(Output.of(phpVersion));
         }
 
+        /**
+         * @param powerShellVersion Version of PowerShell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder powerShellVersion(@Nullable Output<String> powerShellVersion) {
             $.powerShellVersion = powerShellVersion;
             return this;
         }
 
+        /**
+         * @param powerShellVersion Version of PowerShell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder powerShellVersion(String powerShellVersion) {
             return powerShellVersion(Output.of(powerShellVersion));
         }
 
+        /**
+         * @param preWarmedInstanceCount Number of preWarmed instances.
+         * This setting only applies to the Consumption and Elastic Plans
+         * 
+         * @return builder
+         * 
+         */
         public Builder preWarmedInstanceCount(@Nullable Output<Integer> preWarmedInstanceCount) {
             $.preWarmedInstanceCount = preWarmedInstanceCount;
             return this;
         }
 
+        /**
+         * @param preWarmedInstanceCount Number of preWarmed instances.
+         * This setting only applies to the Consumption and Elastic Plans
+         * 
+         * @return builder
+         * 
+         */
         public Builder preWarmedInstanceCount(Integer preWarmedInstanceCount) {
             return preWarmedInstanceCount(Output.of(preWarmedInstanceCount));
         }
 
+        /**
+         * @param publicNetworkAccess Property to allow or block all public traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Property to allow or block all public traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param publishingUsername Publishing user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishingUsername(@Nullable Output<String> publishingUsername) {
             $.publishingUsername = publishingUsername;
             return this;
         }
 
+        /**
+         * @param publishingUsername Publishing user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishingUsername(String publishingUsername) {
             return publishingUsername(Output.of(publishingUsername));
         }
 
+        /**
+         * @param push Push endpoint settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder push(@Nullable Output<PushSettingsArgs> push) {
             $.push = push;
             return this;
         }
 
+        /**
+         * @param push Push endpoint settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder push(PushSettingsArgs push) {
             return push(Output.of(push));
         }
 
+        /**
+         * @param pythonVersion Version of Python.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
             $.pythonVersion = pythonVersion;
             return this;
         }
 
+        /**
+         * @param pythonVersion Version of Python.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonVersion(String pythonVersion) {
             return pythonVersion(Output.of(pythonVersion));
         }
 
+        /**
+         * @param remoteDebuggingEnabled &lt;code&gt;true&lt;/code&gt; if remote debugging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteDebuggingEnabled(@Nullable Output<Boolean> remoteDebuggingEnabled) {
             $.remoteDebuggingEnabled = remoteDebuggingEnabled;
             return this;
         }
 
+        /**
+         * @param remoteDebuggingEnabled &lt;code&gt;true&lt;/code&gt; if remote debugging is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteDebuggingEnabled(Boolean remoteDebuggingEnabled) {
             return remoteDebuggingEnabled(Output.of(remoteDebuggingEnabled));
         }
 
+        /**
+         * @param remoteDebuggingVersion Remote debugging version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteDebuggingVersion(@Nullable Output<String> remoteDebuggingVersion) {
             $.remoteDebuggingVersion = remoteDebuggingVersion;
             return this;
         }
 
+        /**
+         * @param remoteDebuggingVersion Remote debugging version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteDebuggingVersion(String remoteDebuggingVersion) {
             return remoteDebuggingVersion(Output.of(remoteDebuggingVersion));
         }
 
+        /**
+         * @param requestTracingEnabled &lt;code&gt;true&lt;/code&gt; if request tracing is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTracingEnabled(@Nullable Output<Boolean> requestTracingEnabled) {
             $.requestTracingEnabled = requestTracingEnabled;
             return this;
         }
 
+        /**
+         * @param requestTracingEnabled &lt;code&gt;true&lt;/code&gt; if request tracing is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTracingEnabled(Boolean requestTracingEnabled) {
             return requestTracingEnabled(Output.of(requestTracingEnabled));
         }
 
+        /**
+         * @param requestTracingExpirationTime Request tracing expiration time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTracingExpirationTime(@Nullable Output<String> requestTracingExpirationTime) {
             $.requestTracingExpirationTime = requestTracingExpirationTime;
             return this;
         }
 
+        /**
+         * @param requestTracingExpirationTime Request tracing expiration time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTracingExpirationTime(String requestTracingExpirationTime) {
             return requestTracingExpirationTime(Output.of(requestTracingExpirationTime));
         }
 
+        /**
+         * @param scmIpSecurityRestrictions IP security restrictions for scm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scmIpSecurityRestrictions(@Nullable Output<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions) {
             $.scmIpSecurityRestrictions = scmIpSecurityRestrictions;
             return this;
         }
 
+        /**
+         * @param scmIpSecurityRestrictions IP security restrictions for scm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scmIpSecurityRestrictions(List<IpSecurityRestrictionArgs> scmIpSecurityRestrictions) {
             return scmIpSecurityRestrictions(Output.of(scmIpSecurityRestrictions));
         }
 
+        /**
+         * @param scmIpSecurityRestrictions IP security restrictions for scm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scmIpSecurityRestrictions(IpSecurityRestrictionArgs... scmIpSecurityRestrictions) {
             return scmIpSecurityRestrictions(List.of(scmIpSecurityRestrictions));
         }
 
+        /**
+         * @param scmIpSecurityRestrictionsUseMain IP security restrictions for scm to use main.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scmIpSecurityRestrictionsUseMain(@Nullable Output<Boolean> scmIpSecurityRestrictionsUseMain) {
             $.scmIpSecurityRestrictionsUseMain = scmIpSecurityRestrictionsUseMain;
             return this;
         }
 
+        /**
+         * @param scmIpSecurityRestrictionsUseMain IP security restrictions for scm to use main.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scmIpSecurityRestrictionsUseMain(Boolean scmIpSecurityRestrictionsUseMain) {
             return scmIpSecurityRestrictionsUseMain(Output.of(scmIpSecurityRestrictionsUseMain));
         }
 
+        /**
+         * @param scmMinTlsVersion ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site
+         * 
+         * @return builder
+         * 
+         */
         public Builder scmMinTlsVersion(@Nullable Output<Either<String,SupportedTlsVersions>> scmMinTlsVersion) {
             $.scmMinTlsVersion = scmMinTlsVersion;
             return this;
         }
 
+        /**
+         * @param scmMinTlsVersion ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site
+         * 
+         * @return builder
+         * 
+         */
         public Builder scmMinTlsVersion(Either<String,SupportedTlsVersions> scmMinTlsVersion) {
             return scmMinTlsVersion(Output.of(scmMinTlsVersion));
         }
 
+        /**
+         * @param scmMinTlsVersion ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site
+         * 
+         * @return builder
+         * 
+         */
         public Builder scmMinTlsVersion(String scmMinTlsVersion) {
             return scmMinTlsVersion(Either.ofLeft(scmMinTlsVersion));
         }
 
+        /**
+         * @param scmMinTlsVersion ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site
+         * 
+         * @return builder
+         * 
+         */
         public Builder scmMinTlsVersion(SupportedTlsVersions scmMinTlsVersion) {
             return scmMinTlsVersion(Either.ofRight(scmMinTlsVersion));
         }
 
+        /**
+         * @param scmType SCM type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scmType(@Nullable Output<Either<String,ScmType>> scmType) {
             $.scmType = scmType;
             return this;
         }
 
+        /**
+         * @param scmType SCM type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scmType(Either<String,ScmType> scmType) {
             return scmType(Output.of(scmType));
         }
 
+        /**
+         * @param scmType SCM type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scmType(String scmType) {
             return scmType(Either.ofLeft(scmType));
         }
 
+        /**
+         * @param scmType SCM type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scmType(ScmType scmType) {
             return scmType(Either.ofRight(scmType));
         }
 
+        /**
+         * @param tracingOptions Tracing options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracingOptions(@Nullable Output<String> tracingOptions) {
             $.tracingOptions = tracingOptions;
             return this;
         }
 
+        /**
+         * @param tracingOptions Tracing options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracingOptions(String tracingOptions) {
             return tracingOptions(Output.of(tracingOptions));
         }
 
+        /**
+         * @param use32BitWorkerProcess &lt;code&gt;true&lt;/code&gt; to use 32-bit worker process; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder use32BitWorkerProcess(@Nullable Output<Boolean> use32BitWorkerProcess) {
             $.use32BitWorkerProcess = use32BitWorkerProcess;
             return this;
         }
 
+        /**
+         * @param use32BitWorkerProcess &lt;code&gt;true&lt;/code&gt; to use 32-bit worker process; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder use32BitWorkerProcess(Boolean use32BitWorkerProcess) {
             return use32BitWorkerProcess(Output.of(use32BitWorkerProcess));
         }
 
+        /**
+         * @param virtualApplications Virtual applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualApplications(@Nullable Output<List<VirtualApplicationArgs>> virtualApplications) {
             $.virtualApplications = virtualApplications;
             return this;
         }
 
+        /**
+         * @param virtualApplications Virtual applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualApplications(List<VirtualApplicationArgs> virtualApplications) {
             return virtualApplications(Output.of(virtualApplications));
         }
 
+        /**
+         * @param virtualApplications Virtual applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualApplications(VirtualApplicationArgs... virtualApplications) {
             return virtualApplications(List.of(virtualApplications));
         }
 
+        /**
+         * @param vnetName Virtual Network name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetName(@Nullable Output<String> vnetName) {
             $.vnetName = vnetName;
             return this;
         }
 
+        /**
+         * @param vnetName Virtual Network name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetName(String vnetName) {
             return vnetName(Output.of(vnetName));
         }
 
+        /**
+         * @param vnetPrivatePortsCount The number of private ports assigned to this app. These will be assigned dynamically on runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetPrivatePortsCount(@Nullable Output<Integer> vnetPrivatePortsCount) {
             $.vnetPrivatePortsCount = vnetPrivatePortsCount;
             return this;
         }
 
+        /**
+         * @param vnetPrivatePortsCount The number of private ports assigned to this app. These will be assigned dynamically on runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetPrivatePortsCount(Integer vnetPrivatePortsCount) {
             return vnetPrivatePortsCount(Output.of(vnetPrivatePortsCount));
         }
 
+        /**
+         * @param vnetRouteAllEnabled Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetRouteAllEnabled(@Nullable Output<Boolean> vnetRouteAllEnabled) {
             $.vnetRouteAllEnabled = vnetRouteAllEnabled;
             return this;
         }
 
+        /**
+         * @param vnetRouteAllEnabled Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetRouteAllEnabled(Boolean vnetRouteAllEnabled) {
             return vnetRouteAllEnabled(Output.of(vnetRouteAllEnabled));
         }
 
+        /**
+         * @param webSocketsEnabled &lt;code&gt;true&lt;/code&gt; if WebSocket is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webSocketsEnabled(@Nullable Output<Boolean> webSocketsEnabled) {
             $.webSocketsEnabled = webSocketsEnabled;
             return this;
         }
 
+        /**
+         * @param webSocketsEnabled &lt;code&gt;true&lt;/code&gt; if WebSocket is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webSocketsEnabled(Boolean webSocketsEnabled) {
             return webSocketsEnabled(Output.of(webSocketsEnabled));
         }
 
+        /**
+         * @param websiteTimeZone Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones
+         * 
+         * @return builder
+         * 
+         */
         public Builder websiteTimeZone(@Nullable Output<String> websiteTimeZone) {
             $.websiteTimeZone = websiteTimeZone;
             return this;
         }
 
+        /**
+         * @param websiteTimeZone Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones
+         * 
+         * @return builder
+         * 
+         */
         public Builder websiteTimeZone(String websiteTimeZone) {
             return websiteTimeZone(Output.of(websiteTimeZone));
         }
 
+        /**
+         * @param windowsFxVersion Xenon App Framework and version
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsFxVersion(@Nullable Output<String> windowsFxVersion) {
             $.windowsFxVersion = windowsFxVersion;
             return this;
         }
 
+        /**
+         * @param windowsFxVersion Xenon App Framework and version
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsFxVersion(String windowsFxVersion) {
             return windowsFxVersion(Output.of(windowsFxVersion));
         }
 
+        /**
+         * @param xManagedServiceIdentityId Explicit Managed Service Identity Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder xManagedServiceIdentityId(@Nullable Output<Integer> xManagedServiceIdentityId) {
             $.xManagedServiceIdentityId = xManagedServiceIdentityId;
             return this;
         }
 
+        /**
+         * @param xManagedServiceIdentityId Explicit Managed Service Identity Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder xManagedServiceIdentityId(Integer xManagedServiceIdentityId) {
             return xManagedServiceIdentityId(Output.of(xManagedServiceIdentityId));
         }

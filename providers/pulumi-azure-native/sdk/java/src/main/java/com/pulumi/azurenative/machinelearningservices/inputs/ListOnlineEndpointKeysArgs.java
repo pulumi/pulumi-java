@@ -19,6 +19,10 @@ public final class ListOnlineEndpointKeysArgs extends com.pulumi.resources.Invok
     @Import(name="endpointName", required=true)
     private String endpointName;
 
+    /**
+     * @return Online Endpoint name.
+     * 
+     */
     public String endpointName() {
         return this.endpointName;
     }
@@ -30,6 +34,10 @@ public final class ListOnlineEndpointKeysArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class ListOnlineEndpointKeysArgs extends com.pulumi.resources.Invok
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -71,16 +83,34 @@ public final class ListOnlineEndpointKeysArgs extends com.pulumi.resources.Invok
             $ = new ListOnlineEndpointKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointName Online Endpoint name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

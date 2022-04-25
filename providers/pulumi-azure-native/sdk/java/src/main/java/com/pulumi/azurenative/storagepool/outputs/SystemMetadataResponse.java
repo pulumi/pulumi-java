@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SystemMetadataResponse {
     /**
-     * The timestamp of resource creation (UTC).
+     * @return The timestamp of resource creation (UTC).
      * 
      */
     private final @Nullable String createdAt;
     /**
-     * A string identifier for the identity that created the resource.
+     * @return A string identifier for the identity that created the resource.
      * 
      */
     private final @Nullable String createdBy;
     /**
-     * The type of identity that created the resource: user, application, managedIdentity.
+     * @return The type of identity that created the resource: user, application, managedIdentity.
      * 
      */
     private final @Nullable String createdByType;
     /**
-     * The timestamp of resource last modification (UTC).
+     * @return The timestamp of resource last modification (UTC).
      * 
      */
     private final @Nullable String lastModifiedAt;
     /**
-     * A string identifier for the identity that last modified the resource.
+     * @return A string identifier for the identity that last modified the resource.
      * 
      */
     private final @Nullable String lastModifiedBy;
     /**
-     * The type of identity that last modified the resource: user, application, managedIdentity.
+     * @return The type of identity that last modified the resource: user, application, managedIdentity.
      * 
      */
     private final @Nullable String lastModifiedByType;
@@ -59,44 +59,44 @@ public final class SystemMetadataResponse {
     }
 
     /**
-     * The timestamp of resource creation (UTC).
+     * @return The timestamp of resource creation (UTC).
      * 
-    */
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
-     * A string identifier for the identity that created the resource.
+     * @return A string identifier for the identity that created the resource.
      * 
-    */
+     */
     public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
-     * The type of identity that created the resource: user, application, managedIdentity.
+     * @return The type of identity that created the resource: user, application, managedIdentity.
      * 
-    */
+     */
     public Optional<String> createdByType() {
         return Optional.ofNullable(this.createdByType);
     }
     /**
-     * The timestamp of resource last modification (UTC).
+     * @return The timestamp of resource last modification (UTC).
      * 
-    */
+     */
     public Optional<String> lastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
     /**
-     * A string identifier for the identity that last modified the resource.
+     * @return A string identifier for the identity that last modified the resource.
      * 
-    */
+     */
     public Optional<String> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
-     * The type of identity that last modified the resource: user, application, managedIdentity.
+     * @return The type of identity that last modified the resource: user, application, managedIdentity.
      * 
-    */
+     */
     public Optional<String> lastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }

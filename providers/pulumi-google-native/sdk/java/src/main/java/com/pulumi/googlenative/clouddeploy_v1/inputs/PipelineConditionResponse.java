@@ -24,6 +24,10 @@ public final class PipelineConditionResponse extends com.pulumi.resources.Invoke
     @Import(name="pipelineReadyCondition", required=true)
     private PipelineReadyConditionResponse pipelineReadyCondition;
 
+    /**
+     * @return Details around the Pipeline&#39;s overall status.
+     * 
+     */
     public PipelineReadyConditionResponse pipelineReadyCondition() {
         return this.pipelineReadyCondition;
     }
@@ -35,6 +39,10 @@ public final class PipelineConditionResponse extends com.pulumi.resources.Invoke
     @Import(name="targetsPresentCondition", required=true)
     private TargetsPresentConditionResponse targetsPresentCondition;
 
+    /**
+     * @return Detalis around targets enumerated in the pipeline.
+     * 
+     */
     public TargetsPresentConditionResponse targetsPresentCondition() {
         return this.targetsPresentCondition;
     }
@@ -64,11 +72,23 @@ public final class PipelineConditionResponse extends com.pulumi.resources.Invoke
             $ = new PipelineConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pipelineReadyCondition Details around the Pipeline&#39;s overall status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineReadyCondition(PipelineReadyConditionResponse pipelineReadyCondition) {
             $.pipelineReadyCondition = pipelineReadyCondition;
             return this;
         }
 
+        /**
+         * @param targetsPresentCondition Detalis around targets enumerated in the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetsPresentCondition(TargetsPresentConditionResponse targetsPresentCondition) {
             $.targetsPresentCondition = targetsPresentCondition;
             return this;

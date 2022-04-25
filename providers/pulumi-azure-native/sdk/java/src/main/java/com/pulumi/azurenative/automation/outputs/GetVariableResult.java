@@ -13,42 +13,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVariableResult {
     /**
-     * Gets or sets the creation time.
+     * @return Gets or sets the creation time.
      * 
      */
     private final @Nullable String creationTime;
     /**
-     * Gets or sets the description.
+     * @return Gets or sets the description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Fully qualified resource Id for the resource
+     * @return Fully qualified resource Id for the resource
      * 
      */
     private final String id;
     /**
-     * Gets or sets the encrypted flag of the variable.
+     * @return Gets or sets the encrypted flag of the variable.
      * 
      */
     private final @Nullable Boolean isEncrypted;
     /**
-     * Gets or sets the last modified time.
+     * @return Gets or sets the last modified time.
      * 
      */
     private final @Nullable String lastModifiedTime;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
     /**
-     * Gets or sets the value of the variable.
+     * @return Gets or sets the value of the variable.
      * 
      */
     private final @Nullable String value;
@@ -74,58 +74,58 @@ public final class GetVariableResult {
     }
 
     /**
-     * Gets or sets the creation time.
+     * @return Gets or sets the creation time.
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * Gets or sets the description.
+     * @return Gets or sets the description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Fully qualified resource Id for the resource
+     * @return Fully qualified resource Id for the resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets or sets the encrypted flag of the variable.
+     * @return Gets or sets the encrypted flag of the variable.
      * 
-    */
+     */
     public Optional<Boolean> isEncrypted() {
         return Optional.ofNullable(this.isEncrypted);
     }
     /**
-     * Gets or sets the last modified time.
+     * @return Gets or sets the last modified time.
      * 
-    */
+     */
     public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Gets or sets the value of the variable.
+     * @return Gets or sets the value of the variable.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

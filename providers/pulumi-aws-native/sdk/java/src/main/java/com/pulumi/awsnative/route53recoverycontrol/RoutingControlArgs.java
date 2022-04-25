@@ -22,6 +22,10 @@ public final class RoutingControlArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="clusterArn")
     private @Nullable Output<String> clusterArn;
 
+    /**
+     * @return Arn associated with Control Panel
+     * 
+     */
     public Optional<Output<String>> clusterArn() {
         return Optional.ofNullable(this.clusterArn);
     }
@@ -33,6 +37,10 @@ public final class RoutingControlArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="controlPanelArn")
     private @Nullable Output<String> controlPanelArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the control panel.
+     * 
+     */
     public Optional<Output<String>> controlPanelArn() {
         return Optional.ofNullable(this.controlPanelArn);
     }
@@ -44,6 +52,10 @@ public final class RoutingControlArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the routing control. You can use any non-white space character in the name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -74,29 +86,65 @@ public final class RoutingControlArgs extends com.pulumi.resources.ResourceArgs 
             $ = new RoutingControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterArn Arn associated with Control Panel
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterArn(@Nullable Output<String> clusterArn) {
             $.clusterArn = clusterArn;
             return this;
         }
 
+        /**
+         * @param clusterArn Arn associated with Control Panel
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterArn(String clusterArn) {
             return clusterArn(Output.of(clusterArn));
         }
 
+        /**
+         * @param controlPanelArn The Amazon Resource Name (ARN) of the control panel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlPanelArn(@Nullable Output<String> controlPanelArn) {
             $.controlPanelArn = controlPanelArn;
             return this;
         }
 
+        /**
+         * @param controlPanelArn The Amazon Resource Name (ARN) of the control panel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlPanelArn(String controlPanelArn) {
             return controlPanelArn(Output.of(controlPanelArn));
         }
 
+        /**
+         * @param name The name of the routing control. You can use any non-white space character in the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the routing control. You can use any non-white space character in the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

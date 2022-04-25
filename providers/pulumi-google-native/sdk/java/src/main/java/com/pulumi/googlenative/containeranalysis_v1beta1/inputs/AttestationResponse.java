@@ -31,6 +31,10 @@ public final class AttestationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pgpSignedAttestation", required=true)
     private PgpSignedAttestationResponse pgpSignedAttestation;
 
+    /**
+     * @return A PGP signed attestation.
+     * 
+     */
     public PgpSignedAttestationResponse pgpSignedAttestation() {
         return this.pgpSignedAttestation;
     }
@@ -65,6 +69,12 @@ public final class AttestationResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param pgpSignedAttestation A PGP signed attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pgpSignedAttestation(PgpSignedAttestationResponse pgpSignedAttestation) {
             $.pgpSignedAttestation = pgpSignedAttestation;
             return this;

@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class OptimizedAutoscaleResponse {
     /**
-     * A boolean value that indicate if the optimized autoscale feature is enabled or not.
+     * @return A boolean value that indicate if the optimized autoscale feature is enabled or not.
      * 
      */
     private final Boolean isEnabled;
     /**
-     * Maximum allowed instances count.
+     * @return Maximum allowed instances count.
      * 
      */
     private final Integer maximum;
     /**
-     * Minimum allowed instances count.
+     * @return Minimum allowed instances count.
      * 
      */
     private final Integer minimum;
     /**
-     * The version of the template defined, for instance 1.
+     * @return The version of the template defined, for instance 1.
      * 
      */
     private final Integer version;
@@ -44,30 +44,30 @@ public final class OptimizedAutoscaleResponse {
     }
 
     /**
-     * A boolean value that indicate if the optimized autoscale feature is enabled or not.
+     * @return A boolean value that indicate if the optimized autoscale feature is enabled or not.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * Maximum allowed instances count.
+     * @return Maximum allowed instances count.
      * 
-    */
+     */
     public Integer maximum() {
         return this.maximum;
     }
     /**
-     * Minimum allowed instances count.
+     * @return Minimum allowed instances count.
      * 
-    */
+     */
     public Integer minimum() {
         return this.minimum;
     }
     /**
-     * The version of the template defined, for instance 1.
+     * @return The version of the template defined, for instance 1.
      * 
-    */
+     */
     public Integer version() {
         return this.version;
     }

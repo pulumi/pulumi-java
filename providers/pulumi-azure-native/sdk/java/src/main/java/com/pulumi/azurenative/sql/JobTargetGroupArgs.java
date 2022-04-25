@@ -24,6 +24,10 @@ public final class JobTargetGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="jobAgentName", required=true)
     private Output<String> jobAgentName;
 
+    /**
+     * @return The name of the job agent.
+     * 
+     */
     public Output<String> jobAgentName() {
         return this.jobAgentName;
     }
@@ -35,6 +39,10 @@ public final class JobTargetGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="members", required=true)
     private Output<List<JobTargetArgs>> members;
 
+    /**
+     * @return Members of the target group.
+     * 
+     */
     public Output<List<JobTargetArgs>> members() {
         return this.members;
     }
@@ -46,6 +54,10 @@ public final class JobTargetGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class JobTargetGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -68,6 +84,10 @@ public final class JobTargetGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="targetGroupName")
     private @Nullable Output<String> targetGroupName;
 
+    /**
+     * @return The name of the target group.
+     * 
+     */
     public Optional<Output<String>> targetGroupName() {
         return Optional.ofNullable(this.targetGroupName);
     }
@@ -100,51 +120,117 @@ public final class JobTargetGroupArgs extends com.pulumi.resources.ResourceArgs 
             $ = new JobTargetGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobAgentName The name of the job agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobAgentName(Output<String> jobAgentName) {
             $.jobAgentName = jobAgentName;
             return this;
         }
 
+        /**
+         * @param jobAgentName The name of the job agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobAgentName(String jobAgentName) {
             return jobAgentName(Output.of(jobAgentName));
         }
 
+        /**
+         * @param members Members of the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(Output<List<JobTargetArgs>> members) {
             $.members = members;
             return this;
         }
 
+        /**
+         * @param members Members of the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(List<JobTargetArgs> members) {
             return members(Output.of(members));
         }
 
+        /**
+         * @param members Members of the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(JobTargetArgs... members) {
             return members(List.of(members));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param targetGroupName The name of the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroupName(@Nullable Output<String> targetGroupName) {
             $.targetGroupName = targetGroupName;
             return this;
         }
 
+        /**
+         * @param targetGroupName The name of the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroupName(String targetGroupName) {
             return targetGroupName(Output.of(targetGroupName));
         }

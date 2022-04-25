@@ -26,6 +26,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="armTemplateFolderPath")
     private @Nullable Output<String> armTemplateFolderPath;
 
+    /**
+     * @return The folder containing Azure Resource Manager templates.
+     * 
+     */
     public Optional<Output<String>> armTemplateFolderPath() {
         return Optional.ofNullable(this.armTemplateFolderPath);
     }
@@ -37,6 +41,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="branchRef")
     private @Nullable Output<String> branchRef;
 
+    /**
+     * @return The artifact source&#39;s branch reference.
+     * 
+     */
     public Optional<Output<String>> branchRef() {
         return Optional.ofNullable(this.branchRef);
     }
@@ -48,6 +56,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The artifact source&#39;s display name.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -59,6 +71,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="folderPath")
     private @Nullable Output<String> folderPath;
 
+    /**
+     * @return The folder containing artifacts.
+     * 
+     */
     public Optional<Output<String>> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -70,6 +86,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="labName", required=true)
     private Output<String> labName;
 
+    /**
+     * @return The name of the lab.
+     * 
+     */
     public Output<String> labName() {
         return this.labName;
     }
@@ -81,6 +101,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -92,6 +116,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the artifact source.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -103,6 +131,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -114,6 +146,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="securityToken")
     private @Nullable Output<String> securityToken;
 
+    /**
+     * @return The security token to authenticate to the artifact source.
+     * 
+     */
     public Optional<Output<String>> securityToken() {
         return Optional.ofNullable(this.securityToken);
     }
@@ -125,6 +161,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sourceType")
     private @Nullable Output<Either<String,SourceControlType>> sourceType;
 
+    /**
+     * @return The artifact source&#39;s type.
+     * 
+     */
     public Optional<Output<Either<String,SourceControlType>>> sourceType() {
         return Optional.ofNullable(this.sourceType);
     }
@@ -136,6 +176,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="status")
     private @Nullable Output<Either<String,EnableStatus>> status;
 
+    /**
+     * @return Indicates if the artifact source is enabled (values: Enabled, Disabled).
+     * 
+     */
     public Optional<Output<Either<String,EnableStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -147,6 +191,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -158,6 +206,10 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return The artifact source&#39;s URI.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -198,135 +250,315 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ArtifactSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param armTemplateFolderPath The folder containing Azure Resource Manager templates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder armTemplateFolderPath(@Nullable Output<String> armTemplateFolderPath) {
             $.armTemplateFolderPath = armTemplateFolderPath;
             return this;
         }
 
+        /**
+         * @param armTemplateFolderPath The folder containing Azure Resource Manager templates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder armTemplateFolderPath(String armTemplateFolderPath) {
             return armTemplateFolderPath(Output.of(armTemplateFolderPath));
         }
 
+        /**
+         * @param branchRef The artifact source&#39;s branch reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchRef(@Nullable Output<String> branchRef) {
             $.branchRef = branchRef;
             return this;
         }
 
+        /**
+         * @param branchRef The artifact source&#39;s branch reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchRef(String branchRef) {
             return branchRef(Output.of(branchRef));
         }
 
+        /**
+         * @param displayName The artifact source&#39;s display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The artifact source&#39;s display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param folderPath The folder containing artifacts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable Output<String> folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param folderPath The folder containing artifacts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(String folderPath) {
             return folderPath(Output.of(folderPath));
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(Output<String> labName) {
             $.labName = labName;
             return this;
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(String labName) {
             return labName(Output.of(labName));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the artifact source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the artifact source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param securityToken The security token to authenticate to the artifact source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityToken(@Nullable Output<String> securityToken) {
             $.securityToken = securityToken;
             return this;
         }
 
+        /**
+         * @param securityToken The security token to authenticate to the artifact source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityToken(String securityToken) {
             return securityToken(Output.of(securityToken));
         }
 
+        /**
+         * @param sourceType The artifact source&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(@Nullable Output<Either<String,SourceControlType>> sourceType) {
             $.sourceType = sourceType;
             return this;
         }
 
+        /**
+         * @param sourceType The artifact source&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(Either<String,SourceControlType> sourceType) {
             return sourceType(Output.of(sourceType));
         }
 
+        /**
+         * @param sourceType The artifact source&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(String sourceType) {
             return sourceType(Either.ofLeft(sourceType));
         }
 
+        /**
+         * @param sourceType The artifact source&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(SourceControlType sourceType) {
             return sourceType(Either.ofRight(sourceType));
         }
 
+        /**
+         * @param status Indicates if the artifact source is enabled (values: Enabled, Disabled).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,EnableStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Indicates if the artifact source is enabled (values: Enabled, Disabled).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,EnableStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status Indicates if the artifact source is enabled (values: Enabled, Disabled).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status Indicates if the artifact source is enabled (values: Enabled, Disabled).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(EnableStatus status) {
             return status(Either.ofRight(status));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param uri The artifact source&#39;s URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The artifact source&#39;s URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

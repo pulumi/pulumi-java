@@ -23,6 +23,10 @@ public final class ExtendedKeyUsageOptionsResponse extends com.pulumi.resources.
     @Import(name="clientAuth", required=true)
     private Boolean clientAuth;
 
+    /**
+     * @return Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as &#34;TLS WWW client authentication&#34;, though regularly used for non-WWW TLS.
+     * 
+     */
     public Boolean clientAuth() {
         return this.clientAuth;
     }
@@ -34,6 +38,10 @@ public final class ExtendedKeyUsageOptionsResponse extends com.pulumi.resources.
     @Import(name="codeSigning", required=true)
     private Boolean codeSigning;
 
+    /**
+     * @return Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as &#34;Signing of downloadable executable code client authentication&#34;.
+     * 
+     */
     public Boolean codeSigning() {
         return this.codeSigning;
     }
@@ -45,6 +53,10 @@ public final class ExtendedKeyUsageOptionsResponse extends com.pulumi.resources.
     @Import(name="emailProtection", required=true)
     private Boolean emailProtection;
 
+    /**
+     * @return Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as &#34;Email protection&#34;.
+     * 
+     */
     public Boolean emailProtection() {
         return this.emailProtection;
     }
@@ -56,6 +68,10 @@ public final class ExtendedKeyUsageOptionsResponse extends com.pulumi.resources.
     @Import(name="ocspSigning", required=true)
     private Boolean ocspSigning;
 
+    /**
+     * @return Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as &#34;Signing OCSP responses&#34;.
+     * 
+     */
     public Boolean ocspSigning() {
         return this.ocspSigning;
     }
@@ -67,6 +83,10 @@ public final class ExtendedKeyUsageOptionsResponse extends com.pulumi.resources.
     @Import(name="serverAuth", required=true)
     private Boolean serverAuth;
 
+    /**
+     * @return Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as &#34;TLS WWW server authentication&#34;, though regularly used for non-WWW TLS.
+     * 
+     */
     public Boolean serverAuth() {
         return this.serverAuth;
     }
@@ -78,6 +98,10 @@ public final class ExtendedKeyUsageOptionsResponse extends com.pulumi.resources.
     @Import(name="timeStamping", required=true)
     private Boolean timeStamping;
 
+    /**
+     * @return Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as &#34;Binding the hash of an object to a time&#34;.
+     * 
+     */
     public Boolean timeStamping() {
         return this.timeStamping;
     }
@@ -111,31 +135,67 @@ public final class ExtendedKeyUsageOptionsResponse extends com.pulumi.resources.
             $ = new ExtendedKeyUsageOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientAuth Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as &#34;TLS WWW client authentication&#34;, though regularly used for non-WWW TLS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAuth(Boolean clientAuth) {
             $.clientAuth = clientAuth;
             return this;
         }
 
+        /**
+         * @param codeSigning Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as &#34;Signing of downloadable executable code client authentication&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeSigning(Boolean codeSigning) {
             $.codeSigning = codeSigning;
             return this;
         }
 
+        /**
+         * @param emailProtection Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as &#34;Email protection&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailProtection(Boolean emailProtection) {
             $.emailProtection = emailProtection;
             return this;
         }
 
+        /**
+         * @param ocspSigning Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as &#34;Signing OCSP responses&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ocspSigning(Boolean ocspSigning) {
             $.ocspSigning = ocspSigning;
             return this;
         }
 
+        /**
+         * @param serverAuth Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as &#34;TLS WWW server authentication&#34;, though regularly used for non-WWW TLS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverAuth(Boolean serverAuth) {
             $.serverAuth = serverAuth;
             return this;
         }
 
+        /**
+         * @param timeStamping Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as &#34;Binding the hash of an object to a time&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeStamping(Boolean timeStamping) {
             $.timeStamping = timeStamping;
             return this;

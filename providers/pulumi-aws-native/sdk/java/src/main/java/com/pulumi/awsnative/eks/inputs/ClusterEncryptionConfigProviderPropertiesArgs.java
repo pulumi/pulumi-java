@@ -26,6 +26,10 @@ public final class ClusterEncryptionConfigProviderPropertiesArgs extends com.pul
     @Import(name="keyArn")
     private @Nullable Output<String> keyArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) or alias of the KMS key. The KMS key must be symmetric, created in the same region as the cluster, and if the KMS key was created in a different account, the user must have access to the KMS key.
+     * 
+     */
     public Optional<Output<String>> keyArn() {
         return Optional.ofNullable(this.keyArn);
     }
@@ -54,11 +58,23 @@ public final class ClusterEncryptionConfigProviderPropertiesArgs extends com.pul
             $ = new ClusterEncryptionConfigProviderPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyArn Amazon Resource Name (ARN) or alias of the KMS key. The KMS key must be symmetric, created in the same region as the cluster, and if the KMS key was created in a different account, the user must have access to the KMS key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyArn(@Nullable Output<String> keyArn) {
             $.keyArn = keyArn;
             return this;
         }
 
+        /**
+         * @param keyArn Amazon Resource Name (ARN) or alias of the KMS key. The KMS key must be symmetric, created in the same region as the cluster, and if the KMS key was created in a different account, the user must have access to the KMS key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyArn(String keyArn) {
             return keyArn(Output.of(keyArn));
         }

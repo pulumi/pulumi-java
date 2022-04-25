@@ -26,97 +26,97 @@ import java.util.Objects;
 @CustomType
 public final class StepResponse {
     /**
-     * Display information of the final state &#34;abort&#34; and reason.
+     * @return Display information of the final state &#34;abort&#34; and reason.
      * 
      */
     private final AbortInfoResponse abort;
     /**
-     * This is a step that leads to the final state Drop.
+     * @return This is a step that leads to the final state Drop.
      * 
      */
     private final Boolean causesDrop;
     /**
-     * Display information of a Cloud SQL instance.
+     * @return Display information of a Cloud SQL instance.
      * 
      */
     private final CloudSQLInstanceInfoResponse cloudSqlInstance;
     /**
-     * Display information of the final state &#34;deliver&#34; and reason.
+     * @return Display information of the final state &#34;deliver&#34; and reason.
      * 
      */
     private final DeliverInfoResponse deliver;
     /**
-     * A description of the step. Usually this is a summary of the state.
+     * @return A description of the step. Usually this is a summary of the state.
      * 
      */
     private final String description;
     /**
-     * Display information of the final state &#34;drop&#34; and reason.
+     * @return Display information of the final state &#34;drop&#34; and reason.
      * 
      */
     private final DropInfoResponse drop;
     /**
-     * Display information of the source and destination under analysis. The endpoint information in an intermediate state may differ with the initial input, as it might be modified by state like NAT, or Connection Proxy.
+     * @return Display information of the source and destination under analysis. The endpoint information in an intermediate state may differ with the initial input, as it might be modified by state like NAT, or Connection Proxy.
      * 
      */
     private final EndpointInfoResponse endpoint;
     /**
-     * Display information of a Compute Engine firewall rule.
+     * @return Display information of a Compute Engine firewall rule.
      * 
      */
     private final FirewallInfoResponse firewall;
     /**
-     * Display information of the final state &#34;forward&#34; and reason.
+     * @return Display information of the final state &#34;forward&#34; and reason.
      * 
      */
     private final ForwardInfoResponse forward;
     /**
-     * Display information of a Compute Engine forwarding rule.
+     * @return Display information of a Compute Engine forwarding rule.
      * 
      */
     private final ForwardingRuleInfoResponse forwardingRule;
     /**
-     * Display information of a Google Kubernetes Engine cluster master.
+     * @return Display information of a Google Kubernetes Engine cluster master.
      * 
      */
     private final GKEMasterInfoResponse gkeMaster;
     /**
-     * Display information of a Compute Engine instance.
+     * @return Display information of a Compute Engine instance.
      * 
      */
     private final InstanceInfoResponse instance;
     /**
-     * Display information of the load balancers.
+     * @return Display information of the load balancers.
      * 
      */
     private final LoadBalancerInfoResponse loadBalancer;
     /**
-     * Display information of a Google Cloud network.
+     * @return Display information of a Google Cloud network.
      * 
      */
     private final NetworkInfoResponse network;
     /**
-     * Project ID that contains the configuration this step is validating.
+     * @return Project ID that contains the configuration this step is validating.
      * 
      */
     private final String project;
     /**
-     * Display information of a Compute Engine route.
+     * @return Display information of a Compute Engine route.
      * 
      */
     private final RouteInfoResponse route;
     /**
-     * Each step is in one of the pre-defined states.
+     * @return Each step is in one of the pre-defined states.
      * 
      */
     private final String state;
     /**
-     * Display information of a Compute Engine VPN gateway.
+     * @return Display information of a Compute Engine VPN gateway.
      * 
      */
     private final VpnGatewayInfoResponse vpnGateway;
     /**
-     * Display information of a Compute Engine VPN tunnel.
+     * @return Display information of a Compute Engine VPN tunnel.
      * 
      */
     private final VpnTunnelInfoResponse vpnTunnel;
@@ -164,135 +164,135 @@ public final class StepResponse {
     }
 
     /**
-     * Display information of the final state &#34;abort&#34; and reason.
+     * @return Display information of the final state &#34;abort&#34; and reason.
      * 
-    */
+     */
     public AbortInfoResponse abort() {
         return this.abort;
     }
     /**
-     * This is a step that leads to the final state Drop.
+     * @return This is a step that leads to the final state Drop.
      * 
-    */
+     */
     public Boolean causesDrop() {
         return this.causesDrop;
     }
     /**
-     * Display information of a Cloud SQL instance.
+     * @return Display information of a Cloud SQL instance.
      * 
-    */
+     */
     public CloudSQLInstanceInfoResponse cloudSqlInstance() {
         return this.cloudSqlInstance;
     }
     /**
-     * Display information of the final state &#34;deliver&#34; and reason.
+     * @return Display information of the final state &#34;deliver&#34; and reason.
      * 
-    */
+     */
     public DeliverInfoResponse deliver() {
         return this.deliver;
     }
     /**
-     * A description of the step. Usually this is a summary of the state.
+     * @return A description of the step. Usually this is a summary of the state.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Display information of the final state &#34;drop&#34; and reason.
+     * @return Display information of the final state &#34;drop&#34; and reason.
      * 
-    */
+     */
     public DropInfoResponse drop() {
         return this.drop;
     }
     /**
-     * Display information of the source and destination under analysis. The endpoint information in an intermediate state may differ with the initial input, as it might be modified by state like NAT, or Connection Proxy.
+     * @return Display information of the source and destination under analysis. The endpoint information in an intermediate state may differ with the initial input, as it might be modified by state like NAT, or Connection Proxy.
      * 
-    */
+     */
     public EndpointInfoResponse endpoint() {
         return this.endpoint;
     }
     /**
-     * Display information of a Compute Engine firewall rule.
+     * @return Display information of a Compute Engine firewall rule.
      * 
-    */
+     */
     public FirewallInfoResponse firewall() {
         return this.firewall;
     }
     /**
-     * Display information of the final state &#34;forward&#34; and reason.
+     * @return Display information of the final state &#34;forward&#34; and reason.
      * 
-    */
+     */
     public ForwardInfoResponse forward() {
         return this.forward;
     }
     /**
-     * Display information of a Compute Engine forwarding rule.
+     * @return Display information of a Compute Engine forwarding rule.
      * 
-    */
+     */
     public ForwardingRuleInfoResponse forwardingRule() {
         return this.forwardingRule;
     }
     /**
-     * Display information of a Google Kubernetes Engine cluster master.
+     * @return Display information of a Google Kubernetes Engine cluster master.
      * 
-    */
+     */
     public GKEMasterInfoResponse gkeMaster() {
         return this.gkeMaster;
     }
     /**
-     * Display information of a Compute Engine instance.
+     * @return Display information of a Compute Engine instance.
      * 
-    */
+     */
     public InstanceInfoResponse instance() {
         return this.instance;
     }
     /**
-     * Display information of the load balancers.
+     * @return Display information of the load balancers.
      * 
-    */
+     */
     public LoadBalancerInfoResponse loadBalancer() {
         return this.loadBalancer;
     }
     /**
-     * Display information of a Google Cloud network.
+     * @return Display information of a Google Cloud network.
      * 
-    */
+     */
     public NetworkInfoResponse network() {
         return this.network;
     }
     /**
-     * Project ID that contains the configuration this step is validating.
+     * @return Project ID that contains the configuration this step is validating.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * Display information of a Compute Engine route.
+     * @return Display information of a Compute Engine route.
      * 
-    */
+     */
     public RouteInfoResponse route() {
         return this.route;
     }
     /**
-     * Each step is in one of the pre-defined states.
+     * @return Each step is in one of the pre-defined states.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Display information of a Compute Engine VPN gateway.
+     * @return Display information of a Compute Engine VPN gateway.
      * 
-    */
+     */
     public VpnGatewayInfoResponse vpnGateway() {
         return this.vpnGateway;
     }
     /**
-     * Display information of a Compute Engine VPN tunnel.
+     * @return Display information of a Compute Engine VPN tunnel.
      * 
-    */
+     */
     public VpnTunnelInfoResponse vpnTunnel() {
         return this.vpnTunnel;
     }

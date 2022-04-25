@@ -27,6 +27,10 @@ public final class AliasContextArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<AliasContextKind> kind;
 
+    /**
+     * @return The alias kind.
+     * 
+     */
     public Optional<Output<AliasContextKind>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -38,6 +42,10 @@ public final class AliasContextArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The alias name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,20 +75,44 @@ public final class AliasContextArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AliasContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind The alias kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<AliasContextKind> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The alias kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(AliasContextKind kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name The alias name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The alias name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -24,6 +24,10 @@ public final class TrafficPortSelectorResponse extends com.pulumi.resources.Invo
     @Import(name="ports", required=true)
     private List<String> ports;
 
+    /**
+     * @return Optional. A list of ports. Can be port numbers or port range (example, [80-90] specifies all ports from 80 to 90, including 80 and 90) or named ports or * to specify all ports. If the list is empty, all ports are selected.
+     * 
+     */
     public List<String> ports() {
         return this.ports;
     }
@@ -52,11 +56,23 @@ public final class TrafficPortSelectorResponse extends com.pulumi.resources.Invo
             $ = new TrafficPortSelectorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ports Optional. A list of ports. Can be port numbers or port range (example, [80-90] specifies all ports from 80 to 90, including 80 and 90) or named ports or * to specify all ports. If the list is empty, all ports are selected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<String> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports Optional. A list of ports. Can be port numbers or port range (example, [80-90] specifies all ports from 80 to 90, including 80 and 90) or named ports or * to specify all ports. If the list is empty, all ports are selected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(String... ports) {
             return ports(List.of(ports));
         }

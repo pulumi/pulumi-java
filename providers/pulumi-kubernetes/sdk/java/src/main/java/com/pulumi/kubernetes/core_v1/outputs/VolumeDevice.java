@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class VolumeDevice {
     /**
-     * devicePath is the path inside of the container that the device will be mapped to.
+     * @return devicePath is the path inside of the container that the device will be mapped to.
      * 
      */
     private final String devicePath;
     /**
-     * name must match the name of a persistentVolumeClaim in the pod
+     * @return name must match the name of a persistentVolumeClaim in the pod
      * 
      */
     private final String name;
@@ -29,16 +29,16 @@ public final class VolumeDevice {
     }
 
     /**
-     * devicePath is the path inside of the container that the device will be mapped to.
+     * @return devicePath is the path inside of the container that the device will be mapped to.
      * 
-    */
+     */
     public String devicePath() {
         return this.devicePath;
     }
     /**
-     * name must match the name of a persistentVolumeClaim in the pod
+     * @return name must match the name of a persistentVolumeClaim in the pod
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

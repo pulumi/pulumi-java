@@ -24,6 +24,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addonName")
     private @Nullable Output<String> addonName;
 
+    /**
+     * @return The addon name.
+     * 
+     */
     public Optional<Output<String>> addonName() {
         return Optional.ofNullable(this.addonName);
     }
@@ -35,6 +39,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -46,6 +54,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<Either<String,AddonType>> kind;
 
+    /**
+     * @return Addon type.
+     * 
+     */
     public Output<Either<String,AddonType>> kind() {
         return this.kind;
     }
@@ -57,6 +69,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleName", required=true)
     private Output<String> roleName;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public Output<String> roleName() {
         return this.roleName;
     }
@@ -100,55 +120,127 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AddonArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addonName The addon name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonName(@Nullable Output<String> addonName) {
             $.addonName = addonName;
             return this;
         }
 
+        /**
+         * @param addonName The addon name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonName(String addonName) {
             return addonName(Output.of(addonName));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param kind Addon type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,AddonType>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Addon type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,AddonType> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Addon type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Addon type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(AddonType kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param roleName The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(Output<String> roleName) {
             $.roleName = roleName;
             return this;
         }
 
+        /**
+         * @param roleName The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(String roleName) {
             return roleName(Output.of(roleName));
         }

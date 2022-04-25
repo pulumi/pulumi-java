@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ActivationPropertiesResponse {
     /**
-     * The activation status of the connected registry.
+     * @return The activation status of the connected registry.
      * 
      */
     private final String status;
@@ -21,9 +21,9 @@ public final class ActivationPropertiesResponse {
     }
 
     /**
-     * The activation status of the connected registry.
+     * @return The activation status of the connected registry.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

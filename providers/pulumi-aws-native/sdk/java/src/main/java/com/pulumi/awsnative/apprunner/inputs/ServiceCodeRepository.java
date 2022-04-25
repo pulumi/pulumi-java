@@ -34,6 +34,10 @@ public final class ServiceCodeRepository extends com.pulumi.resources.InvokeArgs
     @Import(name="repositoryUrl", required=true)
     private String repositoryUrl;
 
+    /**
+     * @return Repository Url
+     * 
+     */
     public String repositoryUrl() {
         return this.repositoryUrl;
     }
@@ -76,6 +80,12 @@ public final class ServiceCodeRepository extends com.pulumi.resources.InvokeArgs
             return this;
         }
 
+        /**
+         * @param repositoryUrl Repository Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUrl(String repositoryUrl) {
             $.repositoryUrl = repositoryUrl;
             return this;

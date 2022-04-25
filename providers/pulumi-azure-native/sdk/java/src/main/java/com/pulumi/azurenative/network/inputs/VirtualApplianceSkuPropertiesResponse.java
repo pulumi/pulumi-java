@@ -25,6 +25,10 @@ public final class VirtualApplianceSkuPropertiesResponse extends com.pulumi.reso
     @Import(name="bundledScaleUnit")
     private @Nullable String bundledScaleUnit;
 
+    /**
+     * @return Virtual Appliance Scale Unit.
+     * 
+     */
     public Optional<String> bundledScaleUnit() {
         return Optional.ofNullable(this.bundledScaleUnit);
     }
@@ -36,6 +40,10 @@ public final class VirtualApplianceSkuPropertiesResponse extends com.pulumi.reso
     @Import(name="marketPlaceVersion")
     private @Nullable String marketPlaceVersion;
 
+    /**
+     * @return Virtual Appliance Version.
+     * 
+     */
     public Optional<String> marketPlaceVersion() {
         return Optional.ofNullable(this.marketPlaceVersion);
     }
@@ -47,6 +55,10 @@ public final class VirtualApplianceSkuPropertiesResponse extends com.pulumi.reso
     @Import(name="vendor")
     private @Nullable String vendor;
 
+    /**
+     * @return Virtual Appliance Vendor.
+     * 
+     */
     public Optional<String> vendor() {
         return Optional.ofNullable(this.vendor);
     }
@@ -77,16 +89,34 @@ public final class VirtualApplianceSkuPropertiesResponse extends com.pulumi.reso
             $ = new VirtualApplianceSkuPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bundledScaleUnit Virtual Appliance Scale Unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundledScaleUnit(@Nullable String bundledScaleUnit) {
             $.bundledScaleUnit = bundledScaleUnit;
             return this;
         }
 
+        /**
+         * @param marketPlaceVersion Virtual Appliance Version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketPlaceVersion(@Nullable String marketPlaceVersion) {
             $.marketPlaceVersion = marketPlaceVersion;
             return this;
         }
 
+        /**
+         * @param vendor Virtual Appliance Vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendor(@Nullable String vendor) {
             $.vendor = vendor;
             return this;

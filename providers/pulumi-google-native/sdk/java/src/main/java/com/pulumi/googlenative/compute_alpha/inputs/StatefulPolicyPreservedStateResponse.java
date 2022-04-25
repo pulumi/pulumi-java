@@ -24,6 +24,10 @@ public final class StatefulPolicyPreservedStateResponse extends com.pulumi.resou
     @Import(name="disks", required=true)
     private Map<String,String> disks;
 
+    /**
+     * @return Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+     * 
+     */
     public Map<String,String> disks() {
         return this.disks;
     }
@@ -35,6 +39,10 @@ public final class StatefulPolicyPreservedStateResponse extends com.pulumi.resou
     @Import(name="externalIPs", required=true)
     private Map<String,String> externalIPs;
 
+    /**
+     * @return External network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
+     * 
+     */
     public Map<String,String> externalIPs() {
         return this.externalIPs;
     }
@@ -46,6 +54,10 @@ public final class StatefulPolicyPreservedStateResponse extends com.pulumi.resou
     @Import(name="internalIPs", required=true)
     private Map<String,String> internalIPs;
 
+    /**
+     * @return Internal network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
+     * 
+     */
     public Map<String,String> internalIPs() {
         return this.internalIPs;
     }
@@ -76,16 +88,34 @@ public final class StatefulPolicyPreservedStateResponse extends com.pulumi.resou
             $ = new StatefulPolicyPreservedStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disks Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(Map<String,String> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param externalIPs External network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIPs(Map<String,String> externalIPs) {
             $.externalIPs = externalIPs;
             return this;
         }
 
+        /**
+         * @param internalIPs Internal network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIPs(Map<String,String> internalIPs) {
             $.internalIPs = internalIPs;
             return this;

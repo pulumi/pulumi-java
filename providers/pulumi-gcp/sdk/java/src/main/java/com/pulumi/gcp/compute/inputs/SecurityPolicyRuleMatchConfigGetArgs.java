@@ -23,6 +23,12 @@ public final class SecurityPolicyRuleMatchConfigGetArgs extends com.pulumi.resou
     @Import(name="srcIpRanges", required=true)
     private Output<List<String>> srcIpRanges;
 
+    /**
+     * @return Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
+     * to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of &#39;\*&#39; matches all IPs
+     * (can be used to override the default behavior).
+     * 
+     */
     public Output<List<String>> srcIpRanges() {
         return this.srcIpRanges;
     }
@@ -51,15 +57,39 @@ public final class SecurityPolicyRuleMatchConfigGetArgs extends com.pulumi.resou
             $ = new SecurityPolicyRuleMatchConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param srcIpRanges Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
+         * to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of &#39;\*&#39; matches all IPs
+         * (can be used to override the default behavior).
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(Output<List<String>> srcIpRanges) {
             $.srcIpRanges = srcIpRanges;
             return this;
         }
 
+        /**
+         * @param srcIpRanges Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
+         * to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of &#39;\*&#39; matches all IPs
+         * (can be used to override the default behavior).
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(List<String> srcIpRanges) {
             return srcIpRanges(Output.of(srcIpRanges));
         }
 
+        /**
+         * @param srcIpRanges Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
+         * to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of &#39;\*&#39; matches all IPs
+         * (can be used to override the default behavior).
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
         }

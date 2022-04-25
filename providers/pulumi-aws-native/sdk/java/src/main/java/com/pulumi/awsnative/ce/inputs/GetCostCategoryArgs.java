@@ -19,6 +19,10 @@ public final class GetCostCategoryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return Cost category ARN
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetCostCategoryArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCostCategoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Cost category ARN
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

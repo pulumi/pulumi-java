@@ -26,6 +26,10 @@ public final class OnPremisePropertyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return A globally unique ID identifying the associated Kubernetes cluster
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -37,6 +41,10 @@ public final class OnPremisePropertyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="publicSigningKey", required=true)
     private Output<String> publicSigningKey;
 
+    /**
+     * @return Certificate that contains the Kubernetes cluster public key used to verify signing
+     * 
+     */
     public Output<String> publicSigningKey() {
         return this.publicSigningKey;
     }
@@ -48,6 +56,10 @@ public final class OnPremisePropertyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="signingCertificateThumbprint")
     private @Nullable Output<String> signingCertificateThumbprint;
 
+    /**
+     * @return Unique thumbprint returned to customer to verify the certificate being uploaded
+     * 
+     */
     public Optional<Output<String>> signingCertificateThumbprint() {
         return Optional.ofNullable(this.signingCertificateThumbprint);
     }
@@ -78,29 +90,65 @@ public final class OnPremisePropertyArgs extends com.pulumi.resources.ResourceAr
             $ = new OnPremisePropertyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id A globally unique ID identifying the associated Kubernetes cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id A globally unique ID identifying the associated Kubernetes cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param publicSigningKey Certificate that contains the Kubernetes cluster public key used to verify signing
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicSigningKey(Output<String> publicSigningKey) {
             $.publicSigningKey = publicSigningKey;
             return this;
         }
 
+        /**
+         * @param publicSigningKey Certificate that contains the Kubernetes cluster public key used to verify signing
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicSigningKey(String publicSigningKey) {
             return publicSigningKey(Output.of(publicSigningKey));
         }
 
+        /**
+         * @param signingCertificateThumbprint Unique thumbprint returned to customer to verify the certificate being uploaded
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingCertificateThumbprint(@Nullable Output<String> signingCertificateThumbprint) {
             $.signingCertificateThumbprint = signingCertificateThumbprint;
             return this;
         }
 
+        /**
+         * @param signingCertificateThumbprint Unique thumbprint returned to customer to verify the certificate being uploaded
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingCertificateThumbprint(String signingCertificateThumbprint) {
             return signingCertificateThumbprint(Output.of(signingCertificateThumbprint));
         }

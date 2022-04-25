@@ -29,6 +29,10 @@ public final class GoogleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return &lt;code&gt;false&lt;/code&gt; if the Google provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -40,6 +44,10 @@ public final class GoogleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="login")
     private @Nullable Output<LoginScopesArgs> login;
 
+    /**
+     * @return The configuration settings of the login flow.
+     * 
+     */
     public Optional<Output<LoginScopesArgs>> login() {
         return Optional.ofNullable(this.login);
     }
@@ -51,6 +59,10 @@ public final class GoogleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registration")
     private @Nullable Output<ClientRegistrationArgs> registration;
 
+    /**
+     * @return The configuration settings of the app registration for the Google provider.
+     * 
+     */
     public Optional<Output<ClientRegistrationArgs>> registration() {
         return Optional.ofNullable(this.registration);
     }
@@ -62,6 +74,10 @@ public final class GoogleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="validation")
     private @Nullable Output<AllowedAudiencesValidationArgs> validation;
 
+    /**
+     * @return The configuration settings of the Azure Active Directory token validation flow.
+     * 
+     */
     public Optional<Output<AllowedAudiencesValidationArgs>> validation() {
         return Optional.ofNullable(this.validation);
     }
@@ -93,38 +109,86 @@ public final class GoogleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GoogleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled &lt;code&gt;false&lt;/code&gt; if the Google provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled &lt;code&gt;false&lt;/code&gt; if the Google provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param login The configuration settings of the login flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(@Nullable Output<LoginScopesArgs> login) {
             $.login = login;
             return this;
         }
 
+        /**
+         * @param login The configuration settings of the login flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(LoginScopesArgs login) {
             return login(Output.of(login));
         }
 
+        /**
+         * @param registration The configuration settings of the app registration for the Google provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registration(@Nullable Output<ClientRegistrationArgs> registration) {
             $.registration = registration;
             return this;
         }
 
+        /**
+         * @param registration The configuration settings of the app registration for the Google provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registration(ClientRegistrationArgs registration) {
             return registration(Output.of(registration));
         }
 
+        /**
+         * @param validation The configuration settings of the Azure Active Directory token validation flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validation(@Nullable Output<AllowedAudiencesValidationArgs> validation) {
             $.validation = validation;
             return this;
         }
 
+        /**
+         * @param validation The configuration settings of the Azure Active Directory token validation flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validation(AllowedAudiencesValidationArgs validation) {
             return validation(Output.of(validation));
         }

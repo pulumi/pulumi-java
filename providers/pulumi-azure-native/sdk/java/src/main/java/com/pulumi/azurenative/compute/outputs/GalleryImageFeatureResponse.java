@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GalleryImageFeatureResponse {
     /**
-     * The name of the gallery image feature.
+     * @return The name of the gallery image feature.
      * 
      */
     private final @Nullable String name;
     /**
-     * The value of the gallery image feature.
+     * @return The value of the gallery image feature.
      * 
      */
     private final @Nullable String value;
@@ -31,16 +31,16 @@ public final class GalleryImageFeatureResponse {
     }
 
     /**
-     * The name of the gallery image feature.
+     * @return The name of the gallery image feature.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The value of the gallery image feature.
+     * @return The value of the gallery image feature.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -23,6 +23,10 @@ public final class MetricDescriptorMetadataResponse extends com.pulumi.resources
     @Import(name="ingestDelay", required=true)
     private String ingestDelay;
 
+    /**
+     * @return The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors.
+     * 
+     */
     public String ingestDelay() {
         return this.ingestDelay;
     }
@@ -34,6 +38,10 @@ public final class MetricDescriptorMetadataResponse extends com.pulumi.resources
     @Import(name="samplePeriod", required=true)
     private String samplePeriod;
 
+    /**
+     * @return The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period.
+     * 
+     */
     public String samplePeriod() {
         return this.samplePeriod;
     }
@@ -63,11 +71,23 @@ public final class MetricDescriptorMetadataResponse extends com.pulumi.resources
             $ = new MetricDescriptorMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ingestDelay The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestDelay(String ingestDelay) {
             $.ingestDelay = ingestDelay;
             return this;
         }
 
+        /**
+         * @param samplePeriod The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplePeriod(String samplePeriod) {
             $.samplePeriod = samplePeriod;
             return this;

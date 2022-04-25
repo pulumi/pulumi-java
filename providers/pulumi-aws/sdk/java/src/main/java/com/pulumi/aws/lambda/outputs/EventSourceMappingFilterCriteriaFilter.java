@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EventSourceMappingFilterCriteriaFilter {
     /**
-     * A filter pattern up to 4096 characters. See [Filter Rule Syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax).
+     * @return A filter pattern up to 4096 characters. See [Filter Rule Syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax).
      * 
      */
     private final @Nullable String pattern;
@@ -23,9 +23,9 @@ public final class EventSourceMappingFilterCriteriaFilter {
     }
 
     /**
-     * A filter pattern up to 4096 characters. See [Filter Rule Syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax).
+     * @return A filter pattern up to 4096 characters. See [Filter Rule Syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax).
      * 
-    */
+     */
     public Optional<String> pattern() {
         return Optional.ofNullable(this.pattern);
     }

@@ -20,6 +20,10 @@ public final class AccountAliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountAlias", required=true)
     private Output<String> accountAlias;
 
+    /**
+     * @return The account alias
+     * 
+     */
     public Output<String> accountAlias() {
         return this.accountAlias;
     }
@@ -48,11 +52,23 @@ public final class AccountAliasArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccountAliasArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountAlias The account alias
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountAlias(Output<String> accountAlias) {
             $.accountAlias = accountAlias;
             return this;
         }
 
+        /**
+         * @param accountAlias The account alias
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountAlias(String accountAlias) {
             return accountAlias(Output.of(accountAlias));
         }

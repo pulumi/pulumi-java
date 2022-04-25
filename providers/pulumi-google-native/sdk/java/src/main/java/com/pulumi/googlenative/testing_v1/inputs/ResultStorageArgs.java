@@ -27,6 +27,10 @@ public final class ResultStorageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="googleCloudStorage", required=true)
     private Output<GoogleCloudStorageArgs> googleCloudStorage;
 
+    /**
+     * @return Required.
+     * 
+     */
     public Output<GoogleCloudStorageArgs> googleCloudStorage() {
         return this.googleCloudStorage;
     }
@@ -38,6 +42,10 @@ public final class ResultStorageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="toolResultsHistory")
     private @Nullable Output<ToolResultsHistoryArgs> toolResultsHistory;
 
+    /**
+     * @return The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
+     * 
+     */
     public Optional<Output<ToolResultsHistoryArgs>> toolResultsHistory() {
         return Optional.ofNullable(this.toolResultsHistory);
     }
@@ -67,20 +75,44 @@ public final class ResultStorageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResultStorageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param googleCloudStorage Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleCloudStorage(Output<GoogleCloudStorageArgs> googleCloudStorage) {
             $.googleCloudStorage = googleCloudStorage;
             return this;
         }
 
+        /**
+         * @param googleCloudStorage Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleCloudStorage(GoogleCloudStorageArgs googleCloudStorage) {
             return googleCloudStorage(Output.of(googleCloudStorage));
         }
 
+        /**
+         * @param toolResultsHistory The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolResultsHistory(@Nullable Output<ToolResultsHistoryArgs> toolResultsHistory) {
             $.toolResultsHistory = toolResultsHistory;
             return this;
         }
 
+        /**
+         * @param toolResultsHistory The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolResultsHistory(ToolResultsHistoryArgs toolResultsHistory) {
             return toolResultsHistory(Output.of(toolResultsHistory));
         }

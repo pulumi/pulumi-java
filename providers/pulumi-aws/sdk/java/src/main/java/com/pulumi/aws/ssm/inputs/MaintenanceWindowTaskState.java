@@ -26,6 +26,10 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the maintenance window task.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="maxConcurrency")
     private @Nullable Output<String> maxConcurrency;
 
+    /**
+     * @return The maximum number of targets this task can be run for in parallel.
+     * 
+     */
     public Optional<Output<String>> maxConcurrency() {
         return Optional.ofNullable(this.maxConcurrency);
     }
@@ -48,6 +56,10 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="maxErrors")
     private @Nullable Output<String> maxErrors;
 
+    /**
+     * @return The maximum number of errors allowed before this task stops being scheduled.
+     * 
+     */
     public Optional<Output<String>> maxErrors() {
         return Optional.ofNullable(this.maxErrors);
     }
@@ -59,6 +71,10 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the maintenance window task.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -81,6 +101,10 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="serviceRoleArn")
     private @Nullable Output<String> serviceRoleArn;
 
+    /**
+     * @return The role that should be assumed when executing the task. If a role is not provided, Systems Manager uses your account&#39;s service-linked role. If no service-linked role for Systems Manager exists in your account, it is created for you.
+     * 
+     */
     public Optional<Output<String>> serviceRoleArn() {
         return Optional.ofNullable(this.serviceRoleArn);
     }
@@ -92,6 +116,10 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="targets")
     private @Nullable Output<List<MaintenanceWindowTaskTargetGetArgs>> targets;
 
+    /**
+     * @return The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
+     * 
+     */
     public Optional<Output<List<MaintenanceWindowTaskTargetGetArgs>>> targets() {
         return Optional.ofNullable(this.targets);
     }
@@ -103,6 +131,10 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="taskArn")
     private @Nullable Output<String> taskArn;
 
+    /**
+     * @return The ARN of the task to execute.
+     * 
+     */
     public Optional<Output<String>> taskArn() {
         return Optional.ofNullable(this.taskArn);
     }
@@ -114,6 +146,10 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="taskInvocationParameters")
     private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersGetArgs> taskInvocationParameters;
 
+    /**
+     * @return Configuration block with parameters for task execution.
+     * 
+     */
     public Optional<Output<MaintenanceWindowTaskTaskInvocationParametersGetArgs>> taskInvocationParameters() {
         return Optional.ofNullable(this.taskInvocationParameters);
     }
@@ -125,6 +161,10 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="taskType")
     private @Nullable Output<String> taskType;
 
+    /**
+     * @return The type of task being registered. Valid values: `AUTOMATION`, `LAMBDA`, `RUN_COMMAND` or `STEP_FUNCTIONS`.
+     * 
+     */
     public Optional<Output<String>> taskType() {
         return Optional.ofNullable(this.taskType);
     }
@@ -136,6 +176,10 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     @Import(name="windowId")
     private @Nullable Output<String> windowId;
 
+    /**
+     * @return The Id of the maintenance window to register the task with.
+     * 
+     */
     public Optional<Output<String>> windowId() {
         return Optional.ofNullable(this.windowId);
     }
@@ -174,105 +218,243 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
             $ = new MaintenanceWindowTaskState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the maintenance window task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the maintenance window task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param maxConcurrency The maximum number of targets this task can be run for in parallel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrency(@Nullable Output<String> maxConcurrency) {
             $.maxConcurrency = maxConcurrency;
             return this;
         }
 
+        /**
+         * @param maxConcurrency The maximum number of targets this task can be run for in parallel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrency(String maxConcurrency) {
             return maxConcurrency(Output.of(maxConcurrency));
         }
 
+        /**
+         * @param maxErrors The maximum number of errors allowed before this task stops being scheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxErrors(@Nullable Output<String> maxErrors) {
             $.maxErrors = maxErrors;
             return this;
         }
 
+        /**
+         * @param maxErrors The maximum number of errors allowed before this task stops being scheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxErrors(String maxErrors) {
             return maxErrors(Output.of(maxErrors));
         }
 
+        /**
+         * @param name The name of the maintenance window task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the maintenance window task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param priority The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param serviceRoleArn The role that should be assumed when executing the task. If a role is not provided, Systems Manager uses your account&#39;s service-linked role. If no service-linked role for Systems Manager exists in your account, it is created for you.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
             $.serviceRoleArn = serviceRoleArn;
             return this;
         }
 
+        /**
+         * @param serviceRoleArn The role that should be assumed when executing the task. If a role is not provided, Systems Manager uses your account&#39;s service-linked role. If no service-linked role for Systems Manager exists in your account, it is created for you.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRoleArn(String serviceRoleArn) {
             return serviceRoleArn(Output.of(serviceRoleArn));
         }
 
+        /**
+         * @param targets The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(@Nullable Output<List<MaintenanceWindowTaskTargetGetArgs>> targets) {
             $.targets = targets;
             return this;
         }
 
+        /**
+         * @param targets The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(List<MaintenanceWindowTaskTargetGetArgs> targets) {
             return targets(Output.of(targets));
         }
 
+        /**
+         * @param targets The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(MaintenanceWindowTaskTargetGetArgs... targets) {
             return targets(List.of(targets));
         }
 
+        /**
+         * @param taskArn The ARN of the task to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskArn(@Nullable Output<String> taskArn) {
             $.taskArn = taskArn;
             return this;
         }
 
+        /**
+         * @param taskArn The ARN of the task to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskArn(String taskArn) {
             return taskArn(Output.of(taskArn));
         }
 
+        /**
+         * @param taskInvocationParameters Configuration block with parameters for task execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskInvocationParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersGetArgs> taskInvocationParameters) {
             $.taskInvocationParameters = taskInvocationParameters;
             return this;
         }
 
+        /**
+         * @param taskInvocationParameters Configuration block with parameters for task execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskInvocationParameters(MaintenanceWindowTaskTaskInvocationParametersGetArgs taskInvocationParameters) {
             return taskInvocationParameters(Output.of(taskInvocationParameters));
         }
 
+        /**
+         * @param taskType The type of task being registered. Valid values: `AUTOMATION`, `LAMBDA`, `RUN_COMMAND` or `STEP_FUNCTIONS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskType(@Nullable Output<String> taskType) {
             $.taskType = taskType;
             return this;
         }
 
+        /**
+         * @param taskType The type of task being registered. Valid values: `AUTOMATION`, `LAMBDA`, `RUN_COMMAND` or `STEP_FUNCTIONS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskType(String taskType) {
             return taskType(Output.of(taskType));
         }
 
+        /**
+         * @param windowId The Id of the maintenance window to register the task with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowId(@Nullable Output<String> windowId) {
             $.windowId = windowId;
             return this;
         }
 
+        /**
+         * @param windowId The Id of the maintenance window to register the task with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowId(String windowId) {
             return windowId(Output.of(windowId));
         }

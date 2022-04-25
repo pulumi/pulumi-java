@@ -26,6 +26,10 @@ public final class KeyEncryptionKeyInfoArgs extends com.pulumi.resources.Resourc
     @Import(name="keyIdentifier")
     private @Nullable Output<String> keyIdentifier;
 
+    /**
+     * @return The key URL / identifier.
+     * 
+     */
     public Optional<Output<String>> keyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }
@@ -37,6 +41,10 @@ public final class KeyEncryptionKeyInfoArgs extends com.pulumi.resources.Resourc
     @Import(name="keyVaultResourceArmId")
     private @Nullable Output<String> keyVaultResourceArmId;
 
+    /**
+     * @return The KeyVault resource ARM Id for key.
+     * 
+     */
     public Optional<Output<String>> keyVaultResourceArmId() {
         return Optional.ofNullable(this.keyVaultResourceArmId);
     }
@@ -66,20 +74,44 @@ public final class KeyEncryptionKeyInfoArgs extends com.pulumi.resources.Resourc
             $ = new KeyEncryptionKeyInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyIdentifier The key URL / identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(@Nullable Output<String> keyIdentifier) {
             $.keyIdentifier = keyIdentifier;
             return this;
         }
 
+        /**
+         * @param keyIdentifier The key URL / identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(String keyIdentifier) {
             return keyIdentifier(Output.of(keyIdentifier));
         }
 
+        /**
+         * @param keyVaultResourceArmId The KeyVault resource ARM Id for key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultResourceArmId(@Nullable Output<String> keyVaultResourceArmId) {
             $.keyVaultResourceArmId = keyVaultResourceArmId;
             return this;
         }
 
+        /**
+         * @param keyVaultResourceArmId The KeyVault resource ARM Id for key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultResourceArmId(String keyVaultResourceArmId) {
             return keyVaultResourceArmId(Output.of(keyVaultResourceArmId));
         }

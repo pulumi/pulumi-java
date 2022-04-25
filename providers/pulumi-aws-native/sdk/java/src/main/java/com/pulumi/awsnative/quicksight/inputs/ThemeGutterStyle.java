@@ -26,6 +26,11 @@ public final class ThemeGutterStyle extends com.pulumi.resources.InvokeArgs {
     @Import(name="show")
     private @Nullable Boolean show;
 
+    /**
+     * @return &lt;p&gt;This Boolean value controls whether to display a gutter space between sheet tiles.
+     *         &lt;/p&gt;
+     * 
+     */
     public Optional<Boolean> show() {
         return Optional.ofNullable(this.show);
     }
@@ -54,6 +59,13 @@ public final class ThemeGutterStyle extends com.pulumi.resources.InvokeArgs {
             $ = new ThemeGutterStyle(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param show &lt;p&gt;This Boolean value controls whether to display a gutter space between sheet tiles.
+         *         &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder show(@Nullable Boolean show) {
             $.show = show;
             return this;

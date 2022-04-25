@@ -15,23 +15,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataboxJobSecretsResponse {
     /**
-     * Dc Access Security Code for Customer Managed Shipping
+     * @return Dc Access Security Code for Customer Managed Shipping
      * 
      */
     private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
     /**
-     * Error while fetching the secrets.
+     * @return Error while fetching the secrets.
      * 
      */
     private final CloudErrorResponse error;
     /**
-     * Used to indicate what type of job secrets object.
+     * @return Used to indicate what type of job secrets object.
      * Expected value is &#39;DataBox&#39;.
      * 
      */
     private final String jobSecretsType;
     /**
-     * Contains the list of secret objects for a job.
+     * @return Contains the list of secret objects for a job.
      * 
      */
     private final @Nullable List<DataBoxSecretResponse> podSecrets;
@@ -49,31 +49,31 @@ public final class DataboxJobSecretsResponse {
     }
 
     /**
-     * Dc Access Security Code for Customer Managed Shipping
+     * @return Dc Access Security Code for Customer Managed Shipping
      * 
-    */
+     */
     public DcAccessSecurityCodeResponse dcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
     /**
-     * Error while fetching the secrets.
+     * @return Error while fetching the secrets.
      * 
-    */
+     */
     public CloudErrorResponse error() {
         return this.error;
     }
     /**
-     * Used to indicate what type of job secrets object.
+     * @return Used to indicate what type of job secrets object.
      * Expected value is &#39;DataBox&#39;.
      * 
-    */
+     */
     public String jobSecretsType() {
         return this.jobSecretsType;
     }
     /**
-     * Contains the list of secret objects for a job.
+     * @return Contains the list of secret objects for a job.
      * 
-    */
+     */
     public List<DataBoxSecretResponse> podSecrets() {
         return this.podSecrets == null ? List.of() : this.podSecrets;
     }

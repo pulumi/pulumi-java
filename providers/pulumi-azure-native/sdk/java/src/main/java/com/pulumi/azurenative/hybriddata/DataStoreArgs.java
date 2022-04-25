@@ -26,6 +26,10 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerSecrets")
     private @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
 
+    /**
+     * @return List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+     * 
+     */
     public Optional<Output<List<CustomerSecretArgs>>> customerSecrets() {
         return Optional.ofNullable(this.customerSecrets);
     }
@@ -37,6 +41,10 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataManagerName", required=true)
     private Output<String> dataManagerName;
 
+    /**
+     * @return The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+     * 
+     */
     public Output<String> dataManagerName() {
         return this.dataManagerName;
     }
@@ -48,6 +56,10 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataStoreName")
     private @Nullable Output<String> dataStoreName;
 
+    /**
+     * @return The data store/repository name to be created or updated.
+     * 
+     */
     public Optional<Output<String>> dataStoreName() {
         return Optional.ofNullable(this.dataStoreName);
     }
@@ -59,6 +71,10 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataStoreTypeId", required=true)
     private Output<String> dataStoreTypeId;
 
+    /**
+     * @return The arm id of the data store type.
+     * 
+     */
     public Output<String> dataStoreTypeId() {
         return this.dataStoreTypeId;
     }
@@ -70,6 +86,10 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extendedProperties")
     private @Nullable Output<Object> extendedProperties;
 
+    /**
+     * @return A generic json used differently by each data source type.
+     * 
+     */
     public Optional<Output<Object>> extendedProperties() {
         return Optional.ofNullable(this.extendedProperties);
     }
@@ -81,6 +101,10 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryId")
     private @Nullable Output<String> repositoryId;
 
+    /**
+     * @return Arm Id for the manager resource to which the data source is associated. This is optional.
+     * 
+     */
     public Optional<Output<String>> repositoryId() {
         return Optional.ofNullable(this.repositoryId);
     }
@@ -92,6 +116,10 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The Resource Group Name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -103,6 +131,10 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state", required=true)
     private Output<State> state;
 
+    /**
+     * @return State of the data source.
+     * 
+     */
     public Output<State> state() {
         return this.state;
     }
@@ -138,78 +170,180 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataStoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerSecrets List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerSecrets(@Nullable Output<List<CustomerSecretArgs>> customerSecrets) {
             $.customerSecrets = customerSecrets;
             return this;
         }
 
+        /**
+         * @param customerSecrets List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerSecrets(List<CustomerSecretArgs> customerSecrets) {
             return customerSecrets(Output.of(customerSecrets));
         }
 
+        /**
+         * @param customerSecrets List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerSecrets(CustomerSecretArgs... customerSecrets) {
             return customerSecrets(List.of(customerSecrets));
         }
 
+        /**
+         * @param dataManagerName The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataManagerName(Output<String> dataManagerName) {
             $.dataManagerName = dataManagerName;
             return this;
         }
 
+        /**
+         * @param dataManagerName The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataManagerName(String dataManagerName) {
             return dataManagerName(Output.of(dataManagerName));
         }
 
+        /**
+         * @param dataStoreName The data store/repository name to be created or updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreName(@Nullable Output<String> dataStoreName) {
             $.dataStoreName = dataStoreName;
             return this;
         }
 
+        /**
+         * @param dataStoreName The data store/repository name to be created or updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreName(String dataStoreName) {
             return dataStoreName(Output.of(dataStoreName));
         }
 
+        /**
+         * @param dataStoreTypeId The arm id of the data store type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreTypeId(Output<String> dataStoreTypeId) {
             $.dataStoreTypeId = dataStoreTypeId;
             return this;
         }
 
+        /**
+         * @param dataStoreTypeId The arm id of the data store type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreTypeId(String dataStoreTypeId) {
             return dataStoreTypeId(Output.of(dataStoreTypeId));
         }
 
+        /**
+         * @param extendedProperties A generic json used differently by each data source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedProperties(@Nullable Output<Object> extendedProperties) {
             $.extendedProperties = extendedProperties;
             return this;
         }
 
+        /**
+         * @param extendedProperties A generic json used differently by each data source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedProperties(Object extendedProperties) {
             return extendedProperties(Output.of(extendedProperties));
         }
 
+        /**
+         * @param repositoryId Arm Id for the manager resource to which the data source is associated. This is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryId(@Nullable Output<String> repositoryId) {
             $.repositoryId = repositoryId;
             return this;
         }
 
+        /**
+         * @param repositoryId Arm Id for the manager resource to which the data source is associated. This is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryId(String repositoryId) {
             return repositoryId(Output.of(repositoryId));
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param state State of the data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Output<State> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state State of the data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(State state) {
             return state(Output.of(state));
         }

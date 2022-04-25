@@ -27,6 +27,13 @@ public final class GCPolicyMaxAgeGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="days")
     private @Nullable Output<Integer> days;
 
+    /**
+     * @return Number of days before applying GC policy.
+     * 
+     * @deprecated
+     * Deprecated in favor of duration
+     * 
+     */
     @Deprecated /* Deprecated in favor of duration */
     public Optional<Output<Integer>> days() {
         return Optional.ofNullable(this.days);
@@ -39,6 +46,10 @@ public final class GCPolicyMaxAgeGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="duration")
     private @Nullable Output<String> duration;
 
+    /**
+     * @return Duration before applying GC policy (ex. &#34;8h&#34;). This is required when `days` isn&#39;t set
+     * 
+     */
     public Optional<Output<String>> duration() {
         return Optional.ofNullable(this.duration);
     }
@@ -68,20 +79,52 @@ public final class GCPolicyMaxAgeGetArgs extends com.pulumi.resources.ResourceAr
             $ = new GCPolicyMaxAgeGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param days Number of days before applying GC policy.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of duration
+         * 
+         */
+        @Deprecated /* Deprecated in favor of duration */
         public Builder days(@Nullable Output<Integer> days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param days Number of days before applying GC policy.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of duration
+         * 
+         */
+        @Deprecated /* Deprecated in favor of duration */
         public Builder days(Integer days) {
             return days(Output.of(days));
         }
 
+        /**
+         * @param duration Duration before applying GC policy (ex. &#34;8h&#34;). This is required when `days` isn&#39;t set
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(@Nullable Output<String> duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param duration Duration before applying GC policy (ex. &#34;8h&#34;). This is required when `days` isn&#39;t set
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             return duration(Output.of(duration));
         }

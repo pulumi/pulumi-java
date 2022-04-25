@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BuildpackBindingLaunchPropertiesResponse {
     /**
-     * Non-sensitive properties for launchProperties
+     * @return Non-sensitive properties for launchProperties
      * 
      */
     private final @Nullable Map<String,String> properties;
     /**
-     * Sensitive properties for launchProperties
+     * @return Sensitive properties for launchProperties
      * 
      */
     private final @Nullable Map<String,String> secrets;
@@ -31,16 +31,16 @@ public final class BuildpackBindingLaunchPropertiesResponse {
     }
 
     /**
-     * Non-sensitive properties for launchProperties
+     * @return Non-sensitive properties for launchProperties
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * Sensitive properties for launchProperties
+     * @return Sensitive properties for launchProperties
      * 
-    */
+     */
     public Map<String,String> secrets() {
         return this.secrets == null ? Map.of() : this.secrets;
     }

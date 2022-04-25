@@ -21,6 +21,10 @@ public final class GetDelegatedAdministratorsArgs extends com.pulumi.resources.I
     @Import(name="servicePrincipal")
     private @Nullable String servicePrincipal;
 
+    /**
+     * @return Specifies a service principal name. If specified, then the operation lists the delegated administrators only for the specified service. If you don&#39;t specify a service principal, the operation lists all delegated administrators for all services in your organization.
+     * 
+     */
     public Optional<String> servicePrincipal() {
         return Optional.ofNullable(this.servicePrincipal);
     }
@@ -49,6 +53,12 @@ public final class GetDelegatedAdministratorsArgs extends com.pulumi.resources.I
             $ = new GetDelegatedAdministratorsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param servicePrincipal Specifies a service principal name. If specified, then the operation lists the delegated administrators only for the specified service. If you don&#39;t specify a service principal, the operation lists all delegated administrators for all services in your organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipal(@Nullable String servicePrincipal) {
             $.servicePrincipal = servicePrincipal;
             return this;

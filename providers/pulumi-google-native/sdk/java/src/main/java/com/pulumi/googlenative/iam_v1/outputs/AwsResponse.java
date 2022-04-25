@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AwsResponse {
     /**
-     * The AWS account ID.
+     * @return The AWS account ID.
      * 
      */
     private final String accountId;
@@ -21,9 +21,9 @@ public final class AwsResponse {
     }
 
     /**
-     * The AWS account ID.
+     * @return The AWS account ID.
      * 
-    */
+     */
     public String accountId() {
         return this.accountId;
     }

@@ -24,6 +24,10 @@ public final class ReservationAffinityResponse extends com.pulumi.resources.Invo
     @Import(name="consumeReservationType", required=true)
     private String consumeReservationType;
 
+    /**
+     * @return Specifies the type of reservation from which this instance can consume resources: ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved instances for examples.
+     * 
+     */
     public String consumeReservationType() {
         return this.consumeReservationType;
     }
@@ -35,6 +39,10 @@ public final class ReservationAffinityResponse extends com.pulumi.resources.Invo
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify googleapis.com/reservation-name as the key and specify the name of your reservation as its value.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -46,6 +54,10 @@ public final class ReservationAffinityResponse extends com.pulumi.resources.Invo
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return Corresponds to the label values of a reservation resource. This can be either a name to a reservation in the same project or &#34;projects/different-project/reservations/some-reservation-name&#34; to target a shared reservation in the same zone but in a different project.
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -76,21 +88,45 @@ public final class ReservationAffinityResponse extends com.pulumi.resources.Invo
             $ = new ReservationAffinityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumeReservationType Specifies the type of reservation from which this instance can consume resources: ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved instances for examples.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumeReservationType(String consumeReservationType) {
             $.consumeReservationType = consumeReservationType;
             return this;
         }
 
+        /**
+         * @param key Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify googleapis.com/reservation-name as the key and specify the name of your reservation as its value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param values Corresponds to the label values of a reservation resource. This can be either a name to a reservation in the same project or &#34;projects/different-project/reservations/some-reservation-name&#34; to target a shared reservation in the same zone but in a different project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Corresponds to the label values of a reservation resource. This can be either a name to a reservation in the same project or &#34;projects/different-project/reservations/some-reservation-name&#34; to target a shared reservation in the same zone but in a different project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

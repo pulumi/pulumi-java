@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DetectorModelAssetPropertyTimestamp {
     /**
-     * The timestamp, in seconds, in the Unix epoch format. The valid range is between `1-31556889864403199`. You can also specify an expression.
+     * @return The timestamp, in seconds, in the Unix epoch format. The valid range is between `1-31556889864403199`. You can also specify an expression.
      * 
      */
     private final @Nullable String offsetInNanos;
     /**
-     * The nanosecond offset converted from `timeInSeconds`. The valid range is between `0-999999999`. You can also specify an expression.
+     * @return The nanosecond offset converted from `timeInSeconds`. The valid range is between `0-999999999`. You can also specify an expression.
      * 
      */
     private final String timeInSeconds;
@@ -31,16 +31,16 @@ public final class DetectorModelAssetPropertyTimestamp {
     }
 
     /**
-     * The timestamp, in seconds, in the Unix epoch format. The valid range is between `1-31556889864403199`. You can also specify an expression.
+     * @return The timestamp, in seconds, in the Unix epoch format. The valid range is between `1-31556889864403199`. You can also specify an expression.
      * 
-    */
+     */
     public Optional<String> offsetInNanos() {
         return Optional.ofNullable(this.offsetInNanos);
     }
     /**
-     * The nanosecond offset converted from `timeInSeconds`. The valid range is between `0-999999999`. You can also specify an expression.
+     * @return The nanosecond offset converted from `timeInSeconds`. The valid range is between `0-999999999`. You can also specify an expression.
      * 
-    */
+     */
     public String timeInSeconds() {
         return this.timeInSeconds;
     }

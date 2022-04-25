@@ -27,6 +27,10 @@ public final class ManagedVirtualNetworkSettingsResponse extends com.pulumi.reso
     @Import(name="allowedAadTenantIdsForLinking")
     private @Nullable List<String> allowedAadTenantIdsForLinking;
 
+    /**
+     * @return Allowed Aad Tenant Ids For Linking
+     * 
+     */
     public Optional<List<String>> allowedAadTenantIdsForLinking() {
         return Optional.ofNullable(this.allowedAadTenantIdsForLinking);
     }
@@ -38,6 +42,10 @@ public final class ManagedVirtualNetworkSettingsResponse extends com.pulumi.reso
     @Import(name="linkedAccessCheckOnTargetResource")
     private @Nullable Boolean linkedAccessCheckOnTargetResource;
 
+    /**
+     * @return Linked Access Check On Target Resource
+     * 
+     */
     public Optional<Boolean> linkedAccessCheckOnTargetResource() {
         return Optional.ofNullable(this.linkedAccessCheckOnTargetResource);
     }
@@ -49,6 +57,10 @@ public final class ManagedVirtualNetworkSettingsResponse extends com.pulumi.reso
     @Import(name="preventDataExfiltration")
     private @Nullable Boolean preventDataExfiltration;
 
+    /**
+     * @return Prevent Data Exfiltration
+     * 
+     */
     public Optional<Boolean> preventDataExfiltration() {
         return Optional.ofNullable(this.preventDataExfiltration);
     }
@@ -79,20 +91,44 @@ public final class ManagedVirtualNetworkSettingsResponse extends com.pulumi.reso
             $ = new ManagedVirtualNetworkSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedAadTenantIdsForLinking Allowed Aad Tenant Ids For Linking
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedAadTenantIdsForLinking(@Nullable List<String> allowedAadTenantIdsForLinking) {
             $.allowedAadTenantIdsForLinking = allowedAadTenantIdsForLinking;
             return this;
         }
 
+        /**
+         * @param allowedAadTenantIdsForLinking Allowed Aad Tenant Ids For Linking
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedAadTenantIdsForLinking(String... allowedAadTenantIdsForLinking) {
             return allowedAadTenantIdsForLinking(List.of(allowedAadTenantIdsForLinking));
         }
 
+        /**
+         * @param linkedAccessCheckOnTargetResource Linked Access Check On Target Resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedAccessCheckOnTargetResource(@Nullable Boolean linkedAccessCheckOnTargetResource) {
             $.linkedAccessCheckOnTargetResource = linkedAccessCheckOnTargetResource;
             return this;
         }
 
+        /**
+         * @param preventDataExfiltration Prevent Data Exfiltration
+         * 
+         * @return builder
+         * 
+         */
         public Builder preventDataExfiltration(@Nullable Boolean preventDataExfiltration) {
             $.preventDataExfiltration = preventDataExfiltration;
             return this;

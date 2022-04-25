@@ -30,6 +30,10 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="active", required=true)
     private Boolean active;
 
+    /**
+     * @return Indicates whether the Deployment is active
+     * 
+     */
     public Boolean active() {
         return this.active;
     }
@@ -41,6 +45,10 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="appName", required=true)
     private String appName;
 
+    /**
+     * @return App name of the deployment
+     * 
+     */
     public String appName() {
         return this.appName;
     }
@@ -52,6 +60,10 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="createdTime", required=true)
     private String createdTime;
 
+    /**
+     * @return Date time when the resource is created
+     * 
+     */
     public String createdTime() {
         return this.createdTime;
     }
@@ -63,6 +75,10 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="deploymentSettings")
     private @Nullable DeploymentSettingsResponse deploymentSettings;
 
+    /**
+     * @return Deployment settings of the Deployment
+     * 
+     */
     public Optional<DeploymentSettingsResponse> deploymentSettings() {
         return Optional.ofNullable(this.deploymentSettings);
     }
@@ -74,6 +90,10 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="instances", required=true)
     private List<DeploymentInstanceResponse> instances;
 
+    /**
+     * @return Collection of instances belong to the Deployment
+     * 
+     */
     public List<DeploymentInstanceResponse> instances() {
         return this.instances;
     }
@@ -85,6 +105,10 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of the Deployment
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -96,6 +120,10 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="source")
     private @Nullable UserSourceInfoResponse source;
 
+    /**
+     * @return Uploaded source information of the deployment.
+     * 
+     */
     public Optional<UserSourceInfoResponse> source() {
         return Optional.ofNullable(this.source);
     }
@@ -107,6 +135,10 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the Deployment
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -142,45 +174,99 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
             $ = new DeploymentResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param active Indicates whether the Deployment is active
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(Boolean active) {
             $.active = active;
             return this;
         }
 
+        /**
+         * @param appName App name of the deployment
+         * 
+         * @return builder
+         * 
+         */
         public Builder appName(String appName) {
             $.appName = appName;
             return this;
         }
 
+        /**
+         * @param createdTime Date time when the resource is created
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param deploymentSettings Deployment settings of the Deployment
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentSettings(@Nullable DeploymentSettingsResponse deploymentSettings) {
             $.deploymentSettings = deploymentSettings;
             return this;
         }
 
+        /**
+         * @param instances Collection of instances belong to the Deployment
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<DeploymentInstanceResponse> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances Collection of instances belong to the Deployment
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(DeploymentInstanceResponse... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the Deployment
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param source Uploaded source information of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable UserSourceInfoResponse source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param status Status of the Deployment
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

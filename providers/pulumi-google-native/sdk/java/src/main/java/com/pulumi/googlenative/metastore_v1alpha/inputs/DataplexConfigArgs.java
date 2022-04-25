@@ -27,6 +27,10 @@ public final class DataplexConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="lakeResources")
     private @Nullable Output<Map<String,String>> lakeResources;
 
+    /**
+     * @return A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
+     * 
+     */
     public Optional<Output<Map<String,String>>> lakeResources() {
         return Optional.ofNullable(this.lakeResources);
     }
@@ -55,11 +59,23 @@ public final class DataplexConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DataplexConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lakeResources A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lakeResources(@Nullable Output<Map<String,String>> lakeResources) {
             $.lakeResources = lakeResources;
             return this;
         }
 
+        /**
+         * @param lakeResources A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lakeResources(Map<String,String> lakeResources) {
             return lakeResources(Output.of(lakeResources));
         }

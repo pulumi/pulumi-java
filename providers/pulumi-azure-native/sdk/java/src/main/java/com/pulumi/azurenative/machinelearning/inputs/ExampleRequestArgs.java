@@ -29,6 +29,10 @@ public final class ExampleRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="globalParameters")
     private @Nullable Output<Map<String,Object>> globalParameters;
 
+    /**
+     * @return Sample input data for the web service&#39;s global parameters
+     * 
+     */
     public Optional<Output<Map<String,Object>>> globalParameters() {
         return Optional.ofNullable(this.globalParameters);
     }
@@ -40,6 +44,10 @@ public final class ExampleRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="inputs")
     private @Nullable Output<Map<String,List<List<Object>>>> inputs;
 
+    /**
+     * @return Sample input data for the web service&#39;s input(s) given as an input name to sample input values matrix map.
+     * 
+     */
     public Optional<Output<Map<String,List<List<Object>>>>> inputs() {
         return Optional.ofNullable(this.inputs);
     }
@@ -69,20 +77,44 @@ public final class ExampleRequestArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ExampleRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param globalParameters Sample input data for the web service&#39;s global parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalParameters(@Nullable Output<Map<String,Object>> globalParameters) {
             $.globalParameters = globalParameters;
             return this;
         }
 
+        /**
+         * @param globalParameters Sample input data for the web service&#39;s global parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalParameters(Map<String,Object> globalParameters) {
             return globalParameters(Output.of(globalParameters));
         }
 
+        /**
+         * @param inputs Sample input data for the web service&#39;s input(s) given as an input name to sample input values matrix map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(@Nullable Output<Map<String,List<List<Object>>>> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs Sample input data for the web service&#39;s input(s) given as an input name to sample input values matrix map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(Map<String,List<List<Object>>> inputs) {
             return inputs(Output.of(inputs));
         }

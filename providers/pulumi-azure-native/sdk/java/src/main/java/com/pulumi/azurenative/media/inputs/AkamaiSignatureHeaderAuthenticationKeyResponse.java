@@ -25,6 +25,10 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse extends com.pu
     @Import(name="base64Key")
     private @Nullable String base64Key;
 
+    /**
+     * @return authentication key
+     * 
+     */
     public Optional<String> base64Key() {
         return Optional.ofNullable(this.base64Key);
     }
@@ -36,6 +40,10 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse extends com.pu
     @Import(name="expiration")
     private @Nullable String expiration;
 
+    /**
+     * @return The expiration time of the authentication key.
+     * 
+     */
     public Optional<String> expiration() {
         return Optional.ofNullable(this.expiration);
     }
@@ -47,6 +55,10 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse extends com.pu
     @Import(name="identifier")
     private @Nullable String identifier;
 
+    /**
+     * @return identifier of the key
+     * 
+     */
     public Optional<String> identifier() {
         return Optional.ofNullable(this.identifier);
     }
@@ -77,16 +89,34 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse extends com.pu
             $ = new AkamaiSignatureHeaderAuthenticationKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param base64Key authentication key
+         * 
+         * @return builder
+         * 
+         */
         public Builder base64Key(@Nullable String base64Key) {
             $.base64Key = base64Key;
             return this;
         }
 
+        /**
+         * @param expiration The expiration time of the authentication key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiration(@Nullable String expiration) {
             $.expiration = expiration;
             return this;
         }
 
+        /**
+         * @param identifier identifier of the key
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifier(@Nullable String identifier) {
             $.identifier = identifier;
             return this;

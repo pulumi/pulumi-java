@@ -23,6 +23,10 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends com.pulumi.r
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The TLS Common Name string of the certificate.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends com.pulumi.r
     @Import(name="wildcardMatch")
     private @Nullable Output<Boolean> wildcardMatch;
 
+    /**
+     * @return Indicates whether the cert should be matched against as a wildcard cert.
+     * 
+     */
     public Optional<Output<Boolean>> wildcardMatch() {
         return Optional.ofNullable(this.wildcardMatch);
     }
@@ -63,20 +71,44 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends com.pulumi.r
             $ = new GoogleCloudApigeeV1TlsInfoCommonNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The TLS Common Name string of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The TLS Common Name string of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }
 
+        /**
+         * @param wildcardMatch Indicates whether the cert should be matched against as a wildcard cert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wildcardMatch(@Nullable Output<Boolean> wildcardMatch) {
             $.wildcardMatch = wildcardMatch;
             return this;
         }
 
+        /**
+         * @param wildcardMatch Indicates whether the cert should be matched against as a wildcard cert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wildcardMatch(Boolean wildcardMatch) {
             return wildcardMatch(Output.of(wildcardMatch));
         }

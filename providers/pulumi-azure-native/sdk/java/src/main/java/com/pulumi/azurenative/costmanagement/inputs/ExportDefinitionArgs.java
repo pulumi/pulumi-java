@@ -31,6 +31,10 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataSet")
     private @Nullable Output<ExportDatasetArgs> dataSet;
 
+    /**
+     * @return The definition for data in the export.
+     * 
+     */
     public Optional<Output<ExportDatasetArgs>> dataSet() {
         return Optional.ofNullable(this.dataSet);
     }
@@ -42,6 +46,10 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="timePeriod")
     private @Nullable Output<ExportTimePeriodArgs> timePeriod;
 
+    /**
+     * @return Has time period for pulling data for the export.
+     * 
+     */
     public Optional<Output<ExportTimePeriodArgs>> timePeriod() {
         return Optional.ofNullable(this.timePeriod);
     }
@@ -53,6 +61,10 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="timeframe", required=true)
     private Output<Either<String,TimeframeType>> timeframe;
 
+    /**
+     * @return The time frame for pulling data for the export. If custom, then a specific time period must be provided.
+     * 
+     */
     public Output<Either<String,TimeframeType>> timeframe() {
         return this.timeframe;
     }
@@ -64,6 +76,10 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
     private Output<Either<String,ExportType>> type;
 
+    /**
+     * @return The type of the export. Note that &#39;Usage&#39; is equivalent to &#39;ActualCost&#39; and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
+     * 
+     */
     public Output<Either<String,ExportType>> type() {
         return this.type;
     }
@@ -95,54 +111,126 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
             $ = new ExportDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSet The definition for data in the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSet(@Nullable Output<ExportDatasetArgs> dataSet) {
             $.dataSet = dataSet;
             return this;
         }
 
+        /**
+         * @param dataSet The definition for data in the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSet(ExportDatasetArgs dataSet) {
             return dataSet(Output.of(dataSet));
         }
 
+        /**
+         * @param timePeriod Has time period for pulling data for the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePeriod(@Nullable Output<ExportTimePeriodArgs> timePeriod) {
             $.timePeriod = timePeriod;
             return this;
         }
 
+        /**
+         * @param timePeriod Has time period for pulling data for the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePeriod(ExportTimePeriodArgs timePeriod) {
             return timePeriod(Output.of(timePeriod));
         }
 
+        /**
+         * @param timeframe The time frame for pulling data for the export. If custom, then a specific time period must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeframe(Output<Either<String,TimeframeType>> timeframe) {
             $.timeframe = timeframe;
             return this;
         }
 
+        /**
+         * @param timeframe The time frame for pulling data for the export. If custom, then a specific time period must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeframe(Either<String,TimeframeType> timeframe) {
             return timeframe(Output.of(timeframe));
         }
 
+        /**
+         * @param timeframe The time frame for pulling data for the export. If custom, then a specific time period must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeframe(String timeframe) {
             return timeframe(Either.ofLeft(timeframe));
         }
 
+        /**
+         * @param timeframe The time frame for pulling data for the export. If custom, then a specific time period must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeframe(TimeframeType timeframe) {
             return timeframe(Either.ofRight(timeframe));
         }
 
+        /**
+         * @param type The type of the export. Note that &#39;Usage&#39; is equivalent to &#39;ActualCost&#39; and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,ExportType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the export. Note that &#39;Usage&#39; is equivalent to &#39;ActualCost&#39; and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ExportType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of the export. Note that &#39;Usage&#39; is equivalent to &#39;ActualCost&#39; and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of the export. Note that &#39;Usage&#39; is equivalent to &#39;ActualCost&#39; and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ExportType type) {
             return type(Either.ofRight(type));
         }

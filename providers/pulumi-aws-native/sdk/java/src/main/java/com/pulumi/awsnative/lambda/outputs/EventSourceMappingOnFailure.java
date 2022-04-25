@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EventSourceMappingOnFailure {
     /**
-     * The Amazon Resource Name (ARN) of the destination resource.
+     * @return The Amazon Resource Name (ARN) of the destination resource.
      * 
      */
     private final @Nullable String destination;
@@ -23,9 +23,9 @@ public final class EventSourceMappingOnFailure {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the destination resource.
+     * @return The Amazon Resource Name (ARN) of the destination resource.
      * 
-    */
+     */
     public Optional<String> destination() {
         return Optional.ofNullable(this.destination);
     }

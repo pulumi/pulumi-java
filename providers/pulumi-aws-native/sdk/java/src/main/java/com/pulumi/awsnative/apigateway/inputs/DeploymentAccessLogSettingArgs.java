@@ -22,6 +22,10 @@ public final class DeploymentAccessLogSettingArgs extends com.pulumi.resources.R
     @Import(name="destinationArn")
     private @Nullable Output<String> destinationArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-.
+     * 
+     */
     public Optional<Output<String>> destinationArn() {
         return Optional.ofNullable(this.destinationArn);
     }
@@ -33,6 +37,10 @@ public final class DeploymentAccessLogSettingArgs extends com.pulumi.resources.R
     @Import(name="format")
     private @Nullable Output<String> format;
 
+    /**
+     * @return A single line format of the access logs of data, as specified by selected $context variables. The format must include at least $context.requestId.
+     * 
+     */
     public Optional<Output<String>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -62,20 +70,44 @@ public final class DeploymentAccessLogSettingArgs extends com.pulumi.resources.R
             $ = new DeploymentAccessLogSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationArn The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationArn(@Nullable Output<String> destinationArn) {
             $.destinationArn = destinationArn;
             return this;
         }
 
+        /**
+         * @param destinationArn The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationArn(String destinationArn) {
             return destinationArn(Output.of(destinationArn));
         }
 
+        /**
+         * @param format A single line format of the access logs of data, as specified by selected $context variables. The format must include at least $context.requestId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<String> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format A single line format of the access logs of data, as specified by selected $context variables. The format must include at least $context.requestId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Output.of(format));
         }

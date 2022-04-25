@@ -10,47 +10,47 @@ import java.util.Objects;
 @CustomType
 public final class KeyUsageOptionsResponse {
     /**
-     * The key may be used to sign certificates.
+     * @return The key may be used to sign certificates.
      * 
      */
     private final Boolean certSign;
     /**
-     * The key may be used for cryptographic commitments. Note that this may also be referred to as &#34;non-repudiation&#34;.
+     * @return The key may be used for cryptographic commitments. Note that this may also be referred to as &#34;non-repudiation&#34;.
      * 
      */
     private final Boolean contentCommitment;
     /**
-     * The key may be used sign certificate revocation lists.
+     * @return The key may be used sign certificate revocation lists.
      * 
      */
     private final Boolean crlSign;
     /**
-     * The key may be used to encipher data.
+     * @return The key may be used to encipher data.
      * 
      */
     private final Boolean dataEncipherment;
     /**
-     * The key may be used to decipher only.
+     * @return The key may be used to decipher only.
      * 
      */
     private final Boolean decipherOnly;
     /**
-     * The key may be used for digital signatures.
+     * @return The key may be used for digital signatures.
      * 
      */
     private final Boolean digitalSignature;
     /**
-     * The key may be used to encipher only.
+     * @return The key may be used to encipher only.
      * 
      */
     private final Boolean encipherOnly;
     /**
-     * The key may be used in a key agreement protocol.
+     * @return The key may be used in a key agreement protocol.
      * 
      */
     private final Boolean keyAgreement;
     /**
-     * The key may be used to encipher other keys.
+     * @return The key may be used to encipher other keys.
      * 
      */
     private final Boolean keyEncipherment;
@@ -78,65 +78,65 @@ public final class KeyUsageOptionsResponse {
     }
 
     /**
-     * The key may be used to sign certificates.
+     * @return The key may be used to sign certificates.
      * 
-    */
+     */
     public Boolean certSign() {
         return this.certSign;
     }
     /**
-     * The key may be used for cryptographic commitments. Note that this may also be referred to as &#34;non-repudiation&#34;.
+     * @return The key may be used for cryptographic commitments. Note that this may also be referred to as &#34;non-repudiation&#34;.
      * 
-    */
+     */
     public Boolean contentCommitment() {
         return this.contentCommitment;
     }
     /**
-     * The key may be used sign certificate revocation lists.
+     * @return The key may be used sign certificate revocation lists.
      * 
-    */
+     */
     public Boolean crlSign() {
         return this.crlSign;
     }
     /**
-     * The key may be used to encipher data.
+     * @return The key may be used to encipher data.
      * 
-    */
+     */
     public Boolean dataEncipherment() {
         return this.dataEncipherment;
     }
     /**
-     * The key may be used to decipher only.
+     * @return The key may be used to decipher only.
      * 
-    */
+     */
     public Boolean decipherOnly() {
         return this.decipherOnly;
     }
     /**
-     * The key may be used for digital signatures.
+     * @return The key may be used for digital signatures.
      * 
-    */
+     */
     public Boolean digitalSignature() {
         return this.digitalSignature;
     }
     /**
-     * The key may be used to encipher only.
+     * @return The key may be used to encipher only.
      * 
-    */
+     */
     public Boolean encipherOnly() {
         return this.encipherOnly;
     }
     /**
-     * The key may be used in a key agreement protocol.
+     * @return The key may be used in a key agreement protocol.
      * 
-    */
+     */
     public Boolean keyAgreement() {
         return this.keyAgreement;
     }
     /**
-     * The key may be used to encipher other keys.
+     * @return The key may be used to encipher other keys.
      * 
-    */
+     */
     public Boolean keyEncipherment() {
         return this.keyEncipherment;
     }

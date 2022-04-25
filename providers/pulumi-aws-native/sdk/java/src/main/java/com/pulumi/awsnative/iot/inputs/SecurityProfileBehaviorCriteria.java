@@ -29,6 +29,10 @@ public final class SecurityProfileBehaviorCriteria extends com.pulumi.resources.
     @Import(name="comparisonOperator")
     private @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator;
 
+    /**
+     * @return The operator that relates the thing measured (metric) to the criteria (containing a value or statisticalThreshold).
+     * 
+     */
     public Optional<SecurityProfileBehaviorCriteriaComparisonOperator> comparisonOperator() {
         return Optional.ofNullable(this.comparisonOperator);
     }
@@ -40,6 +44,10 @@ public final class SecurityProfileBehaviorCriteria extends com.pulumi.resources.
     @Import(name="consecutiveDatapointsToAlarm")
     private @Nullable Integer consecutiveDatapointsToAlarm;
 
+    /**
+     * @return If a device is in violation of the behavior for the specified number of consecutive datapoints, an alarm occurs. If not specified, the default is 1.
+     * 
+     */
     public Optional<Integer> consecutiveDatapointsToAlarm() {
         return Optional.ofNullable(this.consecutiveDatapointsToAlarm);
     }
@@ -51,6 +59,10 @@ public final class SecurityProfileBehaviorCriteria extends com.pulumi.resources.
     @Import(name="consecutiveDatapointsToClear")
     private @Nullable Integer consecutiveDatapointsToClear;
 
+    /**
+     * @return If an alarm has occurred and the offending device is no longer in violation of the behavior for the specified number of consecutive datapoints, the alarm is cleared. If not specified, the default is 1.
+     * 
+     */
     public Optional<Integer> consecutiveDatapointsToClear() {
         return Optional.ofNullable(this.consecutiveDatapointsToClear);
     }
@@ -62,6 +74,10 @@ public final class SecurityProfileBehaviorCriteria extends com.pulumi.resources.
     @Import(name="durationSeconds")
     private @Nullable Integer durationSeconds;
 
+    /**
+     * @return Use this to specify the time duration over which the behavior is evaluated.
+     * 
+     */
     public Optional<Integer> durationSeconds() {
         return Optional.ofNullable(this.durationSeconds);
     }
@@ -117,21 +133,45 @@ public final class SecurityProfileBehaviorCriteria extends com.pulumi.resources.
             $ = new SecurityProfileBehaviorCriteria(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param comparisonOperator The operator that relates the thing measured (metric) to the criteria (containing a value or statisticalThreshold).
+         * 
+         * @return builder
+         * 
+         */
         public Builder comparisonOperator(@Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator) {
             $.comparisonOperator = comparisonOperator;
             return this;
         }
 
+        /**
+         * @param consecutiveDatapointsToAlarm If a device is in violation of the behavior for the specified number of consecutive datapoints, an alarm occurs. If not specified, the default is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consecutiveDatapointsToAlarm(@Nullable Integer consecutiveDatapointsToAlarm) {
             $.consecutiveDatapointsToAlarm = consecutiveDatapointsToAlarm;
             return this;
         }
 
+        /**
+         * @param consecutiveDatapointsToClear If an alarm has occurred and the offending device is no longer in violation of the behavior for the specified number of consecutive datapoints, the alarm is cleared. If not specified, the default is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consecutiveDatapointsToClear(@Nullable Integer consecutiveDatapointsToClear) {
             $.consecutiveDatapointsToClear = consecutiveDatapointsToClear;
             return this;
         }
 
+        /**
+         * @param durationSeconds Use this to specify the time duration over which the behavior is evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
             $.durationSeconds = durationSeconds;
             return this;

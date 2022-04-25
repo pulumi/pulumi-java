@@ -11,42 +11,42 @@ import java.util.Objects;
 @CustomType
 public final class GetGatewayResult {
     /**
-     * Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+     * @return Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
      * 
      */
     private final String apiConfig;
     /**
-     * Created time.
+     * @return Created time.
      * 
      */
     private final String createTime;
     /**
-     * The default API Gateway host name of the form `{gateway_id}-{hash}.{region_code}.gateway.dev`.
+     * @return The default API Gateway host name of the form `{gateway_id}-{hash}.{region_code}.gateway.dev`.
      * 
      */
     private final String defaultHostname;
     /**
-     * Optional. Display name.
+     * @return Optional. Display name.
      * 
      */
     private final String displayName;
     /**
-     * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+     * @return Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
     private final Map<String,String> labels;
     /**
-     * Resource name of the Gateway. Format: projects/{project}/locations/{location}/gateways/{gateway}
+     * @return Resource name of the Gateway. Format: projects/{project}/locations/{location}/gateways/{gateway}
      * 
      */
     private final String name;
     /**
-     * The current state of the Gateway.
+     * @return The current state of the Gateway.
      * 
      */
     private final String state;
     /**
-     * Updated time.
+     * @return Updated time.
      * 
      */
     private final String updateTime;
@@ -72,58 +72,58 @@ public final class GetGatewayResult {
     }
 
     /**
-     * Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+     * @return Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
      * 
-    */
+     */
     public String apiConfig() {
         return this.apiConfig;
     }
     /**
-     * Created time.
+     * @return Created time.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The default API Gateway host name of the form `{gateway_id}-{hash}.{region_code}.gateway.dev`.
+     * @return The default API Gateway host name of the form `{gateway_id}-{hash}.{region_code}.gateway.dev`.
      * 
-    */
+     */
     public String defaultHostname() {
         return this.defaultHostname;
     }
     /**
-     * Optional. Display name.
+     * @return Optional. Display name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+     * @return Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Resource name of the Gateway. Format: projects/{project}/locations/{location}/gateways/{gateway}
+     * @return Resource name of the Gateway. Format: projects/{project}/locations/{location}/gateways/{gateway}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current state of the Gateway.
+     * @return The current state of the Gateway.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Updated time.
+     * @return Updated time.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

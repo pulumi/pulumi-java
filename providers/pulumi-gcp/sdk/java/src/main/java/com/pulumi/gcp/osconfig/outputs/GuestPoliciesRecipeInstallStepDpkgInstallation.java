@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GuestPoliciesRecipeInstallStepDpkgInstallation {
     /**
-     * The id of the relevant artifact in the recipe.
+     * @return The id of the relevant artifact in the recipe.
      * 
      */
     private final String artifactId;
@@ -21,9 +21,9 @@ public final class GuestPoliciesRecipeInstallStepDpkgInstallation {
     }
 
     /**
-     * The id of the relevant artifact in the recipe.
+     * @return The id of the relevant artifact in the recipe.
      * 
-    */
+     */
     public String artifactId() {
         return this.artifactId;
     }

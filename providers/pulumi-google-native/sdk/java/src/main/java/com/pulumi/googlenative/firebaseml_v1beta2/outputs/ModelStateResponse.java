@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ModelStateResponse {
     /**
-     * Indicates if this model has been published.
+     * @return Indicates if this model has been published.
      * 
      */
     private final Boolean published;
     /**
-     * Indicates the latest validation error on the model if any. A model may have validation errors if there were problems during the model creation/update. e.g. in the case of a TfLiteModel, if a tflite model file was missing or in the wrong format. This field will be empty for valid models.
+     * @return Indicates the latest validation error on the model if any. A model may have validation errors if there were problems during the model creation/update. e.g. in the case of a TfLiteModel, if a tflite model file was missing or in the wrong format. This field will be empty for valid models.
      * 
      */
     private final StatusResponse validationError;
@@ -30,16 +30,16 @@ public final class ModelStateResponse {
     }
 
     /**
-     * Indicates if this model has been published.
+     * @return Indicates if this model has been published.
      * 
-    */
+     */
     public Boolean published() {
         return this.published;
     }
     /**
-     * Indicates the latest validation error on the model if any. A model may have validation errors if there were problems during the model creation/update. e.g. in the case of a TfLiteModel, if a tflite model file was missing or in the wrong format. This field will be empty for valid models.
+     * @return Indicates the latest validation error on the model if any. A model may have validation errors if there were problems during the model creation/update. e.g. in the case of a TfLiteModel, if a tflite model file was missing or in the wrong format. This field will be empty for valid models.
      * 
-    */
+     */
     public StatusResponse validationError() {
         return this.validationError;
     }

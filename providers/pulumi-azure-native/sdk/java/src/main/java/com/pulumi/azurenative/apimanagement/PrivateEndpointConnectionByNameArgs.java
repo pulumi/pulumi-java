@@ -23,6 +23,10 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Private Endpoint Connection Resource Id.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -34,6 +38,10 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
     @Import(name="privateEndpointConnectionName")
     private @Nullable Output<String> privateEndpointConnectionName;
 
+    /**
+     * @return Name of the private endpoint connection.
+     * 
+     */
     public Optional<Output<String>> privateEndpointConnectionName() {
         return Optional.ofNullable(this.privateEndpointConnectionName);
     }
@@ -45,6 +53,10 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
     @Import(name="properties")
     private @Nullable Output<PrivateEndpointConnectionRequestPropertiesArgs> properties;
 
+    /**
+     * @return The connection state of the private endpoint connection.
+     * 
+     */
     public Optional<Output<PrivateEndpointConnectionRequestPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -99,47 +119,107 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
             $ = new PrivateEndpointConnectionByNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Private Endpoint Connection Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Private Endpoint Connection Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param privateEndpointConnectionName Name of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnectionName Name of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
 
+        /**
+         * @param properties The connection state of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<PrivateEndpointConnectionRequestPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The connection state of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(PrivateEndpointConnectionRequestPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

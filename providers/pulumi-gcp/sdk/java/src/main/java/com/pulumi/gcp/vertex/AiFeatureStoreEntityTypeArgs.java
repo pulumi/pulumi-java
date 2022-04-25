@@ -24,6 +24,10 @@ public final class AiFeatureStoreEntityTypeArgs extends com.pulumi.resources.Res
     @Import(name="featurestore", required=true)
     private Output<String> featurestore;
 
+    /**
+     * @return The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}.
+     * 
+     */
     public Output<String> featurestore() {
         return this.featurestore;
     }
@@ -35,6 +39,10 @@ public final class AiFeatureStoreEntityTypeArgs extends com.pulumi.resources.Res
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return A set of key/value label pairs to assign to this EntityType.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -48,6 +56,12 @@ public final class AiFeatureStoreEntityTypeArgs extends com.pulumi.resources.Res
     @Import(name="monitoringConfig")
     private @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig;
 
+    /**
+     * @return The default monitoring configuration for all Features under this EntityType.
+     * If this is populated with [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot analysis monitoring is enabled. Otherwise, snapshot analysis monitoring is disabled.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AiFeatureStoreEntityTypeMonitoringConfigArgs>> monitoringConfig() {
         return Optional.ofNullable(this.monitoringConfig);
     }
@@ -59,6 +73,10 @@ public final class AiFeatureStoreEntityTypeArgs extends com.pulumi.resources.Res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -90,38 +108,90 @@ public final class AiFeatureStoreEntityTypeArgs extends com.pulumi.resources.Res
             $ = new AiFeatureStoreEntityTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param featurestore The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featurestore(Output<String> featurestore) {
             $.featurestore = featurestore;
             return this;
         }
 
+        /**
+         * @param featurestore The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featurestore(String featurestore) {
             return featurestore(Output.of(featurestore));
         }
 
+        /**
+         * @param labels A set of key/value label pairs to assign to this EntityType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels A set of key/value label pairs to assign to this EntityType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param monitoringConfig The default monitoring configuration for all Features under this EntityType.
+         * If this is populated with [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot analysis monitoring is enabled. Otherwise, snapshot analysis monitoring is disabled.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringConfig(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig) {
             $.monitoringConfig = monitoringConfig;
             return this;
         }
 
+        /**
+         * @param monitoringConfig The default monitoring configuration for all Features under this EntityType.
+         * If this is populated with [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot analysis monitoring is enabled. Otherwise, snapshot analysis monitoring is disabled.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringConfig(AiFeatureStoreEntityTypeMonitoringConfigArgs monitoringConfig) {
             return monitoringConfig(Output.of(monitoringConfig));
         }
 
+        /**
+         * @param name The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

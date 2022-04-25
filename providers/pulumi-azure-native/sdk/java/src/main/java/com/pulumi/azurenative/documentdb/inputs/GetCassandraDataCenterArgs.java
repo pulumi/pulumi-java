@@ -19,6 +19,10 @@ public final class GetCassandraDataCenterArgs extends com.pulumi.resources.Invok
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return Managed Cassandra cluster name.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -30,6 +34,10 @@ public final class GetCassandraDataCenterArgs extends com.pulumi.resources.Invok
     @Import(name="dataCenterName", required=true)
     private String dataCenterName;
 
+    /**
+     * @return Data center name in a managed Cassandra cluster.
+     * 
+     */
     public String dataCenterName() {
         return this.dataCenterName;
     }
@@ -41,6 +49,10 @@ public final class GetCassandraDataCenterArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetCassandraDataCenterArgs extends com.pulumi.resources.Invok
             $ = new GetCassandraDataCenterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName Managed Cassandra cluster name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param dataCenterName Data center name in a managed Cassandra cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCenterName(String dataCenterName) {
             $.dataCenterName = dataCenterName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

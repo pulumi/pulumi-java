@@ -34,6 +34,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deliveryInfo")
     private @Nullable Output<JobDeliveryInfoArgs> deliveryInfo;
 
+    /**
+     * @return Delivery Info of Job.
+     * 
+     */
     public Optional<Output<JobDeliveryInfoArgs>> deliveryInfo() {
         return Optional.ofNullable(this.deliveryInfo);
     }
@@ -45,6 +49,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deliveryType")
     private @Nullable Output<Either<String,JobDeliveryType>> deliveryType;
 
+    /**
+     * @return Delivery type of Job.
+     * 
+     */
     public Optional<Output<Either<String,JobDeliveryType>>> deliveryType() {
         return Optional.ofNullable(this.deliveryType);
     }
@@ -56,6 +64,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="details")
     private @Nullable Output<Object> details;
 
+    /**
+     * @return Details of a job run. This field will only be sent for expand details filter.
+     * 
+     */
     public Optional<Output<Object>> details() {
         return Optional.ofNullable(this.details);
     }
@@ -67,6 +79,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<ResourceIdentityArgs> identity;
 
+    /**
+     * @return Msi identity of the resource
+     * 
+     */
     public Optional<Output<ResourceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -78,6 +94,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobName")
     private @Nullable Output<String> jobName;
 
+    /**
+     * @return The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+     * 
+     */
     public Optional<Output<String>> jobName() {
         return Optional.ofNullable(this.jobName);
     }
@@ -89,6 +109,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -100,6 +124,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The Resource Group Name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -111,6 +139,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
     private Output<SkuArgs> sku;
 
+    /**
+     * @return The sku type.
+     * 
+     */
     public Output<SkuArgs> sku() {
         return this.sku;
     }
@@ -122,6 +154,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -133,6 +169,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transferType", required=true)
     private Output<Either<String,TransferType>> transferType;
 
+    /**
+     * @return Type of the data transfer.
+     * 
+     */
     public Output<Either<String,TransferType>> transferType() {
         return this.transferType;
     }
@@ -170,108 +210,252 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deliveryInfo Delivery Info of Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryInfo(@Nullable Output<JobDeliveryInfoArgs> deliveryInfo) {
             $.deliveryInfo = deliveryInfo;
             return this;
         }
 
+        /**
+         * @param deliveryInfo Delivery Info of Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryInfo(JobDeliveryInfoArgs deliveryInfo) {
             return deliveryInfo(Output.of(deliveryInfo));
         }
 
+        /**
+         * @param deliveryType Delivery type of Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryType(@Nullable Output<Either<String,JobDeliveryType>> deliveryType) {
             $.deliveryType = deliveryType;
             return this;
         }
 
+        /**
+         * @param deliveryType Delivery type of Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryType(Either<String,JobDeliveryType> deliveryType) {
             return deliveryType(Output.of(deliveryType));
         }
 
+        /**
+         * @param deliveryType Delivery type of Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryType(String deliveryType) {
             return deliveryType(Either.ofLeft(deliveryType));
         }
 
+        /**
+         * @param deliveryType Delivery type of Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryType(JobDeliveryType deliveryType) {
             return deliveryType(Either.ofRight(deliveryType));
         }
 
+        /**
+         * @param details Details of a job run. This field will only be sent for expand details filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(@Nullable Output<Object> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details Details of a job run. This field will only be sent for expand details filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(Object details) {
             return details(Output.of(details));
         }
 
+        /**
+         * @param identity Msi identity of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Msi identity of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ResourceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param jobName The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(@Nullable Output<String> jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param jobName The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             return jobName(Output.of(jobName));
         }
 
+        /**
+         * @param location The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The sku type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The sku type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param transferType Type of the data transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferType(Output<Either<String,TransferType>> transferType) {
             $.transferType = transferType;
             return this;
         }
 
+        /**
+         * @param transferType Type of the data transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferType(Either<String,TransferType> transferType) {
             return transferType(Output.of(transferType));
         }
 
+        /**
+         * @param transferType Type of the data transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferType(String transferType) {
             return transferType(Either.ofLeft(transferType));
         }
 
+        /**
+         * @param transferType Type of the data transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferType(TransferType transferType) {
             return transferType(Either.ofRight(transferType));
         }

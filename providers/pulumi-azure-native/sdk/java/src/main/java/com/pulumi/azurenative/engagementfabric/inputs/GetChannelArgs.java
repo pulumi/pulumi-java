@@ -19,6 +19,10 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Account Name
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="channelName", required=true)
     private String channelName;
 
+    /**
+     * @return Channel Name
+     * 
+     */
     public String channelName() {
         return this.channelName;
     }
@@ -41,6 +49,10 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Resource Group Name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Account Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param channelName Channel Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelName(String channelName) {
             $.channelName = channelName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

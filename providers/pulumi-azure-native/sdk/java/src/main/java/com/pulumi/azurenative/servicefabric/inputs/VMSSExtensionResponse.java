@@ -28,6 +28,10 @@ public final class VMSSExtensionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="autoUpgradeMinorVersion")
     private @Nullable Boolean autoUpgradeMinorVersion;
 
+    /**
+     * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * 
+     */
     public Optional<Boolean> autoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
@@ -39,6 +43,10 @@ public final class VMSSExtensionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="forceUpdateTag")
     private @Nullable String forceUpdateTag;
 
+    /**
+     * @return If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
+     * 
+     */
     public Optional<String> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
@@ -50,6 +58,10 @@ public final class VMSSExtensionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the extension.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -61,6 +73,10 @@ public final class VMSSExtensionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="protectedSettings")
     private @Nullable Object protectedSettings;
 
+    /**
+     * @return The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * 
+     */
     public Optional<Object> protectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
@@ -72,6 +88,10 @@ public final class VMSSExtensionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="provisionAfterExtensions")
     private @Nullable List<String> provisionAfterExtensions;
 
+    /**
+     * @return Collection of extension names after which this extension needs to be provisioned.
+     * 
+     */
     public Optional<List<String>> provisionAfterExtensions() {
         return Optional.ofNullable(this.provisionAfterExtensions);
     }
@@ -83,6 +103,10 @@ public final class VMSSExtensionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state, which only appears in the response.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -94,6 +118,10 @@ public final class VMSSExtensionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="publisher", required=true)
     private String publisher;
 
+    /**
+     * @return The name of the extension handler publisher.
+     * 
+     */
     public String publisher() {
         return this.publisher;
     }
@@ -105,6 +133,10 @@ public final class VMSSExtensionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="settings")
     private @Nullable Object settings;
 
+    /**
+     * @return Json formatted public settings for the extension.
+     * 
+     */
     public Optional<Object> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -116,6 +148,10 @@ public final class VMSSExtensionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -127,6 +163,10 @@ public final class VMSSExtensionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="typeHandlerVersion", required=true)
     private String typeHandlerVersion;
 
+    /**
+     * @return Specifies the version of the script handler.
+     * 
+     */
     public String typeHandlerVersion() {
         return this.typeHandlerVersion;
     }
@@ -164,55 +204,121 @@ public final class VMSSExtensionResponse extends com.pulumi.resources.InvokeArgs
             $ = new VMSSExtensionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoUpgradeMinorVersion Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             $.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
+        /**
+         * @param forceUpdateTag If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             $.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
+        /**
+         * @param name The name of the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param protectedSettings The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedSettings(@Nullable Object protectedSettings) {
             $.protectedSettings = protectedSettings;
             return this;
         }
 
+        /**
+         * @param provisionAfterExtensions Collection of extension names after which this extension needs to be provisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionAfterExtensions(@Nullable List<String> provisionAfterExtensions) {
             $.provisionAfterExtensions = provisionAfterExtensions;
             return this;
         }
 
+        /**
+         * @param provisionAfterExtensions Collection of extension names after which this extension needs to be provisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionAfterExtensions(String... provisionAfterExtensions) {
             return provisionAfterExtensions(List.of(provisionAfterExtensions));
         }
 
+        /**
+         * @param provisioningState The provisioning state, which only appears in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publisher The name of the extension handler publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param settings Json formatted public settings for the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable Object settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param typeHandlerVersion Specifies the version of the script handler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeHandlerVersion(String typeHandlerVersion) {
             $.typeHandlerVersion = typeHandlerVersion;
             return this;

@@ -24,6 +24,11 @@ public final class CertificateConfigSubjectConfigGetArgs extends com.pulumi.reso
     @Import(name="subject", required=true)
     private Output<CertificateConfigSubjectConfigSubjectGetArgs> subject;
 
+    /**
+     * @return Contains distinguished name fields such as the location and organization.
+     * Structure is documented below.
+     * 
+     */
     public Output<CertificateConfigSubjectConfigSubjectGetArgs> subject() {
         return this.subject;
     }
@@ -36,6 +41,11 @@ public final class CertificateConfigSubjectConfigGetArgs extends com.pulumi.reso
     @Import(name="subjectAltName")
     private @Nullable Output<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName;
 
+    /**
+     * @return The subject alternative name fields.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CertificateConfigSubjectConfigSubjectAltNameGetArgs>> subjectAltName() {
         return Optional.ofNullable(this.subjectAltName);
     }
@@ -65,20 +75,48 @@ public final class CertificateConfigSubjectConfigGetArgs extends com.pulumi.reso
             $ = new CertificateConfigSubjectConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subject Contains distinguished name fields such as the location and organization.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(Output<CertificateConfigSubjectConfigSubjectGetArgs> subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subject Contains distinguished name fields such as the location and organization.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(CertificateConfigSubjectConfigSubjectGetArgs subject) {
             return subject(Output.of(subject));
         }
 
+        /**
+         * @param subjectAltName The subject alternative name fields.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltName(@Nullable Output<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName) {
             $.subjectAltName = subjectAltName;
             return this;
         }
 
+        /**
+         * @param subjectAltName The subject alternative name fields.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltName(CertificateConfigSubjectConfigSubjectAltNameGetArgs subjectAltName) {
             return subjectAltName(Output.of(subjectAltName));
         }

@@ -24,6 +24,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<Either<String,Location>> location;
 
+    /**
+     * @return Location of the resource.
+     * 
+     */
     public Optional<Output<Either<String,Location>>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -35,6 +39,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registrationName")
     private @Nullable Output<String> registrationName;
 
+    /**
+     * @return Name of the Azure Stack registration.
+     * 
+     */
     public Optional<Output<String>> registrationName() {
         return Optional.ofNullable(this.registrationName);
     }
@@ -46,6 +54,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registrationToken", required=true)
     private Output<String> registrationToken;
 
+    /**
+     * @return The token identifying registered Azure Stack
+     * 
+     */
     public Output<String> registrationToken() {
         return this.registrationToken;
     }
@@ -57,6 +69,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroup", required=true)
     private Output<String> resourceGroup;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
@@ -88,46 +104,106 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<Either<String,Location>> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Either<String,Location> location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Either.ofLeft(location));
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Location location) {
             return location(Either.ofRight(location));
         }
 
+        /**
+         * @param registrationName Name of the Azure Stack registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationName(@Nullable Output<String> registrationName) {
             $.registrationName = registrationName;
             return this;
         }
 
+        /**
+         * @param registrationName Name of the Azure Stack registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationName(String registrationName) {
             return registrationName(Output.of(registrationName));
         }
 
+        /**
+         * @param registrationToken The token identifying registered Azure Stack
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationToken(Output<String> registrationToken) {
             $.registrationToken = registrationToken;
             return this;
         }
 
+        /**
+         * @param registrationToken The token identifying registered Azure Stack
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationToken(String registrationToken) {
             return registrationToken(Output.of(registrationToken));
         }
 
+        /**
+         * @param resourceGroup Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(Output<String> resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param resourceGroup Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             return resourceGroup(Output.of(resourceGroup));
         }

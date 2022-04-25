@@ -25,6 +25,10 @@ public final class TldLegalAgreementResponse extends com.pulumi.resources.Invoke
     @Import(name="agreementKey", required=true)
     private String agreementKey;
 
+    /**
+     * @return Unique identifier for the agreement.
+     * 
+     */
     public String agreementKey() {
         return this.agreementKey;
     }
@@ -36,6 +40,10 @@ public final class TldLegalAgreementResponse extends com.pulumi.resources.Invoke
     @Import(name="content", required=true)
     private String content;
 
+    /**
+     * @return Agreement details.
+     * 
+     */
     public String content() {
         return this.content;
     }
@@ -47,6 +55,10 @@ public final class TldLegalAgreementResponse extends com.pulumi.resources.Invoke
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Agreement title.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -58,6 +70,10 @@ public final class TldLegalAgreementResponse extends com.pulumi.resources.Invoke
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return URL where a copy of the agreement details is hosted.
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -89,21 +105,45 @@ public final class TldLegalAgreementResponse extends com.pulumi.resources.Invoke
             $ = new TldLegalAgreementResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agreementKey Unique identifier for the agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agreementKey(String agreementKey) {
             $.agreementKey = agreementKey;
             return this;
         }
 
+        /**
+         * @param content Agreement details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param title Agreement title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param url URL where a copy of the agreement details is hosted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;

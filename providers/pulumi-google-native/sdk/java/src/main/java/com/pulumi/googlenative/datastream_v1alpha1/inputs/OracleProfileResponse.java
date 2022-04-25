@@ -25,6 +25,10 @@ public final class OracleProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="connectionAttributes", required=true)
     private Map<String,String> connectionAttributes;
 
+    /**
+     * @return Connection string attributes
+     * 
+     */
     public Map<String,String> connectionAttributes() {
         return this.connectionAttributes;
     }
@@ -36,6 +40,10 @@ public final class OracleProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="databaseService", required=true)
     private String databaseService;
 
+    /**
+     * @return Database for the Oracle connection.
+     * 
+     */
     public String databaseService() {
         return this.databaseService;
     }
@@ -47,6 +55,10 @@ public final class OracleProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="hostname", required=true)
     private String hostname;
 
+    /**
+     * @return Hostname for the Oracle connection.
+     * 
+     */
     public String hostname() {
         return this.hostname;
     }
@@ -58,6 +70,10 @@ public final class OracleProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return Password for the Oracle connection.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -69,6 +85,10 @@ public final class OracleProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return Port for the Oracle connection, default value is 1521.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -80,6 +100,10 @@ public final class OracleProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return Username for the Oracle connection.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -113,31 +137,67 @@ public final class OracleProfileResponse extends com.pulumi.resources.InvokeArgs
             $ = new OracleProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionAttributes Connection string attributes
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionAttributes(Map<String,String> connectionAttributes) {
             $.connectionAttributes = connectionAttributes;
             return this;
         }
 
+        /**
+         * @param databaseService Database for the Oracle connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseService(String databaseService) {
             $.databaseService = databaseService;
             return this;
         }
 
+        /**
+         * @param hostname Hostname for the Oracle connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param password Password for the Oracle connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param port Port for the Oracle connection, default value is 1521.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param username Username for the Oracle connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

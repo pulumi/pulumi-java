@@ -24,6 +24,10 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
     @Import(name="containerType")
     private @Nullable Either<String,ContainerType> containerType;
 
+    /**
+     * @return The type of container to retrieve logs from.
+     * 
+     */
     public Optional<Either<String,ContainerType>> containerType() {
         return Optional.ofNullable(this.containerType);
     }
@@ -35,6 +39,10 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
     @Import(name="deploymentName", required=true)
     private String deploymentName;
 
+    /**
+     * @return The name and identifier for the endpoint.
+     * 
+     */
     public String deploymentName() {
         return this.deploymentName;
     }
@@ -46,6 +54,10 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
     @Import(name="endpointName", required=true)
     private String endpointName;
 
+    /**
+     * @return Inference endpoint name.
+     * 
+     */
     public String endpointName() {
         return this.endpointName;
     }
@@ -57,6 +69,10 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
     @Import(name="tail")
     private @Nullable Integer tail;
 
+    /**
+     * @return The maximum number of lines to tail.
+     * 
+     */
     public Optional<Integer> tail() {
         return Optional.ofNullable(this.tail);
     }
@@ -79,6 +99,10 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -112,39 +136,87 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
             $ = new GetOnlineDeploymentLogsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerType The type of container to retrieve logs from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(@Nullable Either<String,ContainerType> containerType) {
             $.containerType = containerType;
             return this;
         }
 
+        /**
+         * @param containerType The type of container to retrieve logs from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(String containerType) {
             return containerType(Either.ofLeft(containerType));
         }
 
+        /**
+         * @param containerType The type of container to retrieve logs from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(ContainerType containerType) {
             return containerType(Either.ofRight(containerType));
         }
 
+        /**
+         * @param deploymentName The name and identifier for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(String deploymentName) {
             $.deploymentName = deploymentName;
             return this;
         }
 
+        /**
+         * @param endpointName Inference endpoint name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param tail The maximum number of lines to tail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tail(@Nullable Integer tail) {
             $.tail = tail;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

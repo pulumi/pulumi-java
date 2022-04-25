@@ -22,6 +22,10 @@ public final class RGitHubPackageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="authToken")
     private @Nullable Output<String> authToken;
 
+    /**
+     * @return Personal access token to install from a private repo
+     * 
+     */
     public Optional<Output<String>> authToken() {
         return Optional.ofNullable(this.authToken);
     }
@@ -33,6 +37,10 @@ public final class RGitHubPackageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="repository")
     private @Nullable Output<String> repository;
 
+    /**
+     * @return Repository address in the format username/repo[/subdir][@ref|#pull].
+     * 
+     */
     public Optional<Output<String>> repository() {
         return Optional.ofNullable(this.repository);
     }
@@ -62,20 +70,44 @@ public final class RGitHubPackageArgs extends com.pulumi.resources.ResourceArgs 
             $ = new RGitHubPackageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authToken Personal access token to install from a private repo
+         * 
+         * @return builder
+         * 
+         */
         public Builder authToken(@Nullable Output<String> authToken) {
             $.authToken = authToken;
             return this;
         }
 
+        /**
+         * @param authToken Personal access token to install from a private repo
+         * 
+         * @return builder
+         * 
+         */
         public Builder authToken(String authToken) {
             return authToken(Output.of(authToken));
         }
 
+        /**
+         * @param repository Repository address in the format username/repo[/subdir][@ref|#pull].
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(@Nullable Output<String> repository) {
             $.repository = repository;
             return this;
         }
 
+        /**
+         * @param repository Repository address in the format username/repo[/subdir][@ref|#pull].
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(String repository) {
             return repository(Output.of(repository));
         }

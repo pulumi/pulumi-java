@@ -32,6 +32,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applyImmediately")
     private @Nullable Output<Boolean> applyImmediately;
 
+    /**
+     * @return Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> applyImmediately() {
         return Optional.ofNullable(this.applyImmediately);
     }
@@ -43,6 +47,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the broker.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -54,6 +62,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationStrategy")
     private @Nullable Output<String> authenticationStrategy;
 
+    /**
+     * @return Authentication strategy used to secure the broker. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
+     * 
+     */
     public Optional<Output<String>> authenticationStrategy() {
         return Optional.ofNullable(this.authenticationStrategy);
     }
@@ -65,6 +77,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoMinorVersionUpgrade")
     private @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
+    /**
+     * @return Whether to automatically upgrade to new minor versions of brokers as Amazon MQ makes releases available.
+     * 
+     */
     public Optional<Output<Boolean>> autoMinorVersionUpgrade() {
         return Optional.ofNullable(this.autoMinorVersionUpgrade);
     }
@@ -76,6 +92,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="brokerName")
     private @Nullable Output<String> brokerName;
 
+    /**
+     * @return Name of the broker.
+     * 
+     */
     public Optional<Output<String>> brokerName() {
         return Optional.ofNullable(this.brokerName);
     }
@@ -87,6 +107,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
     private @Nullable Output<BrokerConfigurationGetArgs> configuration;
 
+    /**
+     * @return Configuration block for broker configuration. Applies to `engine_type` of `ActiveMQ` only. Detailed below.
+     * 
+     */
     public Optional<Output<BrokerConfigurationGetArgs>> configuration() {
         return Optional.ofNullable(this.configuration);
     }
@@ -98,6 +122,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentMode")
     private @Nullable Output<String> deploymentMode;
 
+    /**
+     * @return Deployment mode of the broker. Valid values are `SINGLE_INSTANCE`, `ACTIVE_STANDBY_MULTI_AZ`, and `CLUSTER_MULTI_AZ`. Default is `SINGLE_INSTANCE`.
+     * 
+     */
     public Optional<Output<String>> deploymentMode() {
         return Optional.ofNullable(this.deploymentMode);
     }
@@ -109,6 +137,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionOptions")
     private @Nullable Output<BrokerEncryptionOptionsGetArgs> encryptionOptions;
 
+    /**
+     * @return Configuration block containing encryption options. Detailed below.
+     * 
+     */
     public Optional<Output<BrokerEncryptionOptionsGetArgs>> encryptionOptions() {
         return Optional.ofNullable(this.encryptionOptions);
     }
@@ -120,6 +152,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineType")
     private @Nullable Output<String> engineType;
 
+    /**
+     * @return Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
+     * 
+     */
     public Optional<Output<String>> engineType() {
         return Optional.ofNullable(this.engineType);
     }
@@ -131,6 +167,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineVersion")
     private @Nullable Output<String> engineVersion;
 
+    /**
+     * @return Version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions. For example, `5.15.0`.
+     * 
+     */
     public Optional<Output<String>> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
@@ -142,6 +182,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostInstanceType")
     private @Nullable Output<String> hostInstanceType;
 
+    /**
+     * @return Broker&#39;s instance type. For example, `mq.t3.micro`, `mq.m5.large`.
+     * 
+     */
     public Optional<Output<String>> hostInstanceType() {
         return Optional.ofNullable(this.hostInstanceType);
     }
@@ -164,6 +208,21 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instances")
     private @Nullable Output<List<BrokerInstanceGetArgs>> instances;
 
+    /**
+     * @return List of information about allocated brokers (both active &amp; standby).
+     * * `instances.0.console_url` - The URL of the broker&#39;s [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
+     * * `instances.0.ip_address` - IP Address of the broker.
+     * * `instances.0.endpoints` - Broker&#39;s wire-level protocol endpoints in the following order &amp; format referenceable e.g., as `instances.0.endpoints.0` (SSL):
+     * * For `ActiveMQ`:
+     * * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
+     * * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
+     * * `stomp+ssl://broker-id.mq.us-west-2.amazonaws.com:61614`
+     * * `mqtt+ssl://broker-id.mq.us-west-2.amazonaws.com:8883`
+     * * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
+     * * For `RabbitMQ`:
+     * * `amqps://broker-id.mq.us-west-2.amazonaws.com:5671`
+     * 
+     */
     public Optional<Output<List<BrokerInstanceGetArgs>>> instances() {
         return Optional.ofNullable(this.instances);
     }
@@ -175,6 +234,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ldapServerMetadata")
     private @Nullable Output<BrokerLdapServerMetadataGetArgs> ldapServerMetadata;
 
+    /**
+     * @return Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for `engine_type` `RabbitMQ`. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)
+     * 
+     */
     public Optional<Output<BrokerLdapServerMetadataGetArgs>> ldapServerMetadata() {
         return Optional.ofNullable(this.ldapServerMetadata);
     }
@@ -186,6 +249,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="logs")
     private @Nullable Output<BrokerLogsGetArgs> logs;
 
+    /**
+     * @return Configuration block for the logging configuration of the broker. Detailed below.
+     * 
+     */
     public Optional<Output<BrokerLogsGetArgs>> logs() {
         return Optional.ofNullable(this.logs);
     }
@@ -197,6 +264,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceWindowStartTime")
     private @Nullable Output<BrokerMaintenanceWindowStartTimeGetArgs> maintenanceWindowStartTime;
 
+    /**
+     * @return Configuration block for the maintenance window start time. Detailed below.
+     * 
+     */
     public Optional<Output<BrokerMaintenanceWindowStartTimeGetArgs>> maintenanceWindowStartTime() {
         return Optional.ofNullable(this.maintenanceWindowStartTime);
     }
@@ -208,6 +279,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publiclyAccessible")
     private @Nullable Output<Boolean> publiclyAccessible;
 
+    /**
+     * @return Whether to enable connections from applications outside of the VPC that hosts the broker&#39;s subnets.
+     * 
+     */
     public Optional<Output<Boolean>> publiclyAccessible() {
         return Optional.ofNullable(this.publiclyAccessible);
     }
@@ -219,6 +294,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroups")
     private @Nullable Output<List<String>> securityGroups;
 
+    /**
+     * @return List of security group IDs assigned to the broker.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroups() {
         return Optional.ofNullable(this.securityGroups);
     }
@@ -230,6 +309,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageType")
     private @Nullable Output<String> storageType;
 
+    /**
+     * @return Storage type of the broker. For `engine_type` `ActiveMQ`, the valid values are `efs` and `ebs`, and the AWS-default is `efs`. For `engine_type` `RabbitMQ`, only `ebs` is supported. When using `ebs`, only the `mq.m5` broker instance type family is supported.
+     * 
+     */
     public Optional<Output<String>> storageType() {
         return Optional.ofNullable(this.storageType);
     }
@@ -241,6 +324,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
     private @Nullable Output<List<String>> subnetIds;
 
+    /**
+     * @return List of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires multiple subnets.
+     * 
+     */
     public Optional<Output<List<String>>> subnetIds() {
         return Optional.ofNullable(this.subnetIds);
     }
@@ -252,6 +339,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of tags to assign to the broker. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -263,6 +354,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -274,6 +369,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="users")
     private @Nullable Output<List<BrokerUserGetArgs>> users;
 
+    /**
+     * @return Configuration block for broker users. For `engine_type` of `RabbitMQ`, Amazon MQ does not return broker users preventing this resource from making user updates and drift detection. Detailed below.
+     * 
+     */
     public Optional<Output<List<BrokerUserGetArgs>>> users() {
         return Optional.ofNullable(this.users);
     }
@@ -323,216 +422,537 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
             $ = new BrokerState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applyImmediately Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
             $.applyImmediately = applyImmediately;
             return this;
         }
 
+        /**
+         * @param applyImmediately Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyImmediately(Boolean applyImmediately) {
             return applyImmediately(Output.of(applyImmediately));
         }
 
+        /**
+         * @param arn ARN of the broker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the broker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param authenticationStrategy Authentication strategy used to secure the broker. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationStrategy(@Nullable Output<String> authenticationStrategy) {
             $.authenticationStrategy = authenticationStrategy;
             return this;
         }
 
+        /**
+         * @param authenticationStrategy Authentication strategy used to secure the broker. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationStrategy(String authenticationStrategy) {
             return authenticationStrategy(Output.of(authenticationStrategy));
         }
 
+        /**
+         * @param autoMinorVersionUpgrade Whether to automatically upgrade to new minor versions of brokers as Amazon MQ makes releases available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             $.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
 
+        /**
+         * @param autoMinorVersionUpgrade Whether to automatically upgrade to new minor versions of brokers as Amazon MQ makes releases available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
             return autoMinorVersionUpgrade(Output.of(autoMinorVersionUpgrade));
         }
 
+        /**
+         * @param brokerName Name of the broker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brokerName(@Nullable Output<String> brokerName) {
             $.brokerName = brokerName;
             return this;
         }
 
+        /**
+         * @param brokerName Name of the broker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brokerName(String brokerName) {
             return brokerName(Output.of(brokerName));
         }
 
+        /**
+         * @param configuration Configuration block for broker configuration. Applies to `engine_type` of `ActiveMQ` only. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(@Nullable Output<BrokerConfigurationGetArgs> configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param configuration Configuration block for broker configuration. Applies to `engine_type` of `ActiveMQ` only. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(BrokerConfigurationGetArgs configuration) {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param deploymentMode Deployment mode of the broker. Valid values are `SINGLE_INSTANCE`, `ACTIVE_STANDBY_MULTI_AZ`, and `CLUSTER_MULTI_AZ`. Default is `SINGLE_INSTANCE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMode(@Nullable Output<String> deploymentMode) {
             $.deploymentMode = deploymentMode;
             return this;
         }
 
+        /**
+         * @param deploymentMode Deployment mode of the broker. Valid values are `SINGLE_INSTANCE`, `ACTIVE_STANDBY_MULTI_AZ`, and `CLUSTER_MULTI_AZ`. Default is `SINGLE_INSTANCE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMode(String deploymentMode) {
             return deploymentMode(Output.of(deploymentMode));
         }
 
+        /**
+         * @param encryptionOptions Configuration block containing encryption options. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionOptions(@Nullable Output<BrokerEncryptionOptionsGetArgs> encryptionOptions) {
             $.encryptionOptions = encryptionOptions;
             return this;
         }
 
+        /**
+         * @param encryptionOptions Configuration block containing encryption options. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionOptions(BrokerEncryptionOptionsGetArgs encryptionOptions) {
             return encryptionOptions(Output.of(encryptionOptions));
         }
 
+        /**
+         * @param engineType Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineType(@Nullable Output<String> engineType) {
             $.engineType = engineType;
             return this;
         }
 
+        /**
+         * @param engineType Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineType(String engineType) {
             return engineType(Output.of(engineType));
         }
 
+        /**
+         * @param engineVersion Version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions. For example, `5.15.0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             $.engineVersion = engineVersion;
             return this;
         }
 
+        /**
+         * @param engineVersion Version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions. For example, `5.15.0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(String engineVersion) {
             return engineVersion(Output.of(engineVersion));
         }
 
+        /**
+         * @param hostInstanceType Broker&#39;s instance type. For example, `mq.t3.micro`, `mq.m5.large`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostInstanceType(@Nullable Output<String> hostInstanceType) {
             $.hostInstanceType = hostInstanceType;
             return this;
         }
 
+        /**
+         * @param hostInstanceType Broker&#39;s instance type. For example, `mq.t3.micro`, `mq.m5.large`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostInstanceType(String hostInstanceType) {
             return hostInstanceType(Output.of(hostInstanceType));
         }
 
+        /**
+         * @param instances List of information about allocated brokers (both active &amp; standby).
+         * * `instances.0.console_url` - The URL of the broker&#39;s [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
+         * * `instances.0.ip_address` - IP Address of the broker.
+         * * `instances.0.endpoints` - Broker&#39;s wire-level protocol endpoints in the following order &amp; format referenceable e.g., as `instances.0.endpoints.0` (SSL):
+         * * For `ActiveMQ`:
+         * * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
+         * * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
+         * * `stomp+ssl://broker-id.mq.us-west-2.amazonaws.com:61614`
+         * * `mqtt+ssl://broker-id.mq.us-west-2.amazonaws.com:8883`
+         * * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
+         * * For `RabbitMQ`:
+         * * `amqps://broker-id.mq.us-west-2.amazonaws.com:5671`
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(@Nullable Output<List<BrokerInstanceGetArgs>> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances List of information about allocated brokers (both active &amp; standby).
+         * * `instances.0.console_url` - The URL of the broker&#39;s [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
+         * * `instances.0.ip_address` - IP Address of the broker.
+         * * `instances.0.endpoints` - Broker&#39;s wire-level protocol endpoints in the following order &amp; format referenceable e.g., as `instances.0.endpoints.0` (SSL):
+         * * For `ActiveMQ`:
+         * * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
+         * * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
+         * * `stomp+ssl://broker-id.mq.us-west-2.amazonaws.com:61614`
+         * * `mqtt+ssl://broker-id.mq.us-west-2.amazonaws.com:8883`
+         * * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
+         * * For `RabbitMQ`:
+         * * `amqps://broker-id.mq.us-west-2.amazonaws.com:5671`
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<BrokerInstanceGetArgs> instances) {
             return instances(Output.of(instances));
         }
 
+        /**
+         * @param instances List of information about allocated brokers (both active &amp; standby).
+         * * `instances.0.console_url` - The URL of the broker&#39;s [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
+         * * `instances.0.ip_address` - IP Address of the broker.
+         * * `instances.0.endpoints` - Broker&#39;s wire-level protocol endpoints in the following order &amp; format referenceable e.g., as `instances.0.endpoints.0` (SSL):
+         * * For `ActiveMQ`:
+         * * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
+         * * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
+         * * `stomp+ssl://broker-id.mq.us-west-2.amazonaws.com:61614`
+         * * `mqtt+ssl://broker-id.mq.us-west-2.amazonaws.com:8883`
+         * * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
+         * * For `RabbitMQ`:
+         * * `amqps://broker-id.mq.us-west-2.amazonaws.com:5671`
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(BrokerInstanceGetArgs... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param ldapServerMetadata Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for `engine_type` `RabbitMQ`. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldapServerMetadata(@Nullable Output<BrokerLdapServerMetadataGetArgs> ldapServerMetadata) {
             $.ldapServerMetadata = ldapServerMetadata;
             return this;
         }
 
+        /**
+         * @param ldapServerMetadata Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for `engine_type` `RabbitMQ`. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldapServerMetadata(BrokerLdapServerMetadataGetArgs ldapServerMetadata) {
             return ldapServerMetadata(Output.of(ldapServerMetadata));
         }
 
+        /**
+         * @param logs Configuration block for the logging configuration of the broker. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(@Nullable Output<BrokerLogsGetArgs> logs) {
             $.logs = logs;
             return this;
         }
 
+        /**
+         * @param logs Configuration block for the logging configuration of the broker. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(BrokerLogsGetArgs logs) {
             return logs(Output.of(logs));
         }
 
+        /**
+         * @param maintenanceWindowStartTime Configuration block for the maintenance window start time. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindowStartTime(@Nullable Output<BrokerMaintenanceWindowStartTimeGetArgs> maintenanceWindowStartTime) {
             $.maintenanceWindowStartTime = maintenanceWindowStartTime;
             return this;
         }
 
+        /**
+         * @param maintenanceWindowStartTime Configuration block for the maintenance window start time. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindowStartTime(BrokerMaintenanceWindowStartTimeGetArgs maintenanceWindowStartTime) {
             return maintenanceWindowStartTime(Output.of(maintenanceWindowStartTime));
         }
 
+        /**
+         * @param publiclyAccessible Whether to enable connections from applications outside of the VPC that hosts the broker&#39;s subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
             $.publiclyAccessible = publiclyAccessible;
             return this;
         }
 
+        /**
+         * @param publiclyAccessible Whether to enable connections from applications outside of the VPC that hosts the broker&#39;s subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publiclyAccessible(Boolean publiclyAccessible) {
             return publiclyAccessible(Output.of(publiclyAccessible));
         }
 
+        /**
+         * @param securityGroups List of security group IDs assigned to the broker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             $.securityGroups = securityGroups;
             return this;
         }
 
+        /**
+         * @param securityGroups List of security group IDs assigned to the broker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(List<String> securityGroups) {
             return securityGroups(Output.of(securityGroups));
         }
 
+        /**
+         * @param securityGroups List of security group IDs assigned to the broker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
 
+        /**
+         * @param storageType Storage type of the broker. For `engine_type` `ActiveMQ`, the valid values are `efs` and `ebs`, and the AWS-default is `efs`. For `engine_type` `RabbitMQ`, only `ebs` is supported. When using `ebs`, only the `mq.m5` broker instance type family is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(@Nullable Output<String> storageType) {
             $.storageType = storageType;
             return this;
         }
 
+        /**
+         * @param storageType Storage type of the broker. For `engine_type` `ActiveMQ`, the valid values are `efs` and `ebs`, and the AWS-default is `efs`. For `engine_type` `RabbitMQ`, only `ebs` is supported. When using `ebs`, only the `mq.m5` broker instance type family is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(String storageType) {
             return storageType(Output.of(storageType));
         }
 
+        /**
+         * @param subnetIds List of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires multiple subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds List of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires multiple subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds List of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires multiple subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param tags Map of tags to assign to the broker. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of tags to assign to the broker. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param users Configuration block for broker users. For `engine_type` of `RabbitMQ`, Amazon MQ does not return broker users preventing this resource from making user updates and drift detection. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder users(@Nullable Output<List<BrokerUserGetArgs>> users) {
             $.users = users;
             return this;
         }
 
+        /**
+         * @param users Configuration block for broker users. For `engine_type` of `RabbitMQ`, Amazon MQ does not return broker users preventing this resource from making user updates and drift detection. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder users(List<BrokerUserGetArgs> users) {
             return users(Output.of(users));
         }
 
+        /**
+         * @param users Configuration block for broker users. For `engine_type` of `RabbitMQ`, Amazon MQ does not return broker users preventing this resource from making user updates and drift detection. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder users(BrokerUserGetArgs... users) {
             return users(List.of(users));
         }

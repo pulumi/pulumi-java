@@ -22,162 +22,162 @@ import java.util.Objects;
 @CustomType
 public final class GetInstanceResult {
     /**
-     * The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
+     * @return The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
      * 
      */
     private final String backendType;
     /**
-     * Connection name of the Cloud SQL instance used in connection strings.
+     * @return Connection name of the Cloud SQL instance used in connection strings.
      * 
      */
     private final String connectionName;
     /**
-     * The time when the instance was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * @return The time when the instance was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
     private final String createTime;
     /**
-     * The current disk usage of the instance in bytes. This property has been deprecated. Use the &#34;cloudsql.googleapis.com/database/disk/bytes_used&#34; metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.
+     * @return The current disk usage of the instance in bytes. This property has been deprecated. Use the &#34;cloudsql.googleapis.com/database/disk/bytes_used&#34; metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.
      * 
      */
     private final String currentDiskSize;
     /**
-     * Stores the current database version running on the instance including minor version such as `MYSQL_8_0_18`.
+     * @return Stores the current database version running on the instance including minor version such as `MYSQL_8_0_18`.
      * 
      */
     private final String databaseInstalledVersion;
     /**
-     * The database engine type and version. The `databaseVersion` field cannot be changed after instance creation.
+     * @return The database engine type and version. The `databaseVersion` field cannot be changed after instance creation.
      * 
      */
     private final String databaseVersion;
     /**
-     * Disk encryption configuration specific to an instance.
+     * @return Disk encryption configuration specific to an instance.
      * 
      */
     private final DiskEncryptionConfigurationResponse diskEncryptionConfiguration;
     /**
-     * Disk encryption status specific to an instance.
+     * @return Disk encryption status specific to an instance.
      * 
      */
     private final DiskEncryptionStatusResponse diskEncryptionStatus;
     /**
-     * The name and status of the failover replica.
+     * @return The name and status of the failover replica.
      * 
      */
     private final InstanceFailoverReplicaResponse failoverReplica;
     /**
-     * The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone. WARNING: Changing this might restart the instance.
+     * @return The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone. WARNING: Changing this might restart the instance.
      * 
      */
     private final String gceZone;
     /**
-     * The instance type.
+     * @return The instance type.
      * 
      */
     private final String instanceType;
     /**
-     * The assigned IP addresses for the instance.
+     * @return The assigned IP addresses for the instance.
      * 
      */
     private final List<IpMappingResponse> ipAddresses;
     /**
-     * This is always `sql#instance`.
+     * @return This is always `sql#instance`.
      * 
      */
     private final String kind;
     /**
-     * The name of the instance which will act as primary in the replication setup.
+     * @return The name of the instance which will act as primary in the replication setup.
      * 
      */
     private final String masterInstanceName;
     /**
-     * The maximum disk size of the instance in bytes.
+     * @return The maximum disk size of the instance in bytes.
      * 
      */
     private final String maxDiskSize;
     /**
-     * Name of the Cloud SQL instance. This does not include the project ID.
+     * @return Name of the Cloud SQL instance. This does not include the project ID.
      * 
      */
     private final String name;
     /**
-     * Configuration specific to on-premises instances.
+     * @return Configuration specific to on-premises instances.
      * 
      */
     private final OnPremisesConfigurationResponse onPremisesConfiguration;
     /**
-     * This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job
+     * @return This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job
      * 
      */
     private final SqlOutOfDiskReportResponse outOfDiskReport;
     /**
-     * The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.
+     * @return The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.
      * 
      */
     private final String project;
     /**
-     * The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1` (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or `us-central1` depending on the instance type. The region cannot be changed after instance creation.
+     * @return The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1` (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or `us-central1` depending on the instance type. The region cannot be changed after instance creation.
      * 
      */
     private final String region;
     /**
-     * Configuration specific to failover replicas and read replicas.
+     * @return Configuration specific to failover replicas and read replicas.
      * 
      */
     private final ReplicaConfigurationResponse replicaConfiguration;
     /**
-     * The replicas of the instance.
+     * @return The replicas of the instance.
      * 
      */
     private final List<String> replicaNames;
     /**
-     * Initial root password. Use only on creation.
+     * @return Initial root password. Use only on creation.
      * 
      */
     private final String rootPassword;
     /**
-     * The status indicating if instance satisfiesPzs. Reserved for future use.
+     * @return The status indicating if instance satisfiesPzs. Reserved for future use.
      * 
      */
     private final Boolean satisfiesPzs;
     /**
-     * The start time of any upcoming scheduled maintenance for this instance.
+     * @return The start time of any upcoming scheduled maintenance for this instance.
      * 
      */
     private final SqlScheduledMaintenanceResponse scheduledMaintenance;
     /**
-     * The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
+     * @return The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
      * 
      */
     private final String secondaryGceZone;
     /**
-     * The URI of this resource.
+     * @return The URI of this resource.
      * 
      */
     private final String selfLink;
     /**
-     * SSL configuration.
+     * @return SSL configuration.
      * 
      */
     private final SslCertResponse serverCaCert;
     /**
-     * The service account email address assigned to the instance.\This property is read-only.
+     * @return The service account email address assigned to the instance.\This property is read-only.
      * 
      */
     private final String serviceAccountEmailAddress;
     /**
-     * The user settings.
+     * @return The user settings.
      * 
      */
     private final SettingsResponse settings;
     /**
-     * The current serving state of the Cloud SQL instance.
+     * @return The current serving state of the Cloud SQL instance.
      * 
      */
     private final String state;
     /**
-     * If the instance state is SUSPENDED, the reason for the suspension.
+     * @return If the instance state is SUSPENDED, the reason for the suspension.
      * 
      */
     private final List<String> suspensionReason;
@@ -251,226 +251,226 @@ public final class GetInstanceResult {
     }
 
     /**
-     * The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
+     * @return The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
      * 
-    */
+     */
     public String backendType() {
         return this.backendType;
     }
     /**
-     * Connection name of the Cloud SQL instance used in connection strings.
+     * @return Connection name of the Cloud SQL instance used in connection strings.
      * 
-    */
+     */
     public String connectionName() {
         return this.connectionName;
     }
     /**
-     * The time when the instance was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * @return The time when the instance was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The current disk usage of the instance in bytes. This property has been deprecated. Use the &#34;cloudsql.googleapis.com/database/disk/bytes_used&#34; metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.
+     * @return The current disk usage of the instance in bytes. This property has been deprecated. Use the &#34;cloudsql.googleapis.com/database/disk/bytes_used&#34; metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.
      * 
-    */
+     */
     public String currentDiskSize() {
         return this.currentDiskSize;
     }
     /**
-     * Stores the current database version running on the instance including minor version such as `MYSQL_8_0_18`.
+     * @return Stores the current database version running on the instance including minor version such as `MYSQL_8_0_18`.
      * 
-    */
+     */
     public String databaseInstalledVersion() {
         return this.databaseInstalledVersion;
     }
     /**
-     * The database engine type and version. The `databaseVersion` field cannot be changed after instance creation.
+     * @return The database engine type and version. The `databaseVersion` field cannot be changed after instance creation.
      * 
-    */
+     */
     public String databaseVersion() {
         return this.databaseVersion;
     }
     /**
-     * Disk encryption configuration specific to an instance.
+     * @return Disk encryption configuration specific to an instance.
      * 
-    */
+     */
     public DiskEncryptionConfigurationResponse diskEncryptionConfiguration() {
         return this.diskEncryptionConfiguration;
     }
     /**
-     * Disk encryption status specific to an instance.
+     * @return Disk encryption status specific to an instance.
      * 
-    */
+     */
     public DiskEncryptionStatusResponse diskEncryptionStatus() {
         return this.diskEncryptionStatus;
     }
     /**
-     * The name and status of the failover replica.
+     * @return The name and status of the failover replica.
      * 
-    */
+     */
     public InstanceFailoverReplicaResponse failoverReplica() {
         return this.failoverReplica;
     }
     /**
-     * The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone. WARNING: Changing this might restart the instance.
+     * @return The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone. WARNING: Changing this might restart the instance.
      * 
-    */
+     */
     public String gceZone() {
         return this.gceZone;
     }
     /**
-     * The instance type.
+     * @return The instance type.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The assigned IP addresses for the instance.
+     * @return The assigned IP addresses for the instance.
      * 
-    */
+     */
     public List<IpMappingResponse> ipAddresses() {
         return this.ipAddresses;
     }
     /**
-     * This is always `sql#instance`.
+     * @return This is always `sql#instance`.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The name of the instance which will act as primary in the replication setup.
+     * @return The name of the instance which will act as primary in the replication setup.
      * 
-    */
+     */
     public String masterInstanceName() {
         return this.masterInstanceName;
     }
     /**
-     * The maximum disk size of the instance in bytes.
+     * @return The maximum disk size of the instance in bytes.
      * 
-    */
+     */
     public String maxDiskSize() {
         return this.maxDiskSize;
     }
     /**
-     * Name of the Cloud SQL instance. This does not include the project ID.
+     * @return Name of the Cloud SQL instance. This does not include the project ID.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Configuration specific to on-premises instances.
+     * @return Configuration specific to on-premises instances.
      * 
-    */
+     */
     public OnPremisesConfigurationResponse onPremisesConfiguration() {
         return this.onPremisesConfiguration;
     }
     /**
-     * This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job
+     * @return This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job
      * 
-    */
+     */
     public SqlOutOfDiskReportResponse outOfDiskReport() {
         return this.outOfDiskReport;
     }
     /**
-     * The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.
+     * @return The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1` (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or `us-central1` depending on the instance type. The region cannot be changed after instance creation.
+     * @return The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1` (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or `us-central1` depending on the instance type. The region cannot be changed after instance creation.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * Configuration specific to failover replicas and read replicas.
+     * @return Configuration specific to failover replicas and read replicas.
      * 
-    */
+     */
     public ReplicaConfigurationResponse replicaConfiguration() {
         return this.replicaConfiguration;
     }
     /**
-     * The replicas of the instance.
+     * @return The replicas of the instance.
      * 
-    */
+     */
     public List<String> replicaNames() {
         return this.replicaNames;
     }
     /**
-     * Initial root password. Use only on creation.
+     * @return Initial root password. Use only on creation.
      * 
-    */
+     */
     public String rootPassword() {
         return this.rootPassword;
     }
     /**
-     * The status indicating if instance satisfiesPzs. Reserved for future use.
+     * @return The status indicating if instance satisfiesPzs. Reserved for future use.
      * 
-    */
+     */
     public Boolean satisfiesPzs() {
         return this.satisfiesPzs;
     }
     /**
-     * The start time of any upcoming scheduled maintenance for this instance.
+     * @return The start time of any upcoming scheduled maintenance for this instance.
      * 
-    */
+     */
     public SqlScheduledMaintenanceResponse scheduledMaintenance() {
         return this.scheduledMaintenance;
     }
     /**
-     * The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
+     * @return The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
      * 
-    */
+     */
     public String secondaryGceZone() {
         return this.secondaryGceZone;
     }
     /**
-     * The URI of this resource.
+     * @return The URI of this resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * SSL configuration.
+     * @return SSL configuration.
      * 
-    */
+     */
     public SslCertResponse serverCaCert() {
         return this.serverCaCert;
     }
     /**
-     * The service account email address assigned to the instance.\This property is read-only.
+     * @return The service account email address assigned to the instance.\This property is read-only.
      * 
-    */
+     */
     public String serviceAccountEmailAddress() {
         return this.serviceAccountEmailAddress;
     }
     /**
-     * The user settings.
+     * @return The user settings.
      * 
-    */
+     */
     public SettingsResponse settings() {
         return this.settings;
     }
     /**
-     * The current serving state of the Cloud SQL instance.
+     * @return The current serving state of the Cloud SQL instance.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * If the instance state is SUSPENDED, the reason for the suspension.
+     * @return If the instance state is SUSPENDED, the reason for the suspension.
      * 
-    */
+     */
     public List<String> suspensionReason() {
         return this.suspensionReason;
     }

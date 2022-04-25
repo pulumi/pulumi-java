@@ -21,6 +21,10 @@ public final class DatasetDatetimeOptions extends com.pulumi.resources.InvokeArg
     @Import(name="format", required=true)
     private String format;
 
+    /**
+     * @return Date/time format of a date parameter
+     * 
+     */
     public String format() {
         return this.format;
     }
@@ -32,6 +36,10 @@ public final class DatasetDatetimeOptions extends com.pulumi.resources.InvokeArg
     @Import(name="localeCode")
     private @Nullable String localeCode;
 
+    /**
+     * @return Locale code for a date parameter
+     * 
+     */
     public Optional<String> localeCode() {
         return Optional.ofNullable(this.localeCode);
     }
@@ -43,6 +51,10 @@ public final class DatasetDatetimeOptions extends com.pulumi.resources.InvokeArg
     @Import(name="timezoneOffset")
     private @Nullable String timezoneOffset;
 
+    /**
+     * @return Timezone offset
+     * 
+     */
     public Optional<String> timezoneOffset() {
         return Optional.ofNullable(this.timezoneOffset);
     }
@@ -73,16 +85,34 @@ public final class DatasetDatetimeOptions extends com.pulumi.resources.InvokeArg
             $ = new DatasetDatetimeOptions(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param format Date/time format of a date parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param localeCode Locale code for a date parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder localeCode(@Nullable String localeCode) {
             $.localeCode = localeCode;
             return this;
         }
 
+        /**
+         * @param timezoneOffset Timezone offset
+         * 
+         * @return builder
+         * 
+         */
         public Builder timezoneOffset(@Nullable String timezoneOffset) {
             $.timezoneOffset = timezoneOffset;
             return this;

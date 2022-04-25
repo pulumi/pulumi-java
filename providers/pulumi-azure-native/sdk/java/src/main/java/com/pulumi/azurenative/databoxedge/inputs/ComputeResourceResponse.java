@@ -24,6 +24,10 @@ public final class ComputeResourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="memoryInGB", required=true)
     private Double memoryInGB;
 
+    /**
+     * @return Memory in GB
+     * 
+     */
     public Double memoryInGB() {
         return this.memoryInGB;
     }
@@ -35,6 +39,10 @@ public final class ComputeResourceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="processorCount", required=true)
     private Integer processorCount;
 
+    /**
+     * @return Processor count
+     * 
+     */
     public Integer processorCount() {
         return this.processorCount;
     }
@@ -64,11 +72,23 @@ public final class ComputeResourceResponse extends com.pulumi.resources.InvokeAr
             $ = new ComputeResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param memoryInGB Memory in GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(Double memoryInGB) {
             $.memoryInGB = memoryInGB;
             return this;
         }
 
+        /**
+         * @param processorCount Processor count
+         * 
+         * @return builder
+         * 
+         */
         public Builder processorCount(Integer processorCount) {
             $.processorCount = processorCount;
             return this;

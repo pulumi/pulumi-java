@@ -28,6 +28,10 @@ public final class HttpScaleRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="auth")
     private @Nullable List<ScaleRuleAuthResponse> auth;
 
+    /**
+     * @return Authentication secrets for the custom scale rule.
+     * 
+     */
     public Optional<List<ScaleRuleAuthResponse>> auth() {
         return Optional.ofNullable(this.auth);
     }
@@ -39,6 +43,10 @@ public final class HttpScaleRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="metadata")
     private @Nullable Map<String,String> metadata;
 
+    /**
+     * @return Metadata properties to describe http scale rule.
+     * 
+     */
     public Optional<Map<String,String>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -68,15 +76,33 @@ public final class HttpScaleRuleResponse extends com.pulumi.resources.InvokeArgs
             $ = new HttpScaleRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auth Authentication secrets for the custom scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(@Nullable List<ScaleRuleAuthResponse> auth) {
             $.auth = auth;
             return this;
         }
 
+        /**
+         * @param auth Authentication secrets for the custom scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(ScaleRuleAuthResponse... auth) {
             return auth(List.of(auth));
         }
 
+        /**
+         * @param metadata Metadata properties to describe http scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Map<String,String> metadata) {
             $.metadata = metadata;
             return this;

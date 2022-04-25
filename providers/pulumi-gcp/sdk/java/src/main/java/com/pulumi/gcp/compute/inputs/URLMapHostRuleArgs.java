@@ -23,6 +23,10 @@ public final class URLMapHostRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of this test case.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,12 @@ public final class URLMapHostRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hosts", required=true)
     private Output<List<String>> hosts;
 
+    /**
+     * @return The list of host patterns to match. They must be valid hostnames, except * will
+     * match any string of ([a-z0-9-.]*). In that case, * must be the first character
+     * and must be followed in the pattern by either - or ..
+     * 
+     */
     public Output<List<String>> hosts() {
         return this.hosts;
     }
@@ -48,6 +58,11 @@ public final class URLMapHostRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="pathMatcher", required=true)
     private Output<String> pathMatcher;
 
+    /**
+     * @return The name of the PathMatcher to use to match the path portion of the URL if the
+     * hostRule matches the URL&#39;s host portion.
+     * 
+     */
     public Output<String> pathMatcher() {
         return this.pathMatcher;
     }
@@ -78,33 +93,83 @@ public final class URLMapHostRuleArgs extends com.pulumi.resources.ResourceArgs 
             $ = new URLMapHostRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of this test case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of this test case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param hosts The list of host patterns to match. They must be valid hostnames, except * will
+         * match any string of ([a-z0-9-.]*). In that case, * must be the first character
+         * and must be followed in the pattern by either - or ..
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(Output<List<String>> hosts) {
             $.hosts = hosts;
             return this;
         }
 
+        /**
+         * @param hosts The list of host patterns to match. They must be valid hostnames, except * will
+         * match any string of ([a-z0-9-.]*). In that case, * must be the first character
+         * and must be followed in the pattern by either - or ..
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(List<String> hosts) {
             return hosts(Output.of(hosts));
         }
 
+        /**
+         * @param hosts The list of host patterns to match. They must be valid hostnames, except * will
+         * match any string of ([a-z0-9-.]*). In that case, * must be the first character
+         * and must be followed in the pattern by either - or ..
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(String... hosts) {
             return hosts(List.of(hosts));
         }
 
+        /**
+         * @param pathMatcher The name of the PathMatcher to use to match the path portion of the URL if the
+         * hostRule matches the URL&#39;s host portion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatcher(Output<String> pathMatcher) {
             $.pathMatcher = pathMatcher;
             return this;
         }
 
+        /**
+         * @param pathMatcher The name of the PathMatcher to use to match the path portion of the URL if the
+         * hostRule matches the URL&#39;s host portion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatcher(String pathMatcher) {
             return pathMatcher(Output.of(pathMatcher));
         }

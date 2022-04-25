@@ -23,6 +23,10 @@ public final class IstioCanonicalServiceResponse extends com.pulumi.resources.In
     @Import(name="canonicalService", required=true)
     private String canonicalService;
 
+    /**
+     * @return The name of the canonical service underlying this service. Corresponds to the destination_canonical_service_name metric label in label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
+     * 
+     */
     public String canonicalService() {
         return this.canonicalService;
     }
@@ -34,6 +38,10 @@ public final class IstioCanonicalServiceResponse extends com.pulumi.resources.In
     @Import(name="canonicalServiceNamespace", required=true)
     private String canonicalServiceNamespace;
 
+    /**
+     * @return The namespace of the canonical service underlying this service. Corresponds to the destination_canonical_service_namespace metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
+     * 
+     */
     public String canonicalServiceNamespace() {
         return this.canonicalServiceNamespace;
     }
@@ -45,6 +53,10 @@ public final class IstioCanonicalServiceResponse extends com.pulumi.resources.In
     @Import(name="meshUid", required=true)
     private String meshUid;
 
+    /**
+     * @return Identifier for the Istio mesh in which this canonical service is defined. Corresponds to the mesh_uid metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
+     * 
+     */
     public String meshUid() {
         return this.meshUid;
     }
@@ -75,16 +87,34 @@ public final class IstioCanonicalServiceResponse extends com.pulumi.resources.In
             $ = new IstioCanonicalServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canonicalService The name of the canonical service underlying this service. Corresponds to the destination_canonical_service_name metric label in label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalService(String canonicalService) {
             $.canonicalService = canonicalService;
             return this;
         }
 
+        /**
+         * @param canonicalServiceNamespace The namespace of the canonical service underlying this service. Corresponds to the destination_canonical_service_namespace metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalServiceNamespace(String canonicalServiceNamespace) {
             $.canonicalServiceNamespace = canonicalServiceNamespace;
             return this;
         }
 
+        /**
+         * @param meshUid Identifier for the Istio mesh in which this canonical service is defined. Corresponds to the mesh_uid metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshUid(String meshUid) {
             $.meshUid = meshUid;
             return this;

@@ -26,6 +26,10 @@ public final class PrivatePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifactStorage")
     private @Nullable Output<String> artifactStorage;
 
+    /**
+     * @return Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
+     * 
+     */
     public Optional<Output<String>> artifactStorage() {
         return Optional.ofNullable(this.artifactStorage);
     }
@@ -37,6 +41,10 @@ public final class PrivatePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
     private @Nullable Output<String> serviceAccount;
 
+    /**
+     * @return Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+     * 
+     */
     public Optional<Output<String>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -48,6 +56,10 @@ public final class PrivatePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workerPool", required=true)
     private Output<String> workerPool;
 
+    /**
+     * @return Resource name of the Cloud Build worker pool to use. The format is `projects/{project}/locations/{location}/workerPools/{pool}`.
+     * 
+     */
     public Output<String> workerPool() {
         return this.workerPool;
     }
@@ -78,29 +90,65 @@ public final class PrivatePoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PrivatePoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactStorage Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactStorage(@Nullable Output<String> artifactStorage) {
             $.artifactStorage = artifactStorage;
             return this;
         }
 
+        /**
+         * @param artifactStorage Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactStorage(String artifactStorage) {
             return artifactStorage(Output.of(artifactStorage));
         }
 
+        /**
+         * @param serviceAccount Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param workerPool Resource name of the Cloud Build worker pool to use. The format is `projects/{project}/locations/{location}/workerPools/{pool}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerPool(Output<String> workerPool) {
             $.workerPool = workerPool;
             return this;
         }
 
+        /**
+         * @param workerPool Resource name of the Cloud Build worker pool to use. The format is `projects/{project}/locations/{location}/workerPools/{pool}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerPool(String workerPool) {
             return workerPool(Output.of(workerPool));
         }

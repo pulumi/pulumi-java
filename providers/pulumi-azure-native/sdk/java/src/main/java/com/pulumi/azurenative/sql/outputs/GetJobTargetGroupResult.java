@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class GetJobTargetGroupResult {
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Members of the target group.
+     * @return Members of the target group.
      * 
      */
     private final List<JobTargetResponse> members;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -45,30 +45,30 @@ public final class GetJobTargetGroupResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Members of the target group.
+     * @return Members of the target group.
      * 
-    */
+     */
     public List<JobTargetResponse> members() {
         return this.members;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

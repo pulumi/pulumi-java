@@ -35,6 +35,10 @@ public final class AzureFunctionActivityArgs extends com.pulumi.resources.Resour
     @Import(name="body")
     private @Nullable Output<Object> body;
 
+    /**
+     * @return Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -46,6 +50,10 @@ public final class AzureFunctionActivityArgs extends com.pulumi.resources.Resour
     @Import(name="dependsOn")
     private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -57,6 +65,10 @@ public final class AzureFunctionActivityArgs extends com.pulumi.resources.Resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -68,6 +80,10 @@ public final class AzureFunctionActivityArgs extends com.pulumi.resources.Resour
     @Import(name="functionName", required=true)
     private Output<Object> functionName;
 
+    /**
+     * @return Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
+     * 
+     */
     public Output<Object> functionName() {
         return this.functionName;
     }
@@ -79,6 +95,10 @@ public final class AzureFunctionActivityArgs extends com.pulumi.resources.Resour
     @Import(name="headers")
     private @Nullable Output<Object> headers;
 
+    /**
+     * @return Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -90,6 +110,10 @@ public final class AzureFunctionActivityArgs extends com.pulumi.resources.Resour
     @Import(name="linkedServiceName")
     private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -101,6 +125,10 @@ public final class AzureFunctionActivityArgs extends com.pulumi.resources.Resour
     @Import(name="method", required=true)
     private Output<Either<String,AzureFunctionActivityMethod>> method;
 
+    /**
+     * @return Rest API method for target endpoint.
+     * 
+     */
     public Output<Either<String,AzureFunctionActivityMethod>> method() {
         return this.method;
     }
@@ -112,6 +140,10 @@ public final class AzureFunctionActivityArgs extends com.pulumi.resources.Resour
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -123,6 +155,10 @@ public final class AzureFunctionActivityArgs extends com.pulumi.resources.Resour
     @Import(name="policy")
     private @Nullable Output<ActivityPolicyArgs> policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<Output<ActivityPolicyArgs>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -135,6 +171,11 @@ public final class AzureFunctionActivityArgs extends com.pulumi.resources.Resour
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;AzureFunctionActivity&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -146,6 +187,10 @@ public final class AzureFunctionActivityArgs extends com.pulumi.resources.Resour
     @Import(name="userProperties")
     private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<Output<List<UserPropertyArgs>>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -184,117 +229,275 @@ public final class AzureFunctionActivityArgs extends com.pulumi.resources.Resour
             $ = new AzureFunctionActivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param body Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<Object> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(Object body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param functionName Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(Output<Object> functionName) {
             $.functionName = functionName;
             return this;
         }
 
+        /**
+         * @param functionName Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(Object functionName) {
             return functionName(Output.of(functionName));
         }
 
+        /**
+         * @param headers Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<Object> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(Object headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param method Rest API method for target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(Output<Either<String,AzureFunctionActivityMethod>> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method Rest API method for target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(Either<String,AzureFunctionActivityMethod> method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param method Rest API method for target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String method) {
             return method(Either.ofLeft(method));
         }
 
+        /**
+         * @param method Rest API method for target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(AzureFunctionActivityMethod method) {
             return method(Either.ofRight(method));
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(ActivityPolicyArgs policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;AzureFunctionActivity&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;AzureFunctionActivity&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(List<UserPropertyArgs> userProperties) {
             return userProperties(Output.of(userProperties));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
         }

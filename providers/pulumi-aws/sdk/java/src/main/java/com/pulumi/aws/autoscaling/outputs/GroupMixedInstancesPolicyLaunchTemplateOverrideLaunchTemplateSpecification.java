@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification {
     /**
-     * The ID of the launch template. Conflicts with `launch_template_name`.
+     * @return The ID of the launch template. Conflicts with `launch_template_name`.
      * 
      */
     private final @Nullable String launchTemplateId;
     /**
-     * The name of the launch template. Conflicts with `launch_template_id`.
+     * @return The name of the launch template. Conflicts with `launch_template_id`.
      * 
      */
     private final @Nullable String launchTemplateName;
     /**
-     * Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
+     * @return Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
      * 
      */
     private final @Nullable String version;
@@ -38,23 +38,23 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplate
     }
 
     /**
-     * The ID of the launch template. Conflicts with `launch_template_name`.
+     * @return The ID of the launch template. Conflicts with `launch_template_name`.
      * 
-    */
+     */
     public Optional<String> launchTemplateId() {
         return Optional.ofNullable(this.launchTemplateId);
     }
     /**
-     * The name of the launch template. Conflicts with `launch_template_id`.
+     * @return The name of the launch template. Conflicts with `launch_template_id`.
      * 
-    */
+     */
     public Optional<String> launchTemplateName() {
         return Optional.ofNullable(this.launchTemplateName);
     }
     /**
-     * Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
+     * @return Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

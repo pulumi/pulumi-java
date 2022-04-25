@@ -28,6 +28,10 @@ public final class ExtensionDataSourceResponse extends com.pulumi.resources.Invo
     @Import(name="extensionName", required=true)
     private String extensionName;
 
+    /**
+     * @return The name of the VM extension.
+     * 
+     */
     public String extensionName() {
         return this.extensionName;
     }
@@ -39,6 +43,10 @@ public final class ExtensionDataSourceResponse extends com.pulumi.resources.Invo
     @Import(name="extensionSettings")
     private @Nullable Object extensionSettings;
 
+    /**
+     * @return The extension settings. The format is specific for particular extension.
+     * 
+     */
     public Optional<Object> extensionSettings() {
         return Optional.ofNullable(this.extensionSettings);
     }
@@ -50,6 +58,10 @@ public final class ExtensionDataSourceResponse extends com.pulumi.resources.Invo
     @Import(name="inputDataSources")
     private @Nullable List<String> inputDataSources;
 
+    /**
+     * @return The list of data sources this extension needs data from.
+     * 
+     */
     public Optional<List<String>> inputDataSources() {
         return Optional.ofNullable(this.inputDataSources);
     }
@@ -62,6 +74,11 @@ public final class ExtensionDataSourceResponse extends com.pulumi.resources.Invo
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return A friendly name for the data source.
+     * This name should be unique across all data sources (regardless of type) within the data collection rule.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -74,6 +91,11 @@ public final class ExtensionDataSourceResponse extends com.pulumi.resources.Invo
     @Import(name="streams")
     private @Nullable List<String> streams;
 
+    /**
+     * @return List of streams that this data source will be sent to.
+     * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+     * 
+     */
     public Optional<List<String>> streams() {
         return Optional.ofNullable(this.streams);
     }
@@ -106,35 +128,80 @@ public final class ExtensionDataSourceResponse extends com.pulumi.resources.Invo
             $ = new ExtensionDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extensionName The name of the VM extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionName(String extensionName) {
             $.extensionName = extensionName;
             return this;
         }
 
+        /**
+         * @param extensionSettings The extension settings. The format is specific for particular extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionSettings(@Nullable Object extensionSettings) {
             $.extensionSettings = extensionSettings;
             return this;
         }
 
+        /**
+         * @param inputDataSources The list of data sources this extension needs data from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputDataSources(@Nullable List<String> inputDataSources) {
             $.inputDataSources = inputDataSources;
             return this;
         }
 
+        /**
+         * @param inputDataSources The list of data sources this extension needs data from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputDataSources(String... inputDataSources) {
             return inputDataSources(List.of(inputDataSources));
         }
 
+        /**
+         * @param name A friendly name for the data source.
+         * This name should be unique across all data sources (regardless of type) within the data collection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param streams List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(@Nullable List<String> streams) {
             $.streams = streams;
             return this;
         }
 
+        /**
+         * @param streams List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(String... streams) {
             return streams(List.of(streams));
         }

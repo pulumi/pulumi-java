@@ -19,6 +19,10 @@ public final class QueryTimelineSampleResponse extends com.pulumi.resources.Invo
     @Import(name="activeUnits", required=true)
     private String activeUnits;
 
+    /**
+     * @return Total number of units currently being processed by workers. This does not correspond directly to slot usage. This is the largest value observed since the last sample.
+     * 
+     */
     public String activeUnits() {
         return this.activeUnits;
     }
@@ -30,6 +34,10 @@ public final class QueryTimelineSampleResponse extends com.pulumi.resources.Invo
     @Import(name="completedUnits", required=true)
     private String completedUnits;
 
+    /**
+     * @return Total parallel units of work completed by this query.
+     * 
+     */
     public String completedUnits() {
         return this.completedUnits;
     }
@@ -41,6 +49,10 @@ public final class QueryTimelineSampleResponse extends com.pulumi.resources.Invo
     @Import(name="elapsedMs", required=true)
     private String elapsedMs;
 
+    /**
+     * @return Milliseconds elapsed since the start of query execution.
+     * 
+     */
     public String elapsedMs() {
         return this.elapsedMs;
     }
@@ -52,6 +64,10 @@ public final class QueryTimelineSampleResponse extends com.pulumi.resources.Invo
     @Import(name="pendingUnits", required=true)
     private String pendingUnits;
 
+    /**
+     * @return Total parallel units of work remaining for the active stages.
+     * 
+     */
     public String pendingUnits() {
         return this.pendingUnits;
     }
@@ -63,6 +79,10 @@ public final class QueryTimelineSampleResponse extends com.pulumi.resources.Invo
     @Import(name="totalSlotMs", required=true)
     private String totalSlotMs;
 
+    /**
+     * @return Cumulative slot-ms consumed by the query.
+     * 
+     */
     public String totalSlotMs() {
         return this.totalSlotMs;
     }
@@ -95,26 +115,56 @@ public final class QueryTimelineSampleResponse extends com.pulumi.resources.Invo
             $ = new QueryTimelineSampleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeUnits Total number of units currently being processed by workers. This does not correspond directly to slot usage. This is the largest value observed since the last sample.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeUnits(String activeUnits) {
             $.activeUnits = activeUnits;
             return this;
         }
 
+        /**
+         * @param completedUnits Total parallel units of work completed by this query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completedUnits(String completedUnits) {
             $.completedUnits = completedUnits;
             return this;
         }
 
+        /**
+         * @param elapsedMs Milliseconds elapsed since the start of query execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elapsedMs(String elapsedMs) {
             $.elapsedMs = elapsedMs;
             return this;
         }
 
+        /**
+         * @param pendingUnits Total parallel units of work remaining for the active stages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pendingUnits(String pendingUnits) {
             $.pendingUnits = pendingUnits;
             return this;
         }
 
+        /**
+         * @param totalSlotMs Cumulative slot-ms consumed by the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalSlotMs(String totalSlotMs) {
             $.totalSlotMs = totalSlotMs;
             return this;

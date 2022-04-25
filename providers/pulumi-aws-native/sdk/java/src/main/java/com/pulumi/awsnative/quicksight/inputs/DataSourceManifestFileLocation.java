@@ -23,6 +23,10 @@ public final class DataSourceManifestFileLocation extends com.pulumi.resources.I
     @Import(name="bucket", required=true)
     private String bucket;
 
+    /**
+     * @return &lt;p&gt;Amazon S3 bucket.&lt;/p&gt;
+     * 
+     */
     public String bucket() {
         return this.bucket;
     }
@@ -34,6 +38,10 @@ public final class DataSourceManifestFileLocation extends com.pulumi.resources.I
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return &lt;p&gt;Amazon S3 key that identifies an object.&lt;/p&gt;
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -63,11 +71,23 @@ public final class DataSourceManifestFileLocation extends com.pulumi.resources.I
             $ = new DataSourceManifestFileLocation(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket &lt;p&gt;Amazon S3 bucket.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param key &lt;p&gt;Amazon S3 key that identifies an object.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;

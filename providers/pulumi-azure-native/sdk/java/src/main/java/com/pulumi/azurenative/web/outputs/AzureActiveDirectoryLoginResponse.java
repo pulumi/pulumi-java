@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureActiveDirectoryLoginResponse {
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the www-authenticate provider should be omitted from the request; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if the www-authenticate provider should be omitted from the request; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean disableWWWAuthenticate;
     /**
-     * Login parameters to send to the OpenID Connect authorization endpoint when
+     * @return Login parameters to send to the OpenID Connect authorization endpoint when
      * a user logs in. Each parameter must be in the form &#34;key=value&#34;.
      * 
      */
@@ -34,17 +34,17 @@ public final class AzureActiveDirectoryLoginResponse {
     }
 
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the www-authenticate provider should be omitted from the request; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if the www-authenticate provider should be omitted from the request; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> disableWWWAuthenticate() {
         return Optional.ofNullable(this.disableWWWAuthenticate);
     }
     /**
-     * Login parameters to send to the OpenID Connect authorization endpoint when
+     * @return Login parameters to send to the OpenID Connect authorization endpoint when
      * a user logs in. Each parameter must be in the form &#34;key=value&#34;.
      * 
-    */
+     */
     public List<String> loginParameters() {
         return this.loginParameters == null ? List.of() : this.loginParameters;
     }

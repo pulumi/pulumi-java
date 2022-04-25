@@ -28,6 +28,10 @@ public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="daysOfMonth")
     private @Nullable Output<String> daysOfMonth;
 
+    /**
+     * @return Indicates which days of the month snapshot should be taken. A comma delimited string.
+     * 
+     */
     public Optional<Output<String>> daysOfMonth() {
         return Optional.ofNullable(this.daysOfMonth);
     }
@@ -39,6 +43,10 @@ public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="hour")
     private @Nullable Output<Integer> hour;
 
+    /**
+     * @return Indicates which hour in UTC timezone a snapshot should be taken
+     * 
+     */
     public Optional<Output<Integer>> hour() {
         return Optional.ofNullable(this.hour);
     }
@@ -50,6 +58,10 @@ public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="minute")
     private @Nullable Output<Integer> minute;
 
+    /**
+     * @return Indicates which minute snapshot should be taken
+     * 
+     */
     public Optional<Output<Integer>> minute() {
         return Optional.ofNullable(this.minute);
     }
@@ -61,6 +73,10 @@ public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="snapshotsToKeep")
     private @Nullable Output<Integer> snapshotsToKeep;
 
+    /**
+     * @return Monthly snapshot count to keep
+     * 
+     */
     public Optional<Output<Integer>> snapshotsToKeep() {
         return Optional.ofNullable(this.snapshotsToKeep);
     }
@@ -72,6 +88,10 @@ public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="usedBytes")
     private @Nullable Output<Double> usedBytes;
 
+    /**
+     * @return Resource size in bytes, current storage usage for the volume in bytes
+     * 
+     */
     public Optional<Output<Double>> usedBytes() {
         return Optional.ofNullable(this.usedBytes);
     }
@@ -104,47 +124,107 @@ public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs
             $ = new MonthlyScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysOfMonth Indicates which days of the month snapshot should be taken. A comma delimited string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfMonth(@Nullable Output<String> daysOfMonth) {
             $.daysOfMonth = daysOfMonth;
             return this;
         }
 
+        /**
+         * @param daysOfMonth Indicates which days of the month snapshot should be taken. A comma delimited string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfMonth(String daysOfMonth) {
             return daysOfMonth(Output.of(daysOfMonth));
         }
 
+        /**
+         * @param hour Indicates which hour in UTC timezone a snapshot should be taken
+         * 
+         * @return builder
+         * 
+         */
         public Builder hour(@Nullable Output<Integer> hour) {
             $.hour = hour;
             return this;
         }
 
+        /**
+         * @param hour Indicates which hour in UTC timezone a snapshot should be taken
+         * 
+         * @return builder
+         * 
+         */
         public Builder hour(Integer hour) {
             return hour(Output.of(hour));
         }
 
+        /**
+         * @param minute Indicates which minute snapshot should be taken
+         * 
+         * @return builder
+         * 
+         */
         public Builder minute(@Nullable Output<Integer> minute) {
             $.minute = minute;
             return this;
         }
 
+        /**
+         * @param minute Indicates which minute snapshot should be taken
+         * 
+         * @return builder
+         * 
+         */
         public Builder minute(Integer minute) {
             return minute(Output.of(minute));
         }
 
+        /**
+         * @param snapshotsToKeep Monthly snapshot count to keep
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotsToKeep(@Nullable Output<Integer> snapshotsToKeep) {
             $.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
 
+        /**
+         * @param snapshotsToKeep Monthly snapshot count to keep
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotsToKeep(Integer snapshotsToKeep) {
             return snapshotsToKeep(Output.of(snapshotsToKeep));
         }
 
+        /**
+         * @param usedBytes Resource size in bytes, current storage usage for the volume in bytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder usedBytes(@Nullable Output<Double> usedBytes) {
             $.usedBytes = usedBytes;
             return this;
         }
 
+        /**
+         * @param usedBytes Resource size in bytes, current storage usage for the volume in bytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder usedBytes(Double usedBytes) {
             return usedBytes(Output.of(usedBytes));
         }

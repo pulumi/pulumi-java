@@ -13,19 +13,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OrganizationSecurityPolicyRuleMatchConfig {
     /**
-     * Destination IP address range in CIDR format. Required for
+     * @return Destination IP address range in CIDR format. Required for
      * EGRESS rules.
      * 
      */
     private final @Nullable List<String> destIpRanges;
     /**
-     * Pairs of IP protocols and ports that the rule should match.
+     * @return Pairs of IP protocols and ports that the rule should match.
      * Structure is documented below.
      * 
      */
     private final List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> layer4Configs;
     /**
-     * Source IP address range in CIDR format. Required for
+     * @return Source IP address range in CIDR format. Required for
      * INGRESS rules.
      * 
      */
@@ -42,26 +42,26 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
     }
 
     /**
-     * Destination IP address range in CIDR format. Required for
+     * @return Destination IP address range in CIDR format. Required for
      * EGRESS rules.
      * 
-    */
+     */
     public List<String> destIpRanges() {
         return this.destIpRanges == null ? List.of() : this.destIpRanges;
     }
     /**
-     * Pairs of IP protocols and ports that the rule should match.
+     * @return Pairs of IP protocols and ports that the rule should match.
      * Structure is documented below.
      * 
-    */
+     */
     public List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> layer4Configs() {
         return this.layer4Configs;
     }
     /**
-     * Source IP address range in CIDR format. Required for
+     * @return Source IP address range in CIDR format. Required for
      * INGRESS rules.
      * 
-    */
+     */
     public List<String> srcIpRanges() {
         return this.srcIpRanges == null ? List.of() : this.srcIpRanges;
     }

@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AssignmentLockSettingsResponse {
     /**
-     * List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to &#39;AllResourcesReadOnly&#39;, then the following actions are automatically appended to &#39;excludedActions&#39;: &#39;*{@literal /}read&#39;, &#39;Microsoft.Network/virtualNetworks/subnets/join/action&#39; and &#39;Microsoft.Authorization/locks/delete&#39;. If the lock mode is set to &#39;AllResourcesDoNotDelete&#39;, then the following actions are automatically appended to &#39;excludedActions&#39;: &#39;Microsoft.Authorization/locks/delete&#39;. Duplicate actions will get removed.
+     * @return List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to &#39;AllResourcesReadOnly&#39;, then the following actions are automatically appended to &#39;excludedActions&#39;: &#39;*{@literal /}read&#39;, &#39;Microsoft.Network/virtualNetworks/subnets/join/action&#39; and &#39;Microsoft.Authorization/locks/delete&#39;. If the lock mode is set to &#39;AllResourcesDoNotDelete&#39;, then the following actions are automatically appended to &#39;excludedActions&#39;: &#39;Microsoft.Authorization/locks/delete&#39;. Duplicate actions will get removed.
      * 
      */
     private final @Nullable List<String> excludedActions;
     /**
-     * List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.
+     * @return List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.
      * 
      */
     private final @Nullable List<String> excludedPrincipals;
     /**
-     * Lock mode.
+     * @return Lock mode.
      * 
      */
     private final @Nullable String mode;
@@ -39,23 +39,23 @@ public final class AssignmentLockSettingsResponse {
     }
 
     /**
-     * List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to &#39;AllResourcesReadOnly&#39;, then the following actions are automatically appended to &#39;excludedActions&#39;: &#39;*{@literal /}read&#39;, &#39;Microsoft.Network/virtualNetworks/subnets/join/action&#39; and &#39;Microsoft.Authorization/locks/delete&#39;. If the lock mode is set to &#39;AllResourcesDoNotDelete&#39;, then the following actions are automatically appended to &#39;excludedActions&#39;: &#39;Microsoft.Authorization/locks/delete&#39;. Duplicate actions will get removed.
+     * @return List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to &#39;AllResourcesReadOnly&#39;, then the following actions are automatically appended to &#39;excludedActions&#39;: &#39;*{@literal /}read&#39;, &#39;Microsoft.Network/virtualNetworks/subnets/join/action&#39; and &#39;Microsoft.Authorization/locks/delete&#39;. If the lock mode is set to &#39;AllResourcesDoNotDelete&#39;, then the following actions are automatically appended to &#39;excludedActions&#39;: &#39;Microsoft.Authorization/locks/delete&#39;. Duplicate actions will get removed.
      * 
-    */
+     */
     public List<String> excludedActions() {
         return this.excludedActions == null ? List.of() : this.excludedActions;
     }
     /**
-     * List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.
+     * @return List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.
      * 
-    */
+     */
     public List<String> excludedPrincipals() {
         return this.excludedPrincipals == null ? List.of() : this.excludedPrincipals;
     }
     /**
-     * Lock mode.
+     * @return Lock mode.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }

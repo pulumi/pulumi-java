@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class GetOutpostInstanceTypeResult {
     private final String arn;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -36,9 +36,9 @@ public final class GetOutpostInstanceTypeResult {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

@@ -25,6 +25,10 @@ public final class GrpcServiceConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="callCredentials", required=true)
     private CallCredentialsResponse callCredentials;
 
+    /**
+     * @return The call credentials to access the SDS server.
+     * 
+     */
     public CallCredentialsResponse callCredentials() {
         return this.callCredentials;
     }
@@ -36,6 +40,10 @@ public final class GrpcServiceConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="channelCredentials", required=true)
     private ChannelCredentialsResponse channelCredentials;
 
+    /**
+     * @return The channel credentials to access the SDS server.
+     * 
+     */
     public ChannelCredentialsResponse channelCredentials() {
         return this.channelCredentials;
     }
@@ -47,6 +55,10 @@ public final class GrpcServiceConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="targetUri", required=true)
     private String targetUri;
 
+    /**
+     * @return The target URI of the SDS server.
+     * 
+     */
     public String targetUri() {
         return this.targetUri;
     }
@@ -77,16 +89,34 @@ public final class GrpcServiceConfigResponse extends com.pulumi.resources.Invoke
             $ = new GrpcServiceConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param callCredentials The call credentials to access the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callCredentials(CallCredentialsResponse callCredentials) {
             $.callCredentials = callCredentials;
             return this;
         }
 
+        /**
+         * @param channelCredentials The channel credentials to access the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelCredentials(ChannelCredentialsResponse channelCredentials) {
             $.channelCredentials = channelCredentials;
             return this;
         }
 
+        /**
+         * @param targetUri The target URI of the SDS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUri(String targetUri) {
             $.targetUri = targetUri;
             return this;

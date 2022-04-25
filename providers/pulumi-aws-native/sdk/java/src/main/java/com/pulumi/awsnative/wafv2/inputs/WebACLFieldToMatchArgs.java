@@ -29,6 +29,10 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
     @Import(name="allQueryArguments")
     private @Nullable Output<Object> allQueryArguments;
 
+    /**
+     * @return All query arguments of a web request.
+     * 
+     */
     public Optional<Output<Object>> allQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
@@ -40,6 +44,10 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
     @Import(name="body")
     private @Nullable Output<Object> body;
 
+    /**
+     * @return The body of a web request. This immediately follows the request headers.
+     * 
+     */
     public Optional<Output<Object>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -58,6 +66,10 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
     @Import(name="method")
     private @Nullable Output<Object> method;
 
+    /**
+     * @return The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
+     * 
+     */
     public Optional<Output<Object>> method() {
         return Optional.ofNullable(this.method);
     }
@@ -69,6 +81,10 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
     @Import(name="queryString")
     private @Nullable Output<Object> queryString;
 
+    /**
+     * @return The query string of a web request. This is the part of a URL that appears after a ? character, if any.
+     * 
+     */
     public Optional<Output<Object>> queryString() {
         return Optional.ofNullable(this.queryString);
     }
@@ -87,6 +103,10 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
     @Import(name="singleQueryArgument")
     private @Nullable Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument;
 
+    /**
+     * @return One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn&#39;t case sensitive.
+     * 
+     */
     public Optional<Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs>> singleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
@@ -98,6 +118,10 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
     @Import(name="uriPath")
     private @Nullable Output<Object> uriPath;
 
+    /**
+     * @return The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
+     * 
+     */
     public Optional<Output<Object>> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }
@@ -133,20 +157,44 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
             $ = new WebACLFieldToMatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allQueryArguments All query arguments of a web request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allQueryArguments(@Nullable Output<Object> allQueryArguments) {
             $.allQueryArguments = allQueryArguments;
             return this;
         }
 
+        /**
+         * @param allQueryArguments All query arguments of a web request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allQueryArguments(Object allQueryArguments) {
             return allQueryArguments(Output.of(allQueryArguments));
         }
 
+        /**
+         * @param body The body of a web request. This immediately follows the request headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<Object> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body The body of a web request. This immediately follows the request headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(Object body) {
             return body(Output.of(body));
         }
@@ -160,20 +208,44 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
             return jsonBody(Output.of(jsonBody));
         }
 
+        /**
+         * @param method The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable Output<Object> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(Object method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param queryString The query string of a web request. This is the part of a URL that appears after a ? character, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(@Nullable Output<Object> queryString) {
             $.queryString = queryString;
             return this;
         }
 
+        /**
+         * @param queryString The query string of a web request. This is the part of a URL that appears after a ? character, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(Object queryString) {
             return queryString(Output.of(queryString));
         }
@@ -187,20 +259,44 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
             return singleHeader(Output.of(singleHeader));
         }
 
+        /**
+         * @param singleQueryArgument One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn&#39;t case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleQueryArgument(@Nullable Output<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument) {
             $.singleQueryArgument = singleQueryArgument;
             return this;
         }
 
+        /**
+         * @param singleQueryArgument One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn&#39;t case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleQueryArgument(WebACLFieldToMatchSingleQueryArgumentPropertiesArgs singleQueryArgument) {
             return singleQueryArgument(Output.of(singleQueryArgument));
         }
 
+        /**
+         * @param uriPath The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uriPath(@Nullable Output<Object> uriPath) {
             $.uriPath = uriPath;
             return this;
         }
 
+        /**
+         * @param uriPath The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uriPath(Object uriPath) {
             return uriPath(Output.of(uriPath));
         }

@@ -26,6 +26,10 @@ public final class EphemeralStorageConfigArgs extends com.pulumi.resources.Resou
     @Import(name="localSsdCount")
     private @Nullable Output<Integer> localSsdCount;
 
+    /**
+     * @return Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+     * 
+     */
     public Optional<Output<Integer>> localSsdCount() {
         return Optional.ofNullable(this.localSsdCount);
     }
@@ -54,11 +58,23 @@ public final class EphemeralStorageConfigArgs extends com.pulumi.resources.Resou
             $ = new EphemeralStorageConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localSsdCount Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSsdCount(@Nullable Output<Integer> localSsdCount) {
             $.localSsdCount = localSsdCount;
             return this;
         }
 
+        /**
+         * @param localSsdCount Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSsdCount(Integer localSsdCount) {
             return localSsdCount(Output.of(localSsdCount));
         }

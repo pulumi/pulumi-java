@@ -31,6 +31,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bitLockerKey")
     private @Nullable Output<String> bitLockerKey;
 
+    /**
+     * @return The BitLocker key used to encrypt the drive.
+     * 
+     */
     public Optional<Output<String>> bitLockerKey() {
         return Optional.ofNullable(this.bitLockerKey);
     }
@@ -42,6 +46,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bytesSucceeded")
     private @Nullable Output<Double> bytesSucceeded;
 
+    /**
+     * @return Bytes successfully transferred for the drive.
+     * 
+     */
     public Optional<Output<Double>> bytesSucceeded() {
         return Optional.ofNullable(this.bytesSucceeded);
     }
@@ -53,6 +61,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="copyStatus")
     private @Nullable Output<String> copyStatus;
 
+    /**
+     * @return Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.
+     * 
+     */
     public Optional<Output<String>> copyStatus() {
         return Optional.ofNullable(this.copyStatus);
     }
@@ -64,6 +76,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="driveHeaderHash")
     private @Nullable Output<String> driveHeaderHash;
 
+    /**
+     * @return The drive header hash value.
+     * 
+     */
     public Optional<Output<String>> driveHeaderHash() {
         return Optional.ofNullable(this.driveHeaderHash);
     }
@@ -75,6 +91,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="driveId")
     private @Nullable Output<String> driveId;
 
+    /**
+     * @return The drive&#39;s hardware serial number, without spaces.
+     * 
+     */
     public Optional<Output<String>> driveId() {
         return Optional.ofNullable(this.driveId);
     }
@@ -86,6 +106,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="errorLogUri")
     private @Nullable Output<String> errorLogUri;
 
+    /**
+     * @return A URI that points to the blob containing the error log for the data transfer operation.
+     * 
+     */
     public Optional<Output<String>> errorLogUri() {
         return Optional.ofNullable(this.errorLogUri);
     }
@@ -97,6 +121,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="manifestFile")
     private @Nullable Output<String> manifestFile;
 
+    /**
+     * @return The relative path of the manifest file on the drive.
+     * 
+     */
     public Optional<Output<String>> manifestFile() {
         return Optional.ofNullable(this.manifestFile);
     }
@@ -108,6 +136,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="manifestHash")
     private @Nullable Output<String> manifestHash;
 
+    /**
+     * @return The Base16-encoded MD5 hash of the manifest file on the drive.
+     * 
+     */
     public Optional<Output<String>> manifestHash() {
         return Optional.ofNullable(this.manifestHash);
     }
@@ -119,6 +151,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="manifestUri")
     private @Nullable Output<String> manifestUri;
 
+    /**
+     * @return A URI that points to the blob containing the drive manifest file.
+     * 
+     */
     public Optional<Output<String>> manifestUri() {
         return Optional.ofNullable(this.manifestUri);
     }
@@ -130,6 +166,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="percentComplete")
     private @Nullable Output<Integer> percentComplete;
 
+    /**
+     * @return Percentage completed for the drive.
+     * 
+     */
     public Optional<Output<Integer>> percentComplete() {
         return Optional.ofNullable(this.percentComplete);
     }
@@ -141,6 +181,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<Either<String,DriveState>> state;
 
+    /**
+     * @return The drive&#39;s current state.
+     * 
+     */
     public Optional<Output<Either<String,DriveState>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -152,6 +196,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="verboseLogUri")
     private @Nullable Output<String> verboseLogUri;
 
+    /**
+     * @return A URI that points to the blob containing the verbose log for the data transfer operation.
+     * 
+     */
     public Optional<Output<String>> verboseLogUri() {
         return Optional.ofNullable(this.verboseLogUri);
     }
@@ -191,118 +239,274 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DriveStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bitLockerKey The BitLocker key used to encrypt the drive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitLockerKey(@Nullable Output<String> bitLockerKey) {
             $.bitLockerKey = bitLockerKey;
             return this;
         }
 
+        /**
+         * @param bitLockerKey The BitLocker key used to encrypt the drive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitLockerKey(String bitLockerKey) {
             return bitLockerKey(Output.of(bitLockerKey));
         }
 
+        /**
+         * @param bytesSucceeded Bytes successfully transferred for the drive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bytesSucceeded(@Nullable Output<Double> bytesSucceeded) {
             $.bytesSucceeded = bytesSucceeded;
             return this;
         }
 
+        /**
+         * @param bytesSucceeded Bytes successfully transferred for the drive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bytesSucceeded(Double bytesSucceeded) {
             return bytesSucceeded(Output.of(bytesSucceeded));
         }
 
+        /**
+         * @param copyStatus Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyStatus(@Nullable Output<String> copyStatus) {
             $.copyStatus = copyStatus;
             return this;
         }
 
+        /**
+         * @param copyStatus Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyStatus(String copyStatus) {
             return copyStatus(Output.of(copyStatus));
         }
 
+        /**
+         * @param driveHeaderHash The drive header hash value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driveHeaderHash(@Nullable Output<String> driveHeaderHash) {
             $.driveHeaderHash = driveHeaderHash;
             return this;
         }
 
+        /**
+         * @param driveHeaderHash The drive header hash value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driveHeaderHash(String driveHeaderHash) {
             return driveHeaderHash(Output.of(driveHeaderHash));
         }
 
+        /**
+         * @param driveId The drive&#39;s hardware serial number, without spaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driveId(@Nullable Output<String> driveId) {
             $.driveId = driveId;
             return this;
         }
 
+        /**
+         * @param driveId The drive&#39;s hardware serial number, without spaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driveId(String driveId) {
             return driveId(Output.of(driveId));
         }
 
+        /**
+         * @param errorLogUri A URI that points to the blob containing the error log for the data transfer operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorLogUri(@Nullable Output<String> errorLogUri) {
             $.errorLogUri = errorLogUri;
             return this;
         }
 
+        /**
+         * @param errorLogUri A URI that points to the blob containing the error log for the data transfer operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorLogUri(String errorLogUri) {
             return errorLogUri(Output.of(errorLogUri));
         }
 
+        /**
+         * @param manifestFile The relative path of the manifest file on the drive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestFile(@Nullable Output<String> manifestFile) {
             $.manifestFile = manifestFile;
             return this;
         }
 
+        /**
+         * @param manifestFile The relative path of the manifest file on the drive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestFile(String manifestFile) {
             return manifestFile(Output.of(manifestFile));
         }
 
+        /**
+         * @param manifestHash The Base16-encoded MD5 hash of the manifest file on the drive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestHash(@Nullable Output<String> manifestHash) {
             $.manifestHash = manifestHash;
             return this;
         }
 
+        /**
+         * @param manifestHash The Base16-encoded MD5 hash of the manifest file on the drive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestHash(String manifestHash) {
             return manifestHash(Output.of(manifestHash));
         }
 
+        /**
+         * @param manifestUri A URI that points to the blob containing the drive manifest file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestUri(@Nullable Output<String> manifestUri) {
             $.manifestUri = manifestUri;
             return this;
         }
 
+        /**
+         * @param manifestUri A URI that points to the blob containing the drive manifest file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestUri(String manifestUri) {
             return manifestUri(Output.of(manifestUri));
         }
 
+        /**
+         * @param percentComplete Percentage completed for the drive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentComplete(@Nullable Output<Integer> percentComplete) {
             $.percentComplete = percentComplete;
             return this;
         }
 
+        /**
+         * @param percentComplete Percentage completed for the drive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentComplete(Integer percentComplete) {
             return percentComplete(Output.of(percentComplete));
         }
 
+        /**
+         * @param state The drive&#39;s current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,DriveState>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The drive&#39;s current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,DriveState> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state The drive&#39;s current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state The drive&#39;s current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(DriveState state) {
             return state(Either.ofRight(state));
         }
 
+        /**
+         * @param verboseLogUri A URI that points to the blob containing the verbose log for the data transfer operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verboseLogUri(@Nullable Output<String> verboseLogUri) {
             $.verboseLogUri = verboseLogUri;
             return this;
         }
 
+        /**
+         * @param verboseLogUri A URI that points to the blob containing the verbose log for the data transfer operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verboseLogUri(String verboseLogUri) {
             return verboseLogUri(Output.of(verboseLogUri));
         }

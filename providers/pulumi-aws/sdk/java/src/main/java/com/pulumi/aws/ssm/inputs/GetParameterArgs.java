@@ -22,6 +22,10 @@ public final class GetParameterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the parameter.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -33,6 +37,10 @@ public final class GetParameterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="withDecryption")
     private @Nullable Boolean withDecryption;
 
+    /**
+     * @return Whether to return decrypted `SecureString` value. Defaults to `true`.
+     * 
+     */
     public Optional<Boolean> withDecryption() {
         return Optional.ofNullable(this.withDecryption);
     }
@@ -62,11 +70,23 @@ public final class GetParameterArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param withDecryption Whether to return decrypted `SecureString` value. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder withDecryption(@Nullable Boolean withDecryption) {
             $.withDecryption = withDecryption;
             return this;

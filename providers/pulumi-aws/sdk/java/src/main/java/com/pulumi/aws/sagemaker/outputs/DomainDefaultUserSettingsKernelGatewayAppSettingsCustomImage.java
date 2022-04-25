@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage {
     /**
-     * The name of the App Image Config.
+     * @return The name of the App Image Config.
      * 
      */
     private final String appImageConfigName;
     /**
-     * The name of the Custom Image.
+     * @return The name of the Custom Image.
      * 
      */
     private final String imageName;
     /**
-     * The version number of the Custom Image.
+     * @return The version number of the Custom Image.
      * 
      */
     private final @Nullable Integer imageVersionNumber;
@@ -39,23 +39,23 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage 
     }
 
     /**
-     * The name of the App Image Config.
+     * @return The name of the App Image Config.
      * 
-    */
+     */
     public String appImageConfigName() {
         return this.appImageConfigName;
     }
     /**
-     * The name of the Custom Image.
+     * @return The name of the Custom Image.
      * 
-    */
+     */
     public String imageName() {
         return this.imageName;
     }
     /**
-     * The version number of the Custom Image.
+     * @return The version number of the Custom Image.
      * 
-    */
+     */
     public Optional<Integer> imageVersionNumber() {
         return Optional.ofNullable(this.imageVersionNumber);
     }

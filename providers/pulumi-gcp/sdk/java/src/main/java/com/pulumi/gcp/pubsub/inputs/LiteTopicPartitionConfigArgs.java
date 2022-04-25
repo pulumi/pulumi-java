@@ -24,6 +24,11 @@ public final class LiteTopicPartitionConfigArgs extends com.pulumi.resources.Res
     @Import(name="capacity")
     private @Nullable Output<LiteTopicPartitionConfigCapacityArgs> capacity;
 
+    /**
+     * @return The capacity configuration.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<LiteTopicPartitionConfigCapacityArgs>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -35,6 +40,10 @@ public final class LiteTopicPartitionConfigArgs extends com.pulumi.resources.Res
     @Import(name="count", required=true)
     private Output<Integer> count;
 
+    /**
+     * @return The number of partitions in the topic. Must be at least 1.
+     * 
+     */
     public Output<Integer> count() {
         return this.count;
     }
@@ -64,20 +73,46 @@ public final class LiteTopicPartitionConfigArgs extends com.pulumi.resources.Res
             $ = new LiteTopicPartitionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The capacity configuration.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<LiteTopicPartitionConfigCapacityArgs> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The capacity configuration.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(LiteTopicPartitionConfigCapacityArgs capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param count The number of partitions in the topic. Must be at least 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count The number of partitions in the topic. Must be at least 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }

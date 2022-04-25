@@ -27,6 +27,10 @@ public final class AzureClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
     private @Nullable Output<Map<String,String>> annotations;
 
+    /**
+     * @return Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     public Optional<Output<Map<String,String>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -38,6 +42,10 @@ public final class AzureClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorization", required=true)
     private Output<AzureClusterAuthorizationArgs> authorization;
 
+    /**
+     * @return Required. Configuration related to the cluster RBAC settings.
+     * 
+     */
     public Output<AzureClusterAuthorizationArgs> authorization() {
         return this.authorization;
     }
@@ -49,6 +57,10 @@ public final class AzureClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureRegion", required=true)
     private Output<String> azureRegion;
 
+    /**
+     * @return Required. The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
+     * 
+     */
     public Output<String> azureRegion() {
         return this.azureRegion;
     }
@@ -60,6 +72,10 @@ public final class AzureClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="client", required=true)
     private Output<String> client;
 
+    /**
+     * @return Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+     * 
+     */
     public Output<String> client() {
         return this.client;
     }
@@ -71,6 +87,10 @@ public final class AzureClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="controlPlane", required=true)
     private Output<AzureClusterControlPlaneArgs> controlPlane;
 
+    /**
+     * @return Required. Configuration related to the cluster control plane.
+     * 
+     */
     public Output<AzureClusterControlPlaneArgs> controlPlane() {
         return this.controlPlane;
     }
@@ -82,6 +102,10 @@ public final class AzureClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -93,6 +117,10 @@ public final class AzureClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fleet", required=true)
     private Output<AzureClusterFleetArgs> fleet;
 
+    /**
+     * @return Fleet configuration.
+     * 
+     */
     public Output<AzureClusterFleetArgs> fleet() {
         return this.fleet;
     }
@@ -104,6 +132,10 @@ public final class AzureClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The location for the resource
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -115,6 +147,10 @@ public final class AzureClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of this resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -126,6 +162,10 @@ public final class AzureClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networking", required=true)
     private Output<AzureClusterNetworkingArgs> networking;
 
+    /**
+     * @return Required. Cluster-wide networking configuration.
+     * 
+     */
     public Output<AzureClusterNetworkingArgs> networking() {
         return this.networking;
     }
@@ -137,6 +177,10 @@ public final class AzureClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project for the resource
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -148,6 +192,10 @@ public final class AzureClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupId", required=true)
     private Output<String> resourceGroupId;
 
+    /**
+     * @return The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;`
+     * 
+     */
     public Output<String> resourceGroupId() {
         return this.resourceGroupId;
     }
@@ -187,110 +235,254 @@ public final class AzureClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AzureClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Map<String,String> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param authorization Required. Configuration related to the cluster RBAC settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorization(Output<AzureClusterAuthorizationArgs> authorization) {
             $.authorization = authorization;
             return this;
         }
 
+        /**
+         * @param authorization Required. Configuration related to the cluster RBAC settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorization(AzureClusterAuthorizationArgs authorization) {
             return authorization(Output.of(authorization));
         }
 
+        /**
+         * @param azureRegion Required. The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureRegion(Output<String> azureRegion) {
             $.azureRegion = azureRegion;
             return this;
         }
 
+        /**
+         * @param azureRegion Required. The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureRegion(String azureRegion) {
             return azureRegion(Output.of(azureRegion));
         }
 
+        /**
+         * @param client Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder client(Output<String> client) {
             $.client = client;
             return this;
         }
 
+        /**
+         * @param client Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder client(String client) {
             return client(Output.of(client));
         }
 
+        /**
+         * @param controlPlane Required. Configuration related to the cluster control plane.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlPlane(Output<AzureClusterControlPlaneArgs> controlPlane) {
             $.controlPlane = controlPlane;
             return this;
         }
 
+        /**
+         * @param controlPlane Required. Configuration related to the cluster control plane.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlPlane(AzureClusterControlPlaneArgs controlPlane) {
             return controlPlane(Output.of(controlPlane));
         }
 
+        /**
+         * @param description Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param fleet Fleet configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleet(Output<AzureClusterFleetArgs> fleet) {
             $.fleet = fleet;
             return this;
         }
 
+        /**
+         * @param fleet Fleet configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleet(AzureClusterFleetArgs fleet) {
             return fleet(Output.of(fleet));
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networking Required. Cluster-wide networking configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networking(Output<AzureClusterNetworkingArgs> networking) {
             $.networking = networking;
             return this;
         }
 
+        /**
+         * @param networking Required. Cluster-wide networking configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networking(AzureClusterNetworkingArgs networking) {
             return networking(Output.of(networking));
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param resourceGroupId The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupId(Output<String> resourceGroupId) {
             $.resourceGroupId = resourceGroupId;
             return this;
         }
 
+        /**
+         * @param resourceGroupId The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupId(String resourceGroupId) {
             return resourceGroupId(Output.of(resourceGroupId));
         }

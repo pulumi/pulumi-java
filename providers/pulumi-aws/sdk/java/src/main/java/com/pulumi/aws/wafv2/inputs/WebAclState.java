@@ -29,6 +29,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the IP Set that this statement references.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -40,6 +44,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return The web ACL capacity units (WCUs) currently being used by this web ACL.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -51,6 +59,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="customResponseBodies")
     private @Nullable Output<List<WebAclCustomResponseBodyGetArgs>> customResponseBodies;
 
+    /**
+     * @return Defines custom response bodies that can be referenced by `custom_response` actions. See Custom Response Body below for details.
+     * 
+     */
     public Optional<Output<List<WebAclCustomResponseBodyGetArgs>>> customResponseBodies() {
         return Optional.ofNullable(this.customResponseBodies);
     }
@@ -62,6 +74,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultAction")
     private @Nullable Output<WebAclDefaultActionGetArgs> defaultAction;
 
+    /**
+     * @return The action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
+     * 
+     */
     public Optional<Output<WebAclDefaultActionGetArgs>> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
@@ -73,6 +89,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A friendly description of the WebACL.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -91,6 +111,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The label string.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -102,6 +126,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<List<WebAclRuleGetArgs>> rules;
 
+    /**
+     * @return The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
+     * 
+     */
     public Optional<Output<List<WebAclRuleGetArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -113,6 +141,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
     private @Nullable Output<String> scope;
 
+    /**
+     * @return Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the region `us-east-1` (N. Virginia) on the AWS provider.
+     * 
+     */
     public Optional<Output<String>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -124,6 +156,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return An map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -135,6 +171,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -146,6 +186,10 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
     @Import(name="visibilityConfig")
     private @Nullable Output<WebAclVisibilityConfigGetArgs> visibilityConfig;
 
+    /**
+     * @return Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
+     * 
+     */
     public Optional<Output<WebAclVisibilityConfigGetArgs>> visibilityConfig() {
         return Optional.ofNullable(this.visibilityConfig);
     }
@@ -185,51 +229,117 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
             $ = new WebAclState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the IP Set that this statement references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the IP Set that this statement references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param capacity The web ACL capacity units (WCUs) currently being used by this web ACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The web ACL capacity units (WCUs) currently being used by this web ACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param customResponseBodies Defines custom response bodies that can be referenced by `custom_response` actions. See Custom Response Body below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseBodies(@Nullable Output<List<WebAclCustomResponseBodyGetArgs>> customResponseBodies) {
             $.customResponseBodies = customResponseBodies;
             return this;
         }
 
+        /**
+         * @param customResponseBodies Defines custom response bodies that can be referenced by `custom_response` actions. See Custom Response Body below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseBodies(List<WebAclCustomResponseBodyGetArgs> customResponseBodies) {
             return customResponseBodies(Output.of(customResponseBodies));
         }
 
+        /**
+         * @param customResponseBodies Defines custom response bodies that can be referenced by `custom_response` actions. See Custom Response Body below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseBodies(WebAclCustomResponseBodyGetArgs... customResponseBodies) {
             return customResponseBodies(List.of(customResponseBodies));
         }
 
+        /**
+         * @param defaultAction The action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(@Nullable Output<WebAclDefaultActionGetArgs> defaultAction) {
             $.defaultAction = defaultAction;
             return this;
         }
 
+        /**
+         * @param defaultAction The action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(WebAclDefaultActionGetArgs defaultAction) {
             return defaultAction(Output.of(defaultAction));
         }
 
+        /**
+         * @param description A friendly description of the WebACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A friendly description of the WebACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -243,60 +353,138 @@ public final class WebAclState extends com.pulumi.resources.ResourceArgs {
             return lockToken(Output.of(lockToken));
         }
 
+        /**
+         * @param name The label string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The label string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param rules The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<WebAclRuleGetArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<WebAclRuleGetArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(WebAclRuleGetArgs... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param scope Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the region `us-east-1` (N. Virginia) on the AWS provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the region `us-east-1` (N. Virginia) on the AWS provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param tags An map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param visibilityConfig Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder visibilityConfig(@Nullable Output<WebAclVisibilityConfigGetArgs> visibilityConfig) {
             $.visibilityConfig = visibilityConfig;
             return this;
         }
 
+        /**
+         * @param visibilityConfig Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder visibilityConfig(WebAclVisibilityConfigGetArgs visibilityConfig) {
             return visibilityConfig(Output.of(visibilityConfig));
         }

@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends com.pul
     @Import(name="bytesLimitPerFile", required=true)
     private String bytesLimitPerFile;
 
+    /**
+     * @return Max number of bytes to scan from a file. If a scanned file&#39;s size is bigger than this value then the rest of the bytes are omitted. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.
+     * 
+     */
     public String bytesLimitPerFile() {
         return this.bytesLimitPerFile;
     }
@@ -37,6 +41,10 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends com.pul
     @Import(name="bytesLimitPerFilePercent", required=true)
     private Integer bytesLimitPerFilePercent;
 
+    /**
+     * @return Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.
+     * 
+     */
     public Integer bytesLimitPerFilePercent() {
         return this.bytesLimitPerFilePercent;
     }
@@ -48,6 +56,10 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends com.pul
     @Import(name="fileSet", required=true)
     private GooglePrivacyDlpV2FileSetResponse fileSet;
 
+    /**
+     * @return The set of one or more files to scan.
+     * 
+     */
     public GooglePrivacyDlpV2FileSetResponse fileSet() {
         return this.fileSet;
     }
@@ -59,6 +71,10 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends com.pul
     @Import(name="fileTypes", required=true)
     private List<String> fileTypes;
 
+    /**
+     * @return List of file type groups to include in the scan. If empty, all files are scanned and available data format processors are applied. In addition, the binary content of the selected files is always scanned as well. Images are scanned only as binary if the specified region does not support image inspection and no file_types were specified. Image inspection is restricted to &#39;global&#39;, &#39;us&#39;, &#39;asia&#39;, and &#39;europe&#39;.
+     * 
+     */
     public List<String> fileTypes() {
         return this.fileTypes;
     }
@@ -70,6 +86,10 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends com.pul
     @Import(name="filesLimitPercent", required=true)
     private Integer filesLimitPercent;
 
+    /**
+     * @return Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0.
+     * 
+     */
     public Integer filesLimitPercent() {
         return this.filesLimitPercent;
     }
@@ -110,30 +130,66 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends com.pul
             $ = new GooglePrivacyDlpV2CloudStorageOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bytesLimitPerFile Max number of bytes to scan from a file. If a scanned file&#39;s size is bigger than this value then the rest of the bytes are omitted. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bytesLimitPerFile(String bytesLimitPerFile) {
             $.bytesLimitPerFile = bytesLimitPerFile;
             return this;
         }
 
+        /**
+         * @param bytesLimitPerFilePercent Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bytesLimitPerFilePercent(Integer bytesLimitPerFilePercent) {
             $.bytesLimitPerFilePercent = bytesLimitPerFilePercent;
             return this;
         }
 
+        /**
+         * @param fileSet The set of one or more files to scan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSet(GooglePrivacyDlpV2FileSetResponse fileSet) {
             $.fileSet = fileSet;
             return this;
         }
 
+        /**
+         * @param fileTypes List of file type groups to include in the scan. If empty, all files are scanned and available data format processors are applied. In addition, the binary content of the selected files is always scanned as well. Images are scanned only as binary if the specified region does not support image inspection and no file_types were specified. Image inspection is restricted to &#39;global&#39;, &#39;us&#39;, &#39;asia&#39;, and &#39;europe&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileTypes(List<String> fileTypes) {
             $.fileTypes = fileTypes;
             return this;
         }
 
+        /**
+         * @param fileTypes List of file type groups to include in the scan. If empty, all files are scanned and available data format processors are applied. In addition, the binary content of the selected files is always scanned as well. Images are scanned only as binary if the specified region does not support image inspection and no file_types were specified. Image inspection is restricted to &#39;global&#39;, &#39;us&#39;, &#39;asia&#39;, and &#39;europe&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileTypes(String... fileTypes) {
             return fileTypes(List.of(fileTypes));
         }
 
+        /**
+         * @param filesLimitPercent Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesLimitPercent(Integer filesLimitPercent) {
             $.filesLimitPercent = filesLimitPercent;
             return this;

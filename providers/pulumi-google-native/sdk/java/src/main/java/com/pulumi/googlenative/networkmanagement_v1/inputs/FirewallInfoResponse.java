@@ -25,6 +25,10 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="action", required=true)
     private String action;
 
+    /**
+     * @return Possible values: ALLOW, DENY
+     * 
+     */
     public String action() {
         return this.action;
     }
@@ -36,6 +40,10 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="direction", required=true)
     private String direction;
 
+    /**
+     * @return Possible values: INGRESS, EGRESS
+     * 
+     */
     public String direction() {
         return this.direction;
     }
@@ -47,6 +55,10 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The display name of the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -58,6 +70,10 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="firewallRuleType", required=true)
     private String firewallRuleType;
 
+    /**
+     * @return The firewall rule&#39;s type.
+     * 
+     */
     public String firewallRuleType() {
         return this.firewallRuleType;
     }
@@ -69,6 +85,10 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="networkUri", required=true)
     private String networkUri;
 
+    /**
+     * @return The URI of the VPC network that the firewall rule is associated with. This field is not applicable to hierarchical firewall policy rules.
+     * 
+     */
     public String networkUri() {
         return this.networkUri;
     }
@@ -80,6 +100,10 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="policy", required=true)
     private String policy;
 
+    /**
+     * @return The hierarchical firewall policy that this rule is associated with. This field is not applicable to VPC firewall rules.
+     * 
+     */
     public String policy() {
         return this.policy;
     }
@@ -91,6 +115,10 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="priority", required=true)
     private Integer priority;
 
+    /**
+     * @return The priority of the firewall rule.
+     * 
+     */
     public Integer priority() {
         return this.priority;
     }
@@ -102,6 +130,10 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="targetServiceAccounts", required=true)
     private List<String> targetServiceAccounts;
 
+    /**
+     * @return The target service accounts specified by the firewall rule.
+     * 
+     */
     public List<String> targetServiceAccounts() {
         return this.targetServiceAccounts;
     }
@@ -113,6 +145,10 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="targetTags", required=true)
     private List<String> targetTags;
 
+    /**
+     * @return The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
+     * 
+     */
     public List<String> targetTags() {
         return this.targetTags;
     }
@@ -124,6 +160,10 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or hierarchical firewall policy rules.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -161,59 +201,131 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
             $ = new FirewallInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Possible values: ALLOW, DENY
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param direction Possible values: INGRESS, EGRESS
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param firewallRuleType The firewall rule&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRuleType(String firewallRuleType) {
             $.firewallRuleType = firewallRuleType;
             return this;
         }
 
+        /**
+         * @param networkUri The URI of the VPC network that the firewall rule is associated with. This field is not applicable to hierarchical firewall policy rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUri(String networkUri) {
             $.networkUri = networkUri;
             return this;
         }
 
+        /**
+         * @param policy The hierarchical firewall policy that this rule is associated with. This field is not applicable to VPC firewall rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param priority The priority of the firewall rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param targetServiceAccounts The target service accounts specified by the firewall rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
             $.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
 
+        /**
+         * @param targetServiceAccounts The target service accounts specified by the firewall rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServiceAccounts(String... targetServiceAccounts) {
             return targetServiceAccounts(List.of(targetServiceAccounts));
         }
 
+        /**
+         * @param targetTags The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTags(List<String> targetTags) {
             $.targetTags = targetTags;
             return this;
         }
 
+        /**
+         * @param targetTags The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTags(String... targetTags) {
             return targetTags(List.of(targetTags));
         }
 
+        /**
+         * @param uri The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or hierarchical firewall policy rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

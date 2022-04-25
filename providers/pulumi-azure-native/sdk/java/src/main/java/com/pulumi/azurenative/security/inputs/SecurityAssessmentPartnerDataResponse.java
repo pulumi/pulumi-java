@@ -23,6 +23,10 @@ public final class SecurityAssessmentPartnerDataResponse extends com.pulumi.reso
     @Import(name="partnerName", required=true)
     private String partnerName;
 
+    /**
+     * @return Name of the company of the partner
+     * 
+     */
     public String partnerName() {
         return this.partnerName;
     }
@@ -34,6 +38,10 @@ public final class SecurityAssessmentPartnerDataResponse extends com.pulumi.reso
     @Import(name="secret", required=true)
     private String secret;
 
+    /**
+     * @return secret to authenticate the partner - write only
+     * 
+     */
     public String secret() {
         return this.secret;
     }
@@ -63,11 +71,23 @@ public final class SecurityAssessmentPartnerDataResponse extends com.pulumi.reso
             $ = new SecurityAssessmentPartnerDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partnerName Name of the company of the partner
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerName(String partnerName) {
             $.partnerName = partnerName;
             return this;
         }
 
+        /**
+         * @param secret secret to authenticate the partner - write only
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             $.secret = secret;
             return this;

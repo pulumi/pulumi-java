@@ -19,6 +19,10 @@ public final class GetRoutingControlArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="routingControlArn", required=true)
     private String routingControlArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the routing control.
+     * 
+     */
     public String routingControlArn() {
         return this.routingControlArn;
     }
@@ -47,6 +51,12 @@ public final class GetRoutingControlArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetRoutingControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param routingControlArn The Amazon Resource Name (ARN) of the routing control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingControlArn(String routingControlArn) {
             $.routingControlArn = routingControlArn;
             return this;

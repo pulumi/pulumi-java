@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LaunchTemplateCapacityReservationSpecification {
     /**
-     * Indicates the instance&#39;s Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
+     * @return Indicates the instance&#39;s Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
      * 
      */
     private final @Nullable String capacityReservationPreference;
     /**
-     * Used to target a specific Capacity Reservation:
+     * @return Used to target a specific Capacity Reservation:
      * 
      */
     private final @Nullable LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget;
@@ -32,16 +32,16 @@ public final class LaunchTemplateCapacityReservationSpecification {
     }
 
     /**
-     * Indicates the instance&#39;s Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
+     * @return Indicates the instance&#39;s Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
      * 
-    */
+     */
     public Optional<String> capacityReservationPreference() {
         return Optional.ofNullable(this.capacityReservationPreference);
     }
     /**
-     * Used to target a specific Capacity Reservation:
+     * @return Used to target a specific Capacity Reservation:
      * 
-    */
+     */
     public Optional<LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget> capacityReservationTarget() {
         return Optional.ofNullable(this.capacityReservationTarget);
     }

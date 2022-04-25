@@ -29,6 +29,10 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends com.pulumi.resourc
     @Import(name="selectedDatabases", required=true)
     private Output<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases;
 
+    /**
+     * @return Databases to migrate
+     * 
+     */
     public Output<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
     }
@@ -40,6 +44,10 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends com.pulumi.resourc
     @Import(name="sourceConnectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
+    /**
+     * @return Information for connecting to source
+     * 
+     */
     public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -51,6 +59,10 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends com.pulumi.resourc
     @Import(name="targetConnectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
+    /**
+     * @return Information for connecting to target
+     * 
+     */
     public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -64,6 +76,12 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends com.pulumi.resourc
     @Import(name="validationOptions")
     private @Nullable Output<MigrationValidationOptionsArgs> validationOptions;
 
+    /**
+     * @return Options for enabling various post migration validations. Available options,
+     *  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data.
+     *  2.) Schema Validation: Performs a thorough schema comparison between the source and target tables and provides a list of differences between the source and target database, 3.) Query Analysis: Executes a set of queries picked up automatically either from the Query Plan Cache or Query Store and execute them and compares the execution time between the source and target database.
+     * 
+     */
     public Optional<Output<MigrationValidationOptionsArgs>> validationOptions() {
         return Optional.ofNullable(this.validationOptions);
     }
@@ -95,42 +113,100 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends com.pulumi.resourc
             $ = new MigrateSqlServerSqlDbTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(Output<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases) {
             $.selectedDatabases = selectedDatabases;
             return this;
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(List<MigrateSqlServerSqlDbDatabaseInputArgs> selectedDatabases) {
             return selectedDatabases(Output.of(selectedDatabases));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(MigrateSqlServerSqlDbDatabaseInputArgs... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
 
+        /**
+         * @param sourceConnectionInfo Information for connecting to source
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param sourceConnectionInfo Information for connecting to source
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
 
+        /**
+         * @param targetConnectionInfo Information for connecting to target
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Information for connecting to target
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
             return targetConnectionInfo(Output.of(targetConnectionInfo));
         }
 
+        /**
+         * @param validationOptions Options for enabling various post migration validations. Available options,
+         *  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data.
+         *  2.) Schema Validation: Performs a thorough schema comparison between the source and target tables and provides a list of differences between the source and target database, 3.) Query Analysis: Executes a set of queries picked up automatically either from the Query Plan Cache or Query Store and execute them and compares the execution time between the source and target database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOptions(@Nullable Output<MigrationValidationOptionsArgs> validationOptions) {
             $.validationOptions = validationOptions;
             return this;
         }
 
+        /**
+         * @param validationOptions Options for enabling various post migration validations. Available options,
+         *  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data.
+         *  2.) Schema Validation: Performs a thorough schema comparison between the source and target tables and provides a list of differences between the source and target database, 3.) Query Analysis: Executes a set of queries picked up automatically either from the Query Plan Cache or Query Store and execute them and compares the execution time between the source and target database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOptions(MigrationValidationOptionsArgs validationOptions) {
             return validationOptions(Output.of(validationOptions));
         }

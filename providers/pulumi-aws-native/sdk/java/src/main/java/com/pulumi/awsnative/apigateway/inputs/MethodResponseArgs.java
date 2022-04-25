@@ -23,6 +23,10 @@ public final class MethodResponseArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="responseModels")
     private @Nullable Output<Object> responseModels;
 
+    /**
+     * @return The resources used for the response&#39;s content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
+     * 
+     */
     public Optional<Output<Object>> responseModels() {
         return Optional.ofNullable(this.responseModels);
     }
@@ -34,6 +38,10 @@ public final class MethodResponseArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="responseParameters")
     private @Nullable Output<Object> responseParameters;
 
+    /**
+     * @return Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value.
+     * 
+     */
     public Optional<Output<Object>> responseParameters() {
         return Optional.ofNullable(this.responseParameters);
     }
@@ -45,6 +53,10 @@ public final class MethodResponseArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="statusCode", required=true)
     private Output<String> statusCode;
 
+    /**
+     * @return The method response&#39;s status code, which you map to an IntegrationResponse.
+     * 
+     */
     public Output<String> statusCode() {
         return this.statusCode;
     }
@@ -75,29 +87,65 @@ public final class MethodResponseArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MethodResponseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param responseModels The resources used for the response&#39;s content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseModels(@Nullable Output<Object> responseModels) {
             $.responseModels = responseModels;
             return this;
         }
 
+        /**
+         * @param responseModels The resources used for the response&#39;s content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseModels(Object responseModels) {
             return responseModels(Output.of(responseModels));
         }
 
+        /**
+         * @param responseParameters Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseParameters(@Nullable Output<Object> responseParameters) {
             $.responseParameters = responseParameters;
             return this;
         }
 
+        /**
+         * @param responseParameters Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseParameters(Object responseParameters) {
             return responseParameters(Output.of(responseParameters));
         }
 
+        /**
+         * @param statusCode The method response&#39;s status code, which you map to an IntegrationResponse.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(Output<String> statusCode) {
             $.statusCode = statusCode;
             return this;
         }
 
+        /**
+         * @param statusCode The method response&#39;s status code, which you map to an IntegrationResponse.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(String statusCode) {
             return statusCode(Output.of(statusCode));
         }

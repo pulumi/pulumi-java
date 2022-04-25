@@ -26,6 +26,10 @@ public final class BigTableIODetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
+    /**
+     * @return InstanceId accessed in the connection.
+     * 
+     */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -37,6 +41,10 @@ public final class BigTableIODetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return ProjectId accessed in the connection.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -48,6 +56,10 @@ public final class BigTableIODetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tableId")
     private @Nullable Output<String> tableId;
 
+    /**
+     * @return TableId accessed in the connection.
+     * 
+     */
     public Optional<Output<String>> tableId() {
         return Optional.ofNullable(this.tableId);
     }
@@ -78,29 +90,65 @@ public final class BigTableIODetailsArgs extends com.pulumi.resources.ResourceAr
             $ = new BigTableIODetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceId InstanceId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId InstanceId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param project ProjectId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project ProjectId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param tableId TableId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(@Nullable Output<String> tableId) {
             $.tableId = tableId;
             return this;
         }
 
+        /**
+         * @param tableId TableId accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(String tableId) {
             return tableId(Output.of(tableId));
         }

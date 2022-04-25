@@ -29,6 +29,10 @@ public final class DeploymentScaleSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return Deployment capacity.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -40,6 +44,10 @@ public final class DeploymentScaleSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="scaleType")
     private @Nullable Output<Either<String,DeploymentScaleType>> scaleType;
 
+    /**
+     * @return Deployment scale type.
+     * 
+     */
     public Optional<Output<Either<String,DeploymentScaleType>>> scaleType() {
         return Optional.ofNullable(this.scaleType);
     }
@@ -69,28 +77,64 @@ public final class DeploymentScaleSettingsArgs extends com.pulumi.resources.Reso
             $ = new DeploymentScaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Deployment capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity Deployment capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param scaleType Deployment scale type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(@Nullable Output<Either<String,DeploymentScaleType>> scaleType) {
             $.scaleType = scaleType;
             return this;
         }
 
+        /**
+         * @param scaleType Deployment scale type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(Either<String,DeploymentScaleType> scaleType) {
             return scaleType(Output.of(scaleType));
         }
 
+        /**
+         * @param scaleType Deployment scale type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(String scaleType) {
             return scaleType(Either.ofLeft(scaleType));
         }
 
+        /**
+         * @param scaleType Deployment scale type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(DeploymentScaleType scaleType) {
             return scaleType(Either.ofRight(scaleType));
         }

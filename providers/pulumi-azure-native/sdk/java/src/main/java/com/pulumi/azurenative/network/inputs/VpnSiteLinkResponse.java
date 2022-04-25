@@ -27,6 +27,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bgpProperties")
     private @Nullable VpnLinkBgpSettingsResponse bgpProperties;
 
+    /**
+     * @return The set of bgp properties.
+     * 
+     */
     public Optional<VpnLinkBgpSettingsResponse> bgpProperties() {
         return Optional.ofNullable(this.bgpProperties);
     }
@@ -38,6 +42,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -49,6 +57,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fqdn")
     private @Nullable String fqdn;
 
+    /**
+     * @return FQDN of vpn-site-link.
+     * 
+     */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
@@ -60,6 +72,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -71,6 +87,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return The ip-address for the vpn-site-link.
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -82,6 +102,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkProperties")
     private @Nullable VpnLinkProviderPropertiesResponse linkProperties;
 
+    /**
+     * @return The link provider properties.
+     * 
+     */
     public Optional<VpnLinkProviderPropertiesResponse> linkProperties() {
         return Optional.ofNullable(this.linkProperties);
     }
@@ -93,6 +117,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -104,6 +132,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the VPN site link resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -115,6 +147,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -151,46 +187,100 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VpnSiteLinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bgpProperties The set of bgp properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpProperties(@Nullable VpnLinkBgpSettingsResponse bgpProperties) {
             $.bgpProperties = bgpProperties;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param fqdn FQDN of vpn-site-link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(@Nullable String fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ipAddress The ip-address for the vpn-site-link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param linkProperties The link provider properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkProperties(@Nullable VpnLinkProviderPropertiesResponse linkProperties) {
             $.linkProperties = linkProperties;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the VPN site link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

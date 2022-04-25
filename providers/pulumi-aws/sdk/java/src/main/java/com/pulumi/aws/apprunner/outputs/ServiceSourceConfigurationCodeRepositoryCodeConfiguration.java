@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceSourceConfigurationCodeRepositoryCodeConfiguration {
     /**
-     * Basic configuration for building and running the App Runner service. Use this parameter to quickly launch an App Runner service without providing an apprunner.yaml file in the source code repository (or ignoring the file if it exists). See Code Configuration Values below for more details.
+     * @return Basic configuration for building and running the App Runner service. Use this parameter to quickly launch an App Runner service without providing an apprunner.yaml file in the source code repository (or ignoring the file if it exists). See Code Configuration Values below for more details.
      * 
      */
     private final @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues codeConfigurationValues;
     /**
-     * The source of the App Runner configuration. Valid values: `REPOSITORY`, `API`. Values are interpreted as follows:
+     * @return The source of the App Runner configuration. Valid values: `REPOSITORY`, `API`. Values are interpreted as follows:
      * 
      */
     private final String configurationSource;
@@ -32,16 +32,16 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfiguration {
     }
 
     /**
-     * Basic configuration for building and running the App Runner service. Use this parameter to quickly launch an App Runner service without providing an apprunner.yaml file in the source code repository (or ignoring the file if it exists). See Code Configuration Values below for more details.
+     * @return Basic configuration for building and running the App Runner service. Use this parameter to quickly launch an App Runner service without providing an apprunner.yaml file in the source code repository (or ignoring the file if it exists). See Code Configuration Values below for more details.
      * 
-    */
+     */
     public Optional<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues> codeConfigurationValues() {
         return Optional.ofNullable(this.codeConfigurationValues);
     }
     /**
-     * The source of the App Runner configuration. Valid values: `REPOSITORY`, `API`. Values are interpreted as follows:
+     * @return The source of the App Runner configuration. Valid values: `REPOSITORY`, `API`. Values are interpreted as follows:
      * 
-    */
+     */
     public String configurationSource() {
         return this.configurationSource;
     }

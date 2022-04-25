@@ -25,6 +25,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cloudFunction", required=true)
     private String cloudFunction;
 
+    /**
+     * @return The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+     * 
+     */
     public String cloudFunction() {
         return this.cloudFunction;
     }
@@ -36,6 +40,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cloudRun", required=true)
     private CloudRunResponse cloudRun;
 
+    /**
+     * @return Cloud Run fully-managed resource that receives the events. The resource should be in the same project as the trigger.
+     * 
+     */
     public CloudRunResponse cloudRun() {
         return this.cloudRun;
     }
@@ -47,6 +55,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="gke", required=true)
     private GKEResponse gke;
 
+    /**
+     * @return A GKE service capable of receiving events. The service should be running in the same project as the trigger.
+     * 
+     */
     public GKEResponse gke() {
         return this.gke;
     }
@@ -77,16 +89,34 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudFunction The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudFunction(String cloudFunction) {
             $.cloudFunction = cloudFunction;
             return this;
         }
 
+        /**
+         * @param cloudRun Cloud Run fully-managed resource that receives the events. The resource should be in the same project as the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRun(CloudRunResponse cloudRun) {
             $.cloudRun = cloudRun;
             return this;
         }
 
+        /**
+         * @param gke A GKE service capable of receiving events. The service should be running in the same project as the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gke(GKEResponse gke) {
             $.gke = gke;
             return this;

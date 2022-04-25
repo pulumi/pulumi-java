@@ -26,6 +26,10 @@ public final class BackendPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="serviceFabricCluster")
     private @Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;
 
+    /**
+     * @return Backend Service Fabric Cluster Properties
+     * 
+     */
     public Optional<Output<BackendServiceFabricClusterPropertiesArgs>> serviceFabricCluster() {
         return Optional.ofNullable(this.serviceFabricCluster);
     }
@@ -54,11 +58,23 @@ public final class BackendPropertiesArgs extends com.pulumi.resources.ResourceAr
             $ = new BackendPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serviceFabricCluster Backend Service Fabric Cluster Properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceFabricCluster(@Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster) {
             $.serviceFabricCluster = serviceFabricCluster;
             return this;
         }
 
+        /**
+         * @param serviceFabricCluster Backend Service Fabric Cluster Properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceFabricCluster(BackendServiceFabricClusterPropertiesArgs serviceFabricCluster) {
             return serviceFabricCluster(Output.of(serviceFabricCluster));
         }

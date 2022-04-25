@@ -35,6 +35,10 @@ public final class ShopifyLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="accessToken")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
+    /**
+     * @return The API access token that can be used to access Shopify’s data. The token won&#39;t expire if it is offline mode.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
@@ -46,6 +50,10 @@ public final class ShopifyLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -57,6 +65,10 @@ public final class ShopifyLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -68,6 +80,10 @@ public final class ShopifyLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -79,6 +95,10 @@ public final class ShopifyLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -90,6 +110,10 @@ public final class ShopifyLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="host", required=true)
     private Output<Object> host;
 
+    /**
+     * @return The endpoint of the Shopify server. (i.e. mystore.myshopify.com)
+     * 
+     */
     public Output<Object> host() {
         return this.host;
     }
@@ -101,6 +125,10 @@ public final class ShopifyLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -113,6 +141,11 @@ public final class ShopifyLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;Shopify&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -124,6 +157,10 @@ public final class ShopifyLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="useEncryptedEndpoints")
     private @Nullable Output<Object> useEncryptedEndpoints;
 
+    /**
+     * @return Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     * 
+     */
     public Optional<Output<Object>> useEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
@@ -135,6 +172,10 @@ public final class ShopifyLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="useHostVerification")
     private @Nullable Output<Object> useHostVerification;
 
+    /**
+     * @return Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * 
+     */
     public Optional<Output<Object>> useHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
@@ -146,6 +187,10 @@ public final class ShopifyLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="usePeerVerification")
     private @Nullable Output<Object> usePeerVerification;
 
+    /**
+     * @return Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+     * 
+     */
     public Optional<Output<Object>> usePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }
@@ -184,113 +229,265 @@ public final class ShopifyLinkedServiceArgs extends com.pulumi.resources.Resourc
             $ = new ShopifyLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken The API access token that can be used to access Shopify’s data. The token won&#39;t expire if it is offline mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param accessToken The API access token that can be used to access Shopify’s data. The token won&#39;t expire if it is offline mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessToken) {
             return accessToken(Output.of(accessToken));
         }
 
+        /**
+         * @param accessToken The API access token that can be used to access Shopify’s data. The token won&#39;t expire if it is offline mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(AzureKeyVaultSecretReferenceArgs accessToken) {
             return accessToken(Either.ofLeft(accessToken));
         }
 
+        /**
+         * @param accessToken The API access token that can be used to access Shopify’s data. The token won&#39;t expire if it is offline mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(SecureStringArgs accessToken) {
             return accessToken(Either.ofRight(accessToken));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param host The endpoint of the Shopify server. (i.e. mystore.myshopify.com)
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(Output<Object> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host The endpoint of the Shopify server. (i.e. mystore.myshopify.com)
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(Object host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;Shopify&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;Shopify&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param useEncryptedEndpoints Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useEncryptedEndpoints(@Nullable Output<Object> useEncryptedEndpoints) {
             $.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
 
+        /**
+         * @param useEncryptedEndpoints Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useEncryptedEndpoints(Object useEncryptedEndpoints) {
             return useEncryptedEndpoints(Output.of(useEncryptedEndpoints));
         }
 
+        /**
+         * @param useHostVerification Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useHostVerification(@Nullable Output<Object> useHostVerification) {
             $.useHostVerification = useHostVerification;
             return this;
         }
 
+        /**
+         * @param useHostVerification Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useHostVerification(Object useHostVerification) {
             return useHostVerification(Output.of(useHostVerification));
         }
 
+        /**
+         * @param usePeerVerification Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePeerVerification(@Nullable Output<Object> usePeerVerification) {
             $.usePeerVerification = usePeerVerification;
             return this;
         }
 
+        /**
+         * @param usePeerVerification Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePeerVerification(Object usePeerVerification) {
             return usePeerVerification(Output.of(usePeerVerification));
         }

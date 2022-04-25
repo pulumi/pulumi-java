@@ -24,6 +24,10 @@ public final class ManagedInstanceKeyArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyName")
     private @Nullable Output<String> keyName;
 
+    /**
+     * @return The name of the managed instance key to be operated on (updated or created).
+     * 
+     */
     public Optional<Output<String>> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -35,6 +39,10 @@ public final class ManagedInstanceKeyArgs extends com.pulumi.resources.ResourceA
     @Import(name="managedInstanceName", required=true)
     private Output<String> managedInstanceName;
 
+    /**
+     * @return The name of the managed instance.
+     * 
+     */
     public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
@@ -46,6 +54,10 @@ public final class ManagedInstanceKeyArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class ManagedInstanceKeyArgs extends com.pulumi.resources.ResourceA
     @Import(name="serverKeyType", required=true)
     private Output<Either<String,ServerKeyType>> serverKeyType;
 
+    /**
+     * @return The key type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
+     * 
+     */
     public Output<Either<String,ServerKeyType>> serverKeyType() {
         return this.serverKeyType;
     }
@@ -68,6 +84,10 @@ public final class ManagedInstanceKeyArgs extends com.pulumi.resources.ResourceA
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return The URI of the key. If the ServerKeyType is AzureKeyVault, then the URI is required.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -100,55 +120,127 @@ public final class ManagedInstanceKeyArgs extends com.pulumi.resources.ResourceA
             $ = new ManagedInstanceKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The name of the managed instance key to be operated on (updated or created).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName The name of the managed instance key to be operated on (updated or created).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(Output<String> managedInstanceName) {
             $.managedInstanceName = managedInstanceName;
             return this;
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(String managedInstanceName) {
             return managedInstanceName(Output.of(managedInstanceName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverKeyType The key type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverKeyType(Output<Either<String,ServerKeyType>> serverKeyType) {
             $.serverKeyType = serverKeyType;
             return this;
         }
 
+        /**
+         * @param serverKeyType The key type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverKeyType(Either<String,ServerKeyType> serverKeyType) {
             return serverKeyType(Output.of(serverKeyType));
         }
 
+        /**
+         * @param serverKeyType The key type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverKeyType(String serverKeyType) {
             return serverKeyType(Either.ofLeft(serverKeyType));
         }
 
+        /**
+         * @param serverKeyType The key type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverKeyType(ServerKeyType serverKeyType) {
             return serverKeyType(Either.ofRight(serverKeyType));
         }
 
+        /**
+         * @param uri The URI of the key. If the ServerKeyType is AzureKeyVault, then the URI is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The URI of the key. If the ServerKeyType is AzureKeyVault, then the URI is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

@@ -34,6 +34,10 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
     @Import(name="failureReason")
     private @Nullable Output<String> failureReason;
 
+    /**
+     * @return Contains the reason a monitoring job failed, if it failed.
+     * 
+     */
     public Optional<Output<String>> failureReason() {
         return Optional.ofNullable(this.failureReason);
     }
@@ -45,6 +49,10 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
     @Import(name="lastMonitoringExecutionSummary")
     private @Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary;
 
+    /**
+     * @return Describes metadata on the last execution to run, if there was one.
+     * 
+     */
     public Optional<Output<MonitoringScheduleMonitoringExecutionSummaryArgs>> lastMonitoringExecutionSummary() {
         return Optional.ofNullable(this.lastMonitoringExecutionSummary);
     }
@@ -70,6 +78,10 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
     @Import(name="monitoringScheduleStatus")
     private @Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus;
 
+    /**
+     * @return The status of a schedule job.
+     * 
+     */
     public Optional<Output<MonitoringScheduleStatus>> monitoringScheduleStatus() {
         return Optional.ofNullable(this.monitoringScheduleStatus);
     }
@@ -81,6 +93,10 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<List<MonitoringScheduleTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<MonitoringScheduleTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -124,20 +140,44 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
             return endpointName(Output.of(endpointName));
         }
 
+        /**
+         * @param failureReason Contains the reason a monitoring job failed, if it failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureReason(@Nullable Output<String> failureReason) {
             $.failureReason = failureReason;
             return this;
         }
 
+        /**
+         * @param failureReason Contains the reason a monitoring job failed, if it failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureReason(String failureReason) {
             return failureReason(Output.of(failureReason));
         }
 
+        /**
+         * @param lastMonitoringExecutionSummary Describes metadata on the last execution to run, if there was one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastMonitoringExecutionSummary(@Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary) {
             $.lastMonitoringExecutionSummary = lastMonitoringExecutionSummary;
             return this;
         }
 
+        /**
+         * @param lastMonitoringExecutionSummary Describes metadata on the last execution to run, if there was one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastMonitoringExecutionSummary(MonitoringScheduleMonitoringExecutionSummaryArgs lastMonitoringExecutionSummary) {
             return lastMonitoringExecutionSummary(Output.of(lastMonitoringExecutionSummary));
         }
@@ -160,24 +200,54 @@ public final class MonitoringScheduleArgs extends com.pulumi.resources.ResourceA
             return monitoringScheduleName(Output.of(monitoringScheduleName));
         }
 
+        /**
+         * @param monitoringScheduleStatus The status of a schedule job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringScheduleStatus(@Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus) {
             $.monitoringScheduleStatus = monitoringScheduleStatus;
             return this;
         }
 
+        /**
+         * @param monitoringScheduleStatus The status of a schedule job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringScheduleStatus(MonitoringScheduleStatus monitoringScheduleStatus) {
             return monitoringScheduleStatus(Output.of(monitoringScheduleStatus));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<MonitoringScheduleTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<MonitoringScheduleTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(MonitoringScheduleTagArgs... tags) {
             return tags(List.of(tags));
         }

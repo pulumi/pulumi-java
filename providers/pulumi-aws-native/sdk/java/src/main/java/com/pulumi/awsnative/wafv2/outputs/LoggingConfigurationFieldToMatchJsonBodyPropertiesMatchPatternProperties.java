@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties {
     /**
-     * Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.
+     * @return Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.
      * 
      */
     private final @Nullable Object all;
     /**
-     * Match only the specified include paths. See also MatchScope in JsonBody.
+     * @return Match only the specified include paths. See also MatchScope in JsonBody.
      * 
      */
     private final @Nullable List<String> includedPaths;
@@ -33,16 +33,16 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
     }
 
     /**
-     * Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.
+     * @return Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.
      * 
-    */
+     */
     public Optional<Object> all() {
         return Optional.ofNullable(this.all);
     }
     /**
-     * Match only the specified include paths. See also MatchScope in JsonBody.
+     * @return Match only the specified include paths. See also MatchScope in JsonBody.
      * 
-    */
+     */
     public List<String> includedPaths() {
         return this.includedPaths == null ? List.of() : this.includedPaths;
     }

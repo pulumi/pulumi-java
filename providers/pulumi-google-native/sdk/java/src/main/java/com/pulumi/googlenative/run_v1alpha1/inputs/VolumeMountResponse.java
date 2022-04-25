@@ -24,6 +24,10 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mountPath", required=true)
     private String mountPath;
 
+    /**
+     * @return Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;.
+     * 
+     */
     public String mountPath() {
         return this.mountPath;
     }
@@ -35,6 +39,10 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the volume. There must be a corresponding Volume with the same name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -46,6 +54,10 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="readOnly", required=true)
     private Boolean readOnly;
 
+    /**
+     * @return (Optional) Only true is accepted. Defaults to true.
+     * 
+     */
     public Boolean readOnly() {
         return this.readOnly;
     }
@@ -57,6 +69,10 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subPath", required=true)
     private String subPath;
 
+    /**
+     * @return (Optional) Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
+     * 
+     */
     public String subPath() {
         return this.subPath;
     }
@@ -88,21 +104,45 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VolumeMountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mountPath Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(String mountPath) {
             $.mountPath = mountPath;
             return this;
         }
 
+        /**
+         * @param name The name of the volume. There must be a corresponding Volume with the same name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param readOnly (Optional) Only true is accepted. Defaults to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param subPath (Optional) Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subPath(String subPath) {
             $.subPath = subPath;
             return this;

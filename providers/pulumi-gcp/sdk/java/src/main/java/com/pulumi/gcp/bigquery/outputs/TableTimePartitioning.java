@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TableTimePartitioning {
     /**
-     * Number of milliseconds for which to keep the
+     * @return Number of milliseconds for which to keep the
      * storage for a partition.
      * 
      */
     private final @Nullable Integer expirationMs;
     /**
-     * The field used to determine how to create a range-based
+     * @return The field used to determine how to create a range-based
      * partition.
      * 
      */
     private final @Nullable String field;
     /**
-     * If set to true, queries over this table
+     * @return If set to true, queries over this table
      * require a partition filter that can be used for partition elimination to be
      * specified.
      * 
      */
     private final @Nullable Boolean requirePartitionFilter;
     /**
-     * The supported types are DAY, HOUR, MONTH, and YEAR,
+     * @return The supported types are DAY, HOUR, MONTH, and YEAR,
      * which will generate one partition per day, hour, month, and year, respectively.
      * 
      */
@@ -52,35 +52,35 @@ public final class TableTimePartitioning {
     }
 
     /**
-     * Number of milliseconds for which to keep the
+     * @return Number of milliseconds for which to keep the
      * storage for a partition.
      * 
-    */
+     */
     public Optional<Integer> expirationMs() {
         return Optional.ofNullable(this.expirationMs);
     }
     /**
-     * The field used to determine how to create a range-based
+     * @return The field used to determine how to create a range-based
      * partition.
      * 
-    */
+     */
     public Optional<String> field() {
         return Optional.ofNullable(this.field);
     }
     /**
-     * If set to true, queries over this table
+     * @return If set to true, queries over this table
      * require a partition filter that can be used for partition elimination to be
      * specified.
      * 
-    */
+     */
     public Optional<Boolean> requirePartitionFilter() {
         return Optional.ofNullable(this.requirePartitionFilter);
     }
     /**
-     * The supported types are DAY, HOUR, MONTH, and YEAR,
+     * @return The supported types are DAY, HOUR, MONTH, and YEAR,
      * which will generate one partition per day, hour, month, and year, respectively.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

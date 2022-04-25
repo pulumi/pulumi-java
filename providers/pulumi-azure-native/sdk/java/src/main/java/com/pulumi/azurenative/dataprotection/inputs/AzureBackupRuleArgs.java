@@ -32,6 +32,10 @@ public final class AzureBackupRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="backupParameters")
     private @Nullable Output<AzureBackupParamsArgs> backupParameters;
 
+    /**
+     * @return BackupParameters base
+     * 
+     */
     public Optional<Output<AzureBackupParamsArgs>> backupParameters() {
         return Optional.ofNullable(this.backupParameters);
     }
@@ -43,6 +47,10 @@ public final class AzureBackupRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dataStore", required=true)
     private Output<DataStoreInfoBaseArgs> dataStore;
 
+    /**
+     * @return DataStoreInfo base
+     * 
+     */
     public Output<DataStoreInfoBaseArgs> dataStore() {
         return this.dataStore;
     }
@@ -61,6 +69,11 @@ public final class AzureBackupRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="objectType", required=true)
     private Output<String> objectType;
 
+    /**
+     * @return
+     * Expected value is &#39;AzureBackupRule&#39;.
+     * 
+     */
     public Output<String> objectType() {
         return this.objectType;
     }
@@ -72,6 +85,10 @@ public final class AzureBackupRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="trigger", required=true)
     private Output<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger;
 
+    /**
+     * @return Trigger context
+     * 
+     */
     public Output<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger() {
         return this.trigger;
     }
@@ -104,20 +121,44 @@ public final class AzureBackupRuleArgs extends com.pulumi.resources.ResourceArgs
             $ = new AzureBackupRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupParameters BackupParameters base
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupParameters(@Nullable Output<AzureBackupParamsArgs> backupParameters) {
             $.backupParameters = backupParameters;
             return this;
         }
 
+        /**
+         * @param backupParameters BackupParameters base
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupParameters(AzureBackupParamsArgs backupParameters) {
             return backupParameters(Output.of(backupParameters));
         }
 
+        /**
+         * @param dataStore DataStoreInfo base
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStore(Output<DataStoreInfoBaseArgs> dataStore) {
             $.dataStore = dataStore;
             return this;
         }
 
+        /**
+         * @param dataStore DataStoreInfo base
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStore(DataStoreInfoBaseArgs dataStore) {
             return dataStore(Output.of(dataStore));
         }
@@ -131,28 +172,66 @@ public final class AzureBackupRuleArgs extends com.pulumi.resources.ResourceArgs
             return name(Output.of(name));
         }
 
+        /**
+         * @param objectType
+         * Expected value is &#39;AzureBackupRule&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(Output<String> objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param objectType
+         * Expected value is &#39;AzureBackupRule&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             return objectType(Output.of(objectType));
         }
 
+        /**
+         * @param trigger Trigger context
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(Output<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger) {
             $.trigger = trigger;
             return this;
         }
 
+        /**
+         * @param trigger Trigger context
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs> trigger) {
             return trigger(Output.of(trigger));
         }
 
+        /**
+         * @param trigger Trigger context
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(AdhocBasedTriggerContextArgs trigger) {
             return trigger(Either.ofLeft(trigger));
         }
 
+        /**
+         * @param trigger Trigger context
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(ScheduleBasedTriggerContextArgs trigger) {
             return trigger(Either.ofRight(trigger));
         }

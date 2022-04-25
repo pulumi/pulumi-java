@@ -26,6 +26,10 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationSource")
     private @Nullable Output<ScalingPlanApplicationSourceGetArgs> applicationSource;
 
+    /**
+     * @return A CloudFormation stack or set of tags. You can create one scaling plan per application source.
+     * 
+     */
     public Optional<Output<ScalingPlanApplicationSourceGetArgs>> applicationSource() {
         return Optional.ofNullable(this.applicationSource);
     }
@@ -37,6 +41,10 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scalingInstructions")
     private @Nullable Output<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions;
 
+    /**
+     * @return The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
+     * 
+     */
     public Optional<Output<List<ScalingPlanScalingInstructionGetArgs>>> scalingInstructions() {
         return Optional.ofNullable(this.scalingInstructions);
     }
@@ -59,6 +71,10 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scalingPlanVersion")
     private @Nullable Output<Integer> scalingPlanVersion;
 
+    /**
+     * @return The version number of the scaling plan. This value is always 1.
+     * 
+     */
     public Optional<Output<Integer>> scalingPlanVersion() {
         return Optional.ofNullable(this.scalingPlanVersion);
     }
@@ -90,42 +106,96 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
             $ = new ScalingPlanState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationSource A CloudFormation stack or set of tags. You can create one scaling plan per application source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSource(@Nullable Output<ScalingPlanApplicationSourceGetArgs> applicationSource) {
             $.applicationSource = applicationSource;
             return this;
         }
 
+        /**
+         * @param applicationSource A CloudFormation stack or set of tags. You can create one scaling plan per application source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSource(ScalingPlanApplicationSourceGetArgs applicationSource) {
             return applicationSource(Output.of(applicationSource));
         }
 
+        /**
+         * @param name The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param scalingInstructions The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingInstructions(@Nullable Output<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions) {
             $.scalingInstructions = scalingInstructions;
             return this;
         }
 
+        /**
+         * @param scalingInstructions The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingInstructions(List<ScalingPlanScalingInstructionGetArgs> scalingInstructions) {
             return scalingInstructions(Output.of(scalingInstructions));
         }
 
+        /**
+         * @param scalingInstructions The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingInstructions(ScalingPlanScalingInstructionGetArgs... scalingInstructions) {
             return scalingInstructions(List.of(scalingInstructions));
         }
 
+        /**
+         * @param scalingPlanVersion The version number of the scaling plan. This value is always 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingPlanVersion(@Nullable Output<Integer> scalingPlanVersion) {
             $.scalingPlanVersion = scalingPlanVersion;
             return this;
         }
 
+        /**
+         * @param scalingPlanVersion The version number of the scaling plan. This value is always 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingPlanVersion(Integer scalingPlanVersion) {
             return scalingPlanVersion(Output.of(scalingPlanVersion));
         }

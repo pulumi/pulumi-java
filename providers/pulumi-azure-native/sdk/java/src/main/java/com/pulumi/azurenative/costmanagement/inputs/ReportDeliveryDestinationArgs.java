@@ -26,6 +26,10 @@ public final class ReportDeliveryDestinationArgs extends com.pulumi.resources.Re
     @Import(name="container", required=true)
     private Output<String> container;
 
+    /**
+     * @return The name of the container where reports will be uploaded.
+     * 
+     */
     public Output<String> container() {
         return this.container;
     }
@@ -37,6 +41,10 @@ public final class ReportDeliveryDestinationArgs extends com.pulumi.resources.Re
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return The resource id of the storage account where reports will be delivered.
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -48,6 +56,10 @@ public final class ReportDeliveryDestinationArgs extends com.pulumi.resources.Re
     @Import(name="rootFolderPath")
     private @Nullable Output<String> rootFolderPath;
 
+    /**
+     * @return The name of the directory where reports will be uploaded.
+     * 
+     */
     public Optional<Output<String>> rootFolderPath() {
         return Optional.ofNullable(this.rootFolderPath);
     }
@@ -78,29 +90,65 @@ public final class ReportDeliveryDestinationArgs extends com.pulumi.resources.Re
             $ = new ReportDeliveryDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param container The name of the container where reports will be uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(Output<String> container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param container The name of the container where reports will be uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(String container) {
             return container(Output.of(container));
         }
 
+        /**
+         * @param resourceId The resource id of the storage account where reports will be delivered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The resource id of the storage account where reports will be delivered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param rootFolderPath The name of the directory where reports will be uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootFolderPath(@Nullable Output<String> rootFolderPath) {
             $.rootFolderPath = rootFolderPath;
             return this;
         }
 
+        /**
+         * @param rootFolderPath The name of the directory where reports will be uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootFolderPath(String rootFolderPath) {
             return rootFolderPath(Output.of(rootFolderPath));
         }

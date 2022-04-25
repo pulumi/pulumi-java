@@ -26,6 +26,10 @@ public final class GcsProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucketName", required=true)
     private Output<String> bucketName;
 
+    /**
+     * @return The full project and resource path for Cloud Storage bucket including the name.
+     * 
+     */
     public Output<String> bucketName() {
         return this.bucketName;
     }
@@ -37,6 +41,10 @@ public final class GcsProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootPath")
     private @Nullable Output<String> rootPath;
 
+    /**
+     * @return The root path inside the Cloud Storage bucket.
+     * 
+     */
     public Optional<Output<String>> rootPath() {
         return Optional.ofNullable(this.rootPath);
     }
@@ -66,20 +74,44 @@ public final class GcsProfileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GcsProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName The full project and resource path for Cloud Storage bucket including the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName The full project and resource path for Cloud Storage bucket including the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param rootPath The root path inside the Cloud Storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootPath(@Nullable Output<String> rootPath) {
             $.rootPath = rootPath;
             return this;
         }
 
+        /**
+         * @param rootPath The root path inside the Cloud Storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootPath(String rootPath) {
             return rootPath(Output.of(rootPath));
         }

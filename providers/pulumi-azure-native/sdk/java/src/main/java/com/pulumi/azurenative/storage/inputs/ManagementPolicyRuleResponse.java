@@ -27,6 +27,10 @@ public final class ManagementPolicyRuleResponse extends com.pulumi.resources.Inv
     @Import(name="definition", required=true)
     private ManagementPolicyDefinitionResponse definition;
 
+    /**
+     * @return An object that defines the Lifecycle rule.
+     * 
+     */
     public ManagementPolicyDefinitionResponse definition() {
         return this.definition;
     }
@@ -38,6 +42,10 @@ public final class ManagementPolicyRuleResponse extends com.pulumi.resources.Inv
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Rule is enabled if set to true.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -49,6 +57,10 @@ public final class ManagementPolicyRuleResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -60,6 +72,10 @@ public final class ManagementPolicyRuleResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The valid value is Lifecycle
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -91,21 +107,45 @@ public final class ManagementPolicyRuleResponse extends com.pulumi.resources.Inv
             $ = new ManagementPolicyRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param definition An object that defines the Lifecycle rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(ManagementPolicyDefinitionResponse definition) {
             $.definition = definition;
             return this;
         }
 
+        /**
+         * @param enabled Rule is enabled if set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param name A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The valid value is Lifecycle
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

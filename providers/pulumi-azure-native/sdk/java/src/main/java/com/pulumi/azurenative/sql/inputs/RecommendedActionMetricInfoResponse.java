@@ -24,6 +24,10 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
     @Import(name="metricName", required=true)
     private String metricName;
 
+    /**
+     * @return Gets the name of the metric. e.g., CPU, Number of Queries.
+     * 
+     */
     public String metricName() {
         return this.metricName;
     }
@@ -35,6 +39,10 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Gets the start time of time interval given by this MetricInfo.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -46,6 +54,10 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
     @Import(name="timeGrain", required=true)
     private String timeGrain;
 
+    /**
+     * @return Gets the duration of time interval for the value given by this MetricInfo. e.g., PT1H (1 hour)
+     * 
+     */
     public String timeGrain() {
         return this.timeGrain;
     }
@@ -57,6 +69,10 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
     @Import(name="unit", required=true)
     private String unit;
 
+    /**
+     * @return Gets the unit in which metric is measured. e.g., DTU, Frequency
+     * 
+     */
     public String unit() {
         return this.unit;
     }
@@ -68,6 +84,10 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
     @Import(name="value", required=true)
     private Double value;
 
+    /**
+     * @return Gets the value of the metric in the time interval given by this MetricInfo.
+     * 
+     */
     public Double value() {
         return this.value;
     }
@@ -100,26 +120,56 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
             $ = new RecommendedActionMetricInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metricName Gets the name of the metric. e.g., CPU, Number of Queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param startTime Gets the start time of time interval given by this MetricInfo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param timeGrain Gets the duration of time interval for the value given by this MetricInfo. e.g., PT1H (1 hour)
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeGrain(String timeGrain) {
             $.timeGrain = timeGrain;
             return this;
         }
 
+        /**
+         * @param unit Gets the unit in which metric is measured. e.g., DTU, Frequency
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(String unit) {
             $.unit = unit;
             return this;
         }
 
+        /**
+         * @param value Gets the value of the metric in the time interval given by this MetricInfo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Double value) {
             $.value = value;
             return this;

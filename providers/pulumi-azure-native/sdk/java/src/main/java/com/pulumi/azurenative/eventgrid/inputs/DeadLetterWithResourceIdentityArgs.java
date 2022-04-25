@@ -28,6 +28,11 @@ public final class DeadLetterWithResourceIdentityArgs extends com.pulumi.resourc
     @Import(name="deadLetterDestination")
     private @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
+    /**
+     * @return Information about the destination where events have to be delivered for the event subscription.
+     * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+     * 
+     */
     public Optional<Output<StorageBlobDeadLetterDestinationArgs>> deadLetterDestination() {
         return Optional.ofNullable(this.deadLetterDestination);
     }
@@ -39,6 +44,10 @@ public final class DeadLetterWithResourceIdentityArgs extends com.pulumi.resourc
     @Import(name="identity")
     private @Nullable Output<EventSubscriptionIdentityArgs> identity;
 
+    /**
+     * @return The identity to use when dead-lettering events.
+     * 
+     */
     public Optional<Output<EventSubscriptionIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -68,20 +77,46 @@ public final class DeadLetterWithResourceIdentityArgs extends com.pulumi.resourc
             $ = new DeadLetterWithResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deadLetterDestination Information about the destination where events have to be delivered for the event subscription.
+         * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterDestination(@Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination) {
             $.deadLetterDestination = deadLetterDestination;
             return this;
         }
 
+        /**
+         * @param deadLetterDestination Information about the destination where events have to be delivered for the event subscription.
+         * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterDestination(StorageBlobDeadLetterDestinationArgs deadLetterDestination) {
             return deadLetterDestination(Output.of(deadLetterDestination));
         }
 
+        /**
+         * @param identity The identity to use when dead-lettering events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<EventSubscriptionIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity to use when dead-lettering events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(EventSubscriptionIdentityArgs identity) {
             return identity(Output.of(identity));
         }

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ConnectorProfileVeevaConnectorProfileProperties {
     /**
-     * The location of the Veeva resource
+     * @return The location of the Veeva resource
      * 
      */
     private final String instanceUrl;
@@ -21,9 +21,9 @@ public final class ConnectorProfileVeevaConnectorProfileProperties {
     }
 
     /**
-     * The location of the Veeva resource
+     * @return The location of the Veeva resource
      * 
-    */
+     */
     public String instanceUrl() {
         return this.instanceUrl;
     }

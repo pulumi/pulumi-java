@@ -25,6 +25,10 @@ public final class DomainAssociationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="appId", required=true)
     private Output<String> appId;
 
+    /**
+     * @return The unique ID for an Amplify app.
+     * 
+     */
     public Output<String> appId() {
         return this.appId;
     }
@@ -36,6 +40,10 @@ public final class DomainAssociationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return The domain name for the domain association.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -47,6 +55,10 @@ public final class DomainAssociationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="subDomains", required=true)
     private Output<List<DomainAssociationSubDomainArgs>> subDomains;
 
+    /**
+     * @return The setting for the subdomain. Documented below.
+     * 
+     */
     public Output<List<DomainAssociationSubDomainArgs>> subDomains() {
         return this.subDomains;
     }
@@ -58,6 +70,10 @@ public final class DomainAssociationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="waitForVerification")
     private @Nullable Output<Boolean> waitForVerification;
 
+    /**
+     * @return If enabled, the resource will wait for the domain association status to change to `PENDING_DEPLOYMENT` or `AVAILABLE`. Setting this to `false` will skip the process. Default: `true`.
+     * 
+     */
     public Optional<Output<Boolean>> waitForVerification() {
         return Optional.ofNullable(this.waitForVerification);
     }
@@ -89,42 +105,96 @@ public final class DomainAssociationArgs extends com.pulumi.resources.ResourceAr
             $ = new DomainAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId The unique ID for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param appId The unique ID for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(String appId) {
             return appId(Output.of(appId));
         }
 
+        /**
+         * @param domainName The domain name for the domain association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The domain name for the domain association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param subDomains The setting for the subdomain. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subDomains(Output<List<DomainAssociationSubDomainArgs>> subDomains) {
             $.subDomains = subDomains;
             return this;
         }
 
+        /**
+         * @param subDomains The setting for the subdomain. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subDomains(List<DomainAssociationSubDomainArgs> subDomains) {
             return subDomains(Output.of(subDomains));
         }
 
+        /**
+         * @param subDomains The setting for the subdomain. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subDomains(DomainAssociationSubDomainArgs... subDomains) {
             return subDomains(List.of(subDomains));
         }
 
+        /**
+         * @param waitForVerification If enabled, the resource will wait for the domain association status to change to `PENDING_DEPLOYMENT` or `AVAILABLE`. Setting this to `false` will skip the process. Default: `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForVerification(@Nullable Output<Boolean> waitForVerification) {
             $.waitForVerification = waitForVerification;
             return this;
         }
 
+        /**
+         * @param waitForVerification If enabled, the resource will wait for the domain association status to change to `PENDING_DEPLOYMENT` or `AVAILABLE`. Setting this to `false` will skip the process. Default: `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForVerification(Boolean waitForVerification) {
             return waitForVerification(Output.of(waitForVerification));
         }

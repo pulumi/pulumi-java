@@ -28,6 +28,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowProfileCreation")
     private @Nullable Output<Boolean> allowProfileCreation;
 
+    /**
+     * @return Indicates whether a profile should be created when data is received.
+     * 
+     */
     public Optional<Output<Boolean>> allowProfileCreation() {
         return Optional.ofNullable(this.allowProfileCreation);
     }
@@ -39,6 +43,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the profile object type.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return The unique name of the domain.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -61,6 +73,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionKey")
     private @Nullable Output<String> encryptionKey;
 
+    /**
+     * @return The default encryption key
+     * 
+     */
     public Optional<Output<String>> encryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
@@ -72,6 +88,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationDays")
     private @Nullable Output<Integer> expirationDays;
 
+    /**
+     * @return The default number of days until the data within the domain expires.
+     * 
+     */
     public Optional<Output<Integer>> expirationDays() {
         return Optional.ofNullable(this.expirationDays);
     }
@@ -83,6 +103,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fields")
     private @Nullable Output<List<ObjectTypeFieldMapArgs>> fields;
 
+    /**
+     * @return A list of the name and ObjectType field.
+     * 
+     */
     public Optional<Output<List<ObjectTypeFieldMapArgs>>> fields() {
         return Optional.ofNullable(this.fields);
     }
@@ -94,6 +118,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keys")
     private @Nullable Output<List<ObjectTypeKeyMapArgs>> keys;
 
+    /**
+     * @return A list of unique keys that can be used to map data to the profile.
+     * 
+     */
     public Optional<Output<List<ObjectTypeKeyMapArgs>>> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -105,6 +133,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectTypeName")
     private @Nullable Output<String> objectTypeName;
 
+    /**
+     * @return The name of the profile object type.
+     * 
+     */
     public Optional<Output<String>> objectTypeName() {
         return Optional.ofNullable(this.objectTypeName);
     }
@@ -116,6 +148,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ObjectTypeTagArgs>> tags;
 
+    /**
+     * @return The tags (keys and values) associated with the integration.
+     * 
+     */
     public Optional<Output<List<ObjectTypeTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -127,6 +163,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateId")
     private @Nullable Output<String> templateId;
 
+    /**
+     * @return A unique identifier for the object template.
+     * 
+     */
     public Optional<Output<String>> templateId() {
         return Optional.ofNullable(this.templateId);
     }
@@ -164,104 +204,242 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ObjectTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowProfileCreation Indicates whether a profile should be created when data is received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowProfileCreation(@Nullable Output<Boolean> allowProfileCreation) {
             $.allowProfileCreation = allowProfileCreation;
             return this;
         }
 
+        /**
+         * @param allowProfileCreation Indicates whether a profile should be created when data is received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowProfileCreation(Boolean allowProfileCreation) {
             return allowProfileCreation(Output.of(allowProfileCreation));
         }
 
+        /**
+         * @param description Description of the profile object type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the profile object type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param domainName The unique name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The unique name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param encryptionKey The default encryption key
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             $.encryptionKey = encryptionKey;
             return this;
         }
 
+        /**
+         * @param encryptionKey The default encryption key
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(String encryptionKey) {
             return encryptionKey(Output.of(encryptionKey));
         }
 
+        /**
+         * @param expirationDays The default number of days until the data within the domain expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDays(@Nullable Output<Integer> expirationDays) {
             $.expirationDays = expirationDays;
             return this;
         }
 
+        /**
+         * @param expirationDays The default number of days until the data within the domain expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDays(Integer expirationDays) {
             return expirationDays(Output.of(expirationDays));
         }
 
+        /**
+         * @param fields A list of the name and ObjectType field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(@Nullable Output<List<ObjectTypeFieldMapArgs>> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields A list of the name and ObjectType field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(List<ObjectTypeFieldMapArgs> fields) {
             return fields(Output.of(fields));
         }
 
+        /**
+         * @param fields A list of the name and ObjectType field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(ObjectTypeFieldMapArgs... fields) {
             return fields(List.of(fields));
         }
 
+        /**
+         * @param keys A list of unique keys that can be used to map data to the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable Output<List<ObjectTypeKeyMapArgs>> keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param keys A list of unique keys that can be used to map data to the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(List<ObjectTypeKeyMapArgs> keys) {
             return keys(Output.of(keys));
         }
 
+        /**
+         * @param keys A list of unique keys that can be used to map data to the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(ObjectTypeKeyMapArgs... keys) {
             return keys(List.of(keys));
         }
 
+        /**
+         * @param objectTypeName The name of the profile object type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectTypeName(@Nullable Output<String> objectTypeName) {
             $.objectTypeName = objectTypeName;
             return this;
         }
 
+        /**
+         * @param objectTypeName The name of the profile object type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectTypeName(String objectTypeName) {
             return objectTypeName(Output.of(objectTypeName));
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ObjectTypeTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ObjectTypeTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ObjectTypeTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param templateId A unique identifier for the object template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateId(@Nullable Output<String> templateId) {
             $.templateId = templateId;
             return this;
         }
 
+        /**
+         * @param templateId A unique identifier for the object template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateId(String templateId) {
             return templateId(Output.of(templateId));
         }

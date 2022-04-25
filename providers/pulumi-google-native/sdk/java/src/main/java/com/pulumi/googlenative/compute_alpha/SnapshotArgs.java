@@ -27,6 +27,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="chainName")
     private @Nullable Output<String> chainName;
 
+    /**
+     * @return Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035. This is an uncommon option only for advanced service owners who needs to create separate snapshot chains, for example, for chargeback tracking. When you describe your snapshot resource, this field is visible only if it has a non-empty value.
+     * 
+     */
     public Optional<Output<String>> chainName() {
         return Optional.ofNullable(this.chainName);
     }
@@ -38,6 +42,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="guestFlush")
     private @Nullable Output<Boolean> guestFlush;
 
+    /**
+     * @return [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * 
+     */
     public Optional<Output<Boolean>> guestFlush() {
         return Optional.ofNullable(this.guestFlush);
     }
@@ -60,6 +72,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to this snapshot. These can be later modified by the setLabels method. Label values may be empty.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -71,6 +87,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locationHint")
     private @Nullable Output<String> locationHint;
 
+    /**
+     * @return An opaque location hint used to place the snapshot close to other resources. This field is for use by internal tools that use the public API.
+     * 
+     */
     public Optional<Output<String>> locationHint() {
         return Optional.ofNullable(this.locationHint);
     }
@@ -82,6 +102,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -107,6 +131,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotEncryptionKey")
     private @Nullable Output<CustomerEncryptionKeyArgs> snapshotEncryptionKey;
 
+    /**
+     * @return Encrypts the snapshot using a customer-supplied encryption key. After you encrypt a snapshot using a customer-supplied key, you must provide the same key if you use the snapshot later. For example, you must provide the encryption key when you create a disk from the encrypted snapshot in a future request. Customer-supplied encryption keys do not protect access to metadata of the snapshot. If you do not provide an encryption key when creating the snapshot, then the snapshot will be encrypted using an automatically generated key and you do not need to provide a key to use the snapshot later.
+     * 
+     */
     public Optional<Output<CustomerEncryptionKeyArgs>> snapshotEncryptionKey() {
         return Optional.ofNullable(this.snapshotEncryptionKey);
     }
@@ -118,6 +146,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotType")
     private @Nullable Output<SnapshotSnapshotType> snapshotType;
 
+    /**
+     * @return Indicates the type of the snapshot.
+     * 
+     */
     public Optional<Output<SnapshotSnapshotType>> snapshotType() {
         return Optional.ofNullable(this.snapshotType);
     }
@@ -129,6 +161,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
     private @Nullable Output<String> sourceDisk;
 
+    /**
+     * @return The source disk used to create this snapshot.
+     * 
+     */
     public Optional<Output<String>> sourceDisk() {
         return Optional.ofNullable(this.sourceDisk);
     }
@@ -140,6 +176,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDiskEncryptionKey")
     private @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
 
+    /**
+     * @return The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
+     * 
+     */
     public Optional<Output<CustomerEncryptionKeyArgs>> sourceDiskEncryptionKey() {
         return Optional.ofNullable(this.sourceDiskEncryptionKey);
     }
@@ -151,6 +191,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceInstantSnapshot")
     private @Nullable Output<String> sourceInstantSnapshot;
 
+    /**
+     * @return The source instant snapshot used to create this snapshot. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instantSnapshots/instantSnapshot - projects/project/zones/zone/instantSnapshots/instantSnapshot - zones/zone/instantSnapshots/instantSnapshot
+     * 
+     */
     public Optional<Output<String>> sourceInstantSnapshot() {
         return Optional.ofNullable(this.sourceInstantSnapshot);
     }
@@ -162,6 +206,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageLocations")
     private @Nullable Output<List<String>> storageLocations;
 
+    /**
+     * @return Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
+     * 
+     */
     public Optional<Output<List<String>>> storageLocations() {
         return Optional.ofNullable(this.storageLocations);
     }
@@ -203,56 +251,128 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SnapshotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param chainName Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035. This is an uncommon option only for advanced service owners who needs to create separate snapshot chains, for example, for chargeback tracking. When you describe your snapshot resource, this field is visible only if it has a non-empty value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chainName(@Nullable Output<String> chainName) {
             $.chainName = chainName;
             return this;
         }
 
+        /**
+         * @param chainName Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035. This is an uncommon option only for advanced service owners who needs to create separate snapshot chains, for example, for chargeback tracking. When you describe your snapshot resource, this field is visible only if it has a non-empty value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chainName(String chainName) {
             return chainName(Output.of(chainName));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param guestFlush [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
             $.guestFlush = guestFlush;
             return this;
         }
 
+        /**
+         * @param guestFlush [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestFlush(Boolean guestFlush) {
             return guestFlush(Output.of(guestFlush));
         }
 
+        /**
+         * @param labels Labels to apply to this snapshot. These can be later modified by the setLabels method. Label values may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels to apply to this snapshot. These can be later modified by the setLabels method. Label values may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param locationHint An opaque location hint used to place the snapshot close to other resources. This field is for use by internal tools that use the public API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationHint(@Nullable Output<String> locationHint) {
             $.locationHint = locationHint;
             return this;
         }
 
+        /**
+         * @param locationHint An opaque location hint used to place the snapshot close to other resources. This field is for use by internal tools that use the public API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationHint(String locationHint) {
             return locationHint(Output.of(locationHint));
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -275,60 +395,138 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param snapshotEncryptionKey Encrypts the snapshot using a customer-supplied encryption key. After you encrypt a snapshot using a customer-supplied key, you must provide the same key if you use the snapshot later. For example, you must provide the encryption key when you create a disk from the encrypted snapshot in a future request. Customer-supplied encryption keys do not protect access to metadata of the snapshot. If you do not provide an encryption key when creating the snapshot, then the snapshot will be encrypted using an automatically generated key and you do not need to provide a key to use the snapshot later.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> snapshotEncryptionKey) {
             $.snapshotEncryptionKey = snapshotEncryptionKey;
             return this;
         }
 
+        /**
+         * @param snapshotEncryptionKey Encrypts the snapshot using a customer-supplied encryption key. After you encrypt a snapshot using a customer-supplied key, you must provide the same key if you use the snapshot later. For example, you must provide the encryption key when you create a disk from the encrypted snapshot in a future request. Customer-supplied encryption keys do not protect access to metadata of the snapshot. If you do not provide an encryption key when creating the snapshot, then the snapshot will be encrypted using an automatically generated key and you do not need to provide a key to use the snapshot later.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotEncryptionKey(CustomerEncryptionKeyArgs snapshotEncryptionKey) {
             return snapshotEncryptionKey(Output.of(snapshotEncryptionKey));
         }
 
+        /**
+         * @param snapshotType Indicates the type of the snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotType(@Nullable Output<SnapshotSnapshotType> snapshotType) {
             $.snapshotType = snapshotType;
             return this;
         }
 
+        /**
+         * @param snapshotType Indicates the type of the snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotType(SnapshotSnapshotType snapshotType) {
             return snapshotType(Output.of(snapshotType));
         }
 
+        /**
+         * @param sourceDisk The source disk used to create this snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             $.sourceDisk = sourceDisk;
             return this;
         }
 
+        /**
+         * @param sourceDisk The source disk used to create this snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(String sourceDisk) {
             return sourceDisk(Output.of(sourceDisk));
         }
 
+        /**
+         * @param sourceDiskEncryptionKey The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDiskEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey) {
             $.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
             return this;
         }
 
+        /**
+         * @param sourceDiskEncryptionKey The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDiskEncryptionKey(CustomerEncryptionKeyArgs sourceDiskEncryptionKey) {
             return sourceDiskEncryptionKey(Output.of(sourceDiskEncryptionKey));
         }
 
+        /**
+         * @param sourceInstantSnapshot The source instant snapshot used to create this snapshot. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instantSnapshots/instantSnapshot - projects/project/zones/zone/instantSnapshots/instantSnapshot - zones/zone/instantSnapshots/instantSnapshot
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstantSnapshot(@Nullable Output<String> sourceInstantSnapshot) {
             $.sourceInstantSnapshot = sourceInstantSnapshot;
             return this;
         }
 
+        /**
+         * @param sourceInstantSnapshot The source instant snapshot used to create this snapshot. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instantSnapshots/instantSnapshot - projects/project/zones/zone/instantSnapshots/instantSnapshot - zones/zone/instantSnapshots/instantSnapshot
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstantSnapshot(String sourceInstantSnapshot) {
             return sourceInstantSnapshot(Output.of(sourceInstantSnapshot));
         }
 
+        /**
+         * @param storageLocations Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
             $.storageLocations = storageLocations;
             return this;
         }
 
+        /**
+         * @param storageLocations Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(List<String> storageLocations) {
             return storageLocations(Output.of(storageLocations));
         }
 
+        /**
+         * @param storageLocations Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(String... storageLocations) {
             return storageLocations(List.of(storageLocations));
         }

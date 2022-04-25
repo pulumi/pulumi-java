@@ -29,6 +29,10 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
     @Import(name="amiDistributionConfiguration")
     private @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration;
 
+    /**
+     * @return The specific AMI settings (for example, launch permissions, AMI tags).
+     * 
+     */
     public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationProperties> amiDistributionConfiguration() {
         return Optional.ofNullable(this.amiDistributionConfiguration);
     }
@@ -40,6 +44,10 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
     @Import(name="containerDistributionConfiguration")
     private @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration;
 
+    /**
+     * @return Container distribution settings for encryption, licensing, and sharing in a specific Region.
+     * 
+     */
     public Optional<DistributionConfigurationDistributionContainerDistributionConfigurationProperties> containerDistributionConfiguration() {
         return Optional.ofNullable(this.containerDistributionConfiguration);
     }
@@ -51,6 +59,10 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
     @Import(name="launchTemplateConfigurations")
     private @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations;
 
+    /**
+     * @return A group of launchTemplateConfiguration settings that apply to image distribution.
+     * 
+     */
     public Optional<List<DistributionConfigurationLaunchTemplateConfiguration>> launchTemplateConfigurations() {
         return Optional.ofNullable(this.launchTemplateConfigurations);
     }
@@ -62,6 +74,10 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
     @Import(name="licenseConfigurationArns")
     private @Nullable List<String> licenseConfigurationArns;
 
+    /**
+     * @return The License Manager Configuration to associate with the AMI in the specified Region.
+     * 
+     */
     public Optional<List<String>> licenseConfigurationArns() {
         return Optional.ofNullable(this.licenseConfigurationArns);
     }
@@ -73,6 +89,10 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return region
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -105,34 +125,76 @@ public final class DistributionConfigurationDistribution extends com.pulumi.reso
             $ = new DistributionConfigurationDistribution(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amiDistributionConfiguration The specific AMI settings (for example, launch permissions, AMI tags).
+         * 
+         * @return builder
+         * 
+         */
         public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration) {
             $.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
 
+        /**
+         * @param containerDistributionConfiguration Container distribution settings for encryption, licensing, and sharing in a specific Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration) {
             $.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
 
+        /**
+         * @param launchTemplateConfigurations A group of launchTemplateConfiguration settings that apply to image distribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateConfigurations(@Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations) {
             $.launchTemplateConfigurations = launchTemplateConfigurations;
             return this;
         }
 
+        /**
+         * @param launchTemplateConfigurations A group of launchTemplateConfiguration settings that apply to image distribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateConfigurations(DistributionConfigurationLaunchTemplateConfiguration... launchTemplateConfigurations) {
             return launchTemplateConfigurations(List.of(launchTemplateConfigurations));
         }
 
+        /**
+         * @param licenseConfigurationArns The License Manager Configuration to associate with the AMI in the specified Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
             $.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
 
+        /**
+         * @param licenseConfigurationArns The License Manager Configuration to associate with the AMI in the specified Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConfigurationArns(String... licenseConfigurationArns) {
             return licenseConfigurationArns(List.of(licenseConfigurationArns));
         }
 
+        /**
+         * @param region region
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;

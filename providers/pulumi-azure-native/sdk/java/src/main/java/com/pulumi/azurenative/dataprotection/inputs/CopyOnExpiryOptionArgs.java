@@ -26,6 +26,11 @@ public final class CopyOnExpiryOptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="objectType", required=true)
     private Output<String> objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;CopyOnExpiryOption&#39;.
+     * 
+     */
     public Output<String> objectType() {
         return this.objectType;
     }
@@ -54,11 +59,25 @@ public final class CopyOnExpiryOptionArgs extends com.pulumi.resources.ResourceA
             $ = new CopyOnExpiryOptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;CopyOnExpiryOption&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(Output<String> objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;CopyOnExpiryOption&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             return objectType(Output.of(objectType));
         }

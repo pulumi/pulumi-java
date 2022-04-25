@@ -16,47 +16,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetStorageInsightConfigResult {
     /**
-     * The names of the blob containers that the workspace should read
+     * @return The names of the blob containers that the workspace should read
      * 
      */
     private final @Nullable List<String> containers;
     /**
-     * The ETag of the storage insight.
+     * @return The ETag of the storage insight.
      * 
      */
     private final @Nullable String eTag;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The status of the storage insight
+     * @return The status of the storage insight
      * 
      */
     private final StorageInsightStatusResponse status;
     /**
-     * The storage account connection details
+     * @return The storage account connection details
      * 
      */
     private final StorageAccountResponse storageAccount;
     /**
-     * The names of the Azure tables that the workspace should read
+     * @return The names of the Azure tables that the workspace should read
      * 
      */
     private final @Nullable List<String> tables;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -84,65 +84,65 @@ public final class GetStorageInsightConfigResult {
     }
 
     /**
-     * The names of the blob containers that the workspace should read
+     * @return The names of the blob containers that the workspace should read
      * 
-    */
+     */
     public List<String> containers() {
         return this.containers == null ? List.of() : this.containers;
     }
     /**
-     * The ETag of the storage insight.
+     * @return The ETag of the storage insight.
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The status of the storage insight
+     * @return The status of the storage insight
      * 
-    */
+     */
     public StorageInsightStatusResponse status() {
         return this.status;
     }
     /**
-     * The storage account connection details
+     * @return The storage account connection details
      * 
-    */
+     */
     public StorageAccountResponse storageAccount() {
         return this.storageAccount;
     }
     /**
-     * The names of the Azure tables that the workspace should read
+     * @return The names of the Azure tables that the workspace should read
      * 
-    */
+     */
     public List<String> tables() {
         return this.tables == null ? List.of() : this.tables;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -24,6 +24,10 @@ public final class ProductSettingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind", required=true)
     private Output<Either<String,SettingKind>> kind;
 
+    /**
+     * @return The kind of the setting
+     * 
+     */
     public Output<Either<String,SettingKind>> kind() {
         return this.kind;
     }
@@ -35,6 +39,10 @@ public final class ProductSettingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="operationalInsightsResourceProvider", required=true)
     private Output<String> operationalInsightsResourceProvider;
 
+    /**
+     * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
@@ -46,6 +54,10 @@ public final class ProductSettingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class ProductSettingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="settingsName")
     private @Nullable Output<String> settingsName;
 
+    /**
+     * @return The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba
+     * 
+     */
     public Optional<Output<String>> settingsName() {
         return Optional.ofNullable(this.settingsName);
     }
@@ -68,6 +84,10 @@ public final class ProductSettingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -100,55 +120,127 @@ public final class ProductSettingArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ProductSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind The kind of the setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,SettingKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,SettingKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind The kind of the setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind The kind of the setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(SettingKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param settingsName The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba
+         * 
+         * @return builder
+         * 
+         */
         public Builder settingsName(@Nullable Output<String> settingsName) {
             $.settingsName = settingsName;
             return this;
         }
 
+        /**
+         * @param settingsName The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba
+         * 
+         * @return builder
+         * 
+         */
         public Builder settingsName(String settingsName) {
             return settingsName(Output.of(settingsName));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

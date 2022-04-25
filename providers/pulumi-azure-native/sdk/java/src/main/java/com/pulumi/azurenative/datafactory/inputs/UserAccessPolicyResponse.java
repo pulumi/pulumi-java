@@ -25,6 +25,10 @@ public final class UserAccessPolicyResponse extends com.pulumi.resources.InvokeA
     @Import(name="accessResourcePath")
     private @Nullable String accessResourcePath;
 
+    /**
+     * @return The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.
+     * 
+     */
     public Optional<String> accessResourcePath() {
         return Optional.ofNullable(this.accessResourcePath);
     }
@@ -36,6 +40,10 @@ public final class UserAccessPolicyResponse extends com.pulumi.resources.InvokeA
     @Import(name="expireTime")
     private @Nullable String expireTime;
 
+    /**
+     * @return Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.
+     * 
+     */
     public Optional<String> expireTime() {
         return Optional.ofNullable(this.expireTime);
     }
@@ -47,6 +55,10 @@ public final class UserAccessPolicyResponse extends com.pulumi.resources.InvokeA
     @Import(name="permissions")
     private @Nullable String permissions;
 
+    /**
+     * @return The string with permissions for Data Plane access. Currently only &#39;r&#39; is supported which grants read only access.
+     * 
+     */
     public Optional<String> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -58,6 +70,10 @@ public final class UserAccessPolicyResponse extends com.pulumi.resources.InvokeA
     @Import(name="profileName")
     private @Nullable String profileName;
 
+    /**
+     * @return The name of the profile. Currently only the default is supported. The default value is DefaultProfile.
+     * 
+     */
     public Optional<String> profileName() {
         return Optional.ofNullable(this.profileName);
     }
@@ -69,6 +85,10 @@ public final class UserAccessPolicyResponse extends com.pulumi.resources.InvokeA
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return Start time for the token. If not specified the current time will be used.
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -101,26 +121,56 @@ public final class UserAccessPolicyResponse extends com.pulumi.resources.InvokeA
             $ = new UserAccessPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessResourcePath The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessResourcePath(@Nullable String accessResourcePath) {
             $.accessResourcePath = accessResourcePath;
             return this;
         }
 
+        /**
+         * @param expireTime Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(@Nullable String expireTime) {
             $.expireTime = expireTime;
             return this;
         }
 
+        /**
+         * @param permissions The string with permissions for Data Plane access. Currently only &#39;r&#39; is supported which grants read only access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable String permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param profileName The name of the profile. Currently only the default is supported. The default value is DefaultProfile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(@Nullable String profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param startTime Start time for the token. If not specified the current time will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;

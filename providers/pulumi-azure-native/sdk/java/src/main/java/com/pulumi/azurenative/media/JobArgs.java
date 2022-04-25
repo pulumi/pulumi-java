@@ -33,6 +33,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -44,6 +48,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="correlationData")
     private @Nullable Output<Map<String,String>> correlationData;
 
+    /**
+     * @return Customer provided key, value pairs that will be returned in Job and JobOutput state events.
+     * 
+     */
     public Optional<Output<Map<String,String>>> correlationData() {
         return Optional.ofNullable(this.correlationData);
     }
@@ -55,6 +63,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional customer supplied description of the Job.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -66,6 +78,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="input", required=true)
     private Output<Object> input;
 
+    /**
+     * @return The inputs for the Job.
+     * 
+     */
     public Output<Object> input() {
         return this.input;
     }
@@ -77,6 +93,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobName")
     private @Nullable Output<String> jobName;
 
+    /**
+     * @return The Job name.
+     * 
+     */
     public Optional<Output<String>> jobName() {
         return Optional.ofNullable(this.jobName);
     }
@@ -88,6 +108,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputs", required=true)
     private Output<List<JobOutputAssetArgs>> outputs;
 
+    /**
+     * @return The outputs for the Job.
+     * 
+     */
     public Output<List<JobOutputAssetArgs>> outputs() {
         return this.outputs;
     }
@@ -99,6 +123,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority")
     private @Nullable Output<Either<String,Priority>> priority;
 
+    /**
+     * @return Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
+     * 
+     */
     public Optional<Output<Either<String,Priority>>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -110,6 +138,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -121,6 +153,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transformName", required=true)
     private Output<String> transformName;
 
+    /**
+     * @return The Transform name.
+     * 
+     */
     public Output<String> transformName() {
         return this.transformName;
     }
@@ -157,95 +193,221 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param correlationData Customer provided key, value pairs that will be returned in Job and JobOutput state events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder correlationData(@Nullable Output<Map<String,String>> correlationData) {
             $.correlationData = correlationData;
             return this;
         }
 
+        /**
+         * @param correlationData Customer provided key, value pairs that will be returned in Job and JobOutput state events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder correlationData(Map<String,String> correlationData) {
             return correlationData(Output.of(correlationData));
         }
 
+        /**
+         * @param description Optional customer supplied description of the Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional customer supplied description of the Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param input The inputs for the Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(Output<Object> input) {
             $.input = input;
             return this;
         }
 
+        /**
+         * @param input The inputs for the Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(Object input) {
             return input(Output.of(input));
         }
 
+        /**
+         * @param jobName The Job name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(@Nullable Output<String> jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param jobName The Job name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             return jobName(Output.of(jobName));
         }
 
+        /**
+         * @param outputs The outputs for the Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(Output<List<JobOutputAssetArgs>> outputs) {
             $.outputs = outputs;
             return this;
         }
 
+        /**
+         * @param outputs The outputs for the Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(List<JobOutputAssetArgs> outputs) {
             return outputs(Output.of(outputs));
         }
 
+        /**
+         * @param outputs The outputs for the Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(JobOutputAssetArgs... outputs) {
             return outputs(List.of(outputs));
         }
 
+        /**
+         * @param priority Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Either<String,Priority>> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Either<String,Priority> priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param priority Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(String priority) {
             return priority(Either.ofLeft(priority));
         }
 
+        /**
+         * @param priority Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Priority priority) {
             return priority(Either.ofRight(priority));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param transformName The Transform name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformName(Output<String> transformName) {
             $.transformName = transformName;
             return this;
         }
 
+        /**
+         * @param transformName The Transform name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformName(String transformName) {
             return transformName(Output.of(transformName));
         }

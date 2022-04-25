@@ -21,6 +21,10 @@ public final class GetConnectionGatewayArgs extends com.pulumi.resources.InvokeA
     @Import(name="connectionGatewayName", required=true)
     private String connectionGatewayName;
 
+    /**
+     * @return The connection gateway name
+     * 
+     */
     public String connectionGatewayName() {
         return this.connectionGatewayName;
     }
@@ -32,6 +36,10 @@ public final class GetConnectionGatewayArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetConnectionGatewayArgs extends com.pulumi.resources.InvokeA
     @Import(name="subscriptionId")
     private @Nullable String subscriptionId;
 
+    /**
+     * @return Subscription Id
+     * 
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -73,16 +85,34 @@ public final class GetConnectionGatewayArgs extends com.pulumi.resources.InvokeA
             $ = new GetConnectionGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionGatewayName The connection gateway name
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionGatewayName(String connectionGatewayName) {
             $.connectionGatewayName = connectionGatewayName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;

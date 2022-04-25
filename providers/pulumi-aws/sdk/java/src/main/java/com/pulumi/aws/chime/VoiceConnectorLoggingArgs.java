@@ -23,6 +23,10 @@ public final class VoiceConnectorLoggingArgs extends com.pulumi.resources.Resour
     @Import(name="enableSipLogs")
     private @Nullable Output<Boolean> enableSipLogs;
 
+    /**
+     * @return When true, enables SIP message logs for sending to Amazon CloudWatch Logs.
+     * 
+     */
     public Optional<Output<Boolean>> enableSipLogs() {
         return Optional.ofNullable(this.enableSipLogs);
     }
@@ -34,6 +38,10 @@ public final class VoiceConnectorLoggingArgs extends com.pulumi.resources.Resour
     @Import(name="voiceConnectorId", required=true)
     private Output<String> voiceConnectorId;
 
+    /**
+     * @return The Amazon Chime Voice Connector ID.
+     * 
+     */
     public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
@@ -63,20 +71,44 @@ public final class VoiceConnectorLoggingArgs extends com.pulumi.resources.Resour
             $ = new VoiceConnectorLoggingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableSipLogs When true, enables SIP message logs for sending to Amazon CloudWatch Logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSipLogs(@Nullable Output<Boolean> enableSipLogs) {
             $.enableSipLogs = enableSipLogs;
             return this;
         }
 
+        /**
+         * @param enableSipLogs When true, enables SIP message logs for sending to Amazon CloudWatch Logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSipLogs(Boolean enableSipLogs) {
             return enableSipLogs(Output.of(enableSipLogs));
         }
 
+        /**
+         * @param voiceConnectorId The Amazon Chime Voice Connector ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder voiceConnectorId(Output<String> voiceConnectorId) {
             $.voiceConnectorId = voiceConnectorId;
             return this;
         }
 
+        /**
+         * @param voiceConnectorId The Amazon Chime Voice Connector ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder voiceConnectorId(String voiceConnectorId) {
             return voiceConnectorId(Output.of(voiceConnectorId));
         }

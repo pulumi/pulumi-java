@@ -27,6 +27,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applyImmediately")
     private @Nullable Output<Boolean> applyImmediately;
 
+    /**
+     * @return Whether any database modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html).
+     * 
+     */
     public Optional<Output<Boolean>> applyImmediately() {
         return Optional.ofNullable(this.applyImmediately);
     }
@@ -38,6 +42,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the created ElastiCache Cluster.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -49,6 +57,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
     private @Nullable Output<String> availabilityZone;
 
+    /**
+     * @return Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
+     * 
+     */
     public Optional<Output<String>> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -60,6 +72,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="azMode")
     private @Nullable Output<String> azMode;
 
+    /**
+     * @return Whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster&#39;s region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`.
+     * 
+     */
     public Optional<Output<String>> azMode() {
         return Optional.ofNullable(this.azMode);
     }
@@ -71,6 +87,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheNodes")
     private @Nullable Output<List<ClusterCacheNodeGetArgs>> cacheNodes;
 
+    /**
+     * @return List of node objects including `id`, `address`, `port` and `availability_zone`.
+     * 
+     */
     public Optional<Output<List<ClusterCacheNodeGetArgs>>> cacheNodes() {
         return Optional.ofNullable(this.cacheNodes);
     }
@@ -82,6 +102,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterAddress")
     private @Nullable Output<String> clusterAddress;
 
+    /**
+     * @return (Memcached only) DNS name of the cache cluster without the port appended.
+     * 
+     */
     public Optional<Output<String>> clusterAddress() {
         return Optional.ofNullable(this.clusterAddress);
     }
@@ -93,6 +117,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterId")
     private @Nullable Output<String> clusterId;
 
+    /**
+     * @return Group identifier. ElastiCache converts this name to lowercase. Changing this value will re-create the resource.
+     * 
+     */
     public Optional<Output<String>> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
@@ -104,6 +132,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="configurationEndpoint")
     private @Nullable Output<String> configurationEndpoint;
 
+    /**
+     * @return (Memcached only) Configuration endpoint to allow host discovery.
+     * 
+     */
     public Optional<Output<String>> configurationEndpoint() {
         return Optional.ofNullable(this.configurationEndpoint);
     }
@@ -115,6 +147,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="engine")
     private @Nullable Output<String> engine;
 
+    /**
+     * @return Name of the cache engine to be used for this cache cluster. Valid values are `memcached` or `redis`.
+     * 
+     */
     public Optional<Output<String>> engine() {
         return Optional.ofNullable(this.engine);
     }
@@ -128,6 +164,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineVersion")
     private @Nullable Output<String> engineVersion;
 
+    /**
+     * @return Version number of the cache engine to be used.
+     * See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
+     * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+     * 
+     */
     public Optional<Output<String>> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
@@ -139,6 +181,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineVersionActual")
     private @Nullable Output<String> engineVersionActual;
 
+    /**
+     * @return The running version of the cache engine.
+     * 
+     */
     public Optional<Output<String>> engineVersionActual() {
         return Optional.ofNullable(this.engineVersionActual);
     }
@@ -150,6 +196,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="finalSnapshotIdentifier")
     private @Nullable Output<String> finalSnapshotIdentifier;
 
+    /**
+     * @return Name of your final cluster snapshot. If omitted, no final snapshot will be made.
+     * 
+     */
     public Optional<Output<String>> finalSnapshotIdentifier() {
         return Optional.ofNullable(this.finalSnapshotIdentifier);
     }
@@ -163,6 +213,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceWindow")
     private @Nullable Output<String> maintenanceWindow;
 
+    /**
+     * @return Specifies the weekly time range for when maintenance
+     * on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
+     * The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`.
+     * 
+     */
     public Optional<Output<String>> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
@@ -174,6 +230,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeType")
     private @Nullable Output<String> nodeType;
 
+    /**
+     * @return The instance class used. See AWS documentation for information on [supported node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). See AWS documentation for information on [supported node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/nodes-select-size.html). For Memcached, changing this value will re-create the resource.
+     * 
+     */
     public Optional<Output<String>> nodeType() {
         return Optional.ofNullable(this.nodeType);
     }
@@ -185,6 +245,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationTopicArn")
     private @Nullable Output<String> notificationTopicArn;
 
+    /**
+     * @return ARN of an SNS topic to send ElastiCache notifications to. Example: `arn:aws:sns:us-east-1:012345678999:my_sns_topic`.
+     * 
+     */
     public Optional<Output<String>> notificationTopicArn() {
         return Optional.ofNullable(this.notificationTopicArn);
     }
@@ -196,6 +260,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="numCacheNodes")
     private @Nullable Output<Integer> numCacheNodes;
 
+    /**
+     * @return The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
+     * 
+     */
     public Optional<Output<Integer>> numCacheNodes() {
         return Optional.ofNullable(this.numCacheNodes);
     }
@@ -207,6 +275,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameterGroupName")
     private @Nullable Output<String> parameterGroupName;
 
+    /**
+     * @return The name of the parameter group to associate with this cache cluster.
+     * 
+     */
     public Optional<Output<String>> parameterGroupName() {
         return Optional.ofNullable(this.parameterGroupName);
     }
@@ -218,6 +290,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -229,6 +305,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="preferredAvailabilityZones")
     private @Nullable Output<List<String>> preferredAvailabilityZones;
 
+    /**
+     * @return List of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
+     * 
+     */
     public Optional<Output<List<String>>> preferredAvailabilityZones() {
         return Optional.ofNullable(this.preferredAvailabilityZones);
     }
@@ -240,6 +320,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicationGroupId")
     private @Nullable Output<String> replicationGroupId;
 
+    /**
+     * @return ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
+     * 
+     */
     public Optional<Output<String>> replicationGroupId() {
         return Optional.ofNullable(this.replicationGroupId);
     }
@@ -251,6 +335,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupIds")
     private @Nullable Output<List<String>> securityGroupIds;
 
+    /**
+     * @return One or more VPC security groups associated with the cache cluster
+     * 
+     */
     public Optional<Output<List<String>>> securityGroupIds() {
         return Optional.ofNullable(this.securityGroupIds);
     }
@@ -262,6 +350,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupNames")
     private @Nullable Output<List<String>> securityGroupNames;
 
+    /**
+     * @return List of security group names to associate with this cache cluster. Changing this value will re-create the resource.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroupNames() {
         return Optional.ofNullable(this.securityGroupNames);
     }
@@ -273,6 +365,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotArns")
     private @Nullable Output<String> snapshotArns;
 
+    /**
+     * @return Single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing `snapshot_arns` forces a new resource.
+     * 
+     */
     public Optional<Output<String>> snapshotArns() {
         return Optional.ofNullable(this.snapshotArns);
     }
@@ -284,6 +380,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotName")
     private @Nullable Output<String> snapshotName;
 
+    /**
+     * @return Name of a snapshot from which to restore data into the new node group. Changing `snapshot_name` forces a new resource.
+     * 
+     */
     public Optional<Output<String>> snapshotName() {
         return Optional.ofNullable(this.snapshotName);
     }
@@ -295,6 +395,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotRetentionLimit")
     private @Nullable Output<Integer> snapshotRetentionLimit;
 
+    /**
+     * @return Number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
+     * 
+     */
     public Optional<Output<Integer>> snapshotRetentionLimit() {
         return Optional.ofNullable(this.snapshotRetentionLimit);
     }
@@ -306,6 +410,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotWindow")
     private @Nullable Output<String> snapshotWindow;
 
+    /**
+     * @return Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
+     * 
+     */
     public Optional<Output<String>> snapshotWindow() {
         return Optional.ofNullable(this.snapshotWindow);
     }
@@ -317,6 +425,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetGroupName")
     private @Nullable Output<String> subnetGroupName;
 
+    /**
+     * @return Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource.
+     * 
+     */
     public Optional<Output<String>> subnetGroupName() {
         return Optional.ofNullable(this.subnetGroupName);
     }
@@ -328,6 +440,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -391,270 +507,638 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applyImmediately Whether any database modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
             $.applyImmediately = applyImmediately;
             return this;
         }
 
+        /**
+         * @param applyImmediately Whether any database modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyImmediately(Boolean applyImmediately) {
             return applyImmediately(Output.of(applyImmediately));
         }
 
+        /**
+         * @param arn The ARN of the created ElastiCache Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the created ElastiCache Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param availabilityZone Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param availabilityZone Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(String availabilityZone) {
             return availabilityZone(Output.of(availabilityZone));
         }
 
+        /**
+         * @param azMode Whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster&#39;s region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azMode(@Nullable Output<String> azMode) {
             $.azMode = azMode;
             return this;
         }
 
+        /**
+         * @param azMode Whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster&#39;s region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azMode(String azMode) {
             return azMode(Output.of(azMode));
         }
 
+        /**
+         * @param cacheNodes List of node objects including `id`, `address`, `port` and `availability_zone`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheNodes(@Nullable Output<List<ClusterCacheNodeGetArgs>> cacheNodes) {
             $.cacheNodes = cacheNodes;
             return this;
         }
 
+        /**
+         * @param cacheNodes List of node objects including `id`, `address`, `port` and `availability_zone`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheNodes(List<ClusterCacheNodeGetArgs> cacheNodes) {
             return cacheNodes(Output.of(cacheNodes));
         }
 
+        /**
+         * @param cacheNodes List of node objects including `id`, `address`, `port` and `availability_zone`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheNodes(ClusterCacheNodeGetArgs... cacheNodes) {
             return cacheNodes(List.of(cacheNodes));
         }
 
+        /**
+         * @param clusterAddress (Memcached only) DNS name of the cache cluster without the port appended.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterAddress(@Nullable Output<String> clusterAddress) {
             $.clusterAddress = clusterAddress;
             return this;
         }
 
+        /**
+         * @param clusterAddress (Memcached only) DNS name of the cache cluster without the port appended.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterAddress(String clusterAddress) {
             return clusterAddress(Output.of(clusterAddress));
         }
 
+        /**
+         * @param clusterId Group identifier. ElastiCache converts this name to lowercase. Changing this value will re-create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(@Nullable Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param clusterId Group identifier. ElastiCache converts this name to lowercase. Changing this value will re-create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(String clusterId) {
             return clusterId(Output.of(clusterId));
         }
 
+        /**
+         * @param configurationEndpoint (Memcached only) Configuration endpoint to allow host discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationEndpoint(@Nullable Output<String> configurationEndpoint) {
             $.configurationEndpoint = configurationEndpoint;
             return this;
         }
 
+        /**
+         * @param configurationEndpoint (Memcached only) Configuration endpoint to allow host discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationEndpoint(String configurationEndpoint) {
             return configurationEndpoint(Output.of(configurationEndpoint));
         }
 
+        /**
+         * @param engine Name of the cache engine to be used for this cache cluster. Valid values are `memcached` or `redis`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(@Nullable Output<String> engine) {
             $.engine = engine;
             return this;
         }
 
+        /**
+         * @param engine Name of the cache engine to be used for this cache cluster. Valid values are `memcached` or `redis`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(String engine) {
             return engine(Output.of(engine));
         }
 
+        /**
+         * @param engineVersion Version number of the cache engine to be used.
+         * See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
+         * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             $.engineVersion = engineVersion;
             return this;
         }
 
+        /**
+         * @param engineVersion Version number of the cache engine to be used.
+         * See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
+         * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(String engineVersion) {
             return engineVersion(Output.of(engineVersion));
         }
 
+        /**
+         * @param engineVersionActual The running version of the cache engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersionActual(@Nullable Output<String> engineVersionActual) {
             $.engineVersionActual = engineVersionActual;
             return this;
         }
 
+        /**
+         * @param engineVersionActual The running version of the cache engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersionActual(String engineVersionActual) {
             return engineVersionActual(Output.of(engineVersionActual));
         }
 
+        /**
+         * @param finalSnapshotIdentifier Name of your final cluster snapshot. If omitted, no final snapshot will be made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalSnapshotIdentifier(@Nullable Output<String> finalSnapshotIdentifier) {
             $.finalSnapshotIdentifier = finalSnapshotIdentifier;
             return this;
         }
 
+        /**
+         * @param finalSnapshotIdentifier Name of your final cluster snapshot. If omitted, no final snapshot will be made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalSnapshotIdentifier(String finalSnapshotIdentifier) {
             return finalSnapshotIdentifier(Output.of(finalSnapshotIdentifier));
         }
 
+        /**
+         * @param maintenanceWindow Specifies the weekly time range for when maintenance
+         * on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
+         * The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
             $.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
+        /**
+         * @param maintenanceWindow Specifies the weekly time range for when maintenance
+         * on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
+         * The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(String maintenanceWindow) {
             return maintenanceWindow(Output.of(maintenanceWindow));
         }
 
+        /**
+         * @param nodeType The instance class used. See AWS documentation for information on [supported node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). See AWS documentation for information on [supported node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/nodes-select-size.html). For Memcached, changing this value will re-create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeType(@Nullable Output<String> nodeType) {
             $.nodeType = nodeType;
             return this;
         }
 
+        /**
+         * @param nodeType The instance class used. See AWS documentation for information on [supported node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). See AWS documentation for information on [supported node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/nodes-select-size.html). For Memcached, changing this value will re-create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeType(String nodeType) {
             return nodeType(Output.of(nodeType));
         }
 
+        /**
+         * @param notificationTopicArn ARN of an SNS topic to send ElastiCache notifications to. Example: `arn:aws:sns:us-east-1:012345678999:my_sns_topic`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationTopicArn(@Nullable Output<String> notificationTopicArn) {
             $.notificationTopicArn = notificationTopicArn;
             return this;
         }
 
+        /**
+         * @param notificationTopicArn ARN of an SNS topic to send ElastiCache notifications to. Example: `arn:aws:sns:us-east-1:012345678999:my_sns_topic`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationTopicArn(String notificationTopicArn) {
             return notificationTopicArn(Output.of(notificationTopicArn));
         }
 
+        /**
+         * @param numCacheNodes The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numCacheNodes(@Nullable Output<Integer> numCacheNodes) {
             $.numCacheNodes = numCacheNodes;
             return this;
         }
 
+        /**
+         * @param numCacheNodes The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numCacheNodes(Integer numCacheNodes) {
             return numCacheNodes(Output.of(numCacheNodes));
         }
 
+        /**
+         * @param parameterGroupName The name of the parameter group to associate with this cache cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
             $.parameterGroupName = parameterGroupName;
             return this;
         }
 
+        /**
+         * @param parameterGroupName The name of the parameter group to associate with this cache cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterGroupName(String parameterGroupName) {
             return parameterGroupName(Output.of(parameterGroupName));
         }
 
+        /**
+         * @param port The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param preferredAvailabilityZones List of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredAvailabilityZones(@Nullable Output<List<String>> preferredAvailabilityZones) {
             $.preferredAvailabilityZones = preferredAvailabilityZones;
             return this;
         }
 
+        /**
+         * @param preferredAvailabilityZones List of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredAvailabilityZones(List<String> preferredAvailabilityZones) {
             return preferredAvailabilityZones(Output.of(preferredAvailabilityZones));
         }
 
+        /**
+         * @param preferredAvailabilityZones List of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredAvailabilityZones(String... preferredAvailabilityZones) {
             return preferredAvailabilityZones(List.of(preferredAvailabilityZones));
         }
 
+        /**
+         * @param replicationGroupId ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupId(@Nullable Output<String> replicationGroupId) {
             $.replicationGroupId = replicationGroupId;
             return this;
         }
 
+        /**
+         * @param replicationGroupId ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupId(String replicationGroupId) {
             return replicationGroupId(Output.of(replicationGroupId));
         }
 
+        /**
+         * @param securityGroupIds One or more VPC security groups associated with the cache cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds One or more VPC security groups associated with the cache cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             return securityGroupIds(Output.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupIds One or more VPC security groups associated with the cache cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupNames List of security group names to associate with this cache cluster. Changing this value will re-create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupNames(@Nullable Output<List<String>> securityGroupNames) {
             $.securityGroupNames = securityGroupNames;
             return this;
         }
 
+        /**
+         * @param securityGroupNames List of security group names to associate with this cache cluster. Changing this value will re-create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupNames(List<String> securityGroupNames) {
             return securityGroupNames(Output.of(securityGroupNames));
         }
 
+        /**
+         * @param securityGroupNames List of security group names to associate with this cache cluster. Changing this value will re-create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupNames(String... securityGroupNames) {
             return securityGroupNames(List.of(securityGroupNames));
         }
 
+        /**
+         * @param snapshotArns Single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing `snapshot_arns` forces a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotArns(@Nullable Output<String> snapshotArns) {
             $.snapshotArns = snapshotArns;
             return this;
         }
 
+        /**
+         * @param snapshotArns Single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing `snapshot_arns` forces a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotArns(String snapshotArns) {
             return snapshotArns(Output.of(snapshotArns));
         }
 
+        /**
+         * @param snapshotName Name of a snapshot from which to restore data into the new node group. Changing `snapshot_name` forces a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
             $.snapshotName = snapshotName;
             return this;
         }
 
+        /**
+         * @param snapshotName Name of a snapshot from which to restore data into the new node group. Changing `snapshot_name` forces a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotName(String snapshotName) {
             return snapshotName(Output.of(snapshotName));
         }
 
+        /**
+         * @param snapshotRetentionLimit Number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotRetentionLimit(@Nullable Output<Integer> snapshotRetentionLimit) {
             $.snapshotRetentionLimit = snapshotRetentionLimit;
             return this;
         }
 
+        /**
+         * @param snapshotRetentionLimit Number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotRetentionLimit(Integer snapshotRetentionLimit) {
             return snapshotRetentionLimit(Output.of(snapshotRetentionLimit));
         }
 
+        /**
+         * @param snapshotWindow Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotWindow(@Nullable Output<String> snapshotWindow) {
             $.snapshotWindow = snapshotWindow;
             return this;
         }
 
+        /**
+         * @param snapshotWindow Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotWindow(String snapshotWindow) {
             return snapshotWindow(Output.of(snapshotWindow));
         }
 
+        /**
+         * @param subnetGroupName Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             $.subnetGroupName = subnetGroupName;
             return this;
         }
 
+        /**
+         * @param subnetGroupName Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetGroupName(String subnetGroupName) {
             return subnetGroupName(Output.of(subnetGroupName));
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

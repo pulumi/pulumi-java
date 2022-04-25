@@ -12,37 +12,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SourceTriggerDescriptorResponse {
     /**
-     * The branch name in the repository.
+     * @return The branch name in the repository.
      * 
      */
     private final @Nullable String branchName;
     /**
-     * The unique ID that identifies a commit.
+     * @return The unique ID that identifies a commit.
      * 
      */
     private final @Nullable String commitId;
     /**
-     * The event type of the trigger.
+     * @return The event type of the trigger.
      * 
      */
     private final @Nullable String eventType;
     /**
-     * The unique ID of the trigger.
+     * @return The unique ID of the trigger.
      * 
      */
     private final @Nullable String id;
     /**
-     * The source control provider type.
+     * @return The source control provider type.
      * 
      */
     private final @Nullable String providerType;
     /**
-     * The unique ID that identifies pull request.
+     * @return The unique ID that identifies pull request.
      * 
      */
     private final @Nullable String pullRequestId;
     /**
-     * The repository URL.
+     * @return The repository URL.
      * 
      */
     private final @Nullable String repositoryUrl;
@@ -66,51 +66,51 @@ public final class SourceTriggerDescriptorResponse {
     }
 
     /**
-     * The branch name in the repository.
+     * @return The branch name in the repository.
      * 
-    */
+     */
     public Optional<String> branchName() {
         return Optional.ofNullable(this.branchName);
     }
     /**
-     * The unique ID that identifies a commit.
+     * @return The unique ID that identifies a commit.
      * 
-    */
+     */
     public Optional<String> commitId() {
         return Optional.ofNullable(this.commitId);
     }
     /**
-     * The event type of the trigger.
+     * @return The event type of the trigger.
      * 
-    */
+     */
     public Optional<String> eventType() {
         return Optional.ofNullable(this.eventType);
     }
     /**
-     * The unique ID of the trigger.
+     * @return The unique ID of the trigger.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The source control provider type.
+     * @return The source control provider type.
      * 
-    */
+     */
     public Optional<String> providerType() {
         return Optional.ofNullable(this.providerType);
     }
     /**
-     * The unique ID that identifies pull request.
+     * @return The unique ID that identifies pull request.
      * 
-    */
+     */
     public Optional<String> pullRequestId() {
         return Optional.ofNullable(this.pullRequestId);
     }
     /**
-     * The repository URL.
+     * @return The repository URL.
      * 
-    */
+     */
     public Optional<String> repositoryUrl() {
         return Optional.ofNullable(this.repositoryUrl);
     }

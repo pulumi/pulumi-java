@@ -24,6 +24,10 @@ public final class SubjectConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="subject", required=true)
     private SubjectResponse subject;
 
+    /**
+     * @return Contains distinguished name fields such as the common name, location and organization.
+     * 
+     */
     public SubjectResponse subject() {
         return this.subject;
     }
@@ -35,6 +39,10 @@ public final class SubjectConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="subjectAltName", required=true)
     private SubjectAltNamesResponse subjectAltName;
 
+    /**
+     * @return Optional. The subject alternative name fields.
+     * 
+     */
     public SubjectAltNamesResponse subjectAltName() {
         return this.subjectAltName;
     }
@@ -64,11 +72,23 @@ public final class SubjectConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new SubjectConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subject Contains distinguished name fields such as the common name, location and organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(SubjectResponse subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subjectAltName Optional. The subject alternative name fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltName(SubjectAltNamesResponse subjectAltName) {
             $.subjectAltName = subjectAltName;
             return this;

@@ -21,6 +21,11 @@ public final class FirewallLogConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="metadata", required=true)
     private Output<String> metadata;
 
+    /**
+     * @return This field denotes whether to include or exclude metadata for firewall logs.
+     * Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+     * 
+     */
     public Output<String> metadata() {
         return this.metadata;
     }
@@ -49,11 +54,25 @@ public final class FirewallLogConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new FirewallLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadata This field denotes whether to include or exclude metadata for firewall logs.
+         * Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Output<String> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata This field denotes whether to include or exclude metadata for firewall logs.
+         * Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(String metadata) {
             return metadata(Output.of(metadata));
         }

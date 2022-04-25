@@ -26,6 +26,10 @@ public final class CustomProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadataConfigurationPath")
     private @Nullable Output<String> metadataConfigurationPath;
 
+    /**
+     * @return Path for metadata configuration.
+     * 
+     */
     public Optional<Output<String>> metadataConfigurationPath() {
         return Optional.ofNullable(this.metadataConfigurationPath);
     }
@@ -54,11 +58,23 @@ public final class CustomProfileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CustomProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadataConfigurationPath Path for metadata configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataConfigurationPath(@Nullable Output<String> metadataConfigurationPath) {
             $.metadataConfigurationPath = metadataConfigurationPath;
             return this;
         }
 
+        /**
+         * @param metadataConfigurationPath Path for metadata configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataConfigurationPath(String metadataConfigurationPath) {
             return metadataConfigurationPath(Output.of(metadataConfigurationPath));
         }

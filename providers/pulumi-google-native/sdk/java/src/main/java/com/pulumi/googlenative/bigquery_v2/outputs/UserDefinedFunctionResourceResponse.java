@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class UserDefinedFunctionResourceResponse {
     /**
-     * [Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
+     * @return [Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
      * 
      */
     private final String inlineCode;
     /**
-     * [Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
+     * @return [Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
      * 
      */
     private final String resourceUri;
@@ -29,16 +29,16 @@ public final class UserDefinedFunctionResourceResponse {
     }
 
     /**
-     * [Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
+     * @return [Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
      * 
-    */
+     */
     public String inlineCode() {
         return this.inlineCode;
     }
     /**
-     * [Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
+     * @return [Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
      * 
-    */
+     */
     public String resourceUri() {
         return this.resourceUri;
     }

@@ -17,23 +17,24 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureBackupRuleResponse {
     /**
-     * BackupParameters base
+     * @return BackupParameters base
      * 
      */
     private final @Nullable AzureBackupParamsResponse backupParameters;
     /**
-     * DataStoreInfo base
+     * @return DataStoreInfo base
      * 
      */
     private final DataStoreInfoBaseResponse dataStore;
     private final String name;
     /**
+     * @return
      * Expected value is &#39;AzureBackupRule&#39;.
      * 
      */
     private final String objectType;
     /**
-     * Trigger context
+     * @return Trigger context
      * 
      */
     private final Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger;
@@ -53,16 +54,16 @@ public final class AzureBackupRuleResponse {
     }
 
     /**
-     * BackupParameters base
+     * @return BackupParameters base
      * 
-    */
+     */
     public Optional<AzureBackupParamsResponse> backupParameters() {
         return Optional.ofNullable(this.backupParameters);
     }
     /**
-     * DataStoreInfo base
+     * @return DataStoreInfo base
      * 
-    */
+     */
     public DataStoreInfoBaseResponse dataStore() {
         return this.dataStore;
     }
@@ -70,16 +71,17 @@ public final class AzureBackupRuleResponse {
         return this.name;
     }
     /**
+     * @return
      * Expected value is &#39;AzureBackupRule&#39;.
      * 
-    */
+     */
     public String objectType() {
         return this.objectType;
     }
     /**
-     * Trigger context
+     * @return Trigger context
      * 
-    */
+     */
     public Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger() {
         return this.trigger;
     }

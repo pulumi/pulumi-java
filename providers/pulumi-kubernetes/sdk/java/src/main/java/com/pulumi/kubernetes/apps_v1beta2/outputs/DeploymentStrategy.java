@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DeploymentStrategy {
     /**
-     * Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
+     * @return Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
      * 
      */
     private final @Nullable RollingUpdateDeployment rollingUpdate;
     /**
-     * Type of deployment. Can be &#34;Recreate&#34; or &#34;RollingUpdate&#34;. Default is RollingUpdate.
+     * @return Type of deployment. Can be &#34;Recreate&#34; or &#34;RollingUpdate&#34;. Default is RollingUpdate.
      * 
      */
     private final @Nullable String type;
@@ -32,16 +32,16 @@ public final class DeploymentStrategy {
     }
 
     /**
-     * Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
+     * @return Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
      * 
-    */
+     */
     public Optional<RollingUpdateDeployment> rollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
     /**
-     * Type of deployment. Can be &#34;Recreate&#34; or &#34;RollingUpdate&#34;. Default is RollingUpdate.
+     * @return Type of deployment. Can be &#34;Recreate&#34; or &#34;RollingUpdate&#34;. Default is RollingUpdate.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

@@ -27,6 +27,10 @@ public final class GatewayRouteConfigPropertiesResponse extends com.pulumi.resou
     @Import(name="appResourceId")
     private @Nullable String appResourceId;
 
+    /**
+     * @return The resource Id of the Azure Spring Cloud app, required unless route defines `uri`.
+     * 
+     */
     public Optional<String> appResourceId() {
         return Optional.ofNullable(this.appResourceId);
     }
@@ -38,6 +42,10 @@ public final class GatewayRouteConfigPropertiesResponse extends com.pulumi.resou
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return State of the Spring Cloud Gateway route config.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -49,6 +57,10 @@ public final class GatewayRouteConfigPropertiesResponse extends com.pulumi.resou
     @Import(name="routes")
     private @Nullable List<GatewayApiRouteResponse> routes;
 
+    /**
+     * @return Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
+     * 
+     */
     public Optional<List<GatewayApiRouteResponse>> routes() {
         return Optional.ofNullable(this.routes);
     }
@@ -79,21 +91,45 @@ public final class GatewayRouteConfigPropertiesResponse extends com.pulumi.resou
             $ = new GatewayRouteConfigPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appResourceId The resource Id of the Azure Spring Cloud app, required unless route defines `uri`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appResourceId(@Nullable String appResourceId) {
             $.appResourceId = appResourceId;
             return this;
         }
 
+        /**
+         * @param provisioningState State of the Spring Cloud Gateway route config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param routes Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(@Nullable List<GatewayApiRouteResponse> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(GatewayApiRouteResponse... routes) {
             return routes(List.of(routes));
         }

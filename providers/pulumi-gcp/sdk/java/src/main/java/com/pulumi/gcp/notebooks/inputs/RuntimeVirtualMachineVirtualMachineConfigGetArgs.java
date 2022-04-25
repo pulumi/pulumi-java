@@ -31,6 +31,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="acceleratorConfig")
     private @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs> acceleratorConfig;
 
+    /**
+     * @return The Compute Engine accelerator configuration for this runtime.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs>> acceleratorConfig() {
         return Optional.ofNullable(this.acceleratorConfig);
     }
@@ -43,6 +48,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="containerImages")
     private @Nullable Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs>> containerImages;
 
+    /**
+     * @return Use a list of container images to start the notebook instance.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs>>> containerImages() {
         return Optional.ofNullable(this.containerImages);
     }
@@ -55,6 +65,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="dataDisk", required=true)
     private Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs> dataDisk;
 
+    /**
+     * @return Data disk option configuration settings.
+     * Structure is documented below.
+     * 
+     */
     public Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs> dataDisk() {
         return this.dataDisk;
     }
@@ -67,6 +82,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="encryptionConfig")
     private @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs> encryptionConfig;
 
+    /**
+     * @return Encryption settings for virtual machine data disk.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs>> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
@@ -81,6 +101,13 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="guestAttributes")
     private @Nullable Output<Map<String,String>> guestAttributes;
 
+    /**
+     * @return -
+     * The Compute Engine guest attributes. (see [Project and instance
+     * guest attributes](https://cloud.google.com/compute/docs/
+     * storing-retrieving-metadata#guest_attributes)).
+     * 
+     */
     public Optional<Output<Map<String,String>>> guestAttributes() {
         return Optional.ofNullable(this.guestAttributes);
     }
@@ -97,6 +124,15 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="internalIpOnly")
     private @Nullable Output<Boolean> internalIpOnly;
 
+    /**
+     * @return If true, runtime will only have internal IP addresses. By default,
+     * runtimes are not restricted to internal IP addresses, and will
+     * have ephemeral external IP addresses assigned to each vm. This
+     * `internal_ip_only` restriction can only be enabled for subnetwork
+     * enabled networks, and all dependencies must be configured to be
+     * accessible without external IP addresses.
+     * 
+     */
     public Optional<Output<Boolean>> internalIpOnly() {
         return Optional.ofNullable(this.internalIpOnly);
     }
@@ -110,6 +146,12 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to this disk. These can be later modified
+     * by the disks.setLabels method. This field is only
+     * applicable for persistent disks.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -121,6 +163,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="machineType", required=true)
     private Output<String> machineType;
 
+    /**
+     * @return The Compute Engine machine type used for runtimes.
+     * 
+     */
     public Output<String> machineType() {
         return this.machineType;
     }
@@ -135,6 +181,13 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return The Compute Engine metadata entries to add to virtual machine.
+     * (see [Project and instance metadata](https://cloud.google.com
+     * /compute/docs/storing-retrieving-metadata#project_and_instance
+     * _metadata)).
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -159,6 +212,23 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The Compute Engine network to be used for machine communications.
+     * Cannot be specified with subnetwork. If neither `network` nor
+     * `subnet` is specified, the &#34;default&#34; network of the project is
+     * used, if it exists. A full URL or partial URI. Examples:
+     * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
+     *   regions/global/default`
+     * * `projects/[project_id]/regions/global/default`
+     *   Runtimes are managed resources inside Google Infrastructure.
+     *   Runtimes support the following network configurations:
+     * * Google Managed Network (Network &amp; subnet are empty)
+     * * Consumer Project VPC (network &amp; subnet are required). Requires
+     *   configuring Private Service Access.
+     * * Shared VPC (network &amp; subnet are required). Requires
+     *   configuring Private Service Access.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -172,6 +242,12 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="nicType")
     private @Nullable Output<String> nicType;
 
+    /**
+     * @return The type of vNIC to be used on this interface. This may be gVNIC
+     * or VirtioNet.
+     * Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
+     * 
+     */
     public Optional<Output<String>> nicType() {
         return Optional.ofNullable(this.nicType);
     }
@@ -184,6 +260,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="shieldedInstanceConfig")
     private @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
 
+    /**
+     * @return Shielded VM Instance configuration settings.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs>> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
@@ -200,6 +281,15 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="subnet")
     private @Nullable Output<String> subnet;
 
+    /**
+     * @return The Compute Engine subnetwork to be used for machine
+     * communications. Cannot be specified with network. A full URL or
+     * partial URI are valid. Examples:
+     * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
+     *   regions/us-east1/subnetworks/sub0`
+     * * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
+     * 
+     */
     public Optional<Output<String>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -213,6 +303,12 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
+    /**
+     * @return The Compute Engine tags to add to runtime (see [Tagging instances]
+     * (https://cloud.google.com/compute/docs/
+     * label-or-tag-resources#tags)).
+     * 
+     */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -225,6 +321,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return -
+     * The zone where the virtual machine is located.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -267,145 +368,422 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends com.
             $ = new RuntimeVirtualMachineVirtualMachineConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorConfig The Compute Engine accelerator configuration for this runtime.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorConfig(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs> acceleratorConfig) {
             $.acceleratorConfig = acceleratorConfig;
             return this;
         }
 
+        /**
+         * @param acceleratorConfig The Compute Engine accelerator configuration for this runtime.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorConfig(RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs acceleratorConfig) {
             return acceleratorConfig(Output.of(acceleratorConfig));
         }
 
+        /**
+         * @param containerImages Use a list of container images to start the notebook instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImages(@Nullable Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs>> containerImages) {
             $.containerImages = containerImages;
             return this;
         }
 
+        /**
+         * @param containerImages Use a list of container images to start the notebook instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImages(List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs> containerImages) {
             return containerImages(Output.of(containerImages));
         }
 
+        /**
+         * @param containerImages Use a list of container images to start the notebook instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImages(RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs... containerImages) {
             return containerImages(List.of(containerImages));
         }
 
+        /**
+         * @param dataDisk Data disk option configuration settings.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisk(Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs> dataDisk) {
             $.dataDisk = dataDisk;
             return this;
         }
 
+        /**
+         * @param dataDisk Data disk option configuration settings.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisk(RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs dataDisk) {
             return dataDisk(Output.of(dataDisk));
         }
 
+        /**
+         * @param encryptionConfig Encryption settings for virtual machine data disk.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs> encryptionConfig) {
             $.encryptionConfig = encryptionConfig;
             return this;
         }
 
+        /**
+         * @param encryptionConfig Encryption settings for virtual machine data disk.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs encryptionConfig) {
             return encryptionConfig(Output.of(encryptionConfig));
         }
 
+        /**
+         * @param guestAttributes -
+         * The Compute Engine guest attributes. (see [Project and instance
+         * guest attributes](https://cloud.google.com/compute/docs/
+         * storing-retrieving-metadata#guest_attributes)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAttributes(@Nullable Output<Map<String,String>> guestAttributes) {
             $.guestAttributes = guestAttributes;
             return this;
         }
 
+        /**
+         * @param guestAttributes -
+         * The Compute Engine guest attributes. (see [Project and instance
+         * guest attributes](https://cloud.google.com/compute/docs/
+         * storing-retrieving-metadata#guest_attributes)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAttributes(Map<String,String> guestAttributes) {
             return guestAttributes(Output.of(guestAttributes));
         }
 
+        /**
+         * @param internalIpOnly If true, runtime will only have internal IP addresses. By default,
+         * runtimes are not restricted to internal IP addresses, and will
+         * have ephemeral external IP addresses assigned to each vm. This
+         * `internal_ip_only` restriction can only be enabled for subnetwork
+         * enabled networks, and all dependencies must be configured to be
+         * accessible without external IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIpOnly(@Nullable Output<Boolean> internalIpOnly) {
             $.internalIpOnly = internalIpOnly;
             return this;
         }
 
+        /**
+         * @param internalIpOnly If true, runtime will only have internal IP addresses. By default,
+         * runtimes are not restricted to internal IP addresses, and will
+         * have ephemeral external IP addresses assigned to each vm. This
+         * `internal_ip_only` restriction can only be enabled for subnetwork
+         * enabled networks, and all dependencies must be configured to be
+         * accessible without external IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIpOnly(Boolean internalIpOnly) {
             return internalIpOnly(Output.of(internalIpOnly));
         }
 
+        /**
+         * @param labels Labels to apply to this disk. These can be later modified
+         * by the disks.setLabels method. This field is only
+         * applicable for persistent disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels to apply to this disk. These can be later modified
+         * by the disks.setLabels method. This field is only
+         * applicable for persistent disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param machineType The Compute Engine machine type used for runtimes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(Output<String> machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineType The Compute Engine machine type used for runtimes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             return machineType(Output.of(machineType));
         }
 
+        /**
+         * @param metadata The Compute Engine metadata entries to add to virtual machine.
+         * (see [Project and instance metadata](https://cloud.google.com
+         * /compute/docs/storing-retrieving-metadata#project_and_instance
+         * _metadata)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The Compute Engine metadata entries to add to virtual machine.
+         * (see [Project and instance metadata](https://cloud.google.com
+         * /compute/docs/storing-retrieving-metadata#project_and_instance
+         * _metadata)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param network The Compute Engine network to be used for machine communications.
+         * Cannot be specified with subnetwork. If neither `network` nor
+         * `subnet` is specified, the &#34;default&#34; network of the project is
+         * used, if it exists. A full URL or partial URI. Examples:
+         * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
+         *   regions/global/default`
+         * * `projects/[project_id]/regions/global/default`
+         *   Runtimes are managed resources inside Google Infrastructure.
+         *   Runtimes support the following network configurations:
+         * * Google Managed Network (Network &amp; subnet are empty)
+         * * Consumer Project VPC (network &amp; subnet are required). Requires
+         *   configuring Private Service Access.
+         * * Shared VPC (network &amp; subnet are required). Requires
+         *   configuring Private Service Access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The Compute Engine network to be used for machine communications.
+         * Cannot be specified with subnetwork. If neither `network` nor
+         * `subnet` is specified, the &#34;default&#34; network of the project is
+         * used, if it exists. A full URL or partial URI. Examples:
+         * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
+         *   regions/global/default`
+         * * `projects/[project_id]/regions/global/default`
+         *   Runtimes are managed resources inside Google Infrastructure.
+         *   Runtimes support the following network configurations:
+         * * Google Managed Network (Network &amp; subnet are empty)
+         * * Consumer Project VPC (network &amp; subnet are required). Requires
+         *   configuring Private Service Access.
+         * * Shared VPC (network &amp; subnet are required). Requires
+         *   configuring Private Service Access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param nicType The type of vNIC to be used on this interface. This may be gVNIC
+         * or VirtioNet.
+         * Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(@Nullable Output<String> nicType) {
             $.nicType = nicType;
             return this;
         }
 
+        /**
+         * @param nicType The type of vNIC to be used on this interface. This may be gVNIC
+         * or VirtioNet.
+         * Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(String nicType) {
             return nicType(Output.of(nicType));
         }
 
+        /**
+         * @param shieldedInstanceConfig Shielded VM Instance configuration settings.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
+        /**
+         * @param shieldedInstanceConfig Shielded VM Instance configuration settings.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
             return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
 
+        /**
+         * @param subnet The Compute Engine subnetwork to be used for machine
+         * communications. Cannot be specified with network. A full URL or
+         * partial URI are valid. Examples:
+         * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
+         *   regions/us-east1/subnetworks/sub0`
+         * * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<String> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet The Compute Engine subnetwork to be used for machine
+         * communications. Cannot be specified with network. A full URL or
+         * partial URI are valid. Examples:
+         * * `https://www.googleapis.com/compute/v1/projects/[project_id]/
+         *   regions/us-east1/subnetworks/sub0`
+         * * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(String subnet) {
             return subnet(Output.of(subnet));
         }
 
+        /**
+         * @param tags The Compute Engine tags to add to runtime (see [Tagging instances]
+         * (https://cloud.google.com/compute/docs/
+         * label-or-tag-resources#tags)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The Compute Engine tags to add to runtime (see [Tagging instances]
+         * (https://cloud.google.com/compute/docs/
+         * label-or-tag-resources#tags)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The Compute Engine tags to add to runtime (see [Tagging instances]
+         * (https://cloud.google.com/compute/docs/
+         * label-or-tag-resources#tags)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param zone -
+         * The zone where the virtual machine is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone -
+         * The zone where the virtual machine is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

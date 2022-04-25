@@ -26,6 +26,10 @@ public final class MonitoringTagRulesPropertiesResponse extends com.pulumi.resou
     @Import(name="logRules")
     private @Nullable LogRulesResponse logRules;
 
+    /**
+     * @return Rules for sending logs.
+     * 
+     */
     public Optional<LogRulesResponse> logRules() {
         return Optional.ofNullable(this.logRules);
     }
@@ -37,6 +41,10 @@ public final class MonitoringTagRulesPropertiesResponse extends com.pulumi.resou
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return Provisioning state of the monitoring tag rules.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -66,11 +74,23 @@ public final class MonitoringTagRulesPropertiesResponse extends com.pulumi.resou
             $ = new MonitoringTagRulesPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logRules Rules for sending logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logRules(@Nullable LogRulesResponse logRules) {
             $.logRules = logRules;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the monitoring tag rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

@@ -23,6 +23,10 @@ public final class GoogleCloudApigeeV1PropertyResponse extends com.pulumi.resour
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The property key
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudApigeeV1PropertyResponse extends com.pulumi.resour
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The property value
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudApigeeV1PropertyResponse extends com.pulumi.resour
             $ = new GoogleCloudApigeeV1PropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The property key
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The property value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

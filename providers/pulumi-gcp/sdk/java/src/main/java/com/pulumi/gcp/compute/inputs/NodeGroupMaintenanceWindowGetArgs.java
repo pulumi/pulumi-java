@@ -20,6 +20,10 @@ public final class NodeGroupMaintenanceWindowGetArgs extends com.pulumi.resource
     @Import(name="startTime", required=true)
     private Output<String> startTime;
 
+    /**
+     * @return instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+     * 
+     */
     public Output<String> startTime() {
         return this.startTime;
     }
@@ -48,11 +52,23 @@ public final class NodeGroupMaintenanceWindowGetArgs extends com.pulumi.resource
             $ = new NodeGroupMaintenanceWindowGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param startTime instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }

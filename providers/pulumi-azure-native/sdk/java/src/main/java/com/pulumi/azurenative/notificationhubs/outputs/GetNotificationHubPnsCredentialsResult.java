@@ -20,62 +20,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetNotificationHubPnsCredentialsResult {
     /**
-     * The AdmCredential of the created NotificationHub
+     * @return The AdmCredential of the created NotificationHub
      * 
      */
     private final @Nullable AdmCredentialResponse admCredential;
     /**
-     * The ApnsCredential of the created NotificationHub
+     * @return The ApnsCredential of the created NotificationHub
      * 
      */
     private final @Nullable ApnsCredentialResponse apnsCredential;
     /**
-     * The BaiduCredential of the created NotificationHub
+     * @return The BaiduCredential of the created NotificationHub
      * 
      */
     private final @Nullable BaiduCredentialResponse baiduCredential;
     /**
-     * The GcmCredential of the created NotificationHub
+     * @return The GcmCredential of the created NotificationHub
      * 
      */
     private final @Nullable GcmCredentialResponse gcmCredential;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final @Nullable String location;
     /**
-     * The MpnsCredential of the created NotificationHub
+     * @return The MpnsCredential of the created NotificationHub
      * 
      */
     private final @Nullable MpnsCredentialResponse mpnsCredential;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * The sku of the created namespace
+     * @return The sku of the created namespace
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
     /**
-     * The WnsCredential of the created NotificationHub
+     * @return The WnsCredential of the created NotificationHub
      * 
      */
     private final @Nullable WnsCredentialResponse wnsCredential;
@@ -109,86 +109,86 @@ public final class GetNotificationHubPnsCredentialsResult {
     }
 
     /**
-     * The AdmCredential of the created NotificationHub
+     * @return The AdmCredential of the created NotificationHub
      * 
-    */
+     */
     public Optional<AdmCredentialResponse> admCredential() {
         return Optional.ofNullable(this.admCredential);
     }
     /**
-     * The ApnsCredential of the created NotificationHub
+     * @return The ApnsCredential of the created NotificationHub
      * 
-    */
+     */
     public Optional<ApnsCredentialResponse> apnsCredential() {
         return Optional.ofNullable(this.apnsCredential);
     }
     /**
-     * The BaiduCredential of the created NotificationHub
+     * @return The BaiduCredential of the created NotificationHub
      * 
-    */
+     */
     public Optional<BaiduCredentialResponse> baiduCredential() {
         return Optional.ofNullable(this.baiduCredential);
     }
     /**
-     * The GcmCredential of the created NotificationHub
+     * @return The GcmCredential of the created NotificationHub
      * 
-    */
+     */
     public Optional<GcmCredentialResponse> gcmCredential() {
         return Optional.ofNullable(this.gcmCredential);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The MpnsCredential of the created NotificationHub
+     * @return The MpnsCredential of the created NotificationHub
      * 
-    */
+     */
     public Optional<MpnsCredentialResponse> mpnsCredential() {
         return Optional.ofNullable(this.mpnsCredential);
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The sku of the created namespace
+     * @return The sku of the created namespace
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The WnsCredential of the created NotificationHub
+     * @return The WnsCredential of the created NotificationHub
      * 
-    */
+     */
     public Optional<WnsCredentialResponse> wnsCredential() {
         return Optional.ofNullable(this.wnsCredential);
     }

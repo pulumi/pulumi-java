@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BudgetActionDefinition {
     /**
-     * The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.
+     * @return The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.
      * 
      */
     private final @Nullable BudgetActionDefinitionIamActionDefinition iamActionDefinition;
     /**
-     * The service control policies (SCPs) action definition details. See SCP Action Definition.
+     * @return The service control policies (SCPs) action definition details. See SCP Action Definition.
      * 
      */
     private final @Nullable BudgetActionDefinitionScpActionDefinition scpActionDefinition;
     /**
-     * The AWS Systems Manager (SSM) action definition details. See SSM Action Definition.
+     * @return The AWS Systems Manager (SSM) action definition details. See SSM Action Definition.
      * 
      */
     private final @Nullable BudgetActionDefinitionSsmActionDefinition ssmActionDefinition;
@@ -40,23 +40,23 @@ public final class BudgetActionDefinition {
     }
 
     /**
-     * The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.
+     * @return The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.
      * 
-    */
+     */
     public Optional<BudgetActionDefinitionIamActionDefinition> iamActionDefinition() {
         return Optional.ofNullable(this.iamActionDefinition);
     }
     /**
-     * The service control policies (SCPs) action definition details. See SCP Action Definition.
+     * @return The service control policies (SCPs) action definition details. See SCP Action Definition.
      * 
-    */
+     */
     public Optional<BudgetActionDefinitionScpActionDefinition> scpActionDefinition() {
         return Optional.ofNullable(this.scpActionDefinition);
     }
     /**
-     * The AWS Systems Manager (SSM) action definition details. See SSM Action Definition.
+     * @return The AWS Systems Manager (SSM) action definition details. See SSM Action Definition.
      * 
-    */
+     */
     public Optional<BudgetActionDefinitionSsmActionDefinition> ssmActionDefinition() {
         return Optional.ofNullable(this.ssmActionDefinition);
     }

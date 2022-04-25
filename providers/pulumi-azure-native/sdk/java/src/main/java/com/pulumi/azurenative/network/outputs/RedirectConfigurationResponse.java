@@ -12,37 +12,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RedirectConfigurationResponse {
     /**
-     * Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+     * @return Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
      * 
      */
     private final @Nullable String customFragment;
     /**
-     * Host to redirect. Leave empty to use the incoming host as the destination host.
+     * @return Host to redirect. Leave empty to use the incoming host as the destination host.
      * 
      */
     private final @Nullable String customHost;
     /**
-     * The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+     * @return The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
      * 
      */
     private final @Nullable String customPath;
     /**
-     * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. The first ? and &amp; will be added automatically so do not include them in the front, but do separate multiple query strings with &amp;.
+     * @return The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. The first ? and &amp; will be added automatically so do not include them in the front, but do separate multiple query strings with &amp;.
      * 
      */
     private final @Nullable String customQueryString;
     /**
+     * @return
      * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration&#39;.
      * 
      */
     private final String odataType;
     /**
-     * The protocol of the destination to where the traffic is redirected
+     * @return The protocol of the destination to where the traffic is redirected
      * 
      */
     private final @Nullable String redirectProtocol;
     /**
-     * The redirect type the rule will use when redirecting traffic.
+     * @return The redirect type the rule will use when redirecting traffic.
      * 
      */
     private final @Nullable String redirectType;
@@ -66,51 +67,52 @@ public final class RedirectConfigurationResponse {
     }
 
     /**
-     * Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+     * @return Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
      * 
-    */
+     */
     public Optional<String> customFragment() {
         return Optional.ofNullable(this.customFragment);
     }
     /**
-     * Host to redirect. Leave empty to use the incoming host as the destination host.
+     * @return Host to redirect. Leave empty to use the incoming host as the destination host.
      * 
-    */
+     */
     public Optional<String> customHost() {
         return Optional.ofNullable(this.customHost);
     }
     /**
-     * The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+     * @return The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
      * 
-    */
+     */
     public Optional<String> customPath() {
         return Optional.ofNullable(this.customPath);
     }
     /**
-     * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. The first ? and &amp; will be added automatically so do not include them in the front, but do separate multiple query strings with &amp;.
+     * @return The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. The first ? and &amp; will be added automatically so do not include them in the front, but do separate multiple query strings with &amp;.
      * 
-    */
+     */
     public Optional<String> customQueryString() {
         return Optional.ofNullable(this.customQueryString);
     }
     /**
+     * @return
      * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * The protocol of the destination to where the traffic is redirected
+     * @return The protocol of the destination to where the traffic is redirected
      * 
-    */
+     */
     public Optional<String> redirectProtocol() {
         return Optional.ofNullable(this.redirectProtocol);
     }
     /**
-     * The redirect type the rule will use when redirecting traffic.
+     * @return The redirect type the rule will use when redirecting traffic.
      * 
-    */
+     */
     public Optional<String> redirectType() {
         return Optional.ofNullable(this.redirectType);
     }

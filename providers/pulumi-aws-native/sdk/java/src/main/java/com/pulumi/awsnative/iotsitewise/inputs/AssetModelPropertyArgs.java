@@ -29,6 +29,10 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataType", required=true)
     private Output<AssetModelDataType> dataType;
 
+    /**
+     * @return The data type of the asset model property.
+     * 
+     */
     public Output<AssetModelDataType> dataType() {
         return this.dataType;
     }
@@ -40,6 +44,10 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataTypeSpec")
     private @Nullable Output<AssetModelDataTypeSpec> dataTypeSpec;
 
+    /**
+     * @return The data type of the structure for this property.
+     * 
+     */
     public Optional<Output<AssetModelDataTypeSpec>> dataTypeSpec() {
         return Optional.ofNullable(this.dataTypeSpec);
     }
@@ -51,6 +59,10 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="logicalId", required=true)
     private Output<String> logicalId;
 
+    /**
+     * @return Customer provided ID for property.
+     * 
+     */
     public Output<String> logicalId() {
         return this.logicalId;
     }
@@ -62,6 +74,10 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the asset model property.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -73,6 +89,10 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
     private Output<AssetModelPropertyTypeArgs> type;
 
+    /**
+     * @return The property type
+     * 
+     */
     public Output<AssetModelPropertyTypeArgs> type() {
         return this.type;
     }
@@ -84,6 +104,10 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
     @Import(name="unit")
     private @Nullable Output<String> unit;
 
+    /**
+     * @return The unit of the asset model property, such as Newtons or RPM.
+     * 
+     */
     public Optional<Output<String>> unit() {
         return Optional.ofNullable(this.unit);
     }
@@ -117,56 +141,128 @@ public final class AssetModelPropertyArgs extends com.pulumi.resources.ResourceA
             $ = new AssetModelPropertyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataType The data type of the asset model property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(Output<AssetModelDataType> dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param dataType The data type of the asset model property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(AssetModelDataType dataType) {
             return dataType(Output.of(dataType));
         }
 
+        /**
+         * @param dataTypeSpec The data type of the structure for this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypeSpec(@Nullable Output<AssetModelDataTypeSpec> dataTypeSpec) {
             $.dataTypeSpec = dataTypeSpec;
             return this;
         }
 
+        /**
+         * @param dataTypeSpec The data type of the structure for this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypeSpec(AssetModelDataTypeSpec dataTypeSpec) {
             return dataTypeSpec(Output.of(dataTypeSpec));
         }
 
+        /**
+         * @param logicalId Customer provided ID for property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalId(Output<String> logicalId) {
             $.logicalId = logicalId;
             return this;
         }
 
+        /**
+         * @param logicalId Customer provided ID for property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalId(String logicalId) {
             return logicalId(Output.of(logicalId));
         }
 
+        /**
+         * @param name The name of the asset model property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the asset model property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type The property type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<AssetModelPropertyTypeArgs> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The property type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(AssetModelPropertyTypeArgs type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param unit The unit of the asset model property, such as Newtons or RPM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(@Nullable Output<String> unit) {
             $.unit = unit;
             return this;
         }
 
+        /**
+         * @param unit The unit of the asset model property, such as Newtons or RPM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(String unit) {
             return unit(Output.of(unit));
         }

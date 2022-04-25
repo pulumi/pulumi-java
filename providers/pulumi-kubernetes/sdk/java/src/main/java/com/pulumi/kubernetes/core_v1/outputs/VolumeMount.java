@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VolumeMount {
     /**
-     * Path within the container at which the volume should be mounted.  Must not contain &#39;:&#39;.
+     * @return Path within the container at which the volume should be mounted.  Must not contain &#39;:&#39;.
      * 
      */
     private final String mountPath;
     /**
-     * mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationNone is used. This field is beta in 1.10.
+     * @return mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationNone is used. This field is beta in 1.10.
      * 
      */
     private final @Nullable String mountPropagation;
     /**
-     * This must match the Name of a Volume.
+     * @return This must match the Name of a Volume.
      * 
      */
     private final String name;
     /**
-     * Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.
+     * @return Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.
      * 
      */
     private final @Nullable Boolean readOnly;
     /**
-     * Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
+     * @return Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
      * 
      */
     private final @Nullable String subPath;
     /**
-     * Expanded path within the volume from which the container&#39;s volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container&#39;s environment. Defaults to &#34;&#34; (volume&#39;s root). SubPathExpr and SubPath are mutually exclusive.
+     * @return Expanded path within the volume from which the container&#39;s volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container&#39;s environment. Defaults to &#34;&#34; (volume&#39;s root). SubPathExpr and SubPath are mutually exclusive.
      * 
      */
     private final @Nullable String subPathExpr;
@@ -60,44 +60,44 @@ public final class VolumeMount {
     }
 
     /**
-     * Path within the container at which the volume should be mounted.  Must not contain &#39;:&#39;.
+     * @return Path within the container at which the volume should be mounted.  Must not contain &#39;:&#39;.
      * 
-    */
+     */
     public String mountPath() {
         return this.mountPath;
     }
     /**
-     * mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationNone is used. This field is beta in 1.10.
+     * @return mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationNone is used. This field is beta in 1.10.
      * 
-    */
+     */
     public Optional<String> mountPropagation() {
         return Optional.ofNullable(this.mountPropagation);
     }
     /**
-     * This must match the Name of a Volume.
+     * @return This must match the Name of a Volume.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.
+     * @return Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.
      * 
-    */
+     */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
+     * @return Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
      * 
-    */
+     */
     public Optional<String> subPath() {
         return Optional.ofNullable(this.subPath);
     }
     /**
-     * Expanded path within the volume from which the container&#39;s volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container&#39;s environment. Defaults to &#34;&#34; (volume&#39;s root). SubPathExpr and SubPath are mutually exclusive.
+     * @return Expanded path within the volume from which the container&#39;s volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container&#39;s environment. Defaults to &#34;&#34; (volume&#39;s root). SubPathExpr and SubPath are mutually exclusive.
      * 
-    */
+     */
     public Optional<String> subPathExpr() {
         return Optional.ofNullable(this.subPathExpr);
     }

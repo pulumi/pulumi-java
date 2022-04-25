@@ -27,6 +27,10 @@ public final class BasicScalingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="idleTimeout")
     private @Nullable Output<String> idleTimeout;
 
+    /**
+     * @return Duration of time after the last request that an instance must wait before the instance is shut down.
+     * 
+     */
     public Optional<Output<String>> idleTimeout() {
         return Optional.ofNullable(this.idleTimeout);
     }
@@ -38,6 +42,10 @@ public final class BasicScalingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxInstances")
     private @Nullable Output<Integer> maxInstances;
 
+    /**
+     * @return Maximum number of instances to create for this version.
+     * 
+     */
     public Optional<Output<Integer>> maxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
@@ -67,20 +75,44 @@ public final class BasicScalingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BasicScalingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param idleTimeout Duration of time after the last request that an instance must wait before the instance is shut down.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeout(@Nullable Output<String> idleTimeout) {
             $.idleTimeout = idleTimeout;
             return this;
         }
 
+        /**
+         * @param idleTimeout Duration of time after the last request that an instance must wait before the instance is shut down.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeout(String idleTimeout) {
             return idleTimeout(Output.of(idleTimeout));
         }
 
+        /**
+         * @param maxInstances Maximum number of instances to create for this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
             $.maxInstances = maxInstances;
             return this;
         }
 
+        /**
+         * @param maxInstances Maximum number of instances to create for this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(Integer maxInstances) {
             return maxInstances(Output.of(maxInstances));
         }

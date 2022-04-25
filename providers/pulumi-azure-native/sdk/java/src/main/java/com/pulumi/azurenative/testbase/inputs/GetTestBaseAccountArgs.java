@@ -19,6 +19,10 @@ public final class GetTestBaseAccountArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetTestBaseAccountArgs extends com.pulumi.resources.InvokeArg
     @Import(name="testBaseAccountName", required=true)
     private String testBaseAccountName;
 
+    /**
+     * @return The resource name of the Test Base Account.
+     * 
+     */
     public String testBaseAccountName() {
         return this.testBaseAccountName;
     }
@@ -59,11 +67,23 @@ public final class GetTestBaseAccountArgs extends com.pulumi.resources.InvokeArg
             $ = new GetTestBaseAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testBaseAccountName(String testBaseAccountName) {
             $.testBaseAccountName = testBaseAccountName;
             return this;

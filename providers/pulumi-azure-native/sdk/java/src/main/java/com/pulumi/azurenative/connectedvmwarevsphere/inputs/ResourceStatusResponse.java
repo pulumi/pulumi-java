@@ -23,6 +23,10 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="lastUpdatedAt", required=true)
     private String lastUpdatedAt;
 
+    /**
+     * @return The last update time for this condition.
+     * 
+     */
     public String lastUpdatedAt() {
         return this.lastUpdatedAt;
     }
@@ -34,6 +38,10 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return A human readable message indicating details about the status.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -45,6 +53,10 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="reason", required=true)
     private String reason;
 
+    /**
+     * @return The reason for the condition&#39;s status.
+     * 
+     */
     public String reason() {
         return this.reason;
     }
@@ -56,6 +68,10 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="severity", required=true)
     private String severity;
 
+    /**
+     * @return Severity with which to treat failures of this type of condition.
+     * 
+     */
     public String severity() {
         return this.severity;
     }
@@ -67,6 +83,10 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the condition.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -78,6 +98,10 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the condition.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -111,31 +135,67 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
             $ = new ResourceStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastUpdatedAt The last update time for this condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedAt(String lastUpdatedAt) {
             $.lastUpdatedAt = lastUpdatedAt;
             return this;
         }
 
+        /**
+         * @param message A human readable message indicating details about the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param reason The reason for the condition&#39;s status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param severity Severity with which to treat failures of this type of condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param status Status of the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param type The type of the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

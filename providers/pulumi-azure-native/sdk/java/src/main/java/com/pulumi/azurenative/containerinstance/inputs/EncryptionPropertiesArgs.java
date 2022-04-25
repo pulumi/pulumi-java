@@ -24,6 +24,10 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="keyName", required=true)
     private Output<String> keyName;
 
+    /**
+     * @return The encryption key name.
+     * 
+     */
     public Output<String> keyName() {
         return this.keyName;
     }
@@ -35,6 +39,10 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="keyVersion", required=true)
     private Output<String> keyVersion;
 
+    /**
+     * @return The encryption key version.
+     * 
+     */
     public Output<String> keyVersion() {
         return this.keyVersion;
     }
@@ -46,6 +54,10 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="vaultBaseUrl", required=true)
     private Output<String> vaultBaseUrl;
 
+    /**
+     * @return The keyvault base url.
+     * 
+     */
     public Output<String> vaultBaseUrl() {
         return this.vaultBaseUrl;
     }
@@ -76,29 +88,65 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new EncryptionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The encryption key name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName The encryption key name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param keyVersion The encryption key version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(Output<String> keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param keyVersion The encryption key version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(String keyVersion) {
             return keyVersion(Output.of(keyVersion));
         }
 
+        /**
+         * @param vaultBaseUrl The keyvault base url.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultBaseUrl(Output<String> vaultBaseUrl) {
             $.vaultBaseUrl = vaultBaseUrl;
             return this;
         }
 
+        /**
+         * @param vaultBaseUrl The keyvault base url.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultBaseUrl(String vaultBaseUrl) {
             return vaultBaseUrl(Output.of(vaultBaseUrl));
         }

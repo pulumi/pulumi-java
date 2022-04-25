@@ -30,6 +30,10 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="annotationId", required=true)
     private String annotationId;
 
+    /**
+     * @return The unique identifier of the annotation. Format: projects/{project}/locations/{location}/conversationDatasets/{dataset}/conversationDataItems/{data_item}/conversationAnnotations/{annotation}
+     * 
+     */
     public String annotationId() {
         return this.annotationId;
     }
@@ -41,6 +45,10 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="answerFeedback", required=true)
     private GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback;
 
+    /**
+     * @return The feedback that the customer has about the answer in `data`.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback() {
         return this.answerFeedback;
     }
@@ -52,6 +60,10 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="articleSuggestion", required=true)
     private GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion;
 
+    /**
+     * @return Agent Assist Article Suggestion data.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion() {
         return this.articleSuggestion;
     }
@@ -63,6 +75,10 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The time at which this annotation was created.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -74,6 +90,10 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="dialogflowInteraction", required=true)
     private GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction;
 
+    /**
+     * @return Dialogflow interaction data.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction() {
         return this.dialogflowInteraction;
     }
@@ -85,6 +105,10 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="endBoundary", required=true)
     private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary;
 
+    /**
+     * @return The boundary in the conversation where the annotation ends, inclusive.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary() {
         return this.endBoundary;
     }
@@ -96,6 +120,10 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="faqAnswer", required=true)
     private GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer;
 
+    /**
+     * @return Agent Assist FAQ answer data.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer() {
         return this.faqAnswer;
     }
@@ -107,6 +135,10 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="smartComposeSuggestion", required=true)
     private GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion;
 
+    /**
+     * @return Agent Assist Smart Compose suggestion data.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion() {
         return this.smartComposeSuggestion;
     }
@@ -118,6 +150,10 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="smartReply", required=true)
     private GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply;
 
+    /**
+     * @return Agent Assist Smart Reply data.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply() {
         return this.smartReply;
     }
@@ -129,6 +165,10 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     @Import(name="startBoundary", required=true)
     private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary;
 
+    /**
+     * @return The boundary in the conversation where the annotation starts, inclusive.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary() {
         return this.startBoundary;
     }
@@ -166,51 +206,111 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
             $ = new GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotationId The unique identifier of the annotation. Format: projects/{project}/locations/{location}/conversationDatasets/{dataset}/conversationDataItems/{data_item}/conversationAnnotations/{annotation}
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationId(String annotationId) {
             $.annotationId = annotationId;
             return this;
         }
 
+        /**
+         * @param answerFeedback The feedback that the customer has about the answer in `data`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder answerFeedback(GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback) {
             $.answerFeedback = answerFeedback;
             return this;
         }
 
+        /**
+         * @param articleSuggestion Agent Assist Article Suggestion data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder articleSuggestion(GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion) {
             $.articleSuggestion = articleSuggestion;
             return this;
         }
 
+        /**
+         * @param createTime The time at which this annotation was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param dialogflowInteraction Dialogflow interaction data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dialogflowInteraction(GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction) {
             $.dialogflowInteraction = dialogflowInteraction;
             return this;
         }
 
+        /**
+         * @param endBoundary The boundary in the conversation where the annotation ends, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary) {
             $.endBoundary = endBoundary;
             return this;
         }
 
+        /**
+         * @param faqAnswer Agent Assist FAQ answer data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder faqAnswer(GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer) {
             $.faqAnswer = faqAnswer;
             return this;
         }
 
+        /**
+         * @param smartComposeSuggestion Agent Assist Smart Compose suggestion data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smartComposeSuggestion(GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion) {
             $.smartComposeSuggestion = smartComposeSuggestion;
             return this;
         }
 
+        /**
+         * @param smartReply Agent Assist Smart Reply data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smartReply(GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply) {
             $.smartReply = smartReply;
             return this;
         }
 
+        /**
+         * @param startBoundary The boundary in the conversation where the annotation starts, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
             $.startBoundary = startBoundary;
             return this;

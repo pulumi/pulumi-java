@@ -25,6 +25,10 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The data integration description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kmsKey", required=true)
     private Output<String> kmsKey;
 
+    /**
+     * @return The KMS key of the data integration.
+     * 
+     */
     public Output<String> kmsKey() {
         return this.kmsKey;
     }
@@ -47,6 +55,10 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the data integration.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scheduleConfig", required=true)
     private Output<DataIntegrationScheduleConfigArgs> scheduleConfig;
 
+    /**
+     * @return The name of the data and how often it should be pulled from the source.
+     * 
+     */
     public Output<DataIntegrationScheduleConfigArgs> scheduleConfig() {
         return this.scheduleConfig;
     }
@@ -69,6 +85,10 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourceURI", required=true)
     private Output<String> sourceURI;
 
+    /**
+     * @return The URI of the data source.
+     * 
+     */
     public Output<String> sourceURI() {
         return this.sourceURI;
     }
@@ -80,6 +100,10 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<List<DataIntegrationTagArgs>> tags;
 
+    /**
+     * @return The tags (keys and values) associated with the data integration.
+     * 
+     */
     public Optional<Output<List<DataIntegrationTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,60 +137,138 @@ public final class DataIntegrationArgs extends com.pulumi.resources.ResourceArgs
             $ = new DataIntegrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The data integration description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The data integration description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param kmsKey The KMS key of the data integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(Output<String> kmsKey) {
             $.kmsKey = kmsKey;
             return this;
         }
 
+        /**
+         * @param kmsKey The KMS key of the data integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(String kmsKey) {
             return kmsKey(Output.of(kmsKey));
         }
 
+        /**
+         * @param name The name of the data integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the data integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param scheduleConfig The name of the data and how often it should be pulled from the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleConfig(Output<DataIntegrationScheduleConfigArgs> scheduleConfig) {
             $.scheduleConfig = scheduleConfig;
             return this;
         }
 
+        /**
+         * @param scheduleConfig The name of the data and how often it should be pulled from the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleConfig(DataIntegrationScheduleConfigArgs scheduleConfig) {
             return scheduleConfig(Output.of(scheduleConfig));
         }
 
+        /**
+         * @param sourceURI The URI of the data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceURI(Output<String> sourceURI) {
             $.sourceURI = sourceURI;
             return this;
         }
 
+        /**
+         * @param sourceURI The URI of the data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceURI(String sourceURI) {
             return sourceURI(Output.of(sourceURI));
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the data integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DataIntegrationTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the data integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DataIntegrationTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the data integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DataIntegrationTagArgs... tags) {
             return tags(List.of(tags));
         }

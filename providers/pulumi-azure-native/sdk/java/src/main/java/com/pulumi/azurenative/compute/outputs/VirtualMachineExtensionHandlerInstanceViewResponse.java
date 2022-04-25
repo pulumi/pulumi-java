@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualMachineExtensionHandlerInstanceViewResponse {
     /**
-     * The extension handler status.
+     * @return The extension handler status.
      * 
      */
     private final @Nullable InstanceViewStatusResponse status;
     /**
-     * Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+     * @return Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
      * 
      */
     private final @Nullable String type;
     /**
-     * Specifies the version of the script handler.
+     * @return Specifies the version of the script handler.
      * 
      */
     private final @Nullable String typeHandlerVersion;
@@ -39,23 +39,23 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse {
     }
 
     /**
-     * The extension handler status.
+     * @return The extension handler status.
      * 
-    */
+     */
     public Optional<InstanceViewStatusResponse> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+     * @return Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * Specifies the version of the script handler.
+     * @return Specifies the version of the script handler.
      * 
-    */
+     */
     public Optional<String> typeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }

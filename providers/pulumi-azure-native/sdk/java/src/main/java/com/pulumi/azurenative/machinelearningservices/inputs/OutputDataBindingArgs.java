@@ -24,6 +24,10 @@ public final class OutputDataBindingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="datastoreId")
     private @Nullable Output<String> datastoreId;
 
+    /**
+     * @return ARM resource ID of the datastore where the data output will be stored.
+     * 
+     */
     public Optional<Output<String>> datastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
@@ -35,6 +39,10 @@ public final class OutputDataBindingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="mode")
     private @Nullable Output<Either<String,DataBindingMode>> mode;
 
+    /**
+     * @return Mechanism for data movement to datastore.
+     * 
+     */
     public Optional<Output<Either<String,DataBindingMode>>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -46,6 +54,10 @@ public final class OutputDataBindingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="pathOnCompute")
     private @Nullable Output<String> pathOnCompute;
 
+    /**
+     * @return Location of data inside the container process.
+     * 
+     */
     public Optional<Output<String>> pathOnCompute() {
         return Optional.ofNullable(this.pathOnCompute);
     }
@@ -57,6 +69,10 @@ public final class OutputDataBindingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="pathOnDatastore")
     private @Nullable Output<String> pathOnDatastore;
 
+    /**
+     * @return Path within the datastore to the data.
+     * 
+     */
     public Optional<Output<String>> pathOnDatastore() {
         return Optional.ofNullable(this.pathOnDatastore);
     }
@@ -88,46 +104,106 @@ public final class OutputDataBindingArgs extends com.pulumi.resources.ResourceAr
             $ = new OutputDataBindingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datastoreId ARM resource ID of the datastore where the data output will be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreId(@Nullable Output<String> datastoreId) {
             $.datastoreId = datastoreId;
             return this;
         }
 
+        /**
+         * @param datastoreId ARM resource ID of the datastore where the data output will be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreId(String datastoreId) {
             return datastoreId(Output.of(datastoreId));
         }
 
+        /**
+         * @param mode Mechanism for data movement to datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<Either<String,DataBindingMode>> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Mechanism for data movement to datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Either<String,DataBindingMode> mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param mode Mechanism for data movement to datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Either.ofLeft(mode));
         }
 
+        /**
+         * @param mode Mechanism for data movement to datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(DataBindingMode mode) {
             return mode(Either.ofRight(mode));
         }
 
+        /**
+         * @param pathOnCompute Location of data inside the container process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathOnCompute(@Nullable Output<String> pathOnCompute) {
             $.pathOnCompute = pathOnCompute;
             return this;
         }
 
+        /**
+         * @param pathOnCompute Location of data inside the container process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathOnCompute(String pathOnCompute) {
             return pathOnCompute(Output.of(pathOnCompute));
         }
 
+        /**
+         * @param pathOnDatastore Path within the datastore to the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathOnDatastore(@Nullable Output<String> pathOnDatastore) {
             $.pathOnDatastore = pathOnDatastore;
             return this;
         }
 
+        /**
+         * @param pathOnDatastore Path within the datastore to the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathOnDatastore(String pathOnDatastore) {
             return pathOnDatastore(Output.of(pathOnDatastore));
         }

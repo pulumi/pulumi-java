@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobExecutionsRolloutConfigProperties {
     /**
-     * The rate of increase for a job rollout. This parameter allows you to define an exponential rate for a job rollout.
+     * @return The rate of increase for a job rollout. This parameter allows you to define an exponential rate for a job rollout.
      * 
      */
     private final @Nullable JobTemplateExponentialRolloutRate exponentialRolloutRate;
     /**
-     * The maximum number of things that will be notified of a pending job, per minute. This parameter allows you to create a staged rollout.
+     * @return The maximum number of things that will be notified of a pending job, per minute. This parameter allows you to create a staged rollout.
      * 
      */
     private final @Nullable Integer maximumPerMinute;
@@ -32,16 +32,16 @@ public final class JobExecutionsRolloutConfigProperties {
     }
 
     /**
-     * The rate of increase for a job rollout. This parameter allows you to define an exponential rate for a job rollout.
+     * @return The rate of increase for a job rollout. This parameter allows you to define an exponential rate for a job rollout.
      * 
-    */
+     */
     public Optional<JobTemplateExponentialRolloutRate> exponentialRolloutRate() {
         return Optional.ofNullable(this.exponentialRolloutRate);
     }
     /**
-     * The maximum number of things that will be notified of a pending job, per minute. This parameter allows you to create a staged rollout.
+     * @return The maximum number of things that will be notified of a pending job, per minute. This parameter allows you to create a staged rollout.
      * 
-    */
+     */
     public Optional<Integer> maximumPerMinute() {
         return Optional.ofNullable(this.maximumPerMinute);
     }

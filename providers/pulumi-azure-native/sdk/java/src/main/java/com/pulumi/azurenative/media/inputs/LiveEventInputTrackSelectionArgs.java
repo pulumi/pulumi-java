@@ -26,6 +26,10 @@ public final class LiveEventInputTrackSelectionArgs extends com.pulumi.resources
     @Import(name="operation")
     private @Nullable Output<String> operation;
 
+    /**
+     * @return Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
+     * 
+     */
     public Optional<Output<String>> operation() {
         return Optional.ofNullable(this.operation);
     }
@@ -37,6 +41,10 @@ public final class LiveEventInputTrackSelectionArgs extends com.pulumi.resources
     @Import(name="property")
     private @Nullable Output<String> property;
 
+    /**
+     * @return Property name to select. This property is reserved for future use, any value set on this property will be ignored.
+     * 
+     */
     public Optional<Output<String>> property() {
         return Optional.ofNullable(this.property);
     }
@@ -48,6 +56,10 @@ public final class LiveEventInputTrackSelectionArgs extends com.pulumi.resources
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Property value to select. This property is reserved for future use, any value set on this property will be ignored.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -78,29 +90,65 @@ public final class LiveEventInputTrackSelectionArgs extends com.pulumi.resources
             $ = new LiveEventInputTrackSelectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operation Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(@Nullable Output<String> operation) {
             $.operation = operation;
             return this;
         }
 
+        /**
+         * @param operation Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(String operation) {
             return operation(Output.of(operation));
         }
 
+        /**
+         * @param property Property name to select. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(@Nullable Output<String> property) {
             $.property = property;
             return this;
         }
 
+        /**
+         * @param property Property name to select. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(String property) {
             return property(Output.of(property));
         }
 
+        /**
+         * @param value Property value to select. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Property value to select. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

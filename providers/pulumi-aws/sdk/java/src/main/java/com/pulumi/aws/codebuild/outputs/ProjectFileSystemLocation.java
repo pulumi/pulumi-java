@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProjectFileSystemLocation {
     /**
-     * The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the identifier in all capital letters to CODEBUILD\_. For example, if you specify my-efs for identifier, a new environment variable is create named CODEBUILD_MY-EFS.
+     * @return The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the identifier in all capital letters to CODEBUILD\_. For example, if you specify my-efs for identifier, a new environment variable is create named CODEBUILD_MY-EFS.
      * 
      */
     private final @Nullable String identifier;
     /**
-     * A string that specifies the location of the file system created by Amazon EFS. Its format is `efs-dns-name:/directory-path`.
+     * @return A string that specifies the location of the file system created by Amazon EFS. Its format is `efs-dns-name:/directory-path`.
      * 
      */
     private final @Nullable String location;
     /**
-     * The mount options for a file system created by AWS EFS.
+     * @return The mount options for a file system created by AWS EFS.
      * 
      */
     private final @Nullable String mountOptions;
     /**
-     * The location in the container where you mount the file system.
+     * @return The location in the container where you mount the file system.
      * 
      */
     private final @Nullable String mountPoint;
     /**
-     * Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+     * @return Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
      * 
      */
     private final @Nullable String type;
@@ -52,37 +52,37 @@ public final class ProjectFileSystemLocation {
     }
 
     /**
-     * The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the identifier in all capital letters to CODEBUILD\_. For example, if you specify my-efs for identifier, a new environment variable is create named CODEBUILD_MY-EFS.
+     * @return The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the identifier in all capital letters to CODEBUILD\_. For example, if you specify my-efs for identifier, a new environment variable is create named CODEBUILD_MY-EFS.
      * 
-    */
+     */
     public Optional<String> identifier() {
         return Optional.ofNullable(this.identifier);
     }
     /**
-     * A string that specifies the location of the file system created by Amazon EFS. Its format is `efs-dns-name:/directory-path`.
+     * @return A string that specifies the location of the file system created by Amazon EFS. Its format is `efs-dns-name:/directory-path`.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The mount options for a file system created by AWS EFS.
+     * @return The mount options for a file system created by AWS EFS.
      * 
-    */
+     */
     public Optional<String> mountOptions() {
         return Optional.ofNullable(this.mountOptions);
     }
     /**
-     * The location in the container where you mount the file system.
+     * @return The location in the container where you mount the file system.
      * 
-    */
+     */
     public Optional<String> mountPoint() {
         return Optional.ofNullable(this.mountPoint);
     }
     /**
-     * Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
+     * @return Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

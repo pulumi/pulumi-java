@@ -19,6 +19,10 @@ public final class ListIngestionSettingTokensArgs extends com.pulumi.resources.I
     @Import(name="ingestionSettingName", required=true)
     private String ingestionSettingName;
 
+    /**
+     * @return Name of the ingestion setting
+     * 
+     */
     public String ingestionSettingName() {
         return this.ingestionSettingName;
     }
@@ -47,6 +51,12 @@ public final class ListIngestionSettingTokensArgs extends com.pulumi.resources.I
             $ = new ListIngestionSettingTokensArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ingestionSettingName Name of the ingestion setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestionSettingName(String ingestionSettingName) {
             $.ingestionSettingName = ingestionSettingName;
             return this;

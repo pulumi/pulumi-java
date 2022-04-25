@@ -25,6 +25,10 @@ public final class BoundingPolyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="normalizedVertices", required=true)
     private List<NormalizedVertexResponse> normalizedVertices;
 
+    /**
+     * @return The bounding polygon normalized vertices.
+     * 
+     */
     public List<NormalizedVertexResponse> normalizedVertices() {
         return this.normalizedVertices;
     }
@@ -36,6 +40,10 @@ public final class BoundingPolyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="vertices", required=true)
     private List<VertexResponse> vertices;
 
+    /**
+     * @return The bounding polygon vertices.
+     * 
+     */
     public List<VertexResponse> vertices() {
         return this.vertices;
     }
@@ -65,20 +73,44 @@ public final class BoundingPolyResponse extends com.pulumi.resources.InvokeArgs 
             $ = new BoundingPolyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param normalizedVertices The bounding polygon normalized vertices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder normalizedVertices(List<NormalizedVertexResponse> normalizedVertices) {
             $.normalizedVertices = normalizedVertices;
             return this;
         }
 
+        /**
+         * @param normalizedVertices The bounding polygon normalized vertices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder normalizedVertices(NormalizedVertexResponse... normalizedVertices) {
             return normalizedVertices(List.of(normalizedVertices));
         }
 
+        /**
+         * @param vertices The bounding polygon vertices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vertices(List<VertexResponse> vertices) {
             $.vertices = vertices;
             return this;
         }
 
+        /**
+         * @param vertices The bounding polygon vertices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vertices(VertexResponse... vertices) {
             return vertices(List.of(vertices));
         }

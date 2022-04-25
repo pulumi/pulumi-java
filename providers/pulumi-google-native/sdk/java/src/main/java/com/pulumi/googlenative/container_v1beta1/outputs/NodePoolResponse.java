@@ -20,82 +20,82 @@ import java.util.Objects;
 @CustomType
 public final class NodePoolResponse {
     /**
-     * Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is present.
+     * @return Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is present.
      * 
      */
     private final NodePoolAutoscalingResponse autoscaling;
     /**
-     * Which conditions caused the current node pool state.
+     * @return Which conditions caused the current node pool state.
      * 
      */
     private final List<StatusConditionResponse> conditions;
     /**
-     * The node configuration of the pool.
+     * @return The node configuration of the pool.
      * 
      */
     private final NodeConfigResponse config;
     /**
-     * The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.
+     * @return The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.
      * 
      */
     private final Integer initialNodeCount;
     /**
-     * [Output only] The resource URLs of the [managed instance groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances) associated with this node pool.
+     * @return [Output only] The resource URLs of the [managed instance groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances) associated with this node pool.
      * 
      */
     private final List<String> instanceGroupUrls;
     /**
-     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes should be located. If this value is unspecified during node pool creation, the [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will be used, instead. Warning: changing node pool locations will result in nodes being added and/or removed.
+     * @return The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes should be located. If this value is unspecified during node pool creation, the [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will be used, instead. Warning: changing node pool locations will result in nodes being added and/or removed.
      * 
      */
     private final List<String> locations;
     /**
-     * NodeManagement configuration for this NodePool.
+     * @return NodeManagement configuration for this NodePool.
      * 
      */
     private final NodeManagementResponse management;
     /**
-     * The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * @return The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
     private final MaxPodsConstraintResponse maxPodsConstraint;
     /**
-     * The name of the node pool.
+     * @return The name of the node pool.
      * 
      */
     private final String name;
     /**
-     * Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults.
+     * @return Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults.
      * 
      */
     private final NodeNetworkConfigResponse networkConfig;
     /**
-     * Specifies the node placement policy.
+     * @return Specifies the node placement policy.
      * 
      */
     private final PlacementPolicyResponse placementPolicy;
     /**
-     * [Output only] The pod CIDR block size per node in this node pool.
+     * @return [Output only] The pod CIDR block size per node in this node pool.
      * 
      */
     private final Integer podIpv4CidrSize;
     /**
-     * [Output only] Server-defined URL for the resource.
+     * @return [Output only] Server-defined URL for the resource.
      * 
      */
     private final String selfLink;
     /**
-     * [Output only] The status of the nodes in this pool instance.
+     * @return [Output only] The status of the nodes in this pool instance.
      * 
      */
     private final String status;
     /**
-     * Upgrade settings control disruption and speed of the upgrade.
+     * @return Upgrade settings control disruption and speed of the upgrade.
      * 
      */
     private final UpgradeSettingsResponse upgradeSettings;
     /**
-     * The version of the Kubernetes of this node.
+     * @return The version of the Kubernetes of this node.
      * 
      */
     private final String version;
@@ -137,114 +137,114 @@ public final class NodePoolResponse {
     }
 
     /**
-     * Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is present.
+     * @return Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is present.
      * 
-    */
+     */
     public NodePoolAutoscalingResponse autoscaling() {
         return this.autoscaling;
     }
     /**
-     * Which conditions caused the current node pool state.
+     * @return Which conditions caused the current node pool state.
      * 
-    */
+     */
     public List<StatusConditionResponse> conditions() {
         return this.conditions;
     }
     /**
-     * The node configuration of the pool.
+     * @return The node configuration of the pool.
      * 
-    */
+     */
     public NodeConfigResponse config() {
         return this.config;
     }
     /**
-     * The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.
+     * @return The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.
      * 
-    */
+     */
     public Integer initialNodeCount() {
         return this.initialNodeCount;
     }
     /**
-     * [Output only] The resource URLs of the [managed instance groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances) associated with this node pool.
+     * @return [Output only] The resource URLs of the [managed instance groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances) associated with this node pool.
      * 
-    */
+     */
     public List<String> instanceGroupUrls() {
         return this.instanceGroupUrls;
     }
     /**
-     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes should be located. If this value is unspecified during node pool creation, the [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will be used, instead. Warning: changing node pool locations will result in nodes being added and/or removed.
+     * @return The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes should be located. If this value is unspecified during node pool creation, the [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will be used, instead. Warning: changing node pool locations will result in nodes being added and/or removed.
      * 
-    */
+     */
     public List<String> locations() {
         return this.locations;
     }
     /**
-     * NodeManagement configuration for this NodePool.
+     * @return NodeManagement configuration for this NodePool.
      * 
-    */
+     */
     public NodeManagementResponse management() {
         return this.management;
     }
     /**
-     * The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * @return The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
-    */
+     */
     public MaxPodsConstraintResponse maxPodsConstraint() {
         return this.maxPodsConstraint;
     }
     /**
-     * The name of the node pool.
+     * @return The name of the node pool.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults.
+     * @return Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults.
      * 
-    */
+     */
     public NodeNetworkConfigResponse networkConfig() {
         return this.networkConfig;
     }
     /**
-     * Specifies the node placement policy.
+     * @return Specifies the node placement policy.
      * 
-    */
+     */
     public PlacementPolicyResponse placementPolicy() {
         return this.placementPolicy;
     }
     /**
-     * [Output only] The pod CIDR block size per node in this node pool.
+     * @return [Output only] The pod CIDR block size per node in this node pool.
      * 
-    */
+     */
     public Integer podIpv4CidrSize() {
         return this.podIpv4CidrSize;
     }
     /**
-     * [Output only] Server-defined URL for the resource.
+     * @return [Output only] Server-defined URL for the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * [Output only] The status of the nodes in this pool instance.
+     * @return [Output only] The status of the nodes in this pool instance.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Upgrade settings control disruption and speed of the upgrade.
+     * @return Upgrade settings control disruption and speed of the upgrade.
      * 
-    */
+     */
     public UpgradeSettingsResponse upgradeSettings() {
         return this.upgradeSettings;
     }
     /**
-     * The version of the Kubernetes of this node.
+     * @return The version of the Kubernetes of this node.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

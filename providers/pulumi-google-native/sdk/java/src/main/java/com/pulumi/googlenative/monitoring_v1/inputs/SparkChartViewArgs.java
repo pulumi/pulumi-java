@@ -27,6 +27,10 @@ public final class SparkChartViewArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="minAlignmentPeriod")
     private @Nullable Output<String> minAlignmentPeriod;
 
+    /**
+     * @return The lower bound on data point frequency in the chart implemented by specifying the minimum alignment period to use in a time series query. For example, if the data is published once every 10 minutes it would not make sense to fetch and align data at one minute intervals. This field is optional and exists only as a hint.
+     * 
+     */
     public Optional<Output<String>> minAlignmentPeriod() {
         return Optional.ofNullable(this.minAlignmentPeriod);
     }
@@ -38,6 +42,10 @@ public final class SparkChartViewArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sparkChartType", required=true)
     private Output<SparkChartViewSparkChartType> sparkChartType;
 
+    /**
+     * @return The type of sparkchart to show in this chartView.
+     * 
+     */
     public Output<SparkChartViewSparkChartType> sparkChartType() {
         return this.sparkChartType;
     }
@@ -67,20 +75,44 @@ public final class SparkChartViewArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SparkChartViewArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minAlignmentPeriod The lower bound on data point frequency in the chart implemented by specifying the minimum alignment period to use in a time series query. For example, if the data is published once every 10 minutes it would not make sense to fetch and align data at one minute intervals. This field is optional and exists only as a hint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAlignmentPeriod(@Nullable Output<String> minAlignmentPeriod) {
             $.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
 
+        /**
+         * @param minAlignmentPeriod The lower bound on data point frequency in the chart implemented by specifying the minimum alignment period to use in a time series query. For example, if the data is published once every 10 minutes it would not make sense to fetch and align data at one minute intervals. This field is optional and exists only as a hint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAlignmentPeriod(String minAlignmentPeriod) {
             return minAlignmentPeriod(Output.of(minAlignmentPeriod));
         }
 
+        /**
+         * @param sparkChartType The type of sparkchart to show in this chartView.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkChartType(Output<SparkChartViewSparkChartType> sparkChartType) {
             $.sparkChartType = sparkChartType;
             return this;
         }
 
+        /**
+         * @param sparkChartType The type of sparkchart to show in this chartView.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkChartType(SparkChartViewSparkChartType sparkChartType) {
             return sparkChartType(Output.of(sparkChartType));
         }

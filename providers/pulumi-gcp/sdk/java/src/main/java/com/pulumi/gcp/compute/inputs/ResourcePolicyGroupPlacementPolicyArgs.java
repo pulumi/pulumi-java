@@ -24,6 +24,11 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
     @Import(name="availabilityDomainCount")
     private @Nullable Output<Integer> availabilityDomainCount;
 
+    /**
+     * @return The number of availability domains instances will be spread across. If two instances are in different
+     * availability domain, they will not be put in the same low latency network
+     * 
+     */
     public Optional<Output<Integer>> availabilityDomainCount() {
         return Optional.ofNullable(this.availabilityDomainCount);
     }
@@ -39,6 +44,14 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
     @Import(name="collocation")
     private @Nullable Output<String> collocation;
 
+    /**
+     * @return Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
+     * Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
+     * with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
+     * attached.
+     * Possible values are `COLLOCATED`.
+     * 
+     */
     public Optional<Output<String>> collocation() {
         return Optional.ofNullable(this.collocation);
     }
@@ -50,6 +63,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
     @Import(name="vmCount")
     private @Nullable Output<Integer> vmCount;
 
+    /**
+     * @return Number of vms in this placement group.
+     * 
+     */
     public Optional<Output<Integer>> vmCount() {
         return Optional.ofNullable(this.vmCount);
     }
@@ -80,29 +97,75 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
             $ = new ResourcePolicyGroupPlacementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityDomainCount The number of availability domains instances will be spread across. If two instances are in different
+         * availability domain, they will not be put in the same low latency network
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityDomainCount(@Nullable Output<Integer> availabilityDomainCount) {
             $.availabilityDomainCount = availabilityDomainCount;
             return this;
         }
 
+        /**
+         * @param availabilityDomainCount The number of availability domains instances will be spread across. If two instances are in different
+         * availability domain, they will not be put in the same low latency network
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityDomainCount(Integer availabilityDomainCount) {
             return availabilityDomainCount(Output.of(availabilityDomainCount));
         }
 
+        /**
+         * @param collocation Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
+         * Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
+         * with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
+         * attached.
+         * Possible values are `COLLOCATED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collocation(@Nullable Output<String> collocation) {
             $.collocation = collocation;
             return this;
         }
 
+        /**
+         * @param collocation Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
+         * Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
+         * with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
+         * attached.
+         * Possible values are `COLLOCATED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collocation(String collocation) {
             return collocation(Output.of(collocation));
         }
 
+        /**
+         * @param vmCount Number of vms in this placement group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmCount(@Nullable Output<Integer> vmCount) {
             $.vmCount = vmCount;
             return this;
         }
 
+        /**
+         * @param vmCount Number of vms in this placement group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmCount(Integer vmCount) {
             return vmCount(Output.of(vmCount));
         }

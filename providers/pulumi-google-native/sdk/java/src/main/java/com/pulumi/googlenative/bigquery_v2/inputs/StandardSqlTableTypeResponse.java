@@ -24,6 +24,10 @@ public final class StandardSqlTableTypeResponse extends com.pulumi.resources.Inv
     @Import(name="columns", required=true)
     private List<StandardSqlFieldResponse> columns;
 
+    /**
+     * @return The columns in this table type
+     * 
+     */
     public List<StandardSqlFieldResponse> columns() {
         return this.columns;
     }
@@ -52,11 +56,23 @@ public final class StandardSqlTableTypeResponse extends com.pulumi.resources.Inv
             $ = new StandardSqlTableTypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns The columns in this table type
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(List<StandardSqlFieldResponse> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns The columns in this table type
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(StandardSqlFieldResponse... columns) {
             return columns(List.of(columns));
         }

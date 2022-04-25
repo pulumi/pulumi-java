@@ -15,25 +15,25 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PreventionJobTriggerInspectJobStorageConfig {
     /**
-     * Options defining BigQuery table and row identifiers.
+     * @return Options defining BigQuery table and row identifiers.
      * Structure is documented below.
      * 
      */
     private final @Nullable PreventionJobTriggerInspectJobStorageConfigBigQueryOptions bigQueryOptions;
     /**
-     * Options defining a file or a set of files within a Google Cloud Storage bucket.
+     * @return Options defining a file or a set of files within a Google Cloud Storage bucket.
      * Structure is documented below.
      * 
      */
     private final @Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions cloudStorageOptions;
     /**
-     * Options defining a data set within Google Cloud Datastore.
+     * @return Options defining a data set within Google Cloud Datastore.
      * Structure is documented below.
      * 
      */
     private final @Nullable PreventionJobTriggerInspectJobStorageConfigDatastoreOptions datastoreOptions;
     /**
-     * Information on where to inspect
+     * @return Information on where to inspect
      * Structure is documented below.
      * 
      */
@@ -52,34 +52,34 @@ public final class PreventionJobTriggerInspectJobStorageConfig {
     }
 
     /**
-     * Options defining BigQuery table and row identifiers.
+     * @return Options defining BigQuery table and row identifiers.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionJobTriggerInspectJobStorageConfigBigQueryOptions> bigQueryOptions() {
         return Optional.ofNullable(this.bigQueryOptions);
     }
     /**
-     * Options defining a file or a set of files within a Google Cloud Storage bucket.
+     * @return Options defining a file or a set of files within a Google Cloud Storage bucket.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions> cloudStorageOptions() {
         return Optional.ofNullable(this.cloudStorageOptions);
     }
     /**
-     * Options defining a data set within Google Cloud Datastore.
+     * @return Options defining a data set within Google Cloud Datastore.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionJobTriggerInspectJobStorageConfigDatastoreOptions> datastoreOptions() {
         return Optional.ofNullable(this.datastoreOptions);
     }
     /**
-     * Information on where to inspect
+     * @return Information on where to inspect
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionJobTriggerInspectJobStorageConfigTimespanConfig> timespanConfig() {
         return Optional.ofNullable(this.timespanConfig);
     }

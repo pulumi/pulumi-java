@@ -26,6 +26,10 @@ public final class MagneticStoreWritePropertiesProperties extends com.pulumi.res
     @Import(name="enableMagneticStoreWrites", required=true)
     private Boolean enableMagneticStoreWrites;
 
+    /**
+     * @return Boolean flag indicating whether magnetic store writes are enabled.
+     * 
+     */
     public Boolean enableMagneticStoreWrites() {
         return this.enableMagneticStoreWrites;
     }
@@ -37,6 +41,10 @@ public final class MagneticStoreWritePropertiesProperties extends com.pulumi.res
     @Import(name="magneticStoreRejectedDataLocation")
     private @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation;
 
+    /**
+     * @return Location to store information about records that were asynchronously rejected during magnetic store writes.
+     * 
+     */
     public Optional<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties> magneticStoreRejectedDataLocation() {
         return Optional.ofNullable(this.magneticStoreRejectedDataLocation);
     }
@@ -66,11 +74,23 @@ public final class MagneticStoreWritePropertiesProperties extends com.pulumi.res
             $ = new MagneticStoreWritePropertiesProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableMagneticStoreWrites Boolean flag indicating whether magnetic store writes are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMagneticStoreWrites(Boolean enableMagneticStoreWrites) {
             $.enableMagneticStoreWrites = enableMagneticStoreWrites;
             return this;
         }
 
+        /**
+         * @param magneticStoreRejectedDataLocation Location to store information about records that were asynchronously rejected during magnetic store writes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder magneticStoreRejectedDataLocation(@Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation) {
             $.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
             return this;

@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class GetDataCollectorResult {
     /**
-     * The time at which the data collector was created in milliseconds since the epoch.
+     * @return The time at which the data collector was created in milliseconds since the epoch.
      * 
      */
     private final String createdAt;
     /**
-     * A description of the data collector.
+     * @return A description of the data collector.
      * 
      */
     private final String description;
     /**
-     * The time at which the Data Collector was last updated in milliseconds since the epoch.
+     * @return The time at which the Data Collector was last updated in milliseconds since the epoch.
      * 
      */
     private final String lastModifiedAt;
     /**
-     * ID of the data collector. Must begin with `dc_`.
+     * @return ID of the data collector. Must begin with `dc_`.
      * 
      */
     private final String name;
     /**
-     * Immutable. The type of data this data collector will collect.
+     * @return Immutable. The type of data this data collector will collect.
      * 
      */
     private final String type;
@@ -50,37 +50,37 @@ public final class GetDataCollectorResult {
     }
 
     /**
-     * The time at which the data collector was created in milliseconds since the epoch.
+     * @return The time at which the data collector was created in milliseconds since the epoch.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * A description of the data collector.
+     * @return A description of the data collector.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The time at which the Data Collector was last updated in milliseconds since the epoch.
+     * @return The time at which the Data Collector was last updated in milliseconds since the epoch.
      * 
-    */
+     */
     public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
-     * ID of the data collector. Must begin with `dc_`.
+     * @return ID of the data collector. Must begin with `dc_`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Immutable. The type of data this data collector will collect.
+     * @return Immutable. The type of data this data collector will collect.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

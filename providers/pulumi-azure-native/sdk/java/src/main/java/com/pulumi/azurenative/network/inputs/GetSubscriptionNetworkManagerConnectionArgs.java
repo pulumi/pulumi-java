@@ -19,6 +19,10 @@ public final class GetSubscriptionNetworkManagerConnectionArgs extends com.pulum
     @Import(name="networkManagerConnectionName", required=true)
     private String networkManagerConnectionName;
 
+    /**
+     * @return Name for the network manager connection.
+     * 
+     */
     public String networkManagerConnectionName() {
         return this.networkManagerConnectionName;
     }
@@ -47,6 +51,12 @@ public final class GetSubscriptionNetworkManagerConnectionArgs extends com.pulum
             $ = new GetSubscriptionNetworkManagerConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkManagerConnectionName Name for the network manager connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerConnectionName(String networkManagerConnectionName) {
             $.networkManagerConnectionName = networkManagerConnectionName;
             return this;

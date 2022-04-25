@@ -26,6 +26,10 @@ public final class TrustPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The value that indicates whether the policy is enabled or not.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -37,6 +41,10 @@ public final class TrustPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of trust policy.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -66,11 +74,23 @@ public final class TrustPolicyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TrustPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status The value that indicates whether the policy is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param type The type of trust policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

@@ -23,6 +23,10 @@ public final class ManagedPrometheusConfigResponse extends com.pulumi.resources.
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Enable Managed Collection.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class ManagedPrometheusConfigResponse extends com.pulumi.resources.
             $ = new ManagedPrometheusConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Enable Managed Collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

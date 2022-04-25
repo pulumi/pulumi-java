@@ -23,6 +23,10 @@ public final class OSPolicyResourceFileRemoteResponse extends com.pulumi.resourc
     @Import(name="sha256Checksum", required=true)
     private String sha256Checksum;
 
+    /**
+     * @return SHA256 checksum of the remote file.
+     * 
+     */
     public String sha256Checksum() {
         return this.sha256Checksum;
     }
@@ -34,6 +38,10 @@ public final class OSPolicyResourceFileRemoteResponse extends com.pulumi.resourc
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -63,11 +71,23 @@ public final class OSPolicyResourceFileRemoteResponse extends com.pulumi.resourc
             $ = new OSPolicyResourceFileRemoteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sha256Checksum SHA256 checksum of the remote file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha256Checksum(String sha256Checksum) {
             $.sha256Checksum = sha256Checksum;
             return this;
         }
 
+        /**
+         * @param uri URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

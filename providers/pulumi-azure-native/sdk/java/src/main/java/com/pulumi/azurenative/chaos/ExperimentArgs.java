@@ -25,6 +25,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="experimentName")
     private @Nullable Output<String> experimentName;
 
+    /**
+     * @return String that represents a Experiment resource name.
+     * 
+     */
     public Optional<Output<String>> experimentName() {
         return Optional.ofNullable(this.experimentName);
     }
@@ -36,6 +40,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<ResourceIdentityArgs> identity;
 
+    /**
+     * @return The identity of the experiment resource.
+     * 
+     */
     public Optional<Output<ResourceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -47,6 +55,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -58,6 +70,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<ExperimentPropertiesArgs> properties;
 
+    /**
+     * @return The properties of the experiment resource.
+     * 
+     */
     public Output<ExperimentPropertiesArgs> properties() {
         return this.properties;
     }
@@ -69,6 +85,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return String that represents an Azure resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -80,6 +100,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,56 +137,128 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ExperimentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param experimentName String that represents a Experiment resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentName(@Nullable Output<String> experimentName) {
             $.experimentName = experimentName;
             return this;
         }
 
+        /**
+         * @param experimentName String that represents a Experiment resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentName(String experimentName) {
             return experimentName(Output.of(experimentName));
         }
 
+        /**
+         * @param identity The identity of the experiment resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the experiment resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ResourceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties The properties of the experiment resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<ExperimentPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The properties of the experiment resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ExperimentPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName String that represents an Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName String that represents an Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

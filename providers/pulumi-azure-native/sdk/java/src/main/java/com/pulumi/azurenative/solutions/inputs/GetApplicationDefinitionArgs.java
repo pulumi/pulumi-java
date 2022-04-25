@@ -19,6 +19,10 @@ public final class GetApplicationDefinitionArgs extends com.pulumi.resources.Inv
     @Import(name="applicationDefinitionName", required=true)
     private String applicationDefinitionName;
 
+    /**
+     * @return The name of the managed application definition.
+     * 
+     */
     public String applicationDefinitionName() {
         return this.applicationDefinitionName;
     }
@@ -30,6 +34,10 @@ public final class GetApplicationDefinitionArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetApplicationDefinitionArgs extends com.pulumi.resources.Inv
             $ = new GetApplicationDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationDefinitionName The name of the managed application definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationDefinitionName(String applicationDefinitionName) {
             $.applicationDefinitionName = applicationDefinitionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

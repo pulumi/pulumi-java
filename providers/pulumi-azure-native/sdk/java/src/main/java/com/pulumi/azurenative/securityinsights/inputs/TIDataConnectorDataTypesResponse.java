@@ -25,6 +25,10 @@ public final class TIDataConnectorDataTypesResponse extends com.pulumi.resources
     @Import(name="indicators")
     private @Nullable TIDataConnectorDataTypesResponseIndicators indicators;
 
+    /**
+     * @return Data type for indicators connection.
+     * 
+     */
     public Optional<TIDataConnectorDataTypesResponseIndicators> indicators() {
         return Optional.ofNullable(this.indicators);
     }
@@ -53,6 +57,12 @@ public final class TIDataConnectorDataTypesResponse extends com.pulumi.resources
             $ = new TIDataConnectorDataTypesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param indicators Data type for indicators connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indicators(@Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
             $.indicators = indicators;
             return this;

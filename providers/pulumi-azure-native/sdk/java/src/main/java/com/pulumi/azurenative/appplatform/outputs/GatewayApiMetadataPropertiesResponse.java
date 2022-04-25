@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GatewayApiMetadataPropertiesResponse {
     /**
-     * Detailed description of the APIs available on the Gateway instance (default: `Generated OpenAPI 3 document that describes the API routes configured.`)
+     * @return Detailed description of the APIs available on the Gateway instance (default: `Generated OpenAPI 3 document that describes the API routes configured.`)
      * 
      */
     private final @Nullable String description;
     /**
-     * Location of additional documentation for the APIs available on the Gateway instance
+     * @return Location of additional documentation for the APIs available on the Gateway instance
      * 
      */
     private final @Nullable String documentation;
     /**
-     * Base URL that API consumers will use to access APIs on the Gateway instance.
+     * @return Base URL that API consumers will use to access APIs on the Gateway instance.
      * 
      */
     private final @Nullable String serverUrl;
     /**
-     * Title describing the context of the APIs available on the Gateway instance (default: `Spring Cloud Gateway for K8S`)
+     * @return Title describing the context of the APIs available on the Gateway instance (default: `Spring Cloud Gateway for K8S`)
      * 
      */
     private final @Nullable String title;
     /**
-     * Version of APIs available on this Gateway instance (default: `unspecified`).
+     * @return Version of APIs available on this Gateway instance (default: `unspecified`).
      * 
      */
     private final @Nullable String version;
@@ -52,37 +52,37 @@ public final class GatewayApiMetadataPropertiesResponse {
     }
 
     /**
-     * Detailed description of the APIs available on the Gateway instance (default: `Generated OpenAPI 3 document that describes the API routes configured.`)
+     * @return Detailed description of the APIs available on the Gateway instance (default: `Generated OpenAPI 3 document that describes the API routes configured.`)
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Location of additional documentation for the APIs available on the Gateway instance
+     * @return Location of additional documentation for the APIs available on the Gateway instance
      * 
-    */
+     */
     public Optional<String> documentation() {
         return Optional.ofNullable(this.documentation);
     }
     /**
-     * Base URL that API consumers will use to access APIs on the Gateway instance.
+     * @return Base URL that API consumers will use to access APIs on the Gateway instance.
      * 
-    */
+     */
     public Optional<String> serverUrl() {
         return Optional.ofNullable(this.serverUrl);
     }
     /**
-     * Title describing the context of the APIs available on the Gateway instance (default: `Spring Cloud Gateway for K8S`)
+     * @return Title describing the context of the APIs available on the Gateway instance (default: `Spring Cloud Gateway for K8S`)
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
-     * Version of APIs available on this Gateway instance (default: `unspecified`).
+     * @return Version of APIs available on this Gateway instance (default: `unspecified`).
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

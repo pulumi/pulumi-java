@@ -25,6 +25,10 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
     private @Nullable Output<String> apiVersion;
 
+    /**
+     * @return The API version for this call such as &#34;domains.cloudrun.com/v1&#34;.
+     * 
+     */
     public Optional<Output<String>> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -43,6 +47,10 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The kind of resource, in this case &#34;DomainMapping&#34;.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -61,6 +69,10 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<ObjectMetaArgs> metadata;
 
+    /**
+     * @return Metadata associated with this BuildTemplate.
+     * 
+     */
     public Optional<Output<ObjectMetaArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -79,6 +91,10 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spec")
     private @Nullable Output<DomainMappingSpecArgs> spec;
 
+    /**
+     * @return The spec for this DomainMapping.
+     * 
+     */
     public Optional<Output<DomainMappingSpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
@@ -90,6 +106,10 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<DomainMappingStatusArgs> status;
 
+    /**
+     * @return The current status of the DomainMapping.
+     * 
+     */
     public Optional<Output<DomainMappingStatusArgs>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -125,11 +145,23 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DomainMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion The API version for this call such as &#34;domains.cloudrun.com/v1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion The API version for this call such as &#34;domains.cloudrun.com/v1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
@@ -143,11 +175,23 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
             return dryRun(Output.of(dryRun));
         }
 
+        /**
+         * @param kind The kind of resource, in this case &#34;DomainMapping&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of resource, in this case &#34;DomainMapping&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
@@ -161,11 +205,23 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param metadata Metadata associated with this BuildTemplate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Metadata associated with this BuildTemplate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(ObjectMetaArgs metadata) {
             return metadata(Output.of(metadata));
         }
@@ -179,20 +235,44 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param spec The spec for this DomainMapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(@Nullable Output<DomainMappingSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec The spec for this DomainMapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(DomainMappingSpecArgs spec) {
             return spec(Output.of(spec));
         }
 
+        /**
+         * @param status The current status of the DomainMapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<DomainMappingStatusArgs> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The current status of the DomainMapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(DomainMappingStatusArgs status) {
             return status(Output.of(status));
         }

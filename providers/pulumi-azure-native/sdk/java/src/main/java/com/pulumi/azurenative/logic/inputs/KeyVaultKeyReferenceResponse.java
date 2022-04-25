@@ -26,6 +26,10 @@ public final class KeyVaultKeyReferenceResponse extends com.pulumi.resources.Inv
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return The private key name in key vault.
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -37,6 +41,10 @@ public final class KeyVaultKeyReferenceResponse extends com.pulumi.resources.Inv
     @Import(name="keyVault", required=true)
     private KeyVaultKeyReferenceResponseKeyVault keyVault;
 
+    /**
+     * @return The key vault reference.
+     * 
+     */
     public KeyVaultKeyReferenceResponseKeyVault keyVault() {
         return this.keyVault;
     }
@@ -48,6 +56,10 @@ public final class KeyVaultKeyReferenceResponse extends com.pulumi.resources.Inv
     @Import(name="keyVersion")
     private @Nullable String keyVersion;
 
+    /**
+     * @return The private key version in key vault.
+     * 
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -78,16 +90,34 @@ public final class KeyVaultKeyReferenceResponse extends com.pulumi.resources.Inv
             $ = new KeyVaultKeyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The private key name in key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyVault The key vault reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(KeyVaultKeyReferenceResponseKeyVault keyVault) {
             $.keyVault = keyVault;
             return this;
         }
 
+        /**
+         * @param keyVersion The private key version in key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable String keyVersion) {
             $.keyVersion = keyVersion;
             return this;

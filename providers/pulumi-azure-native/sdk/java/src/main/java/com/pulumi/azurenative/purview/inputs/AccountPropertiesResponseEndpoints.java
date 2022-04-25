@@ -23,6 +23,10 @@ public final class AccountPropertiesResponseEndpoints extends com.pulumi.resourc
     @Import(name="catalog", required=true)
     private String catalog;
 
+    /**
+     * @return Gets the catalog endpoint.
+     * 
+     */
     public String catalog() {
         return this.catalog;
     }
@@ -34,6 +38,10 @@ public final class AccountPropertiesResponseEndpoints extends com.pulumi.resourc
     @Import(name="guardian", required=true)
     private String guardian;
 
+    /**
+     * @return Gets the guardian endpoint.
+     * 
+     */
     public String guardian() {
         return this.guardian;
     }
@@ -45,6 +53,10 @@ public final class AccountPropertiesResponseEndpoints extends com.pulumi.resourc
     @Import(name="scan", required=true)
     private String scan;
 
+    /**
+     * @return Gets the scan endpoint.
+     * 
+     */
     public String scan() {
         return this.scan;
     }
@@ -75,16 +87,34 @@ public final class AccountPropertiesResponseEndpoints extends com.pulumi.resourc
             $ = new AccountPropertiesResponseEndpoints(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalog Gets the catalog endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalog(String catalog) {
             $.catalog = catalog;
             return this;
         }
 
+        /**
+         * @param guardian Gets the guardian endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guardian(String guardian) {
             $.guardian = guardian;
             return this;
         }
 
+        /**
+         * @param scan Gets the scan endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scan(String scan) {
             $.scan = scan;
             return this;

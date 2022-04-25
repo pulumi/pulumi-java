@@ -30,6 +30,10 @@ public final class ExecStepConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="allowedSuccessCodes")
     private @Nullable Output<List<Integer>> allowedSuccessCodes;
 
+    /**
+     * @return Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
+     * 
+     */
     public Optional<Output<List<Integer>>> allowedSuccessCodes() {
         return Optional.ofNullable(this.allowedSuccessCodes);
     }
@@ -41,6 +45,10 @@ public final class ExecStepConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="gcsObject")
     private @Nullable Output<GcsObjectArgs> gcsObject;
 
+    /**
+     * @return A Cloud Storage object containing the executable.
+     * 
+     */
     public Optional<Output<GcsObjectArgs>> gcsObject() {
         return Optional.ofNullable(this.gcsObject);
     }
@@ -52,6 +60,10 @@ public final class ExecStepConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="interpreter")
     private @Nullable Output<ExecStepConfigInterpreter> interpreter;
 
+    /**
+     * @return The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
+     * 
+     */
     public Optional<Output<ExecStepConfigInterpreter>> interpreter() {
         return Optional.ofNullable(this.interpreter);
     }
@@ -63,6 +75,10 @@ public final class ExecStepConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="localPath")
     private @Nullable Output<String> localPath;
 
+    /**
+     * @return An absolute path to the executable on the VM.
+     * 
+     */
     public Optional<Output<String>> localPath() {
         return Optional.ofNullable(this.localPath);
     }
@@ -94,42 +110,96 @@ public final class ExecStepConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ExecStepConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedSuccessCodes Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSuccessCodes(@Nullable Output<List<Integer>> allowedSuccessCodes) {
             $.allowedSuccessCodes = allowedSuccessCodes;
             return this;
         }
 
+        /**
+         * @param allowedSuccessCodes Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSuccessCodes(List<Integer> allowedSuccessCodes) {
             return allowedSuccessCodes(Output.of(allowedSuccessCodes));
         }
 
+        /**
+         * @param allowedSuccessCodes Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSuccessCodes(Integer... allowedSuccessCodes) {
             return allowedSuccessCodes(List.of(allowedSuccessCodes));
         }
 
+        /**
+         * @param gcsObject A Cloud Storage object containing the executable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsObject(@Nullable Output<GcsObjectArgs> gcsObject) {
             $.gcsObject = gcsObject;
             return this;
         }
 
+        /**
+         * @param gcsObject A Cloud Storage object containing the executable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsObject(GcsObjectArgs gcsObject) {
             return gcsObject(Output.of(gcsObject));
         }
 
+        /**
+         * @param interpreter The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder interpreter(@Nullable Output<ExecStepConfigInterpreter> interpreter) {
             $.interpreter = interpreter;
             return this;
         }
 
+        /**
+         * @param interpreter The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder interpreter(ExecStepConfigInterpreter interpreter) {
             return interpreter(Output.of(interpreter));
         }
 
+        /**
+         * @param localPath An absolute path to the executable on the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPath(@Nullable Output<String> localPath) {
             $.localPath = localPath;
             return this;
         }
 
+        /**
+         * @param localPath An absolute path to the executable on the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPath(String localPath) {
             return localPath(Output.of(localPath));
         }

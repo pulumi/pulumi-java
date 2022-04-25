@@ -22,6 +22,10 @@ public final class RouteTableRouteGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="carrierGatewayId")
     private @Nullable Output<String> carrierGatewayId;
 
+    /**
+     * @return Identifier of a carrier gateway. This attribute can only be used when the VPC contains a subnet which is associated with a Wavelength Zone.
+     * 
+     */
     public Optional<Output<String>> carrierGatewayId() {
         return Optional.ofNullable(this.carrierGatewayId);
     }
@@ -33,6 +37,10 @@ public final class RouteTableRouteGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="cidrBlock")
     private @Nullable Output<String> cidrBlock;
 
+    /**
+     * @return The CIDR block of the route.
+     * 
+     */
     public Optional<Output<String>> cidrBlock() {
         return Optional.ofNullable(this.cidrBlock);
     }
@@ -44,6 +52,10 @@ public final class RouteTableRouteGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="destinationPrefixListId")
     private @Nullable Output<String> destinationPrefixListId;
 
+    /**
+     * @return The ID of a managed prefix list destination of the route.
+     * 
+     */
     public Optional<Output<String>> destinationPrefixListId() {
         return Optional.ofNullable(this.destinationPrefixListId);
     }
@@ -55,6 +67,10 @@ public final class RouteTableRouteGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="egressOnlyGatewayId")
     private @Nullable Output<String> egressOnlyGatewayId;
 
+    /**
+     * @return Identifier of a VPC Egress Only Internet Gateway.
+     * 
+     */
     public Optional<Output<String>> egressOnlyGatewayId() {
         return Optional.ofNullable(this.egressOnlyGatewayId);
     }
@@ -66,6 +82,10 @@ public final class RouteTableRouteGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="gatewayId")
     private @Nullable Output<String> gatewayId;
 
+    /**
+     * @return Identifier of a VPC internet gateway or a virtual private gateway.
+     * 
+     */
     public Optional<Output<String>> gatewayId() {
         return Optional.ofNullable(this.gatewayId);
     }
@@ -77,6 +97,10 @@ public final class RouteTableRouteGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
+    /**
+     * @return Identifier of an EC2 instance.
+     * 
+     */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -88,6 +112,10 @@ public final class RouteTableRouteGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="ipv6CidrBlock")
     private @Nullable Output<String> ipv6CidrBlock;
 
+    /**
+     * @return The Ipv6 CIDR block of the route.
+     * 
+     */
     public Optional<Output<String>> ipv6CidrBlock() {
         return Optional.ofNullable(this.ipv6CidrBlock);
     }
@@ -99,6 +127,10 @@ public final class RouteTableRouteGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="localGatewayId")
     private @Nullable Output<String> localGatewayId;
 
+    /**
+     * @return Identifier of a Outpost local gateway.
+     * 
+     */
     public Optional<Output<String>> localGatewayId() {
         return Optional.ofNullable(this.localGatewayId);
     }
@@ -110,6 +142,10 @@ public final class RouteTableRouteGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="natGatewayId")
     private @Nullable Output<String> natGatewayId;
 
+    /**
+     * @return Identifier of a VPC NAT gateway.
+     * 
+     */
     public Optional<Output<String>> natGatewayId() {
         return Optional.ofNullable(this.natGatewayId);
     }
@@ -121,6 +157,10 @@ public final class RouteTableRouteGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="networkInterfaceId")
     private @Nullable Output<String> networkInterfaceId;
 
+    /**
+     * @return Identifier of an EC2 network interface.
+     * 
+     */
     public Optional<Output<String>> networkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
@@ -132,6 +172,10 @@ public final class RouteTableRouteGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="transitGatewayId")
     private @Nullable Output<String> transitGatewayId;
 
+    /**
+     * @return Identifier of an EC2 Transit Gateway.
+     * 
+     */
     public Optional<Output<String>> transitGatewayId() {
         return Optional.ofNullable(this.transitGatewayId);
     }
@@ -143,6 +187,10 @@ public final class RouteTableRouteGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="vpcEndpointId")
     private @Nullable Output<String> vpcEndpointId;
 
+    /**
+     * @return Identifier of a VPC Endpoint.
+     * 
+     */
     public Optional<Output<String>> vpcEndpointId() {
         return Optional.ofNullable(this.vpcEndpointId);
     }
@@ -154,6 +202,10 @@ public final class RouteTableRouteGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="vpcPeeringConnectionId")
     private @Nullable Output<String> vpcPeeringConnectionId;
 
+    /**
+     * @return Identifier of a VPC peering connection.
+     * 
+     */
     public Optional<Output<String>> vpcPeeringConnectionId() {
         return Optional.ofNullable(this.vpcPeeringConnectionId);
     }
@@ -194,119 +246,275 @@ public final class RouteTableRouteGetArgs extends com.pulumi.resources.ResourceA
             $ = new RouteTableRouteGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param carrierGatewayId Identifier of a carrier gateway. This attribute can only be used when the VPC contains a subnet which is associated with a Wavelength Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carrierGatewayId(@Nullable Output<String> carrierGatewayId) {
             $.carrierGatewayId = carrierGatewayId;
             return this;
         }
 
+        /**
+         * @param carrierGatewayId Identifier of a carrier gateway. This attribute can only be used when the VPC contains a subnet which is associated with a Wavelength Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carrierGatewayId(String carrierGatewayId) {
             return carrierGatewayId(Output.of(carrierGatewayId));
         }
 
+        /**
+         * @param cidrBlock The CIDR block of the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
 
+        /**
+         * @param cidrBlock The CIDR block of the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(String cidrBlock) {
             return cidrBlock(Output.of(cidrBlock));
         }
 
+        /**
+         * @param destinationPrefixListId The ID of a managed prefix list destination of the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPrefixListId(@Nullable Output<String> destinationPrefixListId) {
             $.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
 
+        /**
+         * @param destinationPrefixListId The ID of a managed prefix list destination of the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPrefixListId(String destinationPrefixListId) {
             return destinationPrefixListId(Output.of(destinationPrefixListId));
         }
 
+        /**
+         * @param egressOnlyGatewayId Identifier of a VPC Egress Only Internet Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressOnlyGatewayId(@Nullable Output<String> egressOnlyGatewayId) {
             $.egressOnlyGatewayId = egressOnlyGatewayId;
             return this;
         }
 
+        /**
+         * @param egressOnlyGatewayId Identifier of a VPC Egress Only Internet Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressOnlyGatewayId(String egressOnlyGatewayId) {
             return egressOnlyGatewayId(Output.of(egressOnlyGatewayId));
         }
 
+        /**
+         * @param gatewayId Identifier of a VPC internet gateway or a virtual private gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
 
+        /**
+         * @param gatewayId Identifier of a VPC internet gateway or a virtual private gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(String gatewayId) {
             return gatewayId(Output.of(gatewayId));
         }
 
+        /**
+         * @param instanceId Identifier of an EC2 instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId Identifier of an EC2 instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param ipv6CidrBlock The Ipv6 CIDR block of the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
             $.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
+        /**
+         * @param ipv6CidrBlock The Ipv6 CIDR block of the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             return ipv6CidrBlock(Output.of(ipv6CidrBlock));
         }
 
+        /**
+         * @param localGatewayId Identifier of a Outpost local gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayId(@Nullable Output<String> localGatewayId) {
             $.localGatewayId = localGatewayId;
             return this;
         }
 
+        /**
+         * @param localGatewayId Identifier of a Outpost local gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayId(String localGatewayId) {
             return localGatewayId(Output.of(localGatewayId));
         }
 
+        /**
+         * @param natGatewayId Identifier of a VPC NAT gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natGatewayId(@Nullable Output<String> natGatewayId) {
             $.natGatewayId = natGatewayId;
             return this;
         }
 
+        /**
+         * @param natGatewayId Identifier of a VPC NAT gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natGatewayId(String natGatewayId) {
             return natGatewayId(Output.of(natGatewayId));
         }
 
+        /**
+         * @param networkInterfaceId Identifier of an EC2 network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
+        /**
+         * @param networkInterfaceId Identifier of an EC2 network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(String networkInterfaceId) {
             return networkInterfaceId(Output.of(networkInterfaceId));
         }
 
+        /**
+         * @param transitGatewayId Identifier of an EC2 Transit Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
             $.transitGatewayId = transitGatewayId;
             return this;
         }
 
+        /**
+         * @param transitGatewayId Identifier of an EC2 Transit Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayId(String transitGatewayId) {
             return transitGatewayId(Output.of(transitGatewayId));
         }
 
+        /**
+         * @param vpcEndpointId Identifier of a VPC Endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             $.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
+        /**
+         * @param vpcEndpointId Identifier of a VPC Endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcEndpointId(String vpcEndpointId) {
             return vpcEndpointId(Output.of(vpcEndpointId));
         }
 
+        /**
+         * @param vpcPeeringConnectionId Identifier of a VPC peering connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcPeeringConnectionId(@Nullable Output<String> vpcPeeringConnectionId) {
             $.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
         }
 
+        /**
+         * @param vpcPeeringConnectionId Identifier of a VPC peering connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcPeeringConnectionId(String vpcPeeringConnectionId) {
             return vpcPeeringConnectionId(Output.of(vpcPeeringConnectionId));
         }

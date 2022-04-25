@@ -25,6 +25,10 @@ public final class IpAddressOrRangeResponse extends com.pulumi.resources.InvokeA
     @Import(name="ipAddressOrRange")
     private @Nullable String ipAddressOrRange;
 
+    /**
+     * @return A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”.
+     * 
+     */
     public Optional<String> ipAddressOrRange() {
         return Optional.ofNullable(this.ipAddressOrRange);
     }
@@ -53,6 +57,12 @@ public final class IpAddressOrRangeResponse extends com.pulumi.resources.InvokeA
             $ = new IpAddressOrRangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddressOrRange A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressOrRange(@Nullable String ipAddressOrRange) {
             $.ipAddressOrRange = ipAddressOrRange;
             return this;

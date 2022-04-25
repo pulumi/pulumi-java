@@ -19,6 +19,10 @@ public final class GetRecoveryGroupArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="recoveryGroupName", required=true)
     private String recoveryGroupName;
 
+    /**
+     * @return The name of the recovery group to create.
+     * 
+     */
     public String recoveryGroupName() {
         return this.recoveryGroupName;
     }
@@ -47,6 +51,12 @@ public final class GetRecoveryGroupArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetRecoveryGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recoveryGroupName The name of the recovery group to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryGroupName(String recoveryGroupName) {
             $.recoveryGroupName = recoveryGroupName;
             return this;

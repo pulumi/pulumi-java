@@ -24,6 +24,10 @@ public final class Oauth2JwtBearerResponse extends com.pulumi.resources.InvokeAr
     @Import(name="clientKey", required=true)
     private SecretResponse clientKey;
 
+    /**
+     * @return Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization grant. Specified in the form as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+     * 
+     */
     public SecretResponse clientKey() {
         return this.clientKey;
     }
@@ -35,6 +39,10 @@ public final class Oauth2JwtBearerResponse extends com.pulumi.resources.InvokeAr
     @Import(name="jwtClaims", required=true)
     private JwtClaimsResponse jwtClaims;
 
+    /**
+     * @return JwtClaims providers fields to generate the token.
+     * 
+     */
     public JwtClaimsResponse jwtClaims() {
         return this.jwtClaims;
     }
@@ -64,11 +72,23 @@ public final class Oauth2JwtBearerResponse extends com.pulumi.resources.InvokeAr
             $ = new Oauth2JwtBearerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientKey Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization grant. Specified in the form as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(SecretResponse clientKey) {
             $.clientKey = clientKey;
             return this;
         }
 
+        /**
+         * @param jwtClaims JwtClaims providers fields to generate the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jwtClaims(JwtClaimsResponse jwtClaims) {
             $.jwtClaims = jwtClaims;
             return this;

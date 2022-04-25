@@ -15,32 +15,32 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2ActionResponse {
     /**
-     * Enable email notification for project owners and editors on job&#39;s completion/failure.
+     * @return Enable email notification for project owners and editors on job&#39;s completion/failure.
      * 
      */
     private final GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails;
     /**
-     * Publish a notification to a pubsub topic.
+     * @return Publish a notification to a pubsub topic.
      * 
      */
     private final GooglePrivacyDlpV2PublishToPubSubResponse pubSub;
     /**
-     * Publish findings to Cloud Datahub.
+     * @return Publish findings to Cloud Datahub.
      * 
      */
     private final GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog;
     /**
-     * Publish summary to Cloud Security Command Center (Alpha).
+     * @return Publish summary to Cloud Security Command Center (Alpha).
      * 
      */
     private final GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc;
     /**
-     * Enable Stackdriver metric dlp.googleapis.com/finding_count.
+     * @return Enable Stackdriver metric dlp.googleapis.com/finding_count.
      * 
      */
     private final GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver;
     /**
-     * Save resulting findings in a provided location.
+     * @return Save resulting findings in a provided location.
      * 
      */
     private final GooglePrivacyDlpV2SaveFindingsResponse saveFindings;
@@ -62,44 +62,44 @@ public final class GooglePrivacyDlpV2ActionResponse {
     }
 
     /**
-     * Enable email notification for project owners and editors on job&#39;s completion/failure.
+     * @return Enable email notification for project owners and editors on job&#39;s completion/failure.
      * 
-    */
+     */
     public GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails() {
         return this.jobNotificationEmails;
     }
     /**
-     * Publish a notification to a pubsub topic.
+     * @return Publish a notification to a pubsub topic.
      * 
-    */
+     */
     public GooglePrivacyDlpV2PublishToPubSubResponse pubSub() {
         return this.pubSub;
     }
     /**
-     * Publish findings to Cloud Datahub.
+     * @return Publish findings to Cloud Datahub.
      * 
-    */
+     */
     public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog() {
         return this.publishFindingsToCloudDataCatalog;
     }
     /**
-     * Publish summary to Cloud Security Command Center (Alpha).
+     * @return Publish summary to Cloud Security Command Center (Alpha).
      * 
-    */
+     */
     public GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc() {
         return this.publishSummaryToCscc;
     }
     /**
-     * Enable Stackdriver metric dlp.googleapis.com/finding_count.
+     * @return Enable Stackdriver metric dlp.googleapis.com/finding_count.
      * 
-    */
+     */
     public GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver() {
         return this.publishToStackdriver;
     }
     /**
-     * Save resulting findings in a provided location.
+     * @return Save resulting findings in a provided location.
      * 
-    */
+     */
     public GooglePrivacyDlpV2SaveFindingsResponse saveFindings() {
         return this.saveFindings;
     }

@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ComplianceStatusResponse {
     /**
-     * The compliance state of the configuration.
+     * @return The compliance state of the configuration.
      * 
      */
     private final String complianceState;
     /**
-     * Datetime the configuration was last applied.
+     * @return Datetime the configuration was last applied.
      * 
      */
     private final @Nullable String lastConfigApplied;
     /**
-     * Message from when the configuration was applied.
+     * @return Message from when the configuration was applied.
      * 
      */
     private final @Nullable String message;
     /**
-     * Level of the message.
+     * @return Level of the message.
      * 
      */
     private final @Nullable String messageLevel;
@@ -45,30 +45,30 @@ public final class ComplianceStatusResponse {
     }
 
     /**
-     * The compliance state of the configuration.
+     * @return The compliance state of the configuration.
      * 
-    */
+     */
     public String complianceState() {
         return this.complianceState;
     }
     /**
-     * Datetime the configuration was last applied.
+     * @return Datetime the configuration was last applied.
      * 
-    */
+     */
     public Optional<String> lastConfigApplied() {
         return Optional.ofNullable(this.lastConfigApplied);
     }
     /**
-     * Message from when the configuration was applied.
+     * @return Message from when the configuration was applied.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Level of the message.
+     * @return Level of the message.
      * 
-    */
+     */
     public Optional<String> messageLevel() {
         return Optional.ofNullable(this.messageLevel);
     }

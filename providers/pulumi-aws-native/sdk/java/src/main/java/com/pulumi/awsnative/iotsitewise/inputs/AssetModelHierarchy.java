@@ -23,6 +23,10 @@ public final class AssetModelHierarchy extends com.pulumi.resources.InvokeArgs {
     @Import(name="childAssetModelId", required=true)
     private String childAssetModelId;
 
+    /**
+     * @return The ID of the asset model. All assets in this hierarchy must be instances of the child AssetModelId asset model.
+     * 
+     */
     public String childAssetModelId() {
         return this.childAssetModelId;
     }
@@ -34,6 +38,10 @@ public final class AssetModelHierarchy extends com.pulumi.resources.InvokeArgs {
     @Import(name="logicalId", required=true)
     private String logicalId;
 
+    /**
+     * @return Customer provided ID for hierarchy.
+     * 
+     */
     public String logicalId() {
         return this.logicalId;
     }
@@ -45,6 +53,10 @@ public final class AssetModelHierarchy extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the asset model hierarchy.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -75,16 +87,34 @@ public final class AssetModelHierarchy extends com.pulumi.resources.InvokeArgs {
             $ = new AssetModelHierarchy(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param childAssetModelId The ID of the asset model. All assets in this hierarchy must be instances of the child AssetModelId asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder childAssetModelId(String childAssetModelId) {
             $.childAssetModelId = childAssetModelId;
             return this;
         }
 
+        /**
+         * @param logicalId Customer provided ID for hierarchy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalId(String logicalId) {
             $.logicalId = logicalId;
             return this;
         }
 
+        /**
+         * @param name The name of the asset model hierarchy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

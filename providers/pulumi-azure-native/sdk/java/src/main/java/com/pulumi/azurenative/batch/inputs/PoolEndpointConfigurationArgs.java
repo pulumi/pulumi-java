@@ -21,6 +21,10 @@ public final class PoolEndpointConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="inboundNatPools", required=true)
     private Output<List<InboundNatPoolArgs>> inboundNatPools;
 
+    /**
+     * @return The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
+     * 
+     */
     public Output<List<InboundNatPoolArgs>> inboundNatPools() {
         return this.inboundNatPools;
     }
@@ -49,15 +53,33 @@ public final class PoolEndpointConfigurationArgs extends com.pulumi.resources.Re
             $ = new PoolEndpointConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inboundNatPools The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatPools(Output<List<InboundNatPoolArgs>> inboundNatPools) {
             $.inboundNatPools = inboundNatPools;
             return this;
         }
 
+        /**
+         * @param inboundNatPools The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatPools(List<InboundNatPoolArgs> inboundNatPools) {
             return inboundNatPools(Output.of(inboundNatPools));
         }
 
+        /**
+         * @param inboundNatPools The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatPools(InboundNatPoolArgs... inboundNatPools) {
             return inboundNatPools(List.of(inboundNatPools));
         }

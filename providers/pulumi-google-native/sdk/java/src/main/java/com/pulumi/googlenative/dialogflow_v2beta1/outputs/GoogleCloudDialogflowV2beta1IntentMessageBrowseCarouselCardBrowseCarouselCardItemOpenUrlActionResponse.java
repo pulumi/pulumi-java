@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse {
     /**
-     * URL
+     * @return URL
      * 
      */
     private final String url;
     /**
-     * Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
+     * @return Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
      * 
      */
     private final String urlTypeHint;
@@ -29,16 +29,16 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
     }
 
     /**
-     * URL
+     * @return URL
      * 
-    */
+     */
     public String url() {
         return this.url;
     }
     /**
-     * Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
+     * @return Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
      * 
-    */
+     */
     public String urlTypeHint() {
         return this.urlTypeHint;
     }

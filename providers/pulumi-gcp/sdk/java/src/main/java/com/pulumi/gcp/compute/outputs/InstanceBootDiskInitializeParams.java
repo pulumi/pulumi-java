@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceBootDiskInitializeParams {
     /**
-     * The image from which to initialize this disk. This can be
+     * @return The image from which to initialize this disk. This can be
      * one of: the image&#39;s `self_link`, `projects/{project}/global/images/{image}`,
      * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
      * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
@@ -28,18 +28,18 @@ public final class InstanceBootDiskInitializeParams {
      */
     private final @Nullable String image;
     /**
-     * A map of key/value label pairs to assign to the instance.
+     * @return A map of key/value label pairs to assign to the instance.
      * 
      */
     private final @Nullable Map<String,Object> labels;
     /**
-     * The size of the image in gigabytes. If not specified, it
+     * @return The size of the image in gigabytes. If not specified, it
      * will inherit the size of its base image.
      * 
      */
     private final @Nullable Integer size;
     /**
-     * The type of reservation from which this instance can consume resources.
+     * @return The type of reservation from which this instance can consume resources.
      * 
      */
     private final @Nullable String type;
@@ -57,7 +57,7 @@ public final class InstanceBootDiskInitializeParams {
     }
 
     /**
-     * The image from which to initialize this disk. This can be
+     * @return The image from which to initialize this disk. This can be
      * one of: the image&#39;s `self_link`, `projects/{project}/global/images/{image}`,
      * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
      * `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
@@ -67,29 +67,29 @@ public final class InstanceBootDiskInitializeParams {
      * For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
      * These images can be referred by family name here.
      * 
-    */
+     */
     public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
     /**
-     * A map of key/value label pairs to assign to the instance.
+     * @return A map of key/value label pairs to assign to the instance.
      * 
-    */
+     */
     public Map<String,Object> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
-     * The size of the image in gigabytes. If not specified, it
+     * @return The size of the image in gigabytes. If not specified, it
      * will inherit the size of its base image.
      * 
-    */
+     */
     public Optional<Integer> size() {
         return Optional.ofNullable(this.size);
     }
     /**
-     * The type of reservation from which this instance can consume resources.
+     * @return The type of reservation from which this instance can consume resources.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

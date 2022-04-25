@@ -32,6 +32,10 @@ public final class AlertingActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="aznsAction")
     private @Nullable Output<AzNsActionGroupArgs> aznsAction;
 
+    /**
+     * @return Azure action group reference.
+     * 
+     */
     public Optional<Output<AzNsActionGroupArgs>> aznsAction() {
         return Optional.ofNullable(this.aznsAction);
     }
@@ -44,6 +48,11 @@ public final class AlertingActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return Specifies the action. Supported values - AlertingAction, LogToMetricAction
+     * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -55,6 +64,10 @@ public final class AlertingActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="severity", required=true)
     private Output<Either<String,AlertSeverity>> severity;
 
+    /**
+     * @return Severity of the alert
+     * 
+     */
     public Output<Either<String,AlertSeverity>> severity() {
         return this.severity;
     }
@@ -66,6 +79,10 @@ public final class AlertingActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="throttlingInMin")
     private @Nullable Output<Integer> throttlingInMin;
 
+    /**
+     * @return time (in minutes) for which Alerts should be throttled or suppressed.
+     * 
+     */
     public Optional<Output<Integer>> throttlingInMin() {
         return Optional.ofNullable(this.throttlingInMin);
     }
@@ -77,6 +94,10 @@ public final class AlertingActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="trigger", required=true)
     private Output<TriggerConditionArgs> trigger;
 
+    /**
+     * @return The trigger condition that results in the alert rule being.
+     * 
+     */
     public Output<TriggerConditionArgs> trigger() {
         return this.trigger;
     }
@@ -109,55 +130,129 @@ public final class AlertingActionArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AlertingActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aznsAction Azure action group reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aznsAction(@Nullable Output<AzNsActionGroupArgs> aznsAction) {
             $.aznsAction = aznsAction;
             return this;
         }
 
+        /**
+         * @param aznsAction Azure action group reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aznsAction(AzNsActionGroupArgs aznsAction) {
             return aznsAction(Output.of(aznsAction));
         }
 
+        /**
+         * @param odataType Specifies the action. Supported values - AlertingAction, LogToMetricAction
+         * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType Specifies the action. Supported values - AlertingAction, LogToMetricAction
+         * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param severity Severity of the alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Output<Either<String,AlertSeverity>> severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param severity Severity of the alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Either<String,AlertSeverity> severity) {
             return severity(Output.of(severity));
         }
 
+        /**
+         * @param severity Severity of the alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             return severity(Either.ofLeft(severity));
         }
 
+        /**
+         * @param severity Severity of the alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(AlertSeverity severity) {
             return severity(Either.ofRight(severity));
         }
 
+        /**
+         * @param throttlingInMin time (in minutes) for which Alerts should be throttled or suppressed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttlingInMin(@Nullable Output<Integer> throttlingInMin) {
             $.throttlingInMin = throttlingInMin;
             return this;
         }
 
+        /**
+         * @param throttlingInMin time (in minutes) for which Alerts should be throttled or suppressed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttlingInMin(Integer throttlingInMin) {
             return throttlingInMin(Output.of(throttlingInMin));
         }
 
+        /**
+         * @param trigger The trigger condition that results in the alert rule being.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(Output<TriggerConditionArgs> trigger) {
             $.trigger = trigger;
             return this;
         }
 
+        /**
+         * @param trigger The trigger condition that results in the alert rule being.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(TriggerConditionArgs trigger) {
             return trigger(Output.of(trigger));
         }

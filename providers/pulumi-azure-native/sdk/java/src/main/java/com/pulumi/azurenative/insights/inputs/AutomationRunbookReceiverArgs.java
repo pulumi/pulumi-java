@@ -28,6 +28,10 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
     @Import(name="automationAccountId", required=true)
     private Output<String> automationAccountId;
 
+    /**
+     * @return The Azure automation account Id which holds this runbook and authenticate to Azure resource.
+     * 
+     */
     public Output<String> automationAccountId() {
         return this.automationAccountId;
     }
@@ -39,6 +43,10 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
     @Import(name="isGlobalRunbook", required=true)
     private Output<Boolean> isGlobalRunbook;
 
+    /**
+     * @return Indicates whether this instance is global runbook.
+     * 
+     */
     public Output<Boolean> isGlobalRunbook() {
         return this.isGlobalRunbook;
     }
@@ -50,6 +58,10 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Indicates name of the webhook.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +73,10 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
     @Import(name="runbookName", required=true)
     private Output<String> runbookName;
 
+    /**
+     * @return The name for this runbook.
+     * 
+     */
     public Output<String> runbookName() {
         return this.runbookName;
     }
@@ -72,6 +88,10 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
     @Import(name="serviceUri")
     private @Nullable Output<String> serviceUri;
 
+    /**
+     * @return The URI where webhooks should be sent.
+     * 
+     */
     public Optional<Output<String>> serviceUri() {
         return Optional.ofNullable(this.serviceUri);
     }
@@ -83,6 +103,10 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
     @Import(name="useCommonAlertSchema")
     private @Nullable Output<Boolean> useCommonAlertSchema;
 
+    /**
+     * @return Indicates whether to use common alert schema.
+     * 
+     */
     public Optional<Output<Boolean>> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
@@ -94,6 +118,10 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
     @Import(name="webhookResourceId", required=true)
     private Output<String> webhookResourceId;
 
+    /**
+     * @return The resource id for webhook linked to this runbook.
+     * 
+     */
     public Output<String> webhookResourceId() {
         return this.webhookResourceId;
     }
@@ -128,65 +156,149 @@ public final class AutomationRunbookReceiverArgs extends com.pulumi.resources.Re
             $ = new AutomationRunbookReceiverArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountId The Azure automation account Id which holds this runbook and authenticate to Azure resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountId(Output<String> automationAccountId) {
             $.automationAccountId = automationAccountId;
             return this;
         }
 
+        /**
+         * @param automationAccountId The Azure automation account Id which holds this runbook and authenticate to Azure resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountId(String automationAccountId) {
             return automationAccountId(Output.of(automationAccountId));
         }
 
+        /**
+         * @param isGlobalRunbook Indicates whether this instance is global runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobalRunbook(Output<Boolean> isGlobalRunbook) {
             $.isGlobalRunbook = isGlobalRunbook;
             return this;
         }
 
+        /**
+         * @param isGlobalRunbook Indicates whether this instance is global runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobalRunbook(Boolean isGlobalRunbook) {
             return isGlobalRunbook(Output.of(isGlobalRunbook));
         }
 
+        /**
+         * @param name Indicates name of the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Indicates name of the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param runbookName The name for this runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runbookName(Output<String> runbookName) {
             $.runbookName = runbookName;
             return this;
         }
 
+        /**
+         * @param runbookName The name for this runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runbookName(String runbookName) {
             return runbookName(Output.of(runbookName));
         }
 
+        /**
+         * @param serviceUri The URI where webhooks should be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUri(@Nullable Output<String> serviceUri) {
             $.serviceUri = serviceUri;
             return this;
         }
 
+        /**
+         * @param serviceUri The URI where webhooks should be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUri(String serviceUri) {
             return serviceUri(Output.of(serviceUri));
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
             $.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(Boolean useCommonAlertSchema) {
             return useCommonAlertSchema(Output.of(useCommonAlertSchema));
         }
 
+        /**
+         * @param webhookResourceId The resource id for webhook linked to this runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookResourceId(Output<String> webhookResourceId) {
             $.webhookResourceId = webhookResourceId;
             return this;
         }
 
+        /**
+         * @param webhookResourceId The resource id for webhook linked to this runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookResourceId(String webhookResourceId) {
             return webhookResourceId(Output.of(webhookResourceId));
         }

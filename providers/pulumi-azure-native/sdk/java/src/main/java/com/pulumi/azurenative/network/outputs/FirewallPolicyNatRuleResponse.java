@@ -18,38 +18,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FirewallPolicyNatRuleResponse {
     /**
-     * The action type of a Nat rule.
+     * @return The action type of a Nat rule.
      * 
      */
     private final @Nullable FirewallPolicyNatRuleActionResponse action;
     /**
-     * The name of the rule.
+     * @return The name of the rule.
      * 
      */
     private final @Nullable String name;
     /**
-     * Priority of the Firewall Policy Rule resource.
+     * @return Priority of the Firewall Policy Rule resource.
      * 
      */
     private final @Nullable Integer priority;
     /**
-     * The match conditions for incoming traffic.
+     * @return The match conditions for incoming traffic.
      * 
      */
     private final @Nullable Object ruleCondition;
     /**
-     * The type of the rule.
+     * @return The type of the rule.
      * Expected value is &#39;FirewallPolicyNatRule&#39;.
      * 
      */
     private final String ruleType;
     /**
-     * The translated address for this NAT rule.
+     * @return The translated address for this NAT rule.
      * 
      */
     private final @Nullable String translatedAddress;
     /**
-     * The translated port for this NAT rule.
+     * @return The translated port for this NAT rule.
      * 
      */
     private final @Nullable String translatedPort;
@@ -73,52 +73,52 @@ public final class FirewallPolicyNatRuleResponse {
     }
 
     /**
-     * The action type of a Nat rule.
+     * @return The action type of a Nat rule.
      * 
-    */
+     */
     public Optional<FirewallPolicyNatRuleActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * The name of the rule.
+     * @return The name of the rule.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Priority of the Firewall Policy Rule resource.
+     * @return Priority of the Firewall Policy Rule resource.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * The match conditions for incoming traffic.
+     * @return The match conditions for incoming traffic.
      * 
-    */
+     */
     public Optional<Object> ruleCondition() {
         return Optional.ofNullable(this.ruleCondition);
     }
     /**
-     * The type of the rule.
+     * @return The type of the rule.
      * Expected value is &#39;FirewallPolicyNatRule&#39;.
      * 
-    */
+     */
     public String ruleType() {
         return this.ruleType;
     }
     /**
-     * The translated address for this NAT rule.
+     * @return The translated address for this NAT rule.
      * 
-    */
+     */
     public Optional<String> translatedAddress() {
         return Optional.ofNullable(this.translatedAddress);
     }
     /**
-     * The translated port for this NAT rule.
+     * @return The translated port for this NAT rule.
      * 
-    */
+     */
     public Optional<String> translatedPort() {
         return Optional.ofNullable(this.translatedPort);
     }

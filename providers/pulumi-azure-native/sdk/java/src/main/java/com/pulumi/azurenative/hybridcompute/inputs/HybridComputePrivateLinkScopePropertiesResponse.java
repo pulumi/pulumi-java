@@ -25,6 +25,10 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends com.p
     @Import(name="privateLinkScopeId", required=true)
     private String privateLinkScopeId;
 
+    /**
+     * @return The Guid id of the private link scope.
+     * 
+     */
     public String privateLinkScopeId() {
         return this.privateLinkScopeId;
     }
@@ -36,6 +40,10 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends com.p
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -47,6 +55,10 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends com.p
     @Import(name="publicNetworkAccess")
     private @Nullable String publicNetworkAccess;
 
+    /**
+     * @return Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
+     * 
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -77,16 +89,34 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends com.p
             $ = new HybridComputePrivateLinkScopePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateLinkScopeId The Guid id of the private link scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkScopeId(String privateLinkScopeId) {
             $.privateLinkScopeId = privateLinkScopeId;
             return this;
         }
 
+        /**
+         * @param provisioningState Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;

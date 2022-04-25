@@ -25,6 +25,10 @@ public final class GatewayDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dmtsClusterUri", required=true)
     private String dmtsClusterUri;
 
+    /**
+     * @return Uri of the DMTS cluster.
+     * 
+     */
     public String dmtsClusterUri() {
         return this.dmtsClusterUri;
     }
@@ -36,6 +40,10 @@ public final class GatewayDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="gatewayObjectId", required=true)
     private String gatewayObjectId;
 
+    /**
+     * @return Gateway object id from in the DMTS cluster for the gateway resource.
+     * 
+     */
     public String gatewayObjectId() {
         return this.gatewayObjectId;
     }
@@ -47,6 +55,10 @@ public final class GatewayDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="gatewayResourceId")
     private @Nullable String gatewayResourceId;
 
+    /**
+     * @return Gateway resource to be associated with the server.
+     * 
+     */
     public Optional<String> gatewayResourceId() {
         return Optional.ofNullable(this.gatewayResourceId);
     }
@@ -77,16 +89,34 @@ public final class GatewayDetailsResponse extends com.pulumi.resources.InvokeArg
             $ = new GatewayDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dmtsClusterUri Uri of the DMTS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dmtsClusterUri(String dmtsClusterUri) {
             $.dmtsClusterUri = dmtsClusterUri;
             return this;
         }
 
+        /**
+         * @param gatewayObjectId Gateway object id from in the DMTS cluster for the gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayObjectId(String gatewayObjectId) {
             $.gatewayObjectId = gatewayObjectId;
             return this;
         }
 
+        /**
+         * @param gatewayResourceId Gateway resource to be associated with the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayResourceId(@Nullable String gatewayResourceId) {
             $.gatewayResourceId = gatewayResourceId;
             return this;

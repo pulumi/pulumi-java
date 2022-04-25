@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ExportDeliveryInfoResponse {
     /**
-     * Has destination for the export being delivered.
+     * @return Has destination for the export being delivered.
      * 
      */
     private final ExportDeliveryDestinationResponse destination;
@@ -21,9 +21,9 @@ public final class ExportDeliveryInfoResponse {
     }
 
     /**
-     * Has destination for the export being delivered.
+     * @return Has destination for the export being delivered.
      * 
-    */
+     */
     public ExportDeliveryDestinationResponse destination() {
         return this.destination;
     }

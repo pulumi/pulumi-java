@@ -26,6 +26,10 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs extends com.
     @Import(name="endDate")
     private @Nullable Output<GoogleTypeDateArgs> endDate;
 
+    /**
+     * @return Optional. The end date of the time period. Budgets with elapsed end date won&#39;t be processed. If unset, specifies to track all usage incurred since the start_date.
+     * 
+     */
     public Optional<Output<GoogleTypeDateArgs>> endDate() {
         return Optional.ofNullable(this.endDate);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs extends com.
     @Import(name="startDate", required=true)
     private Output<GoogleTypeDateArgs> startDate;
 
+    /**
+     * @return The start date must be after January 1, 2017.
+     * 
+     */
     public Output<GoogleTypeDateArgs> startDate() {
         return this.startDate;
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs extends com.
             $ = new GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endDate Optional. The end date of the time period. Budgets with elapsed end date won&#39;t be processed. If unset, specifies to track all usage incurred since the start_date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(@Nullable Output<GoogleTypeDateArgs> endDate) {
             $.endDate = endDate;
             return this;
         }
 
+        /**
+         * @param endDate Optional. The end date of the time period. Budgets with elapsed end date won&#39;t be processed. If unset, specifies to track all usage incurred since the start_date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(GoogleTypeDateArgs endDate) {
             return endDate(Output.of(endDate));
         }
 
+        /**
+         * @param startDate The start date must be after January 1, 2017.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(Output<GoogleTypeDateArgs> startDate) {
             $.startDate = startDate;
             return this;
         }
 
+        /**
+         * @param startDate The start date must be after January 1, 2017.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(GoogleTypeDateArgs startDate) {
             return startDate(Output.of(startDate));
         }

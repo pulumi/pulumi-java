@@ -30,6 +30,10 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends com.pulumi.r
     @Import(name="cleanup")
     private @Nullable Output<Boolean> cleanup;
 
+    /**
+     * @return Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.
+     * 
+     */
     public Optional<Output<Boolean>> cleanup() {
         return Optional.ofNullable(this.cleanup);
     }
@@ -41,6 +45,10 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends com.pulumi.r
     @Import(name="computeType")
     private @Nullable Output<Either<String,DataFlowComputeType>> computeType;
 
+    /**
+     * @return Compute type of the cluster which will execute data flow job.
+     * 
+     */
     public Optional<Output<Either<String,DataFlowComputeType>>> computeType() {
         return Optional.ofNullable(this.computeType);
     }
@@ -52,6 +60,10 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends com.pulumi.r
     @Import(name="coreCount")
     private @Nullable Output<Integer> coreCount;
 
+    /**
+     * @return Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
+     * 
+     */
     public Optional<Output<Integer>> coreCount() {
         return Optional.ofNullable(this.coreCount);
     }
@@ -63,6 +75,10 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends com.pulumi.r
     @Import(name="timeToLive")
     private @Nullable Output<Integer> timeToLive;
 
+    /**
+     * @return Time to live (in minutes) setting of the cluster which will execute data flow job.
+     * 
+     */
     public Optional<Output<Integer>> timeToLive() {
         return Optional.ofNullable(this.timeToLive);
     }
@@ -94,46 +110,106 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends com.pulumi.r
             $ = new IntegrationRuntimeDataFlowPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cleanup Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cleanup(@Nullable Output<Boolean> cleanup) {
             $.cleanup = cleanup;
             return this;
         }
 
+        /**
+         * @param cleanup Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cleanup(Boolean cleanup) {
             return cleanup(Output.of(cleanup));
         }
 
+        /**
+         * @param computeType Compute type of the cluster which will execute data flow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(@Nullable Output<Either<String,DataFlowComputeType>> computeType) {
             $.computeType = computeType;
             return this;
         }
 
+        /**
+         * @param computeType Compute type of the cluster which will execute data flow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(Either<String,DataFlowComputeType> computeType) {
             return computeType(Output.of(computeType));
         }
 
+        /**
+         * @param computeType Compute type of the cluster which will execute data flow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(String computeType) {
             return computeType(Either.ofLeft(computeType));
         }
 
+        /**
+         * @param computeType Compute type of the cluster which will execute data flow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(DataFlowComputeType computeType) {
             return computeType(Either.ofRight(computeType));
         }
 
+        /**
+         * @param coreCount Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreCount(@Nullable Output<Integer> coreCount) {
             $.coreCount = coreCount;
             return this;
         }
 
+        /**
+         * @param coreCount Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreCount(Integer coreCount) {
             return coreCount(Output.of(coreCount));
         }
 
+        /**
+         * @param timeToLive Time to live (in minutes) setting of the cluster which will execute data flow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeToLive(@Nullable Output<Integer> timeToLive) {
             $.timeToLive = timeToLive;
             return this;
         }
 
+        /**
+         * @param timeToLive Time to live (in minutes) setting of the cluster which will execute data flow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeToLive(Integer timeToLive) {
             return timeToLive(Output.of(timeToLive));
         }

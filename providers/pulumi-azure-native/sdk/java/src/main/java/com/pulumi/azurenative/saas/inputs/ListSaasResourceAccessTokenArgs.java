@@ -19,6 +19,10 @@ public final class ListSaasResourceAccessTokenArgs extends com.pulumi.resources.
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return The Saas resource ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -47,6 +51,12 @@ public final class ListSaasResourceAccessTokenArgs extends com.pulumi.resources.
             $ = new ListSaasResourceAccessTokenArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId The Saas resource ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;

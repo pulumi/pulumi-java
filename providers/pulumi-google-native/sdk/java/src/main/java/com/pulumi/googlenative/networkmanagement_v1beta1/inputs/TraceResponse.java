@@ -25,6 +25,10 @@ public final class TraceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointInfo", required=true)
     private EndpointInfoResponse endpointInfo;
 
+    /**
+     * @return Derived from the source and destination endpoints definition specified by user request, and validated by the data plane model. If there are multiple traces starting from different source locations, then the endpoint_info may be different between traces.
+     * 
+     */
     public EndpointInfoResponse endpointInfo() {
         return this.endpointInfo;
     }
@@ -36,6 +40,10 @@ public final class TraceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="steps", required=true)
     private List<StepResponse> steps;
 
+    /**
+     * @return A trace of a test contains multiple steps from the initial state to the final state (delivered, dropped, forwarded, or aborted). The steps are ordered by the processing sequence within the simulated network state machine. It is critical to preserve the order of the steps and avoid reordering or sorting them.
+     * 
+     */
     public List<StepResponse> steps() {
         return this.steps;
     }
@@ -65,16 +73,34 @@ public final class TraceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TraceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointInfo Derived from the source and destination endpoints definition specified by user request, and validated by the data plane model. If there are multiple traces starting from different source locations, then the endpoint_info may be different between traces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointInfo(EndpointInfoResponse endpointInfo) {
             $.endpointInfo = endpointInfo;
             return this;
         }
 
+        /**
+         * @param steps A trace of a test contains multiple steps from the initial state to the final state (delivered, dropped, forwarded, or aborted). The steps are ordered by the processing sequence within the simulated network state machine. It is critical to preserve the order of the steps and avoid reordering or sorting them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(List<StepResponse> steps) {
             $.steps = steps;
             return this;
         }
 
+        /**
+         * @param steps A trace of a test contains multiple steps from the initial state to the final state (delivered, dropped, forwarded, or aborted). The steps are ordered by the processing sequence within the simulated network state machine. It is critical to preserve the order of the steps and avoid reordering or sorting them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(StepResponse... steps) {
             return steps(List.of(steps));
         }

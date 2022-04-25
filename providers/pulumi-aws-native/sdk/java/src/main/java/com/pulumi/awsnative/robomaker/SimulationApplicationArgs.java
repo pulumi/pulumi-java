@@ -28,6 +28,10 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
     @Import(name="currentRevisionId")
     private @Nullable Output<String> currentRevisionId;
 
+    /**
+     * @return The current revision id.
+     * 
+     */
     public Optional<Output<String>> currentRevisionId() {
         return Optional.ofNullable(this.currentRevisionId);
     }
@@ -39,6 +43,10 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
     @Import(name="environment")
     private @Nullable Output<String> environment;
 
+    /**
+     * @return The URI of the Docker image for the robot application.
+     * 
+     */
     public Optional<Output<String>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -50,6 +58,10 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the simulation application.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +73,10 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
     @Import(name="renderingEngine")
     private @Nullable Output<SimulationApplicationRenderingEngineArgs> renderingEngine;
 
+    /**
+     * @return The rendering engine for the simulation application.
+     * 
+     */
     public Optional<Output<SimulationApplicationRenderingEngineArgs>> renderingEngine() {
         return Optional.ofNullable(this.renderingEngine);
     }
@@ -72,6 +88,10 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
     @Import(name="robotSoftwareSuite", required=true)
     private Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
 
+    /**
+     * @return The robot software suite used by the simulation application.
+     * 
+     */
     public Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite() {
         return this.robotSoftwareSuite;
     }
@@ -83,6 +103,10 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
     @Import(name="simulationSoftwareSuite", required=true)
     private Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite;
 
+    /**
+     * @return The simulation software suite used by the simulation application.
+     * 
+     */
     public Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite() {
         return this.simulationSoftwareSuite;
     }
@@ -94,6 +118,10 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
     @Import(name="sources")
     private @Nullable Output<List<SimulationApplicationSourceConfigArgs>> sources;
 
+    /**
+     * @return The sources of the simulation application.
+     * 
+     */
     public Optional<Output<List<SimulationApplicationSourceConfigArgs>>> sources() {
         return Optional.ofNullable(this.sources);
     }
@@ -136,69 +164,159 @@ public final class SimulationApplicationArgs extends com.pulumi.resources.Resour
             $ = new SimulationApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentRevisionId The current revision id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentRevisionId(@Nullable Output<String> currentRevisionId) {
             $.currentRevisionId = currentRevisionId;
             return this;
         }
 
+        /**
+         * @param currentRevisionId The current revision id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentRevisionId(String currentRevisionId) {
             return currentRevisionId(Output.of(currentRevisionId));
         }
 
+        /**
+         * @param environment The URI of the Docker image for the robot application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<String> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment The URI of the Docker image for the robot application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(String environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param name The name of the simulation application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the simulation application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param renderingEngine The rendering engine for the simulation application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder renderingEngine(@Nullable Output<SimulationApplicationRenderingEngineArgs> renderingEngine) {
             $.renderingEngine = renderingEngine;
             return this;
         }
 
+        /**
+         * @param renderingEngine The rendering engine for the simulation application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder renderingEngine(SimulationApplicationRenderingEngineArgs renderingEngine) {
             return renderingEngine(Output.of(renderingEngine));
         }
 
+        /**
+         * @param robotSoftwareSuite The robot software suite used by the simulation application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder robotSoftwareSuite(Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite) {
             $.robotSoftwareSuite = robotSoftwareSuite;
             return this;
         }
 
+        /**
+         * @param robotSoftwareSuite The robot software suite used by the simulation application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder robotSoftwareSuite(SimulationApplicationRobotSoftwareSuiteArgs robotSoftwareSuite) {
             return robotSoftwareSuite(Output.of(robotSoftwareSuite));
         }
 
+        /**
+         * @param simulationSoftwareSuite The simulation software suite used by the simulation application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder simulationSoftwareSuite(Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite) {
             $.simulationSoftwareSuite = simulationSoftwareSuite;
             return this;
         }
 
+        /**
+         * @param simulationSoftwareSuite The simulation software suite used by the simulation application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder simulationSoftwareSuite(SimulationApplicationSimulationSoftwareSuiteArgs simulationSoftwareSuite) {
             return simulationSoftwareSuite(Output.of(simulationSoftwareSuite));
         }
 
+        /**
+         * @param sources The sources of the simulation application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(@Nullable Output<List<SimulationApplicationSourceConfigArgs>> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources The sources of the simulation application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<SimulationApplicationSourceConfigArgs> sources) {
             return sources(Output.of(sources));
         }
 
+        /**
+         * @param sources The sources of the simulation application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(SimulationApplicationSourceConfigArgs... sources) {
             return sources(List.of(sources));
         }

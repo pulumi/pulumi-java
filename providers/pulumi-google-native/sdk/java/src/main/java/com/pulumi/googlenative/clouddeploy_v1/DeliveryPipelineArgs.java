@@ -24,6 +24,10 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
     @Import(name="annotations")
     private @Nullable Output<Map<String,String>> annotations;
 
+    /**
+     * @return User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+     * 
+     */
     public Optional<Output<Map<String,String>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -42,6 +46,10 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the `DeliveryPipeline`. Max length is 255 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -53,6 +61,10 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -64,6 +76,10 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -82,6 +98,10 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -107,6 +127,10 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serialPipeline")
     private @Nullable Output<SerialPipelineArgs> serialPipeline;
 
+    /**
+     * @return SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
+     * 
+     */
     public Optional<Output<SerialPipelineArgs>> serialPipeline() {
         return Optional.ofNullable(this.serialPipeline);
     }
@@ -152,11 +176,23 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
             $ = new DeliveryPipelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Map<String,String> annotations) {
             return annotations(Output.of(annotations));
         }
@@ -170,29 +206,65 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
             return deliveryPipelineId(Output.of(deliveryPipelineId));
         }
 
+        /**
+         * @param description Description of the `DeliveryPipeline`. Max length is 255 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the `DeliveryPipeline`. Max length is 255 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param etag This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param labels Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -206,11 +278,23 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -233,11 +317,23 @@ public final class DeliveryPipelineArgs extends com.pulumi.resources.ResourceArg
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param serialPipeline SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialPipeline(@Nullable Output<SerialPipelineArgs> serialPipeline) {
             $.serialPipeline = serialPipeline;
             return this;
         }
 
+        /**
+         * @param serialPipeline SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialPipeline(SerialPipelineArgs serialPipeline) {
             return serialPipeline(Output.of(serialPipeline));
         }

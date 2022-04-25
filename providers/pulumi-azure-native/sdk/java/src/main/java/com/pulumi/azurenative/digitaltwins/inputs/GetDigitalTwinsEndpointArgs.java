@@ -19,6 +19,10 @@ public final class GetDigitalTwinsEndpointArgs extends com.pulumi.resources.Invo
     @Import(name="endpointName", required=true)
     private String endpointName;
 
+    /**
+     * @return Name of Endpoint Resource.
+     * 
+     */
     public String endpointName() {
         return this.endpointName;
     }
@@ -30,6 +34,10 @@ public final class GetDigitalTwinsEndpointArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the DigitalTwinsInstance.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetDigitalTwinsEndpointArgs extends com.pulumi.resources.Invo
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the DigitalTwinsInstance.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -71,16 +83,34 @@ public final class GetDigitalTwinsEndpointArgs extends com.pulumi.resources.Invo
             $ = new GetDigitalTwinsEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointName Name of Endpoint Resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

@@ -26,6 +26,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Password credential used to connect to the share location.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -37,6 +41,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return The folder path for this share.
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -48,6 +56,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName")
     private @Nullable Output<String> userName;
 
+    /**
+     * @return User name credential to connect to the share location
+     * 
+     */
     public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -78,29 +90,65 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FileShareArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Password credential used to connect to the share location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password credential used to connect to the share location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param path The folder path for this share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The folder path for this share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param userName User name credential to connect to the share location
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName User name credential to connect to the share location
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

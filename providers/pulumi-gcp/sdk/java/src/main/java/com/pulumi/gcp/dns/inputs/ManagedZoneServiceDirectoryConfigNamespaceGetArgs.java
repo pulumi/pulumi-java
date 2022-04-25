@@ -24,6 +24,14 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceGetArgs extends com
     @Import(name="namespaceUrl", required=true)
     private Output<String> namespaceUrl;
 
+    /**
+     * @return The fully qualified or partial URL of the service directory namespace that should be
+     * associated with the zone. This should be formatted like
+     * `https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace_id}`
+     * or simply `projects/{project}/locations/{location}/namespaces/{namespace_id}`
+     * Ignored for `public` visibility zones.
+     * 
+     */
     public Output<String> namespaceUrl() {
         return this.namespaceUrl;
     }
@@ -52,11 +60,31 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceGetArgs extends com
             $ = new ManagedZoneServiceDirectoryConfigNamespaceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespaceUrl The fully qualified or partial URL of the service directory namespace that should be
+         * associated with the zone. This should be formatted like
+         * `https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace_id}`
+         * or simply `projects/{project}/locations/{location}/namespaces/{namespace_id}`
+         * Ignored for `public` visibility zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceUrl(Output<String> namespaceUrl) {
             $.namespaceUrl = namespaceUrl;
             return this;
         }
 
+        /**
+         * @param namespaceUrl The fully qualified or partial URL of the service directory namespace that should be
+         * associated with the zone. This should be formatted like
+         * `https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace_id}`
+         * or simply `projects/{project}/locations/{location}/namespaces/{namespace_id}`
+         * Ignored for `public` visibility zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceUrl(String namespaceUrl) {
             return namespaceUrl(Output.of(namespaceUrl));
         }

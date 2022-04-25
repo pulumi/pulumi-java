@@ -24,6 +24,10 @@ public final class MetricDimensionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the dimension.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class MetricDimensionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return the dimension operator. Only &#39;Include&#39; and &#39;Exclude&#39; are supported
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -46,6 +54,10 @@ public final class MetricDimensionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return list of dimension values.
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -76,21 +88,45 @@ public final class MetricDimensionResponse extends com.pulumi.resources.InvokeAr
             $ = new MetricDimensionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param operator the dimension operator. Only &#39;Include&#39; and &#39;Exclude&#39; are supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param values list of dimension values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values list of dimension values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

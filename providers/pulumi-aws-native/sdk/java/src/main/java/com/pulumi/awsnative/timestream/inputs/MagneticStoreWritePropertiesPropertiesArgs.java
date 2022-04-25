@@ -27,6 +27,10 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends com.pulumi
     @Import(name="enableMagneticStoreWrites", required=true)
     private Output<Boolean> enableMagneticStoreWrites;
 
+    /**
+     * @return Boolean flag indicating whether magnetic store writes are enabled.
+     * 
+     */
     public Output<Boolean> enableMagneticStoreWrites() {
         return this.enableMagneticStoreWrites;
     }
@@ -38,6 +42,10 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends com.pulumi
     @Import(name="magneticStoreRejectedDataLocation")
     private @Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation;
 
+    /**
+     * @return Location to store information about records that were asynchronously rejected during magnetic store writes.
+     * 
+     */
     public Optional<Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs>> magneticStoreRejectedDataLocation() {
         return Optional.ofNullable(this.magneticStoreRejectedDataLocation);
     }
@@ -67,20 +75,44 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends com.pulumi
             $ = new MagneticStoreWritePropertiesPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableMagneticStoreWrites Boolean flag indicating whether magnetic store writes are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMagneticStoreWrites(Output<Boolean> enableMagneticStoreWrites) {
             $.enableMagneticStoreWrites = enableMagneticStoreWrites;
             return this;
         }
 
+        /**
+         * @param enableMagneticStoreWrites Boolean flag indicating whether magnetic store writes are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMagneticStoreWrites(Boolean enableMagneticStoreWrites) {
             return enableMagneticStoreWrites(Output.of(enableMagneticStoreWrites));
         }
 
+        /**
+         * @param magneticStoreRejectedDataLocation Location to store information about records that were asynchronously rejected during magnetic store writes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder magneticStoreRejectedDataLocation(@Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation) {
             $.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
             return this;
         }
 
+        /**
+         * @param magneticStoreRejectedDataLocation Location to store information about records that were asynchronously rejected during magnetic store writes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder magneticStoreRejectedDataLocation(MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs magneticStoreRejectedDataLocation) {
             return magneticStoreRejectedDataLocation(Output.of(magneticStoreRejectedDataLocation));
         }

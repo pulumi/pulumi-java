@@ -23,6 +23,10 @@ public final class CertificateTemplateResponse extends com.pulumi.resources.Invo
     @Import(name="majorVersion", required=true)
     private Integer majorVersion;
 
+    /**
+     * @return The Major version of the template. Example: 100.
+     * 
+     */
     public Integer majorVersion() {
         return this.majorVersion;
     }
@@ -34,6 +38,10 @@ public final class CertificateTemplateResponse extends com.pulumi.resources.Invo
     @Import(name="minorVersion", required=true)
     private Integer minorVersion;
 
+    /**
+     * @return The minor version of the template. Example: 12.
+     * 
+     */
     public Integer minorVersion() {
         return this.minorVersion;
     }
@@ -63,11 +71,23 @@ public final class CertificateTemplateResponse extends com.pulumi.resources.Invo
             $ = new CertificateTemplateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param majorVersion The Major version of the template. Example: 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder majorVersion(Integer majorVersion) {
             $.majorVersion = majorVersion;
             return this;
         }
 
+        /**
+         * @param minorVersion The minor version of the template. Example: 12.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minorVersion(Integer minorVersion) {
             $.minorVersion = minorVersion;
             return this;

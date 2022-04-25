@@ -25,6 +25,10 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends com.pulumi.resource
     @Import(name="allowNoResourceGroupMatch")
     private @Nullable Output<Boolean> allowNoResourceGroupMatch;
 
+    /**
+     * @return This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
+     * 
+     */
     public Optional<Output<Boolean>> allowNoResourceGroupMatch() {
         return Optional.ofNullable(this.allowNoResourceGroupMatch);
     }
@@ -36,6 +40,10 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends com.pulumi.resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return OS policy assignment description. Length of the description is limited to 1024 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends com.pulumi.resource
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -58,6 +70,10 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends com.pulumi.resource
     @Import(name="mode", required=true)
     private Output<String> mode;
 
+    /**
+     * @return Required. Policy mode Possible values: MODE_UNSPECIFIED, VALIDATION, ENFORCEMENT
+     * 
+     */
     public Output<String> mode() {
         return this.mode;
     }
@@ -69,6 +85,10 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends com.pulumi.resource
     @Import(name="resourceGroups", required=true)
     private Output<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups;
 
+    /**
+     * @return Required. List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
+     * 
+     */
     public Output<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups() {
         return this.resourceGroups;
     }
@@ -101,51 +121,117 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends com.pulumi.resource
             $ = new OsPolicyAssignmentOsPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowNoResourceGroupMatch This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowNoResourceGroupMatch(@Nullable Output<Boolean> allowNoResourceGroupMatch) {
             $.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
             return this;
         }
 
+        /**
+         * @param allowNoResourceGroupMatch This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowNoResourceGroupMatch(Boolean allowNoResourceGroupMatch) {
             return allowNoResourceGroupMatch(Output.of(allowNoResourceGroupMatch));
         }
 
+        /**
+         * @param description OS policy assignment description. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description OS policy assignment description. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param id Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param mode Required. Policy mode Possible values: MODE_UNSPECIFIED, VALIDATION, ENFORCEMENT
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Output<String> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Required. Policy mode Possible values: MODE_UNSPECIFIED, VALIDATION, ENFORCEMENT
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param resourceGroups Required. List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroups(Output<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups) {
             $.resourceGroups = resourceGroups;
             return this;
         }
 
+        /**
+         * @param resourceGroups Required. List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroups(List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs> resourceGroups) {
             return resourceGroups(Output.of(resourceGroups));
         }
 
+        /**
+         * @param resourceGroups Required. List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroups(OsPolicyAssignmentOsPolicyResourceGroupGetArgs... resourceGroups) {
             return resourceGroups(List.of(resourceGroups));
         }

@@ -15,38 +15,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataFactoryResponse {
     /**
-     * Location for the underlying compute
+     * @return Location for the underlying compute
      * 
      */
     private final @Nullable String computeLocation;
     /**
-     * The type of compute
+     * @return The type of compute
      * Expected value is &#39;DataFactory&#39;.
      * 
      */
     private final String computeType;
     /**
-     * The description of the Machine Learning compute.
+     * @return The description of the Machine Learning compute.
      * 
      */
     private final @Nullable String description;
     /**
-     * Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
+     * @return Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
      * 
      */
     private final Boolean isAttachedCompute;
     /**
-     * Errors during provisioning
+     * @return Errors during provisioning
      * 
      */
     private final List<MachineLearningServiceErrorResponse> provisioningErrors;
     /**
-     * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+     * @return The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
      * 
      */
     private final String provisioningState;
     /**
-     * ARM resource id of the underlying compute
+     * @return ARM resource id of the underlying compute
      * 
      */
     private final @Nullable String resourceId;
@@ -70,52 +70,52 @@ public final class DataFactoryResponse {
     }
 
     /**
-     * Location for the underlying compute
+     * @return Location for the underlying compute
      * 
-    */
+     */
     public Optional<String> computeLocation() {
         return Optional.ofNullable(this.computeLocation);
     }
     /**
-     * The type of compute
+     * @return The type of compute
      * Expected value is &#39;DataFactory&#39;.
      * 
-    */
+     */
     public String computeType() {
         return this.computeType;
     }
     /**
-     * The description of the Machine Learning compute.
+     * @return The description of the Machine Learning compute.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
+     * @return Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
      * 
-    */
+     */
     public Boolean isAttachedCompute() {
         return this.isAttachedCompute;
     }
     /**
-     * Errors during provisioning
+     * @return Errors during provisioning
      * 
-    */
+     */
     public List<MachineLearningServiceErrorResponse> provisioningErrors() {
         return this.provisioningErrors;
     }
     /**
-     * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+     * @return The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * ARM resource id of the underlying compute
+     * @return ARM resource id of the underlying compute
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }

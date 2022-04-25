@@ -29,6 +29,10 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
     private @Nullable Output<String> accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public Optional<Output<String>> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -40,6 +44,10 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
     private @Nullable Output<AccountEncryptionArgs> encryption;
 
+    /**
+     * @return The account encryption properties.
+     * 
+     */
     public Optional<Output<AccountEncryptionArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -51,6 +59,10 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<MediaServiceIdentityArgs> identity;
 
+    /**
+     * @return The Managed Identity for the Media Services account.
+     * 
+     */
     public Optional<Output<MediaServiceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -62,6 +74,10 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -73,6 +89,10 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -84,6 +104,10 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccounts")
     private @Nullable Output<List<StorageAccountArgs>> storageAccounts;
 
+    /**
+     * @return The storage accounts for this resource.
+     * 
+     */
     public Optional<Output<List<StorageAccountArgs>>> storageAccounts() {
         return Optional.ofNullable(this.storageAccounts);
     }
@@ -102,6 +126,10 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -137,60 +165,138 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MediaServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param encryption The account encryption properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<AccountEncryptionArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption The account encryption properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(AccountEncryptionArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param identity The Managed Identity for the Media Services account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<MediaServiceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The Managed Identity for the Media Services account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(MediaServiceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageAccounts The storage accounts for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccounts(@Nullable Output<List<StorageAccountArgs>> storageAccounts) {
             $.storageAccounts = storageAccounts;
             return this;
         }
 
+        /**
+         * @param storageAccounts The storage accounts for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccounts(List<StorageAccountArgs> storageAccounts) {
             return storageAccounts(Output.of(storageAccounts));
         }
 
+        /**
+         * @param storageAccounts The storage accounts for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccounts(StorageAccountArgs... storageAccounts) {
             return storageAccounts(List.of(storageAccounts));
         }
@@ -212,11 +318,23 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
             return storageAuthentication(Either.ofRight(storageAuthentication));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

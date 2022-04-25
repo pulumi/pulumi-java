@@ -32,6 +32,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cors")
     private @Nullable Output<List<BucketCorArgs>> cors;
 
+    /**
+     * @return The bucket&#39;s [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+     * 
+     */
     public Optional<Output<List<BucketCorArgs>>> cors() {
         return Optional.ofNullable(this.cors);
     }
@@ -50,6 +54,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
     private @Nullable Output<BucketEncryptionArgs> encryption;
 
+    /**
+     * @return The bucket&#39;s encryption configuration. Structure is documented below.
+     * 
+     */
     public Optional<Output<BucketEncryptionArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -63,6 +71,12 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
     private @Nullable Output<Boolean> forceDestroy;
 
+    /**
+     * @return When deleting a bucket, this
+     * boolean option will delete all contained objects. If you try to delete a
+     * bucket that contains objects, the provider will fail that run.
+     * 
+     */
     public Optional<Output<Boolean>> forceDestroy() {
         return Optional.ofNullable(this.forceDestroy);
     }
@@ -74,6 +88,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return A map of key/value label pairs to assign to the bucket.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -85,6 +103,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lifecycleRules")
     private @Nullable Output<List<BucketLifecycleRuleArgs>> lifecycleRules;
 
+    /**
+     * @return The bucket&#39;s [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+     * 
+     */
     public Optional<Output<List<BucketLifecycleRuleArgs>>> lifecycleRules() {
         return Optional.ofNullable(this.lifecycleRules);
     }
@@ -96,6 +118,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -107,6 +133,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logging")
     private @Nullable Output<BucketLoggingArgs> logging;
 
+    /**
+     * @return The bucket&#39;s [Access &amp; Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
+     * 
+     */
     public Optional<Output<BucketLoggingArgs>> logging() {
         return Optional.ofNullable(this.logging);
     }
@@ -118,6 +148,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the bucket.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -130,6 +164,11 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -141,6 +180,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicAccessPrevention")
     private @Nullable Output<String> publicAccessPrevention;
 
+    /**
+     * @return Prevents public access to a bucket.
+     * 
+     */
     public Optional<Output<String>> publicAccessPrevention() {
         return Optional.ofNullable(this.publicAccessPrevention);
     }
@@ -152,6 +195,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requesterPays")
     private @Nullable Output<Boolean> requesterPays;
 
+    /**
+     * @return Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
+     * 
+     */
     public Optional<Output<Boolean>> requesterPays() {
         return Optional.ofNullable(this.requesterPays);
     }
@@ -163,6 +210,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionPolicy")
     private @Nullable Output<BucketRetentionPolicyArgs> retentionPolicy;
 
+    /**
+     * @return Configuration of the bucket&#39;s data retention policy for how long objects in the bucket should be retained. Structure is documented below.
+     * 
+     */
     public Optional<Output<BucketRetentionPolicyArgs>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -174,6 +225,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageClass")
     private @Nullable Output<String> storageClass;
 
+    /**
+     * @return The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
+     * 
+     */
     public Optional<Output<String>> storageClass() {
         return Optional.ofNullable(this.storageClass);
     }
@@ -185,6 +240,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uniformBucketLevelAccess")
     private @Nullable Output<Boolean> uniformBucketLevelAccess;
 
+    /**
+     * @return Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
+     * 
+     */
     public Optional<Output<Boolean>> uniformBucketLevelAccess() {
         return Optional.ofNullable(this.uniformBucketLevelAccess);
     }
@@ -196,6 +255,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versioning")
     private @Nullable Output<BucketVersioningArgs> versioning;
 
+    /**
+     * @return The bucket&#39;s [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
+     * 
+     */
     public Optional<Output<BucketVersioningArgs>> versioning() {
         return Optional.ofNullable(this.versioning);
     }
@@ -207,6 +270,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="website")
     private @Nullable Output<BucketWebsiteArgs> website;
 
+    /**
+     * @return Configuration if the bucket acts as a website. Structure is documented below.
+     * 
+     */
     public Optional<Output<BucketWebsiteArgs>> website() {
         return Optional.ofNullable(this.website);
     }
@@ -251,15 +318,33 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BucketArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cors The bucket&#39;s [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(@Nullable Output<List<BucketCorArgs>> cors) {
             $.cors = cors;
             return this;
         }
 
+        /**
+         * @param cors The bucket&#39;s [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(List<BucketCorArgs> cors) {
             return cors(Output.of(cors));
         }
 
+        /**
+         * @param cors The bucket&#39;s [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(BucketCorArgs... cors) {
             return cors(List.of(cors));
         }
@@ -273,141 +358,333 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
             return defaultEventBasedHold(Output.of(defaultEventBasedHold));
         }
 
+        /**
+         * @param encryption The bucket&#39;s encryption configuration. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<BucketEncryptionArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption The bucket&#39;s encryption configuration. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(BucketEncryptionArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param forceDestroy When deleting a bucket, this
+         * boolean option will delete all contained objects. If you try to delete a
+         * bucket that contains objects, the provider will fail that run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             $.forceDestroy = forceDestroy;
             return this;
         }
 
+        /**
+         * @param forceDestroy When deleting a bucket, this
+         * boolean option will delete all contained objects. If you try to delete a
+         * bucket that contains objects, the provider will fail that run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDestroy(Boolean forceDestroy) {
             return forceDestroy(Output.of(forceDestroy));
         }
 
+        /**
+         * @param labels A map of key/value label pairs to assign to the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels A map of key/value label pairs to assign to the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param lifecycleRules The bucket&#39;s [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleRules(@Nullable Output<List<BucketLifecycleRuleArgs>> lifecycleRules) {
             $.lifecycleRules = lifecycleRules;
             return this;
         }
 
+        /**
+         * @param lifecycleRules The bucket&#39;s [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleRules(List<BucketLifecycleRuleArgs> lifecycleRules) {
             return lifecycleRules(Output.of(lifecycleRules));
         }
 
+        /**
+         * @param lifecycleRules The bucket&#39;s [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleRules(BucketLifecycleRuleArgs... lifecycleRules) {
             return lifecycleRules(List.of(lifecycleRules));
         }
 
+        /**
+         * @param location The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param logging The bucket&#39;s [Access &amp; Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logging(@Nullable Output<BucketLoggingArgs> logging) {
             $.logging = logging;
             return this;
         }
 
+        /**
+         * @param logging The bucket&#39;s [Access &amp; Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logging(BucketLoggingArgs logging) {
             return logging(Output.of(logging));
         }
 
+        /**
+         * @param name The name of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param publicAccessPrevention Prevents public access to a bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccessPrevention(@Nullable Output<String> publicAccessPrevention) {
             $.publicAccessPrevention = publicAccessPrevention;
             return this;
         }
 
+        /**
+         * @param publicAccessPrevention Prevents public access to a bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccessPrevention(String publicAccessPrevention) {
             return publicAccessPrevention(Output.of(publicAccessPrevention));
         }
 
+        /**
+         * @param requesterPays Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requesterPays(@Nullable Output<Boolean> requesterPays) {
             $.requesterPays = requesterPays;
             return this;
         }
 
+        /**
+         * @param requesterPays Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requesterPays(Boolean requesterPays) {
             return requesterPays(Output.of(requesterPays));
         }
 
+        /**
+         * @param retentionPolicy Configuration of the bucket&#39;s data retention policy for how long objects in the bucket should be retained. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Output<BucketRetentionPolicyArgs> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Configuration of the bucket&#39;s data retention policy for how long objects in the bucket should be retained. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(BucketRetentionPolicyArgs retentionPolicy) {
             return retentionPolicy(Output.of(retentionPolicy));
         }
 
+        /**
+         * @param storageClass The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(@Nullable Output<String> storageClass) {
             $.storageClass = storageClass;
             return this;
         }
 
+        /**
+         * @param storageClass The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(String storageClass) {
             return storageClass(Output.of(storageClass));
         }
 
+        /**
+         * @param uniformBucketLevelAccess Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniformBucketLevelAccess(@Nullable Output<Boolean> uniformBucketLevelAccess) {
             $.uniformBucketLevelAccess = uniformBucketLevelAccess;
             return this;
         }
 
+        /**
+         * @param uniformBucketLevelAccess Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniformBucketLevelAccess(Boolean uniformBucketLevelAccess) {
             return uniformBucketLevelAccess(Output.of(uniformBucketLevelAccess));
         }
 
+        /**
+         * @param versioning The bucket&#39;s [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versioning(@Nullable Output<BucketVersioningArgs> versioning) {
             $.versioning = versioning;
             return this;
         }
 
+        /**
+         * @param versioning The bucket&#39;s [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versioning(BucketVersioningArgs versioning) {
             return versioning(Output.of(versioning));
         }
 
+        /**
+         * @param website Configuration if the bucket acts as a website. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder website(@Nullable Output<BucketWebsiteArgs> website) {
             $.website = website;
             return this;
         }
 
+        /**
+         * @param website Configuration if the bucket acts as a website. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder website(BucketWebsiteArgs website) {
             return website(Output.of(website));
         }

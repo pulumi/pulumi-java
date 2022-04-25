@@ -26,6 +26,10 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="count")
     private @Nullable Object count;
 
+    /**
+     * @return Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Object> count() {
         return Optional.ofNullable(this.count);
     }
@@ -37,6 +41,10 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="intervalInSeconds")
     private @Nullable Integer intervalInSeconds;
 
+    /**
+     * @return Interval between retries in seconds. Default is 30.
+     * 
+     */
     public Optional<Integer> intervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
@@ -66,11 +74,23 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RetryPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Object count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param intervalInSeconds Interval between retries in seconds. Default is 30.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             $.intervalInSeconds = intervalInSeconds;
             return this;

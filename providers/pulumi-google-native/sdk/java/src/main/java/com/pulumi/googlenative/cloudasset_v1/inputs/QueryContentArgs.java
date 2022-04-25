@@ -26,6 +26,10 @@ public final class QueryContentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamPolicyAnalysisQuery")
     private @Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
 
+    /**
+     * @return An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
+     * 
+     */
     public Optional<Output<IamPolicyAnalysisQueryArgs>> iamPolicyAnalysisQuery() {
         return Optional.ofNullable(this.iamPolicyAnalysisQuery);
     }
@@ -54,11 +58,23 @@ public final class QueryContentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new QueryContentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iamPolicyAnalysisQuery An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamPolicyAnalysisQuery(@Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery) {
             $.iamPolicyAnalysisQuery = iamPolicyAnalysisQuery;
             return this;
         }
 
+        /**
+         * @param iamPolicyAnalysisQuery An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamPolicyAnalysisQuery(IamPolicyAnalysisQueryArgs iamPolicyAnalysisQuery) {
             return iamPolicyAnalysisQuery(Output.of(iamPolicyAnalysisQuery));
         }

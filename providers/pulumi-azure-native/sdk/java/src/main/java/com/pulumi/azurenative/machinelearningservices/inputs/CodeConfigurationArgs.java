@@ -26,6 +26,10 @@ public final class CodeConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="codeId")
     private @Nullable Output<String> codeId;
 
+    /**
+     * @return ARM resource ID of the code asset.
+     * 
+     */
     public Optional<Output<String>> codeId() {
         return Optional.ofNullable(this.codeId);
     }
@@ -37,6 +41,10 @@ public final class CodeConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="scoringScript", required=true)
     private Output<String> scoringScript;
 
+    /**
+     * @return The script to execute on startup. eg. &#34;score.py&#34;
+     * 
+     */
     public Output<String> scoringScript() {
         return this.scoringScript;
     }
@@ -66,20 +74,44 @@ public final class CodeConfigurationArgs extends com.pulumi.resources.ResourceAr
             $ = new CodeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codeId ARM resource ID of the code asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeId(@Nullable Output<String> codeId) {
             $.codeId = codeId;
             return this;
         }
 
+        /**
+         * @param codeId ARM resource ID of the code asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeId(String codeId) {
             return codeId(Output.of(codeId));
         }
 
+        /**
+         * @param scoringScript The script to execute on startup. eg. &#34;score.py&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringScript(Output<String> scoringScript) {
             $.scoringScript = scoringScript;
             return this;
         }
 
+        /**
+         * @param scoringScript The script to execute on startup. eg. &#34;score.py&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringScript(String scoringScript) {
             return scoringScript(Output.of(scoringScript));
         }

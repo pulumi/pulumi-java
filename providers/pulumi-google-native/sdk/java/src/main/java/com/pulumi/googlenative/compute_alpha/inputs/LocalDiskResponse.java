@@ -20,6 +20,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskCount", required=true)
     private Integer diskCount;
 
+    /**
+     * @return Specifies the number of such disks.
+     * 
+     */
     public Integer diskCount() {
         return this.diskCount;
     }
@@ -31,6 +35,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGb", required=true)
     private Integer diskSizeGb;
 
+    /**
+     * @return Specifies the size of the disk in base-2 GB.
+     * 
+     */
     public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
@@ -42,6 +50,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskType", required=true)
     private String diskType;
 
+    /**
+     * @return Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.
+     * 
+     */
     public String diskType() {
         return this.diskType;
     }
@@ -72,16 +84,34 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LocalDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskCount Specifies the number of such disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskCount(Integer diskCount) {
             $.diskCount = diskCount;
             return this;
         }
 
+        /**
+         * @param diskSizeGb Specifies the size of the disk in base-2 GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(Integer diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskType Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             $.diskType = diskType;
             return this;

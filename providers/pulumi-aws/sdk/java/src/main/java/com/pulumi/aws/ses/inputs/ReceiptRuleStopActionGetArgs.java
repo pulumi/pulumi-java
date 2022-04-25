@@ -23,6 +23,10 @@ public final class ReceiptRuleStopActionGetArgs extends com.pulumi.resources.Res
     @Import(name="position", required=true)
     private Output<Integer> position;
 
+    /**
+     * @return The position of the action in the receipt rule
+     * 
+     */
     public Output<Integer> position() {
         return this.position;
     }
@@ -34,6 +38,10 @@ public final class ReceiptRuleStopActionGetArgs extends com.pulumi.resources.Res
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return The scope to apply
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -45,6 +53,10 @@ public final class ReceiptRuleStopActionGetArgs extends com.pulumi.resources.Res
     @Import(name="topicArn")
     private @Nullable Output<String> topicArn;
 
+    /**
+     * @return The ARN of an SNS topic to notify
+     * 
+     */
     public Optional<Output<String>> topicArn() {
         return Optional.ofNullable(this.topicArn);
     }
@@ -75,29 +87,65 @@ public final class ReceiptRuleStopActionGetArgs extends com.pulumi.resources.Res
             $ = new ReceiptRuleStopActionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param position The position of the action in the receipt rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder position(Output<Integer> position) {
             $.position = position;
             return this;
         }
 
+        /**
+         * @param position The position of the action in the receipt rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder position(Integer position) {
             return position(Output.of(position));
         }
 
+        /**
+         * @param scope The scope to apply
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The scope to apply
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param topicArn The ARN of an SNS topic to notify
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(@Nullable Output<String> topicArn) {
             $.topicArn = topicArn;
             return this;
         }
 
+        /**
+         * @param topicArn The ARN of an SNS topic to notify
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(String topicArn) {
             return topicArn(Output.of(topicArn));
         }

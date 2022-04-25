@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MongoDBDatabaseGetPropertiesResponseOptions {
     /**
-     * Specifies the Autoscale settings.
+     * @return Specifies the Autoscale settings.
      * 
      */
     private final @Nullable AutoscaleSettingsResponse autoscaleSettings;
     /**
-     * Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+     * @return Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
      * 
      */
     private final @Nullable Integer throughput;
@@ -32,16 +32,16 @@ public final class MongoDBDatabaseGetPropertiesResponseOptions {
     }
 
     /**
-     * Specifies the Autoscale settings.
+     * @return Specifies the Autoscale settings.
      * 
-    */
+     */
     public Optional<AutoscaleSettingsResponse> autoscaleSettings() {
         return Optional.ofNullable(this.autoscaleSettings);
     }
     /**
-     * Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+     * @return Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
      * 
-    */
+     */
     public Optional<Integer> throughput() {
         return Optional.ofNullable(this.throughput);
     }

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class AssetModelExpressionVariable {
     /**
-     * The friendly name of the variable to be used in the expression.
+     * @return The friendly name of the variable to be used in the expression.
      * 
      */
     private final String name;
     /**
-     * The variable that identifies an asset property from which to use values.
+     * @return The variable that identifies an asset property from which to use values.
      * 
      */
     private final AssetModelVariableValue value;
@@ -30,16 +30,16 @@ public final class AssetModelExpressionVariable {
     }
 
     /**
-     * The friendly name of the variable to be used in the expression.
+     * @return The friendly name of the variable to be used in the expression.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The variable that identifies an asset property from which to use values.
+     * @return The variable that identifies an asset property from which to use values.
      * 
-    */
+     */
     public AssetModelVariableValue value() {
         return this.value;
     }

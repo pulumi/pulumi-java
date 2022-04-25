@@ -25,6 +25,10 @@ public final class HubRouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationType", required=true)
     private Output<String> destinationType;
 
+    /**
+     * @return The type of destinations (eg: CIDR, ResourceId, Service).
+     * 
+     */
     public Output<String> destinationType() {
         return this.destinationType;
     }
@@ -36,6 +40,10 @@ public final class HubRouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinations", required=true)
     private Output<List<String>> destinations;
 
+    /**
+     * @return List of all destinations.
+     * 
+     */
     public Output<List<String>> destinations() {
         return this.destinations;
     }
@@ -47,6 +55,10 @@ public final class HubRouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the Route that is unique within a RouteTable. This name can be used to access this route.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -58,6 +70,10 @@ public final class HubRouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nextHop", required=true)
     private Output<String> nextHop;
 
+    /**
+     * @return NextHop resource ID.
+     * 
+     */
     public Output<String> nextHop() {
         return this.nextHop;
     }
@@ -69,6 +85,10 @@ public final class HubRouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nextHopType", required=true)
     private Output<String> nextHopType;
 
+    /**
+     * @return The type of next hop (eg: ResourceId).
+     * 
+     */
     public Output<String> nextHopType() {
         return this.nextHopType;
     }
@@ -101,51 +121,117 @@ public final class HubRouteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HubRouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationType The type of destinations (eg: CIDR, ResourceId, Service).
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationType(Output<String> destinationType) {
             $.destinationType = destinationType;
             return this;
         }
 
+        /**
+         * @param destinationType The type of destinations (eg: CIDR, ResourceId, Service).
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationType(String destinationType) {
             return destinationType(Output.of(destinationType));
         }
 
+        /**
+         * @param destinations List of all destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(Output<List<String>> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations List of all destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(List<String> destinations) {
             return destinations(Output.of(destinations));
         }
 
+        /**
+         * @param destinations List of all destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param name The name of the Route that is unique within a RouteTable. This name can be used to access this route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Route that is unique within a RouteTable. This name can be used to access this route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nextHop NextHop resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHop(Output<String> nextHop) {
             $.nextHop = nextHop;
             return this;
         }
 
+        /**
+         * @param nextHop NextHop resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHop(String nextHop) {
             return nextHop(Output.of(nextHop));
         }
 
+        /**
+         * @param nextHopType The type of next hop (eg: ResourceId).
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopType(Output<String> nextHopType) {
             $.nextHopType = nextHopType;
             return this;
         }
 
+        /**
+         * @param nextHopType The type of next hop (eg: ResourceId).
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopType(String nextHopType) {
             return nextHopType(Output.of(nextHopType));
         }

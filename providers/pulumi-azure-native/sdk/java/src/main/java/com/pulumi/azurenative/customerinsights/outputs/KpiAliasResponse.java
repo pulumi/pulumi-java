@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class KpiAliasResponse {
     /**
-     * KPI alias name.
+     * @return KPI alias name.
      * 
      */
     private final String aliasName;
     /**
-     * The expression.
+     * @return The expression.
      * 
      */
     private final String expression;
@@ -29,16 +29,16 @@ public final class KpiAliasResponse {
     }
 
     /**
-     * KPI alias name.
+     * @return KPI alias name.
      * 
-    */
+     */
     public String aliasName() {
         return this.aliasName;
     }
     /**
-     * The expression.
+     * @return The expression.
      * 
-    */
+     */
     public String expression() {
         return this.expression;
     }

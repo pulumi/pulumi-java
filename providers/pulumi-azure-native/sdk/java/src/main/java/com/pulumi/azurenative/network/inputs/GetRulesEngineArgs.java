@@ -19,6 +19,10 @@ public final class GetRulesEngineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="frontDoorName", required=true)
     private String frontDoorName;
 
+    /**
+     * @return Name of the Front Door which is globally unique.
+     * 
+     */
     public String frontDoorName() {
         return this.frontDoorName;
     }
@@ -30,6 +34,10 @@ public final class GetRulesEngineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetRulesEngineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="rulesEngineName", required=true)
     private String rulesEngineName;
 
+    /**
+     * @return Name of the Rules Engine which is unique within the Front Door.
+     * 
+     */
     public String rulesEngineName() {
         return this.rulesEngineName;
     }
@@ -71,16 +83,34 @@ public final class GetRulesEngineArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRulesEngineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frontDoorName Name of the Front Door which is globally unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontDoorName(String frontDoorName) {
             $.frontDoorName = frontDoorName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param rulesEngineName Name of the Rules Engine which is unique within the Front Door.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineName(String rulesEngineName) {
             $.rulesEngineName = rulesEngineName;
             return this;

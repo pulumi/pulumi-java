@@ -17,32 +17,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MabContainerResponse {
     /**
-     * Agent version of this container.
+     * @return Agent version of this container.
      * 
      */
     private final @Nullable String agentVersion;
     /**
-     * Type of backup management for the container.
+     * @return Type of backup management for the container.
      * 
      */
     private final @Nullable String backupManagementType;
     /**
-     * Can the container be registered one more time.
+     * @return Can the container be registered one more time.
      * 
      */
     private final @Nullable Boolean canReRegister;
     /**
-     * Health state of mab container.
+     * @return Health state of mab container.
      * 
      */
     private final @Nullable String containerHealthState;
     /**
-     * ContainerID represents the container.
+     * @return ContainerID represents the container.
      * 
      */
     private final @Nullable Double containerId;
     /**
-     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
      * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
@@ -51,32 +51,32 @@ public final class MabContainerResponse {
      */
     private final String containerType;
     /**
-     * Additional information for this container
+     * @return Additional information for this container
      * 
      */
     private final @Nullable MabContainerExtendedInfoResponse extendedInfo;
     /**
-     * Friendly name of the container.
+     * @return Friendly name of the container.
      * 
      */
     private final @Nullable String friendlyName;
     /**
-     * Status of health of the container.
+     * @return Status of health of the container.
      * 
      */
     private final @Nullable String healthStatus;
     /**
-     * Health details on this mab container.
+     * @return Health details on this mab container.
      * 
      */
     private final @Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails;
     /**
-     * Number of items backed up in this container.
+     * @return Number of items backed up in this container.
      * 
      */
     private final @Nullable Double protectedItemCount;
     /**
-     * Status of registration of the container with the Recovery Services Vault.
+     * @return Status of registration of the container with the Recovery Services Vault.
      * 
      */
     private final @Nullable String registrationStatus;
@@ -110,90 +110,90 @@ public final class MabContainerResponse {
     }
 
     /**
-     * Agent version of this container.
+     * @return Agent version of this container.
      * 
-    */
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
-     * Type of backup management for the container.
+     * @return Type of backup management for the container.
      * 
-    */
+     */
     public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
-     * Can the container be registered one more time.
+     * @return Can the container be registered one more time.
      * 
-    */
+     */
     public Optional<Boolean> canReRegister() {
         return Optional.ofNullable(this.canReRegister);
     }
     /**
-     * Health state of mab container.
+     * @return Health state of mab container.
      * 
-    */
+     */
     public Optional<String> containerHealthState() {
         return Optional.ofNullable(this.containerHealthState);
     }
     /**
-     * ContainerID represents the container.
+     * @return ContainerID represents the container.
      * 
-    */
+     */
     public Optional<Double> containerId() {
         return Optional.ofNullable(this.containerId);
     }
     /**
-     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
      * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is &#39;Windows&#39;.
      * 
-    */
+     */
     public String containerType() {
         return this.containerType;
     }
     /**
-     * Additional information for this container
+     * @return Additional information for this container
      * 
-    */
+     */
     public Optional<MabContainerExtendedInfoResponse> extendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
     /**
-     * Friendly name of the container.
+     * @return Friendly name of the container.
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
-     * Status of health of the container.
+     * @return Status of health of the container.
      * 
-    */
+     */
     public Optional<String> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
-     * Health details on this mab container.
+     * @return Health details on this mab container.
      * 
-    */
+     */
     public List<MABContainerHealthDetailsResponse> mabContainerHealthDetails() {
         return this.mabContainerHealthDetails == null ? List.of() : this.mabContainerHealthDetails;
     }
     /**
-     * Number of items backed up in this container.
+     * @return Number of items backed up in this container.
      * 
-    */
+     */
     public Optional<Double> protectedItemCount() {
         return Optional.ofNullable(this.protectedItemCount);
     }
     /**
-     * Status of registration of the container with the Recovery Services Vault.
+     * @return Status of registration of the container with the Recovery Services Vault.
      * 
-    */
+     */
     public Optional<String> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }

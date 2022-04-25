@@ -26,6 +26,10 @@ public final class NetworkFunctionTemplateResponse extends com.pulumi.resources.
     @Import(name="networkFunctionRoleConfigurations")
     private @Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations;
 
+    /**
+     * @return An array of network function role definitions.
+     * 
+     */
     public Optional<List<NetworkFunctionRoleConfigurationResponse>> networkFunctionRoleConfigurations() {
         return Optional.ofNullable(this.networkFunctionRoleConfigurations);
     }
@@ -54,11 +58,23 @@ public final class NetworkFunctionTemplateResponse extends com.pulumi.resources.
             $ = new NetworkFunctionTemplateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkFunctionRoleConfigurations An array of network function role definitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFunctionRoleConfigurations(@Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations) {
             $.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
             return this;
         }
 
+        /**
+         * @param networkFunctionRoleConfigurations An array of network function role definitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFunctionRoleConfigurations(NetworkFunctionRoleConfigurationResponse... networkFunctionRoleConfigurations) {
             return networkFunctionRoleConfigurations(List.of(networkFunctionRoleConfigurations));
         }

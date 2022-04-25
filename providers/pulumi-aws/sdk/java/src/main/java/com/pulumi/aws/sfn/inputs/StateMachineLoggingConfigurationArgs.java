@@ -23,6 +23,10 @@ public final class StateMachineLoggingConfigurationArgs extends com.pulumi.resou
     @Import(name="includeExecutionData")
     private @Nullable Output<Boolean> includeExecutionData;
 
+    /**
+     * @return Determines whether execution data is included in your log. When set to `false`, data is excluded.
+     * 
+     */
     public Optional<Output<Boolean>> includeExecutionData() {
         return Optional.ofNullable(this.includeExecutionData);
     }
@@ -34,6 +38,10 @@ public final class StateMachineLoggingConfigurationArgs extends com.pulumi.resou
     @Import(name="level")
     private @Nullable Output<String> level;
 
+    /**
+     * @return Defines which category of execution history events are logged. Valid values: `ALL`, `ERROR`, `FATAL`, `OFF`
+     * 
+     */
     public Optional<Output<String>> level() {
         return Optional.ofNullable(this.level);
     }
@@ -45,6 +53,10 @@ public final class StateMachineLoggingConfigurationArgs extends com.pulumi.resou
     @Import(name="logDestination")
     private @Nullable Output<String> logDestination;
 
+    /**
+     * @return Amazon Resource Name (ARN) of a CloudWatch log group. Make sure the State Machine has the correct IAM policies for logging. The ARN must end with `:*`
+     * 
+     */
     public Optional<Output<String>> logDestination() {
         return Optional.ofNullable(this.logDestination);
     }
@@ -75,29 +87,65 @@ public final class StateMachineLoggingConfigurationArgs extends com.pulumi.resou
             $ = new StateMachineLoggingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param includeExecutionData Determines whether execution data is included in your log. When set to `false`, data is excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeExecutionData(@Nullable Output<Boolean> includeExecutionData) {
             $.includeExecutionData = includeExecutionData;
             return this;
         }
 
+        /**
+         * @param includeExecutionData Determines whether execution data is included in your log. When set to `false`, data is excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeExecutionData(Boolean includeExecutionData) {
             return includeExecutionData(Output.of(includeExecutionData));
         }
 
+        /**
+         * @param level Defines which category of execution history events are logged. Valid values: `ALL`, `ERROR`, `FATAL`, `OFF`
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable Output<String> level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param level Defines which category of execution history events are logged. Valid values: `ALL`, `ERROR`, `FATAL`, `OFF`
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(String level) {
             return level(Output.of(level));
         }
 
+        /**
+         * @param logDestination Amazon Resource Name (ARN) of a CloudWatch log group. Make sure the State Machine has the correct IAM policies for logging. The ARN must end with `:*`
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDestination(@Nullable Output<String> logDestination) {
             $.logDestination = logDestination;
             return this;
         }
 
+        /**
+         * @param logDestination Amazon Resource Name (ARN) of a CloudWatch log group. Make sure the State Machine has the correct IAM policies for logging. The ARN must end with `:*`
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDestination(String logDestination) {
             return logDestination(Output.of(logDestination));
         }

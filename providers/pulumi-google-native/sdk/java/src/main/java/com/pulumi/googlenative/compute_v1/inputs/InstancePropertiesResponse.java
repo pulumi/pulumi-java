@@ -34,6 +34,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="advancedMachineFeatures", required=true)
     private AdvancedMachineFeaturesResponse advancedMachineFeatures;
 
+    /**
+     * @return Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     public AdvancedMachineFeaturesResponse advancedMachineFeatures() {
         return this.advancedMachineFeatures;
     }
@@ -45,6 +49,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="canIpForward", required=true)
     private Boolean canIpForward;
 
+    /**
+     * @return Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
+     * 
+     */
     public Boolean canIpForward() {
         return this.canIpForward;
     }
@@ -56,6 +64,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="confidentialInstanceConfig", required=true)
     private ConfidentialInstanceConfigResponse confidentialInstanceConfig;
 
+    /**
+     * @return Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     public ConfidentialInstanceConfigResponse confidentialInstanceConfig() {
         return this.confidentialInstanceConfig;
     }
@@ -67,6 +79,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return An optional text description for the instances that are created from these properties.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -78,6 +94,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="disks", required=true)
     private List<AttachedDiskResponse> disks;
 
+    /**
+     * @return An array of disks that are associated with the instances that are created from these properties.
+     * 
+     */
     public List<AttachedDiskResponse> disks() {
         return this.disks;
     }
@@ -89,6 +109,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="guestAccelerators", required=true)
     private List<AcceleratorConfigResponse> guestAccelerators;
 
+    /**
+     * @return A list of guest accelerator cards&#39; type and count to use for instances created from these properties.
+     * 
+     */
     public List<AcceleratorConfigResponse> guestAccelerators() {
         return this.guestAccelerators;
     }
@@ -100,6 +124,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Labels to apply to instances that are created from these properties.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -111,6 +139,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="machineType", required=true)
     private String machineType;
 
+    /**
+     * @return The machine type to use for instances that are created from these properties.
+     * 
+     */
     public String machineType() {
         return this.machineType;
     }
@@ -122,6 +154,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="metadata", required=true)
     private MetadataResponse metadata;
 
+    /**
+     * @return The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
+     * 
+     */
     public MetadataResponse metadata() {
         return this.metadata;
     }
@@ -133,6 +169,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="minCpuPlatform", required=true)
     private String minCpuPlatform;
 
+    /**
+     * @return Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
+     * 
+     */
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
@@ -144,6 +184,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="networkInterfaces", required=true)
     private List<NetworkInterfaceResponse> networkInterfaces;
 
+    /**
+     * @return An array of network access configurations for this interface.
+     * 
+     */
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
@@ -155,6 +199,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="networkPerformanceConfig", required=true)
     private NetworkPerformanceConfigResponse networkPerformanceConfig;
 
+    /**
+     * @return Note that for MachineImage, this is not supported yet.
+     * 
+     */
     public NetworkPerformanceConfigResponse networkPerformanceConfig() {
         return this.networkPerformanceConfig;
     }
@@ -166,6 +214,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="privateIpv6GoogleAccess", required=true)
     private String privateIpv6GoogleAccess;
 
+    /**
+     * @return The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     public String privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
     }
@@ -177,6 +229,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="reservationAffinity", required=true)
     private ReservationAffinityResponse reservationAffinity;
 
+    /**
+     * @return Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     public ReservationAffinityResponse reservationAffinity() {
         return this.reservationAffinity;
     }
@@ -188,6 +244,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="resourceManagerTags", required=true)
     private Map<String,String> resourceManagerTags;
 
+    /**
+     * @return Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
+     * 
+     */
     public Map<String,String> resourceManagerTags() {
         return this.resourceManagerTags;
     }
@@ -199,6 +259,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="resourcePolicies", required=true)
     private List<String> resourcePolicies;
 
+    /**
+     * @return Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
+     * 
+     */
     public List<String> resourcePolicies() {
         return this.resourcePolicies;
     }
@@ -210,6 +274,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="scheduling", required=true)
     private SchedulingResponse scheduling;
 
+    /**
+     * @return Specifies the scheduling options for the instances that are created from these properties.
+     * 
+     */
     public SchedulingResponse scheduling() {
         return this.scheduling;
     }
@@ -221,6 +289,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="serviceAccounts", required=true)
     private List<ServiceAccountResponse> serviceAccounts;
 
+    /**
+     * @return A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
+     * 
+     */
     public List<ServiceAccountResponse> serviceAccounts() {
         return this.serviceAccounts;
     }
@@ -232,6 +304,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="shieldedInstanceConfig", required=true)
     private ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
+    /**
+     * @return Note that for MachineImage, this is not supported yet.
+     * 
+     */
     public ShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
@@ -243,6 +319,10 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="tags", required=true)
     private TagsResponse tags;
 
+    /**
+     * @return A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
+     * 
+     */
     public TagsResponse tags() {
         return this.tags;
     }
@@ -290,121 +370,271 @@ public final class InstancePropertiesResponse extends com.pulumi.resources.Invok
             $ = new InstancePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advancedMachineFeatures Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedMachineFeatures(AdvancedMachineFeaturesResponse advancedMachineFeatures) {
             $.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
 
+        /**
+         * @param canIpForward Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(Boolean canIpForward) {
             $.canIpForward = canIpForward;
             return this;
         }
 
+        /**
+         * @param confidentialInstanceConfig Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidentialInstanceConfig(ConfidentialInstanceConfigResponse confidentialInstanceConfig) {
             $.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
 
+        /**
+         * @param description An optional text description for the instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param disks An array of disks that are associated with the instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(List<AttachedDiskResponse> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks An array of disks that are associated with the instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(AttachedDiskResponse... disks) {
             return disks(List.of(disks));
         }
 
+        /**
+         * @param guestAccelerators A list of guest accelerator cards&#39; type and count to use for instances created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
             $.guestAccelerators = guestAccelerators;
             return this;
         }
 
+        /**
+         * @param guestAccelerators A list of guest accelerator cards&#39; type and count to use for instances created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(AcceleratorConfigResponse... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
 
+        /**
+         * @param labels Labels to apply to instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param machineType The machine type to use for instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param metadata The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(MetadataResponse metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param networkInterfaces An array of network access configurations for this interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces An array of network access configurations for this interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param networkPerformanceConfig Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPerformanceConfig(NetworkPerformanceConfigResponse networkPerformanceConfig) {
             $.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
 
+        /**
+         * @param privateIpv6GoogleAccess The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             $.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
+        /**
+         * @param reservationAffinity Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(ReservationAffinityResponse reservationAffinity) {
             $.reservationAffinity = reservationAffinity;
             return this;
         }
 
+        /**
+         * @param resourceManagerTags Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT &amp; PATCH) when empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceManagerTags(Map<String,String> resourceManagerTags) {
             $.resourceManagerTags = resourceManagerTags;
             return this;
         }
 
+        /**
+         * @param resourcePolicies Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(List<String> resourcePolicies) {
             $.resourcePolicies = resourcePolicies;
             return this;
         }
 
+        /**
+         * @param resourcePolicies Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(String... resourcePolicies) {
             return resourcePolicies(List.of(resourcePolicies));
         }
 
+        /**
+         * @param scheduling Specifies the scheduling options for the instances that are created from these properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(SchedulingResponse scheduling) {
             $.scheduling = scheduling;
             return this;
         }
 
+        /**
+         * @param serviceAccounts A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccounts(List<ServiceAccountResponse> serviceAccounts) {
             $.serviceAccounts = serviceAccounts;
             return this;
         }
 
+        /**
+         * @param serviceAccounts A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccounts(ServiceAccountResponse... serviceAccounts) {
             return serviceAccounts(List.of(serviceAccounts));
         }
 
+        /**
+         * @param shieldedInstanceConfig Note that for MachineImage, this is not supported yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
+        /**
+         * @param tags A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(TagsResponse tags) {
             $.tags = tags;
             return this;

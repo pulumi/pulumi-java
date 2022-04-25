@@ -19,6 +19,10 @@ public final class GetLocationS3Args extends com.pulumi.resources.InvokeArgs {
     @Import(name="locationArn", required=true)
     private String locationArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Amazon S3 bucket location.
+     * 
+     */
     public String locationArn() {
         return this.locationArn;
     }
@@ -47,6 +51,12 @@ public final class GetLocationS3Args extends com.pulumi.resources.InvokeArgs {
             $ = new GetLocationS3Args(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locationArn The Amazon Resource Name (ARN) of the Amazon S3 bucket location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationArn(String locationArn) {
             $.locationArn = locationArn;
             return this;

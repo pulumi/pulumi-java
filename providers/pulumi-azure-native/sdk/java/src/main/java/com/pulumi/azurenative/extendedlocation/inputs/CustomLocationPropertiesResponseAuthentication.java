@@ -25,6 +25,10 @@ public final class CustomLocationPropertiesResponseAuthentication extends com.pu
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of the Custom Locations authentication
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -53,6 +57,12 @@ public final class CustomLocationPropertiesResponseAuthentication extends com.pu
             $ = new CustomLocationPropertiesResponseAuthentication(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of the Custom Locations authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

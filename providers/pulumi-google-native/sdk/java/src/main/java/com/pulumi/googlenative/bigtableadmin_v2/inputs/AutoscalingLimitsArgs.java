@@ -24,6 +24,10 @@ public final class AutoscalingLimitsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="maxServeNodes", required=true)
     private Output<Integer> maxServeNodes;
 
+    /**
+     * @return Maximum number of nodes to scale up to.
+     * 
+     */
     public Output<Integer> maxServeNodes() {
         return this.maxServeNodes;
     }
@@ -35,6 +39,10 @@ public final class AutoscalingLimitsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="minServeNodes", required=true)
     private Output<Integer> minServeNodes;
 
+    /**
+     * @return Minimum number of nodes to scale down to.
+     * 
+     */
     public Output<Integer> minServeNodes() {
         return this.minServeNodes;
     }
@@ -64,20 +72,44 @@ public final class AutoscalingLimitsArgs extends com.pulumi.resources.ResourceAr
             $ = new AutoscalingLimitsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxServeNodes Maximum number of nodes to scale up to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxServeNodes(Output<Integer> maxServeNodes) {
             $.maxServeNodes = maxServeNodes;
             return this;
         }
 
+        /**
+         * @param maxServeNodes Maximum number of nodes to scale up to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxServeNodes(Integer maxServeNodes) {
             return maxServeNodes(Output.of(maxServeNodes));
         }
 
+        /**
+         * @param minServeNodes Minimum number of nodes to scale down to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minServeNodes(Output<Integer> minServeNodes) {
             $.minServeNodes = minServeNodes;
             return this;
         }
 
+        /**
+         * @param minServeNodes Minimum number of nodes to scale down to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minServeNodes(Integer minServeNodes) {
             return minServeNodes(Output.of(minServeNodes));
         }

@@ -26,6 +26,10 @@ public final class ClientCertificateResponse extends com.pulumi.resources.Invoke
     @Import(name="commonName")
     private @Nullable String commonName;
 
+    /**
+     * @return Certificate Common name.
+     * 
+     */
     public Optional<String> commonName() {
         return Optional.ofNullable(this.commonName);
     }
@@ -37,6 +41,10 @@ public final class ClientCertificateResponse extends com.pulumi.resources.Invoke
     @Import(name="isAdmin", required=true)
     private Boolean isAdmin;
 
+    /**
+     * @return Whether the certificate is admin or not.
+     * 
+     */
     public Boolean isAdmin() {
         return this.isAdmin;
     }
@@ -48,6 +56,10 @@ public final class ClientCertificateResponse extends com.pulumi.resources.Invoke
     @Import(name="issuerThumbprint")
     private @Nullable String issuerThumbprint;
 
+    /**
+     * @return Issuer thumbprint for the certificate. Only used together with CommonName.
+     * 
+     */
     public Optional<String> issuerThumbprint() {
         return Optional.ofNullable(this.issuerThumbprint);
     }
@@ -59,6 +71,10 @@ public final class ClientCertificateResponse extends com.pulumi.resources.Invoke
     @Import(name="thumbprint")
     private @Nullable String thumbprint;
 
+    /**
+     * @return Certificate Thumbprint.
+     * 
+     */
     public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -90,21 +106,45 @@ public final class ClientCertificateResponse extends com.pulumi.resources.Invoke
             $ = new ClientCertificateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commonName Certificate Common name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonName(@Nullable String commonName) {
             $.commonName = commonName;
             return this;
         }
 
+        /**
+         * @param isAdmin Whether the certificate is admin or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAdmin(Boolean isAdmin) {
             $.isAdmin = isAdmin;
             return this;
         }
 
+        /**
+         * @param issuerThumbprint Issuer thumbprint for the certificate. Only used together with CommonName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuerThumbprint(@Nullable String issuerThumbprint) {
             $.issuerThumbprint = issuerThumbprint;
             return this;
         }
 
+        /**
+         * @param thumbprint Certificate Thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable String thumbprint) {
             $.thumbprint = thumbprint;
             return this;

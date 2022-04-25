@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPreparedStatementResult {
     /**
-     * The description of the prepared statement.
+     * @return The description of the prepared statement.
      * 
      */
     private final @Nullable String description;
     /**
-     * The query string for the prepared statement.
+     * @return The query string for the prepared statement.
      * 
      */
     private final @Nullable String queryStatement;
@@ -31,16 +31,16 @@ public final class GetPreparedStatementResult {
     }
 
     /**
-     * The description of the prepared statement.
+     * @return The description of the prepared statement.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The query string for the prepared statement.
+     * @return The query string for the prepared statement.
      * 
-    */
+     */
     public Optional<String> queryStatement() {
         return Optional.ofNullable(this.queryStatement);
     }

@@ -26,6 +26,11 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="executableUsers")
     private @Nullable List<String> executableUsers;
 
+    /**
+     * @return Limit search to users with *explicit* launch permission on
+     * the image. Valid items are the numeric account ID or `self`.
+     * 
+     */
     public Optional<List<String>> executableUsers() {
         return Optional.ofNullable(this.executableUsers);
     }
@@ -39,6 +44,12 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
     private @Nullable List<GetAmiFilter> filters;
 
+    /**
+     * @return One or more name/value pairs to filter off of. There are
+     * several valid keys, for a full reference, check out
+     * [describe-images in the AWS CLI reference][1].
+     * 
+     */
     public Optional<List<GetAmiFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -51,6 +62,11 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="mostRecent")
     private @Nullable Boolean mostRecent;
 
+    /**
+     * @return If more than one result is returned, use the most
+     * recent AMI.
+     * 
+     */
     public Optional<Boolean> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
@@ -66,6 +82,14 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="nameRegex")
     private @Nullable String nameRegex;
 
+    /**
+     * @return A regex string to apply to the AMI list returned
+     * by AWS. This allows more advanced filtering not supported from the AWS API. This
+     * filtering is done locally on what AWS returns, and could have a performance
+     * impact if the result is large. It is recommended to combine this with other
+     * options to narrow down the list AWS returns.
+     * 
+     */
     public Optional<String> nameRegex() {
         return Optional.ofNullable(this.nameRegex);
     }
@@ -77,6 +101,10 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="owners", required=true)
     private List<String> owners;
 
+    /**
+     * @return List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g., `amazon`, `aws-marketplace`, `microsoft`).
+     * 
+     */
     public List<String> owners() {
         return this.owners;
     }
@@ -90,6 +118,12 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Any tags assigned to the image.
+     * * `tags.#.key` - The key name of the tag.
+     * * `tags.#.value` - The value of the tag.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -123,43 +157,110 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAmiArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executableUsers Limit search to users with *explicit* launch permission on
+         * the image. Valid items are the numeric account ID or `self`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executableUsers(@Nullable List<String> executableUsers) {
             $.executableUsers = executableUsers;
             return this;
         }
 
+        /**
+         * @param executableUsers Limit search to users with *explicit* launch permission on
+         * the image. Valid items are the numeric account ID or `self`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executableUsers(String... executableUsers) {
             return executableUsers(List.of(executableUsers));
         }
 
+        /**
+         * @param filters One or more name/value pairs to filter off of. There are
+         * several valid keys, for a full reference, check out
+         * [describe-images in the AWS CLI reference][1].
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetAmiFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters One or more name/value pairs to filter off of. There are
+         * several valid keys, for a full reference, check out
+         * [describe-images in the AWS CLI reference][1].
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetAmiFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param mostRecent If more than one result is returned, use the most
+         * recent AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mostRecent(@Nullable Boolean mostRecent) {
             $.mostRecent = mostRecent;
             return this;
         }
 
+        /**
+         * @param nameRegex A regex string to apply to the AMI list returned
+         * by AWS. This allows more advanced filtering not supported from the AWS API. This
+         * filtering is done locally on what AWS returns, and could have a performance
+         * impact if the result is large. It is recommended to combine this with other
+         * options to narrow down the list AWS returns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameRegex(@Nullable String nameRegex) {
             $.nameRegex = nameRegex;
             return this;
         }
 
+        /**
+         * @param owners List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g., `amazon`, `aws-marketplace`, `microsoft`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(List<String> owners) {
             $.owners = owners;
             return this;
         }
 
+        /**
+         * @param owners List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g., `amazon`, `aws-marketplace`, `microsoft`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(String... owners) {
             return owners(List.of(owners));
         }
 
+        /**
+         * @param tags Any tags assigned to the image.
+         * * `tags.#.key` - The key name of the tag.
+         * * `tags.#.value` - The value of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

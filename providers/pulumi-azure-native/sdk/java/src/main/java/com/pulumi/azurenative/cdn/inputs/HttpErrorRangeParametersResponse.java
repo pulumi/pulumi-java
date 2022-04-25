@@ -25,6 +25,10 @@ public final class HttpErrorRangeParametersResponse extends com.pulumi.resources
     @Import(name="begin")
     private @Nullable Integer begin;
 
+    /**
+     * @return The inclusive start of the http status code range.
+     * 
+     */
     public Optional<Integer> begin() {
         return Optional.ofNullable(this.begin);
     }
@@ -36,6 +40,10 @@ public final class HttpErrorRangeParametersResponse extends com.pulumi.resources
     @Import(name="end")
     private @Nullable Integer end;
 
+    /**
+     * @return The inclusive end of the http status code range.
+     * 
+     */
     public Optional<Integer> end() {
         return Optional.ofNullable(this.end);
     }
@@ -65,11 +73,23 @@ public final class HttpErrorRangeParametersResponse extends com.pulumi.resources
             $ = new HttpErrorRangeParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param begin The inclusive start of the http status code range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder begin(@Nullable Integer begin) {
             $.begin = begin;
             return this;
         }
 
+        /**
+         * @param end The inclusive end of the http status code range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(@Nullable Integer end) {
             $.end = end;
             return this;

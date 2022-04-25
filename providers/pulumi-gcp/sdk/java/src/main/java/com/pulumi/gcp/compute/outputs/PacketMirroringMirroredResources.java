@@ -14,19 +14,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PacketMirroringMirroredResources {
     /**
-     * All the listed instances will be mirrored.  Specify at most 50.
+     * @return All the listed instances will be mirrored.  Specify at most 50.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<PacketMirroringMirroredResourcesInstance> instances;
     /**
-     * All instances in one of these subnetworks will be mirrored.
+     * @return All instances in one of these subnetworks will be mirrored.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<PacketMirroringMirroredResourcesSubnetwork> subnetworks;
     /**
-     * All instances with these tags will be mirrored.
+     * @return All instances with these tags will be mirrored.
      * 
      */
     private final @Nullable List<String> tags;
@@ -42,25 +42,25 @@ public final class PacketMirroringMirroredResources {
     }
 
     /**
-     * All the listed instances will be mirrored.  Specify at most 50.
+     * @return All the listed instances will be mirrored.  Specify at most 50.
      * Structure is documented below.
      * 
-    */
+     */
     public List<PacketMirroringMirroredResourcesInstance> instances() {
         return this.instances == null ? List.of() : this.instances;
     }
     /**
-     * All instances in one of these subnetworks will be mirrored.
+     * @return All instances in one of these subnetworks will be mirrored.
      * Structure is documented below.
      * 
-    */
+     */
     public List<PacketMirroringMirroredResourcesSubnetwork> subnetworks() {
         return this.subnetworks == null ? List.of() : this.subnetworks;
     }
     /**
-     * All instances with these tags will be mirrored.
+     * @return All instances with these tags will be mirrored.
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

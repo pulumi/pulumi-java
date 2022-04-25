@@ -23,6 +23,13 @@ public final class AccessLevelsAccessLevelCustomArgs extends com.pulumi.resource
     @Import(name="expr", required=true)
     private Output<AccessLevelsAccessLevelCustomExprArgs> expr;
 
+    /**
+     * @return Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
+     * This page details the objects and attributes that are used to the build the CEL expressions for
+     * custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.
+     * Structure is documented below.
+     * 
+     */
     public Output<AccessLevelsAccessLevelCustomExprArgs> expr() {
         return this.expr;
     }
@@ -51,11 +58,29 @@ public final class AccessLevelsAccessLevelCustomArgs extends com.pulumi.resource
             $ = new AccessLevelsAccessLevelCustomArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expr Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
+         * This page details the objects and attributes that are used to the build the CEL expressions for
+         * custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expr(Output<AccessLevelsAccessLevelCustomExprArgs> expr) {
             $.expr = expr;
             return this;
         }
 
+        /**
+         * @param expr Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
+         * This page details the objects and attributes that are used to the build the CEL expressions for
+         * custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expr(AccessLevelsAccessLevelCustomExprArgs expr) {
             return expr(Output.of(expr));
         }

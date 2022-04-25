@@ -27,6 +27,10 @@ public final class VertexAIParametersArgs extends com.pulumi.resources.ResourceA
     @Import(name="env")
     private @Nullable Output<Map<String,String>> env;
 
+    /**
+     * @return Environment variables. At most 100 environment variables can be specified and unique. Example: GCP_BUCKET=gs://my-bucket/samples/
+     * 
+     */
     public Optional<Output<Map<String,String>>> env() {
         return Optional.ofNullable(this.env);
     }
@@ -38,6 +42,10 @@ public final class VertexAIParametersArgs extends com.pulumi.resources.ResourceA
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The full name of the Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the Job should be peered. For example, `projects/12345/global/networks/myVPC`. [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert) is of the form `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in `12345`, and {network} is a network name. Private services access must already be configured for the network. If left unspecified, the job is not peered with any network.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -67,20 +75,44 @@ public final class VertexAIParametersArgs extends com.pulumi.resources.ResourceA
             $ = new VertexAIParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param env Environment variables. At most 100 environment variables can be specified and unique. Example: GCP_BUCKET=gs://my-bucket/samples/
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(@Nullable Output<Map<String,String>> env) {
             $.env = env;
             return this;
         }
 
+        /**
+         * @param env Environment variables. At most 100 environment variables can be specified and unique. Example: GCP_BUCKET=gs://my-bucket/samples/
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(Map<String,String> env) {
             return env(Output.of(env));
         }
 
+        /**
+         * @param network The full name of the Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the Job should be peered. For example, `projects/12345/global/networks/myVPC`. [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert) is of the form `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in `12345`, and {network} is a network name. Private services access must already be configured for the network. If left unspecified, the job is not peered with any network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The full name of the Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the Job should be peered. For example, `projects/12345/global/networks/myVPC`. [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert) is of the form `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in `12345`, and {network} is a network name. Private services access must already be configured for the network. If left unspecified, the job is not peered with any network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }

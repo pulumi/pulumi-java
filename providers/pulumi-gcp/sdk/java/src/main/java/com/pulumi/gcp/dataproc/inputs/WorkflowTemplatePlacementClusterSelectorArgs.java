@@ -23,6 +23,10 @@ public final class WorkflowTemplatePlacementClusterSelectorArgs extends com.pulu
     @Import(name="clusterLabels", required=true)
     private Output<Map<String,String>> clusterLabels;
 
+    /**
+     * @return Required. The cluster labels. Cluster must have all labels to match.
+     * 
+     */
     public Output<Map<String,String>> clusterLabels() {
         return this.clusterLabels;
     }
@@ -34,6 +38,10 @@ public final class WorkflowTemplatePlacementClusterSelectorArgs extends com.pulu
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the &#34;global&#34; region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -63,20 +71,44 @@ public final class WorkflowTemplatePlacementClusterSelectorArgs extends com.pulu
             $ = new WorkflowTemplatePlacementClusterSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterLabels Required. The cluster labels. Cluster must have all labels to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterLabels(Output<Map<String,String>> clusterLabels) {
             $.clusterLabels = clusterLabels;
             return this;
         }
 
+        /**
+         * @param clusterLabels Required. The cluster labels. Cluster must have all labels to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterLabels(Map<String,String> clusterLabels) {
             return clusterLabels(Output.of(clusterLabels));
         }
 
+        /**
+         * @param zone Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the &#34;global&#34; region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the &#34;global&#34; region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

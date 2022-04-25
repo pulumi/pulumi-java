@@ -27,6 +27,10 @@ public final class DiskAddOn extends com.pulumi.resources.InvokeArgs {
     @Import(name="addOnType", required=true)
     private String addOnType;
 
+    /**
+     * @return The add-on type
+     * 
+     */
     public String addOnType() {
         return this.addOnType;
     }
@@ -45,6 +49,10 @@ public final class DiskAddOn extends com.pulumi.resources.InvokeArgs {
     @Import(name="status")
     private @Nullable DiskAddOnStatus status;
 
+    /**
+     * @return Status of the Addon
+     * 
+     */
     public Optional<DiskAddOnStatus> status() {
         return Optional.ofNullable(this.status);
     }
@@ -75,6 +83,12 @@ public final class DiskAddOn extends com.pulumi.resources.InvokeArgs {
             $ = new DiskAddOn(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addOnType The add-on type
+         * 
+         * @return builder
+         * 
+         */
         public Builder addOnType(String addOnType) {
             $.addOnType = addOnType;
             return this;
@@ -85,6 +99,12 @@ public final class DiskAddOn extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param status Status of the Addon
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable DiskAddOnStatus status) {
             $.status = status;
             return this;

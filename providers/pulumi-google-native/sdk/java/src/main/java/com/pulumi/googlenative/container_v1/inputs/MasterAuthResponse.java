@@ -24,6 +24,10 @@ public final class MasterAuthResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="clientCertificate", required=true)
     private String clientCertificate;
 
+    /**
+     * @return [Output only] Base64-encoded public certificate used by clients to authenticate to the cluster endpoint.
+     * 
+     */
     public String clientCertificate() {
         return this.clientCertificate;
     }
@@ -35,6 +39,10 @@ public final class MasterAuthResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="clientCertificateConfig", required=true)
     private ClientCertificateConfigResponse clientCertificateConfig;
 
+    /**
+     * @return Configuration for client certificate authentication on the cluster. For clusters before v1.12, if no configuration is specified, a client certificate is issued.
+     * 
+     */
     public ClientCertificateConfigResponse clientCertificateConfig() {
         return this.clientCertificateConfig;
     }
@@ -46,6 +54,10 @@ public final class MasterAuthResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="clientKey", required=true)
     private String clientKey;
 
+    /**
+     * @return [Output only] Base64-encoded private key used by clients to authenticate to the cluster endpoint.
+     * 
+     */
     public String clientKey() {
         return this.clientKey;
     }
@@ -57,6 +69,10 @@ public final class MasterAuthResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterCaCertificate", required=true)
     private String clusterCaCertificate;
 
+    /**
+     * @return [Output only] Base64-encoded public certificate that is the root of trust for the cluster.
+     * 
+     */
     public String clusterCaCertificate() {
         return this.clusterCaCertificate;
     }
@@ -68,6 +84,10 @@ public final class MasterAuthResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return The password to use for HTTP basic authentication to the master endpoint. Because the master endpoint is open to the Internet, you should create a strong password. If a password is provided for cluster creation, username must be non-empty. Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -79,6 +99,10 @@ public final class MasterAuthResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0 and later, basic authentication can be disabled by leaving username unspecified (or setting it to the empty string). Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -112,31 +136,67 @@ public final class MasterAuthResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MasterAuthResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientCertificate [Output only] Base64-encoded public certificate used by clients to authenticate to the cluster endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(String clientCertificate) {
             $.clientCertificate = clientCertificate;
             return this;
         }
 
+        /**
+         * @param clientCertificateConfig Configuration for client certificate authentication on the cluster. For clusters before v1.12, if no configuration is specified, a client certificate is issued.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificateConfig(ClientCertificateConfigResponse clientCertificateConfig) {
             $.clientCertificateConfig = clientCertificateConfig;
             return this;
         }
 
+        /**
+         * @param clientKey [Output only] Base64-encoded private key used by clients to authenticate to the cluster endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientKey(String clientKey) {
             $.clientKey = clientKey;
             return this;
         }
 
+        /**
+         * @param clusterCaCertificate [Output only] Base64-encoded public certificate that is the root of trust for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterCaCertificate(String clusterCaCertificate) {
             $.clusterCaCertificate = clusterCaCertificate;
             return this;
         }
 
+        /**
+         * @param password The password to use for HTTP basic authentication to the master endpoint. Because the master endpoint is open to the Internet, you should create a strong password. If a password is provided for cluster creation, username must be non-empty. Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param username The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0 and later, basic authentication can be disabled by leaving username unspecified (or setting it to the empty string). Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

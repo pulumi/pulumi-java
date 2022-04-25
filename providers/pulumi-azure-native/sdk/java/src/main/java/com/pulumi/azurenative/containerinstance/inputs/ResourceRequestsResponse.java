@@ -26,6 +26,10 @@ public final class ResourceRequestsResponse extends com.pulumi.resources.InvokeA
     @Import(name="cpu", required=true)
     private Double cpu;
 
+    /**
+     * @return The CPU request of this container instance.
+     * 
+     */
     public Double cpu() {
         return this.cpu;
     }
@@ -37,6 +41,10 @@ public final class ResourceRequestsResponse extends com.pulumi.resources.InvokeA
     @Import(name="gpu")
     private @Nullable GpuResourceResponse gpu;
 
+    /**
+     * @return The GPU request of this container instance.
+     * 
+     */
     public Optional<GpuResourceResponse> gpu() {
         return Optional.ofNullable(this.gpu);
     }
@@ -48,6 +56,10 @@ public final class ResourceRequestsResponse extends com.pulumi.resources.InvokeA
     @Import(name="memoryInGB", required=true)
     private Double memoryInGB;
 
+    /**
+     * @return The memory request in GB of this container instance.
+     * 
+     */
     public Double memoryInGB() {
         return this.memoryInGB;
     }
@@ -78,16 +90,34 @@ public final class ResourceRequestsResponse extends com.pulumi.resources.InvokeA
             $ = new ResourceRequestsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu The CPU request of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Double cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param gpu The GPU request of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpu(@Nullable GpuResourceResponse gpu) {
             $.gpu = gpu;
             return this;
         }
 
+        /**
+         * @param memoryInGB The memory request in GB of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(Double memoryInGB) {
             $.memoryInGB = memoryInGB;
             return this;

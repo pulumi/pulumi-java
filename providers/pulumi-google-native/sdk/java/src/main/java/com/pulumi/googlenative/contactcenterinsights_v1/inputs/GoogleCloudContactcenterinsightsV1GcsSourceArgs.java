@@ -26,6 +26,10 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends com.p
     @Import(name="audioUri")
     private @Nullable Output<String> audioUri;
 
+    /**
+     * @return Cloud Storage URI that points to a file that contains the conversation audio.
+     * 
+     */
     public Optional<Output<String>> audioUri() {
         return Optional.ofNullable(this.audioUri);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends com.p
     @Import(name="transcriptUri")
     private @Nullable Output<String> transcriptUri;
 
+    /**
+     * @return Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
+     * 
+     */
     public Optional<Output<String>> transcriptUri() {
         return Optional.ofNullable(this.transcriptUri);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends com.p
             $ = new GoogleCloudContactcenterinsightsV1GcsSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audioUri Cloud Storage URI that points to a file that contains the conversation audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioUri(@Nullable Output<String> audioUri) {
             $.audioUri = audioUri;
             return this;
         }
 
+        /**
+         * @param audioUri Cloud Storage URI that points to a file that contains the conversation audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioUri(String audioUri) {
             return audioUri(Output.of(audioUri));
         }
 
+        /**
+         * @param transcriptUri Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transcriptUri(@Nullable Output<String> transcriptUri) {
             $.transcriptUri = transcriptUri;
             return this;
         }
 
+        /**
+         * @param transcriptUri Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transcriptUri(String transcriptUri) {
             return transcriptUri(Output.of(transcriptUri));
         }

@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse {
     /**
-     * Optional. The body text of the card.
+     * @return Optional. The body text of the card.
      * 
      */
     private final String description;
     /**
-     * Optional. The image to display.
+     * @return Optional. The image to display.
      * 
      */
     private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
     /**
-     * Additional info about the option item.
+     * @return Additional info about the option item.
      * 
      */
     private final GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info;
     /**
-     * Title of the carousel item.
+     * @return Title of the carousel item.
      * 
      */
     private final String title;
@@ -45,30 +45,30 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
     }
 
     /**
-     * Optional. The body text of the card.
+     * @return Optional. The body text of the card.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Optional. The image to display.
+     * @return Optional. The image to display.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
     }
     /**
-     * Additional info about the option item.
+     * @return Additional info about the option item.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info() {
         return this.info;
     }
     /**
-     * Title of the carousel item.
+     * @return Title of the carousel item.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

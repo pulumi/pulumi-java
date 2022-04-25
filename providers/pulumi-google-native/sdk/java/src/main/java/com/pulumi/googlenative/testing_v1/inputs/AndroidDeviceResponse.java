@@ -23,6 +23,10 @@ public final class AndroidDeviceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="androidModelId", required=true)
     private String androidModelId;
 
+    /**
+     * @return The id of the Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public String androidModelId() {
         return this.androidModelId;
     }
@@ -34,6 +38,10 @@ public final class AndroidDeviceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="androidVersionId", required=true)
     private String androidVersionId;
 
+    /**
+     * @return The id of the Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public String androidVersionId() {
         return this.androidVersionId;
     }
@@ -45,6 +53,10 @@ public final class AndroidDeviceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="locale", required=true)
     private String locale;
 
+    /**
+     * @return The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public String locale() {
         return this.locale;
     }
@@ -56,6 +68,10 @@ public final class AndroidDeviceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="orientation", required=true)
     private String orientation;
 
+    /**
+     * @return How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public String orientation() {
         return this.orientation;
     }
@@ -87,21 +103,45 @@ public final class AndroidDeviceResponse extends com.pulumi.resources.InvokeArgs
             $ = new AndroidDeviceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidModelId The id of the Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidModelId(String androidModelId) {
             $.androidModelId = androidModelId;
             return this;
         }
 
+        /**
+         * @param androidVersionId The id of the Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidVersionId(String androidVersionId) {
             $.androidVersionId = androidVersionId;
             return this;
         }
 
+        /**
+         * @param locale The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locale(String locale) {
             $.locale = locale;
             return this;
         }
 
+        /**
+         * @param orientation How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orientation(String orientation) {
             $.orientation = orientation;
             return this;

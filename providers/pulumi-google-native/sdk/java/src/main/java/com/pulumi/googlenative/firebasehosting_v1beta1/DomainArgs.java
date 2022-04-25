@@ -23,6 +23,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return The domain name of the association.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -34,6 +38,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainRedirect")
     private @Nullable Output<DomainRedirectArgs> domainRedirect;
 
+    /**
+     * @return If set, the domain should redirect with the provided parameters.
+     * 
+     */
     public Optional<Output<DomainRedirectArgs>> domainRedirect() {
         return Optional.ofNullable(this.domainRedirect);
     }
@@ -52,6 +60,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="site", required=true)
     private Output<String> site;
 
+    /**
+     * @return The site name of the association.
+     * 
+     */
     public Output<String> site() {
         return this.site;
     }
@@ -91,20 +103,44 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The domain name of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The domain name of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param domainRedirect If set, the domain should redirect with the provided parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainRedirect(@Nullable Output<DomainRedirectArgs> domainRedirect) {
             $.domainRedirect = domainRedirect;
             return this;
         }
 
+        /**
+         * @param domainRedirect If set, the domain should redirect with the provided parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainRedirect(DomainRedirectArgs domainRedirect) {
             return domainRedirect(Output.of(domainRedirect));
         }
@@ -118,11 +154,23 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param site The site name of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder site(Output<String> site) {
             $.site = site;
             return this;
         }
 
+        /**
+         * @param site The site name of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder site(String site) {
             return site(Output.of(site));
         }

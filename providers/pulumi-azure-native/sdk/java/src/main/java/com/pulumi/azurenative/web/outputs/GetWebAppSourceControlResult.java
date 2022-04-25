@@ -14,57 +14,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWebAppSourceControlResult {
     /**
-     * Name of branch to use for deployment.
+     * @return Name of branch to use for deployment.
      * 
      */
     private final @Nullable String branch;
     /**
-     * &lt;code&gt;true&lt;/code&gt; to enable deployment rollback; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; to enable deployment rollback; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean deploymentRollbackEnabled;
     /**
-     * If GitHub Action is selected, than the associated configuration.
+     * @return If GitHub Action is selected, than the associated configuration.
      * 
      */
     private final @Nullable GitHubActionConfigurationResponse gitHubActionConfiguration;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * &lt;code&gt;true&lt;/code&gt; if this is deployed via GitHub action.
+     * @return &lt;code&gt;true&lt;/code&gt; if this is deployed via GitHub action.
      * 
      */
     private final @Nullable Boolean isGitHubAction;
     /**
-     * &lt;code&gt;true&lt;/code&gt; to limit to manual integration; &lt;code&gt;false&lt;/code&gt; to enable continuous integration (which configures webhooks into online repos like GitHub).
+     * @return &lt;code&gt;true&lt;/code&gt; to limit to manual integration; &lt;code&gt;false&lt;/code&gt; to enable continuous integration (which configures webhooks into online repos like GitHub).
      * 
      */
     private final @Nullable Boolean isManualIntegration;
     /**
-     * &lt;code&gt;true&lt;/code&gt; for a Mercurial repository; &lt;code&gt;false&lt;/code&gt; for a Git repository.
+     * @return &lt;code&gt;true&lt;/code&gt; for a Mercurial repository; &lt;code&gt;false&lt;/code&gt; for a Git repository.
      * 
      */
     private final @Nullable Boolean isMercurial;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * Repository or source control URL.
+     * @return Repository or source control URL.
      * 
      */
     private final @Nullable String repoUrl;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -96,79 +96,79 @@ public final class GetWebAppSourceControlResult {
     }
 
     /**
-     * Name of branch to use for deployment.
+     * @return Name of branch to use for deployment.
      * 
-    */
+     */
     public Optional<String> branch() {
         return Optional.ofNullable(this.branch);
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; to enable deployment rollback; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; to enable deployment rollback; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> deploymentRollbackEnabled() {
         return Optional.ofNullable(this.deploymentRollbackEnabled);
     }
     /**
-     * If GitHub Action is selected, than the associated configuration.
+     * @return If GitHub Action is selected, than the associated configuration.
      * 
-    */
+     */
     public Optional<GitHubActionConfigurationResponse> gitHubActionConfiguration() {
         return Optional.ofNullable(this.gitHubActionConfiguration);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; if this is deployed via GitHub action.
+     * @return &lt;code&gt;true&lt;/code&gt; if this is deployed via GitHub action.
      * 
-    */
+     */
     public Optional<Boolean> isGitHubAction() {
         return Optional.ofNullable(this.isGitHubAction);
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; to limit to manual integration; &lt;code&gt;false&lt;/code&gt; to enable continuous integration (which configures webhooks into online repos like GitHub).
+     * @return &lt;code&gt;true&lt;/code&gt; to limit to manual integration; &lt;code&gt;false&lt;/code&gt; to enable continuous integration (which configures webhooks into online repos like GitHub).
      * 
-    */
+     */
     public Optional<Boolean> isManualIntegration() {
         return Optional.ofNullable(this.isManualIntegration);
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; for a Mercurial repository; &lt;code&gt;false&lt;/code&gt; for a Git repository.
+     * @return &lt;code&gt;true&lt;/code&gt; for a Mercurial repository; &lt;code&gt;false&lt;/code&gt; for a Git repository.
      * 
-    */
+     */
     public Optional<Boolean> isMercurial() {
         return Optional.ofNullable(this.isMercurial);
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Repository or source control URL.
+     * @return Repository or source control URL.
      * 
-    */
+     */
     public Optional<String> repoUrl() {
         return Optional.ofNullable(this.repoUrl);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

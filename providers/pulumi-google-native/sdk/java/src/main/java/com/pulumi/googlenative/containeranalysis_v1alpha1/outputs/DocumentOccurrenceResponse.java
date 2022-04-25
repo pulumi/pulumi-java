@@ -11,42 +11,42 @@ import java.util.Objects;
 @CustomType
 public final class DocumentOccurrenceResponse {
     /**
-     * Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard
+     * @return Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard
      * 
      */
     private final String createTime;
     /**
-     * A field for creators of the SPDX file to provide general comments about the creation of the SPDX file or any other relevant comment not included in the other fields
+     * @return A field for creators of the SPDX file to provide general comments about the creation of the SPDX file or any other relevant comment not included in the other fields
      * 
      */
     private final String creatorComment;
     /**
-     * Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person&#39;s name
+     * @return Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person&#39;s name
      * 
      */
     private final List<String> creators;
     /**
-     * A field for creators of the SPDX file content to provide comments to the consumers of the SPDX document
+     * @return A field for creators of the SPDX file content to provide comments to the consumers of the SPDX document
      * 
      */
     private final String documentComment;
     /**
-     * Identify any external SPDX documents referenced within this SPDX document
+     * @return Identify any external SPDX documents referenced within this SPDX document
      * 
      */
     private final List<String> externalDocumentRefs;
     /**
-     * A field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created
+     * @return A field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created
      * 
      */
     private final String licenseListVersion;
     /**
-     * Provide an SPDX document specific namespace as a unique absolute Uniform Resource Identifier (URI) as specified in RFC-3986, with the exception of the ‘#’ delimiter
+     * @return Provide an SPDX document specific namespace as a unique absolute Uniform Resource Identifier (URI) as specified in RFC-3986, with the exception of the ‘#’ delimiter
      * 
      */
     private final String namespace;
     /**
-     * Identify name of this document as designated by creator
+     * @return Identify name of this document as designated by creator
      * 
      */
     private final String title;
@@ -72,58 +72,58 @@ public final class DocumentOccurrenceResponse {
     }
 
     /**
-     * Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard
+     * @return Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * A field for creators of the SPDX file to provide general comments about the creation of the SPDX file or any other relevant comment not included in the other fields
+     * @return A field for creators of the SPDX file to provide general comments about the creation of the SPDX file or any other relevant comment not included in the other fields
      * 
-    */
+     */
     public String creatorComment() {
         return this.creatorComment;
     }
     /**
-     * Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person&#39;s name
+     * @return Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person&#39;s name
      * 
-    */
+     */
     public List<String> creators() {
         return this.creators;
     }
     /**
-     * A field for creators of the SPDX file content to provide comments to the consumers of the SPDX document
+     * @return A field for creators of the SPDX file content to provide comments to the consumers of the SPDX document
      * 
-    */
+     */
     public String documentComment() {
         return this.documentComment;
     }
     /**
-     * Identify any external SPDX documents referenced within this SPDX document
+     * @return Identify any external SPDX documents referenced within this SPDX document
      * 
-    */
+     */
     public List<String> externalDocumentRefs() {
         return this.externalDocumentRefs;
     }
     /**
-     * A field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created
+     * @return A field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created
      * 
-    */
+     */
     public String licenseListVersion() {
         return this.licenseListVersion;
     }
     /**
-     * Provide an SPDX document specific namespace as a unique absolute Uniform Resource Identifier (URI) as specified in RFC-3986, with the exception of the ‘#’ delimiter
+     * @return Provide an SPDX document specific namespace as a unique absolute Uniform Resource Identifier (URI) as specified in RFC-3986, with the exception of the ‘#’ delimiter
      * 
-    */
+     */
     public String namespace() {
         return this.namespace;
     }
     /**
-     * Identify name of this document as designated by creator
+     * @return Identify name of this document as designated by creator
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

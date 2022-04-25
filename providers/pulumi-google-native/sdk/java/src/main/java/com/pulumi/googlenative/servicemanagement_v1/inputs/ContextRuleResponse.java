@@ -24,6 +24,10 @@ public final class ContextRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedRequestExtensions", required=true)
     private List<String> allowedRequestExtensions;
 
+    /**
+     * @return A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
+     * 
+     */
     public List<String> allowedRequestExtensions() {
         return this.allowedRequestExtensions;
     }
@@ -35,6 +39,10 @@ public final class ContextRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedResponseExtensions", required=true)
     private List<String> allowedResponseExtensions;
 
+    /**
+     * @return A list of full type names or extension IDs of extensions allowed in grpc side channel from backend to client.
+     * 
+     */
     public List<String> allowedResponseExtensions() {
         return this.allowedResponseExtensions;
     }
@@ -46,6 +54,10 @@ public final class ContextRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provided", required=true)
     private List<String> provided;
 
+    /**
+     * @return A list of full type names of provided contexts.
+     * 
+     */
     public List<String> provided() {
         return this.provided;
     }
@@ -57,6 +69,10 @@ public final class ContextRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requested", required=true)
     private List<String> requested;
 
+    /**
+     * @return A list of full type names of requested contexts.
+     * 
+     */
     public List<String> requested() {
         return this.requested;
     }
@@ -68,6 +84,10 @@ public final class ContextRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="selector", required=true)
     private String selector;
 
+    /**
+     * @return Selects the methods to which this rule applies. Refer to selector for syntax details.
+     * 
+     */
     public String selector() {
         return this.selector;
     }
@@ -100,42 +120,96 @@ public final class ContextRuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ContextRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedRequestExtensions A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedRequestExtensions(List<String> allowedRequestExtensions) {
             $.allowedRequestExtensions = allowedRequestExtensions;
             return this;
         }
 
+        /**
+         * @param allowedRequestExtensions A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedRequestExtensions(String... allowedRequestExtensions) {
             return allowedRequestExtensions(List.of(allowedRequestExtensions));
         }
 
+        /**
+         * @param allowedResponseExtensions A list of full type names or extension IDs of extensions allowed in grpc side channel from backend to client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedResponseExtensions(List<String> allowedResponseExtensions) {
             $.allowedResponseExtensions = allowedResponseExtensions;
             return this;
         }
 
+        /**
+         * @param allowedResponseExtensions A list of full type names or extension IDs of extensions allowed in grpc side channel from backend to client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedResponseExtensions(String... allowedResponseExtensions) {
             return allowedResponseExtensions(List.of(allowedResponseExtensions));
         }
 
+        /**
+         * @param provided A list of full type names of provided contexts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provided(List<String> provided) {
             $.provided = provided;
             return this;
         }
 
+        /**
+         * @param provided A list of full type names of provided contexts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provided(String... provided) {
             return provided(List.of(provided));
         }
 
+        /**
+         * @param requested A list of full type names of requested contexts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requested(List<String> requested) {
             $.requested = requested;
             return this;
         }
 
+        /**
+         * @param requested A list of full type names of requested contexts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requested(String... requested) {
             return requested(List.of(requested));
         }
 
+        /**
+         * @param selector Selects the methods to which this rule applies. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             $.selector = selector;
             return this;

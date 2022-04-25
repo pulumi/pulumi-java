@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegistrationAssignmentPropertiesResponseRegistrationDefinition {
     /**
-     * Fully qualified path of the registration definition.
+     * @return Fully qualified path of the registration definition.
      * 
      */
     private final String id;
     /**
-     * Name of the registration definition.
+     * @return Name of the registration definition.
      * 
      */
     private final String name;
     /**
-     * Plan details for the managed services.
+     * @return Plan details for the managed services.
      * 
      */
     private final @Nullable PlanResponse plan;
     /**
-     * Properties of registration definition inside registration assignment.
+     * @return Properties of registration definition inside registration assignment.
      * 
      */
     private final @Nullable RegistrationAssignmentPropertiesResponseProperties properties;
     /**
-     * Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
+     * @return Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
      * 
      */
     private final String type;
@@ -54,37 +54,37 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
     }
 
     /**
-     * Fully qualified path of the registration definition.
+     * @return Fully qualified path of the registration definition.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the registration definition.
+     * @return Name of the registration definition.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Plan details for the managed services.
+     * @return Plan details for the managed services.
      * 
-    */
+     */
     public Optional<PlanResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
-     * Properties of registration definition inside registration assignment.
+     * @return Properties of registration definition inside registration assignment.
      * 
-    */
+     */
     public Optional<RegistrationAssignmentPropertiesResponseProperties> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
-     * Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
+     * @return Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

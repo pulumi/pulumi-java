@@ -26,6 +26,10 @@ public final class ModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="args")
     private @Nullable Output<String> args;
 
+    /**
+     * @return Configuration options for the module, e.g. &#39;ERROR_RATE 0.00 INITIAL_SIZE 400&#39;.
+     * 
+     */
     public Optional<Output<String>> args() {
         return Optional.ofNullable(this.args);
     }
@@ -37,6 +41,10 @@ public final class ModuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the module, e.g. &#39;RedisBloom&#39;, &#39;RediSearch&#39;, &#39;RedisTimeSeries&#39;
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -66,20 +74,44 @@ public final class ModuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ModuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args Configuration options for the module, e.g. &#39;ERROR_RATE 0.00 INITIAL_SIZE 400&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(@Nullable Output<String> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Configuration options for the module, e.g. &#39;ERROR_RATE 0.00 INITIAL_SIZE 400&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String args) {
             return args(Output.of(args));
         }
 
+        /**
+         * @param name The name of the module, e.g. &#39;RedisBloom&#39;, &#39;RediSearch&#39;, &#39;RedisTimeSeries&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the module, e.g. &#39;RedisBloom&#39;, &#39;RediSearch&#39;, &#39;RedisTimeSeries&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

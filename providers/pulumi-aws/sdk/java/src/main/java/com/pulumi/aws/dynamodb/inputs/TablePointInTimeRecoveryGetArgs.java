@@ -20,6 +20,10 @@ public final class TablePointInTimeRecoveryGetArgs extends com.pulumi.resources.
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Indicates whether ttl is enabled (true) or disabled (false).
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -48,11 +52,23 @@ public final class TablePointInTimeRecoveryGetArgs extends com.pulumi.resources.
             $ = new TablePointInTimeRecoveryGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Indicates whether ttl is enabled (true) or disabled (false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Indicates whether ttl is enabled (true) or disabled (false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

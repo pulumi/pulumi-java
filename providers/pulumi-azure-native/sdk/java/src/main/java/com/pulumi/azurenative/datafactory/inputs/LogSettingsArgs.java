@@ -28,6 +28,10 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="copyActivityLogSettings")
     private @Nullable Output<CopyActivityLogSettingsArgs> copyActivityLogSettings;
 
+    /**
+     * @return Specifies settings for copy activity log.
+     * 
+     */
     public Optional<Output<CopyActivityLogSettingsArgs>> copyActivityLogSettings() {
         return Optional.ofNullable(this.copyActivityLogSettings);
     }
@@ -39,6 +43,10 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableCopyActivityLog")
     private @Nullable Output<Object> enableCopyActivityLog;
 
+    /**
+     * @return Specifies whether to enable copy activity log. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> enableCopyActivityLog() {
         return Optional.ofNullable(this.enableCopyActivityLog);
     }
@@ -50,6 +58,10 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logLocationSettings", required=true)
     private Output<LogLocationSettingsArgs> logLocationSettings;
 
+    /**
+     * @return Log location settings customer needs to provide when enabling log.
+     * 
+     */
     public Output<LogLocationSettingsArgs> logLocationSettings() {
         return this.logLocationSettings;
     }
@@ -80,29 +92,65 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LogSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copyActivityLogSettings Specifies settings for copy activity log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyActivityLogSettings(@Nullable Output<CopyActivityLogSettingsArgs> copyActivityLogSettings) {
             $.copyActivityLogSettings = copyActivityLogSettings;
             return this;
         }
 
+        /**
+         * @param copyActivityLogSettings Specifies settings for copy activity log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyActivityLogSettings(CopyActivityLogSettingsArgs copyActivityLogSettings) {
             return copyActivityLogSettings(Output.of(copyActivityLogSettings));
         }
 
+        /**
+         * @param enableCopyActivityLog Specifies whether to enable copy activity log. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCopyActivityLog(@Nullable Output<Object> enableCopyActivityLog) {
             $.enableCopyActivityLog = enableCopyActivityLog;
             return this;
         }
 
+        /**
+         * @param enableCopyActivityLog Specifies whether to enable copy activity log. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCopyActivityLog(Object enableCopyActivityLog) {
             return enableCopyActivityLog(Output.of(enableCopyActivityLog));
         }
 
+        /**
+         * @param logLocationSettings Log location settings customer needs to provide when enabling log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLocationSettings(Output<LogLocationSettingsArgs> logLocationSettings) {
             $.logLocationSettings = logLocationSettings;
             return this;
         }
 
+        /**
+         * @param logLocationSettings Log location settings customer needs to provide when enabling log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLocationSettings(LogLocationSettingsArgs logLocationSettings) {
             return logLocationSettings(Output.of(logLocationSettings));
         }

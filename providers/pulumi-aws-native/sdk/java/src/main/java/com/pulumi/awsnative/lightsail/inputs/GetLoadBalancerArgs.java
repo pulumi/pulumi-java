@@ -19,6 +19,10 @@ public final class GetLoadBalancerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="loadBalancerName", required=true)
     private String loadBalancerName;
 
+    /**
+     * @return The name of your load balancer.
+     * 
+     */
     public String loadBalancerName() {
         return this.loadBalancerName;
     }
@@ -47,6 +51,12 @@ public final class GetLoadBalancerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLoadBalancerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loadBalancerName The name of your load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerName(String loadBalancerName) {
             $.loadBalancerName = loadBalancerName;
             return this;

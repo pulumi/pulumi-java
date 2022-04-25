@@ -13,44 +13,44 @@ import java.util.Objects;
 @CustomType
 public final class GetConnectionResult {
     /**
-     * The ARN of the Glue Connection.
+     * @return The ARN of the Glue Connection.
      * 
      */
     private final String arn;
     /**
-     * The catalog ID of the Glue Connection.
+     * @return The catalog ID of the Glue Connection.
      * 
      */
     private final String catalogId;
     private final Map<String,String> connectionProperties;
     /**
-     * The type of Glue Connection.
+     * @return The type of Glue Connection.
      * 
      */
     private final String connectionType;
     /**
-     * Description of the connection.
+     * @return Description of the connection.
      * 
      */
     private final String description;
     private final String id;
     /**
-     * A list of criteria that can be used in selecting this connection.
+     * @return A list of criteria that can be used in selecting this connection.
      * 
      */
     private final List<String> matchCriterias;
     /**
-     * The name of the Glue Connection.
+     * @return The name of the Glue Connection.
      * 
      */
     private final String name;
     /**
-     * A map of physical connection requirements, such as VPC and SecurityGroup.
+     * @return A map of physical connection requirements, such as VPC and SecurityGroup.
      * 
      */
     private final List<GetConnectionPhysicalConnectionRequirement> physicalConnectionRequirements;
     /**
-     * The tags assigned to the resource
+     * @return The tags assigned to the resource
      * 
      */
     private final Map<String,String> tags;
@@ -80,16 +80,16 @@ public final class GetConnectionResult {
     }
 
     /**
-     * The ARN of the Glue Connection.
+     * @return The ARN of the Glue Connection.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The catalog ID of the Glue Connection.
+     * @return The catalog ID of the Glue Connection.
      * 
-    */
+     */
     public String catalogId() {
         return this.catalogId;
     }
@@ -97,16 +97,16 @@ public final class GetConnectionResult {
         return this.connectionProperties;
     }
     /**
-     * The type of Glue Connection.
+     * @return The type of Glue Connection.
      * 
-    */
+     */
     public String connectionType() {
         return this.connectionType;
     }
     /**
-     * Description of the connection.
+     * @return Description of the connection.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
@@ -114,30 +114,30 @@ public final class GetConnectionResult {
         return this.id;
     }
     /**
-     * A list of criteria that can be used in selecting this connection.
+     * @return A list of criteria that can be used in selecting this connection.
      * 
-    */
+     */
     public List<String> matchCriterias() {
         return this.matchCriterias;
     }
     /**
-     * The name of the Glue Connection.
+     * @return The name of the Glue Connection.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A map of physical connection requirements, such as VPC and SecurityGroup.
+     * @return A map of physical connection requirements, such as VPC and SecurityGroup.
      * 
-    */
+     */
     public List<GetConnectionPhysicalConnectionRequirement> physicalConnectionRequirements() {
         return this.physicalConnectionRequirements;
     }
     /**
-     * The tags assigned to the resource
+     * @return The tags assigned to the resource
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

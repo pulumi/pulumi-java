@@ -26,6 +26,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="agentVersion")
     private @Nullable Output<String> agentVersion;
 
+    /**
+     * @return If set to `&#34;LATEST&#34;`, OpsWorks will automatically install the latest version.
+     * 
+     */
     public Optional<Output<String>> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
@@ -44,6 +48,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="berkshelfVersion")
     private @Nullable Output<String> berkshelfVersion;
 
+    /**
+     * @return If `manage_berkshelf` is enabled, the version of Berkshelf to use.
+     * 
+     */
     public Optional<Output<String>> berkshelfVersion() {
         return Optional.ofNullable(this.berkshelfVersion);
     }
@@ -55,6 +63,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="color")
     private @Nullable Output<String> color;
 
+    /**
+     * @return Color to paint next to the stack&#39;s resources in the OpsWorks console.
+     * 
+     */
     public Optional<Output<String>> color() {
         return Optional.ofNullable(this.color);
     }
@@ -66,6 +78,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="configurationManagerName")
     private @Nullable Output<String> configurationManagerName;
 
+    /**
+     * @return Name of the configuration manager to use. Defaults to &#34;Chef&#34;.
+     * 
+     */
     public Optional<Output<String>> configurationManagerName() {
         return Optional.ofNullable(this.configurationManagerName);
     }
@@ -77,6 +93,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="configurationManagerVersion")
     private @Nullable Output<String> configurationManagerVersion;
 
+    /**
+     * @return Version of the configuration manager to use. Defaults to &#34;11.4&#34;.
+     * 
+     */
     public Optional<Output<String>> configurationManagerVersion() {
         return Optional.ofNullable(this.configurationManagerVersion);
     }
@@ -89,6 +109,11 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="customCookbooksSources")
     private @Nullable Output<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources;
 
+    /**
+     * @return When `use_custom_cookbooks` is set, provide this sub-object as
+     * described below.
+     * 
+     */
     public Optional<Output<List<StackCustomCookbooksSourceGetArgs>>> customCookbooksSources() {
         return Optional.ofNullable(this.customCookbooksSources);
     }
@@ -100,6 +125,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="customJson")
     private @Nullable Output<String> customJson;
 
+    /**
+     * @return Custom JSON attributes to apply to the entire stack.
+     * 
+     */
     public Optional<Output<String>> customJson() {
         return Optional.ofNullable(this.customJson);
     }
@@ -112,6 +141,11 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultAvailabilityZone")
     private @Nullable Output<String> defaultAvailabilityZone;
 
+    /**
+     * @return Name of the availability zone where instances will be created
+     * by default. This is required unless you set `vpc_id`.
+     * 
+     */
     public Optional<Output<String>> defaultAvailabilityZone() {
         return Optional.ofNullable(this.defaultAvailabilityZone);
     }
@@ -124,6 +158,11 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultInstanceProfileArn")
     private @Nullable Output<String> defaultInstanceProfileArn;
 
+    /**
+     * @return The ARN of an IAM Instance Profile that created instances
+     * will have by default.
+     * 
+     */
     public Optional<Output<String>> defaultInstanceProfileArn() {
         return Optional.ofNullable(this.defaultInstanceProfileArn);
     }
@@ -135,6 +174,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultOs")
     private @Nullable Output<String> defaultOs;
 
+    /**
+     * @return Name of OS that will be installed on instances by default.
+     * 
+     */
     public Optional<Output<String>> defaultOs() {
         return Optional.ofNullable(this.defaultOs);
     }
@@ -146,6 +189,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultRootDeviceType")
     private @Nullable Output<String> defaultRootDeviceType;
 
+    /**
+     * @return Name of the type of root device instances will have by default.
+     * 
+     */
     public Optional<Output<String>> defaultRootDeviceType() {
         return Optional.ofNullable(this.defaultRootDeviceType);
     }
@@ -157,6 +204,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultSshKeyName")
     private @Nullable Output<String> defaultSshKeyName;
 
+    /**
+     * @return Name of the SSH keypair that instances will have by default.
+     * 
+     */
     public Optional<Output<String>> defaultSshKeyName() {
         return Optional.ofNullable(this.defaultSshKeyName);
     }
@@ -169,6 +220,11 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultSubnetId")
     private @Nullable Output<String> defaultSubnetId;
 
+    /**
+     * @return Id of the subnet in which instances will be created by default. Mandatory
+     * if `vpc_id` is set, and forbidden if it isn&#39;t.
+     * 
+     */
     public Optional<Output<String>> defaultSubnetId() {
         return Optional.ofNullable(this.defaultSubnetId);
     }
@@ -181,6 +237,11 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostnameTheme")
     private @Nullable Output<String> hostnameTheme;
 
+    /**
+     * @return Keyword representing the naming scheme that will be used for instance hostnames
+     * within this stack.
+     * 
+     */
     public Optional<Output<String>> hostnameTheme() {
         return Optional.ofNullable(this.hostnameTheme);
     }
@@ -192,6 +253,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="manageBerkshelf")
     private @Nullable Output<Boolean> manageBerkshelf;
 
+    /**
+     * @return Boolean value controlling whether Opsworks will run Berkshelf for this stack.
+     * 
+     */
     public Optional<Output<Boolean>> manageBerkshelf() {
         return Optional.ofNullable(this.manageBerkshelf);
     }
@@ -203,6 +268,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the stack.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -214,6 +283,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The name of the region where the stack will exist.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -225,6 +298,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceRoleArn")
     private @Nullable Output<String> serviceRoleArn;
 
+    /**
+     * @return The ARN of an IAM role that the OpsWorks service will act as.
+     * 
+     */
     public Optional<Output<String>> serviceRoleArn() {
         return Optional.ofNullable(this.serviceRoleArn);
     }
@@ -243,6 +320,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -254,6 +335,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -266,6 +351,11 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="useCustomCookbooks")
     private @Nullable Output<Boolean> useCustomCookbooks;
 
+    /**
+     * @return Boolean value controlling whether the custom cookbook settings are
+     * enabled.
+     * 
+     */
     public Optional<Output<Boolean>> useCustomCookbooks() {
         return Optional.ofNullable(this.useCustomCookbooks);
     }
@@ -278,6 +368,11 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="useOpsworksSecurityGroups")
     private @Nullable Output<Boolean> useOpsworksSecurityGroups;
 
+    /**
+     * @return Boolean value controlling whether the standard OpsWorks
+     * security groups apply to created instances.
+     * 
+     */
     public Optional<Output<Boolean>> useOpsworksSecurityGroups() {
         return Optional.ofNullable(this.useOpsworksSecurityGroups);
     }
@@ -289,6 +384,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
+    /**
+     * @return The id of the VPC that this stack belongs to.
+     * 
+     */
     public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -341,11 +440,23 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
             $ = new StackState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentVersion If set to `&#34;LATEST&#34;`, OpsWorks will automatically install the latest version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(@Nullable Output<String> agentVersion) {
             $.agentVersion = agentVersion;
             return this;
         }
 
+        /**
+         * @param agentVersion If set to `&#34;LATEST&#34;`, OpsWorks will automatically install the latest version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(String agentVersion) {
             return agentVersion(Output.of(agentVersion));
         }
@@ -359,159 +470,380 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param berkshelfVersion If `manage_berkshelf` is enabled, the version of Berkshelf to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder berkshelfVersion(@Nullable Output<String> berkshelfVersion) {
             $.berkshelfVersion = berkshelfVersion;
             return this;
         }
 
+        /**
+         * @param berkshelfVersion If `manage_berkshelf` is enabled, the version of Berkshelf to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder berkshelfVersion(String berkshelfVersion) {
             return berkshelfVersion(Output.of(berkshelfVersion));
         }
 
+        /**
+         * @param color Color to paint next to the stack&#39;s resources in the OpsWorks console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder color(@Nullable Output<String> color) {
             $.color = color;
             return this;
         }
 
+        /**
+         * @param color Color to paint next to the stack&#39;s resources in the OpsWorks console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder color(String color) {
             return color(Output.of(color));
         }
 
+        /**
+         * @param configurationManagerName Name of the configuration manager to use. Defaults to &#34;Chef&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationManagerName(@Nullable Output<String> configurationManagerName) {
             $.configurationManagerName = configurationManagerName;
             return this;
         }
 
+        /**
+         * @param configurationManagerName Name of the configuration manager to use. Defaults to &#34;Chef&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationManagerName(String configurationManagerName) {
             return configurationManagerName(Output.of(configurationManagerName));
         }
 
+        /**
+         * @param configurationManagerVersion Version of the configuration manager to use. Defaults to &#34;11.4&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationManagerVersion(@Nullable Output<String> configurationManagerVersion) {
             $.configurationManagerVersion = configurationManagerVersion;
             return this;
         }
 
+        /**
+         * @param configurationManagerVersion Version of the configuration manager to use. Defaults to &#34;11.4&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationManagerVersion(String configurationManagerVersion) {
             return configurationManagerVersion(Output.of(configurationManagerVersion));
         }
 
+        /**
+         * @param customCookbooksSources When `use_custom_cookbooks` is set, provide this sub-object as
+         * described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customCookbooksSources(@Nullable Output<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources) {
             $.customCookbooksSources = customCookbooksSources;
             return this;
         }
 
+        /**
+         * @param customCookbooksSources When `use_custom_cookbooks` is set, provide this sub-object as
+         * described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customCookbooksSources(List<StackCustomCookbooksSourceGetArgs> customCookbooksSources) {
             return customCookbooksSources(Output.of(customCookbooksSources));
         }
 
+        /**
+         * @param customCookbooksSources When `use_custom_cookbooks` is set, provide this sub-object as
+         * described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customCookbooksSources(StackCustomCookbooksSourceGetArgs... customCookbooksSources) {
             return customCookbooksSources(List.of(customCookbooksSources));
         }
 
+        /**
+         * @param customJson Custom JSON attributes to apply to the entire stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customJson(@Nullable Output<String> customJson) {
             $.customJson = customJson;
             return this;
         }
 
+        /**
+         * @param customJson Custom JSON attributes to apply to the entire stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customJson(String customJson) {
             return customJson(Output.of(customJson));
         }
 
+        /**
+         * @param defaultAvailabilityZone Name of the availability zone where instances will be created
+         * by default. This is required unless you set `vpc_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAvailabilityZone(@Nullable Output<String> defaultAvailabilityZone) {
             $.defaultAvailabilityZone = defaultAvailabilityZone;
             return this;
         }
 
+        /**
+         * @param defaultAvailabilityZone Name of the availability zone where instances will be created
+         * by default. This is required unless you set `vpc_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAvailabilityZone(String defaultAvailabilityZone) {
             return defaultAvailabilityZone(Output.of(defaultAvailabilityZone));
         }
 
+        /**
+         * @param defaultInstanceProfileArn The ARN of an IAM Instance Profile that created instances
+         * will have by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultInstanceProfileArn(@Nullable Output<String> defaultInstanceProfileArn) {
             $.defaultInstanceProfileArn = defaultInstanceProfileArn;
             return this;
         }
 
+        /**
+         * @param defaultInstanceProfileArn The ARN of an IAM Instance Profile that created instances
+         * will have by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultInstanceProfileArn(String defaultInstanceProfileArn) {
             return defaultInstanceProfileArn(Output.of(defaultInstanceProfileArn));
         }
 
+        /**
+         * @param defaultOs Name of OS that will be installed on instances by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultOs(@Nullable Output<String> defaultOs) {
             $.defaultOs = defaultOs;
             return this;
         }
 
+        /**
+         * @param defaultOs Name of OS that will be installed on instances by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultOs(String defaultOs) {
             return defaultOs(Output.of(defaultOs));
         }
 
+        /**
+         * @param defaultRootDeviceType Name of the type of root device instances will have by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRootDeviceType(@Nullable Output<String> defaultRootDeviceType) {
             $.defaultRootDeviceType = defaultRootDeviceType;
             return this;
         }
 
+        /**
+         * @param defaultRootDeviceType Name of the type of root device instances will have by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRootDeviceType(String defaultRootDeviceType) {
             return defaultRootDeviceType(Output.of(defaultRootDeviceType));
         }
 
+        /**
+         * @param defaultSshKeyName Name of the SSH keypair that instances will have by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSshKeyName(@Nullable Output<String> defaultSshKeyName) {
             $.defaultSshKeyName = defaultSshKeyName;
             return this;
         }
 
+        /**
+         * @param defaultSshKeyName Name of the SSH keypair that instances will have by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSshKeyName(String defaultSshKeyName) {
             return defaultSshKeyName(Output.of(defaultSshKeyName));
         }
 
+        /**
+         * @param defaultSubnetId Id of the subnet in which instances will be created by default. Mandatory
+         * if `vpc_id` is set, and forbidden if it isn&#39;t.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSubnetId(@Nullable Output<String> defaultSubnetId) {
             $.defaultSubnetId = defaultSubnetId;
             return this;
         }
 
+        /**
+         * @param defaultSubnetId Id of the subnet in which instances will be created by default. Mandatory
+         * if `vpc_id` is set, and forbidden if it isn&#39;t.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSubnetId(String defaultSubnetId) {
             return defaultSubnetId(Output.of(defaultSubnetId));
         }
 
+        /**
+         * @param hostnameTheme Keyword representing the naming scheme that will be used for instance hostnames
+         * within this stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostnameTheme(@Nullable Output<String> hostnameTheme) {
             $.hostnameTheme = hostnameTheme;
             return this;
         }
 
+        /**
+         * @param hostnameTheme Keyword representing the naming scheme that will be used for instance hostnames
+         * within this stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostnameTheme(String hostnameTheme) {
             return hostnameTheme(Output.of(hostnameTheme));
         }
 
+        /**
+         * @param manageBerkshelf Boolean value controlling whether Opsworks will run Berkshelf for this stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manageBerkshelf(@Nullable Output<Boolean> manageBerkshelf) {
             $.manageBerkshelf = manageBerkshelf;
             return this;
         }
 
+        /**
+         * @param manageBerkshelf Boolean value controlling whether Opsworks will run Berkshelf for this stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manageBerkshelf(Boolean manageBerkshelf) {
             return manageBerkshelf(Output.of(manageBerkshelf));
         }
 
+        /**
+         * @param name The name of the stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param region The name of the region where the stack will exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The name of the region where the stack will exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param serviceRoleArn The ARN of an IAM role that the OpsWorks service will act as.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
             $.serviceRoleArn = serviceRoleArn;
             return this;
         }
 
+        /**
+         * @param serviceRoleArn The ARN of an IAM role that the OpsWorks service will act as.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRoleArn(String serviceRoleArn) {
             return serviceRoleArn(Output.of(serviceRoleArn));
         }
@@ -525,47 +857,111 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
             return stackEndpoint(Output.of(stackEndpoint));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param useCustomCookbooks Boolean value controlling whether the custom cookbook settings are
+         * enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCustomCookbooks(@Nullable Output<Boolean> useCustomCookbooks) {
             $.useCustomCookbooks = useCustomCookbooks;
             return this;
         }
 
+        /**
+         * @param useCustomCookbooks Boolean value controlling whether the custom cookbook settings are
+         * enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCustomCookbooks(Boolean useCustomCookbooks) {
             return useCustomCookbooks(Output.of(useCustomCookbooks));
         }
 
+        /**
+         * @param useOpsworksSecurityGroups Boolean value controlling whether the standard OpsWorks
+         * security groups apply to created instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useOpsworksSecurityGroups(@Nullable Output<Boolean> useOpsworksSecurityGroups) {
             $.useOpsworksSecurityGroups = useOpsworksSecurityGroups;
             return this;
         }
 
+        /**
+         * @param useOpsworksSecurityGroups Boolean value controlling whether the standard OpsWorks
+         * security groups apply to created instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useOpsworksSecurityGroups(Boolean useOpsworksSecurityGroups) {
             return useOpsworksSecurityGroups(Output.of(useOpsworksSecurityGroups));
         }
 
+        /**
+         * @param vpcId The id of the VPC that this stack belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The id of the VPC that this stack belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

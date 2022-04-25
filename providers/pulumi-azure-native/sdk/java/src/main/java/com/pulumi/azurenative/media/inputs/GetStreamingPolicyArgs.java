@@ -19,6 +19,10 @@ public final class GetStreamingPolicyArgs extends com.pulumi.resources.InvokeArg
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetStreamingPolicyArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetStreamingPolicyArgs extends com.pulumi.resources.InvokeArg
     @Import(name="streamingPolicyName", required=true)
     private String streamingPolicyName;
 
+    /**
+     * @return The Streaming Policy name.
+     * 
+     */
     public String streamingPolicyName() {
         return this.streamingPolicyName;
     }
@@ -71,16 +83,34 @@ public final class GetStreamingPolicyArgs extends com.pulumi.resources.InvokeArg
             $ = new GetStreamingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param streamingPolicyName The Streaming Policy name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingPolicyName(String streamingPolicyName) {
             $.streamingPolicyName = streamingPolicyName;
             return this;

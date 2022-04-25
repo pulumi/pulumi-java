@@ -24,6 +24,10 @@ public final class TpuConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether Cloud TPU integration is enabled or not.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -35,6 +39,10 @@ public final class TpuConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipv4CidrBlock", required=true)
     private String ipv4CidrBlock;
 
+    /**
+     * @return IPv4 CIDR block reserved for Cloud TPU in the VPC.
+     * 
+     */
     public String ipv4CidrBlock() {
         return this.ipv4CidrBlock;
     }
@@ -46,6 +54,10 @@ public final class TpuConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="useServiceNetworking", required=true)
     private Boolean useServiceNetworking;
 
+    /**
+     * @return Whether to use service networking for Cloud TPU or not.
+     * 
+     */
     public Boolean useServiceNetworking() {
         return this.useServiceNetworking;
     }
@@ -76,16 +88,34 @@ public final class TpuConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TpuConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether Cloud TPU integration is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param ipv4CidrBlock IPv4 CIDR block reserved for Cloud TPU in the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4CidrBlock(String ipv4CidrBlock) {
             $.ipv4CidrBlock = ipv4CidrBlock;
             return this;
         }
 
+        /**
+         * @param useServiceNetworking Whether to use service networking for Cloud TPU or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useServiceNetworking(Boolean useServiceNetworking) {
             $.useServiceNetworking = useServiceNetworking;
             return this;

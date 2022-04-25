@@ -22,6 +22,10 @@ public final class ClusterCertificateAuthorityGetArgs extends com.pulumi.resourc
     @Import(name="data")
     private @Nullable Output<String> data;
 
+    /**
+     * @return Base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
+     * 
+     */
     public Optional<Output<String>> data() {
         return Optional.ofNullable(this.data);
     }
@@ -50,11 +54,23 @@ public final class ClusterCertificateAuthorityGetArgs extends com.pulumi.resourc
             $ = new ClusterCertificateAuthorityGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param data Base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(@Nullable Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data Base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }

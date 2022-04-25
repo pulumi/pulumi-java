@@ -25,6 +25,10 @@ public final class PerformanceThresholdResponse extends com.pulumi.resources.Inv
     @Import(name="basicSliPerformance", required=true)
     private BasicSliResponse basicSliPerformance;
 
+    /**
+     * @return BasicSli to evaluate to judge window quality.
+     * 
+     */
     public BasicSliResponse basicSliPerformance() {
         return this.basicSliPerformance;
     }
@@ -36,6 +40,10 @@ public final class PerformanceThresholdResponse extends com.pulumi.resources.Inv
     @Import(name="performance", required=true)
     private RequestBasedSliResponse performance;
 
+    /**
+     * @return RequestBasedSli to evaluate to judge window quality.
+     * 
+     */
     public RequestBasedSliResponse performance() {
         return this.performance;
     }
@@ -47,6 +55,10 @@ public final class PerformanceThresholdResponse extends com.pulumi.resources.Inv
     @Import(name="threshold", required=true)
     private Double threshold;
 
+    /**
+     * @return If window performance &gt;= threshold, the window is counted as good.
+     * 
+     */
     public Double threshold() {
         return this.threshold;
     }
@@ -77,16 +89,34 @@ public final class PerformanceThresholdResponse extends com.pulumi.resources.Inv
             $ = new PerformanceThresholdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicSliPerformance BasicSli to evaluate to judge window quality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicSliPerformance(BasicSliResponse basicSliPerformance) {
             $.basicSliPerformance = basicSliPerformance;
             return this;
         }
 
+        /**
+         * @param performance RequestBasedSli to evaluate to judge window quality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder performance(RequestBasedSliResponse performance) {
             $.performance = performance;
             return this;
         }
 
+        /**
+         * @param threshold If window performance &gt;= threshold, the window is counted as good.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Double threshold) {
             $.threshold = threshold;
             return this;

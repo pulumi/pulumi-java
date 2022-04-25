@@ -24,6 +24,10 @@ public final class ODataErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return The machine-readable description of the error, such as &#39;InvalidRequest&#39; or &#39;InternalServerError&#39;
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -35,6 +39,10 @@ public final class ODataErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
     private List<ODataErrorResponse> details;
 
+    /**
+     * @return Inner errors that caused this error
+     * 
+     */
     public List<ODataErrorResponse> details() {
         return this.details;
     }
@@ -46,6 +54,10 @@ public final class ODataErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return The human-readable description of the error
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -76,20 +88,44 @@ public final class ODataErrorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ODataErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The machine-readable description of the error, such as &#39;InvalidRequest&#39; or &#39;InternalServerError&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param details Inner errors that caused this error
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(List<ODataErrorResponse> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details Inner errors that caused this error
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(ODataErrorResponse... details) {
             return details(List.of(details));
         }
 
+        /**
+         * @param message The human-readable description of the error
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;

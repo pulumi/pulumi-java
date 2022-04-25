@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AutomaticResolutionPropertiesResponse {
     /**
-     * Gets the MoveResource ARM ID of
+     * @return Gets the MoveResource ARM ID of
      * the dependent resource if the resolution type is Automatic.
      * 
      */
@@ -24,10 +24,10 @@ public final class AutomaticResolutionPropertiesResponse {
     }
 
     /**
-     * Gets the MoveResource ARM ID of
+     * @return Gets the MoveResource ARM ID of
      * the dependent resource if the resolution type is Automatic.
      * 
-    */
+     */
     public Optional<String> moveResourceId() {
         return Optional.ofNullable(this.moveResourceId);
     }

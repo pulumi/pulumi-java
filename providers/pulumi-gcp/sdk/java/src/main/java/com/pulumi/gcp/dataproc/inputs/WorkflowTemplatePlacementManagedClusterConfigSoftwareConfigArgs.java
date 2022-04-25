@@ -24,6 +24,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigAr
     @Import(name="imageVersion")
     private @Nullable Output<String> imageVersion;
 
+    /**
+     * @return Optional. The version of software inside the cluster. It must be one of the supported (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
+     * 
+     */
     public Optional<Output<String>> imageVersion() {
         return Optional.ofNullable(this.imageVersion);
     }
@@ -42,6 +46,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigAr
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -72,11 +80,23 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigAr
             $ = new WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageVersion Optional. The version of software inside the cluster. It must be one of the supported (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageVersion(@Nullable Output<String> imageVersion) {
             $.imageVersion = imageVersion;
             return this;
         }
 
+        /**
+         * @param imageVersion Optional. The version of software inside the cluster. It must be one of the supported (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageVersion(String imageVersion) {
             return imageVersion(Output.of(imageVersion));
         }
@@ -94,11 +114,23 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigAr
             return optionalComponents(List.of(optionalComponents));
         }
 
+        /**
+         * @param properties Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }

@@ -27,6 +27,10 @@ public final class ImageUpdateTriggerResponse extends com.pulumi.resources.Invok
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The unique ID of the trigger.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -38,6 +42,10 @@ public final class ImageUpdateTriggerResponse extends com.pulumi.resources.Invok
     @Import(name="images")
     private @Nullable List<ImageDescriptorResponse> images;
 
+    /**
+     * @return The list of image updates that caused the build.
+     * 
+     */
     public Optional<List<ImageDescriptorResponse>> images() {
         return Optional.ofNullable(this.images);
     }
@@ -49,6 +57,10 @@ public final class ImageUpdateTriggerResponse extends com.pulumi.resources.Invok
     @Import(name="timestamp")
     private @Nullable String timestamp;
 
+    /**
+     * @return The timestamp when the image update happened.
+     * 
+     */
     public Optional<String> timestamp() {
         return Optional.ofNullable(this.timestamp);
     }
@@ -79,20 +91,44 @@ public final class ImageUpdateTriggerResponse extends com.pulumi.resources.Invok
             $ = new ImageUpdateTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The unique ID of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param images The list of image updates that caused the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(@Nullable List<ImageDescriptorResponse> images) {
             $.images = images;
             return this;
         }
 
+        /**
+         * @param images The list of image updates that caused the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(ImageDescriptorResponse... images) {
             return images(List.of(images));
         }
 
+        /**
+         * @param timestamp The timestamp when the image update happened.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestamp(@Nullable String timestamp) {
             $.timestamp = timestamp;
             return this;

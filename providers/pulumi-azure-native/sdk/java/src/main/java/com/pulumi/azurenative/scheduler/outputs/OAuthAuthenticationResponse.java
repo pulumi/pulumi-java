@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OAuthAuthenticationResponse {
     /**
-     * Gets or sets the audience.
+     * @return Gets or sets the audience.
      * 
      */
     private final @Nullable String audience;
     /**
-     * Gets or sets the client identifier.
+     * @return Gets or sets the client identifier.
      * 
      */
     private final @Nullable String clientId;
     /**
-     * Gets or sets the secret, return value will always be empty.
+     * @return Gets or sets the secret, return value will always be empty.
      * 
      */
     private final @Nullable String secret;
     /**
-     * Gets or sets the tenant.
+     * @return Gets or sets the tenant.
      * 
      */
     private final @Nullable String tenant;
     /**
-     * Gets or sets the HTTP authentication type.
+     * @return Gets or sets the HTTP authentication type.
      * Expected value is &#39;ActiveDirectoryOAuth&#39;.
      * 
      */
@@ -53,38 +53,38 @@ public final class OAuthAuthenticationResponse {
     }
 
     /**
-     * Gets or sets the audience.
+     * @return Gets or sets the audience.
      * 
-    */
+     */
     public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
     /**
-     * Gets or sets the client identifier.
+     * @return Gets or sets the client identifier.
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * Gets or sets the secret, return value will always be empty.
+     * @return Gets or sets the secret, return value will always be empty.
      * 
-    */
+     */
     public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }
     /**
-     * Gets or sets the tenant.
+     * @return Gets or sets the tenant.
      * 
-    */
+     */
     public Optional<String> tenant() {
         return Optional.ofNullable(this.tenant);
     }
     /**
-     * Gets or sets the HTTP authentication type.
+     * @return Gets or sets the HTTP authentication type.
      * Expected value is &#39;ActiveDirectoryOAuth&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

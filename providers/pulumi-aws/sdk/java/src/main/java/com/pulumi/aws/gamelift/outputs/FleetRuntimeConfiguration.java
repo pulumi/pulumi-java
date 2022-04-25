@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FleetRuntimeConfiguration {
     /**
-     * Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
+     * @return Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
      * 
      */
     private final @Nullable Integer gameSessionActivationTimeoutSeconds;
     /**
-     * Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously.
+     * @return Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously.
      * 
      */
     private final @Nullable Integer maxConcurrentGameSessionActivations;
     /**
-     * Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
+     * @return Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
      * 
      */
     private final @Nullable List<FleetRuntimeConfigurationServerProcess> serverProcesses;
@@ -40,23 +40,23 @@ public final class FleetRuntimeConfiguration {
     }
 
     /**
-     * Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
+     * @return Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
      * 
-    */
+     */
     public Optional<Integer> gameSessionActivationTimeoutSeconds() {
         return Optional.ofNullable(this.gameSessionActivationTimeoutSeconds);
     }
     /**
-     * Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously.
+     * @return Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously.
      * 
-    */
+     */
     public Optional<Integer> maxConcurrentGameSessionActivations() {
         return Optional.ofNullable(this.maxConcurrentGameSessionActivations);
     }
     /**
-     * Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
+     * @return Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
      * 
-    */
+     */
     public List<FleetRuntimeConfigurationServerProcess> serverProcesses() {
         return this.serverProcesses == null ? List.of() : this.serverProcesses;
     }

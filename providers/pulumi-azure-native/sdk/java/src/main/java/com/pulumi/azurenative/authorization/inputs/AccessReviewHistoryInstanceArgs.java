@@ -26,6 +26,10 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name for the parent history definition.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -37,6 +41,10 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
     @Import(name="expiration")
     private @Nullable Output<String> expiration;
 
+    /**
+     * @return Date time when history data report expires and the associated data is deleted.
+     * 
+     */
     public Optional<Output<String>> expiration() {
         return Optional.ofNullable(this.expiration);
     }
@@ -48,6 +56,10 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
     @Import(name="fulfilledDateTime")
     private @Nullable Output<String> fulfilledDateTime;
 
+    /**
+     * @return Date time when the history data report is scheduled to be generated.
+     * 
+     */
     public Optional<Output<String>> fulfilledDateTime() {
         return Optional.ofNullable(this.fulfilledDateTime);
     }
@@ -59,6 +71,10 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
     @Import(name="reviewHistoryPeriodEndDateTime")
     private @Nullable Output<String> reviewHistoryPeriodEndDateTime;
 
+    /**
+     * @return Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
+     * 
+     */
     public Optional<Output<String>> reviewHistoryPeriodEndDateTime() {
         return Optional.ofNullable(this.reviewHistoryPeriodEndDateTime);
     }
@@ -70,6 +86,10 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
     @Import(name="reviewHistoryPeriodStartDateTime")
     private @Nullable Output<String> reviewHistoryPeriodStartDateTime;
 
+    /**
+     * @return Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
+     * 
+     */
     public Optional<Output<String>> reviewHistoryPeriodStartDateTime() {
         return Optional.ofNullable(this.reviewHistoryPeriodStartDateTime);
     }
@@ -81,6 +101,10 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
     @Import(name="runDateTime")
     private @Nullable Output<String> runDateTime;
 
+    /**
+     * @return Date time when the history data report is scheduled to be generated.
+     * 
+     */
     public Optional<Output<String>> runDateTime() {
         return Optional.ofNullable(this.runDateTime);
     }
@@ -114,56 +138,128 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
             $ = new AccessReviewHistoryInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name for the parent history definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name for the parent history definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param expiration Date time when history data report expires and the associated data is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiration(@Nullable Output<String> expiration) {
             $.expiration = expiration;
             return this;
         }
 
+        /**
+         * @param expiration Date time when history data report expires and the associated data is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiration(String expiration) {
             return expiration(Output.of(expiration));
         }
 
+        /**
+         * @param fulfilledDateTime Date time when the history data report is scheduled to be generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fulfilledDateTime(@Nullable Output<String> fulfilledDateTime) {
             $.fulfilledDateTime = fulfilledDateTime;
             return this;
         }
 
+        /**
+         * @param fulfilledDateTime Date time when the history data report is scheduled to be generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fulfilledDateTime(String fulfilledDateTime) {
             return fulfilledDateTime(Output.of(fulfilledDateTime));
         }
 
+        /**
+         * @param reviewHistoryPeriodEndDateTime Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reviewHistoryPeriodEndDateTime(@Nullable Output<String> reviewHistoryPeriodEndDateTime) {
             $.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
             return this;
         }
 
+        /**
+         * @param reviewHistoryPeriodEndDateTime Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reviewHistoryPeriodEndDateTime(String reviewHistoryPeriodEndDateTime) {
             return reviewHistoryPeriodEndDateTime(Output.of(reviewHistoryPeriodEndDateTime));
         }
 
+        /**
+         * @param reviewHistoryPeriodStartDateTime Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reviewHistoryPeriodStartDateTime(@Nullable Output<String> reviewHistoryPeriodStartDateTime) {
             $.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
             return this;
         }
 
+        /**
+         * @param reviewHistoryPeriodStartDateTime Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reviewHistoryPeriodStartDateTime(String reviewHistoryPeriodStartDateTime) {
             return reviewHistoryPeriodStartDateTime(Output.of(reviewHistoryPeriodStartDateTime));
         }
 
+        /**
+         * @param runDateTime Date time when the history data report is scheduled to be generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runDateTime(@Nullable Output<String> runDateTime) {
             $.runDateTime = runDateTime;
             return this;
         }
 
+        /**
+         * @param runDateTime Date time when the history data report is scheduled to be generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runDateTime(String runDateTime) {
             return runDateTime(Output.of(runDateTime));
         }

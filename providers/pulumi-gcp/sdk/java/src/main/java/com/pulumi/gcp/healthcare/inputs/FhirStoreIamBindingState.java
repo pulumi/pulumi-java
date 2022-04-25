@@ -31,6 +31,10 @@ public final class FhirStoreIamBindingState extends com.pulumi.resources.Resourc
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the FHIR store&#39;s IAM policy.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -45,6 +49,13 @@ public final class FhirStoreIamBindingState extends com.pulumi.resources.Resourc
     @Import(name="fhirStoreId")
     private @Nullable Output<String> fhirStoreId;
 
+    /**
+     * @return The FHIR store ID, in the form
+     * `{project_id}/{location_name}/{dataset_name}/{fhir_store_name}` or
+     * `{location_name}/{dataset_name}/{fhir_store_name}`. In the second form, the provider&#39;s
+     * project setting will be used as a fallback.
+     * 
+     */
     public Optional<Output<String>> fhirStoreId() {
         return Optional.ofNullable(this.fhirStoreId);
     }
@@ -65,6 +76,12 @@ public final class FhirStoreIamBindingState extends com.pulumi.resources.Resourc
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.healthcare.FhirStoreIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -106,20 +123,50 @@ public final class FhirStoreIamBindingState extends com.pulumi.resources.Resourc
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param etag (Computed) The etag of the FHIR store&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag (Computed) The etag of the FHIR store&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param fhirStoreId The FHIR store ID, in the form
+         * `{project_id}/{location_name}/{dataset_name}/{fhir_store_name}` or
+         * `{location_name}/{dataset_name}/{fhir_store_name}`. In the second form, the provider&#39;s
+         * project setting will be used as a fallback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fhirStoreId(@Nullable Output<String> fhirStoreId) {
             $.fhirStoreId = fhirStoreId;
             return this;
         }
 
+        /**
+         * @param fhirStoreId The FHIR store ID, in the form
+         * `{project_id}/{location_name}/{dataset_name}/{fhir_store_name}` or
+         * `{location_name}/{dataset_name}/{fhir_store_name}`. In the second form, the provider&#39;s
+         * project setting will be used as a fallback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fhirStoreId(String fhirStoreId) {
             return fhirStoreId(Output.of(fhirStoreId));
         }
@@ -137,11 +184,27 @@ public final class FhirStoreIamBindingState extends com.pulumi.resources.Resourc
             return members(List.of(members));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.healthcare.FhirStoreIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.healthcare.FhirStoreIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

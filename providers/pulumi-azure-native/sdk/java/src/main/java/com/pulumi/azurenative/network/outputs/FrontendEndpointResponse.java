@@ -15,57 +15,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FrontendEndpointResponse {
     /**
-     * The configuration specifying how to enable HTTPS
+     * @return The configuration specifying how to enable HTTPS
      * 
      */
     private final CustomHttpsConfigurationResponse customHttpsConfiguration;
     /**
-     * Provisioning status of Custom Https of the frontendEndpoint.
+     * @return Provisioning status of Custom Https of the frontendEndpoint.
      * 
      */
     private final String customHttpsProvisioningState;
     /**
-     * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
+     * @return Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
      * 
      */
     private final String customHttpsProvisioningSubstate;
     /**
-     * The host name of the frontendEndpoint. Must be a domain name.
+     * @return The host name of the frontendEndpoint. Must be a domain name.
      * 
      */
     private final @Nullable String hostName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final @Nullable String name;
     /**
-     * Resource status.
+     * @return Resource status.
      * 
      */
     private final String resourceState;
     /**
-     * Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * @return Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     private final @Nullable String sessionAffinityEnabledState;
     /**
-     * UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
+     * @return UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
      * 
      */
     private final @Nullable Integer sessionAffinityTtlSeconds;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Defines the Web Application Firewall policy for each host (if applicable)
+     * @return Defines the Web Application Firewall policy for each host (if applicable)
      * 
      */
     private final @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
@@ -97,79 +97,79 @@ public final class FrontendEndpointResponse {
     }
 
     /**
-     * The configuration specifying how to enable HTTPS
+     * @return The configuration specifying how to enable HTTPS
      * 
-    */
+     */
     public CustomHttpsConfigurationResponse customHttpsConfiguration() {
         return this.customHttpsConfiguration;
     }
     /**
-     * Provisioning status of Custom Https of the frontendEndpoint.
+     * @return Provisioning status of Custom Https of the frontendEndpoint.
      * 
-    */
+     */
     public String customHttpsProvisioningState() {
         return this.customHttpsProvisioningState;
     }
     /**
-     * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
+     * @return Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
      * 
-    */
+     */
     public String customHttpsProvisioningSubstate() {
         return this.customHttpsProvisioningSubstate;
     }
     /**
-     * The host name of the frontendEndpoint. Must be a domain name.
+     * @return The host name of the frontendEndpoint. Must be a domain name.
      * 
-    */
+     */
     public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Resource status.
+     * @return Resource status.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * @return Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
-    */
+     */
     public Optional<String> sessionAffinityEnabledState() {
         return Optional.ofNullable(this.sessionAffinityEnabledState);
     }
     /**
-     * UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
+     * @return UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
      * 
-    */
+     */
     public Optional<Integer> sessionAffinityTtlSeconds() {
         return Optional.ofNullable(this.sessionAffinityTtlSeconds);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Defines the Web Application Firewall policy for each host (if applicable)
+     * @return Defines the Web Application Firewall policy for each host (if applicable)
      * 
-    */
+     */
     public Optional<FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink> webApplicationFirewallPolicyLink() {
         return Optional.ofNullable(this.webApplicationFirewallPolicyLink);
     }

@@ -19,6 +19,10 @@ public final class GetScheduledActionArgs extends com.pulumi.resources.InvokeArg
     @Import(name="scheduledActionName", required=true)
     private String scheduledActionName;
 
+    /**
+     * @return The name of the scheduled action. The name must be unique within an account.
+     * 
+     */
     public String scheduledActionName() {
         return this.scheduledActionName;
     }
@@ -47,6 +51,12 @@ public final class GetScheduledActionArgs extends com.pulumi.resources.InvokeArg
             $ = new GetScheduledActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheduledActionName The name of the scheduled action. The name must be unique within an account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledActionName(String scheduledActionName) {
             $.scheduledActionName = scheduledActionName;
             return this;

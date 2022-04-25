@@ -26,6 +26,10 @@ public final class SlsaBuilderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return id is the id of the slsa provenance builder
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -54,11 +58,23 @@ public final class SlsaBuilderArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SlsaBuilderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id id is the id of the slsa provenance builder
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id id is the id of the slsa provenance builder
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

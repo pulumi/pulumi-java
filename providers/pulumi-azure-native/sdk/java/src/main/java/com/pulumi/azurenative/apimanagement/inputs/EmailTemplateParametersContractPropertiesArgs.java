@@ -26,6 +26,10 @@ public final class EmailTemplateParametersContractPropertiesArgs extends com.pul
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Template parameter description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class EmailTemplateParametersContractPropertiesArgs extends com.pul
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Template parameter name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class EmailTemplateParametersContractPropertiesArgs extends com.pul
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Template parameter title.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -78,29 +90,65 @@ public final class EmailTemplateParametersContractPropertiesArgs extends com.pul
             $ = new EmailTemplateParametersContractPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Template parameter description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Template parameter description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Template parameter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Template parameter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param title Template parameter title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Template parameter title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

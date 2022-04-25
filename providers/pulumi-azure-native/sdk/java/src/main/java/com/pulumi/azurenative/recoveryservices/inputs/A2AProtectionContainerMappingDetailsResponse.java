@@ -26,6 +26,10 @@ public final class A2AProtectionContainerMappingDetailsResponse extends com.pulu
     @Import(name="agentAutoUpdateStatus")
     private @Nullable String agentAutoUpdateStatus;
 
+    /**
+     * @return A value indicating whether the auto update is enabled.
+     * 
+     */
     public Optional<String> agentAutoUpdateStatus() {
         return Optional.ofNullable(this.agentAutoUpdateStatus);
     }
@@ -37,6 +41,10 @@ public final class A2AProtectionContainerMappingDetailsResponse extends com.pulu
     @Import(name="automationAccountArmId")
     private @Nullable String automationAccountArmId;
 
+    /**
+     * @return The automation account arm id.
+     * 
+     */
     public Optional<String> automationAccountArmId() {
         return Optional.ofNullable(this.automationAccountArmId);
     }
@@ -49,6 +57,11 @@ public final class A2AProtectionContainerMappingDetailsResponse extends com.pulu
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the class type. Overridden in derived classes.
+     * Expected value is &#39;A2A&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -60,6 +73,10 @@ public final class A2AProtectionContainerMappingDetailsResponse extends com.pulu
     @Import(name="jobScheduleName")
     private @Nullable String jobScheduleName;
 
+    /**
+     * @return The job schedule arm name.
+     * 
+     */
     public Optional<String> jobScheduleName() {
         return Optional.ofNullable(this.jobScheduleName);
     }
@@ -71,6 +88,10 @@ public final class A2AProtectionContainerMappingDetailsResponse extends com.pulu
     @Import(name="scheduleName")
     private @Nullable String scheduleName;
 
+    /**
+     * @return The schedule arm name.
+     * 
+     */
     public Optional<String> scheduleName() {
         return Optional.ofNullable(this.scheduleName);
     }
@@ -103,26 +124,57 @@ public final class A2AProtectionContainerMappingDetailsResponse extends com.pulu
             $ = new A2AProtectionContainerMappingDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentAutoUpdateStatus A value indicating whether the auto update is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentAutoUpdateStatus(@Nullable String agentAutoUpdateStatus) {
             $.agentAutoUpdateStatus = agentAutoUpdateStatus;
             return this;
         }
 
+        /**
+         * @param automationAccountArmId The automation account arm id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountArmId(@Nullable String automationAccountArmId) {
             $.automationAccountArmId = automationAccountArmId;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;A2A&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param jobScheduleName The job schedule arm name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobScheduleName(@Nullable String jobScheduleName) {
             $.jobScheduleName = jobScheduleName;
             return this;
         }
 
+        /**
+         * @param scheduleName The schedule arm name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleName(@Nullable String scheduleName) {
             $.scheduleName = scheduleName;
             return this;

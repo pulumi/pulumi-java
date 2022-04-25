@@ -27,6 +27,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="consumerGroupName", required=true)
     private Output<String> consumerGroupName;
 
+    /**
+     * @return The name of the event hub&#39;s consumer group that holds the partitions from which events will be read.
+     * 
+     */
     public Output<String> consumerGroupName() {
         return this.consumerGroupName;
     }
@@ -38,6 +42,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="environmentName", required=true)
     private Output<String> environmentName;
 
+    /**
+     * @return The name of the Time Series Insights environment associated with the specified resource group.
+     * 
+     */
     public Output<String> environmentName() {
         return this.environmentName;
     }
@@ -49,6 +57,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="eventHubName", required=true)
     private Output<String> eventHubName;
 
+    /**
+     * @return The name of the event hub.
+     * 
+     */
     public Output<String> eventHubName() {
         return this.eventHubName;
     }
@@ -60,6 +72,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="eventSourceName")
     private @Nullable Output<String> eventSourceName;
 
+    /**
+     * @return Name of the event source.
+     * 
+     */
     public Optional<Output<String>> eventSourceName() {
         return Optional.ofNullable(this.eventSourceName);
     }
@@ -71,6 +87,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="eventSourceResourceId", required=true)
     private Output<String> eventSourceResourceId;
 
+    /**
+     * @return The resource id of the event source in Azure Resource Manager.
+     * 
+     */
     public Output<String> eventSourceResourceId() {
         return this.eventSourceResourceId;
     }
@@ -82,6 +102,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="keyName", required=true)
     private Output<String> keyName;
 
+    /**
+     * @return The name of the SAS key that grants the Time Series Insights service access to the event hub. The shared access policies for this key must grant &#39;Listen&#39; permissions to the event hub.
+     * 
+     */
     public Output<String> keyName() {
         return this.keyName;
     }
@@ -94,6 +118,11 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return The kind of the event source.
+     * Expected value is &#39;Microsoft.EventHub&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -105,6 +134,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="localTimestamp")
     private @Nullable Output<LocalTimestampArgs> localTimestamp;
 
+    /**
+     * @return An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn&#39;t specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+     * 
+     */
     public Optional<Output<LocalTimestampArgs>> localTimestamp() {
         return Optional.ofNullable(this.localTimestamp);
     }
@@ -116,6 +149,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -127,6 +164,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -138,6 +179,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="serviceBusNamespace", required=true)
     private Output<String> serviceBusNamespace;
 
+    /**
+     * @return The name of the service bus that contains the event hub.
+     * 
+     */
     public Output<String> serviceBusNamespace() {
         return this.serviceBusNamespace;
     }
@@ -149,6 +194,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="sharedAccessKey", required=true)
     private Output<String> sharedAccessKey;
 
+    /**
+     * @return The value of the shared access key that grants the Time Series Insights service read access to the event hub. This property is not shown in event source responses.
+     * 
+     */
     public Output<String> sharedAccessKey() {
         return this.sharedAccessKey;
     }
@@ -160,6 +209,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value pairs of additional properties for the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -171,6 +224,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="time")
     private @Nullable Output<String> time;
 
+    /**
+     * @return ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
+     * 
+     */
     public Optional<Output<String>> time() {
         return Optional.ofNullable(this.time);
     }
@@ -182,6 +239,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="timestampPropertyName")
     private @Nullable Output<String> timestampPropertyName;
 
+    /**
+     * @return The event property that will be used as the event source&#39;s timestamp. If a value isn&#39;t specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
+     * 
+     */
     public Optional<Output<String>> timestampPropertyName() {
         return Optional.ofNullable(this.timestampPropertyName);
     }
@@ -193,6 +254,10 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
     @Import(name="type")
     private @Nullable Output<Either<String,IngressStartAtType>> type;
 
+    /**
+     * @return The type of the ingressStartAt, It can be &#34;EarliestAvailable&#34;, &#34;EventSourceCreationTime&#34;, &#34;CustomEnqueuedTime&#34;.
+     * 
+     */
     public Optional<Output<Either<String,IngressStartAtType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -236,154 +301,360 @@ public final class EventHubEventSourceArgs extends com.pulumi.resources.Resource
             $ = new EventHubEventSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumerGroupName The name of the event hub&#39;s consumer group that holds the partitions from which events will be read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerGroupName(Output<String> consumerGroupName) {
             $.consumerGroupName = consumerGroupName;
             return this;
         }
 
+        /**
+         * @param consumerGroupName The name of the event hub&#39;s consumer group that holds the partitions from which events will be read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerGroupName(String consumerGroupName) {
             return consumerGroupName(Output.of(consumerGroupName));
         }
 
+        /**
+         * @param environmentName The name of the Time Series Insights environment associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(Output<String> environmentName) {
             $.environmentName = environmentName;
             return this;
         }
 
+        /**
+         * @param environmentName The name of the Time Series Insights environment associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(String environmentName) {
             return environmentName(Output.of(environmentName));
         }
 
+        /**
+         * @param eventHubName The name of the event hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(Output<String> eventHubName) {
             $.eventHubName = eventHubName;
             return this;
         }
 
+        /**
+         * @param eventHubName The name of the event hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(String eventHubName) {
             return eventHubName(Output.of(eventHubName));
         }
 
+        /**
+         * @param eventSourceName Name of the event source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSourceName(@Nullable Output<String> eventSourceName) {
             $.eventSourceName = eventSourceName;
             return this;
         }
 
+        /**
+         * @param eventSourceName Name of the event source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSourceName(String eventSourceName) {
             return eventSourceName(Output.of(eventSourceName));
         }
 
+        /**
+         * @param eventSourceResourceId The resource id of the event source in Azure Resource Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSourceResourceId(Output<String> eventSourceResourceId) {
             $.eventSourceResourceId = eventSourceResourceId;
             return this;
         }
 
+        /**
+         * @param eventSourceResourceId The resource id of the event source in Azure Resource Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSourceResourceId(String eventSourceResourceId) {
             return eventSourceResourceId(Output.of(eventSourceResourceId));
         }
 
+        /**
+         * @param keyName The name of the SAS key that grants the Time Series Insights service access to the event hub. The shared access policies for this key must grant &#39;Listen&#39; permissions to the event hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName The name of the SAS key that grants the Time Series Insights service access to the event hub. The shared access policies for this key must grant &#39;Listen&#39; permissions to the event hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param kind The kind of the event source.
+         * Expected value is &#39;Microsoft.EventHub&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the event source.
+         * Expected value is &#39;Microsoft.EventHub&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param localTimestamp An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn&#39;t specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localTimestamp(@Nullable Output<LocalTimestampArgs> localTimestamp) {
             $.localTimestamp = localTimestamp;
             return this;
         }
 
+        /**
+         * @param localTimestamp An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn&#39;t specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localTimestamp(LocalTimestampArgs localTimestamp) {
             return localTimestamp(Output.of(localTimestamp));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceBusNamespace The name of the service bus that contains the event hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusNamespace(Output<String> serviceBusNamespace) {
             $.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
 
+        /**
+         * @param serviceBusNamespace The name of the service bus that contains the event hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusNamespace(String serviceBusNamespace) {
             return serviceBusNamespace(Output.of(serviceBusNamespace));
         }
 
+        /**
+         * @param sharedAccessKey The value of the shared access key that grants the Time Series Insights service read access to the event hub. This property is not shown in event source responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedAccessKey(Output<String> sharedAccessKey) {
             $.sharedAccessKey = sharedAccessKey;
             return this;
         }
 
+        /**
+         * @param sharedAccessKey The value of the shared access key that grants the Time Series Insights service read access to the event hub. This property is not shown in event source responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedAccessKey(String sharedAccessKey) {
             return sharedAccessKey(Output.of(sharedAccessKey));
         }
 
+        /**
+         * @param tags Key-value pairs of additional properties for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value pairs of additional properties for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param time ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(@Nullable Output<String> time) {
             $.time = time;
             return this;
         }
 
+        /**
+         * @param time ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             return time(Output.of(time));
         }
 
+        /**
+         * @param timestampPropertyName The event property that will be used as the event source&#39;s timestamp. If a value isn&#39;t specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampPropertyName(@Nullable Output<String> timestampPropertyName) {
             $.timestampPropertyName = timestampPropertyName;
             return this;
         }
 
+        /**
+         * @param timestampPropertyName The event property that will be used as the event source&#39;s timestamp. If a value isn&#39;t specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampPropertyName(String timestampPropertyName) {
             return timestampPropertyName(Output.of(timestampPropertyName));
         }
 
+        /**
+         * @param type The type of the ingressStartAt, It can be &#34;EarliestAvailable&#34;, &#34;EventSourceCreationTime&#34;, &#34;CustomEnqueuedTime&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,IngressStartAtType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the ingressStartAt, It can be &#34;EarliestAvailable&#34;, &#34;EventSourceCreationTime&#34;, &#34;CustomEnqueuedTime&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,IngressStartAtType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of the ingressStartAt, It can be &#34;EarliestAvailable&#34;, &#34;EventSourceCreationTime&#34;, &#34;CustomEnqueuedTime&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of the ingressStartAt, It can be &#34;EarliestAvailable&#34;, &#34;EventSourceCreationTime&#34;, &#34;CustomEnqueuedTime&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(IngressStartAtType type) {
             return type(Either.ofRight(type));
         }

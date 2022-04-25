@@ -23,6 +23,10 @@ public final class PeeringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizedNetwork", required=true)
     private Output<String> authorizedNetwork;
 
+    /**
+     * @return The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Caller needs to make sure that CIDR subnets do not overlap between networks, else peering creation will fail.
+     * 
+     */
     public Output<String> authorizedNetwork() {
         return this.authorizedNetwork;
     }
@@ -34,6 +38,10 @@ public final class PeeringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainResource", required=true)
     private Output<String> domainResource;
 
+    /**
+     * @return Full domain resource path for the Managed AD Domain involved in peering. The resource path should be in the form: `projects/{project_id}/locations/global/domains/{domain_name}`
+     * 
+     */
     public Output<String> domainResource() {
         return this.domainResource;
     }
@@ -45,6 +53,10 @@ public final class PeeringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Resource labels to represent user-provided metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -91,29 +103,65 @@ public final class PeeringArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PeeringArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizedNetwork The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Caller needs to make sure that CIDR subnets do not overlap between networks, else peering creation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedNetwork(Output<String> authorizedNetwork) {
             $.authorizedNetwork = authorizedNetwork;
             return this;
         }
 
+        /**
+         * @param authorizedNetwork The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Caller needs to make sure that CIDR subnets do not overlap between networks, else peering creation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedNetwork(String authorizedNetwork) {
             return authorizedNetwork(Output.of(authorizedNetwork));
         }
 
+        /**
+         * @param domainResource Full domain resource path for the Managed AD Domain involved in peering. The resource path should be in the form: `projects/{project_id}/locations/global/domains/{domain_name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainResource(Output<String> domainResource) {
             $.domainResource = domainResource;
             return this;
         }
 
+        /**
+         * @param domainResource Full domain resource path for the Managed AD Domain involved in peering. The resource path should be in the form: `projects/{project_id}/locations/global/domains/{domain_name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainResource(String domainResource) {
             return domainResource(Output.of(domainResource));
         }
 
+        /**
+         * @param labels Optional. Resource labels to represent user-provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Resource labels to represent user-provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }

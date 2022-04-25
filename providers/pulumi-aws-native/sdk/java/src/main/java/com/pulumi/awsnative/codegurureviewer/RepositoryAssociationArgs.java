@@ -25,6 +25,10 @@ public final class RepositoryAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="bucketName")
     private @Nullable Output<String> bucketName;
 
+    /**
+     * @return The name of the S3 bucket associated with an associated S3 repository. It must start with `codeguru-reviewer-`.
+     * 
+     */
     public Optional<Output<String>> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
@@ -36,6 +40,10 @@ public final class RepositoryAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="connectionArn")
     private @Nullable Output<String> connectionArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection.
+     * 
+     */
     public Optional<Output<String>> connectionArn() {
         return Optional.ofNullable(this.connectionArn);
     }
@@ -47,6 +55,10 @@ public final class RepositoryAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the repository to be associated.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class RepositoryAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="owner")
     private @Nullable Output<String> owner;
 
+    /**
+     * @return The owner of the repository. For a Bitbucket repository, this is the username for the account that owns the repository.
+     * 
+     */
     public Optional<Output<String>> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -69,6 +85,10 @@ public final class RepositoryAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<List<RepositoryAssociationTagArgs>> tags;
 
+    /**
+     * @return The tags associated with a repository association.
+     * 
+     */
     public Optional<Output<List<RepositoryAssociationTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -80,6 +100,10 @@ public final class RepositoryAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="type", required=true)
     private Output<RepositoryAssociationType> type;
 
+    /**
+     * @return The type of repository to be associated.
+     * 
+     */
     public Output<RepositoryAssociationType> type() {
         return this.type;
     }
@@ -113,60 +137,138 @@ public final class RepositoryAssociationArgs extends com.pulumi.resources.Resour
             $ = new RepositoryAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName The name of the S3 bucket associated with an associated S3 repository. It must start with `codeguru-reviewer-`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(@Nullable Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName The name of the S3 bucket associated with an associated S3 repository. It must start with `codeguru-reviewer-`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param connectionArn The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionArn(@Nullable Output<String> connectionArn) {
             $.connectionArn = connectionArn;
             return this;
         }
 
+        /**
+         * @param connectionArn The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionArn(String connectionArn) {
             return connectionArn(Output.of(connectionArn));
         }
 
+        /**
+         * @param name Name of the repository to be associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the repository to be associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param owner The owner of the repository. For a Bitbucket repository, this is the username for the account that owns the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(@Nullable Output<String> owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param owner The owner of the repository. For a Bitbucket repository, this is the username for the account that owns the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(String owner) {
             return owner(Output.of(owner));
         }
 
+        /**
+         * @param tags The tags associated with a repository association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<RepositoryAssociationTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags associated with a repository association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<RepositoryAssociationTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags associated with a repository association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(RepositoryAssociationTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param type The type of repository to be associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<RepositoryAssociationType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of repository to be associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(RepositoryAssociationType type) {
             return type(Output.of(type));
         }

@@ -30,6 +30,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="catalogDigest")
     private @Nullable String catalogDigest;
 
+    /**
+     * @return The digest of the tar used to transfer the artifacts.
+     * 
+     */
     public Optional<String> catalogDigest() {
         return Optional.ofNullable(this.catalogDigest);
     }
@@ -41,6 +45,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="finishTime")
     private @Nullable String finishTime;
 
+    /**
+     * @return The time the pipeline run finished.
+     * 
+     */
     public Optional<String> finishTime() {
         return Optional.ofNullable(this.finishTime);
     }
@@ -52,6 +60,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="importedArtifacts")
     private @Nullable List<String> importedArtifacts;
 
+    /**
+     * @return The artifacts imported in the pipeline run.
+     * 
+     */
     public Optional<List<String>> importedArtifacts() {
         return Optional.ofNullable(this.importedArtifacts);
     }
@@ -63,6 +75,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="pipelineRunErrorMessage")
     private @Nullable String pipelineRunErrorMessage;
 
+    /**
+     * @return The detailed error message for the pipeline run in the case of failure.
+     * 
+     */
     public Optional<String> pipelineRunErrorMessage() {
         return Optional.ofNullable(this.pipelineRunErrorMessage);
     }
@@ -74,6 +90,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="progress")
     private @Nullable ProgressPropertiesResponse progress;
 
+    /**
+     * @return The current progress of the copy operation.
+     * 
+     */
     public Optional<ProgressPropertiesResponse> progress() {
         return Optional.ofNullable(this.progress);
     }
@@ -85,6 +105,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="source")
     private @Nullable ImportPipelineSourcePropertiesResponse source;
 
+    /**
+     * @return The source of the pipeline run.
+     * 
+     */
     public Optional<ImportPipelineSourcePropertiesResponse> source() {
         return Optional.ofNullable(this.source);
     }
@@ -96,6 +120,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return The time the pipeline run started.
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -107,6 +135,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The current status of the pipeline run.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -118,6 +150,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="target")
     private @Nullable ExportPipelineTargetPropertiesResponse target;
 
+    /**
+     * @return The target of the pipeline run.
+     * 
+     */
     public Optional<ExportPipelineTargetPropertiesResponse> target() {
         return Optional.ofNullable(this.target);
     }
@@ -129,6 +165,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="trigger")
     private @Nullable PipelineTriggerDescriptorResponse trigger;
 
+    /**
+     * @return The trigger that caused the pipeline run.
+     * 
+     */
     public Optional<PipelineTriggerDescriptorResponse> trigger() {
         return Optional.ofNullable(this.trigger);
     }
@@ -166,55 +206,121 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
             $ = new PipelineRunResponseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogDigest The digest of the tar used to transfer the artifacts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogDigest(@Nullable String catalogDigest) {
             $.catalogDigest = catalogDigest;
             return this;
         }
 
+        /**
+         * @param finishTime The time the pipeline run finished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finishTime(@Nullable String finishTime) {
             $.finishTime = finishTime;
             return this;
         }
 
+        /**
+         * @param importedArtifacts The artifacts imported in the pipeline run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedArtifacts(@Nullable List<String> importedArtifacts) {
             $.importedArtifacts = importedArtifacts;
             return this;
         }
 
+        /**
+         * @param importedArtifacts The artifacts imported in the pipeline run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedArtifacts(String... importedArtifacts) {
             return importedArtifacts(List.of(importedArtifacts));
         }
 
+        /**
+         * @param pipelineRunErrorMessage The detailed error message for the pipeline run in the case of failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineRunErrorMessage(@Nullable String pipelineRunErrorMessage) {
             $.pipelineRunErrorMessage = pipelineRunErrorMessage;
             return this;
         }
 
+        /**
+         * @param progress The current progress of the copy operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progress(@Nullable ProgressPropertiesResponse progress) {
             $.progress = progress;
             return this;
         }
 
+        /**
+         * @param source The source of the pipeline run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable ImportPipelineSourcePropertiesResponse source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param startTime The time the pipeline run started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param status The current status of the pipeline run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param target The target of the pipeline run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable ExportPipelineTargetPropertiesResponse target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param trigger The trigger that caused the pipeline run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(@Nullable PipelineTriggerDescriptorResponse trigger) {
             $.trigger = trigger;
             return this;

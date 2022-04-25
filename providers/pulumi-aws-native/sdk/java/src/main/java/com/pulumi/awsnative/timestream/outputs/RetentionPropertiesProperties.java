@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RetentionPropertiesProperties {
     /**
-     * The duration for which data must be stored in the magnetic store.
+     * @return The duration for which data must be stored in the magnetic store.
      * 
      */
     private final @Nullable String magneticStoreRetentionPeriodInDays;
     /**
-     * The duration for which data must be stored in the memory store.
+     * @return The duration for which data must be stored in the memory store.
      * 
      */
     private final @Nullable String memoryStoreRetentionPeriodInHours;
@@ -31,16 +31,16 @@ public final class RetentionPropertiesProperties {
     }
 
     /**
-     * The duration for which data must be stored in the magnetic store.
+     * @return The duration for which data must be stored in the magnetic store.
      * 
-    */
+     */
     public Optional<String> magneticStoreRetentionPeriodInDays() {
         return Optional.ofNullable(this.magneticStoreRetentionPeriodInDays);
     }
     /**
-     * The duration for which data must be stored in the memory store.
+     * @return The duration for which data must be stored in the memory store.
      * 
-    */
+     */
     public Optional<String> memoryStoreRetentionPeriodInHours() {
         return Optional.ofNullable(this.memoryStoreRetentionPeriodInHours);
     }

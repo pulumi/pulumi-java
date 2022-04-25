@@ -27,6 +27,10 @@ public final class ContainerResourceMetricStatusArgs extends com.pulumi.resource
     @Import(name="container", required=true)
     private Output<String> container;
 
+    /**
+     * @return container is the name of the container in the pods of the scaling target
+     * 
+     */
     public Output<String> container() {
         return this.container;
     }
@@ -38,6 +42,10 @@ public final class ContainerResourceMetricStatusArgs extends com.pulumi.resource
     @Import(name="currentAverageUtilization")
     private @Nullable Output<Integer> currentAverageUtilization;
 
+    /**
+     * @return currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.
+     * 
+     */
     public Optional<Output<Integer>> currentAverageUtilization() {
         return Optional.ofNullable(this.currentAverageUtilization);
     }
@@ -49,6 +57,10 @@ public final class ContainerResourceMetricStatusArgs extends com.pulumi.resource
     @Import(name="currentAverageValue", required=true)
     private Output<String> currentAverageValue;
 
+    /**
+     * @return currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the &#34;pods&#34; metric source type. It will always be set, regardless of the corresponding metric specification.
+     * 
+     */
     public Output<String> currentAverageValue() {
         return this.currentAverageValue;
     }
@@ -60,6 +72,10 @@ public final class ContainerResourceMetricStatusArgs extends com.pulumi.resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return name is the name of the resource in question.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -91,38 +107,86 @@ public final class ContainerResourceMetricStatusArgs extends com.pulumi.resource
             $ = new ContainerResourceMetricStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param container container is the name of the container in the pods of the scaling target
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(Output<String> container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param container container is the name of the container in the pods of the scaling target
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(String container) {
             return container(Output.of(container));
         }
 
+        /**
+         * @param currentAverageUtilization currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentAverageUtilization(@Nullable Output<Integer> currentAverageUtilization) {
             $.currentAverageUtilization = currentAverageUtilization;
             return this;
         }
 
+        /**
+         * @param currentAverageUtilization currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentAverageUtilization(Integer currentAverageUtilization) {
             return currentAverageUtilization(Output.of(currentAverageUtilization));
         }
 
+        /**
+         * @param currentAverageValue currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the &#34;pods&#34; metric source type. It will always be set, regardless of the corresponding metric specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentAverageValue(Output<String> currentAverageValue) {
             $.currentAverageValue = currentAverageValue;
             return this;
         }
 
+        /**
+         * @param currentAverageValue currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the &#34;pods&#34; metric source type. It will always be set, regardless of the corresponding metric specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentAverageValue(String currentAverageValue) {
             return currentAverageValue(Output.of(currentAverageValue));
         }
 
+        /**
+         * @param name name is the name of the resource in question.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name name is the name of the resource in question.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

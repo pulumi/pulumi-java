@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class SearchConfigResponse {
     /**
-     * A list of search parameters in this FHIR store that are used to configure this FHIR store.
+     * @return A list of search parameters in this FHIR store that are used to configure this FHIR store.
      * 
      */
     private final List<SearchParameterResponse> searchParameters;
@@ -22,9 +22,9 @@ public final class SearchConfigResponse {
     }
 
     /**
-     * A list of search parameters in this FHIR store that are used to configure this FHIR store.
+     * @return A list of search parameters in this FHIR store that are used to configure this FHIR store.
      * 
-    */
+     */
     public List<SearchParameterResponse> searchParameters() {
         return this.searchParameters;
     }

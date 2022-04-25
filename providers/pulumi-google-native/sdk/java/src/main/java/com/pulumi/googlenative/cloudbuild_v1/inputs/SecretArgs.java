@@ -27,6 +27,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
     private @Nullable Output<String> kmsKeyName;
 
+    /**
+     * @return Cloud KMS key name to use to decrypt these envs.
+     * 
+     */
     public Optional<Output<String>> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
@@ -38,6 +42,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretEnv")
     private @Nullable Output<Map<String,String>> secretEnv;
 
+    /**
+     * @return Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build&#39;s secrets.
+     * 
+     */
     public Optional<Output<Map<String,String>>> secretEnv() {
         return Optional.ofNullable(this.secretEnv);
     }
@@ -67,20 +75,44 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName Cloud KMS key name to use to decrypt these envs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName Cloud KMS key name to use to decrypt these envs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }
 
+        /**
+         * @param secretEnv Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build&#39;s secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretEnv(@Nullable Output<Map<String,String>> secretEnv) {
             $.secretEnv = secretEnv;
             return this;
         }
 
+        /**
+         * @param secretEnv Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build&#39;s secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretEnv(Map<String,String> secretEnv) {
             return secretEnv(Output.of(secretEnv));
         }

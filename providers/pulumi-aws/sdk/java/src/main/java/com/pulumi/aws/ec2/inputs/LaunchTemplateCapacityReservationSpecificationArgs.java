@@ -23,6 +23,10 @@ public final class LaunchTemplateCapacityReservationSpecificationArgs extends co
     @Import(name="capacityReservationPreference")
     private @Nullable Output<String> capacityReservationPreference;
 
+    /**
+     * @return Indicates the instance&#39;s Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
+     * 
+     */
     public Optional<Output<String>> capacityReservationPreference() {
         return Optional.ofNullable(this.capacityReservationPreference);
     }
@@ -34,6 +38,10 @@ public final class LaunchTemplateCapacityReservationSpecificationArgs extends co
     @Import(name="capacityReservationTarget")
     private @Nullable Output<LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget;
 
+    /**
+     * @return Used to target a specific Capacity Reservation:
+     * 
+     */
     public Optional<Output<LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs>> capacityReservationTarget() {
         return Optional.ofNullable(this.capacityReservationTarget);
     }
@@ -63,20 +71,44 @@ public final class LaunchTemplateCapacityReservationSpecificationArgs extends co
             $ = new LaunchTemplateCapacityReservationSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityReservationPreference Indicates the instance&#39;s Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationPreference(@Nullable Output<String> capacityReservationPreference) {
             $.capacityReservationPreference = capacityReservationPreference;
             return this;
         }
 
+        /**
+         * @param capacityReservationPreference Indicates the instance&#39;s Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationPreference(String capacityReservationPreference) {
             return capacityReservationPreference(Output.of(capacityReservationPreference));
         }
 
+        /**
+         * @param capacityReservationTarget Used to target a specific Capacity Reservation:
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationTarget(@Nullable Output<LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget) {
             $.capacityReservationTarget = capacityReservationTarget;
             return this;
         }
 
+        /**
+         * @param capacityReservationTarget Used to target a specific Capacity Reservation:
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationTarget(LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetArgs capacityReservationTarget) {
             return capacityReservationTarget(Output.of(capacityReservationTarget));
         }

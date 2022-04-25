@@ -23,6 +23,10 @@ public final class ServiceCorrelationDescriptionResponse extends com.pulumi.reso
     @Import(name="scheme", required=true)
     private String scheme;
 
+    /**
+     * @return The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
+     * 
+     */
     public String scheme() {
         return this.scheme;
     }
@@ -34,6 +38,10 @@ public final class ServiceCorrelationDescriptionResponse extends com.pulumi.reso
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the service that the correlation relationship is established with.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -63,11 +71,23 @@ public final class ServiceCorrelationDescriptionResponse extends com.pulumi.reso
             $ = new ServiceCorrelationDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheme The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(String scheme) {
             $.scheme = scheme;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the service that the correlation relationship is established with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

@@ -20,6 +20,10 @@ public final class DataTransferConfigEmailPreferencesGetArgs extends com.pulumi.
     @Import(name="enableFailureEmail", required=true)
     private Output<Boolean> enableFailureEmail;
 
+    /**
+     * @return If true, email notifications will be sent on transfer run failures.
+     * 
+     */
     public Output<Boolean> enableFailureEmail() {
         return this.enableFailureEmail;
     }
@@ -48,11 +52,23 @@ public final class DataTransferConfigEmailPreferencesGetArgs extends com.pulumi.
             $ = new DataTransferConfigEmailPreferencesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableFailureEmail If true, email notifications will be sent on transfer run failures.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFailureEmail(Output<Boolean> enableFailureEmail) {
             $.enableFailureEmail = enableFailureEmail;
             return this;
         }
 
+        /**
+         * @param enableFailureEmail If true, email notifications will be sent on transfer run failures.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFailureEmail(Boolean enableFailureEmail) {
             return enableFailureEmail(Output.of(enableFailureEmail));
         }

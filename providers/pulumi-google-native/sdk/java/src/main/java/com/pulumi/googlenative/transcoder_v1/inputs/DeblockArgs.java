@@ -27,6 +27,10 @@ public final class DeblockArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Enable deblocker. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class DeblockArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="strength")
     private @Nullable Output<Double> strength;
 
+    /**
+     * @return Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.
+     * 
+     */
     public Optional<Output<Double>> strength() {
         return Optional.ofNullable(this.strength);
     }
@@ -67,20 +75,44 @@ public final class DeblockArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeblockArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Enable deblocker. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Enable deblocker. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param strength Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strength(@Nullable Output<Double> strength) {
             $.strength = strength;
             return this;
         }
 
+        /**
+         * @param strength Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strength(Double strength) {
             return strength(Output.of(strength));
         }

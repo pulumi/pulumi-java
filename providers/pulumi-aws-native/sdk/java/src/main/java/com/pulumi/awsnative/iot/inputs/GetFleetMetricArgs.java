@@ -19,6 +19,10 @@ public final class GetFleetMetricArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="metricName", required=true)
     private String metricName;
 
+    /**
+     * @return The name of the fleet metric
+     * 
+     */
     public String metricName() {
         return this.metricName;
     }
@@ -47,6 +51,12 @@ public final class GetFleetMetricArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFleetMetricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metricName The name of the fleet metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             $.metricName = metricName;
             return this;

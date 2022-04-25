@@ -30,6 +30,10 @@ public final class Hl7StoreIamMemberState extends com.pulumi.resources.ResourceA
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the HL7v2 store&#39;s IAM policy.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -44,6 +48,13 @@ public final class Hl7StoreIamMemberState extends com.pulumi.resources.ResourceA
     @Import(name="hl7V2StoreId")
     private @Nullable Output<String> hl7V2StoreId;
 
+    /**
+     * @return The HL7v2 store ID, in the form
+     * `{project_id}/{location_name}/{dataset_name}/{hl7_v2_store_name}` or
+     * `{location_name}/{dataset_name}/{hl7_v2_store_name}`. In the second form, the provider&#39;s
+     * project setting will be used as a fallback.
+     * 
+     */
     public Optional<Output<String>> hl7V2StoreId() {
         return Optional.ofNullable(this.hl7V2StoreId);
     }
@@ -64,6 +75,12 @@ public final class Hl7StoreIamMemberState extends com.pulumi.resources.ResourceA
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.healthcare.Hl7StoreIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -105,20 +122,50 @@ public final class Hl7StoreIamMemberState extends com.pulumi.resources.ResourceA
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param etag (Computed) The etag of the HL7v2 store&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag (Computed) The etag of the HL7v2 store&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param hl7V2StoreId The HL7v2 store ID, in the form
+         * `{project_id}/{location_name}/{dataset_name}/{hl7_v2_store_name}` or
+         * `{location_name}/{dataset_name}/{hl7_v2_store_name}`. In the second form, the provider&#39;s
+         * project setting will be used as a fallback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hl7V2StoreId(@Nullable Output<String> hl7V2StoreId) {
             $.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
 
+        /**
+         * @param hl7V2StoreId The HL7v2 store ID, in the form
+         * `{project_id}/{location_name}/{dataset_name}/{hl7_v2_store_name}` or
+         * `{location_name}/{dataset_name}/{hl7_v2_store_name}`. In the second form, the provider&#39;s
+         * project setting will be used as a fallback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hl7V2StoreId(String hl7V2StoreId) {
             return hl7V2StoreId(Output.of(hl7V2StoreId));
         }
@@ -132,11 +179,27 @@ public final class Hl7StoreIamMemberState extends com.pulumi.resources.ResourceA
             return member(Output.of(member));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.healthcare.Hl7StoreIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.healthcare.Hl7StoreIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

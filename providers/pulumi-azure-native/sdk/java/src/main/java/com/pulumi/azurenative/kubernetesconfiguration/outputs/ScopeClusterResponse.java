@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScopeClusterResponse {
     /**
-     * Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created
+     * @return Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created
      * 
      */
     private final @Nullable String releaseNamespace;
@@ -23,9 +23,9 @@ public final class ScopeClusterResponse {
     }
 
     /**
-     * Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created
+     * @return Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created
      * 
-    */
+     */
     public Optional<String> releaseNamespace() {
         return Optional.ofNullable(this.releaseNamespace);
     }

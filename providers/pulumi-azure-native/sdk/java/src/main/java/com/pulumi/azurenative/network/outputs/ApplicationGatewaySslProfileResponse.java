@@ -16,42 +16,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationGatewaySslProfileResponse {
     /**
-     * Client authentication configuration of the application gateway resource.
+     * @return Client authentication configuration of the application gateway resource.
      * 
      */
     private final @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Name of the SSL profile that is unique within an Application Gateway.
+     * @return Name of the SSL profile that is unique within an Application Gateway.
      * 
      */
     private final @Nullable String name;
     /**
-     * The provisioning state of the HTTP listener resource.
+     * @return The provisioning state of the HTTP listener resource.
      * 
      */
     private final String provisioningState;
     /**
-     * SSL policy of the application gateway resource.
+     * @return SSL policy of the application gateway resource.
      * 
      */
     private final @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
     /**
-     * Array of references to application gateway trusted client certificates.
+     * @return Array of references to application gateway trusted client certificates.
      * 
      */
     private final @Nullable List<SubResourceResponse> trustedClientCertificates;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -77,58 +77,58 @@ public final class ApplicationGatewaySslProfileResponse {
     }
 
     /**
-     * Client authentication configuration of the application gateway resource.
+     * @return Client authentication configuration of the application gateway resource.
      * 
-    */
+     */
     public Optional<ApplicationGatewayClientAuthConfigurationResponse> clientAuthConfiguration() {
         return Optional.ofNullable(this.clientAuthConfiguration);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name of the SSL profile that is unique within an Application Gateway.
+     * @return Name of the SSL profile that is unique within an Application Gateway.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the HTTP listener resource.
+     * @return The provisioning state of the HTTP listener resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * SSL policy of the application gateway resource.
+     * @return SSL policy of the application gateway resource.
      * 
-    */
+     */
     public Optional<ApplicationGatewaySslPolicyResponse> sslPolicy() {
         return Optional.ofNullable(this.sslPolicy);
     }
     /**
-     * Array of references to application gateway trusted client certificates.
+     * @return Array of references to application gateway trusted client certificates.
      * 
-    */
+     */
     public List<SubResourceResponse> trustedClientCertificates() {
         return this.trustedClientCertificates == null ? List.of() : this.trustedClientCertificates;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

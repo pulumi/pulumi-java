@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UserIdentityResponse {
     /**
-     * Set to the app Id of the client JWT making the request.
+     * @return Set to the app Id of the client JWT making the request.
      * 
      */
     private final @Nullable String appId;
     /**
-     * Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.
+     * @return Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.
      * 
      */
     private final @Nullable String objectId;
     /**
-     * Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.
+     * @return Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.
      * 
      */
     private final @Nullable String principalId;
     /**
-     * Set to the principal name / UPN of the client JWT making the request.
+     * @return Set to the principal name / UPN of the client JWT making the request.
      * 
      */
     private final @Nullable String principalName;
     /**
-     * Set to the tenant ID of the client JWT making the request.
+     * @return Set to the tenant ID of the client JWT making the request.
      * 
      */
     private final @Nullable String tenantId;
@@ -52,37 +52,37 @@ public final class UserIdentityResponse {
     }
 
     /**
-     * Set to the app Id of the client JWT making the request.
+     * @return Set to the app Id of the client JWT making the request.
      * 
-    */
+     */
     public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
     /**
-     * Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.
+     * @return Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.
      * 
-    */
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
-     * Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.
+     * @return Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.
      * 
-    */
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
-     * Set to the principal name / UPN of the client JWT making the request.
+     * @return Set to the principal name / UPN of the client JWT making the request.
      * 
-    */
+     */
     public Optional<String> principalName() {
         return Optional.ofNullable(this.principalName);
     }
     /**
-     * Set to the tenant ID of the client JWT making the request.
+     * @return Set to the tenant ID of the client JWT making the request.
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }

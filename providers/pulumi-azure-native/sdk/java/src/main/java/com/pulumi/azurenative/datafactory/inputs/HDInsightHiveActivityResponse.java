@@ -34,6 +34,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="arguments")
     private @Nullable List<Object> arguments;
 
+    /**
+     * @return User specified arguments to HDInsightActivity.
+     * 
+     */
     public Optional<List<Object>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -45,6 +49,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="defines")
     private @Nullable Map<String,Object> defines;
 
+    /**
+     * @return Allows user to specify defines for Hive job request.
+     * 
+     */
     public Optional<Map<String,Object>> defines() {
         return Optional.ofNullable(this.defines);
     }
@@ -56,6 +64,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -67,6 +79,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -78,6 +94,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="getDebugInfo")
     private @Nullable String getDebugInfo;
 
+    /**
+     * @return Debug info option.
+     * 
+     */
     public Optional<String> getDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
@@ -89,6 +109,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -100,6 +124,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -111,6 +139,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="policy")
     private @Nullable ActivityPolicyResponse policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -122,6 +154,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="queryTimeout")
     private @Nullable Integer queryTimeout;
 
+    /**
+     * @return Query timeout value (in minutes).  Effective when the HDInsight cluster is with ESP (Enterprise Security Package)
+     * 
+     */
     public Optional<Integer> queryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
@@ -133,6 +169,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="scriptLinkedService")
     private @Nullable LinkedServiceReferenceResponse scriptLinkedService;
 
+    /**
+     * @return Script linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> scriptLinkedService() {
         return Optional.ofNullable(this.scriptLinkedService);
     }
@@ -144,6 +184,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="scriptPath")
     private @Nullable Object scriptPath;
 
+    /**
+     * @return Script path. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> scriptPath() {
         return Optional.ofNullable(this.scriptPath);
     }
@@ -155,6 +199,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="storageLinkedServices")
     private @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
 
+    /**
+     * @return Storage linked service references.
+     * 
+     */
     public Optional<List<LinkedServiceReferenceResponse>> storageLinkedServices() {
         return Optional.ofNullable(this.storageLinkedServices);
     }
@@ -167,6 +215,11 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;HDInsightHive&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -178,6 +231,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -189,6 +246,10 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
     @Import(name="variables")
     private @Nullable List<Object> variables;
 
+    /**
+     * @return User specified arguments under hivevar namespace.
+     * 
+     */
     public Optional<List<Object>> variables() {
         return Optional.ofNullable(this.variables);
     }
@@ -231,97 +292,218 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
             $ = new HDInsightHiveActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments User specified arguments to HDInsightActivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable List<Object> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments User specified arguments to HDInsightActivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(Object... arguments) {
             return arguments(List.of(arguments));
         }
 
+        /**
+         * @param defines Allows user to specify defines for Hive job request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defines(@Nullable Map<String,Object> defines) {
             $.defines = defines;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param getDebugInfo Debug info option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder getDebugInfo(@Nullable String getDebugInfo) {
             $.getDebugInfo = getDebugInfo;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param queryTimeout Query timeout value (in minutes).  Effective when the HDInsight cluster is with ESP (Enterprise Security Package)
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTimeout(@Nullable Integer queryTimeout) {
             $.queryTimeout = queryTimeout;
             return this;
         }
 
+        /**
+         * @param scriptLinkedService Script linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptLinkedService(@Nullable LinkedServiceReferenceResponse scriptLinkedService) {
             $.scriptLinkedService = scriptLinkedService;
             return this;
         }
 
+        /**
+         * @param scriptPath Script path. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptPath(@Nullable Object scriptPath) {
             $.scriptPath = scriptPath;
             return this;
         }
 
+        /**
+         * @param storageLinkedServices Storage linked service references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceResponse> storageLinkedServices) {
             $.storageLinkedServices = storageLinkedServices;
             return this;
         }
 
+        /**
+         * @param storageLinkedServices Storage linked service references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLinkedServices(LinkedServiceReferenceResponse... storageLinkedServices) {
             return storageLinkedServices(List.of(storageLinkedServices));
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;HDInsightHive&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }
 
+        /**
+         * @param variables User specified arguments under hivevar namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(@Nullable List<Object> variables) {
             $.variables = variables;
             return this;
         }
 
+        /**
+         * @param variables User specified arguments under hivevar namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(Object... variables) {
             return variables(List.of(variables));
         }

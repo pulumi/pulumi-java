@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DiscoveryNoteResponse {
     /**
-     * Immutable. The kind of analysis that is handled by this discovery.
+     * @return Immutable. The kind of analysis that is handled by this discovery.
      * 
      */
     private final String analysisKind;
@@ -21,9 +21,9 @@ public final class DiscoveryNoteResponse {
     }
 
     /**
-     * Immutable. The kind of analysis that is handled by this discovery.
+     * @return Immutable. The kind of analysis that is handled by this discovery.
      * 
-    */
+     */
     public String analysisKind() {
         return this.analysisKind;
     }

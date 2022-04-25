@@ -26,6 +26,10 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additions")
     private @Nullable Output<List<ResourceRecordSetArgs>> additions;
 
+    /**
+     * @return Which ResourceRecordSets to add?
+     * 
+     */
     public Optional<Output<List<ResourceRecordSetArgs>>> additions() {
         return Optional.ofNullable(this.additions);
     }
@@ -44,6 +48,10 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deletions")
     private @Nullable Output<List<ResourceRecordSetArgs>> deletions;
 
+    /**
+     * @return Which ResourceRecordSets to remove? Must match existing data exactly.
+     * 
+     */
     public Optional<Output<List<ResourceRecordSetArgs>>> deletions() {
         return Optional.ofNullable(this.deletions);
     }
@@ -55,6 +63,10 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Unique identifier for the resource; defined by the server (output only).
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -66,6 +78,10 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isServing")
     private @Nullable Output<Boolean> isServing;
 
+    /**
+     * @return If the DNS queries for the zone will be served.
+     * 
+     */
     public Optional<Output<Boolean>> isServing() {
         return Optional.ofNullable(this.isServing);
     }
@@ -98,6 +114,10 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return The time that this operation was started by the server (output only). This is in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -109,6 +129,10 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<ChangeStatus> status;
 
+    /**
+     * @return Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
+     * 
+     */
     public Optional<Output<ChangeStatus>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -146,15 +170,33 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ChangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additions Which ResourceRecordSets to add?
+         * 
+         * @return builder
+         * 
+         */
         public Builder additions(@Nullable Output<List<ResourceRecordSetArgs>> additions) {
             $.additions = additions;
             return this;
         }
 
+        /**
+         * @param additions Which ResourceRecordSets to add?
+         * 
+         * @return builder
+         * 
+         */
         public Builder additions(List<ResourceRecordSetArgs> additions) {
             return additions(Output.of(additions));
         }
 
+        /**
+         * @param additions Which ResourceRecordSets to add?
+         * 
+         * @return builder
+         * 
+         */
         public Builder additions(ResourceRecordSetArgs... additions) {
             return additions(List.of(additions));
         }
@@ -168,33 +210,75 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
             return clientOperationId(Output.of(clientOperationId));
         }
 
+        /**
+         * @param deletions Which ResourceRecordSets to remove? Must match existing data exactly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletions(@Nullable Output<List<ResourceRecordSetArgs>> deletions) {
             $.deletions = deletions;
             return this;
         }
 
+        /**
+         * @param deletions Which ResourceRecordSets to remove? Must match existing data exactly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletions(List<ResourceRecordSetArgs> deletions) {
             return deletions(Output.of(deletions));
         }
 
+        /**
+         * @param deletions Which ResourceRecordSets to remove? Must match existing data exactly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletions(ResourceRecordSetArgs... deletions) {
             return deletions(List.of(deletions));
         }
 
+        /**
+         * @param id Unique identifier for the resource; defined by the server (output only).
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Unique identifier for the resource; defined by the server (output only).
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param isServing If the DNS queries for the zone will be served.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isServing(@Nullable Output<Boolean> isServing) {
             $.isServing = isServing;
             return this;
         }
 
+        /**
+         * @param isServing If the DNS queries for the zone will be served.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isServing(Boolean isServing) {
             return isServing(Output.of(isServing));
         }
@@ -226,20 +310,44 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param startTime The time that this operation was started by the server (output only). This is in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The time that this operation was started by the server (output only). This is in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param status Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<ChangeStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(ChangeStatus status) {
             return status(Output.of(status));
         }

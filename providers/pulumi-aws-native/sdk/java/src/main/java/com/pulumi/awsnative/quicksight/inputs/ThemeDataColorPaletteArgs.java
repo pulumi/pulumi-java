@@ -29,6 +29,10 @@ public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.Resour
     @Import(name="colors")
     private @Nullable Output<List<String>> colors;
 
+    /**
+     * @return &lt;p&gt;The hexadecimal codes for the colors.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<String>>> colors() {
         return Optional.ofNullable(this.colors);
     }
@@ -41,6 +45,11 @@ public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.Resour
     @Import(name="emptyFillColor")
     private @Nullable Output<String> emptyFillColor;
 
+    /**
+     * @return &lt;p&gt;The hexadecimal code of a color that applies to charts where a lack of data is
+     *             highlighted.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> emptyFillColor() {
         return Optional.ofNullable(this.emptyFillColor);
     }
@@ -52,6 +61,10 @@ public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.Resour
     @Import(name="minMaxGradient")
     private @Nullable Output<List<String>> minMaxGradient;
 
+    /**
+     * @return &lt;p&gt;The minimum and maximum hexadecimal codes that describe a color gradient. &lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<String>>> minMaxGradient() {
         return Optional.ofNullable(this.minMaxGradient);
     }
@@ -82,37 +95,87 @@ public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.Resour
             $ = new ThemeDataColorPaletteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param colors &lt;p&gt;The hexadecimal codes for the colors.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder colors(@Nullable Output<List<String>> colors) {
             $.colors = colors;
             return this;
         }
 
+        /**
+         * @param colors &lt;p&gt;The hexadecimal codes for the colors.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder colors(List<String> colors) {
             return colors(Output.of(colors));
         }
 
+        /**
+         * @param colors &lt;p&gt;The hexadecimal codes for the colors.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder colors(String... colors) {
             return colors(List.of(colors));
         }
 
+        /**
+         * @param emptyFillColor &lt;p&gt;The hexadecimal code of a color that applies to charts where a lack of data is
+         *             highlighted.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder emptyFillColor(@Nullable Output<String> emptyFillColor) {
             $.emptyFillColor = emptyFillColor;
             return this;
         }
 
+        /**
+         * @param emptyFillColor &lt;p&gt;The hexadecimal code of a color that applies to charts where a lack of data is
+         *             highlighted.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder emptyFillColor(String emptyFillColor) {
             return emptyFillColor(Output.of(emptyFillColor));
         }
 
+        /**
+         * @param minMaxGradient &lt;p&gt;The minimum and maximum hexadecimal codes that describe a color gradient. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder minMaxGradient(@Nullable Output<List<String>> minMaxGradient) {
             $.minMaxGradient = minMaxGradient;
             return this;
         }
 
+        /**
+         * @param minMaxGradient &lt;p&gt;The minimum and maximum hexadecimal codes that describe a color gradient. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder minMaxGradient(List<String> minMaxGradient) {
             return minMaxGradient(Output.of(minMaxGradient));
         }
 
+        /**
+         * @param minMaxGradient &lt;p&gt;The minimum and maximum hexadecimal codes that describe a color gradient. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder minMaxGradient(String... minMaxGradient) {
             return minMaxGradient(List.of(minMaxGradient));
         }

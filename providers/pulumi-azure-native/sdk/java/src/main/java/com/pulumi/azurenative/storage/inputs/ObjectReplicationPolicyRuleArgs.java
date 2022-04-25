@@ -27,6 +27,10 @@ public final class ObjectReplicationPolicyRuleArgs extends com.pulumi.resources.
     @Import(name="destinationContainer", required=true)
     private Output<String> destinationContainer;
 
+    /**
+     * @return Required. Destination container name.
+     * 
+     */
     public Output<String> destinationContainer() {
         return this.destinationContainer;
     }
@@ -38,6 +42,10 @@ public final class ObjectReplicationPolicyRuleArgs extends com.pulumi.resources.
     @Import(name="filters")
     private @Nullable Output<ObjectReplicationPolicyFilterArgs> filters;
 
+    /**
+     * @return Optional. An object that defines the filter set.
+     * 
+     */
     public Optional<Output<ObjectReplicationPolicyFilterArgs>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -49,6 +57,10 @@ public final class ObjectReplicationPolicyRuleArgs extends com.pulumi.resources.
     @Import(name="ruleId")
     private @Nullable Output<String> ruleId;
 
+    /**
+     * @return Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
+     * 
+     */
     public Optional<Output<String>> ruleId() {
         return Optional.ofNullable(this.ruleId);
     }
@@ -60,6 +72,10 @@ public final class ObjectReplicationPolicyRuleArgs extends com.pulumi.resources.
     @Import(name="sourceContainer", required=true)
     private Output<String> sourceContainer;
 
+    /**
+     * @return Required. Source container name.
+     * 
+     */
     public Output<String> sourceContainer() {
         return this.sourceContainer;
     }
@@ -91,38 +107,86 @@ public final class ObjectReplicationPolicyRuleArgs extends com.pulumi.resources.
             $ = new ObjectReplicationPolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationContainer Required. Destination container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationContainer(Output<String> destinationContainer) {
             $.destinationContainer = destinationContainer;
             return this;
         }
 
+        /**
+         * @param destinationContainer Required. Destination container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationContainer(String destinationContainer) {
             return destinationContainer(Output.of(destinationContainer));
         }
 
+        /**
+         * @param filters Optional. An object that defines the filter set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable Output<ObjectReplicationPolicyFilterArgs> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Optional. An object that defines the filter set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(ObjectReplicationPolicyFilterArgs filters) {
             return filters(Output.of(filters));
         }
 
+        /**
+         * @param ruleId Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(@Nullable Output<String> ruleId) {
             $.ruleId = ruleId;
             return this;
         }
 
+        /**
+         * @param ruleId Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(String ruleId) {
             return ruleId(Output.of(ruleId));
         }
 
+        /**
+         * @param sourceContainer Required. Source container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceContainer(Output<String> sourceContainer) {
             $.sourceContainer = sourceContainer;
             return this;
         }
 
+        /**
+         * @param sourceContainer Required. Source container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceContainer(String sourceContainer) {
             return sourceContainer(Output.of(sourceContainer));
         }

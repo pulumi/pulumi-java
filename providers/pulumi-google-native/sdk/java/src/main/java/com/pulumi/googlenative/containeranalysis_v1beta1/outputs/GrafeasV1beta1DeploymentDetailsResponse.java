@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GrafeasV1beta1DeploymentDetailsResponse {
     /**
-     * Deployment history for the resource.
+     * @return Deployment history for the resource.
      * 
      */
     private final DeploymentResponse deployment;
@@ -21,9 +21,9 @@ public final class GrafeasV1beta1DeploymentDetailsResponse {
     }
 
     /**
-     * Deployment history for the resource.
+     * @return Deployment history for the resource.
      * 
-    */
+     */
     public DeploymentResponse deployment() {
         return this.deployment;
     }

@@ -24,6 +24,10 @@ public final class IdentityProviderConfigArgs extends com.pulumi.resources.Resou
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return Name of the EKS Cluster.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -35,6 +39,10 @@ public final class IdentityProviderConfigArgs extends com.pulumi.resources.Resou
     @Import(name="oidc", required=true)
     private Output<IdentityProviderConfigOidcArgs> oidc;
 
+    /**
+     * @return Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
+     * 
+     */
     public Output<IdentityProviderConfigOidcArgs> oidc() {
         return this.oidc;
     }
@@ -46,6 +54,10 @@ public final class IdentityProviderConfigArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -76,29 +88,65 @@ public final class IdentityProviderConfigArgs extends com.pulumi.resources.Resou
             $ = new IdentityProviderConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName Name of the EKS Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName Name of the EKS Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param oidc Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidc(Output<IdentityProviderConfigOidcArgs> oidc) {
             $.oidc = oidc;
             return this;
         }
 
+        /**
+         * @param oidc Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidc(IdentityProviderConfigOidcArgs oidc) {
             return oidc(Output.of(oidc));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

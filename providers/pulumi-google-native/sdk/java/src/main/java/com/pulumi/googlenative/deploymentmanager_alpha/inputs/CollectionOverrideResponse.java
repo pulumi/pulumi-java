@@ -25,6 +25,10 @@ public final class CollectionOverrideResponse extends com.pulumi.resources.Invok
     @Import(name="collection", required=true)
     private String collection;
 
+    /**
+     * @return The collection that identifies this resource within its service.
+     * 
+     */
     public String collection() {
         return this.collection;
     }
@@ -36,6 +40,10 @@ public final class CollectionOverrideResponse extends com.pulumi.resources.Invok
     @Import(name="methodMap", required=true)
     private MethodMapResponse methodMap;
 
+    /**
+     * @return Custom verb method mappings to support unordered list API mappings.
+     * 
+     */
     public MethodMapResponse methodMap() {
         return this.methodMap;
     }
@@ -47,6 +55,10 @@ public final class CollectionOverrideResponse extends com.pulumi.resources.Invok
     @Import(name="options", required=true)
     private OptionsResponse options;
 
+    /**
+     * @return The options to apply to this resource-level override
+     * 
+     */
     public OptionsResponse options() {
         return this.options;
     }
@@ -77,16 +89,34 @@ public final class CollectionOverrideResponse extends com.pulumi.resources.Invok
             $ = new CollectionOverrideResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param collection The collection that identifies this resource within its service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collection(String collection) {
             $.collection = collection;
             return this;
         }
 
+        /**
+         * @param methodMap Custom verb method mappings to support unordered list API mappings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodMap(MethodMapResponse methodMap) {
             $.methodMap = methodMap;
             return this;
         }
 
+        /**
+         * @param options The options to apply to this resource-level override
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionsResponse options) {
             $.options = options;
             return this;

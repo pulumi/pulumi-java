@@ -25,6 +25,10 @@ public final class ResourceRangeResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="max")
     private @Nullable Integer max;
 
+    /**
+     * @return The maximum number of the resource.
+     * 
+     */
     public Optional<Integer> max() {
         return Optional.ofNullable(this.max);
     }
@@ -36,6 +40,10 @@ public final class ResourceRangeResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="min")
     private @Nullable Integer min;
 
+    /**
+     * @return The minimum number of the resource.
+     * 
+     */
     public Optional<Integer> min() {
         return Optional.ofNullable(this.min);
     }
@@ -65,11 +73,23 @@ public final class ResourceRangeResponse extends com.pulumi.resources.InvokeArgs
             $ = new ResourceRangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param max The maximum number of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(@Nullable Integer max) {
             $.max = max;
             return this;
         }
 
+        /**
+         * @param min The minimum number of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(@Nullable Integer min) {
             $.min = min;
             return this;

@@ -22,6 +22,10 @@ public final class CloudServiceConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="osFamily", required=true)
     private Output<String> osFamily;
 
+    /**
+     * @return Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. 6 - OS Family 6, equivalent to Windows Server 2019. For more information, see Azure Guest OS Releases (https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases).
+     * 
+     */
     public Output<String> osFamily() {
         return this.osFamily;
     }
@@ -33,6 +37,10 @@ public final class CloudServiceConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="osVersion")
     private @Nullable Output<String> osVersion;
 
+    /**
+     * @return The default value is * which specifies the latest operating system version for the specified OS family.
+     * 
+     */
     public Optional<Output<String>> osVersion() {
         return Optional.ofNullable(this.osVersion);
     }
@@ -62,20 +70,44 @@ public final class CloudServiceConfigurationArgs extends com.pulumi.resources.Re
             $ = new CloudServiceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param osFamily Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. 6 - OS Family 6, equivalent to Windows Server 2019. For more information, see Azure Guest OS Releases (https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases).
+         * 
+         * @return builder
+         * 
+         */
         public Builder osFamily(Output<String> osFamily) {
             $.osFamily = osFamily;
             return this;
         }
 
+        /**
+         * @param osFamily Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. 6 - OS Family 6, equivalent to Windows Server 2019. For more information, see Azure Guest OS Releases (https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases).
+         * 
+         * @return builder
+         * 
+         */
         public Builder osFamily(String osFamily) {
             return osFamily(Output.of(osFamily));
         }
 
+        /**
+         * @param osVersion The default value is * which specifies the latest operating system version for the specified OS family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osVersion(@Nullable Output<String> osVersion) {
             $.osVersion = osVersion;
             return this;
         }
 
+        /**
+         * @param osVersion The default value is * which specifies the latest operating system version for the specified OS family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osVersion(String osVersion) {
             return osVersion(Output.of(osVersion));
         }

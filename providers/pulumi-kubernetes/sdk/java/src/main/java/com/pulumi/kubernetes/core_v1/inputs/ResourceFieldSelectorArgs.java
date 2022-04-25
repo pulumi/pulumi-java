@@ -26,6 +26,10 @@ public final class ResourceFieldSelectorArgs extends com.pulumi.resources.Resour
     @Import(name="containerName")
     private @Nullable Output<String> containerName;
 
+    /**
+     * @return Container name: required for volumes, optional for env vars
+     * 
+     */
     public Optional<Output<String>> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -37,6 +41,10 @@ public final class ResourceFieldSelectorArgs extends com.pulumi.resources.Resour
     @Import(name="divisor")
     private @Nullable Output<String> divisor;
 
+    /**
+     * @return Specifies the output format of the exposed resources, defaults to &#34;1&#34;
+     * 
+     */
     public Optional<Output<String>> divisor() {
         return Optional.ofNullable(this.divisor);
     }
@@ -48,6 +56,10 @@ public final class ResourceFieldSelectorArgs extends com.pulumi.resources.Resour
     @Import(name="resource", required=true)
     private Output<String> resource;
 
+    /**
+     * @return Required: resource to select
+     * 
+     */
     public Output<String> resource() {
         return this.resource;
     }
@@ -78,29 +90,65 @@ public final class ResourceFieldSelectorArgs extends com.pulumi.resources.Resour
             $ = new ResourceFieldSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerName Container name: required for volumes, optional for env vars
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable Output<String> containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param containerName Container name: required for volumes, optional for env vars
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             return containerName(Output.of(containerName));
         }
 
+        /**
+         * @param divisor Specifies the output format of the exposed resources, defaults to &#34;1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder divisor(@Nullable Output<String> divisor) {
             $.divisor = divisor;
             return this;
         }
 
+        /**
+         * @param divisor Specifies the output format of the exposed resources, defaults to &#34;1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder divisor(String divisor) {
             return divisor(Output.of(divisor));
         }
 
+        /**
+         * @param resource Required: resource to select
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(Output<String> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource Required: resource to select
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(String resource) {
             return resource(Output.of(resource));
         }

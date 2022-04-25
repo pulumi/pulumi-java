@@ -25,6 +25,10 @@ public final class TargetEligibilityErrorMessageResponse extends com.pulumi.reso
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return The localized error message stating the reason why the device is not eligible as a target device.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -36,6 +40,10 @@ public final class TargetEligibilityErrorMessageResponse extends com.pulumi.reso
     @Import(name="resolution")
     private @Nullable String resolution;
 
+    /**
+     * @return The localized resolution message for the error.
+     * 
+     */
     public Optional<String> resolution() {
         return Optional.ofNullable(this.resolution);
     }
@@ -47,6 +55,10 @@ public final class TargetEligibilityErrorMessageResponse extends com.pulumi.reso
     @Import(name="resultCode")
     private @Nullable String resultCode;
 
+    /**
+     * @return The result code for the error, due to which the device does not qualify as a failover target device.
+     * 
+     */
     public Optional<String> resultCode() {
         return Optional.ofNullable(this.resultCode);
     }
@@ -77,16 +89,34 @@ public final class TargetEligibilityErrorMessageResponse extends com.pulumi.reso
             $ = new TargetEligibilityErrorMessageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message The localized error message stating the reason why the device is not eligible as a target device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param resolution The localized resolution message for the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolution(@Nullable String resolution) {
             $.resolution = resolution;
             return this;
         }
 
+        /**
+         * @param resultCode The result code for the error, due to which the device does not qualify as a failover target device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultCode(@Nullable String resultCode) {
             $.resultCode = resultCode;
             return this;

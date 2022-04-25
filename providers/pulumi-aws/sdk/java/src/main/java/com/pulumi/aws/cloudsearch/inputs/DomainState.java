@@ -27,6 +27,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The domain&#39;s ARN.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -38,6 +42,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentServiceEndpoint")
     private @Nullable Output<String> documentServiceEndpoint;
 
+    /**
+     * @return The service endpoint for updating documents in a search domain.
+     * 
+     */
     public Optional<Output<String>> documentServiceEndpoint() {
         return Optional.ofNullable(this.documentServiceEndpoint);
     }
@@ -49,6 +57,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainId")
     private @Nullable Output<String> domainId;
 
+    /**
+     * @return An internally generated unique identifier for the domain.
+     * 
+     */
     public Optional<Output<String>> domainId() {
         return Optional.ofNullable(this.domainId);
     }
@@ -60,6 +72,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointOptions")
     private @Nullable Output<DomainEndpointOptionsGetArgs> endpointOptions;
 
+    /**
+     * @return Domain endpoint options. Documented below.
+     * 
+     */
     public Optional<Output<DomainEndpointOptionsGetArgs>> endpointOptions() {
         return Optional.ofNullable(this.endpointOptions);
     }
@@ -71,6 +87,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
     @Import(name="indexFields")
     private @Nullable Output<List<DomainIndexFieldGetArgs>> indexFields;
 
+    /**
+     * @return The index fields for documents added to the domain. Documented below.
+     * 
+     */
     public Optional<Output<List<DomainIndexFieldGetArgs>>> indexFields() {
         return Optional.ofNullable(this.indexFields);
     }
@@ -82,6 +102,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
     @Import(name="multiAz")
     private @Nullable Output<Boolean> multiAz;
 
+    /**
+     * @return Whether or not to maintain extra instances for the domain in a second Availability Zone to ensure high availability.
+     * 
+     */
     public Optional<Output<Boolean>> multiAz() {
         return Optional.ofNullable(this.multiAz);
     }
@@ -93,6 +117,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A unique name for the field. Field names must begin with a letter and be at least 3 and no more than 64 characters long. The allowed characters are: `a`-`z` (lower-case letters), `0`-`9`, and `_` (underscore). The name `score` is reserved and cannot be used as a field name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -104,6 +132,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scalingParameters")
     private @Nullable Output<DomainScalingParametersGetArgs> scalingParameters;
 
+    /**
+     * @return Domain scaling parameters. Documented below.
+     * 
+     */
     public Optional<Output<DomainScalingParametersGetArgs>> scalingParameters() {
         return Optional.ofNullable(this.scalingParameters);
     }
@@ -115,6 +147,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
     @Import(name="searchServiceEndpoint")
     private @Nullable Output<String> searchServiceEndpoint;
 
+    /**
+     * @return The service endpoint for requesting search results from a search domain.
+     * 
+     */
     public Optional<Output<String>> searchServiceEndpoint() {
         return Optional.ofNullable(this.searchServiceEndpoint);
     }
@@ -151,87 +187,201 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
             $ = new DomainState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The domain&#39;s ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The domain&#39;s ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param documentServiceEndpoint The service endpoint for updating documents in a search domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentServiceEndpoint(@Nullable Output<String> documentServiceEndpoint) {
             $.documentServiceEndpoint = documentServiceEndpoint;
             return this;
         }
 
+        /**
+         * @param documentServiceEndpoint The service endpoint for updating documents in a search domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentServiceEndpoint(String documentServiceEndpoint) {
             return documentServiceEndpoint(Output.of(documentServiceEndpoint));
         }
 
+        /**
+         * @param domainId An internally generated unique identifier for the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainId(@Nullable Output<String> domainId) {
             $.domainId = domainId;
             return this;
         }
 
+        /**
+         * @param domainId An internally generated unique identifier for the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainId(String domainId) {
             return domainId(Output.of(domainId));
         }
 
+        /**
+         * @param endpointOptions Domain endpoint options. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointOptions(@Nullable Output<DomainEndpointOptionsGetArgs> endpointOptions) {
             $.endpointOptions = endpointOptions;
             return this;
         }
 
+        /**
+         * @param endpointOptions Domain endpoint options. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointOptions(DomainEndpointOptionsGetArgs endpointOptions) {
             return endpointOptions(Output.of(endpointOptions));
         }
 
+        /**
+         * @param indexFields The index fields for documents added to the domain. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexFields(@Nullable Output<List<DomainIndexFieldGetArgs>> indexFields) {
             $.indexFields = indexFields;
             return this;
         }
 
+        /**
+         * @param indexFields The index fields for documents added to the domain. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexFields(List<DomainIndexFieldGetArgs> indexFields) {
             return indexFields(Output.of(indexFields));
         }
 
+        /**
+         * @param indexFields The index fields for documents added to the domain. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexFields(DomainIndexFieldGetArgs... indexFields) {
             return indexFields(List.of(indexFields));
         }
 
+        /**
+         * @param multiAz Whether or not to maintain extra instances for the domain in a second Availability Zone to ensure high availability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiAz(@Nullable Output<Boolean> multiAz) {
             $.multiAz = multiAz;
             return this;
         }
 
+        /**
+         * @param multiAz Whether or not to maintain extra instances for the domain in a second Availability Zone to ensure high availability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiAz(Boolean multiAz) {
             return multiAz(Output.of(multiAz));
         }
 
+        /**
+         * @param name A unique name for the field. Field names must begin with a letter and be at least 3 and no more than 64 characters long. The allowed characters are: `a`-`z` (lower-case letters), `0`-`9`, and `_` (underscore). The name `score` is reserved and cannot be used as a field name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique name for the field. Field names must begin with a letter and be at least 3 and no more than 64 characters long. The allowed characters are: `a`-`z` (lower-case letters), `0`-`9`, and `_` (underscore). The name `score` is reserved and cannot be used as a field name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param scalingParameters Domain scaling parameters. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingParameters(@Nullable Output<DomainScalingParametersGetArgs> scalingParameters) {
             $.scalingParameters = scalingParameters;
             return this;
         }
 
+        /**
+         * @param scalingParameters Domain scaling parameters. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingParameters(DomainScalingParametersGetArgs scalingParameters) {
             return scalingParameters(Output.of(scalingParameters));
         }
 
+        /**
+         * @param searchServiceEndpoint The service endpoint for requesting search results from a search domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchServiceEndpoint(@Nullable Output<String> searchServiceEndpoint) {
             $.searchServiceEndpoint = searchServiceEndpoint;
             return this;
         }
 
+        /**
+         * @param searchServiceEndpoint The service endpoint for requesting search results from a search domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchServiceEndpoint(String searchServiceEndpoint) {
             return searchServiceEndpoint(Output.of(searchServiceEndpoint));
         }

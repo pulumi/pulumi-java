@@ -13,14 +13,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AlertPolicyConditionConditionThresholdTrigger {
     /**
-     * The absolute number of time series
+     * @return The absolute number of time series
      * that must fail the predicate for the
      * condition to be triggered.
      * 
      */
     private final @Nullable Integer count;
     /**
-     * The percentage of time series that
+     * @return The percentage of time series that
      * must fail the predicate for the
      * condition to be triggered.
      * 
@@ -36,20 +36,20 @@ public final class AlertPolicyConditionConditionThresholdTrigger {
     }
 
     /**
-     * The absolute number of time series
+     * @return The absolute number of time series
      * that must fail the predicate for the
      * condition to be triggered.
      * 
-    */
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
-     * The percentage of time series that
+     * @return The percentage of time series that
      * must fail the predicate for the
      * condition to be triggered.
      * 
-    */
+     */
     public Optional<Double> percent() {
         return Optional.ofNullable(this.percent);
     }

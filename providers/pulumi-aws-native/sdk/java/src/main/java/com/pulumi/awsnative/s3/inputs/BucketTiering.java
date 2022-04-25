@@ -20,6 +20,10 @@ public final class BucketTiering extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessTier", required=true)
     private BucketTieringAccessTier accessTier;
 
+    /**
+     * @return S3 Intelligent-Tiering access tier. See Storage class for automatically optimizing frequently and infrequently accessed objects for a list of access tiers in the S3 Intelligent-Tiering storage class.
+     * 
+     */
     public BucketTieringAccessTier accessTier() {
         return this.accessTier;
     }
@@ -31,6 +35,10 @@ public final class BucketTiering extends com.pulumi.resources.InvokeArgs {
     @Import(name="days", required=true)
     private Integer days;
 
+    /**
+     * @return The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier. The minimum number of days specified for Archive Access tier must be at least 90 days and Deep Archive Access tier must be at least 180 days. The maximum can be up to 2 years (730 days).
+     * 
+     */
     public Integer days() {
         return this.days;
     }
@@ -60,11 +68,23 @@ public final class BucketTiering extends com.pulumi.resources.InvokeArgs {
             $ = new BucketTiering(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessTier S3 Intelligent-Tiering access tier. See Storage class for automatically optimizing frequently and infrequently accessed objects for a list of access tiers in the S3 Intelligent-Tiering storage class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTier(BucketTieringAccessTier accessTier) {
             $.accessTier = accessTier;
             return this;
         }
 
+        /**
+         * @param days The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier. The minimum number of days specified for Archive Access tier must be at least 90 days and Deep Archive Access tier must be at least 180 days. The maximum can be up to 2 years (730 days).
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Integer days) {
             $.days = days;
             return this;

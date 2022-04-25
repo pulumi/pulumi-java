@@ -28,6 +28,12 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when
+     * you create the resource. This field can be set only at resource
+     * creation time.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -42,6 +48,13 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipCidrRange", required=true)
     private Output<String> ipCidrRange;
 
+    /**
+     * @return The range of IP addresses belonging to this subnetwork secondary
+     * range. Provide this property when you create the subnetwork.
+     * Ranges must be unique and non-overlapping with all primary and
+     * secondary IP ranges within a network. Only IPv4 is supported.
+     * 
+     */
     public Output<String> ipCidrRange() {
         return this.ipCidrRange;
     }
@@ -56,6 +69,13 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipv6AccessType")
     private @Nullable Output<String> ipv6AccessType;
 
+    /**
+     * @return The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation
+     * or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
+     * cannot enable direct path.
+     * Possible values are `EXTERNAL`.
+     * 
+     */
     public Optional<Output<String>> ipv6AccessType() {
         return Optional.ofNullable(this.ipv6AccessType);
     }
@@ -70,6 +90,13 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logConfig")
     private @Nullable Output<SubnetworkLogConfigArgs> logConfig;
 
+    /**
+     * @return Denotes the logging options for the subnetwork flow logs. If logging is enabled
+     * logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
+     * subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SubnetworkLogConfigArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
@@ -87,6 +114,16 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource, provided by the client when initially
+     * creating the resource. The name must be 1-63 characters long, and
+     * comply with RFC1035. Specifically, the name must be 1-63 characters
+     * long and match the regular expression `a-z?` which
+     * means the first character must be a lowercase letter, and all
+     * following characters must be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -99,6 +136,11 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="network", required=true)
     private Output<String> network;
 
+    /**
+     * @return The network this subnet belongs to.
+     * Only networks that are in the distributed mode can have subnetworks.
+     * 
+     */
     public Output<String> network() {
         return this.network;
     }
@@ -111,6 +153,11 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateIpGoogleAccess")
     private @Nullable Output<Boolean> privateIpGoogleAccess;
 
+    /**
+     * @return When enabled, VMs in this subnetwork without external IP addresses can
+     * access Google APIs and services by using Private Google Access.
+     * 
+     */
     public Optional<Output<Boolean>> privateIpGoogleAccess() {
         return Optional.ofNullable(this.privateIpGoogleAccess);
     }
@@ -122,6 +169,10 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateIpv6GoogleAccess")
     private @Nullable Output<String> privateIpv6GoogleAccess;
 
+    /**
+     * @return The private IPv6 google access type for the VMs in this subnet.
+     * 
+     */
     public Optional<Output<String>> privateIpv6GoogleAccess() {
         return Optional.ofNullable(this.privateIpv6GoogleAccess);
     }
@@ -134,6 +185,11 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -148,6 +204,13 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="purpose")
     private @Nullable Output<String> purpose;
 
+    /**
+     * @return The purpose of the resource. A subnetwork with purpose set to
+     * INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+     * reserved for Internal HTTP(S) Load Balancing.
+     * If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the `role` field.
+     * 
+     */
     public Optional<Output<String>> purpose() {
         return Optional.ofNullable(this.purpose);
     }
@@ -159,6 +222,10 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The GCP region for this subnetwork.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -175,6 +242,15 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return The role of subnetwork. Currently, this field is only used when
+     * purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+     * or BACKUP. An ACTIVE subnetwork is one that is currently being used
+     * for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+     * is ready to be promoted to ACTIVE or is currently draining.
+     * Possible values are `ACTIVE` and `BACKUP`.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -190,6 +266,14 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secondaryIpRanges")
     private @Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges;
 
+    /**
+     * @return An array of configurations for secondary IP ranges for VM instances
+     * contained in this subnetwork. The primary IP of such VM must belong
+     * to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+     * to either primary or secondary ranges.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<SubnetworkSecondaryIpRangeArgs>>> secondaryIpRanges() {
         return Optional.ofNullable(this.secondaryIpRanges);
     }
@@ -203,6 +287,12 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stackType")
     private @Nullable Output<String> stackType;
 
+    /**
+     * @return The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
+     * If not specified IPV4_ONLY will be used.
+     * Possible values are `IPV4_ONLY` and `IPV4_IPV6`.
+     * 
+     */
     public Optional<Output<String>> stackType() {
         return Optional.ofNullable(this.stackType);
     }
@@ -244,132 +334,378 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubnetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when
+         * you create the resource. This field can be set only at resource
+         * creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when
+         * you create the resource. This field can be set only at resource
+         * creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ipCidrRange The range of IP addresses belonging to this subnetwork secondary
+         * range. Provide this property when you create the subnetwork.
+         * Ranges must be unique and non-overlapping with all primary and
+         * secondary IP ranges within a network. Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(Output<String> ipCidrRange) {
             $.ipCidrRange = ipCidrRange;
             return this;
         }
 
+        /**
+         * @param ipCidrRange The range of IP addresses belonging to this subnetwork secondary
+         * range. Provide this property when you create the subnetwork.
+         * Ranges must be unique and non-overlapping with all primary and
+         * secondary IP ranges within a network. Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(String ipCidrRange) {
             return ipCidrRange(Output.of(ipCidrRange));
         }
 
+        /**
+         * @param ipv6AccessType The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation
+         * or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
+         * cannot enable direct path.
+         * Possible values are `EXTERNAL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6AccessType(@Nullable Output<String> ipv6AccessType) {
             $.ipv6AccessType = ipv6AccessType;
             return this;
         }
 
+        /**
+         * @param ipv6AccessType The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation
+         * or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
+         * cannot enable direct path.
+         * Possible values are `EXTERNAL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6AccessType(String ipv6AccessType) {
             return ipv6AccessType(Output.of(ipv6AccessType));
         }
 
+        /**
+         * @param logConfig Denotes the logging options for the subnetwork flow logs. If logging is enabled
+         * logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
+         * subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(@Nullable Output<SubnetworkLogConfigArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
 
+        /**
+         * @param logConfig Denotes the logging options for the subnetwork flow logs. If logging is enabled
+         * logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
+         * subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(SubnetworkLogConfigArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially
+         * creating the resource. The name must be 1-63 characters long, and
+         * comply with RFC1035. Specifically, the name must be 1-63 characters
+         * long and match the regular expression `a-z?` which
+         * means the first character must be a lowercase letter, and all
+         * following characters must be a dash, lowercase letter, or digit,
+         * except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially
+         * creating the resource. The name must be 1-63 characters long, and
+         * comply with RFC1035. Specifically, the name must be 1-63 characters
+         * long and match the regular expression `a-z?` which
+         * means the first character must be a lowercase letter, and all
+         * following characters must be a dash, lowercase letter, or digit,
+         * except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network The network this subnet belongs to.
+         * Only networks that are in the distributed mode can have subnetworks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The network this subnet belongs to.
+         * Only networks that are in the distributed mode can have subnetworks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param privateIpGoogleAccess When enabled, VMs in this subnetwork without external IP addresses can
+         * access Google APIs and services by using Private Google Access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpGoogleAccess(@Nullable Output<Boolean> privateIpGoogleAccess) {
             $.privateIpGoogleAccess = privateIpGoogleAccess;
             return this;
         }
 
+        /**
+         * @param privateIpGoogleAccess When enabled, VMs in this subnetwork without external IP addresses can
+         * access Google APIs and services by using Private Google Access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpGoogleAccess(Boolean privateIpGoogleAccess) {
             return privateIpGoogleAccess(Output.of(privateIpGoogleAccess));
         }
 
+        /**
+         * @param privateIpv6GoogleAccess The private IPv6 google access type for the VMs in this subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpv6GoogleAccess(@Nullable Output<String> privateIpv6GoogleAccess) {
             $.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
+        /**
+         * @param privateIpv6GoogleAccess The private IPv6 google access type for the VMs in this subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             return privateIpv6GoogleAccess(Output.of(privateIpv6GoogleAccess));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param purpose The purpose of the resource. A subnetwork with purpose set to
+         * INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+         * reserved for Internal HTTP(S) Load Balancing.
+         * If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the `role` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder purpose(@Nullable Output<String> purpose) {
             $.purpose = purpose;
             return this;
         }
 
+        /**
+         * @param purpose The purpose of the resource. A subnetwork with purpose set to
+         * INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+         * reserved for Internal HTTP(S) Load Balancing.
+         * If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the `role` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder purpose(String purpose) {
             return purpose(Output.of(purpose));
         }
 
+        /**
+         * @param region The GCP region for this subnetwork.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The GCP region for this subnetwork.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param role The role of subnetwork. Currently, this field is only used when
+         * purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+         * or BACKUP. An ACTIVE subnetwork is one that is currently being used
+         * for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+         * is ready to be promoted to ACTIVE or is currently draining.
+         * Possible values are `ACTIVE` and `BACKUP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role of subnetwork. Currently, this field is only used when
+         * purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+         * or BACKUP. An ACTIVE subnetwork is one that is currently being used
+         * for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+         * is ready to be promoted to ACTIVE or is currently draining.
+         * Possible values are `ACTIVE` and `BACKUP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param secondaryIpRanges An array of configurations for secondary IP ranges for VM instances
+         * contained in this subnetwork. The primary IP of such VM must belong
+         * to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+         * to either primary or secondary ranges.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryIpRanges(@Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges) {
             $.secondaryIpRanges = secondaryIpRanges;
             return this;
         }
 
+        /**
+         * @param secondaryIpRanges An array of configurations for secondary IP ranges for VM instances
+         * contained in this subnetwork. The primary IP of such VM must belong
+         * to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+         * to either primary or secondary ranges.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryIpRanges(List<SubnetworkSecondaryIpRangeArgs> secondaryIpRanges) {
             return secondaryIpRanges(Output.of(secondaryIpRanges));
         }
 
+        /**
+         * @param secondaryIpRanges An array of configurations for secondary IP ranges for VM instances
+         * contained in this subnetwork. The primary IP of such VM must belong
+         * to the primary ipCidrRange of the subnetwork. The alias IPs may belong
+         * to either primary or secondary ranges.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryIpRanges(SubnetworkSecondaryIpRangeArgs... secondaryIpRanges) {
             return secondaryIpRanges(List.of(secondaryIpRanges));
         }
 
+        /**
+         * @param stackType The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
+         * If not specified IPV4_ONLY will be used.
+         * Possible values are `IPV4_ONLY` and `IPV4_IPV6`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackType(@Nullable Output<String> stackType) {
             $.stackType = stackType;
             return this;
         }
 
+        /**
+         * @param stackType The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
+         * If not specified IPV4_ONLY will be used.
+         * Possible values are `IPV4_ONLY` and `IPV4_IPV6`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackType(String stackType) {
             return stackType(Output.of(stackType));
         }

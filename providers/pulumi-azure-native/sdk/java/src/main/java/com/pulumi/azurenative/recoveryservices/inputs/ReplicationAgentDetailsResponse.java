@@ -25,6 +25,10 @@ public final class ReplicationAgentDetailsResponse extends com.pulumi.resources.
     @Import(name="health", required=true)
     private String health;
 
+    /**
+     * @return The health of the replication agent.
+     * 
+     */
     public String health() {
         return this.health;
     }
@@ -36,6 +40,10 @@ public final class ReplicationAgentDetailsResponse extends com.pulumi.resources.
     @Import(name="healthErrors", required=true)
     private List<HealthErrorResponse> healthErrors;
 
+    /**
+     * @return The health errors.
+     * 
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
@@ -47,6 +55,10 @@ public final class ReplicationAgentDetailsResponse extends com.pulumi.resources.
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The replication agent Id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -58,6 +70,10 @@ public final class ReplicationAgentDetailsResponse extends com.pulumi.resources.
     @Import(name="lastHeartbeatUtc", required=true)
     private String lastHeartbeatUtc;
 
+    /**
+     * @return The last heartbeat received from the replication agent.
+     * 
+     */
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
@@ -69,6 +85,10 @@ public final class ReplicationAgentDetailsResponse extends com.pulumi.resources.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The replication agent name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -80,6 +100,10 @@ public final class ReplicationAgentDetailsResponse extends com.pulumi.resources.
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The replication agent version.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -113,35 +137,77 @@ public final class ReplicationAgentDetailsResponse extends com.pulumi.resources.
             $ = new ReplicationAgentDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param health The health of the replication agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder health(String health) {
             $.health = health;
             return this;
         }
 
+        /**
+         * @param healthErrors The health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(List<HealthErrorResponse> healthErrors) {
             $.healthErrors = healthErrors;
             return this;
         }
 
+        /**
+         * @param healthErrors The health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
 
+        /**
+         * @param id The replication agent Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param lastHeartbeatUtc The last heartbeat received from the replication agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
             $.lastHeartbeatUtc = lastHeartbeatUtc;
             return this;
         }
 
+        /**
+         * @param name The replication agent name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version The replication agent version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

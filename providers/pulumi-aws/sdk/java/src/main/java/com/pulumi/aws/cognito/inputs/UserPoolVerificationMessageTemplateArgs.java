@@ -22,6 +22,10 @@ public final class UserPoolVerificationMessageTemplateArgs extends com.pulumi.re
     @Import(name="defaultEmailOption")
     private @Nullable Output<String> defaultEmailOption;
 
+    /**
+     * @return Default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
+     * 
+     */
     public Optional<Output<String>> defaultEmailOption() {
         return Optional.ofNullable(this.defaultEmailOption);
     }
@@ -33,6 +37,10 @@ public final class UserPoolVerificationMessageTemplateArgs extends com.pulumi.re
     @Import(name="emailMessage")
     private @Nullable Output<String> emailMessage;
 
+    /**
+     * @return Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
+     * 
+     */
     public Optional<Output<String>> emailMessage() {
         return Optional.ofNullable(this.emailMessage);
     }
@@ -44,6 +52,10 @@ public final class UserPoolVerificationMessageTemplateArgs extends com.pulumi.re
     @Import(name="emailMessageByLink")
     private @Nullable Output<String> emailMessageByLink;
 
+    /**
+     * @return Email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
+     * 
+     */
     public Optional<Output<String>> emailMessageByLink() {
         return Optional.ofNullable(this.emailMessageByLink);
     }
@@ -55,6 +67,10 @@ public final class UserPoolVerificationMessageTemplateArgs extends com.pulumi.re
     @Import(name="emailSubject")
     private @Nullable Output<String> emailSubject;
 
+    /**
+     * @return Subject line for the email message template. Conflicts with `email_verification_subject` argument.
+     * 
+     */
     public Optional<Output<String>> emailSubject() {
         return Optional.ofNullable(this.emailSubject);
     }
@@ -66,6 +82,10 @@ public final class UserPoolVerificationMessageTemplateArgs extends com.pulumi.re
     @Import(name="emailSubjectByLink")
     private @Nullable Output<String> emailSubjectByLink;
 
+    /**
+     * @return Subject line for the email message template for sending a confirmation link to the user.
+     * 
+     */
     public Optional<Output<String>> emailSubjectByLink() {
         return Optional.ofNullable(this.emailSubjectByLink);
     }
@@ -77,6 +97,10 @@ public final class UserPoolVerificationMessageTemplateArgs extends com.pulumi.re
     @Import(name="smsMessage")
     private @Nullable Output<String> smsMessage;
 
+    /**
+     * @return SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
+     * 
+     */
     public Optional<Output<String>> smsMessage() {
         return Optional.ofNullable(this.smsMessage);
     }
@@ -110,56 +134,128 @@ public final class UserPoolVerificationMessageTemplateArgs extends com.pulumi.re
             $ = new UserPoolVerificationMessageTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultEmailOption Default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultEmailOption(@Nullable Output<String> defaultEmailOption) {
             $.defaultEmailOption = defaultEmailOption;
             return this;
         }
 
+        /**
+         * @param defaultEmailOption Default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultEmailOption(String defaultEmailOption) {
             return defaultEmailOption(Output.of(defaultEmailOption));
         }
 
+        /**
+         * @param emailMessage Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailMessage(@Nullable Output<String> emailMessage) {
             $.emailMessage = emailMessage;
             return this;
         }
 
+        /**
+         * @param emailMessage Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailMessage(String emailMessage) {
             return emailMessage(Output.of(emailMessage));
         }
 
+        /**
+         * @param emailMessageByLink Email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailMessageByLink(@Nullable Output<String> emailMessageByLink) {
             $.emailMessageByLink = emailMessageByLink;
             return this;
         }
 
+        /**
+         * @param emailMessageByLink Email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailMessageByLink(String emailMessageByLink) {
             return emailMessageByLink(Output.of(emailMessageByLink));
         }
 
+        /**
+         * @param emailSubject Subject line for the email message template. Conflicts with `email_verification_subject` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailSubject(@Nullable Output<String> emailSubject) {
             $.emailSubject = emailSubject;
             return this;
         }
 
+        /**
+         * @param emailSubject Subject line for the email message template. Conflicts with `email_verification_subject` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailSubject(String emailSubject) {
             return emailSubject(Output.of(emailSubject));
         }
 
+        /**
+         * @param emailSubjectByLink Subject line for the email message template for sending a confirmation link to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailSubjectByLink(@Nullable Output<String> emailSubjectByLink) {
             $.emailSubjectByLink = emailSubjectByLink;
             return this;
         }
 
+        /**
+         * @param emailSubjectByLink Subject line for the email message template for sending a confirmation link to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailSubjectByLink(String emailSubjectByLink) {
             return emailSubjectByLink(Output.of(emailSubjectByLink));
         }
 
+        /**
+         * @param smsMessage SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smsMessage(@Nullable Output<String> smsMessage) {
             $.smsMessage = smsMessage;
             return this;
         }
 
+        /**
+         * @param smsMessage SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smsMessage(String smsMessage) {
             return smsMessage(Output.of(smsMessage));
         }

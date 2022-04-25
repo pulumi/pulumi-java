@@ -28,6 +28,10 @@ public final class BoundingPolyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return A description of this polygon.
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -39,6 +43,10 @@ public final class BoundingPolyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vertices")
     private @Nullable Output<List<VertexArgs>> vertices;
 
+    /**
+     * @return List of the vertices of this polygon.
+     * 
+     */
     public Optional<Output<List<VertexArgs>>> vertices() {
         return Optional.ofNullable(this.vertices);
     }
@@ -68,24 +76,54 @@ public final class BoundingPolyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BoundingPolyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param label A description of this polygon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label A description of this polygon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param vertices List of the vertices of this polygon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vertices(@Nullable Output<List<VertexArgs>> vertices) {
             $.vertices = vertices;
             return this;
         }
 
+        /**
+         * @param vertices List of the vertices of this polygon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vertices(List<VertexArgs> vertices) {
             return vertices(Output.of(vertices));
         }
 
+        /**
+         * @param vertices List of the vertices of this polygon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vertices(VertexArgs... vertices) {
             return vertices(List.of(vertices));
         }

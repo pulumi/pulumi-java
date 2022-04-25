@@ -25,6 +25,10 @@ public final class HourDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minute")
     private @Nullable Integer minute;
 
+    /**
+     * @return Minutes of the hour the schedule will run.
+     * 
+     */
     public Optional<Integer> minute() {
         return Optional.ofNullable(this.minute);
     }
@@ -53,6 +57,12 @@ public final class HourDetailsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HourDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minute Minutes of the hour the schedule will run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minute(@Nullable Integer minute) {
             $.minute = minute;
             return this;

@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BucketNoncurrentVersionTransition {
     /**
-     * Specified the number of newer noncurrent and current versions that must exists before performing the associated action
+     * @return Specified the number of newer noncurrent and current versions that must exists before performing the associated action
      * 
      */
     private final @Nullable Integer newerNoncurrentVersions;
     /**
-     * The class of storage used to store the object.
+     * @return The class of storage used to store the object.
      * 
      */
     private final BucketNoncurrentVersionTransitionStorageClass storageClass;
     /**
-     * Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.
+     * @return Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.
      * 
      */
     private final Integer transitionInDays;
@@ -39,23 +39,23 @@ public final class BucketNoncurrentVersionTransition {
     }
 
     /**
-     * Specified the number of newer noncurrent and current versions that must exists before performing the associated action
+     * @return Specified the number of newer noncurrent and current versions that must exists before performing the associated action
      * 
-    */
+     */
     public Optional<Integer> newerNoncurrentVersions() {
         return Optional.ofNullable(this.newerNoncurrentVersions);
     }
     /**
-     * The class of storage used to store the object.
+     * @return The class of storage used to store the object.
      * 
-    */
+     */
     public BucketNoncurrentVersionTransitionStorageClass storageClass() {
         return this.storageClass;
     }
     /**
-     * Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.
+     * @return Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.
      * 
-    */
+     */
     public Integer transitionInDays() {
         return this.transitionInDays;
     }

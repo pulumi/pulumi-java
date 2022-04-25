@@ -28,6 +28,10 @@ public final class DiskInstantiationConfigArgs extends com.pulumi.resources.Reso
     @Import(name="autoDelete")
     private @Nullable Output<Boolean> autoDelete;
 
+    /**
+     * @return Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
+     * 
+     */
     public Optional<Output<Boolean>> autoDelete() {
         return Optional.ofNullable(this.autoDelete);
     }
@@ -39,6 +43,10 @@ public final class DiskInstantiationConfigArgs extends com.pulumi.resources.Reso
     @Import(name="customImage")
     private @Nullable Output<String> customImage;
 
+    /**
+     * @return The custom source image to be used to restore this disk when instantiating this instance template.
+     * 
+     */
     public Optional<Output<String>> customImage() {
         return Optional.ofNullable(this.customImage);
     }
@@ -50,6 +58,10 @@ public final class DiskInstantiationConfigArgs extends com.pulumi.resources.Reso
     @Import(name="deviceName")
     private @Nullable Output<String> deviceName;
 
+    /**
+     * @return Specifies the device name of the disk to which the configurations apply to.
+     * 
+     */
     public Optional<Output<String>> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -61,6 +73,10 @@ public final class DiskInstantiationConfigArgs extends com.pulumi.resources.Reso
     @Import(name="instantiateFrom")
     private @Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom;
 
+    /**
+     * @return Specifies whether to include the disk and what image to use. Possible values are: - source-image: to use the same image that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - source-image-family: to use the same image family that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - custom-image: to use a user-provided image url for disk creation. Applicable to the boot disk and additional read-write disks. - attach-read-only: to attach a read-only disk. Applicable to read-only disks. - do-not-include: to exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and read-only disks.
+     * 
+     */
     public Optional<Output<DiskInstantiationConfigInstantiateFrom>> instantiateFrom() {
         return Optional.ofNullable(this.instantiateFrom);
     }
@@ -92,38 +108,86 @@ public final class DiskInstantiationConfigArgs extends com.pulumi.resources.Reso
             $ = new DiskInstantiationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoDelete Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDelete(@Nullable Output<Boolean> autoDelete) {
             $.autoDelete = autoDelete;
             return this;
         }
 
+        /**
+         * @param autoDelete Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDelete(Boolean autoDelete) {
             return autoDelete(Output.of(autoDelete));
         }
 
+        /**
+         * @param customImage The custom source image to be used to restore this disk when instantiating this instance template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImage(@Nullable Output<String> customImage) {
             $.customImage = customImage;
             return this;
         }
 
+        /**
+         * @param customImage The custom source image to be used to restore this disk when instantiating this instance template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImage(String customImage) {
             return customImage(Output.of(customImage));
         }
 
+        /**
+         * @param deviceName Specifies the device name of the disk to which the configurations apply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(@Nullable Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName Specifies the device name of the disk to which the configurations apply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param instantiateFrom Specifies whether to include the disk and what image to use. Possible values are: - source-image: to use the same image that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - source-image-family: to use the same image family that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - custom-image: to use a user-provided image url for disk creation. Applicable to the boot disk and additional read-write disks. - attach-read-only: to attach a read-only disk. Applicable to read-only disks. - do-not-include: to exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and read-only disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instantiateFrom(@Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom) {
             $.instantiateFrom = instantiateFrom;
             return this;
         }
 
+        /**
+         * @param instantiateFrom Specifies whether to include the disk and what image to use. Possible values are: - source-image: to use the same image that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - source-image-family: to use the same image family that was used to create the source instance&#39;s corresponding disk. Applicable to the boot disk and additional read-write disks. - custom-image: to use a user-provided image url for disk creation. Applicable to the boot disk and additional read-write disks. - attach-read-only: to attach a read-only disk. Applicable to read-only disks. - do-not-include: to exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and read-only disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instantiateFrom(DiskInstantiationConfigInstantiateFrom instantiateFrom) {
             return instantiateFrom(Output.of(instantiateFrom));
         }

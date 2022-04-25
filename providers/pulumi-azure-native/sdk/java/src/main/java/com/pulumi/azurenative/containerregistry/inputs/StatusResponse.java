@@ -23,6 +23,10 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayStatus", required=true)
     private String displayStatus;
 
+    /**
+     * @return The short label for the status.
+     * 
+     */
     public String displayStatus() {
         return this.displayStatus;
     }
@@ -34,6 +38,10 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return The detailed message for the status, including alerts and error messages.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -45,6 +53,10 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timestamp", required=true)
     private String timestamp;
 
+    /**
+     * @return The timestamp when the status was changed to the current value.
+     * 
+     */
     public String timestamp() {
         return this.timestamp;
     }
@@ -75,16 +87,34 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
             $ = new StatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayStatus The short label for the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayStatus(String displayStatus) {
             $.displayStatus = displayStatus;
             return this;
         }
 
+        /**
+         * @param message The detailed message for the status, including alerts and error messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param timestamp The timestamp when the status was changed to the current value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestamp(String timestamp) {
             $.timestamp = timestamp;
             return this;

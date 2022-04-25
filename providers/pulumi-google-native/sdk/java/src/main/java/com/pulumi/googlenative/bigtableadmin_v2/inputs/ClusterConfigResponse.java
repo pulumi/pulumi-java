@@ -23,6 +23,10 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="clusterAutoscalingConfig", required=true)
     private ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
 
+    /**
+     * @return Autoscaling configuration for this cluster.
+     * 
+     */
     public ClusterAutoscalingConfigResponse clusterAutoscalingConfig() {
         return this.clusterAutoscalingConfig;
     }
@@ -51,6 +55,12 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new ClusterConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterAutoscalingConfig Autoscaling configuration for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterAutoscalingConfig(ClusterAutoscalingConfigResponse clusterAutoscalingConfig) {
             $.clusterAutoscalingConfig = clusterAutoscalingConfig;
             return this;

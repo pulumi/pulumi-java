@@ -23,6 +23,10 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends co
     @Import(name="integrationAccountName", required=true)
     private String integrationAccountName;
 
+    /**
+     * @return The integration account name.
+     * 
+     */
     public String integrationAccountName() {
         return this.integrationAccountName;
     }
@@ -34,6 +38,10 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends co
     @Import(name="keyType")
     private @Nullable Either<String,KeyType> keyType;
 
+    /**
+     * @return The key type.
+     * 
+     */
     public Optional<Either<String,KeyType>> keyType() {
         return Optional.ofNullable(this.keyType);
     }
@@ -45,6 +53,10 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends co
     @Import(name="notAfter")
     private @Nullable String notAfter;
 
+    /**
+     * @return The expiry time.
+     * 
+     */
     public Optional<String> notAfter() {
         return Optional.ofNullable(this.notAfter);
     }
@@ -56,6 +68,10 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends co
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends co
     @Import(name="schemaName", required=true)
     private String schemaName;
 
+    /**
+     * @return The integration account schema name.
+     * 
+     */
     public String schemaName() {
         return this.schemaName;
     }
@@ -99,34 +119,76 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends co
             $ = new ListIntegrationAccountSchemaContentCallbackUrlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(String integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
             return this;
         }
 
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(String keyType) {
             return keyType(Either.ofLeft(keyType));
         }
 
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(KeyType keyType) {
             return keyType(Either.ofRight(keyType));
         }
 
+        /**
+         * @param notAfter The expiry time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notAfter(@Nullable String notAfter) {
             $.notAfter = notAfter;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param schemaName The integration account schema name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(String schemaName) {
             $.schemaName = schemaName;
             return this;

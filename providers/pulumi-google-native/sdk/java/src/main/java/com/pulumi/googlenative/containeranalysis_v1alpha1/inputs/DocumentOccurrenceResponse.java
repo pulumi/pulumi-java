@@ -24,6 +24,10 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -35,6 +39,10 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
     @Import(name="creatorComment", required=true)
     private String creatorComment;
 
+    /**
+     * @return A field for creators of the SPDX file to provide general comments about the creation of the SPDX file or any other relevant comment not included in the other fields
+     * 
+     */
     public String creatorComment() {
         return this.creatorComment;
     }
@@ -46,6 +54,10 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
     @Import(name="creators", required=true)
     private List<String> creators;
 
+    /**
+     * @return Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person&#39;s name
+     * 
+     */
     public List<String> creators() {
         return this.creators;
     }
@@ -57,6 +69,10 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
     @Import(name="documentComment", required=true)
     private String documentComment;
 
+    /**
+     * @return A field for creators of the SPDX file content to provide comments to the consumers of the SPDX document
+     * 
+     */
     public String documentComment() {
         return this.documentComment;
     }
@@ -68,6 +84,10 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
     @Import(name="externalDocumentRefs", required=true)
     private List<String> externalDocumentRefs;
 
+    /**
+     * @return Identify any external SPDX documents referenced within this SPDX document
+     * 
+     */
     public List<String> externalDocumentRefs() {
         return this.externalDocumentRefs;
     }
@@ -79,6 +99,10 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
     @Import(name="licenseListVersion", required=true)
     private String licenseListVersion;
 
+    /**
+     * @return A field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created
+     * 
+     */
     public String licenseListVersion() {
         return this.licenseListVersion;
     }
@@ -90,6 +114,10 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
     @Import(name="namespace", required=true)
     private String namespace;
 
+    /**
+     * @return Provide an SPDX document specific namespace as a unique absolute Uniform Resource Identifier (URI) as specified in RFC-3986, with the exception of the ‘#’ delimiter
+     * 
+     */
     public String namespace() {
         return this.namespace;
     }
@@ -101,6 +129,10 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Identify name of this document as designated by creator
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -136,49 +168,109 @@ public final class DocumentOccurrenceResponse extends com.pulumi.resources.Invok
             $ = new DocumentOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param creatorComment A field for creators of the SPDX file to provide general comments about the creation of the SPDX file or any other relevant comment not included in the other fields
+         * 
+         * @return builder
+         * 
+         */
         public Builder creatorComment(String creatorComment) {
             $.creatorComment = creatorComment;
             return this;
         }
 
+        /**
+         * @param creators Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person&#39;s name
+         * 
+         * @return builder
+         * 
+         */
         public Builder creators(List<String> creators) {
             $.creators = creators;
             return this;
         }
 
+        /**
+         * @param creators Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person&#39;s name
+         * 
+         * @return builder
+         * 
+         */
         public Builder creators(String... creators) {
             return creators(List.of(creators));
         }
 
+        /**
+         * @param documentComment A field for creators of the SPDX file content to provide comments to the consumers of the SPDX document
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentComment(String documentComment) {
             $.documentComment = documentComment;
             return this;
         }
 
+        /**
+         * @param externalDocumentRefs Identify any external SPDX documents referenced within this SPDX document
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalDocumentRefs(List<String> externalDocumentRefs) {
             $.externalDocumentRefs = externalDocumentRefs;
             return this;
         }
 
+        /**
+         * @param externalDocumentRefs Identify any external SPDX documents referenced within this SPDX document
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalDocumentRefs(String... externalDocumentRefs) {
             return externalDocumentRefs(List.of(externalDocumentRefs));
         }
 
+        /**
+         * @param licenseListVersion A field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseListVersion(String licenseListVersion) {
             $.licenseListVersion = licenseListVersion;
             return this;
         }
 
+        /**
+         * @param namespace Provide an SPDX document specific namespace as a unique absolute Uniform Resource Identifier (URI) as specified in RFC-3986, with the exception of the ‘#’ delimiter
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param title Identify name of this document as designated by creator
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

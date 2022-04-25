@@ -27,6 +27,10 @@ public final class IosTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="iosAppInfo", required=true)
     private IosAppInfoResponse iosAppInfo;
 
+    /**
+     * @return Information about the application under test.
+     * 
+     */
     public IosAppInfoResponse iosAppInfo() {
         return this.iosAppInfo;
     }
@@ -38,6 +42,10 @@ public final class IosTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="iosRoboTest", required=true)
     private IosRoboTestResponse iosRoboTest;
 
+    /**
+     * @return An iOS Robo test.
+     * 
+     */
     public IosRoboTestResponse iosRoboTest() {
         return this.iosRoboTest;
     }
@@ -49,6 +57,10 @@ public final class IosTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="iosTestLoop", required=true)
     private IosTestLoopResponse iosTestLoop;
 
+    /**
+     * @return An iOS test loop.
+     * 
+     */
     public IosTestLoopResponse iosTestLoop() {
         return this.iosTestLoop;
     }
@@ -60,6 +72,10 @@ public final class IosTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="iosXcTest", required=true)
     private IosXcTestResponse iosXcTest;
 
+    /**
+     * @return An iOS XCTest.
+     * 
+     */
     public IosXcTestResponse iosXcTest() {
         return this.iosXcTest;
     }
@@ -71,6 +87,10 @@ public final class IosTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="testTimeout", required=true)
     private DurationResponse testTimeout;
 
+    /**
+     * @return Max time a test is allowed to run before it is automatically cancelled.
+     * 
+     */
     public DurationResponse testTimeout() {
         return this.testTimeout;
     }
@@ -103,26 +123,56 @@ public final class IosTestResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IosTestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iosAppInfo Information about the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosAppInfo(IosAppInfoResponse iosAppInfo) {
             $.iosAppInfo = iosAppInfo;
             return this;
         }
 
+        /**
+         * @param iosRoboTest An iOS Robo test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosRoboTest(IosRoboTestResponse iosRoboTest) {
             $.iosRoboTest = iosRoboTest;
             return this;
         }
 
+        /**
+         * @param iosTestLoop An iOS test loop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosTestLoop(IosTestLoopResponse iosTestLoop) {
             $.iosTestLoop = iosTestLoop;
             return this;
         }
 
+        /**
+         * @param iosXcTest An iOS XCTest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosXcTest(IosXcTestResponse iosXcTest) {
             $.iosXcTest = iosXcTest;
             return this;
         }
 
+        /**
+         * @param testTimeout Max time a test is allowed to run before it is automatically cancelled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTimeout(DurationResponse testTimeout) {
             $.testTimeout = testTimeout;
             return this;

@@ -26,6 +26,10 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     @Import(name="customFragment")
     private @Nullable String customFragment;
 
+    /**
+     * @return Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+     * 
+     */
     public Optional<String> customFragment() {
         return Optional.ofNullable(this.customFragment);
     }
@@ -37,6 +41,10 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     @Import(name="customHost")
     private @Nullable String customHost;
 
+    /**
+     * @return Host to redirect. Leave empty to use the incoming host as the destination host.
+     * 
+     */
     public Optional<String> customHost() {
         return Optional.ofNullable(this.customHost);
     }
@@ -48,6 +56,10 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     @Import(name="customPath")
     private @Nullable String customPath;
 
+    /**
+     * @return The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+     * 
+     */
     public Optional<String> customPath() {
         return Optional.ofNullable(this.customPath);
     }
@@ -59,6 +71,10 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     @Import(name="customQueryString")
     private @Nullable String customQueryString;
 
+    /**
+     * @return The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. The first ? and &amp; will be added automatically so do not include them in the front, but do separate multiple query strings with &amp;.
+     * 
+     */
     public Optional<String> customQueryString() {
         return Optional.ofNullable(this.customQueryString);
     }
@@ -70,6 +86,11 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return
+     * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -81,6 +102,10 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     @Import(name="redirectProtocol")
     private @Nullable String redirectProtocol;
 
+    /**
+     * @return The protocol of the destination to where the traffic is redirected
+     * 
+     */
     public Optional<String> redirectProtocol() {
         return Optional.ofNullable(this.redirectProtocol);
     }
@@ -92,6 +117,10 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     @Import(name="redirectType")
     private @Nullable String redirectType;
 
+    /**
+     * @return The redirect type the rule will use when redirecting traffic.
+     * 
+     */
     public Optional<String> redirectType() {
         return Optional.ofNullable(this.redirectType);
     }
@@ -126,36 +155,79 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
             $ = new RedirectConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customFragment Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFragment(@Nullable String customFragment) {
             $.customFragment = customFragment;
             return this;
         }
 
+        /**
+         * @param customHost Host to redirect. Leave empty to use the incoming host as the destination host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHost(@Nullable String customHost) {
             $.customHost = customHost;
             return this;
         }
 
+        /**
+         * @param customPath The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customPath(@Nullable String customPath) {
             $.customPath = customPath;
             return this;
         }
 
+        /**
+         * @param customQueryString The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. The first ? and &amp; will be added automatically so do not include them in the front, but do separate multiple query strings with &amp;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customQueryString(@Nullable String customQueryString) {
             $.customQueryString = customQueryString;
             return this;
         }
 
+        /**
+         * @param odataType
+         * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param redirectProtocol The protocol of the destination to where the traffic is redirected
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectProtocol(@Nullable String redirectProtocol) {
             $.redirectProtocol = redirectProtocol;
             return this;
         }
 
+        /**
+         * @param redirectType The redirect type the rule will use when redirecting traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectType(@Nullable String redirectType) {
             $.redirectType = redirectType;
             return this;

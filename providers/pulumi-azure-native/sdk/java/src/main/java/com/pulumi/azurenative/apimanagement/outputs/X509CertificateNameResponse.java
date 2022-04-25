@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class X509CertificateNameResponse {
     /**
-     * Thumbprint for the Issuer of the Certificate.
+     * @return Thumbprint for the Issuer of the Certificate.
      * 
      */
     private final @Nullable String issuerCertificateThumbprint;
     /**
-     * Common Name of the Certificate.
+     * @return Common Name of the Certificate.
      * 
      */
     private final @Nullable String name;
@@ -31,16 +31,16 @@ public final class X509CertificateNameResponse {
     }
 
     /**
-     * Thumbprint for the Issuer of the Certificate.
+     * @return Thumbprint for the Issuer of the Certificate.
      * 
-    */
+     */
     public Optional<String> issuerCertificateThumbprint() {
         return Optional.ofNullable(this.issuerCertificateThumbprint);
     }
     /**
-     * Common Name of the Certificate.
+     * @return Common Name of the Certificate.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

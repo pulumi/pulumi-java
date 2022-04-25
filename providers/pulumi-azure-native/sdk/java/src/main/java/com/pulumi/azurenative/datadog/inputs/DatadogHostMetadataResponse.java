@@ -23,6 +23,10 @@ public final class DatadogHostMetadataResponse extends com.pulumi.resources.Invo
     @Import(name="agentVersion")
     private @Nullable String agentVersion;
 
+    /**
+     * @return The agent version.
+     * 
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
@@ -67,6 +71,12 @@ public final class DatadogHostMetadataResponse extends com.pulumi.resources.Invo
             $ = new DatadogHostMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentVersion The agent version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(@Nullable String agentVersion) {
             $.agentVersion = agentVersion;
             return this;

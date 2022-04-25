@@ -24,6 +24,10 @@ public final class FleetLaunchTemplateConfigGetArgs extends com.pulumi.resources
     @Import(name="launchTemplateSpecification", required=true)
     private Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
 
+    /**
+     * @return Nested argument containing EC2 Launch Template to use. Defined below.
+     * 
+     */
     public Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification() {
         return this.launchTemplateSpecification;
     }
@@ -35,6 +39,10 @@ public final class FleetLaunchTemplateConfigGetArgs extends com.pulumi.resources
     @Import(name="overrides")
     private @Nullable Output<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides;
 
+    /**
+     * @return Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
+     * 
+     */
     public Optional<Output<List<FleetLaunchTemplateConfigOverrideGetArgs>>> overrides() {
         return Optional.ofNullable(this.overrides);
     }
@@ -64,24 +72,54 @@ public final class FleetLaunchTemplateConfigGetArgs extends com.pulumi.resources
             $ = new FleetLaunchTemplateConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param launchTemplateSpecification Nested argument containing EC2 Launch Template to use. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateSpecification(Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification) {
             $.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
 
+        /**
+         * @param launchTemplateSpecification Nested argument containing EC2 Launch Template to use. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateSpecification(FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs launchTemplateSpecification) {
             return launchTemplateSpecification(Output.of(launchTemplateSpecification));
         }
 
+        /**
+         * @param overrides Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrides(@Nullable Output<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides) {
             $.overrides = overrides;
             return this;
         }
 
+        /**
+         * @param overrides Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrides(List<FleetLaunchTemplateConfigOverrideGetArgs> overrides) {
             return overrides(Output.of(overrides));
         }
 
+        /**
+         * @param overrides Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrides(FleetLaunchTemplateConfigOverrideGetArgs... overrides) {
             return overrides(List.of(overrides));
         }

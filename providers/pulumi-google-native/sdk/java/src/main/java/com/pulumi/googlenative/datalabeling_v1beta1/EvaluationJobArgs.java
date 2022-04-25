@@ -24,6 +24,10 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotationSpecSet", required=true)
     private Output<String> annotationSpecSet;
 
+    /**
+     * @return Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: &#34;projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}&#34;
+     * 
+     */
     public Output<String> annotationSpecSet() {
         return this.annotationSpecSet;
     }
@@ -35,6 +39,10 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description", required=true)
     private Output<String> description;
 
+    /**
+     * @return Description of the job. The description can be up to 25,000 characters long.
+     * 
+     */
     public Output<String> description() {
         return this.description;
     }
@@ -46,6 +54,10 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="evaluationJobConfig", required=true)
     private Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig;
 
+    /**
+     * @return Configuration details for the evaluation job.
+     * 
+     */
     public Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig() {
         return this.evaluationJobConfig;
     }
@@ -57,6 +69,10 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labelMissingGroundTruth", required=true)
     private Output<Boolean> labelMissingGroundTruth;
 
+    /**
+     * @return Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job&#39;s BigQuery table, set this to `false`.
+     * 
+     */
     public Output<Boolean> labelMissingGroundTruth() {
         return this.labelMissingGroundTruth;
     }
@@ -68,6 +84,10 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="modelVersion", required=true)
     private Output<String> modelVersion;
 
+    /**
+     * @return The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: &#34;projects/{project_id}/models/{model_name}/versions/{version_name}&#34; There can only be one evaluation job per model version.
+     * 
+     */
     public Output<String> modelVersion() {
         return this.modelVersion;
     }
@@ -86,6 +106,10 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
     private Output<String> schedule;
 
+    /**
+     * @return Describes the interval at which the job runs. This interval must be at least 1 day, and it is rounded to the nearest day. For example, if you specify a 50-hour interval, the job runs every 2 days. You can provide the schedule in [crontab format](/scheduler/docs/configuring/cron-job-schedules) or in an [English-like format](/appengine/docs/standard/python/config/cronref#schedule_format). Regardless of what you specify, the job will run at 10:00 AM UTC. Only the interval from this schedule is used, not the specific time of day.
+     * 
+     */
     public Output<String> schedule() {
         return this.schedule;
     }
@@ -120,47 +144,107 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EvaluationJobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotationSpecSet Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: &#34;projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationSpecSet(Output<String> annotationSpecSet) {
             $.annotationSpecSet = annotationSpecSet;
             return this;
         }
 
+        /**
+         * @param annotationSpecSet Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: &#34;projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationSpecSet(String annotationSpecSet) {
             return annotationSpecSet(Output.of(annotationSpecSet));
         }
 
+        /**
+         * @param description Description of the job. The description can be up to 25,000 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the job. The description can be up to 25,000 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param evaluationJobConfig Configuration details for the evaluation job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationJobConfig(Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig) {
             $.evaluationJobConfig = evaluationJobConfig;
             return this;
         }
 
+        /**
+         * @param evaluationJobConfig Configuration details for the evaluation job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationJobConfig(GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs evaluationJobConfig) {
             return evaluationJobConfig(Output.of(evaluationJobConfig));
         }
 
+        /**
+         * @param labelMissingGroundTruth Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job&#39;s BigQuery table, set this to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelMissingGroundTruth(Output<Boolean> labelMissingGroundTruth) {
             $.labelMissingGroundTruth = labelMissingGroundTruth;
             return this;
         }
 
+        /**
+         * @param labelMissingGroundTruth Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job&#39;s BigQuery table, set this to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelMissingGroundTruth(Boolean labelMissingGroundTruth) {
             return labelMissingGroundTruth(Output.of(labelMissingGroundTruth));
         }
 
+        /**
+         * @param modelVersion The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: &#34;projects/{project_id}/models/{model_name}/versions/{version_name}&#34; There can only be one evaluation job per model version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelVersion(Output<String> modelVersion) {
             $.modelVersion = modelVersion;
             return this;
         }
 
+        /**
+         * @param modelVersion The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: &#34;projects/{project_id}/models/{model_name}/versions/{version_name}&#34; There can only be one evaluation job per model version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelVersion(String modelVersion) {
             return modelVersion(Output.of(modelVersion));
         }
@@ -174,11 +258,23 @@ public final class EvaluationJobArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param schedule Describes the interval at which the job runs. This interval must be at least 1 day, and it is rounded to the nearest day. For example, if you specify a 50-hour interval, the job runs every 2 days. You can provide the schedule in [crontab format](/scheduler/docs/configuring/cron-job-schedules) or in an [English-like format](/appengine/docs/standard/python/config/cronref#schedule_format). Regardless of what you specify, the job will run at 10:00 AM UTC. Only the interval from this schedule is used, not the specific time of day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Describes the interval at which the job runs. This interval must be at least 1 day, and it is rounded to the nearest day. For example, if you specify a 50-hour interval, the job runs every 2 days. You can provide the schedule in [crontab format](/scheduler/docs/configuring/cron-job-schedules) or in an [English-like format](/appengine/docs/standard/python/config/cronref#schedule_format). Regardless of what you specify, the job will run at 10:00 AM UTC. Only the interval from this schedule is used, not the specific time of day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }

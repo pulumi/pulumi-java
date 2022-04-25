@@ -26,6 +26,10 @@ public final class IosTestLoopArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bundleId")
     private @Nullable Output<String> bundleId;
 
+    /**
+     * @return Bundle ID of the app.
+     * 
+     */
     public Optional<Output<String>> bundleId() {
         return Optional.ofNullable(this.bundleId);
     }
@@ -54,11 +58,23 @@ public final class IosTestLoopArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IosTestLoopArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bundleId Bundle ID of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(@Nullable Output<String> bundleId) {
             $.bundleId = bundleId;
             return this;
         }
 
+        /**
+         * @param bundleId Bundle ID of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(String bundleId) {
             return bundleId(Output.of(bundleId));
         }

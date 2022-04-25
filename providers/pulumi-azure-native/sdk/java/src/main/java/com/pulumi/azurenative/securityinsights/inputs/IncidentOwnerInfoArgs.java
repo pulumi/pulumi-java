@@ -26,6 +26,10 @@ public final class IncidentOwnerInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="assignedTo")
     private @Nullable Output<String> assignedTo;
 
+    /**
+     * @return The name of the user the incident is assigned to.
+     * 
+     */
     public Optional<Output<String>> assignedTo() {
         return Optional.ofNullable(this.assignedTo);
     }
@@ -37,6 +41,10 @@ public final class IncidentOwnerInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="email")
     private @Nullable Output<String> email;
 
+    /**
+     * @return The email of the user the incident is assigned to.
+     * 
+     */
     public Optional<Output<String>> email() {
         return Optional.ofNullable(this.email);
     }
@@ -48,6 +56,10 @@ public final class IncidentOwnerInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="objectId")
     private @Nullable Output<String> objectId;
 
+    /**
+     * @return The object id of the user the incident is assigned to.
+     * 
+     */
     public Optional<Output<String>> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -59,6 +71,10 @@ public final class IncidentOwnerInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="userPrincipalName")
     private @Nullable Output<String> userPrincipalName;
 
+    /**
+     * @return The user principal name of the user the incident is assigned to.
+     * 
+     */
     public Optional<Output<String>> userPrincipalName() {
         return Optional.ofNullable(this.userPrincipalName);
     }
@@ -90,38 +106,86 @@ public final class IncidentOwnerInfoArgs extends com.pulumi.resources.ResourceAr
             $ = new IncidentOwnerInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignedTo The name of the user the incident is assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignedTo(@Nullable Output<String> assignedTo) {
             $.assignedTo = assignedTo;
             return this;
         }
 
+        /**
+         * @param assignedTo The name of the user the incident is assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignedTo(String assignedTo) {
             return assignedTo(Output.of(assignedTo));
         }
 
+        /**
+         * @param email The email of the user the incident is assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email The email of the user the incident is assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param objectId The object id of the user the incident is assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId The object id of the user the incident is assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }
 
+        /**
+         * @param userPrincipalName The user principal name of the user the incident is assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPrincipalName(@Nullable Output<String> userPrincipalName) {
             $.userPrincipalName = userPrincipalName;
             return this;
         }
 
+        /**
+         * @param userPrincipalName The user principal name of the user the incident is assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPrincipalName(String userPrincipalName) {
             return userPrincipalName(Output.of(userPrincipalName));
         }

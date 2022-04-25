@@ -20,6 +20,10 @@ public final class ApiConfigOpenapiDocumentDocumentArgs extends com.pulumi.resou
     @Import(name="contents", required=true)
     private Output<String> contents;
 
+    /**
+     * @return Base64 encoded content of the file.
+     * 
+     */
     public Output<String> contents() {
         return this.contents;
     }
@@ -31,6 +35,10 @@ public final class ApiConfigOpenapiDocumentDocumentArgs extends com.pulumi.resou
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return The file path (full or relative path). This is typically the path of the file when it is uploaded.
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -60,20 +68,44 @@ public final class ApiConfigOpenapiDocumentDocumentArgs extends com.pulumi.resou
             $ = new ApiConfigOpenapiDocumentDocumentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contents Base64 encoded content of the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contents(Output<String> contents) {
             $.contents = contents;
             return this;
         }
 
+        /**
+         * @param contents Base64 encoded content of the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contents(String contents) {
             return contents(Output.of(contents));
         }
 
+        /**
+         * @param path The file path (full or relative path). This is typically the path of the file when it is uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The file path (full or relative path). This is typically the path of the file when it is uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

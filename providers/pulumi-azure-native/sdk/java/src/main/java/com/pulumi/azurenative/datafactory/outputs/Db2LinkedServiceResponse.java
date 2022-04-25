@@ -20,73 +20,73 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Db2LinkedServiceResponse {
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
+     * @return AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
      * 
      */
     private final @Nullable String authenticationType;
     /**
-     * Certificate Common Name when TLS is enabled. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * @return Certificate Common Name when TLS is enabled. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object certificateCommonName;
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
-     * The connection string. It is mutually exclusive with server, database, authenticationType, userName, packageCollection and certificateCommonName property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * @return The connection string. It is mutually exclusive with server, database, authenticationType, userName, packageCollection and certificateCommonName property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
     private final @Nullable Object connectionString;
     /**
-     * Database name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * @return Database name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object database;
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object encryptedCredential;
     /**
-     * Under where packages are created when querying database. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * @return Under where packages are created when querying database. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object packageCollection;
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
-     * Password for authentication.
+     * @return Password for authentication.
      * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
-     * Server name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * @return Server name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object server;
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Db2&#39;.
      * 
      */
     private final String type;
     /**
-     * Username for authentication. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * @return Username for authentication. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object username;
@@ -124,101 +124,101 @@ public final class Db2LinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
+     * @return AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
      * 
-    */
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
-     * Certificate Common Name when TLS is enabled. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * @return Certificate Common Name when TLS is enabled. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> certificateCommonName() {
         return Optional.ofNullable(this.certificateCommonName);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * The connection string. It is mutually exclusive with server, database, authenticationType, userName, packageCollection and certificateCommonName property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * @return The connection string. It is mutually exclusive with server, database, authenticationType, userName, packageCollection and certificateCommonName property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
-    */
+     */
     public Optional<Object> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
-     * Database name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * @return Database name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> database() {
         return Optional.ofNullable(this.database);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Under where packages are created when querying database. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * @return Under where packages are created when querying database. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> packageCollection() {
         return Optional.ofNullable(this.packageCollection);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Password for authentication.
+     * @return Password for authentication.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Server name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * @return Server name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> server() {
         return Optional.ofNullable(this.server);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Db2&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Username for authentication. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * @return Username for authentication. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> username() {
         return Optional.ofNullable(this.username);
     }

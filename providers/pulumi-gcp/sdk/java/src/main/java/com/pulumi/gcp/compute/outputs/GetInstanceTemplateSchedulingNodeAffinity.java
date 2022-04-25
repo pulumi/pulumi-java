@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetInstanceTemplateSchedulingNodeAffinity {
     /**
-     * The key for the node affinity label.
+     * @return The key for the node affinity label.
      * 
      */
     private final String key;
     /**
-     * The operator. Can be `IN` for node-affinities
+     * @return The operator. Can be `IN` for node-affinities
      * or `NOT_IN` for anti-affinities.
      * 
      */
@@ -34,17 +34,17 @@ public final class GetInstanceTemplateSchedulingNodeAffinity {
     }
 
     /**
-     * The key for the node affinity label.
+     * @return The key for the node affinity label.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The operator. Can be `IN` for node-affinities
+     * @return The operator. Can be `IN` for node-affinities
      * or `NOT_IN` for anti-affinities.
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }

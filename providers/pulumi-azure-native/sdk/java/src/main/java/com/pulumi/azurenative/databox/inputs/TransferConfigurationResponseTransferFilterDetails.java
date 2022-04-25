@@ -25,6 +25,10 @@ public final class TransferConfigurationResponseTransferFilterDetails extends co
     @Import(name="include")
     private @Nullable TransferFilterDetailsResponse include;
 
+    /**
+     * @return Details of the filtering the transfer of data.
+     * 
+     */
     public Optional<TransferFilterDetailsResponse> include() {
         return Optional.ofNullable(this.include);
     }
@@ -53,6 +57,12 @@ public final class TransferConfigurationResponseTransferFilterDetails extends co
             $ = new TransferConfigurationResponseTransferFilterDetails(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param include Details of the filtering the transfer of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder include(@Nullable TransferFilterDetailsResponse include) {
             $.include = include;
             return this;

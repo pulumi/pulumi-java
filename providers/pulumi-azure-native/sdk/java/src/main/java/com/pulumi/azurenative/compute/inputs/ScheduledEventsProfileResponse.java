@@ -21,6 +21,10 @@ public final class ScheduledEventsProfileResponse extends com.pulumi.resources.I
     @Import(name="terminateNotificationProfile")
     private @Nullable TerminateNotificationProfileResponse terminateNotificationProfile;
 
+    /**
+     * @return Specifies Terminate Scheduled Event related configurations.
+     * 
+     */
     public Optional<TerminateNotificationProfileResponse> terminateNotificationProfile() {
         return Optional.ofNullable(this.terminateNotificationProfile);
     }
@@ -49,6 +53,12 @@ public final class ScheduledEventsProfileResponse extends com.pulumi.resources.I
             $ = new ScheduledEventsProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param terminateNotificationProfile Specifies Terminate Scheduled Event related configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminateNotificationProfile(@Nullable TerminateNotificationProfileResponse terminateNotificationProfile) {
             $.terminateNotificationProfile = terminateNotificationProfile;
             return this;

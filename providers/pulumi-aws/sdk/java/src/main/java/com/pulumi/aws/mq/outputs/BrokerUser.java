@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BrokerUser {
     /**
-     * Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user. Applies to `engine_type` of `ActiveMQ` only.
+     * @return Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user. Applies to `engine_type` of `ActiveMQ` only.
      * 
      */
     private final @Nullable Boolean consoleAccess;
     /**
-     * List of groups (20 maximum) to which the ActiveMQ user belongs. Applies to `engine_type` of `ActiveMQ` only.
+     * @return List of groups (20 maximum) to which the ActiveMQ user belongs. Applies to `engine_type` of `ActiveMQ` only.
      * 
      */
     private final @Nullable List<String> groups;
     /**
-     * Password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
+     * @return Password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
      * 
      */
     private final String password;
     /**
-     * Username of the user.
+     * @return Username of the user.
      * 
      */
     private final String username;
@@ -47,30 +47,30 @@ public final class BrokerUser {
     }
 
     /**
-     * Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user. Applies to `engine_type` of `ActiveMQ` only.
+     * @return Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user. Applies to `engine_type` of `ActiveMQ` only.
      * 
-    */
+     */
     public Optional<Boolean> consoleAccess() {
         return Optional.ofNullable(this.consoleAccess);
     }
     /**
-     * List of groups (20 maximum) to which the ActiveMQ user belongs. Applies to `engine_type` of `ActiveMQ` only.
+     * @return List of groups (20 maximum) to which the ActiveMQ user belongs. Applies to `engine_type` of `ActiveMQ` only.
      * 
-    */
+     */
     public List<String> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
-     * Password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
+     * @return Password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * Username of the user.
+     * @return Username of the user.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

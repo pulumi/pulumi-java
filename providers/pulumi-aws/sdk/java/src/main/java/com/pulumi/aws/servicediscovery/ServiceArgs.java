@@ -27,6 +27,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the service.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsConfig")
     private @Nullable Output<ServiceDnsConfigArgs> dnsConfig;
 
+    /**
+     * @return A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
+     * 
+     */
     public Optional<Output<ServiceDnsConfigArgs>> dnsConfig() {
         return Optional.ofNullable(this.dnsConfig);
     }
@@ -49,6 +57,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
     private @Nullable Output<Boolean> forceDestroy;
 
+    /**
+     * @return A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
+     * 
+     */
     public Optional<Output<Boolean>> forceDestroy() {
         return Optional.ofNullable(this.forceDestroy);
     }
@@ -60,6 +72,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckConfig")
     private @Nullable Output<ServiceHealthCheckConfigArgs> healthCheckConfig;
 
+    /**
+     * @return A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
+     * 
+     */
     public Optional<Output<ServiceHealthCheckConfigArgs>> healthCheckConfig() {
         return Optional.ofNullable(this.healthCheckConfig);
     }
@@ -71,6 +87,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckCustomConfig")
     private @Nullable Output<ServiceHealthCheckCustomConfigArgs> healthCheckCustomConfig;
 
+    /**
+     * @return A complex type that contains settings for ECS managed health checks.
+     * 
+     */
     public Optional<Output<ServiceHealthCheckCustomConfigArgs>> healthCheckCustomConfig() {
         return Optional.ofNullable(this.healthCheckCustomConfig);
     }
@@ -82,6 +102,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the service.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -93,6 +117,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespaceId")
     private @Nullable Output<String> namespaceId;
 
+    /**
+     * @return The ID of the namespace to use for DNS configuration.
+     * 
+     */
     public Optional<Output<String>> namespaceId() {
         return Optional.ofNullable(this.namespaceId);
     }
@@ -104,6 +132,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the service. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -139,74 +171,170 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param dnsConfig A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsConfig(@Nullable Output<ServiceDnsConfigArgs> dnsConfig) {
             $.dnsConfig = dnsConfig;
             return this;
         }
 
+        /**
+         * @param dnsConfig A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsConfig(ServiceDnsConfigArgs dnsConfig) {
             return dnsConfig(Output.of(dnsConfig));
         }
 
+        /**
+         * @param forceDestroy A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             $.forceDestroy = forceDestroy;
             return this;
         }
 
+        /**
+         * @param forceDestroy A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDestroy(Boolean forceDestroy) {
             return forceDestroy(Output.of(forceDestroy));
         }
 
+        /**
+         * @param healthCheckConfig A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckConfig(@Nullable Output<ServiceHealthCheckConfigArgs> healthCheckConfig) {
             $.healthCheckConfig = healthCheckConfig;
             return this;
         }
 
+        /**
+         * @param healthCheckConfig A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckConfig(ServiceHealthCheckConfigArgs healthCheckConfig) {
             return healthCheckConfig(Output.of(healthCheckConfig));
         }
 
+        /**
+         * @param healthCheckCustomConfig A complex type that contains settings for ECS managed health checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckCustomConfig(@Nullable Output<ServiceHealthCheckCustomConfigArgs> healthCheckCustomConfig) {
             $.healthCheckCustomConfig = healthCheckCustomConfig;
             return this;
         }
 
+        /**
+         * @param healthCheckCustomConfig A complex type that contains settings for ECS managed health checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckCustomConfig(ServiceHealthCheckCustomConfigArgs healthCheckCustomConfig) {
             return healthCheckCustomConfig(Output.of(healthCheckCustomConfig));
         }
 
+        /**
+         * @param name The name of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namespaceId The ID of the namespace to use for DNS configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceId(@Nullable Output<String> namespaceId) {
             $.namespaceId = namespaceId;
             return this;
         }
 
+        /**
+         * @param namespaceId The ID of the namespace to use for DNS configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceId(String namespaceId) {
             return namespaceId(Output.of(namespaceId));
         }
 
+        /**
+         * @param tags A map of tags to assign to the service. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the service. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

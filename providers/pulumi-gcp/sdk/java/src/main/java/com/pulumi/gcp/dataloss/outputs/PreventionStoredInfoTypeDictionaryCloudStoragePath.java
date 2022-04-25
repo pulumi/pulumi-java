@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PreventionStoredInfoTypeDictionaryCloudStoragePath {
     /**
-     * A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
+     * @return A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
      * 
      */
     private final String path;
@@ -21,9 +21,9 @@ public final class PreventionStoredInfoTypeDictionaryCloudStoragePath {
     }
 
     /**
-     * A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
+     * @return A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
      * 
-    */
+     */
     public String path() {
         return this.path;
     }

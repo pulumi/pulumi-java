@@ -25,6 +25,10 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiMappingSelectionExpression")
     private @Nullable Output<String> apiMappingSelectionExpression;
 
+    /**
+     * @return The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
+     * 
+     */
     public Optional<Output<String>> apiMappingSelectionExpression() {
         return Optional.ofNullable(this.apiMappingSelectionExpression);
     }
@@ -36,6 +40,10 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the domain name.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -47,6 +55,10 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return The domain name. Must be between 1 and 512 characters in length.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -58,6 +70,10 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainNameConfiguration")
     private @Nullable Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration;
 
+    /**
+     * @return The domain name configuration.
+     * 
+     */
     public Optional<Output<DomainNameDomainNameConfigurationGetArgs>> domainNameConfiguration() {
         return Optional.ofNullable(this.domainNameConfiguration);
     }
@@ -69,6 +85,10 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mutualTlsAuthentication")
     private @Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
 
+    /**
+     * @return The mutual TLS authentication configuration for the domain name.
+     * 
+     */
     public Optional<Output<DomainNameMutualTlsAuthenticationGetArgs>> mutualTlsAuthentication() {
         return Optional.ofNullable(this.mutualTlsAuthentication);
     }
@@ -80,6 +100,10 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -91,6 +115,10 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -125,65 +153,149 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
             $ = new DomainNameState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiMappingSelectionExpression The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiMappingSelectionExpression(@Nullable Output<String> apiMappingSelectionExpression) {
             $.apiMappingSelectionExpression = apiMappingSelectionExpression;
             return this;
         }
 
+        /**
+         * @param apiMappingSelectionExpression The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiMappingSelectionExpression(String apiMappingSelectionExpression) {
             return apiMappingSelectionExpression(Output.of(apiMappingSelectionExpression));
         }
 
+        /**
+         * @param arn The ARN of the domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param domainName The domain name. Must be between 1 and 512 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The domain name. Must be between 1 and 512 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param domainNameConfiguration The domain name configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNameConfiguration(@Nullable Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration) {
             $.domainNameConfiguration = domainNameConfiguration;
             return this;
         }
 
+        /**
+         * @param domainNameConfiguration The domain name configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNameConfiguration(DomainNameDomainNameConfigurationGetArgs domainNameConfiguration) {
             return domainNameConfiguration(Output.of(domainNameConfiguration));
         }
 
+        /**
+         * @param mutualTlsAuthentication The mutual TLS authentication configuration for the domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication) {
             $.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
 
+        /**
+         * @param mutualTlsAuthentication The mutual TLS authentication configuration for the domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutualTlsAuthentication(DomainNameMutualTlsAuthenticationGetArgs mutualTlsAuthentication) {
             return mutualTlsAuthentication(Output.of(mutualTlsAuthentication));
         }
 
+        /**
+         * @param tags A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

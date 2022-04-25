@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class LatencyPercentileResponse {
     /**
-     * percent-th percentile of latency observed, in microseconds. Fraction of percent/100 of samples have latency lower or equal to the value of this field.
+     * @return percent-th percentile of latency observed, in microseconds. Fraction of percent/100 of samples have latency lower or equal to the value of this field.
      * 
      */
     private final String latencyMicros;
     /**
-     * Percentage of samples this data point applies to.
+     * @return Percentage of samples this data point applies to.
      * 
      */
     private final Integer percent;
@@ -30,16 +30,16 @@ public final class LatencyPercentileResponse {
     }
 
     /**
-     * percent-th percentile of latency observed, in microseconds. Fraction of percent/100 of samples have latency lower or equal to the value of this field.
+     * @return percent-th percentile of latency observed, in microseconds. Fraction of percent/100 of samples have latency lower or equal to the value of this field.
      * 
-    */
+     */
     public String latencyMicros() {
         return this.latencyMicros;
     }
     /**
-     * Percentage of samples this data point applies to.
+     * @return Percentage of samples this data point applies to.
      * 
-    */
+     */
     public Integer percent() {
         return this.percent;
     }

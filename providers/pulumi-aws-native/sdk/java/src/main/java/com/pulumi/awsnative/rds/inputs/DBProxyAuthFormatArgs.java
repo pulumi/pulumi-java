@@ -24,6 +24,10 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
     @Import(name="authScheme")
     private @Nullable Output<DBProxyAuthFormatAuthScheme> authScheme;
 
+    /**
+     * @return The type of authentication that the proxy uses for connections from the proxy to the underlying database.
+     * 
+     */
     public Optional<Output<DBProxyAuthFormatAuthScheme>> authScheme() {
         return Optional.ofNullable(this.authScheme);
     }
@@ -35,6 +39,10 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A user-specified description about the authentication used by a proxy to log in as a specific database user.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
     @Import(name="iAMAuth")
     private @Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth;
 
+    /**
+     * @return Whether to require or disallow AWS Identity and Access Management (IAM) authentication for connections to the proxy.
+     * 
+     */
     public Optional<Output<DBProxyAuthFormatIAMAuth>> iAMAuth() {
         return Optional.ofNullable(this.iAMAuth);
     }
@@ -57,6 +69,10 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
     @Import(name="secretArn")
     private @Nullable Output<String> secretArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.
+     * 
+     */
     public Optional<Output<String>> secretArn() {
         return Optional.ofNullable(this.secretArn);
     }
@@ -68,6 +84,10 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
     @Import(name="userName")
     private @Nullable Output<String> userName;
 
+    /**
+     * @return The name of the database user to which the proxy connects.
+     * 
+     */
     public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -100,47 +120,107 @@ public final class DBProxyAuthFormatArgs extends com.pulumi.resources.ResourceAr
             $ = new DBProxyAuthFormatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authScheme The type of authentication that the proxy uses for connections from the proxy to the underlying database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authScheme(@Nullable Output<DBProxyAuthFormatAuthScheme> authScheme) {
             $.authScheme = authScheme;
             return this;
         }
 
+        /**
+         * @param authScheme The type of authentication that the proxy uses for connections from the proxy to the underlying database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authScheme(DBProxyAuthFormatAuthScheme authScheme) {
             return authScheme(Output.of(authScheme));
         }
 
+        /**
+         * @param description A user-specified description about the authentication used by a proxy to log in as a specific database user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A user-specified description about the authentication used by a proxy to log in as a specific database user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param iAMAuth Whether to require or disallow AWS Identity and Access Management (IAM) authentication for connections to the proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iAMAuth(@Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth) {
             $.iAMAuth = iAMAuth;
             return this;
         }
 
+        /**
+         * @param iAMAuth Whether to require or disallow AWS Identity and Access Management (IAM) authentication for connections to the proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iAMAuth(DBProxyAuthFormatIAMAuth iAMAuth) {
             return iAMAuth(Output.of(iAMAuth));
         }
 
+        /**
+         * @param secretArn The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretArn(@Nullable Output<String> secretArn) {
             $.secretArn = secretArn;
             return this;
         }
 
+        /**
+         * @param secretArn The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretArn(String secretArn) {
             return secretArn(Output.of(secretArn));
         }
 
+        /**
+         * @param userName The name of the database user to which the proxy connects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName The name of the database user to which the proxy connects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

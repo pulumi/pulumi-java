@@ -29,6 +29,10 @@ public final class SoftwareRecipeStepRunScriptArgs extends com.pulumi.resources.
     @Import(name="allowedExitCodes")
     private @Nullable Output<List<Integer>> allowedExitCodes;
 
+    /**
+     * @return Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * 
+     */
     public Optional<Output<List<Integer>>> allowedExitCodes() {
         return Optional.ofNullable(this.allowedExitCodes);
     }
@@ -40,6 +44,10 @@ public final class SoftwareRecipeStepRunScriptArgs extends com.pulumi.resources.
     @Import(name="interpreter")
     private @Nullable Output<SoftwareRecipeStepRunScriptInterpreter> interpreter;
 
+    /**
+     * @return The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](&lt;https://en.wikipedia.org/wiki/Shebang_\(Unix\)&gt;).
+     * 
+     */
     public Optional<Output<SoftwareRecipeStepRunScriptInterpreter>> interpreter() {
         return Optional.ofNullable(this.interpreter);
     }
@@ -51,6 +59,10 @@ public final class SoftwareRecipeStepRunScriptArgs extends com.pulumi.resources.
     @Import(name="script", required=true)
     private Output<String> script;
 
+    /**
+     * @return The shell script to be executed.
+     * 
+     */
     public Output<String> script() {
         return this.script;
     }
@@ -81,33 +93,75 @@ public final class SoftwareRecipeStepRunScriptArgs extends com.pulumi.resources.
             $ = new SoftwareRecipeStepRunScriptArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedExitCodes Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(@Nullable Output<List<Integer>> allowedExitCodes) {
             $.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
+        /**
+         * @param allowedExitCodes Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
             return allowedExitCodes(Output.of(allowedExitCodes));
         }
 
+        /**
+         * @param allowedExitCodes Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
             return allowedExitCodes(List.of(allowedExitCodes));
         }
 
+        /**
+         * @param interpreter The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](&lt;https://en.wikipedia.org/wiki/Shebang_\(Unix\)&gt;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder interpreter(@Nullable Output<SoftwareRecipeStepRunScriptInterpreter> interpreter) {
             $.interpreter = interpreter;
             return this;
         }
 
+        /**
+         * @param interpreter The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](&lt;https://en.wikipedia.org/wiki/Shebang_\(Unix\)&gt;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder interpreter(SoftwareRecipeStepRunScriptInterpreter interpreter) {
             return interpreter(Output.of(interpreter));
         }
 
+        /**
+         * @param script The shell script to be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(Output<String> script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param script The shell script to be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             return script(Output.of(script));
         }

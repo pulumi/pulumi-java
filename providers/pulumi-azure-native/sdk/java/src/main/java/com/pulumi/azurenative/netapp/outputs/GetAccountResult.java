@@ -17,47 +17,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAccountResult {
     /**
-     * Active Directories
+     * @return Active Directories
      * 
      */
     private final @Nullable List<ActiveDirectoryResponse> activeDirectories;
     /**
-     * Encryption settings
+     * @return Encryption settings
      * 
      */
     private final @Nullable AccountEncryptionResponse encryption;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * Azure lifecycle management
+     * @return Azure lifecycle management
      * 
      */
     private final String provisioningState;
     /**
-     * The system meta data relating to this resource.
+     * @return The system meta data relating to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -85,65 +85,65 @@ public final class GetAccountResult {
     }
 
     /**
-     * Active Directories
+     * @return Active Directories
      * 
-    */
+     */
     public List<ActiveDirectoryResponse> activeDirectories() {
         return this.activeDirectories == null ? List.of() : this.activeDirectories;
     }
     /**
-     * Encryption settings
+     * @return Encryption settings
      * 
-    */
+     */
     public Optional<AccountEncryptionResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Azure lifecycle management
+     * @return Azure lifecycle management
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The system meta data relating to this resource.
+     * @return The system meta data relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -25,6 +25,10 @@ public final class CmkKeyVaultPropertiesResponse extends com.pulumi.resources.In
     @Import(name="keyUri")
     private @Nullable String keyUri;
 
+    /**
+     * @return The key uri of the Customer Managed Key
+     * 
+     */
     public Optional<String> keyUri() {
         return Optional.ofNullable(this.keyUri);
     }
@@ -53,6 +57,12 @@ public final class CmkKeyVaultPropertiesResponse extends com.pulumi.resources.In
             $ = new CmkKeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyUri The key uri of the Customer Managed Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUri(@Nullable String keyUri) {
             $.keyUri = keyUri;
             return this;

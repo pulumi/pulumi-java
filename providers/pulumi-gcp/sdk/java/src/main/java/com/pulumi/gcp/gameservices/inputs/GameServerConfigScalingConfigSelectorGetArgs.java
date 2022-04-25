@@ -23,6 +23,10 @@ public final class GameServerConfigScalingConfigSelectorGetArgs extends com.pulu
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Set of labels to group by.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -51,11 +55,23 @@ public final class GameServerConfigScalingConfigSelectorGetArgs extends com.pulu
             $ = new GameServerConfigScalingConfigSelectorGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels Set of labels to group by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Set of labels to group by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }

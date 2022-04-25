@@ -16,27 +16,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VolumeResponse {
     /**
-     * The Azure File volume.
+     * @return The Azure File volume.
      * 
      */
     private final @Nullable AzureFileVolumeResponse azureFile;
     /**
-     * The empty directory volume.
+     * @return The empty directory volume.
      * 
      */
     private final @Nullable Object emptyDir;
     /**
-     * The git repo volume.
+     * @return The git repo volume.
      * 
      */
     private final @Nullable GitRepoVolumeResponse gitRepo;
     /**
-     * The name of the volume.
+     * @return The name of the volume.
      * 
      */
     private final String name;
     /**
-     * The secret volume.
+     * @return The secret volume.
      * 
      */
     private final @Nullable Map<String,String> secret;
@@ -56,37 +56,37 @@ public final class VolumeResponse {
     }
 
     /**
-     * The Azure File volume.
+     * @return The Azure File volume.
      * 
-    */
+     */
     public Optional<AzureFileVolumeResponse> azureFile() {
         return Optional.ofNullable(this.azureFile);
     }
     /**
-     * The empty directory volume.
+     * @return The empty directory volume.
      * 
-    */
+     */
     public Optional<Object> emptyDir() {
         return Optional.ofNullable(this.emptyDir);
     }
     /**
-     * The git repo volume.
+     * @return The git repo volume.
      * 
-    */
+     */
     public Optional<GitRepoVolumeResponse> gitRepo() {
         return Optional.ofNullable(this.gitRepo);
     }
     /**
-     * The name of the volume.
+     * @return The name of the volume.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The secret volume.
+     * @return The secret volume.
      * 
-    */
+     */
     public Map<String,String> secret() {
         return this.secret == null ? Map.of() : this.secret;
     }

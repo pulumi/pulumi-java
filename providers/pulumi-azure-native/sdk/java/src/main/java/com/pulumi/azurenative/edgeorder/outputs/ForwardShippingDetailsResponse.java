@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class ForwardShippingDetailsResponse {
     /**
-     * Carrier Name for display purpose. Not to be used for any processing.
+     * @return Carrier Name for display purpose. Not to be used for any processing.
      * 
      */
     private final String carrierDisplayName;
     /**
-     * Name of the carrier.
+     * @return Name of the carrier.
      * 
      */
     private final String carrierName;
     /**
-     * TrackingId of the package
+     * @return TrackingId of the package
      * 
      */
     private final String trackingId;
     /**
-     * TrackingUrl of the package.
+     * @return TrackingUrl of the package.
      * 
      */
     private final String trackingUrl;
@@ -43,30 +43,30 @@ public final class ForwardShippingDetailsResponse {
     }
 
     /**
-     * Carrier Name for display purpose. Not to be used for any processing.
+     * @return Carrier Name for display purpose. Not to be used for any processing.
      * 
-    */
+     */
     public String carrierDisplayName() {
         return this.carrierDisplayName;
     }
     /**
-     * Name of the carrier.
+     * @return Name of the carrier.
      * 
-    */
+     */
     public String carrierName() {
         return this.carrierName;
     }
     /**
-     * TrackingId of the package
+     * @return TrackingId of the package
      * 
-    */
+     */
     public String trackingId() {
         return this.trackingId;
     }
     /**
-     * TrackingUrl of the package.
+     * @return TrackingUrl of the package.
      * 
-    */
+     */
     public String trackingUrl() {
         return this.trackingUrl;
     }

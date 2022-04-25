@@ -25,6 +25,10 @@ public final class ActorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The subject or username associated with the request context that generated the event.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class ActorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ActorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The subject or username associated with the request context that generated the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

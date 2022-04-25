@@ -40,6 +40,10 @@ public final class LocationNFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverHostname", required=true)
     private Output<String> serverHostname;
 
+    /**
+     * @return The name of the NFS server. This value is the IP address or DNS name of the NFS server.
+     * 
+     */
     public Output<String> serverHostname() {
         return this.serverHostname;
     }
@@ -51,6 +55,10 @@ public final class LocationNFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory", required=true)
     private Output<String> subdirectory;
 
+    /**
+     * @return The subdirectory in the NFS file system that is used to read data from the NFS source location or write data to the NFS destination.
+     * 
+     */
     public Output<String> subdirectory() {
         return this.subdirectory;
     }
@@ -62,6 +70,10 @@ public final class LocationNFSArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<LocationNFSTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<LocationNFSTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -112,33 +124,75 @@ public final class LocationNFSArgs extends com.pulumi.resources.ResourceArgs {
             return onPremConfig(Output.of(onPremConfig));
         }
 
+        /**
+         * @param serverHostname The name of the NFS server. This value is the IP address or DNS name of the NFS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverHostname(Output<String> serverHostname) {
             $.serverHostname = serverHostname;
             return this;
         }
 
+        /**
+         * @param serverHostname The name of the NFS server. This value is the IP address or DNS name of the NFS server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverHostname(String serverHostname) {
             return serverHostname(Output.of(serverHostname));
         }
 
+        /**
+         * @param subdirectory The subdirectory in the NFS file system that is used to read data from the NFS source location or write data to the NFS destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(Output<String> subdirectory) {
             $.subdirectory = subdirectory;
             return this;
         }
 
+        /**
+         * @param subdirectory The subdirectory in the NFS file system that is used to read data from the NFS source location or write data to the NFS destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(String subdirectory) {
             return subdirectory(Output.of(subdirectory));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<LocationNFSTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<LocationNFSTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(LocationNFSTagArgs... tags) {
             return tags(List.of(tags));
         }

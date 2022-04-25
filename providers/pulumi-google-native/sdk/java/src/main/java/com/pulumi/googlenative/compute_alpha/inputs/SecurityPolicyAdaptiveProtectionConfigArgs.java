@@ -26,6 +26,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigArgs extends com.pulumi
     @Import(name="layer7DdosDefenseConfig")
     private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> layer7DdosDefenseConfig;
 
+    /**
+     * @return If set to true, enables Cloud Armor Machine Learning.
+     * 
+     */
     public Optional<Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs>> layer7DdosDefenseConfig() {
         return Optional.ofNullable(this.layer7DdosDefenseConfig);
     }
@@ -54,11 +58,23 @@ public final class SecurityPolicyAdaptiveProtectionConfigArgs extends com.pulumi
             $ = new SecurityPolicyAdaptiveProtectionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param layer7DdosDefenseConfig If set to true, enables Cloud Armor Machine Learning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer7DdosDefenseConfig(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> layer7DdosDefenseConfig) {
             $.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
             return this;
         }
 
+        /**
+         * @param layer7DdosDefenseConfig If set to true, enables Cloud Armor Machine Learning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer7DdosDefenseConfig(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs layer7DdosDefenseConfig) {
             return layer7DdosDefenseConfig(Output.of(layer7DdosDefenseConfig));
         }

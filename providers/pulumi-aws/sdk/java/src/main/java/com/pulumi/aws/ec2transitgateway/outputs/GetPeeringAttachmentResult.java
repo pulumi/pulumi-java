@@ -16,23 +16,23 @@ public final class GetPeeringAttachmentResult {
     private final @Nullable List<GetPeeringAttachmentFilter> filters;
     private final String id;
     /**
-     * Identifier of the peer AWS account
+     * @return Identifier of the peer AWS account
      * 
      */
     private final String peerAccountId;
     /**
-     * Identifier of the peer AWS region
+     * @return Identifier of the peer AWS region
      * 
      */
     private final String peerRegion;
     /**
-     * Identifier of the peer EC2 Transit Gateway
+     * @return Identifier of the peer EC2 Transit Gateway
      * 
      */
     private final String peerTransitGatewayId;
     private final Map<String,String> tags;
     /**
-     * Identifier of the local EC2 Transit Gateway
+     * @return Identifier of the local EC2 Transit Gateway
      * 
      */
     private final String transitGatewayId;
@@ -62,23 +62,23 @@ public final class GetPeeringAttachmentResult {
         return this.id;
     }
     /**
-     * Identifier of the peer AWS account
+     * @return Identifier of the peer AWS account
      * 
-    */
+     */
     public String peerAccountId() {
         return this.peerAccountId;
     }
     /**
-     * Identifier of the peer AWS region
+     * @return Identifier of the peer AWS region
      * 
-    */
+     */
     public String peerRegion() {
         return this.peerRegion;
     }
     /**
-     * Identifier of the peer EC2 Transit Gateway
+     * @return Identifier of the peer EC2 Transit Gateway
      * 
-    */
+     */
     public String peerTransitGatewayId() {
         return this.peerTransitGatewayId;
     }
@@ -86,9 +86,9 @@ public final class GetPeeringAttachmentResult {
         return this.tags;
     }
     /**
-     * Identifier of the local EC2 Transit Gateway
+     * @return Identifier of the local EC2 Transit Gateway
      * 
-    */
+     */
     public String transitGatewayId() {
         return this.transitGatewayId;
     }

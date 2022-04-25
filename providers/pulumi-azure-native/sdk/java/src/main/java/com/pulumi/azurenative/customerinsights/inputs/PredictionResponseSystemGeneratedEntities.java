@@ -27,6 +27,10 @@ public final class PredictionResponseSystemGeneratedEntities extends com.pulumi.
     @Import(name="generatedInteractionTypes")
     private @Nullable List<String> generatedInteractionTypes;
 
+    /**
+     * @return Generated interaction types.
+     * 
+     */
     public Optional<List<String>> generatedInteractionTypes() {
         return Optional.ofNullable(this.generatedInteractionTypes);
     }
@@ -38,6 +42,10 @@ public final class PredictionResponseSystemGeneratedEntities extends com.pulumi.
     @Import(name="generatedKpis")
     private @Nullable Map<String,String> generatedKpis;
 
+    /**
+     * @return Generated KPIs.
+     * 
+     */
     public Optional<Map<String,String>> generatedKpis() {
         return Optional.ofNullable(this.generatedKpis);
     }
@@ -49,6 +57,10 @@ public final class PredictionResponseSystemGeneratedEntities extends com.pulumi.
     @Import(name="generatedLinks")
     private @Nullable List<String> generatedLinks;
 
+    /**
+     * @return Generated links.
+     * 
+     */
     public Optional<List<String>> generatedLinks() {
         return Optional.ofNullable(this.generatedLinks);
     }
@@ -79,25 +91,55 @@ public final class PredictionResponseSystemGeneratedEntities extends com.pulumi.
             $ = new PredictionResponseSystemGeneratedEntities(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param generatedInteractionTypes Generated interaction types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generatedInteractionTypes(@Nullable List<String> generatedInteractionTypes) {
             $.generatedInteractionTypes = generatedInteractionTypes;
             return this;
         }
 
+        /**
+         * @param generatedInteractionTypes Generated interaction types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generatedInteractionTypes(String... generatedInteractionTypes) {
             return generatedInteractionTypes(List.of(generatedInteractionTypes));
         }
 
+        /**
+         * @param generatedKpis Generated KPIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generatedKpis(@Nullable Map<String,String> generatedKpis) {
             $.generatedKpis = generatedKpis;
             return this;
         }
 
+        /**
+         * @param generatedLinks Generated links.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generatedLinks(@Nullable List<String> generatedLinks) {
             $.generatedLinks = generatedLinks;
             return this;
         }
 
+        /**
+         * @param generatedLinks Generated links.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generatedLinks(String... generatedLinks) {
             return generatedLinks(List.of(generatedLinks));
         }

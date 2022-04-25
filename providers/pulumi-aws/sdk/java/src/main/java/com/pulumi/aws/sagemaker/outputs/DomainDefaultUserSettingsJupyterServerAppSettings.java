@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DomainDefaultUserSettingsJupyterServerAppSettings {
     /**
-     * The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+     * @return The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
      * 
      */
     private final @Nullable DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpec defaultResourceSpec;
     /**
-     * The Amazon Resource Name (ARN) of the Lifecycle Configurations.
+     * @return The Amazon Resource Name (ARN) of the Lifecycle Configurations.
      * 
      */
     private final @Nullable List<String> lifecycleConfigArns;
@@ -33,16 +33,16 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettings {
     }
 
     /**
-     * The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+     * @return The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
      * 
-    */
+     */
     public Optional<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpec> defaultResourceSpec() {
         return Optional.ofNullable(this.defaultResourceSpec);
     }
     /**
-     * The Amazon Resource Name (ARN) of the Lifecycle Configurations.
+     * @return The Amazon Resource Name (ARN) of the Lifecycle Configurations.
      * 
-    */
+     */
     public List<String> lifecycleConfigArns() {
         return this.lifecycleConfigArns == null ? List.of() : this.lifecycleConfigArns;
     }

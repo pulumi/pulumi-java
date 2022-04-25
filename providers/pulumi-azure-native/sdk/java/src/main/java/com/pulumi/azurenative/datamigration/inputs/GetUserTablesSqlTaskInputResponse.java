@@ -25,6 +25,10 @@ public final class GetUserTablesSqlTaskInputResponse extends com.pulumi.resource
     @Import(name="connectionInfo", required=true)
     private SqlConnectionInfoResponse connectionInfo;
 
+    /**
+     * @return Connection information for SQL Server
+     * 
+     */
     public SqlConnectionInfoResponse connectionInfo() {
         return this.connectionInfo;
     }
@@ -36,6 +40,10 @@ public final class GetUserTablesSqlTaskInputResponse extends com.pulumi.resource
     @Import(name="selectedDatabases", required=true)
     private List<String> selectedDatabases;
 
+    /**
+     * @return List of database names to collect tables for
+     * 
+     */
     public List<String> selectedDatabases() {
         return this.selectedDatabases;
     }
@@ -65,16 +73,34 @@ public final class GetUserTablesSqlTaskInputResponse extends com.pulumi.resource
             $ = new GetUserTablesSqlTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionInfo Connection information for SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionInfo(SqlConnectionInfoResponse connectionInfo) {
             $.connectionInfo = connectionInfo;
             return this;
         }
 
+        /**
+         * @param selectedDatabases List of database names to collect tables for
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(List<String> selectedDatabases) {
             $.selectedDatabases = selectedDatabases;
             return this;
         }
 
+        /**
+         * @param selectedDatabases List of database names to collect tables for
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(String... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }

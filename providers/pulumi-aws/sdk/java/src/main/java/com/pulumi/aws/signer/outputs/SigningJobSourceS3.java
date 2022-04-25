@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class SigningJobSourceS3 {
     /**
-     * Name of the S3 bucket.
+     * @return Name of the S3 bucket.
      * 
      */
     private final String bucket;
     /**
-     * Key name of the bucket object that contains your unsigned code.
+     * @return Key name of the bucket object that contains your unsigned code.
      * 
      */
     private final String key;
     /**
-     * Version of your source image in your version enabled S3 bucket.
+     * @return Version of your source image in your version enabled S3 bucket.
      * 
      */
     private final String version;
@@ -36,23 +36,23 @@ public final class SigningJobSourceS3 {
     }
 
     /**
-     * Name of the S3 bucket.
+     * @return Name of the S3 bucket.
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * Key name of the bucket object that contains your unsigned code.
+     * @return Key name of the bucket object that contains your unsigned code.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Version of your source image in your version enabled S3 bucket.
+     * @return Version of your source image in your version enabled S3 bucket.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

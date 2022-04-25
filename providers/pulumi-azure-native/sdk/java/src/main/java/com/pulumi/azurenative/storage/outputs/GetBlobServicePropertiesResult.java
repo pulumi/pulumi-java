@@ -19,67 +19,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetBlobServicePropertiesResult {
     /**
-     * Deprecated in favor of isVersioningEnabled property.
+     * @return Deprecated in favor of isVersioningEnabled property.
      * 
      */
     private final @Nullable Boolean automaticSnapshotPolicyEnabled;
     /**
-     * The blob service properties for change feed events.
+     * @return The blob service properties for change feed events.
      * 
      */
     private final @Nullable ChangeFeedResponse changeFeed;
     /**
-     * The blob service properties for container soft delete.
+     * @return The blob service properties for container soft delete.
      * 
      */
     private final @Nullable DeleteRetentionPolicyResponse containerDeleteRetentionPolicy;
     /**
-     * Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
+     * @return Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
      * 
      */
     private final @Nullable CorsRulesResponse cors;
     /**
-     * DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
+     * @return DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
      * 
      */
     private final @Nullable String defaultServiceVersion;
     /**
-     * The blob service properties for blob soft delete.
+     * @return The blob service properties for blob soft delete.
      * 
      */
     private final @Nullable DeleteRetentionPolicyResponse deleteRetentionPolicy;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Versioning is enabled if set to true.
+     * @return Versioning is enabled if set to true.
      * 
      */
     private final @Nullable Boolean isVersioningEnabled;
     /**
-     * The blob service property to configure last access time based tracking policy.
+     * @return The blob service property to configure last access time based tracking policy.
      * 
      */
     private final @Nullable LastAccessTimeTrackingPolicyResponse lastAccessTimeTrackingPolicy;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The blob service properties for blob restore policy.
+     * @return The blob service properties for blob restore policy.
      * 
      */
     private final @Nullable RestorePolicyPropertiesResponse restorePolicy;
     /**
-     * Sku name and tier.
+     * @return Sku name and tier.
      * 
      */
     private final SkuResponse sku;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -115,93 +115,93 @@ public final class GetBlobServicePropertiesResult {
     }
 
     /**
-     * Deprecated in favor of isVersioningEnabled property.
+     * @return Deprecated in favor of isVersioningEnabled property.
      * 
-    */
+     */
     public Optional<Boolean> automaticSnapshotPolicyEnabled() {
         return Optional.ofNullable(this.automaticSnapshotPolicyEnabled);
     }
     /**
-     * The blob service properties for change feed events.
+     * @return The blob service properties for change feed events.
      * 
-    */
+     */
     public Optional<ChangeFeedResponse> changeFeed() {
         return Optional.ofNullable(this.changeFeed);
     }
     /**
-     * The blob service properties for container soft delete.
+     * @return The blob service properties for container soft delete.
      * 
-    */
+     */
     public Optional<DeleteRetentionPolicyResponse> containerDeleteRetentionPolicy() {
         return Optional.ofNullable(this.containerDeleteRetentionPolicy);
     }
     /**
-     * Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
+     * @return Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
      * 
-    */
+     */
     public Optional<CorsRulesResponse> cors() {
         return Optional.ofNullable(this.cors);
     }
     /**
-     * DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
+     * @return DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
      * 
-    */
+     */
     public Optional<String> defaultServiceVersion() {
         return Optional.ofNullable(this.defaultServiceVersion);
     }
     /**
-     * The blob service properties for blob soft delete.
+     * @return The blob service properties for blob soft delete.
      * 
-    */
+     */
     public Optional<DeleteRetentionPolicyResponse> deleteRetentionPolicy() {
         return Optional.ofNullable(this.deleteRetentionPolicy);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Versioning is enabled if set to true.
+     * @return Versioning is enabled if set to true.
      * 
-    */
+     */
     public Optional<Boolean> isVersioningEnabled() {
         return Optional.ofNullable(this.isVersioningEnabled);
     }
     /**
-     * The blob service property to configure last access time based tracking policy.
+     * @return The blob service property to configure last access time based tracking policy.
      * 
-    */
+     */
     public Optional<LastAccessTimeTrackingPolicyResponse> lastAccessTimeTrackingPolicy() {
         return Optional.ofNullable(this.lastAccessTimeTrackingPolicy);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The blob service properties for blob restore policy.
+     * @return The blob service properties for blob restore policy.
      * 
-    */
+     */
     public Optional<RestorePolicyPropertiesResponse> restorePolicy() {
         return Optional.ofNullable(this.restorePolicy);
     }
     /**
-     * Sku name and tier.
+     * @return Sku name and tier.
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

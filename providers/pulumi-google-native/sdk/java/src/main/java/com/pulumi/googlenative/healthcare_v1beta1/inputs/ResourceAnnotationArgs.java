@@ -26,6 +26,10 @@ public final class ResourceAnnotationArgs extends com.pulumi.resources.ResourceA
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return A description of the annotation record.
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -54,11 +58,23 @@ public final class ResourceAnnotationArgs extends com.pulumi.resources.ResourceA
             $ = new ResourceAnnotationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param label A description of the annotation record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label A description of the annotation record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }

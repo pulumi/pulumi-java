@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetGuestUsageResult {
     /**
-     * An identifier that represents the Guest Usages resource.
+     * @return An identifier that represents the Guest Usages resource.
      * 
      */
     private final String id;
     /**
-     * Location of the Guest Usages resource.
+     * @return Location of the Guest Usages resource.
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the Guest Usages resource.
+     * @return The name of the Guest Usages resource.
      * 
      */
     private final String name;
     /**
-     * Key-value pairs of additional resource provisioning properties.
+     * @return Key-value pairs of additional resource provisioning properties.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * An identifier for the tenant for which the resource is being created
+     * @return An identifier for the tenant for which the resource is being created
      * 
      */
     private final @Nullable String tenantId;
     /**
-     * The type of the Guest Usages resource.
+     * @return The type of the Guest Usages resource.
      * 
      */
     private final String type;
@@ -60,44 +60,44 @@ public final class GetGuestUsageResult {
     }
 
     /**
-     * An identifier that represents the Guest Usages resource.
+     * @return An identifier that represents the Guest Usages resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Location of the Guest Usages resource.
+     * @return Location of the Guest Usages resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the Guest Usages resource.
+     * @return The name of the Guest Usages resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Key-value pairs of additional resource provisioning properties.
+     * @return Key-value pairs of additional resource provisioning properties.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * An identifier for the tenant for which the resource is being created
+     * @return An identifier for the tenant for which the resource is being created
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * The type of the Guest Usages resource.
+     * @return The type of the Guest Usages resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

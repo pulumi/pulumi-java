@@ -26,6 +26,10 @@ public final class WorkflowParameterResponse extends com.pulumi.resources.Invoke
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class WorkflowParameterResponse extends com.pulumi.resources.Invoke
     @Import(name="metadata")
     private @Nullable Object metadata;
 
+    /**
+     * @return The metadata.
+     * 
+     */
     public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -48,6 +56,10 @@ public final class WorkflowParameterResponse extends com.pulumi.resources.Invoke
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -59,6 +71,10 @@ public final class WorkflowParameterResponse extends com.pulumi.resources.Invoke
     @Import(name="value")
     private @Nullable Object value;
 
+    /**
+     * @return The value.
+     * 
+     */
     public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }
@@ -90,21 +106,45 @@ public final class WorkflowParameterResponse extends com.pulumi.resources.Invoke
             $ = new WorkflowParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param metadata The metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Object metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param type The type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value The value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Object value) {
             $.value = value;
             return this;

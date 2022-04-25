@@ -26,6 +26,10 @@ public final class SchemaVersionSchemaArgs extends com.pulumi.resources.Resource
     @Import(name="registryName")
     private @Nullable Output<String> registryName;
 
+    /**
+     * @return Name of the registry to identify where the Schema is located.
+     * 
+     */
     public Optional<Output<String>> registryName() {
         return Optional.ofNullable(this.registryName);
     }
@@ -37,6 +41,10 @@ public final class SchemaVersionSchemaArgs extends com.pulumi.resources.Resource
     @Import(name="schemaArn")
     private @Nullable Output<String> schemaArn;
 
+    /**
+     * @return Amazon Resource Name for the Schema. This attribute can be used to uniquely represent the Schema.
+     * 
+     */
     public Optional<Output<String>> schemaArn() {
         return Optional.ofNullable(this.schemaArn);
     }
@@ -48,6 +56,10 @@ public final class SchemaVersionSchemaArgs extends com.pulumi.resources.Resource
     @Import(name="schemaName")
     private @Nullable Output<String> schemaName;
 
+    /**
+     * @return Name of the schema. This parameter requires RegistryName to be provided.
+     * 
+     */
     public Optional<Output<String>> schemaName() {
         return Optional.ofNullable(this.schemaName);
     }
@@ -78,29 +90,65 @@ public final class SchemaVersionSchemaArgs extends com.pulumi.resources.Resource
             $ = new SchemaVersionSchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param registryName Name of the registry to identify where the Schema is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(@Nullable Output<String> registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param registryName Name of the registry to identify where the Schema is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             return registryName(Output.of(registryName));
         }
 
+        /**
+         * @param schemaArn Amazon Resource Name for the Schema. This attribute can be used to uniquely represent the Schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaArn(@Nullable Output<String> schemaArn) {
             $.schemaArn = schemaArn;
             return this;
         }
 
+        /**
+         * @param schemaArn Amazon Resource Name for the Schema. This attribute can be used to uniquely represent the Schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaArn(String schemaArn) {
             return schemaArn(Output.of(schemaArn));
         }
 
+        /**
+         * @param schemaName Name of the schema. This parameter requires RegistryName to be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(@Nullable Output<String> schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param schemaName Name of the schema. This parameter requires RegistryName to be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(String schemaName) {
             return schemaName(Output.of(schemaName));
         }

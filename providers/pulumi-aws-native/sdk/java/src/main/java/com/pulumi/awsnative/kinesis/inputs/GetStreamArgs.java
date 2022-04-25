@@ -19,6 +19,10 @@ public final class GetStreamArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the Kinesis stream.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetStreamArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetStreamArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the Kinesis stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

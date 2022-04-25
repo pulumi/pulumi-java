@@ -19,6 +19,10 @@ public final class CustomerEncryptionKeyResponse extends com.pulumi.resources.In
     @Import(name="kmsKeyName", required=true)
     private String kmsKeyName;
 
+    /**
+     * @return The name of the encryption key that is stored in Google Cloud KMS. For example: &#34;kmsKeyName&#34;: &#34;projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
+     * 
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -30,6 +34,10 @@ public final class CustomerEncryptionKeyResponse extends com.pulumi.resources.In
     @Import(name="kmsKeyServiceAccount", required=true)
     private String kmsKeyServiceAccount;
 
+    /**
+     * @return The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used. For example: &#34;kmsKeyServiceAccount&#34;: &#34;name@project_id.iam.gserviceaccount.com/
+     * 
+     */
     public String kmsKeyServiceAccount() {
         return this.kmsKeyServiceAccount;
     }
@@ -41,6 +49,10 @@ public final class CustomerEncryptionKeyResponse extends com.pulumi.resources.In
     @Import(name="rawKey", required=true)
     private String rawKey;
 
+    /**
+     * @return Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: &#34;rawKey&#34;: &#34;SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0=&#34;
+     * 
+     */
     public String rawKey() {
         return this.rawKey;
     }
@@ -52,6 +64,10 @@ public final class CustomerEncryptionKeyResponse extends com.pulumi.resources.In
     @Import(name="rsaEncryptedKey", required=true)
     private String rsaEncryptedKey;
 
+    /**
+     * @return Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: &#34;rsaEncryptedKey&#34;: &#34;ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==&#34; The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem
+     * 
+     */
     public String rsaEncryptedKey() {
         return this.rsaEncryptedKey;
     }
@@ -63,6 +79,10 @@ public final class CustomerEncryptionKeyResponse extends com.pulumi.resources.In
     @Import(name="sha256", required=true)
     private String sha256;
 
+    /**
+     * @return [Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.
+     * 
+     */
     public String sha256() {
         return this.sha256;
     }
@@ -95,26 +115,56 @@ public final class CustomerEncryptionKeyResponse extends com.pulumi.resources.In
             $ = new CustomerEncryptionKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName The name of the encryption key that is stored in Google Cloud KMS. For example: &#34;kmsKeyName&#34;: &#34;projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyServiceAccount The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used. For example: &#34;kmsKeyServiceAccount&#34;: &#34;name@project_id.iam.gserviceaccount.com/
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyServiceAccount(String kmsKeyServiceAccount) {
             $.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
 
+        /**
+         * @param rawKey Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: &#34;rawKey&#34;: &#34;SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0=&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawKey(String rawKey) {
             $.rawKey = rawKey;
             return this;
         }
 
+        /**
+         * @param rsaEncryptedKey Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: &#34;rsaEncryptedKey&#34;: &#34;ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==&#34; The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem
+         * 
+         * @return builder
+         * 
+         */
         public Builder rsaEncryptedKey(String rsaEncryptedKey) {
             $.rsaEncryptedKey = rsaEncryptedKey;
             return this;
         }
 
+        /**
+         * @param sha256 [Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha256(String sha256) {
             $.sha256 = sha256;
             return this;

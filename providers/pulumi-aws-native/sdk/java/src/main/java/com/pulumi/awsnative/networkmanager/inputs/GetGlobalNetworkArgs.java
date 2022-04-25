@@ -19,6 +19,10 @@ public final class GetGlobalNetworkArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The ID of the global network.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetGlobalNetworkArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetGlobalNetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

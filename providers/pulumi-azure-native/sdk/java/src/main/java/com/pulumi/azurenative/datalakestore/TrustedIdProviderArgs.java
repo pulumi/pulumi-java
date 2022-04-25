@@ -22,6 +22,10 @@ public final class TrustedIdProviderArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the Data Lake Store account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -33,6 +37,10 @@ public final class TrustedIdProviderArgs extends com.pulumi.resources.ResourceAr
     @Import(name="idProvider", required=true)
     private Output<String> idProvider;
 
+    /**
+     * @return The URL of this trusted identity provider.
+     * 
+     */
     public Output<String> idProvider() {
         return this.idProvider;
     }
@@ -44,6 +52,10 @@ public final class TrustedIdProviderArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the Azure resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class TrustedIdProviderArgs extends com.pulumi.resources.ResourceAr
     @Import(name="trustedIdProviderName")
     private @Nullable Output<String> trustedIdProviderName;
 
+    /**
+     * @return The name of the trusted identity provider. This is used for differentiation of providers in the account.
+     * 
+     */
     public Optional<Output<String>> trustedIdProviderName() {
         return Optional.ofNullable(this.trustedIdProviderName);
     }
@@ -86,38 +102,86 @@ public final class TrustedIdProviderArgs extends com.pulumi.resources.ResourceAr
             $ = new TrustedIdProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param idProvider The URL of this trusted identity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idProvider(Output<String> idProvider) {
             $.idProvider = idProvider;
             return this;
         }
 
+        /**
+         * @param idProvider The URL of this trusted identity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idProvider(String idProvider) {
             return idProvider(Output.of(idProvider));
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param trustedIdProviderName The name of the trusted identity provider. This is used for differentiation of providers in the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedIdProviderName(@Nullable Output<String> trustedIdProviderName) {
             $.trustedIdProviderName = trustedIdProviderName;
             return this;
         }
 
+        /**
+         * @param trustedIdProviderName The name of the trusted identity provider. This is used for differentiation of providers in the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedIdProviderName(String trustedIdProviderName) {
             return trustedIdProviderName(Output.of(trustedIdProviderName));
         }

@@ -24,6 +24,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
     private Output<String> automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
@@ -35,6 +39,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Gets or sets the description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionFrequencyInSeconds")
     private @Nullable Output<Double> executionFrequencyInSeconds;
 
+    /**
+     * @return Gets or sets the frequency at which the watcher is invoked.
+     * 
+     */
     public Optional<Output<Double>> executionFrequencyInSeconds() {
         return Optional.ofNullable(this.executionFrequencyInSeconds);
     }
@@ -57,6 +69,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -68,6 +84,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scriptName")
     private @Nullable Output<String> scriptName;
 
+    /**
+     * @return Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.
+     * 
+     */
     public Optional<Output<String>> scriptName() {
         return Optional.ofNullable(this.scriptName);
     }
@@ -90,6 +114,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scriptParameters")
     private @Nullable Output<Map<String,String>> scriptParameters;
 
+    /**
+     * @return Gets or sets the parameters of the script.
+     * 
+     */
     public Optional<Output<Map<String,String>>> scriptParameters() {
         return Optional.ofNullable(this.scriptParameters);
     }
@@ -101,6 +129,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scriptRunOn")
     private @Nullable Output<String> scriptRunOn;
 
+    /**
+     * @return Gets or sets the name of the hybrid worker group the watcher will run on.
+     * 
+     */
     public Optional<Output<String>> scriptRunOn() {
         return Optional.ofNullable(this.scriptRunOn);
     }
@@ -112,6 +144,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -123,6 +159,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="watcherName")
     private @Nullable Output<String> watcherName;
 
+    /**
+     * @return The watcher name.
+     * 
+     */
     public Optional<Output<String>> watcherName() {
         return Optional.ofNullable(this.watcherName);
     }
@@ -160,92 +200,212 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WatcherArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
         }
 
+        /**
+         * @param description Gets or sets the description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Gets or sets the description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param executionFrequencyInSeconds Gets or sets the frequency at which the watcher is invoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionFrequencyInSeconds(@Nullable Output<Double> executionFrequencyInSeconds) {
             $.executionFrequencyInSeconds = executionFrequencyInSeconds;
             return this;
         }
 
+        /**
+         * @param executionFrequencyInSeconds Gets or sets the frequency at which the watcher is invoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionFrequencyInSeconds(Double executionFrequencyInSeconds) {
             return executionFrequencyInSeconds(Output.of(executionFrequencyInSeconds));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scriptName Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptName(@Nullable Output<String> scriptName) {
             $.scriptName = scriptName;
             return this;
         }
 
+        /**
+         * @param scriptName Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptName(String scriptName) {
             return scriptName(Output.of(scriptName));
         }
 
+        /**
+         * @param scriptParameters Gets or sets the parameters of the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptParameters(@Nullable Output<Map<String,String>> scriptParameters) {
             $.scriptParameters = scriptParameters;
             return this;
         }
 
+        /**
+         * @param scriptParameters Gets or sets the parameters of the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptParameters(Map<String,String> scriptParameters) {
             return scriptParameters(Output.of(scriptParameters));
         }
 
+        /**
+         * @param scriptRunOn Gets or sets the name of the hybrid worker group the watcher will run on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptRunOn(@Nullable Output<String> scriptRunOn) {
             $.scriptRunOn = scriptRunOn;
             return this;
         }
 
+        /**
+         * @param scriptRunOn Gets or sets the name of the hybrid worker group the watcher will run on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptRunOn(String scriptRunOn) {
             return scriptRunOn(Output.of(scriptRunOn));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param watcherName The watcher name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder watcherName(@Nullable Output<String> watcherName) {
             $.watcherName = watcherName;
             return this;
         }
 
+        /**
+         * @param watcherName The watcher name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder watcherName(String watcherName) {
             return watcherName(Output.of(watcherName));
         }

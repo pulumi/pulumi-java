@@ -26,6 +26,10 @@ public final class DashboardIntegerParameterArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return &lt;p&gt;The name of the integer parameter.&lt;/p&gt;
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class DashboardIntegerParameterArgs extends com.pulumi.resources.Re
     @Import(name="values", required=true)
     private Output<List<Double>> values;
 
+    /**
+     * @return &lt;p&gt;The values for the integer parameter.&lt;/p&gt;
+     * 
+     */
     public Output<List<Double>> values() {
         return this.values;
     }
@@ -66,24 +74,54 @@ public final class DashboardIntegerParameterArgs extends com.pulumi.resources.Re
             $ = new DashboardIntegerParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name &lt;p&gt;The name of the integer parameter.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;The name of the integer parameter.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param values &lt;p&gt;The values for the integer parameter.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Output<List<Double>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values &lt;p&gt;The values for the integer parameter.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<Double> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values &lt;p&gt;The values for the integer parameter.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Double... values) {
             return values(List.of(values));
         }

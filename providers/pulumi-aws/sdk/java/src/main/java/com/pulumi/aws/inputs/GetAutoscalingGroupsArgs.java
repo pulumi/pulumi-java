@@ -22,6 +22,10 @@ public final class GetAutoscalingGroupsArgs extends com.pulumi.resources.InvokeA
     @Import(name="filters")
     private @Nullable List<GetAutoscalingGroupsFilter> filters;
 
+    /**
+     * @return A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
+     * 
+     */
     public Optional<List<GetAutoscalingGroupsFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -50,11 +54,23 @@ public final class GetAutoscalingGroupsArgs extends com.pulumi.resources.InvokeA
             $ = new GetAutoscalingGroupsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetAutoscalingGroupsFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetAutoscalingGroupsFilter... filters) {
             return filters(List.of(filters));
         }

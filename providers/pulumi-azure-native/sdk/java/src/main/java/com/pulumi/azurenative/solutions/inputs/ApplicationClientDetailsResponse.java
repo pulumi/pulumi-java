@@ -25,6 +25,10 @@ public final class ApplicationClientDetailsResponse extends com.pulumi.resources
     @Import(name="applicationId")
     private @Nullable String applicationId;
 
+    /**
+     * @return The client application Id.
+     * 
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -36,6 +40,10 @@ public final class ApplicationClientDetailsResponse extends com.pulumi.resources
     @Import(name="oid")
     private @Nullable String oid;
 
+    /**
+     * @return The client Oid.
+     * 
+     */
     public Optional<String> oid() {
         return Optional.ofNullable(this.oid);
     }
@@ -47,6 +55,10 @@ public final class ApplicationClientDetailsResponse extends com.pulumi.resources
     @Import(name="puid")
     private @Nullable String puid;
 
+    /**
+     * @return The client Puid
+     * 
+     */
     public Optional<String> puid() {
         return Optional.ofNullable(this.puid);
     }
@@ -77,16 +89,34 @@ public final class ApplicationClientDetailsResponse extends com.pulumi.resources
             $ = new ApplicationClientDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The client application Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable String applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param oid The client Oid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oid(@Nullable String oid) {
             $.oid = oid;
             return this;
         }
 
+        /**
+         * @param puid The client Puid
+         * 
+         * @return builder
+         * 
+         */
         public Builder puid(@Nullable String puid) {
             $.puid = puid;
             return this;

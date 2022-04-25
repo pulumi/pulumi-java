@@ -24,6 +24,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
     @Import(name="connectionBorrowTimeout")
     private @Nullable Output<Integer> connectionBorrowTimeout;
 
+    /**
+     * @return The number of seconds for a proxy to wait for a connection to become available in the connection pool.
+     * 
+     */
     public Optional<Output<Integer>> connectionBorrowTimeout() {
         return Optional.ofNullable(this.connectionBorrowTimeout);
     }
@@ -35,6 +39,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
     @Import(name="initQuery")
     private @Nullable Output<String> initQuery;
 
+    /**
+     * @return One or more SQL statements for the proxy to run when opening each new database connection.
+     * 
+     */
     public Optional<Output<String>> initQuery() {
         return Optional.ofNullable(this.initQuery);
     }
@@ -46,6 +54,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
     @Import(name="maxConnectionsPercent")
     private @Nullable Output<Integer> maxConnectionsPercent;
 
+    /**
+     * @return The maximum size of the connection pool for each target in a target group.
+     * 
+     */
     public Optional<Output<Integer>> maxConnectionsPercent() {
         return Optional.ofNullable(this.maxConnectionsPercent);
     }
@@ -57,6 +69,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
     @Import(name="maxIdleConnectionsPercent")
     private @Nullable Output<Integer> maxIdleConnectionsPercent;
 
+    /**
+     * @return Controls how actively the proxy closes idle database connections in the connection pool.
+     * 
+     */
     public Optional<Output<Integer>> maxIdleConnectionsPercent() {
         return Optional.ofNullable(this.maxIdleConnectionsPercent);
     }
@@ -68,6 +84,10 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
     @Import(name="sessionPinningFilters")
     private @Nullable Output<List<String>> sessionPinningFilters;
 
+    /**
+     * @return Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection.
+     * 
+     */
     public Optional<Output<List<String>>> sessionPinningFilters() {
         return Optional.ofNullable(this.sessionPinningFilters);
     }
@@ -100,51 +120,117 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs e
             $ = new DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionBorrowTimeout The number of seconds for a proxy to wait for a connection to become available in the connection pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionBorrowTimeout(@Nullable Output<Integer> connectionBorrowTimeout) {
             $.connectionBorrowTimeout = connectionBorrowTimeout;
             return this;
         }
 
+        /**
+         * @param connectionBorrowTimeout The number of seconds for a proxy to wait for a connection to become available in the connection pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionBorrowTimeout(Integer connectionBorrowTimeout) {
             return connectionBorrowTimeout(Output.of(connectionBorrowTimeout));
         }
 
+        /**
+         * @param initQuery One or more SQL statements for the proxy to run when opening each new database connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initQuery(@Nullable Output<String> initQuery) {
             $.initQuery = initQuery;
             return this;
         }
 
+        /**
+         * @param initQuery One or more SQL statements for the proxy to run when opening each new database connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initQuery(String initQuery) {
             return initQuery(Output.of(initQuery));
         }
 
+        /**
+         * @param maxConnectionsPercent The maximum size of the connection pool for each target in a target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConnectionsPercent(@Nullable Output<Integer> maxConnectionsPercent) {
             $.maxConnectionsPercent = maxConnectionsPercent;
             return this;
         }
 
+        /**
+         * @param maxConnectionsPercent The maximum size of the connection pool for each target in a target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConnectionsPercent(Integer maxConnectionsPercent) {
             return maxConnectionsPercent(Output.of(maxConnectionsPercent));
         }
 
+        /**
+         * @param maxIdleConnectionsPercent Controls how actively the proxy closes idle database connections in the connection pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxIdleConnectionsPercent(@Nullable Output<Integer> maxIdleConnectionsPercent) {
             $.maxIdleConnectionsPercent = maxIdleConnectionsPercent;
             return this;
         }
 
+        /**
+         * @param maxIdleConnectionsPercent Controls how actively the proxy closes idle database connections in the connection pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxIdleConnectionsPercent(Integer maxIdleConnectionsPercent) {
             return maxIdleConnectionsPercent(Output.of(maxIdleConnectionsPercent));
         }
 
+        /**
+         * @param sessionPinningFilters Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionPinningFilters(@Nullable Output<List<String>> sessionPinningFilters) {
             $.sessionPinningFilters = sessionPinningFilters;
             return this;
         }
 
+        /**
+         * @param sessionPinningFilters Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionPinningFilters(List<String> sessionPinningFilters) {
             return sessionPinningFilters(Output.of(sessionPinningFilters));
         }
 
+        /**
+         * @param sessionPinningFilters Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionPinningFilters(String... sessionPinningFilters) {
             return sessionPinningFilters(List.of(sessionPinningFilters));
         }

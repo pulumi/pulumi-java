@@ -23,6 +23,10 @@ public final class RunCommandInputParameterResponse extends com.pulumi.resources
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The run command parameter name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class RunCommandInputParameterResponse extends com.pulumi.resources
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The run command parameter value.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class RunCommandInputParameterResponse extends com.pulumi.resources
             $ = new RunCommandInputParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The run command parameter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The run command parameter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

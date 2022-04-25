@@ -26,6 +26,10 @@ public final class AccessReviewReviewerArgs extends com.pulumi.resources.Resourc
     @Import(name="principalId")
     private @Nullable Output<String> principalId;
 
+    /**
+     * @return The id of the reviewer(user/servicePrincipal)
+     * 
+     */
     public Optional<Output<String>> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -54,11 +58,23 @@ public final class AccessReviewReviewerArgs extends com.pulumi.resources.Resourc
             $ = new AccessReviewReviewerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The id of the reviewer(user/servicePrincipal)
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId The id of the reviewer(user/servicePrincipal)
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }

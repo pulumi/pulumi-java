@@ -31,6 +31,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdTime")
     private @Nullable String createdTime;
 
+    /**
+     * @return The Model creation time (UTC).
+     * 
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -42,6 +46,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="datasets")
     private @Nullable List<DatasetReferenceResponse> datasets;
 
+    /**
+     * @return The list of datasets associated with the model.
+     * 
+     */
     public Optional<List<DatasetReferenceResponse>> datasets() {
         return Optional.ofNullable(this.datasets);
     }
@@ -53,6 +61,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="derivedModelIds")
     private @Nullable List<String> derivedModelIds;
 
+    /**
+     * @return Models derived from this model
+     * 
+     */
     public Optional<List<String>> derivedModelIds() {
         return Optional.ofNullable(this.derivedModelIds);
     }
@@ -64,6 +76,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The Model description text.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -75,6 +91,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="experimentName")
     private @Nullable String experimentName;
 
+    /**
+     * @return The name of the experiment where this model was created.
+     * 
+     */
     public Optional<String> experimentName() {
         return Optional.ofNullable(this.experimentName);
     }
@@ -86,6 +106,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="framework")
     private @Nullable String framework;
 
+    /**
+     * @return The Model framework.
+     * 
+     */
     public Optional<String> framework() {
         return Optional.ofNullable(this.framework);
     }
@@ -97,6 +121,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="frameworkVersion")
     private @Nullable String frameworkVersion;
 
+    /**
+     * @return The Model framework version.
+     * 
+     */
     public Optional<String> frameworkVersion() {
         return Optional.ofNullable(this.frameworkVersion);
     }
@@ -108,6 +136,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The Model Id.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -119,6 +151,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kvTags")
     private @Nullable Map<String,String> kvTags;
 
+    /**
+     * @return The Model tag dictionary. Items are mutable.
+     * 
+     */
     public Optional<Map<String,String>> kvTags() {
         return Optional.ofNullable(this.kvTags);
     }
@@ -130,6 +166,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mimeType", required=true)
     private String mimeType;
 
+    /**
+     * @return The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml
+     * 
+     */
     public String mimeType() {
         return this.mimeType;
     }
@@ -141,6 +181,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="modifiedTime")
     private @Nullable String modifiedTime;
 
+    /**
+     * @return The Model last modified time (UTC).
+     * 
+     */
     public Optional<String> modifiedTime() {
         return Optional.ofNullable(this.modifiedTime);
     }
@@ -152,6 +196,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The Model name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -163,6 +211,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parentModelId")
     private @Nullable String parentModelId;
 
+    /**
+     * @return The Parent Model Id.
+     * 
+     */
     public Optional<String> parentModelId() {
         return Optional.ofNullable(this.parentModelId);
     }
@@ -174,6 +226,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return The Model property dictionary. Properties are immutable.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -185,6 +241,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceRequirements")
     private @Nullable ContainerResourceRequirementsResponse resourceRequirements;
 
+    /**
+     * @return Resource requirements for the model
+     * 
+     */
     public Optional<ContainerResourceRequirementsResponse> resourceRequirements() {
         return Optional.ofNullable(this.resourceRequirements);
     }
@@ -196,6 +256,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="runId")
     private @Nullable String runId;
 
+    /**
+     * @return The RunId that created this model.
+     * 
+     */
     public Optional<String> runId() {
         return Optional.ofNullable(this.runId);
     }
@@ -207,6 +271,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sampleInputData")
     private @Nullable String sampleInputData;
 
+    /**
+     * @return Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
+     * 
+     */
     public Optional<String> sampleInputData() {
         return Optional.ofNullable(this.sampleInputData);
     }
@@ -218,6 +286,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sampleOutputData")
     private @Nullable String sampleOutputData;
 
+    /**
+     * @return Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
+     * 
+     */
     public Optional<String> sampleOutputData() {
         return Optional.ofNullable(this.sampleOutputData);
     }
@@ -229,6 +301,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="unpack")
     private @Nullable Boolean unpack;
 
+    /**
+     * @return Indicates whether we need to unpack the Model during docker Image creation.
+     * 
+     */
     public Optional<Boolean> unpack() {
         return Optional.ofNullable(this.unpack);
     }
@@ -240,6 +316,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return The URL of the Model. Usually a SAS URL.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -251,6 +331,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version")
     private @Nullable Double version;
 
+    /**
+     * @return The Model version assigned by Model Management Service.
+     * 
+     */
     public Optional<Double> version() {
         return Optional.ofNullable(this.version);
     }
@@ -299,114 +383,252 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ModelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdTime The Model creation time (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable String createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param datasets The list of datasets associated with the model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasets(@Nullable List<DatasetReferenceResponse> datasets) {
             $.datasets = datasets;
             return this;
         }
 
+        /**
+         * @param datasets The list of datasets associated with the model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasets(DatasetReferenceResponse... datasets) {
             return datasets(List.of(datasets));
         }
 
+        /**
+         * @param derivedModelIds Models derived from this model
+         * 
+         * @return builder
+         * 
+         */
         public Builder derivedModelIds(@Nullable List<String> derivedModelIds) {
             $.derivedModelIds = derivedModelIds;
             return this;
         }
 
+        /**
+         * @param derivedModelIds Models derived from this model
+         * 
+         * @return builder
+         * 
+         */
         public Builder derivedModelIds(String... derivedModelIds) {
             return derivedModelIds(List.of(derivedModelIds));
         }
 
+        /**
+         * @param description The Model description text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param experimentName The name of the experiment where this model was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentName(@Nullable String experimentName) {
             $.experimentName = experimentName;
             return this;
         }
 
+        /**
+         * @param framework The Model framework.
+         * 
+         * @return builder
+         * 
+         */
         public Builder framework(@Nullable String framework) {
             $.framework = framework;
             return this;
         }
 
+        /**
+         * @param frameworkVersion The Model framework version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameworkVersion(@Nullable String frameworkVersion) {
             $.frameworkVersion = frameworkVersion;
             return this;
         }
 
+        /**
+         * @param id The Model Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param kvTags The Model tag dictionary. Items are mutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
             $.kvTags = kvTags;
             return this;
         }
 
+        /**
+         * @param mimeType The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(String mimeType) {
             $.mimeType = mimeType;
             return this;
         }
 
+        /**
+         * @param modifiedTime The Model last modified time (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedTime(@Nullable String modifiedTime) {
             $.modifiedTime = modifiedTime;
             return this;
         }
 
+        /**
+         * @param name The Model name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parentModelId The Parent Model Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentModelId(@Nullable String parentModelId) {
             $.parentModelId = parentModelId;
             return this;
         }
 
+        /**
+         * @param properties The Model property dictionary. Properties are immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param resourceRequirements Resource requirements for the model
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRequirements(@Nullable ContainerResourceRequirementsResponse resourceRequirements) {
             $.resourceRequirements = resourceRequirements;
             return this;
         }
 
+        /**
+         * @param runId The RunId that created this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runId(@Nullable String runId) {
             $.runId = runId;
             return this;
         }
 
+        /**
+         * @param sampleInputData Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleInputData(@Nullable String sampleInputData) {
             $.sampleInputData = sampleInputData;
             return this;
         }
 
+        /**
+         * @param sampleOutputData Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleOutputData(@Nullable String sampleOutputData) {
             $.sampleOutputData = sampleOutputData;
             return this;
         }
 
+        /**
+         * @param unpack Indicates whether we need to unpack the Model during docker Image creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unpack(@Nullable Boolean unpack) {
             $.unpack = unpack;
             return this;
         }
 
+        /**
+         * @param url The URL of the Model. Usually a SAS URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param version The Model version assigned by Model Management Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Double version) {
             $.version = version;
             return this;

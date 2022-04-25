@@ -27,6 +27,10 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource Id
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -38,6 +42,10 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the Load balancer
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="properties", required=true)
     private Output<LoadBalancerConfigurationPropertiesArgs> properties;
 
+    /**
+     * @return Properties of the load balancer configuration.
+     * 
+     */
     public Output<LoadBalancerConfigurationPropertiesArgs> properties() {
         return this.properties;
     }
@@ -79,29 +91,65 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
             $ = new LoadBalancerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the Load balancer
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Load balancer
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties Properties of the load balancer configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<LoadBalancerConfigurationPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the load balancer configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(LoadBalancerConfigurationPropertiesArgs properties) {
             return properties(Output.of(properties));
         }

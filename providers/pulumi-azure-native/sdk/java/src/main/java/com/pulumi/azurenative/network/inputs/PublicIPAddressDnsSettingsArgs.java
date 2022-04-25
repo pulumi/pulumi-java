@@ -26,6 +26,10 @@ public final class PublicIPAddressDnsSettingsArgs extends com.pulumi.resources.R
     @Import(name="domainNameLabel")
     private @Nullable Output<String> domainNameLabel;
 
+    /**
+     * @return The domain name label. The concatenation of the domain name label and the regionalized DNS zone make up the fully qualified domain name associated with the public IP address. If a domain name label is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system.
+     * 
+     */
     public Optional<Output<String>> domainNameLabel() {
         return Optional.ofNullable(this.domainNameLabel);
     }
@@ -37,6 +41,10 @@ public final class PublicIPAddressDnsSettingsArgs extends com.pulumi.resources.R
     @Import(name="fqdn")
     private @Nullable Output<String> fqdn;
 
+    /**
+     * @return The Fully Qualified Domain Name of the A DNS record associated with the public IP. This is the concatenation of the domainNameLabel and the regionalized DNS zone.
+     * 
+     */
     public Optional<Output<String>> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
@@ -48,6 +56,10 @@ public final class PublicIPAddressDnsSettingsArgs extends com.pulumi.resources.R
     @Import(name="reverseFqdn")
     private @Nullable Output<String> reverseFqdn;
 
+    /**
+     * @return The reverse FQDN. A user-visible, fully qualified domain name that resolves to this public IP address. If the reverseFqdn is specified, then a PTR DNS record is created pointing from the IP address in the in-addr.arpa domain to the reverse FQDN.
+     * 
+     */
     public Optional<Output<String>> reverseFqdn() {
         return Optional.ofNullable(this.reverseFqdn);
     }
@@ -78,29 +90,65 @@ public final class PublicIPAddressDnsSettingsArgs extends com.pulumi.resources.R
             $ = new PublicIPAddressDnsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainNameLabel The domain name label. The concatenation of the domain name label and the regionalized DNS zone make up the fully qualified domain name associated with the public IP address. If a domain name label is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNameLabel(@Nullable Output<String> domainNameLabel) {
             $.domainNameLabel = domainNameLabel;
             return this;
         }
 
+        /**
+         * @param domainNameLabel The domain name label. The concatenation of the domain name label and the regionalized DNS zone make up the fully qualified domain name associated with the public IP address. If a domain name label is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNameLabel(String domainNameLabel) {
             return domainNameLabel(Output.of(domainNameLabel));
         }
 
+        /**
+         * @param fqdn The Fully Qualified Domain Name of the A DNS record associated with the public IP. This is the concatenation of the domainNameLabel and the regionalized DNS zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(@Nullable Output<String> fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param fqdn The Fully Qualified Domain Name of the A DNS record associated with the public IP. This is the concatenation of the domainNameLabel and the regionalized DNS zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(String fqdn) {
             return fqdn(Output.of(fqdn));
         }
 
+        /**
+         * @param reverseFqdn The reverse FQDN. A user-visible, fully qualified domain name that resolves to this public IP address. If the reverseFqdn is specified, then a PTR DNS record is created pointing from the IP address in the in-addr.arpa domain to the reverse FQDN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reverseFqdn(@Nullable Output<String> reverseFqdn) {
             $.reverseFqdn = reverseFqdn;
             return this;
         }
 
+        /**
+         * @param reverseFqdn The reverse FQDN. A user-visible, fully qualified domain name that resolves to this public IP address. If the reverseFqdn is specified, then a PTR DNS record is created pointing from the IP address in the in-addr.arpa domain to the reverse FQDN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reverseFqdn(String reverseFqdn) {
             return reverseFqdn(Output.of(reverseFqdn));
         }

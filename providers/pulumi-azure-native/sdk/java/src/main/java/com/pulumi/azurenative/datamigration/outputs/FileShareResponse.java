@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FileShareResponse {
     /**
-     * Password credential used to connect to the share location.
+     * @return Password credential used to connect to the share location.
      * 
      */
     private final @Nullable String password;
     /**
-     * The folder path for this share.
+     * @return The folder path for this share.
      * 
      */
     private final String path;
     /**
-     * User name credential to connect to the share location
+     * @return User name credential to connect to the share location
      * 
      */
     private final @Nullable String userName;
@@ -38,23 +38,23 @@ public final class FileShareResponse {
     }
 
     /**
-     * Password credential used to connect to the share location.
+     * @return Password credential used to connect to the share location.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The folder path for this share.
+     * @return The folder path for this share.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * User name credential to connect to the share location
+     * @return User name credential to connect to the share location
      * 
-    */
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }

@@ -24,6 +24,10 @@ public final class UserPasswordResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="password", required=true)
     private SecretResponse password;
 
+    /**
+     * @return Secret version reference containing the password.
+     * 
+     */
     public SecretResponse password() {
         return this.password;
     }
@@ -35,6 +39,10 @@ public final class UserPasswordResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return Username.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -64,11 +72,23 @@ public final class UserPasswordResponse extends com.pulumi.resources.InvokeArgs 
             $ = new UserPasswordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Secret version reference containing the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecretResponse password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param username Username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

@@ -19,6 +19,10 @@ public final class GetServerKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return The name of the MySQL Server key to be retrieved.
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -30,6 +34,10 @@ public final class GetServerKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetServerKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -71,16 +83,34 @@ public final class GetServerKeyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetServerKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The name of the MySQL Server key to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;

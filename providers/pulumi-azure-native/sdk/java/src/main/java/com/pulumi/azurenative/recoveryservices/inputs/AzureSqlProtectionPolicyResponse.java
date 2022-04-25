@@ -31,6 +31,11 @@ public final class AzureSqlProtectionPolicyResponse extends com.pulumi.resources
     @Import(name="backupManagementType", required=true)
     private String backupManagementType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;AzureSql&#39;.
+     * 
+     */
     public String backupManagementType() {
         return this.backupManagementType;
     }
@@ -42,6 +47,10 @@ public final class AzureSqlProtectionPolicyResponse extends com.pulumi.resources
     @Import(name="protectedItemsCount")
     private @Nullable Integer protectedItemsCount;
 
+    /**
+     * @return Number of items associated with this policy.
+     * 
+     */
     public Optional<Integer> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
@@ -53,6 +62,10 @@ public final class AzureSqlProtectionPolicyResponse extends com.pulumi.resources
     @Import(name="retentionPolicy")
     private @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
+    /**
+     * @return Retention policy details.
+     * 
+     */
     public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -83,25 +96,56 @@ public final class AzureSqlProtectionPolicyResponse extends com.pulumi.resources
             $ = new AzureSqlProtectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;AzureSql&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(String backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param protectedItemsCount Number of items associated with this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             $.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(LongTermRetentionPolicyResponse retentionPolicy) {
             return retentionPolicy(Either.ofLeft(retentionPolicy));
         }
 
+        /**
+         * @param retentionPolicy Retention policy details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(SimpleRetentionPolicyResponse retentionPolicy) {
             return retentionPolicy(Either.ofRight(retentionPolicy));
         }

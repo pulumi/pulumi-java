@@ -27,6 +27,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="eTag")
     private @Nullable String eTag;
 
+    /**
+     * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+     * 
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
@@ -38,6 +42,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="error")
     private @Nullable ErrorDetailsResponse error;
 
+    /**
+     * @return The details of any error.
+     * 
+     */
     public Optional<ErrorDetailsResponse> error() {
         return Optional.ofNullable(this.error);
     }
@@ -49,6 +57,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="executionType")
     private @Nullable String executionType;
 
+    /**
+     * @return The type of the export execution.
+     * 
+     */
     public Optional<String> executionType() {
         return Optional.ofNullable(this.executionType);
     }
@@ -60,6 +72,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="fileName")
     private @Nullable String fileName;
 
+    /**
+     * @return The name of the exported file.
+     * 
+     */
     public Optional<String> fileName() {
         return Optional.ofNullable(this.fileName);
     }
@@ -71,6 +87,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource Id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -82,6 +102,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -93,6 +117,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="processingEndTime")
     private @Nullable String processingEndTime;
 
+    /**
+     * @return The time when the export execution finished.
+     * 
+     */
     public Optional<String> processingEndTime() {
         return Optional.ofNullable(this.processingEndTime);
     }
@@ -104,6 +132,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="processingStartTime")
     private @Nullable String processingStartTime;
 
+    /**
+     * @return The time when export was picked up to be executed.
+     * 
+     */
     public Optional<String> processingStartTime() {
         return Optional.ofNullable(this.processingStartTime);
     }
@@ -115,6 +147,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="runSettings")
     private @Nullable CommonExportPropertiesResponse runSettings;
 
+    /**
+     * @return The export settings that were in effect for this execution.
+     * 
+     */
     public Optional<CommonExportPropertiesResponse> runSettings() {
         return Optional.ofNullable(this.runSettings);
     }
@@ -126,6 +162,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The last known status of the export execution.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -137,6 +177,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="submittedBy")
     private @Nullable String submittedBy;
 
+    /**
+     * @return The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is &#39;System&#39;.
+     * 
+     */
     public Optional<String> submittedBy() {
         return Optional.ofNullable(this.submittedBy);
     }
@@ -148,6 +192,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="submittedTime")
     private @Nullable String submittedTime;
 
+    /**
+     * @return The time when export was queued to be executed.
+     * 
+     */
     public Optional<String> submittedTime() {
         return Optional.ofNullable(this.submittedTime);
     }
@@ -159,6 +207,10 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -199,66 +251,144 @@ public final class ExportExecutionResponse extends com.pulumi.resources.InvokeAr
             $ = new ExportExecutionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eTag eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(@Nullable String eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param error The details of any error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable ErrorDetailsResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param executionType The type of the export execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionType(@Nullable String executionType) {
             $.executionType = executionType;
             return this;
         }
 
+        /**
+         * @param fileName The name of the exported file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(@Nullable String fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param id Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param processingEndTime The time when the export execution finished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingEndTime(@Nullable String processingEndTime) {
             $.processingEndTime = processingEndTime;
             return this;
         }
 
+        /**
+         * @param processingStartTime The time when export was picked up to be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingStartTime(@Nullable String processingStartTime) {
             $.processingStartTime = processingStartTime;
             return this;
         }
 
+        /**
+         * @param runSettings The export settings that were in effect for this execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runSettings(@Nullable CommonExportPropertiesResponse runSettings) {
             $.runSettings = runSettings;
             return this;
         }
 
+        /**
+         * @param status The last known status of the export execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param submittedBy The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is &#39;System&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder submittedBy(@Nullable String submittedBy) {
             $.submittedBy = submittedBy;
             return this;
         }
 
+        /**
+         * @param submittedTime The time when export was queued to be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder submittedTime(@Nullable String submittedTime) {
             $.submittedTime = submittedTime;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -27,6 +27,10 @@ public final class NodeManagementArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoRepair")
     private @Nullable Output<Boolean> autoRepair;
 
+    /**
+     * @return Whether the nodes will be automatically repaired.
+     * 
+     */
     public Optional<Output<Boolean>> autoRepair() {
         return Optional.ofNullable(this.autoRepair);
     }
@@ -38,6 +42,10 @@ public final class NodeManagementArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoUpgrade")
     private @Nullable Output<Boolean> autoUpgrade;
 
+    /**
+     * @return Whether the nodes will be automatically upgraded.
+     * 
+     */
     public Optional<Output<Boolean>> autoUpgrade() {
         return Optional.ofNullable(this.autoUpgrade);
     }
@@ -49,6 +57,10 @@ public final class NodeManagementArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="upgradeOptions")
     private @Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions;
 
+    /**
+     * @return Specifies the Auto Upgrade knobs for the node pool.
+     * 
+     */
     public Optional<Output<AutoUpgradeOptionsArgs>> upgradeOptions() {
         return Optional.ofNullable(this.upgradeOptions);
     }
@@ -79,29 +91,65 @@ public final class NodeManagementArgs extends com.pulumi.resources.ResourceArgs 
             $ = new NodeManagementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoRepair Whether the nodes will be automatically repaired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRepair(@Nullable Output<Boolean> autoRepair) {
             $.autoRepair = autoRepair;
             return this;
         }
 
+        /**
+         * @param autoRepair Whether the nodes will be automatically repaired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRepair(Boolean autoRepair) {
             return autoRepair(Output.of(autoRepair));
         }
 
+        /**
+         * @param autoUpgrade Whether the nodes will be automatically upgraded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgrade(@Nullable Output<Boolean> autoUpgrade) {
             $.autoUpgrade = autoUpgrade;
             return this;
         }
 
+        /**
+         * @param autoUpgrade Whether the nodes will be automatically upgraded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgrade(Boolean autoUpgrade) {
             return autoUpgrade(Output.of(autoUpgrade));
         }
 
+        /**
+         * @param upgradeOptions Specifies the Auto Upgrade knobs for the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeOptions(@Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions) {
             $.upgradeOptions = upgradeOptions;
             return this;
         }
 
+        /**
+         * @param upgradeOptions Specifies the Auto Upgrade knobs for the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeOptions(AutoUpgradeOptionsArgs upgradeOptions) {
             return upgradeOptions(Output.of(upgradeOptions));
         }

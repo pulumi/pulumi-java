@@ -22,6 +22,11 @@ public final class PreventionStoredInfoTypeDictionaryWordListGetArgs extends com
     @Import(name="words", required=true)
     private Output<List<String>> words;
 
+    /**
+     * @return Words or phrases defining the dictionary. The dictionary must contain at least one
+     * phrase and every phrase must contain at least 2 characters that are letters or digits.
+     * 
+     */
     public Output<List<String>> words() {
         return this.words;
     }
@@ -50,15 +55,36 @@ public final class PreventionStoredInfoTypeDictionaryWordListGetArgs extends com
             $ = new PreventionStoredInfoTypeDictionaryWordListGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param words Words or phrases defining the dictionary. The dictionary must contain at least one
+         * phrase and every phrase must contain at least 2 characters that are letters or digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder words(Output<List<String>> words) {
             $.words = words;
             return this;
         }
 
+        /**
+         * @param words Words or phrases defining the dictionary. The dictionary must contain at least one
+         * phrase and every phrase must contain at least 2 characters that are letters or digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder words(List<String> words) {
             return words(Output.of(words));
         }
 
+        /**
+         * @param words Words or phrases defining the dictionary. The dictionary must contain at least one
+         * phrase and every phrase must contain at least 2 characters that are letters or digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder words(String... words) {
             return words(List.of(words));
         }

@@ -27,6 +27,10 @@ public final class EnterpriseChannelPropertiesResponse extends com.pulumi.resour
     @Import(name="nodes", required=true)
     private List<EnterpriseChannelNodeResponse> nodes;
 
+    /**
+     * @return The nodes associated with the Enterprise Channel.
+     * 
+     */
     public List<EnterpriseChannelNodeResponse> nodes() {
         return this.nodes;
     }
@@ -38,6 +42,10 @@ public final class EnterpriseChannelPropertiesResponse extends com.pulumi.resour
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return The current state of the Enterprise Channel.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -67,15 +75,33 @@ public final class EnterpriseChannelPropertiesResponse extends com.pulumi.resour
             $ = new EnterpriseChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodes The nodes associated with the Enterprise Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(List<EnterpriseChannelNodeResponse> nodes) {
             $.nodes = nodes;
             return this;
         }
 
+        /**
+         * @param nodes The nodes associated with the Enterprise Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(EnterpriseChannelNodeResponse... nodes) {
             return nodes(List.of(nodes));
         }
 
+        /**
+         * @param state The current state of the Enterprise Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

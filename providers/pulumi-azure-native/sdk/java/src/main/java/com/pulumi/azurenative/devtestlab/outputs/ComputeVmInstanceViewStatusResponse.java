@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ComputeVmInstanceViewStatusResponse {
     /**
-     * Gets the status Code.
+     * @return Gets the status Code.
      * 
      */
     private final @Nullable String code;
     /**
-     * Gets the short localizable label for the status.
+     * @return Gets the short localizable label for the status.
      * 
      */
     private final @Nullable String displayStatus;
     /**
-     * Gets the message associated with the status.
+     * @return Gets the message associated with the status.
      * 
      */
     private final @Nullable String message;
@@ -38,23 +38,23 @@ public final class ComputeVmInstanceViewStatusResponse {
     }
 
     /**
-     * Gets the status Code.
+     * @return Gets the status Code.
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * Gets the short localizable label for the status.
+     * @return Gets the short localizable label for the status.
      * 
-    */
+     */
     public Optional<String> displayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
     /**
-     * Gets the message associated with the status.
+     * @return Gets the message associated with the status.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }

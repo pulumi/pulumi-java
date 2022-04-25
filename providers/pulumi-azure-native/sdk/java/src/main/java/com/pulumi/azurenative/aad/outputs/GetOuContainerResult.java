@@ -16,77 +16,77 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetOuContainerResult {
     /**
-     * The list of container accounts
+     * @return The list of container accounts
      * 
      */
     private final @Nullable List<ContainerAccountResponse> accounts;
     /**
-     * The OuContainer name
+     * @return The OuContainer name
      * 
      */
     private final String containerId;
     /**
-     * The Deployment id
+     * @return The Deployment id
      * 
      */
     private final String deploymentId;
     /**
-     * Distinguished Name of OuContainer instance
+     * @return Distinguished Name of OuContainer instance
      * 
      */
     private final String distinguishedName;
     /**
-     * The domain name of Domain Services.
+     * @return The domain name of Domain Services.
      * 
      */
     private final String domainName;
     /**
-     * Resource etag
+     * @return Resource etag
      * 
      */
     private final @Nullable String etag;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * The current deployment or provisioning state, which only appears in the response.
+     * @return The current deployment or provisioning state, which only appears in the response.
      * 
      */
     private final String provisioningState;
     /**
-     * Status of OuContainer instance
+     * @return Status of OuContainer instance
      * 
      */
     private final String serviceStatus;
     /**
-     * The system meta data relating to this resource.
+     * @return The system meta data relating to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Azure Active Directory tenant id
+     * @return Azure Active Directory tenant id
      * 
      */
     private final String tenantId;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -126,107 +126,107 @@ public final class GetOuContainerResult {
     }
 
     /**
-     * The list of container accounts
+     * @return The list of container accounts
      * 
-    */
+     */
     public List<ContainerAccountResponse> accounts() {
         return this.accounts == null ? List.of() : this.accounts;
     }
     /**
-     * The OuContainer name
+     * @return The OuContainer name
      * 
-    */
+     */
     public String containerId() {
         return this.containerId;
     }
     /**
-     * The Deployment id
+     * @return The Deployment id
      * 
-    */
+     */
     public String deploymentId() {
         return this.deploymentId;
     }
     /**
-     * Distinguished Name of OuContainer instance
+     * @return Distinguished Name of OuContainer instance
      * 
-    */
+     */
     public String distinguishedName() {
         return this.distinguishedName;
     }
     /**
-     * The domain name of Domain Services.
+     * @return The domain name of Domain Services.
      * 
-    */
+     */
     public String domainName() {
         return this.domainName;
     }
     /**
-     * Resource etag
+     * @return Resource etag
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current deployment or provisioning state, which only appears in the response.
+     * @return The current deployment or provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Status of OuContainer instance
+     * @return Status of OuContainer instance
      * 
-    */
+     */
     public String serviceStatus() {
         return this.serviceStatus;
     }
     /**
-     * The system meta data relating to this resource.
+     * @return The system meta data relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Azure Active Directory tenant id
+     * @return Azure Active Directory tenant id
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

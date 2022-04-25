@@ -31,6 +31,10 @@ public final class AdditionalWorkspacesPropertiesArgs extends com.pulumi.resourc
     @Import(name="dataTypes")
     private @Nullable Output<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes;
 
+    /**
+     * @return List of data types sent to workspace
+     * 
+     */
     public Optional<Output<List<Either<String,AdditionalWorkspaceDataType>>>> dataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
@@ -42,6 +46,10 @@ public final class AdditionalWorkspacesPropertiesArgs extends com.pulumi.resourc
     @Import(name="type")
     private @Nullable Output<Either<String,AdditionalWorkspaceType>> type;
 
+    /**
+     * @return Workspace type.
+     * 
+     */
     public Optional<Output<Either<String,AdditionalWorkspaceType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -53,6 +61,10 @@ public final class AdditionalWorkspacesPropertiesArgs extends com.pulumi.resourc
     @Import(name="workspace")
     private @Nullable Output<String> workspace;
 
+    /**
+     * @return Workspace resource id
+     * 
+     */
     public Optional<Output<String>> workspace() {
         return Optional.ofNullable(this.workspace);
     }
@@ -83,41 +95,95 @@ public final class AdditionalWorkspacesPropertiesArgs extends com.pulumi.resourc
             $ = new AdditionalWorkspacesPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataTypes List of data types sent to workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypes(@Nullable Output<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes) {
             $.dataTypes = dataTypes;
             return this;
         }
 
+        /**
+         * @param dataTypes List of data types sent to workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypes(List<Either<String,AdditionalWorkspaceDataType>> dataTypes) {
             return dataTypes(Output.of(dataTypes));
         }
 
+        /**
+         * @param dataTypes List of data types sent to workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypes(Either<String,AdditionalWorkspaceDataType>... dataTypes) {
             return dataTypes(List.of(dataTypes));
         }
 
+        /**
+         * @param type Workspace type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,AdditionalWorkspaceType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Workspace type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,AdditionalWorkspaceType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Workspace type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Workspace type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(AdditionalWorkspaceType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param workspace Workspace resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspace(@Nullable Output<String> workspace) {
             $.workspace = workspace;
             return this;
         }
 
+        /**
+         * @param workspace Workspace resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspace(String workspace) {
             return workspace(Output.of(workspace));
         }

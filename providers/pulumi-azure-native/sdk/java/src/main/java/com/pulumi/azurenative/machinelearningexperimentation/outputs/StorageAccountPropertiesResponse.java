@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class StorageAccountPropertiesResponse {
     /**
-     * The access key to the storage account.
+     * @return The access key to the storage account.
      * 
      */
     private final String accessKey;
     /**
-     * The fully qualified arm Id of the storage account.
+     * @return The fully qualified arm Id of the storage account.
      * 
      */
     private final String storageAccountId;
@@ -29,16 +29,16 @@ public final class StorageAccountPropertiesResponse {
     }
 
     /**
-     * The access key to the storage account.
+     * @return The access key to the storage account.
      * 
-    */
+     */
     public String accessKey() {
         return this.accessKey;
     }
     /**
-     * The fully qualified arm Id of the storage account.
+     * @return The fully qualified arm Id of the storage account.
      * 
-    */
+     */
     public String storageAccountId() {
         return this.storageAccountId;
     }

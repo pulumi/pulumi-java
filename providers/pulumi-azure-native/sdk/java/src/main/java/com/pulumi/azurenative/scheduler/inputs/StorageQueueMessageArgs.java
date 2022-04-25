@@ -22,6 +22,10 @@ public final class StorageQueueMessageArgs extends com.pulumi.resources.Resource
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return Gets or sets the message.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -33,6 +37,10 @@ public final class StorageQueueMessageArgs extends com.pulumi.resources.Resource
     @Import(name="queueName")
     private @Nullable Output<String> queueName;
 
+    /**
+     * @return Gets or sets the queue name.
+     * 
+     */
     public Optional<Output<String>> queueName() {
         return Optional.ofNullable(this.queueName);
     }
@@ -44,6 +52,10 @@ public final class StorageQueueMessageArgs extends com.pulumi.resources.Resource
     @Import(name="sasToken")
     private @Nullable Output<String> sasToken;
 
+    /**
+     * @return Gets or sets the SAS key.
+     * 
+     */
     public Optional<Output<String>> sasToken() {
         return Optional.ofNullable(this.sasToken);
     }
@@ -55,6 +67,10 @@ public final class StorageQueueMessageArgs extends com.pulumi.resources.Resource
     @Import(name="storageAccount")
     private @Nullable Output<String> storageAccount;
 
+    /**
+     * @return Gets or sets the storage account name.
+     * 
+     */
     public Optional<Output<String>> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
@@ -86,38 +102,86 @@ public final class StorageQueueMessageArgs extends com.pulumi.resources.Resource
             $ = new StorageQueueMessageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message Gets or sets the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message Gets or sets the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param queueName Gets or sets the queue name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueName(@Nullable Output<String> queueName) {
             $.queueName = queueName;
             return this;
         }
 
+        /**
+         * @param queueName Gets or sets the queue name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueName(String queueName) {
             return queueName(Output.of(queueName));
         }
 
+        /**
+         * @param sasToken Gets or sets the SAS key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasToken(@Nullable Output<String> sasToken) {
             $.sasToken = sasToken;
             return this;
         }
 
+        /**
+         * @param sasToken Gets or sets the SAS key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasToken(String sasToken) {
             return sasToken(Output.of(sasToken));
         }
 
+        /**
+         * @param storageAccount Gets or sets the storage account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(@Nullable Output<String> storageAccount) {
             $.storageAccount = storageAccount;
             return this;
         }
 
+        /**
+         * @param storageAccount Gets or sets the storage account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(String storageAccount) {
             return storageAccount(Output.of(storageAccount));
         }

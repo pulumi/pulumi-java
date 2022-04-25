@@ -25,6 +25,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return RDS Global Cluster Amazon Resource Name (ARN)
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return Name for an automatically created database on cluster creation.
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -47,6 +55,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
     @Import(name="deletionProtection")
     private @Nullable Output<Boolean> deletionProtection;
 
+    /**
+     * @return If the Global Cluster should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> deletionProtection() {
         return Optional.ofNullable(this.deletionProtection);
     }
@@ -58,6 +70,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
     @Import(name="engine")
     private @Nullable Output<String> engine;
 
+    /**
+     * @return Name of the database engine to be used for this DB cluster. The provider will only perform drift detection if a configuration value is provided. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`. Conflicts with `source_db_cluster_identifier`.
+     * 
+     */
     public Optional<Output<String>> engine() {
         return Optional.ofNullable(this.engine);
     }
@@ -70,6 +86,11 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
     @Import(name="engineVersion")
     private @Nullable Output<String> engineVersion;
 
+    /**
+     * @return Engine version of the Aurora global database.
+     * * **NOTE:** When the engine is set to `aurora-mysql`, an engine version compatible with global database is required. The earliest available version is `5.7.mysql_aurora.2.06.0`.
+     * 
+     */
     public Optional<Output<String>> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
@@ -81,6 +102,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
     @Import(name="forceDestroy")
     private @Nullable Output<Boolean> forceDestroy;
 
+    /**
+     * @return Enable to remove DB Cluster members from Global Cluster on destroy. Required with `source_db_cluster_identifier`.
+     * 
+     */
     public Optional<Output<Boolean>> forceDestroy() {
         return Optional.ofNullable(this.forceDestroy);
     }
@@ -92,6 +117,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
     @Import(name="globalClusterIdentifier")
     private @Nullable Output<String> globalClusterIdentifier;
 
+    /**
+     * @return The global cluster identifier.
+     * 
+     */
     public Optional<Output<String>> globalClusterIdentifier() {
         return Optional.ofNullable(this.globalClusterIdentifier);
     }
@@ -103,6 +132,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
     @Import(name="globalClusterMembers")
     private @Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers;
 
+    /**
+     * @return Set of objects containing Global Cluster members.
+     * 
+     */
     public Optional<Output<List<GlobalClusterGlobalClusterMemberGetArgs>>> globalClusterMembers() {
         return Optional.ofNullable(this.globalClusterMembers);
     }
@@ -114,6 +147,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
     @Import(name="globalClusterResourceId")
     private @Nullable Output<String> globalClusterResourceId;
 
+    /**
+     * @return AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed
+     * 
+     */
     public Optional<Output<String>> globalClusterResourceId() {
         return Optional.ofNullable(this.globalClusterResourceId);
     }
@@ -125,6 +162,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
     @Import(name="sourceDbClusterIdentifier")
     private @Nullable Output<String> sourceDbClusterIdentifier;
 
+    /**
+     * @return Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation. The provider cannot perform drift detection of this value.
+     * 
+     */
     public Optional<Output<String>> sourceDbClusterIdentifier() {
         return Optional.ofNullable(this.sourceDbClusterIdentifier);
     }
@@ -136,6 +177,10 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageEncrypted")
     private @Nullable Output<Boolean> storageEncrypted;
 
+    /**
+     * @return Specifies whether the DB cluster is encrypted. The default is `false` unless `source_db_cluster_identifier` is specified and encrypted. The provider will only perform drift detection if a configuration value is provided.
+     * 
+     */
     public Optional<Output<Boolean>> storageEncrypted() {
         return Optional.ofNullable(this.storageEncrypted);
     }
@@ -174,105 +219,245 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
             $ = new GlobalClusterState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn RDS Global Cluster Amazon Resource Name (ARN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn RDS Global Cluster Amazon Resource Name (ARN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param databaseName Name for an automatically created database on cluster creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName Name for an automatically created database on cluster creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param deletionProtection If the Global Cluster should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             $.deletionProtection = deletionProtection;
             return this;
         }
 
+        /**
+         * @param deletionProtection If the Global Cluster should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(Boolean deletionProtection) {
             return deletionProtection(Output.of(deletionProtection));
         }
 
+        /**
+         * @param engine Name of the database engine to be used for this DB cluster. The provider will only perform drift detection if a configuration value is provided. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`. Conflicts with `source_db_cluster_identifier`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(@Nullable Output<String> engine) {
             $.engine = engine;
             return this;
         }
 
+        /**
+         * @param engine Name of the database engine to be used for this DB cluster. The provider will only perform drift detection if a configuration value is provided. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`. Conflicts with `source_db_cluster_identifier`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(String engine) {
             return engine(Output.of(engine));
         }
 
+        /**
+         * @param engineVersion Engine version of the Aurora global database.
+         * * **NOTE:** When the engine is set to `aurora-mysql`, an engine version compatible with global database is required. The earliest available version is `5.7.mysql_aurora.2.06.0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             $.engineVersion = engineVersion;
             return this;
         }
 
+        /**
+         * @param engineVersion Engine version of the Aurora global database.
+         * * **NOTE:** When the engine is set to `aurora-mysql`, an engine version compatible with global database is required. The earliest available version is `5.7.mysql_aurora.2.06.0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(String engineVersion) {
             return engineVersion(Output.of(engineVersion));
         }
 
+        /**
+         * @param forceDestroy Enable to remove DB Cluster members from Global Cluster on destroy. Required with `source_db_cluster_identifier`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             $.forceDestroy = forceDestroy;
             return this;
         }
 
+        /**
+         * @param forceDestroy Enable to remove DB Cluster members from Global Cluster on destroy. Required with `source_db_cluster_identifier`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDestroy(Boolean forceDestroy) {
             return forceDestroy(Output.of(forceDestroy));
         }
 
+        /**
+         * @param globalClusterIdentifier The global cluster identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalClusterIdentifier(@Nullable Output<String> globalClusterIdentifier) {
             $.globalClusterIdentifier = globalClusterIdentifier;
             return this;
         }
 
+        /**
+         * @param globalClusterIdentifier The global cluster identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalClusterIdentifier(String globalClusterIdentifier) {
             return globalClusterIdentifier(Output.of(globalClusterIdentifier));
         }
 
+        /**
+         * @param globalClusterMembers Set of objects containing Global Cluster members.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalClusterMembers(@Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers) {
             $.globalClusterMembers = globalClusterMembers;
             return this;
         }
 
+        /**
+         * @param globalClusterMembers Set of objects containing Global Cluster members.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalClusterMembers(List<GlobalClusterGlobalClusterMemberGetArgs> globalClusterMembers) {
             return globalClusterMembers(Output.of(globalClusterMembers));
         }
 
+        /**
+         * @param globalClusterMembers Set of objects containing Global Cluster members.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalClusterMembers(GlobalClusterGlobalClusterMemberGetArgs... globalClusterMembers) {
             return globalClusterMembers(List.of(globalClusterMembers));
         }
 
+        /**
+         * @param globalClusterResourceId AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalClusterResourceId(@Nullable Output<String> globalClusterResourceId) {
             $.globalClusterResourceId = globalClusterResourceId;
             return this;
         }
 
+        /**
+         * @param globalClusterResourceId AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalClusterResourceId(String globalClusterResourceId) {
             return globalClusterResourceId(Output.of(globalClusterResourceId));
         }
 
+        /**
+         * @param sourceDbClusterIdentifier Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation. The provider cannot perform drift detection of this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDbClusterIdentifier(@Nullable Output<String> sourceDbClusterIdentifier) {
             $.sourceDbClusterIdentifier = sourceDbClusterIdentifier;
             return this;
         }
 
+        /**
+         * @param sourceDbClusterIdentifier Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation. The provider cannot perform drift detection of this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDbClusterIdentifier(String sourceDbClusterIdentifier) {
             return sourceDbClusterIdentifier(Output.of(sourceDbClusterIdentifier));
         }
 
+        /**
+         * @param storageEncrypted Specifies whether the DB cluster is encrypted. The default is `false` unless `source_db_cluster_identifier` is specified and encrypted. The provider will only perform drift detection if a configuration value is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             $.storageEncrypted = storageEncrypted;
             return this;
         }
 
+        /**
+         * @param storageEncrypted Specifies whether the DB cluster is encrypted. The default is `false` unless `source_db_cluster_identifier` is specified and encrypted. The provider will only perform drift detection if a configuration value is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageEncrypted(Boolean storageEncrypted) {
             return storageEncrypted(Output.of(storageEncrypted));
         }

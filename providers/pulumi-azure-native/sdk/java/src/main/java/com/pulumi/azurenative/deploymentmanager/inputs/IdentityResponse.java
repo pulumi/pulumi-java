@@ -24,6 +24,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="identityIds", required=true)
     private List<String> identityIds;
 
+    /**
+     * @return The list of identities.
+     * 
+     */
     public List<String> identityIds() {
         return this.identityIds;
     }
@@ -35,6 +39,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The identity type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -64,15 +72,33 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityIds The list of identities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityIds(List<String> identityIds) {
             $.identityIds = identityIds;
             return this;
         }
 
+        /**
+         * @param identityIds The list of identities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityIds(String... identityIds) {
             return identityIds(List.of(identityIds));
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

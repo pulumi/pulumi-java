@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class ObjectMetricSource {
     /**
-     * describedObject specifies the descriptions of a object,such as kind,name apiVersion
+     * @return describedObject specifies the descriptions of a object,such as kind,name apiVersion
      * 
      */
     private final CrossVersionObjectReference describedObject;
     /**
-     * metric identifies the target metric by name and selector
+     * @return metric identifies the target metric by name and selector
      * 
      */
     private final MetricIdentifier metric;
     /**
-     * target specifies the target value for the given metric
+     * @return target specifies the target value for the given metric
      * 
      */
     private final MetricTarget target;
@@ -38,23 +38,23 @@ public final class ObjectMetricSource {
     }
 
     /**
-     * describedObject specifies the descriptions of a object,such as kind,name apiVersion
+     * @return describedObject specifies the descriptions of a object,such as kind,name apiVersion
      * 
-    */
+     */
     public CrossVersionObjectReference describedObject() {
         return this.describedObject;
     }
     /**
-     * metric identifies the target metric by name and selector
+     * @return metric identifies the target metric by name and selector
      * 
-    */
+     */
     public MetricIdentifier metric() {
         return this.metric;
     }
     /**
-     * target specifies the target value for the given metric
+     * @return target specifies the target value for the given metric
      * 
-    */
+     */
     public MetricTarget target() {
         return this.target;
     }

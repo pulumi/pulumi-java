@@ -27,6 +27,10 @@ public final class IPBlockArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cidr", required=true)
     private Output<String> cidr;
 
+    /**
+     * @return CIDR is a string representing the IP Block Valid examples are &#34;192.168.1.1/24&#34; or &#34;2001:db9::/64&#34;
+     * 
+     */
     public Output<String> cidr() {
         return this.cidr;
     }
@@ -38,6 +42,10 @@ public final class IPBlockArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="except")
     private @Nullable Output<List<String>> except;
 
+    /**
+     * @return Except is a slice of CIDRs that should not be included within an IP Block Valid examples are &#34;192.168.1.1/24&#34; or &#34;2001:db9::/64&#34; Except values will be rejected if they are outside the CIDR range
+     * 
+     */
     public Optional<Output<List<String>>> except() {
         return Optional.ofNullable(this.except);
     }
@@ -67,24 +75,54 @@ public final class IPBlockArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IPBlockArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidr CIDR is a string representing the IP Block Valid examples are &#34;192.168.1.1/24&#34; or &#34;2001:db9::/64&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidr(Output<String> cidr) {
             $.cidr = cidr;
             return this;
         }
 
+        /**
+         * @param cidr CIDR is a string representing the IP Block Valid examples are &#34;192.168.1.1/24&#34; or &#34;2001:db9::/64&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidr(String cidr) {
             return cidr(Output.of(cidr));
         }
 
+        /**
+         * @param except Except is a slice of CIDRs that should not be included within an IP Block Valid examples are &#34;192.168.1.1/24&#34; or &#34;2001:db9::/64&#34; Except values will be rejected if they are outside the CIDR range
+         * 
+         * @return builder
+         * 
+         */
         public Builder except(@Nullable Output<List<String>> except) {
             $.except = except;
             return this;
         }
 
+        /**
+         * @param except Except is a slice of CIDRs that should not be included within an IP Block Valid examples are &#34;192.168.1.1/24&#34; or &#34;2001:db9::/64&#34; Except values will be rejected if they are outside the CIDR range
+         * 
+         * @return builder
+         * 
+         */
         public Builder except(List<String> except) {
             return except(Output.of(except));
         }
 
+        /**
+         * @param except Except is a slice of CIDRs that should not be included within an IP Block Valid examples are &#34;192.168.1.1/24&#34; or &#34;2001:db9::/64&#34; Except values will be rejected if they are outside the CIDR range
+         * 
+         * @return builder
+         * 
+         */
         public Builder except(String... except) {
             return except(List.of(except));
         }

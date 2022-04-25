@@ -26,6 +26,10 @@ public final class DedicatedHostAvailableCapacityResponse extends com.pulumi.res
     @Import(name="allocatableVMs")
     private @Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs;
 
+    /**
+     * @return The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.
+     * 
+     */
     public Optional<List<DedicatedHostAllocatableVMResponse>> allocatableVMs() {
         return Optional.ofNullable(this.allocatableVMs);
     }
@@ -54,11 +58,23 @@ public final class DedicatedHostAvailableCapacityResponse extends com.pulumi.res
             $ = new DedicatedHostAvailableCapacityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocatableVMs The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocatableVMs(@Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs) {
             $.allocatableVMs = allocatableVMs;
             return this;
         }
 
+        /**
+         * @param allocatableVMs The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocatableVMs(DedicatedHostAllocatableVMResponse... allocatableVMs) {
             return allocatableVMs(List.of(allocatableVMs));
         }

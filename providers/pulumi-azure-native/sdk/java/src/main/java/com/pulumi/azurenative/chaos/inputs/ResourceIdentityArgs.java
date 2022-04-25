@@ -24,6 +24,10 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
     private Output<ResourceIdentityType> type;
 
+    /**
+     * @return String of the resource identity type.
+     * 
+     */
     public Output<ResourceIdentityType> type() {
         return this.type;
     }
@@ -52,11 +56,23 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
             $ = new ResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type String of the resource identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<ResourceIdentityType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type String of the resource identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ResourceIdentityType type) {
             return type(Output.of(type));
         }

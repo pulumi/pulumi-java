@@ -28,6 +28,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -39,6 +43,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -50,6 +58,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="intervalInSeconds")
     private @Nullable Integer intervalInSeconds;
 
+    /**
+     * @return The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5.
+     * 
+     */
     public Optional<Integer> intervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
@@ -61,6 +73,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="loadBalancingRules", required=true)
     private List<SubResourceResponse> loadBalancingRules;
 
+    /**
+     * @return The load balancer rules that use this probe.
+     * 
+     */
     public List<SubResourceResponse> loadBalancingRules() {
         return this.loadBalancingRules;
     }
@@ -72,6 +88,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within the set of probes used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,6 +103,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="numberOfProbes")
     private @Nullable Integer numberOfProbes;
 
+    /**
+     * @return The number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure.
+     * 
+     */
     public Optional<Integer> numberOfProbes() {
         return Optional.ofNullable(this.numberOfProbes);
     }
@@ -94,6 +118,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The port for communicating the probe. Possible values range from 1 to 65535, inclusive.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -105,6 +133,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="protocol", required=true)
     private String protocol;
 
+    /**
+     * @return The protocol of the end point. If &#39;Tcp&#39; is specified, a received ACK is required for the probe to be successful. If &#39;Http&#39; or &#39;Https&#39; is specified, a 200 OK response from the specifies URI is required for the probe to be successful.
+     * 
+     */
     public String protocol() {
         return this.protocol;
     }
@@ -116,6 +148,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the probe resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -127,6 +163,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requestPath")
     private @Nullable String requestPath;
 
+    /**
+     * @return The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value.
+     * 
+     */
     public Optional<String> requestPath() {
         return Optional.ofNullable(this.requestPath);
     }
@@ -138,6 +178,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -176,60 +220,132 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ProbeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param intervalInSeconds The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             $.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
+        /**
+         * @param loadBalancingRules The load balancer rules that use this probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingRules(List<SubResourceResponse> loadBalancingRules) {
             $.loadBalancingRules = loadBalancingRules;
             return this;
         }
 
+        /**
+         * @param loadBalancingRules The load balancer rules that use this probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingRules(SubResourceResponse... loadBalancingRules) {
             return loadBalancingRules(List.of(loadBalancingRules));
         }
 
+        /**
+         * @param name The name of the resource that is unique within the set of probes used by the load balancer. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param numberOfProbes The number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfProbes(@Nullable Integer numberOfProbes) {
             $.numberOfProbes = numberOfProbes;
             return this;
         }
 
+        /**
+         * @param port The port for communicating the probe. Possible values range from 1 to 65535, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param protocol The protocol of the end point. If &#39;Tcp&#39; is specified, a received ACK is required for the probe to be successful. If &#39;Http&#39; or &#39;Https&#39; is specified, a 200 OK response from the specifies URI is required for the probe to be successful.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the probe resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param requestPath The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestPath(@Nullable String requestPath) {
             $.requestPath = requestPath;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

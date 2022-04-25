@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServicePrincipalProfileResponse {
     /**
-     * The client ID used for the cluster (immutable).
+     * @return The client ID used for the cluster (immutable).
      * 
      */
     private final @Nullable String clientId;
     /**
-     * The client secret used for the cluster (immutable).
+     * @return The client secret used for the cluster (immutable).
      * 
      */
     private final @Nullable String clientSecret;
@@ -31,16 +31,16 @@ public final class ServicePrincipalProfileResponse {
     }
 
     /**
-     * The client ID used for the cluster (immutable).
+     * @return The client ID used for the cluster (immutable).
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * The client secret used for the cluster (immutable).
+     * @return The client secret used for the cluster (immutable).
      * 
-    */
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }

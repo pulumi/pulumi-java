@@ -29,6 +29,10 @@ public final class WindowsPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="excludedKbNumbers")
     private @Nullable Output<List<String>> excludedKbNumbers;
 
+    /**
+     * @return KB numbers excluded from the software update configuration.
+     * 
+     */
     public Optional<Output<List<String>>> excludedKbNumbers() {
         return Optional.ofNullable(this.excludedKbNumbers);
     }
@@ -40,6 +44,10 @@ public final class WindowsPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="includedKbNumbers")
     private @Nullable Output<List<String>> includedKbNumbers;
 
+    /**
+     * @return KB numbers included from the software update configuration.
+     * 
+     */
     public Optional<Output<List<String>>> includedKbNumbers() {
         return Optional.ofNullable(this.includedKbNumbers);
     }
@@ -51,6 +59,10 @@ public final class WindowsPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="includedUpdateClassifications")
     private @Nullable Output<Either<String,WindowsUpdateClasses>> includedUpdateClassifications;
 
+    /**
+     * @return Update classification included in the software update configuration. A comma separated string with required values
+     * 
+     */
     public Optional<Output<Either<String,WindowsUpdateClasses>>> includedUpdateClassifications() {
         return Optional.ofNullable(this.includedUpdateClassifications);
     }
@@ -62,6 +74,10 @@ public final class WindowsPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="rebootSetting")
     private @Nullable Output<String> rebootSetting;
 
+    /**
+     * @return Reboot setting for the software update configuration.
+     * 
+     */
     public Optional<Output<String>> rebootSetting() {
         return Optional.ofNullable(this.rebootSetting);
     }
@@ -93,54 +109,126 @@ public final class WindowsPropertiesArgs extends com.pulumi.resources.ResourceAr
             $ = new WindowsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludedKbNumbers KB numbers excluded from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedKbNumbers(@Nullable Output<List<String>> excludedKbNumbers) {
             $.excludedKbNumbers = excludedKbNumbers;
             return this;
         }
 
+        /**
+         * @param excludedKbNumbers KB numbers excluded from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedKbNumbers(List<String> excludedKbNumbers) {
             return excludedKbNumbers(Output.of(excludedKbNumbers));
         }
 
+        /**
+         * @param excludedKbNumbers KB numbers excluded from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedKbNumbers(String... excludedKbNumbers) {
             return excludedKbNumbers(List.of(excludedKbNumbers));
         }
 
+        /**
+         * @param includedKbNumbers KB numbers included from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedKbNumbers(@Nullable Output<List<String>> includedKbNumbers) {
             $.includedKbNumbers = includedKbNumbers;
             return this;
         }
 
+        /**
+         * @param includedKbNumbers KB numbers included from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedKbNumbers(List<String> includedKbNumbers) {
             return includedKbNumbers(Output.of(includedKbNumbers));
         }
 
+        /**
+         * @param includedKbNumbers KB numbers included from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedKbNumbers(String... includedKbNumbers) {
             return includedKbNumbers(List.of(includedKbNumbers));
         }
 
+        /**
+         * @param includedUpdateClassifications Update classification included in the software update configuration. A comma separated string with required values
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedUpdateClassifications(@Nullable Output<Either<String,WindowsUpdateClasses>> includedUpdateClassifications) {
             $.includedUpdateClassifications = includedUpdateClassifications;
             return this;
         }
 
+        /**
+         * @param includedUpdateClassifications Update classification included in the software update configuration. A comma separated string with required values
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedUpdateClassifications(Either<String,WindowsUpdateClasses> includedUpdateClassifications) {
             return includedUpdateClassifications(Output.of(includedUpdateClassifications));
         }
 
+        /**
+         * @param includedUpdateClassifications Update classification included in the software update configuration. A comma separated string with required values
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedUpdateClassifications(String includedUpdateClassifications) {
             return includedUpdateClassifications(Either.ofLeft(includedUpdateClassifications));
         }
 
+        /**
+         * @param includedUpdateClassifications Update classification included in the software update configuration. A comma separated string with required values
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedUpdateClassifications(WindowsUpdateClasses includedUpdateClassifications) {
             return includedUpdateClassifications(Either.ofRight(includedUpdateClassifications));
         }
 
+        /**
+         * @param rebootSetting Reboot setting for the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rebootSetting(@Nullable Output<String> rebootSetting) {
             $.rebootSetting = rebootSetting;
             return this;
         }
 
+        /**
+         * @param rebootSetting Reboot setting for the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rebootSetting(String rebootSetting) {
             return rebootSetting(Output.of(rebootSetting));
         }

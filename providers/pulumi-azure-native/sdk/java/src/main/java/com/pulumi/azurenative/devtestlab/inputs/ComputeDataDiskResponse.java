@@ -26,6 +26,10 @@ public final class ComputeDataDiskResponse extends com.pulumi.resources.InvokeAr
     @Import(name="diskSizeGiB")
     private @Nullable Integer diskSizeGiB;
 
+    /**
+     * @return Gets data disk size in GiB.
+     * 
+     */
     public Optional<Integer> diskSizeGiB() {
         return Optional.ofNullable(this.diskSizeGiB);
     }
@@ -37,6 +41,10 @@ public final class ComputeDataDiskResponse extends com.pulumi.resources.InvokeAr
     @Import(name="diskUri")
     private @Nullable String diskUri;
 
+    /**
+     * @return When backed by a blob, the URI of underlying blob.
+     * 
+     */
     public Optional<String> diskUri() {
         return Optional.ofNullable(this.diskUri);
     }
@@ -48,6 +56,10 @@ public final class ComputeDataDiskResponse extends com.pulumi.resources.InvokeAr
     @Import(name="managedDiskId")
     private @Nullable String managedDiskId;
 
+    /**
+     * @return When backed by managed disk, this is the ID of the compute disk resource.
+     * 
+     */
     public Optional<String> managedDiskId() {
         return Optional.ofNullable(this.managedDiskId);
     }
@@ -59,6 +71,10 @@ public final class ComputeDataDiskResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets data disk name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -90,21 +106,45 @@ public final class ComputeDataDiskResponse extends com.pulumi.resources.InvokeAr
             $ = new ComputeDataDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeGiB Gets data disk size in GiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
             $.diskSizeGiB = diskSizeGiB;
             return this;
         }
 
+        /**
+         * @param diskUri When backed by a blob, the URI of underlying blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskUri(@Nullable String diskUri) {
             $.diskUri = diskUri;
             return this;
         }
 
+        /**
+         * @param managedDiskId When backed by managed disk, this is the ID of the compute disk resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDiskId(@Nullable String managedDiskId) {
             $.managedDiskId = managedDiskId;
             return this;
         }
 
+        /**
+         * @param name Gets data disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

@@ -19,6 +19,10 @@ public final class ResponsePolicyGKEClusterResponse extends com.pulumi.resources
     @Import(name="gkeClusterName", required=true)
     private String gkeClusterName;
 
+    /**
+     * @return The resource name of the cluster to bind this response policy to. This should be specified in the format like: projects/*{@literal /}locations/*{@literal /}clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get
+     * 
+     */
     public String gkeClusterName() {
         return this.gkeClusterName;
     }
@@ -55,6 +59,12 @@ public final class ResponsePolicyGKEClusterResponse extends com.pulumi.resources
             $ = new ResponsePolicyGKEClusterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gkeClusterName The resource name of the cluster to bind this response policy to. This should be specified in the format like: projects/*{@literal /}locations/*{@literal /}clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusterName(String gkeClusterName) {
             $.gkeClusterName = gkeClusterName;
             return this;

@@ -14,23 +14,23 @@ import javax.annotation.Nullable;
 public final class GetExportResult {
     private final @Nullable String accepts;
     /**
-     * The API Spec.
+     * @return The API Spec.
      * 
      */
     private final String body;
     /**
-     * The content-disposition header value in the HTTP response.
+     * @return The content-disposition header value in the HTTP response.
      * 
      */
     private final String contentDisposition;
     /**
-     * The content-type header value in the HTTP response.
+     * @return The content-type header value in the HTTP response.
      * 
      */
     private final String contentType;
     private final String exportType;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -64,23 +64,23 @@ public final class GetExportResult {
         return Optional.ofNullable(this.accepts);
     }
     /**
-     * The API Spec.
+     * @return The API Spec.
      * 
-    */
+     */
     public String body() {
         return this.body;
     }
     /**
-     * The content-disposition header value in the HTTP response.
+     * @return The content-disposition header value in the HTTP response.
      * 
-    */
+     */
     public String contentDisposition() {
         return this.contentDisposition;
     }
     /**
-     * The content-type header value in the HTTP response.
+     * @return The content-type header value in the HTTP response.
      * 
-    */
+     */
     public String contentType() {
         return this.contentType;
     }
@@ -88,9 +88,9 @@ public final class GetExportResult {
         return this.exportType;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

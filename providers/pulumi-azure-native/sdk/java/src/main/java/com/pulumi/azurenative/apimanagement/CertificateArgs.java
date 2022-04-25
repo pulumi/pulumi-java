@@ -23,6 +23,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateId")
     private @Nullable Output<String> certificateId;
 
+    /**
+     * @return Identifier of the certificate entity. Must be unique in the current API Management service instance.
+     * 
+     */
     public Optional<Output<String>> certificateId() {
         return Optional.ofNullable(this.certificateId);
     }
@@ -34,6 +38,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="data")
     private @Nullable Output<String> data;
 
+    /**
+     * @return Base 64 encoded certificate using the application/x-pkcs12 representation.
+     * 
+     */
     public Optional<Output<String>> data() {
         return Optional.ofNullable(this.data);
     }
@@ -45,6 +53,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVault")
     private @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
 
+    /**
+     * @return KeyVault location details of the certificate.
+     * 
+     */
     public Optional<Output<KeyVaultContractCreatePropertiesArgs>> keyVault() {
         return Optional.ofNullable(this.keyVault);
     }
@@ -56,6 +68,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Password for the Certificate
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -67,6 +83,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -78,6 +98,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -111,56 +135,128 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateId Identifier of the certificate entity. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(@Nullable Output<String> certificateId) {
             $.certificateId = certificateId;
             return this;
         }
 
+        /**
+         * @param certificateId Identifier of the certificate entity. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(String certificateId) {
             return certificateId(Output.of(certificateId));
         }
 
+        /**
+         * @param data Base 64 encoded certificate using the application/x-pkcs12 representation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(@Nullable Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data Base 64 encoded certificate using the application/x-pkcs12 representation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }
 
+        /**
+         * @param keyVault KeyVault location details of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(@Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault) {
             $.keyVault = keyVault;
             return this;
         }
 
+        /**
+         * @param keyVault KeyVault location details of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(KeyVaultContractCreatePropertiesArgs keyVault) {
             return keyVault(Output.of(keyVault));
         }
 
+        /**
+         * @param password Password for the Certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for the Certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

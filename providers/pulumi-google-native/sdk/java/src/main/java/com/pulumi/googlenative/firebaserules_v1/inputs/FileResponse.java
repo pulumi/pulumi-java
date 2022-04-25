@@ -23,6 +23,10 @@ public final class FileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="content", required=true)
     private String content;
 
+    /**
+     * @return Textual Content.
+     * 
+     */
     public String content() {
         return this.content;
     }
@@ -34,6 +38,10 @@ public final class FileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fingerprint", required=true)
     private String fingerprint;
 
+    /**
+     * @return Fingerprint (e.g. github sha) associated with the `File`.
+     * 
+     */
     public String fingerprint() {
         return this.fingerprint;
     }
@@ -45,6 +53,10 @@ public final class FileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return File name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -75,16 +87,34 @@ public final class FileResponse extends com.pulumi.resources.InvokeArgs {
             $ = new FileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content Textual Content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param fingerprint Fingerprint (e.g. github sha) associated with the `File`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(String fingerprint) {
             $.fingerprint = fingerprint;
             return this;
         }
 
+        /**
+         * @param name File name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

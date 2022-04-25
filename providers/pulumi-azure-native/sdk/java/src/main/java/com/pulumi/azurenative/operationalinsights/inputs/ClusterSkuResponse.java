@@ -26,6 +26,10 @@ public final class ClusterSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
     private @Nullable Double capacity;
 
+    /**
+     * @return The capacity value
+     * 
+     */
     public Optional<Double> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class ClusterSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the SKU.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,11 +74,23 @@ public final class ClusterSkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ClusterSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The capacity value
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Double capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

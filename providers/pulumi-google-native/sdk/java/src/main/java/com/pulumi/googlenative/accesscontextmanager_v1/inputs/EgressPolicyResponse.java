@@ -24,6 +24,10 @@ public final class EgressPolicyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="egressFrom", required=true)
     private EgressFromResponse egressFrom;
 
+    /**
+     * @return Defines conditions on the source of a request causing this EgressPolicy to apply.
+     * 
+     */
     public EgressFromResponse egressFrom() {
         return this.egressFrom;
     }
@@ -35,6 +39,10 @@ public final class EgressPolicyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="egressTo", required=true)
     private EgressToResponse egressTo;
 
+    /**
+     * @return Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply.
+     * 
+     */
     public EgressToResponse egressTo() {
         return this.egressTo;
     }
@@ -64,11 +72,23 @@ public final class EgressPolicyResponse extends com.pulumi.resources.InvokeArgs 
             $ = new EgressPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param egressFrom Defines conditions on the source of a request causing this EgressPolicy to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressFrom(EgressFromResponse egressFrom) {
             $.egressFrom = egressFrom;
             return this;
         }
 
+        /**
+         * @param egressTo Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressTo(EgressToResponse egressTo) {
             $.egressTo = egressTo;
             return this;

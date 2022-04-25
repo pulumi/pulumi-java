@@ -31,6 +31,10 @@ public final class RecipeStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="conditionExpressions")
     private @Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions;
 
+    /**
+     * @return Condition expressions applied to the step action
+     * 
+     */
     public Optional<Output<List<RecipeConditionExpressionArgs>>> conditionExpressions() {
         return Optional.ofNullable(this.conditionExpressions);
     }
@@ -69,15 +73,33 @@ public final class RecipeStepArgs extends com.pulumi.resources.ResourceArgs {
             return action(Output.of(action));
         }
 
+        /**
+         * @param conditionExpressions Condition expressions applied to the step action
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionExpressions(@Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions) {
             $.conditionExpressions = conditionExpressions;
             return this;
         }
 
+        /**
+         * @param conditionExpressions Condition expressions applied to the step action
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionExpressions(List<RecipeConditionExpressionArgs> conditionExpressions) {
             return conditionExpressions(Output.of(conditionExpressions));
         }
 
+        /**
+         * @param conditionExpressions Condition expressions applied to the step action
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionExpressions(RecipeConditionExpressionArgs... conditionExpressions) {
             return conditionExpressions(List.of(conditionExpressions));
         }

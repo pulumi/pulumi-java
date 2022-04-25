@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ManagedZoneServiceDirectoryConfig {
     /**
-     * The namespace associated with the zone.
+     * @return The namespace associated with the zone.
      * Structure is documented below.
      * 
      */
@@ -22,10 +22,10 @@ public final class ManagedZoneServiceDirectoryConfig {
     }
 
     /**
-     * The namespace associated with the zone.
+     * @return The namespace associated with the zone.
      * Structure is documented below.
      * 
-    */
+     */
     public ManagedZoneServiceDirectoryConfigNamespace namespace() {
         return this.namespace;
     }

@@ -25,6 +25,10 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="authProviderX509CertUrl", required=true)
     private Output<String> authProviderX509CertUrl;
 
+    /**
+     * @return Auth provider x509 certificate URL field of the API key (write only)
+     * 
+     */
     public Output<String> authProviderX509CertUrl() {
         return this.authProviderX509CertUrl;
     }
@@ -36,6 +40,10 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="authUri", required=true)
     private Output<String> authUri;
 
+    /**
+     * @return Auth URI field of the API key (write only)
+     * 
+     */
     public Output<String> authUri() {
         return this.authUri;
     }
@@ -48,6 +56,11 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="authenticationType", required=true)
     private Output<String> authenticationType;
 
+    /**
+     * @return Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+     * Expected value is &#39;gcpCredentials&#39;.
+     * 
+     */
     public Output<String> authenticationType() {
         return this.authenticationType;
     }
@@ -59,6 +72,10 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="clientEmail", required=true)
     private Output<String> clientEmail;
 
+    /**
+     * @return Client email field of the API key (write only)
+     * 
+     */
     public Output<String> clientEmail() {
         return this.clientEmail;
     }
@@ -70,6 +87,10 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="clientId", required=true)
     private Output<String> clientId;
 
+    /**
+     * @return Client ID field of the API key (write only)
+     * 
+     */
     public Output<String> clientId() {
         return this.clientId;
     }
@@ -81,6 +102,10 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="clientX509CertUrl", required=true)
     private Output<String> clientX509CertUrl;
 
+    /**
+     * @return Client x509 certificate URL field of the API key (write only)
+     * 
+     */
     public Output<String> clientX509CertUrl() {
         return this.clientX509CertUrl;
     }
@@ -92,6 +117,10 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="organizationId", required=true)
     private Output<String> organizationId;
 
+    /**
+     * @return The organization ID of the GCP cloud account
+     * 
+     */
     public Output<String> organizationId() {
         return this.organizationId;
     }
@@ -103,6 +132,10 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="privateKey", required=true)
     private Output<String> privateKey;
 
+    /**
+     * @return Private key field of the API key (write only)
+     * 
+     */
     public Output<String> privateKey() {
         return this.privateKey;
     }
@@ -114,6 +147,10 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="privateKeyId", required=true)
     private Output<String> privateKeyId;
 
+    /**
+     * @return Private key ID field of the API key (write only)
+     * 
+     */
     public Output<String> privateKeyId() {
         return this.privateKeyId;
     }
@@ -125,6 +162,10 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="projectId", required=true)
     private Output<String> projectId;
 
+    /**
+     * @return Project ID field of the API key (write only)
+     * 
+     */
     public Output<String> projectId() {
         return this.projectId;
     }
@@ -136,6 +177,10 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="tokenUri", required=true)
     private Output<String> tokenUri;
 
+    /**
+     * @return Token URI field of the API key (write only)
+     * 
+     */
     public Output<String> tokenUri() {
         return this.tokenUri;
     }
@@ -147,6 +192,10 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type field of the API key (write only)
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -186,110 +235,256 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
             $ = new GcpCredentialsDetailsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authProviderX509CertUrl Auth provider x509 certificate URL field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder authProviderX509CertUrl(Output<String> authProviderX509CertUrl) {
             $.authProviderX509CertUrl = authProviderX509CertUrl;
             return this;
         }
 
+        /**
+         * @param authProviderX509CertUrl Auth provider x509 certificate URL field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder authProviderX509CertUrl(String authProviderX509CertUrl) {
             return authProviderX509CertUrl(Output.of(authProviderX509CertUrl));
         }
 
+        /**
+         * @param authUri Auth URI field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder authUri(Output<String> authUri) {
             $.authUri = authUri;
             return this;
         }
 
+        /**
+         * @param authUri Auth URI field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder authUri(String authUri) {
             return authUri(Output.of(authUri));
         }
 
+        /**
+         * @param authenticationType Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+         * Expected value is &#39;gcpCredentials&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Output<String> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+         * Expected value is &#39;gcpCredentials&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param clientEmail Client email field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientEmail(Output<String> clientEmail) {
             $.clientEmail = clientEmail;
             return this;
         }
 
+        /**
+         * @param clientEmail Client email field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientEmail(String clientEmail) {
             return clientEmail(Output.of(clientEmail));
         }
 
+        /**
+         * @param clientId Client ID field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId Client ID field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientX509CertUrl Client x509 certificate URL field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientX509CertUrl(Output<String> clientX509CertUrl) {
             $.clientX509CertUrl = clientX509CertUrl;
             return this;
         }
 
+        /**
+         * @param clientX509CertUrl Client x509 certificate URL field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientX509CertUrl(String clientX509CertUrl) {
             return clientX509CertUrl(Output.of(clientX509CertUrl));
         }
 
+        /**
+         * @param organizationId The organization ID of the GCP cloud account
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
+        /**
+         * @param organizationId The organization ID of the GCP cloud account
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationId(String organizationId) {
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param privateKey Private key field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(Output<String> privateKey) {
             $.privateKey = privateKey;
             return this;
         }
 
+        /**
+         * @param privateKey Private key field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(String privateKey) {
             return privateKey(Output.of(privateKey));
         }
 
+        /**
+         * @param privateKeyId Private key ID field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyId(Output<String> privateKeyId) {
             $.privateKeyId = privateKeyId;
             return this;
         }
 
+        /**
+         * @param privateKeyId Private key ID field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyId(String privateKeyId) {
             return privateKeyId(Output.of(privateKeyId));
         }
 
+        /**
+         * @param projectId Project ID field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId Project ID field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }
 
+        /**
+         * @param tokenUri Token URI field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenUri(Output<String> tokenUri) {
             $.tokenUri = tokenUri;
             return this;
         }
 
+        /**
+         * @param tokenUri Token URI field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenUri(String tokenUri) {
             return tokenUri(Output.of(tokenUri));
         }
 
+        /**
+         * @param type Type field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -27,6 +27,10 @@ public final class OpenAuthenticationAccessPolicyResponse extends com.pulumi.res
     @Import(name="claims")
     private @Nullable List<OpenAuthenticationPolicyClaimResponse> claims;
 
+    /**
+     * @return The access policy claims.
+     * 
+     */
     public Optional<List<OpenAuthenticationPolicyClaimResponse>> claims() {
         return Optional.ofNullable(this.claims);
     }
@@ -38,6 +42,10 @@ public final class OpenAuthenticationAccessPolicyResponse extends com.pulumi.res
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of provider for OAuth.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -67,15 +75,33 @@ public final class OpenAuthenticationAccessPolicyResponse extends com.pulumi.res
             $ = new OpenAuthenticationAccessPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param claims The access policy claims.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claims(@Nullable List<OpenAuthenticationPolicyClaimResponse> claims) {
             $.claims = claims;
             return this;
         }
 
+        /**
+         * @param claims The access policy claims.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claims(OpenAuthenticationPolicyClaimResponse... claims) {
             return claims(List.of(claims));
         }
 
+        /**
+         * @param type Type of provider for OAuth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

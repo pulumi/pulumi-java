@@ -23,6 +23,10 @@ public final class InputMappingResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fieldName", required=true)
     private String fieldName;
 
+    /**
+     * @return The name of the field that is going to be injected.
+     * 
+     */
     public String fieldName() {
         return this.fieldName;
     }
@@ -34,6 +38,10 @@ public final class InputMappingResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The location where this mapping applies.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -45,6 +53,10 @@ public final class InputMappingResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="methodMatch", required=true)
     private String methodMatch;
 
+    /**
+     * @return Regex to evaluate on method to decide if input applies.
+     * 
+     */
     public String methodMatch() {
         return this.methodMatch;
     }
@@ -56,6 +68,10 @@ public final class InputMappingResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return A jsonPath expression to select an element.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -87,21 +103,45 @@ public final class InputMappingResponse extends com.pulumi.resources.InvokeArgs 
             $ = new InputMappingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fieldName The name of the field that is going to be injected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldName(String fieldName) {
             $.fieldName = fieldName;
             return this;
         }
 
+        /**
+         * @param location The location where this mapping applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param methodMatch Regex to evaluate on method to decide if input applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodMatch(String methodMatch) {
             $.methodMatch = methodMatch;
             return this;
         }
 
+        /**
+         * @param value A jsonPath expression to select an element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

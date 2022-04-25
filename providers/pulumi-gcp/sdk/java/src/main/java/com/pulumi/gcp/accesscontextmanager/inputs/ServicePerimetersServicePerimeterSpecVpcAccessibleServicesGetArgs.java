@@ -25,6 +25,11 @@ public final class ServicePerimetersServicePerimeterSpecVpcAccessibleServicesGet
     @Import(name="allowedServices")
     private @Nullable Output<List<String>> allowedServices;
 
+    /**
+     * @return The list of APIs usable within the Service Perimeter.
+     * Must be empty unless `enableRestriction` is True.
+     * 
+     */
     public Optional<Output<List<String>>> allowedServices() {
         return Optional.ofNullable(this.allowedServices);
     }
@@ -37,6 +42,11 @@ public final class ServicePerimetersServicePerimeterSpecVpcAccessibleServicesGet
     @Import(name="enableRestriction")
     private @Nullable Output<Boolean> enableRestriction;
 
+    /**
+     * @return Whether to restrict API calls within the Service Perimeter to the
+     * list of APIs specified in &#39;allowedServices&#39;.
+     * 
+     */
     public Optional<Output<Boolean>> enableRestriction() {
         return Optional.ofNullable(this.enableRestriction);
     }
@@ -66,24 +76,59 @@ public final class ServicePerimetersServicePerimeterSpecVpcAccessibleServicesGet
             $ = new ServicePerimetersServicePerimeterSpecVpcAccessibleServicesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedServices The list of APIs usable within the Service Perimeter.
+         * Must be empty unless `enableRestriction` is True.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedServices(@Nullable Output<List<String>> allowedServices) {
             $.allowedServices = allowedServices;
             return this;
         }
 
+        /**
+         * @param allowedServices The list of APIs usable within the Service Perimeter.
+         * Must be empty unless `enableRestriction` is True.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedServices(List<String> allowedServices) {
             return allowedServices(Output.of(allowedServices));
         }
 
+        /**
+         * @param allowedServices The list of APIs usable within the Service Perimeter.
+         * Must be empty unless `enableRestriction` is True.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedServices(String... allowedServices) {
             return allowedServices(List.of(allowedServices));
         }
 
+        /**
+         * @param enableRestriction Whether to restrict API calls within the Service Perimeter to the
+         * list of APIs specified in &#39;allowedServices&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRestriction(@Nullable Output<Boolean> enableRestriction) {
             $.enableRestriction = enableRestriction;
             return this;
         }
 
+        /**
+         * @param enableRestriction Whether to restrict API calls within the Service Perimeter to the
+         * list of APIs specified in &#39;allowedServices&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRestriction(Boolean enableRestriction) {
             return enableRestriction(Output.of(enableRestriction));
         }

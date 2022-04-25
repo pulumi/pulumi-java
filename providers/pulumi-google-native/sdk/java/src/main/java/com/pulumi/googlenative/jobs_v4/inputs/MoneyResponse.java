@@ -24,6 +24,10 @@ public final class MoneyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="currencyCode", required=true)
     private String currencyCode;
 
+    /**
+     * @return The three-letter currency code defined in ISO 4217.
+     * 
+     */
     public String currencyCode() {
         return this.currencyCode;
     }
@@ -35,6 +39,10 @@ public final class MoneyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nanos", required=true)
     private Integer nanos;
 
+    /**
+     * @return Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.
+     * 
+     */
     public Integer nanos() {
         return this.nanos;
     }
@@ -46,6 +54,10 @@ public final class MoneyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="units", required=true)
     private String units;
 
+    /**
+     * @return The whole units of the amount. For example if `currencyCode` is `&#34;USD&#34;`, then 1 unit is one US dollar.
+     * 
+     */
     public String units() {
         return this.units;
     }
@@ -76,16 +88,34 @@ public final class MoneyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MoneyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currencyCode The three-letter currency code defined in ISO 4217.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currencyCode(String currencyCode) {
             $.currencyCode = currencyCode;
             return this;
         }
 
+        /**
+         * @param nanos Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nanos(Integer nanos) {
             $.nanos = nanos;
             return this;
         }
 
+        /**
+         * @param units The whole units of the amount. For example if `currencyCode` is `&#34;USD&#34;`, then 1 unit is one US dollar.
+         * 
+         * @return builder
+         * 
+         */
         public Builder units(String units) {
             $.units = units;
             return this;

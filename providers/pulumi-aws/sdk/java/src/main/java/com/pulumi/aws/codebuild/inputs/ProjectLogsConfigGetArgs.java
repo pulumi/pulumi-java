@@ -23,6 +23,10 @@ public final class ProjectLogsConfigGetArgs extends com.pulumi.resources.Resourc
     @Import(name="cloudwatchLogs")
     private @Nullable Output<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs;
 
+    /**
+     * @return Configuration block. Detailed below.
+     * 
+     */
     public Optional<Output<ProjectLogsConfigCloudwatchLogsGetArgs>> cloudwatchLogs() {
         return Optional.ofNullable(this.cloudwatchLogs);
     }
@@ -34,6 +38,10 @@ public final class ProjectLogsConfigGetArgs extends com.pulumi.resources.Resourc
     @Import(name="s3Logs")
     private @Nullable Output<ProjectLogsConfigS3LogsGetArgs> s3Logs;
 
+    /**
+     * @return Configuration block. Detailed below.
+     * 
+     */
     public Optional<Output<ProjectLogsConfigS3LogsGetArgs>> s3Logs() {
         return Optional.ofNullable(this.s3Logs);
     }
@@ -63,20 +71,44 @@ public final class ProjectLogsConfigGetArgs extends com.pulumi.resources.Resourc
             $ = new ProjectLogsConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudwatchLogs Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLogs(@Nullable Output<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs) {
             $.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
 
+        /**
+         * @param cloudwatchLogs Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLogs(ProjectLogsConfigCloudwatchLogsGetArgs cloudwatchLogs) {
             return cloudwatchLogs(Output.of(cloudwatchLogs));
         }
 
+        /**
+         * @param s3Logs Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Logs(@Nullable Output<ProjectLogsConfigS3LogsGetArgs> s3Logs) {
             $.s3Logs = s3Logs;
             return this;
         }
 
+        /**
+         * @param s3Logs Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Logs(ProjectLogsConfigS3LogsGetArgs s3Logs) {
             return s3Logs(Output.of(s3Logs));
         }

@@ -27,6 +27,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalData")
     private @Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData;
 
+    /**
+     * @return Additional data about the assignment
+     * 
+     */
     public Optional<Output<AssignmentPropertiesAdditionalDataArgs>> additionalData() {
         return Optional.ofNullable(this.additionalData);
     }
@@ -38,6 +42,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assignedComponent")
     private @Nullable Output<AssignedComponentItemArgs> assignedComponent;
 
+    /**
+     * @return Component item with key as applied to this standard assignment over the given scope
+     * 
+     */
     public Optional<Output<AssignedComponentItemArgs>> assignedComponent() {
         return Optional.ofNullable(this.assignedComponent);
     }
@@ -49,6 +57,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assignedStandard")
     private @Nullable Output<AssignedStandardItemArgs> assignedStandard;
 
+    /**
+     * @return Standard item with key as applied to this standard assignment over the given scope
+     * 
+     */
     public Optional<Output<AssignedStandardItemArgs>> assignedStandard() {
         return Optional.ofNullable(this.assignedStandard);
     }
@@ -60,6 +72,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assignmentId")
     private @Nullable Output<String> assignmentId;
 
+    /**
+     * @return The security assignment key - unique key for the standard assignment
+     * 
+     */
     public Optional<Output<String>> assignmentId() {
         return Optional.ofNullable(this.assignmentId);
     }
@@ -71,6 +87,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return description of the standardAssignment
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -82,6 +102,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return display name of the standardAssignment
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -93,6 +117,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="effect")
     private @Nullable Output<String> effect;
 
+    /**
+     * @return expected effect of this assignment (Disable/Exempt/etc)
+     * 
+     */
     public Optional<Output<String>> effect() {
         return Optional.ofNullable(this.effect);
     }
@@ -104,6 +132,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expiresOn")
     private @Nullable Output<String> expiresOn;
 
+    /**
+     * @return Expiration date of this assignment as a full ISO date
+     * 
+     */
     public Optional<Output<String>> expiresOn() {
         return Optional.ofNullable(this.expiresOn);
     }
@@ -115,6 +147,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of the resource
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -126,6 +162,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location where the resource is stored
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -137,6 +177,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Object> metadata;
 
+    /**
+     * @return The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+     * 
+     */
     public Optional<Output<Object>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -148,6 +192,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -159,6 +207,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
     private @Nullable Output<String> scope;
 
+    /**
+     * @return Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
+     * 
+     */
     public Optional<Output<String>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -170,6 +222,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A list of key value pairs that describe the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -211,128 +267,296 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalData Additional data about the assignment
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalData(@Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData) {
             $.additionalData = additionalData;
             return this;
         }
 
+        /**
+         * @param additionalData Additional data about the assignment
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalData(AssignmentPropertiesAdditionalDataArgs additionalData) {
             return additionalData(Output.of(additionalData));
         }
 
+        /**
+         * @param assignedComponent Component item with key as applied to this standard assignment over the given scope
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignedComponent(@Nullable Output<AssignedComponentItemArgs> assignedComponent) {
             $.assignedComponent = assignedComponent;
             return this;
         }
 
+        /**
+         * @param assignedComponent Component item with key as applied to this standard assignment over the given scope
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignedComponent(AssignedComponentItemArgs assignedComponent) {
             return assignedComponent(Output.of(assignedComponent));
         }
 
+        /**
+         * @param assignedStandard Standard item with key as applied to this standard assignment over the given scope
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignedStandard(@Nullable Output<AssignedStandardItemArgs> assignedStandard) {
             $.assignedStandard = assignedStandard;
             return this;
         }
 
+        /**
+         * @param assignedStandard Standard item with key as applied to this standard assignment over the given scope
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignedStandard(AssignedStandardItemArgs assignedStandard) {
             return assignedStandard(Output.of(assignedStandard));
         }
 
+        /**
+         * @param assignmentId The security assignment key - unique key for the standard assignment
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignmentId(@Nullable Output<String> assignmentId) {
             $.assignmentId = assignmentId;
             return this;
         }
 
+        /**
+         * @param assignmentId The security assignment key - unique key for the standard assignment
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignmentId(String assignmentId) {
             return assignmentId(Output.of(assignmentId));
         }
 
+        /**
+         * @param description description of the standardAssignment
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description description of the standardAssignment
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName display name of the standardAssignment
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName display name of the standardAssignment
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param effect expected effect of this assignment (Disable/Exempt/etc)
+         * 
+         * @return builder
+         * 
+         */
         public Builder effect(@Nullable Output<String> effect) {
             $.effect = effect;
             return this;
         }
 
+        /**
+         * @param effect expected effect of this assignment (Disable/Exempt/etc)
+         * 
+         * @return builder
+         * 
+         */
         public Builder effect(String effect) {
             return effect(Output.of(effect));
         }
 
+        /**
+         * @param expiresOn Expiration date of this assignment as a full ISO date
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiresOn(@Nullable Output<String> expiresOn) {
             $.expiresOn = expiresOn;
             return this;
         }
 
+        /**
+         * @param expiresOn Expiration date of this assignment as a full ISO date
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiresOn(String expiresOn) {
             return expiresOn(Output.of(expiresOn));
         }
 
+        /**
+         * @param kind Kind of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Location where the resource is stored
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location where the resource is stored
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param metadata The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Object> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Object metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scope Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param tags A list of key value pairs that describe the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key value pairs that describe the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

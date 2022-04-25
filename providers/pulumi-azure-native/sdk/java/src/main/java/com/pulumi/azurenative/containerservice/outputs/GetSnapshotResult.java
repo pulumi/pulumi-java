@@ -15,42 +15,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSnapshotResult {
     /**
-     * CreationData to be used to specify the source agent pool resource ID to create this snapshot.
+     * @return CreationData to be used to specify the source agent pool resource ID to create this snapshot.
      * 
      */
     private final @Nullable CreationDataResponse creationData;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * The type of a snapshot. The default is NodePool.
+     * @return The type of a snapshot. The default is NodePool.
      * 
      */
     private final @Nullable String snapshotType;
     /**
-     * The system metadata relating to this snapshot.
+     * @return The system metadata relating to this snapshot.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -76,58 +76,58 @@ public final class GetSnapshotResult {
     }
 
     /**
-     * CreationData to be used to specify the source agent pool resource ID to create this snapshot.
+     * @return CreationData to be used to specify the source agent pool resource ID to create this snapshot.
      * 
-    */
+     */
     public Optional<CreationDataResponse> creationData() {
         return Optional.ofNullable(this.creationData);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The type of a snapshot. The default is NodePool.
+     * @return The type of a snapshot. The default is NodePool.
      * 
-    */
+     */
     public Optional<String> snapshotType() {
         return Optional.ofNullable(this.snapshotType);
     }
     /**
-     * The system metadata relating to this snapshot.
+     * @return The system metadata relating to this snapshot.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

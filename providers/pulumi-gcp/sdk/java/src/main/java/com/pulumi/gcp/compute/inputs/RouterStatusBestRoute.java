@@ -35,6 +35,10 @@ public final class RouterStatusBestRoute extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the router.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,11 @@ public final class RouterStatusBestRoute extends com.pulumi.resources.InvokeArgs
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return The network name or resource link to the parent
+     * network of this subnetwork.
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -115,6 +124,11 @@ public final class RouterStatusBestRoute extends com.pulumi.resources.InvokeArgs
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return The ID of the project in which the resource
+     * belongs. If it is not provided, the provider project is used.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -181,11 +195,24 @@ public final class RouterStatusBestRoute extends com.pulumi.resources.InvokeArgs
             return this;
         }
 
+        /**
+         * @param name The name of the router.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param network The network name or resource link to the parent
+         * network of this subnetwork.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
@@ -231,6 +258,13 @@ public final class RouterStatusBestRoute extends com.pulumi.resources.InvokeArgs
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource
+         * belongs. If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;

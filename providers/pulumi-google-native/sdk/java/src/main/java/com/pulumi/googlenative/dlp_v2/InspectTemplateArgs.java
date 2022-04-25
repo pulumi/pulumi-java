@@ -23,6 +23,10 @@ public final class InspectTemplateArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Short description (max 256 chars).
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class InspectTemplateArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name (max 256 chars).
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -45,6 +53,10 @@ public final class InspectTemplateArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="inspectConfig")
     private @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
 
+    /**
+     * @return The core content of the template. Configuration of the scanning process.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2InspectConfigArgs>> inspectConfig() {
         return Optional.ofNullable(this.inspectConfig);
     }
@@ -70,6 +82,10 @@ public final class InspectTemplateArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="templateId")
     private @Nullable Output<String> templateId;
 
+    /**
+     * @return The template id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
+     * 
+     */
     public Optional<Output<String>> templateId() {
         return Optional.ofNullable(this.templateId);
     }
@@ -103,29 +119,65 @@ public final class InspectTemplateArgs extends com.pulumi.resources.ResourceArgs
             $ = new InspectTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Short description (max 256 chars).
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Short description (max 256 chars).
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Display name (max 256 chars).
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name (max 256 chars).
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param inspectConfig The core content of the template. Configuration of the scanning process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectConfig(@Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig) {
             $.inspectConfig = inspectConfig;
             return this;
         }
 
+        /**
+         * @param inspectConfig The core content of the template. Configuration of the scanning process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectConfig(GooglePrivacyDlpV2InspectConfigArgs inspectConfig) {
             return inspectConfig(Output.of(inspectConfig));
         }
@@ -148,11 +200,23 @@ public final class InspectTemplateArgs extends com.pulumi.resources.ResourceArgs
             return project(Output.of(project));
         }
 
+        /**
+         * @param templateId The template id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateId(@Nullable Output<String> templateId) {
             $.templateId = templateId;
             return this;
         }
 
+        /**
+         * @param templateId The template id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateId(String templateId) {
             return templateId(Output.of(templateId));
         }

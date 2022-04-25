@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DockerBuildResponse {
     /**
-     * Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
+     * @return Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
      * The path is relative to the asset path which must contain a single Blob URI value.
      * &lt;seealso href=&#34;https://docs.docker.com/engine/context/working-with-contexts/&#34; /&gt;
      * 
      */
     private final @Nullable String context;
     /**
-     * Enum to determine docker specification type. Must be either Build or Image.
+     * @return Enum to determine docker specification type. Must be either Build or Image.
      * Expected value is &#39;Build&#39;.
      * 
      */
     private final String dockerSpecificationType;
     /**
-     * Docker command line instructions to assemble an image.
+     * @return Docker command line instructions to assemble an image.
      * &lt;seealso href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments&#34; /&gt;
      * 
      */
     private final String dockerfile;
     /**
-     * The platform information of the docker image.
+     * @return The platform information of the docker image.
      * 
      */
     private final @Nullable DockerImagePlatformResponse platform;
@@ -50,34 +50,34 @@ public final class DockerBuildResponse {
     }
 
     /**
-     * Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
+     * @return Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
      * The path is relative to the asset path which must contain a single Blob URI value.
      * &lt;seealso href=&#34;https://docs.docker.com/engine/context/working-with-contexts/&#34; /&gt;
      * 
-    */
+     */
     public Optional<String> context() {
         return Optional.ofNullable(this.context);
     }
     /**
-     * Enum to determine docker specification type. Must be either Build or Image.
+     * @return Enum to determine docker specification type. Must be either Build or Image.
      * Expected value is &#39;Build&#39;.
      * 
-    */
+     */
     public String dockerSpecificationType() {
         return this.dockerSpecificationType;
     }
     /**
-     * Docker command line instructions to assemble an image.
+     * @return Docker command line instructions to assemble an image.
      * &lt;seealso href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments&#34; /&gt;
      * 
-    */
+     */
     public String dockerfile() {
         return this.dockerfile;
     }
     /**
-     * The platform information of the docker image.
+     * @return The platform information of the docker image.
      * 
-    */
+     */
     public Optional<DockerImagePlatformResponse> platform() {
         return Optional.ofNullable(this.platform);
     }

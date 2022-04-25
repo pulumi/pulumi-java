@@ -28,6 +28,10 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends com.pulumi.
     @Import(name="checkPermissionsGroup")
     private @Nullable String checkPermissionsGroup;
 
+    /**
+     * @return Permission group for validations
+     * 
+     */
     public Optional<String> checkPermissionsGroup() {
         return Optional.ofNullable(this.checkPermissionsGroup);
     }
@@ -39,6 +43,10 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends com.pulumi.
     @Import(name="collectAgentJobs")
     private @Nullable Boolean collectAgentJobs;
 
+    /**
+     * @return Flag for whether to collect agent jobs from source server.
+     * 
+     */
     public Optional<Boolean> collectAgentJobs() {
         return Optional.ofNullable(this.collectAgentJobs);
     }
@@ -50,6 +58,10 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends com.pulumi.
     @Import(name="collectLogins")
     private @Nullable Boolean collectLogins;
 
+    /**
+     * @return Flag for whether to collect logins from source server.
+     * 
+     */
     public Optional<Boolean> collectLogins() {
         return Optional.ofNullable(this.collectLogins);
     }
@@ -61,6 +73,10 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends com.pulumi.
     @Import(name="sourceConnectionInfo", required=true)
     private SqlConnectionInfoResponse sourceConnectionInfo;
 
+    /**
+     * @return Connection information for Source SQL Server
+     * 
+     */
     public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -92,21 +108,45 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends com.pulumi.
             $ = new ConnectToSourceSqlServerTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checkPermissionsGroup Permission group for validations
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkPermissionsGroup(@Nullable String checkPermissionsGroup) {
             $.checkPermissionsGroup = checkPermissionsGroup;
             return this;
         }
 
+        /**
+         * @param collectAgentJobs Flag for whether to collect agent jobs from source server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectAgentJobs(@Nullable Boolean collectAgentJobs) {
             $.collectAgentJobs = collectAgentJobs;
             return this;
         }
 
+        /**
+         * @param collectLogins Flag for whether to collect logins from source server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectLogins(@Nullable Boolean collectLogins) {
             $.collectLogins = collectLogins;
             return this;
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for Source SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;

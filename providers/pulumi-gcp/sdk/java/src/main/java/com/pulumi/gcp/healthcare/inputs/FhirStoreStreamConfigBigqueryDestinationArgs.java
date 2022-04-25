@@ -21,6 +21,10 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends com.pulu
     @Import(name="datasetUri", required=true)
     private Output<String> datasetUri;
 
+    /**
+     * @return BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
+     * 
+     */
     public Output<String> datasetUri() {
         return this.datasetUri;
     }
@@ -33,6 +37,11 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends com.pulu
     @Import(name="schemaConfig", required=true)
     private Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig;
 
+    /**
+     * @return The configuration for the exported BigQuery schema.
+     * Structure is documented below.
+     * 
+     */
     public Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig() {
         return this.schemaConfig;
     }
@@ -62,20 +71,46 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends com.pulu
             $ = new FhirStoreStreamConfigBigqueryDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetUri BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetUri(Output<String> datasetUri) {
             $.datasetUri = datasetUri;
             return this;
         }
 
+        /**
+         * @param datasetUri BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetUri(String datasetUri) {
             return datasetUri(Output.of(datasetUri));
         }
 
+        /**
+         * @param schemaConfig The configuration for the exported BigQuery schema.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaConfig(Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig) {
             $.schemaConfig = schemaConfig;
             return this;
         }
 
+        /**
+         * @param schemaConfig The configuration for the exported BigQuery schema.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaConfig(FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs schemaConfig) {
             return schemaConfig(Output.of(schemaConfig));
         }

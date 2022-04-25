@@ -26,6 +26,10 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="cpuHotAddEnabled", required=true)
     private Boolean cpuHotAddEnabled;
 
+    /**
+     * @return Gets or sets a value indicating whether virtual processors can be added while this virtual machine is running.
+     * 
+     */
     public Boolean cpuHotAddEnabled() {
         return this.cpuHotAddEnabled;
     }
@@ -37,6 +41,10 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="cpuHotRemoveEnabled", required=true)
     private Boolean cpuHotRemoveEnabled;
 
+    /**
+     * @return Gets or sets a value indicating whether virtual processors can be removed while this virtual machine is running.
+     * 
+     */
     public Boolean cpuHotRemoveEnabled() {
         return this.cpuHotRemoveEnabled;
     }
@@ -48,6 +56,10 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="memoryHotAddEnabled", required=true)
     private Boolean memoryHotAddEnabled;
 
+    /**
+     * @return Gets or sets a value indicating whether memory can be added while this virtual machine is running.
+     * 
+     */
     public Boolean memoryHotAddEnabled() {
         return this.memoryHotAddEnabled;
     }
@@ -59,6 +71,10 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="memorySizeMB")
     private @Nullable Integer memorySizeMB;
 
+    /**
+     * @return Gets or sets memory size in MBs for the vm.
+     * 
+     */
     public Optional<Integer> memorySizeMB() {
         return Optional.ofNullable(this.memorySizeMB);
     }
@@ -70,6 +86,10 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="numCPUs")
     private @Nullable Integer numCPUs;
 
+    /**
+     * @return Gets or sets the number of vCPUs for the vm.
+     * 
+     */
     public Optional<Integer> numCPUs() {
         return Optional.ofNullable(this.numCPUs);
     }
@@ -81,6 +101,10 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="numCoresPerSocket")
     private @Nullable Integer numCoresPerSocket;
 
+    /**
+     * @return Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
+     * 
+     */
     public Optional<Integer> numCoresPerSocket() {
         return Optional.ofNullable(this.numCoresPerSocket);
     }
@@ -114,31 +138,67 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
             $ = new HardwareProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuHotAddEnabled Gets or sets a value indicating whether virtual processors can be added while this virtual machine is running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuHotAddEnabled(Boolean cpuHotAddEnabled) {
             $.cpuHotAddEnabled = cpuHotAddEnabled;
             return this;
         }
 
+        /**
+         * @param cpuHotRemoveEnabled Gets or sets a value indicating whether virtual processors can be removed while this virtual machine is running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuHotRemoveEnabled(Boolean cpuHotRemoveEnabled) {
             $.cpuHotRemoveEnabled = cpuHotRemoveEnabled;
             return this;
         }
 
+        /**
+         * @param memoryHotAddEnabled Gets or sets a value indicating whether memory can be added while this virtual machine is running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryHotAddEnabled(Boolean memoryHotAddEnabled) {
             $.memoryHotAddEnabled = memoryHotAddEnabled;
             return this;
         }
 
+        /**
+         * @param memorySizeMB Gets or sets memory size in MBs for the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memorySizeMB(@Nullable Integer memorySizeMB) {
             $.memorySizeMB = memorySizeMB;
             return this;
         }
 
+        /**
+         * @param numCPUs Gets or sets the number of vCPUs for the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numCPUs(@Nullable Integer numCPUs) {
             $.numCPUs = numCPUs;
             return this;
         }
 
+        /**
+         * @param numCoresPerSocket Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numCoresPerSocket(@Nullable Integer numCoresPerSocket) {
             $.numCoresPerSocket = numCoresPerSocket;
             return this;

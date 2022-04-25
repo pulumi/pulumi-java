@@ -25,6 +25,10 @@ public final class ServiceSpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="template", required=true)
     private RevisionTemplateResponse template;
 
+    /**
+     * @return Template holds the latest specification for the Revision to be stamped out.
+     * 
+     */
     public RevisionTemplateResponse template() {
         return this.template;
     }
@@ -36,6 +40,10 @@ public final class ServiceSpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="traffic", required=true)
     private List<TrafficTargetResponse> traffic;
 
+    /**
+     * @return Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
+     * 
+     */
     public List<TrafficTargetResponse> traffic() {
         return this.traffic;
     }
@@ -65,16 +73,34 @@ public final class ServiceSpecResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ServiceSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param template Template holds the latest specification for the Revision to be stamped out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(RevisionTemplateResponse template) {
             $.template = template;
             return this;
         }
 
+        /**
+         * @param traffic Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traffic(List<TrafficTargetResponse> traffic) {
             $.traffic = traffic;
             return this;
         }
 
+        /**
+         * @param traffic Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traffic(TrafficTargetResponse... traffic) {
             return traffic(List.of(traffic));
         }

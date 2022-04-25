@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class TemplateSourceTemplate {
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
      */
     private final String arn;
@@ -21,9 +21,9 @@ public final class TemplateSourceTemplate {
     }
 
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }

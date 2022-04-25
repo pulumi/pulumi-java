@@ -26,6 +26,10 @@ public final class AttestationAtResourceGroupArgs extends com.pulumi.resources.R
     @Import(name="attestationName")
     private @Nullable Output<String> attestationName;
 
+    /**
+     * @return The name of the attestation.
+     * 
+     */
     public Optional<Output<String>> attestationName() {
         return Optional.ofNullable(this.attestationName);
     }
@@ -37,6 +41,10 @@ public final class AttestationAtResourceGroupArgs extends com.pulumi.resources.R
     @Import(name="comments")
     private @Nullable Output<String> comments;
 
+    /**
+     * @return Comments describing why this attestation was created.
+     * 
+     */
     public Optional<Output<String>> comments() {
         return Optional.ofNullable(this.comments);
     }
@@ -48,6 +56,10 @@ public final class AttestationAtResourceGroupArgs extends com.pulumi.resources.R
     @Import(name="complianceState")
     private @Nullable Output<Either<String,ComplianceState>> complianceState;
 
+    /**
+     * @return The compliance state that should be set on the resource.
+     * 
+     */
     public Optional<Output<Either<String,ComplianceState>>> complianceState() {
         return Optional.ofNullable(this.complianceState);
     }
@@ -59,6 +71,10 @@ public final class AttestationAtResourceGroupArgs extends com.pulumi.resources.R
     @Import(name="evidence")
     private @Nullable Output<List<AttestationEvidenceArgs>> evidence;
 
+    /**
+     * @return The evidence supporting the compliance state set in this attestation.
+     * 
+     */
     public Optional<Output<List<AttestationEvidenceArgs>>> evidence() {
         return Optional.ofNullable(this.evidence);
     }
@@ -70,6 +86,10 @@ public final class AttestationAtResourceGroupArgs extends com.pulumi.resources.R
     @Import(name="expiresOn")
     private @Nullable Output<String> expiresOn;
 
+    /**
+     * @return The time the compliance state should expire.
+     * 
+     */
     public Optional<Output<String>> expiresOn() {
         return Optional.ofNullable(this.expiresOn);
     }
@@ -81,6 +101,10 @@ public final class AttestationAtResourceGroupArgs extends com.pulumi.resources.R
     @Import(name="owner")
     private @Nullable Output<String> owner;
 
+    /**
+     * @return The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.
+     * 
+     */
     public Optional<Output<String>> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -92,6 +116,10 @@ public final class AttestationAtResourceGroupArgs extends com.pulumi.resources.R
     @Import(name="policyAssignmentId", required=true)
     private Output<String> policyAssignmentId;
 
+    /**
+     * @return The resource ID of the policy assignment that the attestation is setting the state for.
+     * 
+     */
     public Output<String> policyAssignmentId() {
         return this.policyAssignmentId;
     }
@@ -103,6 +131,10 @@ public final class AttestationAtResourceGroupArgs extends com.pulumi.resources.R
     @Import(name="policyDefinitionReferenceId")
     private @Nullable Output<String> policyDefinitionReferenceId;
 
+    /**
+     * @return The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.
+     * 
+     */
     public Optional<Output<String>> policyDefinitionReferenceId() {
         return Optional.ofNullable(this.policyDefinitionReferenceId);
     }
@@ -114,6 +146,10 @@ public final class AttestationAtResourceGroupArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -150,95 +186,221 @@ public final class AttestationAtResourceGroupArgs extends com.pulumi.resources.R
             $ = new AttestationAtResourceGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attestationName The name of the attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestationName(@Nullable Output<String> attestationName) {
             $.attestationName = attestationName;
             return this;
         }
 
+        /**
+         * @param attestationName The name of the attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestationName(String attestationName) {
             return attestationName(Output.of(attestationName));
         }
 
+        /**
+         * @param comments Comments describing why this attestation was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comments(@Nullable Output<String> comments) {
             $.comments = comments;
             return this;
         }
 
+        /**
+         * @param comments Comments describing why this attestation was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comments(String comments) {
             return comments(Output.of(comments));
         }
 
+        /**
+         * @param complianceState The compliance state that should be set on the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceState(@Nullable Output<Either<String,ComplianceState>> complianceState) {
             $.complianceState = complianceState;
             return this;
         }
 
+        /**
+         * @param complianceState The compliance state that should be set on the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceState(Either<String,ComplianceState> complianceState) {
             return complianceState(Output.of(complianceState));
         }
 
+        /**
+         * @param complianceState The compliance state that should be set on the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceState(String complianceState) {
             return complianceState(Either.ofLeft(complianceState));
         }
 
+        /**
+         * @param complianceState The compliance state that should be set on the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceState(ComplianceState complianceState) {
             return complianceState(Either.ofRight(complianceState));
         }
 
+        /**
+         * @param evidence The evidence supporting the compliance state set in this attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evidence(@Nullable Output<List<AttestationEvidenceArgs>> evidence) {
             $.evidence = evidence;
             return this;
         }
 
+        /**
+         * @param evidence The evidence supporting the compliance state set in this attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evidence(List<AttestationEvidenceArgs> evidence) {
             return evidence(Output.of(evidence));
         }
 
+        /**
+         * @param evidence The evidence supporting the compliance state set in this attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evidence(AttestationEvidenceArgs... evidence) {
             return evidence(List.of(evidence));
         }
 
+        /**
+         * @param expiresOn The time the compliance state should expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiresOn(@Nullable Output<String> expiresOn) {
             $.expiresOn = expiresOn;
             return this;
         }
 
+        /**
+         * @param expiresOn The time the compliance state should expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiresOn(String expiresOn) {
             return expiresOn(Output.of(expiresOn));
         }
 
+        /**
+         * @param owner The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(@Nullable Output<String> owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param owner The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(String owner) {
             return owner(Output.of(owner));
         }
 
+        /**
+         * @param policyAssignmentId The resource ID of the policy assignment that the attestation is setting the state for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyAssignmentId(Output<String> policyAssignmentId) {
             $.policyAssignmentId = policyAssignmentId;
             return this;
         }
 
+        /**
+         * @param policyAssignmentId The resource ID of the policy assignment that the attestation is setting the state for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyAssignmentId(String policyAssignmentId) {
             return policyAssignmentId(Output.of(policyAssignmentId));
         }
 
+        /**
+         * @param policyDefinitionReferenceId The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
             $.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
 
+        /**
+         * @param policyDefinitionReferenceId The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionReferenceId(String policyDefinitionReferenceId) {
             return policyDefinitionReferenceId(Output.of(policyDefinitionReferenceId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

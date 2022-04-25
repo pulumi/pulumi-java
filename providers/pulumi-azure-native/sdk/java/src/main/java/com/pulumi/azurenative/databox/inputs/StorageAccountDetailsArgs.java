@@ -28,6 +28,11 @@ public final class StorageAccountDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="dataAccountType", required=true)
     private Output<String> dataAccountType;
 
+    /**
+     * @return Account Type of the data to be transferred.
+     * Expected value is &#39;StorageAccount&#39;.
+     * 
+     */
     public Output<String> dataAccountType() {
         return this.dataAccountType;
     }
@@ -39,6 +44,10 @@ public final class StorageAccountDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="sharePassword")
     private @Nullable Output<String> sharePassword;
 
+    /**
+     * @return Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+     * 
+     */
     public Optional<Output<String>> sharePassword() {
         return Optional.ofNullable(this.sharePassword);
     }
@@ -50,6 +59,10 @@ public final class StorageAccountDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="storageAccountId", required=true)
     private Output<String> storageAccountId;
 
+    /**
+     * @return Storage Account Resource Id.
+     * 
+     */
     public Output<String> storageAccountId() {
         return this.storageAccountId;
     }
@@ -80,29 +93,67 @@ public final class StorageAccountDetailsArgs extends com.pulumi.resources.Resour
             $ = new StorageAccountDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataAccountType Account Type of the data to be transferred.
+         * Expected value is &#39;StorageAccount&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(Output<String> dataAccountType) {
             $.dataAccountType = dataAccountType;
             return this;
         }
 
+        /**
+         * @param dataAccountType Account Type of the data to be transferred.
+         * Expected value is &#39;StorageAccount&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(String dataAccountType) {
             return dataAccountType(Output.of(dataAccountType));
         }
 
+        /**
+         * @param sharePassword Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharePassword(@Nullable Output<String> sharePassword) {
             $.sharePassword = sharePassword;
             return this;
         }
 
+        /**
+         * @param sharePassword Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharePassword(String sharePassword) {
             return sharePassword(Output.of(sharePassword));
         }
 
+        /**
+         * @param storageAccountId Storage Account Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(Output<String> storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;
         }
 
+        /**
+         * @param storageAccountId Storage Account Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(String storageAccountId) {
             return storageAccountId(Output.of(storageAccountId));
         }

@@ -22,6 +22,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigAr
     @Import(name="kerberosConfig")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig;
 
+    /**
+     * @return Kerberos related configuration.
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs>> kerberosConfig() {
         return Optional.ofNullable(this.kerberosConfig);
     }
@@ -50,11 +54,23 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigAr
             $ = new WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kerberosConfig Kerberos related configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig) {
             $.kerberosConfig = kerberosConfig;
             return this;
         }
 
+        /**
+         * @param kerberosConfig Kerberos related configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosConfig(WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs kerberosConfig) {
             return kerberosConfig(Output.of(kerberosConfig));
         }

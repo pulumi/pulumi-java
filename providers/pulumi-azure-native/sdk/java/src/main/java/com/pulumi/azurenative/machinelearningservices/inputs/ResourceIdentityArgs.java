@@ -30,6 +30,10 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type")
     private @Nullable Output<Either<String,ResourceIdentityAssignment>> type;
 
+    /**
+     * @return Defines values for a ResourceIdentity&#39;s type.
+     * 
+     */
     public Optional<Output<Either<String,ResourceIdentityAssignment>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -41,6 +45,10 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
     @Import(name="userAssignedIdentities")
     private @Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities;
 
+    /**
+     * @return Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
+     * 
+     */
     public Optional<Output<Map<String,UserAssignedIdentityMetaArgs>>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -70,28 +78,64 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
             $ = new ResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Defines values for a ResourceIdentity&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ResourceIdentityAssignment>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Defines values for a ResourceIdentity&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ResourceIdentityAssignment> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Defines values for a ResourceIdentity&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Defines values for a ResourceIdentity&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ResourceIdentityAssignment type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param userAssignedIdentities Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(Map<String,UserAssignedIdentityMetaArgs> userAssignedIdentities) {
             return userAssignedIdentities(Output.of(userAssignedIdentities));
         }

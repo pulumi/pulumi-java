@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IngressBackend {
     /**
-     * Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.
+     * @return Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.
      * 
      */
     private final @Nullable TypedLocalObjectReference resource;
     /**
-     * Specifies the name of the referenced service.
+     * @return Specifies the name of the referenced service.
      * 
      */
     private final String serviceName;
     /**
-     * Specifies the port of the referenced service.
+     * @return Specifies the port of the referenced service.
      * 
      */
     private final Either<Integer,String> servicePort;
@@ -41,23 +41,23 @@ public final class IngressBackend {
     }
 
     /**
-     * Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.
+     * @return Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.
      * 
-    */
+     */
     public Optional<TypedLocalObjectReference> resource() {
         return Optional.ofNullable(this.resource);
     }
     /**
-     * Specifies the name of the referenced service.
+     * @return Specifies the name of the referenced service.
      * 
-    */
+     */
     public String serviceName() {
         return this.serviceName;
     }
     /**
-     * Specifies the port of the referenced service.
+     * @return Specifies the port of the referenced service.
      * 
-    */
+     */
     public Either<Integer,String> servicePort() {
         return this.servicePort;
     }

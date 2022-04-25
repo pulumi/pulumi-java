@@ -23,6 +23,10 @@ public final class X12MessageFilterResponse extends com.pulumi.resources.InvokeA
     @Import(name="messageFilterType", required=true)
     private String messageFilterType;
 
+    /**
+     * @return The message filter type.
+     * 
+     */
     public String messageFilterType() {
         return this.messageFilterType;
     }
@@ -51,6 +55,12 @@ public final class X12MessageFilterResponse extends com.pulumi.resources.InvokeA
             $ = new X12MessageFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messageFilterType The message filter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageFilterType(String messageFilterType) {
             $.messageFilterType = messageFilterType;
             return this;

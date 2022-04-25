@@ -25,6 +25,11 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends com
     @Import(name="authorizationType", required=true)
     private String authorizationType;
 
+    /**
+     * @return The authorization type for integration runtime sharing.
+     * Expected value is &#39;RBAC&#39;.
+     * 
+     */
     public String authorizationType() {
         return this.authorizationType;
     }
@@ -36,6 +41,10 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends com
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return The resource identifier of the integration runtime to be shared.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -65,11 +74,24 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends com
             $ = new LinkedIntegrationRuntimeRbacAuthorizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationType The authorization type for integration runtime sharing.
+         * Expected value is &#39;RBAC&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationType(String authorizationType) {
             $.authorizationType = authorizationType;
             return this;
         }
 
+        /**
+         * @param resourceId The resource identifier of the integration runtime to be shared.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;

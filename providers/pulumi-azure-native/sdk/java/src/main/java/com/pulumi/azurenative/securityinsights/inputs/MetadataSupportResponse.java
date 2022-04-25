@@ -25,6 +25,10 @@ public final class MetadataSupportResponse extends com.pulumi.resources.InvokeAr
     @Import(name="email")
     private @Nullable String email;
 
+    /**
+     * @return Email of support contact
+     * 
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
@@ -36,6 +40,10 @@ public final class MetadataSupportResponse extends com.pulumi.resources.InvokeAr
     @Import(name="link")
     private @Nullable String link;
 
+    /**
+     * @return Link for support help, like to support page to open a ticket etc.
+     * 
+     */
     public Optional<String> link() {
         return Optional.ofNullable(this.link);
     }
@@ -47,6 +55,10 @@ public final class MetadataSupportResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the support contact. Company or person.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class MetadataSupportResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tier", required=true)
     private String tier;
 
+    /**
+     * @return Type of support for content item
+     * 
+     */
     public String tier() {
         return this.tier;
     }
@@ -89,21 +105,45 @@ public final class MetadataSupportResponse extends com.pulumi.resources.InvokeAr
             $ = new MetadataSupportResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email Email of support contact
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param link Link for support help, like to support page to open a ticket etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder link(@Nullable String link) {
             $.link = link;
             return this;
         }
 
+        /**
+         * @param name Name of the support contact. Company or person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier Type of support for content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             $.tier = tier;
             return this;

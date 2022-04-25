@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LogMetricFilterMetricTransformation {
     /**
-     * The value to emit when a filter pattern does not match a log event. Conflicts with `dimensions`.
+     * @return The value to emit when a filter pattern does not match a log event. Conflicts with `dimensions`.
      * 
      */
     private final @Nullable String defaultValue;
     /**
-     * Map of fields to use as dimensions for the metric. Up to 3 dimensions are allowed. Conflicts with `default_value`.
+     * @return Map of fields to use as dimensions for the metric. Up to 3 dimensions are allowed. Conflicts with `default_value`.
      * 
      */
     private final @Nullable Map<String,String> dimensions;
     /**
-     * The name of the CloudWatch metric to which the monitored log information should be published (e.g., `ErrorCount`)
+     * @return The name of the CloudWatch metric to which the monitored log information should be published (e.g., `ErrorCount`)
      * 
      */
     private final String name;
     /**
-     * The destination namespace of the CloudWatch metric.
+     * @return The destination namespace of the CloudWatch metric.
      * 
      */
     private final String namespace;
     /**
-     * The unit to assign to the metric. If you omit this, the unit is set as `None`.
+     * @return The unit to assign to the metric. If you omit this, the unit is set as `None`.
      * 
      */
     private final @Nullable String unit;
     /**
-     * What to publish to the metric. For example, if you&#39;re counting the occurrences of a particular term like &#34;Error&#34;, the value will be &#34;1&#34; for each occurrence. If you&#39;re counting the bytes transferred the published value will be the value in the log event.
+     * @return What to publish to the metric. For example, if you&#39;re counting the occurrences of a particular term like &#34;Error&#34;, the value will be &#34;1&#34; for each occurrence. If you&#39;re counting the bytes transferred the published value will be the value in the log event.
      * 
      */
     private final String value;
@@ -60,44 +60,44 @@ public final class LogMetricFilterMetricTransformation {
     }
 
     /**
-     * The value to emit when a filter pattern does not match a log event. Conflicts with `dimensions`.
+     * @return The value to emit when a filter pattern does not match a log event. Conflicts with `dimensions`.
      * 
-    */
+     */
     public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
-     * Map of fields to use as dimensions for the metric. Up to 3 dimensions are allowed. Conflicts with `default_value`.
+     * @return Map of fields to use as dimensions for the metric. Up to 3 dimensions are allowed. Conflicts with `default_value`.
      * 
-    */
+     */
     public Map<String,String> dimensions() {
         return this.dimensions == null ? Map.of() : this.dimensions;
     }
     /**
-     * The name of the CloudWatch metric to which the monitored log information should be published (e.g., `ErrorCount`)
+     * @return The name of the CloudWatch metric to which the monitored log information should be published (e.g., `ErrorCount`)
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The destination namespace of the CloudWatch metric.
+     * @return The destination namespace of the CloudWatch metric.
      * 
-    */
+     */
     public String namespace() {
         return this.namespace;
     }
     /**
-     * The unit to assign to the metric. If you omit this, the unit is set as `None`.
+     * @return The unit to assign to the metric. If you omit this, the unit is set as `None`.
      * 
-    */
+     */
     public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }
     /**
-     * What to publish to the metric. For example, if you&#39;re counting the occurrences of a particular term like &#34;Error&#34;, the value will be &#34;1&#34; for each occurrence. If you&#39;re counting the bytes transferred the published value will be the value in the log event.
+     * @return What to publish to the metric. For example, if you&#39;re counting the occurrences of a particular term like &#34;Error&#34;, the value will be &#34;1&#34; for each occurrence. If you&#39;re counting the bytes transferred the published value will be the value in the log event.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

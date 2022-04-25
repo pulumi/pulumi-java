@@ -25,6 +25,10 @@ public final class RunAsCredentialAssociationPropertyResponse extends com.pulumi
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets or sets the name of the credential.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class RunAsCredentialAssociationPropertyResponse extends com.pulumi
             $ = new RunAsCredentialAssociationPropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gets or sets the name of the credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

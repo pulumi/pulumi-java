@@ -26,6 +26,10 @@ public final class DefaultSnatStatusArgs extends com.pulumi.resources.ResourceAr
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
+    /**
+     * @return Disables cluster default sNAT rules.
+     * 
+     */
     public Optional<Output<Boolean>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -54,11 +58,23 @@ public final class DefaultSnatStatusArgs extends com.pulumi.resources.ResourceAr
             $ = new DefaultSnatStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disabled Disables cluster default sNAT rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled Disables cluster default sNAT rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }

@@ -11,73 +11,73 @@ import java.util.Objects;
 @CustomType
 public final class GcpCredentialsDetailsPropertiesResponse {
     /**
-     * Auth provider x509 certificate URL field of the API key (write only)
+     * @return Auth provider x509 certificate URL field of the API key (write only)
      * 
      */
     private final String authProviderX509CertUrl;
     /**
-     * Auth URI field of the API key (write only)
+     * @return Auth URI field of the API key (write only)
      * 
      */
     private final String authUri;
     /**
-     * State of the multi-cloud connector
+     * @return State of the multi-cloud connector
      * 
      */
     private final String authenticationProvisioningState;
     /**
-     * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+     * @return Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
      * Expected value is &#39;gcpCredentials&#39;.
      * 
      */
     private final String authenticationType;
     /**
-     * Client email field of the API key (write only)
+     * @return Client email field of the API key (write only)
      * 
      */
     private final String clientEmail;
     /**
-     * Client ID field of the API key (write only)
+     * @return Client ID field of the API key (write only)
      * 
      */
     private final String clientId;
     /**
-     * Client x509 certificate URL field of the API key (write only)
+     * @return Client x509 certificate URL field of the API key (write only)
      * 
      */
     private final String clientX509CertUrl;
     /**
-     * The permissions detected in the cloud account.
+     * @return The permissions detected in the cloud account.
      * 
      */
     private final List<String> grantedPermissions;
     /**
-     * The organization ID of the GCP cloud account
+     * @return The organization ID of the GCP cloud account
      * 
      */
     private final String organizationId;
     /**
-     * Private key field of the API key (write only)
+     * @return Private key field of the API key (write only)
      * 
      */
     private final String privateKey;
     /**
-     * Private key ID field of the API key (write only)
+     * @return Private key ID field of the API key (write only)
      * 
      */
     private final String privateKeyId;
     /**
-     * Project ID field of the API key (write only)
+     * @return Project ID field of the API key (write only)
      * 
      */
     private final String projectId;
     /**
-     * Token URI field of the API key (write only)
+     * @return Token URI field of the API key (write only)
      * 
      */
     private final String tokenUri;
     /**
-     * Type field of the API key (write only)
+     * @return Type field of the API key (write only)
      * 
      */
     private final String type;
@@ -115,101 +115,101 @@ public final class GcpCredentialsDetailsPropertiesResponse {
     }
 
     /**
-     * Auth provider x509 certificate URL field of the API key (write only)
+     * @return Auth provider x509 certificate URL field of the API key (write only)
      * 
-    */
+     */
     public String authProviderX509CertUrl() {
         return this.authProviderX509CertUrl;
     }
     /**
-     * Auth URI field of the API key (write only)
+     * @return Auth URI field of the API key (write only)
      * 
-    */
+     */
     public String authUri() {
         return this.authUri;
     }
     /**
-     * State of the multi-cloud connector
+     * @return State of the multi-cloud connector
      * 
-    */
+     */
     public String authenticationProvisioningState() {
         return this.authenticationProvisioningState;
     }
     /**
-     * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+     * @return Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
      * Expected value is &#39;gcpCredentials&#39;.
      * 
-    */
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
     /**
-     * Client email field of the API key (write only)
+     * @return Client email field of the API key (write only)
      * 
-    */
+     */
     public String clientEmail() {
         return this.clientEmail;
     }
     /**
-     * Client ID field of the API key (write only)
+     * @return Client ID field of the API key (write only)
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * Client x509 certificate URL field of the API key (write only)
+     * @return Client x509 certificate URL field of the API key (write only)
      * 
-    */
+     */
     public String clientX509CertUrl() {
         return this.clientX509CertUrl;
     }
     /**
-     * The permissions detected in the cloud account.
+     * @return The permissions detected in the cloud account.
      * 
-    */
+     */
     public List<String> grantedPermissions() {
         return this.grantedPermissions;
     }
     /**
-     * The organization ID of the GCP cloud account
+     * @return The organization ID of the GCP cloud account
      * 
-    */
+     */
     public String organizationId() {
         return this.organizationId;
     }
     /**
-     * Private key field of the API key (write only)
+     * @return Private key field of the API key (write only)
      * 
-    */
+     */
     public String privateKey() {
         return this.privateKey;
     }
     /**
-     * Private key ID field of the API key (write only)
+     * @return Private key ID field of the API key (write only)
      * 
-    */
+     */
     public String privateKeyId() {
         return this.privateKeyId;
     }
     /**
-     * Project ID field of the API key (write only)
+     * @return Project ID field of the API key (write only)
      * 
-    */
+     */
     public String projectId() {
         return this.projectId;
     }
     /**
-     * Token URI field of the API key (write only)
+     * @return Token URI field of the API key (write only)
      * 
-    */
+     */
     public String tokenUri() {
         return this.tokenUri;
     }
     /**
-     * Type field of the API key (write only)
+     * @return Type field of the API key (write only)
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

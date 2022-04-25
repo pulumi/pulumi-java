@@ -25,6 +25,10 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="isPrimaryNic")
     private @Nullable String isPrimaryNic;
 
+    /**
+     * @return A value indicating whether this is the primary NIC.
+     * 
+     */
     public Optional<String> isPrimaryNic() {
         return Optional.ofNullable(this.isPrimaryNic);
     }
@@ -36,6 +40,10 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="isSelectedForMigration")
     private @Nullable String isSelectedForMigration;
 
+    /**
+     * @return A value indicating whether this NIC is selected for migration.
+     * 
+     */
     public Optional<String> isSelectedForMigration() {
         return Optional.ofNullable(this.isSelectedForMigration);
     }
@@ -47,6 +55,10 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="nicId", required=true)
     private String nicId;
 
+    /**
+     * @return The NIC Id.
+     * 
+     */
     public String nicId() {
         return this.nicId;
     }
@@ -58,6 +70,10 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="sourceIPAddress", required=true)
     private String sourceIPAddress;
 
+    /**
+     * @return The source IP address.
+     * 
+     */
     public String sourceIPAddress() {
         return this.sourceIPAddress;
     }
@@ -69,6 +85,10 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="sourceIPAddressType", required=true)
     private String sourceIPAddressType;
 
+    /**
+     * @return The source IP address type.
+     * 
+     */
     public String sourceIPAddressType() {
         return this.sourceIPAddressType;
     }
@@ -80,6 +100,10 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="sourceNetworkId", required=true)
     private String sourceNetworkId;
 
+    /**
+     * @return Source network Id.
+     * 
+     */
     public String sourceNetworkId() {
         return this.sourceNetworkId;
     }
@@ -91,6 +115,10 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="targetIPAddress")
     private @Nullable String targetIPAddress;
 
+    /**
+     * @return The target IP address.
+     * 
+     */
     public Optional<String> targetIPAddress() {
         return Optional.ofNullable(this.targetIPAddress);
     }
@@ -102,6 +130,10 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="targetIPAddressType")
     private @Nullable String targetIPAddressType;
 
+    /**
+     * @return The target IP address type.
+     * 
+     */
     public Optional<String> targetIPAddressType() {
         return Optional.ofNullable(this.targetIPAddressType);
     }
@@ -113,6 +145,10 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="targetSubnetName")
     private @Nullable String targetSubnetName;
 
+    /**
+     * @return Target subnet name.
+     * 
+     */
     public Optional<String> targetSubnetName() {
         return Optional.ofNullable(this.targetSubnetName);
     }
@@ -149,46 +185,100 @@ public final class VMwareCbtNicDetailsResponse extends com.pulumi.resources.Invo
             $ = new VMwareCbtNicDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isPrimaryNic A value indicating whether this is the primary NIC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPrimaryNic(@Nullable String isPrimaryNic) {
             $.isPrimaryNic = isPrimaryNic;
             return this;
         }
 
+        /**
+         * @param isSelectedForMigration A value indicating whether this NIC is selected for migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSelectedForMigration(@Nullable String isSelectedForMigration) {
             $.isSelectedForMigration = isSelectedForMigration;
             return this;
         }
 
+        /**
+         * @param nicId The NIC Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicId(String nicId) {
             $.nicId = nicId;
             return this;
         }
 
+        /**
+         * @param sourceIPAddress The source IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIPAddress(String sourceIPAddress) {
             $.sourceIPAddress = sourceIPAddress;
             return this;
         }
 
+        /**
+         * @param sourceIPAddressType The source IP address type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIPAddressType(String sourceIPAddressType) {
             $.sourceIPAddressType = sourceIPAddressType;
             return this;
         }
 
+        /**
+         * @param sourceNetworkId Source network Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNetworkId(String sourceNetworkId) {
             $.sourceNetworkId = sourceNetworkId;
             return this;
         }
 
+        /**
+         * @param targetIPAddress The target IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetIPAddress(@Nullable String targetIPAddress) {
             $.targetIPAddress = targetIPAddress;
             return this;
         }
 
+        /**
+         * @param targetIPAddressType The target IP address type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetIPAddressType(@Nullable String targetIPAddressType) {
             $.targetIPAddressType = targetIPAddressType;
             return this;
         }
 
+        /**
+         * @param targetSubnetName Target subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSubnetName(@Nullable String targetSubnetName) {
             $.targetSubnetName = targetSubnetName;
             return this;

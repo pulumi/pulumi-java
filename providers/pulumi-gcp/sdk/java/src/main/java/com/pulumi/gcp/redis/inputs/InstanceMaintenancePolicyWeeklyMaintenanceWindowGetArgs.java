@@ -32,6 +32,19 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs exten
     @Import(name="day", required=true)
     private Output<String> day;
 
+    /**
+     * @return Required. The day of week that maintenance updates occur.
+     * - DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified.
+     * - MONDAY: Monday
+     * - TUESDAY: Tuesday
+     * - WEDNESDAY: Wednesday
+     * - THURSDAY: Thursday
+     * - FRIDAY: Friday
+     * - SATURDAY: Saturday
+     * - SUNDAY: Sunday
+     *   Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     public Output<String> day() {
         return this.day;
     }
@@ -47,6 +60,14 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs exten
     @Import(name="duration")
     private @Nullable Output<String> duration;
 
+    /**
+     * @return -
+     * Output only. Duration of the maintenance window.
+     * The current window is fixed at 1 hour.
+     * A duration in seconds with up to nine fractional digits,
+     * terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
     public Optional<Output<String>> duration() {
         return Optional.ofNullable(this.duration);
     }
@@ -61,6 +82,13 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs exten
     @Import(name="startTime", required=true)
     private Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeGetArgs> startTime;
 
+    /**
+     * @return -
+     * Output only. The start time of any upcoming scheduled maintenance for this instance.
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     public Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeGetArgs> startTime() {
         return this.startTime;
     }
@@ -91,29 +119,97 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs exten
             $ = new InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day Required. The day of week that maintenance updates occur.
+         * - DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified.
+         * - MONDAY: Monday
+         * - TUESDAY: Tuesday
+         * - WEDNESDAY: Wednesday
+         * - THURSDAY: Thursday
+         * - FRIDAY: Friday
+         * - SATURDAY: Saturday
+         * - SUNDAY: Sunday
+         *   Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Output<String> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day Required. The day of week that maintenance updates occur.
+         * - DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified.
+         * - MONDAY: Monday
+         * - TUESDAY: Tuesday
+         * - WEDNESDAY: Wednesday
+         * - THURSDAY: Thursday
+         * - FRIDAY: Friday
+         * - SATURDAY: Saturday
+         * - SUNDAY: Sunday
+         *   Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(String day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param duration -
+         * Output only. Duration of the maintenance window.
+         * The current window is fixed at 1 hour.
+         * A duration in seconds with up to nine fractional digits,
+         * terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(@Nullable Output<String> duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param duration -
+         * Output only. Duration of the maintenance window.
+         * The current window is fixed at 1 hour.
+         * A duration in seconds with up to nine fractional digits,
+         * terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             return duration(Output.of(duration));
         }
 
+        /**
+         * @param startTime -
+         * Output only. The start time of any upcoming scheduled maintenance for this instance.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+         * resolution and up to nine fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeGetArgs> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime -
+         * Output only. The start time of any upcoming scheduled maintenance for this instance.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+         * resolution and up to nine fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeGetArgs startTime) {
             return startTime(Output.of(startTime));
         }

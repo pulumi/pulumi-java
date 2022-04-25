@@ -15,32 +15,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerResponse {
     /**
-     * Container start command arguments.
+     * @return Container start command arguments.
      * 
      */
     private final @Nullable List<String> args;
     /**
-     * Container start command.
+     * @return Container start command.
      * 
      */
     private final @Nullable List<String> command;
     /**
-     * Container environment variables.
+     * @return Container environment variables.
      * 
      */
     private final @Nullable List<EnvironmentVarResponse> env;
     /**
-     * Container image tag.
+     * @return Container image tag.
      * 
      */
     private final @Nullable String image;
     /**
-     * Custom container name.
+     * @return Custom container name.
      * 
      */
     private final @Nullable String name;
     /**
-     * Container resource requirements.
+     * @return Container resource requirements.
      * 
      */
     private final @Nullable ContainerResourcesResponse resources;
@@ -62,44 +62,44 @@ public final class ContainerResponse {
     }
 
     /**
-     * Container start command arguments.
+     * @return Container start command arguments.
      * 
-    */
+     */
     public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
     /**
-     * Container start command.
+     * @return Container start command.
      * 
-    */
+     */
     public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
     /**
-     * Container environment variables.
+     * @return Container environment variables.
      * 
-    */
+     */
     public List<EnvironmentVarResponse> env() {
         return this.env == null ? List.of() : this.env;
     }
     /**
-     * Container image tag.
+     * @return Container image tag.
      * 
-    */
+     */
     public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
     /**
-     * Custom container name.
+     * @return Custom container name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Container resource requirements.
+     * @return Container resource requirements.
      * 
-    */
+     */
     public Optional<ContainerResourcesResponse> resources() {
         return Optional.ofNullable(this.resources);
     }

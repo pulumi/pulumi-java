@@ -26,6 +26,10 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
     @Import(name="clusterId")
     private @Nullable Output<String> clusterId;
 
+    /**
+     * @return ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
+     * 
+     */
     public Optional<Output<String>> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
@@ -37,6 +41,10 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
     @Import(name="instanceTypeConfigs")
     private @Nullable Output<List<InstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs;
 
+    /**
+     * @return Configuration block for instance fleet
+     * 
+     */
     public Optional<Output<List<InstanceFleetInstanceTypeConfigGetArgs>>> instanceTypeConfigs() {
         return Optional.ofNullable(this.instanceTypeConfigs);
     }
@@ -48,6 +56,10 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
     @Import(name="launchSpecifications")
     private @Nullable Output<InstanceFleetLaunchSpecificationsGetArgs> launchSpecifications;
 
+    /**
+     * @return Configuration block for launch specification
+     * 
+     */
     public Optional<Output<InstanceFleetLaunchSpecificationsGetArgs>> launchSpecifications() {
         return Optional.ofNullable(this.launchSpecifications);
     }
@@ -59,6 +71,10 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Friendly name given to the instance fleet.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -84,6 +100,10 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
     @Import(name="targetOnDemandCapacity")
     private @Nullable Output<Integer> targetOnDemandCapacity;
 
+    /**
+     * @return The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
+     * 
+     */
     public Optional<Output<Integer>> targetOnDemandCapacity() {
         return Optional.ofNullable(this.targetOnDemandCapacity);
     }
@@ -95,6 +115,10 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
     @Import(name="targetSpotCapacity")
     private @Nullable Output<Integer> targetSpotCapacity;
 
+    /**
+     * @return The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
+     * 
+     */
     public Optional<Output<Integer>> targetSpotCapacity() {
         return Optional.ofNullable(this.targetSpotCapacity);
     }
@@ -130,42 +154,96 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
             $ = new InstanceFleetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterId ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(@Nullable Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param clusterId ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(String clusterId) {
             return clusterId(Output.of(clusterId));
         }
 
+        /**
+         * @param instanceTypeConfigs Configuration block for instance fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTypeConfigs(@Nullable Output<List<InstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs) {
             $.instanceTypeConfigs = instanceTypeConfigs;
             return this;
         }
 
+        /**
+         * @param instanceTypeConfigs Configuration block for instance fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTypeConfigs(List<InstanceFleetInstanceTypeConfigGetArgs> instanceTypeConfigs) {
             return instanceTypeConfigs(Output.of(instanceTypeConfigs));
         }
 
+        /**
+         * @param instanceTypeConfigs Configuration block for instance fleet
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTypeConfigs(InstanceFleetInstanceTypeConfigGetArgs... instanceTypeConfigs) {
             return instanceTypeConfigs(List.of(instanceTypeConfigs));
         }
 
+        /**
+         * @param launchSpecifications Configuration block for launch specification
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchSpecifications(@Nullable Output<InstanceFleetLaunchSpecificationsGetArgs> launchSpecifications) {
             $.launchSpecifications = launchSpecifications;
             return this;
         }
 
+        /**
+         * @param launchSpecifications Configuration block for launch specification
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchSpecifications(InstanceFleetLaunchSpecificationsGetArgs launchSpecifications) {
             return launchSpecifications(Output.of(launchSpecifications));
         }
 
+        /**
+         * @param name Friendly name given to the instance fleet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Friendly name given to the instance fleet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -188,20 +266,44 @@ public final class InstanceFleetState extends com.pulumi.resources.ResourceArgs 
             return provisionedSpotCapacity(Output.of(provisionedSpotCapacity));
         }
 
+        /**
+         * @param targetOnDemandCapacity The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetOnDemandCapacity(@Nullable Output<Integer> targetOnDemandCapacity) {
             $.targetOnDemandCapacity = targetOnDemandCapacity;
             return this;
         }
 
+        /**
+         * @param targetOnDemandCapacity The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetOnDemandCapacity(Integer targetOnDemandCapacity) {
             return targetOnDemandCapacity(Output.of(targetOnDemandCapacity));
         }
 
+        /**
+         * @param targetSpotCapacity The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSpotCapacity(@Nullable Output<Integer> targetSpotCapacity) {
             $.targetSpotCapacity = targetSpotCapacity;
             return this;
         }
 
+        /**
+         * @param targetSpotCapacity The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSpotCapacity(Integer targetSpotCapacity) {
             return targetSpotCapacity(Output.of(targetSpotCapacity));
         }

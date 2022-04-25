@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GetVpcEndpointDnsEntry {
     /**
-     * The DNS name.
+     * @return The DNS name.
      * 
      */
     private final String dnsName;
     /**
-     * The ID of the private hosted zone.
+     * @return The ID of the private hosted zone.
      * 
      */
     private final String hostedZoneId;
@@ -29,16 +29,16 @@ public final class GetVpcEndpointDnsEntry {
     }
 
     /**
-     * The DNS name.
+     * @return The DNS name.
      * 
-    */
+     */
     public String dnsName() {
         return this.dnsName;
     }
     /**
-     * The ID of the private hosted zone.
+     * @return The ID of the private hosted zone.
      * 
-    */
+     */
     public String hostedZoneId() {
         return this.hostedZoneId;
     }

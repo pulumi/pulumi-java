@@ -19,6 +19,10 @@ public final class GetWirelessGatewayArgs extends com.pulumi.resources.InvokeArg
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Id for Wireless Gateway. Returned upon successful create.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetWirelessGatewayArgs extends com.pulumi.resources.InvokeArg
             $ = new GetWirelessGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Id for Wireless Gateway. Returned upon successful create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

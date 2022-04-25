@@ -25,6 +25,10 @@ public final class FindingsFilterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="action")
     private @Nullable Output<FindingsFilterFindingFilterAction> action;
 
+    /**
+     * @return Findings filter action.
+     * 
+     */
     public Optional<Output<FindingsFilterFindingFilterAction>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -36,6 +40,10 @@ public final class FindingsFilterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Findings filter description
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class FindingsFilterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="findingCriteria", required=true)
     private Output<FindingsFilterFindingCriteriaArgs> findingCriteria;
 
+    /**
+     * @return Findings filter criteria.
+     * 
+     */
     public Output<FindingsFilterFindingCriteriaArgs> findingCriteria() {
         return this.findingCriteria;
     }
@@ -58,6 +70,10 @@ public final class FindingsFilterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Findings filter name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +85,10 @@ public final class FindingsFilterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="position")
     private @Nullable Output<Integer> position;
 
+    /**
+     * @return Findings filter position.
+     * 
+     */
     public Optional<Output<Integer>> position() {
         return Optional.ofNullable(this.position);
     }
@@ -101,47 +121,107 @@ public final class FindingsFilterArgs extends com.pulumi.resources.ResourceArgs 
             $ = new FindingsFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Findings filter action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<FindingsFilterFindingFilterAction> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Findings filter action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(FindingsFilterFindingFilterAction action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param description Findings filter description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Findings filter description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param findingCriteria Findings filter criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingCriteria(Output<FindingsFilterFindingCriteriaArgs> findingCriteria) {
             $.findingCriteria = findingCriteria;
             return this;
         }
 
+        /**
+         * @param findingCriteria Findings filter criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingCriteria(FindingsFilterFindingCriteriaArgs findingCriteria) {
             return findingCriteria(Output.of(findingCriteria));
         }
 
+        /**
+         * @param name Findings filter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Findings filter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param position Findings filter position.
+         * 
+         * @return builder
+         * 
+         */
         public Builder position(@Nullable Output<Integer> position) {
             $.position = position;
             return this;
         }
 
+        /**
+         * @param position Findings filter position.
+         * 
+         * @return builder
+         * 
+         */
         public Builder position(Integer position) {
             return position(Output.of(position));
         }

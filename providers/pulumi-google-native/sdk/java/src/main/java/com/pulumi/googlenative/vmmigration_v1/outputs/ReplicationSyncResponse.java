@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ReplicationSyncResponse {
     /**
-     * The most updated snapshot created time in the source that finished replication.
+     * @return The most updated snapshot created time in the source that finished replication.
      * 
      */
     private final String lastSyncTime;
@@ -21,9 +21,9 @@ public final class ReplicationSyncResponse {
     }
 
     /**
-     * The most updated snapshot created time in the source that finished replication.
+     * @return The most updated snapshot created time in the source that finished replication.
      * 
-    */
+     */
     public String lastSyncTime() {
         return this.lastSyncTime;
     }

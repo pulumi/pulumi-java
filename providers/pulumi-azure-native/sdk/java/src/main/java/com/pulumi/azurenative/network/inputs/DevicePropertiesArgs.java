@@ -27,6 +27,10 @@ public final class DevicePropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="deviceModel")
     private @Nullable Output<String> deviceModel;
 
+    /**
+     * @return Model of the device.
+     * 
+     */
     public Optional<Output<String>> deviceModel() {
         return Optional.ofNullable(this.deviceModel);
     }
@@ -38,6 +42,10 @@ public final class DevicePropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="deviceVendor")
     private @Nullable Output<String> deviceVendor;
 
+    /**
+     * @return Name of the device Vendor.
+     * 
+     */
     public Optional<Output<String>> deviceVendor() {
         return Optional.ofNullable(this.deviceVendor);
     }
@@ -49,6 +57,10 @@ public final class DevicePropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="linkSpeedInMbps")
     private @Nullable Output<Integer> linkSpeedInMbps;
 
+    /**
+     * @return Link speed.
+     * 
+     */
     public Optional<Output<Integer>> linkSpeedInMbps() {
         return Optional.ofNullable(this.linkSpeedInMbps);
     }
@@ -79,29 +91,65 @@ public final class DevicePropertiesArgs extends com.pulumi.resources.ResourceArg
             $ = new DevicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceModel Model of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceModel(@Nullable Output<String> deviceModel) {
             $.deviceModel = deviceModel;
             return this;
         }
 
+        /**
+         * @param deviceModel Model of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceModel(String deviceModel) {
             return deviceModel(Output.of(deviceModel));
         }
 
+        /**
+         * @param deviceVendor Name of the device Vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceVendor(@Nullable Output<String> deviceVendor) {
             $.deviceVendor = deviceVendor;
             return this;
         }
 
+        /**
+         * @param deviceVendor Name of the device Vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceVendor(String deviceVendor) {
             return deviceVendor(Output.of(deviceVendor));
         }
 
+        /**
+         * @param linkSpeedInMbps Link speed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkSpeedInMbps(@Nullable Output<Integer> linkSpeedInMbps) {
             $.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }
 
+        /**
+         * @param linkSpeedInMbps Link speed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkSpeedInMbps(Integer linkSpeedInMbps) {
             return linkSpeedInMbps(Output.of(linkSpeedInMbps));
         }

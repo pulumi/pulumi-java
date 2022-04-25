@@ -25,6 +25,12 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Resource labels associated with this Namespace. No more than 64 user
+     * labels can be associated with a given resource. Label keys and values can
+     * be no longer than 63 characters.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -38,6 +44,12 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The location for the Namespace.
+     * A full list of valid locations can be found by running
+     * `gcloud beta service-directory locations list`.
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -50,6 +62,11 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespaceId", required=true)
     private Output<String> namespaceId;
 
+    /**
+     * @return The Resource ID must be 1-63 characters long, including digits,
+     * lowercase letters or the hyphen character.
+     * 
+     */
     public Output<String> namespaceId() {
         return this.namespaceId;
     }
@@ -62,6 +79,11 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -93,38 +115,98 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NamespaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels Resource labels associated with this Namespace. No more than 64 user
+         * labels can be associated with a given resource. Label keys and values can
+         * be no longer than 63 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Resource labels associated with this Namespace. No more than 64 user
+         * labels can be associated with a given resource. Label keys and values can
+         * be no longer than 63 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param location The location for the Namespace.
+         * A full list of valid locations can be found by running
+         * `gcloud beta service-directory locations list`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location for the Namespace.
+         * A full list of valid locations can be found by running
+         * `gcloud beta service-directory locations list`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param namespaceId The Resource ID must be 1-63 characters long, including digits,
+         * lowercase letters or the hyphen character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceId(Output<String> namespaceId) {
             $.namespaceId = namespaceId;
             return this;
         }
 
+        /**
+         * @param namespaceId The Resource ID must be 1-63 characters long, including digits,
+         * lowercase letters or the hyphen character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceId(String namespaceId) {
             return namespaceId(Output.of(namespaceId));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

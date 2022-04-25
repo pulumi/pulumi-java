@@ -23,6 +23,10 @@ public final class DatabaseEncryptionResponse extends com.pulumi.resources.Invok
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -34,6 +38,10 @@ public final class DatabaseEncryptionResponse extends com.pulumi.resources.Invok
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Denotes the state of etcd encryption.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -63,11 +71,23 @@ public final class DatabaseEncryptionResponse extends com.pulumi.resources.Invok
             $ = new DatabaseEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param state Denotes the state of etcd encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UptimeCheckConfigResourceGroup {
     /**
-     * The group of resources being monitored. Should be the `name` of a group
+     * @return The group of resources being monitored. Should be the `name` of a group
      * 
      */
     private final @Nullable String groupId;
     /**
-     * The resource type of the group members.
+     * @return The resource type of the group members.
      * Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
      * 
      */
@@ -32,17 +32,17 @@ public final class UptimeCheckConfigResourceGroup {
     }
 
     /**
-     * The group of resources being monitored. Should be the `name` of a group
+     * @return The group of resources being monitored. Should be the `name` of a group
      * 
-    */
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
-     * The resource type of the group members.
+     * @return The resource type of the group members.
      * Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
      * 
-    */
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }

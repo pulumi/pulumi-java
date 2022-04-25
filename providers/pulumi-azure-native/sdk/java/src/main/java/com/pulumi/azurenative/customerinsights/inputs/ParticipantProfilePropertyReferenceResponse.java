@@ -23,6 +23,10 @@ public final class ParticipantProfilePropertyReferenceResponse extends com.pulum
     @Import(name="interactionPropertyName", required=true)
     private String interactionPropertyName;
 
+    /**
+     * @return The source interaction property that maps to the target profile property.
+     * 
+     */
     public String interactionPropertyName() {
         return this.interactionPropertyName;
     }
@@ -34,6 +38,10 @@ public final class ParticipantProfilePropertyReferenceResponse extends com.pulum
     @Import(name="profilePropertyName", required=true)
     private String profilePropertyName;
 
+    /**
+     * @return The target profile property that maps to the source interaction property.
+     * 
+     */
     public String profilePropertyName() {
         return this.profilePropertyName;
     }
@@ -63,11 +71,23 @@ public final class ParticipantProfilePropertyReferenceResponse extends com.pulum
             $ = new ParticipantProfilePropertyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interactionPropertyName The source interaction property that maps to the target profile property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interactionPropertyName(String interactionPropertyName) {
             $.interactionPropertyName = interactionPropertyName;
             return this;
         }
 
+        /**
+         * @param profilePropertyName The target profile property that maps to the source interaction property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profilePropertyName(String profilePropertyName) {
             $.profilePropertyName = profilePropertyName;
             return this;

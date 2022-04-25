@@ -25,6 +25,10 @@ public final class SecretRotationState extends com.pulumi.resources.ResourceArgs
     @Import(name="rotationEnabled")
     private @Nullable Output<Boolean> rotationEnabled;
 
+    /**
+     * @return Specifies whether automatic rotation is enabled for this secret.
+     * 
+     */
     public Optional<Output<Boolean>> rotationEnabled() {
         return Optional.ofNullable(this.rotationEnabled);
     }
@@ -36,6 +40,10 @@ public final class SecretRotationState extends com.pulumi.resources.ResourceArgs
     @Import(name="rotationLambdaArn")
     private @Nullable Output<String> rotationLambdaArn;
 
+    /**
+     * @return Specifies the ARN of the Lambda function that can rotate the secret.
+     * 
+     */
     public Optional<Output<String>> rotationLambdaArn() {
         return Optional.ofNullable(this.rotationLambdaArn);
     }
@@ -47,6 +55,10 @@ public final class SecretRotationState extends com.pulumi.resources.ResourceArgs
     @Import(name="rotationRules")
     private @Nullable Output<SecretRotationRotationRulesGetArgs> rotationRules;
 
+    /**
+     * @return A structure that defines the rotation configuration for this secret. Defined below.
+     * 
+     */
     public Optional<Output<SecretRotationRotationRulesGetArgs>> rotationRules() {
         return Optional.ofNullable(this.rotationRules);
     }
@@ -58,6 +70,10 @@ public final class SecretRotationState extends com.pulumi.resources.ResourceArgs
     @Import(name="secretId")
     private @Nullable Output<String> secretId;
 
+    /**
+     * @return Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret. The secret must already exist.
+     * 
+     */
     public Optional<Output<String>> secretId() {
         return Optional.ofNullable(this.secretId);
     }
@@ -97,38 +113,86 @@ public final class SecretRotationState extends com.pulumi.resources.ResourceArgs
             $ = new SecretRotationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rotationEnabled Specifies whether automatic rotation is enabled for this secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationEnabled(@Nullable Output<Boolean> rotationEnabled) {
             $.rotationEnabled = rotationEnabled;
             return this;
         }
 
+        /**
+         * @param rotationEnabled Specifies whether automatic rotation is enabled for this secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationEnabled(Boolean rotationEnabled) {
             return rotationEnabled(Output.of(rotationEnabled));
         }
 
+        /**
+         * @param rotationLambdaArn Specifies the ARN of the Lambda function that can rotate the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationLambdaArn(@Nullable Output<String> rotationLambdaArn) {
             $.rotationLambdaArn = rotationLambdaArn;
             return this;
         }
 
+        /**
+         * @param rotationLambdaArn Specifies the ARN of the Lambda function that can rotate the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationLambdaArn(String rotationLambdaArn) {
             return rotationLambdaArn(Output.of(rotationLambdaArn));
         }
 
+        /**
+         * @param rotationRules A structure that defines the rotation configuration for this secret. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationRules(@Nullable Output<SecretRotationRotationRulesGetArgs> rotationRules) {
             $.rotationRules = rotationRules;
             return this;
         }
 
+        /**
+         * @param rotationRules A structure that defines the rotation configuration for this secret. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationRules(SecretRotationRotationRulesGetArgs rotationRules) {
             return rotationRules(Output.of(rotationRules));
         }
 
+        /**
+         * @param secretId Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret. The secret must already exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretId(@Nullable Output<String> secretId) {
             $.secretId = secretId;
             return this;
         }
 
+        /**
+         * @param secretId Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret. The secret must already exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretId(String secretId) {
             return secretId(Output.of(secretId));
         }

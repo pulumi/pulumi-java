@@ -25,6 +25,10 @@ public final class LinkedRouterApplianceInstancesResponse extends com.pulumi.res
     @Import(name="instances", required=true)
     private List<RouterApplianceInstanceResponse> instances;
 
+    /**
+     * @return The list of router appliance instances.
+     * 
+     */
     public List<RouterApplianceInstanceResponse> instances() {
         return this.instances;
     }
@@ -36,6 +40,10 @@ public final class LinkedRouterApplianceInstancesResponse extends com.pulumi.res
     @Import(name="siteToSiteDataTransfer", required=true)
     private Boolean siteToSiteDataTransfer;
 
+    /**
+     * @return A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
+     * 
+     */
     public Boolean siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
@@ -65,15 +73,33 @@ public final class LinkedRouterApplianceInstancesResponse extends com.pulumi.res
             $ = new LinkedRouterApplianceInstancesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instances The list of router appliance instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<RouterApplianceInstanceResponse> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances The list of router appliance instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(RouterApplianceInstanceResponse... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param siteToSiteDataTransfer A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             $.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;

@@ -22,6 +22,10 @@ public final class DatasetCreateRequestDataPathArgs extends com.pulumi.resources
     @Import(name="datastoreName")
     private @Nullable Output<String> datastoreName;
 
+    /**
+     * @return The datastore name.
+     * 
+     */
     public Optional<Output<String>> datastoreName() {
         return Optional.ofNullable(this.datastoreName);
     }
@@ -33,6 +37,10 @@ public final class DatasetCreateRequestDataPathArgs extends com.pulumi.resources
     @Import(name="relativePath")
     private @Nullable Output<String> relativePath;
 
+    /**
+     * @return Path within the datastore.
+     * 
+     */
     public Optional<Output<String>> relativePath() {
         return Optional.ofNullable(this.relativePath);
     }
@@ -62,20 +70,44 @@ public final class DatasetCreateRequestDataPathArgs extends com.pulumi.resources
             $ = new DatasetCreateRequestDataPathArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datastoreName The datastore name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreName(@Nullable Output<String> datastoreName) {
             $.datastoreName = datastoreName;
             return this;
         }
 
+        /**
+         * @param datastoreName The datastore name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreName(String datastoreName) {
             return datastoreName(Output.of(datastoreName));
         }
 
+        /**
+         * @param relativePath Path within the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativePath(@Nullable Output<String> relativePath) {
             $.relativePath = relativePath;
             return this;
         }
 
+        /**
+         * @param relativePath Path within the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativePath(String relativePath) {
             return relativePath(Output.of(relativePath));
         }

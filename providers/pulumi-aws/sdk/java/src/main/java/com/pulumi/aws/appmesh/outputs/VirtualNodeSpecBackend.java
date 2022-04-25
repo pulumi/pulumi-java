@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class VirtualNodeSpecBackend {
     /**
-     * Specifies a virtual service to use as a backend for a virtual node.
+     * @return Specifies a virtual service to use as a backend for a virtual node.
      * 
      */
     private final VirtualNodeSpecBackendVirtualService virtualService;
@@ -21,9 +21,9 @@ public final class VirtualNodeSpecBackend {
     }
 
     /**
-     * Specifies a virtual service to use as a backend for a virtual node.
+     * @return Specifies a virtual service to use as a backend for a virtual node.
      * 
-    */
+     */
     public VirtualNodeSpecBackendVirtualService virtualService() {
         return this.virtualService;
     }

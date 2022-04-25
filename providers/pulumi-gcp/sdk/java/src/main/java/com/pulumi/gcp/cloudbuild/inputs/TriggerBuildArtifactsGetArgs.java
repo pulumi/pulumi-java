@@ -27,6 +27,13 @@ public final class TriggerBuildArtifactsGetArgs extends com.pulumi.resources.Res
     @Import(name="images")
     private @Nullable Output<List<String>> images;
 
+    /**
+     * @return A list of images to be pushed upon the successful completion of all build steps.
+     * The images will be pushed using the builder service account&#39;s credentials.
+     * The digests of the pushed images will be stored in the Build resource&#39;s results field.
+     * If any of the images fail to be pushed, the build is marked FAILURE.
+     * 
+     */
     public Optional<Output<List<String>>> images() {
         return Optional.ofNullable(this.images);
     }
@@ -43,6 +50,15 @@ public final class TriggerBuildArtifactsGetArgs extends com.pulumi.resources.Res
     @Import(name="objects")
     private @Nullable Output<TriggerBuildArtifactsObjectsGetArgs> objects;
 
+    /**
+     * @return A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
+     * Files in the workspace matching specified paths globs will be uploaded to the
+     * Cloud Storage location using the builder service account&#39;s credentials.
+     * The location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.
+     * If any objects fail to be pushed, the build is marked FAILURE.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<TriggerBuildArtifactsObjectsGetArgs>> objects() {
         return Optional.ofNullable(this.objects);
     }
@@ -72,24 +88,73 @@ public final class TriggerBuildArtifactsGetArgs extends com.pulumi.resources.Res
             $ = new TriggerBuildArtifactsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param images A list of images to be pushed upon the successful completion of all build steps.
+         * The images will be pushed using the builder service account&#39;s credentials.
+         * The digests of the pushed images will be stored in the Build resource&#39;s results field.
+         * If any of the images fail to be pushed, the build is marked FAILURE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(@Nullable Output<List<String>> images) {
             $.images = images;
             return this;
         }
 
+        /**
+         * @param images A list of images to be pushed upon the successful completion of all build steps.
+         * The images will be pushed using the builder service account&#39;s credentials.
+         * The digests of the pushed images will be stored in the Build resource&#39;s results field.
+         * If any of the images fail to be pushed, the build is marked FAILURE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(List<String> images) {
             return images(Output.of(images));
         }
 
+        /**
+         * @param images A list of images to be pushed upon the successful completion of all build steps.
+         * The images will be pushed using the builder service account&#39;s credentials.
+         * The digests of the pushed images will be stored in the Build resource&#39;s results field.
+         * If any of the images fail to be pushed, the build is marked FAILURE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder images(String... images) {
             return images(List.of(images));
         }
 
+        /**
+         * @param objects A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
+         * Files in the workspace matching specified paths globs will be uploaded to the
+         * Cloud Storage location using the builder service account&#39;s credentials.
+         * The location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.
+         * If any objects fail to be pushed, the build is marked FAILURE.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objects(@Nullable Output<TriggerBuildArtifactsObjectsGetArgs> objects) {
             $.objects = objects;
             return this;
         }
 
+        /**
+         * @param objects A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
+         * Files in the workspace matching specified paths globs will be uploaded to the
+         * Cloud Storage location using the builder service account&#39;s credentials.
+         * The location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.
+         * If any objects fail to be pushed, the build is marked FAILURE.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objects(TriggerBuildArtifactsObjectsGetArgs objects) {
             return objects(Output.of(objects));
         }

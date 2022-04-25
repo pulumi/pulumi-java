@@ -25,6 +25,10 @@ public final class SaasPropertiesResponseTerm extends com.pulumi.resources.Invok
     @Import(name="endDate")
     private @Nullable String endDate;
 
+    /**
+     * @return The end date of the current term
+     * 
+     */
     public Optional<String> endDate() {
         return Optional.ofNullable(this.endDate);
     }
@@ -36,6 +40,10 @@ public final class SaasPropertiesResponseTerm extends com.pulumi.resources.Invok
     @Import(name="startDate")
     private @Nullable String startDate;
 
+    /**
+     * @return The start date of the current term
+     * 
+     */
     public Optional<String> startDate() {
         return Optional.ofNullable(this.startDate);
     }
@@ -47,6 +55,10 @@ public final class SaasPropertiesResponseTerm extends com.pulumi.resources.Invok
     @Import(name="termUnit")
     private @Nullable String termUnit;
 
+    /**
+     * @return The unit indicating Monthly / Yearly
+     * 
+     */
     public Optional<String> termUnit() {
         return Optional.ofNullable(this.termUnit);
     }
@@ -77,16 +89,34 @@ public final class SaasPropertiesResponseTerm extends com.pulumi.resources.Invok
             $ = new SaasPropertiesResponseTerm(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endDate The end date of the current term
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(@Nullable String endDate) {
             $.endDate = endDate;
             return this;
         }
 
+        /**
+         * @param startDate The start date of the current term
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(@Nullable String startDate) {
             $.startDate = startDate;
             return this;
         }
 
+        /**
+         * @param termUnit The unit indicating Monthly / Yearly
+         * 
+         * @return builder
+         * 
+         */
         public Builder termUnit(@Nullable String termUnit) {
             $.termUnit = termUnit;
             return this;

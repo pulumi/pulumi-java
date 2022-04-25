@@ -26,6 +26,10 @@ public final class FileIODetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filePattern")
     private @Nullable Output<String> filePattern;
 
+    /**
+     * @return File Pattern used to access files by the connector.
+     * 
+     */
     public Optional<Output<String>> filePattern() {
         return Optional.ofNullable(this.filePattern);
     }
@@ -54,11 +58,23 @@ public final class FileIODetailsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FileIODetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filePattern File Pattern used to access files by the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePattern(@Nullable Output<String> filePattern) {
             $.filePattern = filePattern;
             return this;
         }
 
+        /**
+         * @param filePattern File Pattern used to access files by the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePattern(String filePattern) {
             return filePattern(Output.of(filePattern));
         }

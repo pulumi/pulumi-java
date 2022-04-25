@@ -29,6 +29,10 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="encryptionPreferences")
     private @Nullable EncryptionPreferencesResponse encryptionPreferences;
 
+    /**
+     * @return Preferences related to the Encryption.
+     * 
+     */
     public Optional<EncryptionPreferencesResponse> encryptionPreferences() {
         return Optional.ofNullable(this.encryptionPreferences);
     }
@@ -40,6 +44,10 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="managementResourcePreferences")
     private @Nullable ManagementResourcePreferencesResponse managementResourcePreferences;
 
+    /**
+     * @return Preferences related to the Management resource.
+     * 
+     */
     public Optional<ManagementResourcePreferencesResponse> managementResourcePreferences() {
         return Optional.ofNullable(this.managementResourcePreferences);
     }
@@ -51,6 +59,10 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="notificationPreferences")
     private @Nullable List<NotificationPreferenceResponse> notificationPreferences;
 
+    /**
+     * @return Notification preferences.
+     * 
+     */
     public Optional<List<NotificationPreferenceResponse>> notificationPreferences() {
         return Optional.ofNullable(this.notificationPreferences);
     }
@@ -62,6 +74,10 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="transportPreferences")
     private @Nullable TransportPreferencesResponse transportPreferences;
 
+    /**
+     * @return Preferences related to the shipment logistics of the order.
+     * 
+     */
     public Optional<TransportPreferencesResponse> transportPreferences() {
         return Optional.ofNullable(this.transportPreferences);
     }
@@ -93,25 +109,55 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PreferencesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionPreferences Preferences related to the Encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionPreferences(@Nullable EncryptionPreferencesResponse encryptionPreferences) {
             $.encryptionPreferences = encryptionPreferences;
             return this;
         }
 
+        /**
+         * @param managementResourcePreferences Preferences related to the Management resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementResourcePreferences(@Nullable ManagementResourcePreferencesResponse managementResourcePreferences) {
             $.managementResourcePreferences = managementResourcePreferences;
             return this;
         }
 
+        /**
+         * @param notificationPreferences Notification preferences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationPreferences(@Nullable List<NotificationPreferenceResponse> notificationPreferences) {
             $.notificationPreferences = notificationPreferences;
             return this;
         }
 
+        /**
+         * @param notificationPreferences Notification preferences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationPreferences(NotificationPreferenceResponse... notificationPreferences) {
             return notificationPreferences(List.of(notificationPreferences));
         }
 
+        /**
+         * @param transportPreferences Preferences related to the shipment logistics of the order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportPreferences(@Nullable TransportPreferencesResponse transportPreferences) {
             $.transportPreferences = transportPreferences;
             return this;

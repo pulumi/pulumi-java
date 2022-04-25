@@ -27,6 +27,10 @@ public final class CmkKekIdentityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="useSystemAssignedIdentity")
     private @Nullable Output<Boolean> useSystemAssignedIdentity;
 
+    /**
+     * @return Indicate that system assigned identity should be used. Mutually exclusive with &#39;userAssignedIdentity&#39; field
+     * 
+     */
     public Optional<Output<Boolean>> useSystemAssignedIdentity() {
         return Optional.ofNullable(this.useSystemAssignedIdentity);
     }
@@ -38,6 +42,10 @@ public final class CmkKekIdentityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="userAssignedIdentity")
     private @Nullable Output<String> userAssignedIdentity;
 
+    /**
+     * @return The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned
+     * 
+     */
     public Optional<Output<String>> userAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }
@@ -67,20 +75,44 @@ public final class CmkKekIdentityArgs extends com.pulumi.resources.ResourceArgs 
             $ = new CmkKekIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param useSystemAssignedIdentity Indicate that system assigned identity should be used. Mutually exclusive with &#39;userAssignedIdentity&#39; field
+         * 
+         * @return builder
+         * 
+         */
         public Builder useSystemAssignedIdentity(@Nullable Output<Boolean> useSystemAssignedIdentity) {
             $.useSystemAssignedIdentity = useSystemAssignedIdentity;
             return this;
         }
 
+        /**
+         * @param useSystemAssignedIdentity Indicate that system assigned identity should be used. Mutually exclusive with &#39;userAssignedIdentity&#39; field
+         * 
+         * @return builder
+         * 
+         */
         public Builder useSystemAssignedIdentity(Boolean useSystemAssignedIdentity) {
             return useSystemAssignedIdentity(Output.of(useSystemAssignedIdentity));
         }
 
+        /**
+         * @param userAssignedIdentity The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
             $.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentity The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(String userAssignedIdentity) {
             return userAssignedIdentity(Output.of(userAssignedIdentity));
         }

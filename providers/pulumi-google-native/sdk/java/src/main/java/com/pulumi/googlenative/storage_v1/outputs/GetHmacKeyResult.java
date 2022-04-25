@@ -10,47 +10,47 @@ import java.util.Objects;
 @CustomType
 public final class GetHmacKeyResult {
     /**
-     * The ID of the HMAC Key.
+     * @return The ID of the HMAC Key.
      * 
      */
     private final String accessId;
     /**
-     * HTTP 1.1 Entity tag for the HMAC key.
+     * @return HTTP 1.1 Entity tag for the HMAC key.
      * 
      */
     private final String etag;
     /**
-     * The kind of item this is. For HMAC Key metadata, this is always storage#hmacKeyMetadata.
+     * @return The kind of item this is. For HMAC Key metadata, this is always storage#hmacKeyMetadata.
      * 
      */
     private final String kind;
     /**
-     * Project ID owning the service account to which the key authenticates.
+     * @return Project ID owning the service account to which the key authenticates.
      * 
      */
     private final String project;
     /**
-     * The link to this resource.
+     * @return The link to this resource.
      * 
      */
     private final String selfLink;
     /**
-     * The email address of the key&#39;s associated service account.
+     * @return The email address of the key&#39;s associated service account.
      * 
      */
     private final String serviceAccountEmail;
     /**
-     * The state of the key. Can be one of ACTIVE, INACTIVE, or DELETED.
+     * @return The state of the key. Can be one of ACTIVE, INACTIVE, or DELETED.
      * 
      */
     private final String state;
     /**
-     * The creation time of the HMAC key in RFC 3339 format.
+     * @return The creation time of the HMAC key in RFC 3339 format.
      * 
      */
     private final String timeCreated;
     /**
-     * The last modification time of the HMAC key metadata in RFC 3339 format.
+     * @return The last modification time of the HMAC key metadata in RFC 3339 format.
      * 
      */
     private final String updated;
@@ -78,65 +78,65 @@ public final class GetHmacKeyResult {
     }
 
     /**
-     * The ID of the HMAC Key.
+     * @return The ID of the HMAC Key.
      * 
-    */
+     */
     public String accessId() {
         return this.accessId;
     }
     /**
-     * HTTP 1.1 Entity tag for the HMAC key.
+     * @return HTTP 1.1 Entity tag for the HMAC key.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The kind of item this is. For HMAC Key metadata, this is always storage#hmacKeyMetadata.
+     * @return The kind of item this is. For HMAC Key metadata, this is always storage#hmacKeyMetadata.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Project ID owning the service account to which the key authenticates.
+     * @return Project ID owning the service account to which the key authenticates.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * The link to this resource.
+     * @return The link to this resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * The email address of the key&#39;s associated service account.
+     * @return The email address of the key&#39;s associated service account.
      * 
-    */
+     */
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
     /**
-     * The state of the key. Can be one of ACTIVE, INACTIVE, or DELETED.
+     * @return The state of the key. Can be one of ACTIVE, INACTIVE, or DELETED.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The creation time of the HMAC key in RFC 3339 format.
+     * @return The creation time of the HMAC key in RFC 3339 format.
      * 
-    */
+     */
     public String timeCreated() {
         return this.timeCreated;
     }
     /**
-     * The last modification time of the HMAC key metadata in RFC 3339 format.
+     * @return The last modification time of the HMAC key metadata in RFC 3339 format.
      * 
-    */
+     */
     public String updated() {
         return this.updated;
     }

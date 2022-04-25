@@ -30,6 +30,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return The Event Hubs throughput units, value should be 0 to 20 throughput units.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -41,6 +45,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<Either<String,SkuName>> name;
 
+    /**
+     * @return Name of this SKU.
+     * 
+     */
     public Output<Either<String,SkuName>> name() {
         return this.name;
     }
@@ -52,6 +60,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
     private @Nullable Output<Either<String,SkuTier>> tier;
 
+    /**
+     * @return The billing tier of this particular SKU.
+     * 
+     */
     public Optional<Output<Either<String,SkuTier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -82,45 +94,105 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The Event Hubs throughput units, value should be 0 to 20 throughput units.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The Event Hubs throughput units, value should be 0 to 20 throughput units.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name Name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,SkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,SkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SkuName name) {
             return name(Either.ofRight(name));
         }
 
+        /**
+         * @param tier The billing tier of this particular SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,SkuTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The billing tier of this particular SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,SkuTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier The billing tier of this particular SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier The billing tier of this particular SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(SkuTier tier) {
             return tier(Either.ofRight(tier));
         }

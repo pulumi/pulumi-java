@@ -25,6 +25,10 @@ public final class LinkedWorkspacePropsResponse extends com.pulumi.resources.Inv
     @Import(name="linkedWorkspaceResourceId")
     private @Nullable String linkedWorkspaceResourceId;
 
+    /**
+     * @return ResourceId of the link target of the linked workspace.
+     * 
+     */
     public Optional<String> linkedWorkspaceResourceId() {
         return Optional.ofNullable(this.linkedWorkspaceResourceId);
     }
@@ -36,6 +40,10 @@ public final class LinkedWorkspacePropsResponse extends com.pulumi.resources.Inv
     @Import(name="userAssignedIdentityResourceId")
     private @Nullable String userAssignedIdentityResourceId;
 
+    /**
+     * @return ResourceId of the user assigned identity for the linked workspace.
+     * 
+     */
     public Optional<String> userAssignedIdentityResourceId() {
         return Optional.ofNullable(this.userAssignedIdentityResourceId);
     }
@@ -65,11 +73,23 @@ public final class LinkedWorkspacePropsResponse extends com.pulumi.resources.Inv
             $ = new LinkedWorkspacePropsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkedWorkspaceResourceId ResourceId of the link target of the linked workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedWorkspaceResourceId(@Nullable String linkedWorkspaceResourceId) {
             $.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentityResourceId ResourceId of the user assigned identity for the linked workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentityResourceId(@Nullable String userAssignedIdentityResourceId) {
             $.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
             return this;

@@ -23,6 +23,11 @@ public final class JobLoadDestinationEncryptionConfigurationArgs extends com.pul
     @Import(name="kmsKeyName", required=true)
     private Output<String> kmsKeyName;
 
+    /**
+     * @return Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+     * The BigQuery Service Account associated with your project requires access to this encryption key.
+     * 
+     */
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -35,6 +40,11 @@ public final class JobLoadDestinationEncryptionConfigurationArgs extends com.pul
     @Import(name="kmsKeyVersion")
     private @Nullable Output<String> kmsKeyVersion;
 
+    /**
+     * @return -
+     * Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
+     * 
+     */
     public Optional<Output<String>> kmsKeyVersion() {
         return Optional.ofNullable(this.kmsKeyVersion);
     }
@@ -64,20 +74,48 @@ public final class JobLoadDestinationEncryptionConfigurationArgs extends com.pul
             $ = new JobLoadDestinationEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+         * The BigQuery Service Account associated with your project requires access to this encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
+         * The BigQuery Service Account associated with your project requires access to this encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }
 
+        /**
+         * @param kmsKeyVersion -
+         * Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyVersion(@Nullable Output<String> kmsKeyVersion) {
             $.kmsKeyVersion = kmsKeyVersion;
             return this;
         }
 
+        /**
+         * @param kmsKeyVersion -
+         * Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyVersion(String kmsKeyVersion) {
             return kmsKeyVersion(Output.of(kmsKeyVersion));
         }

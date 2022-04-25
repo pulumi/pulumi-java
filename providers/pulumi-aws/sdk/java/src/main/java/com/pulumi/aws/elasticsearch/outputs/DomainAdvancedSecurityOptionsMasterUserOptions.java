@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DomainAdvancedSecurityOptionsMasterUserOptions {
     /**
-     * ARN for the main user. Only specify if `internal_user_database_enabled` is not set or set to `false`.
+     * @return ARN for the main user. Only specify if `internal_user_database_enabled` is not set or set to `false`.
      * 
      */
     private final @Nullable String masterUserArn;
     /**
-     * Main user&#39;s username, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+     * @return Main user&#39;s username, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
      * 
      */
     private final @Nullable String masterUserName;
     /**
-     * Main user&#39;s password, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+     * @return Main user&#39;s password, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
      * 
      */
     private final @Nullable String masterUserPassword;
@@ -38,23 +38,23 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptions {
     }
 
     /**
-     * ARN for the main user. Only specify if `internal_user_database_enabled` is not set or set to `false`.
+     * @return ARN for the main user. Only specify if `internal_user_database_enabled` is not set or set to `false`.
      * 
-    */
+     */
     public Optional<String> masterUserArn() {
         return Optional.ofNullable(this.masterUserArn);
     }
     /**
-     * Main user&#39;s username, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+     * @return Main user&#39;s username, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
      * 
-    */
+     */
     public Optional<String> masterUserName() {
         return Optional.ofNullable(this.masterUserName);
     }
     /**
-     * Main user&#39;s password, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+     * @return Main user&#39;s password, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
      * 
-    */
+     */
     public Optional<String> masterUserPassword() {
         return Optional.ofNullable(this.masterUserPassword);
     }

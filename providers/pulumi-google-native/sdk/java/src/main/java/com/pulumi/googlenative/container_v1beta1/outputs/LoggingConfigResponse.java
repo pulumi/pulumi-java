@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class LoggingConfigResponse {
     /**
-     * Logging components configuration
+     * @return Logging components configuration
      * 
      */
     private final LoggingComponentConfigResponse componentConfig;
@@ -21,9 +21,9 @@ public final class LoggingConfigResponse {
     }
 
     /**
-     * Logging components configuration
+     * @return Logging components configuration
      * 
-    */
+     */
     public LoggingComponentConfigResponse componentConfig() {
         return this.componentConfig;
     }

@@ -22,6 +22,10 @@ public final class ConnectionConfirmationState extends com.pulumi.resources.Reso
     @Import(name="connectionId")
     private @Nullable Output<String> connectionId;
 
+    /**
+     * @return The ID of the hosted connection.
+     * 
+     */
     public Optional<Output<String>> connectionId() {
         return Optional.ofNullable(this.connectionId);
     }
@@ -50,11 +54,23 @@ public final class ConnectionConfirmationState extends com.pulumi.resources.Reso
             $ = new ConnectionConfirmationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionId The ID of the hosted connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(@Nullable Output<String> connectionId) {
             $.connectionId = connectionId;
             return this;
         }
 
+        /**
+         * @param connectionId The ID of the hosted connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(String connectionId) {
             return connectionId(Output.of(connectionId));
         }

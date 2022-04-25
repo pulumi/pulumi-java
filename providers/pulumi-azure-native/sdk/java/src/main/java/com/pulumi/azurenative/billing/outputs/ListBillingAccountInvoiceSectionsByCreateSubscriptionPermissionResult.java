@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult {
     /**
-     * The link (url) to the next page of results.
+     * @return The link (url) to the next page of results.
      * 
      */
     private final String nextLink;
     /**
-     * The list of invoice section properties with create subscription permission.
+     * @return The list of invoice section properties with create subscription permission.
      * 
      */
     private final @Nullable List<InvoiceSectionWithCreateSubPermissionResponse> value;
@@ -32,16 +32,16 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
     }
 
     /**
-     * The link (url) to the next page of results.
+     * @return The link (url) to the next page of results.
      * 
-    */
+     */
     public String nextLink() {
         return this.nextLink;
     }
     /**
-     * The list of invoice section properties with create subscription permission.
+     * @return The list of invoice section properties with create subscription permission.
      * 
-    */
+     */
     public List<InvoiceSectionWithCreateSubPermissionResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

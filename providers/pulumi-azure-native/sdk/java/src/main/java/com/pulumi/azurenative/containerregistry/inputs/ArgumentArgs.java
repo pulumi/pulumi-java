@@ -28,6 +28,10 @@ public final class ArgumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isSecret")
     private @Nullable Output<Boolean> isSecret;
 
+    /**
+     * @return Flag to indicate whether the argument represents a secret and want to be removed from build logs.
+     * 
+     */
     public Optional<Output<Boolean>> isSecret() {
         return Optional.ofNullable(this.isSecret);
     }
@@ -39,6 +43,10 @@ public final class ArgumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the argument.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -50,6 +58,10 @@ public final class ArgumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The value of the argument.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -80,29 +92,65 @@ public final class ArgumentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ArgumentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isSecret Flag to indicate whether the argument represents a secret and want to be removed from build logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSecret(@Nullable Output<Boolean> isSecret) {
             $.isSecret = isSecret;
             return this;
         }
 
+        /**
+         * @param isSecret Flag to indicate whether the argument represents a secret and want to be removed from build logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSecret(Boolean isSecret) {
             return isSecret(Output.of(isSecret));
         }
 
+        /**
+         * @param name The name of the argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value The value of the argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of the argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

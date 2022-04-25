@@ -13,14 +13,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressTo {
     /**
-     * A list of `ApiOperations` that this egress rule applies to. A request matches
+     * @return A list of `ApiOperations` that this egress rule applies to. A request matches
      * if it contains an operation/service in this list.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperation> operations;
     /**
-     * A list of resources, currently only projects in the form
+     * @return A list of resources, currently only projects in the form
      * `projects/&lt;projectnumber&gt;`, that match this to stanza. A request matches
      * if it contains a resource in this list. If * is specified for resources,
      * then this `EgressTo` rule will authorize access to all resources outside
@@ -38,22 +38,22 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressTo {
     }
 
     /**
-     * A list of `ApiOperations` that this egress rule applies to. A request matches
+     * @return A list of `ApiOperations` that this egress rule applies to. A request matches
      * if it contains an operation/service in this list.
      * Structure is documented below.
      * 
-    */
+     */
     public List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperation> operations() {
         return this.operations == null ? List.of() : this.operations;
     }
     /**
-     * A list of resources, currently only projects in the form
+     * @return A list of resources, currently only projects in the form
      * `projects/&lt;projectnumber&gt;`, that match this to stanza. A request matches
      * if it contains a resource in this list. If * is specified for resources,
      * then this `EgressTo` rule will authorize access to all resources outside
      * the perimeter.
      * 
-    */
+     */
     public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }

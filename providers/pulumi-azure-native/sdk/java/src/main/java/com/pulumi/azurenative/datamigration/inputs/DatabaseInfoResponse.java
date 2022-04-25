@@ -23,6 +23,10 @@ public final class DatabaseInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceDatabaseName", required=true)
     private String sourceDatabaseName;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
@@ -51,6 +55,12 @@ public final class DatabaseInfoResponse extends com.pulumi.resources.InvokeArgs 
             $ = new DatabaseInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceDatabaseName Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabaseName(String sourceDatabaseName) {
             $.sourceDatabaseName = sourceDatabaseName;
             return this;

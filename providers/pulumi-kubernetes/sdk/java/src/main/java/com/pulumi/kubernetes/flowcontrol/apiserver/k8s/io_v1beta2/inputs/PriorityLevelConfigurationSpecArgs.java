@@ -27,6 +27,10 @@ public final class PriorityLevelConfigurationSpecArgs extends com.pulumi.resourc
     @Import(name="limited")
     private @Nullable Output<LimitedPriorityLevelConfigurationArgs> limited;
 
+    /**
+     * @return `limited` specifies how requests are handled for a Limited priority level. This field must be non-empty if and only if `type` is `&#34;Limited&#34;`.
+     * 
+     */
     public Optional<Output<LimitedPriorityLevelConfigurationArgs>> limited() {
         return Optional.ofNullable(this.limited);
     }
@@ -38,6 +42,10 @@ public final class PriorityLevelConfigurationSpecArgs extends com.pulumi.resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return `type` indicates whether this priority level is subject to limitation on request execution.  A value of `&#34;Exempt&#34;` means that requests of this priority level are not subject to a limit (and thus are never queued) and do not detract from the capacity made available to other priority levels.  A value of `&#34;Limited&#34;` means that (a) requests of this priority level _are_ subject to limits and (b) some of the server&#39;s limited capacity is made available exclusively to this priority level. Required.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -67,20 +75,44 @@ public final class PriorityLevelConfigurationSpecArgs extends com.pulumi.resourc
             $ = new PriorityLevelConfigurationSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param limited `limited` specifies how requests are handled for a Limited priority level. This field must be non-empty if and only if `type` is `&#34;Limited&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limited(@Nullable Output<LimitedPriorityLevelConfigurationArgs> limited) {
             $.limited = limited;
             return this;
         }
 
+        /**
+         * @param limited `limited` specifies how requests are handled for a Limited priority level. This field must be non-empty if and only if `type` is `&#34;Limited&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limited(LimitedPriorityLevelConfigurationArgs limited) {
             return limited(Output.of(limited));
         }
 
+        /**
+         * @param type `type` indicates whether this priority level is subject to limitation on request execution.  A value of `&#34;Exempt&#34;` means that requests of this priority level are not subject to a limit (and thus are never queued) and do not detract from the capacity made available to other priority levels.  A value of `&#34;Limited&#34;` means that (a) requests of this priority level _are_ subject to limits and (b) some of the server&#39;s limited capacity is made available exclusively to this priority level. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type `type` indicates whether this priority level is subject to limitation on request execution.  A value of `&#34;Exempt&#34;` means that requests of this priority level are not subject to a limit (and thus are never queued) and do not detract from the capacity made available to other priority levels.  A value of `&#34;Limited&#34;` means that (a) requests of this priority level _are_ subject to limits and (b) some of the server&#39;s limited capacity is made available exclusively to this priority level. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

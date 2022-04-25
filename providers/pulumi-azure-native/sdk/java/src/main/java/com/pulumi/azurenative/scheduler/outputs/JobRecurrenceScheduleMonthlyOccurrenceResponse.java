@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobRecurrenceScheduleMonthlyOccurrenceResponse {
     /**
-     * Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+     * @return Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
      * 
      */
     private final @Nullable String day;
     /**
-     * Gets or sets the occurrence. Must be between -5 and 5.
+     * @return Gets or sets the occurrence. Must be between -5 and 5.
      * 
      */
     private final @Nullable Integer occurrence;
@@ -32,16 +32,16 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceResponse {
     }
 
     /**
-     * Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+     * @return Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
      * 
-    */
+     */
     public Optional<String> day() {
         return Optional.ofNullable(this.day);
     }
     /**
-     * Gets or sets the occurrence. Must be between -5 and 5.
+     * @return Gets or sets the occurrence. Must be between -5 and 5.
      * 
-    */
+     */
     public Optional<Integer> occurrence() {
         return Optional.ofNullable(this.occurrence);
     }

@@ -25,6 +25,10 @@ public final class AppliancePropertiesResponseInfrastructureConfig extends com.p
     @Import(name="provider")
     private @Nullable String provider;
 
+    /**
+     * @return Information about the connected appliance.
+     * 
+     */
     public Optional<String> provider() {
         return Optional.ofNullable(this.provider);
     }
@@ -53,6 +57,12 @@ public final class AppliancePropertiesResponseInfrastructureConfig extends com.p
             $ = new AppliancePropertiesResponseInfrastructureConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param provider Information about the connected appliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(@Nullable String provider) {
             $.provider = provider;
             return this;

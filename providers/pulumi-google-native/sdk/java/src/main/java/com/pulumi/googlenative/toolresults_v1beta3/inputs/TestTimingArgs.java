@@ -26,6 +26,10 @@ public final class TestTimingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="testProcessDuration")
     private @Nullable Output<DurationArgs> testProcessDuration;
 
+    /**
+     * @return How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
+     * 
+     */
     public Optional<Output<DurationArgs>> testProcessDuration() {
         return Optional.ofNullable(this.testProcessDuration);
     }
@@ -54,11 +58,23 @@ public final class TestTimingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TestTimingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param testProcessDuration How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder testProcessDuration(@Nullable Output<DurationArgs> testProcessDuration) {
             $.testProcessDuration = testProcessDuration;
             return this;
         }
 
+        /**
+         * @param testProcessDuration How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder testProcessDuration(DurationArgs testProcessDuration) {
             return testProcessDuration(Output.of(testProcessDuration));
         }

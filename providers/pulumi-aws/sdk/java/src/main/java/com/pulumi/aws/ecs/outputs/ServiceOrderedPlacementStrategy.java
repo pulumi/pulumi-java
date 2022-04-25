@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceOrderedPlacementStrategy {
     /**
-     * For the `spread` placement strategy, valid values are `instanceId` (or `host`,
+     * @return For the `spread` placement strategy, valid values are `instanceId` (or `host`,
      * which has the same effect), or any platform or custom attribute that is applied to a container instance.
      * For the `binpack` type, valid values are `memory` and `cpu`. For the `random` type, this attribute is not
      * needed. For more information, see [Placement Strategy](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html).
@@ -20,7 +20,7 @@ public final class ServiceOrderedPlacementStrategy {
      */
     private final @Nullable String field;
     /**
-     * Type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
+     * @return Type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
      * 
      */
     private final String type;
@@ -34,19 +34,19 @@ public final class ServiceOrderedPlacementStrategy {
     }
 
     /**
-     * For the `spread` placement strategy, valid values are `instanceId` (or `host`,
+     * @return For the `spread` placement strategy, valid values are `instanceId` (or `host`,
      * which has the same effect), or any platform or custom attribute that is applied to a container instance.
      * For the `binpack` type, valid values are `memory` and `cpu`. For the `random` type, this attribute is not
      * needed. For more information, see [Placement Strategy](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html).
      * 
-    */
+     */
     public Optional<String> field() {
         return Optional.ofNullable(this.field);
     }
     /**
-     * Type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
+     * @return Type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

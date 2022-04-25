@@ -25,29 +25,29 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterNodeConfig {
     /**
-     * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: &lt;https://cloud.google.com/compute/docs/disks/customer-managed-encryption&gt;
+     * @return The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: &lt;https://cloud.google.com/compute/docs/disks/customer-managed-encryption&gt;
      * 
      */
     private final @Nullable String bootDiskKmsKey;
     /**
-     * Size of the disk attached to each node, specified
+     * @return Size of the disk attached to each node, specified
      * in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
      * 
      */
     private final @Nullable Integer diskSizeGb;
     /**
-     * Type of the disk attached to each node
+     * @return Type of the disk attached to each node
      * (e.g. &#39;pd-standard&#39;, &#39;pd-balanced&#39; or &#39;pd-ssd&#39;). If unspecified, the default disk type is &#39;pd-standard&#39;
      * 
      */
     private final @Nullable String diskType;
     /**
-     * Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
+     * @return Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
      * 
      */
     private final @Nullable ClusterNodeConfigEphemeralStorageConfig ephemeralStorageConfig;
     /**
-     * Parameters for the Google Container Filesystem (GCFS).
+     * @return Parameters for the Google Container Filesystem (GCFS).
      * If unspecified, GCFS will not be enabled on the node pool. When enabling this feature you must specify `image_type = &#34;COS_CONTAINERD&#34;` and `node_version` from GKE versions 1.19 or later to use it.
      * For GKE versions 1.19, 1.20, and 1.21, the recommended minimum `node_version` would be 1.19.15-gke.1300, 1.20.11-gke.1300, and 1.21.5-gke.1300 respectively.
      * A `machine_type` that has more than 16 GiB of memory is also recommended.
@@ -57,50 +57,50 @@ public final class ClusterNodeConfig {
      */
     private final @Nullable ClusterNodeConfigGcfsConfig gcfsConfig;
     /**
-     * List of the type and count of accelerator cards attached to the instance.
+     * @return List of the type and count of accelerator cards attached to the instance.
      * Structure documented below.
      * 
      */
     private final @Nullable List<ClusterNodeConfigGuestAccelerator> guestAccelerators;
     /**
-     * The image type to use for this node. Note that changing the image type
+     * @return The image type to use for this node. Note that changing the image type
      * will delete and recreate all nodes in the node pool.
      * 
      */
     private final @Nullable String imageType;
     /**
-     * Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+     * @return Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
      * Structure is documented below.
      * 
      */
     private final @Nullable ClusterNodeConfigKubeletConfig kubeletConfig;
     /**
-     * The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
+     * @return The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
      * reserved by Kubernetes Core components and cannot be specified.
      * 
      */
     private final @Nullable Map<String,String> labels;
     /**
-     * Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+     * @return Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
      * Note that validations happen all server side. All attributes are optional.
      * Structure is documented below.
      * 
      */
     private final @Nullable ClusterNodeConfigLinuxNodeConfig linuxNodeConfig;
     /**
-     * Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+     * @return Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
      * 
      */
     private final @Nullable Integer localSsdCount;
     /**
-     * The name of a Google Compute Engine machine type.
+     * @return The name of a Google Compute Engine machine type.
      * Defaults to `e2-medium`. To create a custom machine type, value should be set as specified
      * [here](https://cloud.google.com/compute/docs/reference/latest/instances#machineType).
      * 
      */
     private final @Nullable String machineType;
     /**
-     * The metadata key/value pairs assigned to instances in
+     * @return The metadata key/value pairs assigned to instances in
      * the cluster. From GKE `1.12` onwards, `disable-legacy-endpoints` is set to
      * `true` by the API; if `metadata` is set but that default value is not
      * included, the provider will attempt to unset the value. To avoid this, set the
@@ -109,7 +109,7 @@ public final class ClusterNodeConfig {
      */
     private final @Nullable Map<String,String> metadata;
     /**
-     * Minimum CPU platform to be used by this instance.
+     * @return Minimum CPU platform to be used by this instance.
      * The instance may be scheduled on the specified or newer CPU platform. Applicable
      * values are the friendly names of CPU platforms, such as `Intel Haswell`. See the
      * [official documentation](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
@@ -118,56 +118,56 @@ public final class ClusterNodeConfig {
      */
     private final @Nullable String minCpuPlatform;
     /**
-     * Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
+     * @return Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
      * 
      */
     private final @Nullable String nodeGroup;
     /**
-     * The set of Google API scopes to be made available
+     * @return The set of Google API scopes to be made available
      * on all of the node VMs under the &#34;default&#34; service account.
      * Use the &#34;https://www.googleapis.com/auth/cloud-platform&#34; scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
      * 
      */
     private final @Nullable List<String> oauthScopes;
     /**
-     * A boolean that represents whether or not the underlying node VMs
+     * @return A boolean that represents whether or not the underlying node VMs
      * are preemptible. See the [official documentation](https://cloud.google.com/container-engine/docs/preemptible-vm)
      * for more information. Defaults to false.
      * 
      */
     private final @Nullable Boolean preemptible;
     /**
-     * [GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = &#34;COS_CONTAINERD&#34;` and `node_version = &#34;1.12.7-gke.17&#34;` or later to use it.
+     * @return [GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = &#34;COS_CONTAINERD&#34;` and `node_version = &#34;1.12.7-gke.17&#34;` or later to use it.
      * Structure is documented below.
      * 
      */
     private final @Nullable ClusterNodeConfigSandboxConfig sandboxConfig;
     /**
-     * The service account to be used by the Node VMs.
+     * @return The service account to be used by the Node VMs.
      * If not specified, the &#34;default&#34; service account is used.
      * 
      */
     private final @Nullable String serviceAccount;
     /**
-     * Shielded Instance options. Structure is documented below.
+     * @return Shielded Instance options. Structure is documented below.
      * 
      */
     private final @Nullable ClusterNodeConfigShieldedInstanceConfig shieldedInstanceConfig;
     /**
-     * ) A boolean
+     * @return ) A boolean
      * that represents whether the underlying node VMs are spot. See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/spot-vms)
      * for more information. Defaults to false.
      * 
      */
     private final @Nullable Boolean spot;
     /**
-     * The list of instance tags applied to all nodes. Tags are used to identify
+     * @return The list of instance tags applied to all nodes. Tags are used to identify
      * valid sources or targets for network firewalls.
      * 
      */
     private final @Nullable List<String> tags;
     /**
-     * A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
+     * @return A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
      * to apply to nodes. GKE&#39;s API can only set this field on cluster creation.
      * However, GKE will add taints to your nodes if you enable certain features such
      * as GPUs. If this field is set, any diffs on this field will cause the provider to
@@ -179,7 +179,7 @@ public final class ClusterNodeConfig {
      */
     private final @Nullable List<ClusterNodeConfigTaint> taints;
     /**
-     * Metadata configuration to expose to workloads on the node pool.
+     * @return Metadata configuration to expose to workloads on the node pool.
      * Structure is documented below.
      * 
      */
@@ -238,193 +238,193 @@ public final class ClusterNodeConfig {
     }
 
     /**
-     * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: &lt;https://cloud.google.com/compute/docs/disks/customer-managed-encryption&gt;
+     * @return The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: &lt;https://cloud.google.com/compute/docs/disks/customer-managed-encryption&gt;
      * 
-    */
+     */
     public Optional<String> bootDiskKmsKey() {
         return Optional.ofNullable(this.bootDiskKmsKey);
     }
     /**
-     * Size of the disk attached to each node, specified
+     * @return Size of the disk attached to each node, specified
      * in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
      * 
-    */
+     */
     public Optional<Integer> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
     /**
-     * Type of the disk attached to each node
+     * @return Type of the disk attached to each node
      * (e.g. &#39;pd-standard&#39;, &#39;pd-balanced&#39; or &#39;pd-ssd&#39;). If unspecified, the default disk type is &#39;pd-standard&#39;
      * 
-    */
+     */
     public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
-     * Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
+     * @return Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
      * 
-    */
+     */
     public Optional<ClusterNodeConfigEphemeralStorageConfig> ephemeralStorageConfig() {
         return Optional.ofNullable(this.ephemeralStorageConfig);
     }
     /**
-     * Parameters for the Google Container Filesystem (GCFS).
+     * @return Parameters for the Google Container Filesystem (GCFS).
      * If unspecified, GCFS will not be enabled on the node pool. When enabling this feature you must specify `image_type = &#34;COS_CONTAINERD&#34;` and `node_version` from GKE versions 1.19 or later to use it.
      * For GKE versions 1.19, 1.20, and 1.21, the recommended minimum `node_version` would be 1.19.15-gke.1300, 1.20.11-gke.1300, and 1.21.5-gke.1300 respectively.
      * A `machine_type` that has more than 16 GiB of memory is also recommended.
      * GCFS must be enabled in order to use [image streaming](https://cloud.google.com/kubernetes-engine/docs/how-to/image-streaming).
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ClusterNodeConfigGcfsConfig> gcfsConfig() {
         return Optional.ofNullable(this.gcfsConfig);
     }
     /**
-     * List of the type and count of accelerator cards attached to the instance.
+     * @return List of the type and count of accelerator cards attached to the instance.
      * Structure documented below.
      * 
-    */
+     */
     public List<ClusterNodeConfigGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators == null ? List.of() : this.guestAccelerators;
     }
     /**
-     * The image type to use for this node. Note that changing the image type
+     * @return The image type to use for this node. Note that changing the image type
      * will delete and recreate all nodes in the node pool.
      * 
-    */
+     */
     public Optional<String> imageType() {
         return Optional.ofNullable(this.imageType);
     }
     /**
-     * Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+     * @return Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ClusterNodeConfigKubeletConfig> kubeletConfig() {
         return Optional.ofNullable(this.kubeletConfig);
     }
     /**
-     * The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
+     * @return The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
      * reserved by Kubernetes Core components and cannot be specified.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
-     * Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
+     * @return Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
      * Note that validations happen all server side. All attributes are optional.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ClusterNodeConfigLinuxNodeConfig> linuxNodeConfig() {
         return Optional.ofNullable(this.linuxNodeConfig);
     }
     /**
-     * Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
+     * @return Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
      * 
-    */
+     */
     public Optional<Integer> localSsdCount() {
         return Optional.ofNullable(this.localSsdCount);
     }
     /**
-     * The name of a Google Compute Engine machine type.
+     * @return The name of a Google Compute Engine machine type.
      * Defaults to `e2-medium`. To create a custom machine type, value should be set as specified
      * [here](https://cloud.google.com/compute/docs/reference/latest/instances#machineType).
      * 
-    */
+     */
     public Optional<String> machineType() {
         return Optional.ofNullable(this.machineType);
     }
     /**
-     * The metadata key/value pairs assigned to instances in
+     * @return The metadata key/value pairs assigned to instances in
      * the cluster. From GKE `1.12` onwards, `disable-legacy-endpoints` is set to
      * `true` by the API; if `metadata` is set but that default value is not
      * included, the provider will attempt to unset the value. To avoid this, set the
      * value in your config.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
-     * Minimum CPU platform to be used by this instance.
+     * @return Minimum CPU platform to be used by this instance.
      * The instance may be scheduled on the specified or newer CPU platform. Applicable
      * values are the friendly names of CPU platforms, such as `Intel Haswell`. See the
      * [official documentation](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
      * for more information.
      * 
-    */
+     */
     public Optional<String> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
     /**
-     * Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
+     * @return Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
      * 
-    */
+     */
     public Optional<String> nodeGroup() {
         return Optional.ofNullable(this.nodeGroup);
     }
     /**
-     * The set of Google API scopes to be made available
+     * @return The set of Google API scopes to be made available
      * on all of the node VMs under the &#34;default&#34; service account.
      * Use the &#34;https://www.googleapis.com/auth/cloud-platform&#34; scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
      * 
-    */
+     */
     public List<String> oauthScopes() {
         return this.oauthScopes == null ? List.of() : this.oauthScopes;
     }
     /**
-     * A boolean that represents whether or not the underlying node VMs
+     * @return A boolean that represents whether or not the underlying node VMs
      * are preemptible. See the [official documentation](https://cloud.google.com/container-engine/docs/preemptible-vm)
      * for more information. Defaults to false.
      * 
-    */
+     */
     public Optional<Boolean> preemptible() {
         return Optional.ofNullable(this.preemptible);
     }
     /**
-     * [GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = &#34;COS_CONTAINERD&#34;` and `node_version = &#34;1.12.7-gke.17&#34;` or later to use it.
+     * @return [GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = &#34;COS_CONTAINERD&#34;` and `node_version = &#34;1.12.7-gke.17&#34;` or later to use it.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ClusterNodeConfigSandboxConfig> sandboxConfig() {
         return Optional.ofNullable(this.sandboxConfig);
     }
     /**
-     * The service account to be used by the Node VMs.
+     * @return The service account to be used by the Node VMs.
      * If not specified, the &#34;default&#34; service account is used.
      * 
-    */
+     */
     public Optional<String> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
     /**
-     * Shielded Instance options. Structure is documented below.
+     * @return Shielded Instance options. Structure is documented below.
      * 
-    */
+     */
     public Optional<ClusterNodeConfigShieldedInstanceConfig> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
     /**
-     * ) A boolean
+     * @return ) A boolean
      * that represents whether the underlying node VMs are spot. See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/spot-vms)
      * for more information. Defaults to false.
      * 
-    */
+     */
     public Optional<Boolean> spot() {
         return Optional.ofNullable(this.spot);
     }
     /**
-     * The list of instance tags applied to all nodes. Tags are used to identify
+     * @return The list of instance tags applied to all nodes. Tags are used to identify
      * valid sources or targets for network firewalls.
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
+     * @return A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
      * to apply to nodes. GKE&#39;s API can only set this field on cluster creation.
      * However, GKE will add taints to your nodes if you enable certain features such
      * as GPUs. If this field is set, any diffs on this field will cause the provider to
@@ -433,15 +433,15 @@ public final class ClusterNodeConfig {
      * this field to manage taints. If you do, `lifecycle.ignore_changes` is
      * recommended. Structure is documented below.
      * 
-    */
+     */
     public List<ClusterNodeConfigTaint> taints() {
         return this.taints == null ? List.of() : this.taints;
     }
     /**
-     * Metadata configuration to expose to workloads on the node pool.
+     * @return Metadata configuration to expose to workloads on the node pool.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ClusterNodeConfigWorkloadMetadataConfig> workloadMetadataConfig() {
         return Optional.ofNullable(this.workloadMetadataConfig);
     }

@@ -27,6 +27,10 @@ public final class HubBillingInfoFormatArgs extends com.pulumi.resources.Resourc
     @Import(name="maxUnits")
     private @Nullable Output<Integer> maxUnits;
 
+    /**
+     * @return The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
+     * 
+     */
     public Optional<Output<Integer>> maxUnits() {
         return Optional.ofNullable(this.maxUnits);
     }
@@ -38,6 +42,10 @@ public final class HubBillingInfoFormatArgs extends com.pulumi.resources.Resourc
     @Import(name="minUnits")
     private @Nullable Output<Integer> minUnits;
 
+    /**
+     * @return The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
+     * 
+     */
     public Optional<Output<Integer>> minUnits() {
         return Optional.ofNullable(this.minUnits);
     }
@@ -49,6 +57,10 @@ public final class HubBillingInfoFormatArgs extends com.pulumi.resources.Resourc
     @Import(name="skuName")
     private @Nullable Output<String> skuName;
 
+    /**
+     * @return The sku name.
+     * 
+     */
     public Optional<Output<String>> skuName() {
         return Optional.ofNullable(this.skuName);
     }
@@ -79,29 +91,65 @@ public final class HubBillingInfoFormatArgs extends com.pulumi.resources.Resourc
             $ = new HubBillingInfoFormatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxUnits The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnits(@Nullable Output<Integer> maxUnits) {
             $.maxUnits = maxUnits;
             return this;
         }
 
+        /**
+         * @param maxUnits The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnits(Integer maxUnits) {
             return maxUnits(Output.of(maxUnits));
         }
 
+        /**
+         * @param minUnits The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minUnits(@Nullable Output<Integer> minUnits) {
             $.minUnits = minUnits;
             return this;
         }
 
+        /**
+         * @param minUnits The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minUnits(Integer minUnits) {
             return minUnits(Output.of(minUnits));
         }
 
+        /**
+         * @param skuName The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuName(@Nullable Output<String> skuName) {
             $.skuName = skuName;
             return this;
         }
 
+        /**
+         * @param skuName The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuName(String skuName) {
             return skuName(Output.of(skuName));
         }

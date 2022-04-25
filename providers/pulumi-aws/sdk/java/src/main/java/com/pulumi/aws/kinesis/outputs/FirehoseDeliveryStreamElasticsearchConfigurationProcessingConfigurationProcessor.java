@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor {
     /**
-     * Array of processor parameters. More details are given below
+     * @return Array of processor parameters. More details are given below
      * 
      */
     private final @Nullable List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameter> parameters;
     /**
-     * The type of processor. Valid Values: `Lambda`
+     * @return The type of processor. Valid Values: `Lambda`
      * 
      */
     private final String type;
@@ -32,16 +32,16 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
     }
 
     /**
-     * Array of processor parameters. More details are given below
+     * @return Array of processor parameters. More details are given below
      * 
-    */
+     */
     public List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
-     * The type of processor. Valid Values: `Lambda`
+     * @return The type of processor. Valid Values: `Lambda`
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

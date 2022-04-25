@@ -21,6 +21,10 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="assessmentName", required=true)
     private String assessmentName;
 
+    /**
+     * @return The Assessment Key - Unique key for the assessment type
+     * 
+     */
     public String assessmentName() {
         return this.assessmentName;
     }
@@ -32,6 +36,10 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return OData expand. Optional.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -43,6 +51,10 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return The identifier of the resource.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -73,16 +85,34 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAssessmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assessmentName The Assessment Key - Unique key for the assessment type
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentName(String assessmentName) {
             $.assessmentName = assessmentName;
             return this;
         }
 
+        /**
+         * @param expand OData expand. Optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceId The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;

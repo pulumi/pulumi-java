@@ -25,6 +25,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="input")
     private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs> input;
 
+    /**
+     * @return The input stream used by the application.
+     * 
+     */
     public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs>> input() {
         return Optional.ofNullable(this.input);
     }
@@ -36,6 +40,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="outputs")
     private @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs>> outputs;
 
+    /**
+     * @return The destination streams used by the application.
+     * 
+     */
     public Optional<Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs>>> outputs() {
         return Optional.ofNullable(this.outputs);
     }
@@ -47,6 +55,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="referenceDataSource")
     private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs> referenceDataSource;
 
+    /**
+     * @return The reference data source used by the application.
+     * 
+     */
     public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs>> referenceDataSource() {
         return Optional.ofNullable(this.referenceDataSource);
     }
@@ -77,33 +89,75 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param input The input stream used by the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs> input) {
             $.input = input;
             return this;
         }
 
+        /**
+         * @param input The input stream used by the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs input) {
             return input(Output.of(input));
         }
 
+        /**
+         * @param outputs The destination streams used by the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(@Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs>> outputs) {
             $.outputs = outputs;
             return this;
         }
 
+        /**
+         * @param outputs The destination streams used by the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs> outputs) {
             return outputs(Output.of(outputs));
         }
 
+        /**
+         * @param outputs The destination streams used by the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs... outputs) {
             return outputs(List.of(outputs));
         }
 
+        /**
+         * @param referenceDataSource The reference data source used by the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceDataSource(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs> referenceDataSource) {
             $.referenceDataSource = referenceDataSource;
             return this;
         }
 
+        /**
+         * @param referenceDataSource The reference data source used by the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceDataSource(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs referenceDataSource) {
             return referenceDataSource(Output.of(referenceDataSource));
         }

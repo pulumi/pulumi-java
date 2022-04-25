@@ -34,6 +34,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clustering")
     private @Nullable Output<ClusteringArgs> clustering;
 
+    /**
+     * @return [Beta] Clustering specification for the table. Must be specified with partitioning, data in the table will be first partitioned and subsequently clustered.
+     * 
+     */
     public Optional<Output<ClusteringArgs>> clustering() {
         return Optional.ofNullable(this.clustering);
     }
@@ -52,6 +56,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return [Optional] A user-friendly description of this table.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -63,6 +71,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfiguration")
     private @Nullable Output<EncryptionConfigurationArgs> encryptionConfiguration;
 
+    /**
+     * @return Custom encryption configuration (e.g., Cloud KMS keys).
+     * 
+     */
     public Optional<Output<EncryptionConfigurationArgs>> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
@@ -74,6 +86,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationTime")
     private @Nullable Output<String> expirationTime;
 
+    /**
+     * @return [Optional] The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. The defaultTableExpirationMs property of the encapsulating dataset can be used to set a default expirationTime on newly created tables.
+     * 
+     */
     public Optional<Output<String>> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
@@ -85,6 +101,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalDataConfiguration")
     private @Nullable Output<ExternalDataConfigurationArgs> externalDataConfiguration;
 
+    /**
+     * @return [Optional] Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.
+     * 
+     */
     public Optional<Output<ExternalDataConfigurationArgs>> externalDataConfiguration() {
         return Optional.ofNullable(this.externalDataConfiguration);
     }
@@ -96,6 +116,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return [Optional] A descriptive name for this table.
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -107,6 +131,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The labels associated with this table. You can use these to organize and group your tables. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -118,6 +146,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="materializedView")
     private @Nullable Output<MaterializedViewDefinitionArgs> materializedView;
 
+    /**
+     * @return [Optional] Materialized view definition.
+     * 
+     */
     public Optional<Output<MaterializedViewDefinitionArgs>> materializedView() {
         return Optional.ofNullable(this.materializedView);
     }
@@ -129,6 +161,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="model")
     private @Nullable Output<ModelDefinitionArgs> model;
 
+    /**
+     * @return [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run &#39;PREDICT&#39; queries.
+     * 
+     */
     public Optional<Output<ModelDefinitionArgs>> model() {
         return Optional.ofNullable(this.model);
     }
@@ -147,6 +183,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rangePartitioning")
     private @Nullable Output<RangePartitioningArgs> rangePartitioning;
 
+    /**
+     * @return [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
+     * 
+     */
     public Optional<Output<RangePartitioningArgs>> rangePartitioning() {
         return Optional.ofNullable(this.rangePartitioning);
     }
@@ -158,6 +198,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requirePartitionFilter")
     private @Nullable Output<Boolean> requirePartitionFilter;
 
+    /**
+     * @return [Optional] If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.
+     * 
+     */
     public Optional<Output<Boolean>> requirePartitionFilter() {
         return Optional.ofNullable(this.requirePartitionFilter);
     }
@@ -169,6 +213,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schema")
     private @Nullable Output<TableSchemaArgs> schema;
 
+    /**
+     * @return [Optional] Describes the schema of this table.
+     * 
+     */
     public Optional<Output<TableSchemaArgs>> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -180,6 +228,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableReference")
     private @Nullable Output<TableReferenceArgs> tableReference;
 
+    /**
+     * @return [Required] Reference describing the ID of this table.
+     * 
+     */
     public Optional<Output<TableReferenceArgs>> tableReference() {
         return Optional.ofNullable(this.tableReference);
     }
@@ -191,6 +243,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timePartitioning")
     private @Nullable Output<TimePartitioningArgs> timePartitioning;
 
+    /**
+     * @return Time-based partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
+     * 
+     */
     public Optional<Output<TimePartitioningArgs>> timePartitioning() {
         return Optional.ofNullable(this.timePartitioning);
     }
@@ -202,6 +258,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="view")
     private @Nullable Output<ViewDefinitionArgs> view;
 
+    /**
+     * @return [Optional] The view definition.
+     * 
+     */
     public Optional<Output<ViewDefinitionArgs>> view() {
         return Optional.ofNullable(this.view);
     }
@@ -246,11 +306,23 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clustering [Beta] Clustering specification for the table. Must be specified with partitioning, data in the table will be first partitioned and subsequently clustered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clustering(@Nullable Output<ClusteringArgs> clustering) {
             $.clustering = clustering;
             return this;
         }
 
+        /**
+         * @param clustering [Beta] Clustering specification for the table. Must be specified with partitioning, data in the table will be first partitioned and subsequently clustered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clustering(ClusteringArgs clustering) {
             return clustering(Output.of(clustering));
         }
@@ -264,74 +336,170 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param description [Optional] A user-friendly description of this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description [Optional] A user-friendly description of this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptionConfiguration Custom encryption configuration (e.g., Cloud KMS keys).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfiguration(@Nullable Output<EncryptionConfigurationArgs> encryptionConfiguration) {
             $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param encryptionConfiguration Custom encryption configuration (e.g., Cloud KMS keys).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfiguration(EncryptionConfigurationArgs encryptionConfiguration) {
             return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
 
+        /**
+         * @param expirationTime [Optional] The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. The defaultTableExpirationMs property of the encapsulating dataset can be used to set a default expirationTime on newly created tables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param expirationTime [Optional] The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. The defaultTableExpirationMs property of the encapsulating dataset can be used to set a default expirationTime on newly created tables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             return expirationTime(Output.of(expirationTime));
         }
 
+        /**
+         * @param externalDataConfiguration [Optional] Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalDataConfiguration(@Nullable Output<ExternalDataConfigurationArgs> externalDataConfiguration) {
             $.externalDataConfiguration = externalDataConfiguration;
             return this;
         }
 
+        /**
+         * @param externalDataConfiguration [Optional] Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalDataConfiguration(ExternalDataConfigurationArgs externalDataConfiguration) {
             return externalDataConfiguration(Output.of(externalDataConfiguration));
         }
 
+        /**
+         * @param friendlyName [Optional] A descriptive name for this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName [Optional] A descriptive name for this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param labels The labels associated with this table. You can use these to organize and group your tables. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The labels associated with this table. You can use these to organize and group your tables. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param materializedView [Optional] Materialized view definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder materializedView(@Nullable Output<MaterializedViewDefinitionArgs> materializedView) {
             $.materializedView = materializedView;
             return this;
         }
 
+        /**
+         * @param materializedView [Optional] Materialized view definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder materializedView(MaterializedViewDefinitionArgs materializedView) {
             return materializedView(Output.of(materializedView));
         }
 
+        /**
+         * @param model [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run &#39;PREDICT&#39; queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(@Nullable Output<ModelDefinitionArgs> model) {
             $.model = model;
             return this;
         }
 
+        /**
+         * @param model [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run &#39;PREDICT&#39; queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(ModelDefinitionArgs model) {
             return model(Output.of(model));
         }
@@ -345,56 +513,128 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param rangePartitioning [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangePartitioning(@Nullable Output<RangePartitioningArgs> rangePartitioning) {
             $.rangePartitioning = rangePartitioning;
             return this;
         }
 
+        /**
+         * @param rangePartitioning [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangePartitioning(RangePartitioningArgs rangePartitioning) {
             return rangePartitioning(Output.of(rangePartitioning));
         }
 
+        /**
+         * @param requirePartitionFilter [Optional] If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirePartitionFilter(@Nullable Output<Boolean> requirePartitionFilter) {
             $.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
 
+        /**
+         * @param requirePartitionFilter [Optional] If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirePartitionFilter(Boolean requirePartitionFilter) {
             return requirePartitionFilter(Output.of(requirePartitionFilter));
         }
 
+        /**
+         * @param schema [Optional] Describes the schema of this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Output<TableSchemaArgs> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema [Optional] Describes the schema of this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(TableSchemaArgs schema) {
             return schema(Output.of(schema));
         }
 
+        /**
+         * @param tableReference [Required] Reference describing the ID of this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableReference(@Nullable Output<TableReferenceArgs> tableReference) {
             $.tableReference = tableReference;
             return this;
         }
 
+        /**
+         * @param tableReference [Required] Reference describing the ID of this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableReference(TableReferenceArgs tableReference) {
             return tableReference(Output.of(tableReference));
         }
 
+        /**
+         * @param timePartitioning Time-based partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePartitioning(@Nullable Output<TimePartitioningArgs> timePartitioning) {
             $.timePartitioning = timePartitioning;
             return this;
         }
 
+        /**
+         * @param timePartitioning Time-based partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePartitioning(TimePartitioningArgs timePartitioning) {
             return timePartitioning(Output.of(timePartitioning));
         }
 
+        /**
+         * @param view [Optional] The view definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder view(@Nullable Output<ViewDefinitionArgs> view) {
             $.view = view;
             return this;
         }
 
+        /**
+         * @param view [Optional] The view definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder view(ViewDefinitionArgs view) {
             return view(Output.of(view));
         }

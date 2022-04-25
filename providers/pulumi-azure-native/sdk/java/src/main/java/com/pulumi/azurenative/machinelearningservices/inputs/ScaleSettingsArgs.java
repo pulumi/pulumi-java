@@ -28,6 +28,10 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxNodeCount", required=true)
     private Output<Integer> maxNodeCount;
 
+    /**
+     * @return Max number of nodes to use
+     * 
+     */
     public Output<Integer> maxNodeCount() {
         return this.maxNodeCount;
     }
@@ -39,6 +43,10 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minNodeCount")
     private @Nullable Output<Integer> minNodeCount;
 
+    /**
+     * @return Min number of nodes to use
+     * 
+     */
     public Optional<Output<Integer>> minNodeCount() {
         return Optional.ofNullable(this.minNodeCount);
     }
@@ -50,6 +58,10 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeIdleTimeBeforeScaleDown")
     private @Nullable Output<String> nodeIdleTimeBeforeScaleDown;
 
+    /**
+     * @return Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
+     * 
+     */
     public Optional<Output<String>> nodeIdleTimeBeforeScaleDown() {
         return Optional.ofNullable(this.nodeIdleTimeBeforeScaleDown);
     }
@@ -80,29 +92,65 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxNodeCount Max number of nodes to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodeCount(Output<Integer> maxNodeCount) {
             $.maxNodeCount = maxNodeCount;
             return this;
         }
 
+        /**
+         * @param maxNodeCount Max number of nodes to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodeCount(Integer maxNodeCount) {
             return maxNodeCount(Output.of(maxNodeCount));
         }
 
+        /**
+         * @param minNodeCount Min number of nodes to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCount(@Nullable Output<Integer> minNodeCount) {
             $.minNodeCount = minNodeCount;
             return this;
         }
 
+        /**
+         * @param minNodeCount Min number of nodes to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCount(Integer minNodeCount) {
             return minNodeCount(Output.of(minNodeCount));
         }
 
+        /**
+         * @param nodeIdleTimeBeforeScaleDown Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeIdleTimeBeforeScaleDown(@Nullable Output<String> nodeIdleTimeBeforeScaleDown) {
             $.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
             return this;
         }
 
+        /**
+         * @param nodeIdleTimeBeforeScaleDown Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeIdleTimeBeforeScaleDown(String nodeIdleTimeBeforeScaleDown) {
             return nodeIdleTimeBeforeScaleDown(Output.of(nodeIdleTimeBeforeScaleDown));
         }

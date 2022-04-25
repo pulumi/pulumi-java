@@ -26,6 +26,10 @@ public final class MqttConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mqttEnabledState")
     private @Nullable Output<MqttConfigMqttEnabledState> mqttEnabledState;
 
+    /**
+     * @return If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
+     * 
+     */
     public Optional<Output<MqttConfigMqttEnabledState>> mqttEnabledState() {
         return Optional.ofNullable(this.mqttEnabledState);
     }
@@ -54,11 +58,23 @@ public final class MqttConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MqttConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mqttEnabledState If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mqttEnabledState(@Nullable Output<MqttConfigMqttEnabledState> mqttEnabledState) {
             $.mqttEnabledState = mqttEnabledState;
             return this;
         }
 
+        /**
+         * @param mqttEnabledState If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mqttEnabledState(MqttConfigMqttEnabledState mqttEnabledState) {
             return mqttEnabledState(Output.of(mqttEnabledState));
         }

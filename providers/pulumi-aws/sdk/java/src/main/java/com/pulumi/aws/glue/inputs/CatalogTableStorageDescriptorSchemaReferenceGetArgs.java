@@ -24,6 +24,10 @@ public final class CatalogTableStorageDescriptorSchemaReferenceGetArgs extends c
     @Import(name="schemaId")
     private @Nullable Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs> schemaId;
 
+    /**
+     * @return Configuration block that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See `schema_id` below.
+     * 
+     */
     public Optional<Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs>> schemaId() {
         return Optional.ofNullable(this.schemaId);
     }
@@ -35,6 +39,10 @@ public final class CatalogTableStorageDescriptorSchemaReferenceGetArgs extends c
     @Import(name="schemaVersionId")
     private @Nullable Output<String> schemaVersionId;
 
+    /**
+     * @return Unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
+     * 
+     */
     public Optional<Output<String>> schemaVersionId() {
         return Optional.ofNullable(this.schemaVersionId);
     }
@@ -46,6 +54,10 @@ public final class CatalogTableStorageDescriptorSchemaReferenceGetArgs extends c
     @Import(name="schemaVersionNumber", required=true)
     private Output<Integer> schemaVersionNumber;
 
+    /**
+     * @return Version number of the schema.
+     * 
+     */
     public Output<Integer> schemaVersionNumber() {
         return this.schemaVersionNumber;
     }
@@ -76,29 +88,65 @@ public final class CatalogTableStorageDescriptorSchemaReferenceGetArgs extends c
             $ = new CatalogTableStorageDescriptorSchemaReferenceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schemaId Configuration block that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See `schema_id` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaId(@Nullable Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs> schemaId) {
             $.schemaId = schemaId;
             return this;
         }
 
+        /**
+         * @param schemaId Configuration block that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See `schema_id` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaId(CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs schemaId) {
             return schemaId(Output.of(schemaId));
         }
 
+        /**
+         * @param schemaVersionId Unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaVersionId(@Nullable Output<String> schemaVersionId) {
             $.schemaVersionId = schemaVersionId;
             return this;
         }
 
+        /**
+         * @param schemaVersionId Unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaVersionId(String schemaVersionId) {
             return schemaVersionId(Output.of(schemaVersionId));
         }
 
+        /**
+         * @param schemaVersionNumber Version number of the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaVersionNumber(Output<Integer> schemaVersionNumber) {
             $.schemaVersionNumber = schemaVersionNumber;
             return this;
         }
 
+        /**
+         * @param schemaVersionNumber Version number of the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaVersionNumber(Integer schemaVersionNumber) {
             return schemaVersionNumber(Output.of(schemaVersionNumber));
         }

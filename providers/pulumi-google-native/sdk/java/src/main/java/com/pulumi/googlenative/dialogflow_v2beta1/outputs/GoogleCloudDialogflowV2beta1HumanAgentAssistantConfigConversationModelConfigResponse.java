@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse {
     /**
-     * Conversation model resource name. Format: `projects//conversationModels/`.
+     * @return Conversation model resource name. Format: `projects//conversationModels/`.
      * 
      */
     private final String model;
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
     }
 
     /**
-     * Conversation model resource name. Format: `projects//conversationModels/`.
+     * @return Conversation model resource name. Format: `projects//conversationModels/`.
      * 
-    */
+     */
     public String model() {
         return this.model;
     }

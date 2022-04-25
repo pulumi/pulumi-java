@@ -24,6 +24,10 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     @Import(name="connectedGateway")
     private @Nullable Output<String> connectedGateway;
 
+    /**
+     * @return Gateway which to connect segment to.
+     * 
+     */
     public Optional<Output<String>> connectedGateway() {
         return Optional.ofNullable(this.connectedGateway);
     }
@@ -35,6 +39,10 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of the segment.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -46,6 +54,10 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -57,6 +69,10 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     @Import(name="revision")
     private @Nullable Output<Double> revision;
 
+    /**
+     * @return NSX revision number.
+     * 
+     */
     public Optional<Output<Double>> revision() {
         return Optional.ofNullable(this.revision);
     }
@@ -79,6 +99,10 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     @Import(name="segmentId")
     private @Nullable Output<String> segmentId;
 
+    /**
+     * @return NSX Segment identifier. Generally the same as the Segment&#39;s display name
+     * 
+     */
     public Optional<Output<String>> segmentId() {
         return Optional.ofNullable(this.segmentId);
     }
@@ -90,6 +114,10 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     @Import(name="subnet")
     private @Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet;
 
+    /**
+     * @return Subnet which to connect segment to.
+     * 
+     */
     public Optional<Output<WorkloadNetworkSegmentSubnetArgs>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -124,65 +152,149 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
             $ = new WorkloadNetworkSegmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectedGateway Gateway which to connect segment to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectedGateway(@Nullable Output<String> connectedGateway) {
             $.connectedGateway = connectedGateway;
             return this;
         }
 
+        /**
+         * @param connectedGateway Gateway which to connect segment to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectedGateway(String connectedGateway) {
             return connectedGateway(Output.of(connectedGateway));
         }
 
+        /**
+         * @param displayName Display name of the segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param revision NSX revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(@Nullable Output<Double> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision NSX revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Double revision) {
             return revision(Output.of(revision));
         }
 
+        /**
+         * @param segmentId NSX Segment identifier. Generally the same as the Segment&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentId(@Nullable Output<String> segmentId) {
             $.segmentId = segmentId;
             return this;
         }
 
+        /**
+         * @param segmentId NSX Segment identifier. Generally the same as the Segment&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentId(String segmentId) {
             return segmentId(Output.of(segmentId));
         }
 
+        /**
+         * @param subnet Subnet which to connect segment to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet Subnet which to connect segment to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(WorkloadNetworkSegmentSubnetArgs subnet) {
             return subnet(Output.of(subnet));
         }

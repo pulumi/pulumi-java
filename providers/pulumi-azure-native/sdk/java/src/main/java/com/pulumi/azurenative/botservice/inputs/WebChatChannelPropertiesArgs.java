@@ -27,6 +27,10 @@ public final class WebChatChannelPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="sites")
     private @Nullable Output<List<WebChatSiteArgs>> sites;
 
+    /**
+     * @return The list of Web Chat sites
+     * 
+     */
     public Optional<Output<List<WebChatSiteArgs>>> sites() {
         return Optional.ofNullable(this.sites);
     }
@@ -55,15 +59,33 @@ public final class WebChatChannelPropertiesArgs extends com.pulumi.resources.Res
             $ = new WebChatChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sites The list of Web Chat sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder sites(@Nullable Output<List<WebChatSiteArgs>> sites) {
             $.sites = sites;
             return this;
         }
 
+        /**
+         * @param sites The list of Web Chat sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder sites(List<WebChatSiteArgs> sites) {
             return sites(Output.of(sites));
         }
 
+        /**
+         * @param sites The list of Web Chat sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder sites(WebChatSiteArgs... sites) {
             return sites(List.of(sites));
         }

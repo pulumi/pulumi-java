@@ -27,6 +27,10 @@ public final class BucketQueueConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="event", required=true)
     private Output<String> event;
 
+    /**
+     * @return The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.
+     * 
+     */
     public Output<String> event() {
         return this.event;
     }
@@ -38,6 +42,10 @@ public final class BucketQueueConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="filter")
     private @Nullable Output<BucketNotificationFilterArgs> filter;
 
+    /**
+     * @return The filtering rules that determine which objects trigger notifications.
+     * 
+     */
     public Optional<Output<BucketNotificationFilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -49,6 +57,10 @@ public final class BucketQueueConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="queue", required=true)
     private Output<String> queue;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type.
+     * 
+     */
     public Output<String> queue() {
         return this.queue;
     }
@@ -79,29 +91,65 @@ public final class BucketQueueConfigurationArgs extends com.pulumi.resources.Res
             $ = new BucketQueueConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param event The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(Output<String> event) {
             $.event = event;
             return this;
         }
 
+        /**
+         * @param event The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(String event) {
             return event(Output.of(event));
         }
 
+        /**
+         * @param filter The filtering rules that determine which objects trigger notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<BucketNotificationFilterArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter The filtering rules that determine which objects trigger notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(BucketNotificationFilterArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param queue The Amazon Resource Name (ARN) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queue(Output<String> queue) {
             $.queue = queue;
             return this;
         }
 
+        /**
+         * @param queue The Amazon Resource Name (ARN) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queue(String queue) {
             return queue(Output.of(queue));
         }

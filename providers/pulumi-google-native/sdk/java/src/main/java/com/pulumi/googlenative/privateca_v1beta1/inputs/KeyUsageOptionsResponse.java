@@ -23,6 +23,10 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="certSign", required=true)
     private Boolean certSign;
 
+    /**
+     * @return The key may be used to sign certificates.
+     * 
+     */
     public Boolean certSign() {
         return this.certSign;
     }
@@ -34,6 +38,10 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="contentCommitment", required=true)
     private Boolean contentCommitment;
 
+    /**
+     * @return The key may be used for cryptographic commitments. Note that this may also be referred to as &#34;non-repudiation&#34;.
+     * 
+     */
     public Boolean contentCommitment() {
         return this.contentCommitment;
     }
@@ -45,6 +53,10 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="crlSign", required=true)
     private Boolean crlSign;
 
+    /**
+     * @return The key may be used sign certificate revocation lists.
+     * 
+     */
     public Boolean crlSign() {
         return this.crlSign;
     }
@@ -56,6 +68,10 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dataEncipherment", required=true)
     private Boolean dataEncipherment;
 
+    /**
+     * @return The key may be used to encipher data.
+     * 
+     */
     public Boolean dataEncipherment() {
         return this.dataEncipherment;
     }
@@ -67,6 +83,10 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="decipherOnly", required=true)
     private Boolean decipherOnly;
 
+    /**
+     * @return The key may be used to decipher only.
+     * 
+     */
     public Boolean decipherOnly() {
         return this.decipherOnly;
     }
@@ -78,6 +98,10 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="digitalSignature", required=true)
     private Boolean digitalSignature;
 
+    /**
+     * @return The key may be used for digital signatures.
+     * 
+     */
     public Boolean digitalSignature() {
         return this.digitalSignature;
     }
@@ -89,6 +113,10 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="encipherOnly", required=true)
     private Boolean encipherOnly;
 
+    /**
+     * @return The key may be used to encipher only.
+     * 
+     */
     public Boolean encipherOnly() {
         return this.encipherOnly;
     }
@@ -100,6 +128,10 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="keyAgreement", required=true)
     private Boolean keyAgreement;
 
+    /**
+     * @return The key may be used in a key agreement protocol.
+     * 
+     */
     public Boolean keyAgreement() {
         return this.keyAgreement;
     }
@@ -111,6 +143,10 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="keyEncipherment", required=true)
     private Boolean keyEncipherment;
 
+    /**
+     * @return The key may be used to encipher other keys.
+     * 
+     */
     public Boolean keyEncipherment() {
         return this.keyEncipherment;
     }
@@ -147,46 +183,100 @@ public final class KeyUsageOptionsResponse extends com.pulumi.resources.InvokeAr
             $ = new KeyUsageOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certSign The key may be used to sign certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certSign(Boolean certSign) {
             $.certSign = certSign;
             return this;
         }
 
+        /**
+         * @param contentCommitment The key may be used for cryptographic commitments. Note that this may also be referred to as &#34;non-repudiation&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentCommitment(Boolean contentCommitment) {
             $.contentCommitment = contentCommitment;
             return this;
         }
 
+        /**
+         * @param crlSign The key may be used sign certificate revocation lists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crlSign(Boolean crlSign) {
             $.crlSign = crlSign;
             return this;
         }
 
+        /**
+         * @param dataEncipherment The key may be used to encipher data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataEncipherment(Boolean dataEncipherment) {
             $.dataEncipherment = dataEncipherment;
             return this;
         }
 
+        /**
+         * @param decipherOnly The key may be used to decipher only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder decipherOnly(Boolean decipherOnly) {
             $.decipherOnly = decipherOnly;
             return this;
         }
 
+        /**
+         * @param digitalSignature The key may be used for digital signatures.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digitalSignature(Boolean digitalSignature) {
             $.digitalSignature = digitalSignature;
             return this;
         }
 
+        /**
+         * @param encipherOnly The key may be used to encipher only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encipherOnly(Boolean encipherOnly) {
             $.encipherOnly = encipherOnly;
             return this;
         }
 
+        /**
+         * @param keyAgreement The key may be used in a key agreement protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyAgreement(Boolean keyAgreement) {
             $.keyAgreement = keyAgreement;
             return this;
         }
 
+        /**
+         * @param keyEncipherment The key may be used to encipher other keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyEncipherment(Boolean keyEncipherment) {
             $.keyEncipherment = keyEncipherment;
             return this;

@@ -28,6 +28,10 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="enterpriseConfigResourceName")
     private @Nullable Output<String> enterpriseConfigResourceName;
 
+    /**
+     * @return Optional. The resource name of the github enterprise config that should be applied to this installation. For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
+     * 
+     */
     public Optional<Output<String>> enterpriseConfigResourceName() {
         return Optional.ofNullable(this.enterpriseConfigResourceName);
     }
@@ -39,6 +43,10 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="installationId")
     private @Nullable Output<String> installationId;
 
+    /**
+     * @return The installationID that emits the GitHub event.
+     * 
+     */
     public Optional<Output<String>> installationId() {
         return Optional.ofNullable(this.installationId);
     }
@@ -50,6 +58,10 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is &#34;cloud-builders&#34;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +73,10 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="owner")
     private @Nullable Output<String> owner;
 
+    /**
+     * @return Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
+     * 
+     */
     public Optional<Output<String>> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -72,6 +88,10 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="pullRequest")
     private @Nullable Output<PullRequestFilterArgs> pullRequest;
 
+    /**
+     * @return filter to match changes in pull requests.
+     * 
+     */
     public Optional<Output<PullRequestFilterArgs>> pullRequest() {
         return Optional.ofNullable(this.pullRequest);
     }
@@ -83,6 +103,10 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="push")
     private @Nullable Output<PushFilterArgs> push;
 
+    /**
+     * @return filter to match changes in refs like branches, tags.
+     * 
+     */
     public Optional<Output<PushFilterArgs>> push() {
         return Optional.ofNullable(this.push);
     }
@@ -116,56 +140,128 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
             $ = new GitHubEventsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enterpriseConfigResourceName Optional. The resource name of the github enterprise config that should be applied to this installation. For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enterpriseConfigResourceName(@Nullable Output<String> enterpriseConfigResourceName) {
             $.enterpriseConfigResourceName = enterpriseConfigResourceName;
             return this;
         }
 
+        /**
+         * @param enterpriseConfigResourceName Optional. The resource name of the github enterprise config that should be applied to this installation. For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enterpriseConfigResourceName(String enterpriseConfigResourceName) {
             return enterpriseConfigResourceName(Output.of(enterpriseConfigResourceName));
         }
 
+        /**
+         * @param installationId The installationID that emits the GitHub event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installationId(@Nullable Output<String> installationId) {
             $.installationId = installationId;
             return this;
         }
 
+        /**
+         * @param installationId The installationID that emits the GitHub event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installationId(String installationId) {
             return installationId(Output.of(installationId));
         }
 
+        /**
+         * @param name Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is &#34;cloud-builders&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is &#34;cloud-builders&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param owner Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(@Nullable Output<String> owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param owner Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(String owner) {
             return owner(Output.of(owner));
         }
 
+        /**
+         * @param pullRequest filter to match changes in pull requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullRequest(@Nullable Output<PullRequestFilterArgs> pullRequest) {
             $.pullRequest = pullRequest;
             return this;
         }
 
+        /**
+         * @param pullRequest filter to match changes in pull requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullRequest(PullRequestFilterArgs pullRequest) {
             return pullRequest(Output.of(pullRequest));
         }
 
+        /**
+         * @param push filter to match changes in refs like branches, tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder push(@Nullable Output<PushFilterArgs> push) {
             $.push = push;
             return this;
         }
 
+        /**
+         * @param push filter to match changes in refs like branches, tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder push(PushFilterArgs push) {
             return push(Output.of(push));
         }

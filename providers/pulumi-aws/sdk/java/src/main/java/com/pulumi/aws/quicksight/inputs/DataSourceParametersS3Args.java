@@ -20,6 +20,10 @@ public final class DataSourceParametersS3Args extends com.pulumi.resources.Resou
     @Import(name="manifestFileLocation", required=true)
     private Output<DataSourceParametersS3ManifestFileLocationArgs> manifestFileLocation;
 
+    /**
+     * @return An object containing the S3 location of the S3 manifest file.
+     * 
+     */
     public Output<DataSourceParametersS3ManifestFileLocationArgs> manifestFileLocation() {
         return this.manifestFileLocation;
     }
@@ -48,11 +52,23 @@ public final class DataSourceParametersS3Args extends com.pulumi.resources.Resou
             $ = new DataSourceParametersS3Args(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param manifestFileLocation An object containing the S3 location of the S3 manifest file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestFileLocation(Output<DataSourceParametersS3ManifestFileLocationArgs> manifestFileLocation) {
             $.manifestFileLocation = manifestFileLocation;
             return this;
         }
 
+        /**
+         * @param manifestFileLocation An object containing the S3 location of the S3 manifest file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestFileLocation(DataSourceParametersS3ManifestFileLocationArgs manifestFileLocation) {
             return manifestFileLocation(Output.of(manifestFileLocation));
         }

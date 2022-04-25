@@ -31,6 +31,10 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="autoRenew")
     private @Nullable Output<Boolean> autoRenew;
 
+    /**
+     * @return Whether the SaaS subscription will auto renew upon term end.
+     * 
+     */
     public Optional<Output<Boolean>> autoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
@@ -42,6 +46,10 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="offerId")
     private @Nullable Output<String> offerId;
 
+    /**
+     * @return The offer id.
+     * 
+     */
     public Optional<Output<String>> offerId() {
         return Optional.ofNullable(this.offerId);
     }
@@ -53,6 +61,10 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="paymentChannelMetadata")
     private @Nullable Output<Map<String,String>> paymentChannelMetadata;
 
+    /**
+     * @return The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
+     * 
+     */
     public Optional<Output<Map<String,String>>> paymentChannelMetadata() {
         return Optional.ofNullable(this.paymentChannelMetadata);
     }
@@ -64,6 +76,10 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="paymentChannelType")
     private @Nullable Output<Either<String,PaymentChannelType>> paymentChannelType;
 
+    /**
+     * @return The Payment channel for the SaasSubscription.
+     * 
+     */
     public Optional<Output<Either<String,PaymentChannelType>>> paymentChannelType() {
         return Optional.ofNullable(this.paymentChannelType);
     }
@@ -75,6 +91,10 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="publisherId")
     private @Nullable Output<String> publisherId;
 
+    /**
+     * @return The publisher id.
+     * 
+     */
     public Optional<Output<String>> publisherId() {
         return Optional.ofNullable(this.publisherId);
     }
@@ -86,6 +106,10 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="publisherTestEnvironment")
     private @Nullable Output<String> publisherTestEnvironment;
 
+    /**
+     * @return The environment in the publisher side for this resource.
+     * 
+     */
     public Optional<Output<String>> publisherTestEnvironment() {
         return Optional.ofNullable(this.publisherTestEnvironment);
     }
@@ -97,6 +121,10 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="quantity")
     private @Nullable Output<Double> quantity;
 
+    /**
+     * @return The seat count.
+     * 
+     */
     public Optional<Output<Double>> quantity() {
         return Optional.ofNullable(this.quantity);
     }
@@ -108,6 +136,10 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="saasResourceName")
     private @Nullable Output<String> saasResourceName;
 
+    /**
+     * @return The SaaS resource name.
+     * 
+     */
     public Optional<Output<String>> saasResourceName() {
         return Optional.ofNullable(this.saasResourceName);
     }
@@ -119,6 +151,10 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="saasSessionId")
     private @Nullable Output<String> saasSessionId;
 
+    /**
+     * @return The saas session id used for dev service migration request.
+     * 
+     */
     public Optional<Output<String>> saasSessionId() {
         return Optional.ofNullable(this.saasSessionId);
     }
@@ -130,6 +166,10 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="saasSubscriptionId")
     private @Nullable Output<String> saasSubscriptionId;
 
+    /**
+     * @return The saas subscription id used for tenant to subscription level migration request.
+     * 
+     */
     public Optional<Output<String>> saasSubscriptionId() {
         return Optional.ofNullable(this.saasSubscriptionId);
     }
@@ -141,6 +181,10 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="skuId")
     private @Nullable Output<String> skuId;
 
+    /**
+     * @return The plan id.
+     * 
+     */
     public Optional<Output<String>> skuId() {
         return Optional.ofNullable(this.skuId);
     }
@@ -152,6 +196,10 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="termId")
     private @Nullable Output<String> termId;
 
+    /**
+     * @return The current Term id.
+     * 
+     */
     public Optional<Output<String>> termId() {
         return Optional.ofNullable(this.termId);
     }
@@ -191,118 +239,274 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
             $ = new SaasCreationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoRenew Whether the SaaS subscription will auto renew upon term end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRenew(@Nullable Output<Boolean> autoRenew) {
             $.autoRenew = autoRenew;
             return this;
         }
 
+        /**
+         * @param autoRenew Whether the SaaS subscription will auto renew upon term end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRenew(Boolean autoRenew) {
             return autoRenew(Output.of(autoRenew));
         }
 
+        /**
+         * @param offerId The offer id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offerId(@Nullable Output<String> offerId) {
             $.offerId = offerId;
             return this;
         }
 
+        /**
+         * @param offerId The offer id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offerId(String offerId) {
             return offerId(Output.of(offerId));
         }
 
+        /**
+         * @param paymentChannelMetadata The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paymentChannelMetadata(@Nullable Output<Map<String,String>> paymentChannelMetadata) {
             $.paymentChannelMetadata = paymentChannelMetadata;
             return this;
         }
 
+        /**
+         * @param paymentChannelMetadata The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paymentChannelMetadata(Map<String,String> paymentChannelMetadata) {
             return paymentChannelMetadata(Output.of(paymentChannelMetadata));
         }
 
+        /**
+         * @param paymentChannelType The Payment channel for the SaasSubscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paymentChannelType(@Nullable Output<Either<String,PaymentChannelType>> paymentChannelType) {
             $.paymentChannelType = paymentChannelType;
             return this;
         }
 
+        /**
+         * @param paymentChannelType The Payment channel for the SaasSubscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paymentChannelType(Either<String,PaymentChannelType> paymentChannelType) {
             return paymentChannelType(Output.of(paymentChannelType));
         }
 
+        /**
+         * @param paymentChannelType The Payment channel for the SaasSubscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paymentChannelType(String paymentChannelType) {
             return paymentChannelType(Either.ofLeft(paymentChannelType));
         }
 
+        /**
+         * @param paymentChannelType The Payment channel for the SaasSubscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paymentChannelType(PaymentChannelType paymentChannelType) {
             return paymentChannelType(Either.ofRight(paymentChannelType));
         }
 
+        /**
+         * @param publisherId The publisher id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherId(@Nullable Output<String> publisherId) {
             $.publisherId = publisherId;
             return this;
         }
 
+        /**
+         * @param publisherId The publisher id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherId(String publisherId) {
             return publisherId(Output.of(publisherId));
         }
 
+        /**
+         * @param publisherTestEnvironment The environment in the publisher side for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherTestEnvironment(@Nullable Output<String> publisherTestEnvironment) {
             $.publisherTestEnvironment = publisherTestEnvironment;
             return this;
         }
 
+        /**
+         * @param publisherTestEnvironment The environment in the publisher side for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherTestEnvironment(String publisherTestEnvironment) {
             return publisherTestEnvironment(Output.of(publisherTestEnvironment));
         }
 
+        /**
+         * @param quantity The seat count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quantity(@Nullable Output<Double> quantity) {
             $.quantity = quantity;
             return this;
         }
 
+        /**
+         * @param quantity The seat count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quantity(Double quantity) {
             return quantity(Output.of(quantity));
         }
 
+        /**
+         * @param saasResourceName The SaaS resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saasResourceName(@Nullable Output<String> saasResourceName) {
             $.saasResourceName = saasResourceName;
             return this;
         }
 
+        /**
+         * @param saasResourceName The SaaS resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saasResourceName(String saasResourceName) {
             return saasResourceName(Output.of(saasResourceName));
         }
 
+        /**
+         * @param saasSessionId The saas session id used for dev service migration request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saasSessionId(@Nullable Output<String> saasSessionId) {
             $.saasSessionId = saasSessionId;
             return this;
         }
 
+        /**
+         * @param saasSessionId The saas session id used for dev service migration request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saasSessionId(String saasSessionId) {
             return saasSessionId(Output.of(saasSessionId));
         }
 
+        /**
+         * @param saasSubscriptionId The saas subscription id used for tenant to subscription level migration request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saasSubscriptionId(@Nullable Output<String> saasSubscriptionId) {
             $.saasSubscriptionId = saasSubscriptionId;
             return this;
         }
 
+        /**
+         * @param saasSubscriptionId The saas subscription id used for tenant to subscription level migration request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saasSubscriptionId(String saasSubscriptionId) {
             return saasSubscriptionId(Output.of(saasSubscriptionId));
         }
 
+        /**
+         * @param skuId The plan id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuId(@Nullable Output<String> skuId) {
             $.skuId = skuId;
             return this;
         }
 
+        /**
+         * @param skuId The plan id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuId(String skuId) {
             return skuId(Output.of(skuId));
         }
 
+        /**
+         * @param termId The current Term id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder termId(@Nullable Output<String> termId) {
             $.termId = termId;
             return this;
         }
 
+        /**
+         * @param termId The current Term id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder termId(String termId) {
             return termId(Output.of(termId));
         }

@@ -24,6 +24,10 @@ public final class ResourceIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The ID of the resource
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -52,11 +56,23 @@ public final class ResourceIdArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ID of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

@@ -26,6 +26,10 @@ public final class ConfigurationProfileResourcePropertiesArgs extends com.pulumi
     @Import(name="notifications")
     private @Nullable Output<NotificationSettingsArgs> notifications;
 
+    /**
+     * @return Settings of change notification configuration for a subscription.
+     * 
+     */
     public Optional<Output<NotificationSettingsArgs>> notifications() {
         return Optional.ofNullable(this.notifications);
     }
@@ -54,11 +58,23 @@ public final class ConfigurationProfileResourcePropertiesArgs extends com.pulumi
             $ = new ConfigurationProfileResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param notifications Settings of change notification configuration for a subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(@Nullable Output<NotificationSettingsArgs> notifications) {
             $.notifications = notifications;
             return this;
         }
 
+        /**
+         * @param notifications Settings of change notification configuration for a subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(NotificationSettingsArgs notifications) {
             return notifications(Output.of(notifications));
         }

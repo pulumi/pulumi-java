@@ -30,6 +30,10 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends com.pulumi.reso
     @Import(name="maintenanceWindow")
     private @Nullable Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow;
 
+    /**
+     * @return Maintenance windows that are applied to VMs covered by this policy.
+     * 
+     */
     public Optional<Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs>> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
@@ -68,11 +72,23 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends com.pulumi.reso
             return concurrencyControlGroup(Output.of(concurrencyControlGroup));
         }
 
+        /**
+         * @param maintenanceWindow Maintenance windows that are applied to VMs covered by this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(@Nullable Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow) {
             $.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
+        /**
+         * @param maintenanceWindow Maintenance windows that are applied to VMs covered by this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs maintenanceWindow) {
             return maintenanceWindow(Output.of(maintenanceWindow));
         }

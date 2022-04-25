@@ -23,6 +23,10 @@ public final class NetworkPeeringRoutesConfigState extends com.pulumi.resources.
     @Import(name="exportCustomRoutes")
     private @Nullable Output<Boolean> exportCustomRoutes;
 
+    /**
+     * @return Whether to export the custom routes to the peer network.
+     * 
+     */
     public Optional<Output<Boolean>> exportCustomRoutes() {
         return Optional.ofNullable(this.exportCustomRoutes);
     }
@@ -34,6 +38,10 @@ public final class NetworkPeeringRoutesConfigState extends com.pulumi.resources.
     @Import(name="importCustomRoutes")
     private @Nullable Output<Boolean> importCustomRoutes;
 
+    /**
+     * @return Whether to import the custom routes to the peer network.
+     * 
+     */
     public Optional<Output<Boolean>> importCustomRoutes() {
         return Optional.ofNullable(this.importCustomRoutes);
     }
@@ -45,6 +53,10 @@ public final class NetworkPeeringRoutesConfigState extends com.pulumi.resources.
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The name of the primary network for the peering.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -56,6 +68,10 @@ public final class NetworkPeeringRoutesConfigState extends com.pulumi.resources.
     @Import(name="peering")
     private @Nullable Output<String> peering;
 
+    /**
+     * @return Name of the peering.
+     * 
+     */
     public Optional<Output<String>> peering() {
         return Optional.ofNullable(this.peering);
     }
@@ -68,6 +84,11 @@ public final class NetworkPeeringRoutesConfigState extends com.pulumi.resources.
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -100,47 +121,109 @@ public final class NetworkPeeringRoutesConfigState extends com.pulumi.resources.
             $ = new NetworkPeeringRoutesConfigState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exportCustomRoutes Whether to export the custom routes to the peer network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportCustomRoutes(@Nullable Output<Boolean> exportCustomRoutes) {
             $.exportCustomRoutes = exportCustomRoutes;
             return this;
         }
 
+        /**
+         * @param exportCustomRoutes Whether to export the custom routes to the peer network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportCustomRoutes(Boolean exportCustomRoutes) {
             return exportCustomRoutes(Output.of(exportCustomRoutes));
         }
 
+        /**
+         * @param importCustomRoutes Whether to import the custom routes to the peer network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importCustomRoutes(@Nullable Output<Boolean> importCustomRoutes) {
             $.importCustomRoutes = importCustomRoutes;
             return this;
         }
 
+        /**
+         * @param importCustomRoutes Whether to import the custom routes to the peer network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importCustomRoutes(Boolean importCustomRoutes) {
             return importCustomRoutes(Output.of(importCustomRoutes));
         }
 
+        /**
+         * @param network The name of the primary network for the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The name of the primary network for the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param peering Name of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peering(@Nullable Output<String> peering) {
             $.peering = peering;
             return this;
         }
 
+        /**
+         * @param peering Name of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peering(String peering) {
             return peering(Output.of(peering));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

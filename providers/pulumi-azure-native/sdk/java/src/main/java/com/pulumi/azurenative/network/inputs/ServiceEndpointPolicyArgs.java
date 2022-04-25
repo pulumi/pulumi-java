@@ -29,6 +29,10 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -40,6 +44,10 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -51,6 +59,10 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="serviceEndpointPolicyDefinitions")
     private @Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions;
 
+    /**
+     * @return A collection of service endpoint policy definitions of the service endpoint policy.
+     * 
+     */
     public Optional<Output<List<ServiceEndpointPolicyDefinitionArgs>>> serviceEndpointPolicyDefinitions() {
         return Optional.ofNullable(this.serviceEndpointPolicyDefinitions);
     }
@@ -62,6 +74,10 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -93,42 +109,96 @@ public final class ServiceEndpointPolicyArgs extends com.pulumi.resources.Resour
             $ = new ServiceEndpointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param serviceEndpointPolicyDefinitions A collection of service endpoint policy definitions of the service endpoint policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpointPolicyDefinitions(@Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions) {
             $.serviceEndpointPolicyDefinitions = serviceEndpointPolicyDefinitions;
             return this;
         }
 
+        /**
+         * @param serviceEndpointPolicyDefinitions A collection of service endpoint policy definitions of the service endpoint policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpointPolicyDefinitions(List<ServiceEndpointPolicyDefinitionArgs> serviceEndpointPolicyDefinitions) {
             return serviceEndpointPolicyDefinitions(Output.of(serviceEndpointPolicyDefinitions));
         }
 
+        /**
+         * @param serviceEndpointPolicyDefinitions A collection of service endpoint policy definitions of the service endpoint policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpointPolicyDefinitions(ServiceEndpointPolicyDefinitionArgs... serviceEndpointPolicyDefinitions) {
             return serviceEndpointPolicyDefinitions(List.of(serviceEndpointPolicyDefinitions));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

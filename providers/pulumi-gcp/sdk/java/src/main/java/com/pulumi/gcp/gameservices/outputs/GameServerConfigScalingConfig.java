@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GameServerConfigScalingConfig {
     /**
-     * Fleet autoscaler spec, which is sent to Agones.
+     * @return Fleet autoscaler spec, which is sent to Agones.
      * Example spec can be found :
      * https://agones.dev/site/docs/reference/fleetautoscaler/
      * 
      */
     private final String fleetAutoscalerSpec;
     /**
-     * The name of the ScalingConfig
+     * @return The name of the ScalingConfig
      * 
      */
     private final String name;
     /**
-     * The schedules to which this scaling config applies.
+     * @return The schedules to which this scaling config applies.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<GameServerConfigScalingConfigSchedule> schedules;
     /**
-     * Labels used to identify the clusters to which this scaling config
+     * @return Labels used to identify the clusters to which this scaling config
      * applies. A cluster is subject to this scaling config if its labels match
      * any of the selector entries.
      * Structure is documented below.
@@ -53,36 +53,36 @@ public final class GameServerConfigScalingConfig {
     }
 
     /**
-     * Fleet autoscaler spec, which is sent to Agones.
+     * @return Fleet autoscaler spec, which is sent to Agones.
      * Example spec can be found :
      * https://agones.dev/site/docs/reference/fleetautoscaler/
      * 
-    */
+     */
     public String fleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
     }
     /**
-     * The name of the ScalingConfig
+     * @return The name of the ScalingConfig
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The schedules to which this scaling config applies.
+     * @return The schedules to which this scaling config applies.
      * Structure is documented below.
      * 
-    */
+     */
     public List<GameServerConfigScalingConfigSchedule> schedules() {
         return this.schedules == null ? List.of() : this.schedules;
     }
     /**
-     * Labels used to identify the clusters to which this scaling config
+     * @return Labels used to identify the clusters to which this scaling config
      * applies. A cluster is subject to this scaling config if its labels match
      * any of the selector entries.
      * Structure is documented below.
      * 
-    */
+     */
     public List<GameServerConfigScalingConfigSelector> selectors() {
         return this.selectors == null ? List.of() : this.selectors;
     }

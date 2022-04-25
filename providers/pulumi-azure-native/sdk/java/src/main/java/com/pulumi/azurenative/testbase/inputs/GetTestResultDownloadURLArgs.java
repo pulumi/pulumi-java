@@ -19,6 +19,10 @@ public final class GetTestResultDownloadURLArgs extends com.pulumi.resources.Inv
     @Import(name="packageName", required=true)
     private String packageName;
 
+    /**
+     * @return The resource name of the Test Base Package.
+     * 
+     */
     public String packageName() {
         return this.packageName;
     }
@@ -30,6 +34,10 @@ public final class GetTestResultDownloadURLArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetTestResultDownloadURLArgs extends com.pulumi.resources.Inv
     @Import(name="testBaseAccountName", required=true)
     private String testBaseAccountName;
 
+    /**
+     * @return The resource name of the Test Base Account.
+     * 
+     */
     public String testBaseAccountName() {
         return this.testBaseAccountName;
     }
@@ -52,6 +64,10 @@ public final class GetTestResultDownloadURLArgs extends com.pulumi.resources.Inv
     @Import(name="testResultName", required=true)
     private String testResultName;
 
+    /**
+     * @return The Test Result Name. It equals to {osName}-{TestResultId} string.
+     * 
+     */
     public String testResultName() {
         return this.testResultName;
     }
@@ -83,21 +99,45 @@ public final class GetTestResultDownloadURLArgs extends com.pulumi.resources.Inv
             $ = new GetTestResultDownloadURLArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param packageName The resource name of the Test Base Package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(String packageName) {
             $.packageName = packageName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testBaseAccountName(String testBaseAccountName) {
             $.testBaseAccountName = testBaseAccountName;
             return this;
         }
 
+        /**
+         * @param testResultName The Test Result Name. It equals to {osName}-{TestResultId} string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testResultName(String testResultName) {
             $.testResultName = testResultName;
             return this;

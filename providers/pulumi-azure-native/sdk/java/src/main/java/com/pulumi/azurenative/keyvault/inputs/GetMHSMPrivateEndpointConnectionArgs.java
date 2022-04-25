@@ -19,6 +19,10 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends com.pulumi.resou
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the managed HSM Pool
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends com.pulumi.resou
     @Import(name="privateEndpointConnectionName", required=true)
     private String privateEndpointConnectionName;
 
+    /**
+     * @return Name of the private endpoint connection associated with the managed hsm pool.
+     * 
+     */
     public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
@@ -41,6 +49,10 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group that contains the managed HSM pool.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends com.pulumi.resou
             $ = new GetMHSMPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the managed HSM Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnectionName Name of the private endpoint connection associated with the managed hsm pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the managed HSM pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

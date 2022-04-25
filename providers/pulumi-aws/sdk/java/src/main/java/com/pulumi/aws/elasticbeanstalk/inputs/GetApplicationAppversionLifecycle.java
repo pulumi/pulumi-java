@@ -21,6 +21,10 @@ public final class GetApplicationAppversionLifecycle extends com.pulumi.resource
     @Import(name="deleteSourceFromS3", required=true)
     private Boolean deleteSourceFromS3;
 
+    /**
+     * @return Specifies whether delete a version&#39;s source bundle from S3 when the application version is deleted.
+     * 
+     */
     public Boolean deleteSourceFromS3() {
         return this.deleteSourceFromS3;
     }
@@ -32,6 +36,10 @@ public final class GetApplicationAppversionLifecycle extends com.pulumi.resource
     @Import(name="maxAgeInDays", required=true)
     private Integer maxAgeInDays;
 
+    /**
+     * @return The number of days to retain an application version.
+     * 
+     */
     public Integer maxAgeInDays() {
         return this.maxAgeInDays;
     }
@@ -43,6 +51,10 @@ public final class GetApplicationAppversionLifecycle extends com.pulumi.resource
     @Import(name="maxCount", required=true)
     private Integer maxCount;
 
+    /**
+     * @return The maximum number of application versions to retain.
+     * 
+     */
     public Integer maxCount() {
         return this.maxCount;
     }
@@ -54,6 +66,10 @@ public final class GetApplicationAppversionLifecycle extends com.pulumi.resource
     @Import(name="serviceRole", required=true)
     private String serviceRole;
 
+    /**
+     * @return The ARN of an IAM service role under which the application version is deleted.  Elastic Beanstalk must have permission to assume this role.
+     * 
+     */
     public String serviceRole() {
         return this.serviceRole;
     }
@@ -85,21 +101,45 @@ public final class GetApplicationAppversionLifecycle extends com.pulumi.resource
             $ = new GetApplicationAppversionLifecycle(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteSourceFromS3 Specifies whether delete a version&#39;s source bundle from S3 when the application version is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteSourceFromS3(Boolean deleteSourceFromS3) {
             $.deleteSourceFromS3 = deleteSourceFromS3;
             return this;
         }
 
+        /**
+         * @param maxAgeInDays The number of days to retain an application version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAgeInDays(Integer maxAgeInDays) {
             $.maxAgeInDays = maxAgeInDays;
             return this;
         }
 
+        /**
+         * @param maxCount The maximum number of application versions to retain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCount(Integer maxCount) {
             $.maxCount = maxCount;
             return this;
         }
 
+        /**
+         * @param serviceRole The ARN of an IAM service role under which the application version is deleted.  Elastic Beanstalk must have permission to assume this role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRole(String serviceRole) {
             $.serviceRole = serviceRole;
             return this;

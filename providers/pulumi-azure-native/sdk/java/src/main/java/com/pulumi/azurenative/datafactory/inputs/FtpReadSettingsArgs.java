@@ -29,6 +29,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deleteFilesAfterCompletion")
     private @Nullable Output<Object> deleteFilesAfterCompletion;
 
+    /**
+     * @return Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> deleteFilesAfterCompletion() {
         return Optional.ofNullable(this.deleteFilesAfterCompletion);
     }
@@ -40,6 +44,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="disableChunking")
     private @Nullable Output<Object> disableChunking;
 
+    /**
+     * @return If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> disableChunking() {
         return Optional.ofNullable(this.disableChunking);
     }
@@ -51,6 +59,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="disableMetricsCollection")
     private @Nullable Output<Object> disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -62,6 +74,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enablePartitionDiscovery")
     private @Nullable Output<Boolean> enablePartitionDiscovery;
 
+    /**
+     * @return Indicates whether to enable partition discovery.
+     * 
+     */
     public Optional<Output<Boolean>> enablePartitionDiscovery() {
         return Optional.ofNullable(this.enablePartitionDiscovery);
     }
@@ -73,6 +89,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="fileListPath")
     private @Nullable Output<Object> fileListPath;
 
+    /**
+     * @return Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> fileListPath() {
         return Optional.ofNullable(this.fileListPath);
     }
@@ -84,6 +104,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="maxConcurrentConnections")
     private @Nullable Output<Object> maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -95,6 +119,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="partitionRootPath")
     private @Nullable Output<Object> partitionRootPath;
 
+    /**
+     * @return Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> partitionRootPath() {
         return Optional.ofNullable(this.partitionRootPath);
     }
@@ -106,6 +134,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="recursive")
     private @Nullable Output<Object> recursive;
 
+    /**
+     * @return If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> recursive() {
         return Optional.ofNullable(this.recursive);
     }
@@ -118,6 +150,11 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The read setting type.
+     * Expected value is &#39;FtpReadSettings&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -129,6 +166,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="useBinaryTransfer")
     private @Nullable Output<Boolean> useBinaryTransfer;
 
+    /**
+     * @return Specify whether to use binary transfer mode for FTP stores.
+     * 
+     */
     public Optional<Output<Boolean>> useBinaryTransfer() {
         return Optional.ofNullable(this.useBinaryTransfer);
     }
@@ -140,6 +181,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="wildcardFileName")
     private @Nullable Output<Object> wildcardFileName;
 
+    /**
+     * @return Ftp wildcardFileName. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> wildcardFileName() {
         return Optional.ofNullable(this.wildcardFileName);
     }
@@ -151,6 +196,10 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="wildcardFolderPath")
     private @Nullable Output<Object> wildcardFolderPath;
 
+    /**
+     * @return Ftp wildcardFolderPath. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> wildcardFolderPath() {
         return Optional.ofNullable(this.wildcardFolderPath);
     }
@@ -190,110 +239,256 @@ public final class FtpReadSettingsArgs extends com.pulumi.resources.ResourceArgs
             $ = new FtpReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteFilesAfterCompletion Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteFilesAfterCompletion(@Nullable Output<Object> deleteFilesAfterCompletion) {
             $.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
             return this;
         }
 
+        /**
+         * @param deleteFilesAfterCompletion Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteFilesAfterCompletion(Object deleteFilesAfterCompletion) {
             return deleteFilesAfterCompletion(Output.of(deleteFilesAfterCompletion));
         }
 
+        /**
+         * @param disableChunking If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableChunking(@Nullable Output<Object> disableChunking) {
             $.disableChunking = disableChunking;
             return this;
         }
 
+        /**
+         * @param disableChunking If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableChunking(Object disableChunking) {
             return disableChunking(Output.of(disableChunking));
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(Object disableMetricsCollection) {
             return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
 
+        /**
+         * @param enablePartitionDiscovery Indicates whether to enable partition discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePartitionDiscovery(@Nullable Output<Boolean> enablePartitionDiscovery) {
             $.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
 
+        /**
+         * @param enablePartitionDiscovery Indicates whether to enable partition discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePartitionDiscovery(Boolean enablePartitionDiscovery) {
             return enablePartitionDiscovery(Output.of(enablePartitionDiscovery));
         }
 
+        /**
+         * @param fileListPath Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileListPath(@Nullable Output<Object> fileListPath) {
             $.fileListPath = fileListPath;
             return this;
         }
 
+        /**
+         * @param fileListPath Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileListPath(Object fileListPath) {
             return fileListPath(Output.of(fileListPath));
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
             return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
 
+        /**
+         * @param partitionRootPath Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionRootPath(@Nullable Output<Object> partitionRootPath) {
             $.partitionRootPath = partitionRootPath;
             return this;
         }
 
+        /**
+         * @param partitionRootPath Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionRootPath(Object partitionRootPath) {
             return partitionRootPath(Output.of(partitionRootPath));
         }
 
+        /**
+         * @param recursive If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder recursive(@Nullable Output<Object> recursive) {
             $.recursive = recursive;
             return this;
         }
 
+        /**
+         * @param recursive If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder recursive(Object recursive) {
             return recursive(Output.of(recursive));
         }
 
+        /**
+         * @param type The read setting type.
+         * Expected value is &#39;FtpReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The read setting type.
+         * Expected value is &#39;FtpReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param useBinaryTransfer Specify whether to use binary transfer mode for FTP stores.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useBinaryTransfer(@Nullable Output<Boolean> useBinaryTransfer) {
             $.useBinaryTransfer = useBinaryTransfer;
             return this;
         }
 
+        /**
+         * @param useBinaryTransfer Specify whether to use binary transfer mode for FTP stores.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useBinaryTransfer(Boolean useBinaryTransfer) {
             return useBinaryTransfer(Output.of(useBinaryTransfer));
         }
 
+        /**
+         * @param wildcardFileName Ftp wildcardFileName. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder wildcardFileName(@Nullable Output<Object> wildcardFileName) {
             $.wildcardFileName = wildcardFileName;
             return this;
         }
 
+        /**
+         * @param wildcardFileName Ftp wildcardFileName. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder wildcardFileName(Object wildcardFileName) {
             return wildcardFileName(Output.of(wildcardFileName));
         }
 
+        /**
+         * @param wildcardFolderPath Ftp wildcardFolderPath. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder wildcardFolderPath(@Nullable Output<Object> wildcardFolderPath) {
             $.wildcardFolderPath = wildcardFolderPath;
             return this;
         }
 
+        /**
+         * @param wildcardFolderPath Ftp wildcardFolderPath. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder wildcardFolderPath(Object wildcardFolderPath) {
             return wildcardFolderPath(Output.of(wildcardFolderPath));
         }

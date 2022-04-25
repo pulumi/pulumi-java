@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class RelatedUrlResponse {
     /**
-     * Label to describe usage of the URL.
+     * @return Label to describe usage of the URL.
      * 
      */
     private final String label;
     /**
-     * Specific URL associated with the resource.
+     * @return Specific URL associated with the resource.
      * 
      */
     private final String url;
@@ -29,16 +29,16 @@ public final class RelatedUrlResponse {
     }
 
     /**
-     * Label to describe usage of the URL.
+     * @return Label to describe usage of the URL.
      * 
-    */
+     */
     public String label() {
         return this.label;
     }
     /**
-     * Specific URL associated with the resource.
+     * @return Specific URL associated with the resource.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

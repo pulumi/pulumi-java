@@ -14,62 +14,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSqlVirtualMachineGroupResult {
     /**
-     * Cluster type.
+     * @return Cluster type.
      * 
      */
     private final String clusterConfiguration;
     /**
-     * Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.
+     * @return Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.
      * 
      */
     private final String clusterManagerType;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Provisioning state to track the async operation status.
+     * @return Provisioning state to track the async operation status.
      * 
      */
     private final String provisioningState;
     /**
-     * Scale type.
+     * @return Scale type.
      * 
      */
     private final String scaleType;
     /**
-     * SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
+     * @return SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
      * 
      */
     private final @Nullable String sqlImageOffer;
     /**
-     * SQL image sku.
+     * @return SQL image sku.
      * 
      */
     private final @Nullable String sqlImageSku;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Cluster Active Directory domain profile.
+     * @return Cluster Active Directory domain profile.
      * 
      */
     private final @Nullable WsfcDomainProfileResponse wsfcDomainProfile;
@@ -103,86 +103,86 @@ public final class GetSqlVirtualMachineGroupResult {
     }
 
     /**
-     * Cluster type.
+     * @return Cluster type.
      * 
-    */
+     */
     public String clusterConfiguration() {
         return this.clusterConfiguration;
     }
     /**
-     * Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.
+     * @return Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.
      * 
-    */
+     */
     public String clusterManagerType() {
         return this.clusterManagerType;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state to track the async operation status.
+     * @return Provisioning state to track the async operation status.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Scale type.
+     * @return Scale type.
      * 
-    */
+     */
     public String scaleType() {
         return this.scaleType;
     }
     /**
-     * SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
+     * @return SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
      * 
-    */
+     */
     public Optional<String> sqlImageOffer() {
         return Optional.ofNullable(this.sqlImageOffer);
     }
     /**
-     * SQL image sku.
+     * @return SQL image sku.
      * 
-    */
+     */
     public Optional<String> sqlImageSku() {
         return Optional.ofNullable(this.sqlImageSku);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Cluster Active Directory domain profile.
+     * @return Cluster Active Directory domain profile.
      * 
-    */
+     */
     public Optional<WsfcDomainProfileResponse> wsfcDomainProfile() {
         return Optional.ofNullable(this.wsfcDomainProfile);
     }

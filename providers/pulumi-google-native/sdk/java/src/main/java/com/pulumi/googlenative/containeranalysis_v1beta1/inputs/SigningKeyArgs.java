@@ -26,6 +26,10 @@ public final class SigningKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyId")
     private @Nullable Output<String> keyId;
 
+    /**
+     * @return key_id is an identifier for the signing key.
+     * 
+     */
     public Optional<Output<String>> keyId() {
         return Optional.ofNullable(this.keyId);
     }
@@ -37,6 +41,10 @@ public final class SigningKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyScheme")
     private @Nullable Output<String> keyScheme;
 
+    /**
+     * @return This field contains the corresponding signature scheme. Eg: &#34;rsassa-pss-sha256&#34;.
+     * 
+     */
     public Optional<Output<String>> keyScheme() {
         return Optional.ofNullable(this.keyScheme);
     }
@@ -48,6 +56,10 @@ public final class SigningKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyType")
     private @Nullable Output<String> keyType;
 
+    /**
+     * @return This field identifies the specific signing method. Eg: &#34;rsa&#34;, &#34;ed25519&#34;, and &#34;ecdsa&#34;.
+     * 
+     */
     public Optional<Output<String>> keyType() {
         return Optional.ofNullable(this.keyType);
     }
@@ -59,6 +71,10 @@ public final class SigningKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKeyValue")
     private @Nullable Output<String> publicKeyValue;
 
+    /**
+     * @return This field contains the actual public key.
+     * 
+     */
     public Optional<Output<String>> publicKeyValue() {
         return Optional.ofNullable(this.publicKeyValue);
     }
@@ -90,38 +106,86 @@ public final class SigningKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SigningKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyId key_id is an identifier for the signing key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(@Nullable Output<String> keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param keyId key_id is an identifier for the signing key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             return keyId(Output.of(keyId));
         }
 
+        /**
+         * @param keyScheme This field contains the corresponding signature scheme. Eg: &#34;rsassa-pss-sha256&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyScheme(@Nullable Output<String> keyScheme) {
             $.keyScheme = keyScheme;
             return this;
         }
 
+        /**
+         * @param keyScheme This field contains the corresponding signature scheme. Eg: &#34;rsassa-pss-sha256&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyScheme(String keyScheme) {
             return keyScheme(Output.of(keyScheme));
         }
 
+        /**
+         * @param keyType This field identifies the specific signing method. Eg: &#34;rsa&#34;, &#34;ed25519&#34;, and &#34;ecdsa&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(@Nullable Output<String> keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param keyType This field identifies the specific signing method. Eg: &#34;rsa&#34;, &#34;ed25519&#34;, and &#34;ecdsa&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(String keyType) {
             return keyType(Output.of(keyType));
         }
 
+        /**
+         * @param publicKeyValue This field contains the actual public key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyValue(@Nullable Output<String> publicKeyValue) {
             $.publicKeyValue = publicKeyValue;
             return this;
         }
 
+        /**
+         * @param publicKeyValue This field contains the actual public key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyValue(String publicKeyValue) {
             return publicKeyValue(Output.of(publicKeyValue));
         }

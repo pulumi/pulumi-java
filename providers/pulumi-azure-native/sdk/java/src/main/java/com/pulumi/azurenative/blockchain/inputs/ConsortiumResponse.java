@@ -25,6 +25,10 @@ public final class ConsortiumResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets or sets the blockchain member name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class ConsortiumResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="protocol")
     private @Nullable String protocol;
 
+    /**
+     * @return Gets or sets the protocol for the consortium.
+     * 
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -65,11 +73,23 @@ public final class ConsortiumResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ConsortiumResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gets or sets the blockchain member name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param protocol Gets or sets the protocol for the consortium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable String protocol) {
             $.protocol = protocol;
             return this;

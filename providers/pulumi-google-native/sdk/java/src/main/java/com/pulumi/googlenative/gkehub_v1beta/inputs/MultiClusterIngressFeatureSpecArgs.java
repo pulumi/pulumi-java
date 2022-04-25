@@ -26,6 +26,10 @@ public final class MultiClusterIngressFeatureSpecArgs extends com.pulumi.resourc
     @Import(name="configMembership")
     private @Nullable Output<String> configMembership;
 
+    /**
+     * @return Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
+     * 
+     */
     public Optional<Output<String>> configMembership() {
         return Optional.ofNullable(this.configMembership);
     }
@@ -54,11 +58,23 @@ public final class MultiClusterIngressFeatureSpecArgs extends com.pulumi.resourc
             $ = new MultiClusterIngressFeatureSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configMembership Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMembership(@Nullable Output<String> configMembership) {
             $.configMembership = configMembership;
             return this;
         }
 
+        /**
+         * @param configMembership Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMembership(String configMembership) {
             return configMembership(Output.of(configMembership));
         }

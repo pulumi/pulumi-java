@@ -27,6 +27,10 @@ public final class RequestBodyMatchConditionParametersResponse extends com.pulum
     @Import(name="matchValues")
     private @Nullable List<String> matchValues;
 
+    /**
+     * @return The match value for the condition of the delivery rule
+     * 
+     */
     public Optional<List<String>> matchValues() {
         return Optional.ofNullable(this.matchValues);
     }
@@ -38,6 +42,10 @@ public final class RequestBodyMatchConditionParametersResponse extends com.pulum
     @Import(name="negateCondition")
     private @Nullable Boolean negateCondition;
 
+    /**
+     * @return Describes if this is negate condition or not
+     * 
+     */
     public Optional<Boolean> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
@@ -56,6 +64,10 @@ public final class RequestBodyMatchConditionParametersResponse extends com.pulum
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return Describes operator to be matched
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -67,6 +79,10 @@ public final class RequestBodyMatchConditionParametersResponse extends com.pulum
     @Import(name="transforms")
     private @Nullable List<String> transforms;
 
+    /**
+     * @return List of transforms
+     * 
+     */
     public Optional<List<String>> transforms() {
         return Optional.ofNullable(this.transforms);
     }
@@ -99,15 +115,33 @@ public final class RequestBodyMatchConditionParametersResponse extends com.pulum
             $ = new RequestBodyMatchConditionParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchValues The match value for the condition of the delivery rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(@Nullable List<String> matchValues) {
             $.matchValues = matchValues;
             return this;
         }
 
+        /**
+         * @param matchValues The match value for the condition of the delivery rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(String... matchValues) {
             return matchValues(List.of(matchValues));
         }
 
+        /**
+         * @param negateCondition Describes if this is negate condition or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder negateCondition(@Nullable Boolean negateCondition) {
             $.negateCondition = negateCondition;
             return this;
@@ -118,16 +152,34 @@ public final class RequestBodyMatchConditionParametersResponse extends com.pulum
             return this;
         }
 
+        /**
+         * @param operator Describes operator to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(@Nullable List<String> transforms) {
             $.transforms = transforms;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(String... transforms) {
             return transforms(List.of(transforms));
         }

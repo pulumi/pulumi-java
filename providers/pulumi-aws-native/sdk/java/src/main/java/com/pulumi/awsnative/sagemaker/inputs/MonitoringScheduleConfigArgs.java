@@ -36,6 +36,10 @@ public final class MonitoringScheduleConfigArgs extends com.pulumi.resources.Res
     @Import(name="monitoringJobDefinitionName")
     private @Nullable Output<String> monitoringJobDefinitionName;
 
+    /**
+     * @return Name of the job definition
+     * 
+     */
     public Optional<Output<String>> monitoringJobDefinitionName() {
         return Optional.ofNullable(this.monitoringJobDefinitionName);
     }
@@ -90,11 +94,23 @@ public final class MonitoringScheduleConfigArgs extends com.pulumi.resources.Res
             return monitoringJobDefinition(Output.of(monitoringJobDefinition));
         }
 
+        /**
+         * @param monitoringJobDefinitionName Name of the job definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringJobDefinitionName(@Nullable Output<String> monitoringJobDefinitionName) {
             $.monitoringJobDefinitionName = monitoringJobDefinitionName;
             return this;
         }
 
+        /**
+         * @param monitoringJobDefinitionName Name of the job definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringJobDefinitionName(String monitoringJobDefinitionName) {
             return monitoringJobDefinitionName(Output.of(monitoringJobDefinitionName));
         }

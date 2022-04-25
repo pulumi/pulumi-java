@@ -14,57 +14,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWorkloadNetworkDnsServiceResult {
     /**
-     * Default DNS zone of the DNS Service.
+     * @return Default DNS zone of the DNS Service.
      * 
      */
     private final @Nullable String defaultDnsZone;
     /**
-     * Display name of the DNS Service.
+     * @return Display name of the DNS Service.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * DNS service IP of the DNS Service.
+     * @return DNS service IP of the DNS Service.
      * 
      */
     private final @Nullable String dnsServiceIp;
     /**
-     * FQDN zones of the DNS Service.
+     * @return FQDN zones of the DNS Service.
      * 
      */
     private final @Nullable List<String> fqdnZones;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * DNS Service log level.
+     * @return DNS Service log level.
      * 
      */
     private final @Nullable String logLevel;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The provisioning state
+     * @return The provisioning state
      * 
      */
     private final String provisioningState;
     /**
-     * NSX revision number.
+     * @return NSX revision number.
      * 
      */
     private final @Nullable Double revision;
     /**
-     * DNS Service status.
+     * @return DNS Service status.
      * 
      */
     private final String status;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -96,79 +96,79 @@ public final class GetWorkloadNetworkDnsServiceResult {
     }
 
     /**
-     * Default DNS zone of the DNS Service.
+     * @return Default DNS zone of the DNS Service.
      * 
-    */
+     */
     public Optional<String> defaultDnsZone() {
         return Optional.ofNullable(this.defaultDnsZone);
     }
     /**
-     * Display name of the DNS Service.
+     * @return Display name of the DNS Service.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * DNS service IP of the DNS Service.
+     * @return DNS service IP of the DNS Service.
      * 
-    */
+     */
     public Optional<String> dnsServiceIp() {
         return Optional.ofNullable(this.dnsServiceIp);
     }
     /**
-     * FQDN zones of the DNS Service.
+     * @return FQDN zones of the DNS Service.
      * 
-    */
+     */
     public List<String> fqdnZones() {
         return this.fqdnZones == null ? List.of() : this.fqdnZones;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * DNS Service log level.
+     * @return DNS Service log level.
      * 
-    */
+     */
     public Optional<String> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state
+     * @return The provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * NSX revision number.
+     * @return NSX revision number.
      * 
-    */
+     */
     public Optional<Double> revision() {
         return Optional.ofNullable(this.revision);
     }
     /**
-     * DNS Service status.
+     * @return DNS Service status.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

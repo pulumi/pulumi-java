@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class EncryptionConfigurationResponse {
     /**
-     * [Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.
+     * @return [Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.
      * 
      */
     private final String kmsKeyName;
@@ -21,9 +21,9 @@ public final class EncryptionConfigurationResponse {
     }
 
     /**
-     * [Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.
+     * @return [Optional] Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.
      * 
-    */
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }

@@ -13,52 +13,52 @@ import java.util.Objects;
 @CustomType
 public final class BucketLifecycleRuleItemConditionResponse {
     /**
-     * Age of an object (in days). This condition is satisfied when an object reaches the specified age.
+     * @return Age of an object (in days). This condition is satisfied when an object reaches the specified age.
      * 
      */
     private final Integer age;
     /**
-     * A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when an object is created before midnight of the specified date in UTC.
+     * @return A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when an object is created before midnight of the specified date in UTC.
      * 
      */
     private final String createdBefore;
     /**
-     * A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the custom time on an object is before this date in UTC.
+     * @return A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the custom time on an object is before this date in UTC.
      * 
      */
     private final String customTimeBefore;
     /**
-     * Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.
+     * @return Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.
      * 
      */
     private final Integer daysSinceCustomTime;
     /**
-     * Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it&#39;s zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.
+     * @return Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it&#39;s zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.
      * 
      */
     private final Integer daysSinceNoncurrentTime;
     /**
-     * Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.
+     * @return Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.
      * 
      */
     private final Boolean isLive;
     /**
-     * A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the &#34;Early Access&#34; launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.
+     * @return A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the &#34;Early Access&#34; launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.
      * 
      */
     private final String matchesPattern;
     /**
-     * Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.
+     * @return Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.
      * 
      */
     private final List<String> matchesStorageClass;
     /**
-     * A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.
+     * @return A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.
      * 
      */
     private final String noncurrentTimeBefore;
     /**
-     * Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.
+     * @return Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.
      * 
      */
     private final Integer numNewerVersions;
@@ -88,72 +88,72 @@ public final class BucketLifecycleRuleItemConditionResponse {
     }
 
     /**
-     * Age of an object (in days). This condition is satisfied when an object reaches the specified age.
+     * @return Age of an object (in days). This condition is satisfied when an object reaches the specified age.
      * 
-    */
+     */
     public Integer age() {
         return this.age;
     }
     /**
-     * A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when an object is created before midnight of the specified date in UTC.
+     * @return A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when an object is created before midnight of the specified date in UTC.
      * 
-    */
+     */
     public String createdBefore() {
         return this.createdBefore;
     }
     /**
-     * A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the custom time on an object is before this date in UTC.
+     * @return A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the custom time on an object is before this date in UTC.
      * 
-    */
+     */
     public String customTimeBefore() {
         return this.customTimeBefore;
     }
     /**
-     * Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.
+     * @return Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.
      * 
-    */
+     */
     public Integer daysSinceCustomTime() {
         return this.daysSinceCustomTime;
     }
     /**
-     * Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it&#39;s zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.
+     * @return Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it&#39;s zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.
      * 
-    */
+     */
     public Integer daysSinceNoncurrentTime() {
         return this.daysSinceNoncurrentTime;
     }
     /**
-     * Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.
+     * @return Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.
      * 
-    */
+     */
     public Boolean isLive() {
         return this.isLive;
     }
     /**
-     * A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the &#34;Early Access&#34; launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.
+     * @return A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the &#34;Early Access&#34; launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.
      * 
-    */
+     */
     public String matchesPattern() {
         return this.matchesPattern;
     }
     /**
-     * Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.
+     * @return Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.
      * 
-    */
+     */
     public List<String> matchesStorageClass() {
         return this.matchesStorageClass;
     }
     /**
-     * A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.
+     * @return A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.
      * 
-    */
+     */
     public String noncurrentTimeBefore() {
         return this.noncurrentTimeBefore;
     }
     /**
-     * Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.
+     * @return Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.
      * 
-    */
+     */
     public Integer numNewerVersions() {
         return this.numNewerVersions;
     }

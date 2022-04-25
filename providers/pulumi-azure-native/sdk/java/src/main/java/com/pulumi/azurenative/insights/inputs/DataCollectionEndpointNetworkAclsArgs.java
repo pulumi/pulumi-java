@@ -28,6 +28,10 @@ public final class DataCollectionEndpointNetworkAclsArgs extends com.pulumi.reso
     @Import(name="publicNetworkAccess")
     private @Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess;
 
+    /**
+     * @return The configuration to set whether network access from public internet to the endpoints are allowed.
+     * 
+     */
     public Optional<Output<Either<String,KnownPublicNetworkAccessOptions>>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -56,19 +60,43 @@ public final class DataCollectionEndpointNetworkAclsArgs extends com.pulumi.reso
             $ = new DataCollectionEndpointNetworkAclsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicNetworkAccess The configuration to set whether network access from public internet to the endpoints are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess The configuration to set whether network access from public internet to the endpoints are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(Either<String,KnownPublicNetworkAccessOptions> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess The configuration to set whether network access from public internet to the endpoints are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess The configuration to set whether network access from public internet to the endpoints are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(KnownPublicNetworkAccessOptions publicNetworkAccess) {
             return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }

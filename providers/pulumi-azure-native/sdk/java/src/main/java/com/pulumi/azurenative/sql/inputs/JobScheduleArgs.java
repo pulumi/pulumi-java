@@ -29,6 +29,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether or not the schedule is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -40,6 +44,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return Schedule end time.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -51,6 +59,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="interval")
     private @Nullable Output<String> interval;
 
+    /**
+     * @return Value of the schedule&#39;s recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
+     * 
+     */
     public Optional<Output<String>> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -62,6 +74,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return Schedule start time.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -73,6 +89,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<JobScheduleType> type;
 
+    /**
+     * @return Schedule interval type
+     * 
+     */
     public Optional<Output<JobScheduleType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -105,47 +125,107 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether or not the schedule is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether or not the schedule is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param endTime Schedule end time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime Schedule end time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param interval Value of the schedule&#39;s recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Output<String> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval Value of the schedule&#39;s recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(String interval) {
             return interval(Output.of(interval));
         }
 
+        /**
+         * @param startTime Schedule start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Schedule start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param type Schedule interval type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<JobScheduleType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Schedule interval type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(JobScheduleType type) {
             return type(Output.of(type));
         }

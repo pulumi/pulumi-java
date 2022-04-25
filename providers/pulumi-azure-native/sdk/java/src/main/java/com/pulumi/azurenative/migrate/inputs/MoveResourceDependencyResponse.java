@@ -27,6 +27,10 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
     @Import(name="automaticResolution")
     private @Nullable AutomaticResolutionPropertiesResponse automaticResolution;
 
+    /**
+     * @return Defines the properties for automatic resolution.
+     * 
+     */
     public Optional<AutomaticResolutionPropertiesResponse> automaticResolution() {
         return Optional.ofNullable(this.automaticResolution);
     }
@@ -38,6 +42,10 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
     @Import(name="dependencyType")
     private @Nullable String dependencyType;
 
+    /**
+     * @return Defines the dependency type.
+     * 
+     */
     public Optional<String> dependencyType() {
         return Optional.ofNullable(this.dependencyType);
     }
@@ -49,6 +57,10 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Gets the source ARM ID of the dependent resource.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -60,6 +72,10 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
     @Import(name="isOptional")
     private @Nullable String isOptional;
 
+    /**
+     * @return Gets or sets a value indicating whether the dependency is optional.
+     * 
+     */
     public Optional<String> isOptional() {
         return Optional.ofNullable(this.isOptional);
     }
@@ -71,6 +87,10 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
     @Import(name="manualResolution")
     private @Nullable ManualResolutionPropertiesResponse manualResolution;
 
+    /**
+     * @return Defines the properties for manual resolution.
+     * 
+     */
     public Optional<ManualResolutionPropertiesResponse> manualResolution() {
         return Optional.ofNullable(this.manualResolution);
     }
@@ -82,6 +102,10 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
     @Import(name="resolutionStatus")
     private @Nullable String resolutionStatus;
 
+    /**
+     * @return Gets the dependency resolution status.
+     * 
+     */
     public Optional<String> resolutionStatus() {
         return Optional.ofNullable(this.resolutionStatus);
     }
@@ -93,6 +117,10 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
     @Import(name="resolutionType")
     private @Nullable String resolutionType;
 
+    /**
+     * @return Defines the resolution type.
+     * 
+     */
     public Optional<String> resolutionType() {
         return Optional.ofNullable(this.resolutionType);
     }
@@ -127,36 +155,78 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
             $ = new MoveResourceDependencyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automaticResolution Defines the properties for automatic resolution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticResolution(@Nullable AutomaticResolutionPropertiesResponse automaticResolution) {
             $.automaticResolution = automaticResolution;
             return this;
         }
 
+        /**
+         * @param dependencyType Defines the dependency type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencyType(@Nullable String dependencyType) {
             $.dependencyType = dependencyType;
             return this;
         }
 
+        /**
+         * @param id Gets the source ARM ID of the dependent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param isOptional Gets or sets a value indicating whether the dependency is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isOptional(@Nullable String isOptional) {
             $.isOptional = isOptional;
             return this;
         }
 
+        /**
+         * @param manualResolution Defines the properties for manual resolution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualResolution(@Nullable ManualResolutionPropertiesResponse manualResolution) {
             $.manualResolution = manualResolution;
             return this;
         }
 
+        /**
+         * @param resolutionStatus Gets the dependency resolution status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolutionStatus(@Nullable String resolutionStatus) {
             $.resolutionStatus = resolutionStatus;
             return this;
         }
 
+        /**
+         * @param resolutionType Defines the resolution type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolutionType(@Nullable String resolutionType) {
             $.resolutionType = resolutionType;
             return this;

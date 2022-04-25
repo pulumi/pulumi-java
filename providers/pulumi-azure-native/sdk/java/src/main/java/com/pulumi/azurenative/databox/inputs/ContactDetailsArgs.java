@@ -28,6 +28,10 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contactName", required=true)
     private Output<String> contactName;
 
+    /**
+     * @return Contact name of the person.
+     * 
+     */
     public Output<String> contactName() {
         return this.contactName;
     }
@@ -39,6 +43,10 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="emailList", required=true)
     private Output<List<String>> emailList;
 
+    /**
+     * @return List of Email-ids to be notified about job progress.
+     * 
+     */
     public Output<List<String>> emailList() {
         return this.emailList;
     }
@@ -50,6 +58,10 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="mobile")
     private @Nullable Output<String> mobile;
 
+    /**
+     * @return Mobile number of the contact person.
+     * 
+     */
     public Optional<Output<String>> mobile() {
         return Optional.ofNullable(this.mobile);
     }
@@ -61,6 +73,10 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="notificationPreference")
     private @Nullable Output<List<NotificationPreferenceArgs>> notificationPreference;
 
+    /**
+     * @return Notification preference for a job stage.
+     * 
+     */
     public Optional<Output<List<NotificationPreferenceArgs>>> notificationPreference() {
         return Optional.ofNullable(this.notificationPreference);
     }
@@ -72,6 +88,10 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="phone", required=true)
     private Output<String> phone;
 
+    /**
+     * @return Phone number of the contact person.
+     * 
+     */
     public Output<String> phone() {
         return this.phone;
     }
@@ -83,6 +103,10 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="phoneExtension")
     private @Nullable Output<String> phoneExtension;
 
+    /**
+     * @return Phone extension number of the contact person.
+     * 
+     */
     public Optional<Output<String>> phoneExtension() {
         return Optional.ofNullable(this.phoneExtension);
     }
@@ -116,64 +140,148 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ContactDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactName Contact name of the person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactName(Output<String> contactName) {
             $.contactName = contactName;
             return this;
         }
 
+        /**
+         * @param contactName Contact name of the person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactName(String contactName) {
             return contactName(Output.of(contactName));
         }
 
+        /**
+         * @param emailList List of Email-ids to be notified about job progress.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailList(Output<List<String>> emailList) {
             $.emailList = emailList;
             return this;
         }
 
+        /**
+         * @param emailList List of Email-ids to be notified about job progress.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailList(List<String> emailList) {
             return emailList(Output.of(emailList));
         }
 
+        /**
+         * @param emailList List of Email-ids to be notified about job progress.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailList(String... emailList) {
             return emailList(List.of(emailList));
         }
 
+        /**
+         * @param mobile Mobile number of the contact person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mobile(@Nullable Output<String> mobile) {
             $.mobile = mobile;
             return this;
         }
 
+        /**
+         * @param mobile Mobile number of the contact person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mobile(String mobile) {
             return mobile(Output.of(mobile));
         }
 
+        /**
+         * @param notificationPreference Notification preference for a job stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationPreference(@Nullable Output<List<NotificationPreferenceArgs>> notificationPreference) {
             $.notificationPreference = notificationPreference;
             return this;
         }
 
+        /**
+         * @param notificationPreference Notification preference for a job stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationPreference(List<NotificationPreferenceArgs> notificationPreference) {
             return notificationPreference(Output.of(notificationPreference));
         }
 
+        /**
+         * @param notificationPreference Notification preference for a job stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationPreference(NotificationPreferenceArgs... notificationPreference) {
             return notificationPreference(List.of(notificationPreference));
         }
 
+        /**
+         * @param phone Phone number of the contact person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(Output<String> phone) {
             $.phone = phone;
             return this;
         }
 
+        /**
+         * @param phone Phone number of the contact person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(String phone) {
             return phone(Output.of(phone));
         }
 
+        /**
+         * @param phoneExtension Phone extension number of the contact person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneExtension(@Nullable Output<String> phoneExtension) {
             $.phoneExtension = phoneExtension;
             return this;
         }
 
+        /**
+         * @param phoneExtension Phone extension number of the contact person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneExtension(String phoneExtension) {
             return phoneExtension(Output.of(phoneExtension));
         }

@@ -26,6 +26,10 @@ public final class DailyRetentionFormatResponse extends com.pulumi.resources.Inv
     @Import(name="daysOfTheMonth")
     private @Nullable List<DayResponse> daysOfTheMonth;
 
+    /**
+     * @return List of days of the month.
+     * 
+     */
     public Optional<List<DayResponse>> daysOfTheMonth() {
         return Optional.ofNullable(this.daysOfTheMonth);
     }
@@ -54,11 +58,23 @@ public final class DailyRetentionFormatResponse extends com.pulumi.resources.Inv
             $ = new DailyRetentionFormatResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysOfTheMonth List of days of the month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheMonth(@Nullable List<DayResponse> daysOfTheMonth) {
             $.daysOfTheMonth = daysOfTheMonth;
             return this;
         }
 
+        /**
+         * @param daysOfTheMonth List of days of the month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheMonth(DayResponse... daysOfTheMonth) {
             return daysOfTheMonth(List.of(daysOfTheMonth));
         }

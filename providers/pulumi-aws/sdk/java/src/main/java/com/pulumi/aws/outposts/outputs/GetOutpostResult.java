@@ -11,17 +11,17 @@ import java.util.Objects;
 public final class GetOutpostResult {
     private final String arn;
     /**
-     * Availability Zone name.
+     * @return Availability Zone name.
      * 
      */
     private final String availabilityZone;
     /**
-     * Availability Zone identifier.
+     * @return Availability Zone identifier.
      * 
      */
     private final String availabilityZoneId;
     /**
-     * Description.
+     * @return Description.
      * 
      */
     private final String description;
@@ -29,7 +29,7 @@ public final class GetOutpostResult {
     private final String name;
     private final String ownerId;
     /**
-     * Site identifier.
+     * @return Site identifier.
      * 
      */
     private final String siteId;
@@ -58,23 +58,23 @@ public final class GetOutpostResult {
         return this.arn;
     }
     /**
-     * Availability Zone name.
+     * @return Availability Zone name.
      * 
-    */
+     */
     public String availabilityZone() {
         return this.availabilityZone;
     }
     /**
-     * Availability Zone identifier.
+     * @return Availability Zone identifier.
      * 
-    */
+     */
     public String availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
-     * Description.
+     * @return Description.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
@@ -88,9 +88,9 @@ public final class GetOutpostResult {
         return this.ownerId;
     }
     /**
-     * Site identifier.
+     * @return Site identifier.
      * 
-    */
+     */
     public String siteId() {
         return this.siteId;
     }

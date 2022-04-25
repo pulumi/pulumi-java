@@ -24,6 +24,10 @@ public final class SasAuthenticationResponse extends com.pulumi.resources.Invoke
     @Import(name="sasUri", required=true)
     private String sasUri;
 
+    /**
+     * @return The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
+     * 
+     */
     public String sasUri() {
         return this.sasUri;
     }
@@ -36,6 +40,11 @@ public final class SasAuthenticationResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The authentication type
+     * Expected value is &#39;Sas&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -65,11 +74,24 @@ public final class SasAuthenticationResponse extends com.pulumi.resources.Invoke
             $ = new SasAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sasUri The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUri(String sasUri) {
             $.sasUri = sasUri;
             return this;
         }
 
+        /**
+         * @param type The authentication type
+         * Expected value is &#39;Sas&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

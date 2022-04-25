@@ -23,6 +23,11 @@ public final class SnapshotSourceDiskEncryptionKeyGetArgs extends com.pulumi.res
     @Import(name="kmsKeyServiceAccount")
     private @Nullable Output<String> kmsKeyServiceAccount;
 
+    /**
+     * @return The service account used for the encryption request for the given KMS key.
+     * If absent, the Compute Engine Service Agent service account is used.
+     * 
+     */
     public Optional<Output<String>> kmsKeyServiceAccount() {
         return Optional.ofNullable(this.kmsKeyServiceAccount);
     }
@@ -36,6 +41,12 @@ public final class SnapshotSourceDiskEncryptionKeyGetArgs extends com.pulumi.res
     @Import(name="rawKey")
     private @Nullable Output<String> rawKey;
 
+    /**
+     * @return Specifies a 256-bit customer-supplied encryption key, encoded in
+     * RFC 4648 base64 to either encrypt or decrypt this resource.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<Output<String>> rawKey() {
         return Optional.ofNullable(this.rawKey);
     }
@@ -65,20 +76,50 @@ public final class SnapshotSourceDiskEncryptionKeyGetArgs extends com.pulumi.res
             $ = new SnapshotSourceDiskEncryptionKeyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyServiceAccount The service account used for the encryption request for the given KMS key.
+         * If absent, the Compute Engine Service Agent service account is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyServiceAccount(@Nullable Output<String> kmsKeyServiceAccount) {
             $.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
 
+        /**
+         * @param kmsKeyServiceAccount The service account used for the encryption request for the given KMS key.
+         * If absent, the Compute Engine Service Agent service account is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyServiceAccount(String kmsKeyServiceAccount) {
             return kmsKeyServiceAccount(Output.of(kmsKeyServiceAccount));
         }
 
+        /**
+         * @param rawKey Specifies a 256-bit customer-supplied encryption key, encoded in
+         * RFC 4648 base64 to either encrypt or decrypt this resource.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawKey(@Nullable Output<String> rawKey) {
             $.rawKey = rawKey;
             return this;
         }
 
+        /**
+         * @param rawKey Specifies a 256-bit customer-supplied encryption key, encoded in
+         * RFC 4648 base64 to either encrypt or decrypt this resource.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawKey(String rawKey) {
             return rawKey(Output.of(rawKey));
         }

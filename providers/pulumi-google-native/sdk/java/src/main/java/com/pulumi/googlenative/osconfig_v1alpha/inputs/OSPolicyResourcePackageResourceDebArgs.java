@@ -27,6 +27,10 @@ public final class OSPolicyResourcePackageResourceDebArgs extends com.pulumi.res
     @Import(name="pullDeps")
     private @Nullable Output<Boolean> pullDeps;
 
+    /**
+     * @return Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`
+     * 
+     */
     public Optional<Output<Boolean>> pullDeps() {
         return Optional.ofNullable(this.pullDeps);
     }
@@ -38,6 +42,10 @@ public final class OSPolicyResourcePackageResourceDebArgs extends com.pulumi.res
     @Import(name="source", required=true)
     private Output<OSPolicyResourceFileArgs> source;
 
+    /**
+     * @return A deb package.
+     * 
+     */
     public Output<OSPolicyResourceFileArgs> source() {
         return this.source;
     }
@@ -67,20 +75,44 @@ public final class OSPolicyResourcePackageResourceDebArgs extends com.pulumi.res
             $ = new OSPolicyResourcePackageResourceDebArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pullDeps Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullDeps(@Nullable Output<Boolean> pullDeps) {
             $.pullDeps = pullDeps;
             return this;
         }
 
+        /**
+         * @param pullDeps Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullDeps(Boolean pullDeps) {
             return pullDeps(Output.of(pullDeps));
         }
 
+        /**
+         * @param source A deb package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<OSPolicyResourceFileArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source A deb package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(OSPolicyResourceFileArgs source) {
             return source(Output.of(source));
         }

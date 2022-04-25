@@ -30,6 +30,10 @@ public final class JobDatabaseOutput extends com.pulumi.resources.InvokeArgs {
     @Import(name="databaseOutputMode")
     private @Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode;
 
+    /**
+     * @return Database table name
+     * 
+     */
     public Optional<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode() {
         return Optional.ofNullable(this.databaseOutputMode);
     }
@@ -41,6 +45,10 @@ public final class JobDatabaseOutput extends com.pulumi.resources.InvokeArgs {
     @Import(name="glueConnectionName", required=true)
     private String glueConnectionName;
 
+    /**
+     * @return Glue connection name
+     * 
+     */
     public String glueConnectionName() {
         return this.glueConnectionName;
     }
@@ -76,11 +84,23 @@ public final class JobDatabaseOutput extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param databaseOutputMode Database table name
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseOutputMode(@Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode) {
             $.databaseOutputMode = databaseOutputMode;
             return this;
         }
 
+        /**
+         * @param glueConnectionName Glue connection name
+         * 
+         * @return builder
+         * 
+         */
         public Builder glueConnectionName(String glueConnectionName) {
             $.glueConnectionName = glueConnectionName;
             return this;

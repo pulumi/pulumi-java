@@ -17,47 +17,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPrefixListResult {
     /**
-     * Ip Version of Prefix List.
+     * @return Ip Version of Prefix List.
      * 
      */
     private final @Nullable PrefixListAddressFamily addressFamily;
     /**
-     * The Amazon Resource Name (ARN) of the Prefix List.
+     * @return The Amazon Resource Name (ARN) of the Prefix List.
      * 
      */
     private final @Nullable String arn;
     /**
-     * Entries of Prefix List.
+     * @return Entries of Prefix List.
      * 
      */
     private final @Nullable List<PrefixListEntry> entries;
     /**
-     * Max Entries of Prefix List.
+     * @return Max Entries of Prefix List.
      * 
      */
     private final @Nullable Integer maxEntries;
     /**
-     * Owner Id of Prefix List.
+     * @return Owner Id of Prefix List.
      * 
      */
     private final @Nullable String ownerId;
     /**
-     * Id of Prefix List.
+     * @return Id of Prefix List.
      * 
      */
     private final @Nullable String prefixListId;
     /**
-     * Name of Prefix List.
+     * @return Name of Prefix List.
      * 
      */
     private final @Nullable String prefixListName;
     /**
-     * Tags for Prefix List
+     * @return Tags for Prefix List
      * 
      */
     private final @Nullable List<PrefixListTag> tags;
     /**
-     * Version of Prefix List.
+     * @return Version of Prefix List.
      * 
      */
     private final @Nullable Integer version;
@@ -85,65 +85,65 @@ public final class GetPrefixListResult {
     }
 
     /**
-     * Ip Version of Prefix List.
+     * @return Ip Version of Prefix List.
      * 
-    */
+     */
     public Optional<PrefixListAddressFamily> addressFamily() {
         return Optional.ofNullable(this.addressFamily);
     }
     /**
-     * The Amazon Resource Name (ARN) of the Prefix List.
+     * @return The Amazon Resource Name (ARN) of the Prefix List.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Entries of Prefix List.
+     * @return Entries of Prefix List.
      * 
-    */
+     */
     public List<PrefixListEntry> entries() {
         return this.entries == null ? List.of() : this.entries;
     }
     /**
-     * Max Entries of Prefix List.
+     * @return Max Entries of Prefix List.
      * 
-    */
+     */
     public Optional<Integer> maxEntries() {
         return Optional.ofNullable(this.maxEntries);
     }
     /**
-     * Owner Id of Prefix List.
+     * @return Owner Id of Prefix List.
      * 
-    */
+     */
     public Optional<String> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
-     * Id of Prefix List.
+     * @return Id of Prefix List.
      * 
-    */
+     */
     public Optional<String> prefixListId() {
         return Optional.ofNullable(this.prefixListId);
     }
     /**
-     * Name of Prefix List.
+     * @return Name of Prefix List.
      * 
-    */
+     */
     public Optional<String> prefixListName() {
         return Optional.ofNullable(this.prefixListName);
     }
     /**
-     * Tags for Prefix List
+     * @return Tags for Prefix List
      * 
-    */
+     */
     public List<PrefixListTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * Version of Prefix List.
+     * @return Version of Prefix List.
      * 
-    */
+     */
     public Optional<Integer> version() {
         return Optional.ofNullable(this.version);
     }

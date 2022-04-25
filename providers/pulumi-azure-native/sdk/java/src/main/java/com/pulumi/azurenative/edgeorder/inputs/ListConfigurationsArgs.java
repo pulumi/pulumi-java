@@ -24,6 +24,10 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="configurationFilters", required=true)
     private List<ConfigurationFilters> configurationFilters;
 
+    /**
+     * @return Holds details about product hierarchy information and filterable property.
+     * 
+     */
     public List<ConfigurationFilters> configurationFilters() {
         return this.configurationFilters;
     }
@@ -35,6 +39,10 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="customerSubscriptionDetails")
     private @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
 
+    /**
+     * @return Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
+     * 
+     */
     public Optional<CustomerSubscriptionDetails> customerSubscriptionDetails() {
         return Optional.ofNullable(this.customerSubscriptionDetails);
     }
@@ -46,6 +54,10 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="skipToken")
     private @Nullable String skipToken;
 
+    /**
+     * @return $skipToken is supported on list of configurations, which provides the next page in the list of configurations.
+     * 
+     */
     public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
@@ -76,20 +88,44 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
             $ = new ListConfigurationsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationFilters Holds details about product hierarchy information and filterable property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationFilters(List<ConfigurationFilters> configurationFilters) {
             $.configurationFilters = configurationFilters;
             return this;
         }
 
+        /**
+         * @param configurationFilters Holds details about product hierarchy information and filterable property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationFilters(ConfigurationFilters... configurationFilters) {
             return configurationFilters(List.of(configurationFilters));
         }
 
+        /**
+         * @param customerSubscriptionDetails Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerSubscriptionDetails(@Nullable CustomerSubscriptionDetails customerSubscriptionDetails) {
             $.customerSubscriptionDetails = customerSubscriptionDetails;
             return this;
         }
 
+        /**
+         * @param skipToken $skipToken is supported on list of configurations, which provides the next page in the list of configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipToken(@Nullable String skipToken) {
             $.skipToken = skipToken;
             return this;

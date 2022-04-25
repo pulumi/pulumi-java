@@ -24,6 +24,10 @@ public final class OptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The option&#39;s name. For protobuf built-in options (options defined in descriptor.proto), this is the short name. For example, `&#34;map_entry&#34;`. For custom options, it should be the fully-qualified name. For example, `&#34;google.api.http&#34;`.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class OptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private Map<String,String> value;
 
+    /**
+     * @return The option&#39;s value packed in an Any message. If the value is a primitive, the corresponding wrapper type defined in google/protobuf/wrappers.proto should be used. If the value is an enum, it should be stored as an int32 value using the google.protobuf.Int32Value type.
+     * 
+     */
     public Map<String,String> value() {
         return this.value;
     }
@@ -64,11 +72,23 @@ public final class OptionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The option&#39;s name. For protobuf built-in options (options defined in descriptor.proto), this is the short name. For example, `&#34;map_entry&#34;`. For custom options, it should be the fully-qualified name. For example, `&#34;google.api.http&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The option&#39;s value packed in an Any message. If the value is a primitive, the corresponding wrapper type defined in google/protobuf/wrappers.proto should be used. If the value is an enum, it should be stored as an int32 value using the google.protobuf.Int32Value type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Map<String,String> value) {
             $.value = value;
             return this;

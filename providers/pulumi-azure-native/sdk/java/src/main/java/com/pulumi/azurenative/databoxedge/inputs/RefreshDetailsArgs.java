@@ -26,6 +26,10 @@ public final class RefreshDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="errorManifestFile")
     private @Nullable Output<String> errorManifestFile;
 
+    /**
+     * @return Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.
+     * 
+     */
     public Optional<Output<String>> errorManifestFile() {
         return Optional.ofNullable(this.errorManifestFile);
     }
@@ -37,6 +41,10 @@ public final class RefreshDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="inProgressRefreshJobId")
     private @Nullable Output<String> inProgressRefreshJobId;
 
+    /**
+     * @return If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.
+     * 
+     */
     public Optional<Output<String>> inProgressRefreshJobId() {
         return Optional.ofNullable(this.inProgressRefreshJobId);
     }
@@ -48,6 +56,10 @@ public final class RefreshDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="lastCompletedRefreshJobTimeInUTC")
     private @Nullable Output<String> lastCompletedRefreshJobTimeInUTC;
 
+    /**
+     * @return Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.
+     * 
+     */
     public Optional<Output<String>> lastCompletedRefreshJobTimeInUTC() {
         return Optional.ofNullable(this.lastCompletedRefreshJobTimeInUTC);
     }
@@ -59,6 +71,10 @@ public final class RefreshDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="lastJob")
     private @Nullable Output<String> lastJob;
 
+    /**
+     * @return Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.
+     * 
+     */
     public Optional<Output<String>> lastJob() {
         return Optional.ofNullable(this.lastJob);
     }
@@ -90,38 +106,86 @@ public final class RefreshDetailsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new RefreshDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorManifestFile Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorManifestFile(@Nullable Output<String> errorManifestFile) {
             $.errorManifestFile = errorManifestFile;
             return this;
         }
 
+        /**
+         * @param errorManifestFile Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorManifestFile(String errorManifestFile) {
             return errorManifestFile(Output.of(errorManifestFile));
         }
 
+        /**
+         * @param inProgressRefreshJobId If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inProgressRefreshJobId(@Nullable Output<String> inProgressRefreshJobId) {
             $.inProgressRefreshJobId = inProgressRefreshJobId;
             return this;
         }
 
+        /**
+         * @param inProgressRefreshJobId If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inProgressRefreshJobId(String inProgressRefreshJobId) {
             return inProgressRefreshJobId(Output.of(inProgressRefreshJobId));
         }
 
+        /**
+         * @param lastCompletedRefreshJobTimeInUTC Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastCompletedRefreshJobTimeInUTC(@Nullable Output<String> lastCompletedRefreshJobTimeInUTC) {
             $.lastCompletedRefreshJobTimeInUTC = lastCompletedRefreshJobTimeInUTC;
             return this;
         }
 
+        /**
+         * @param lastCompletedRefreshJobTimeInUTC Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastCompletedRefreshJobTimeInUTC(String lastCompletedRefreshJobTimeInUTC) {
             return lastCompletedRefreshJobTimeInUTC(Output.of(lastCompletedRefreshJobTimeInUTC));
         }
 
+        /**
+         * @param lastJob Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastJob(@Nullable Output<String> lastJob) {
             $.lastJob = lastJob;
             return this;
         }
 
+        /**
+         * @param lastJob Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastJob(String lastJob) {
             return lastJob(Output.of(lastJob));
         }

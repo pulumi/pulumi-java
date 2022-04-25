@@ -22,6 +22,10 @@ public final class BucketAccessControlState extends com.pulumi.resources.Resourc
     @Import(name="bucket")
     private @Nullable Output<String> bucket;
 
+    /**
+     * @return The name of the bucket.
+     * 
+     */
     public Optional<Output<String>> bucket() {
         return Optional.ofNullable(this.bucket);
     }
@@ -33,6 +37,10 @@ public final class BucketAccessControlState extends com.pulumi.resources.Resourc
     @Import(name="domain")
     private @Nullable Output<String> domain;
 
+    /**
+     * @return The domain associated with the entity.
+     * 
+     */
     public Optional<Output<String>> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -44,6 +52,10 @@ public final class BucketAccessControlState extends com.pulumi.resources.Resourc
     @Import(name="email")
     private @Nullable Output<String> email;
 
+    /**
+     * @return The email address associated with the entity.
+     * 
+     */
     public Optional<Output<String>> email() {
         return Optional.ofNullable(this.email);
     }
@@ -69,6 +81,24 @@ public final class BucketAccessControlState extends com.pulumi.resources.Resourc
     @Import(name="entity")
     private @Nullable Output<String> entity;
 
+    /**
+     * @return The entity holding the permission, in one of the following forms:
+     * user-userId
+     * user-email
+     * group-groupId
+     * group-email
+     * domain-domain
+     * project-team-projectId
+     * allUsers
+     * allAuthenticatedUsers
+     * Examples:
+     * The user liz@example.com would be user-liz@example.com.
+     * The group example@googlegroups.com would be
+     * group-example@googlegroups.com.
+     * To refer to all members of the Google Apps for Business domain
+     * example.com, the entity would be domain-example.com.
+     * 
+     */
     public Optional<Output<String>> entity() {
         return Optional.ofNullable(this.entity);
     }
@@ -81,6 +111,11 @@ public final class BucketAccessControlState extends com.pulumi.resources.Resourc
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return The access permission for the entity.
+     * Possible values are `OWNER`, `READER`, and `WRITER`.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -113,47 +148,137 @@ public final class BucketAccessControlState extends com.pulumi.resources.Resourc
             $ = new BucketAccessControlState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(@Nullable Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The name of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param domain The domain associated with the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain The domain associated with the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param email The email address associated with the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email The email address associated with the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param entity The entity holding the permission, in one of the following forms:
+         * user-userId
+         * user-email
+         * group-groupId
+         * group-email
+         * domain-domain
+         * project-team-projectId
+         * allUsers
+         * allAuthenticatedUsers
+         * Examples:
+         * The user liz@example.com would be user-liz@example.com.
+         * The group example@googlegroups.com would be
+         * group-example@googlegroups.com.
+         * To refer to all members of the Google Apps for Business domain
+         * example.com, the entity would be domain-example.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entity(@Nullable Output<String> entity) {
             $.entity = entity;
             return this;
         }
 
+        /**
+         * @param entity The entity holding the permission, in one of the following forms:
+         * user-userId
+         * user-email
+         * group-groupId
+         * group-email
+         * domain-domain
+         * project-team-projectId
+         * allUsers
+         * allAuthenticatedUsers
+         * Examples:
+         * The user liz@example.com would be user-liz@example.com.
+         * The group example@googlegroups.com would be
+         * group-example@googlegroups.com.
+         * To refer to all members of the Google Apps for Business domain
+         * example.com, the entity would be domain-example.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entity(String entity) {
             return entity(Output.of(entity));
         }
 
+        /**
+         * @param role The access permission for the entity.
+         * Possible values are `OWNER`, `READER`, and `WRITER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The access permission for the entity.
+         * Possible values are `OWNER`, `READER`, and `WRITER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

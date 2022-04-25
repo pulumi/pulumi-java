@@ -19,6 +19,10 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessPolicyName", required=true)
     private String accessPolicyName;
 
+    /**
+     * @return The name of the Time Series Insights access policy associated with the specified environment.
+     * 
+     */
     public String accessPolicyName() {
         return this.accessPolicyName;
     }
@@ -30,6 +34,10 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="environmentName", required=true)
     private String environmentName;
 
+    /**
+     * @return The name of the Time Series Insights environment associated with the specified resource group.
+     * 
+     */
     public String environmentName() {
         return this.environmentName;
     }
@@ -41,6 +49,10 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPolicyName The name of the Time Series Insights access policy associated with the specified environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicyName(String accessPolicyName) {
             $.accessPolicyName = accessPolicyName;
             return this;
         }
 
+        /**
+         * @param environmentName The name of the Time Series Insights environment associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(String environmentName) {
             $.environmentName = environmentName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

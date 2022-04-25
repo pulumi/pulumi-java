@@ -23,6 +23,10 @@ public final class PlacementPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of placement.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -51,6 +55,12 @@ public final class PlacementPolicyResponse extends com.pulumi.resources.InvokeAr
             $ = new PlacementPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of placement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

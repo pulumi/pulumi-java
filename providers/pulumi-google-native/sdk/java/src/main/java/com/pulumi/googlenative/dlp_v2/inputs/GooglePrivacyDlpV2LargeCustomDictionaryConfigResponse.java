@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse extends
     @Import(name="bigQueryField", required=true)
     private GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField;
 
+    /**
+     * @return Field in a BigQuery table where each cell represents a dictionary phrase.
+     * 
+     */
     public GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField() {
         return this.bigQueryField;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse extends
     @Import(name="cloudStorageFileSet", required=true)
     private GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet;
 
+    /**
+     * @return Set of files containing newline-delimited lists of dictionary phrases.
+     * 
+     */
     public GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet() {
         return this.cloudStorageFileSet;
     }
@@ -47,6 +55,10 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse extends
     @Import(name="outputPath", required=true)
     private GooglePrivacyDlpV2CloudStoragePathResponse outputPath;
 
+    /**
+     * @return Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
+     * 
+     */
     public GooglePrivacyDlpV2CloudStoragePathResponse outputPath() {
         return this.outputPath;
     }
@@ -77,16 +89,34 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse extends
             $ = new GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigQueryField Field in a BigQuery table where each cell represents a dictionary phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigQueryField(GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField) {
             $.bigQueryField = bigQueryField;
             return this;
         }
 
+        /**
+         * @param cloudStorageFileSet Set of files containing newline-delimited lists of dictionary phrases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStorageFileSet(GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet) {
             $.cloudStorageFileSet = cloudStorageFileSet;
             return this;
         }
 
+        /**
+         * @param outputPath Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputPath(GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
             $.outputPath = outputPath;
             return this;

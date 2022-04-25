@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SkypeChannelPropertiesResponse {
     /**
-     * Calling web hook for Skype channel
+     * @return Calling web hook for Skype channel
      * 
      */
     private final @Nullable String callingWebHook;
     /**
-     * Enable calling for Skype channel
+     * @return Enable calling for Skype channel
      * 
      */
     private final @Nullable Boolean enableCalling;
     /**
-     * Enable groups for Skype channel
+     * @return Enable groups for Skype channel
      * 
      */
     private final @Nullable Boolean enableGroups;
     /**
-     * Enable media cards for Skype channel
+     * @return Enable media cards for Skype channel
      * 
      */
     private final @Nullable Boolean enableMediaCards;
     /**
-     * Enable messaging for Skype channel
+     * @return Enable messaging for Skype channel
      * 
      */
     private final @Nullable Boolean enableMessaging;
     /**
-     * Enable screen sharing for Skype channel
+     * @return Enable screen sharing for Skype channel
      * 
      */
     private final @Nullable Boolean enableScreenSharing;
     /**
-     * Enable video for Skype channel
+     * @return Enable video for Skype channel
      * 
      */
     private final @Nullable Boolean enableVideo;
     /**
-     * Group mode for Skype channel
+     * @return Group mode for Skype channel
      * 
      */
     private final @Nullable String groupsMode;
     /**
-     * Incoming call route for Skype channel
+     * @return Incoming call route for Skype channel
      * 
      */
     private final @Nullable String incomingCallRoute;
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
      */
     private final Boolean isEnabled;
@@ -88,72 +88,72 @@ public final class SkypeChannelPropertiesResponse {
     }
 
     /**
-     * Calling web hook for Skype channel
+     * @return Calling web hook for Skype channel
      * 
-    */
+     */
     public Optional<String> callingWebHook() {
         return Optional.ofNullable(this.callingWebHook);
     }
     /**
-     * Enable calling for Skype channel
+     * @return Enable calling for Skype channel
      * 
-    */
+     */
     public Optional<Boolean> enableCalling() {
         return Optional.ofNullable(this.enableCalling);
     }
     /**
-     * Enable groups for Skype channel
+     * @return Enable groups for Skype channel
      * 
-    */
+     */
     public Optional<Boolean> enableGroups() {
         return Optional.ofNullable(this.enableGroups);
     }
     /**
-     * Enable media cards for Skype channel
+     * @return Enable media cards for Skype channel
      * 
-    */
+     */
     public Optional<Boolean> enableMediaCards() {
         return Optional.ofNullable(this.enableMediaCards);
     }
     /**
-     * Enable messaging for Skype channel
+     * @return Enable messaging for Skype channel
      * 
-    */
+     */
     public Optional<Boolean> enableMessaging() {
         return Optional.ofNullable(this.enableMessaging);
     }
     /**
-     * Enable screen sharing for Skype channel
+     * @return Enable screen sharing for Skype channel
      * 
-    */
+     */
     public Optional<Boolean> enableScreenSharing() {
         return Optional.ofNullable(this.enableScreenSharing);
     }
     /**
-     * Enable video for Skype channel
+     * @return Enable video for Skype channel
      * 
-    */
+     */
     public Optional<Boolean> enableVideo() {
         return Optional.ofNullable(this.enableVideo);
     }
     /**
-     * Group mode for Skype channel
+     * @return Group mode for Skype channel
      * 
-    */
+     */
     public Optional<String> groupsMode() {
         return Optional.ofNullable(this.groupsMode);
     }
     /**
-     * Incoming call route for Skype channel
+     * @return Incoming call route for Skype channel
      * 
-    */
+     */
     public Optional<String> incomingCallRoute() {
         return Optional.ofNullable(this.incomingCallRoute);
     }
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }

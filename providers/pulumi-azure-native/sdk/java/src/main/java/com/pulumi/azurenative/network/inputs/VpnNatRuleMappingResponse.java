@@ -25,6 +25,10 @@ public final class VpnNatRuleMappingResponse extends com.pulumi.resources.Invoke
     @Import(name="addressSpace")
     private @Nullable String addressSpace;
 
+    /**
+     * @return Address space for Vpn NatRule mapping.
+     * 
+     */
     public Optional<String> addressSpace() {
         return Optional.ofNullable(this.addressSpace);
     }
@@ -53,6 +57,12 @@ public final class VpnNatRuleMappingResponse extends com.pulumi.resources.Invoke
             $ = new VpnNatRuleMappingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressSpace Address space for Vpn NatRule mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressSpace(@Nullable String addressSpace) {
             $.addressSpace = addressSpace;
             return this;

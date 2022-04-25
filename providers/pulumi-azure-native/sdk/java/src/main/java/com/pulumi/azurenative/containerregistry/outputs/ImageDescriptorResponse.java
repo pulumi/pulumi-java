@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ImageDescriptorResponse {
     /**
-     * The sha256-based digest of the image manifest.
+     * @return The sha256-based digest of the image manifest.
      * 
      */
     private final @Nullable String digest;
     /**
-     * The registry login server.
+     * @return The registry login server.
      * 
      */
     private final @Nullable String registry;
     /**
-     * The repository name.
+     * @return The repository name.
      * 
      */
     private final @Nullable String repository;
     /**
-     * The tag name.
+     * @return The tag name.
      * 
      */
     private final @Nullable String tag;
@@ -45,30 +45,30 @@ public final class ImageDescriptorResponse {
     }
 
     /**
-     * The sha256-based digest of the image manifest.
+     * @return The sha256-based digest of the image manifest.
      * 
-    */
+     */
     public Optional<String> digest() {
         return Optional.ofNullable(this.digest);
     }
     /**
-     * The registry login server.
+     * @return The registry login server.
      * 
-    */
+     */
     public Optional<String> registry() {
         return Optional.ofNullable(this.registry);
     }
     /**
-     * The repository name.
+     * @return The repository name.
      * 
-    */
+     */
     public Optional<String> repository() {
         return Optional.ofNullable(this.repository);
     }
     /**
-     * The tag name.
+     * @return The tag name.
      * 
-    */
+     */
     public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }

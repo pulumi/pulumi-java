@@ -19,6 +19,10 @@ public final class GetAutomationRuleArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="automationRuleId", required=true)
     private String automationRuleId;
 
+    /**
+     * @return Automation rule ID
+     * 
+     */
     public String automationRuleId() {
         return this.automationRuleId;
     }
@@ -30,6 +34,10 @@ public final class GetAutomationRuleArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="operationalInsightsResourceProvider", required=true)
     private String operationalInsightsResourceProvider;
 
+    /**
+     * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
@@ -41,6 +49,10 @@ public final class GetAutomationRuleArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetAutomationRuleArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -83,21 +99,45 @@ public final class GetAutomationRuleArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetAutomationRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationRuleId Automation rule ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationRuleId(String automationRuleId) {
             $.automationRuleId = automationRuleId;
             return this;
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

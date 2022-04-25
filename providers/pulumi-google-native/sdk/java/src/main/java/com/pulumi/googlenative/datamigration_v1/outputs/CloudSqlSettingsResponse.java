@@ -13,82 +13,82 @@ import java.util.Objects;
 @CustomType
 public final class CloudSqlSettingsResponse {
     /**
-     * The activation policy specifies when the instance is activated; it is applicable only when the instance state is &#39;RUNNABLE&#39;. Valid values: &#39;ALWAYS&#39;: The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.
+     * @return The activation policy specifies when the instance is activated; it is applicable only when the instance state is &#39;RUNNABLE&#39;. Valid values: &#39;ALWAYS&#39;: The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.
      * 
      */
     private final String activationPolicy;
     /**
-     * [default: ON] If you enable this setting, Cloud SQL checks your available storage every 30 seconds. If the available storage falls below a threshold size, Cloud SQL automatically adds additional storage capacity. If the available storage repeatedly falls below the threshold size, Cloud SQL continues to add storage until it reaches the maximum of 30 TB.
+     * @return [default: ON] If you enable this setting, Cloud SQL checks your available storage every 30 seconds. If the available storage falls below a threshold size, Cloud SQL automatically adds additional storage capacity. If the available storage repeatedly falls below the threshold size, Cloud SQL continues to add storage until it reaches the maximum of 30 TB.
      * 
      */
     private final Boolean autoStorageIncrease;
     /**
-     * The KMS key name used for the csql instance.
+     * @return The KMS key name used for the csql instance.
      * 
      */
     private final String cmekKeyName;
     /**
-     * The Cloud SQL default instance level collation.
+     * @return The Cloud SQL default instance level collation.
      * 
      */
     private final String collation;
     /**
-     * The storage capacity available to the database, in GB. The minimum (and default) size is 10GB.
+     * @return The storage capacity available to the database, in GB. The minimum (and default) size is 10GB.
      * 
      */
     private final String dataDiskSizeGb;
     /**
-     * The type of storage: `PD_SSD` (default) or `PD_HDD`.
+     * @return The type of storage: `PD_SSD` (default) or `PD_HDD`.
      * 
      */
     private final String dataDiskType;
     /**
-     * The database flags passed to the Cloud SQL instance at startup. An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+     * @return The database flags passed to the Cloud SQL instance at startup. An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     private final Map<String,String> databaseFlags;
     /**
-     * The database engine type and version.
+     * @return The database engine type and version.
      * 
      */
     private final String databaseVersion;
     /**
-     * The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled.
+     * @return The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled.
      * 
      */
     private final SqlIpConfigResponse ipConfig;
     /**
-     * Input only. Initial root password.
+     * @return Input only. Initial root password.
      * 
      */
     private final String rootPassword;
     /**
-     * Indicates If this connection profile root password is stored.
+     * @return Indicates If this connection profile root password is stored.
      * 
      */
     private final Boolean rootPasswordSet;
     /**
-     * The Database Migration Service source connection profile ID, in the format: `projects/my_project_name/locations/us-central1/connectionProfiles/connection_profile_ID`
+     * @return The Database Migration Service source connection profile ID, in the format: `projects/my_project_name/locations/us-central1/connectionProfiles/connection_profile_ID`
      * 
      */
     private final String sourceId;
     /**
-     * The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
+     * @return The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
      * 
      */
     private final String storageAutoResizeLimit;
     /**
-     * The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL instances) or `db-custom-1-3840` (PostgreSQL instances). For more information, see [Cloud SQL Instance Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).
+     * @return The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL instances) or `db-custom-1-3840` (PostgreSQL instances). For more information, see [Cloud SQL Instance Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).
      * 
      */
     private final String tier;
     /**
-     * The resource labels for a Cloud SQL instance to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;18kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
+     * @return The resource labels for a Cloud SQL instance to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;18kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
      * 
      */
     private final Map<String,String> userLabels;
     /**
-     * The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.
+     * @return The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.
      * 
      */
     private final String zone;
@@ -130,114 +130,114 @@ public final class CloudSqlSettingsResponse {
     }
 
     /**
-     * The activation policy specifies when the instance is activated; it is applicable only when the instance state is &#39;RUNNABLE&#39;. Valid values: &#39;ALWAYS&#39;: The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.
+     * @return The activation policy specifies when the instance is activated; it is applicable only when the instance state is &#39;RUNNABLE&#39;. Valid values: &#39;ALWAYS&#39;: The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.
      * 
-    */
+     */
     public String activationPolicy() {
         return this.activationPolicy;
     }
     /**
-     * [default: ON] If you enable this setting, Cloud SQL checks your available storage every 30 seconds. If the available storage falls below a threshold size, Cloud SQL automatically adds additional storage capacity. If the available storage repeatedly falls below the threshold size, Cloud SQL continues to add storage until it reaches the maximum of 30 TB.
+     * @return [default: ON] If you enable this setting, Cloud SQL checks your available storage every 30 seconds. If the available storage falls below a threshold size, Cloud SQL automatically adds additional storage capacity. If the available storage repeatedly falls below the threshold size, Cloud SQL continues to add storage until it reaches the maximum of 30 TB.
      * 
-    */
+     */
     public Boolean autoStorageIncrease() {
         return this.autoStorageIncrease;
     }
     /**
-     * The KMS key name used for the csql instance.
+     * @return The KMS key name used for the csql instance.
      * 
-    */
+     */
     public String cmekKeyName() {
         return this.cmekKeyName;
     }
     /**
-     * The Cloud SQL default instance level collation.
+     * @return The Cloud SQL default instance level collation.
      * 
-    */
+     */
     public String collation() {
         return this.collation;
     }
     /**
-     * The storage capacity available to the database, in GB. The minimum (and default) size is 10GB.
+     * @return The storage capacity available to the database, in GB. The minimum (and default) size is 10GB.
      * 
-    */
+     */
     public String dataDiskSizeGb() {
         return this.dataDiskSizeGb;
     }
     /**
-     * The type of storage: `PD_SSD` (default) or `PD_HDD`.
+     * @return The type of storage: `PD_SSD` (default) or `PD_HDD`.
      * 
-    */
+     */
     public String dataDiskType() {
         return this.dataDiskType;
     }
     /**
-     * The database flags passed to the Cloud SQL instance at startup. An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+     * @return The database flags passed to the Cloud SQL instance at startup. An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
-    */
+     */
     public Map<String,String> databaseFlags() {
         return this.databaseFlags;
     }
     /**
-     * The database engine type and version.
+     * @return The database engine type and version.
      * 
-    */
+     */
     public String databaseVersion() {
         return this.databaseVersion;
     }
     /**
-     * The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled.
+     * @return The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled.
      * 
-    */
+     */
     public SqlIpConfigResponse ipConfig() {
         return this.ipConfig;
     }
     /**
-     * Input only. Initial root password.
+     * @return Input only. Initial root password.
      * 
-    */
+     */
     public String rootPassword() {
         return this.rootPassword;
     }
     /**
-     * Indicates If this connection profile root password is stored.
+     * @return Indicates If this connection profile root password is stored.
      * 
-    */
+     */
     public Boolean rootPasswordSet() {
         return this.rootPasswordSet;
     }
     /**
-     * The Database Migration Service source connection profile ID, in the format: `projects/my_project_name/locations/us-central1/connectionProfiles/connection_profile_ID`
+     * @return The Database Migration Service source connection profile ID, in the format: `projects/my_project_name/locations/us-central1/connectionProfiles/connection_profile_ID`
      * 
-    */
+     */
     public String sourceId() {
         return this.sourceId;
     }
     /**
-     * The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
+     * @return The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
      * 
-    */
+     */
     public String storageAutoResizeLimit() {
         return this.storageAutoResizeLimit;
     }
     /**
-     * The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL instances) or `db-custom-1-3840` (PostgreSQL instances). For more information, see [Cloud SQL Instance Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).
+     * @return The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL instances) or `db-custom-1-3840` (PostgreSQL instances). For more information, see [Cloud SQL Instance Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).
      * 
-    */
+     */
     public String tier() {
         return this.tier;
     }
     /**
-     * The resource labels for a Cloud SQL instance to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;18kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
+     * @return The resource labels for a Cloud SQL instance to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;18kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
      * 
-    */
+     */
     public Map<String,String> userLabels() {
         return this.userLabels;
     }
     /**
-     * The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.
+     * @return The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.
      * 
-    */
+     */
     public String zone() {
         return this.zone;
     }

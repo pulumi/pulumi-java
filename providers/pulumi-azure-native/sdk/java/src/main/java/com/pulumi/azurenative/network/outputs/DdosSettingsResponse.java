@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DdosSettingsResponse {
     /**
-     * The DDoS custom policy associated with the public IP.
+     * @return The DDoS custom policy associated with the public IP.
      * 
      */
     private final @Nullable SubResourceResponse ddosCustomPolicy;
     /**
-     * Enables DDoS protection on the public IP.
+     * @return Enables DDoS protection on the public IP.
      * 
      */
     private final @Nullable Boolean protectedIP;
     /**
-     * The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
+     * @return The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
      * 
      */
     private final @Nullable String protectionCoverage;
@@ -40,23 +40,23 @@ public final class DdosSettingsResponse {
     }
 
     /**
-     * The DDoS custom policy associated with the public IP.
+     * @return The DDoS custom policy associated with the public IP.
      * 
-    */
+     */
     public Optional<SubResourceResponse> ddosCustomPolicy() {
         return Optional.ofNullable(this.ddosCustomPolicy);
     }
     /**
-     * Enables DDoS protection on the public IP.
+     * @return Enables DDoS protection on the public IP.
      * 
-    */
+     */
     public Optional<Boolean> protectedIP() {
         return Optional.ofNullable(this.protectedIP);
     }
     /**
-     * The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
+     * @return The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
      * 
-    */
+     */
     public Optional<String> protectionCoverage() {
         return Optional.ofNullable(this.protectionCoverage);
     }

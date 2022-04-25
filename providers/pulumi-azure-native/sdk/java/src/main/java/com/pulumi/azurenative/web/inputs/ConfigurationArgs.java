@@ -33,6 +33,11 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="activeRevisionsMode")
     private @Nullable Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode;
 
+    /**
+     * @return ActiveRevisionsMode controls how active revisions are handled for the Container app:
+     * &lt;list&gt;&lt;item&gt;Multiple: multiple revisions can be active. If no value if provided, this is the default&lt;/item&gt;&lt;item&gt;Single: Only one revision can be active at a time. Revision weights can not be used in this mode&lt;/item&gt;&lt;/list&gt;
+     * 
+     */
     public Optional<Output<Either<String,ActiveRevisionsMode>>> activeRevisionsMode() {
         return Optional.ofNullable(this.activeRevisionsMode);
     }
@@ -44,6 +49,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ingress")
     private @Nullable Output<IngressArgs> ingress;
 
+    /**
+     * @return Ingress configurations.
+     * 
+     */
     public Optional<Output<IngressArgs>> ingress() {
         return Optional.ofNullable(this.ingress);
     }
@@ -55,6 +64,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registries")
     private @Nullable Output<List<RegistryCredentialsArgs>> registries;
 
+    /**
+     * @return Collection of private container registry credentials for containers used by the Container app
+     * 
+     */
     public Optional<Output<List<RegistryCredentialsArgs>>> registries() {
         return Optional.ofNullable(this.registries);
     }
@@ -66,6 +79,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secrets")
     private @Nullable Output<List<SecretArgs>> secrets;
 
+    /**
+     * @return Collection of secrets used by a Container app
+     * 
+     */
     public Optional<Output<List<SecretArgs>>> secrets() {
         return Optional.ofNullable(this.secrets);
     }
@@ -97,54 +114,130 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeRevisionsMode ActiveRevisionsMode controls how active revisions are handled for the Container app:
+         * &lt;list&gt;&lt;item&gt;Multiple: multiple revisions can be active. If no value if provided, this is the default&lt;/item&gt;&lt;item&gt;Single: Only one revision can be active at a time. Revision weights can not be used in this mode&lt;/item&gt;&lt;/list&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeRevisionsMode(@Nullable Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode) {
             $.activeRevisionsMode = activeRevisionsMode;
             return this;
         }
 
+        /**
+         * @param activeRevisionsMode ActiveRevisionsMode controls how active revisions are handled for the Container app:
+         * &lt;list&gt;&lt;item&gt;Multiple: multiple revisions can be active. If no value if provided, this is the default&lt;/item&gt;&lt;item&gt;Single: Only one revision can be active at a time. Revision weights can not be used in this mode&lt;/item&gt;&lt;/list&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeRevisionsMode(Either<String,ActiveRevisionsMode> activeRevisionsMode) {
             return activeRevisionsMode(Output.of(activeRevisionsMode));
         }
 
+        /**
+         * @param activeRevisionsMode ActiveRevisionsMode controls how active revisions are handled for the Container app:
+         * &lt;list&gt;&lt;item&gt;Multiple: multiple revisions can be active. If no value if provided, this is the default&lt;/item&gt;&lt;item&gt;Single: Only one revision can be active at a time. Revision weights can not be used in this mode&lt;/item&gt;&lt;/list&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeRevisionsMode(String activeRevisionsMode) {
             return activeRevisionsMode(Either.ofLeft(activeRevisionsMode));
         }
 
+        /**
+         * @param activeRevisionsMode ActiveRevisionsMode controls how active revisions are handled for the Container app:
+         * &lt;list&gt;&lt;item&gt;Multiple: multiple revisions can be active. If no value if provided, this is the default&lt;/item&gt;&lt;item&gt;Single: Only one revision can be active at a time. Revision weights can not be used in this mode&lt;/item&gt;&lt;/list&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeRevisionsMode(ActiveRevisionsMode activeRevisionsMode) {
             return activeRevisionsMode(Either.ofRight(activeRevisionsMode));
         }
 
+        /**
+         * @param ingress Ingress configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(@Nullable Output<IngressArgs> ingress) {
             $.ingress = ingress;
             return this;
         }
 
+        /**
+         * @param ingress Ingress configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(IngressArgs ingress) {
             return ingress(Output.of(ingress));
         }
 
+        /**
+         * @param registries Collection of private container registry credentials for containers used by the Container app
+         * 
+         * @return builder
+         * 
+         */
         public Builder registries(@Nullable Output<List<RegistryCredentialsArgs>> registries) {
             $.registries = registries;
             return this;
         }
 
+        /**
+         * @param registries Collection of private container registry credentials for containers used by the Container app
+         * 
+         * @return builder
+         * 
+         */
         public Builder registries(List<RegistryCredentialsArgs> registries) {
             return registries(Output.of(registries));
         }
 
+        /**
+         * @param registries Collection of private container registry credentials for containers used by the Container app
+         * 
+         * @return builder
+         * 
+         */
         public Builder registries(RegistryCredentialsArgs... registries) {
             return registries(List.of(registries));
         }
 
+        /**
+         * @param secrets Collection of secrets used by a Container app
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(@Nullable Output<List<SecretArgs>> secrets) {
             $.secrets = secrets;
             return this;
         }
 
+        /**
+         * @param secrets Collection of secrets used by a Container app
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(List<SecretArgs> secrets) {
             return secrets(Output.of(secrets));
         }
 
+        /**
+         * @param secrets Collection of secrets used by a Container app
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(SecretArgs... secrets) {
             return secrets(List.of(secrets));
         }

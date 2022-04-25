@@ -25,6 +25,10 @@ public final class HeaderActionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="headerActionType", required=true)
     private String headerActionType;
 
+    /**
+     * @return Which type of manipulation to apply to the header.
+     * 
+     */
     public String headerActionType() {
         return this.headerActionType;
     }
@@ -36,6 +40,10 @@ public final class HeaderActionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="headerName", required=true)
     private String headerName;
 
+    /**
+     * @return The name of the header this action will apply to.
+     * 
+     */
     public String headerName() {
         return this.headerName;
     }
@@ -47,6 +55,10 @@ public final class HeaderActionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The value to update the given header name with. This value is not used if the actionType is Delete.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -77,16 +89,34 @@ public final class HeaderActionResponse extends com.pulumi.resources.InvokeArgs 
             $ = new HeaderActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerActionType Which type of manipulation to apply to the header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerActionType(String headerActionType) {
             $.headerActionType = headerActionType;
             return this;
         }
 
+        /**
+         * @param headerName The name of the header this action will apply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param value The value to update the given header name with. This value is not used if the actionType is Delete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

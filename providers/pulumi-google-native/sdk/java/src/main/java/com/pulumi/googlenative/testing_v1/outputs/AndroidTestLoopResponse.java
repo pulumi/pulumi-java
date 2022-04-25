@@ -14,27 +14,27 @@ import java.util.Objects;
 @CustomType
 public final class AndroidTestLoopResponse {
     /**
-     * The APK for the application under test.
+     * @return The APK for the application under test.
      * 
      */
     private final FileReferenceResponse appApk;
     /**
-     * A multi-apk app bundle for the application under test.
+     * @return A multi-apk app bundle for the application under test.
      * 
      */
     private final AppBundleResponse appBundle;
     /**
-     * The java package for the application under test. The default is determined by examining the application&#39;s manifest.
+     * @return The java package for the application under test. The default is determined by examining the application&#39;s manifest.
      * 
      */
     private final String appPackageId;
     /**
-     * The list of scenario labels that should be run during the test. The scenario labels should map to labels defined in the application&#39;s manifest. For example, player_experience and com.google.test.loops.player_experience add all of the loops labeled in the manifest with the com.google.test.loops.player_experience name to the execution. Scenarios can also be specified in the scenarios field.
+     * @return The list of scenario labels that should be run during the test. The scenario labels should map to labels defined in the application&#39;s manifest. For example, player_experience and com.google.test.loops.player_experience add all of the loops labeled in the manifest with the com.google.test.loops.player_experience name to the execution. Scenarios can also be specified in the scenarios field.
      * 
      */
     private final List<String> scenarioLabels;
     /**
-     * The list of scenarios that should be run during the test. The default is all test loops, derived from the application&#39;s manifest.
+     * @return The list of scenarios that should be run during the test. The default is all test loops, derived from the application&#39;s manifest.
      * 
      */
     private final List<Integer> scenarios;
@@ -54,37 +54,37 @@ public final class AndroidTestLoopResponse {
     }
 
     /**
-     * The APK for the application under test.
+     * @return The APK for the application under test.
      * 
-    */
+     */
     public FileReferenceResponse appApk() {
         return this.appApk;
     }
     /**
-     * A multi-apk app bundle for the application under test.
+     * @return A multi-apk app bundle for the application under test.
      * 
-    */
+     */
     public AppBundleResponse appBundle() {
         return this.appBundle;
     }
     /**
-     * The java package for the application under test. The default is determined by examining the application&#39;s manifest.
+     * @return The java package for the application under test. The default is determined by examining the application&#39;s manifest.
      * 
-    */
+     */
     public String appPackageId() {
         return this.appPackageId;
     }
     /**
-     * The list of scenario labels that should be run during the test. The scenario labels should map to labels defined in the application&#39;s manifest. For example, player_experience and com.google.test.loops.player_experience add all of the loops labeled in the manifest with the com.google.test.loops.player_experience name to the execution. Scenarios can also be specified in the scenarios field.
+     * @return The list of scenario labels that should be run during the test. The scenario labels should map to labels defined in the application&#39;s manifest. For example, player_experience and com.google.test.loops.player_experience add all of the loops labeled in the manifest with the com.google.test.loops.player_experience name to the execution. Scenarios can also be specified in the scenarios field.
      * 
-    */
+     */
     public List<String> scenarioLabels() {
         return this.scenarioLabels;
     }
     /**
-     * The list of scenarios that should be run during the test. The default is all test loops, derived from the application&#39;s manifest.
+     * @return The list of scenarios that should be run during the test. The default is all test loops, derived from the application&#39;s manifest.
      * 
-    */
+     */
     public List<Integer> scenarios() {
         return this.scenarios;
     }

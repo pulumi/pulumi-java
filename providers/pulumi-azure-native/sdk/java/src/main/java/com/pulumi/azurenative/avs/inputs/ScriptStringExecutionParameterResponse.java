@@ -26,6 +26,10 @@ public final class ScriptStringExecutionParameterResponse extends com.pulumi.res
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The parameter name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -38,6 +42,11 @@ public final class ScriptStringExecutionParameterResponse extends com.pulumi.res
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of execution parameter
+     * Expected value is &#39;Value&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -49,6 +58,10 @@ public final class ScriptStringExecutionParameterResponse extends com.pulumi.res
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The value for the passed parameter
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -79,16 +92,35 @@ public final class ScriptStringExecutionParameterResponse extends com.pulumi.res
             $ = new ScriptStringExecutionParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The parameter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The type of execution parameter
+         * Expected value is &#39;Value&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value The value for the passed parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

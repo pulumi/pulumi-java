@@ -27,6 +27,10 @@ public final class StudioComponentActiveDirectoryConfiguration extends com.pulum
     @Import(name="computerAttributes")
     private @Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes;
 
+    /**
+     * @return &lt;p&gt;A collection of custom attributes for an Active Directory computer.&lt;/p&gt;
+     * 
+     */
     public Optional<List<StudioComponentActiveDirectoryComputerAttribute>> computerAttributes() {
         return Optional.ofNullable(this.computerAttributes);
     }
@@ -38,6 +42,10 @@ public final class StudioComponentActiveDirectoryConfiguration extends com.pulum
     @Import(name="directoryId")
     private @Nullable String directoryId;
 
+    /**
+     * @return &lt;p&gt;The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.&lt;/p&gt;
+     * 
+     */
     public Optional<String> directoryId() {
         return Optional.ofNullable(this.directoryId);
     }
@@ -49,6 +57,10 @@ public final class StudioComponentActiveDirectoryConfiguration extends com.pulum
     @Import(name="organizationalUnitDistinguishedName")
     private @Nullable String organizationalUnitDistinguishedName;
 
+    /**
+     * @return &lt;p&gt;The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.&lt;/p&gt;
+     * 
+     */
     public Optional<String> organizationalUnitDistinguishedName() {
         return Optional.ofNullable(this.organizationalUnitDistinguishedName);
     }
@@ -79,20 +91,44 @@ public final class StudioComponentActiveDirectoryConfiguration extends com.pulum
             $ = new StudioComponentActiveDirectoryConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computerAttributes &lt;p&gt;A collection of custom attributes for an Active Directory computer.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerAttributes(@Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes) {
             $.computerAttributes = computerAttributes;
             return this;
         }
 
+        /**
+         * @param computerAttributes &lt;p&gt;A collection of custom attributes for an Active Directory computer.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerAttributes(StudioComponentActiveDirectoryComputerAttribute... computerAttributes) {
             return computerAttributes(List.of(computerAttributes));
         }
 
+        /**
+         * @param directoryId &lt;p&gt;The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryId(@Nullable String directoryId) {
             $.directoryId = directoryId;
             return this;
         }
 
+        /**
+         * @param organizationalUnitDistinguishedName &lt;p&gt;The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             $.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;

@@ -31,6 +31,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
     @Import(name="buttons")
     private @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons;
 
+    /**
+     * @return Optional. List of buttons for the card.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>>> buttons() {
         return Optional.ofNullable(this.buttons);
     }
@@ -42,6 +46,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
     @Import(name="columnProperties")
     private @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs>> columnProperties;
 
+    /**
+     * @return Optional. Display properties for the columns in this table.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs>>> columnProperties() {
         return Optional.ofNullable(this.columnProperties);
     }
@@ -53,6 +61,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
     @Import(name="image")
     private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
+    /**
+     * @return Optional. Image which should be displayed on the card.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -64,6 +76,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
     @Import(name="rows")
     private @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs>> rows;
 
+    /**
+     * @return Optional. Rows in this table of data.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs>>> rows() {
         return Optional.ofNullable(this.rows);
     }
@@ -75,6 +91,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
     @Import(name="subtitle")
     private @Nullable Output<String> subtitle;
 
+    /**
+     * @return Optional. Subtitle to the title.
+     * 
+     */
     public Optional<Output<String>> subtitle() {
         return Optional.ofNullable(this.subtitle);
     }
@@ -86,6 +106,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
     @Import(name="title", required=true)
     private Output<String> title;
 
+    /**
+     * @return Title of the card.
+     * 
+     */
     public Output<String> title() {
         return this.title;
     }
@@ -119,68 +143,158 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
             $ = new GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buttons Optional. List of buttons for the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(@Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons) {
             $.buttons = buttons;
             return this;
         }
 
+        /**
+         * @param buttons Optional. List of buttons for the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs> buttons) {
             return buttons(Output.of(buttons));
         }
 
+        /**
+         * @param buttons Optional. List of buttons for the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs... buttons) {
             return buttons(List.of(buttons));
         }
 
+        /**
+         * @param columnProperties Optional. Display properties for the columns in this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnProperties(@Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs>> columnProperties) {
             $.columnProperties = columnProperties;
             return this;
         }
 
+        /**
+         * @param columnProperties Optional. Display properties for the columns in this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnProperties(List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs> columnProperties) {
             return columnProperties(Output.of(columnProperties));
         }
 
+        /**
+         * @param columnProperties Optional. Display properties for the columns in this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnProperties(GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs... columnProperties) {
             return columnProperties(List.of(columnProperties));
         }
 
+        /**
+         * @param image Optional. Image which should be displayed on the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image Optional. Image which should be displayed on the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param rows Optional. Rows in this table of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rows(@Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs>> rows) {
             $.rows = rows;
             return this;
         }
 
+        /**
+         * @param rows Optional. Rows in this table of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rows(List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs> rows) {
             return rows(Output.of(rows));
         }
 
+        /**
+         * @param rows Optional. Rows in this table of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rows(GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs... rows) {
             return rows(List.of(rows));
         }
 
+        /**
+         * @param subtitle Optional. Subtitle to the title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(@Nullable Output<String> subtitle) {
             $.subtitle = subtitle;
             return this;
         }
 
+        /**
+         * @param subtitle Optional. Subtitle to the title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(String subtitle) {
             return subtitle(Output.of(subtitle));
         }
 
+        /**
+         * @param title Title of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Title of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

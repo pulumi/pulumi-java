@@ -35,6 +35,18 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="airflowConfigurationOptions")
     private @Nullable Output<Object> airflowConfigurationOptions;
 
+    /**
+     * @return Key/value pairs representing Airflow configuration variables.
+     *     Keys are prefixed by their section:
+     * 
+     *     [core]
+     *     dags_folder={AIRFLOW_HOME}/dags
+     *     
+     *     Would be represented as
+     *     
+     *     &#34;core.dags_folder&#34;: &#34;{AIRFLOW_HOME}/dags&#34;
+     * 
+     */
     public Optional<Output<Object>> airflowConfigurationOptions() {
         return Optional.ofNullable(this.airflowConfigurationOptions);
     }
@@ -158,6 +170,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Object> tags;
 
+    /**
+     * @return A map of tags for the environment.
+     * 
+     */
     public Optional<Output<Object>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -219,11 +235,39 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param airflowConfigurationOptions Key/value pairs representing Airflow configuration variables.
+         *     Keys are prefixed by their section:
+         * 
+         *     [core]
+         *     dags_folder={AIRFLOW_HOME}/dags
+         *     
+         *     Would be represented as
+         *     
+         *     &#34;core.dags_folder&#34;: &#34;{AIRFLOW_HOME}/dags&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder airflowConfigurationOptions(@Nullable Output<Object> airflowConfigurationOptions) {
             $.airflowConfigurationOptions = airflowConfigurationOptions;
             return this;
         }
 
+        /**
+         * @param airflowConfigurationOptions Key/value pairs representing Airflow configuration variables.
+         *     Keys are prefixed by their section:
+         * 
+         *     [core]
+         *     dags_folder={AIRFLOW_HOME}/dags
+         *     
+         *     Would be represented as
+         *     
+         *     &#34;core.dags_folder&#34;: &#34;{AIRFLOW_HOME}/dags&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder airflowConfigurationOptions(Object airflowConfigurationOptions) {
             return airflowConfigurationOptions(Output.of(airflowConfigurationOptions));
         }
@@ -372,11 +416,23 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             return sourceBucketArn(Output.of(sourceBucketArn));
         }
 
+        /**
+         * @param tags A map of tags for the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Object> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags for the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Object tags) {
             return tags(Output.of(tags));
         }

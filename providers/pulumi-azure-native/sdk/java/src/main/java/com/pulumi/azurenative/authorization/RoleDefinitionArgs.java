@@ -24,6 +24,10 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="assignableScopes")
     private @Nullable Output<List<String>> assignableScopes;
 
+    /**
+     * @return Role definition assignable scopes.
+     * 
+     */
     public Optional<Output<List<String>>> assignableScopes() {
         return Optional.ofNullable(this.assignableScopes);
     }
@@ -35,6 +39,10 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The role definition description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="permissions")
     private @Nullable Output<List<PermissionArgs>> permissions;
 
+    /**
+     * @return Role definition permissions.
+     * 
+     */
     public Optional<Output<List<PermissionArgs>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -57,6 +69,10 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="roleDefinitionId")
     private @Nullable Output<String> roleDefinitionId;
 
+    /**
+     * @return The ID of the role definition.
+     * 
+     */
     public Optional<Output<String>> roleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }
@@ -68,6 +84,10 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="roleName")
     private @Nullable Output<String> roleName;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public Optional<Output<String>> roleName() {
         return Optional.ofNullable(this.roleName);
     }
@@ -79,6 +99,10 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="roleType")
     private @Nullable Output<String> roleType;
 
+    /**
+     * @return The role type.
+     * 
+     */
     public Optional<Output<String>> roleType() {
         return Optional.ofNullable(this.roleType);
     }
@@ -90,6 +114,10 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return The scope of the role definition.
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -124,73 +152,169 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
             $ = new RoleDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignableScopes Role definition assignable scopes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignableScopes(@Nullable Output<List<String>> assignableScopes) {
             $.assignableScopes = assignableScopes;
             return this;
         }
 
+        /**
+         * @param assignableScopes Role definition assignable scopes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignableScopes(List<String> assignableScopes) {
             return assignableScopes(Output.of(assignableScopes));
         }
 
+        /**
+         * @param assignableScopes Role definition assignable scopes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignableScopes(String... assignableScopes) {
             return assignableScopes(List.of(assignableScopes));
         }
 
+        /**
+         * @param description The role definition description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The role definition description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param permissions Role definition permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<List<PermissionArgs>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions Role definition permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<PermissionArgs> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions Role definition permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(PermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
 
+        /**
+         * @param roleDefinitionId The ID of the role definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
+        /**
+         * @param roleDefinitionId The ID of the role definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(String roleDefinitionId) {
             return roleDefinitionId(Output.of(roleDefinitionId));
         }
 
+        /**
+         * @param roleName The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(@Nullable Output<String> roleName) {
             $.roleName = roleName;
             return this;
         }
 
+        /**
+         * @param roleName The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(String roleName) {
             return roleName(Output.of(roleName));
         }
 
+        /**
+         * @param roleType The role type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleType(@Nullable Output<String> roleType) {
             $.roleType = roleType;
             return this;
         }
 
+        /**
+         * @param roleType The role type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleType(String roleType) {
             return roleType(Output.of(roleType));
         }
 
+        /**
+         * @param scope The scope of the role definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The scope of the role definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }

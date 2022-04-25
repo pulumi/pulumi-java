@@ -23,6 +23,10 @@ public final class WebServerResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="cpu", required=true)
     private Double cpu;
 
+    /**
+     * @return Optional. CPU request and limit for Airflow web server.
+     * 
+     */
     public Double cpu() {
         return this.cpu;
     }
@@ -34,6 +38,10 @@ public final class WebServerResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="memoryGb", required=true)
     private Double memoryGb;
 
+    /**
+     * @return Optional. Memory (GB) request and limit for Airflow web server.
+     * 
+     */
     public Double memoryGb() {
         return this.memoryGb;
     }
@@ -45,6 +53,10 @@ public final class WebServerResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="storageGb", required=true)
     private Double storageGb;
 
+    /**
+     * @return Optional. Storage (GB) request and limit for Airflow web server.
+     * 
+     */
     public Double storageGb() {
         return this.storageGb;
     }
@@ -75,16 +87,34 @@ public final class WebServerResourceResponse extends com.pulumi.resources.Invoke
             $ = new WebServerResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Optional. CPU request and limit for Airflow web server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Double cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param memoryGb Optional. Memory (GB) request and limit for Airflow web server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryGb(Double memoryGb) {
             $.memoryGb = memoryGb;
             return this;
         }
 
+        /**
+         * @param storageGb Optional. Storage (GB) request and limit for Airflow web server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageGb(Double storageGb) {
             $.storageGb = storageGb;
             return this;

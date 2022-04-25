@@ -19,6 +19,10 @@ public final class GetImportPipelineArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="importPipelineName", required=true)
     private String importPipelineName;
 
+    /**
+     * @return The name of the import pipeline.
+     * 
+     */
     public String importPipelineName() {
         return this.importPipelineName;
     }
@@ -30,6 +34,10 @@ public final class GetImportPipelineArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="registryName", required=true)
     private String registryName;
 
+    /**
+     * @return The name of the container registry.
+     * 
+     */
     public String registryName() {
         return this.registryName;
     }
@@ -41,6 +49,10 @@ public final class GetImportPipelineArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetImportPipelineArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetImportPipelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param importPipelineName The name of the import pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importPipelineName(String importPipelineName) {
             $.importPipelineName = importPipelineName;
             return this;
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

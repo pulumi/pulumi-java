@@ -27,6 +27,10 @@ public final class HostAliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostnames")
     private @Nullable Output<List<String>> hostnames;
 
+    /**
+     * @return Hostnames for the above IP address.
+     * 
+     */
     public Optional<Output<List<String>>> hostnames() {
         return Optional.ofNullable(this.hostnames);
     }
@@ -38,6 +42,10 @@ public final class HostAliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ip")
     private @Nullable Output<String> ip;
 
+    /**
+     * @return IP address of the host file entry.
+     * 
+     */
     public Optional<Output<String>> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -67,24 +75,54 @@ public final class HostAliasArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HostAliasArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostnames Hostnames for the above IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostnames(@Nullable Output<List<String>> hostnames) {
             $.hostnames = hostnames;
             return this;
         }
 
+        /**
+         * @param hostnames Hostnames for the above IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostnames(List<String> hostnames) {
             return hostnames(Output.of(hostnames));
         }
 
+        /**
+         * @param hostnames Hostnames for the above IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostnames(String... hostnames) {
             return hostnames(List.of(hostnames));
         }
 
+        /**
+         * @param ip IP address of the host file entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable Output<String> ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param ip IP address of the host file entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(String ip) {
             return ip(Output.of(ip));
         }

@@ -26,6 +26,10 @@ public final class ContainerRecipeComponentConfigurationArgs extends com.pulumi.
     @Import(name="componentArn")
     private @Nullable Output<String> componentArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the component.
+     * 
+     */
     public Optional<Output<String>> componentArn() {
         return Optional.ofNullable(this.componentArn);
     }
@@ -54,11 +58,23 @@ public final class ContainerRecipeComponentConfigurationArgs extends com.pulumi.
             $ = new ContainerRecipeComponentConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentArn The Amazon Resource Name (ARN) of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentArn(@Nullable Output<String> componentArn) {
             $.componentArn = componentArn;
             return this;
         }
 
+        /**
+         * @param componentArn The Amazon Resource Name (ARN) of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentArn(String componentArn) {
             return componentArn(Output.of(componentArn));
         }

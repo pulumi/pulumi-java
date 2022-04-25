@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class IosDeviceListResponse {
     /**
-     * A list of iOS devices.
+     * @return A list of iOS devices.
      * 
      */
     private final List<IosDeviceResponse> iosDevices;
@@ -22,9 +22,9 @@ public final class IosDeviceListResponse {
     }
 
     /**
-     * A list of iOS devices.
+     * @return A list of iOS devices.
      * 
-    */
+     */
     public List<IosDeviceResponse> iosDevices() {
         return this.iosDevices;
     }

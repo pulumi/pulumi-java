@@ -28,6 +28,10 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends com.pulumi.resour
     @Import(name="copyBehavior")
     private @Nullable Output<Object> copyBehavior;
 
+    /**
+     * @return The type of copy behavior for copy sink.
+     * 
+     */
     public Optional<Output<Object>> copyBehavior() {
         return Optional.ofNullable(this.copyBehavior);
     }
@@ -39,6 +43,10 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends com.pulumi.resour
     @Import(name="disableMetricsCollection")
     private @Nullable Output<Object> disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -50,6 +58,10 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends com.pulumi.resour
     @Import(name="expiryDateTime")
     private @Nullable Output<Object> expiryDateTime;
 
+    /**
+     * @return Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of &#34;2018-12-01T05:00:00Z&#34;. Default value is NULL. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> expiryDateTime() {
         return Optional.ofNullable(this.expiryDateTime);
     }
@@ -61,6 +73,10 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends com.pulumi.resour
     @Import(name="maxConcurrentConnections")
     private @Nullable Output<Object> maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -73,6 +89,11 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends com.pulumi.resour
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The write setting type.
+     * Expected value is &#39;AzureDataLakeStoreWriteSettings&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -105,47 +126,109 @@ public final class AzureDataLakeStoreWriteSettingsArgs extends com.pulumi.resour
             $ = new AzureDataLakeStoreWriteSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copyBehavior The type of copy behavior for copy sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyBehavior(@Nullable Output<Object> copyBehavior) {
             $.copyBehavior = copyBehavior;
             return this;
         }
 
+        /**
+         * @param copyBehavior The type of copy behavior for copy sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyBehavior(Object copyBehavior) {
             return copyBehavior(Output.of(copyBehavior));
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(Object disableMetricsCollection) {
             return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
 
+        /**
+         * @param expiryDateTime Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of &#34;2018-12-01T05:00:00Z&#34;. Default value is NULL. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryDateTime(@Nullable Output<Object> expiryDateTime) {
             $.expiryDateTime = expiryDateTime;
             return this;
         }
 
+        /**
+         * @param expiryDateTime Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of &#34;2018-12-01T05:00:00Z&#34;. Default value is NULL. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryDateTime(Object expiryDateTime) {
             return expiryDateTime(Output.of(expiryDateTime));
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
             return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;AzureDataLakeStoreWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;AzureDataLakeStoreWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -28,6 +28,10 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
     @Import(name="command")
     private @Nullable List<String> command;
 
+    /**
+     * @return The launch command for the container.
+     * 
+     */
     public Optional<List<String>> command() {
         return Optional.ofNullable(this.command);
     }
@@ -39,6 +43,10 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
     @Import(name="containerName")
     private @Nullable String containerName;
 
+    /**
+     * @return The name of the container.
+     * 
+     */
     public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -50,6 +58,10 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
     @Import(name="environment")
     private @Nullable List<ContainerEnvironmentVariable> environment;
 
+    /**
+     * @return The environment variables of the container.
+     * 
+     */
     public Optional<List<ContainerEnvironmentVariable>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -61,6 +73,10 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
     @Import(name="image")
     private @Nullable String image;
 
+    /**
+     * @return The name of the image used for the container.
+     * 
+     */
     public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
@@ -72,6 +88,10 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
     @Import(name="ports")
     private @Nullable List<ContainerPortInfo> ports;
 
+    /**
+     * @return The open firewall ports of the container.
+     * 
+     */
     public Optional<List<ContainerPortInfo>> ports() {
         return Optional.ofNullable(this.ports);
     }
@@ -104,39 +124,87 @@ public final class Container extends com.pulumi.resources.InvokeArgs {
             $ = new Container(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param command The launch command for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(@Nullable List<String> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command The launch command for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }
 
+        /**
+         * @param containerName The name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param environment The environment variables of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable List<ContainerEnvironmentVariable> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment The environment variables of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(ContainerEnvironmentVariable... environment) {
             return environment(List.of(environment));
         }
 
+        /**
+         * @param image The name of the image used for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable String image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param ports The open firewall ports of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(@Nullable List<ContainerPortInfo> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports The open firewall ports of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(ContainerPortInfo... ports) {
             return ports(List.of(ports));
         }

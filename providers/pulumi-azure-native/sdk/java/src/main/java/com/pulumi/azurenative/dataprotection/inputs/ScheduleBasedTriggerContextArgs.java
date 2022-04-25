@@ -29,6 +29,11 @@ public final class ScheduleBasedTriggerContextArgs extends com.pulumi.resources.
     @Import(name="objectType", required=true)
     private Output<String> objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;ScheduleBasedTriggerContext&#39;.
+     * 
+     */
     public Output<String> objectType() {
         return this.objectType;
     }
@@ -40,6 +45,10 @@ public final class ScheduleBasedTriggerContextArgs extends com.pulumi.resources.
     @Import(name="schedule", required=true)
     private Output<BackupScheduleArgs> schedule;
 
+    /**
+     * @return Schedule for this backup
+     * 
+     */
     public Output<BackupScheduleArgs> schedule() {
         return this.schedule;
     }
@@ -51,6 +60,10 @@ public final class ScheduleBasedTriggerContextArgs extends com.pulumi.resources.
     @Import(name="taggingCriteria", required=true)
     private Output<List<TaggingCriteriaArgs>> taggingCriteria;
 
+    /**
+     * @return List of tags that can be applicable for given schedule.
+     * 
+     */
     public Output<List<TaggingCriteriaArgs>> taggingCriteria() {
         return this.taggingCriteria;
     }
@@ -81,33 +94,77 @@ public final class ScheduleBasedTriggerContextArgs extends com.pulumi.resources.
             $ = new ScheduleBasedTriggerContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;ScheduleBasedTriggerContext&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(Output<String> objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;ScheduleBasedTriggerContext&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             return objectType(Output.of(objectType));
         }
 
+        /**
+         * @param schedule Schedule for this backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(Output<BackupScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Schedule for this backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(BackupScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param taggingCriteria List of tags that can be applicable for given schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taggingCriteria(Output<List<TaggingCriteriaArgs>> taggingCriteria) {
             $.taggingCriteria = taggingCriteria;
             return this;
         }
 
+        /**
+         * @param taggingCriteria List of tags that can be applicable for given schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taggingCriteria(List<TaggingCriteriaArgs> taggingCriteria) {
             return taggingCriteria(Output.of(taggingCriteria));
         }
 
+        /**
+         * @param taggingCriteria List of tags that can be applicable for given schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taggingCriteria(TaggingCriteriaArgs... taggingCriteria) {
             return taggingCriteria(List.of(taggingCriteria));
         }

@@ -25,6 +25,10 @@ public final class OfficeDataConnectorDataTypesResponseSharePoint extends com.pu
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return Describe whether this data type connection is enabled or not.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -53,6 +57,12 @@ public final class OfficeDataConnectorDataTypesResponseSharePoint extends com.pu
             $ = new OfficeDataConnectorDataTypesResponseSharePoint(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param state Describe whether this data type connection is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

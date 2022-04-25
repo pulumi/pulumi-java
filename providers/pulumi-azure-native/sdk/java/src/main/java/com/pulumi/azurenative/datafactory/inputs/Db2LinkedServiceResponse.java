@@ -34,6 +34,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -45,6 +49,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="authenticationType")
     private @Nullable String authenticationType;
 
+    /**
+     * @return AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
+     * 
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -56,6 +64,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="certificateCommonName")
     private @Nullable Object certificateCommonName;
 
+    /**
+     * @return Certificate Common Name when TLS is enabled. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> certificateCommonName() {
         return Optional.ofNullable(this.certificateCommonName);
     }
@@ -67,6 +79,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -78,6 +94,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="connectionString")
     private @Nullable Object connectionString;
 
+    /**
+     * @return The connection string. It is mutually exclusive with server, database, authenticationType, userName, packageCollection and certificateCommonName property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     public Optional<Object> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -89,6 +109,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="database")
     private @Nullable Object database;
 
+    /**
+     * @return Database name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> database() {
         return Optional.ofNullable(this.database);
     }
@@ -100,6 +124,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -111,6 +139,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -122,6 +154,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="packageCollection")
     private @Nullable Object packageCollection;
 
+    /**
+     * @return Under where packages are created when querying database. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> packageCollection() {
         return Optional.ofNullable(this.packageCollection);
     }
@@ -133,6 +169,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -144,6 +184,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="password")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return Password for authentication.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -155,6 +199,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="server")
     private @Nullable Object server;
 
+    /**
+     * @return Server name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> server() {
         return Optional.ofNullable(this.server);
     }
@@ -167,6 +215,11 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;Db2&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -178,6 +231,10 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="username")
     private @Nullable Object username;
 
+    /**
+     * @return Username for authentication. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> username() {
         return Optional.ofNullable(this.username);
     }
@@ -219,83 +276,186 @@ public final class Db2LinkedServiceResponse extends com.pulumi.resources.InvokeA
             $ = new Db2LinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param authenticationType AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param certificateCommonName Certificate Common Name when TLS is enabled. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateCommonName(@Nullable Object certificateCommonName) {
             $.certificateCommonName = certificateCommonName;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectionString The connection string. It is mutually exclusive with server, database, authenticationType, userName, packageCollection and certificateCommonName property. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable Object connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param database Database name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(@Nullable Object database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param packageCollection Under where packages are created when querying database. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageCollection(@Nullable Object packageCollection) {
             $.packageCollection = packageCollection;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param password Password for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param server Server name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(@Nullable Object server) {
             $.server = server;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;Db2&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param username Username for authentication. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Object username) {
             $.username = username;
             return this;

@@ -20,6 +20,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs 
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Required. The name of the repository.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -48,11 +52,23 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs 
             $ = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Required. The name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Required. The name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPackagingGroupResult {
     /**
-     * The ARN of the PackagingGroup.
+     * @return The ARN of the PackagingGroup.
      * 
      */
     private final @Nullable String arn;
     /**
-     * CDN Authorization
+     * @return CDN Authorization
      * 
      */
     private final @Nullable PackagingGroupAuthorization authorization;
     /**
-     * The fully qualified domain name for Assets in the PackagingGroup.
+     * @return The fully qualified domain name for Assets in the PackagingGroup.
      * 
      */
     private final @Nullable String domainName;
     /**
-     * The configuration parameters for egress access logging.
+     * @return The configuration parameters for egress access logging.
      * 
      */
     private final @Nullable PackagingGroupLogConfiguration egressAccessLogs;
@@ -47,30 +47,30 @@ public final class GetPackagingGroupResult {
     }
 
     /**
-     * The ARN of the PackagingGroup.
+     * @return The ARN of the PackagingGroup.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * CDN Authorization
+     * @return CDN Authorization
      * 
-    */
+     */
     public Optional<PackagingGroupAuthorization> authorization() {
         return Optional.ofNullable(this.authorization);
     }
     /**
-     * The fully qualified domain name for Assets in the PackagingGroup.
+     * @return The fully qualified domain name for Assets in the PackagingGroup.
      * 
-    */
+     */
     public Optional<String> domainName() {
         return Optional.ofNullable(this.domainName);
     }
     /**
-     * The configuration parameters for egress access logging.
+     * @return The configuration parameters for egress access logging.
      * 
-    */
+     */
     public Optional<PackagingGroupLogConfiguration> egressAccessLogs() {
         return Optional.ofNullable(this.egressAccessLogs);
     }

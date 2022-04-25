@@ -26,6 +26,10 @@ public final class DWCopyCommandDefaultValueArgs extends com.pulumi.resources.Re
     @Import(name="columnName")
     private @Nullable Output<Object> columnName;
 
+    /**
+     * @return Column name. Type: object (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> columnName() {
         return Optional.ofNullable(this.columnName);
     }
@@ -37,6 +41,10 @@ public final class DWCopyCommandDefaultValueArgs extends com.pulumi.resources.Re
     @Import(name="defaultValue")
     private @Nullable Output<Object> defaultValue;
 
+    /**
+     * @return The default value of the column. Type: object (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -66,20 +74,44 @@ public final class DWCopyCommandDefaultValueArgs extends com.pulumi.resources.Re
             $ = new DWCopyCommandDefaultValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnName Column name. Type: object (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnName(@Nullable Output<Object> columnName) {
             $.columnName = columnName;
             return this;
         }
 
+        /**
+         * @param columnName Column name. Type: object (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnName(Object columnName) {
             return columnName(Output.of(columnName));
         }
 
+        /**
+         * @param defaultValue The default value of the column. Type: object (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Output<Object> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param defaultValue The default value of the column. Type: object (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(Object defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }

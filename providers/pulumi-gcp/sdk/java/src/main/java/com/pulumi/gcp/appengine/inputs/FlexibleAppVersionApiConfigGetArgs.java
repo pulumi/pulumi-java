@@ -24,6 +24,12 @@ public final class FlexibleAppVersionApiConfigGetArgs extends com.pulumi.resourc
     @Import(name="authFailAction")
     private @Nullable Output<String> authFailAction;
 
+    /**
+     * @return Action to take when users access resources that require authentication.
+     * Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+     * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
+     * 
+     */
     public Optional<Output<String>> authFailAction() {
         return Optional.ofNullable(this.authFailAction);
     }
@@ -37,6 +43,12 @@ public final class FlexibleAppVersionApiConfigGetArgs extends com.pulumi.resourc
     @Import(name="login")
     private @Nullable Output<String> login;
 
+    /**
+     * @return Level of login required to access this resource.
+     * Default value is `LOGIN_OPTIONAL`.
+     * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
+     * 
+     */
     public Optional<Output<String>> login() {
         return Optional.ofNullable(this.login);
     }
@@ -48,6 +60,10 @@ public final class FlexibleAppVersionApiConfigGetArgs extends com.pulumi.resourc
     @Import(name="script", required=true)
     private Output<String> script;
 
+    /**
+     * @return Path to the script from the application root directory.
+     * 
+     */
     public Output<String> script() {
         return this.script;
     }
@@ -60,6 +76,11 @@ public final class FlexibleAppVersionApiConfigGetArgs extends com.pulumi.resourc
     @Import(name="securityLevel")
     private @Nullable Output<String> securityLevel;
 
+    /**
+     * @return Security (HTTPS) enforcement for this URL.
+     * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
+     * 
+     */
     public Optional<Output<String>> securityLevel() {
         return Optional.ofNullable(this.securityLevel);
     }
@@ -71,6 +92,10 @@ public final class FlexibleAppVersionApiConfigGetArgs extends com.pulumi.resourc
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return URL to serve the endpoint at.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -103,47 +128,117 @@ public final class FlexibleAppVersionApiConfigGetArgs extends com.pulumi.resourc
             $ = new FlexibleAppVersionApiConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authFailAction Action to take when users access resources that require authentication.
+         * Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+         * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authFailAction(@Nullable Output<String> authFailAction) {
             $.authFailAction = authFailAction;
             return this;
         }
 
+        /**
+         * @param authFailAction Action to take when users access resources that require authentication.
+         * Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+         * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authFailAction(String authFailAction) {
             return authFailAction(Output.of(authFailAction));
         }
 
+        /**
+         * @param login Level of login required to access this resource.
+         * Default value is `LOGIN_OPTIONAL`.
+         * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(@Nullable Output<String> login) {
             $.login = login;
             return this;
         }
 
+        /**
+         * @param login Level of login required to access this resource.
+         * Default value is `LOGIN_OPTIONAL`.
+         * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(String login) {
             return login(Output.of(login));
         }
 
+        /**
+         * @param script Path to the script from the application root directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(Output<String> script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param script Path to the script from the application root directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             return script(Output.of(script));
         }
 
+        /**
+         * @param securityLevel Security (HTTPS) enforcement for this URL.
+         * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityLevel(@Nullable Output<String> securityLevel) {
             $.securityLevel = securityLevel;
             return this;
         }
 
+        /**
+         * @param securityLevel Security (HTTPS) enforcement for this URL.
+         * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityLevel(String securityLevel) {
             return securityLevel(Output.of(securityLevel));
         }
 
+        /**
+         * @param url URL to serve the endpoint at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url URL to serve the endpoint at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

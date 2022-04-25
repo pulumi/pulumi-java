@@ -26,6 +26,10 @@ public final class AnalysisSourceTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="arn", required=true)
     private Output<String> arn;
 
+    /**
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the source template of an analysis.&lt;/p&gt;
+     * 
+     */
     public Output<String> arn() {
         return this.arn;
     }
@@ -37,6 +41,10 @@ public final class AnalysisSourceTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="dataSetReferences", required=true)
     private Output<List<AnalysisDataSetReferenceArgs>> dataSetReferences;
 
+    /**
+     * @return &lt;p&gt;The dataset references of the source template of an analysis.&lt;/p&gt;
+     * 
+     */
     public Output<List<AnalysisDataSetReferenceArgs>> dataSetReferences() {
         return this.dataSetReferences;
     }
@@ -66,24 +74,54 @@ public final class AnalysisSourceTemplateArgs extends com.pulumi.resources.Resou
             $ = new AnalysisSourceTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn &lt;p&gt;The Amazon Resource Name (ARN) of the source template of an analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn &lt;p&gt;The Amazon Resource Name (ARN) of the source template of an analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param dataSetReferences &lt;p&gt;The dataset references of the source template of an analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetReferences(Output<List<AnalysisDataSetReferenceArgs>> dataSetReferences) {
             $.dataSetReferences = dataSetReferences;
             return this;
         }
 
+        /**
+         * @param dataSetReferences &lt;p&gt;The dataset references of the source template of an analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetReferences(List<AnalysisDataSetReferenceArgs> dataSetReferences) {
             return dataSetReferences(Output.of(dataSetReferences));
         }
 
+        /**
+         * @param dataSetReferences &lt;p&gt;The dataset references of the source template of an analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetReferences(AnalysisDataSetReferenceArgs... dataSetReferences) {
             return dataSetReferences(List.of(dataSetReferences));
         }

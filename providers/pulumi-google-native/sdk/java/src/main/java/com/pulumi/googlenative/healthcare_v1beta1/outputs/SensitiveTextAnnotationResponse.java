@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class SensitiveTextAnnotationResponse {
     /**
-     * Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --&gt; {findings_1, findings_2, findings_3}
+     * @return Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --&gt; {findings_1, findings_2, findings_3}
      * 
      */
     private final Map<String,String> details;
@@ -22,9 +22,9 @@ public final class SensitiveTextAnnotationResponse {
     }
 
     /**
-     * Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --&gt; {findings_1, findings_2, findings_3}
+     * @return Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --&gt; {findings_1, findings_2, findings_3}
      * 
-    */
+     */
     public Map<String,String> details() {
         return this.details;
     }

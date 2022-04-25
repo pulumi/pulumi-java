@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CronJobStatus {
     /**
-     * A list of pointers to currently running jobs.
+     * @return A list of pointers to currently running jobs.
      * 
      */
     private final @Nullable List<ObjectReference> active;
     /**
-     * Information when was the last time the job was successfully scheduled.
+     * @return Information when was the last time the job was successfully scheduled.
      * 
      */
     private final @Nullable String lastScheduleTime;
     /**
-     * Information when was the last time the job successfully completed.
+     * @return Information when was the last time the job successfully completed.
      * 
      */
     private final @Nullable String lastSuccessfulTime;
@@ -40,23 +40,23 @@ public final class CronJobStatus {
     }
 
     /**
-     * A list of pointers to currently running jobs.
+     * @return A list of pointers to currently running jobs.
      * 
-    */
+     */
     public List<ObjectReference> active() {
         return this.active == null ? List.of() : this.active;
     }
     /**
-     * Information when was the last time the job was successfully scheduled.
+     * @return Information when was the last time the job was successfully scheduled.
      * 
-    */
+     */
     public Optional<String> lastScheduleTime() {
         return Optional.ofNullable(this.lastScheduleTime);
     }
     /**
-     * Information when was the last time the job successfully completed.
+     * @return Information when was the last time the job successfully completed.
      * 
-    */
+     */
     public Optional<String> lastSuccessfulTime() {
         return Optional.ofNullable(this.lastSuccessfulTime);
     }

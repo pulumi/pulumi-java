@@ -29,6 +29,10 @@ public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends co
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Port number for the protocol, cannot be greater than 64000.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -40,6 +44,10 @@ public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends co
     @Import(name="protocolType")
     private @Nullable Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType;
 
+    /**
+     * @return Protocol type.
+     * 
+     */
     public Optional<Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>>> protocolType() {
         return Optional.ofNullable(this.protocolType);
     }
@@ -69,28 +77,64 @@ public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends co
             $ = new FirewallPolicyRuleConditionApplicationProtocolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port Port number for the protocol, cannot be greater than 64000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port number for the protocol, cannot be greater than 64000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param protocolType Protocol type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolType(@Nullable Output<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType) {
             $.protocolType = protocolType;
             return this;
         }
 
+        /**
+         * @param protocolType Protocol type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolType(Either<String,FirewallPolicyRuleConditionApplicationProtocolType> protocolType) {
             return protocolType(Output.of(protocolType));
         }
 
+        /**
+         * @param protocolType Protocol type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolType(String protocolType) {
             return protocolType(Either.ofLeft(protocolType));
         }
 
+        /**
+         * @param protocolType Protocol type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolType(FirewallPolicyRuleConditionApplicationProtocolType protocolType) {
             return protocolType(Either.ofRight(protocolType));
         }

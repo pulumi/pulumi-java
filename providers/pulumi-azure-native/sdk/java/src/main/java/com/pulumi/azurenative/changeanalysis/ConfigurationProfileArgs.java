@@ -24,6 +24,10 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="identity")
     private @Nullable Output<ResourceIdentityArgs> identity;
 
+    /**
+     * @return The identity block returned by ARM resource that supports managed identity.
+     * 
+     */
     public Optional<Output<ResourceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -35,6 +39,10 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location where the resource is to be deployed.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -46,6 +54,10 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="profileName")
     private @Nullable Output<String> profileName;
 
+    /**
+     * @return The name of the configuration profile. The profile name should be set to &#39;default&#39;, all other names will be overwritten.
+     * 
+     */
     public Optional<Output<String>> profileName() {
         return Optional.ofNullable(this.profileName);
     }
@@ -57,6 +69,10 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="properties")
     private @Nullable Output<ConfigurationProfileResourcePropertiesArgs> properties;
 
+    /**
+     * @return The properties of a configuration profile.
+     * 
+     */
     public Optional<Output<ConfigurationProfileResourcePropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -88,38 +104,86 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
             $ = new ConfigurationProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity The identity block returned by ARM resource that supports managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity block returned by ARM resource that supports managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ResourceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The location where the resource is to be deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location where the resource is to be deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param profileName The name of the configuration profile. The profile name should be set to &#39;default&#39;, all other names will be overwritten.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(@Nullable Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param profileName The name of the configuration profile. The profile name should be set to &#39;default&#39;, all other names will be overwritten.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             return profileName(Output.of(profileName));
         }
 
+        /**
+         * @param properties The properties of a configuration profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ConfigurationProfileResourcePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The properties of a configuration profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ConfigurationProfileResourcePropertiesArgs properties) {
             return properties(Output.of(properties));
         }

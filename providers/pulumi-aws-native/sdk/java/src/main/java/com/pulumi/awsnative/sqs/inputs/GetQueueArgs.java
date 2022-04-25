@@ -19,6 +19,10 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="queueUrl", required=true)
     private String queueUrl;
 
+    /**
+     * @return URL of the source queue.
+     * 
+     */
     public String queueUrl() {
         return this.queueUrl;
     }
@@ -47,6 +51,12 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetQueueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queueUrl URL of the source queue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueUrl(String queueUrl) {
             $.queueUrl = queueUrl;
             return this;

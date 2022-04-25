@@ -28,6 +28,15 @@ public final class SloRequestBasedSliArgs extends com.pulumi.resources.ResourceA
     @Import(name="distributionCut")
     private @Nullable Output<SloRequestBasedSliDistributionCutArgs> distributionCut;
 
+    /**
+     * @return Used when good_service is defined by a count of values aggregated in a
+     * Distribution that fall into a good range. The total_service is the
+     * total count of all values aggregated in the Distribution.
+     * Defines a distribution TimeSeries filter and thresholds used for
+     * measuring good service and total service.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SloRequestBasedSliDistributionCutArgs>> distributionCut() {
         return Optional.ofNullable(this.distributionCut);
     }
@@ -44,6 +53,15 @@ public final class SloRequestBasedSliArgs extends com.pulumi.resources.ResourceA
     @Import(name="goodTotalRatio")
     private @Nullable Output<SloRequestBasedSliGoodTotalRatioArgs> goodTotalRatio;
 
+    /**
+     * @return A means to compute a ratio of `good_service` to `total_service`.
+     * Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
+     * Must specify exactly two of good, bad, and total service filters.
+     * The relationship good_service + bad_service = total_service
+     * will be assumed.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SloRequestBasedSliGoodTotalRatioArgs>> goodTotalRatio() {
         return Optional.ofNullable(this.goodTotalRatio);
     }
@@ -73,20 +91,64 @@ public final class SloRequestBasedSliArgs extends com.pulumi.resources.ResourceA
             $ = new SloRequestBasedSliArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionCut Used when good_service is defined by a count of values aggregated in a
+         * Distribution that fall into a good range. The total_service is the
+         * total count of all values aggregated in the Distribution.
+         * Defines a distribution TimeSeries filter and thresholds used for
+         * measuring good service and total service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionCut(@Nullable Output<SloRequestBasedSliDistributionCutArgs> distributionCut) {
             $.distributionCut = distributionCut;
             return this;
         }
 
+        /**
+         * @param distributionCut Used when good_service is defined by a count of values aggregated in a
+         * Distribution that fall into a good range. The total_service is the
+         * total count of all values aggregated in the Distribution.
+         * Defines a distribution TimeSeries filter and thresholds used for
+         * measuring good service and total service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionCut(SloRequestBasedSliDistributionCutArgs distributionCut) {
             return distributionCut(Output.of(distributionCut));
         }
 
+        /**
+         * @param goodTotalRatio A means to compute a ratio of `good_service` to `total_service`.
+         * Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
+         * Must specify exactly two of good, bad, and total service filters.
+         * The relationship good_service + bad_service = total_service
+         * will be assumed.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goodTotalRatio(@Nullable Output<SloRequestBasedSliGoodTotalRatioArgs> goodTotalRatio) {
             $.goodTotalRatio = goodTotalRatio;
             return this;
         }
 
+        /**
+         * @param goodTotalRatio A means to compute a ratio of `good_service` to `total_service`.
+         * Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
+         * Must specify exactly two of good, bad, and total service filters.
+         * The relationship good_service + bad_service = total_service
+         * will be assumed.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goodTotalRatio(SloRequestBasedSliGoodTotalRatioArgs goodTotalRatio) {
             return goodTotalRatio(Output.of(goodTotalRatio));
         }

@@ -26,6 +26,10 @@ public final class ManagementEventAggregationConditionResponse extends com.pulum
     @Import(name="operator")
     private @Nullable String operator;
 
+    /**
+     * @return the condition operator.
+     * 
+     */
     public Optional<String> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -37,6 +41,10 @@ public final class ManagementEventAggregationConditionResponse extends com.pulum
     @Import(name="threshold")
     private @Nullable Double threshold;
 
+    /**
+     * @return The threshold value that activates the alert.
+     * 
+     */
     public Optional<Double> threshold() {
         return Optional.ofNullable(this.threshold);
     }
@@ -48,6 +56,10 @@ public final class ManagementEventAggregationConditionResponse extends com.pulum
     @Import(name="windowSize")
     private @Nullable String windowSize;
 
+    /**
+     * @return the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+     * 
+     */
     public Optional<String> windowSize() {
         return Optional.ofNullable(this.windowSize);
     }
@@ -78,16 +90,34 @@ public final class ManagementEventAggregationConditionResponse extends com.pulum
             $ = new ManagementEventAggregationConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operator the condition operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param threshold The threshold value that activates the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(@Nullable Double threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param windowSize the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowSize(@Nullable String windowSize) {
             $.windowSize = windowSize;
             return this;

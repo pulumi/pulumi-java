@@ -27,6 +27,10 @@ public final class PeerAsnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerAsn")
     private @Nullable Output<Integer> peerAsn;
 
+    /**
+     * @return The Autonomous System Number (ASN) of the peer.
+     * 
+     */
     public Optional<Output<Integer>> peerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
@@ -38,6 +42,10 @@ public final class PeerAsnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerAsnName")
     private @Nullable Output<String> peerAsnName;
 
+    /**
+     * @return The peer ASN name.
+     * 
+     */
     public Optional<Output<String>> peerAsnName() {
         return Optional.ofNullable(this.peerAsnName);
     }
@@ -49,6 +57,10 @@ public final class PeerAsnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerContactDetail")
     private @Nullable Output<List<ContactDetailArgs>> peerContactDetail;
 
+    /**
+     * @return The contact details of the peer.
+     * 
+     */
     public Optional<Output<List<ContactDetailArgs>>> peerContactDetail() {
         return Optional.ofNullable(this.peerContactDetail);
     }
@@ -60,6 +72,10 @@ public final class PeerAsnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerName")
     private @Nullable Output<String> peerName;
 
+    /**
+     * @return The name of the peer.
+     * 
+     */
     public Optional<Output<String>> peerName() {
         return Optional.ofNullable(this.peerName);
     }
@@ -71,6 +87,10 @@ public final class PeerAsnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="validationState")
     private @Nullable Output<Either<String,ValidationState>> validationState;
 
+    /**
+     * @return The validation state of the ASN associated with the peer.
+     * 
+     */
     public Optional<Output<Either<String,ValidationState>>> validationState() {
         return Optional.ofNullable(this.validationState);
     }
@@ -103,59 +123,137 @@ public final class PeerAsnArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PeerAsnArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peerAsn The Autonomous System Number (ASN) of the peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(@Nullable Output<Integer> peerAsn) {
             $.peerAsn = peerAsn;
             return this;
         }
 
+        /**
+         * @param peerAsn The Autonomous System Number (ASN) of the peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(Integer peerAsn) {
             return peerAsn(Output.of(peerAsn));
         }
 
+        /**
+         * @param peerAsnName The peer ASN name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsnName(@Nullable Output<String> peerAsnName) {
             $.peerAsnName = peerAsnName;
             return this;
         }
 
+        /**
+         * @param peerAsnName The peer ASN name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsnName(String peerAsnName) {
             return peerAsnName(Output.of(peerAsnName));
         }
 
+        /**
+         * @param peerContactDetail The contact details of the peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerContactDetail(@Nullable Output<List<ContactDetailArgs>> peerContactDetail) {
             $.peerContactDetail = peerContactDetail;
             return this;
         }
 
+        /**
+         * @param peerContactDetail The contact details of the peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerContactDetail(List<ContactDetailArgs> peerContactDetail) {
             return peerContactDetail(Output.of(peerContactDetail));
         }
 
+        /**
+         * @param peerContactDetail The contact details of the peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerContactDetail(ContactDetailArgs... peerContactDetail) {
             return peerContactDetail(List.of(peerContactDetail));
         }
 
+        /**
+         * @param peerName The name of the peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerName(@Nullable Output<String> peerName) {
             $.peerName = peerName;
             return this;
         }
 
+        /**
+         * @param peerName The name of the peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerName(String peerName) {
             return peerName(Output.of(peerName));
         }
 
+        /**
+         * @param validationState The validation state of the ASN associated with the peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationState(@Nullable Output<Either<String,ValidationState>> validationState) {
             $.validationState = validationState;
             return this;
         }
 
+        /**
+         * @param validationState The validation state of the ASN associated with the peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationState(Either<String,ValidationState> validationState) {
             return validationState(Output.of(validationState));
         }
 
+        /**
+         * @param validationState The validation state of the ASN associated with the peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationState(String validationState) {
             return validationState(Either.ofLeft(validationState));
         }
 
+        /**
+         * @param validationState The validation state of the ASN associated with the peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationState(ValidationState validationState) {
             return validationState(Either.ofRight(validationState));
         }

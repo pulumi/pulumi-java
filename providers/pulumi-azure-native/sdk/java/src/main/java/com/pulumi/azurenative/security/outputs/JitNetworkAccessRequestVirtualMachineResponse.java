@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class JitNetworkAccessRequestVirtualMachineResponse {
     /**
-     * Resource ID of the virtual machine that is linked to this policy
+     * @return Resource ID of the virtual machine that is linked to this policy
      * 
      */
     private final String id;
     /**
-     * The ports that were opened for the virtual machine
+     * @return The ports that were opened for the virtual machine
      * 
      */
     private final List<JitNetworkAccessRequestPortResponse> ports;
@@ -31,16 +31,16 @@ public final class JitNetworkAccessRequestVirtualMachineResponse {
     }
 
     /**
-     * Resource ID of the virtual machine that is linked to this policy
+     * @return Resource ID of the virtual machine that is linked to this policy
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The ports that were opened for the virtual machine
+     * @return The ports that were opened for the virtual machine
      * 
-    */
+     */
     public List<JitNetworkAccessRequestPortResponse> ports() {
         return this.ports;
     }

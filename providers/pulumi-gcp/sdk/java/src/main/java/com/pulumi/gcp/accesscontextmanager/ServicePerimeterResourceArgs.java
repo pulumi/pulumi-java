@@ -20,6 +20,10 @@ public final class ServicePerimeterResourceArgs extends com.pulumi.resources.Res
     @Import(name="perimeterName", required=true)
     private Output<String> perimeterName;
 
+    /**
+     * @return The name of the Service Perimeter to add this resource to.
+     * 
+     */
     public Output<String> perimeterName() {
         return this.perimeterName;
     }
@@ -33,6 +37,12 @@ public final class ServicePerimeterResourceArgs extends com.pulumi.resources.Res
     @Import(name="resource", required=true)
     private Output<String> resource;
 
+    /**
+     * @return A GCP resource that is inside of the service perimeter.
+     * Currently only projects are allowed.
+     * Format: projects/{project_number}
+     * 
+     */
     public Output<String> resource() {
         return this.resource;
     }
@@ -62,20 +72,48 @@ public final class ServicePerimeterResourceArgs extends com.pulumi.resources.Res
             $ = new ServicePerimeterResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param perimeterName The name of the Service Perimeter to add this resource to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perimeterName(Output<String> perimeterName) {
             $.perimeterName = perimeterName;
             return this;
         }
 
+        /**
+         * @param perimeterName The name of the Service Perimeter to add this resource to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perimeterName(String perimeterName) {
             return perimeterName(Output.of(perimeterName));
         }
 
+        /**
+         * @param resource A GCP resource that is inside of the service perimeter.
+         * Currently only projects are allowed.
+         * Format: projects/{project_number}
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(Output<String> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource A GCP resource that is inside of the service perimeter.
+         * Currently only projects are allowed.
+         * Format: projects/{project_number}
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(String resource) {
             return resource(Output.of(resource));
         }

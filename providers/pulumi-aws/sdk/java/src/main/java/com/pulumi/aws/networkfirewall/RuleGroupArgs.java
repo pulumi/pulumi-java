@@ -25,6 +25,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity", required=true)
     private Output<Integer> capacity;
 
+    /**
+     * @return The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
+     * 
+     */
     public Output<Integer> capacity() {
         return this.capacity;
     }
@@ -36,6 +40,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A friendly description of the rule group.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A friendly name of the rule group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleGroup")
     private @Nullable Output<RuleGroupRuleGroupArgs> ruleGroup;
 
+    /**
+     * @return A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
+     * 
+     */
     public Optional<Output<RuleGroupRuleGroupArgs>> ruleGroup() {
         return Optional.ofNullable(this.ruleGroup);
     }
@@ -69,6 +85,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<String> rules;
 
+    /**
+     * @return The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
+     * 
+     */
     public Optional<Output<String>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -80,6 +100,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -91,6 +115,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -125,65 +153,149 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RuleGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param description A friendly description of the rule group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A friendly description of the rule group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name A friendly name of the rule group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A friendly name of the rule group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param ruleGroup A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroup(@Nullable Output<RuleGroupRuleGroupArgs> ruleGroup) {
             $.ruleGroup = ruleGroup;
             return this;
         }
 
+        /**
+         * @param ruleGroup A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroup(RuleGroupRuleGroupArgs ruleGroup) {
             return ruleGroup(Output.of(ruleGroup));
         }
 
+        /**
+         * @param rules The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<String> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(String rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param tags A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param type Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -19,6 +19,10 @@ public final class GetManagedNetworkGroupArgs extends com.pulumi.resources.Invok
     @Import(name="managedNetworkGroupName", required=true)
     private String managedNetworkGroupName;
 
+    /**
+     * @return The name of the Managed Network Group.
+     * 
+     */
     public String managedNetworkGroupName() {
         return this.managedNetworkGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetManagedNetworkGroupArgs extends com.pulumi.resources.Invok
     @Import(name="managedNetworkName", required=true)
     private String managedNetworkName;
 
+    /**
+     * @return The name of the Managed Network.
+     * 
+     */
     public String managedNetworkName() {
         return this.managedNetworkName;
     }
@@ -41,6 +49,10 @@ public final class GetManagedNetworkGroupArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetManagedNetworkGroupArgs extends com.pulumi.resources.Invok
             $ = new GetManagedNetworkGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managedNetworkGroupName The name of the Managed Network Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedNetworkGroupName(String managedNetworkGroupName) {
             $.managedNetworkGroupName = managedNetworkGroupName;
             return this;
         }
 
+        /**
+         * @param managedNetworkName The name of the Managed Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedNetworkName(String managedNetworkName) {
             $.managedNetworkName = managedNetworkName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

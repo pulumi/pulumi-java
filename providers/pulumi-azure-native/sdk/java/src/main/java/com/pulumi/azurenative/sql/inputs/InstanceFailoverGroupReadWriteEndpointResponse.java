@@ -26,6 +26,10 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse extends com.pu
     @Import(name="failoverPolicy", required=true)
     private String failoverPolicy;
 
+    /**
+     * @return Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+     * 
+     */
     public String failoverPolicy() {
         return this.failoverPolicy;
     }
@@ -37,6 +41,10 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse extends com.pu
     @Import(name="failoverWithDataLossGracePeriodMinutes")
     private @Nullable Integer failoverWithDataLossGracePeriodMinutes;
 
+    /**
+     * @return Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+     * 
+     */
     public Optional<Integer> failoverWithDataLossGracePeriodMinutes() {
         return Optional.ofNullable(this.failoverWithDataLossGracePeriodMinutes);
     }
@@ -66,11 +74,23 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse extends com.pu
             $ = new InstanceFailoverGroupReadWriteEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failoverPolicy Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverPolicy(String failoverPolicy) {
             $.failoverPolicy = failoverPolicy;
             return this;
         }
 
+        /**
+         * @param failoverWithDataLossGracePeriodMinutes Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverWithDataLossGracePeriodMinutes(@Nullable Integer failoverWithDataLossGracePeriodMinutes) {
             $.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
             return this;

@@ -14,67 +14,67 @@ import java.util.Objects;
 @CustomType
 public final class GetAgentResult {
     /**
-     * Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.
+     * @return Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.
      * 
      */
     private final GoogleCloudDialogflowCxV3AdvancedSettingsResponse advancedSettings;
     /**
-     * The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
+     * @return The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
      * 
      */
     private final String avatarUri;
     /**
-     * Immutable. The default language of the agent as a language tag. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
+     * @return Immutable. The default language of the agent as a language tag. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
      * 
      */
     private final String defaultLanguageCode;
     /**
-     * The description of the agent. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * @return The description of the agent. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
     private final String description;
     /**
-     * The human-readable name of the agent, unique within the location.
+     * @return The human-readable name of the agent, unique within the location.
      * 
      */
     private final String displayName;
     /**
-     * Indicates if automatic spell correction is enabled in detect intent requests.
+     * @return Indicates if automatic spell correction is enabled in detect intent requests.
      * 
      */
     private final Boolean enableSpellCorrection;
     /**
-     * Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings instead.
+     * @return Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings instead.
      * 
      */
     private final Boolean enableStackdriverLogging;
     /**
-     * The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
+     * @return The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
      * 
      */
     private final String name;
     /**
-     * Name of the SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
+     * @return Name of the SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
      * 
      */
     private final String securitySettings;
     /**
-     * Speech recognition related settings.
+     * @return Speech recognition related settings.
      * 
      */
     private final GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse speechToTextSettings;
     /**
-     * Immutable. Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: `projects//locations//agents//flows/`.
+     * @return Immutable. Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: `projects//locations//agents//flows/`.
      * 
      */
     private final String startFlow;
     /**
-     * The list of all languages supported by the agent (except for the `default_language_code`).
+     * @return The list of all languages supported by the agent (except for the `default_language_code`).
      * 
      */
     private final List<String> supportedLanguageCodes;
     /**
-     * The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.
+     * @return The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.
      * 
      */
     private final String timeZone;
@@ -110,93 +110,93 @@ public final class GetAgentResult {
     }
 
     /**
-     * Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.
+     * @return Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3AdvancedSettingsResponse advancedSettings() {
         return this.advancedSettings;
     }
     /**
-     * The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
+     * @return The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
      * 
-    */
+     */
     public String avatarUri() {
         return this.avatarUri;
     }
     /**
-     * Immutable. The default language of the agent as a language tag. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
+     * @return Immutable. The default language of the agent as a language tag. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
      * 
-    */
+     */
     public String defaultLanguageCode() {
         return this.defaultLanguageCode;
     }
     /**
-     * The description of the agent. The maximum length is 500 characters. If exceeded, the request is rejected.
+     * @return The description of the agent. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The human-readable name of the agent, unique within the location.
+     * @return The human-readable name of the agent, unique within the location.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Indicates if automatic spell correction is enabled in detect intent requests.
+     * @return Indicates if automatic spell correction is enabled in detect intent requests.
      * 
-    */
+     */
     public Boolean enableSpellCorrection() {
         return this.enableSpellCorrection;
     }
     /**
-     * Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings instead.
+     * @return Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings instead.
      * 
-    */
+     */
     public Boolean enableStackdriverLogging() {
         return this.enableStackdriverLogging;
     }
     /**
-     * The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
+     * @return The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Name of the SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
+     * @return Name of the SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
      * 
-    */
+     */
     public String securitySettings() {
         return this.securitySettings;
     }
     /**
-     * Speech recognition related settings.
+     * @return Speech recognition related settings.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse speechToTextSettings() {
         return this.speechToTextSettings;
     }
     /**
-     * Immutable. Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: `projects//locations//agents//flows/`.
+     * @return Immutable. Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: `projects//locations//agents//flows/`.
      * 
-    */
+     */
     public String startFlow() {
         return this.startFlow;
     }
     /**
-     * The list of all languages supported by the agent (except for the `default_language_code`).
+     * @return The list of all languages supported by the agent (except for the `default_language_code`).
      * 
-    */
+     */
     public List<String> supportedLanguageCodes() {
         return this.supportedLanguageCodes;
     }
     /**
-     * The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.
+     * @return The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.
      * 
-    */
+     */
     public String timeZone() {
         return this.timeZone;
     }

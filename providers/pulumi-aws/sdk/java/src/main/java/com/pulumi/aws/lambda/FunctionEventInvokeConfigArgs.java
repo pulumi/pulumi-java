@@ -24,6 +24,10 @@ public final class FunctionEventInvokeConfigArgs extends com.pulumi.resources.Re
     @Import(name="destinationConfig")
     private @Nullable Output<FunctionEventInvokeConfigDestinationConfigArgs> destinationConfig;
 
+    /**
+     * @return Configuration block with destination configuration. See below for details.
+     * 
+     */
     public Optional<Output<FunctionEventInvokeConfigDestinationConfigArgs>> destinationConfig() {
         return Optional.ofNullable(this.destinationConfig);
     }
@@ -35,6 +39,10 @@ public final class FunctionEventInvokeConfigArgs extends com.pulumi.resources.Re
     @Import(name="functionName", required=true)
     private Output<String> functionName;
 
+    /**
+     * @return Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
+     * 
+     */
     public Output<String> functionName() {
         return this.functionName;
     }
@@ -46,6 +54,10 @@ public final class FunctionEventInvokeConfigArgs extends com.pulumi.resources.Re
     @Import(name="maximumEventAgeInSeconds")
     private @Nullable Output<Integer> maximumEventAgeInSeconds;
 
+    /**
+     * @return Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
+     * 
+     */
     public Optional<Output<Integer>> maximumEventAgeInSeconds() {
         return Optional.ofNullable(this.maximumEventAgeInSeconds);
     }
@@ -57,6 +69,10 @@ public final class FunctionEventInvokeConfigArgs extends com.pulumi.resources.Re
     @Import(name="maximumRetryAttempts")
     private @Nullable Output<Integer> maximumRetryAttempts;
 
+    /**
+     * @return Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
+     * 
+     */
     public Optional<Output<Integer>> maximumRetryAttempts() {
         return Optional.ofNullable(this.maximumRetryAttempts);
     }
@@ -68,6 +84,10 @@ public final class FunctionEventInvokeConfigArgs extends com.pulumi.resources.Re
     @Import(name="qualifier")
     private @Nullable Output<String> qualifier;
 
+    /**
+     * @return Lambda Function published version, `$LATEST`, or Lambda Alias name.
+     * 
+     */
     public Optional<Output<String>> qualifier() {
         return Optional.ofNullable(this.qualifier);
     }
@@ -100,47 +120,107 @@ public final class FunctionEventInvokeConfigArgs extends com.pulumi.resources.Re
             $ = new FunctionEventInvokeConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationConfig Configuration block with destination configuration. See below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationConfig(@Nullable Output<FunctionEventInvokeConfigDestinationConfigArgs> destinationConfig) {
             $.destinationConfig = destinationConfig;
             return this;
         }
 
+        /**
+         * @param destinationConfig Configuration block with destination configuration. See below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationConfig(FunctionEventInvokeConfigDestinationConfigArgs destinationConfig) {
             return destinationConfig(Output.of(destinationConfig));
         }
 
+        /**
+         * @param functionName Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(Output<String> functionName) {
             $.functionName = functionName;
             return this;
         }
 
+        /**
+         * @param functionName Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(String functionName) {
             return functionName(Output.of(functionName));
         }
 
+        /**
+         * @param maximumEventAgeInSeconds Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumEventAgeInSeconds(@Nullable Output<Integer> maximumEventAgeInSeconds) {
             $.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
             return this;
         }
 
+        /**
+         * @param maximumEventAgeInSeconds Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumEventAgeInSeconds(Integer maximumEventAgeInSeconds) {
             return maximumEventAgeInSeconds(Output.of(maximumEventAgeInSeconds));
         }
 
+        /**
+         * @param maximumRetryAttempts Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumRetryAttempts(@Nullable Output<Integer> maximumRetryAttempts) {
             $.maximumRetryAttempts = maximumRetryAttempts;
             return this;
         }
 
+        /**
+         * @param maximumRetryAttempts Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumRetryAttempts(Integer maximumRetryAttempts) {
             return maximumRetryAttempts(Output.of(maximumRetryAttempts));
         }
 
+        /**
+         * @param qualifier Lambda Function published version, `$LATEST`, or Lambda Alias name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder qualifier(@Nullable Output<String> qualifier) {
             $.qualifier = qualifier;
             return this;
         }
 
+        /**
+         * @param qualifier Lambda Function published version, `$LATEST`, or Lambda Alias name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder qualifier(String qualifier) {
             return qualifier(Output.of(qualifier));
         }

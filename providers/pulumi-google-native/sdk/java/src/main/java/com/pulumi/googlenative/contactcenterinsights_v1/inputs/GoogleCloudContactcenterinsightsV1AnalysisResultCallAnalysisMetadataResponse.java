@@ -28,6 +28,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
     @Import(name="annotations", required=true)
     private List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations;
 
+    /**
+     * @return A list of call annotations that apply to this call.
+     * 
+     */
     public List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations() {
         return this.annotations;
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
     @Import(name="entities", required=true)
     private Map<String,String> entities;
 
+    /**
+     * @return All the entities in the call.
+     * 
+     */
     public Map<String,String> entities() {
         return this.entities;
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
     @Import(name="intents", required=true)
     private Map<String,String> intents;
 
+    /**
+     * @return All the matched intents in the call.
+     * 
+     */
     public Map<String,String> intents() {
         return this.intents;
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
     @Import(name="issueModelResult", required=true)
     private GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult;
 
+    /**
+     * @return Overall conversation-level issue modeling result.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult() {
         return this.issueModelResult;
     }
@@ -72,6 +88,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
     @Import(name="phraseMatchers", required=true)
     private Map<String,String> phraseMatchers;
 
+    /**
+     * @return All the matched phrase matchers in the call.
+     * 
+     */
     public Map<String,String> phraseMatchers() {
         return this.phraseMatchers;
     }
@@ -83,6 +103,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
     @Import(name="sentiments", required=true)
     private List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments;
 
+    /**
+     * @return Overall conversation-level sentiment for each channel of the call.
+     * 
+     */
     public List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments() {
         return this.sentiments;
     }
@@ -116,40 +140,88 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
             $ = new GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations A list of call annotations that apply to this call.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations A list of call annotations that apply to this call.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(GoogleCloudContactcenterinsightsV1CallAnnotationResponse... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param entities All the entities in the call.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entities(Map<String,String> entities) {
             $.entities = entities;
             return this;
         }
 
+        /**
+         * @param intents All the matched intents in the call.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intents(Map<String,String> intents) {
             $.intents = intents;
             return this;
         }
 
+        /**
+         * @param issueModelResult Overall conversation-level issue modeling result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issueModelResult(GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult) {
             $.issueModelResult = issueModelResult;
             return this;
         }
 
+        /**
+         * @param phraseMatchers All the matched phrase matchers in the call.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseMatchers(Map<String,String> phraseMatchers) {
             $.phraseMatchers = phraseMatchers;
             return this;
         }
 
+        /**
+         * @param sentiments Overall conversation-level sentiment for each channel of the call.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentiments(List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments) {
             $.sentiments = sentiments;
             return this;
         }
 
+        /**
+         * @param sentiments Overall conversation-level sentiment for each channel of the call.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentiments(GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse... sentiments) {
             return sentiments(List.of(sentiments));
         }

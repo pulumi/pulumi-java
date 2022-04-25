@@ -22,6 +22,10 @@ public final class DatasetCreateRequestQueryArgs extends com.pulumi.resources.Re
     @Import(name="datastoreName")
     private @Nullable Output<String> datastoreName;
 
+    /**
+     * @return The SQL/PostgreSQL/MySQL datastore name.
+     * 
+     */
     public Optional<Output<String>> datastoreName() {
         return Optional.ofNullable(this.datastoreName);
     }
@@ -33,6 +37,10 @@ public final class DatasetCreateRequestQueryArgs extends com.pulumi.resources.Re
     @Import(name="query")
     private @Nullable Output<String> query;
 
+    /**
+     * @return SQL Quey.
+     * 
+     */
     public Optional<Output<String>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -62,20 +70,44 @@ public final class DatasetCreateRequestQueryArgs extends com.pulumi.resources.Re
             $ = new DatasetCreateRequestQueryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datastoreName The SQL/PostgreSQL/MySQL datastore name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreName(@Nullable Output<String> datastoreName) {
             $.datastoreName = datastoreName;
             return this;
         }
 
+        /**
+         * @param datastoreName The SQL/PostgreSQL/MySQL datastore name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreName(String datastoreName) {
             return datastoreName(Output.of(datastoreName));
         }
 
+        /**
+         * @param query SQL Quey.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query SQL Quey.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }

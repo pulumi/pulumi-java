@@ -21,6 +21,10 @@ public final class TagAtScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<TagsArgs> properties;
 
+    /**
+     * @return The set of tags.
+     * 
+     */
     public Output<TagsArgs> properties() {
         return this.properties;
     }
@@ -32,6 +36,10 @@ public final class TagAtScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return The resource scope.
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -61,20 +69,44 @@ public final class TagAtScopeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TagAtScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties The set of tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<TagsArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The set of tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(TagsArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param scope The resource scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The resource scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }

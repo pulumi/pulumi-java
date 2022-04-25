@@ -25,6 +25,10 @@ public final class KeyVaultKeyReferenceArgs extends com.pulumi.resources.Resourc
     @Import(name="keyUrl", required=true)
     private Output<String> keyUrl;
 
+    /**
+     * @return The URL referencing a key encryption key in Key Vault.
+     * 
+     */
     public Output<String> keyUrl() {
         return this.keyUrl;
     }
@@ -36,6 +40,10 @@ public final class KeyVaultKeyReferenceArgs extends com.pulumi.resources.Resourc
     @Import(name="sourceVault", required=true)
     private Output<SubResourceArgs> sourceVault;
 
+    /**
+     * @return The relative URL of the Key Vault containing the key.
+     * 
+     */
     public Output<SubResourceArgs> sourceVault() {
         return this.sourceVault;
     }
@@ -65,20 +73,44 @@ public final class KeyVaultKeyReferenceArgs extends com.pulumi.resources.Resourc
             $ = new KeyVaultKeyReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyUrl The URL referencing a key encryption key in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUrl(Output<String> keyUrl) {
             $.keyUrl = keyUrl;
             return this;
         }
 
+        /**
+         * @param keyUrl The URL referencing a key encryption key in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUrl(String keyUrl) {
             return keyUrl(Output.of(keyUrl));
         }
 
+        /**
+         * @param sourceVault The relative URL of the Key Vault containing the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVault(Output<SubResourceArgs> sourceVault) {
             $.sourceVault = sourceVault;
             return this;
         }
 
+        /**
+         * @param sourceVault The relative URL of the Key Vault containing the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVault(SubResourceArgs sourceVault) {
             return sourceVault(Output.of(sourceVault));
         }

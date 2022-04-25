@@ -21,6 +21,10 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends com.pulumi.
     @Import(name="peer")
     private @Nullable String peer;
 
+    /**
+     * @return The IP address of the peer to retrieve the status of.
+     * 
+     */
     public Optional<String> peer() {
         return Optional.ofNullable(this.peer);
     }
@@ -32,6 +36,10 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends com.pulumi.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends com.pulumi.
     @Import(name="virtualNetworkGatewayName", required=true)
     private String virtualNetworkGatewayName;
 
+    /**
+     * @return The name of the virtual network gateway.
+     * 
+     */
     public String virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
@@ -73,16 +85,34 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends com.pulumi.
             $ = new GetVirtualNetworkGatewayBgpPeerStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peer The IP address of the peer to retrieve the status of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peer(@Nullable String peer) {
             $.peer = peer;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkGatewayName The name of the virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
             $.virtualNetworkGatewayName = virtualNetworkGatewayName;
             return this;

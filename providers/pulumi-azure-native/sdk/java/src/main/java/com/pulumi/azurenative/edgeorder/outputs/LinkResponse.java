@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class LinkResponse {
     /**
-     * Type of link
+     * @return Type of link
      * 
      */
     private final String linkType;
     /**
-     * Url of the link
+     * @return Url of the link
      * 
      */
     private final String linkUrl;
@@ -29,16 +29,16 @@ public final class LinkResponse {
     }
 
     /**
-     * Type of link
+     * @return Type of link
      * 
-    */
+     */
     public String linkType() {
         return this.linkType;
     }
     /**
-     * Url of the link
+     * @return Url of the link
      * 
-    */
+     */
     public String linkUrl() {
         return this.linkUrl;
     }

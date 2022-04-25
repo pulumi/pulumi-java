@@ -28,6 +28,10 @@ public final class UsageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="producerNotificationChannel")
     private @Nullable Output<String> producerNotificationChannel;
 
+    /**
+     * @return The full resource name of a channel used for sending notifications to the service producer. Google Service Management currently only supports [Google Cloud Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud Pub/Sub as the channel, this must be the name of a Cloud Pub/Sub topic that uses the Cloud Pub/Sub topic name format documented in https://cloud.google.com/pubsub/docs/overview.
+     * 
+     */
     public Optional<Output<String>> producerNotificationChannel() {
         return Optional.ofNullable(this.producerNotificationChannel);
     }
@@ -39,6 +43,10 @@ public final class UsageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requirements")
     private @Nullable Output<List<String>> requirements;
 
+    /**
+     * @return Requirements that must be satisfied before a consumer project can use the service. Each requirement is of the form /; for example &#39;serviceusage.googleapis.com/billing-enabled&#39;. For Google APIs, a Terms of Service requirement must be included here. Google Cloud APIs must include &#34;serviceusage.googleapis.com/tos/cloud&#34;. Other Google APIs should include &#34;serviceusage.googleapis.com/tos/universal&#34;. Additional ToS can be included based on the business needs.
+     * 
+     */
     public Optional<Output<List<String>>> requirements() {
         return Optional.ofNullable(this.requirements);
     }
@@ -50,6 +58,10 @@ public final class UsageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<List<UsageRuleArgs>> rules;
 
+    /**
+     * @return A list of usage rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * 
+     */
     public Optional<Output<List<UsageRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -80,37 +92,85 @@ public final class UsageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UsageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param producerNotificationChannel The full resource name of a channel used for sending notifications to the service producer. Google Service Management currently only supports [Google Cloud Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud Pub/Sub as the channel, this must be the name of a Cloud Pub/Sub topic that uses the Cloud Pub/Sub topic name format documented in https://cloud.google.com/pubsub/docs/overview.
+         * 
+         * @return builder
+         * 
+         */
         public Builder producerNotificationChannel(@Nullable Output<String> producerNotificationChannel) {
             $.producerNotificationChannel = producerNotificationChannel;
             return this;
         }
 
+        /**
+         * @param producerNotificationChannel The full resource name of a channel used for sending notifications to the service producer. Google Service Management currently only supports [Google Cloud Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud Pub/Sub as the channel, this must be the name of a Cloud Pub/Sub topic that uses the Cloud Pub/Sub topic name format documented in https://cloud.google.com/pubsub/docs/overview.
+         * 
+         * @return builder
+         * 
+         */
         public Builder producerNotificationChannel(String producerNotificationChannel) {
             return producerNotificationChannel(Output.of(producerNotificationChannel));
         }
 
+        /**
+         * @param requirements Requirements that must be satisfied before a consumer project can use the service. Each requirement is of the form /; for example &#39;serviceusage.googleapis.com/billing-enabled&#39;. For Google APIs, a Terms of Service requirement must be included here. Google Cloud APIs must include &#34;serviceusage.googleapis.com/tos/cloud&#34;. Other Google APIs should include &#34;serviceusage.googleapis.com/tos/universal&#34;. Additional ToS can be included based on the business needs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirements(@Nullable Output<List<String>> requirements) {
             $.requirements = requirements;
             return this;
         }
 
+        /**
+         * @param requirements Requirements that must be satisfied before a consumer project can use the service. Each requirement is of the form /; for example &#39;serviceusage.googleapis.com/billing-enabled&#39;. For Google APIs, a Terms of Service requirement must be included here. Google Cloud APIs must include &#34;serviceusage.googleapis.com/tos/cloud&#34;. Other Google APIs should include &#34;serviceusage.googleapis.com/tos/universal&#34;. Additional ToS can be included based on the business needs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirements(List<String> requirements) {
             return requirements(Output.of(requirements));
         }
 
+        /**
+         * @param requirements Requirements that must be satisfied before a consumer project can use the service. Each requirement is of the form /; for example &#39;serviceusage.googleapis.com/billing-enabled&#39;. For Google APIs, a Terms of Service requirement must be included here. Google Cloud APIs must include &#34;serviceusage.googleapis.com/tos/cloud&#34;. Other Google APIs should include &#34;serviceusage.googleapis.com/tos/universal&#34;. Additional ToS can be included based on the business needs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirements(String... requirements) {
             return requirements(List.of(requirements));
         }
 
+        /**
+         * @param rules A list of usage rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<UsageRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of usage rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<UsageRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules A list of usage rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(UsageRuleArgs... rules) {
             return rules(List.of(rules));
         }

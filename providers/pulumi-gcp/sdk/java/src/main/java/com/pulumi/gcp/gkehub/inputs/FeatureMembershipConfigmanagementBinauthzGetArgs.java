@@ -22,6 +22,10 @@ public final class FeatureMembershipConfigmanagementBinauthzGetArgs extends com.
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -50,11 +54,23 @@ public final class FeatureMembershipConfigmanagementBinauthzGetArgs extends com.
             $ = new FeatureMembershipConfigmanagementBinauthzGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

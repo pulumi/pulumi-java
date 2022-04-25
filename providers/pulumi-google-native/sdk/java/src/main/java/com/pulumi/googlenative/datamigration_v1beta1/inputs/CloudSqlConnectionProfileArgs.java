@@ -26,6 +26,10 @@ public final class CloudSqlConnectionProfileArgs extends com.pulumi.resources.Re
     @Import(name="settings")
     private @Nullable Output<CloudSqlSettingsArgs> settings;
 
+    /**
+     * @return Immutable. Metadata used to create the destination Cloud SQL database.
+     * 
+     */
     public Optional<Output<CloudSqlSettingsArgs>> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -54,11 +58,23 @@ public final class CloudSqlConnectionProfileArgs extends com.pulumi.resources.Re
             $ = new CloudSqlConnectionProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param settings Immutable. Metadata used to create the destination Cloud SQL database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable Output<CloudSqlSettingsArgs> settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param settings Immutable. Metadata used to create the destination Cloud SQL database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(CloudSqlSettingsArgs settings) {
             return settings(Output.of(settings));
         }

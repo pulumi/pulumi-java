@@ -25,6 +25,10 @@ public final class OnPremisePropertyResponse extends com.pulumi.resources.Invoke
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return A globally unique ID identifying the associated Kubernetes cluster
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -36,6 +40,10 @@ public final class OnPremisePropertyResponse extends com.pulumi.resources.Invoke
     @Import(name="publicSigningKey", required=true)
     private String publicSigningKey;
 
+    /**
+     * @return Certificate that contains the Kubernetes cluster public key used to verify signing
+     * 
+     */
     public String publicSigningKey() {
         return this.publicSigningKey;
     }
@@ -47,6 +55,10 @@ public final class OnPremisePropertyResponse extends com.pulumi.resources.Invoke
     @Import(name="signingCertificateThumbprint")
     private @Nullable String signingCertificateThumbprint;
 
+    /**
+     * @return Unique thumbprint returned to customer to verify the certificate being uploaded
+     * 
+     */
     public Optional<String> signingCertificateThumbprint() {
         return Optional.ofNullable(this.signingCertificateThumbprint);
     }
@@ -77,16 +89,34 @@ public final class OnPremisePropertyResponse extends com.pulumi.resources.Invoke
             $ = new OnPremisePropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id A globally unique ID identifying the associated Kubernetes cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param publicSigningKey Certificate that contains the Kubernetes cluster public key used to verify signing
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicSigningKey(String publicSigningKey) {
             $.publicSigningKey = publicSigningKey;
             return this;
         }
 
+        /**
+         * @param signingCertificateThumbprint Unique thumbprint returned to customer to verify the certificate being uploaded
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingCertificateThumbprint(@Nullable String signingCertificateThumbprint) {
             $.signingCertificateThumbprint = signingCertificateThumbprint;
             return this;

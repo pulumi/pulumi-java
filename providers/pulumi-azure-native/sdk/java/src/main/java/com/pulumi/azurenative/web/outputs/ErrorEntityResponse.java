@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ErrorEntityResponse {
     /**
-     * Basic error code.
+     * @return Basic error code.
      * 
      */
     private final @Nullable String code;
     /**
-     * Type of error.
+     * @return Type of error.
      * 
      */
     private final @Nullable String extendedCode;
     /**
-     * Inner errors.
+     * @return Inner errors.
      * 
      */
     private final @Nullable List<ErrorEntityResponse> innerErrors;
     /**
-     * Any details of the error.
+     * @return Any details of the error.
      * 
      */
     private final @Nullable String message;
     /**
-     * Message template.
+     * @return Message template.
      * 
      */
     private final @Nullable String messageTemplate;
     /**
-     * Parameters for the template.
+     * @return Parameters for the template.
      * 
      */
     private final @Nullable List<String> parameters;
@@ -60,44 +60,44 @@ public final class ErrorEntityResponse {
     }
 
     /**
-     * Basic error code.
+     * @return Basic error code.
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * Type of error.
+     * @return Type of error.
      * 
-    */
+     */
     public Optional<String> extendedCode() {
         return Optional.ofNullable(this.extendedCode);
     }
     /**
-     * Inner errors.
+     * @return Inner errors.
      * 
-    */
+     */
     public List<ErrorEntityResponse> innerErrors() {
         return this.innerErrors == null ? List.of() : this.innerErrors;
     }
     /**
-     * Any details of the error.
+     * @return Any details of the error.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Message template.
+     * @return Message template.
      * 
-    */
+     */
     public Optional<String> messageTemplate() {
         return Optional.ofNullable(this.messageTemplate);
     }
     /**
-     * Parameters for the template.
+     * @return Parameters for the template.
      * 
-    */
+     */
     public List<String> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }

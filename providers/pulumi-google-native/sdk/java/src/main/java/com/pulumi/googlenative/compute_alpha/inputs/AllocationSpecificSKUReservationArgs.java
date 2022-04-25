@@ -27,6 +27,10 @@ public final class AllocationSpecificSKUReservationArgs extends com.pulumi.resou
     @Import(name="count")
     private @Nullable Output<String> count;
 
+    /**
+     * @return Specifies the number of resources that are allocated.
+     * 
+     */
     public Optional<Output<String>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -38,6 +42,10 @@ public final class AllocationSpecificSKUReservationArgs extends com.pulumi.resou
     @Import(name="instanceProperties")
     private @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
+    /**
+     * @return The instance properties for the reservation.
+     * 
+     */
     public Optional<Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs>> instanceProperties() {
         return Optional.ofNullable(this.instanceProperties);
     }
@@ -67,20 +75,44 @@ public final class AllocationSpecificSKUReservationArgs extends com.pulumi.resou
             $ = new AllocationSpecificSKUReservationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Specifies the number of resources that are allocated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<String> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Specifies the number of resources that are allocated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(String count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param instanceProperties The instance properties for the reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceProperties(@Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
             $.instanceProperties = instanceProperties;
             return this;
         }
 
+        /**
+         * @param instanceProperties The instance properties for the reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceProperties(AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
             return instanceProperties(Output.of(instanceProperties));
         }

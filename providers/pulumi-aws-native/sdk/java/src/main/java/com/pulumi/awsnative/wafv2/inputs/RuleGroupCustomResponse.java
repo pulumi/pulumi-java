@@ -28,6 +28,10 @@ public final class RuleGroupCustomResponse extends com.pulumi.resources.InvokeAr
     @Import(name="customResponseBodyKey")
     private @Nullable String customResponseBodyKey;
 
+    /**
+     * @return Custom response body key.
+     * 
+     */
     public Optional<String> customResponseBodyKey() {
         return Optional.ofNullable(this.customResponseBodyKey);
     }
@@ -46,6 +50,10 @@ public final class RuleGroupCustomResponse extends com.pulumi.resources.InvokeAr
     @Import(name="responseHeaders")
     private @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders;
 
+    /**
+     * @return Collection of HTTP headers.
+     * 
+     */
     public Optional<List<RuleGroupCustomHTTPHeader>> responseHeaders() {
         return Optional.ofNullable(this.responseHeaders);
     }
@@ -76,6 +84,12 @@ public final class RuleGroupCustomResponse extends com.pulumi.resources.InvokeAr
             $ = new RuleGroupCustomResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customResponseBodyKey Custom response body key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
             $.customResponseBodyKey = customResponseBodyKey;
             return this;
@@ -86,11 +100,23 @@ public final class RuleGroupCustomResponse extends com.pulumi.resources.InvokeAr
             return this;
         }
 
+        /**
+         * @param responseHeaders Collection of HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaders(@Nullable List<RuleGroupCustomHTTPHeader> responseHeaders) {
             $.responseHeaders = responseHeaders;
             return this;
         }
 
+        /**
+         * @param responseHeaders Collection of HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaders(RuleGroupCustomHTTPHeader... responseHeaders) {
             return responseHeaders(List.of(responseHeaders));
         }

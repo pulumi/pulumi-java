@@ -25,6 +25,10 @@ public final class GetInsightsErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="errorMessage", required=true)
     private String errorMessage;
 
+    /**
+     * @return the error message
+     * 
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
@@ -36,6 +40,10 @@ public final class GetInsightsErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return the query kind
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -47,6 +55,10 @@ public final class GetInsightsErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="queryId")
     private @Nullable String queryId;
 
+    /**
+     * @return the query id
+     * 
+     */
     public Optional<String> queryId() {
         return Optional.ofNullable(this.queryId);
     }
@@ -77,16 +89,34 @@ public final class GetInsightsErrorResponse extends com.pulumi.resources.InvokeA
             $ = new GetInsightsErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorMessage the error message
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessage(String errorMessage) {
             $.errorMessage = errorMessage;
             return this;
         }
 
+        /**
+         * @param kind the query kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param queryId the query id
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryId(@Nullable String queryId) {
             $.queryId = queryId;
             return this;

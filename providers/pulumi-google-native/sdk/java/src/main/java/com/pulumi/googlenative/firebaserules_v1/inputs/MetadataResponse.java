@@ -24,6 +24,10 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="services", required=true)
     private List<String> services;
 
+    /**
+     * @return Services that this ruleset has declarations for (e.g., &#34;cloud.firestore&#34;). There may be 0+ of these.
+     * 
+     */
     public List<String> services() {
         return this.services;
     }
@@ -52,11 +56,23 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param services Services that this ruleset has declarations for (e.g., &#34;cloud.firestore&#34;). There may be 0+ of these.
+         * 
+         * @return builder
+         * 
+         */
         public Builder services(List<String> services) {
             $.services = services;
             return this;
         }
 
+        /**
+         * @param services Services that this ruleset has declarations for (e.g., &#34;cloud.firestore&#34;). There may be 0+ of these.
+         * 
+         * @return builder
+         * 
+         */
         public Builder services(String... services) {
             return services(List.of(services));
         }

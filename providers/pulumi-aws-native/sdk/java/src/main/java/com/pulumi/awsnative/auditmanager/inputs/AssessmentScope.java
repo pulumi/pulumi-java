@@ -27,6 +27,10 @@ public final class AssessmentScope extends com.pulumi.resources.InvokeArgs {
     @Import(name="awsAccounts")
     private @Nullable List<AssessmentAWSAccount> awsAccounts;
 
+    /**
+     * @return The AWS accounts included in scope.
+     * 
+     */
     public Optional<List<AssessmentAWSAccount>> awsAccounts() {
         return Optional.ofNullable(this.awsAccounts);
     }
@@ -38,6 +42,10 @@ public final class AssessmentScope extends com.pulumi.resources.InvokeArgs {
     @Import(name="awsServices")
     private @Nullable List<AssessmentAWSService> awsServices;
 
+    /**
+     * @return The AWS services included in scope.
+     * 
+     */
     public Optional<List<AssessmentAWSService>> awsServices() {
         return Optional.ofNullable(this.awsServices);
     }
@@ -67,20 +75,44 @@ public final class AssessmentScope extends com.pulumi.resources.InvokeArgs {
             $ = new AssessmentScope(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsAccounts The AWS accounts included in scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccounts(@Nullable List<AssessmentAWSAccount> awsAccounts) {
             $.awsAccounts = awsAccounts;
             return this;
         }
 
+        /**
+         * @param awsAccounts The AWS accounts included in scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccounts(AssessmentAWSAccount... awsAccounts) {
             return awsAccounts(List.of(awsAccounts));
         }
 
+        /**
+         * @param awsServices The AWS services included in scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsServices(@Nullable List<AssessmentAWSService> awsServices) {
             $.awsServices = awsServices;
             return this;
         }
 
+        /**
+         * @param awsServices The AWS services included in scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsServices(AssessmentAWSService... awsServices) {
             return awsServices(List.of(awsServices));
         }

@@ -24,6 +24,10 @@ public final class MaintenancePolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="resourceVersion", required=true)
     private String resourceVersion;
 
+    /**
+     * @return A hash identifying the version of this policy, so that updates to fields of the policy won&#39;t accidentally undo intermediate changes (and so that users of the API unaware of some fields won&#39;t accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
+     * 
+     */
     public String resourceVersion() {
         return this.resourceVersion;
     }
@@ -35,6 +39,10 @@ public final class MaintenancePolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="window", required=true)
     private MaintenanceWindowResponse window;
 
+    /**
+     * @return Specifies the maintenance window in which maintenance may be performed.
+     * 
+     */
     public MaintenanceWindowResponse window() {
         return this.window;
     }
@@ -64,11 +72,23 @@ public final class MaintenancePolicyResponse extends com.pulumi.resources.Invoke
             $ = new MaintenancePolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceVersion A hash identifying the version of this policy, so that updates to fields of the policy won&#39;t accidentally undo intermediate changes (and so that users of the API unaware of some fields won&#39;t accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceVersion(String resourceVersion) {
             $.resourceVersion = resourceVersion;
             return this;
         }
 
+        /**
+         * @param window Specifies the maintenance window in which maintenance may be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder window(MaintenanceWindowResponse window) {
             $.window = window;
             return this;

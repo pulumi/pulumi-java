@@ -28,6 +28,10 @@ public final class PostgreSqlConnectionInfoArgs extends com.pulumi.resources.Res
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -39,6 +43,10 @@ public final class PostgreSqlConnectionInfoArgs extends com.pulumi.resources.Res
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Password credential.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -50,6 +58,10 @@ public final class PostgreSqlConnectionInfoArgs extends com.pulumi.resources.Res
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return Port for Server
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -61,6 +73,10 @@ public final class PostgreSqlConnectionInfoArgs extends com.pulumi.resources.Res
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return Name of the server
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -73,6 +89,11 @@ public final class PostgreSqlConnectionInfoArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of connection info
+     * Expected value is &#39;PostgreSqlConnectionInfo&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -84,6 +105,10 @@ public final class PostgreSqlConnectionInfoArgs extends com.pulumi.resources.Res
     @Import(name="userName")
     private @Nullable Output<String> userName;
 
+    /**
+     * @return User name
+     * 
+     */
     public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -117,56 +142,130 @@ public final class PostgreSqlConnectionInfoArgs extends com.pulumi.resources.Res
             $ = new PostgreSqlConnectionInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param password Password credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param port Port for Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port for Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param serverName Name of the server
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName Name of the server
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param type Type of connection info
+         * Expected value is &#39;PostgreSqlConnectionInfo&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of connection info
+         * Expected value is &#39;PostgreSqlConnectionInfo&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userName User name
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName User name
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

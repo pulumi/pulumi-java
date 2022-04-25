@@ -23,6 +23,11 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends com.pulumi.
     @Import(name="authToken")
     private @Nullable Output<String> authToken;
 
+    /**
+     * @return An authorization token for a notification channel. Channel types that support this field include: slack
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<Output<String>> authToken() {
         return Optional.ofNullable(this.authToken);
     }
@@ -35,6 +40,11 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends com.pulumi.
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return An password for a notification channel. Channel types that support this field include: webhook_basicauth
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -47,6 +57,11 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends com.pulumi.
     @Import(name="serviceKey")
     private @Nullable Output<String> serviceKey;
 
+    /**
+     * @return An servicekey token for a notification channel. Channel types that support this field include: pagerduty
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<Output<String>> serviceKey() {
         return Optional.ofNullable(this.serviceKey);
     }
@@ -77,29 +92,71 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends com.pulumi.
             $ = new NotificationChannelSensitiveLabelsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authToken An authorization token for a notification channel. Channel types that support this field include: slack
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authToken(@Nullable Output<String> authToken) {
             $.authToken = authToken;
             return this;
         }
 
+        /**
+         * @param authToken An authorization token for a notification channel. Channel types that support this field include: slack
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authToken(String authToken) {
             return authToken(Output.of(authToken));
         }
 
+        /**
+         * @param password An password for a notification channel. Channel types that support this field include: webhook_basicauth
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password An password for a notification channel. Channel types that support this field include: webhook_basicauth
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param serviceKey An servicekey token for a notification channel. Channel types that support this field include: pagerduty
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceKey(@Nullable Output<String> serviceKey) {
             $.serviceKey = serviceKey;
             return this;
         }
 
+        /**
+         * @param serviceKey An servicekey token for a notification channel. Channel types that support this field include: pagerduty
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceKey(String serviceKey) {
             return serviceKey(Output.of(serviceKey));
         }

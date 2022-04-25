@@ -31,6 +31,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends com.pulumi.
     @Import(name="allMetrics")
     private @Nullable Output<List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs>> allMetrics;
 
+    /**
+     * @return All recorded object metrics for this trial. This field is not currently populated.
+     * 
+     */
     public Optional<Output<List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs>>> allMetrics() {
         return Optional.ofNullable(this.allMetrics);
     }
@@ -42,6 +46,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends com.pulumi.
     @Import(name="builtInAlgorithmOutput")
     private @Nullable Output<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput;
 
+    /**
+     * @return Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs>> builtInAlgorithmOutput() {
         return Optional.ofNullable(this.builtInAlgorithmOutput);
     }
@@ -53,6 +61,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends com.pulumi.
     @Import(name="finalMetric")
     private @Nullable Output<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> finalMetric;
 
+    /**
+     * @return The final objective metric seen for this trial.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs>> finalMetric() {
         return Optional.ofNullable(this.finalMetric);
     }
@@ -64,6 +76,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends com.pulumi.
     @Import(name="hyperparameters")
     private @Nullable Output<Map<String,String>> hyperparameters;
 
+    /**
+     * @return The hyperparameters given to this trial.
+     * 
+     */
     public Optional<Output<Map<String,String>>> hyperparameters() {
         return Optional.ofNullable(this.hyperparameters);
     }
@@ -75,6 +91,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends com.pulumi.
     @Import(name="isTrialStoppedEarly")
     private @Nullable Output<Boolean> isTrialStoppedEarly;
 
+    /**
+     * @return True if the trial is stopped early.
+     * 
+     */
     public Optional<Output<Boolean>> isTrialStoppedEarly() {
         return Optional.ofNullable(this.isTrialStoppedEarly);
     }
@@ -86,6 +106,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends com.pulumi.
     @Import(name="trialId")
     private @Nullable Output<String> trialId;
 
+    /**
+     * @return The trial id for these results.
+     * 
+     */
     public Optional<Output<String>> trialId() {
         return Optional.ofNullable(this.trialId);
     }
@@ -97,6 +121,10 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends com.pulumi.
     @Import(name="webAccessUris")
     private @Nullable Output<Map<String,String>> webAccessUris;
 
+    /**
+     * @return URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if this trial is part of a hyperparameter tuning job and the job&#39;s training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node&#39;s interactive shell.
+     * 
+     */
     public Optional<Output<Map<String,String>>> webAccessUris() {
         return Optional.ofNullable(this.webAccessUris);
     }
@@ -131,69 +159,159 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends com.pulumi.
             $ = new GoogleCloudMlV1__HyperparameterOutputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allMetrics All recorded object metrics for this trial. This field is not currently populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allMetrics(@Nullable Output<List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs>> allMetrics) {
             $.allMetrics = allMetrics;
             return this;
         }
 
+        /**
+         * @param allMetrics All recorded object metrics for this trial. This field is not currently populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allMetrics(List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> allMetrics) {
             return allMetrics(Output.of(allMetrics));
         }
 
+        /**
+         * @param allMetrics All recorded object metrics for this trial. This field is not currently populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allMetrics(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs... allMetrics) {
             return allMetrics(List.of(allMetrics));
         }
 
+        /**
+         * @param builtInAlgorithmOutput Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builtInAlgorithmOutput(@Nullable Output<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput) {
             $.builtInAlgorithmOutput = builtInAlgorithmOutput;
             return this;
         }
 
+        /**
+         * @param builtInAlgorithmOutput Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builtInAlgorithmOutput(GoogleCloudMlV1__BuiltInAlgorithmOutputArgs builtInAlgorithmOutput) {
             return builtInAlgorithmOutput(Output.of(builtInAlgorithmOutput));
         }
 
+        /**
+         * @param finalMetric The final objective metric seen for this trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalMetric(@Nullable Output<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> finalMetric) {
             $.finalMetric = finalMetric;
             return this;
         }
 
+        /**
+         * @param finalMetric The final objective metric seen for this trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finalMetric(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs finalMetric) {
             return finalMetric(Output.of(finalMetric));
         }
 
+        /**
+         * @param hyperparameters The hyperparameters given to this trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hyperparameters(@Nullable Output<Map<String,String>> hyperparameters) {
             $.hyperparameters = hyperparameters;
             return this;
         }
 
+        /**
+         * @param hyperparameters The hyperparameters given to this trial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hyperparameters(Map<String,String> hyperparameters) {
             return hyperparameters(Output.of(hyperparameters));
         }
 
+        /**
+         * @param isTrialStoppedEarly True if the trial is stopped early.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isTrialStoppedEarly(@Nullable Output<Boolean> isTrialStoppedEarly) {
             $.isTrialStoppedEarly = isTrialStoppedEarly;
             return this;
         }
 
+        /**
+         * @param isTrialStoppedEarly True if the trial is stopped early.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isTrialStoppedEarly(Boolean isTrialStoppedEarly) {
             return isTrialStoppedEarly(Output.of(isTrialStoppedEarly));
         }
 
+        /**
+         * @param trialId The trial id for these results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trialId(@Nullable Output<String> trialId) {
             $.trialId = trialId;
             return this;
         }
 
+        /**
+         * @param trialId The trial id for these results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trialId(String trialId) {
             return trialId(Output.of(trialId));
         }
 
+        /**
+         * @param webAccessUris URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if this trial is part of a hyperparameter tuning job and the job&#39;s training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node&#39;s interactive shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webAccessUris(@Nullable Output<Map<String,String>> webAccessUris) {
             $.webAccessUris = webAccessUris;
             return this;
         }
 
+        /**
+         * @param webAccessUris URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if this trial is part of a hyperparameter tuning job and the job&#39;s training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node&#39;s interactive shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webAccessUris(Map<String,String> webAccessUris) {
             return webAccessUris(Output.of(webAccessUris));
         }

@@ -26,6 +26,10 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="managementGroups")
     private @Nullable List<ResourceIdResponse> managementGroups;
 
+    /**
+     * @return The collection of management groups covered by the Managed Network
+     * 
+     */
     public Optional<List<ResourceIdResponse>> managementGroups() {
         return Optional.ofNullable(this.managementGroups);
     }
@@ -37,6 +41,10 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnets")
     private @Nullable List<ResourceIdResponse> subnets;
 
+    /**
+     * @return The collection of  subnets covered by the Managed Network
+     * 
+     */
     public Optional<List<ResourceIdResponse>> subnets() {
         return Optional.ofNullable(this.subnets);
     }
@@ -48,6 +56,10 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subscriptions")
     private @Nullable List<ResourceIdResponse> subscriptions;
 
+    /**
+     * @return The collection of subscriptions covered by the Managed Network
+     * 
+     */
     public Optional<List<ResourceIdResponse>> subscriptions() {
         return Optional.ofNullable(this.subscriptions);
     }
@@ -59,6 +71,10 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="virtualNetworks")
     private @Nullable List<ResourceIdResponse> virtualNetworks;
 
+    /**
+     * @return The collection of virtual nets covered by the Managed Network
+     * 
+     */
     public Optional<List<ResourceIdResponse>> virtualNetworks() {
         return Optional.ofNullable(this.virtualNetworks);
     }
@@ -90,38 +106,86 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ScopeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managementGroups The collection of management groups covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroups(@Nullable List<ResourceIdResponse> managementGroups) {
             $.managementGroups = managementGroups;
             return this;
         }
 
+        /**
+         * @param managementGroups The collection of management groups covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroups(ResourceIdResponse... managementGroups) {
             return managementGroups(List.of(managementGroups));
         }
 
+        /**
+         * @param subnets The collection of  subnets covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(@Nullable List<ResourceIdResponse> subnets) {
             $.subnets = subnets;
             return this;
         }
 
+        /**
+         * @param subnets The collection of  subnets covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(ResourceIdResponse... subnets) {
             return subnets(List.of(subnets));
         }
 
+        /**
+         * @param subscriptions The collection of subscriptions covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptions(@Nullable List<ResourceIdResponse> subscriptions) {
             $.subscriptions = subscriptions;
             return this;
         }
 
+        /**
+         * @param subscriptions The collection of subscriptions covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptions(ResourceIdResponse... subscriptions) {
             return subscriptions(List.of(subscriptions));
         }
 
+        /**
+         * @param virtualNetworks The collection of virtual nets covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworks(@Nullable List<ResourceIdResponse> virtualNetworks) {
             $.virtualNetworks = virtualNetworks;
             return this;
         }
 
+        /**
+         * @param virtualNetworks The collection of virtual nets covered by the Managed Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworks(ResourceIdResponse... virtualNetworks) {
             return virtualNetworks(List.of(virtualNetworks));
         }

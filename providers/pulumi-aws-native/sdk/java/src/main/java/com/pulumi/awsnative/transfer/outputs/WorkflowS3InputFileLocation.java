@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WorkflowS3InputFileLocation {
     /**
-     * Specifies the S3 bucket that contains the file being copied.
+     * @return Specifies the S3 bucket that contains the file being copied.
      * 
      */
     private final @Nullable String bucket;
     /**
-     * The name assigned to the file when it was created in S3. You use the object key to retrieve the object.
+     * @return The name assigned to the file when it was created in S3. You use the object key to retrieve the object.
      * 
      */
     private final @Nullable String key;
@@ -31,16 +31,16 @@ public final class WorkflowS3InputFileLocation {
     }
 
     /**
-     * Specifies the S3 bucket that contains the file being copied.
+     * @return Specifies the S3 bucket that contains the file being copied.
      * 
-    */
+     */
     public Optional<String> bucket() {
         return Optional.ofNullable(this.bucket);
     }
     /**
-     * The name assigned to the file when it was created in S3. You use the object key to retrieve the object.
+     * @return The name assigned to the file when it was created in S3. You use the object key to retrieve the object.
      * 
-    */
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }

@@ -29,6 +29,11 @@ public final class MpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="distributionType", required=true)
     private Output<String> distributionType;
 
+    /**
+     * @return Enum to determine the job distribution type.
+     * Expected value is &#39;Mpi&#39;.
+     * 
+     */
     public Output<String> distributionType() {
         return this.distributionType;
     }
@@ -40,6 +45,10 @@ public final class MpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="processCountPerInstance")
     private @Nullable Output<Integer> processCountPerInstance;
 
+    /**
+     * @return Number of processes per MPI node.
+     * 
+     */
     public Optional<Output<Integer>> processCountPerInstance() {
         return Optional.ofNullable(this.processCountPerInstance);
     }
@@ -69,20 +78,46 @@ public final class MpiArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MpiArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionType Enum to determine the job distribution type.
+         * Expected value is &#39;Mpi&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionType(Output<String> distributionType) {
             $.distributionType = distributionType;
             return this;
         }
 
+        /**
+         * @param distributionType Enum to determine the job distribution type.
+         * Expected value is &#39;Mpi&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionType(String distributionType) {
             return distributionType(Output.of(distributionType));
         }
 
+        /**
+         * @param processCountPerInstance Number of processes per MPI node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processCountPerInstance(@Nullable Output<Integer> processCountPerInstance) {
             $.processCountPerInstance = processCountPerInstance;
             return this;
         }
 
+        /**
+         * @param processCountPerInstance Number of processes per MPI node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processCountPerInstance(Integer processCountPerInstance) {
             return processCountPerInstance(Output.of(processCountPerInstance));
         }

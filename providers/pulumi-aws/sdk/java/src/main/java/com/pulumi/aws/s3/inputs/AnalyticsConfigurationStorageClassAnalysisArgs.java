@@ -20,6 +20,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisArgs extends com.pu
     @Import(name="dataExport", required=true)
     private Output<AnalyticsConfigurationStorageClassAnalysisDataExportArgs> dataExport;
 
+    /**
+     * @return Data export configuration (documented below).
+     * 
+     */
     public Output<AnalyticsConfigurationStorageClassAnalysisDataExportArgs> dataExport() {
         return this.dataExport;
     }
@@ -48,11 +52,23 @@ public final class AnalyticsConfigurationStorageClassAnalysisArgs extends com.pu
             $ = new AnalyticsConfigurationStorageClassAnalysisArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataExport Data export configuration (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataExport(Output<AnalyticsConfigurationStorageClassAnalysisDataExportArgs> dataExport) {
             $.dataExport = dataExport;
             return this;
         }
 
+        /**
+         * @param dataExport Data export configuration (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataExport(AnalyticsConfigurationStorageClassAnalysisDataExportArgs dataExport) {
             return dataExport(Output.of(dataExport));
         }

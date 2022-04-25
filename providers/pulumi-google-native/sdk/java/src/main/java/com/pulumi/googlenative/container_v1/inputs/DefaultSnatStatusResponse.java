@@ -23,6 +23,10 @@ public final class DefaultSnatStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="disabled", required=true)
     private Boolean disabled;
 
+    /**
+     * @return Disables cluster default sNAT rules.
+     * 
+     */
     public Boolean disabled() {
         return this.disabled;
     }
@@ -51,6 +55,12 @@ public final class DefaultSnatStatusResponse extends com.pulumi.resources.Invoke
             $ = new DefaultSnatStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disabled Disables cluster default sNAT rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             $.disabled = disabled;
             return this;

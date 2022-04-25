@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomRegistryCredentialsResponse {
     /**
-     * Indicates the managed identity assigned to the custom credential. If a user-assigned identity
+     * @return Indicates the managed identity assigned to the custom credential. If a user-assigned identity
      * this value is the Client ID. If a system-assigned identity, the value will be `system`. In
      * the case of a system-assigned identity, the Client ID will be determined by the runner. This
      * identity may be used to authenticate to key vault to retrieve credentials or it may be the only
@@ -22,13 +22,13 @@ public final class CustomRegistryCredentialsResponse {
      */
     private final @Nullable String identity;
     /**
-     * The password for logging into the custom registry. The password is a secret
+     * @return The password for logging into the custom registry. The password is a secret
      * object that allows multiple ways of providing the value for it.
      * 
      */
     private final @Nullable SecretObjectResponse password;
     /**
-     * The username for logging into the custom registry.
+     * @return The username for logging into the custom registry.
      * 
      */
     private final @Nullable SecretObjectResponse userName;
@@ -44,28 +44,28 @@ public final class CustomRegistryCredentialsResponse {
     }
 
     /**
-     * Indicates the managed identity assigned to the custom credential. If a user-assigned identity
+     * @return Indicates the managed identity assigned to the custom credential. If a user-assigned identity
      * this value is the Client ID. If a system-assigned identity, the value will be `system`. In
      * the case of a system-assigned identity, the Client ID will be determined by the runner. This
      * identity may be used to authenticate to key vault to retrieve credentials or it may be the only
      * source of authentication used for accessing the registry.
      * 
-    */
+     */
     public Optional<String> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The password for logging into the custom registry. The password is a secret
+     * @return The password for logging into the custom registry. The password is a secret
      * object that allows multiple ways of providing the value for it.
      * 
-    */
+     */
     public Optional<SecretObjectResponse> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The username for logging into the custom registry.
+     * @return The username for logging into the custom registry.
      * 
-    */
+     */
     public Optional<SecretObjectResponse> userName() {
         return Optional.ofNullable(this.userName);
     }

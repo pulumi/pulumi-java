@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class SecretEnvVarResponse {
     /**
-     * Name of the environment variable.
+     * @return Name of the environment variable.
      * 
      */
     private final String key;
     /**
-     * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function&#39;s project assuming that the secret exists in the same project as of the function.
+     * @return Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function&#39;s project assuming that the secret exists in the same project as of the function.
      * 
      */
     private final String project;
     /**
-     * Name of the secret in secret manager (not the full resource name).
+     * @return Name of the secret in secret manager (not the full resource name).
      * 
      */
     private final String secret;
     /**
-     * Version of the secret (version number or the string &#39;latest&#39;). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
+     * @return Version of the secret (version number or the string &#39;latest&#39;). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
      * 
      */
     private final String version;
@@ -43,30 +43,30 @@ public final class SecretEnvVarResponse {
     }
 
     /**
-     * Name of the environment variable.
+     * @return Name of the environment variable.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function&#39;s project assuming that the secret exists in the same project as of the function.
+     * @return Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function&#39;s project assuming that the secret exists in the same project as of the function.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * Name of the secret in secret manager (not the full resource name).
+     * @return Name of the secret in secret manager (not the full resource name).
      * 
-    */
+     */
     public String secret() {
         return this.secret;
     }
     /**
-     * Version of the secret (version number or the string &#39;latest&#39;). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
+     * @return Version of the secret (version number or the string &#39;latest&#39;). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

@@ -19,6 +19,10 @@ public final class GetLogGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="logGroupName", required=true)
     private String logGroupName;
 
+    /**
+     * @return The name of the log group. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID for the log group.
+     * 
+     */
     public String logGroupName() {
         return this.logGroupName;
     }
@@ -47,6 +51,12 @@ public final class GetLogGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLogGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logGroupName The name of the log group. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID for the log group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(String logGroupName) {
             $.logGroupName = logGroupName;
             return this;

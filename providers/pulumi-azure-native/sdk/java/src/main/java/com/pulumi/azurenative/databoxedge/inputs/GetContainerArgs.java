@@ -19,6 +19,10 @@ public final class GetContainerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="containerName", required=true)
     private String containerName;
 
+    /**
+     * @return The container Name
+     * 
+     */
     public String containerName() {
         return this.containerName;
     }
@@ -30,6 +34,10 @@ public final class GetContainerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -41,6 +49,10 @@ public final class GetContainerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetContainerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageAccountName", required=true)
     private String storageAccountName;
 
+    /**
+     * @return The Storage Account Name
+     * 
+     */
     public String storageAccountName() {
         return this.storageAccountName;
     }
@@ -83,21 +99,45 @@ public final class GetContainerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerName The container Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param storageAccountName The Storage Account Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(String storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;

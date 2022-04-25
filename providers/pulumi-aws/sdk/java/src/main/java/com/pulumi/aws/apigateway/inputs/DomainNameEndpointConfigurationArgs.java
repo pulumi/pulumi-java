@@ -20,6 +20,10 @@ public final class DomainNameEndpointConfigurationArgs extends com.pulumi.resour
     @Import(name="types", required=true)
     private Output<String> types;
 
+    /**
+     * @return A list of endpoint types. This resource currently only supports managing a single value. Valid values: `EDGE` or `REGIONAL`. If unspecified, defaults to `EDGE`. Must be declared as `REGIONAL` in non-Commercial partitions. Refer to the [documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html) for more information on the difference between edge-optimized and regional APIs.
+     * 
+     */
     public Output<String> types() {
         return this.types;
     }
@@ -48,11 +52,23 @@ public final class DomainNameEndpointConfigurationArgs extends com.pulumi.resour
             $ = new DomainNameEndpointConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param types A list of endpoint types. This resource currently only supports managing a single value. Valid values: `EDGE` or `REGIONAL`. If unspecified, defaults to `EDGE`. Must be declared as `REGIONAL` in non-Commercial partitions. Refer to the [documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html) for more information on the difference between edge-optimized and regional APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(Output<String> types) {
             $.types = types;
             return this;
         }
 
+        /**
+         * @param types A list of endpoint types. This resource currently only supports managing a single value. Valid values: `EDGE` or `REGIONAL`. If unspecified, defaults to `EDGE`. Must be declared as `REGIONAL` in non-Commercial partitions. Refer to the [documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html) for more information on the difference between edge-optimized and regional APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(String types) {
             return types(Output.of(types));
         }

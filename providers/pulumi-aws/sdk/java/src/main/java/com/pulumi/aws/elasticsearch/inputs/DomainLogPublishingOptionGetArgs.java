@@ -23,6 +23,10 @@ public final class DomainLogPublishingOptionGetArgs extends com.pulumi.resources
     @Import(name="cloudwatchLogGroupArn", required=true)
     private Output<String> cloudwatchLogGroupArn;
 
+    /**
+     * @return ARN of the Cloudwatch log group to which log needs to be published.
+     * 
+     */
     public Output<String> cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
@@ -34,6 +38,10 @@ public final class DomainLogPublishingOptionGetArgs extends com.pulumi.resources
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -45,6 +53,10 @@ public final class DomainLogPublishingOptionGetArgs extends com.pulumi.resources
     @Import(name="logType", required=true)
     private Output<String> logType;
 
+    /**
+     * @return Type of Elasticsearch log. Valid values: `INDEX_SLOW_LOGS`, `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `AUDIT_LOGS`.
+     * 
+     */
     public Output<String> logType() {
         return this.logType;
     }
@@ -75,29 +87,65 @@ public final class DomainLogPublishingOptionGetArgs extends com.pulumi.resources
             $ = new DomainLogPublishingOptionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudwatchLogGroupArn ARN of the Cloudwatch log group to which log needs to be published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLogGroupArn(Output<String> cloudwatchLogGroupArn) {
             $.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
 
+        /**
+         * @param cloudwatchLogGroupArn ARN of the Cloudwatch log group to which log needs to be published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
             return cloudwatchLogGroupArn(Output.of(cloudwatchLogGroupArn));
         }
 
+        /**
+         * @param enabled Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param logType Type of Elasticsearch log. Valid values: `INDEX_SLOW_LOGS`, `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `AUDIT_LOGS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logType(Output<String> logType) {
             $.logType = logType;
             return this;
         }
 
+        /**
+         * @param logType Type of Elasticsearch log. Valid values: `INDEX_SLOW_LOGS`, `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `AUDIT_LOGS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logType(String logType) {
             return logType(Output.of(logType));
         }

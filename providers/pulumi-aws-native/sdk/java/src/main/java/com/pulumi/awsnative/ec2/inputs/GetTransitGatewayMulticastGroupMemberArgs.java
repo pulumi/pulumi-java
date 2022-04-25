@@ -19,6 +19,10 @@ public final class GetTransitGatewayMulticastGroupMemberArgs extends com.pulumi.
     @Import(name="groupIpAddress", required=true)
     private String groupIpAddress;
 
+    /**
+     * @return The IP address assigned to the transit gateway multicast group.
+     * 
+     */
     public String groupIpAddress() {
         return this.groupIpAddress;
     }
@@ -30,6 +34,10 @@ public final class GetTransitGatewayMulticastGroupMemberArgs extends com.pulumi.
     @Import(name="networkInterfaceId", required=true)
     private String networkInterfaceId;
 
+    /**
+     * @return The ID of the transit gateway attachment.
+     * 
+     */
     public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
@@ -41,6 +49,10 @@ public final class GetTransitGatewayMulticastGroupMemberArgs extends com.pulumi.
     @Import(name="transitGatewayMulticastDomainId", required=true)
     private String transitGatewayMulticastDomainId;
 
+    /**
+     * @return The ID of the transit gateway multicast domain.
+     * 
+     */
     public String transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
@@ -71,16 +83,34 @@ public final class GetTransitGatewayMulticastGroupMemberArgs extends com.pulumi.
             $ = new GetTransitGatewayMulticastGroupMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupIpAddress The IP address assigned to the transit gateway multicast group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIpAddress(String groupIpAddress) {
             $.groupIpAddress = groupIpAddress;
             return this;
         }
 
+        /**
+         * @param networkInterfaceId The ID of the transit gateway attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(String networkInterfaceId) {
             $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
+        /**
+         * @param transitGatewayMulticastDomainId The ID of the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
             $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;

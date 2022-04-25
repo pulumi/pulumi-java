@@ -26,6 +26,12 @@ public final class MetricMetricDescriptorGetArgs extends com.pulumi.resources.Re
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return A concise name for the metric, which can be displayed in user interfaces. Use sentence case
+     * without an ending period, for example &#34;Request count&#34;. This field is optional but it is
+     * recommended to be set for any metrics associated with user-visible concepts, such as Quota.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -41,6 +47,14 @@ public final class MetricMetricDescriptorGetArgs extends com.pulumi.resources.Re
     @Import(name="labels")
     private @Nullable Output<List<MetricMetricDescriptorLabelGetArgs>> labels;
 
+    /**
+     * @return The set of labels that can be used to describe a specific instance of this metric type. For
+     * example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
+     * for the HTTP response code, response_code, so you can look at latencies for successful responses
+     * or just for responses that failed.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<MetricMetricDescriptorLabelGetArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -55,6 +69,13 @@ public final class MetricMetricDescriptorGetArgs extends com.pulumi.resources.Re
     @Import(name="metricKind", required=true)
     private Output<String> metricKind;
 
+    /**
+     * @return Whether the metric records instantaneous values, changes to a value, etc.
+     * Some combinations of metricKind and valueType might not be supported.
+     * For counter metrics, set this to DELTA.
+     * Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
+     * 
+     */
     public Output<String> metricKind() {
         return this.metricKind;
     }
@@ -68,6 +89,12 @@ public final class MetricMetricDescriptorGetArgs extends com.pulumi.resources.Re
     @Import(name="unit")
     private @Nullable Output<String> unit;
 
+    /**
+     * @return The unit in which the metric value is reported. It is only applicable if the valueType is
+     * `INT64`, `DOUBLE`, or `DISTRIBUTION`. The supported units are a subset of
+     * [The Unified Code for Units of Measure](http://unitsofmeasure.org/ucum.html) standard
+     * 
+     */
     public Optional<Output<String>> unit() {
         return Optional.ofNullable(this.unit);
     }
@@ -81,6 +108,12 @@ public final class MetricMetricDescriptorGetArgs extends com.pulumi.resources.Re
     @Import(name="valueType", required=true)
     private Output<String> valueType;
 
+    /**
+     * @return The type of data that can be assigned to the label.
+     * Default value is `STRING`.
+     * Possible values are `BOOL`, `INT64`, and `STRING`.
+     * 
+     */
     public Output<String> valueType() {
         return this.valueType;
     }
@@ -113,51 +146,147 @@ public final class MetricMetricDescriptorGetArgs extends com.pulumi.resources.Re
             $ = new MetricMetricDescriptorGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName A concise name for the metric, which can be displayed in user interfaces. Use sentence case
+         * without an ending period, for example &#34;Request count&#34;. This field is optional but it is
+         * recommended to be set for any metrics associated with user-visible concepts, such as Quota.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName A concise name for the metric, which can be displayed in user interfaces. Use sentence case
+         * without an ending period, for example &#34;Request count&#34;. This field is optional but it is
+         * recommended to be set for any metrics associated with user-visible concepts, such as Quota.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param labels The set of labels that can be used to describe a specific instance of this metric type. For
+         * example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
+         * for the HTTP response code, response_code, so you can look at latencies for successful responses
+         * or just for responses that failed.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<List<MetricMetricDescriptorLabelGetArgs>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The set of labels that can be used to describe a specific instance of this metric type. For
+         * example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
+         * for the HTTP response code, response_code, so you can look at latencies for successful responses
+         * or just for responses that failed.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<MetricMetricDescriptorLabelGetArgs> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels The set of labels that can be used to describe a specific instance of this metric type. For
+         * example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
+         * for the HTTP response code, response_code, so you can look at latencies for successful responses
+         * or just for responses that failed.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(MetricMetricDescriptorLabelGetArgs... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param metricKind Whether the metric records instantaneous values, changes to a value, etc.
+         * Some combinations of metricKind and valueType might not be supported.
+         * For counter metrics, set this to DELTA.
+         * Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricKind(Output<String> metricKind) {
             $.metricKind = metricKind;
             return this;
         }
 
+        /**
+         * @param metricKind Whether the metric records instantaneous values, changes to a value, etc.
+         * Some combinations of metricKind and valueType might not be supported.
+         * For counter metrics, set this to DELTA.
+         * Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricKind(String metricKind) {
             return metricKind(Output.of(metricKind));
         }
 
+        /**
+         * @param unit The unit in which the metric value is reported. It is only applicable if the valueType is
+         * `INT64`, `DOUBLE`, or `DISTRIBUTION`. The supported units are a subset of
+         * [The Unified Code for Units of Measure](http://unitsofmeasure.org/ucum.html) standard
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(@Nullable Output<String> unit) {
             $.unit = unit;
             return this;
         }
 
+        /**
+         * @param unit The unit in which the metric value is reported. It is only applicable if the valueType is
+         * `INT64`, `DOUBLE`, or `DISTRIBUTION`. The supported units are a subset of
+         * [The Unified Code for Units of Measure](http://unitsofmeasure.org/ucum.html) standard
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(String unit) {
             return unit(Output.of(unit));
         }
 
+        /**
+         * @param valueType The type of data that can be assigned to the label.
+         * Default value is `STRING`.
+         * Possible values are `BOOL`, `INT64`, and `STRING`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueType(Output<String> valueType) {
             $.valueType = valueType;
             return this;
         }
 
+        /**
+         * @param valueType The type of data that can be assigned to the label.
+         * Default value is `STRING`.
+         * Possible values are `BOOL`, `INT64`, and `STRING`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueType(String valueType) {
             return valueType(Output.of(valueType));
         }

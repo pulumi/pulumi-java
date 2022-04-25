@@ -27,6 +27,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
     @Import(name="allowedValues")
     private @Nullable Output<List<String>> allowedValues;
 
+    /**
+     * @return List of values allowed at this resource.
+     * 
+     */
     public Optional<Output<List<String>>> allowedValues() {
         return Optional.ofNullable(this.allowedValues);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
     @Import(name="deniedValues")
     private @Nullable Output<List<String>> deniedValues;
 
+    /**
+     * @return List of values denied at this resource.
+     * 
+     */
     public Optional<Output<List<String>>> deniedValues() {
         return Optional.ofNullable(this.deniedValues);
     }
@@ -67,28 +75,64 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
             $ = new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedValues List of values allowed at this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(@Nullable Output<List<String>> allowedValues) {
             $.allowedValues = allowedValues;
             return this;
         }
 
+        /**
+         * @param allowedValues List of values allowed at this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(List<String> allowedValues) {
             return allowedValues(Output.of(allowedValues));
         }
 
+        /**
+         * @param allowedValues List of values allowed at this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(String... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
 
+        /**
+         * @param deniedValues List of values denied at this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deniedValues(@Nullable Output<List<String>> deniedValues) {
             $.deniedValues = deniedValues;
             return this;
         }
 
+        /**
+         * @param deniedValues List of values denied at this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deniedValues(List<String> deniedValues) {
             return deniedValues(Output.of(deniedValues));
         }
 
+        /**
+         * @param deniedValues List of values denied at this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deniedValues(String... deniedValues) {
             return deniedValues(List.of(deniedValues));
         }

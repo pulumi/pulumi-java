@@ -27,6 +27,10 @@ public final class PubsubTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
     private @Nullable Output<Map<String,String>> attributes;
 
+    /**
+     * @return Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+     * 
+     */
     public Optional<Output<Map<String,String>>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -38,6 +42,10 @@ public final class PubsubTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="data")
     private @Nullable Output<String> data;
 
+    /**
+     * @return The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+     * 
+     */
     public Optional<Output<String>> data() {
         return Optional.ofNullable(this.data);
     }
@@ -49,6 +57,10 @@ public final class PubsubTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topicName", required=true)
     private Output<String> topicName;
 
+    /**
+     * @return The name of the Cloud Pub/Sub topic to which messages will be published when a job is delivered. The topic name must be in the same format as required by PubSub&#39;s [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the Cloud Scheduler job.
+     * 
+     */
     public Output<String> topicName() {
         return this.topicName;
     }
@@ -79,29 +91,65 @@ public final class PubsubTargetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PubsubTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(Map<String,String> attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param data The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(@Nullable Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }
 
+        /**
+         * @param topicName The name of the Cloud Pub/Sub topic to which messages will be published when a job is delivered. The topic name must be in the same format as required by PubSub&#39;s [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the Cloud Scheduler job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(Output<String> topicName) {
             $.topicName = topicName;
             return this;
         }
 
+        /**
+         * @param topicName The name of the Cloud Pub/Sub topic to which messages will be published when a job is delivered. The topic name must be in the same format as required by PubSub&#39;s [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the Cloud Scheduler job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(String topicName) {
             return topicName(Output.of(topicName));
         }

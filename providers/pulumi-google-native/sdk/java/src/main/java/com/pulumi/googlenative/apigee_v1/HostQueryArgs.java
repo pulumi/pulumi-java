@@ -26,6 +26,10 @@ public final class HostQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="csvDelimiter")
     private @Nullable Output<String> csvDelimiter;
 
+    /**
+     * @return Delimiter used in the CSV file, if `outputFormat` is set to `csv`. Defaults to the `,` (comma) character. Supported delimiter characters include comma (`,`), pipe (`|`), and tab (`\t`).
+     * 
+     */
     public Optional<Output<String>> csvDelimiter() {
         return Optional.ofNullable(this.csvDelimiter);
     }
@@ -37,6 +41,10 @@ public final class HostQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dimensions")
     private @Nullable Output<List<String>> dimensions;
 
+    /**
+     * @return A list of dimensions. https://docs.apigee.com/api-platform/analytics/analytics-reference#dimensions
+     * 
+     */
     public Optional<Output<List<String>>> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -48,6 +56,10 @@ public final class HostQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="envgroupHostname")
     private @Nullable Output<String> envgroupHostname;
 
+    /**
+     * @return Hostname needs to be specified if query intends to run at host level. This field is only allowed when query is submitted by CreateHostAsyncQuery where analytics data will be grouped by organization and hostname.
+     * 
+     */
     public Optional<Output<String>> envgroupHostname() {
         return Optional.ofNullable(this.envgroupHostname);
     }
@@ -59,6 +71,10 @@ public final class HostQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
     private @Nullable Output<String> filter;
 
+    /**
+     * @return Boolean expression that can be used to filter data. Filter expressions can be combined using AND/OR terms and should be fully parenthesized to avoid ambiguity. See Analytics metrics, dimensions, and filters reference https://docs.apigee.com/api-platform/analytics/analytics-reference for more information on the fields available to filter on. For more information on the tokens that you use to build filter expressions, see Filter expression syntax. https://docs.apigee.com/api-platform/analytics/asynch-reports-api#filter-expression-syntax
+     * 
+     */
     public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -70,6 +86,10 @@ public final class HostQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupByTimeUnit")
     private @Nullable Output<String> groupByTimeUnit;
 
+    /**
+     * @return Time unit used to group the result set. Valid values include: second, minute, hour, day, week, or month. If a query includes groupByTimeUnit, then the result is an aggregation based on the specified time unit and the resultant timestamp does not include milliseconds precision. If a query omits groupByTimeUnit, then the resultant timestamp includes milliseconds precision.
+     * 
+     */
     public Optional<Output<String>> groupByTimeUnit() {
         return Optional.ofNullable(this.groupByTimeUnit);
     }
@@ -81,6 +101,10 @@ public final class HostQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="limit")
     private @Nullable Output<Integer> limit;
 
+    /**
+     * @return Maximum number of rows that can be returned in the result.
+     * 
+     */
     public Optional<Output<Integer>> limit() {
         return Optional.ofNullable(this.limit);
     }
@@ -92,6 +116,10 @@ public final class HostQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metrics")
     private @Nullable Output<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics;
 
+    /**
+     * @return A list of Metrics.
+     * 
+     */
     public Optional<Output<List<GoogleCloudApigeeV1QueryMetricArgs>>> metrics() {
         return Optional.ofNullable(this.metrics);
     }
@@ -103,6 +131,10 @@ public final class HostQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Asynchronous Query Name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -121,6 +153,10 @@ public final class HostQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputFormat")
     private @Nullable Output<String> outputFormat;
 
+    /**
+     * @return Valid values include: `csv` or `json`. Defaults to `json`. Note: Configure the delimiter for CSV output using the csvDelimiter property.
+     * 
+     */
     public Optional<Output<String>> outputFormat() {
         return Optional.ofNullable(this.outputFormat);
     }
@@ -132,6 +168,10 @@ public final class HostQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reportDefinitionId")
     private @Nullable Output<String> reportDefinitionId;
 
+    /**
+     * @return Asynchronous Report ID.
+     * 
+     */
     public Optional<Output<String>> reportDefinitionId() {
         return Optional.ofNullable(this.reportDefinitionId);
     }
@@ -143,6 +183,10 @@ public final class HostQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeRange", required=true)
     private Output<Object> timeRange;
 
+    /**
+     * @return Time range for the query. Can use the following predefined strings to specify the time range: `last60minutes` `last24hours` `last7days` Or, specify the timeRange as a structure describing start and end timestamps in the ISO format: yyyy-mm-ddThh:mm:ssZ. Example: &#34;timeRange&#34;: { &#34;start&#34;: &#34;2018-07-29T00:13:00Z&#34;, &#34;end&#34;: &#34;2018-08-01T00:18:00Z&#34; }
+     * 
+     */
     public Output<Object> timeRange() {
         return this.timeRange;
     }
@@ -182,82 +226,190 @@ public final class HostQueryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HostQueryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param csvDelimiter Delimiter used in the CSV file, if `outputFormat` is set to `csv`. Defaults to the `,` (comma) character. Supported delimiter characters include comma (`,`), pipe (`|`), and tab (`\t`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvDelimiter(@Nullable Output<String> csvDelimiter) {
             $.csvDelimiter = csvDelimiter;
             return this;
         }
 
+        /**
+         * @param csvDelimiter Delimiter used in the CSV file, if `outputFormat` is set to `csv`. Defaults to the `,` (comma) character. Supported delimiter characters include comma (`,`), pipe (`|`), and tab (`\t`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvDelimiter(String csvDelimiter) {
             return csvDelimiter(Output.of(csvDelimiter));
         }
 
+        /**
+         * @param dimensions A list of dimensions. https://docs.apigee.com/api-platform/analytics/analytics-reference#dimensions
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable Output<List<String>> dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param dimensions A list of dimensions. https://docs.apigee.com/api-platform/analytics/analytics-reference#dimensions
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(List<String> dimensions) {
             return dimensions(Output.of(dimensions));
         }
 
+        /**
+         * @param dimensions A list of dimensions. https://docs.apigee.com/api-platform/analytics/analytics-reference#dimensions
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(String... dimensions) {
             return dimensions(List.of(dimensions));
         }
 
+        /**
+         * @param envgroupHostname Hostname needs to be specified if query intends to run at host level. This field is only allowed when query is submitted by CreateHostAsyncQuery where analytics data will be grouped by organization and hostname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envgroupHostname(@Nullable Output<String> envgroupHostname) {
             $.envgroupHostname = envgroupHostname;
             return this;
         }
 
+        /**
+         * @param envgroupHostname Hostname needs to be specified if query intends to run at host level. This field is only allowed when query is submitted by CreateHostAsyncQuery where analytics data will be grouped by organization and hostname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envgroupHostname(String envgroupHostname) {
             return envgroupHostname(Output.of(envgroupHostname));
         }
 
+        /**
+         * @param filter Boolean expression that can be used to filter data. Filter expressions can be combined using AND/OR terms and should be fully parenthesized to avoid ambiguity. See Analytics metrics, dimensions, and filters reference https://docs.apigee.com/api-platform/analytics/analytics-reference for more information on the fields available to filter on. For more information on the tokens that you use to build filter expressions, see Filter expression syntax. https://docs.apigee.com/api-platform/analytics/asynch-reports-api#filter-expression-syntax
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter Boolean expression that can be used to filter data. Filter expressions can be combined using AND/OR terms and should be fully parenthesized to avoid ambiguity. See Analytics metrics, dimensions, and filters reference https://docs.apigee.com/api-platform/analytics/analytics-reference for more information on the fields available to filter on. For more information on the tokens that you use to build filter expressions, see Filter expression syntax. https://docs.apigee.com/api-platform/analytics/asynch-reports-api#filter-expression-syntax
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param groupByTimeUnit Time unit used to group the result set. Valid values include: second, minute, hour, day, week, or month. If a query includes groupByTimeUnit, then the result is an aggregation based on the specified time unit and the resultant timestamp does not include milliseconds precision. If a query omits groupByTimeUnit, then the resultant timestamp includes milliseconds precision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupByTimeUnit(@Nullable Output<String> groupByTimeUnit) {
             $.groupByTimeUnit = groupByTimeUnit;
             return this;
         }
 
+        /**
+         * @param groupByTimeUnit Time unit used to group the result set. Valid values include: second, minute, hour, day, week, or month. If a query includes groupByTimeUnit, then the result is an aggregation based on the specified time unit and the resultant timestamp does not include milliseconds precision. If a query omits groupByTimeUnit, then the resultant timestamp includes milliseconds precision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupByTimeUnit(String groupByTimeUnit) {
             return groupByTimeUnit(Output.of(groupByTimeUnit));
         }
 
+        /**
+         * @param limit Maximum number of rows that can be returned in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limit(@Nullable Output<Integer> limit) {
             $.limit = limit;
             return this;
         }
 
+        /**
+         * @param limit Maximum number of rows that can be returned in the result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limit(Integer limit) {
             return limit(Output.of(limit));
         }
 
+        /**
+         * @param metrics A list of Metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(@Nullable Output<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics A list of Metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<GoogleCloudApigeeV1QueryMetricArgs> metrics) {
             return metrics(Output.of(metrics));
         }
 
+        /**
+         * @param metrics A list of Metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(GoogleCloudApigeeV1QueryMetricArgs... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param name Asynchronous Query Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Asynchronous Query Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -271,29 +423,65 @@ public final class HostQueryArgs extends com.pulumi.resources.ResourceArgs {
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param outputFormat Valid values include: `csv` or `json`. Defaults to `json`. Note: Configure the delimiter for CSV output using the csvDelimiter property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
             $.outputFormat = outputFormat;
             return this;
         }
 
+        /**
+         * @param outputFormat Valid values include: `csv` or `json`. Defaults to `json`. Note: Configure the delimiter for CSV output using the csvDelimiter property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputFormat(String outputFormat) {
             return outputFormat(Output.of(outputFormat));
         }
 
+        /**
+         * @param reportDefinitionId Asynchronous Report ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportDefinitionId(@Nullable Output<String> reportDefinitionId) {
             $.reportDefinitionId = reportDefinitionId;
             return this;
         }
 
+        /**
+         * @param reportDefinitionId Asynchronous Report ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportDefinitionId(String reportDefinitionId) {
             return reportDefinitionId(Output.of(reportDefinitionId));
         }
 
+        /**
+         * @param timeRange Time range for the query. Can use the following predefined strings to specify the time range: `last60minutes` `last24hours` `last7days` Or, specify the timeRange as a structure describing start and end timestamps in the ISO format: yyyy-mm-ddThh:mm:ssZ. Example: &#34;timeRange&#34;: { &#34;start&#34;: &#34;2018-07-29T00:13:00Z&#34;, &#34;end&#34;: &#34;2018-08-01T00:18:00Z&#34; }
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeRange(Output<Object> timeRange) {
             $.timeRange = timeRange;
             return this;
         }
 
+        /**
+         * @param timeRange Time range for the query. Can use the following predefined strings to specify the time range: `last60minutes` `last24hours` `last7days` Or, specify the timeRange as a structure describing start and end timestamps in the ISO format: yyyy-mm-ddThh:mm:ssZ. Example: &#34;timeRange&#34;: { &#34;start&#34;: &#34;2018-07-29T00:13:00Z&#34;, &#34;end&#34;: &#34;2018-08-01T00:18:00Z&#34; }
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeRange(Object timeRange) {
             return timeRange(Output.of(timeRange));
         }

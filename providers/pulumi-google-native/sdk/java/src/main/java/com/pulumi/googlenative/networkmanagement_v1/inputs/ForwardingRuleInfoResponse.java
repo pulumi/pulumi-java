@@ -23,6 +23,10 @@ public final class ForwardingRuleInfoResponse extends com.pulumi.resources.Invok
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Name of a Compute Engine forwarding rule.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -34,6 +38,10 @@ public final class ForwardingRuleInfoResponse extends com.pulumi.resources.Invok
     @Import(name="matchedPortRange", required=true)
     private String matchedPortRange;
 
+    /**
+     * @return Port range defined in the forwarding rule that matches the test.
+     * 
+     */
     public String matchedPortRange() {
         return this.matchedPortRange;
     }
@@ -45,6 +53,10 @@ public final class ForwardingRuleInfoResponse extends com.pulumi.resources.Invok
     @Import(name="matchedProtocol", required=true)
     private String matchedProtocol;
 
+    /**
+     * @return Protocol defined in the forwarding rule that matches the test.
+     * 
+     */
     public String matchedProtocol() {
         return this.matchedProtocol;
     }
@@ -56,6 +68,10 @@ public final class ForwardingRuleInfoResponse extends com.pulumi.resources.Invok
     @Import(name="networkUri", required=true)
     private String networkUri;
 
+    /**
+     * @return Network URI. Only valid for Internal Load Balancer.
+     * 
+     */
     public String networkUri() {
         return this.networkUri;
     }
@@ -67,6 +83,10 @@ public final class ForwardingRuleInfoResponse extends com.pulumi.resources.Invok
     @Import(name="target", required=true)
     private String target;
 
+    /**
+     * @return Target type of the forwarding rule.
+     * 
+     */
     public String target() {
         return this.target;
     }
@@ -78,6 +98,10 @@ public final class ForwardingRuleInfoResponse extends com.pulumi.resources.Invok
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI of a Compute Engine forwarding rule.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -89,6 +113,10 @@ public final class ForwardingRuleInfoResponse extends com.pulumi.resources.Invok
     @Import(name="vip", required=true)
     private String vip;
 
+    /**
+     * @return VIP of the forwarding rule.
+     * 
+     */
     public String vip() {
         return this.vip;
     }
@@ -123,36 +151,78 @@ public final class ForwardingRuleInfoResponse extends com.pulumi.resources.Invok
             $ = new ForwardingRuleInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Name of a Compute Engine forwarding rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param matchedPortRange Port range defined in the forwarding rule that matches the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchedPortRange(String matchedPortRange) {
             $.matchedPortRange = matchedPortRange;
             return this;
         }
 
+        /**
+         * @param matchedProtocol Protocol defined in the forwarding rule that matches the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchedProtocol(String matchedProtocol) {
             $.matchedProtocol = matchedProtocol;
             return this;
         }
 
+        /**
+         * @param networkUri Network URI. Only valid for Internal Load Balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUri(String networkUri) {
             $.networkUri = networkUri;
             return this;
         }
 
+        /**
+         * @param target Target type of the forwarding rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param uri URI of a Compute Engine forwarding rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param vip VIP of the forwarding rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vip(String vip) {
             $.vip = vip;
             return this;

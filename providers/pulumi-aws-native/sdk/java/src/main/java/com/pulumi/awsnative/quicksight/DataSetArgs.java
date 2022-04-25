@@ -40,6 +40,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="columnGroups")
     private @Nullable Output<List<DataSetColumnGroupArgs>> columnGroups;
 
+    /**
+     * @return &lt;p&gt;Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<DataSetColumnGroupArgs>>> columnGroups() {
         return Optional.ofNullable(this.columnGroups);
     }
@@ -93,6 +97,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return &lt;p&gt;The display name for the dataset.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -104,6 +112,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
     private @Nullable Output<List<DataSetResourcePermissionArgs>> permissions;
 
+    /**
+     * @return &lt;p&gt;A list of resource permissions on the dataset.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<DataSetResourcePermissionArgs>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -129,6 +141,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DataSetTagArgs>> tags;
 
+    /**
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<DataSetTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -178,15 +194,33 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
             return awsAccountId(Output.of(awsAccountId));
         }
 
+        /**
+         * @param columnGroups &lt;p&gt;Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnGroups(@Nullable Output<List<DataSetColumnGroupArgs>> columnGroups) {
             $.columnGroups = columnGroups;
             return this;
         }
 
+        /**
+         * @param columnGroups &lt;p&gt;Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnGroups(List<DataSetColumnGroupArgs> columnGroups) {
             return columnGroups(Output.of(columnGroups));
         }
 
+        /**
+         * @param columnGroups &lt;p&gt;Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnGroups(DataSetColumnGroupArgs... columnGroups) {
             return columnGroups(List.of(columnGroups));
         }
@@ -249,24 +283,54 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
             return logicalTableMap(Output.of(logicalTableMap));
         }
 
+        /**
+         * @param name &lt;p&gt;The display name for the dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;The display name for the dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param permissions &lt;p&gt;A list of resource permissions on the dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<List<DataSetResourcePermissionArgs>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions &lt;p&gt;A list of resource permissions on the dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<DataSetResourcePermissionArgs> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions &lt;p&gt;A list of resource permissions on the dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(DataSetResourcePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
@@ -289,15 +353,33 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
             return rowLevelPermissionDataSet(Output.of(rowLevelPermissionDataSet));
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DataSetTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DataSetTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DataSetTagArgs... tags) {
             return tags(List.of(tags));
         }

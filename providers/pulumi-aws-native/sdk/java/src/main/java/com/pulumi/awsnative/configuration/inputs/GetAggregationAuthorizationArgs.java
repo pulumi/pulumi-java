@@ -19,6 +19,10 @@ public final class GetAggregationAuthorizationArgs extends com.pulumi.resources.
     @Import(name="aggregationAuthorizationArn", required=true)
     private String aggregationAuthorizationArn;
 
+    /**
+     * @return The ARN of the AggregationAuthorization.
+     * 
+     */
     public String aggregationAuthorizationArn() {
         return this.aggregationAuthorizationArn;
     }
@@ -47,6 +51,12 @@ public final class GetAggregationAuthorizationArgs extends com.pulumi.resources.
             $ = new GetAggregationAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregationAuthorizationArn The ARN of the AggregationAuthorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregationAuthorizationArn(String aggregationAuthorizationArn) {
             $.aggregationAuthorizationArn = aggregationAuthorizationArn;
             return this;

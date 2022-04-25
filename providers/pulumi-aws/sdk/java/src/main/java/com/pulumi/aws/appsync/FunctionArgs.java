@@ -24,6 +24,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
     private Output<String> apiId;
 
+    /**
+     * @return The ID of the associated AppSync API.
+     * 
+     */
     public Output<String> apiId() {
         return this.apiId;
     }
@@ -35,6 +39,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSource", required=true)
     private Output<String> dataSource;
 
+    /**
+     * @return The Function DataSource name.
+     * 
+     */
     public Output<String> dataSource() {
         return this.dataSource;
     }
@@ -46,6 +54,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The Function description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -57,6 +69,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionVersion")
     private @Nullable Output<String> functionVersion;
 
+    /**
+     * @return The version of the request mapping template. Currently the supported value is `2018-05-29`.
+     * 
+     */
     public Optional<Output<String>> functionVersion() {
         return Optional.ofNullable(this.functionVersion);
     }
@@ -68,6 +84,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxBatchSize")
     private @Nullable Output<Integer> maxBatchSize;
 
+    /**
+     * @return The maximum batching size for a resolver. Valid values are between `0` and `2000`.
+     * 
+     */
     public Optional<Output<Integer>> maxBatchSize() {
         return Optional.ofNullable(this.maxBatchSize);
     }
@@ -79,6 +99,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The Function name. The function name does not have to be unique.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -90,6 +114,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestMappingTemplate", required=true)
     private Output<String> requestMappingTemplate;
 
+    /**
+     * @return The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
+     * 
+     */
     public Output<String> requestMappingTemplate() {
         return this.requestMappingTemplate;
     }
@@ -101,6 +129,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseMappingTemplate", required=true)
     private Output<String> responseMappingTemplate;
 
+    /**
+     * @return The Function response mapping template.
+     * 
+     */
     public Output<String> responseMappingTemplate() {
         return this.responseMappingTemplate;
     }
@@ -112,6 +144,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncConfig")
     private @Nullable Output<FunctionSyncConfigArgs> syncConfig;
 
+    /**
+     * @return Describes a Sync configuration for a resolver. See Sync Config.
+     * 
+     */
     public Optional<Output<FunctionSyncConfigArgs>> syncConfig() {
         return Optional.ofNullable(this.syncConfig);
     }
@@ -148,83 +184,191 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FunctionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId The ID of the associated AppSync API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId The ID of the associated AppSync API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param dataSource The Function DataSource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(Output<String> dataSource) {
             $.dataSource = dataSource;
             return this;
         }
 
+        /**
+         * @param dataSource The Function DataSource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(String dataSource) {
             return dataSource(Output.of(dataSource));
         }
 
+        /**
+         * @param description The Function description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The Function description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param functionVersion The version of the request mapping template. Currently the supported value is `2018-05-29`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionVersion(@Nullable Output<String> functionVersion) {
             $.functionVersion = functionVersion;
             return this;
         }
 
+        /**
+         * @param functionVersion The version of the request mapping template. Currently the supported value is `2018-05-29`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionVersion(String functionVersion) {
             return functionVersion(Output.of(functionVersion));
         }
 
+        /**
+         * @param maxBatchSize The maximum batching size for a resolver. Valid values are between `0` and `2000`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBatchSize(@Nullable Output<Integer> maxBatchSize) {
             $.maxBatchSize = maxBatchSize;
             return this;
         }
 
+        /**
+         * @param maxBatchSize The maximum batching size for a resolver. Valid values are between `0` and `2000`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBatchSize(Integer maxBatchSize) {
             return maxBatchSize(Output.of(maxBatchSize));
         }
 
+        /**
+         * @param name The Function name. The function name does not have to be unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The Function name. The function name does not have to be unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param requestMappingTemplate The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMappingTemplate(Output<String> requestMappingTemplate) {
             $.requestMappingTemplate = requestMappingTemplate;
             return this;
         }
 
+        /**
+         * @param requestMappingTemplate The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMappingTemplate(String requestMappingTemplate) {
             return requestMappingTemplate(Output.of(requestMappingTemplate));
         }
 
+        /**
+         * @param responseMappingTemplate The Function response mapping template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseMappingTemplate(Output<String> responseMappingTemplate) {
             $.responseMappingTemplate = responseMappingTemplate;
             return this;
         }
 
+        /**
+         * @param responseMappingTemplate The Function response mapping template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseMappingTemplate(String responseMappingTemplate) {
             return responseMappingTemplate(Output.of(responseMappingTemplate));
         }
 
+        /**
+         * @param syncConfig Describes a Sync configuration for a resolver. See Sync Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncConfig(@Nullable Output<FunctionSyncConfigArgs> syncConfig) {
             $.syncConfig = syncConfig;
             return this;
         }
 
+        /**
+         * @param syncConfig Describes a Sync configuration for a resolver. See Sync Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncConfig(FunctionSyncConfigArgs syncConfig) {
             return syncConfig(Output.of(syncConfig));
         }

@@ -13,42 +13,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApiReferenceResponse {
     /**
-     * Brand color
+     * @return Brand color
      * 
      */
     private final @Nullable String brandColor;
     /**
-     * The custom API description
+     * @return The custom API description
      * 
      */
     private final @Nullable String description;
     /**
-     * The display name
+     * @return The display name
      * 
      */
     private final @Nullable String displayName;
     /**
-     * The icon URI
+     * @return The icon URI
      * 
      */
     private final @Nullable String iconUri;
     /**
-     * Resource reference id
+     * @return Resource reference id
      * 
      */
     private final @Nullable String id;
     /**
-     * The name of the API
+     * @return The name of the API
      * 
      */
     private final @Nullable String name;
     /**
-     * The JSON representation of the swagger
+     * @return The JSON representation of the swagger
      * 
      */
     private final @Nullable Object swagger;
     /**
-     * Resource reference type
+     * @return Resource reference type
      * 
      */
     private final @Nullable String type;
@@ -74,58 +74,58 @@ public final class ApiReferenceResponse {
     }
 
     /**
-     * Brand color
+     * @return Brand color
      * 
-    */
+     */
     public Optional<String> brandColor() {
         return Optional.ofNullable(this.brandColor);
     }
     /**
-     * The custom API description
+     * @return The custom API description
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The display name
+     * @return The display name
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The icon URI
+     * @return The icon URI
      * 
-    */
+     */
     public Optional<String> iconUri() {
         return Optional.ofNullable(this.iconUri);
     }
     /**
-     * Resource reference id
+     * @return Resource reference id
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the API
+     * @return The name of the API
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The JSON representation of the swagger
+     * @return The JSON representation of the swagger
      * 
-    */
+     */
     public Optional<Object> swagger() {
         return Optional.ofNullable(this.swagger);
     }
     /**
-     * Resource reference type
+     * @return Resource reference type
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

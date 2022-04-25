@@ -24,6 +24,10 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -35,6 +39,10 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="propId")
     private @Nullable Output<String> propId;
 
+    /**
+     * @return Identifier of the property.
+     * 
+     */
     public Optional<Output<String>> propId() {
         return Optional.ofNullable(this.propId);
     }
@@ -46,6 +54,10 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secret")
     private @Nullable Output<Boolean> secret;
 
+    /**
+     * @return Determines whether the value is a secret and should be encrypted or not. Default value is false.
+     * 
+     */
     public Optional<Output<Boolean>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -68,6 +84,10 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -79,6 +99,10 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
+    /**
+     * @return Optional tags that when provided can be used to filter the property list.
+     * 
+     */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -90,6 +114,10 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -124,69 +152,159 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PropertyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param propId Identifier of the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propId(@Nullable Output<String> propId) {
             $.propId = propId;
             return this;
         }
 
+        /**
+         * @param propId Identifier of the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propId(String propId) {
             return propId(Output.of(propId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param secret Determines whether the value is a secret and should be encrypted or not. Default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Output<Boolean> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret Determines whether the value is a secret and should be encrypted or not. Default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(Boolean secret) {
             return secret(Output.of(secret));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param tags Optional tags that when provided can be used to filter the property list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Optional tags that when provided can be used to filter the property list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Optional tags that when provided can be used to filter the property list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param value Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BotImageResponseCard {
     /**
-     * A list of buttons that should be displayed on the response card.
+     * @return A list of buttons that should be displayed on the response card.
      * 
      */
     private final @Nullable List<BotButton> buttons;
     /**
-     * The URL of an image to display on the response card.
+     * @return The URL of an image to display on the response card.
      * 
      */
     private final @Nullable String imageUrl;
     /**
-     * The subtitle to display on the response card.
+     * @return The subtitle to display on the response card.
      * 
      */
     private final @Nullable String subtitle;
     /**
-     * The title to display on the response card.
+     * @return The title to display on the response card.
      * 
      */
     private final String title;
@@ -47,30 +47,30 @@ public final class BotImageResponseCard {
     }
 
     /**
-     * A list of buttons that should be displayed on the response card.
+     * @return A list of buttons that should be displayed on the response card.
      * 
-    */
+     */
     public List<BotButton> buttons() {
         return this.buttons == null ? List.of() : this.buttons;
     }
     /**
-     * The URL of an image to display on the response card.
+     * @return The URL of an image to display on the response card.
      * 
-    */
+     */
     public Optional<String> imageUrl() {
         return Optional.ofNullable(this.imageUrl);
     }
     /**
-     * The subtitle to display on the response card.
+     * @return The subtitle to display on the response card.
      * 
-    */
+     */
     public Optional<String> subtitle() {
         return Optional.ofNullable(this.subtitle);
     }
     /**
-     * The title to display on the response card.
+     * @return The title to display on the response card.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

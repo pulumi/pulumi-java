@@ -23,6 +23,10 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datastoreConfig")
     private @Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
 
+    /**
+     * @return Datastore Configurations.
+     * 
+     */
     public Optional<Output<GoogleCloudApigeeV1DatastoreConfigArgs>> datastoreConfig() {
         return Optional.ofNullable(this.datastoreConfig);
     }
@@ -34,6 +38,10 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Display name in UI
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -52,6 +60,10 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetType")
     private @Nullable Output<String> targetType;
 
+    /**
+     * @return Destination storage type. Supported types `gcs` or `bigquery`.
+     * 
+     */
     public Optional<Output<String>> targetType() {
         return Optional.ofNullable(this.targetType);
     }
@@ -83,20 +95,44 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatastoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datastoreConfig Datastore Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreConfig(@Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig) {
             $.datastoreConfig = datastoreConfig;
             return this;
         }
 
+        /**
+         * @param datastoreConfig Datastore Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreConfig(GoogleCloudApigeeV1DatastoreConfigArgs datastoreConfig) {
             return datastoreConfig(Output.of(datastoreConfig));
         }
 
+        /**
+         * @param displayName Display name in UI
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name in UI
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -110,11 +146,23 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param targetType Destination storage type. Supported types `gcs` or `bigquery`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(@Nullable Output<String> targetType) {
             $.targetType = targetType;
             return this;
         }
 
+        /**
+         * @param targetType Destination storage type. Supported types `gcs` or `bigquery`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(String targetType) {
             return targetType(Output.of(targetType));
         }

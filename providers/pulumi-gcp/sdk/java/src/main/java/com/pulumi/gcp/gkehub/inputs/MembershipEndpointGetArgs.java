@@ -23,6 +23,11 @@ public final class MembershipEndpointGetArgs extends com.pulumi.resources.Resour
     @Import(name="gkeCluster")
     private @Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster;
 
+    /**
+     * @return If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<MembershipEndpointGkeClusterGetArgs>> gkeCluster() {
         return Optional.ofNullable(this.gkeCluster);
     }
@@ -51,11 +56,25 @@ public final class MembershipEndpointGetArgs extends com.pulumi.resources.Resour
             $ = new MembershipEndpointGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gkeCluster If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeCluster(@Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster) {
             $.gkeCluster = gkeCluster;
             return this;
         }
 
+        /**
+         * @param gkeCluster If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeCluster(MembershipEndpointGkeClusterGetArgs gkeCluster) {
             return gkeCluster(Output.of(gkeCluster));
         }

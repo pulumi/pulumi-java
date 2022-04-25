@@ -25,6 +25,10 @@ public final class CxIntentTrainingPhraseGetArgs extends com.pulumi.resources.Re
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The unique identifier of the parameter. This field is used by training phrases to annotate their parts.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -43,6 +47,17 @@ public final class CxIntentTrainingPhraseGetArgs extends com.pulumi.resources.Re
     @Import(name="parts", required=true)
     private Output<List<CxIntentTrainingPhrasePartGetArgs>> parts;
 
+    /**
+     * @return The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase.
+     * Note: The API does not automatically annotate training phrases like the Dialogflow Console does.
+     * Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated.
+     * If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set.
+     * If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways:
+     * Part.text is set to a part of the phrase that has no parameters.
+     * Part.text is set to a part of the phrase that you want to annotate, and the parameterId field is set.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<CxIntentTrainingPhrasePartGetArgs>> parts() {
         return this.parts;
     }
@@ -54,6 +69,10 @@ public final class CxIntentTrainingPhraseGetArgs extends com.pulumi.resources.Re
     @Import(name="repeatCount")
     private @Nullable Output<Integer> repeatCount;
 
+    /**
+     * @return Indicates how many times this example was added to the intent.
+     * 
+     */
     public Optional<Output<Integer>> repeatCount() {
         return Optional.ofNullable(this.repeatCount);
     }
@@ -84,33 +103,96 @@ public final class CxIntentTrainingPhraseGetArgs extends com.pulumi.resources.Re
             $ = new CxIntentTrainingPhraseGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The unique identifier of the parameter. This field is used by training phrases to annotate their parts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The unique identifier of the parameter. This field is used by training phrases to annotate their parts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param parts The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase.
+         * Note: The API does not automatically annotate training phrases like the Dialogflow Console does.
+         * Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated.
+         * If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set.
+         * If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways:
+         * Part.text is set to a part of the phrase that has no parameters.
+         * Part.text is set to a part of the phrase that you want to annotate, and the parameterId field is set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parts(Output<List<CxIntentTrainingPhrasePartGetArgs>> parts) {
             $.parts = parts;
             return this;
         }
 
+        /**
+         * @param parts The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase.
+         * Note: The API does not automatically annotate training phrases like the Dialogflow Console does.
+         * Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated.
+         * If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set.
+         * If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways:
+         * Part.text is set to a part of the phrase that has no parameters.
+         * Part.text is set to a part of the phrase that you want to annotate, and the parameterId field is set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parts(List<CxIntentTrainingPhrasePartGetArgs> parts) {
             return parts(Output.of(parts));
         }
 
+        /**
+         * @param parts The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase.
+         * Note: The API does not automatically annotate training phrases like the Dialogflow Console does.
+         * Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated.
+         * If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set.
+         * If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways:
+         * Part.text is set to a part of the phrase that has no parameters.
+         * Part.text is set to a part of the phrase that you want to annotate, and the parameterId field is set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parts(CxIntentTrainingPhrasePartGetArgs... parts) {
             return parts(List.of(parts));
         }
 
+        /**
+         * @param repeatCount Indicates how many times this example was added to the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repeatCount(@Nullable Output<Integer> repeatCount) {
             $.repeatCount = repeatCount;
             return this;
         }
 
+        /**
+         * @param repeatCount Indicates how many times this example was added to the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repeatCount(Integer repeatCount) {
             return repeatCount(Output.of(repeatCount));
         }

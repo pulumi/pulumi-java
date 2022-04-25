@@ -17,22 +17,22 @@ import javax.annotation.Nullable;
 public final class GetTableResult {
     private final @Nullable String arn;
     /**
-     * The properties that determine whether magnetic store writes are enabled.
+     * @return The properties that determine whether magnetic store writes are enabled.
      * 
      */
     private final @Nullable MagneticStoreWritePropertiesProperties magneticStoreWriteProperties;
     /**
-     * The table name exposed as a read-only attribute.
+     * @return The table name exposed as a read-only attribute.
      * 
      */
     private final @Nullable String name;
     /**
-     * The retention duration of the memory store and the magnetic store.
+     * @return The retention duration of the memory store and the magnetic store.
      * 
      */
     private final @Nullable RetentionPropertiesProperties retentionProperties;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<TableTag> tags;
@@ -55,30 +55,30 @@ public final class GetTableResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The properties that determine whether magnetic store writes are enabled.
+     * @return The properties that determine whether magnetic store writes are enabled.
      * 
-    */
+     */
     public Optional<MagneticStoreWritePropertiesProperties> magneticStoreWriteProperties() {
         return Optional.ofNullable(this.magneticStoreWriteProperties);
     }
     /**
-     * The table name exposed as a read-only attribute.
+     * @return The table name exposed as a read-only attribute.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The retention duration of the memory store and the magnetic store.
+     * @return The retention duration of the memory store and the magnetic store.
      * 
-    */
+     */
     public Optional<RetentionPropertiesProperties> retentionProperties() {
         return Optional.ofNullable(this.retentionProperties);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<TableTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

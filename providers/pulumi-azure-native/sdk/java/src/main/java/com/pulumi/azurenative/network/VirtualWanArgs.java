@@ -24,6 +24,10 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowBranchToBranchTraffic")
     private @Nullable Output<Boolean> allowBranchToBranchTraffic;
 
+    /**
+     * @return True if branch to branch traffic is allowed.
+     * 
+     */
     public Optional<Output<Boolean>> allowBranchToBranchTraffic() {
         return Optional.ofNullable(this.allowBranchToBranchTraffic);
     }
@@ -35,6 +39,10 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowVnetToVnetTraffic")
     private @Nullable Output<Boolean> allowVnetToVnetTraffic;
 
+    /**
+     * @return True if Vnet to Vnet traffic is allowed.
+     * 
+     */
     public Optional<Output<Boolean>> allowVnetToVnetTraffic() {
         return Optional.ofNullable(this.allowVnetToVnetTraffic);
     }
@@ -46,6 +54,10 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableVpnEncryption")
     private @Nullable Output<Boolean> disableVpnEncryption;
 
+    /**
+     * @return Vpn encryption to be disabled or not.
+     * 
+     */
     public Optional<Output<Boolean>> disableVpnEncryption() {
         return Optional.ofNullable(this.disableVpnEncryption);
     }
@@ -57,6 +69,10 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -68,6 +84,10 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -79,6 +99,10 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name of the VirtualWan.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -90,6 +114,10 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,6 +129,10 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of the VirtualWAN.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -112,6 +144,10 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualWANName")
     private @Nullable Output<String> virtualWANName;
 
+    /**
+     * @return The name of the VirtualWAN being created or updated.
+     * 
+     */
     public Optional<Output<String>> virtualWANName() {
         return Optional.ofNullable(this.virtualWANName);
     }
@@ -148,83 +184,191 @@ public final class VirtualWanArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VirtualWanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowBranchToBranchTraffic True if branch to branch traffic is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowBranchToBranchTraffic(@Nullable Output<Boolean> allowBranchToBranchTraffic) {
             $.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
             return this;
         }
 
+        /**
+         * @param allowBranchToBranchTraffic True if branch to branch traffic is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowBranchToBranchTraffic(Boolean allowBranchToBranchTraffic) {
             return allowBranchToBranchTraffic(Output.of(allowBranchToBranchTraffic));
         }
 
+        /**
+         * @param allowVnetToVnetTraffic True if Vnet to Vnet traffic is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowVnetToVnetTraffic(@Nullable Output<Boolean> allowVnetToVnetTraffic) {
             $.allowVnetToVnetTraffic = allowVnetToVnetTraffic;
             return this;
         }
 
+        /**
+         * @param allowVnetToVnetTraffic True if Vnet to Vnet traffic is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowVnetToVnetTraffic(Boolean allowVnetToVnetTraffic) {
             return allowVnetToVnetTraffic(Output.of(allowVnetToVnetTraffic));
         }
 
+        /**
+         * @param disableVpnEncryption Vpn encryption to be disabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableVpnEncryption(@Nullable Output<Boolean> disableVpnEncryption) {
             $.disableVpnEncryption = disableVpnEncryption;
             return this;
         }
 
+        /**
+         * @param disableVpnEncryption Vpn encryption to be disabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableVpnEncryption(Boolean disableVpnEncryption) {
             return disableVpnEncryption(Output.of(disableVpnEncryption));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VirtualWan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VirtualWan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param type The type of the VirtualWAN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the VirtualWAN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param virtualWANName The name of the VirtualWAN being created or updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualWANName(@Nullable Output<String> virtualWANName) {
             $.virtualWANName = virtualWANName;
             return this;
         }
 
+        /**
+         * @param virtualWANName The name of the VirtualWAN being created or updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualWANName(String virtualWANName) {
             return virtualWANName(Output.of(virtualWANName));
         }

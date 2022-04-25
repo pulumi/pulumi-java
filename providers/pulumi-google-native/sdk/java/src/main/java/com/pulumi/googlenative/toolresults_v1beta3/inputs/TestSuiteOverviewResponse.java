@@ -26,6 +26,10 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
     @Import(name="elapsedTime", required=true)
     private DurationResponse elapsedTime;
 
+    /**
+     * @return Elapsed time of test suite.
+     * 
+     */
     public DurationResponse elapsedTime() {
         return this.elapsedTime;
     }
@@ -37,6 +41,10 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
     @Import(name="errorCount", required=true)
     private Integer errorCount;
 
+    /**
+     * @return Number of test cases in error, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
+     * 
+     */
     public Integer errorCount() {
         return this.errorCount;
     }
@@ -48,6 +56,10 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
     @Import(name="failureCount", required=true)
     private Integer failureCount;
 
+    /**
+     * @return Number of failed test cases, typically set by the service by parsing the xml_source. May also be set by the user. - In create/response: always set - In update request: never
+     * 
+     */
     public Integer failureCount() {
         return this.failureCount;
     }
@@ -59,6 +71,10 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
     @Import(name="flakyCount", required=true)
     private Integer flakyCount;
 
+    /**
+     * @return Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only for rollup test suite overview at environment level. A step cannot have flaky test cases.
+     * 
+     */
     public Integer flakyCount() {
         return this.flakyCount;
     }
@@ -70,6 +86,10 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the test suite. - In create/response: always set - In update request: never
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -81,6 +101,10 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
     @Import(name="skippedCount", required=true)
     private Integer skippedCount;
 
+    /**
+     * @return Number of test cases not run, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
+     * 
+     */
     public Integer skippedCount() {
         return this.skippedCount;
     }
@@ -92,6 +116,10 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
     @Import(name="totalCount", required=true)
     private Integer totalCount;
 
+    /**
+     * @return Number of test cases, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
+     * 
+     */
     public Integer totalCount() {
         return this.totalCount;
     }
@@ -103,6 +131,10 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
     @Import(name="xmlSource", required=true)
     private FileReferenceResponse xmlSource;
 
+    /**
+     * @return If this test suite was parsed from XML, this is the URI where the original XML file is stored. Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri format is not supported. - In create/response: optional - In update request: never
+     * 
+     */
     public FileReferenceResponse xmlSource() {
         return this.xmlSource;
     }
@@ -138,41 +170,89 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
             $ = new TestSuiteOverviewResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param elapsedTime Elapsed time of test suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elapsedTime(DurationResponse elapsedTime) {
             $.elapsedTime = elapsedTime;
             return this;
         }
 
+        /**
+         * @param errorCount Number of test cases in error, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCount(Integer errorCount) {
             $.errorCount = errorCount;
             return this;
         }
 
+        /**
+         * @param failureCount Number of failed test cases, typically set by the service by parsing the xml_source. May also be set by the user. - In create/response: always set - In update request: never
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureCount(Integer failureCount) {
             $.failureCount = failureCount;
             return this;
         }
 
+        /**
+         * @param flakyCount Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only for rollup test suite overview at environment level. A step cannot have flaky test cases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flakyCount(Integer flakyCount) {
             $.flakyCount = flakyCount;
             return this;
         }
 
+        /**
+         * @param name The name of the test suite. - In create/response: always set - In update request: never
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param skippedCount Number of test cases not run, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
+         * 
+         * @return builder
+         * 
+         */
         public Builder skippedCount(Integer skippedCount) {
             $.skippedCount = skippedCount;
             return this;
         }
 
+        /**
+         * @param totalCount Number of test cases, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalCount(Integer totalCount) {
             $.totalCount = totalCount;
             return this;
         }
 
+        /**
+         * @param xmlSource If this test suite was parsed from XML, this is the URI where the original XML file is stored. Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri format is not supported. - In create/response: optional - In update request: never
+         * 
+         * @return builder
+         * 
+         */
         public Builder xmlSource(FileReferenceResponse xmlSource) {
             $.xmlSource = xmlSource;
             return this;

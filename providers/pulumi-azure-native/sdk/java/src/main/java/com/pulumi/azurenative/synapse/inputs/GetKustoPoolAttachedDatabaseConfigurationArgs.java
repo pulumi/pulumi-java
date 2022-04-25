@@ -19,6 +19,10 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends com.pul
     @Import(name="attachedDatabaseConfigurationName", required=true)
     private String attachedDatabaseConfigurationName;
 
+    /**
+     * @return The name of the attached database configuration.
+     * 
+     */
     public String attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
@@ -30,6 +34,10 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends com.pul
     @Import(name="kustoPoolName", required=true)
     private String kustoPoolName;
 
+    /**
+     * @return The name of the Kusto pool.
+     * 
+     */
     public String kustoPoolName() {
         return this.kustoPoolName;
     }
@@ -41,6 +49,10 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends com.pul
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends com.pul
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -83,21 +99,45 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends com.pul
             $ = new GetKustoPoolAttachedDatabaseConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachedDatabaseConfigurationName The name of the attached database configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
             $.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
             return this;
         }
 
+        /**
+         * @param kustoPoolName The name of the Kusto pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustoPoolName(String kustoPoolName) {
             $.kustoPoolName = kustoPoolName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

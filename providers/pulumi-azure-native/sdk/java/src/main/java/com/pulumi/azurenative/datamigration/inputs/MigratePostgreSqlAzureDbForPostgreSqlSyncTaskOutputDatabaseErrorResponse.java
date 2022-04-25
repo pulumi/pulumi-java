@@ -24,6 +24,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
     @Import(name="errorMessage")
     private @Nullable String errorMessage;
 
+    /**
+     * @return Error message
+     * 
+     */
     public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
@@ -35,6 +39,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
     @Import(name="events")
     private @Nullable List<SyncMigrationDatabaseErrorEventResponse> events;
 
+    /**
+     * @return List of error events.
+     * 
+     */
     public Optional<List<SyncMigrationDatabaseErrorEventResponse>> events() {
         return Optional.ofNullable(this.events);
     }
@@ -46,6 +54,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -58,6 +70,11 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Result type
+     * Expected value is &#39;DatabaseLevelErrorOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -89,25 +106,56 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
             $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorMessage Error message
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessage(@Nullable String errorMessage) {
             $.errorMessage = errorMessage;
             return this;
         }
 
+        /**
+         * @param events List of error events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(@Nullable List<SyncMigrationDatabaseErrorEventResponse> events) {
             $.events = events;
             return this;
         }
 
+        /**
+         * @param events List of error events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(SyncMigrationDatabaseErrorEventResponse... events) {
             return events(List.of(events));
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param resultType Result type
+         * Expected value is &#39;DatabaseLevelErrorOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;

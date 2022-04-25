@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class PullRequestFilterResponse {
     /**
-     * Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     * @return Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
      * 
      */
     private final String branch;
     /**
-     * Configure builds to run whether a repository owner or collaborator need to comment `/gcbrun`.
+     * @return Configure builds to run whether a repository owner or collaborator need to comment `/gcbrun`.
      * 
      */
     private final String commentControl;
     /**
-     * If true, branches that do NOT match the git_ref will trigger a build.
+     * @return If true, branches that do NOT match the git_ref will trigger a build.
      * 
      */
     private final Boolean invertRegex;
@@ -37,23 +37,23 @@ public final class PullRequestFilterResponse {
     }
 
     /**
-     * Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     * @return Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
      * 
-    */
+     */
     public String branch() {
         return this.branch;
     }
     /**
-     * Configure builds to run whether a repository owner or collaborator need to comment `/gcbrun`.
+     * @return Configure builds to run whether a repository owner or collaborator need to comment `/gcbrun`.
      * 
-    */
+     */
     public String commentControl() {
         return this.commentControl;
     }
     /**
-     * If true, branches that do NOT match the git_ref will trigger a build.
+     * @return If true, branches that do NOT match the git_ref will trigger a build.
      * 
-    */
+     */
     public Boolean invertRegex() {
         return this.invertRegex;
     }

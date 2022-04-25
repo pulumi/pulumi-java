@@ -19,6 +19,10 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="addonName", required=true)
     private String addonName;
 
+    /**
+     * @return The addon name.
+     * 
+     */
     public String addonName() {
         return this.addonName;
     }
@@ -30,6 +34,10 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -41,6 +49,10 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="roleName", required=true)
     private String roleName;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public String roleName() {
         return this.roleName;
     }
@@ -83,21 +99,45 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAddonArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addonName The addon name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonName(String addonName) {
             $.addonName = addonName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param roleName The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(String roleName) {
             $.roleName = roleName;
             return this;

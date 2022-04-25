@@ -25,6 +25,10 @@ public final class SqlUpsertSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="interimSchemaName")
     private @Nullable Object interimSchemaName;
 
+    /**
+     * @return Schema name for interim table. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> interimSchemaName() {
         return Optional.ofNullable(this.interimSchemaName);
     }
@@ -36,6 +40,10 @@ public final class SqlUpsertSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="keys")
     private @Nullable Object keys;
 
+    /**
+     * @return Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
+     * 
+     */
     public Optional<Object> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -47,6 +55,10 @@ public final class SqlUpsertSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="useTempDB")
     private @Nullable Object useTempDB;
 
+    /**
+     * @return Specifies whether to use temp db for upsert interim table. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> useTempDB() {
         return Optional.ofNullable(this.useTempDB);
     }
@@ -77,16 +89,34 @@ public final class SqlUpsertSettingsResponse extends com.pulumi.resources.Invoke
             $ = new SqlUpsertSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interimSchemaName Schema name for interim table. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder interimSchemaName(@Nullable Object interimSchemaName) {
             $.interimSchemaName = interimSchemaName;
             return this;
         }
 
+        /**
+         * @param keys Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable Object keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param useTempDB Specifies whether to use temp db for upsert interim table. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder useTempDB(@Nullable Object useTempDB) {
             $.useTempDB = useTempDB;
             return this;

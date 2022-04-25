@@ -23,6 +23,10 @@ public final class LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="arguments", required=true)
     private String arguments;
 
+    /**
+     * @return The recovered arguments to the Dockerfile directive.
+     * 
+     */
     public String arguments() {
         return this.arguments;
     }
@@ -34,6 +38,10 @@ public final class LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="directive", required=true)
     private String directive;
 
+    /**
+     * @return The recovered Dockerfile directive used to construct this layer.
+     * 
+     */
     public String directive() {
         return this.directive;
     }
@@ -63,11 +71,23 @@ public final class LayerResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LayerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments The recovered arguments to the Dockerfile directive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(String arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param directive The recovered Dockerfile directive used to construct this layer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directive(String directive) {
             $.directive = directive;
             return this;

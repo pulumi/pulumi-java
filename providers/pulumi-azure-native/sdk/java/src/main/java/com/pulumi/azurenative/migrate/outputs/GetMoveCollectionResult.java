@@ -15,42 +15,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMoveCollectionResult {
     /**
-     * The etag of the resource.
+     * @return The etag of the resource.
      * 
      */
     private final String etag;
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
      */
     private final String id;
     /**
-     * Defines the MSI properties of the Move Collection.
+     * @return Defines the MSI properties of the Move Collection.
      * 
      */
     private final @Nullable IdentityResponse identity;
     /**
-     * The geo-location where the resource lives.
+     * @return The geo-location where the resource lives.
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Defines the move collection properties.
+     * @return Defines the move collection properties.
      * 
      */
     private final MoveCollectionPropertiesResponse properties;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -76,58 +76,58 @@ public final class GetMoveCollectionResult {
     }
 
     /**
-     * The etag of the resource.
+     * @return The etag of the resource.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Defines the MSI properties of the Move Collection.
+     * @return Defines the MSI properties of the Move Collection.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The geo-location where the resource lives.
+     * @return The geo-location where the resource lives.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Defines the move collection properties.
+     * @return Defines the move collection properties.
      * 
-    */
+     */
     public MoveCollectionPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

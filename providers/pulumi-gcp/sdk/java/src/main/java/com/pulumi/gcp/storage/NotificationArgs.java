@@ -24,6 +24,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return The name of the bucket.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -35,6 +39,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customAttributes")
     private @Nullable Output<Map<String,String>> customAttributes;
 
+    /**
+     * @return A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
+     * 
+     */
     public Optional<Output<Map<String,String>>> customAttributes() {
         return Optional.ofNullable(this.customAttributes);
     }
@@ -46,6 +54,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventTypes")
     private @Nullable Output<List<String>> eventTypes;
 
+    /**
+     * @return List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `&#34;OBJECT_FINALIZE&#34;`, `&#34;OBJECT_METADATA_UPDATE&#34;`, `&#34;OBJECT_DELETE&#34;`, `&#34;OBJECT_ARCHIVE&#34;`
+     * 
+     */
     public Optional<Output<List<String>>> eventTypes() {
         return Optional.ofNullable(this.eventTypes);
     }
@@ -57,6 +69,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectNamePrefix")
     private @Nullable Output<String> objectNamePrefix;
 
+    /**
+     * @return Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
+     * 
+     */
     public Optional<Output<String>> objectNamePrefix() {
         return Optional.ofNullable(this.objectNamePrefix);
     }
@@ -68,6 +84,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="payloadFormat", required=true)
     private Output<String> payloadFormat;
 
+    /**
+     * @return The desired content of the Payload. One of `&#34;JSON_API_V1&#34;` or `&#34;NONE&#34;`.
+     * 
+     */
     public Output<String> payloadFormat() {
         return this.payloadFormat;
     }
@@ -82,6 +102,13 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topic", required=true)
     private Output<String> topic;
 
+    /**
+     * @return The Cloud PubSub topic to which this subscription publishes. Expects either the
+     * topic name, assumed to belong to the default GCP provider project, or the project-level name,
+     * i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is not set in the provider,
+     * you will need to use the project-level name.
+     * 
+     */
     public Output<String> topic() {
         return this.topic;
     }
@@ -115,60 +142,144 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NotificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The name of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param customAttributes A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAttributes(@Nullable Output<Map<String,String>> customAttributes) {
             $.customAttributes = customAttributes;
             return this;
         }
 
+        /**
+         * @param customAttributes A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAttributes(Map<String,String> customAttributes) {
             return customAttributes(Output.of(customAttributes));
         }
 
+        /**
+         * @param eventTypes List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `&#34;OBJECT_FINALIZE&#34;`, `&#34;OBJECT_METADATA_UPDATE&#34;`, `&#34;OBJECT_DELETE&#34;`, `&#34;OBJECT_ARCHIVE&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypes(@Nullable Output<List<String>> eventTypes) {
             $.eventTypes = eventTypes;
             return this;
         }
 
+        /**
+         * @param eventTypes List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `&#34;OBJECT_FINALIZE&#34;`, `&#34;OBJECT_METADATA_UPDATE&#34;`, `&#34;OBJECT_DELETE&#34;`, `&#34;OBJECT_ARCHIVE&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypes(List<String> eventTypes) {
             return eventTypes(Output.of(eventTypes));
         }
 
+        /**
+         * @param eventTypes List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `&#34;OBJECT_FINALIZE&#34;`, `&#34;OBJECT_METADATA_UPDATE&#34;`, `&#34;OBJECT_DELETE&#34;`, `&#34;OBJECT_ARCHIVE&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypes(String... eventTypes) {
             return eventTypes(List.of(eventTypes));
         }
 
+        /**
+         * @param objectNamePrefix Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectNamePrefix(@Nullable Output<String> objectNamePrefix) {
             $.objectNamePrefix = objectNamePrefix;
             return this;
         }
 
+        /**
+         * @param objectNamePrefix Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectNamePrefix(String objectNamePrefix) {
             return objectNamePrefix(Output.of(objectNamePrefix));
         }
 
+        /**
+         * @param payloadFormat The desired content of the Payload. One of `&#34;JSON_API_V1&#34;` or `&#34;NONE&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadFormat(Output<String> payloadFormat) {
             $.payloadFormat = payloadFormat;
             return this;
         }
 
+        /**
+         * @param payloadFormat The desired content of the Payload. One of `&#34;JSON_API_V1&#34;` or `&#34;NONE&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadFormat(String payloadFormat) {
             return payloadFormat(Output.of(payloadFormat));
         }
 
+        /**
+         * @param topic The Cloud PubSub topic to which this subscription publishes. Expects either the
+         * topic name, assumed to belong to the default GCP provider project, or the project-level name,
+         * i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is not set in the provider,
+         * you will need to use the project-level name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic The Cloud PubSub topic to which this subscription publishes. Expects either the
+         * topic name, assumed to belong to the default GCP provider project, or the project-level name,
+         * i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is not set in the provider,
+         * you will need to use the project-level name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

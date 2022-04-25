@@ -71,6 +71,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdBy", required=true)
     private UserInfoResponse createdBy;
 
+    /**
+     * @return The User who created the datastore.
+     * 
+     */
     public UserInfoResponse createdBy() {
         return this.createdBy;
     }
@@ -82,6 +86,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdTime", required=true)
     private String createdTime;
 
+    /**
+     * @return The date and time when the datastore was created.
+     * 
+     */
     public String createdTime() {
         return this.createdTime;
     }
@@ -93,6 +101,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataStoreType")
     private @Nullable String dataStoreType;
 
+    /**
+     * @return The datastore type.
+     * 
+     */
     public Optional<String> dataStoreType() {
         return Optional.ofNullable(this.dataStoreType);
     }
@@ -104,6 +116,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the datastore.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -115,6 +131,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="glusterFsSection")
     private @Nullable GlusterFsSectionResponse glusterFsSection;
 
+    /**
+     * @return Data specific to GlusterFS.
+     * 
+     */
     public Optional<GlusterFsSectionResponse> glusterFsSection() {
         return Optional.ofNullable(this.glusterFsSection);
     }
@@ -126,6 +146,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hasBeenValidated")
     private @Nullable Boolean hasBeenValidated;
 
+    /**
+     * @return A read only property that denotes whether the service datastore has been validated with credentials.
+     * 
+     */
     public Optional<Boolean> hasBeenValidated() {
         return Optional.ofNullable(this.hasBeenValidated);
     }
@@ -137,6 +161,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkedInfo")
     private @Nullable LinkedInfoResponse linkedInfo;
 
+    /**
+     * @return Info about origin if it is linked.
+     * 
+     */
     public Optional<LinkedInfoResponse> linkedInfo() {
         return Optional.ofNullable(this.linkedInfo);
     }
@@ -148,6 +176,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="modifiedBy", required=true)
     private UserInfoResponse modifiedBy;
 
+    /**
+     * @return The User who modified the datastore.
+     * 
+     */
     public UserInfoResponse modifiedBy() {
         return this.modifiedBy;
     }
@@ -159,6 +191,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="modifiedTime", required=true)
     private String modifiedTime;
 
+    /**
+     * @return The date and time when the datastore was last modified.
+     * 
+     */
     public String modifiedTime() {
         return this.modifiedTime;
     }
@@ -170,6 +206,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the datastore.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -181,6 +221,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags", required=true)
     private Map<String,String> tags;
 
+    /**
+     * @return Tags for this datastore.
+     * 
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
@@ -249,56 +293,122 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param createdBy The User who created the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(UserInfoResponse createdBy) {
             $.createdBy = createdBy;
             return this;
         }
 
+        /**
+         * @param createdTime The date and time when the datastore was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param dataStoreType The datastore type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreType(@Nullable String dataStoreType) {
             $.dataStoreType = dataStoreType;
             return this;
         }
 
+        /**
+         * @param description Description of the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param glusterFsSection Data specific to GlusterFS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder glusterFsSection(@Nullable GlusterFsSectionResponse glusterFsSection) {
             $.glusterFsSection = glusterFsSection;
             return this;
         }
 
+        /**
+         * @param hasBeenValidated A read only property that denotes whether the service datastore has been validated with credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasBeenValidated(@Nullable Boolean hasBeenValidated) {
             $.hasBeenValidated = hasBeenValidated;
             return this;
         }
 
+        /**
+         * @param linkedInfo Info about origin if it is linked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedInfo(@Nullable LinkedInfoResponse linkedInfo) {
             $.linkedInfo = linkedInfo;
             return this;
         }
 
+        /**
+         * @param modifiedBy The User who modified the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedBy(UserInfoResponse modifiedBy) {
             $.modifiedBy = modifiedBy;
             return this;
         }
 
+        /**
+         * @param modifiedTime The date and time when the datastore was last modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedTime(String modifiedTime) {
             $.modifiedTime = modifiedTime;
             return this;
         }
 
+        /**
+         * @param name Name of the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tags Tags for this datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             $.tags = tags;
             return this;

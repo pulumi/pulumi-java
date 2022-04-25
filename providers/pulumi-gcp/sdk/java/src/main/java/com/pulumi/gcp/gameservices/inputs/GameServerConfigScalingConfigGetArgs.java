@@ -27,6 +27,12 @@ public final class GameServerConfigScalingConfigGetArgs extends com.pulumi.resou
     @Import(name="fleetAutoscalerSpec", required=true)
     private Output<String> fleetAutoscalerSpec;
 
+    /**
+     * @return Fleet autoscaler spec, which is sent to Agones.
+     * Example spec can be found :
+     * https://agones.dev/site/docs/reference/fleetautoscaler/
+     * 
+     */
     public Output<String> fleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
     }
@@ -38,6 +44,10 @@ public final class GameServerConfigScalingConfigGetArgs extends com.pulumi.resou
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the ScalingConfig
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -50,6 +60,11 @@ public final class GameServerConfigScalingConfigGetArgs extends com.pulumi.resou
     @Import(name="schedules")
     private @Nullable Output<List<GameServerConfigScalingConfigScheduleGetArgs>> schedules;
 
+    /**
+     * @return The schedules to which this scaling config applies.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<GameServerConfigScalingConfigScheduleGetArgs>>> schedules() {
         return Optional.ofNullable(this.schedules);
     }
@@ -64,6 +79,13 @@ public final class GameServerConfigScalingConfigGetArgs extends com.pulumi.resou
     @Import(name="selectors")
     private @Nullable Output<List<GameServerConfigScalingConfigSelectorGetArgs>> selectors;
 
+    /**
+     * @return Labels used to identify the clusters to which this scaling config
+     * applies. A cluster is subject to this scaling config if its labels match
+     * any of the selector entries.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<GameServerConfigScalingConfigSelectorGetArgs>>> selectors() {
         return Optional.ofNullable(this.selectors);
     }
@@ -95,46 +117,122 @@ public final class GameServerConfigScalingConfigGetArgs extends com.pulumi.resou
             $ = new GameServerConfigScalingConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fleetAutoscalerSpec Fleet autoscaler spec, which is sent to Agones.
+         * Example spec can be found :
+         * https://agones.dev/site/docs/reference/fleetautoscaler/
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetAutoscalerSpec(Output<String> fleetAutoscalerSpec) {
             $.fleetAutoscalerSpec = fleetAutoscalerSpec;
             return this;
         }
 
+        /**
+         * @param fleetAutoscalerSpec Fleet autoscaler spec, which is sent to Agones.
+         * Example spec can be found :
+         * https://agones.dev/site/docs/reference/fleetautoscaler/
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetAutoscalerSpec(String fleetAutoscalerSpec) {
             return fleetAutoscalerSpec(Output.of(fleetAutoscalerSpec));
         }
 
+        /**
+         * @param name The name of the ScalingConfig
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the ScalingConfig
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param schedules The schedules to which this scaling config applies.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedules(@Nullable Output<List<GameServerConfigScalingConfigScheduleGetArgs>> schedules) {
             $.schedules = schedules;
             return this;
         }
 
+        /**
+         * @param schedules The schedules to which this scaling config applies.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedules(List<GameServerConfigScalingConfigScheduleGetArgs> schedules) {
             return schedules(Output.of(schedules));
         }
 
+        /**
+         * @param schedules The schedules to which this scaling config applies.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedules(GameServerConfigScalingConfigScheduleGetArgs... schedules) {
             return schedules(List.of(schedules));
         }
 
+        /**
+         * @param selectors Labels used to identify the clusters to which this scaling config
+         * applies. A cluster is subject to this scaling config if its labels match
+         * any of the selector entries.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(@Nullable Output<List<GameServerConfigScalingConfigSelectorGetArgs>> selectors) {
             $.selectors = selectors;
             return this;
         }
 
+        /**
+         * @param selectors Labels used to identify the clusters to which this scaling config
+         * applies. A cluster is subject to this scaling config if its labels match
+         * any of the selector entries.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(List<GameServerConfigScalingConfigSelectorGetArgs> selectors) {
             return selectors(Output.of(selectors));
         }
 
+        /**
+         * @param selectors Labels used to identify the clusters to which this scaling config
+         * applies. A cluster is subject to this scaling config if its labels match
+         * any of the selector entries.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(GameServerConfigScalingConfigSelectorGetArgs... selectors) {
             return selectors(List.of(selectors));
         }

@@ -19,6 +19,10 @@ public final class GetConformancePackArgs extends com.pulumi.resources.InvokeArg
     @Import(name="conformancePackName", required=true)
     private String conformancePackName;
 
+    /**
+     * @return Name of the conformance pack which will be assigned as the unique identifier.
+     * 
+     */
     public String conformancePackName() {
         return this.conformancePackName;
     }
@@ -47,6 +51,12 @@ public final class GetConformancePackArgs extends com.pulumi.resources.InvokeArg
             $ = new GetConformancePackArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conformancePackName Name of the conformance pack which will be assigned as the unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conformancePackName(String conformancePackName) {
             $.conformancePackName = conformancePackName;
             return this;

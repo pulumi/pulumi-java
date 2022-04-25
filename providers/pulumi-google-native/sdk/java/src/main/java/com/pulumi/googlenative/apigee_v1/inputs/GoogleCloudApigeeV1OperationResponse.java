@@ -24,6 +24,10 @@ public final class GoogleCloudApigeeV1OperationResponse extends com.pulumi.resou
     @Import(name="methods", required=true)
     private List<String> methods;
 
+    /**
+     * @return methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.
+     * 
+     */
     public List<String> methods() {
         return this.methods;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudApigeeV1OperationResponse extends com.pulumi.resou
     @Import(name="resource", required=true)
     private String resource;
 
+    /**
+     * @return REST resource path associated with the API proxy or remote service.
+     * 
+     */
     public String resource() {
         return this.resource;
     }
@@ -64,15 +72,33 @@ public final class GoogleCloudApigeeV1OperationResponse extends com.pulumi.resou
             $ = new GoogleCloudApigeeV1OperationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param methods methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(List<String> methods) {
             $.methods = methods;
             return this;
         }
 
+        /**
+         * @param methods methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
 
+        /**
+         * @param resource REST resource path associated with the API proxy or remote service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(String resource) {
             $.resource = resource;
             return this;

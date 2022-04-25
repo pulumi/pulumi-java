@@ -23,6 +23,10 @@ public final class MemcacheParametersArgs extends com.pulumi.resources.ResourceA
     @Import(name="params")
     private @Nullable Output<Map<String,String>> params;
 
+    /**
+     * @return User defined set of parameters to use in the memcached process.
+     * 
+     */
     public Optional<Output<Map<String,String>>> params() {
         return Optional.ofNullable(this.params);
     }
@@ -51,11 +55,23 @@ public final class MemcacheParametersArgs extends com.pulumi.resources.ResourceA
             $ = new MemcacheParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param params User defined set of parameters to use in the memcached process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder params(@Nullable Output<Map<String,String>> params) {
             $.params = params;
             return this;
         }
 
+        /**
+         * @param params User defined set of parameters to use in the memcached process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder params(Map<String,String> params) {
             return params(Output.of(params));
         }

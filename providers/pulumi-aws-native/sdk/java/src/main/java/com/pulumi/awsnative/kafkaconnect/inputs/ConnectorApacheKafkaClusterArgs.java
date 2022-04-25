@@ -25,6 +25,10 @@ public final class ConnectorApacheKafkaClusterArgs extends com.pulumi.resources.
     @Import(name="bootstrapServers", required=true)
     private Output<String> bootstrapServers;
 
+    /**
+     * @return The bootstrap servers string of the Apache Kafka cluster.
+     * 
+     */
     public Output<String> bootstrapServers() {
         return this.bootstrapServers;
     }
@@ -61,11 +65,23 @@ public final class ConnectorApacheKafkaClusterArgs extends com.pulumi.resources.
             $ = new ConnectorApacheKafkaClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bootstrapServers The bootstrap servers string of the Apache Kafka cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapServers(Output<String> bootstrapServers) {
             $.bootstrapServers = bootstrapServers;
             return this;
         }
 
+        /**
+         * @param bootstrapServers The bootstrap servers string of the Apache Kafka cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapServers(String bootstrapServers) {
             return bootstrapServers(Output.of(bootstrapServers));
         }

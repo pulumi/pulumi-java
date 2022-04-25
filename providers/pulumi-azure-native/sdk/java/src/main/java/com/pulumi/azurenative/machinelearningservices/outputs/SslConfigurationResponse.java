@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SslConfigurationResponse {
     /**
-     * Cert data
+     * @return Cert data
      * 
      */
     private final @Nullable String cert;
     /**
-     * CNAME of the cert
+     * @return CNAME of the cert
      * 
      */
     private final @Nullable String cname;
     /**
-     * Key data
+     * @return Key data
      * 
      */
     private final @Nullable String key;
     /**
-     * Enable or disable ssl for scoring
+     * @return Enable or disable ssl for scoring
      * 
      */
     private final @Nullable String status;
@@ -45,30 +45,30 @@ public final class SslConfigurationResponse {
     }
 
     /**
-     * Cert data
+     * @return Cert data
      * 
-    */
+     */
     public Optional<String> cert() {
         return Optional.ofNullable(this.cert);
     }
     /**
-     * CNAME of the cert
+     * @return CNAME of the cert
      * 
-    */
+     */
     public Optional<String> cname() {
         return Optional.ofNullable(this.cname);
     }
     /**
-     * Key data
+     * @return Key data
      * 
-    */
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
-     * Enable or disable ssl for scoring
+     * @return Enable or disable ssl for scoring
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

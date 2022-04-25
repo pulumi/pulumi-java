@@ -24,6 +24,10 @@ public final class GoogleCloudRunOpV2ContainerPortResponse extends com.pulumi.re
     @Import(name="containerPort", required=true)
     private Integer containerPort;
 
+    /**
+     * @return Port number the container listens on. This must be a valid TCP port number, 0 &lt; container_port &lt; 65536.
+     * 
+     */
     public Integer containerPort() {
         return this.containerPort;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudRunOpV2ContainerPortResponse extends com.pulumi.re
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudRunOpV2ContainerPortResponse extends com.pulumi.re
             $ = new GoogleCloudRunOpV2ContainerPortResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerPort Port number the container listens on. This must be a valid TCP port number, 0 &lt; container_port &lt; 65536.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(Integer containerPort) {
             $.containerPort = containerPort;
             return this;
         }
 
+        /**
+         * @param name If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

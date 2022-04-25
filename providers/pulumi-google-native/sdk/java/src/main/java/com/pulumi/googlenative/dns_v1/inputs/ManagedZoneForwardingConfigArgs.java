@@ -31,6 +31,10 @@ public final class ManagedZoneForwardingConfigArgs extends com.pulumi.resources.
     @Import(name="targetNameServers")
     private @Nullable Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers;
 
+    /**
+     * @return List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
+     * 
+     */
     public Optional<Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>>> targetNameServers() {
         return Optional.ofNullable(this.targetNameServers);
     }
@@ -69,15 +73,33 @@ public final class ManagedZoneForwardingConfigArgs extends com.pulumi.resources.
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param targetNameServers List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNameServers(@Nullable Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers) {
             $.targetNameServers = targetNameServers;
             return this;
         }
 
+        /**
+         * @param targetNameServers List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNameServers(List<ManagedZoneForwardingConfigNameServerTargetArgs> targetNameServers) {
             return targetNameServers(Output.of(targetNameServers));
         }
 
+        /**
+         * @param targetNameServers List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNameServers(ManagedZoneForwardingConfigNameServerTargetArgs... targetNameServers) {
             return targetNameServers(List.of(targetNameServers));
         }

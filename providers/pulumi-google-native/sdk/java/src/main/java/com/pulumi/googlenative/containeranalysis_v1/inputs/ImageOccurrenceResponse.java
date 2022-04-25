@@ -27,6 +27,10 @@ public final class ImageOccurrenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="baseResourceUrl", required=true)
     private String baseResourceUrl;
 
+    /**
+     * @return This contains the base image URL for the derived image occurrence.
+     * 
+     */
     public String baseResourceUrl() {
         return this.baseResourceUrl;
     }
@@ -38,6 +42,10 @@ public final class ImageOccurrenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="distance", required=true)
     private Integer distance;
 
+    /**
+     * @return The number of layers by which this image differs from the associated image basis.
+     * 
+     */
     public Integer distance() {
         return this.distance;
     }
@@ -49,6 +57,10 @@ public final class ImageOccurrenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="fingerprint", required=true)
     private FingerprintResponse fingerprint;
 
+    /**
+     * @return The fingerprint of the derived image.
+     * 
+     */
     public FingerprintResponse fingerprint() {
         return this.fingerprint;
     }
@@ -60,6 +72,10 @@ public final class ImageOccurrenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="layerInfo", required=true)
     private List<LayerResponse> layerInfo;
 
+    /**
+     * @return This contains layer-specific metadata, if populated it has length &#34;distance&#34; and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
+     * 
+     */
     public List<LayerResponse> layerInfo() {
         return this.layerInfo;
     }
@@ -91,26 +107,56 @@ public final class ImageOccurrenceResponse extends com.pulumi.resources.InvokeAr
             $ = new ImageOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseResourceUrl This contains the base image URL for the derived image occurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseResourceUrl(String baseResourceUrl) {
             $.baseResourceUrl = baseResourceUrl;
             return this;
         }
 
+        /**
+         * @param distance The number of layers by which this image differs from the associated image basis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distance(Integer distance) {
             $.distance = distance;
             return this;
         }
 
+        /**
+         * @param fingerprint The fingerprint of the derived image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(FingerprintResponse fingerprint) {
             $.fingerprint = fingerprint;
             return this;
         }
 
+        /**
+         * @param layerInfo This contains layer-specific metadata, if populated it has length &#34;distance&#34; and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layerInfo(List<LayerResponse> layerInfo) {
             $.layerInfo = layerInfo;
             return this;
         }
 
+        /**
+         * @param layerInfo This contains layer-specific metadata, if populated it has length &#34;distance&#34; and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layerInfo(LayerResponse... layerInfo) {
             return layerInfo(List.of(layerInfo));
         }

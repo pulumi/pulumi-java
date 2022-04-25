@@ -24,6 +24,10 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
     @Import(name="force", required=true)
     private Boolean force;
 
+    /**
+     * @return Use `write_disposition` instead. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
+     * 
+     */
     public Boolean force() {
         return this.force;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
     @Import(name="tableUri", required=true)
     private String tableUri;
 
+    /**
+     * @return BigQuery URI to a table, up to 2000 characters long, in the format `bq://projectId.bqDatasetId.tableId`
+     * 
+     */
     public String tableUri() {
         return this.tableUri;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
     @Import(name="writeDisposition", required=true)
     private String writeDisposition;
 
+    /**
+     * @return Determines whether the existing table in the destination is to be overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.
+     * 
+     */
     public String writeDisposition() {
         return this.writeDisposition;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
             $ = new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param force Use `write_disposition` instead. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder force(Boolean force) {
             $.force = force;
             return this;
         }
 
+        /**
+         * @param tableUri BigQuery URI to a table, up to 2000 characters long, in the format `bq://projectId.bqDatasetId.tableId`
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableUri(String tableUri) {
             $.tableUri = tableUri;
             return this;
         }
 
+        /**
+         * @param writeDisposition Determines whether the existing table in the destination is to be overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeDisposition(String writeDisposition) {
             $.writeDisposition = writeDisposition;
             return this;

@@ -28,6 +28,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hanaSids")
     private @Nullable Output<List<SAPSystemIDArgs>> hanaSids;
 
+    /**
+     * @return Specifies information related to SAP system IDs for the hana instance.
+     * 
+     */
     public Optional<Output<List<SAPSystemIDArgs>>> hanaSids() {
         return Optional.ofNullable(this.hanaSids);
     }
@@ -39,6 +43,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="osDisks")
     private @Nullable Output<List<DiskArgs>> osDisks;
 
+    /**
+     * @return Specifies information about the operating system disk used by the hana instance.
+     * 
+     */
     public Optional<Output<List<DiskArgs>>> osDisks() {
         return Optional.ofNullable(this.osDisks);
     }
@@ -68,28 +76,64 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hanaSids Specifies information related to SAP system IDs for the hana instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hanaSids(@Nullable Output<List<SAPSystemIDArgs>> hanaSids) {
             $.hanaSids = hanaSids;
             return this;
         }
 
+        /**
+         * @param hanaSids Specifies information related to SAP system IDs for the hana instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hanaSids(List<SAPSystemIDArgs> hanaSids) {
             return hanaSids(Output.of(hanaSids));
         }
 
+        /**
+         * @param hanaSids Specifies information related to SAP system IDs for the hana instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hanaSids(SAPSystemIDArgs... hanaSids) {
             return hanaSids(List.of(hanaSids));
         }
 
+        /**
+         * @param osDisks Specifies information about the operating system disk used by the hana instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisks(@Nullable Output<List<DiskArgs>> osDisks) {
             $.osDisks = osDisks;
             return this;
         }
 
+        /**
+         * @param osDisks Specifies information about the operating system disk used by the hana instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisks(List<DiskArgs> osDisks) {
             return osDisks(Output.of(osDisks));
         }
 
+        /**
+         * @param osDisks Specifies information about the operating system disk used by the hana instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisks(DiskArgs... osDisks) {
             return osDisks(List.of(osDisks));
         }

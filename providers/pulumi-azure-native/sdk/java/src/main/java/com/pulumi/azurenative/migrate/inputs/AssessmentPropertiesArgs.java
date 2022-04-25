@@ -41,6 +41,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="azureDiskType", required=true)
     private Output<Either<String,AzureDiskType>> azureDiskType;
 
+    /**
+     * @return Storage type selected for this disk.
+     * 
+     */
     public Output<Either<String,AzureDiskType>> azureDiskType() {
         return this.azureDiskType;
     }
@@ -52,6 +56,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="azureHybridUseBenefit", required=true)
     private Output<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit;
 
+    /**
+     * @return AHUB discount on windows virtual machines.
+     * 
+     */
     public Output<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit() {
         return this.azureHybridUseBenefit;
     }
@@ -63,6 +71,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="azureLocation", required=true)
     private Output<Either<String,AzureLocation>> azureLocation;
 
+    /**
+     * @return Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.
+     * 
+     */
     public Output<Either<String,AzureLocation>> azureLocation() {
         return this.azureLocation;
     }
@@ -74,6 +86,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="azureOfferCode", required=true)
     private Output<Either<String,AzureOfferCode>> azureOfferCode;
 
+    /**
+     * @return Offer code according to which cost estimation is done.
+     * 
+     */
     public Output<Either<String,AzureOfferCode>> azureOfferCode() {
         return this.azureOfferCode;
     }
@@ -85,6 +101,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="azurePricingTier", required=true)
     private Output<Either<String,AzurePricingTier>> azurePricingTier;
 
+    /**
+     * @return Pricing tier for Size evaluation.
+     * 
+     */
     public Output<Either<String,AzurePricingTier>> azurePricingTier() {
         return this.azurePricingTier;
     }
@@ -96,6 +116,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="azureStorageRedundancy", required=true)
     private Output<Either<String,AzureStorageRedundancy>> azureStorageRedundancy;
 
+    /**
+     * @return Storage Redundancy type offered by Azure.
+     * 
+     */
     public Output<Either<String,AzureStorageRedundancy>> azureStorageRedundancy() {
         return this.azureStorageRedundancy;
     }
@@ -107,6 +131,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="azureVmFamilies", required=true)
     private Output<List<Either<String,AzureVmFamily>>> azureVmFamilies;
 
+    /**
+     * @return List of azure VM families.
+     * 
+     */
     public Output<List<Either<String,AzureVmFamily>>> azureVmFamilies() {
         return this.azureVmFamilies;
     }
@@ -118,6 +146,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="currency", required=true)
     private Output<Either<String,Currency>> currency;
 
+    /**
+     * @return Currency to report prices in.
+     * 
+     */
     public Output<Either<String,Currency>> currency() {
         return this.currency;
     }
@@ -129,6 +161,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="discountPercentage", required=true)
     private Output<Double> discountPercentage;
 
+    /**
+     * @return Custom discount percentage to be applied on final costs. Can be in the range [0, 100].
+     * 
+     */
     public Output<Double> discountPercentage() {
         return this.discountPercentage;
     }
@@ -140,6 +176,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="percentile", required=true)
     private Output<Either<String,Percentile>> percentile;
 
+    /**
+     * @return Percentile of performance data used to recommend Azure size.
+     * 
+     */
     public Output<Either<String,Percentile>> percentile() {
         return this.percentile;
     }
@@ -151,6 +191,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="reservedInstance", required=true)
     private Output<Either<String,ReservedInstance>> reservedInstance;
 
+    /**
+     * @return Azure reserved instance.
+     * 
+     */
     public Output<Either<String,ReservedInstance>> reservedInstance() {
         return this.reservedInstance;
     }
@@ -162,6 +206,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="scalingFactor", required=true)
     private Output<Double> scalingFactor;
 
+    /**
+     * @return Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.
+     * 
+     */
     public Output<Double> scalingFactor() {
         return this.scalingFactor;
     }
@@ -173,6 +221,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="sizingCriterion", required=true)
     private Output<Either<String,AssessmentSizingCriterion>> sizingCriterion;
 
+    /**
+     * @return Assessment sizing criterion.
+     * 
+     */
     public Output<Either<String,AssessmentSizingCriterion>> sizingCriterion() {
         return this.sizingCriterion;
     }
@@ -184,6 +236,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="stage", required=true)
     private Output<Either<String,AssessmentStage>> stage;
 
+    /**
+     * @return User configurable setting that describes the status of the assessment.
+     * 
+     */
     public Output<Either<String,AssessmentStage>> stage() {
         return this.stage;
     }
@@ -195,6 +251,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="timeRange", required=true)
     private Output<Either<String,TimeRange>> timeRange;
 
+    /**
+     * @return Time range of performance data used to recommend a size.
+     * 
+     */
     public Output<Either<String,TimeRange>> timeRange() {
         return this.timeRange;
     }
@@ -206,6 +266,10 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="vmUptime", required=true)
     private Output<VmUptimeArgs> vmUptime;
 
+    /**
+     * @return Specify the duration for which the VMs are up in the on-premises environment.
+     * 
+     */
     public Output<VmUptimeArgs> vmUptime() {
         return this.vmUptime;
     }
@@ -249,246 +313,588 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new AssessmentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureDiskType Storage type selected for this disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureDiskType(Output<Either<String,AzureDiskType>> azureDiskType) {
             $.azureDiskType = azureDiskType;
             return this;
         }
 
+        /**
+         * @param azureDiskType Storage type selected for this disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureDiskType(Either<String,AzureDiskType> azureDiskType) {
             return azureDiskType(Output.of(azureDiskType));
         }
 
+        /**
+         * @param azureDiskType Storage type selected for this disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureDiskType(String azureDiskType) {
             return azureDiskType(Either.ofLeft(azureDiskType));
         }
 
+        /**
+         * @param azureDiskType Storage type selected for this disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureDiskType(AzureDiskType azureDiskType) {
             return azureDiskType(Either.ofRight(azureDiskType));
         }
 
+        /**
+         * @param azureHybridUseBenefit AHUB discount on windows virtual machines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureHybridUseBenefit(Output<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit) {
             $.azureHybridUseBenefit = azureHybridUseBenefit;
             return this;
         }
 
+        /**
+         * @param azureHybridUseBenefit AHUB discount on windows virtual machines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureHybridUseBenefit(Either<String,AzureHybridUseBenefit> azureHybridUseBenefit) {
             return azureHybridUseBenefit(Output.of(azureHybridUseBenefit));
         }
 
+        /**
+         * @param azureHybridUseBenefit AHUB discount on windows virtual machines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureHybridUseBenefit(String azureHybridUseBenefit) {
             return azureHybridUseBenefit(Either.ofLeft(azureHybridUseBenefit));
         }
 
+        /**
+         * @param azureHybridUseBenefit AHUB discount on windows virtual machines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureHybridUseBenefit(AzureHybridUseBenefit azureHybridUseBenefit) {
             return azureHybridUseBenefit(Either.ofRight(azureHybridUseBenefit));
         }
 
+        /**
+         * @param azureLocation Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureLocation(Output<Either<String,AzureLocation>> azureLocation) {
             $.azureLocation = azureLocation;
             return this;
         }
 
+        /**
+         * @param azureLocation Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureLocation(Either<String,AzureLocation> azureLocation) {
             return azureLocation(Output.of(azureLocation));
         }
 
+        /**
+         * @param azureLocation Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureLocation(String azureLocation) {
             return azureLocation(Either.ofLeft(azureLocation));
         }
 
+        /**
+         * @param azureLocation Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureLocation(AzureLocation azureLocation) {
             return azureLocation(Either.ofRight(azureLocation));
         }
 
+        /**
+         * @param azureOfferCode Offer code according to which cost estimation is done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureOfferCode(Output<Either<String,AzureOfferCode>> azureOfferCode) {
             $.azureOfferCode = azureOfferCode;
             return this;
         }
 
+        /**
+         * @param azureOfferCode Offer code according to which cost estimation is done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureOfferCode(Either<String,AzureOfferCode> azureOfferCode) {
             return azureOfferCode(Output.of(azureOfferCode));
         }
 
+        /**
+         * @param azureOfferCode Offer code according to which cost estimation is done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureOfferCode(String azureOfferCode) {
             return azureOfferCode(Either.ofLeft(azureOfferCode));
         }
 
+        /**
+         * @param azureOfferCode Offer code according to which cost estimation is done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureOfferCode(AzureOfferCode azureOfferCode) {
             return azureOfferCode(Either.ofRight(azureOfferCode));
         }
 
+        /**
+         * @param azurePricingTier Pricing tier for Size evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azurePricingTier(Output<Either<String,AzurePricingTier>> azurePricingTier) {
             $.azurePricingTier = azurePricingTier;
             return this;
         }
 
+        /**
+         * @param azurePricingTier Pricing tier for Size evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azurePricingTier(Either<String,AzurePricingTier> azurePricingTier) {
             return azurePricingTier(Output.of(azurePricingTier));
         }
 
+        /**
+         * @param azurePricingTier Pricing tier for Size evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azurePricingTier(String azurePricingTier) {
             return azurePricingTier(Either.ofLeft(azurePricingTier));
         }
 
+        /**
+         * @param azurePricingTier Pricing tier for Size evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azurePricingTier(AzurePricingTier azurePricingTier) {
             return azurePricingTier(Either.ofRight(azurePricingTier));
         }
 
+        /**
+         * @param azureStorageRedundancy Storage Redundancy type offered by Azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureStorageRedundancy(Output<Either<String,AzureStorageRedundancy>> azureStorageRedundancy) {
             $.azureStorageRedundancy = azureStorageRedundancy;
             return this;
         }
 
+        /**
+         * @param azureStorageRedundancy Storage Redundancy type offered by Azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureStorageRedundancy(Either<String,AzureStorageRedundancy> azureStorageRedundancy) {
             return azureStorageRedundancy(Output.of(azureStorageRedundancy));
         }
 
+        /**
+         * @param azureStorageRedundancy Storage Redundancy type offered by Azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureStorageRedundancy(String azureStorageRedundancy) {
             return azureStorageRedundancy(Either.ofLeft(azureStorageRedundancy));
         }
 
+        /**
+         * @param azureStorageRedundancy Storage Redundancy type offered by Azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureStorageRedundancy(AzureStorageRedundancy azureStorageRedundancy) {
             return azureStorageRedundancy(Either.ofRight(azureStorageRedundancy));
         }
 
+        /**
+         * @param azureVmFamilies List of azure VM families.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureVmFamilies(Output<List<Either<String,AzureVmFamily>>> azureVmFamilies) {
             $.azureVmFamilies = azureVmFamilies;
             return this;
         }
 
+        /**
+         * @param azureVmFamilies List of azure VM families.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureVmFamilies(List<Either<String,AzureVmFamily>> azureVmFamilies) {
             return azureVmFamilies(Output.of(azureVmFamilies));
         }
 
+        /**
+         * @param azureVmFamilies List of azure VM families.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureVmFamilies(Either<String,AzureVmFamily>... azureVmFamilies) {
             return azureVmFamilies(List.of(azureVmFamilies));
         }
 
+        /**
+         * @param currency Currency to report prices in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currency(Output<Either<String,Currency>> currency) {
             $.currency = currency;
             return this;
         }
 
+        /**
+         * @param currency Currency to report prices in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currency(Either<String,Currency> currency) {
             return currency(Output.of(currency));
         }
 
+        /**
+         * @param currency Currency to report prices in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currency(String currency) {
             return currency(Either.ofLeft(currency));
         }
 
+        /**
+         * @param currency Currency to report prices in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currency(Currency currency) {
             return currency(Either.ofRight(currency));
         }
 
+        /**
+         * @param discountPercentage Custom discount percentage to be applied on final costs. Can be in the range [0, 100].
+         * 
+         * @return builder
+         * 
+         */
         public Builder discountPercentage(Output<Double> discountPercentage) {
             $.discountPercentage = discountPercentage;
             return this;
         }
 
+        /**
+         * @param discountPercentage Custom discount percentage to be applied on final costs. Can be in the range [0, 100].
+         * 
+         * @return builder
+         * 
+         */
         public Builder discountPercentage(Double discountPercentage) {
             return discountPercentage(Output.of(discountPercentage));
         }
 
+        /**
+         * @param percentile Percentile of performance data used to recommend Azure size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentile(Output<Either<String,Percentile>> percentile) {
             $.percentile = percentile;
             return this;
         }
 
+        /**
+         * @param percentile Percentile of performance data used to recommend Azure size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentile(Either<String,Percentile> percentile) {
             return percentile(Output.of(percentile));
         }
 
+        /**
+         * @param percentile Percentile of performance data used to recommend Azure size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentile(String percentile) {
             return percentile(Either.ofLeft(percentile));
         }
 
+        /**
+         * @param percentile Percentile of performance data used to recommend Azure size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentile(Percentile percentile) {
             return percentile(Either.ofRight(percentile));
         }
 
+        /**
+         * @param reservedInstance Azure reserved instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservedInstance(Output<Either<String,ReservedInstance>> reservedInstance) {
             $.reservedInstance = reservedInstance;
             return this;
         }
 
+        /**
+         * @param reservedInstance Azure reserved instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservedInstance(Either<String,ReservedInstance> reservedInstance) {
             return reservedInstance(Output.of(reservedInstance));
         }
 
+        /**
+         * @param reservedInstance Azure reserved instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservedInstance(String reservedInstance) {
             return reservedInstance(Either.ofLeft(reservedInstance));
         }
 
+        /**
+         * @param reservedInstance Azure reserved instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservedInstance(ReservedInstance reservedInstance) {
             return reservedInstance(Either.ofRight(reservedInstance));
         }
 
+        /**
+         * @param scalingFactor Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingFactor(Output<Double> scalingFactor) {
             $.scalingFactor = scalingFactor;
             return this;
         }
 
+        /**
+         * @param scalingFactor Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingFactor(Double scalingFactor) {
             return scalingFactor(Output.of(scalingFactor));
         }
 
+        /**
+         * @param sizingCriterion Assessment sizing criterion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizingCriterion(Output<Either<String,AssessmentSizingCriterion>> sizingCriterion) {
             $.sizingCriterion = sizingCriterion;
             return this;
         }
 
+        /**
+         * @param sizingCriterion Assessment sizing criterion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizingCriterion(Either<String,AssessmentSizingCriterion> sizingCriterion) {
             return sizingCriterion(Output.of(sizingCriterion));
         }
 
+        /**
+         * @param sizingCriterion Assessment sizing criterion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizingCriterion(String sizingCriterion) {
             return sizingCriterion(Either.ofLeft(sizingCriterion));
         }
 
+        /**
+         * @param sizingCriterion Assessment sizing criterion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizingCriterion(AssessmentSizingCriterion sizingCriterion) {
             return sizingCriterion(Either.ofRight(sizingCriterion));
         }
 
+        /**
+         * @param stage User configurable setting that describes the status of the assessment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(Output<Either<String,AssessmentStage>> stage) {
             $.stage = stage;
             return this;
         }
 
+        /**
+         * @param stage User configurable setting that describes the status of the assessment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(Either<String,AssessmentStage> stage) {
             return stage(Output.of(stage));
         }
 
+        /**
+         * @param stage User configurable setting that describes the status of the assessment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(String stage) {
             return stage(Either.ofLeft(stage));
         }
 
+        /**
+         * @param stage User configurable setting that describes the status of the assessment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(AssessmentStage stage) {
             return stage(Either.ofRight(stage));
         }
 
+        /**
+         * @param timeRange Time range of performance data used to recommend a size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeRange(Output<Either<String,TimeRange>> timeRange) {
             $.timeRange = timeRange;
             return this;
         }
 
+        /**
+         * @param timeRange Time range of performance data used to recommend a size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeRange(Either<String,TimeRange> timeRange) {
             return timeRange(Output.of(timeRange));
         }
 
+        /**
+         * @param timeRange Time range of performance data used to recommend a size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeRange(String timeRange) {
             return timeRange(Either.ofLeft(timeRange));
         }
 
+        /**
+         * @param timeRange Time range of performance data used to recommend a size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeRange(TimeRange timeRange) {
             return timeRange(Either.ofRight(timeRange));
         }
 
+        /**
+         * @param vmUptime Specify the duration for which the VMs are up in the on-premises environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmUptime(Output<VmUptimeArgs> vmUptime) {
             $.vmUptime = vmUptime;
             return this;
         }
 
+        /**
+         * @param vmUptime Specify the duration for which the VMs are up in the on-premises environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmUptime(VmUptimeArgs vmUptime) {
             return vmUptime(Output.of(vmUptime));
         }

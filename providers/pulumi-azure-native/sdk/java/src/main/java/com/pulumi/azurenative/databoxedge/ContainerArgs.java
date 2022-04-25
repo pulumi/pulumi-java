@@ -24,6 +24,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerName")
     private @Nullable Output<String> containerName;
 
+    /**
+     * @return The container name.
+     * 
+     */
     public Optional<Output<String>> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -35,6 +39,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataFormat", required=true)
     private Output<Either<String,AzureContainerDataFormat>> dataFormat;
 
+    /**
+     * @return DataFormat for Container
+     * 
+     */
     public Output<Either<String,AzureContainerDataFormat>> dataFormat() {
         return this.dataFormat;
     }
@@ -46,6 +54,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -57,6 +69,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountName", required=true)
     private Output<String> storageAccountName;
 
+    /**
+     * @return The Storage Account Name
+     * 
+     */
     public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
@@ -100,55 +120,127 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerName The container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable Output<String> containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param containerName The container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             return containerName(Output.of(containerName));
         }
 
+        /**
+         * @param dataFormat DataFormat for Container
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFormat(Output<Either<String,AzureContainerDataFormat>> dataFormat) {
             $.dataFormat = dataFormat;
             return this;
         }
 
+        /**
+         * @param dataFormat DataFormat for Container
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFormat(Either<String,AzureContainerDataFormat> dataFormat) {
             return dataFormat(Output.of(dataFormat));
         }
 
+        /**
+         * @param dataFormat DataFormat for Container
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFormat(String dataFormat) {
             return dataFormat(Either.ofLeft(dataFormat));
         }
 
+        /**
+         * @param dataFormat DataFormat for Container
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFormat(AzureContainerDataFormat dataFormat) {
             return dataFormat(Either.ofRight(dataFormat));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageAccountName The Storage Account Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(Output<String> storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;
         }
 
+        /**
+         * @param storageAccountName The Storage Account Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(String storageAccountName) {
             return storageAccountName(Output.of(storageAccountName));
         }

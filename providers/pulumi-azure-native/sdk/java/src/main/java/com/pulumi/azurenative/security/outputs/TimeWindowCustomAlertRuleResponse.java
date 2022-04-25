@@ -12,38 +12,38 @@ import java.util.Objects;
 @CustomType
 public final class TimeWindowCustomAlertRuleResponse {
     /**
-     * The description of the custom alert.
+     * @return The description of the custom alert.
      * 
      */
     private final String description;
     /**
-     * The display name of the custom alert.
+     * @return The display name of the custom alert.
      * 
      */
     private final String displayName;
     /**
-     * Status of the custom alert.
+     * @return Status of the custom alert.
      * 
      */
     private final Boolean isEnabled;
     /**
-     * The maximum threshold.
+     * @return The maximum threshold.
      * 
      */
     private final Integer maxThreshold;
     /**
-     * The minimum threshold.
+     * @return The minimum threshold.
      * 
      */
     private final Integer minThreshold;
     /**
-     * The type of the custom alert rule.
+     * @return The type of the custom alert rule.
      * Expected value is &#39;TimeWindowCustomAlertRule&#39;.
      * 
      */
     private final String ruleType;
     /**
-     * The time window size in iso8601 format.
+     * @return The time window size in iso8601 format.
      * 
      */
     private final String timeWindowSize;
@@ -67,52 +67,52 @@ public final class TimeWindowCustomAlertRuleResponse {
     }
 
     /**
-     * The description of the custom alert.
+     * @return The description of the custom alert.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The display name of the custom alert.
+     * @return The display name of the custom alert.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Status of the custom alert.
+     * @return Status of the custom alert.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * The maximum threshold.
+     * @return The maximum threshold.
      * 
-    */
+     */
     public Integer maxThreshold() {
         return this.maxThreshold;
     }
     /**
-     * The minimum threshold.
+     * @return The minimum threshold.
      * 
-    */
+     */
     public Integer minThreshold() {
         return this.minThreshold;
     }
     /**
-     * The type of the custom alert rule.
+     * @return The type of the custom alert rule.
      * Expected value is &#39;TimeWindowCustomAlertRule&#39;.
      * 
-    */
+     */
     public String ruleType() {
         return this.ruleType;
     }
     /**
-     * The time window size in iso8601 format.
+     * @return The time window size in iso8601 format.
      * 
-    */
+     */
     public String timeWindowSize() {
         return this.timeWindowSize;
     }

@@ -28,6 +28,10 @@ public final class SnowflakeImportCopyCommandResponse extends com.pulumi.resourc
     @Import(name="additionalCopyOptions")
     private @Nullable Map<String,Object> additionalCopyOptions;
 
+    /**
+     * @return Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalCopyOptions&#34;: { &#34;DATE_FORMAT&#34;: &#34;MM/DD/YYYY&#34;, &#34;TIME_FORMAT&#34;: &#34;&#39;HH24:MI:SS.FF&#39;&#34; }
+     * 
+     */
     public Optional<Map<String,Object>> additionalCopyOptions() {
         return Optional.ofNullable(this.additionalCopyOptions);
     }
@@ -39,6 +43,10 @@ public final class SnowflakeImportCopyCommandResponse extends com.pulumi.resourc
     @Import(name="additionalFormatOptions")
     private @Nullable Map<String,Object> additionalFormatOptions;
 
+    /**
+     * @return Additional format options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalFormatOptions&#34;: { &#34;FORCE&#34;: &#34;TRUE&#34;, &#34;LOAD_UNCERTAIN_FILES&#34;: &#34;&#39;FALSE&#39;&#34; }
+     * 
+     */
     public Optional<Map<String,Object>> additionalFormatOptions() {
         return Optional.ofNullable(this.additionalFormatOptions);
     }
@@ -51,6 +59,11 @@ public final class SnowflakeImportCopyCommandResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The import setting type.
+     * Expected value is &#39;SnowflakeImportCopyCommand&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -81,16 +94,35 @@ public final class SnowflakeImportCopyCommandResponse extends com.pulumi.resourc
             $ = new SnowflakeImportCopyCommandResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalCopyOptions Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalCopyOptions&#34;: { &#34;DATE_FORMAT&#34;: &#34;MM/DD/YYYY&#34;, &#34;TIME_FORMAT&#34;: &#34;&#39;HH24:MI:SS.FF&#39;&#34; }
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalCopyOptions(@Nullable Map<String,Object> additionalCopyOptions) {
             $.additionalCopyOptions = additionalCopyOptions;
             return this;
         }
 
+        /**
+         * @param additionalFormatOptions Additional format options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalFormatOptions&#34;: { &#34;FORCE&#34;: &#34;TRUE&#34;, &#34;LOAD_UNCERTAIN_FILES&#34;: &#34;&#39;FALSE&#39;&#34; }
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalFormatOptions(@Nullable Map<String,Object> additionalFormatOptions) {
             $.additionalFormatOptions = additionalFormatOptions;
             return this;
         }
 
+        /**
+         * @param type The import setting type.
+         * Expected value is &#39;SnowflakeImportCopyCommand&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

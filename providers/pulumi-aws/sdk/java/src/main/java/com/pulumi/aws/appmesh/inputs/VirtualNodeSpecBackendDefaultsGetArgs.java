@@ -22,6 +22,10 @@ public final class VirtualNodeSpecBackendDefaultsGetArgs extends com.pulumi.reso
     @Import(name="clientPolicy")
     private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
 
+    /**
+     * @return The default client policy for virtual service backends. See above for details.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs>> clientPolicy() {
         return Optional.ofNullable(this.clientPolicy);
     }
@@ -50,11 +54,23 @@ public final class VirtualNodeSpecBackendDefaultsGetArgs extends com.pulumi.reso
             $ = new VirtualNodeSpecBackendDefaultsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientPolicy The default client policy for virtual service backends. See above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientPolicy(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy) {
             $.clientPolicy = clientPolicy;
             return this;
         }
 
+        /**
+         * @param clientPolicy The default client policy for virtual service backends. See above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientPolicy(VirtualNodeSpecBackendDefaultsClientPolicyGetArgs clientPolicy) {
             return clientPolicy(Output.of(clientPolicy));
         }

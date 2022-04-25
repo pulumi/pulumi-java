@@ -25,6 +25,10 @@ public final class WebTestGeolocationResponse extends com.pulumi.resources.Invok
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Location ID for the webtest to run from.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -53,6 +57,12 @@ public final class WebTestGeolocationResponse extends com.pulumi.resources.Invok
             $ = new WebTestGeolocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Location ID for the webtest to run from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;

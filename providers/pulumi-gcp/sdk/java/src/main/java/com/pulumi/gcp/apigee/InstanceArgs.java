@@ -22,6 +22,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the instance.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionKeyName")
     private @Nullable Output<String> diskEncryptionKeyName;
 
+    /**
+     * @return Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only.
+     * Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
+     * 
+     */
     public Optional<Output<String>> diskEncryptionKeyName() {
         return Optional.ofNullable(this.diskEncryptionKeyName);
     }
@@ -45,6 +54,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of the instance.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -62,6 +75,16 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipRange")
     private @Nullable Output<String> ipRange;
 
+    /**
+     * @return IP range represents the customer-provided CIDR block of length 22 that will be used for
+     * the Apigee instance creation. This optional range, if provided, should be freely
+     * available as part of larger named range the customer has allocated to the Service
+     * Networking peering. If this is not provided, Apigee will automatically request for any
+     * available /22 CIDR block from Service Networking. The customer should use this CIDR block
+     * for configuring their firewall needs to allow traffic from Apigee.
+     * Input format: &#34;a.b.c.d/22&#34;
+     * 
+     */
     public Optional<Output<String>> ipRange() {
         return Optional.ofNullable(this.ipRange);
     }
@@ -75,6 +98,12 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return Compute Engine location where the instance resides. For trial organization
+     * subscriptions, the location must be a Compute Engine zone. For paid organization
+     * subscriptions, it should correspond to a Compute Engine region.
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -86,6 +115,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource ID of the instance.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -98,6 +131,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="orgId", required=true)
     private Output<String> orgId;
 
+    /**
+     * @return The Apigee Organization associated with the Apigee instance,
+     * in the format `organizations/{{org_name}}`.
+     * 
+     */
     public Output<String> orgId() {
         return this.orgId;
     }
@@ -110,6 +148,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peeringCidrRange")
     private @Nullable Output<String> peeringCidrRange;
 
+    /**
+     * @return The size of the CIDR block range that will be reserved by the instance. For valid values,
+     * see [CidrRange](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances#CidrRange) on the documentation.
+     * 
+     */
     public Optional<Output<String>> peeringCidrRange() {
         return Optional.ofNullable(this.peeringCidrRange);
     }
@@ -145,74 +188,192 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param diskEncryptionKeyName Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only.
+         * Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKeyName(@Nullable Output<String> diskEncryptionKeyName) {
             $.diskEncryptionKeyName = diskEncryptionKeyName;
             return this;
         }
 
+        /**
+         * @param diskEncryptionKeyName Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only.
+         * Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKeyName(String diskEncryptionKeyName) {
             return diskEncryptionKeyName(Output.of(diskEncryptionKeyName));
         }
 
+        /**
+         * @param displayName Display name of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param ipRange IP range represents the customer-provided CIDR block of length 22 that will be used for
+         * the Apigee instance creation. This optional range, if provided, should be freely
+         * available as part of larger named range the customer has allocated to the Service
+         * Networking peering. If this is not provided, Apigee will automatically request for any
+         * available /22 CIDR block from Service Networking. The customer should use this CIDR block
+         * for configuring their firewall needs to allow traffic from Apigee.
+         * Input format: &#34;a.b.c.d/22&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRange(@Nullable Output<String> ipRange) {
             $.ipRange = ipRange;
             return this;
         }
 
+        /**
+         * @param ipRange IP range represents the customer-provided CIDR block of length 22 that will be used for
+         * the Apigee instance creation. This optional range, if provided, should be freely
+         * available as part of larger named range the customer has allocated to the Service
+         * Networking peering. If this is not provided, Apigee will automatically request for any
+         * available /22 CIDR block from Service Networking. The customer should use this CIDR block
+         * for configuring their firewall needs to allow traffic from Apigee.
+         * Input format: &#34;a.b.c.d/22&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRange(String ipRange) {
             return ipRange(Output.of(ipRange));
         }
 
+        /**
+         * @param location Compute Engine location where the instance resides. For trial organization
+         * subscriptions, the location must be a Compute Engine zone. For paid organization
+         * subscriptions, it should correspond to a Compute Engine region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Compute Engine location where the instance resides. For trial organization
+         * subscriptions, the location must be a Compute Engine zone. For paid organization
+         * subscriptions, it should correspond to a Compute Engine region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Resource ID of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource ID of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param orgId The Apigee Organization associated with the Apigee instance,
+         * in the format `organizations/{{org_name}}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(Output<String> orgId) {
             $.orgId = orgId;
             return this;
         }
 
+        /**
+         * @param orgId The Apigee Organization associated with the Apigee instance,
+         * in the format `organizations/{{org_name}}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(String orgId) {
             return orgId(Output.of(orgId));
         }
 
+        /**
+         * @param peeringCidrRange The size of the CIDR block range that will be reserved by the instance. For valid values,
+         * see [CidrRange](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances#CidrRange) on the documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringCidrRange(@Nullable Output<String> peeringCidrRange) {
             $.peeringCidrRange = peeringCidrRange;
             return this;
         }
 
+        /**
+         * @param peeringCidrRange The size of the CIDR block range that will be reserved by the instance. For valid values,
+         * see [CidrRange](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances#CidrRange) on the documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringCidrRange(String peeringCidrRange) {
             return peeringCidrRange(Output.of(peeringCidrRange));
         }

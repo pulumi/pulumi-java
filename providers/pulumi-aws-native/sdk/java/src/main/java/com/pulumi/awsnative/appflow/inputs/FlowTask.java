@@ -25,6 +25,10 @@ public final class FlowTask extends com.pulumi.resources.InvokeArgs {
     @Import(name="connectorOperator")
     private @Nullable FlowConnectorOperator connectorOperator;
 
+    /**
+     * @return Operation to be performed on provided source fields
+     * 
+     */
     public Optional<FlowConnectorOperator> connectorOperator() {
         return Optional.ofNullable(this.connectorOperator);
     }
@@ -36,6 +40,10 @@ public final class FlowTask extends com.pulumi.resources.InvokeArgs {
     @Import(name="destinationField")
     private @Nullable String destinationField;
 
+    /**
+     * @return A field value on which source field should be validated
+     * 
+     */
     public Optional<String> destinationField() {
         return Optional.ofNullable(this.destinationField);
     }
@@ -47,6 +55,10 @@ public final class FlowTask extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceFields", required=true)
     private List<String> sourceFields;
 
+    /**
+     * @return Source fields on which particular task will be applied
+     * 
+     */
     public List<String> sourceFields() {
         return this.sourceFields;
     }
@@ -58,6 +70,10 @@ public final class FlowTask extends com.pulumi.resources.InvokeArgs {
     @Import(name="taskProperties")
     private @Nullable List<FlowTaskPropertiesObject> taskProperties;
 
+    /**
+     * @return A Map used to store task related info
+     * 
+     */
     public Optional<List<FlowTaskPropertiesObject>> taskProperties() {
         return Optional.ofNullable(this.taskProperties);
     }
@@ -69,6 +85,10 @@ public final class FlowTask extends com.pulumi.resources.InvokeArgs {
     @Import(name="taskType", required=true)
     private FlowTaskType taskType;
 
+    /**
+     * @return Type of task
+     * 
+     */
     public FlowTaskType taskType() {
         return this.taskType;
     }
@@ -101,34 +121,76 @@ public final class FlowTask extends com.pulumi.resources.InvokeArgs {
             $ = new FlowTask(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectorOperator Operation to be performed on provided source fields
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorOperator(@Nullable FlowConnectorOperator connectorOperator) {
             $.connectorOperator = connectorOperator;
             return this;
         }
 
+        /**
+         * @param destinationField A field value on which source field should be validated
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationField(@Nullable String destinationField) {
             $.destinationField = destinationField;
             return this;
         }
 
+        /**
+         * @param sourceFields Source fields on which particular task will be applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFields(List<String> sourceFields) {
             $.sourceFields = sourceFields;
             return this;
         }
 
+        /**
+         * @param sourceFields Source fields on which particular task will be applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFields(String... sourceFields) {
             return sourceFields(List.of(sourceFields));
         }
 
+        /**
+         * @param taskProperties A Map used to store task related info
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskProperties(@Nullable List<FlowTaskPropertiesObject> taskProperties) {
             $.taskProperties = taskProperties;
             return this;
         }
 
+        /**
+         * @param taskProperties A Map used to store task related info
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskProperties(FlowTaskPropertiesObject... taskProperties) {
             return taskProperties(List.of(taskProperties));
         }
 
+        /**
+         * @param taskType Type of task
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskType(FlowTaskType taskType) {
             $.taskType = taskType;
             return this;

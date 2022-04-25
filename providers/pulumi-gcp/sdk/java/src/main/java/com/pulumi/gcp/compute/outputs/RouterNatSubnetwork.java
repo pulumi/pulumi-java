@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RouterNatSubnetwork {
     /**
-     * Self-link of subnetwork to NAT
+     * @return Self-link of subnetwork to NAT
      * 
      */
     private final String name;
     /**
-     * List of the secondary ranges of the subnetwork that are allowed
+     * @return List of the secondary ranges of the subnetwork that are allowed
      * to use NAT. This can be populated only if
      * `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
      * sourceIpRangesToNat
@@ -25,7 +25,7 @@ public final class RouterNatSubnetwork {
      */
     private final @Nullable List<String> secondaryIpRangeNames;
     /**
-     * List of options for which source IPs in the subnetwork
+     * @return List of options for which source IPs in the subnetwork
      * should have NAT enabled. Supported values include:
      * `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
      * `PRIMARY_IP_RANGE`.
@@ -44,29 +44,29 @@ public final class RouterNatSubnetwork {
     }
 
     /**
-     * Self-link of subnetwork to NAT
+     * @return Self-link of subnetwork to NAT
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of the secondary ranges of the subnetwork that are allowed
+     * @return List of the secondary ranges of the subnetwork that are allowed
      * to use NAT. This can be populated only if
      * `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
      * sourceIpRangesToNat
      * 
-    */
+     */
     public List<String> secondaryIpRangeNames() {
         return this.secondaryIpRangeNames == null ? List.of() : this.secondaryIpRangeNames;
     }
     /**
-     * List of options for which source IPs in the subnetwork
+     * @return List of options for which source IPs in the subnetwork
      * should have NAT enabled. Supported values include:
      * `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
      * `PRIMARY_IP_RANGE`.
      * 
-    */
+     */
     public List<String> sourceIpRangesToNats() {
         return this.sourceIpRangesToNats;
     }

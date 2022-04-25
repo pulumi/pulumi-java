@@ -26,6 +26,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="done", required=true)
     private Boolean done;
 
+    /**
+     * @return If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.
+     * 
+     */
     public Boolean done() {
         return this.done;
     }
@@ -37,6 +41,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="error", required=true)
     private StatusResponse error;
 
+    /**
+     * @return The error result of the operation in case of failure or cancellation.
+     * 
+     */
     public StatusResponse error() {
         return this.error;
     }
@@ -48,6 +56,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metadata", required=true)
     private Map<String,String> metadata;
 
+    /**
+     * @return Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.
+     * 
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
@@ -59,6 +71,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -70,6 +86,10 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="response", required=true)
     private Map<String,String> response;
 
+    /**
+     * @return The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.
+     * 
+     */
     public Map<String,String> response() {
         return this.response;
     }
@@ -102,26 +122,56 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OperationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param done If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder done(Boolean done) {
             $.done = done;
             return this;
         }
 
+        /**
+         * @param error The error result of the operation in case of failure or cancellation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(StatusResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param metadata Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param name The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param response The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder response(Map<String,String> response) {
             $.response = response;
             return this;

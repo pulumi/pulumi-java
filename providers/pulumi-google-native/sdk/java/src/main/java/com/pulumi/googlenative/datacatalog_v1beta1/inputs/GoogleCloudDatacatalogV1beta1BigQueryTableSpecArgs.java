@@ -27,6 +27,10 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs extends co
     @Import(name="tableSpec")
     private @Nullable Output<GoogleCloudDatacatalogV1beta1TableSpecArgs> tableSpec;
 
+    /**
+     * @return Spec of a BigQuery table. This field should only be populated if `table_source_type` is `BIGQUERY_TABLE`.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1beta1TableSpecArgs>> tableSpec() {
         return Optional.ofNullable(this.tableSpec);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs extends co
     @Import(name="viewSpec")
     private @Nullable Output<GoogleCloudDatacatalogV1beta1ViewSpecArgs> viewSpec;
 
+    /**
+     * @return Table view specification. This field should only be populated if `table_source_type` is `BIGQUERY_VIEW`.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1beta1ViewSpecArgs>> viewSpec() {
         return Optional.ofNullable(this.viewSpec);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs extends co
             $ = new GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tableSpec Spec of a BigQuery table. This field should only be populated if `table_source_type` is `BIGQUERY_TABLE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableSpec(@Nullable Output<GoogleCloudDatacatalogV1beta1TableSpecArgs> tableSpec) {
             $.tableSpec = tableSpec;
             return this;
         }
 
+        /**
+         * @param tableSpec Spec of a BigQuery table. This field should only be populated if `table_source_type` is `BIGQUERY_TABLE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableSpec(GoogleCloudDatacatalogV1beta1TableSpecArgs tableSpec) {
             return tableSpec(Output.of(tableSpec));
         }
 
+        /**
+         * @param viewSpec Table view specification. This field should only be populated if `table_source_type` is `BIGQUERY_VIEW`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder viewSpec(@Nullable Output<GoogleCloudDatacatalogV1beta1ViewSpecArgs> viewSpec) {
             $.viewSpec = viewSpec;
             return this;
         }
 
+        /**
+         * @param viewSpec Table view specification. This field should only be populated if `table_source_type` is `BIGQUERY_VIEW`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder viewSpec(GoogleCloudDatacatalogV1beta1ViewSpecArgs viewSpec) {
             return viewSpec(Output.of(viewSpec));
         }

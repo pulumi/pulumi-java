@@ -30,6 +30,12 @@ public final class SourceRegistryCredentialsArgs extends com.pulumi.resources.Re
     @Import(name="loginMode")
     private @Nullable Output<Either<String,SourceRegistryLoginMode>> loginMode;
 
+    /**
+     * @return The authentication mode which determines the source registry login scope. The credentials for the source registry
+     * will be generated using the given scope. These credentials will be used to login to
+     * the source registry during the run.
+     * 
+     */
     public Optional<Output<Either<String,SourceRegistryLoginMode>>> loginMode() {
         return Optional.ofNullable(this.loginMode);
     }
@@ -58,19 +64,51 @@ public final class SourceRegistryCredentialsArgs extends com.pulumi.resources.Re
             $ = new SourceRegistryCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loginMode The authentication mode which determines the source registry login scope. The credentials for the source registry
+         * will be generated using the given scope. These credentials will be used to login to
+         * the source registry during the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginMode(@Nullable Output<Either<String,SourceRegistryLoginMode>> loginMode) {
             $.loginMode = loginMode;
             return this;
         }
 
+        /**
+         * @param loginMode The authentication mode which determines the source registry login scope. The credentials for the source registry
+         * will be generated using the given scope. These credentials will be used to login to
+         * the source registry during the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginMode(Either<String,SourceRegistryLoginMode> loginMode) {
             return loginMode(Output.of(loginMode));
         }
 
+        /**
+         * @param loginMode The authentication mode which determines the source registry login scope. The credentials for the source registry
+         * will be generated using the given scope. These credentials will be used to login to
+         * the source registry during the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginMode(String loginMode) {
             return loginMode(Either.ofLeft(loginMode));
         }
 
+        /**
+         * @param loginMode The authentication mode which determines the source registry login scope. The credentials for the source registry
+         * will be generated using the given scope. These credentials will be used to login to
+         * the source registry during the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginMode(SourceRegistryLoginMode loginMode) {
             return loginMode(Either.ofRight(loginMode));
         }

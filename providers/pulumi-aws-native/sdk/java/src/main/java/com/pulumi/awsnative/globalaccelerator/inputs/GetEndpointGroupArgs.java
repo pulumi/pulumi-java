@@ -19,6 +19,10 @@ public final class GetEndpointGroupArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="endpointGroupArn", required=true)
     private String endpointGroupArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the endpoint group
+     * 
+     */
     public String endpointGroupArn() {
         return this.endpointGroupArn;
     }
@@ -47,6 +51,12 @@ public final class GetEndpointGroupArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetEndpointGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointGroupArn The Amazon Resource Name (ARN) of the endpoint group
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointGroupArn(String endpointGroupArn) {
             $.endpointGroupArn = endpointGroupArn;
             return this;

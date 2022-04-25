@@ -20,6 +20,10 @@ public final class GetAccessPointPosixUser extends com.pulumi.resources.InvokeAr
     @Import(name="gid", required=true)
     private Integer gid;
 
+    /**
+     * @return Group ID
+     * 
+     */
     public Integer gid() {
         return this.gid;
     }
@@ -31,6 +35,10 @@ public final class GetAccessPointPosixUser extends com.pulumi.resources.InvokeAr
     @Import(name="secondaryGids", required=true)
     private List<Integer> secondaryGids;
 
+    /**
+     * @return Secondary group IDs
+     * 
+     */
     public List<Integer> secondaryGids() {
         return this.secondaryGids;
     }
@@ -43,6 +51,11 @@ public final class GetAccessPointPosixUser extends com.pulumi.resources.InvokeAr
     @Import(name="uid", required=true)
     private Integer uid;
 
+    /**
+     * @return User Id
+     * * `root_directory`- Single element list containing information on the directory on the Amazon EFS file system that the access point provides access to.
+     * 
+     */
     public Integer uid() {
         return this.uid;
     }
@@ -73,20 +86,45 @@ public final class GetAccessPointPosixUser extends com.pulumi.resources.InvokeAr
             $ = new GetAccessPointPosixUser(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gid Group ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder gid(Integer gid) {
             $.gid = gid;
             return this;
         }
 
+        /**
+         * @param secondaryGids Secondary group IDs
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryGids(List<Integer> secondaryGids) {
             $.secondaryGids = secondaryGids;
             return this;
         }
 
+        /**
+         * @param secondaryGids Secondary group IDs
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryGids(Integer... secondaryGids) {
             return secondaryGids(List.of(secondaryGids));
         }
 
+        /**
+         * @param uid User Id
+         * * `root_directory`- Single element list containing information on the directory on the Amazon EFS file system that the access point provides access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(Integer uid) {
             $.uid = uid;
             return this;

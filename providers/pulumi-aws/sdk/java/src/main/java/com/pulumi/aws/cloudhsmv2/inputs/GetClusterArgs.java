@@ -21,6 +21,10 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterId", required=true)
     private String clusterId;
 
+    /**
+     * @return The id of Cloud HSM v2 cluster.
+     * 
+     */
     public String clusterId() {
         return this.clusterId;
     }
@@ -32,6 +36,10 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterState")
     private @Nullable String clusterState;
 
+    /**
+     * @return The state of the cluster to be found.
+     * 
+     */
     public Optional<String> clusterState() {
         return Optional.ofNullable(this.clusterState);
     }
@@ -61,11 +69,23 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterId The id of Cloud HSM v2 cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(String clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param clusterState The state of the cluster to be found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterState(@Nullable String clusterState) {
             $.clusterState = clusterState;
             return this;

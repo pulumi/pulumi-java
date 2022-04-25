@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class TfLiteModelResponse {
     /**
-     * The AutoML model id referencing a model you created with the AutoML API. The name should have format &#39;projects//locations//models/&#39; (This is the model resource name returned from the AutoML API)
+     * @return The AutoML model id referencing a model you created with the AutoML API. The name should have format &#39;projects//locations//models/&#39; (This is the model resource name returned from the AutoML API)
      * 
      */
     private final String automlModel;
     /**
-     * The TfLite file containing the model. (Stored in Google Cloud). The gcs_tflite_uri should have form: gs://some-bucket/some-model.tflite Note: If you update the file in the original location, it is necessary to call UpdateModel for ML to pick up and validate the updated file.
+     * @return The TfLite file containing the model. (Stored in Google Cloud). The gcs_tflite_uri should have form: gs://some-bucket/some-model.tflite Note: If you update the file in the original location, it is necessary to call UpdateModel for ML to pick up and validate the updated file.
      * 
      */
     private final String gcsTfliteUri;
     /**
-     * The size of the TFLite model
+     * @return The size of the TFLite model
      * 
      */
     private final String sizeBytes;
@@ -36,23 +36,23 @@ public final class TfLiteModelResponse {
     }
 
     /**
-     * The AutoML model id referencing a model you created with the AutoML API. The name should have format &#39;projects//locations//models/&#39; (This is the model resource name returned from the AutoML API)
+     * @return The AutoML model id referencing a model you created with the AutoML API. The name should have format &#39;projects//locations//models/&#39; (This is the model resource name returned from the AutoML API)
      * 
-    */
+     */
     public String automlModel() {
         return this.automlModel;
     }
     /**
-     * The TfLite file containing the model. (Stored in Google Cloud). The gcs_tflite_uri should have form: gs://some-bucket/some-model.tflite Note: If you update the file in the original location, it is necessary to call UpdateModel for ML to pick up and validate the updated file.
+     * @return The TfLite file containing the model. (Stored in Google Cloud). The gcs_tflite_uri should have form: gs://some-bucket/some-model.tflite Note: If you update the file in the original location, it is necessary to call UpdateModel for ML to pick up and validate the updated file.
      * 
-    */
+     */
     public String gcsTfliteUri() {
         return this.gcsTfliteUri;
     }
     /**
-     * The size of the TFLite model
+     * @return The size of the TFLite model
      * 
-    */
+     */
     public String sizeBytes() {
         return this.sizeBytes;
     }

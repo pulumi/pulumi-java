@@ -32,6 +32,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="compressionSettings")
     private @Nullable Output<CompressionSettingsArgs> compressionSettings;
 
+    /**
+     * @return compression settings.
+     * 
+     */
     public Optional<Output<CompressionSettingsArgs>> compressionSettings() {
         return Optional.ofNullable(this.compressionSettings);
     }
@@ -43,6 +47,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customDomains")
     private @Nullable Output<List<ResourceReferenceArgs>> customDomains;
 
+    /**
+     * @return Domains referenced by this endpoint.
+     * 
+     */
     public Optional<Output<List<ResourceReferenceArgs>>> customDomains() {
         return Optional.ofNullable(this.customDomains);
     }
@@ -54,6 +62,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
     private @Nullable Output<Either<String,EnabledState>> enabledState;
 
+    /**
+     * @return Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * 
+     */
     public Optional<Output<Either<String,EnabledState>>> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -65,6 +77,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointName", required=true)
     private Output<String> endpointName;
 
+    /**
+     * @return Name of the endpoint under the profile which is unique globally.
+     * 
+     */
     public Output<String> endpointName() {
         return this.endpointName;
     }
@@ -76,6 +92,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forwardingProtocol")
     private @Nullable Output<Either<String,ForwardingProtocol>> forwardingProtocol;
 
+    /**
+     * @return Protocol this rule will use when forwarding traffic to backends.
+     * 
+     */
     public Optional<Output<Either<String,ForwardingProtocol>>> forwardingProtocol() {
         return Optional.ofNullable(this.forwardingProtocol);
     }
@@ -87,6 +107,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpsRedirect")
     private @Nullable Output<Either<String,HttpsRedirect>> httpsRedirect;
 
+    /**
+     * @return Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
+     * 
+     */
     public Optional<Output<Either<String,HttpsRedirect>>> httpsRedirect() {
         return Optional.ofNullable(this.httpsRedirect);
     }
@@ -98,6 +122,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkToDefaultDomain")
     private @Nullable Output<Either<String,LinkToDefaultDomain>> linkToDefaultDomain;
 
+    /**
+     * @return whether this route will be linked to the default endpoint domain.
+     * 
+     */
     public Optional<Output<Either<String,LinkToDefaultDomain>>> linkToDefaultDomain() {
         return Optional.ofNullable(this.linkToDefaultDomain);
     }
@@ -109,6 +137,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="originGroup", required=true)
     private Output<ResourceReferenceArgs> originGroup;
 
+    /**
+     * @return A reference to the origin group.
+     * 
+     */
     public Output<ResourceReferenceArgs> originGroup() {
         return this.originGroup;
     }
@@ -120,6 +152,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="originPath")
     private @Nullable Output<String> originPath;
 
+    /**
+     * @return A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
+     * 
+     */
     public Optional<Output<String>> originPath() {
         return Optional.ofNullable(this.originPath);
     }
@@ -131,6 +167,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="patternsToMatch")
     private @Nullable Output<List<String>> patternsToMatch;
 
+    /**
+     * @return The route patterns of the rule.
+     * 
+     */
     public Optional<Output<List<String>>> patternsToMatch() {
         return Optional.ofNullable(this.patternsToMatch);
     }
@@ -142,6 +182,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
     private Output<String> profileName;
 
+    /**
+     * @return Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     public Output<String> profileName() {
         return this.profileName;
     }
@@ -153,6 +197,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryStringCachingBehavior")
     private @Nullable Output<AfdQueryStringCachingBehavior> queryStringCachingBehavior;
 
+    /**
+     * @return Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
+     * 
+     */
     public Optional<Output<AfdQueryStringCachingBehavior>> queryStringCachingBehavior() {
         return Optional.ofNullable(this.queryStringCachingBehavior);
     }
@@ -164,6 +212,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -175,6 +227,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeName")
     private @Nullable Output<String> routeName;
 
+    /**
+     * @return Name of the routing rule.
+     * 
+     */
     public Optional<Output<String>> routeName() {
         return Optional.ofNullable(this.routeName);
     }
@@ -186,6 +242,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleSets")
     private @Nullable Output<List<ResourceReferenceArgs>> ruleSets;
 
+    /**
+     * @return rule sets referenced by this endpoint.
+     * 
+     */
     public Optional<Output<List<ResourceReferenceArgs>>> ruleSets() {
         return Optional.ofNullable(this.ruleSets);
     }
@@ -197,6 +257,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportedProtocols")
     private @Nullable Output<List<Either<String,AFDEndpointProtocols>>> supportedProtocols;
 
+    /**
+     * @return List of supported protocols for this route.
+     * 
+     */
     public Optional<Output<List<Either<String,AFDEndpointProtocols>>>> supportedProtocols() {
         return Optional.ofNullable(this.supportedProtocols);
     }
@@ -240,194 +304,458 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compressionSettings compression settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionSettings(@Nullable Output<CompressionSettingsArgs> compressionSettings) {
             $.compressionSettings = compressionSettings;
             return this;
         }
 
+        /**
+         * @param compressionSettings compression settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionSettings(CompressionSettingsArgs compressionSettings) {
             return compressionSettings(Output.of(compressionSettings));
         }
 
+        /**
+         * @param customDomains Domains referenced by this endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDomains(@Nullable Output<List<ResourceReferenceArgs>> customDomains) {
             $.customDomains = customDomains;
             return this;
         }
 
+        /**
+         * @param customDomains Domains referenced by this endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDomains(List<ResourceReferenceArgs> customDomains) {
             return customDomains(Output.of(customDomains));
         }
 
+        /**
+         * @param customDomains Domains referenced by this endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDomains(ResourceReferenceArgs... customDomains) {
             return customDomains(List.of(customDomains));
         }
 
+        /**
+         * @param enabledState Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable Output<Either<String,EnabledState>> enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param enabledState Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(Either<String,EnabledState> enabledState) {
             return enabledState(Output.of(enabledState));
         }
 
+        /**
+         * @param enabledState Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(String enabledState) {
             return enabledState(Either.ofLeft(enabledState));
         }
 
+        /**
+         * @param enabledState Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(EnabledState enabledState) {
             return enabledState(Either.ofRight(enabledState));
         }
 
+        /**
+         * @param endpointName Name of the endpoint under the profile which is unique globally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(Output<String> endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param endpointName Name of the endpoint under the profile which is unique globally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             return endpointName(Output.of(endpointName));
         }
 
+        /**
+         * @param forwardingProtocol Protocol this rule will use when forwarding traffic to backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingProtocol(@Nullable Output<Either<String,ForwardingProtocol>> forwardingProtocol) {
             $.forwardingProtocol = forwardingProtocol;
             return this;
         }
 
+        /**
+         * @param forwardingProtocol Protocol this rule will use when forwarding traffic to backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingProtocol(Either<String,ForwardingProtocol> forwardingProtocol) {
             return forwardingProtocol(Output.of(forwardingProtocol));
         }
 
+        /**
+         * @param forwardingProtocol Protocol this rule will use when forwarding traffic to backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingProtocol(String forwardingProtocol) {
             return forwardingProtocol(Either.ofLeft(forwardingProtocol));
         }
 
+        /**
+         * @param forwardingProtocol Protocol this rule will use when forwarding traffic to backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingProtocol(ForwardingProtocol forwardingProtocol) {
             return forwardingProtocol(Either.ofRight(forwardingProtocol));
         }
 
+        /**
+         * @param httpsRedirect Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsRedirect(@Nullable Output<Either<String,HttpsRedirect>> httpsRedirect) {
             $.httpsRedirect = httpsRedirect;
             return this;
         }
 
+        /**
+         * @param httpsRedirect Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsRedirect(Either<String,HttpsRedirect> httpsRedirect) {
             return httpsRedirect(Output.of(httpsRedirect));
         }
 
+        /**
+         * @param httpsRedirect Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsRedirect(String httpsRedirect) {
             return httpsRedirect(Either.ofLeft(httpsRedirect));
         }
 
+        /**
+         * @param httpsRedirect Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsRedirect(HttpsRedirect httpsRedirect) {
             return httpsRedirect(Either.ofRight(httpsRedirect));
         }
 
+        /**
+         * @param linkToDefaultDomain whether this route will be linked to the default endpoint domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkToDefaultDomain(@Nullable Output<Either<String,LinkToDefaultDomain>> linkToDefaultDomain) {
             $.linkToDefaultDomain = linkToDefaultDomain;
             return this;
         }
 
+        /**
+         * @param linkToDefaultDomain whether this route will be linked to the default endpoint domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkToDefaultDomain(Either<String,LinkToDefaultDomain> linkToDefaultDomain) {
             return linkToDefaultDomain(Output.of(linkToDefaultDomain));
         }
 
+        /**
+         * @param linkToDefaultDomain whether this route will be linked to the default endpoint domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkToDefaultDomain(String linkToDefaultDomain) {
             return linkToDefaultDomain(Either.ofLeft(linkToDefaultDomain));
         }
 
+        /**
+         * @param linkToDefaultDomain whether this route will be linked to the default endpoint domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkToDefaultDomain(LinkToDefaultDomain linkToDefaultDomain) {
             return linkToDefaultDomain(Either.ofRight(linkToDefaultDomain));
         }
 
+        /**
+         * @param originGroup A reference to the origin group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originGroup(Output<ResourceReferenceArgs> originGroup) {
             $.originGroup = originGroup;
             return this;
         }
 
+        /**
+         * @param originGroup A reference to the origin group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originGroup(ResourceReferenceArgs originGroup) {
             return originGroup(Output.of(originGroup));
         }
 
+        /**
+         * @param originPath A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originPath(@Nullable Output<String> originPath) {
             $.originPath = originPath;
             return this;
         }
 
+        /**
+         * @param originPath A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originPath(String originPath) {
             return originPath(Output.of(originPath));
         }
 
+        /**
+         * @param patternsToMatch The route patterns of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternsToMatch(@Nullable Output<List<String>> patternsToMatch) {
             $.patternsToMatch = patternsToMatch;
             return this;
         }
 
+        /**
+         * @param patternsToMatch The route patterns of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternsToMatch(List<String> patternsToMatch) {
             return patternsToMatch(Output.of(patternsToMatch));
         }
 
+        /**
+         * @param patternsToMatch The route patterns of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternsToMatch(String... patternsToMatch) {
             return patternsToMatch(List.of(patternsToMatch));
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             return profileName(Output.of(profileName));
         }
 
+        /**
+         * @param queryStringCachingBehavior Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringCachingBehavior(@Nullable Output<AfdQueryStringCachingBehavior> queryStringCachingBehavior) {
             $.queryStringCachingBehavior = queryStringCachingBehavior;
             return this;
         }
 
+        /**
+         * @param queryStringCachingBehavior Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringCachingBehavior(AfdQueryStringCachingBehavior queryStringCachingBehavior) {
             return queryStringCachingBehavior(Output.of(queryStringCachingBehavior));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param routeName Name of the routing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeName(@Nullable Output<String> routeName) {
             $.routeName = routeName;
             return this;
         }
 
+        /**
+         * @param routeName Name of the routing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeName(String routeName) {
             return routeName(Output.of(routeName));
         }
 
+        /**
+         * @param ruleSets rule sets referenced by this endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSets(@Nullable Output<List<ResourceReferenceArgs>> ruleSets) {
             $.ruleSets = ruleSets;
             return this;
         }
 
+        /**
+         * @param ruleSets rule sets referenced by this endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSets(List<ResourceReferenceArgs> ruleSets) {
             return ruleSets(Output.of(ruleSets));
         }
 
+        /**
+         * @param ruleSets rule sets referenced by this endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSets(ResourceReferenceArgs... ruleSets) {
             return ruleSets(List.of(ruleSets));
         }
 
+        /**
+         * @param supportedProtocols List of supported protocols for this route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedProtocols(@Nullable Output<List<Either<String,AFDEndpointProtocols>>> supportedProtocols) {
             $.supportedProtocols = supportedProtocols;
             return this;
         }
 
+        /**
+         * @param supportedProtocols List of supported protocols for this route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedProtocols(List<Either<String,AFDEndpointProtocols>> supportedProtocols) {
             return supportedProtocols(Output.of(supportedProtocols));
         }
 
+        /**
+         * @param supportedProtocols List of supported protocols for this route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedProtocols(Either<String,AFDEndpointProtocols>... supportedProtocols) {
             return supportedProtocols(List.of(supportedProtocols));
         }

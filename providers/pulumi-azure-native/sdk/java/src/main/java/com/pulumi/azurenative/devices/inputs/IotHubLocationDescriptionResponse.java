@@ -25,6 +25,10 @@ public final class IotHubLocationDescriptionResponse extends com.pulumi.resource
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return The name of the Azure region
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -36,6 +40,10 @@ public final class IotHubLocationDescriptionResponse extends com.pulumi.resource
     @Import(name="role")
     private @Nullable String role;
 
+    /**
+     * @return The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.
+     * 
+     */
     public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
@@ -65,11 +73,23 @@ public final class IotHubLocationDescriptionResponse extends com.pulumi.resource
             $ = new IotHubLocationDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The name of the Azure region
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param role The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable String role) {
             $.role = role;
             return this;

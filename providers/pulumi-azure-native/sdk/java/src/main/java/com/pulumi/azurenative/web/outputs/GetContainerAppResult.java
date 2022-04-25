@@ -15,62 +15,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetContainerAppResult {
     /**
-     * Non versioned Container App configuration properties.
+     * @return Non versioned Container App configuration properties.
      * 
      */
     private final @Nullable ConfigurationResponse configuration;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource ID of the Container App&#39;s KubeEnvironment.
+     * @return Resource ID of the Container App&#39;s KubeEnvironment.
      * 
      */
     private final @Nullable String kubeEnvironmentId;
     /**
-     * Fully Qualified Domain Name of the latest revision of the Container App.
+     * @return Fully Qualified Domain Name of the latest revision of the Container App.
      * 
      */
     private final String latestRevisionFqdn;
     /**
-     * Name of the latest revision of the Container App.
+     * @return Name of the latest revision of the Container App.
      * 
      */
     private final String latestRevisionName;
     /**
-     * Resource Location.
+     * @return Resource Location.
      * 
      */
     private final String location;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * Provisioning state of the Container App.
+     * @return Provisioning state of the Container App.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Container App versioned application definition.
+     * @return Container App versioned application definition.
      * 
      */
     private final @Nullable TemplateResponse template;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -104,86 +104,86 @@ public final class GetContainerAppResult {
     }
 
     /**
-     * Non versioned Container App configuration properties.
+     * @return Non versioned Container App configuration properties.
      * 
-    */
+     */
     public Optional<ConfigurationResponse> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource ID of the Container App&#39;s KubeEnvironment.
+     * @return Resource ID of the Container App&#39;s KubeEnvironment.
      * 
-    */
+     */
     public Optional<String> kubeEnvironmentId() {
         return Optional.ofNullable(this.kubeEnvironmentId);
     }
     /**
-     * Fully Qualified Domain Name of the latest revision of the Container App.
+     * @return Fully Qualified Domain Name of the latest revision of the Container App.
      * 
-    */
+     */
     public String latestRevisionFqdn() {
         return this.latestRevisionFqdn;
     }
     /**
-     * Name of the latest revision of the Container App.
+     * @return Name of the latest revision of the Container App.
      * 
-    */
+     */
     public String latestRevisionName() {
         return this.latestRevisionName;
     }
     /**
-     * Resource Location.
+     * @return Resource Location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the Container App.
+     * @return Provisioning state of the Container App.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Container App versioned application definition.
+     * @return Container App versioned application definition.
      * 
-    */
+     */
     public Optional<TemplateResponse> template() {
         return Optional.ofNullable(this.template);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

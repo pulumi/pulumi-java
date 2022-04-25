@@ -26,6 +26,10 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
     @Import(name="keyName")
     private @Nullable String keyName;
 
+    /**
+     * @return Gets the key name in the Key Vault.
+     * 
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -37,6 +41,10 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
     @Import(name="keyVault")
     private @Nullable ResourceReferenceResponse keyVault;
 
+    /**
+     * @return The key vault reference.
+     * 
+     */
     public Optional<ResourceReferenceResponse> keyVault() {
         return Optional.ofNullable(this.keyVault);
     }
@@ -48,6 +56,10 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
     @Import(name="keyVersion")
     private @Nullable String keyVersion;
 
+    /**
+     * @return Gets the version of the key specified in the keyName property.
+     * 
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -78,16 +90,34 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
             $ = new IntegrationServiceEnvironmenEncryptionKeyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName Gets the key name in the Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyVault The key vault reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(@Nullable ResourceReferenceResponse keyVault) {
             $.keyVault = keyVault;
             return this;
         }
 
+        /**
+         * @param keyVersion Gets the version of the key specified in the keyName property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable String keyVersion) {
             $.keyVersion = keyVersion;
             return this;

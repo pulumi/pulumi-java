@@ -20,6 +20,10 @@ public final class VirtualNodeSpecListenerTlsCertificateFileGetArgs extends com.
     @Import(name="certificateChain", required=true)
     private Output<String> certificateChain;
 
+    /**
+     * @return The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Output<String> certificateChain() {
         return this.certificateChain;
     }
@@ -31,6 +35,10 @@ public final class VirtualNodeSpecListenerTlsCertificateFileGetArgs extends com.
     @Import(name="privateKey", required=true)
     private Output<String> privateKey;
 
+    /**
+     * @return The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Output<String> privateKey() {
         return this.privateKey;
     }
@@ -60,20 +68,44 @@ public final class VirtualNodeSpecListenerTlsCertificateFileGetArgs extends com.
             $ = new VirtualNodeSpecListenerTlsCertificateFileGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateChain The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateChain(Output<String> certificateChain) {
             $.certificateChain = certificateChain;
             return this;
         }
 
+        /**
+         * @param certificateChain The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateChain(String certificateChain) {
             return certificateChain(Output.of(certificateChain));
         }
 
+        /**
+         * @param privateKey The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(Output<String> privateKey) {
             $.privateKey = privateKey;
             return this;
         }
 
+        /**
+         * @param privateKey The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(String privateKey) {
             return privateKey(Output.of(privateKey));
         }

@@ -23,6 +23,10 @@ public final class CertificateInformationResponse extends com.pulumi.resources.I
     @Import(name="expiry", required=true)
     private String expiry;
 
+    /**
+     * @return Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * 
+     */
     public String expiry() {
         return this.expiry;
     }
@@ -34,6 +38,10 @@ public final class CertificateInformationResponse extends com.pulumi.resources.I
     @Import(name="subject", required=true)
     private String subject;
 
+    /**
+     * @return Subject of the certificate.
+     * 
+     */
     public String subject() {
         return this.subject;
     }
@@ -45,6 +53,10 @@ public final class CertificateInformationResponse extends com.pulumi.resources.I
     @Import(name="thumbprint", required=true)
     private String thumbprint;
 
+    /**
+     * @return Thumbprint of the certificate.
+     * 
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
@@ -75,16 +87,34 @@ public final class CertificateInformationResponse extends com.pulumi.resources.I
             $ = new CertificateInformationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expiry Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiry(String expiry) {
             $.expiry = expiry;
             return this;
         }
 
+        /**
+         * @param subject Subject of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(String subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param thumbprint Thumbprint of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             $.thumbprint = thumbprint;
             return this;

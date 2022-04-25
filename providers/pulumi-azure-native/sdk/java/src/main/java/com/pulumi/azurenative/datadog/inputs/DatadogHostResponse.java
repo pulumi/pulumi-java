@@ -23,6 +23,10 @@ public final class DatadogHostResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="aliases")
     private @Nullable List<String> aliases;
 
+    /**
+     * @return The aliases for the host.
+     * 
+     */
     public Optional<List<String>> aliases() {
         return Optional.ofNullable(this.aliases);
     }
@@ -34,6 +38,10 @@ public final class DatadogHostResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="apps")
     private @Nullable List<String> apps;
 
+    /**
+     * @return The Datadog integrations reporting metrics for the host.
+     * 
+     */
     public Optional<List<String>> apps() {
         return Optional.ofNullable(this.apps);
     }
@@ -52,6 +60,10 @@ public final class DatadogHostResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the host.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,20 +95,44 @@ public final class DatadogHostResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DatadogHostResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aliases The aliases for the host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliases(@Nullable List<String> aliases) {
             $.aliases = aliases;
             return this;
         }
 
+        /**
+         * @param aliases The aliases for the host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliases(String... aliases) {
             return aliases(List.of(aliases));
         }
 
+        /**
+         * @param apps The Datadog integrations reporting metrics for the host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apps(@Nullable List<String> apps) {
             $.apps = apps;
             return this;
         }
 
+        /**
+         * @param apps The Datadog integrations reporting metrics for the host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apps(String... apps) {
             return apps(List.of(apps));
         }
@@ -106,6 +142,12 @@ public final class DatadogHostResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param name The name of the host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

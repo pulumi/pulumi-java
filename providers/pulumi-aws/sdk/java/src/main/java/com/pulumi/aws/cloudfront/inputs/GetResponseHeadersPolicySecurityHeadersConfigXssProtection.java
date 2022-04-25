@@ -20,6 +20,10 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
     @Import(name="modeBlock", required=true)
     private Boolean modeBlock;
 
+    /**
+     * @return A Boolean value that determines whether CloudFront includes the mode=block directive in the X-XSS-Protection header.
+     * 
+     */
     public Boolean modeBlock() {
         return this.modeBlock;
     }
@@ -31,6 +35,10 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
     @Import(name="override", required=true)
     private Boolean override;
 
+    /**
+     * @return A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
+     * 
+     */
     public Boolean override() {
         return this.override;
     }
@@ -42,6 +50,10 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
     @Import(name="protection", required=true)
     private Boolean protection;
 
+    /**
+     * @return A Boolean value that determines the value of the X-XSS-Protection HTTP response header. When this setting is true, the value of the X-XSS-Protection header is 1. When this setting is false, the value of the X-XSS-Protection header is 0.
+     * 
+     */
     public Boolean protection() {
         return this.protection;
     }
@@ -53,6 +65,10 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
     @Import(name="reportUri", required=true)
     private String reportUri;
 
+    /**
+     * @return A Boolean value that determines whether CloudFront sets a reporting URI in the X-XSS-Protection header.
+     * 
+     */
     public String reportUri() {
         return this.reportUri;
     }
@@ -84,21 +100,45 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
             $ = new GetResponseHeadersPolicySecurityHeadersConfigXssProtection(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param modeBlock A Boolean value that determines whether CloudFront includes the mode=block directive in the X-XSS-Protection header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modeBlock(Boolean modeBlock) {
             $.modeBlock = modeBlock;
             return this;
         }
 
+        /**
+         * @param override A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder override(Boolean override) {
             $.override = override;
             return this;
         }
 
+        /**
+         * @param protection A Boolean value that determines the value of the X-XSS-Protection HTTP response header. When this setting is true, the value of the X-XSS-Protection header is 1. When this setting is false, the value of the X-XSS-Protection header is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protection(Boolean protection) {
             $.protection = protection;
             return this;
         }
 
+        /**
+         * @param reportUri A Boolean value that determines whether CloudFront sets a reporting URI in the X-XSS-Protection header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportUri(String reportUri) {
             $.reportUri = reportUri;
             return this;

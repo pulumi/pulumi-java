@@ -37,6 +37,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="basicCard", required=true)
     private GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard;
 
+    /**
+     * @return The basic card response for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard() {
         return this.basicCard;
     }
@@ -48,6 +52,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="browseCarouselCard", required=true)
     private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard;
 
+    /**
+     * @return Browse carousel card for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard() {
         return this.browseCarouselCard;
     }
@@ -59,6 +67,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="card", required=true)
     private GoogleCloudDialogflowV2IntentMessageCardResponse card;
 
+    /**
+     * @return The card response.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageCardResponse card() {
         return this.card;
     }
@@ -70,6 +82,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="carouselSelect", required=true)
     private GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect;
 
+    /**
+     * @return The carousel card response for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect() {
         return this.carouselSelect;
     }
@@ -81,6 +97,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="image", required=true)
     private GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
+    /**
+     * @return The image response.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
     }
@@ -92,6 +112,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="linkOutSuggestion", required=true)
     private GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
 
+    /**
+     * @return The link out suggestion chip for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion() {
         return this.linkOutSuggestion;
     }
@@ -103,6 +127,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="listSelect", required=true)
     private GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect;
 
+    /**
+     * @return The list card response for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect() {
         return this.listSelect;
     }
@@ -114,6 +142,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="mediaContent", required=true)
     private GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent;
 
+    /**
+     * @return The media content card for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent() {
         return this.mediaContent;
     }
@@ -125,6 +157,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="payload", required=true)
     private Map<String,String> payload;
 
+    /**
+     * @return A custom platform-specific response.
+     * 
+     */
     public Map<String,String> payload() {
         return this.payload;
     }
@@ -136,6 +172,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="platform", required=true)
     private String platform;
 
+    /**
+     * @return Optional. The platform that this message is intended for.
+     * 
+     */
     public String platform() {
         return this.platform;
     }
@@ -147,6 +187,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="quickReplies", required=true)
     private GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies;
 
+    /**
+     * @return The quick replies response.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies() {
         return this.quickReplies;
     }
@@ -158,6 +202,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="simpleResponses", required=true)
     private GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses;
 
+    /**
+     * @return The voice and text-only responses for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses() {
         return this.simpleResponses;
     }
@@ -169,6 +217,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="suggestions", required=true)
     private GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions;
 
+    /**
+     * @return The suggestion chips for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions() {
         return this.suggestions;
     }
@@ -180,6 +232,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="tableCard", required=true)
     private GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard;
 
+    /**
+     * @return Table card for Actions on Google.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard() {
         return this.tableCard;
     }
@@ -191,6 +247,10 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
     @Import(name="text", required=true)
     private GoogleCloudDialogflowV2IntentMessageTextResponse text;
 
+    /**
+     * @return The text response.
+     * 
+     */
     public GoogleCloudDialogflowV2IntentMessageTextResponse text() {
         return this.text;
     }
@@ -233,76 +293,166 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
             $ = new GoogleCloudDialogflowV2IntentMessageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicCard The basic card response for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicCard(GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard) {
             $.basicCard = basicCard;
             return this;
         }
 
+        /**
+         * @param browseCarouselCard Browse carousel card for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder browseCarouselCard(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard) {
             $.browseCarouselCard = browseCarouselCard;
             return this;
         }
 
+        /**
+         * @param card The card response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder card(GoogleCloudDialogflowV2IntentMessageCardResponse card) {
             $.card = card;
             return this;
         }
 
+        /**
+         * @param carouselSelect The carousel card response for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carouselSelect(GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect) {
             $.carouselSelect = carouselSelect;
             return this;
         }
 
+        /**
+         * @param image The image response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param linkOutSuggestion The link out suggestion chip for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkOutSuggestion(GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion) {
             $.linkOutSuggestion = linkOutSuggestion;
             return this;
         }
 
+        /**
+         * @param listSelect The list card response for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listSelect(GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect) {
             $.listSelect = listSelect;
             return this;
         }
 
+        /**
+         * @param mediaContent The media content card for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaContent(GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent) {
             $.mediaContent = mediaContent;
             return this;
         }
 
+        /**
+         * @param payload A custom platform-specific response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payload(Map<String,String> payload) {
             $.payload = payload;
             return this;
         }
 
+        /**
+         * @param platform Optional. The platform that this message is intended for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(String platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param quickReplies The quick replies response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quickReplies(GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies) {
             $.quickReplies = quickReplies;
             return this;
         }
 
+        /**
+         * @param simpleResponses The voice and text-only responses for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder simpleResponses(GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses) {
             $.simpleResponses = simpleResponses;
             return this;
         }
 
+        /**
+         * @param suggestions The suggestion chips for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestions(GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions) {
             $.suggestions = suggestions;
             return this;
         }
 
+        /**
+         * @param tableCard Table card for Actions on Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableCard(GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard) {
             $.tableCard = tableCard;
             return this;
         }
 
+        /**
+         * @param text The text response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(GoogleCloudDialogflowV2IntentMessageTextResponse text) {
             $.text = text;
             return this;

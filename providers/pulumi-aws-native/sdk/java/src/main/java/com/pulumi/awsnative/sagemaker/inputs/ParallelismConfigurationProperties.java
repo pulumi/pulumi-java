@@ -19,6 +19,10 @@ public final class ParallelismConfigurationProperties extends com.pulumi.resourc
     @Import(name="maxParallelExecutionSteps", required=true)
     private Integer maxParallelExecutionSteps;
 
+    /**
+     * @return Maximum parallel execution steps
+     * 
+     */
     public Integer maxParallelExecutionSteps() {
         return this.maxParallelExecutionSteps;
     }
@@ -47,6 +51,12 @@ public final class ParallelismConfigurationProperties extends com.pulumi.resourc
             $ = new ParallelismConfigurationProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxParallelExecutionSteps Maximum parallel execution steps
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxParallelExecutionSteps(Integer maxParallelExecutionSteps) {
             $.maxParallelExecutionSteps = maxParallelExecutionSteps;
             return this;

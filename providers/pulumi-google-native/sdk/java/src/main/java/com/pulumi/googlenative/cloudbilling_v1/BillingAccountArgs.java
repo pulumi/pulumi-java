@@ -22,6 +22,10 @@ public final class BillingAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name given to the billing account, such as `My Billing Account`. This name is displayed in the Google Cloud Console.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -33,6 +37,10 @@ public final class BillingAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="masterBillingAccount")
     private @Nullable Output<String> masterBillingAccount;
 
+    /**
+     * @return If this account is a [subaccount](https://cloud.google.com/billing/docs/concepts), then this will be the resource name of the parent billing account that it is being resold through. Otherwise this will be empty.
+     * 
+     */
     public Optional<Output<String>> masterBillingAccount() {
         return Optional.ofNullable(this.masterBillingAccount);
     }
@@ -62,20 +70,44 @@ public final class BillingAccountArgs extends com.pulumi.resources.ResourceArgs 
             $ = new BillingAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name given to the billing account, such as `My Billing Account`. This name is displayed in the Google Cloud Console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name given to the billing account, such as `My Billing Account`. This name is displayed in the Google Cloud Console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param masterBillingAccount If this account is a [subaccount](https://cloud.google.com/billing/docs/concepts), then this will be the resource name of the parent billing account that it is being resold through. Otherwise this will be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterBillingAccount(@Nullable Output<String> masterBillingAccount) {
             $.masterBillingAccount = masterBillingAccount;
             return this;
         }
 
+        /**
+         * @param masterBillingAccount If this account is a [subaccount](https://cloud.google.com/billing/docs/concepts), then this will be the resource name of the parent billing account that it is being resold through. Otherwise this will be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterBillingAccount(String masterBillingAccount) {
             return masterBillingAccount(Output.of(masterBillingAccount));
         }

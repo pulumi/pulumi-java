@@ -25,6 +25,10 @@ public final class ClientCertificateCommonNameArgs extends com.pulumi.resources.
     @Import(name="certificateCommonName", required=true)
     private Output<String> certificateCommonName;
 
+    /**
+     * @return The common name of the client certificate.
+     * 
+     */
     public Output<String> certificateCommonName() {
         return this.certificateCommonName;
     }
@@ -36,6 +40,10 @@ public final class ClientCertificateCommonNameArgs extends com.pulumi.resources.
     @Import(name="certificateIssuerThumbprint", required=true)
     private Output<String> certificateIssuerThumbprint;
 
+    /**
+     * @return The issuer thumbprint of the client certificate.
+     * 
+     */
     public Output<String> certificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }
@@ -47,6 +55,10 @@ public final class ClientCertificateCommonNameArgs extends com.pulumi.resources.
     @Import(name="isAdmin", required=true)
     private Output<Boolean> isAdmin;
 
+    /**
+     * @return Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
+     * 
+     */
     public Output<Boolean> isAdmin() {
         return this.isAdmin;
     }
@@ -77,29 +89,65 @@ public final class ClientCertificateCommonNameArgs extends com.pulumi.resources.
             $ = new ClientCertificateCommonNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateCommonName The common name of the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateCommonName(Output<String> certificateCommonName) {
             $.certificateCommonName = certificateCommonName;
             return this;
         }
 
+        /**
+         * @param certificateCommonName The common name of the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateCommonName(String certificateCommonName) {
             return certificateCommonName(Output.of(certificateCommonName));
         }
 
+        /**
+         * @param certificateIssuerThumbprint The issuer thumbprint of the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateIssuerThumbprint(Output<String> certificateIssuerThumbprint) {
             $.certificateIssuerThumbprint = certificateIssuerThumbprint;
             return this;
         }
 
+        /**
+         * @param certificateIssuerThumbprint The issuer thumbprint of the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateIssuerThumbprint(String certificateIssuerThumbprint) {
             return certificateIssuerThumbprint(Output.of(certificateIssuerThumbprint));
         }
 
+        /**
+         * @param isAdmin Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAdmin(Output<Boolean> isAdmin) {
             $.isAdmin = isAdmin;
             return this;
         }
 
+        /**
+         * @param isAdmin Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAdmin(Boolean isAdmin) {
             return isAdmin(Output.of(isAdmin));
         }

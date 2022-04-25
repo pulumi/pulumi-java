@@ -23,6 +23,10 @@ public final class ResourceProviderDetailsResponse extends com.pulumi.resources.
     @Import(name="resourceProviderNamespace", required=true)
     private String resourceProviderNamespace;
 
+    /**
+     * @return Resource provider namespace
+     * 
+     */
     public String resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
@@ -51,6 +55,12 @@ public final class ResourceProviderDetailsResponse extends com.pulumi.resources.
             $ = new ResourceProviderDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceProviderNamespace Resource provider namespace
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             $.resourceProviderNamespace = resourceProviderNamespace;
             return this;

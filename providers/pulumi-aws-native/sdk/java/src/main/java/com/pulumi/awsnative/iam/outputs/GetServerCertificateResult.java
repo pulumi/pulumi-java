@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetServerCertificateResult {
     /**
-     * Amazon Resource Name (ARN) of the server certificate
+     * @return Amazon Resource Name (ARN) of the server certificate
      * 
      */
     private final @Nullable String arn;
@@ -32,9 +32,9 @@ public final class GetServerCertificateResult {
     }
 
     /**
-     * Amazon Resource Name (ARN) of the server certificate
+     * @return Amazon Resource Name (ARN) of the server certificate
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }

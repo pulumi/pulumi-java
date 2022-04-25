@@ -15,47 +15,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAdminRuleCollectionResult {
     /**
-     * Groups for configuration
+     * @return Groups for configuration
      * 
      */
     private final @Nullable List<NetworkManagerSecurityGroupItemResponse> appliesToGroups;
     /**
-     * A description of the rule collection.
+     * @return A description of the rule collection.
      * 
      */
     private final @Nullable String description;
     /**
-     * A display name of the rule collection.
+     * @return A display name of the rule collection.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The system metadata related to this resource.
+     * @return The system metadata related to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -83,65 +83,65 @@ public final class GetAdminRuleCollectionResult {
     }
 
     /**
-     * Groups for configuration
+     * @return Groups for configuration
      * 
-    */
+     */
     public List<NetworkManagerSecurityGroupItemResponse> appliesToGroups() {
         return this.appliesToGroups == null ? List.of() : this.appliesToGroups;
     }
     /**
-     * A description of the rule collection.
+     * @return A description of the rule collection.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * A display name of the rule collection.
+     * @return A display name of the rule collection.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The system metadata related to this resource.
+     * @return The system metadata related to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

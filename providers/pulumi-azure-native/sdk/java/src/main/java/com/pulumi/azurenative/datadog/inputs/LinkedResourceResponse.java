@@ -25,6 +25,10 @@ public final class LinkedResourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ARM id of the linked resource.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class LinkedResourceResponse extends com.pulumi.resources.InvokeArg
             $ = new LinkedResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ARM id of the linked resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

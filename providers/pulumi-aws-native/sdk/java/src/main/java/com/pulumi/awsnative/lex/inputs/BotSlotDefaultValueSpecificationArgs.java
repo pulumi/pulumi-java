@@ -25,6 +25,10 @@ public final class BotSlotDefaultValueSpecificationArgs extends com.pulumi.resou
     @Import(name="defaultValueList", required=true)
     private Output<List<BotSlotDefaultValueArgs>> defaultValueList;
 
+    /**
+     * @return A list of slot default values
+     * 
+     */
     public Output<List<BotSlotDefaultValueArgs>> defaultValueList() {
         return this.defaultValueList;
     }
@@ -53,15 +57,33 @@ public final class BotSlotDefaultValueSpecificationArgs extends com.pulumi.resou
             $ = new BotSlotDefaultValueSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValueList A list of slot default values
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValueList(Output<List<BotSlotDefaultValueArgs>> defaultValueList) {
             $.defaultValueList = defaultValueList;
             return this;
         }
 
+        /**
+         * @param defaultValueList A list of slot default values
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValueList(List<BotSlotDefaultValueArgs> defaultValueList) {
             return defaultValueList(Output.of(defaultValueList));
         }
 
+        /**
+         * @param defaultValueList A list of slot default values
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValueList(BotSlotDefaultValueArgs... defaultValueList) {
             return defaultValueList(List.of(defaultValueList));
         }

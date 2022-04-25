@@ -26,6 +26,10 @@ public final class NetworkInterfaceTapConfigurationResponse extends com.pulumi.r
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -37,6 +41,10 @@ public final class NetworkInterfaceTapConfigurationResponse extends com.pulumi.r
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -48,6 +56,10 @@ public final class NetworkInterfaceTapConfigurationResponse extends com.pulumi.r
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class NetworkInterfaceTapConfigurationResponse extends com.pulumi.r
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the network interface tap configuration resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -70,6 +86,10 @@ public final class NetworkInterfaceTapConfigurationResponse extends com.pulumi.r
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Sub Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -81,6 +101,10 @@ public final class NetworkInterfaceTapConfigurationResponse extends com.pulumi.r
     @Import(name="virtualNetworkTap")
     private @Nullable VirtualNetworkTapResponse virtualNetworkTap;
 
+    /**
+     * @return The reference to the Virtual Network Tap resource.
+     * 
+     */
     public Optional<VirtualNetworkTapResponse> virtualNetworkTap() {
         return Optional.ofNullable(this.virtualNetworkTap);
     }
@@ -114,31 +138,67 @@ public final class NetworkInterfaceTapConfigurationResponse extends com.pulumi.r
             $ = new NetworkInterfaceTapConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the network interface tap configuration resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type Sub Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param virtualNetworkTap The reference to the Virtual Network Tap resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkTap(@Nullable VirtualNetworkTapResponse virtualNetworkTap) {
             $.virtualNetworkTap = virtualNetworkTap;
             return this;

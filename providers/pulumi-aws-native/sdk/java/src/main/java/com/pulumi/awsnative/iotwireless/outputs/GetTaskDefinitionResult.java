@@ -18,42 +18,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetTaskDefinitionResult {
     /**
-     * TaskDefinition arn. Returned after successful create.
+     * @return TaskDefinition arn. Returned after successful create.
      * 
      */
     private final @Nullable String arn;
     /**
-     * Whether to automatically create tasks using this task definition for all gateways with the specified current version. If false, the task must me created by calling CreateWirelessGatewayTask.
+     * @return Whether to automatically create tasks using this task definition for all gateways with the specified current version. If false, the task must me created by calling CreateWirelessGatewayTask.
      * 
      */
     private final @Nullable Boolean autoCreateTasks;
     /**
-     * The ID of the new wireless gateway task definition
+     * @return The ID of the new wireless gateway task definition
      * 
      */
     private final @Nullable String id;
     /**
-     * The list of task definitions.
+     * @return The list of task definitions.
      * 
      */
     private final @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskEntry loRaWANUpdateGatewayTaskEntry;
     /**
-     * The name of the new resource.
+     * @return The name of the new resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * A list of key-value pairs that contain metadata for the destination.
+     * @return A list of key-value pairs that contain metadata for the destination.
      * 
      */
     private final @Nullable List<TaskDefinitionTag> tags;
     /**
-     * A filter to list only the wireless gateway task definitions that use this task definition type
+     * @return A filter to list only the wireless gateway task definitions that use this task definition type
      * 
      */
     private final @Nullable TaskDefinitionType taskDefinitionType;
     /**
-     * Information about the gateways to update.
+     * @return Information about the gateways to update.
      * 
      */
     private final @Nullable TaskDefinitionUpdateWirelessGatewayTaskCreate update;
@@ -79,58 +79,58 @@ public final class GetTaskDefinitionResult {
     }
 
     /**
-     * TaskDefinition arn. Returned after successful create.
+     * @return TaskDefinition arn. Returned after successful create.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Whether to automatically create tasks using this task definition for all gateways with the specified current version. If false, the task must me created by calling CreateWirelessGatewayTask.
+     * @return Whether to automatically create tasks using this task definition for all gateways with the specified current version. If false, the task must me created by calling CreateWirelessGatewayTask.
      * 
-    */
+     */
     public Optional<Boolean> autoCreateTasks() {
         return Optional.ofNullable(this.autoCreateTasks);
     }
     /**
-     * The ID of the new wireless gateway task definition
+     * @return The ID of the new wireless gateway task definition
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The list of task definitions.
+     * @return The list of task definitions.
      * 
-    */
+     */
     public Optional<TaskDefinitionLoRaWANUpdateGatewayTaskEntry> loRaWANUpdateGatewayTaskEntry() {
         return Optional.ofNullable(this.loRaWANUpdateGatewayTaskEntry);
     }
     /**
-     * The name of the new resource.
+     * @return The name of the new resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * A list of key-value pairs that contain metadata for the destination.
+     * @return A list of key-value pairs that contain metadata for the destination.
      * 
-    */
+     */
     public List<TaskDefinitionTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * A filter to list only the wireless gateway task definitions that use this task definition type
+     * @return A filter to list only the wireless gateway task definitions that use this task definition type
      * 
-    */
+     */
     public Optional<TaskDefinitionType> taskDefinitionType() {
         return Optional.ofNullable(this.taskDefinitionType);
     }
     /**
-     * Information about the gateways to update.
+     * @return Information about the gateways to update.
      * 
-    */
+     */
     public Optional<TaskDefinitionUpdateWirelessGatewayTaskCreate> update() {
         return Optional.ofNullable(this.update);
     }

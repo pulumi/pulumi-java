@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class ContentKeyPolicyWidevineConfigurationResponse {
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyWidevineConfiguration&#39;.
      * 
      */
     private final String odataType;
     /**
-     * The Widevine template.
+     * @return The Widevine template.
      * 
      */
     private final String widevineTemplate;
@@ -30,17 +30,17 @@ public final class ContentKeyPolicyWidevineConfigurationResponse {
     }
 
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyWidevineConfiguration&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * The Widevine template.
+     * @return The Widevine template.
      * 
-    */
+     */
     public String widevineTemplate() {
         return this.widevineTemplate;
     }

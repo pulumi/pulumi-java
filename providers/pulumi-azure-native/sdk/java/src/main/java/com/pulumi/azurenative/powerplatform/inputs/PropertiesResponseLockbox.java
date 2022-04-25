@@ -25,6 +25,10 @@ public final class PropertiesResponseLockbox extends com.pulumi.resources.Invoke
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return lockbox configuration
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -53,6 +57,12 @@ public final class PropertiesResponseLockbox extends com.pulumi.resources.Invoke
             $ = new PropertiesResponseLockbox(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param state lockbox configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

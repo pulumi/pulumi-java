@@ -13,22 +13,22 @@ import java.util.Objects;
 @CustomType
 public final class ServiceMeshAnalysisMessageResponse {
     /**
-     * A UI can combine these args with a template (based on message_base.type) to produce an internationalized message.
+     * @return A UI can combine these args with a template (based on message_base.type) to produce an internationalized message.
      * 
      */
     private final Map<String,String> args;
     /**
-     * A human readable description of what the error means. It is suitable for non-internationalize display purposes.
+     * @return A human readable description of what the error means. It is suitable for non-internationalize display purposes.
      * 
      */
     private final String description;
     /**
-     * Details common to all types of Istio and ServiceMesh analysis messages.
+     * @return Details common to all types of Istio and ServiceMesh analysis messages.
      * 
      */
     private final ServiceMeshAnalysisMessageBaseResponse messageBase;
     /**
-     * A list of strings specifying the resource identifiers that were the cause of message generation. A &#34;path&#34; here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
+     * @return A list of strings specifying the resource identifiers that were the cause of message generation. A &#34;path&#34; here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
      * 
      */
     private final List<String> resourcePaths;
@@ -46,30 +46,30 @@ public final class ServiceMeshAnalysisMessageResponse {
     }
 
     /**
-     * A UI can combine these args with a template (based on message_base.type) to produce an internationalized message.
+     * @return A UI can combine these args with a template (based on message_base.type) to produce an internationalized message.
      * 
-    */
+     */
     public Map<String,String> args() {
         return this.args;
     }
     /**
-     * A human readable description of what the error means. It is suitable for non-internationalize display purposes.
+     * @return A human readable description of what the error means. It is suitable for non-internationalize display purposes.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Details common to all types of Istio and ServiceMesh analysis messages.
+     * @return Details common to all types of Istio and ServiceMesh analysis messages.
      * 
-    */
+     */
     public ServiceMeshAnalysisMessageBaseResponse messageBase() {
         return this.messageBase;
     }
     /**
-     * A list of strings specifying the resource identifiers that were the cause of message generation. A &#34;path&#34; here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
+     * @return A list of strings specifying the resource identifiers that were the cause of message generation. A &#34;path&#34; here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
      * 
-    */
+     */
     public List<String> resourcePaths() {
         return this.resourcePaths;
     }

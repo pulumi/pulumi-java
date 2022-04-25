@@ -16,42 +16,42 @@ import java.util.Objects;
 @CustomType
 public final class CertificateDescriptionResponse {
     /**
-     * Describes lists of issuer CA certificate URLs that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+     * @return Describes lists of issuer CA certificate URLs that appear in the &#34;Authority Information Access&#34; extension in the certificate.
      * 
      */
     private final List<String> aiaIssuingCertificateUrls;
     /**
-     * Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1
+     * @return Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1
      * 
      */
     private final KeyIdResponse authorityKeyId;
     /**
-     * The hash of the x.509 certificate.
+     * @return The hash of the x.509 certificate.
      * 
      */
     private final CertificateFingerprintResponse certFingerprint;
     /**
-     * Describes a list of locations to obtain CRL information, i.e. the DistributionPoint.fullName described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13
+     * @return Describes a list of locations to obtain CRL information, i.e. the DistributionPoint.fullName described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13
      * 
      */
     private final List<String> crlDistributionPoints;
     /**
-     * The public key that corresponds to an issued certificate.
+     * @return The public key that corresponds to an issued certificate.
      * 
      */
     private final PublicKeyResponse publicKey;
     /**
-     * Describes some of the values in a certificate that are related to the subject and lifetime.
+     * @return Describes some of the values in a certificate that are related to the subject and lifetime.
      * 
      */
     private final SubjectDescriptionResponse subjectDescription;
     /**
-     * Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.
+     * @return Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.
      * 
      */
     private final KeyIdResponse subjectKeyId;
     /**
-     * Describes some of the technical X.509 fields in a certificate.
+     * @return Describes some of the technical X.509 fields in a certificate.
      * 
      */
     private final X509ParametersResponse x509Description;
@@ -77,58 +77,58 @@ public final class CertificateDescriptionResponse {
     }
 
     /**
-     * Describes lists of issuer CA certificate URLs that appear in the &#34;Authority Information Access&#34; extension in the certificate.
+     * @return Describes lists of issuer CA certificate URLs that appear in the &#34;Authority Information Access&#34; extension in the certificate.
      * 
-    */
+     */
     public List<String> aiaIssuingCertificateUrls() {
         return this.aiaIssuingCertificateUrls;
     }
     /**
-     * Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1
+     * @return Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1
      * 
-    */
+     */
     public KeyIdResponse authorityKeyId() {
         return this.authorityKeyId;
     }
     /**
-     * The hash of the x.509 certificate.
+     * @return The hash of the x.509 certificate.
      * 
-    */
+     */
     public CertificateFingerprintResponse certFingerprint() {
         return this.certFingerprint;
     }
     /**
-     * Describes a list of locations to obtain CRL information, i.e. the DistributionPoint.fullName described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13
+     * @return Describes a list of locations to obtain CRL information, i.e. the DistributionPoint.fullName described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13
      * 
-    */
+     */
     public List<String> crlDistributionPoints() {
         return this.crlDistributionPoints;
     }
     /**
-     * The public key that corresponds to an issued certificate.
+     * @return The public key that corresponds to an issued certificate.
      * 
-    */
+     */
     public PublicKeyResponse publicKey() {
         return this.publicKey;
     }
     /**
-     * Describes some of the values in a certificate that are related to the subject and lifetime.
+     * @return Describes some of the values in a certificate that are related to the subject and lifetime.
      * 
-    */
+     */
     public SubjectDescriptionResponse subjectDescription() {
         return this.subjectDescription;
     }
     /**
-     * Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.
+     * @return Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.
      * 
-    */
+     */
     public KeyIdResponse subjectKeyId() {
         return this.subjectKeyId;
     }
     /**
-     * Describes some of the technical X.509 fields in a certificate.
+     * @return Describes some of the technical X.509 fields in a certificate.
      * 
-    */
+     */
     public X509ParametersResponse x509Description() {
         return this.x509Description;
     }

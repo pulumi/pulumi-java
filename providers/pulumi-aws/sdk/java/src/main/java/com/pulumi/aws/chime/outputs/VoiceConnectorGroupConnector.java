@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class VoiceConnectorGroupConnector {
     /**
-     * The priority associated with the Amazon Chime Voice Connector, with 1 being the highest priority. Higher priority Amazon Chime Voice Connectors are attempted first.
+     * @return The priority associated with the Amazon Chime Voice Connector, with 1 being the highest priority. Higher priority Amazon Chime Voice Connectors are attempted first.
      * 
      */
     private final Integer priority;
     /**
-     * The Amazon Chime Voice Connector ID.
+     * @return The Amazon Chime Voice Connector ID.
      * 
      */
     private final String voiceConnectorId;
@@ -30,16 +30,16 @@ public final class VoiceConnectorGroupConnector {
     }
 
     /**
-     * The priority associated with the Amazon Chime Voice Connector, with 1 being the highest priority. Higher priority Amazon Chime Voice Connectors are attempted first.
+     * @return The priority associated with the Amazon Chime Voice Connector, with 1 being the highest priority. Higher priority Amazon Chime Voice Connectors are attempted first.
      * 
-    */
+     */
     public Integer priority() {
         return this.priority;
     }
     /**
-     * The Amazon Chime Voice Connector ID.
+     * @return The Amazon Chime Voice Connector ID.
      * 
-    */
+     */
     public String voiceConnectorId() {
         return this.voiceConnectorId;
     }

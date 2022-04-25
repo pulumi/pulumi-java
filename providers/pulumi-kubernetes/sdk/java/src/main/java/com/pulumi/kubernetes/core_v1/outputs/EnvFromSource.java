@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EnvFromSource {
     /**
-     * The ConfigMap to select from
+     * @return The ConfigMap to select from
      * 
      */
     private final @Nullable ConfigMapEnvSource configMapRef;
     /**
-     * An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
+     * @return An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
      * 
      */
     private final @Nullable String prefix;
     /**
-     * The Secret to select from
+     * @return The Secret to select from
      * 
      */
     private final @Nullable SecretEnvSource secretRef;
@@ -40,23 +40,23 @@ public final class EnvFromSource {
     }
 
     /**
-     * The ConfigMap to select from
+     * @return The ConfigMap to select from
      * 
-    */
+     */
     public Optional<ConfigMapEnvSource> configMapRef() {
         return Optional.ofNullable(this.configMapRef);
     }
     /**
-     * An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
+     * @return An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * The Secret to select from
+     * @return The Secret to select from
      * 
-    */
+     */
     public Optional<SecretEnvSource> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }

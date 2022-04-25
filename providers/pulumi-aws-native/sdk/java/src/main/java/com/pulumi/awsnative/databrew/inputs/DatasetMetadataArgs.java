@@ -22,6 +22,10 @@ public final class DatasetMetadataArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourceArn")
     private @Nullable Output<String> sourceArn;
 
+    /**
+     * @return Arn of the source of the dataset. For e.g.: AppFlow Flow ARN.
+     * 
+     */
     public Optional<Output<String>> sourceArn() {
         return Optional.ofNullable(this.sourceArn);
     }
@@ -50,11 +54,23 @@ public final class DatasetMetadataArgs extends com.pulumi.resources.ResourceArgs
             $ = new DatasetMetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceArn Arn of the source of the dataset. For e.g.: AppFlow Flow ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceArn(@Nullable Output<String> sourceArn) {
             $.sourceArn = sourceArn;
             return this;
         }
 
+        /**
+         * @param sourceArn Arn of the source of the dataset. For e.g.: AppFlow Flow ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceArn(String sourceArn) {
             return sourceArn(Output.of(sourceArn));
         }

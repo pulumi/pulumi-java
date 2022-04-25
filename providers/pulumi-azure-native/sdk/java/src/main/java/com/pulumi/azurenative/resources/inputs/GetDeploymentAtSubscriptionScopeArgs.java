@@ -19,6 +19,10 @@ public final class GetDeploymentAtSubscriptionScopeArgs extends com.pulumi.resou
     @Import(name="deploymentName", required=true)
     private String deploymentName;
 
+    /**
+     * @return The name of the deployment.
+     * 
+     */
     public String deploymentName() {
         return this.deploymentName;
     }
@@ -47,6 +51,12 @@ public final class GetDeploymentAtSubscriptionScopeArgs extends com.pulumi.resou
             $ = new GetDeploymentAtSubscriptionScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentName The name of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(String deploymentName) {
             $.deploymentName = deploymentName;
             return this;

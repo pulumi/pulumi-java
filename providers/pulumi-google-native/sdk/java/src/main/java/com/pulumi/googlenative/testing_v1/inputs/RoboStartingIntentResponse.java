@@ -25,6 +25,10 @@ public final class RoboStartingIntentResponse extends com.pulumi.resources.Invok
     @Import(name="launcherActivity", required=true)
     private LauncherActivityIntentResponse launcherActivity;
 
+    /**
+     * @return An intent that starts the main launcher activity.
+     * 
+     */
     public LauncherActivityIntentResponse launcherActivity() {
         return this.launcherActivity;
     }
@@ -36,6 +40,10 @@ public final class RoboStartingIntentResponse extends com.pulumi.resources.Invok
     @Import(name="startActivity", required=true)
     private StartActivityIntentResponse startActivity;
 
+    /**
+     * @return An intent that starts an activity with specific details.
+     * 
+     */
     public StartActivityIntentResponse startActivity() {
         return this.startActivity;
     }
@@ -47,6 +55,10 @@ public final class RoboStartingIntentResponse extends com.pulumi.resources.Invok
     @Import(name="timeout", required=true)
     private String timeout;
 
+    /**
+     * @return Timeout in seconds for each intent.
+     * 
+     */
     public String timeout() {
         return this.timeout;
     }
@@ -77,16 +89,34 @@ public final class RoboStartingIntentResponse extends com.pulumi.resources.Invok
             $ = new RoboStartingIntentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param launcherActivity An intent that starts the main launcher activity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launcherActivity(LauncherActivityIntentResponse launcherActivity) {
             $.launcherActivity = launcherActivity;
             return this;
         }
 
+        /**
+         * @param startActivity An intent that starts an activity with specific details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startActivity(StartActivityIntentResponse startActivity) {
             $.startActivity = startActivity;
             return this;
         }
 
+        /**
+         * @param timeout Timeout in seconds for each intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             $.timeout = timeout;
             return this;

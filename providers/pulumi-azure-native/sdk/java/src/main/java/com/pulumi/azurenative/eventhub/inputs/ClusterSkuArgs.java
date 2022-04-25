@@ -29,6 +29,10 @@ public final class ClusterSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -40,6 +44,10 @@ public final class ClusterSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<Either<String,ClusterSkuName>> name;
 
+    /**
+     * @return Name of this SKU.
+     * 
+     */
     public Output<Either<String,ClusterSkuName>> name() {
         return this.name;
     }
@@ -69,28 +77,64 @@ public final class ClusterSkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name Name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,ClusterSkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,ClusterSkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(ClusterSkuName name) {
             return name(Either.ofRight(name));
         }

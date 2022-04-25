@@ -19,6 +19,10 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="backupPolicyName", required=true)
     private String backupPolicyName;
 
+    /**
+     * @return The name of backup policy to be fetched.
+     * 
+     */
     public String backupPolicyName() {
         return this.backupPolicyName;
     }
@@ -30,6 +34,10 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The device name
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -41,6 +49,10 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="managerName", required=true)
     private String managerName;
 
+    /**
+     * @return The manager name
+     * 
+     */
     public String managerName() {
         return this.managerName;
     }
@@ -52,6 +64,10 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupPolicyName The name of backup policy to be fetched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicyName(String backupPolicyName) {
             $.backupPolicyName = backupPolicyName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(String managerName) {
             $.managerName = managerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

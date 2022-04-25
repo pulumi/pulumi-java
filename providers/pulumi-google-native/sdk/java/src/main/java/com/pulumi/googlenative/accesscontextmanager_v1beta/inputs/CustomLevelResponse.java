@@ -23,6 +23,10 @@ public final class CustomLevelResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="expr", required=true)
     private ExprResponse expr;
 
+    /**
+     * @return A Cloud CEL expression evaluating to a boolean.
+     * 
+     */
     public ExprResponse expr() {
         return this.expr;
     }
@@ -51,6 +55,12 @@ public final class CustomLevelResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CustomLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expr A Cloud CEL expression evaluating to a boolean.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expr(ExprResponse expr) {
             $.expr = expr;
             return this;

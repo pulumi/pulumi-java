@@ -24,6 +24,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectId", required=true)
     private Output<String> objectId;
 
+    /**
+     * @return The object id of the user.
+     * 
+     */
     public Output<String> objectId() {
         return this.objectId;
     }
@@ -52,11 +56,23 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectId The object id of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId The object id of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }

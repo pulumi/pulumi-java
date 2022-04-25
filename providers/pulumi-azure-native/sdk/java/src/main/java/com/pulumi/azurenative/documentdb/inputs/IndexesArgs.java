@@ -31,6 +31,10 @@ public final class IndexesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataType")
     private @Nullable Output<Either<String,DataType>> dataType;
 
+    /**
+     * @return The datatype for which the indexing behavior is applied to.
+     * 
+     */
     public Optional<Output<Either<String,DataType>>> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -42,6 +46,10 @@ public final class IndexesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<Either<String,IndexKind>> kind;
 
+    /**
+     * @return Indicates the type of index.
+     * 
+     */
     public Optional<Output<Either<String,IndexKind>>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -53,6 +61,10 @@ public final class IndexesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="precision")
     private @Nullable Output<Integer> precision;
 
+    /**
+     * @return The precision of the index. -1 is maximum precision.
+     * 
+     */
     public Optional<Output<Integer>> precision() {
         return Optional.ofNullable(this.precision);
     }
@@ -83,45 +95,105 @@ public final class IndexesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IndexesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataType The datatype for which the indexing behavior is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable Output<Either<String,DataType>> dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param dataType The datatype for which the indexing behavior is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(Either<String,DataType> dataType) {
             return dataType(Output.of(dataType));
         }
 
+        /**
+         * @param dataType The datatype for which the indexing behavior is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(String dataType) {
             return dataType(Either.ofLeft(dataType));
         }
 
+        /**
+         * @param dataType The datatype for which the indexing behavior is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(DataType dataType) {
             return dataType(Either.ofRight(dataType));
         }
 
+        /**
+         * @param kind Indicates the type of index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Either<String,IndexKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Indicates the type of index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,IndexKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Indicates the type of index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Indicates the type of index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(IndexKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param precision The precision of the index. -1 is maximum precision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder precision(@Nullable Output<Integer> precision) {
             $.precision = precision;
             return this;
         }
 
+        /**
+         * @param precision The precision of the index. -1 is maximum precision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder precision(Integer precision) {
             return precision(Output.of(precision));
         }

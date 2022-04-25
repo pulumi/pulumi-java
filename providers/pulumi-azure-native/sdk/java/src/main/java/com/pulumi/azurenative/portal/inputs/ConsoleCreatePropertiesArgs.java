@@ -29,6 +29,10 @@ public final class ConsoleCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="osType", required=true)
     private Output<Either<String,OsType>> osType;
 
+    /**
+     * @return The operating system type of the cloud shell.
+     * 
+     */
     public Output<Either<String,OsType>> osType() {
         return this.osType;
     }
@@ -40,6 +44,10 @@ public final class ConsoleCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="provisioningState")
     private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
+    /**
+     * @return Provisioning state of the console.
+     * 
+     */
     public Optional<Output<Either<String,ProvisioningState>>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -51,6 +59,10 @@ public final class ConsoleCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return Uri of the console.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -81,45 +93,105 @@ public final class ConsoleCreatePropertiesArgs extends com.pulumi.resources.Reso
             $ = new ConsoleCreatePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param osType The operating system type of the cloud shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(Output<Either<String,OsType>> osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osType The operating system type of the cloud shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(Either<String,OsType> osType) {
             return osType(Output.of(osType));
         }
 
+        /**
+         * @param osType The operating system type of the cloud shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             return osType(Either.ofLeft(osType));
         }
 
+        /**
+         * @param osType The operating system type of the cloud shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(OsType osType) {
             return osType(Either.ofRight(osType));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(Either<String,ProvisioningState> provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Either.ofLeft(provisioningState));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(ProvisioningState provisioningState) {
             return provisioningState(Either.ofRight(provisioningState));
         }
 
+        /**
+         * @param uri Uri of the console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri Uri of the console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

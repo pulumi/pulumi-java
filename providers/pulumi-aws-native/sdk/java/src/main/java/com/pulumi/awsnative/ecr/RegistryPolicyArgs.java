@@ -20,6 +20,10 @@ public final class RegistryPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="policyText", required=true)
     private Output<Object> policyText;
 
+    /**
+     * @return The JSON policy text to apply to your registry. The policy text follows the same format as IAM policy text. For more information, see Registry permissions (https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html) in the Amazon Elastic Container Registry User Guide.
+     * 
+     */
     public Output<Object> policyText() {
         return this.policyText;
     }
@@ -48,11 +52,23 @@ public final class RegistryPolicyArgs extends com.pulumi.resources.ResourceArgs 
             $ = new RegistryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyText The JSON policy text to apply to your registry. The policy text follows the same format as IAM policy text. For more information, see Registry permissions (https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html) in the Amazon Elastic Container Registry User Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyText(Output<Object> policyText) {
             $.policyText = policyText;
             return this;
         }
 
+        /**
+         * @param policyText The JSON policy text to apply to your registry. The policy text follows the same format as IAM policy text. For more information, see Registry permissions (https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html) in the Amazon Elastic Container Registry User Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyText(Object policyText) {
             return policyText(Output.of(policyText));
         }

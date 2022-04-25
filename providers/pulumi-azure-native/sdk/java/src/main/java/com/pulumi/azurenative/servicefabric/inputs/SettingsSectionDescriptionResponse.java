@@ -25,6 +25,10 @@ public final class SettingsSectionDescriptionResponse extends com.pulumi.resourc
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The section name of the fabric settings.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -36,6 +40,10 @@ public final class SettingsSectionDescriptionResponse extends com.pulumi.resourc
     @Import(name="parameters", required=true)
     private List<SettingsParameterDescriptionResponse> parameters;
 
+    /**
+     * @return The collection of parameters in the section.
+     * 
+     */
     public List<SettingsParameterDescriptionResponse> parameters() {
         return this.parameters;
     }
@@ -65,16 +73,34 @@ public final class SettingsSectionDescriptionResponse extends com.pulumi.resourc
             $ = new SettingsSectionDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The section name of the fabric settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters The collection of parameters in the section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<SettingsParameterDescriptionResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The collection of parameters in the section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(SettingsParameterDescriptionResponse... parameters) {
             return parameters(List.of(parameters));
         }

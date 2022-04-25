@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse {
     /**
-     * Flag that specifies whether the configuration is for Apigee API proxy or a remote service. Valid values include `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.
+     * @return Flag that specifies whether the configuration is for Apigee API proxy or a remote service. Valid values include `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.
      * 
      */
     private final String operationConfigType;
     /**
-     * List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
+     * @return List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
      * 
      */
     private final List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs;
@@ -31,16 +31,16 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse {
     }
 
     /**
-     * Flag that specifies whether the configuration is for Apigee API proxy or a remote service. Valid values include `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.
+     * @return Flag that specifies whether the configuration is for Apigee API proxy or a remote service. Valid values include `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.
      * 
-    */
+     */
     public String operationConfigType() {
         return this.operationConfigType;
     }
     /**
-     * List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
+     * @return List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
      * 
-    */
+     */
     public List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs() {
         return this.operationConfigs;
     }

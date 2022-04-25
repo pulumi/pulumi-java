@@ -21,6 +21,10 @@ public final class GetGlobalAddressArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return A unique name for the resource, required by GCE.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -33,6 +37,11 @@ public final class GetGlobalAddressArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -62,11 +71,24 @@ public final class GetGlobalAddressArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetGlobalAddressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A unique name for the resource, required by GCE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param project The project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;

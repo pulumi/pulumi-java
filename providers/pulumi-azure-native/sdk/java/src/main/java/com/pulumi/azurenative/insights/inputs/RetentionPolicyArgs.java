@@ -25,6 +25,10 @@ public final class RetentionPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="days", required=true)
     private Output<Integer> days;
 
+    /**
+     * @return the number of days for the retention in days. A value of 0 will retain the events indefinitely.
+     * 
+     */
     public Output<Integer> days() {
         return this.days;
     }
@@ -36,6 +40,10 @@ public final class RetentionPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return a value indicating whether the retention policy is enabled.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -65,20 +73,44 @@ public final class RetentionPolicyArgs extends com.pulumi.resources.ResourceArgs
             $ = new RetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param days the number of days for the retention in days. A value of 0 will retain the events indefinitely.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Output<Integer> days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param days the number of days for the retention in days. A value of 0 will retain the events indefinitely.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Integer days) {
             return days(Output.of(days));
         }
 
+        /**
+         * @param enabled a value indicating whether the retention policy is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled a value indicating whether the retention policy is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

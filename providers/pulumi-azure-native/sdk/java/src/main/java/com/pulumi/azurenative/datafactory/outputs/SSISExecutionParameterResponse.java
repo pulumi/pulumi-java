@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class SSISExecutionParameterResponse {
     /**
-     * SSIS package execution parameter value. Type: string (or Expression with resultType string).
+     * @return SSIS package execution parameter value. Type: string (or Expression with resultType string).
      * 
      */
     private final Object value;
@@ -21,9 +21,9 @@ public final class SSISExecutionParameterResponse {
     }
 
     /**
-     * SSIS package execution parameter value. Type: string (or Expression with resultType string).
+     * @return SSIS package execution parameter value. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object value() {
         return this.value;
     }

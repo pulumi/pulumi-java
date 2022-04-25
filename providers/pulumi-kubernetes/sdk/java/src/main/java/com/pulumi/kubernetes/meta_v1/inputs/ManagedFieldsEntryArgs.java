@@ -27,6 +27,10 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
     @Import(name="apiVersion")
     private @Nullable Output<String> apiVersion;
 
+    /**
+     * @return APIVersion defines the version of this resource that this field set applies to. The format is &#34;group/version&#34; just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.
+     * 
+     */
     public Optional<Output<String>> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -38,6 +42,10 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
     @Import(name="fieldsType")
     private @Nullable Output<String> fieldsType;
 
+    /**
+     * @return FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: &#34;FieldsV1&#34;
+     * 
+     */
     public Optional<Output<String>> fieldsType() {
         return Optional.ofNullable(this.fieldsType);
     }
@@ -49,6 +57,10 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
     @Import(name="fieldsV1")
     private @Nullable Output<JsonElement> fieldsV1;
 
+    /**
+     * @return FieldsV1 holds the first JSON version format as described in the &#34;FieldsV1&#34; type.
+     * 
+     */
     public Optional<Output<JsonElement>> fieldsV1() {
         return Optional.ofNullable(this.fieldsV1);
     }
@@ -60,6 +72,10 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
     @Import(name="manager")
     private @Nullable Output<String> manager;
 
+    /**
+     * @return Manager is an identifier of the workflow managing these fields.
+     * 
+     */
     public Optional<Output<String>> manager() {
         return Optional.ofNullable(this.manager);
     }
@@ -71,6 +87,10 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
     @Import(name="operation")
     private @Nullable Output<String> operation;
 
+    /**
+     * @return Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are &#39;Apply&#39; and &#39;Update&#39;.
+     * 
+     */
     public Optional<Output<String>> operation() {
         return Optional.ofNullable(this.operation);
     }
@@ -82,6 +102,10 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
     @Import(name="subresource")
     private @Nullable Output<String> subresource;
 
+    /**
+     * @return Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.
+     * 
+     */
     public Optional<Output<String>> subresource() {
         return Optional.ofNullable(this.subresource);
     }
@@ -93,6 +117,10 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
     @Import(name="time")
     private @Nullable Output<String> time;
 
+    /**
+     * @return Time is timestamp of when these fields were set. It should always be empty if Operation is &#39;Apply&#39;
+     * 
+     */
     public Optional<Output<String>> time() {
         return Optional.ofNullable(this.time);
     }
@@ -127,65 +155,149 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
             $ = new ManagedFieldsEntryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion APIVersion defines the version of this resource that this field set applies to. The format is &#34;group/version&#34; just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion APIVersion defines the version of this resource that this field set applies to. The format is &#34;group/version&#34; just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param fieldsType FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: &#34;FieldsV1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldsType(@Nullable Output<String> fieldsType) {
             $.fieldsType = fieldsType;
             return this;
         }
 
+        /**
+         * @param fieldsType FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: &#34;FieldsV1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldsType(String fieldsType) {
             return fieldsType(Output.of(fieldsType));
         }
 
+        /**
+         * @param fieldsV1 FieldsV1 holds the first JSON version format as described in the &#34;FieldsV1&#34; type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldsV1(@Nullable Output<JsonElement> fieldsV1) {
             $.fieldsV1 = fieldsV1;
             return this;
         }
 
+        /**
+         * @param fieldsV1 FieldsV1 holds the first JSON version format as described in the &#34;FieldsV1&#34; type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldsV1(JsonElement fieldsV1) {
             return fieldsV1(Output.of(fieldsV1));
         }
 
+        /**
+         * @param manager Manager is an identifier of the workflow managing these fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manager(@Nullable Output<String> manager) {
             $.manager = manager;
             return this;
         }
 
+        /**
+         * @param manager Manager is an identifier of the workflow managing these fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manager(String manager) {
             return manager(Output.of(manager));
         }
 
+        /**
+         * @param operation Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are &#39;Apply&#39; and &#39;Update&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(@Nullable Output<String> operation) {
             $.operation = operation;
             return this;
         }
 
+        /**
+         * @param operation Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are &#39;Apply&#39; and &#39;Update&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(String operation) {
             return operation(Output.of(operation));
         }
 
+        /**
+         * @param subresource Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subresource(@Nullable Output<String> subresource) {
             $.subresource = subresource;
             return this;
         }
 
+        /**
+         * @param subresource Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subresource(String subresource) {
             return subresource(Output.of(subresource));
         }
 
+        /**
+         * @param time Time is timestamp of when these fields were set. It should always be empty if Operation is &#39;Apply&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(@Nullable Output<String> time) {
             $.time = time;
             return this;
         }
 
+        /**
+         * @param time Time is timestamp of when these fields were set. It should always be empty if Operation is &#39;Apply&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             return time(Output.of(time));
         }

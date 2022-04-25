@@ -27,6 +27,10 @@ public final class DiskPoolVolumeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="endpoints")
     private @Nullable Output<List<String>> endpoints;
 
+    /**
+     * @return iSCSI provider target IP address list
+     * 
+     */
     public Optional<Output<List<String>>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
@@ -38,6 +42,10 @@ public final class DiskPoolVolumeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="lunName")
     private @Nullable Output<String> lunName;
 
+    /**
+     * @return Name of the LUN to be used
+     * 
+     */
     public Optional<Output<String>> lunName() {
         return Optional.ofNullable(this.lunName);
     }
@@ -67,24 +75,54 @@ public final class DiskPoolVolumeArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DiskPoolVolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoints iSCSI provider target IP address list
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(@Nullable Output<List<String>> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param endpoints iSCSI provider target IP address list
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(List<String> endpoints) {
             return endpoints(Output.of(endpoints));
         }
 
+        /**
+         * @param endpoints iSCSI provider target IP address list
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(String... endpoints) {
             return endpoints(List.of(endpoints));
         }
 
+        /**
+         * @param lunName Name of the LUN to be used
+         * 
+         * @return builder
+         * 
+         */
         public Builder lunName(@Nullable Output<String> lunName) {
             $.lunName = lunName;
             return this;
         }
 
+        /**
+         * @param lunName Name of the LUN to be used
+         * 
+         * @return builder
+         * 
+         */
         public Builder lunName(String lunName) {
             return lunName(Output.of(lunName));
         }

@@ -23,6 +23,10 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends com.pulumi.r
     @Import(name="artifactId", required=true)
     private String artifactId;
 
+    /**
+     * @return The id of the relevant artifact in the recipe.
+     * 
+     */
     public String artifactId() {
         return this.artifactId;
     }
@@ -34,6 +38,10 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends com.pulumi.r
     @Import(name="destination", required=true)
     private String destination;
 
+    /**
+     * @return Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
+     * 
+     */
     public String destination() {
         return this.destination;
     }
@@ -45,6 +53,10 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends com.pulumi.r
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the archive to extract.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -75,16 +87,34 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends com.pulumi.r
             $ = new SoftwareRecipeStepExtractArchiveResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactId The id of the relevant artifact in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactId(String artifactId) {
             $.artifactId = artifactId;
             return this;
         }
 
+        /**
+         * @param destination Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(String destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param type The type of the archive to extract.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

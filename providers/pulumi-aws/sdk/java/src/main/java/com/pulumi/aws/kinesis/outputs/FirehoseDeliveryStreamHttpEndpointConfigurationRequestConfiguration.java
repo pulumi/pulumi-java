@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration {
     /**
-     * Describes the metadata sent to the HTTP endpoint destination. More details are given below
+     * @return Describes the metadata sent to the HTTP endpoint destination. More details are given below
      * 
      */
     private final @Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute> commonAttributes;
     /**
-     * Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. Valid values are `NONE` and `GZIP`.  Default value is `NONE`.
+     * @return Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. Valid values are `NONE` and `GZIP`.  Default value is `NONE`.
      * 
      */
     private final @Nullable String contentEncoding;
@@ -33,16 +33,16 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
     }
 
     /**
-     * Describes the metadata sent to the HTTP endpoint destination. More details are given below
+     * @return Describes the metadata sent to the HTTP endpoint destination. More details are given below
      * 
-    */
+     */
     public List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute> commonAttributes() {
         return this.commonAttributes == null ? List.of() : this.commonAttributes;
     }
     /**
-     * Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. Valid values are `NONE` and `GZIP`.  Default value is `NONE`.
+     * @return Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. Valid values are `NONE` and `GZIP`.  Default value is `NONE`.
      * 
-    */
+     */
     public Optional<String> contentEncoding() {
         return Optional.ofNullable(this.contentEncoding);
     }

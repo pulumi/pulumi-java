@@ -25,6 +25,11 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends com.
     @Import(name="basicSliPerformance")
     private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance;
 
+    /**
+     * @return Basic SLI to evaluate to judge window quality.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs>> basicSliPerformance() {
         return Optional.ofNullable(this.basicSliPerformance);
     }
@@ -37,6 +42,11 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends com.
     @Import(name="performance")
     private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance;
 
+    /**
+     * @return Request-based SLI to evaluate to judge window quality.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs>> performance() {
         return Optional.ofNullable(this.performance);
     }
@@ -50,6 +60,12 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends com.
     @Import(name="threshold")
     private @Nullable Output<Double> threshold;
 
+    /**
+     * @return A duration string, e.g. 10s.
+     * Good service is defined to be the count of requests made to
+     * this service that return in no more than threshold.
+     * 
+     */
     public Optional<Output<Double>> threshold() {
         return Optional.ofNullable(this.threshold);
     }
@@ -80,29 +96,73 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends com.
             $ = new SloWindowsBasedSliGoodTotalRatioThresholdGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicSliPerformance Basic SLI to evaluate to judge window quality.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicSliPerformance(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance) {
             $.basicSliPerformance = basicSliPerformance;
             return this;
         }
 
+        /**
+         * @param basicSliPerformance Basic SLI to evaluate to judge window quality.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicSliPerformance(SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs basicSliPerformance) {
             return basicSliPerformance(Output.of(basicSliPerformance));
         }
 
+        /**
+         * @param performance Request-based SLI to evaluate to judge window quality.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder performance(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance) {
             $.performance = performance;
             return this;
         }
 
+        /**
+         * @param performance Request-based SLI to evaluate to judge window quality.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder performance(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs performance) {
             return performance(Output.of(performance));
         }
 
+        /**
+         * @param threshold A duration string, e.g. 10s.
+         * Good service is defined to be the count of requests made to
+         * this service that return in no more than threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(@Nullable Output<Double> threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param threshold A duration string, e.g. 10s.
+         * Good service is defined to be the count of requests made to
+         * this service that return in no more than threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Double threshold) {
             return threshold(Output.of(threshold));
         }

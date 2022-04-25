@@ -24,6 +24,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetIds")
     private @Nullable Output<List<String>> assetIds;
 
+    /**
+     * @return The IDs of the assets to be associated to the project.
+     * 
+     */
     public Optional<Output<List<String>>> assetIds() {
         return Optional.ofNullable(this.assetIds);
     }
@@ -35,6 +39,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="portalId", required=true)
     private Output<String> portalId;
 
+    /**
+     * @return The ID of the portal in which to create the project.
+     * 
+     */
     public Output<String> portalId() {
         return this.portalId;
     }
@@ -46,6 +54,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectDescription")
     private @Nullable Output<String> projectDescription;
 
+    /**
+     * @return A description for the project.
+     * 
+     */
     public Optional<Output<String>> projectDescription() {
         return Optional.ofNullable(this.projectDescription);
     }
@@ -57,6 +69,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectName")
     private @Nullable Output<String> projectName;
 
+    /**
+     * @return A friendly name for the project.
+     * 
+     */
     public Optional<Output<String>> projectName() {
         return Optional.ofNullable(this.projectName);
     }
@@ -68,6 +84,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ProjectTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the project.
+     * 
+     */
     public Optional<Output<List<ProjectTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,55 +120,127 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetIds The IDs of the assets to be associated to the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetIds(@Nullable Output<List<String>> assetIds) {
             $.assetIds = assetIds;
             return this;
         }
 
+        /**
+         * @param assetIds The IDs of the assets to be associated to the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetIds(List<String> assetIds) {
             return assetIds(Output.of(assetIds));
         }
 
+        /**
+         * @param assetIds The IDs of the assets to be associated to the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetIds(String... assetIds) {
             return assetIds(List.of(assetIds));
         }
 
+        /**
+         * @param portalId The ID of the portal in which to create the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalId(Output<String> portalId) {
             $.portalId = portalId;
             return this;
         }
 
+        /**
+         * @param portalId The ID of the portal in which to create the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalId(String portalId) {
             return portalId(Output.of(portalId));
         }
 
+        /**
+         * @param projectDescription A description for the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectDescription(@Nullable Output<String> projectDescription) {
             $.projectDescription = projectDescription;
             return this;
         }
 
+        /**
+         * @param projectDescription A description for the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectDescription(String projectDescription) {
             return projectDescription(Output.of(projectDescription));
         }
 
+        /**
+         * @param projectName A friendly name for the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(@Nullable Output<String> projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param projectName A friendly name for the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(String projectName) {
             return projectName(Output.of(projectName));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ProjectTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ProjectTagArgs... tags) {
             return tags(List.of(tags));
         }

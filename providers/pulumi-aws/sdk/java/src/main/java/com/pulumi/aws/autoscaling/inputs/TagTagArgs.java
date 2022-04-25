@@ -21,6 +21,10 @@ public final class TagTagArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return Tag name.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -32,6 +36,10 @@ public final class TagTagArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="propagateAtLaunch", required=true)
     private Output<Boolean> propagateAtLaunch;
 
+    /**
+     * @return Whether to propagate the tags to instances launched by the ASG.
+     * 
+     */
     public Output<Boolean> propagateAtLaunch() {
         return this.propagateAtLaunch;
     }
@@ -43,6 +51,10 @@ public final class TagTagArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Tag value.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -73,29 +85,65 @@ public final class TagTagArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TagTagArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Tag name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Tag name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param propagateAtLaunch Whether to propagate the tags to instances launched by the ASG.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagateAtLaunch(Output<Boolean> propagateAtLaunch) {
             $.propagateAtLaunch = propagateAtLaunch;
             return this;
         }
 
+        /**
+         * @param propagateAtLaunch Whether to propagate the tags to instances launched by the ASG.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagateAtLaunch(Boolean propagateAtLaunch) {
             return propagateAtLaunch(Output.of(propagateAtLaunch));
         }
 
+        /**
+         * @param value Tag value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Tag value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetStaticIpResult {
     /**
-     * The instance where the static IP is attached.
+     * @return The instance where the static IP is attached.
      * 
      */
     private final @Nullable String attachedTo;
     /**
-     * The static IP address.
+     * @return The static IP address.
      * 
      */
     private final @Nullable String ipAddress;
     /**
-     * A Boolean value indicating whether the static IP is attached.
+     * @return A Boolean value indicating whether the static IP is attached.
      * 
      */
     private final @Nullable Boolean isAttached;
@@ -42,23 +42,23 @@ public final class GetStaticIpResult {
     }
 
     /**
-     * The instance where the static IP is attached.
+     * @return The instance where the static IP is attached.
      * 
-    */
+     */
     public Optional<String> attachedTo() {
         return Optional.ofNullable(this.attachedTo);
     }
     /**
-     * The static IP address.
+     * @return The static IP address.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * A Boolean value indicating whether the static IP is attached.
+     * @return A Boolean value indicating whether the static IP is attached.
      * 
-    */
+     */
     public Optional<Boolean> isAttached() {
         return Optional.ofNullable(this.isAttached);
     }

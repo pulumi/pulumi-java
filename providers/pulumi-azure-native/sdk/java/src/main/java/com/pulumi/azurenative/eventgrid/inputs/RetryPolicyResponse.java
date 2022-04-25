@@ -25,6 +25,10 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="eventTimeToLiveInMinutes")
     private @Nullable Integer eventTimeToLiveInMinutes;
 
+    /**
+     * @return Time To Live (in minutes) for events.
+     * 
+     */
     public Optional<Integer> eventTimeToLiveInMinutes() {
         return Optional.ofNullable(this.eventTimeToLiveInMinutes);
     }
@@ -36,6 +40,10 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxDeliveryAttempts")
     private @Nullable Integer maxDeliveryAttempts;
 
+    /**
+     * @return Maximum number of delivery retry attempts for events.
+     * 
+     */
     public Optional<Integer> maxDeliveryAttempts() {
         return Optional.ofNullable(this.maxDeliveryAttempts);
     }
@@ -65,11 +73,23 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RetryPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventTimeToLiveInMinutes Time To Live (in minutes) for events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTimeToLiveInMinutes(@Nullable Integer eventTimeToLiveInMinutes) {
             $.eventTimeToLiveInMinutes = eventTimeToLiveInMinutes;
             return this;
         }
 
+        /**
+         * @param maxDeliveryAttempts Maximum number of delivery retry attempts for events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
             $.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;

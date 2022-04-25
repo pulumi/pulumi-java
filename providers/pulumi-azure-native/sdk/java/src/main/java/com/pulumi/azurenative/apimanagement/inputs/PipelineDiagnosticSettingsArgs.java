@@ -26,6 +26,10 @@ public final class PipelineDiagnosticSettingsArgs extends com.pulumi.resources.R
     @Import(name="request")
     private @Nullable Output<HttpMessageDiagnosticArgs> request;
 
+    /**
+     * @return Diagnostic settings for request.
+     * 
+     */
     public Optional<Output<HttpMessageDiagnosticArgs>> request() {
         return Optional.ofNullable(this.request);
     }
@@ -37,6 +41,10 @@ public final class PipelineDiagnosticSettingsArgs extends com.pulumi.resources.R
     @Import(name="response")
     private @Nullable Output<HttpMessageDiagnosticArgs> response;
 
+    /**
+     * @return Diagnostic settings for response.
+     * 
+     */
     public Optional<Output<HttpMessageDiagnosticArgs>> response() {
         return Optional.ofNullable(this.response);
     }
@@ -66,20 +74,44 @@ public final class PipelineDiagnosticSettingsArgs extends com.pulumi.resources.R
             $ = new PipelineDiagnosticSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param request Diagnostic settings for request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(@Nullable Output<HttpMessageDiagnosticArgs> request) {
             $.request = request;
             return this;
         }
 
+        /**
+         * @param request Diagnostic settings for request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(HttpMessageDiagnosticArgs request) {
             return request(Output.of(request));
         }
 
+        /**
+         * @param response Diagnostic settings for response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder response(@Nullable Output<HttpMessageDiagnosticArgs> response) {
             $.response = response;
             return this;
         }
 
+        /**
+         * @param response Diagnostic settings for response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder response(HttpMessageDiagnosticArgs response) {
             return response(Output.of(response));
         }

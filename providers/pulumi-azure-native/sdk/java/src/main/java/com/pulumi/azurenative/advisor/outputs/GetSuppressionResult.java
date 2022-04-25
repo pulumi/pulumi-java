@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSuppressionResult {
     /**
-     * Gets or sets the expiration time stamp.
+     * @return Gets or sets the expiration time stamp.
      * 
      */
     private final String expirationTimeStamp;
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
      */
     private final String id;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The GUID of the suppression.
+     * @return The GUID of the suppression.
      * 
      */
     private final @Nullable String suppressionId;
     /**
-     * The duration for which the suppression is valid.
+     * @return The duration for which the suppression is valid.
      * 
      */
     private final @Nullable String ttl;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -59,44 +59,44 @@ public final class GetSuppressionResult {
     }
 
     /**
-     * Gets or sets the expiration time stamp.
+     * @return Gets or sets the expiration time stamp.
      * 
-    */
+     */
     public String expirationTimeStamp() {
         return this.expirationTimeStamp;
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The GUID of the suppression.
+     * @return The GUID of the suppression.
      * 
-    */
+     */
     public Optional<String> suppressionId() {
         return Optional.ofNullable(this.suppressionId);
     }
     /**
-     * The duration for which the suppression is valid.
+     * @return The duration for which the suppression is valid.
      * 
-    */
+     */
     public Optional<String> ttl() {
         return Optional.ofNullable(this.ttl);
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

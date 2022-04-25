@@ -53,6 +53,10 @@ public final class BucketReplicationRuleArgs extends com.pulumi.resources.Resour
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return A unique identifier for the rule.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -64,6 +68,10 @@ public final class BucketReplicationRuleArgs extends com.pulumi.resources.Resour
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return An object key name prefix that identifies the object or objects to which the rule applies.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -89,6 +97,10 @@ public final class BucketReplicationRuleArgs extends com.pulumi.resources.Resour
     @Import(name="status", required=true)
     private Output<BucketReplicationRuleStatus> status;
 
+    /**
+     * @return Specifies whether the rule is enabled.
+     * 
+     */
     public Output<BucketReplicationRuleStatus> status() {
         return this.status;
     }
@@ -151,20 +163,44 @@ public final class BucketReplicationRuleArgs extends com.pulumi.resources.Resour
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param id A unique identifier for the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id A unique identifier for the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param prefix An object key name prefix that identifies the object or objects to which the rule applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix An object key name prefix that identifies the object or objects to which the rule applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
@@ -187,11 +223,23 @@ public final class BucketReplicationRuleArgs extends com.pulumi.resources.Resour
             return sourceSelectionCriteria(Output.of(sourceSelectionCriteria));
         }
 
+        /**
+         * @param status Specifies whether the rule is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<BucketReplicationRuleStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Specifies whether the rule is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(BucketReplicationRuleStatus status) {
             return status(Output.of(status));
         }

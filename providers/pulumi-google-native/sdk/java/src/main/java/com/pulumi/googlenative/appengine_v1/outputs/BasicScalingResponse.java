@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class BasicScalingResponse {
     /**
-     * Duration of time after the last request that an instance must wait before the instance is shut down.
+     * @return Duration of time after the last request that an instance must wait before the instance is shut down.
      * 
      */
     private final String idleTimeout;
     /**
-     * Maximum number of instances to create for this version.
+     * @return Maximum number of instances to create for this version.
      * 
      */
     private final Integer maxInstances;
@@ -30,16 +30,16 @@ public final class BasicScalingResponse {
     }
 
     /**
-     * Duration of time after the last request that an instance must wait before the instance is shut down.
+     * @return Duration of time after the last request that an instance must wait before the instance is shut down.
      * 
-    */
+     */
     public String idleTimeout() {
         return this.idleTimeout;
     }
     /**
-     * Maximum number of instances to create for this version.
+     * @return Maximum number of instances to create for this version.
      * 
-    */
+     */
     public Integer maxInstances() {
         return this.maxInstances;
     }

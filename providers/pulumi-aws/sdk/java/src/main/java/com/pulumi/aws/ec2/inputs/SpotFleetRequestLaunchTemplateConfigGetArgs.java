@@ -24,6 +24,10 @@ public final class SpotFleetRequestLaunchTemplateConfigGetArgs extends com.pulum
     @Import(name="launchTemplateSpecification", required=true)
     private Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
 
+    /**
+     * @return Launch template specification. See Launch Template Specification below for more details.
+     * 
+     */
     public Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification() {
         return this.launchTemplateSpecification;
     }
@@ -35,6 +39,10 @@ public final class SpotFleetRequestLaunchTemplateConfigGetArgs extends com.pulum
     @Import(name="overrides")
     private @Nullable Output<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> overrides;
 
+    /**
+     * @return One or more override configurations. See Overrides below for more details.
+     * 
+     */
     public Optional<Output<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>>> overrides() {
         return Optional.ofNullable(this.overrides);
     }
@@ -64,24 +72,54 @@ public final class SpotFleetRequestLaunchTemplateConfigGetArgs extends com.pulum
             $ = new SpotFleetRequestLaunchTemplateConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param launchTemplateSpecification Launch template specification. See Launch Template Specification below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateSpecification(Output<SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification) {
             $.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
 
+        /**
+         * @param launchTemplateSpecification Launch template specification. See Launch Template Specification below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateSpecification(SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationGetArgs launchTemplateSpecification) {
             return launchTemplateSpecification(Output.of(launchTemplateSpecification));
         }
 
+        /**
+         * @param overrides One or more override configurations. See Overrides below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrides(@Nullable Output<List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs>> overrides) {
             $.overrides = overrides;
             return this;
         }
 
+        /**
+         * @param overrides One or more override configurations. See Overrides below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrides(List<SpotFleetRequestLaunchTemplateConfigOverrideGetArgs> overrides) {
             return overrides(Output.of(overrides));
         }
 
+        /**
+         * @param overrides One or more override configurations. See Overrides below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrides(SpotFleetRequestLaunchTemplateConfigOverrideGetArgs... overrides) {
             return overrides(List.of(overrides));
         }

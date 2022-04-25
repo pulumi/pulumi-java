@@ -13,19 +13,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebhookClientConfig {
     /**
-     * `caBundle` is a PEM encoded CA bundle which will be used to validate the webhook&#39;s server certificate. If unspecified, system trust roots on the apiserver are used.
+     * @return `caBundle` is a PEM encoded CA bundle which will be used to validate the webhook&#39;s server certificate. If unspecified, system trust roots on the apiserver are used.
      * 
      */
     private final @Nullable String caBundle;
     /**
-     * `service` is a reference to the service for this webhook. Either `service` or `url` must be specified.
+     * @return `service` is a reference to the service for this webhook. Either `service` or `url` must be specified.
      * 
      * If the webhook is running within the cluster, then you should use `service`.
      * 
      */
     private final @Nullable ServiceReference service;
     /**
-     * `url` gives the location of the webhook, in standard URL form (`scheme://host:port/path`). Exactly one of `url` or `service` must be specified.
+     * @return `url` gives the location of the webhook, in standard URL form (`scheme://host:port/path`). Exactly one of `url` or `service` must be specified.
      * 
      * The `host` should not refer to a service running in the cluster; use the `service` field instead. The host might be resolved via external DNS in some apiservers (e.g., `kube-apiserver` cannot resolve in-cluster DNS as that would be a layering violation). `host` may also be an IP address.
      * 
@@ -51,23 +51,23 @@ public final class WebhookClientConfig {
     }
 
     /**
-     * `caBundle` is a PEM encoded CA bundle which will be used to validate the webhook&#39;s server certificate. If unspecified, system trust roots on the apiserver are used.
+     * @return `caBundle` is a PEM encoded CA bundle which will be used to validate the webhook&#39;s server certificate. If unspecified, system trust roots on the apiserver are used.
      * 
-    */
+     */
     public Optional<String> caBundle() {
         return Optional.ofNullable(this.caBundle);
     }
     /**
-     * `service` is a reference to the service for this webhook. Either `service` or `url` must be specified.
+     * @return `service` is a reference to the service for this webhook. Either `service` or `url` must be specified.
      * 
      * If the webhook is running within the cluster, then you should use `service`.
      * 
-    */
+     */
     public Optional<ServiceReference> service() {
         return Optional.ofNullable(this.service);
     }
     /**
-     * `url` gives the location of the webhook, in standard URL form (`scheme://host:port/path`). Exactly one of `url` or `service` must be specified.
+     * @return `url` gives the location of the webhook, in standard URL form (`scheme://host:port/path`). Exactly one of `url` or `service` must be specified.
      * 
      * The `host` should not refer to a service running in the cluster; use the `service` field instead. The host might be resolved via external DNS in some apiservers (e.g., `kube-apiserver` cannot resolve in-cluster DNS as that would be a layering violation). `host` may also be an IP address.
      * 
@@ -79,7 +79,7 @@ public final class WebhookClientConfig {
      * 
      * Attempting to use a user or basic auth e.g. &#34;user:password@&#34; is not allowed. Fragments (&#34;#...&#34;) and query parameters (&#34;?...&#34;) are not allowed, either.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }

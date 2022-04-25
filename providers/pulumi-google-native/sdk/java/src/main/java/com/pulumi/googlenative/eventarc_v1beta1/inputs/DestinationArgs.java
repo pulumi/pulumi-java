@@ -26,6 +26,10 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudRunService")
     private @Nullable Output<CloudRunServiceArgs> cloudRunService;
 
+    /**
+     * @return Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
+     * 
+     */
     public Optional<Output<CloudRunServiceArgs>> cloudRunService() {
         return Optional.ofNullable(this.cloudRunService);
     }
@@ -54,11 +58,23 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudRunService Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRunService(@Nullable Output<CloudRunServiceArgs> cloudRunService) {
             $.cloudRunService = cloudRunService;
             return this;
         }
 
+        /**
+         * @param cloudRunService Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRunService(CloudRunServiceArgs cloudRunService) {
             return cloudRunService(Output.of(cloudRunService));
         }

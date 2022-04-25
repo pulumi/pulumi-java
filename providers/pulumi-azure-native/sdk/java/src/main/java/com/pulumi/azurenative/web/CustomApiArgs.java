@@ -24,6 +24,10 @@ public final class CustomApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiName")
     private @Nullable Output<String> apiName;
 
+    /**
+     * @return API name
+     * 
+     */
     public Optional<Output<String>> apiName() {
         return Optional.ofNullable(this.apiName);
     }
@@ -35,6 +39,10 @@ public final class CustomApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -46,6 +54,10 @@ public final class CustomApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<CustomApiPropertiesDefinitionArgs> properties;
 
+    /**
+     * @return Custom API properties
+     * 
+     */
     public Optional<Output<CustomApiPropertiesDefinitionArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -57,6 +69,10 @@ public final class CustomApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class CustomApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionId")
     private @Nullable Output<String> subscriptionId;
 
+    /**
+     * @return Subscription Id
+     * 
+     */
     public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -79,6 +99,10 @@ public final class CustomApiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -112,56 +136,128 @@ public final class CustomApiArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CustomApiArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiName API name
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiName(@Nullable Output<String> apiName) {
             $.apiName = apiName;
             return this;
         }
 
+        /**
+         * @param apiName API name
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiName(String apiName) {
             return apiName(Output.of(apiName));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties Custom API properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<CustomApiPropertiesDefinitionArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Custom API properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(CustomApiPropertiesDefinitionArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param subscriptionId Subscription Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

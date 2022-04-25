@@ -25,6 +25,12 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
     @Import(name="abort")
     private @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs> abort;
 
+    /**
+     * @return The specification for how client requests are aborted as part of fault
+     * injection.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs>> abort() {
         return Optional.ofNullable(this.abort);
     }
@@ -38,6 +44,12 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
     @Import(name="delay")
     private @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs> delay;
 
+    /**
+     * @return The specification for how client requests are delayed as part of fault
+     * injection, before being sent to a backend service.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs>> delay() {
         return Optional.ofNullable(this.delay);
     }
@@ -67,20 +79,52 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
             $ = new RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param abort The specification for how client requests are aborted as part of fault
+         * injection.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abort(@Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs> abort) {
             $.abort = abort;
             return this;
         }
 
+        /**
+         * @param abort The specification for how client requests are aborted as part of fault
+         * injection.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abort(RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs abort) {
             return abort(Output.of(abort));
         }
 
+        /**
+         * @param delay The specification for how client requests are delayed as part of fault
+         * injection, before being sent to a backend service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delay(@Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs> delay) {
             $.delay = delay;
             return this;
         }
 
+        /**
+         * @param delay The specification for how client requests are delayed as part of fault
+         * injection, before being sent to a backend service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delay(RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs delay) {
             return delay(Output.of(delay));
         }

@@ -24,6 +24,10 @@ public final class MetadataIntegrationResponse extends com.pulumi.resources.Invo
     @Import(name="dataCatalogConfig", required=true)
     private DataCatalogConfigResponse dataCatalogConfig;
 
+    /**
+     * @return The integration config for the Data Catalog service.
+     * 
+     */
     public DataCatalogConfigResponse dataCatalogConfig() {
         return this.dataCatalogConfig;
     }
@@ -35,6 +39,10 @@ public final class MetadataIntegrationResponse extends com.pulumi.resources.Invo
     @Import(name="dataplexConfig", required=true)
     private DataplexConfigResponse dataplexConfig;
 
+    /**
+     * @return The integration config for the Dataplex service.
+     * 
+     */
     public DataplexConfigResponse dataplexConfig() {
         return this.dataplexConfig;
     }
@@ -64,11 +72,23 @@ public final class MetadataIntegrationResponse extends com.pulumi.resources.Invo
             $ = new MetadataIntegrationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataCatalogConfig The integration config for the Data Catalog service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCatalogConfig(DataCatalogConfigResponse dataCatalogConfig) {
             $.dataCatalogConfig = dataCatalogConfig;
             return this;
         }
 
+        /**
+         * @param dataplexConfig The integration config for the Dataplex service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataplexConfig(DataplexConfigResponse dataplexConfig) {
             $.dataplexConfig = dataplexConfig;
             return this;

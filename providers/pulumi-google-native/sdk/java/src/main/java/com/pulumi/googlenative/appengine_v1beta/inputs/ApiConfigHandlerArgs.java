@@ -29,6 +29,10 @@ public final class ApiConfigHandlerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="authFailAction")
     private @Nullable Output<ApiConfigHandlerAuthFailAction> authFailAction;
 
+    /**
+     * @return Action to take when users access resources that require authentication. Defaults to redirect.
+     * 
+     */
     public Optional<Output<ApiConfigHandlerAuthFailAction>> authFailAction() {
         return Optional.ofNullable(this.authFailAction);
     }
@@ -40,6 +44,10 @@ public final class ApiConfigHandlerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="login")
     private @Nullable Output<ApiConfigHandlerLogin> login;
 
+    /**
+     * @return Level of login required to access this resource. Defaults to optional.
+     * 
+     */
     public Optional<Output<ApiConfigHandlerLogin>> login() {
         return Optional.ofNullable(this.login);
     }
@@ -51,6 +59,10 @@ public final class ApiConfigHandlerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="script")
     private @Nullable Output<String> script;
 
+    /**
+     * @return Path to the script from the application root directory.
+     * 
+     */
     public Optional<Output<String>> script() {
         return Optional.ofNullable(this.script);
     }
@@ -62,6 +74,10 @@ public final class ApiConfigHandlerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="securityLevel")
     private @Nullable Output<ApiConfigHandlerSecurityLevel> securityLevel;
 
+    /**
+     * @return Security (HTTPS) enforcement for this URL.
+     * 
+     */
     public Optional<Output<ApiConfigHandlerSecurityLevel>> securityLevel() {
         return Optional.ofNullable(this.securityLevel);
     }
@@ -73,6 +89,10 @@ public final class ApiConfigHandlerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return URL to serve the endpoint at.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -105,47 +125,107 @@ public final class ApiConfigHandlerArgs extends com.pulumi.resources.ResourceArg
             $ = new ApiConfigHandlerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authFailAction Action to take when users access resources that require authentication. Defaults to redirect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authFailAction(@Nullable Output<ApiConfigHandlerAuthFailAction> authFailAction) {
             $.authFailAction = authFailAction;
             return this;
         }
 
+        /**
+         * @param authFailAction Action to take when users access resources that require authentication. Defaults to redirect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authFailAction(ApiConfigHandlerAuthFailAction authFailAction) {
             return authFailAction(Output.of(authFailAction));
         }
 
+        /**
+         * @param login Level of login required to access this resource. Defaults to optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(@Nullable Output<ApiConfigHandlerLogin> login) {
             $.login = login;
             return this;
         }
 
+        /**
+         * @param login Level of login required to access this resource. Defaults to optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(ApiConfigHandlerLogin login) {
             return login(Output.of(login));
         }
 
+        /**
+         * @param script Path to the script from the application root directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(@Nullable Output<String> script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param script Path to the script from the application root directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             return script(Output.of(script));
         }
 
+        /**
+         * @param securityLevel Security (HTTPS) enforcement for this URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityLevel(@Nullable Output<ApiConfigHandlerSecurityLevel> securityLevel) {
             $.securityLevel = securityLevel;
             return this;
         }
 
+        /**
+         * @param securityLevel Security (HTTPS) enforcement for this URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityLevel(ApiConfigHandlerSecurityLevel securityLevel) {
             return securityLevel(Output.of(securityLevel));
         }
 
+        /**
+         * @param url URL to serve the endpoint at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url URL to serve the endpoint at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

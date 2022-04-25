@@ -25,6 +25,10 @@ public final class StreamEncryptionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="encryptionType", required=true)
     private Output<StreamEncryptionEncryptionType> encryptionType;
 
+    /**
+     * @return The encryption type to use. The only valid value is KMS.
+     * 
+     */
     public Output<StreamEncryptionEncryptionType> encryptionType() {
         return this.encryptionType;
     }
@@ -36,6 +40,10 @@ public final class StreamEncryptionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="keyId", required=true)
     private Output<String> keyId;
 
+    /**
+     * @return The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified Amazon Resource Name (ARN) to either an alias or a key, or an alias name prefixed by &#34;alias/&#34;.You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.
+     * 
+     */
     public Output<String> keyId() {
         return this.keyId;
     }
@@ -65,20 +73,44 @@ public final class StreamEncryptionArgs extends com.pulumi.resources.ResourceArg
             $ = new StreamEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionType The encryption type to use. The only valid value is KMS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionType(Output<StreamEncryptionEncryptionType> encryptionType) {
             $.encryptionType = encryptionType;
             return this;
         }
 
+        /**
+         * @param encryptionType The encryption type to use. The only valid value is KMS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionType(StreamEncryptionEncryptionType encryptionType) {
             return encryptionType(Output.of(encryptionType));
         }
 
+        /**
+         * @param keyId The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified Amazon Resource Name (ARN) to either an alias or a key, or an alias name prefixed by &#34;alias/&#34;.You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(Output<String> keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param keyId The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified Amazon Resource Name (ARN) to either an alias or a key, or an alias name prefixed by &#34;alias/&#34;.You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             return keyId(Output.of(keyId));
         }

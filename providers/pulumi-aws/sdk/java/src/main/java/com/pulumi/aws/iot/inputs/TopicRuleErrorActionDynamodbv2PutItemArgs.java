@@ -20,6 +20,10 @@ public final class TopicRuleErrorActionDynamodbv2PutItemArgs extends com.pulumi.
     @Import(name="tableName", required=true)
     private Output<String> tableName;
 
+    /**
+     * @return The name of the DynamoDB table.
+     * 
+     */
     public Output<String> tableName() {
         return this.tableName;
     }
@@ -48,11 +52,23 @@ public final class TopicRuleErrorActionDynamodbv2PutItemArgs extends com.pulumi.
             $ = new TopicRuleErrorActionDynamodbv2PutItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tableName The name of the DynamoDB table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(Output<String> tableName) {
             $.tableName = tableName;
             return this;
         }
 
+        /**
+         * @param tableName The name of the DynamoDB table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             return tableName(Output.of(tableName));
         }

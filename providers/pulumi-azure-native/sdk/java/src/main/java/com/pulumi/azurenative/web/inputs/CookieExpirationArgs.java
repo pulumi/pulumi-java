@@ -27,6 +27,10 @@ public final class CookieExpirationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="convention")
     private @Nullable Output<CookieExpirationConvention> convention;
 
+    /**
+     * @return The convention used when determining the session cookie&#39;s expiration.
+     * 
+     */
     public Optional<Output<CookieExpirationConvention>> convention() {
         return Optional.ofNullable(this.convention);
     }
@@ -38,6 +42,10 @@ public final class CookieExpirationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="timeToExpiration")
     private @Nullable Output<String> timeToExpiration;
 
+    /**
+     * @return The time after the request is made when the session cookie should expire.
+     * 
+     */
     public Optional<Output<String>> timeToExpiration() {
         return Optional.ofNullable(this.timeToExpiration);
     }
@@ -67,20 +75,44 @@ public final class CookieExpirationArgs extends com.pulumi.resources.ResourceArg
             $ = new CookieExpirationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param convention The convention used when determining the session cookie&#39;s expiration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder convention(@Nullable Output<CookieExpirationConvention> convention) {
             $.convention = convention;
             return this;
         }
 
+        /**
+         * @param convention The convention used when determining the session cookie&#39;s expiration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder convention(CookieExpirationConvention convention) {
             return convention(Output.of(convention));
         }
 
+        /**
+         * @param timeToExpiration The time after the request is made when the session cookie should expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeToExpiration(@Nullable Output<String> timeToExpiration) {
             $.timeToExpiration = timeToExpiration;
             return this;
         }
 
+        /**
+         * @param timeToExpiration The time after the request is made when the session cookie should expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeToExpiration(String timeToExpiration) {
             return timeToExpiration(Output.of(timeToExpiration));
         }

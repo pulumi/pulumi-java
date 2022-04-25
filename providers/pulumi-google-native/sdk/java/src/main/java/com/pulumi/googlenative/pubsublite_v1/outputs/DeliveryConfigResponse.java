@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DeliveryConfigResponse {
     /**
-     * The DeliveryRequirement for this subscription.
+     * @return The DeliveryRequirement for this subscription.
      * 
      */
     private final String deliveryRequirement;
@@ -21,9 +21,9 @@ public final class DeliveryConfigResponse {
     }
 
     /**
-     * The DeliveryRequirement for this subscription.
+     * @return The DeliveryRequirement for this subscription.
      * 
-    */
+     */
     public String deliveryRequirement() {
         return this.deliveryRequirement;
     }

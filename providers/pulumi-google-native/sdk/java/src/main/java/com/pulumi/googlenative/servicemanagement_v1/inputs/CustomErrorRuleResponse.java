@@ -24,6 +24,10 @@ public final class CustomErrorRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="isErrorType", required=true)
     private Boolean isErrorType;
 
+    /**
+     * @return Mark this message as possible payload in error response. Otherwise, objects of this type will be filtered when they appear in error payload.
+     * 
+     */
     public Boolean isErrorType() {
         return this.isErrorType;
     }
@@ -35,6 +39,10 @@ public final class CustomErrorRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="selector", required=true)
     private String selector;
 
+    /**
+     * @return Selects messages to which this rule applies. Refer to selector for syntax details.
+     * 
+     */
     public String selector() {
         return this.selector;
     }
@@ -64,11 +72,23 @@ public final class CustomErrorRuleResponse extends com.pulumi.resources.InvokeAr
             $ = new CustomErrorRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isErrorType Mark this message as possible payload in error response. Otherwise, objects of this type will be filtered when they appear in error payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isErrorType(Boolean isErrorType) {
             $.isErrorType = isErrorType;
             return this;
         }
 
+        /**
+         * @param selector Selects messages to which this rule applies. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             $.selector = selector;
             return this;

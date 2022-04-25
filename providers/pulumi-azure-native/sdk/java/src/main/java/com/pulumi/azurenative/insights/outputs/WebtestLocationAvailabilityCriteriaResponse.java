@@ -11,23 +11,23 @@ import java.util.Objects;
 @CustomType
 public final class WebtestLocationAvailabilityCriteriaResponse {
     /**
-     * The Application Insights resource Id.
+     * @return The Application Insights resource Id.
      * 
      */
     private final String componentId;
     /**
-     * The number of failed locations.
+     * @return The number of failed locations.
      * 
      */
     private final Double failedLocationCount;
     /**
-     * specifies the type of the alert criteria.
+     * @return specifies the type of the alert criteria.
      * Expected value is &#39;Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria&#39;.
      * 
      */
     private final String odataType;
     /**
-     * The Application Insights web test Id.
+     * @return The Application Insights web test Id.
      * 
      */
     private final String webTestId;
@@ -45,31 +45,31 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
     }
 
     /**
-     * The Application Insights resource Id.
+     * @return The Application Insights resource Id.
      * 
-    */
+     */
     public String componentId() {
         return this.componentId;
     }
     /**
-     * The number of failed locations.
+     * @return The number of failed locations.
      * 
-    */
+     */
     public Double failedLocationCount() {
         return this.failedLocationCount;
     }
     /**
-     * specifies the type of the alert criteria.
+     * @return specifies the type of the alert criteria.
      * Expected value is &#39;Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * The Application Insights web test Id.
+     * @return The Application Insights web test Id.
      * 
-    */
+     */
     public String webTestId() {
         return this.webTestId;
     }

@@ -26,6 +26,10 @@ public final class RuntimeScriptActionResponse extends com.pulumi.resources.Invo
     @Import(name="applicationName", required=true)
     private String applicationName;
 
+    /**
+     * @return The application name of the script action, if any.
+     * 
+     */
     public String applicationName() {
         return this.applicationName;
     }
@@ -37,6 +41,10 @@ public final class RuntimeScriptActionResponse extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the script action.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -48,6 +56,10 @@ public final class RuntimeScriptActionResponse extends com.pulumi.resources.Invo
     @Import(name="parameters")
     private @Nullable String parameters;
 
+    /**
+     * @return The parameters for the script
+     * 
+     */
     public Optional<String> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -59,6 +71,10 @@ public final class RuntimeScriptActionResponse extends com.pulumi.resources.Invo
     @Import(name="roles", required=true)
     private List<String> roles;
 
+    /**
+     * @return The list of roles where script will be executed.
+     * 
+     */
     public List<String> roles() {
         return this.roles;
     }
@@ -70,6 +86,10 @@ public final class RuntimeScriptActionResponse extends com.pulumi.resources.Invo
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return The URI to the script.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -102,30 +122,66 @@ public final class RuntimeScriptActionResponse extends com.pulumi.resources.Invo
             $ = new RuntimeScriptActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationName The application name of the script action, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(String applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param name The name of the script action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters The parameters for the script
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable String parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param roles The list of roles where script will be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(List<String> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles The list of roles where script will be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(String... roles) {
             return roles(List.of(roles));
         }
 
+        /**
+         * @param uri The URI to the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

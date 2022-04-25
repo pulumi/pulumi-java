@@ -27,6 +27,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalInstanceConfiguration")
     private @Nullable Output<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration;
 
+    /**
+     * @return Specify additional settings and launch scripts for your build instances.
+     * 
+     */
     public Optional<Output<ImageRecipeAdditionalInstanceConfigurationArgs>> additionalInstanceConfiguration() {
         return Optional.ofNullable(this.additionalInstanceConfiguration);
     }
@@ -38,6 +42,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blockDeviceMappings")
     private @Nullable Output<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
 
+    /**
+     * @return The block device mappings to apply when creating images from this recipe.
+     * 
+     */
     public Optional<Output<List<ImageRecipeInstanceBlockDeviceMappingArgs>>> blockDeviceMappings() {
         return Optional.ofNullable(this.blockDeviceMappings);
     }
@@ -49,6 +57,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="components", required=true)
     private Output<List<ImageRecipeComponentConfigurationArgs>> components;
 
+    /**
+     * @return The components of the image recipe.
+     * 
+     */
     public Output<List<ImageRecipeComponentConfigurationArgs>> components() {
         return this.components;
     }
@@ -60,6 +72,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the image recipe.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -71,6 +87,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the image recipe.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -82,6 +102,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentImage", required=true)
     private Output<String> parentImage;
 
+    /**
+     * @return The parent image of the image recipe.
+     * 
+     */
     public Output<String> parentImage() {
         return this.parentImage;
     }
@@ -93,6 +117,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Object> tags;
 
+    /**
+     * @return The tags of the image recipe.
+     * 
+     */
     public Optional<Output<Object>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -104,6 +132,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version", required=true)
     private Output<String> version;
 
+    /**
+     * @return The version of the image recipe.
+     * 
+     */
     public Output<String> version() {
         return this.version;
     }
@@ -115,6 +147,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workingDirectory")
     private @Nullable Output<String> workingDirectory;
 
+    /**
+     * @return The working directory to be used during build and test workflows.
+     * 
+     */
     public Optional<Output<String>> workingDirectory() {
         return Optional.ofNullable(this.workingDirectory);
     }
@@ -151,91 +187,211 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ImageRecipeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalInstanceConfiguration Specify additional settings and launch scripts for your build instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalInstanceConfiguration(@Nullable Output<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration) {
             $.additionalInstanceConfiguration = additionalInstanceConfiguration;
             return this;
         }
 
+        /**
+         * @param additionalInstanceConfiguration Specify additional settings and launch scripts for your build instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalInstanceConfiguration(ImageRecipeAdditionalInstanceConfigurationArgs additionalInstanceConfiguration) {
             return additionalInstanceConfiguration(Output.of(additionalInstanceConfiguration));
         }
 
+        /**
+         * @param blockDeviceMappings The block device mappings to apply when creating images from this recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockDeviceMappings(@Nullable Output<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings) {
             $.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
+        /**
+         * @param blockDeviceMappings The block device mappings to apply when creating images from this recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockDeviceMappings(List<ImageRecipeInstanceBlockDeviceMappingArgs> blockDeviceMappings) {
             return blockDeviceMappings(Output.of(blockDeviceMappings));
         }
 
+        /**
+         * @param blockDeviceMappings The block device mappings to apply when creating images from this recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockDeviceMappings(ImageRecipeInstanceBlockDeviceMappingArgs... blockDeviceMappings) {
             return blockDeviceMappings(List.of(blockDeviceMappings));
         }
 
+        /**
+         * @param components The components of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(Output<List<ImageRecipeComponentConfigurationArgs>> components) {
             $.components = components;
             return this;
         }
 
+        /**
+         * @param components The components of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(List<ImageRecipeComponentConfigurationArgs> components) {
             return components(Output.of(components));
         }
 
+        /**
+         * @param components The components of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(ImageRecipeComponentConfigurationArgs... components) {
             return components(List.of(components));
         }
 
+        /**
+         * @param description The description of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parentImage The parent image of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentImage(Output<String> parentImage) {
             $.parentImage = parentImage;
             return this;
         }
 
+        /**
+         * @param parentImage The parent image of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentImage(String parentImage) {
             return parentImage(Output.of(parentImage));
         }
 
+        /**
+         * @param tags The tags of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Object> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Object tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param version The version of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param workingDirectory The working directory to be used during build and test workflows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
             $.workingDirectory = workingDirectory;
             return this;
         }
 
+        /**
+         * @param workingDirectory The working directory to be used during build and test workflows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workingDirectory(String workingDirectory) {
             return workingDirectory(Output.of(workingDirectory));
         }

@@ -23,6 +23,10 @@ public final class TaskSetScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="unit")
     private @Nullable Output<TaskSetScaleUnit> unit;
 
+    /**
+     * @return The unit of measure for the scale value.
+     * 
+     */
     public Optional<Output<TaskSetScaleUnit>> unit() {
         return Optional.ofNullable(this.unit);
     }
@@ -34,6 +38,10 @@ public final class TaskSetScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<Double> value;
 
+    /**
+     * @return The value, specified as a percent total of a service&#39;s desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
+     * 
+     */
     public Optional<Output<Double>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -63,20 +71,44 @@ public final class TaskSetScaleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TaskSetScaleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param unit The unit of measure for the scale value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(@Nullable Output<TaskSetScaleUnit> unit) {
             $.unit = unit;
             return this;
         }
 
+        /**
+         * @param unit The unit of measure for the scale value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(TaskSetScaleUnit unit) {
             return unit(Output.of(unit));
         }
 
+        /**
+         * @param value The value, specified as a percent total of a service&#39;s desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<Double> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value, specified as a percent total of a service&#39;s desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Double value) {
             return value(Output.of(value));
         }

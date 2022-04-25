@@ -32,6 +32,10 @@ public final class BotSlotPriorityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="slotName", required=true)
     private Output<String> slotName;
 
+    /**
+     * @return The name of the slot.
+     * 
+     */
     public Output<String> slotName() {
         return this.slotName;
     }
@@ -70,11 +74,23 @@ public final class BotSlotPriorityArgs extends com.pulumi.resources.ResourceArgs
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param slotName The name of the slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotName(Output<String> slotName) {
             $.slotName = slotName;
             return this;
         }
 
+        /**
+         * @param slotName The name of the slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotName(String slotName) {
             return slotName(Output.of(slotName));
         }

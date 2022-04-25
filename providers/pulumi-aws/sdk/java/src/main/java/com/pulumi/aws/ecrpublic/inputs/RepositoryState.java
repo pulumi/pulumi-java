@@ -24,6 +24,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Full ARN of the repository.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="catalogData")
     private @Nullable Output<RepositoryCatalogDataGetArgs> catalogData;
 
+    /**
+     * @return Catalog data configuration for the repository. See below for schema.
+     * 
+     */
     public Optional<Output<RepositoryCatalogDataGetArgs>> catalogData() {
         return Optional.ofNullable(this.catalogData);
     }
@@ -53,6 +61,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="registryId")
     private @Nullable Output<String> registryId;
 
+    /**
+     * @return The registry ID where the repository was created.
+     * 
+     */
     public Optional<Output<String>> registryId() {
         return Optional.ofNullable(this.registryId);
     }
@@ -64,6 +76,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName")
     private @Nullable Output<String> repositoryName;
 
+    /**
+     * @return Name of the repository.
+     * 
+     */
     public Optional<Output<String>> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
@@ -75,6 +91,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryUri")
     private @Nullable Output<String> repositoryUri;
 
+    /**
+     * @return The URI of the repository.
+     * 
+     */
     public Optional<Output<String>> repositoryUri() {
         return Optional.ofNullable(this.repositoryUri);
     }
@@ -108,20 +128,44 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
             $ = new RepositoryState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Full ARN of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Full ARN of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param catalogData Catalog data configuration for the repository. See below for schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogData(@Nullable Output<RepositoryCatalogDataGetArgs> catalogData) {
             $.catalogData = catalogData;
             return this;
         }
 
+        /**
+         * @param catalogData Catalog data configuration for the repository. See below for schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogData(RepositoryCatalogDataGetArgs catalogData) {
             return catalogData(Output.of(catalogData));
         }
@@ -135,29 +179,65 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
             return forceDestroy(Output.of(forceDestroy));
         }
 
+        /**
+         * @param registryId The registry ID where the repository was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(@Nullable Output<String> registryId) {
             $.registryId = registryId;
             return this;
         }
 
+        /**
+         * @param registryId The registry ID where the repository was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(String registryId) {
             return registryId(Output.of(registryId));
         }
 
+        /**
+         * @param repositoryName Name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param repositoryName Name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(String repositoryName) {
             return repositoryName(Output.of(repositoryName));
         }
 
+        /**
+         * @param repositoryUri The URI of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUri(@Nullable Output<String> repositoryUri) {
             $.repositoryUri = repositoryUri;
             return this;
         }
 
+        /**
+         * @param repositoryUri The URI of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUri(String repositoryUri) {
             return repositoryUri(Output.of(repositoryUri));
         }

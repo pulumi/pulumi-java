@@ -31,6 +31,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="destinationLoadBalancerFrontEndIPConfiguration")
     private @Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration;
 
+    /**
+     * @return The reference to the private IP address on the internal Load Balancer that will receive the tap.
+     * 
+     */
     public Optional<FrontendIPConfigurationResponse> destinationLoadBalancerFrontEndIPConfiguration() {
         return Optional.ofNullable(this.destinationLoadBalancerFrontEndIPConfiguration);
     }
@@ -42,6 +46,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="destinationNetworkInterfaceIPConfiguration")
     private @Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration;
 
+    /**
+     * @return The reference to the private IP Address of the collector nic that will receive the tap.
+     * 
+     */
     public Optional<NetworkInterfaceIPConfigurationResponse> destinationNetworkInterfaceIPConfiguration() {
         return Optional.ofNullable(this.destinationNetworkInterfaceIPConfiguration);
     }
@@ -53,6 +61,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="destinationPort")
     private @Nullable Integer destinationPort;
 
+    /**
+     * @return The VXLAN destination port that will receive the tapped traffic.
+     * 
+     */
     public Optional<Integer> destinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
@@ -64,6 +76,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -75,6 +91,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -86,6 +106,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -97,6 +121,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -108,6 +136,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="networkInterfaceTapConfigurations", required=true)
     private List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations;
 
+    /**
+     * @return Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.
+     * 
+     */
     public List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations() {
         return this.networkInterfaceTapConfigurations;
     }
@@ -119,6 +151,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the virtual network tap resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -130,6 +166,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="resourceGuid", required=true)
     private String resourceGuid;
 
+    /**
+     * @return The resource GUID property of the virtual network tap resource.
+     * 
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
@@ -141,6 +181,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -152,6 +196,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -191,65 +239,143 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
             $ = new VirtualNetworkTapResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationLoadBalancerFrontEndIPConfiguration The reference to the private IP address on the internal Load Balancer that will receive the tap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationLoadBalancerFrontEndIPConfiguration(@Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration) {
             $.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
             return this;
         }
 
+        /**
+         * @param destinationNetworkInterfaceIPConfiguration The reference to the private IP Address of the collector nic that will receive the tap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationNetworkInterfaceIPConfiguration(@Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration) {
             $.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
             return this;
         }
 
+        /**
+         * @param destinationPort The VXLAN destination port that will receive the tapped traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPort(@Nullable Integer destinationPort) {
             $.destinationPort = destinationPort;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param networkInterfaceTapConfigurations Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceTapConfigurations(List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations) {
             $.networkInterfaceTapConfigurations = networkInterfaceTapConfigurations;
             return this;
         }
 
+        /**
+         * @param networkInterfaceTapConfigurations Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceTapConfigurations(NetworkInterfaceTapConfigurationResponse... networkInterfaceTapConfigurations) {
             return networkInterfaceTapConfigurations(List.of(networkInterfaceTapConfigurations));
         }
 
+        /**
+         * @param provisioningState The provisioning state of the virtual network tap resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param resourceGuid The resource GUID property of the virtual network tap resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGuid(String resourceGuid) {
             $.resourceGuid = resourceGuid;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -23,6 +23,10 @@ public final class WorkloadIdentityConfigResponse extends com.pulumi.resources.I
     @Import(name="workloadPool", required=true)
     private String workloadPool;
 
+    /**
+     * @return The workload pool to attach all Kubernetes service accounts to.
+     * 
+     */
     public String workloadPool() {
         return this.workloadPool;
     }
@@ -51,6 +55,12 @@ public final class WorkloadIdentityConfigResponse extends com.pulumi.resources.I
             $ = new WorkloadIdentityConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param workloadPool The workload pool to attach all Kubernetes service accounts to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadPool(String workloadPool) {
             $.workloadPool = workloadPool;
             return this;

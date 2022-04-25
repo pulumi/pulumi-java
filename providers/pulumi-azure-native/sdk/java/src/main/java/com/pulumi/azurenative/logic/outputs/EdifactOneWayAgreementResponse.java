@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class EdifactOneWayAgreementResponse {
     /**
-     * The EDIFACT protocol settings.
+     * @return The EDIFACT protocol settings.
      * 
      */
     private final EdifactProtocolSettingsResponse protocolSettings;
     /**
-     * The receiver business identity
+     * @return The receiver business identity
      * 
      */
     private final BusinessIdentityResponse receiverBusinessIdentity;
     /**
-     * The sender business identity
+     * @return The sender business identity
      * 
      */
     private final BusinessIdentityResponse senderBusinessIdentity;
@@ -37,23 +37,23 @@ public final class EdifactOneWayAgreementResponse {
     }
 
     /**
-     * The EDIFACT protocol settings.
+     * @return The EDIFACT protocol settings.
      * 
-    */
+     */
     public EdifactProtocolSettingsResponse protocolSettings() {
         return this.protocolSettings;
     }
     /**
-     * The receiver business identity
+     * @return The receiver business identity
      * 
-    */
+     */
     public BusinessIdentityResponse receiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
     /**
-     * The sender business identity
+     * @return The sender business identity
      * 
-    */
+     */
     public BusinessIdentityResponse senderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FleetResourceCreationLimitPolicy {
     /**
-     * Maximum number of game sessions that an individual can create during the policy period.
+     * @return Maximum number of game sessions that an individual can create during the policy period.
      * 
      */
     private final @Nullable Integer newGameSessionsPerCreator;
     /**
-     * Time span used in evaluating the resource creation limit policy.
+     * @return Time span used in evaluating the resource creation limit policy.
      * 
      */
     private final @Nullable Integer policyPeriodInMinutes;
@@ -31,16 +31,16 @@ public final class FleetResourceCreationLimitPolicy {
     }
 
     /**
-     * Maximum number of game sessions that an individual can create during the policy period.
+     * @return Maximum number of game sessions that an individual can create during the policy period.
      * 
-    */
+     */
     public Optional<Integer> newGameSessionsPerCreator() {
         return Optional.ofNullable(this.newGameSessionsPerCreator);
     }
     /**
-     * Time span used in evaluating the resource creation limit policy.
+     * @return Time span used in evaluating the resource creation limit policy.
      * 
-    */
+     */
     public Optional<Integer> policyPeriodInMinutes() {
         return Optional.ofNullable(this.policyPeriodInMinutes);
     }

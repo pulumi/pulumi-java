@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRecoveryGroupResult {
     /**
-     * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
+     * @return A list of the cell Amazon Resource Names (ARNs) in the recovery group.
      * 
      */
     private final @Nullable List<String> cells;
     /**
-     * A collection of tags associated with a resource.
+     * @return A collection of tags associated with a resource.
      * 
      */
     private final @Nullable String recoveryGroupArn;
     /**
-     * A collection of tags associated with a resource.
+     * @return A collection of tags associated with a resource.
      * 
      */
     private final @Nullable List<RecoveryGroupTag> tags;
@@ -40,23 +40,23 @@ public final class GetRecoveryGroupResult {
     }
 
     /**
-     * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
+     * @return A list of the cell Amazon Resource Names (ARNs) in the recovery group.
      * 
-    */
+     */
     public List<String> cells() {
         return this.cells == null ? List.of() : this.cells;
     }
     /**
-     * A collection of tags associated with a resource.
+     * @return A collection of tags associated with a resource.
      * 
-    */
+     */
     public Optional<String> recoveryGroupArn() {
         return Optional.ofNullable(this.recoveryGroupArn);
     }
     /**
-     * A collection of tags associated with a resource.
+     * @return A collection of tags associated with a resource.
      * 
-    */
+     */
     public List<RecoveryGroupTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

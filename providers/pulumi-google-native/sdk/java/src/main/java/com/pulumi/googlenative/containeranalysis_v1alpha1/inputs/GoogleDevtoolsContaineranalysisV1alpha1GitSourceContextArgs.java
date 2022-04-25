@@ -26,6 +26,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
     @Import(name="revisionId", required=true)
     private Output<String> revisionId;
 
+    /**
+     * @return Git commit hash.
+     * 
+     */
     public Output<String> revisionId() {
         return this.revisionId;
     }
@@ -37,6 +41,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return Git repository URL.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -66,20 +74,44 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
             $ = new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param revisionId Git commit hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionId(Output<String> revisionId) {
             $.revisionId = revisionId;
             return this;
         }
 
+        /**
+         * @param revisionId Git commit hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionId(String revisionId) {
             return revisionId(Output.of(revisionId));
         }
 
+        /**
+         * @param url Git repository URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url Git repository URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

@@ -19,6 +19,10 @@ public final class GetReportByBillingAccountArgs extends com.pulumi.resources.In
     @Import(name="billingAccountId", required=true)
     private String billingAccountId;
 
+    /**
+     * @return BillingAccount ID
+     * 
+     */
     public String billingAccountId() {
         return this.billingAccountId;
     }
@@ -30,6 +34,10 @@ public final class GetReportByBillingAccountArgs extends com.pulumi.resources.In
     @Import(name="reportName", required=true)
     private String reportName;
 
+    /**
+     * @return Report Name.
+     * 
+     */
     public String reportName() {
         return this.reportName;
     }
@@ -59,11 +67,23 @@ public final class GetReportByBillingAccountArgs extends com.pulumi.resources.In
             $ = new GetReportByBillingAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccountId BillingAccount ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountId(String billingAccountId) {
             $.billingAccountId = billingAccountId;
             return this;
         }
 
+        /**
+         * @param reportName Report Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportName(String reportName) {
             $.reportName = reportName;
             return this;

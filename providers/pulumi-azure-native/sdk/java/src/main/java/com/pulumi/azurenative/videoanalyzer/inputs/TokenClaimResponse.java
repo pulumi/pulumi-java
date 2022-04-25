@@ -23,6 +23,10 @@ public final class TokenClaimResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the claim which must be present on the token.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class TokenClaimResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Expected value of the claim to be present on the token.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class TokenClaimResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TokenClaimResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the claim which must be present on the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value Expected value of the claim to be present on the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

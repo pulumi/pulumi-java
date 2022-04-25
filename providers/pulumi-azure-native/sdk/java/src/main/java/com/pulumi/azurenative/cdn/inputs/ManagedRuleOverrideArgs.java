@@ -29,6 +29,10 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="action")
     private @Nullable Output<Either<String,ActionType>> action;
 
+    /**
+     * @return Describes the override action to be applied when rule matches.
+     * 
+     */
     public Optional<Output<Either<String,ActionType>>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -40,6 +44,10 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="enabledState")
     private @Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState;
 
+    /**
+     * @return Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+     * 
+     */
     public Optional<Output<Either<String,ManagedRuleEnabledState>>> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -51,6 +59,10 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="ruleId", required=true)
     private Output<String> ruleId;
 
+    /**
+     * @return Identifier for the managed rule.
+     * 
+     */
     public Output<String> ruleId() {
         return this.ruleId;
     }
@@ -81,45 +93,105 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
             $ = new ManagedRuleOverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Describes the override action to be applied when rule matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<Either<String,ActionType>> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Describes the override action to be applied when rule matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Either<String,ActionType> action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param action Describes the override action to be applied when rule matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Either.ofLeft(action));
         }
 
+        /**
+         * @param action Describes the override action to be applied when rule matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(ActionType action) {
             return action(Either.ofRight(action));
         }
 
+        /**
+         * @param enabledState Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param enabledState Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(Either<String,ManagedRuleEnabledState> enabledState) {
             return enabledState(Output.of(enabledState));
         }
 
+        /**
+         * @param enabledState Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(String enabledState) {
             return enabledState(Either.ofLeft(enabledState));
         }
 
+        /**
+         * @param enabledState Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(ManagedRuleEnabledState enabledState) {
             return enabledState(Either.ofRight(enabledState));
         }
 
+        /**
+         * @param ruleId Identifier for the managed rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(Output<String> ruleId) {
             $.ruleId = ruleId;
             return this;
         }
 
+        /**
+         * @param ruleId Identifier for the managed rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(String ruleId) {
             return ruleId(Output.of(ruleId));
         }

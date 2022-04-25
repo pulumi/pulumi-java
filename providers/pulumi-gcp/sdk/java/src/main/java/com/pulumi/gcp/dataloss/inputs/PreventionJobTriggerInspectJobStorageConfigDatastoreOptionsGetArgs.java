@@ -22,6 +22,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGe
     @Import(name="kind", required=true)
     private Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> kind;
 
+    /**
+     * @return A representation of a Datastore kind.
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> kind() {
         return this.kind;
     }
@@ -35,6 +40,12 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGe
     @Import(name="partitionId", required=true)
     private Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> partitionId;
 
+    /**
+     * @return Datastore partition ID. A partition ID identifies a grouping of entities. The grouping
+     * is always by project and namespace, however the namespace ID may be empty.
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> partitionId() {
         return this.partitionId;
     }
@@ -64,20 +75,50 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGe
             $ = new PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind A representation of a Datastore kind.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind A representation of a Datastore kind.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param partitionId Datastore partition ID. A partition ID identifies a grouping of entities. The grouping
+         * is always by project and namespace, however the namespace ID may be empty.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionId(Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> partitionId) {
             $.partitionId = partitionId;
             return this;
         }
 
+        /**
+         * @param partitionId Datastore partition ID. A partition ID identifies a grouping of entities. The grouping
+         * is always by project and namespace, however the namespace ID may be empty.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionId(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs partitionId) {
             return partitionId(Output.of(partitionId));
         }

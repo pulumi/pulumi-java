@@ -19,6 +19,10 @@ public final class GetDeviceSecurityGroupArgs extends com.pulumi.resources.Invok
     @Import(name="deviceSecurityGroupName", required=true)
     private String deviceSecurityGroupName;
 
+    /**
+     * @return The name of the device security group. Note that the name of the device security group is case insensitive.
+     * 
+     */
     public String deviceSecurityGroupName() {
         return this.deviceSecurityGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetDeviceSecurityGroupArgs extends com.pulumi.resources.Invok
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return The identifier of the resource.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -59,11 +67,23 @@ public final class GetDeviceSecurityGroupArgs extends com.pulumi.resources.Invok
             $ = new GetDeviceSecurityGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceSecurityGroupName The name of the device security group. Note that the name of the device security group is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceSecurityGroupName(String deviceSecurityGroupName) {
             $.deviceSecurityGroupName = deviceSecurityGroupName;
             return this;
         }
 
+        /**
+         * @param resourceId The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;

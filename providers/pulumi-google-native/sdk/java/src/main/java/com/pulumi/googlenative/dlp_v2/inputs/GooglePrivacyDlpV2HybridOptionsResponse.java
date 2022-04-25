@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends com.pulumi.re
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return A short description of where the data is coming from. Will be stored once in the job. 256 max length.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -37,6 +41,10 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends com.pulumi.re
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return To organize findings, these labels will be added to each finding. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can be associated with a given finding. Examples: * `&#34;environment&#34; : &#34;production&#34;` * `&#34;pipeline&#34; : &#34;etl&#34;`
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -48,6 +56,10 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends com.pulumi.re
     @Import(name="requiredFindingLabelKeys", required=true)
     private List<String> requiredFindingLabelKeys;
 
+    /**
+     * @return These are labels that each inspection request must include within their &#39;finding_labels&#39; map. Request may contain others, but any missing one of these will be rejected. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. No more than 10 keys can be required.
+     * 
+     */
     public List<String> requiredFindingLabelKeys() {
         return this.requiredFindingLabelKeys;
     }
@@ -59,6 +71,10 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends com.pulumi.re
     @Import(name="tableOptions", required=true)
     private GooglePrivacyDlpV2TableOptionsResponse tableOptions;
 
+    /**
+     * @return If the container is a table, additional information to make findings meaningful such as the columns that are primary keys.
+     * 
+     */
     public GooglePrivacyDlpV2TableOptionsResponse tableOptions() {
         return this.tableOptions;
     }
@@ -90,25 +106,55 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends com.pulumi.re
             $ = new GooglePrivacyDlpV2HybridOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A short description of where the data is coming from. Will be stored once in the job. 256 max length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param labels To organize findings, these labels will be added to each finding. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`. No more than 10 labels can be associated with a given finding. Examples: * `&#34;environment&#34; : &#34;production&#34;` * `&#34;pipeline&#34; : &#34;etl&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param requiredFindingLabelKeys These are labels that each inspection request must include within their &#39;finding_labels&#39; map. Request may contain others, but any missing one of these will be rejected. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. No more than 10 keys can be required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredFindingLabelKeys(List<String> requiredFindingLabelKeys) {
             $.requiredFindingLabelKeys = requiredFindingLabelKeys;
             return this;
         }
 
+        /**
+         * @param requiredFindingLabelKeys These are labels that each inspection request must include within their &#39;finding_labels&#39; map. Request may contain others, but any missing one of these will be rejected. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. No more than 10 keys can be required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredFindingLabelKeys(String... requiredFindingLabelKeys) {
             return requiredFindingLabelKeys(List.of(requiredFindingLabelKeys));
         }
 
+        /**
+         * @param tableOptions If the container is a table, additional information to make findings meaningful such as the columns that are primary keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableOptions(GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
             $.tableOptions = tableOptions;
             return this;

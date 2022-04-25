@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageArgs extends co
     @Import(name="accessibilityText")
     private @Nullable Output<String> accessibilityText;
 
+    /**
+     * @return A text description of the image to be used for accessibility, e.g., screen readers. Required if image_uri is set for CarouselSelect.
+     * 
+     */
     public Optional<Output<String>> accessibilityText() {
         return Optional.ofNullable(this.accessibilityText);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageArgs extends co
     @Import(name="imageUri")
     private @Nullable Output<String> imageUri;
 
+    /**
+     * @return Optional. The public URI to an image file.
+     * 
+     */
     public Optional<Output<String>> imageUri() {
         return Optional.ofNullable(this.imageUri);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageArgs extends co
             $ = new GoogleCloudDialogflowV2beta1IntentMessageImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessibilityText A text description of the image to be used for accessibility, e.g., screen readers. Required if image_uri is set for CarouselSelect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessibilityText(@Nullable Output<String> accessibilityText) {
             $.accessibilityText = accessibilityText;
             return this;
         }
 
+        /**
+         * @param accessibilityText A text description of the image to be used for accessibility, e.g., screen readers. Required if image_uri is set for CarouselSelect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessibilityText(String accessibilityText) {
             return accessibilityText(Output.of(accessibilityText));
         }
 
+        /**
+         * @param imageUri Optional. The public URI to an image file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUri(@Nullable Output<String> imageUri) {
             $.imageUri = imageUri;
             return this;
         }
 
+        /**
+         * @param imageUri Optional. The public URI to an image file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUri(String imageUri) {
             return imageUri(Output.of(imageUri));
         }

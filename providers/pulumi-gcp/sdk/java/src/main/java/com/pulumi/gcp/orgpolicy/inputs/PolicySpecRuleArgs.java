@@ -24,6 +24,10 @@ public final class PolicySpecRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="allowAll")
     private @Nullable Output<String> allowAll;
 
+    /**
+     * @return Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
+     * 
+     */
     public Optional<Output<String>> allowAll() {
         return Optional.ofNullable(this.allowAll);
     }
@@ -35,6 +39,10 @@ public final class PolicySpecRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="condition")
     private @Nullable Output<PolicySpecRuleConditionArgs> condition;
 
+    /**
+     * @return A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr&#39; must include from 1 to 10 subexpressions, joined by the &#34;||&#34; or &#34;&amp;&amp;&#34; operators. Each subexpression must be of the form &#34;resource.matchTag(&#39;/tag_key_short_name, &#39;tag_value_short_name&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/key_id&#39;, &#39;tagValues/value_id&#39;)&#34;. where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: &#34;resource.matchTag(&#39;123456789/environment, &#39;prod&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/123&#39;, &#39;tagValues/456&#39;)&#34;.
+     * 
+     */
     public Optional<Output<PolicySpecRuleConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -46,6 +54,10 @@ public final class PolicySpecRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="denyAll")
     private @Nullable Output<String> denyAll;
 
+    /**
+     * @return Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
+     * 
+     */
     public Optional<Output<String>> denyAll() {
         return Optional.ofNullable(this.denyAll);
     }
@@ -57,6 +69,10 @@ public final class PolicySpecRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enforce")
     private @Nullable Output<String> enforce;
 
+    /**
+     * @return If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
+     * 
+     */
     public Optional<Output<String>> enforce() {
         return Optional.ofNullable(this.enforce);
     }
@@ -68,6 +84,10 @@ public final class PolicySpecRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="values")
     private @Nullable Output<PolicySpecRuleValuesArgs> values;
 
+    /**
+     * @return List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.
+     * 
+     */
     public Optional<Output<PolicySpecRuleValuesArgs>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -100,47 +120,107 @@ public final class PolicySpecRuleArgs extends com.pulumi.resources.ResourceArgs 
             $ = new PolicySpecRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowAll Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowAll(@Nullable Output<String> allowAll) {
             $.allowAll = allowAll;
             return this;
         }
 
+        /**
+         * @param allowAll Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowAll(String allowAll) {
             return allowAll(Output.of(allowAll));
         }
 
+        /**
+         * @param condition A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr&#39; must include from 1 to 10 subexpressions, joined by the &#34;||&#34; or &#34;&amp;&amp;&#34; operators. Each subexpression must be of the form &#34;resource.matchTag(&#39;/tag_key_short_name, &#39;tag_value_short_name&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/key_id&#39;, &#39;tagValues/value_id&#39;)&#34;. where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: &#34;resource.matchTag(&#39;123456789/environment, &#39;prod&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/123&#39;, &#39;tagValues/456&#39;)&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<PolicySpecRuleConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr&#39; must include from 1 to 10 subexpressions, joined by the &#34;||&#34; or &#34;&amp;&amp;&#34; operators. Each subexpression must be of the form &#34;resource.matchTag(&#39;/tag_key_short_name, &#39;tag_value_short_name&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/key_id&#39;, &#39;tagValues/value_id&#39;)&#34;. where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: &#34;resource.matchTag(&#39;123456789/environment, &#39;prod&#39;)&#34;. or &#34;resource.matchTagId(&#39;tagKeys/123&#39;, &#39;tagValues/456&#39;)&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(PolicySpecRuleConditionArgs condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param denyAll Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyAll(@Nullable Output<String> denyAll) {
             $.denyAll = denyAll;
             return this;
         }
 
+        /**
+         * @param denyAll Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyAll(String denyAll) {
             return denyAll(Output.of(denyAll));
         }
 
+        /**
+         * @param enforce If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforce(@Nullable Output<String> enforce) {
             $.enforce = enforce;
             return this;
         }
 
+        /**
+         * @param enforce If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforce(String enforce) {
             return enforce(Output.of(enforce));
         }
 
+        /**
+         * @param values List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<PolicySpecRuleValuesArgs> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(PolicySpecRuleValuesArgs values) {
             return values(Output.of(values));
         }

@@ -33,6 +33,10 @@ public final class ConfigurationAggregatorArgs extends com.pulumi.resources.Reso
     @Import(name="configurationAggregatorName")
     private @Nullable Output<String> configurationAggregatorName;
 
+    /**
+     * @return The name of the aggregator.
+     * 
+     */
     public Optional<Output<String>> configurationAggregatorName() {
         return Optional.ofNullable(this.configurationAggregatorName);
     }
@@ -51,6 +55,10 @@ public final class ConfigurationAggregatorArgs extends com.pulumi.resources.Reso
     @Import(name="tags")
     private @Nullable Output<List<ConfigurationAggregatorTagArgs>> tags;
 
+    /**
+     * @return The tags for the configuration aggregator.
+     * 
+     */
     public Optional<Output<List<ConfigurationAggregatorTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -95,11 +103,23 @@ public final class ConfigurationAggregatorArgs extends com.pulumi.resources.Reso
             return accountAggregationSources(List.of(accountAggregationSources));
         }
 
+        /**
+         * @param configurationAggregatorName The name of the aggregator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationAggregatorName(@Nullable Output<String> configurationAggregatorName) {
             $.configurationAggregatorName = configurationAggregatorName;
             return this;
         }
 
+        /**
+         * @param configurationAggregatorName The name of the aggregator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationAggregatorName(String configurationAggregatorName) {
             return configurationAggregatorName(Output.of(configurationAggregatorName));
         }
@@ -113,15 +133,33 @@ public final class ConfigurationAggregatorArgs extends com.pulumi.resources.Reso
             return organizationAggregationSource(Output.of(organizationAggregationSource));
         }
 
+        /**
+         * @param tags The tags for the configuration aggregator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ConfigurationAggregatorTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags for the configuration aggregator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ConfigurationAggregatorTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags for the configuration aggregator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ConfigurationAggregatorTagArgs... tags) {
             return tags(List.of(tags));
         }

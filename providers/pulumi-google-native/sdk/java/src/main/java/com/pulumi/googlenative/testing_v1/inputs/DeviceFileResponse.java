@@ -24,6 +24,10 @@ public final class DeviceFileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="obbFile", required=true)
     private ObbFileResponse obbFile;
 
+    /**
+     * @return A reference to an opaque binary blob file.
+     * 
+     */
     public ObbFileResponse obbFile() {
         return this.obbFile;
     }
@@ -35,6 +39,10 @@ public final class DeviceFileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="regularFile", required=true)
     private RegularFileResponse regularFile;
 
+    /**
+     * @return A reference to a regular file.
+     * 
+     */
     public RegularFileResponse regularFile() {
         return this.regularFile;
     }
@@ -64,11 +72,23 @@ public final class DeviceFileResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DeviceFileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param obbFile A reference to an opaque binary blob file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obbFile(ObbFileResponse obbFile) {
             $.obbFile = obbFile;
             return this;
         }
 
+        /**
+         * @param regularFile A reference to a regular file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regularFile(RegularFileResponse regularFile) {
             $.regularFile = regularFile;
             return this;

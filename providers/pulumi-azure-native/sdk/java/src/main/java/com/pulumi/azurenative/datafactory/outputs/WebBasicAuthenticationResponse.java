@@ -14,23 +14,23 @@ import java.util.Objects;
 @CustomType
 public final class WebBasicAuthenticationResponse {
     /**
-     * Type of authentication used to connect to the web table source.
+     * @return Type of authentication used to connect to the web table source.
      * Expected value is &#39;Basic&#39;.
      * 
      */
     private final String authenticationType;
     /**
-     * The password for Basic authentication.
+     * @return The password for Basic authentication.
      * 
      */
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
-     * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+     * @return The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
      */
     private final Object url;
     /**
-     * User name for Basic authentication. Type: string (or Expression with resultType string).
+     * @return User name for Basic authentication. Type: string (or Expression with resultType string).
      * 
      */
     private final Object username;
@@ -48,31 +48,31 @@ public final class WebBasicAuthenticationResponse {
     }
 
     /**
-     * Type of authentication used to connect to the web table source.
+     * @return Type of authentication used to connect to the web table source.
      * Expected value is &#39;Basic&#39;.
      * 
-    */
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
     /**
-     * The password for Basic authentication.
+     * @return The password for Basic authentication.
      * 
-    */
+     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
     }
     /**
-     * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+     * @return The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object url() {
         return this.url;
     }
     /**
-     * User name for Basic authentication. Type: string (or Expression with resultType string).
+     * @return User name for Basic authentication. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object username() {
         return this.username;
     }

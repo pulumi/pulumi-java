@@ -24,6 +24,10 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
     @Import(name="archiveType", required=true)
     private String archiveType;
 
+    /**
+     * @return Type of archive files in this repository.
+     * 
+     */
     public String archiveType() {
         return this.archiveType;
     }
@@ -35,6 +39,10 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
     @Import(name="components", required=true)
     private List<String> components;
 
+    /**
+     * @return List of components for this repository. Must contain at least one item.
+     * 
+     */
     public List<String> components() {
         return this.components;
     }
@@ -46,6 +54,10 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
     @Import(name="distribution", required=true)
     private String distribution;
 
+    /**
+     * @return Distribution of this repository.
+     * 
+     */
     public String distribution() {
         return this.distribution;
     }
@@ -57,6 +69,10 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
     @Import(name="gpgKey", required=true)
     private String gpgKey;
 
+    /**
+     * @return URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+     * 
+     */
     public String gpgKey() {
         return this.gpgKey;
     }
@@ -68,6 +84,10 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI for this repository.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -100,30 +120,66 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
             $ = new OSPolicyResourceRepositoryResourceAptRepositoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param archiveType Type of archive files in this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveType(String archiveType) {
             $.archiveType = archiveType;
             return this;
         }
 
+        /**
+         * @param components List of components for this repository. Must contain at least one item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(List<String> components) {
             $.components = components;
             return this;
         }
 
+        /**
+         * @param components List of components for this repository. Must contain at least one item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(String... components) {
             return components(List.of(components));
         }
 
+        /**
+         * @param distribution Distribution of this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribution(String distribution) {
             $.distribution = distribution;
             return this;
         }
 
+        /**
+         * @param gpgKey URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpgKey(String gpgKey) {
             $.gpgKey = gpgKey;
             return this;
         }
 
+        /**
+         * @param uri URI for this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

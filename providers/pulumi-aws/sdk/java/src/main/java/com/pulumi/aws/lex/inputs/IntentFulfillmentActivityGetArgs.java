@@ -24,6 +24,11 @@ public final class IntentFulfillmentActivityGetArgs extends com.pulumi.resources
     @Import(name="codeHook")
     private @Nullable Output<IntentFulfillmentActivityCodeHookGetArgs> codeHook;
 
+    /**
+     * @return A description of the Lambda function that is run to fulfill the intent.
+     * Required if type is CodeHook. Attributes are documented under code_hook.
+     * 
+     */
     public Optional<Output<IntentFulfillmentActivityCodeHookGetArgs>> codeHook() {
         return Optional.ofNullable(this.codeHook);
     }
@@ -36,6 +41,11 @@ public final class IntentFulfillmentActivityGetArgs extends com.pulumi.resources
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return How the intent should be fulfilled, either by running a Lambda function or by
+     * returning the slot data to the client application.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -65,20 +75,48 @@ public final class IntentFulfillmentActivityGetArgs extends com.pulumi.resources
             $ = new IntentFulfillmentActivityGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codeHook A description of the Lambda function that is run to fulfill the intent.
+         * Required if type is CodeHook. Attributes are documented under code_hook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeHook(@Nullable Output<IntentFulfillmentActivityCodeHookGetArgs> codeHook) {
             $.codeHook = codeHook;
             return this;
         }
 
+        /**
+         * @param codeHook A description of the Lambda function that is run to fulfill the intent.
+         * Required if type is CodeHook. Attributes are documented under code_hook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeHook(IntentFulfillmentActivityCodeHookGetArgs codeHook) {
             return codeHook(Output.of(codeHook));
         }
 
+        /**
+         * @param type How the intent should be fulfilled, either by running a Lambda function or by
+         * returning the slot data to the client application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type How the intent should be fulfilled, either by running a Lambda function or by
+         * returning the slot data to the client application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -27,6 +27,10 @@ public final class PodIPArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ip")
     private @Nullable Output<String> ip;
 
+    /**
+     * @return ip is an IP address (IPv4 or IPv6) assigned to the pod
+     * 
+     */
     public Optional<Output<String>> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -55,11 +59,23 @@ public final class PodIPArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PodIPArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ip ip is an IP address (IPv4 or IPv6) assigned to the pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable Output<String> ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param ip ip is an IP address (IPv4 or IPv6) assigned to the pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(String ip) {
             return ip(Output.of(ip));
         }

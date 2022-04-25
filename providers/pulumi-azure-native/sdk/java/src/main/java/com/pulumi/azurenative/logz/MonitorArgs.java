@@ -39,6 +39,10 @@ public final class MonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitorName")
     private @Nullable Output<String> monitorName;
 
+    /**
+     * @return Monitor resource name
+     * 
+     */
     public Optional<Output<String>> monitorName() {
         return Optional.ofNullable(this.monitorName);
     }
@@ -50,6 +54,10 @@ public final class MonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<MonitorPropertiesArgs> properties;
 
+    /**
+     * @return Properties specific to the monitor resource.
+     * 
+     */
     public Optional<Output<MonitorPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -61,6 +69,10 @@ public final class MonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -119,29 +131,65 @@ public final class MonitorArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorName(@Nullable Output<String> monitorName) {
             $.monitorName = monitorName;
             return this;
         }
 
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorName(String monitorName) {
             return monitorName(Output.of(monitorName));
         }
 
+        /**
+         * @param properties Properties specific to the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<MonitorPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties specific to the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(MonitorPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

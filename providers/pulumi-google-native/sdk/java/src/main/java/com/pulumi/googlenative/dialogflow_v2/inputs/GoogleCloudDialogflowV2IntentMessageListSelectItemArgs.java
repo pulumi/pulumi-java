@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemArgs extend
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. The main text describing the item.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemArgs extend
     @Import(name="image")
     private @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
+    /**
+     * @return Optional. The image to display.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2IntentMessageImageArgs>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemArgs extend
     @Import(name="info", required=true)
     private Output<GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs> info;
 
+    /**
+     * @return Additional information about this option.
+     * 
+     */
     public Output<GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs> info() {
         return this.info;
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemArgs extend
     @Import(name="title", required=true)
     private Output<String> title;
 
+    /**
+     * @return The title of the list item.
+     * 
+     */
     public Output<String> title() {
         return this.title;
     }
@@ -92,38 +108,86 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemArgs extend
             $ = new GoogleCloudDialogflowV2IntentMessageListSelectItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. The main text describing the item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. The main text describing the item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param image Optional. The image to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image Optional. The image to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(GoogleCloudDialogflowV2IntentMessageImageArgs image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param info Additional information about this option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder info(Output<GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs> info) {
             $.info = info;
             return this;
         }
 
+        /**
+         * @param info Additional information about this option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder info(GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs info) {
             return info(Output.of(info));
         }
 
+        /**
+         * @param title The title of the list item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title The title of the list item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

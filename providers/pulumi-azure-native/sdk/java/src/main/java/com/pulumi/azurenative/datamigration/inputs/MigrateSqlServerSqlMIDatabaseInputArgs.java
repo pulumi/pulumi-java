@@ -28,6 +28,10 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends com.pulumi.res
     @Import(name="backupFilePaths")
     private @Nullable Output<List<String>> backupFilePaths;
 
+    /**
+     * @return The list of backup files to be used in case of existing backups.
+     * 
+     */
     public Optional<Output<List<String>>> backupFilePaths() {
         return Optional.ofNullable(this.backupFilePaths);
     }
@@ -39,6 +43,10 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends com.pulumi.res
     @Import(name="backupFileShare")
     private @Nullable Output<FileShareArgs> backupFileShare;
 
+    /**
+     * @return Backup file share information for backing up this database.
+     * 
+     */
     public Optional<Output<FileShareArgs>> backupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
@@ -50,6 +58,10 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends com.pulumi.res
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -61,6 +73,10 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends com.pulumi.res
     @Import(name="restoreDatabaseName", required=true)
     private Output<String> restoreDatabaseName;
 
+    /**
+     * @return Name of the database at destination
+     * 
+     */
     public Output<String> restoreDatabaseName() {
         return this.restoreDatabaseName;
     }
@@ -92,42 +108,96 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends com.pulumi.res
             $ = new MigrateSqlServerSqlMIDatabaseInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupFilePaths The list of backup files to be used in case of existing backups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFilePaths(@Nullable Output<List<String>> backupFilePaths) {
             $.backupFilePaths = backupFilePaths;
             return this;
         }
 
+        /**
+         * @param backupFilePaths The list of backup files to be used in case of existing backups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFilePaths(List<String> backupFilePaths) {
             return backupFilePaths(Output.of(backupFilePaths));
         }
 
+        /**
+         * @param backupFilePaths The list of backup files to be used in case of existing backups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFilePaths(String... backupFilePaths) {
             return backupFilePaths(List.of(backupFilePaths));
         }
 
+        /**
+         * @param backupFileShare Backup file share information for backing up this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFileShare(@Nullable Output<FileShareArgs> backupFileShare) {
             $.backupFileShare = backupFileShare;
             return this;
         }
 
+        /**
+         * @param backupFileShare Backup file share information for backing up this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFileShare(FileShareArgs backupFileShare) {
             return backupFileShare(Output.of(backupFileShare));
         }
 
+        /**
+         * @param name Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param restoreDatabaseName Name of the database at destination
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreDatabaseName(Output<String> restoreDatabaseName) {
             $.restoreDatabaseName = restoreDatabaseName;
             return this;
         }
 
+        /**
+         * @param restoreDatabaseName Name of the database at destination
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreDatabaseName(String restoreDatabaseName) {
             return restoreDatabaseName(Output.of(restoreDatabaseName));
         }

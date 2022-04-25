@@ -24,6 +24,10 @@ public final class FirewallPolicyRuleMatchArgs extends com.pulumi.resources.Reso
     @Import(name="destIpRanges")
     private @Nullable Output<List<String>> destIpRanges;
 
+    /**
+     * @return CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
+     * 
+     */
     public Optional<Output<List<String>>> destIpRanges() {
         return Optional.ofNullable(this.destIpRanges);
     }
@@ -35,6 +39,10 @@ public final class FirewallPolicyRuleMatchArgs extends com.pulumi.resources.Reso
     @Import(name="layer4Configs", required=true)
     private Output<List<FirewallPolicyRuleMatchLayer4ConfigArgs>> layer4Configs;
 
+    /**
+     * @return Pairs of IP protocols and ports that the rule should match. Structure is documented below.
+     * 
+     */
     public Output<List<FirewallPolicyRuleMatchLayer4ConfigArgs>> layer4Configs() {
         return this.layer4Configs;
     }
@@ -46,6 +54,10 @@ public final class FirewallPolicyRuleMatchArgs extends com.pulumi.resources.Reso
     @Import(name="srcIpRanges")
     private @Nullable Output<List<String>> srcIpRanges;
 
+    /**
+     * @return CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.
+     * 
+     */
     public Optional<Output<List<String>>> srcIpRanges() {
         return Optional.ofNullable(this.srcIpRanges);
     }
@@ -76,41 +88,95 @@ public final class FirewallPolicyRuleMatchArgs extends com.pulumi.resources.Reso
             $ = new FirewallPolicyRuleMatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destIpRanges CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(@Nullable Output<List<String>> destIpRanges) {
             $.destIpRanges = destIpRanges;
             return this;
         }
 
+        /**
+         * @param destIpRanges CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(List<String> destIpRanges) {
             return destIpRanges(Output.of(destIpRanges));
         }
 
+        /**
+         * @param destIpRanges CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(String... destIpRanges) {
             return destIpRanges(List.of(destIpRanges));
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(Output<List<FirewallPolicyRuleMatchLayer4ConfigArgs>> layer4Configs) {
             $.layer4Configs = layer4Configs;
             return this;
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(List<FirewallPolicyRuleMatchLayer4ConfigArgs> layer4Configs) {
             return layer4Configs(Output.of(layer4Configs));
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(FirewallPolicyRuleMatchLayer4ConfigArgs... layer4Configs) {
             return layer4Configs(List.of(layer4Configs));
         }
 
+        /**
+         * @param srcIpRanges CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(@Nullable Output<List<String>> srcIpRanges) {
             $.srcIpRanges = srcIpRanges;
             return this;
         }
 
+        /**
+         * @param srcIpRanges CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(List<String> srcIpRanges) {
             return srcIpRanges(Output.of(srcIpRanges));
         }
 
+        /**
+         * @param srcIpRanges CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
         }

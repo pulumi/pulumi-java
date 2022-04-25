@@ -26,6 +26,10 @@ public final class SafetyRuleRuleConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="inverted", required=true)
     private Output<Boolean> inverted;
 
+    /**
+     * @return Logical negation of the rule. If the rule would usually evaluate true, it&#39;s evaluated as false, and vice versa.
+     * 
+     */
     public Output<Boolean> inverted() {
         return this.inverted;
     }
@@ -37,6 +41,10 @@ public final class SafetyRuleRuleConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="threshold", required=true)
     private Output<Integer> threshold;
 
+    /**
+     * @return The value of N, when you specify an ATLEAST rule type. That is, Threshold is the number of controls that must be set when you specify an ATLEAST type.
+     * 
+     */
     public Output<Integer> threshold() {
         return this.threshold;
     }
@@ -74,20 +82,44 @@ public final class SafetyRuleRuleConfigArgs extends com.pulumi.resources.Resourc
             $ = new SafetyRuleRuleConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inverted Logical negation of the rule. If the rule would usually evaluate true, it&#39;s evaluated as false, and vice versa.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inverted(Output<Boolean> inverted) {
             $.inverted = inverted;
             return this;
         }
 
+        /**
+         * @param inverted Logical negation of the rule. If the rule would usually evaluate true, it&#39;s evaluated as false, and vice versa.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inverted(Boolean inverted) {
             return inverted(Output.of(inverted));
         }
 
+        /**
+         * @param threshold The value of N, when you specify an ATLEAST rule type. That is, Threshold is the number of controls that must be set when you specify an ATLEAST type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Output<Integer> threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param threshold The value of N, when you specify an ATLEAST rule type. That is, Threshold is the number of controls that must be set when you specify an ATLEAST type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Integer threshold) {
             return threshold(Output.of(threshold));
         }

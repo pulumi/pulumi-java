@@ -17,42 +17,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFindingsFilterResult {
     /**
-     * Findings filter action.
+     * @return Findings filter action.
      * 
      */
     private final @Nullable FindingsFilterFindingFilterAction action;
     /**
-     * Findings filter ARN.
+     * @return Findings filter ARN.
      * 
      */
     private final @Nullable String arn;
     /**
-     * Findings filter description
+     * @return Findings filter description
      * 
      */
     private final @Nullable String description;
     /**
-     * Findings filter criteria.
+     * @return Findings filter criteria.
      * 
      */
     private final @Nullable FindingsFilterFindingCriteria findingCriteria;
     /**
-     * Findings filters list.
+     * @return Findings filters list.
      * 
      */
     private final @Nullable List<FindingsFilterListItem> findingsFilterListItems;
     /**
-     * Findings filter ID.
+     * @return Findings filter ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Findings filter name
+     * @return Findings filter name
      * 
      */
     private final @Nullable String name;
     /**
-     * Findings filter position.
+     * @return Findings filter position.
      * 
      */
     private final @Nullable Integer position;
@@ -78,58 +78,58 @@ public final class GetFindingsFilterResult {
     }
 
     /**
-     * Findings filter action.
+     * @return Findings filter action.
      * 
-    */
+     */
     public Optional<FindingsFilterFindingFilterAction> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * Findings filter ARN.
+     * @return Findings filter ARN.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Findings filter description
+     * @return Findings filter description
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Findings filter criteria.
+     * @return Findings filter criteria.
      * 
-    */
+     */
     public Optional<FindingsFilterFindingCriteria> findingCriteria() {
         return Optional.ofNullable(this.findingCriteria);
     }
     /**
-     * Findings filters list.
+     * @return Findings filters list.
      * 
-    */
+     */
     public List<FindingsFilterListItem> findingsFilterListItems() {
         return this.findingsFilterListItems == null ? List.of() : this.findingsFilterListItems;
     }
     /**
-     * Findings filter ID.
+     * @return Findings filter ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Findings filter name
+     * @return Findings filter name
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Findings filter position.
+     * @return Findings filter position.
      * 
-    */
+     */
     public Optional<Integer> position() {
         return Optional.ofNullable(this.position);
     }

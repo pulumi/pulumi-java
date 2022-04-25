@@ -22,6 +22,10 @@ public final class FleetOnDemandOptionsGetArgs extends com.pulumi.resources.Reso
     @Import(name="allocationStrategy")
     private @Nullable Output<String> allocationStrategy;
 
+    /**
+     * @return How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
+     * 
+     */
     public Optional<Output<String>> allocationStrategy() {
         return Optional.ofNullable(this.allocationStrategy);
     }
@@ -50,11 +54,23 @@ public final class FleetOnDemandOptionsGetArgs extends com.pulumi.resources.Reso
             $ = new FleetOnDemandOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocationStrategy How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationStrategy(@Nullable Output<String> allocationStrategy) {
             $.allocationStrategy = allocationStrategy;
             return this;
         }
 
+        /**
+         * @param allocationStrategy How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationStrategy(String allocationStrategy) {
             return allocationStrategy(Output.of(allocationStrategy));
         }

@@ -26,6 +26,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
     @Import(name="adminState")
     private @Nullable String adminState;
 
+    /**
+     * @return Administrative state of the physical port.
+     * 
+     */
     public Optional<String> adminState() {
         return Optional.ofNullable(this.adminState);
     }
@@ -37,6 +41,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
     @Import(name="connectorType", required=true)
     private String connectorType;
 
+    /**
+     * @return Physical fiber port type.
+     * 
+     */
     public String connectorType() {
         return this.connectorType;
     }
@@ -48,6 +56,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -59,6 +71,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -70,6 +86,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
     @Import(name="interfaceName", required=true)
     private String interfaceName;
 
+    /**
+     * @return Name of Azure router interface.
+     * 
+     */
     public String interfaceName() {
         return this.interfaceName;
     }
@@ -81,6 +101,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
     @Import(name="macSecConfig")
     private @Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig;
 
+    /**
+     * @return MacSec configuration.
+     * 
+     */
     public Optional<ExpressRouteLinkMacSecConfigResponse> macSecConfig() {
         return Optional.ofNullable(this.macSecConfig);
     }
@@ -92,6 +116,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of child port resource that is unique among child port resources of the parent.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -103,6 +131,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
     @Import(name="patchPanelId", required=true)
     private String patchPanelId;
 
+    /**
+     * @return Mapping between physical port to patch panel port.
+     * 
+     */
     public String patchPanelId() {
         return this.patchPanelId;
     }
@@ -114,6 +146,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the express route link resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -125,6 +161,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
     @Import(name="rackId", required=true)
     private String rackId;
 
+    /**
+     * @return Mapping of physical patch panel to rack.
+     * 
+     */
     public String rackId() {
         return this.rackId;
     }
@@ -136,6 +176,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
     @Import(name="routerName", required=true)
     private String routerName;
 
+    /**
+     * @return Name of Azure router associated with physical port.
+     * 
+     */
     public String routerName() {
         return this.routerName;
     }
@@ -174,56 +218,122 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
             $ = new ExpressRouteLinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminState Administrative state of the physical port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminState(@Nullable String adminState) {
             $.adminState = adminState;
             return this;
         }
 
+        /**
+         * @param connectorType Physical fiber port type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorType(String connectorType) {
             $.connectorType = connectorType;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param interfaceName Name of Azure router interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaceName(String interfaceName) {
             $.interfaceName = interfaceName;
             return this;
         }
 
+        /**
+         * @param macSecConfig MacSec configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder macSecConfig(@Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig) {
             $.macSecConfig = macSecConfig;
             return this;
         }
 
+        /**
+         * @param name Name of child port resource that is unique among child port resources of the parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param patchPanelId Mapping between physical port to patch panel port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchPanelId(String patchPanelId) {
             $.patchPanelId = patchPanelId;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the express route link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param rackId Mapping of physical patch panel to rack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rackId(String rackId) {
             $.rackId = rackId;
             return this;
         }
 
+        /**
+         * @param routerName Name of Azure router associated with physical port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routerName(String routerName) {
             $.routerName = routerName;
             return this;

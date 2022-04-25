@@ -25,6 +25,11 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the class type. Overridden in derived classes.
+     * Expected value is &#39;VMwareCbt&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -36,6 +41,10 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
     @Import(name="keyVaultId", required=true)
     private String keyVaultId;
 
+    /**
+     * @return The target key vault ARM Id.
+     * 
+     */
     public String keyVaultId() {
         return this.keyVaultId;
     }
@@ -47,6 +56,10 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
     @Import(name="keyVaultUri", required=true)
     private String keyVaultUri;
 
+    /**
+     * @return The target key vault URI.
+     * 
+     */
     public String keyVaultUri() {
         return this.keyVaultUri;
     }
@@ -58,6 +71,10 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
     @Import(name="serviceBusConnectionStringSecretName", required=true)
     private String serviceBusConnectionStringSecretName;
 
+    /**
+     * @return The secret name of the service bus connection string.
+     * 
+     */
     public String serviceBusConnectionStringSecretName() {
         return this.serviceBusConnectionStringSecretName;
     }
@@ -69,6 +86,10 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
     @Import(name="storageAccountId", required=true)
     private String storageAccountId;
 
+    /**
+     * @return The storage account ARM Id.
+     * 
+     */
     public String storageAccountId() {
         return this.storageAccountId;
     }
@@ -80,6 +101,10 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
     @Import(name="storageAccountSasSecretName", required=true)
     private String storageAccountSasSecretName;
 
+    /**
+     * @return The secret name of the storage account.
+     * 
+     */
     public String storageAccountSasSecretName() {
         return this.storageAccountSasSecretName;
     }
@@ -91,6 +116,10 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
     @Import(name="targetLocation", required=true)
     private String targetLocation;
 
+    /**
+     * @return The target location.
+     * 
+     */
     public String targetLocation() {
         return this.targetLocation;
     }
@@ -125,36 +154,79 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
             $ = new VMwareCbtProtectionContainerMappingDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;VMwareCbt&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param keyVaultId The target key vault ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(String keyVaultId) {
             $.keyVaultId = keyVaultId;
             return this;
         }
 
+        /**
+         * @param keyVaultUri The target key vault URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(String keyVaultUri) {
             $.keyVaultUri = keyVaultUri;
             return this;
         }
 
+        /**
+         * @param serviceBusConnectionStringSecretName The secret name of the service bus connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusConnectionStringSecretName(String serviceBusConnectionStringSecretName) {
             $.serviceBusConnectionStringSecretName = serviceBusConnectionStringSecretName;
             return this;
         }
 
+        /**
+         * @param storageAccountId The storage account ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(String storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;
         }
 
+        /**
+         * @param storageAccountSasSecretName The secret name of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountSasSecretName(String storageAccountSasSecretName) {
             $.storageAccountSasSecretName = storageAccountSasSecretName;
             return this;
         }
 
+        /**
+         * @param targetLocation The target location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLocation(String targetLocation) {
             $.targetLocation = targetLocation;
             return this;

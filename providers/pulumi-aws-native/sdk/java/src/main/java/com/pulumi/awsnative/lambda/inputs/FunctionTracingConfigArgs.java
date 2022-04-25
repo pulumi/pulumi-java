@@ -26,6 +26,10 @@ public final class FunctionTracingConfigArgs extends com.pulumi.resources.Resour
     @Import(name="mode")
     private @Nullable Output<FunctionTracingConfigMode> mode;
 
+    /**
+     * @return The tracing mode.
+     * 
+     */
     public Optional<Output<FunctionTracingConfigMode>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -54,11 +58,23 @@ public final class FunctionTracingConfigArgs extends com.pulumi.resources.Resour
             $ = new FunctionTracingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode The tracing mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<FunctionTracingConfigMode> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode The tracing mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(FunctionTracingConfigMode mode) {
             return mode(Output.of(mode));
         }

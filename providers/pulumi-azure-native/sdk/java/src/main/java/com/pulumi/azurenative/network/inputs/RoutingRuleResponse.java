@@ -31,6 +31,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="acceptedProtocols")
     private @Nullable List<String> acceptedProtocols;
 
+    /**
+     * @return Protocol schemes to match for this rule
+     * 
+     */
     public Optional<List<String>> acceptedProtocols() {
         return Optional.ofNullable(this.acceptedProtocols);
     }
@@ -42,6 +46,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabledState")
     private @Nullable String enabledState;
 
+    /**
+     * @return Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * 
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -53,6 +61,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="frontendEndpoints")
     private @Nullable List<SubResourceResponse> frontendEndpoints;
 
+    /**
+     * @return Frontend endpoints associated with this rule
+     * 
+     */
     public Optional<List<SubResourceResponse>> frontendEndpoints() {
         return Optional.ofNullable(this.frontendEndpoints);
     }
@@ -64,6 +76,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -75,6 +91,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -86,6 +106,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="patternsToMatch")
     private @Nullable List<String> patternsToMatch;
 
+    /**
+     * @return The route patterns of the rule.
+     * 
+     */
     public Optional<List<String>> patternsToMatch() {
         return Optional.ofNullable(this.patternsToMatch);
     }
@@ -97,6 +121,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceState", required=true)
     private String resourceState;
 
+    /**
+     * @return Resource status.
+     * 
+     */
     public String resourceState() {
         return this.resourceState;
     }
@@ -108,6 +136,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="routeConfiguration")
     private @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration;
 
+    /**
+     * @return A reference to the routing configuration.
+     * 
+     */
     public Optional<Either<ForwardingConfigurationResponse,RedirectConfigurationResponse>> routeConfiguration() {
         return Optional.ofNullable(this.routeConfiguration);
     }
@@ -119,6 +151,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rulesEngine")
     private @Nullable SubResourceResponse rulesEngine;
 
+    /**
+     * @return A reference to a specific Rules Engine Configuration to apply to this route.
+     * 
+     */
     public Optional<SubResourceResponse> rulesEngine() {
         return Optional.ofNullable(this.rulesEngine);
     }
@@ -130,6 +166,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -141,6 +181,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="webApplicationFirewallPolicyLink")
     private @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
+    /**
+     * @return Defines the Web Application Firewall policy for each routing rule (if applicable)
+     * 
+     */
     public Optional<RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink> webApplicationFirewallPolicyLink() {
         return Optional.ofNullable(this.webApplicationFirewallPolicyLink);
     }
@@ -179,76 +223,172 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RoutingRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceptedProtocols Protocol schemes to match for this rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptedProtocols(@Nullable List<String> acceptedProtocols) {
             $.acceptedProtocols = acceptedProtocols;
             return this;
         }
 
+        /**
+         * @param acceptedProtocols Protocol schemes to match for this rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptedProtocols(String... acceptedProtocols) {
             return acceptedProtocols(List.of(acceptedProtocols));
         }
 
+        /**
+         * @param enabledState Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable String enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param frontendEndpoints Frontend endpoints associated with this rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendEndpoints(@Nullable List<SubResourceResponse> frontendEndpoints) {
             $.frontendEndpoints = frontendEndpoints;
             return this;
         }
 
+        /**
+         * @param frontendEndpoints Frontend endpoints associated with this rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendEndpoints(SubResourceResponse... frontendEndpoints) {
             return frontendEndpoints(List.of(frontendEndpoints));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param patternsToMatch The route patterns of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
             $.patternsToMatch = patternsToMatch;
             return this;
         }
 
+        /**
+         * @param patternsToMatch The route patterns of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternsToMatch(String... patternsToMatch) {
             return patternsToMatch(List.of(patternsToMatch));
         }
 
+        /**
+         * @param resourceState Resource status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceState(String resourceState) {
             $.resourceState = resourceState;
             return this;
         }
 
+        /**
+         * @param routeConfiguration A reference to the routing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeConfiguration(@Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration) {
             $.routeConfiguration = routeConfiguration;
             return this;
         }
 
+        /**
+         * @param routeConfiguration A reference to the routing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeConfiguration(ForwardingConfigurationResponse routeConfiguration) {
             return routeConfiguration(Either.ofLeft(routeConfiguration));
         }
 
+        /**
+         * @param routeConfiguration A reference to the routing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeConfiguration(RedirectConfigurationResponse routeConfiguration) {
             return routeConfiguration(Either.ofRight(routeConfiguration));
         }
 
+        /**
+         * @param rulesEngine A reference to a specific Rules Engine Configuration to apply to this route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngine(@Nullable SubResourceResponse rulesEngine) {
             $.rulesEngine = rulesEngine;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param webApplicationFirewallPolicyLink Defines the Web Application Firewall policy for each routing rule (if applicable)
+         * 
+         * @return builder
+         * 
+         */
         public Builder webApplicationFirewallPolicyLink(@Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
             $.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;

@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureStorageInfoValueResponse {
     /**
-     * Access key for the storage account.
+     * @return Access key for the storage account.
      * 
      */
     private final @Nullable String accessKey;
     /**
-     * Name of the storage account.
+     * @return Name of the storage account.
      * 
      */
     private final @Nullable String accountName;
     /**
-     * Path to mount the storage within the site&#39;s runtime environment.
+     * @return Path to mount the storage within the site&#39;s runtime environment.
      * 
      */
     private final @Nullable String mountPath;
     /**
-     * Name of the file share (container name, for Blob storage).
+     * @return Name of the file share (container name, for Blob storage).
      * 
      */
     private final @Nullable String shareName;
     /**
-     * State of the storage account.
+     * @return State of the storage account.
      * 
      */
     private final String state;
     /**
-     * Type of storage.
+     * @return Type of storage.
      * 
      */
     private final @Nullable String type;
@@ -59,44 +59,44 @@ public final class AzureStorageInfoValueResponse {
     }
 
     /**
-     * Access key for the storage account.
+     * @return Access key for the storage account.
      * 
-    */
+     */
     public Optional<String> accessKey() {
         return Optional.ofNullable(this.accessKey);
     }
     /**
-     * Name of the storage account.
+     * @return Name of the storage account.
      * 
-    */
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
-     * Path to mount the storage within the site&#39;s runtime environment.
+     * @return Path to mount the storage within the site&#39;s runtime environment.
      * 
-    */
+     */
     public Optional<String> mountPath() {
         return Optional.ofNullable(this.mountPath);
     }
     /**
-     * Name of the file share (container name, for Blob storage).
+     * @return Name of the file share (container name, for Blob storage).
      * 
-    */
+     */
     public Optional<String> shareName() {
         return Optional.ofNullable(this.shareName);
     }
     /**
-     * State of the storage account.
+     * @return State of the storage account.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Type of storage.
+     * @return Type of storage.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

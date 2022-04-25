@@ -35,6 +35,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="azureASN")
     private @Nullable Integer azureASN;
 
+    /**
+     * @return The Azure ASN.
+     * 
+     */
     public Optional<Integer> azureASN() {
         return Optional.ofNullable(this.azureASN);
     }
@@ -46,6 +50,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="connections")
     private @Nullable List<ExpressRouteCircuitConnectionResponse> connections;
 
+    /**
+     * @return The list of circuit connections associated with Azure Private Peering for this circuit.
+     * 
+     */
     public Optional<List<ExpressRouteCircuitConnectionResponse>> connections() {
         return Optional.ofNullable(this.connections);
     }
@@ -57,6 +65,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -68,6 +80,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="expressRouteConnection")
     private @Nullable ExpressRouteConnectionIdResponse expressRouteConnection;
 
+    /**
+     * @return The ExpressRoute connection.
+     * 
+     */
     public Optional<ExpressRouteConnectionIdResponse> expressRouteConnection() {
         return Optional.ofNullable(this.expressRouteConnection);
     }
@@ -79,6 +95,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="gatewayManagerEtag")
     private @Nullable String gatewayManagerEtag;
 
+    /**
+     * @return The GatewayManager Etag.
+     * 
+     */
     public Optional<String> gatewayManagerEtag() {
         return Optional.ofNullable(this.gatewayManagerEtag);
     }
@@ -90,6 +110,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -101,6 +125,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="ipv6PeeringConfig")
     private @Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig;
 
+    /**
+     * @return The IPv6 peering configuration.
+     * 
+     */
     public Optional<Ipv6ExpressRouteCircuitPeeringConfigResponse> ipv6PeeringConfig() {
         return Optional.ofNullable(this.ipv6PeeringConfig);
     }
@@ -112,6 +140,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="lastModifiedBy", required=true)
     private String lastModifiedBy;
 
+    /**
+     * @return Who was the last to modify the peering.
+     * 
+     */
     public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -123,6 +155,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="microsoftPeeringConfig")
     private @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig;
 
+    /**
+     * @return The Microsoft peering configuration.
+     * 
+     */
     public Optional<ExpressRouteCircuitPeeringConfigResponse> microsoftPeeringConfig() {
         return Optional.ofNullable(this.microsoftPeeringConfig);
     }
@@ -134,6 +170,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -145,6 +185,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="peerASN")
     private @Nullable Double peerASN;
 
+    /**
+     * @return The peer ASN.
+     * 
+     */
     public Optional<Double> peerASN() {
         return Optional.ofNullable(this.peerASN);
     }
@@ -156,6 +200,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="peeredConnections", required=true)
     private List<PeerExpressRouteCircuitConnectionResponse> peeredConnections;
 
+    /**
+     * @return The list of peered circuit connections associated with Azure Private Peering for this circuit.
+     * 
+     */
     public List<PeerExpressRouteCircuitConnectionResponse> peeredConnections() {
         return this.peeredConnections;
     }
@@ -167,6 +215,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="peeringType")
     private @Nullable String peeringType;
 
+    /**
+     * @return The peering type.
+     * 
+     */
     public Optional<String> peeringType() {
         return Optional.ofNullable(this.peeringType);
     }
@@ -178,6 +230,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="primaryAzurePort")
     private @Nullable String primaryAzurePort;
 
+    /**
+     * @return The primary port.
+     * 
+     */
     public Optional<String> primaryAzurePort() {
         return Optional.ofNullable(this.primaryAzurePort);
     }
@@ -189,6 +245,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="primaryPeerAddressPrefix")
     private @Nullable String primaryPeerAddressPrefix;
 
+    /**
+     * @return The primary address prefix.
+     * 
+     */
     public Optional<String> primaryPeerAddressPrefix() {
         return Optional.ofNullable(this.primaryPeerAddressPrefix);
     }
@@ -200,6 +260,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the express route circuit peering resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -211,6 +275,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="routeFilter")
     private @Nullable SubResourceResponse routeFilter;
 
+    /**
+     * @return The reference to the RouteFilter resource.
+     * 
+     */
     public Optional<SubResourceResponse> routeFilter() {
         return Optional.ofNullable(this.routeFilter);
     }
@@ -222,6 +290,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="secondaryAzurePort")
     private @Nullable String secondaryAzurePort;
 
+    /**
+     * @return The secondary port.
+     * 
+     */
     public Optional<String> secondaryAzurePort() {
         return Optional.ofNullable(this.secondaryAzurePort);
     }
@@ -233,6 +305,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="secondaryPeerAddressPrefix")
     private @Nullable String secondaryPeerAddressPrefix;
 
+    /**
+     * @return The secondary address prefix.
+     * 
+     */
     public Optional<String> secondaryPeerAddressPrefix() {
         return Optional.ofNullable(this.secondaryPeerAddressPrefix);
     }
@@ -244,6 +320,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="sharedKey")
     private @Nullable String sharedKey;
 
+    /**
+     * @return The shared key.
+     * 
+     */
     public Optional<String> sharedKey() {
         return Optional.ofNullable(this.sharedKey);
     }
@@ -255,6 +335,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return The peering state.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -266,6 +350,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="stats")
     private @Nullable ExpressRouteCircuitStatsResponse stats;
 
+    /**
+     * @return The peering stats of express route circuit.
+     * 
+     */
     public Optional<ExpressRouteCircuitStatsResponse> stats() {
         return Optional.ofNullable(this.stats);
     }
@@ -277,6 +365,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -288,6 +380,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
     @Import(name="vlanId")
     private @Nullable Integer vlanId;
 
+    /**
+     * @return The VLAN ID.
+     * 
+     */
     public Optional<Integer> vlanId() {
         return Optional.ofNullable(this.vlanId);
     }
@@ -339,129 +435,285 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
             $ = new ExpressRouteCircuitPeeringResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureASN The Azure ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureASN(@Nullable Integer azureASN) {
             $.azureASN = azureASN;
             return this;
         }
 
+        /**
+         * @param connections The list of circuit connections associated with Azure Private Peering for this circuit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(@Nullable List<ExpressRouteCircuitConnectionResponse> connections) {
             $.connections = connections;
             return this;
         }
 
+        /**
+         * @param connections The list of circuit connections associated with Azure Private Peering for this circuit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(ExpressRouteCircuitConnectionResponse... connections) {
             return connections(List.of(connections));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param expressRouteConnection The ExpressRoute connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRouteConnection(@Nullable ExpressRouteConnectionIdResponse expressRouteConnection) {
             $.expressRouteConnection = expressRouteConnection;
             return this;
         }
 
+        /**
+         * @param gatewayManagerEtag The GatewayManager Etag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
             $.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ipv6PeeringConfig The IPv6 peering configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6PeeringConfig(@Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig) {
             $.ipv6PeeringConfig = ipv6PeeringConfig;
             return this;
         }
 
+        /**
+         * @param lastModifiedBy Who was the last to modify the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedBy(String lastModifiedBy) {
             $.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
+        /**
+         * @param microsoftPeeringConfig The Microsoft peering configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig) {
             $.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param peerASN The peer ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerASN(@Nullable Double peerASN) {
             $.peerASN = peerASN;
             return this;
         }
 
+        /**
+         * @param peeredConnections The list of peered circuit connections associated with Azure Private Peering for this circuit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeredConnections(List<PeerExpressRouteCircuitConnectionResponse> peeredConnections) {
             $.peeredConnections = peeredConnections;
             return this;
         }
 
+        /**
+         * @param peeredConnections The list of peered circuit connections associated with Azure Private Peering for this circuit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeredConnections(PeerExpressRouteCircuitConnectionResponse... peeredConnections) {
             return peeredConnections(List.of(peeredConnections));
         }
 
+        /**
+         * @param peeringType The peering type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringType(@Nullable String peeringType) {
             $.peeringType = peeringType;
             return this;
         }
 
+        /**
+         * @param primaryAzurePort The primary port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryAzurePort(@Nullable String primaryAzurePort) {
             $.primaryAzurePort = primaryAzurePort;
             return this;
         }
 
+        /**
+         * @param primaryPeerAddressPrefix The primary address prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
             $.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the express route circuit peering resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param routeFilter The reference to the RouteFilter resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeFilter(@Nullable SubResourceResponse routeFilter) {
             $.routeFilter = routeFilter;
             return this;
         }
 
+        /**
+         * @param secondaryAzurePort The secondary port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryAzurePort(@Nullable String secondaryAzurePort) {
             $.secondaryAzurePort = secondaryAzurePort;
             return this;
         }
 
+        /**
+         * @param secondaryPeerAddressPrefix The secondary address prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
             $.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
 
+        /**
+         * @param sharedKey The shared key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedKey(@Nullable String sharedKey) {
             $.sharedKey = sharedKey;
             return this;
         }
 
+        /**
+         * @param state The peering state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param stats The peering stats of express route circuit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stats(@Nullable ExpressRouteCircuitStatsResponse stats) {
             $.stats = stats;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param vlanId The VLAN ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vlanId(@Nullable Integer vlanId) {
             $.vlanId = vlanId;
             return this;

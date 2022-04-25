@@ -29,6 +29,10 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="authorizationKey")
     private @Nullable String authorizationKey;
 
+    /**
+     * @return Authorization key to establish the connection.
+     * 
+     */
     public Optional<String> authorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
@@ -40,6 +44,10 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="enableInternetSecurity")
     private @Nullable Boolean enableInternetSecurity;
 
+    /**
+     * @return Enable internet security.
+     * 
+     */
     public Optional<Boolean> enableInternetSecurity() {
         return Optional.ofNullable(this.enableInternetSecurity);
     }
@@ -51,6 +59,10 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="expressRouteCircuitPeering", required=true)
     private ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering;
 
+    /**
+     * @return The ExpressRoute circuit peering.
+     * 
+     */
     public ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering;
     }
@@ -62,6 +74,10 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="expressRouteGatewayBypass")
     private @Nullable Boolean expressRouteGatewayBypass;
 
+    /**
+     * @return Enable FastPath to vWan Firewall hub.
+     * 
+     */
     public Optional<Boolean> expressRouteGatewayBypass() {
         return Optional.ofNullable(this.expressRouteGatewayBypass);
     }
@@ -73,6 +89,10 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -84,6 +104,10 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -95,6 +119,10 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the express route connection resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -106,6 +134,10 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="routingConfiguration")
     private @Nullable RoutingConfigurationResponse routingConfiguration;
 
+    /**
+     * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
+     * 
+     */
     public Optional<RoutingConfigurationResponse> routingConfiguration() {
         return Optional.ofNullable(this.routingConfiguration);
     }
@@ -117,6 +149,10 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
     @Import(name="routingWeight")
     private @Nullable Integer routingWeight;
 
+    /**
+     * @return The routing weight associated to the connection.
+     * 
+     */
     public Optional<Integer> routingWeight() {
         return Optional.ofNullable(this.routingWeight);
     }
@@ -153,46 +189,100 @@ public final class ExpressRouteConnectionResponse extends com.pulumi.resources.I
             $ = new ExpressRouteConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationKey Authorization key to establish the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationKey(@Nullable String authorizationKey) {
             $.authorizationKey = authorizationKey;
             return this;
         }
 
+        /**
+         * @param enableInternetSecurity Enable internet security.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             $.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
 
+        /**
+         * @param expressRouteCircuitPeering The ExpressRoute circuit peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRouteCircuitPeering(ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering) {
             $.expressRouteCircuitPeering = expressRouteCircuitPeering;
             return this;
         }
 
+        /**
+         * @param expressRouteGatewayBypass Enable FastPath to vWan Firewall hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRouteGatewayBypass(@Nullable Boolean expressRouteGatewayBypass) {
             $.expressRouteGatewayBypass = expressRouteGatewayBypass;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the express route connection resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param routingConfiguration The Routing Configuration indicating the associated and propagated route tables on this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
             $.routingConfiguration = routingConfiguration;
             return this;
         }
 
+        /**
+         * @param routingWeight The routing weight associated to the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingWeight(@Nullable Integer routingWeight) {
             $.routingWeight = routingWeight;
             return this;

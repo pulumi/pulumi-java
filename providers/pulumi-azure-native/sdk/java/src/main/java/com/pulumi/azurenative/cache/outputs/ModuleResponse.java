@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ModuleResponse {
     /**
-     * Configuration options for the module, e.g. &#39;ERROR_RATE 0.00 INITIAL_SIZE 400&#39;.
+     * @return Configuration options for the module, e.g. &#39;ERROR_RATE 0.00 INITIAL_SIZE 400&#39;.
      * 
      */
     private final @Nullable String args;
     /**
-     * The name of the module, e.g. &#39;RedisBloom&#39;, &#39;RediSearch&#39;, &#39;RedisTimeSeries&#39;
+     * @return The name of the module, e.g. &#39;RedisBloom&#39;, &#39;RediSearch&#39;, &#39;RedisTimeSeries&#39;
      * 
      */
     private final String name;
     /**
-     * The version of the module, e.g. &#39;1.0&#39;.
+     * @return The version of the module, e.g. &#39;1.0&#39;.
      * 
      */
     private final String version;
@@ -38,23 +38,23 @@ public final class ModuleResponse {
     }
 
     /**
-     * Configuration options for the module, e.g. &#39;ERROR_RATE 0.00 INITIAL_SIZE 400&#39;.
+     * @return Configuration options for the module, e.g. &#39;ERROR_RATE 0.00 INITIAL_SIZE 400&#39;.
      * 
-    */
+     */
     public Optional<String> args() {
         return Optional.ofNullable(this.args);
     }
     /**
-     * The name of the module, e.g. &#39;RedisBloom&#39;, &#39;RediSearch&#39;, &#39;RedisTimeSeries&#39;
+     * @return The name of the module, e.g. &#39;RedisBloom&#39;, &#39;RediSearch&#39;, &#39;RedisTimeSeries&#39;
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The version of the module, e.g. &#39;1.0&#39;.
+     * @return The version of the module, e.g. &#39;1.0&#39;.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

@@ -23,6 +23,10 @@ public final class DefaultRolloutArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="properties")
     private @Nullable Output<DefaultRolloutPropertiesArgs> properties;
 
+    /**
+     * @return Properties of the rollout.
+     * 
+     */
     public Optional<Output<DefaultRolloutPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -34,6 +38,10 @@ public final class DefaultRolloutArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="providerNamespace", required=true)
     private Output<String> providerNamespace;
 
+    /**
+     * @return The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
@@ -45,6 +53,10 @@ public final class DefaultRolloutArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="rolloutName")
     private @Nullable Output<String> rolloutName;
 
+    /**
+     * @return The rollout name.
+     * 
+     */
     public Optional<Output<String>> rolloutName() {
         return Optional.ofNullable(this.rolloutName);
     }
@@ -75,29 +87,65 @@ public final class DefaultRolloutArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DefaultRolloutArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties Properties of the rollout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<DefaultRolloutPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the rollout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(DefaultRolloutPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(Output<String> providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             return providerNamespace(Output.of(providerNamespace));
         }
 
+        /**
+         * @param rolloutName The rollout name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutName(@Nullable Output<String> rolloutName) {
             $.rolloutName = rolloutName;
             return this;
         }
 
+        /**
+         * @param rolloutName The rollout name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutName(String rolloutName) {
             return rolloutName(Output.of(rolloutName));
         }

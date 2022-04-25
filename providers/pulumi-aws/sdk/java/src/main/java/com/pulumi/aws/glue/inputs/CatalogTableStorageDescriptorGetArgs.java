@@ -31,6 +31,10 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
     @Import(name="bucketColumns")
     private @Nullable Output<List<String>> bucketColumns;
 
+    /**
+     * @return List of reducer grouping columns, clustering columns, and bucketing columns in the table.
+     * 
+     */
     public Optional<Output<List<String>>> bucketColumns() {
         return Optional.ofNullable(this.bucketColumns);
     }
@@ -42,6 +46,10 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
     @Import(name="columns")
     private @Nullable Output<List<CatalogTableStorageDescriptorColumnGetArgs>> columns;
 
+    /**
+     * @return Configuration block for columns in the table. See `columns` below.
+     * 
+     */
     public Optional<Output<List<CatalogTableStorageDescriptorColumnGetArgs>>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -53,6 +61,10 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
     @Import(name="compressed")
     private @Nullable Output<Boolean> compressed;
 
+    /**
+     * @return Whether the data in the table is compressed.
+     * 
+     */
     public Optional<Output<Boolean>> compressed() {
         return Optional.ofNullable(this.compressed);
     }
@@ -64,6 +76,10 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
     @Import(name="inputFormat")
     private @Nullable Output<String> inputFormat;
 
+    /**
+     * @return Input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
+     * 
+     */
     public Optional<Output<String>> inputFormat() {
         return Optional.ofNullable(this.inputFormat);
     }
@@ -75,6 +91,10 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -86,6 +106,10 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
     @Import(name="numberOfBuckets")
     private @Nullable Output<Integer> numberOfBuckets;
 
+    /**
+     * @return Must be specified if the table contains any dimension columns.
+     * 
+     */
     public Optional<Output<Integer>> numberOfBuckets() {
         return Optional.ofNullable(this.numberOfBuckets);
     }
@@ -97,6 +121,10 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
     @Import(name="outputFormat")
     private @Nullable Output<String> outputFormat;
 
+    /**
+     * @return Output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
+     * 
+     */
     public Optional<Output<String>> outputFormat() {
         return Optional.ofNullable(this.outputFormat);
     }
@@ -108,6 +136,10 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
     @Import(name="parameters")
     private @Nullable Output<Map<String,String>> parameters;
 
+    /**
+     * @return Map of initialization parameters for the SerDe, in key-value form.
+     * 
+     */
     public Optional<Output<Map<String,String>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -119,6 +151,10 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
     @Import(name="schemaReference")
     private @Nullable Output<CatalogTableStorageDescriptorSchemaReferenceGetArgs> schemaReference;
 
+    /**
+     * @return Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
+     * 
+     */
     public Optional<Output<CatalogTableStorageDescriptorSchemaReferenceGetArgs>> schemaReference() {
         return Optional.ofNullable(this.schemaReference);
     }
@@ -130,6 +166,10 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
     @Import(name="serDeInfo")
     private @Nullable Output<CatalogTableStorageDescriptorSerDeInfoGetArgs> serDeInfo;
 
+    /**
+     * @return Configuration block for serialization and deserialization (&#34;SerDe&#34;) information. See `ser_de_info` below.
+     * 
+     */
     public Optional<Output<CatalogTableStorageDescriptorSerDeInfoGetArgs>> serDeInfo() {
         return Optional.ofNullable(this.serDeInfo);
     }
@@ -141,6 +181,10 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
     @Import(name="skewedInfo")
     private @Nullable Output<CatalogTableStorageDescriptorSkewedInfoGetArgs> skewedInfo;
 
+    /**
+     * @return Configuration block with information about values that appear very frequently in a column (skewed values). See `skewed_info` below.
+     * 
+     */
     public Optional<Output<CatalogTableStorageDescriptorSkewedInfoGetArgs>> skewedInfo() {
         return Optional.ofNullable(this.skewedInfo);
     }
@@ -152,6 +196,10 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
     @Import(name="sortColumns")
     private @Nullable Output<List<CatalogTableStorageDescriptorSortColumnGetArgs>> sortColumns;
 
+    /**
+     * @return Configuration block for the sort order of each bucket in the table. See `sort_columns` below.
+     * 
+     */
     public Optional<Output<List<CatalogTableStorageDescriptorSortColumnGetArgs>>> sortColumns() {
         return Optional.ofNullable(this.sortColumns);
     }
@@ -163,6 +211,10 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
     @Import(name="storedAsSubDirectories")
     private @Nullable Output<Boolean> storedAsSubDirectories;
 
+    /**
+     * @return Whether the table data is stored in subdirectories.
+     * 
+     */
     public Optional<Output<Boolean>> storedAsSubDirectories() {
         return Optional.ofNullable(this.storedAsSubDirectories);
     }
@@ -203,131 +255,305 @@ public final class CatalogTableStorageDescriptorGetArgs extends com.pulumi.resou
             $ = new CatalogTableStorageDescriptorGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketColumns List of reducer grouping columns, clustering columns, and bucketing columns in the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketColumns(@Nullable Output<List<String>> bucketColumns) {
             $.bucketColumns = bucketColumns;
             return this;
         }
 
+        /**
+         * @param bucketColumns List of reducer grouping columns, clustering columns, and bucketing columns in the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketColumns(List<String> bucketColumns) {
             return bucketColumns(Output.of(bucketColumns));
         }
 
+        /**
+         * @param bucketColumns List of reducer grouping columns, clustering columns, and bucketing columns in the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketColumns(String... bucketColumns) {
             return bucketColumns(List.of(bucketColumns));
         }
 
+        /**
+         * @param columns Configuration block for columns in the table. See `columns` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable Output<List<CatalogTableStorageDescriptorColumnGetArgs>> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns Configuration block for columns in the table. See `columns` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(List<CatalogTableStorageDescriptorColumnGetArgs> columns) {
             return columns(Output.of(columns));
         }
 
+        /**
+         * @param columns Configuration block for columns in the table. See `columns` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(CatalogTableStorageDescriptorColumnGetArgs... columns) {
             return columns(List.of(columns));
         }
 
+        /**
+         * @param compressed Whether the data in the table is compressed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressed(@Nullable Output<Boolean> compressed) {
             $.compressed = compressed;
             return this;
         }
 
+        /**
+         * @param compressed Whether the data in the table is compressed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressed(Boolean compressed) {
             return compressed(Output.of(compressed));
         }
 
+        /**
+         * @param inputFormat Input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputFormat(@Nullable Output<String> inputFormat) {
             $.inputFormat = inputFormat;
             return this;
         }
 
+        /**
+         * @param inputFormat Input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputFormat(String inputFormat) {
             return inputFormat(Output.of(inputFormat));
         }
 
+        /**
+         * @param location Physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param numberOfBuckets Must be specified if the table contains any dimension columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfBuckets(@Nullable Output<Integer> numberOfBuckets) {
             $.numberOfBuckets = numberOfBuckets;
             return this;
         }
 
+        /**
+         * @param numberOfBuckets Must be specified if the table contains any dimension columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfBuckets(Integer numberOfBuckets) {
             return numberOfBuckets(Output.of(numberOfBuckets));
         }
 
+        /**
+         * @param outputFormat Output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
             $.outputFormat = outputFormat;
             return this;
         }
 
+        /**
+         * @param outputFormat Output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputFormat(String outputFormat) {
             return outputFormat(Output.of(outputFormat));
         }
 
+        /**
+         * @param parameters Map of initialization parameters for the SerDe, in key-value form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Map of initialization parameters for the SerDe, in key-value form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,String> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param schemaReference Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaReference(@Nullable Output<CatalogTableStorageDescriptorSchemaReferenceGetArgs> schemaReference) {
             $.schemaReference = schemaReference;
             return this;
         }
 
+        /**
+         * @param schemaReference Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaReference(CatalogTableStorageDescriptorSchemaReferenceGetArgs schemaReference) {
             return schemaReference(Output.of(schemaReference));
         }
 
+        /**
+         * @param serDeInfo Configuration block for serialization and deserialization (&#34;SerDe&#34;) information. See `ser_de_info` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serDeInfo(@Nullable Output<CatalogTableStorageDescriptorSerDeInfoGetArgs> serDeInfo) {
             $.serDeInfo = serDeInfo;
             return this;
         }
 
+        /**
+         * @param serDeInfo Configuration block for serialization and deserialization (&#34;SerDe&#34;) information. See `ser_de_info` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serDeInfo(CatalogTableStorageDescriptorSerDeInfoGetArgs serDeInfo) {
             return serDeInfo(Output.of(serDeInfo));
         }
 
+        /**
+         * @param skewedInfo Configuration block with information about values that appear very frequently in a column (skewed values). See `skewed_info` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skewedInfo(@Nullable Output<CatalogTableStorageDescriptorSkewedInfoGetArgs> skewedInfo) {
             $.skewedInfo = skewedInfo;
             return this;
         }
 
+        /**
+         * @param skewedInfo Configuration block with information about values that appear very frequently in a column (skewed values). See `skewed_info` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skewedInfo(CatalogTableStorageDescriptorSkewedInfoGetArgs skewedInfo) {
             return skewedInfo(Output.of(skewedInfo));
         }
 
+        /**
+         * @param sortColumns Configuration block for the sort order of each bucket in the table. See `sort_columns` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sortColumns(@Nullable Output<List<CatalogTableStorageDescriptorSortColumnGetArgs>> sortColumns) {
             $.sortColumns = sortColumns;
             return this;
         }
 
+        /**
+         * @param sortColumns Configuration block for the sort order of each bucket in the table. See `sort_columns` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sortColumns(List<CatalogTableStorageDescriptorSortColumnGetArgs> sortColumns) {
             return sortColumns(Output.of(sortColumns));
         }
 
+        /**
+         * @param sortColumns Configuration block for the sort order of each bucket in the table. See `sort_columns` below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sortColumns(CatalogTableStorageDescriptorSortColumnGetArgs... sortColumns) {
             return sortColumns(List.of(sortColumns));
         }
 
+        /**
+         * @param storedAsSubDirectories Whether the table data is stored in subdirectories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedAsSubDirectories(@Nullable Output<Boolean> storedAsSubDirectories) {
             $.storedAsSubDirectories = storedAsSubDirectories;
             return this;
         }
 
+        /**
+         * @param storedAsSubDirectories Whether the table data is stored in subdirectories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedAsSubDirectories(Boolean storedAsSubDirectories) {
             return storedAsSubDirectories(Output.of(storedAsSubDirectories));
         }

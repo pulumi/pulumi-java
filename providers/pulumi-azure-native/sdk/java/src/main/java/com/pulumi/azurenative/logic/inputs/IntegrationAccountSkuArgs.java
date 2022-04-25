@@ -26,6 +26,10 @@ public final class IntegrationAccountSkuArgs extends com.pulumi.resources.Resour
     @Import(name="name", required=true)
     private Output<Either<String,IntegrationAccountSkuName>> name;
 
+    /**
+     * @return The sku name.
+     * 
+     */
     public Output<Either<String,IntegrationAccountSkuName>> name() {
         return this.name;
     }
@@ -54,19 +58,43 @@ public final class IntegrationAccountSkuArgs extends com.pulumi.resources.Resour
             $ = new IntegrationAccountSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,IntegrationAccountSkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,IntegrationAccountSkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(IntegrationAccountSkuName name) {
             return name(Either.ofRight(name));
         }

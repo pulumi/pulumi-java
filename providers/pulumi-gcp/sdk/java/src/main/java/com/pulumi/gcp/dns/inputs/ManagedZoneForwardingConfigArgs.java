@@ -24,6 +24,13 @@ public final class ManagedZoneForwardingConfigArgs extends com.pulumi.resources.
     @Import(name="targetNameServers", required=true)
     private Output<List<ManagedZoneForwardingConfigTargetNameServerArgs>> targetNameServers;
 
+    /**
+     * @return List of target name servers to forward to. Cloud DNS will
+     * select the best available name server if more than
+     * one target is given.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<ManagedZoneForwardingConfigTargetNameServerArgs>> targetNameServers() {
         return this.targetNameServers;
     }
@@ -52,15 +59,42 @@ public final class ManagedZoneForwardingConfigArgs extends com.pulumi.resources.
             $ = new ManagedZoneForwardingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetNameServers List of target name servers to forward to. Cloud DNS will
+         * select the best available name server if more than
+         * one target is given.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNameServers(Output<List<ManagedZoneForwardingConfigTargetNameServerArgs>> targetNameServers) {
             $.targetNameServers = targetNameServers;
             return this;
         }
 
+        /**
+         * @param targetNameServers List of target name servers to forward to. Cloud DNS will
+         * select the best available name server if more than
+         * one target is given.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNameServers(List<ManagedZoneForwardingConfigTargetNameServerArgs> targetNameServers) {
             return targetNameServers(Output.of(targetNameServers));
         }
 
+        /**
+         * @param targetNameServers List of target name servers to forward to. Cloud DNS will
+         * select the best available name server if more than
+         * one target is given.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNameServers(ManagedZoneForwardingConfigTargetNameServerArgs... targetNameServers) {
             return targetNameServers(List.of(targetNameServers));
         }

@@ -23,6 +23,10 @@ public final class KustoClusterDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -34,6 +38,10 @@ public final class KustoClusterDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="dataSetName")
     private @Nullable Output<String> dataSetName;
 
+    /**
+     * @return The name of the dataSet.
+     * 
+     */
     public Optional<Output<String>> dataSetName() {
         return Optional.ofNullable(this.dataSetName);
     }
@@ -46,6 +54,11 @@ public final class KustoClusterDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Kind of data set.
+     * Expected value is &#39;KustoCluster&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -57,6 +70,10 @@ public final class KustoClusterDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="kustoClusterResourceId", required=true)
     private Output<String> kustoClusterResourceId;
 
+    /**
+     * @return Resource id of the kusto cluster.
+     * 
+     */
     public Output<String> kustoClusterResourceId() {
         return this.kustoClusterResourceId;
     }
@@ -68,6 +85,10 @@ public final class KustoClusterDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +100,10 @@ public final class KustoClusterDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="shareName", required=true)
     private Output<String> shareName;
 
+    /**
+     * @return The name of the share to add the data set to.
+     * 
+     */
     public Output<String> shareName() {
         return this.shareName;
     }
@@ -112,56 +137,130 @@ public final class KustoClusterDataSetArgs extends com.pulumi.resources.Resource
             $ = new KustoClusterDataSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param dataSetName The name of the dataSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetName(@Nullable Output<String> dataSetName) {
             $.dataSetName = dataSetName;
             return this;
         }
 
+        /**
+         * @param dataSetName The name of the dataSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetName(String dataSetName) {
             return dataSetName(Output.of(dataSetName));
         }
 
+        /**
+         * @param kind Kind of data set.
+         * Expected value is &#39;KustoCluster&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of data set.
+         * Expected value is &#39;KustoCluster&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kustoClusterResourceId Resource id of the kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustoClusterResourceId(Output<String> kustoClusterResourceId) {
             $.kustoClusterResourceId = kustoClusterResourceId;
             return this;
         }
 
+        /**
+         * @param kustoClusterResourceId Resource id of the kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustoClusterResourceId(String kustoClusterResourceId) {
             return kustoClusterResourceId(Output.of(kustoClusterResourceId));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param shareName The name of the share to add the data set to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(Output<String> shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param shareName The name of the share to add the data set to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             return shareName(Output.of(shareName));
         }

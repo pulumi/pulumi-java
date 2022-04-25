@@ -19,72 +19,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRolloutResult {
     /**
-     * The reference to the artifact source resource Id where the payload is located.
+     * @return The reference to the artifact source resource Id where the payload is located.
      * 
      */
     private final @Nullable String artifactSourceId;
     /**
-     * The version of the build being deployed.
+     * @return The version of the build being deployed.
      * 
      */
     private final String buildVersion;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Identity for the resource.
+     * @return Identity for the resource.
      * 
      */
     private final @Nullable IdentityResponse identity;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Operational information of the rollout.
+     * @return Operational information of the rollout.
      * 
      */
     private final RolloutOperationInfoResponse operationInfo;
     /**
-     * The detailed information on the services being deployed.
+     * @return The detailed information on the services being deployed.
      * 
      */
     private final List<ServiceResponse> services;
     /**
-     * The current status of the rollout.
+     * @return The current status of the rollout.
      * 
      */
     private final String status;
     /**
-     * The list of step groups that define the orchestration.
+     * @return The list of step groups that define the orchestration.
      * 
      */
     private final List<StepGroupResponse> stepGroups;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
+     * @return The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
      * 
      */
     private final String targetServiceTopologyId;
     /**
-     * The cardinal count of total number of retries performed on the rollout at a given time.
+     * @return The cardinal count of total number of retries performed on the rollout at a given time.
      * 
      */
     private final Integer totalRetryAttempts;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -122,100 +122,100 @@ public final class GetRolloutResult {
     }
 
     /**
-     * The reference to the artifact source resource Id where the payload is located.
+     * @return The reference to the artifact source resource Id where the payload is located.
      * 
-    */
+     */
     public Optional<String> artifactSourceId() {
         return Optional.ofNullable(this.artifactSourceId);
     }
     /**
-     * The version of the build being deployed.
+     * @return The version of the build being deployed.
      * 
-    */
+     */
     public String buildVersion() {
         return this.buildVersion;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Identity for the resource.
+     * @return Identity for the resource.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Operational information of the rollout.
+     * @return Operational information of the rollout.
      * 
-    */
+     */
     public RolloutOperationInfoResponse operationInfo() {
         return this.operationInfo;
     }
     /**
-     * The detailed information on the services being deployed.
+     * @return The detailed information on the services being deployed.
      * 
-    */
+     */
     public List<ServiceResponse> services() {
         return this.services;
     }
     /**
-     * The current status of the rollout.
+     * @return The current status of the rollout.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The list of step groups that define the orchestration.
+     * @return The list of step groups that define the orchestration.
      * 
-    */
+     */
     public List<StepGroupResponse> stepGroups() {
         return this.stepGroups;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
+     * @return The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
      * 
-    */
+     */
     public String targetServiceTopologyId() {
         return this.targetServiceTopologyId;
     }
     /**
-     * The cardinal count of total number of retries performed on the rollout at a given time.
+     * @return The cardinal count of total number of retries performed on the rollout at a given time.
      * 
-    */
+     */
     public Integer totalRetryAttempts() {
         return this.totalRetryAttempts;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

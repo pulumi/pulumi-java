@@ -21,6 +21,10 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domain")
     private @Nullable String domain;
 
+    /**
+     * @return The domain name of the Organization.
+     * 
+     */
     public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -32,6 +36,10 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="organization")
     private @Nullable String organization;
 
+    /**
+     * @return The Organization&#39;s numeric ID, including an optional `organizations/` prefix.
+     * 
+     */
     public Optional<String> organization() {
         return Optional.ofNullable(this.organization);
     }
@@ -61,11 +69,23 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetOrganizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain The domain name of the Organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable String domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param organization The Organization&#39;s numeric ID, including an optional `organizations/` prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organization(@Nullable String organization) {
             $.organization = organization;
             return this;

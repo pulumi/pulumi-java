@@ -19,6 +19,10 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends com.pulumi.res
     @Import(name="domainOwnershipIdentifierName", required=true)
     private String domainOwnershipIdentifierName;
 
+    /**
+     * @return Name of domain ownership identifier.
+     * 
+     */
     public String domainOwnershipIdentifierName() {
         return this.domainOwnershipIdentifierName;
     }
@@ -30,6 +34,10 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends com.pulumi.res
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the app.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -41,6 +49,10 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends com.pulumi.res
             $ = new GetWebAppDomainOwnershipIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainOwnershipIdentifierName Name of domain ownership identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainOwnershipIdentifierName(String domainOwnershipIdentifierName) {
             $.domainOwnershipIdentifierName = domainOwnershipIdentifierName;
             return this;
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

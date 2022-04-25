@@ -20,6 +20,10 @@ public final class UDPHealthCheckResponse extends com.pulumi.resources.InvokeArg
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The UDP port number for the health check request. Valid values are 1 through 65535.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -31,6 +35,10 @@ public final class UDPHealthCheckResponse extends com.pulumi.resources.InvokeArg
     @Import(name="portName", required=true)
     private String portName;
 
+    /**
+     * @return Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
+     * 
+     */
     public String portName() {
         return this.portName;
     }
@@ -42,6 +50,10 @@ public final class UDPHealthCheckResponse extends com.pulumi.resources.InvokeArg
     @Import(name="request", required=true)
     private String request;
 
+    /**
+     * @return Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.
+     * 
+     */
     public String request() {
         return this.request;
     }
@@ -53,6 +65,10 @@ public final class UDPHealthCheckResponse extends com.pulumi.resources.InvokeArg
     @Import(name="response", required=true)
     private String response;
 
+    /**
+     * @return The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.
+     * 
+     */
     public String response() {
         return this.response;
     }
@@ -84,21 +100,45 @@ public final class UDPHealthCheckResponse extends com.pulumi.resources.InvokeArg
             $ = new UDPHealthCheckResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port The UDP port number for the health check request. Valid values are 1 through 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param portName Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portName(String portName) {
             $.portName = portName;
             return this;
         }
 
+        /**
+         * @param request Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(String request) {
             $.request = request;
             return this;
         }
 
+        /**
+         * @param response The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.
+         * 
+         * @return builder
+         * 
+         */
         public Builder response(String response) {
             $.response = response;
             return this;

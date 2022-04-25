@@ -26,6 +26,10 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
     @Import(name="offer")
     private @Nullable Output<String> offer;
 
+    /**
+     * @return The offer of the gallery image.
+     * 
+     */
     public Optional<Output<String>> offer() {
         return Optional.ofNullable(this.offer);
     }
@@ -37,6 +41,10 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
     @Import(name="osType")
     private @Nullable Output<String> osType;
 
+    /**
+     * @return The OS type of the gallery image.
+     * 
+     */
     public Optional<Output<String>> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -48,6 +56,10 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
     @Import(name="publisher")
     private @Nullable Output<String> publisher;
 
+    /**
+     * @return The publisher of the gallery image.
+     * 
+     */
     public Optional<Output<String>> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -59,6 +71,10 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
     @Import(name="sku")
     private @Nullable Output<String> sku;
 
+    /**
+     * @return The SKU of the gallery image.
+     * 
+     */
     public Optional<Output<String>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -70,6 +86,10 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The version of the gallery image.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -102,47 +122,107 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
             $ = new GalleryImageReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param offer The offer of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(@Nullable Output<String> offer) {
             $.offer = offer;
             return this;
         }
 
+        /**
+         * @param offer The offer of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(String offer) {
             return offer(Output.of(offer));
         }
 
+        /**
+         * @param osType The OS type of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable Output<String> osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osType The OS type of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             return osType(Output.of(osType));
         }
 
+        /**
+         * @param publisher The publisher of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher The publisher of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }
 
+        /**
+         * @param sku The SKU of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<String> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param version The version of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the gallery image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

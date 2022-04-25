@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class GetClusterKubernetesNetworkConfig {
     private final String ipFamily;
     /**
-     * The CIDR block to assign Kubernetes service IP addresses from.
+     * @return The CIDR block to assign Kubernetes service IP addresses from.
      * 
      */
     private final String serviceIpv4Cidr;
@@ -28,9 +28,9 @@ public final class GetClusterKubernetesNetworkConfig {
         return this.ipFamily;
     }
     /**
-     * The CIDR block to assign Kubernetes service IP addresses from.
+     * @return The CIDR block to assign Kubernetes service IP addresses from.
      * 
-    */
+     */
     public String serviceIpv4Cidr() {
         return this.serviceIpv4Cidr;
     }

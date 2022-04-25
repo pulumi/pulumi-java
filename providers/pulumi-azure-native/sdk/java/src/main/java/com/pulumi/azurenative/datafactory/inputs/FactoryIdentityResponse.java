@@ -27,6 +27,10 @@ public final class FactoryIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal id of the identity.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -38,6 +42,10 @@ public final class FactoryIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The client tenant id of the identity.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -49,6 +57,10 @@ public final class FactoryIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The identity type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -60,6 +72,10 @@ public final class FactoryIdentityResponse extends com.pulumi.resources.InvokeAr
     @Import(name="userAssignedIdentities")
     private @Nullable Map<String,Object> userAssignedIdentities;
 
+    /**
+     * @return List of user assigned identities for the factory.
+     * 
+     */
     public Optional<Map<String,Object>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -91,21 +107,45 @@ public final class FactoryIdentityResponse extends com.pulumi.resources.InvokeAr
             $ = new FactoryIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal id of the identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The client tenant id of the identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities List of user assigned identities for the factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;

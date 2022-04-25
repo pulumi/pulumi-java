@@ -19,6 +19,10 @@ public final class GetLinkedServiceArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="linkName", required=true)
     private String linkName;
 
+    /**
+     * @return Friendly name of the linked workspace
+     * 
+     */
     public String linkName() {
         return this.linkName;
     }
@@ -30,6 +34,10 @@ public final class GetLinkedServiceArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which workspace is located.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetLinkedServiceArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -71,16 +83,34 @@ public final class GetLinkedServiceArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkName Friendly name of the linked workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkName(String linkName) {
             $.linkName = linkName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

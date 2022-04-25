@@ -23,6 +23,10 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cert", required=true)
     private String cert;
 
+    /**
+     * @return PEM representation.
+     * 
+     */
     public String cert() {
         return this.cert;
     }
@@ -34,6 +38,10 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="certSerialNumber", required=true)
     private String certSerialNumber;
 
+    /**
+     * @return Serial number, as extracted from the certificate.
+     * 
+     */
     public String certSerialNumber() {
         return this.certSerialNumber;
     }
@@ -45,6 +53,10 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="commonName", required=true)
     private String commonName;
 
+    /**
+     * @return User supplied name. Constrained to [a-zA-Z.-_ ]+.
+     * 
+     */
     public String commonName() {
         return this.commonName;
     }
@@ -56,6 +68,10 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -67,6 +83,10 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="expirationTime", required=true)
     private String expirationTime;
 
+    /**
+     * @return The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     * 
+     */
     public String expirationTime() {
         return this.expirationTime;
     }
@@ -78,6 +98,10 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instance", required=true)
     private String instance;
 
+    /**
+     * @return Name of the database instance.
+     * 
+     */
     public String instance() {
         return this.instance;
     }
@@ -89,6 +113,10 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return This is always `sql#sslCert`.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -100,6 +128,10 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="selfLink", required=true)
     private String selfLink;
 
+    /**
+     * @return The URI of this resource.
+     * 
+     */
     public String selfLink() {
         return this.selfLink;
     }
@@ -111,6 +143,10 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sha1Fingerprint", required=true)
     private String sha1Fingerprint;
 
+    /**
+     * @return Sha1 Fingerprint.
+     * 
+     */
     public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
@@ -147,46 +183,100 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SslCertResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cert PEM representation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cert(String cert) {
             $.cert = cert;
             return this;
         }
 
+        /**
+         * @param certSerialNumber Serial number, as extracted from the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certSerialNumber(String certSerialNumber) {
             $.certSerialNumber = certSerialNumber;
             return this;
         }
 
+        /**
+         * @param commonName User supplied name. Constrained to [a-zA-Z.-_ ]+.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonName(String commonName) {
             $.commonName = commonName;
             return this;
         }
 
+        /**
+         * @param createTime The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param expirationTime The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param instance Name of the database instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#sslCert`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param sha1Fingerprint Sha1 Fingerprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha1Fingerprint(String sha1Fingerprint) {
             $.sha1Fingerprint = sha1Fingerprint;
             return this;

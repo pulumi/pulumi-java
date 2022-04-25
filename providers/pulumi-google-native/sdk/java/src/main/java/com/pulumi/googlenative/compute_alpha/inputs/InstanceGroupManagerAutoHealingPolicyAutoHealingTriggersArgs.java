@@ -22,6 +22,10 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
     @Import(name="onHealthCheck")
     private @Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck;
 
+    /**
+     * @return If you have configured an application-based health check for the group, this field controls whether to trigger VM autohealing based on a failed health check. Valid values are: - ON (default): The group recreates running VMs that fail the application-based health check. - OFF: When set to OFF, you can still observe instance health state, but the group does not recreate VMs that fail the application-based health check. This is useful for troubleshooting and setting up your health check configuration.
+     * 
+     */
     public Optional<Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck>> onHealthCheck() {
         return Optional.ofNullable(this.onHealthCheck);
     }
@@ -50,11 +54,23 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
             $ = new InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param onHealthCheck If you have configured an application-based health check for the group, this field controls whether to trigger VM autohealing based on a failed health check. Valid values are: - ON (default): The group recreates running VMs that fail the application-based health check. - OFF: When set to OFF, you can still observe instance health state, but the group does not recreate VMs that fail the application-based health check. This is useful for troubleshooting and setting up your health check configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onHealthCheck(@Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck) {
             $.onHealthCheck = onHealthCheck;
             return this;
         }
 
+        /**
+         * @param onHealthCheck If you have configured an application-based health check for the group, this field controls whether to trigger VM autohealing based on a failed health check. Valid values are: - ON (default): The group recreates running VMs that fail the application-based health check. - OFF: When set to OFF, you can still observe instance health state, but the group does not recreate VMs that fail the application-based health check. This is useful for troubleshooting and setting up your health check configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onHealthCheck(InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck onHealthCheck) {
             return onHealthCheck(Output.of(onHealthCheck));
         }

@@ -19,6 +19,10 @@ public final class GetPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the NetApp account
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="poolName", required=true)
     private String poolName;
 
+    /**
+     * @return The name of the capacity pool
+     * 
+     */
     public String poolName() {
         return this.poolName;
     }
@@ -41,6 +49,10 @@ public final class GetPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetPoolArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param poolName The name of the capacity pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolName(String poolName) {
             $.poolName = poolName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

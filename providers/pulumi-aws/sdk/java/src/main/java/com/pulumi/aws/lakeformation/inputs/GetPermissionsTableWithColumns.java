@@ -23,6 +23,10 @@ public final class GetPermissionsTableWithColumns extends com.pulumi.resources.I
     @Import(name="catalogId", required=true)
     private String catalogId;
 
+    /**
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * 
+     */
     public String catalogId() {
         return this.catalogId;
     }
@@ -34,6 +38,10 @@ public final class GetPermissionsTableWithColumns extends com.pulumi.resources.I
     @Import(name="columnNames")
     private @Nullable List<String> columnNames;
 
+    /**
+     * @return Set of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
+     * 
+     */
     public Optional<List<String>> columnNames() {
         return Optional.ofNullable(this.columnNames);
     }
@@ -45,6 +53,10 @@ public final class GetPermissionsTableWithColumns extends com.pulumi.resources.I
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return Name of the database for the table with columns resource. Unique to the Data Catalog.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -56,6 +68,10 @@ public final class GetPermissionsTableWithColumns extends com.pulumi.resources.I
     @Import(name="excludedColumnNames")
     private @Nullable List<String> excludedColumnNames;
 
+    /**
+     * @return Set of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
+     * 
+     */
     public Optional<List<String>> excludedColumnNames() {
         return Optional.ofNullable(this.excludedColumnNames);
     }
@@ -67,6 +83,10 @@ public final class GetPermissionsTableWithColumns extends com.pulumi.resources.I
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the table resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -78,6 +98,10 @@ public final class GetPermissionsTableWithColumns extends com.pulumi.resources.I
     @Import(name="wildcard")
     private @Nullable Boolean wildcard;
 
+    /**
+     * @return Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
+     * 
+     */
     public Optional<Boolean> wildcard() {
         return Optional.ofNullable(this.wildcard);
     }
@@ -111,39 +135,87 @@ public final class GetPermissionsTableWithColumns extends com.pulumi.resources.I
             $ = new GetPermissionsTableWithColumns(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogId Identifier for the Data Catalog. By default, it is the account ID of the caller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(String catalogId) {
             $.catalogId = catalogId;
             return this;
         }
 
+        /**
+         * @param columnNames Set of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnNames(@Nullable List<String> columnNames) {
             $.columnNames = columnNames;
             return this;
         }
 
+        /**
+         * @param columnNames Set of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnNames(String... columnNames) {
             return columnNames(List.of(columnNames));
         }
 
+        /**
+         * @param databaseName Name of the database for the table with columns resource. Unique to the Data Catalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param excludedColumnNames Set of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedColumnNames(@Nullable List<String> excludedColumnNames) {
             $.excludedColumnNames = excludedColumnNames;
             return this;
         }
 
+        /**
+         * @param excludedColumnNames Set of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedColumnNames(String... excludedColumnNames) {
             return excludedColumnNames(List.of(excludedColumnNames));
         }
 
+        /**
+         * @param name Name of the table resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param wildcard Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wildcard(@Nullable Boolean wildcard) {
             $.wildcard = wildcard;
             return this;

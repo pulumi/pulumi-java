@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse {
     /**
-     * Uses LivePerson (https://www.liveperson.com).
+     * @return Uses LivePerson (https://www.liveperson.com).
      * 
      */
     private final GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig;
     /**
-     * Uses Salesforce Live Agent.
+     * @return Uses Salesforce Live Agent.
      * 
      */
     private final GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
@@ -30,16 +30,16 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse {
     }
 
     /**
-     * Uses LivePerson (https://www.liveperson.com).
+     * @return Uses LivePerson (https://www.liveperson.com).
      * 
-    */
+     */
     public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig() {
         return this.livePersonConfig;
     }
     /**
-     * Uses Salesforce Live Agent.
+     * @return Uses Salesforce Live Agent.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig() {
         return this.salesforceLiveAgentConfig;
     }

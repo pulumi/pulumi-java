@@ -23,6 +23,10 @@ public final class MHSMPrivateEndpointResponse extends com.pulumi.resources.Invo
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Full identifier of the private endpoint resource.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class MHSMPrivateEndpointResponse extends com.pulumi.resources.Invo
             $ = new MHSMPrivateEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Full identifier of the private endpoint resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

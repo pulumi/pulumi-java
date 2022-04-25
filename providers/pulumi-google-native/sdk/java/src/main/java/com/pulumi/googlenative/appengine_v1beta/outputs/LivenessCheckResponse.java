@@ -11,37 +11,37 @@ import java.util.Objects;
 @CustomType
 public final class LivenessCheckResponse {
     /**
-     * Interval between health checks.
+     * @return Interval between health checks.
      * 
      */
     private final String checkInterval;
     /**
-     * Number of consecutive failed checks required before considering the VM unhealthy.
+     * @return Number of consecutive failed checks required before considering the VM unhealthy.
      * 
      */
     private final Integer failureThreshold;
     /**
-     * Host header to send when performing a HTTP Liveness check. Example: &#34;myapp.appspot.com&#34;
+     * @return Host header to send when performing a HTTP Liveness check. Example: &#34;myapp.appspot.com&#34;
      * 
      */
     private final String host;
     /**
-     * The initial delay before starting to execute the checks.
+     * @return The initial delay before starting to execute the checks.
      * 
      */
     private final String initialDelay;
     /**
-     * The request path.
+     * @return The request path.
      * 
      */
     private final String path;
     /**
-     * Number of consecutive successful checks required before considering the VM healthy.
+     * @return Number of consecutive successful checks required before considering the VM healthy.
      * 
      */
     private final Integer successThreshold;
     /**
-     * Time before the check is considered failed.
+     * @return Time before the check is considered failed.
      * 
      */
     private final String timeout;
@@ -65,51 +65,51 @@ public final class LivenessCheckResponse {
     }
 
     /**
-     * Interval between health checks.
+     * @return Interval between health checks.
      * 
-    */
+     */
     public String checkInterval() {
         return this.checkInterval;
     }
     /**
-     * Number of consecutive failed checks required before considering the VM unhealthy.
+     * @return Number of consecutive failed checks required before considering the VM unhealthy.
      * 
-    */
+     */
     public Integer failureThreshold() {
         return this.failureThreshold;
     }
     /**
-     * Host header to send when performing a HTTP Liveness check. Example: &#34;myapp.appspot.com&#34;
+     * @return Host header to send when performing a HTTP Liveness check. Example: &#34;myapp.appspot.com&#34;
      * 
-    */
+     */
     public String host() {
         return this.host;
     }
     /**
-     * The initial delay before starting to execute the checks.
+     * @return The initial delay before starting to execute the checks.
      * 
-    */
+     */
     public String initialDelay() {
         return this.initialDelay;
     }
     /**
-     * The request path.
+     * @return The request path.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * Number of consecutive successful checks required before considering the VM healthy.
+     * @return Number of consecutive successful checks required before considering the VM healthy.
      * 
-    */
+     */
     public Integer successThreshold() {
         return this.successThreshold;
     }
     /**
-     * Time before the check is considered failed.
+     * @return Time before the check is considered failed.
      * 
-    */
+     */
     public String timeout() {
         return this.timeout;
     }

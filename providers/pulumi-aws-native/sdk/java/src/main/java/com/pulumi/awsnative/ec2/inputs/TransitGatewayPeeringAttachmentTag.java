@@ -21,6 +21,10 @@ public final class TransitGatewayPeeringAttachmentTag extends com.pulumi.resourc
     @Import(name="key")
     private @Nullable String key;
 
+    /**
+     * @return The key of the tag. Constraints: Tag keys are case-sensitive and accept a maximum of 127 Unicode characters. May not begin with aws:.
+     * 
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -32,6 +36,10 @@ public final class TransitGatewayPeeringAttachmentTag extends com.pulumi.resourc
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The value of the tag. Constraints: Tag values are case-sensitive and accept a maximum of 255 Unicode characters.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -61,11 +69,23 @@ public final class TransitGatewayPeeringAttachmentTag extends com.pulumi.resourc
             $ = new TransitGatewayPeeringAttachmentTag(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key of the tag. Constraints: Tag keys are case-sensitive and accept a maximum of 127 Unicode characters. May not begin with aws:.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value The value of the tag. Constraints: Tag values are case-sensitive and accept a maximum of 255 Unicode characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

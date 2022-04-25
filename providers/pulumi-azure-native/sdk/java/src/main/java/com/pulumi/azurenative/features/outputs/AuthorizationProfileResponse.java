@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class AuthorizationProfileResponse {
     /**
-     * The approved time
+     * @return The approved time
      * 
      */
     private final String approvedTime;
     /**
-     * The approver
+     * @return The approver
      * 
      */
     private final String approver;
     /**
-     * The requested time
+     * @return The requested time
      * 
      */
     private final String requestedTime;
     /**
-     * The requester
+     * @return The requester
      * 
      */
     private final String requester;
     /**
-     * The requester object id
+     * @return The requester object id
      * 
      */
     private final String requesterObjectId;
@@ -50,37 +50,37 @@ public final class AuthorizationProfileResponse {
     }
 
     /**
-     * The approved time
+     * @return The approved time
      * 
-    */
+     */
     public String approvedTime() {
         return this.approvedTime;
     }
     /**
-     * The approver
+     * @return The approver
      * 
-    */
+     */
     public String approver() {
         return this.approver;
     }
     /**
-     * The requested time
+     * @return The requested time
      * 
-    */
+     */
     public String requestedTime() {
         return this.requestedTime;
     }
     /**
-     * The requester
+     * @return The requester
      * 
-    */
+     */
     public String requester() {
         return this.requester;
     }
     /**
-     * The requester object id
+     * @return The requester object id
      * 
-    */
+     */
     public String requesterObjectId() {
         return this.requesterObjectId;
     }

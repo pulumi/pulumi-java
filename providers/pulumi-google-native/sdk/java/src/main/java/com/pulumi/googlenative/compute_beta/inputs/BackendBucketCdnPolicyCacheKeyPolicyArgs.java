@@ -27,6 +27,10 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends com.pulumi.r
     @Import(name="includeHttpHeaders")
     private @Nullable Output<List<String>> includeHttpHeaders;
 
+    /**
+     * @return Allows HTTP request headers (by name) to be used in the cache key.
+     * 
+     */
     public Optional<Output<List<String>>> includeHttpHeaders() {
         return Optional.ofNullable(this.includeHttpHeaders);
     }
@@ -38,6 +42,10 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends com.pulumi.r
     @Import(name="queryStringWhitelist")
     private @Nullable Output<List<String>> queryStringWhitelist;
 
+    /**
+     * @return Names of query string parameters to include in cache keys. All other parameters will be excluded. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+     * 
+     */
     public Optional<Output<List<String>>> queryStringWhitelist() {
         return Optional.ofNullable(this.queryStringWhitelist);
     }
@@ -67,28 +75,64 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends com.pulumi.r
             $ = new BackendBucketCdnPolicyCacheKeyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param includeHttpHeaders Allows HTTP request headers (by name) to be used in the cache key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeHttpHeaders(@Nullable Output<List<String>> includeHttpHeaders) {
             $.includeHttpHeaders = includeHttpHeaders;
             return this;
         }
 
+        /**
+         * @param includeHttpHeaders Allows HTTP request headers (by name) to be used in the cache key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeHttpHeaders(List<String> includeHttpHeaders) {
             return includeHttpHeaders(Output.of(includeHttpHeaders));
         }
 
+        /**
+         * @param includeHttpHeaders Allows HTTP request headers (by name) to be used in the cache key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeHttpHeaders(String... includeHttpHeaders) {
             return includeHttpHeaders(List.of(includeHttpHeaders));
         }
 
+        /**
+         * @param queryStringWhitelist Names of query string parameters to include in cache keys. All other parameters will be excluded. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringWhitelist(@Nullable Output<List<String>> queryStringWhitelist) {
             $.queryStringWhitelist = queryStringWhitelist;
             return this;
         }
 
+        /**
+         * @param queryStringWhitelist Names of query string parameters to include in cache keys. All other parameters will be excluded. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringWhitelist(List<String> queryStringWhitelist) {
             return queryStringWhitelist(Output.of(queryStringWhitelist));
         }
 
+        /**
+         * @param queryStringWhitelist Names of query string parameters to include in cache keys. All other parameters will be excluded. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringWhitelist(String... queryStringWhitelist) {
             return queryStringWhitelist(List.of(queryStringWhitelist));
         }

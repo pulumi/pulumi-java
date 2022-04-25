@@ -27,6 +27,10 @@ public final class CustomImagePropertiesFromVmResponse extends com.pulumi.resour
     @Import(name="linuxOsInfo")
     private @Nullable LinuxOsInfoResponse linuxOsInfo;
 
+    /**
+     * @return The Linux OS information of the VM.
+     * 
+     */
     public Optional<LinuxOsInfoResponse> linuxOsInfo() {
         return Optional.ofNullable(this.linuxOsInfo);
     }
@@ -38,6 +42,10 @@ public final class CustomImagePropertiesFromVmResponse extends com.pulumi.resour
     @Import(name="sourceVmId")
     private @Nullable String sourceVmId;
 
+    /**
+     * @return The source vm identifier.
+     * 
+     */
     public Optional<String> sourceVmId() {
         return Optional.ofNullable(this.sourceVmId);
     }
@@ -49,6 +57,10 @@ public final class CustomImagePropertiesFromVmResponse extends com.pulumi.resour
     @Import(name="windowsOsInfo")
     private @Nullable WindowsOsInfoResponse windowsOsInfo;
 
+    /**
+     * @return The Windows OS information of the VM.
+     * 
+     */
     public Optional<WindowsOsInfoResponse> windowsOsInfo() {
         return Optional.ofNullable(this.windowsOsInfo);
     }
@@ -79,16 +91,34 @@ public final class CustomImagePropertiesFromVmResponse extends com.pulumi.resour
             $ = new CustomImagePropertiesFromVmResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linuxOsInfo The Linux OS information of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxOsInfo(@Nullable LinuxOsInfoResponse linuxOsInfo) {
             $.linuxOsInfo = linuxOsInfo;
             return this;
         }
 
+        /**
+         * @param sourceVmId The source vm identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVmId(@Nullable String sourceVmId) {
             $.sourceVmId = sourceVmId;
             return this;
         }
 
+        /**
+         * @param windowsOsInfo The Windows OS information of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsOsInfo(@Nullable WindowsOsInfoResponse windowsOsInfo) {
             $.windowsOsInfo = windowsOsInfo;
             return this;

@@ -15,14 +15,14 @@ import javax.annotation.Nullable;
 public final class GetBotResult {
     private final @Nullable String arn;
     /**
-     * Data privacy setting of the Bot.
+     * @return Data privacy setting of the Bot.
      * 
      */
     private final @Nullable DataPrivacyProperties dataPrivacy;
     private final @Nullable String description;
     private final @Nullable String id;
     /**
-     * IdleSessionTTLInSeconds of the resource
+     * @return IdleSessionTTLInSeconds of the resource
      * 
      */
     private final @Nullable Integer idleSessionTTLInSeconds;
@@ -51,9 +51,9 @@ public final class GetBotResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Data privacy setting of the Bot.
+     * @return Data privacy setting of the Bot.
      * 
-    */
+     */
     public Optional<DataPrivacyProperties> dataPrivacy() {
         return Optional.ofNullable(this.dataPrivacy);
     }
@@ -64,9 +64,9 @@ public final class GetBotResult {
         return Optional.ofNullable(this.id);
     }
     /**
-     * IdleSessionTTLInSeconds of the resource
+     * @return IdleSessionTTLInSeconds of the resource
      * 
-    */
+     */
     public Optional<Integer> idleSessionTTLInSeconds() {
         return Optional.ofNullable(this.idleSessionTTLInSeconds);
     }

@@ -24,6 +24,10 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the virtual service.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="createdDate")
     private @Nullable Output<String> createdDate;
 
+    /**
+     * @return The creation date of the virtual service.
+     * 
+     */
     public Optional<Output<String>> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
@@ -46,6 +54,10 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="lastUpdatedDate")
     private @Nullable Output<String> lastUpdatedDate;
 
+    /**
+     * @return The last update date of the virtual service.
+     * 
+     */
     public Optional<Output<String>> lastUpdatedDate() {
         return Optional.ofNullable(this.lastUpdatedDate);
     }
@@ -57,6 +69,10 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="meshName")
     private @Nullable Output<String> meshName;
 
+    /**
+     * @return The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Optional<Output<String>> meshName() {
         return Optional.ofNullable(this.meshName);
     }
@@ -68,6 +84,10 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="meshOwner")
     private @Nullable Output<String> meshOwner;
 
+    /**
+     * @return The AWS account ID of the service mesh&#39;s owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+     * 
+     */
     public Optional<Output<String>> meshOwner() {
         return Optional.ofNullable(this.meshOwner);
     }
@@ -79,6 +99,10 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name to use for the virtual service. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -90,6 +114,10 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceOwner")
     private @Nullable Output<String> resourceOwner;
 
+    /**
+     * @return The resource owner&#39;s AWS account ID.
+     * 
+     */
     public Optional<Output<String>> resourceOwner() {
         return Optional.ofNullable(this.resourceOwner);
     }
@@ -101,6 +129,10 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="spec")
     private @Nullable Output<VirtualServiceSpecGetArgs> spec;
 
+    /**
+     * @return The virtual service specification to apply.
+     * 
+     */
     public Optional<Output<VirtualServiceSpecGetArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
@@ -112,6 +144,10 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -123,6 +159,10 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -160,92 +200,212 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
             $ = new VirtualServiceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param createdDate The creation date of the virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(@Nullable Output<String> createdDate) {
             $.createdDate = createdDate;
             return this;
         }
 
+        /**
+         * @param createdDate The creation date of the virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(String createdDate) {
             return createdDate(Output.of(createdDate));
         }
 
+        /**
+         * @param lastUpdatedDate The last update date of the virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
             $.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
 
+        /**
+         * @param lastUpdatedDate The last update date of the virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedDate(String lastUpdatedDate) {
             return lastUpdatedDate(Output.of(lastUpdatedDate));
         }
 
+        /**
+         * @param meshName The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshName(@Nullable Output<String> meshName) {
             $.meshName = meshName;
             return this;
         }
 
+        /**
+         * @param meshName The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshName(String meshName) {
             return meshName(Output.of(meshName));
         }
 
+        /**
+         * @param meshOwner The AWS account ID of the service mesh&#39;s owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshOwner(@Nullable Output<String> meshOwner) {
             $.meshOwner = meshOwner;
             return this;
         }
 
+        /**
+         * @param meshOwner The AWS account ID of the service mesh&#39;s owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshOwner(String meshOwner) {
             return meshOwner(Output.of(meshOwner));
         }
 
+        /**
+         * @param name The name to use for the virtual service. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name to use for the virtual service. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceOwner The resource owner&#39;s AWS account ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceOwner(@Nullable Output<String> resourceOwner) {
             $.resourceOwner = resourceOwner;
             return this;
         }
 
+        /**
+         * @param resourceOwner The resource owner&#39;s AWS account ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceOwner(String resourceOwner) {
             return resourceOwner(Output.of(resourceOwner));
         }
 
+        /**
+         * @param spec The virtual service specification to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(@Nullable Output<VirtualServiceSpecGetArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec The virtual service specification to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(VirtualServiceSpecGetArgs spec) {
             return spec(Output.of(spec));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

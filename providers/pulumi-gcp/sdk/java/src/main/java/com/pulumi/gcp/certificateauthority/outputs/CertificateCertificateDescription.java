@@ -23,7 +23,7 @@ public final class CertificateCertificateDescription {
     private final @Nullable List<CertificateCertificateDescriptionConfigValue> configValues;
     private final @Nullable List<String> crlDistributionPoints;
     /**
-     * A PublicKey describes a public key.
+     * @return A PublicKey describes a public key.
      * Structure is documented below.
      * 
      */
@@ -67,10 +67,10 @@ public final class CertificateCertificateDescription {
         return this.crlDistributionPoints == null ? List.of() : this.crlDistributionPoints;
     }
     /**
-     * A PublicKey describes a public key.
+     * @return A PublicKey describes a public key.
      * Structure is documented below.
      * 
-    */
+     */
     public List<CertificateCertificateDescriptionPublicKey> publicKeys() {
         return this.publicKeys == null ? List.of() : this.publicKeys;
     }

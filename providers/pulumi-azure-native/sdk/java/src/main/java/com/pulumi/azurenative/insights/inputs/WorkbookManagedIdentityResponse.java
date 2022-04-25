@@ -26,6 +26,10 @@ public final class WorkbookManagedIdentityResponse extends com.pulumi.resources.
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The identity type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -37,6 +41,10 @@ public final class WorkbookManagedIdentityResponse extends com.pulumi.resources.
     @Import(name="userAssignedIdentities")
     private @Nullable WorkbookUserAssignedIdentitiesResponse userAssignedIdentities;
 
+    /**
+     * @return Customer Managed Identity
+     * 
+     */
     public Optional<WorkbookUserAssignedIdentitiesResponse> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -66,11 +74,23 @@ public final class WorkbookManagedIdentityResponse extends com.pulumi.resources.
             $ = new WorkbookManagedIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities Customer Managed Identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable WorkbookUserAssignedIdentitiesResponse userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;

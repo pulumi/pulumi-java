@@ -23,6 +23,10 @@ public final class ServicePrincipalPropertiesResponse extends com.pulumi.resourc
     @Import(name="clientId", required=true)
     private String clientId;
 
+    /**
+     * @return The service principal client ID
+     * 
+     */
     public String clientId() {
         return this.clientId;
     }
@@ -34,6 +38,10 @@ public final class ServicePrincipalPropertiesResponse extends com.pulumi.resourc
     @Import(name="secret", required=true)
     private String secret;
 
+    /**
+     * @return The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
+     * 
+     */
     public String secret() {
         return this.secret;
     }
@@ -63,11 +71,23 @@ public final class ServicePrincipalPropertiesResponse extends com.pulumi.resourc
             $ = new ServicePrincipalPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The service principal client ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param secret The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             $.secret = secret;
             return this;

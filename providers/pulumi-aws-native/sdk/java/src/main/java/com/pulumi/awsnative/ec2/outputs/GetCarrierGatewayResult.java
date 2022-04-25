@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCarrierGatewayResult {
     /**
-     * The ID of the carrier gateway.
+     * @return The ID of the carrier gateway.
      * 
      */
     private final @Nullable String carrierGatewayId;
     /**
-     * The ID of the owner.
+     * @return The ID of the owner.
      * 
      */
     private final @Nullable String ownerId;
     /**
-     * The state of the carrier gateway.
+     * @return The state of the carrier gateway.
      * 
      */
     private final @Nullable String state;
     /**
-     * The tags for the carrier gateway.
+     * @return The tags for the carrier gateway.
      * 
      */
     private final @Nullable List<CarrierGatewayTag> tags;
@@ -47,30 +47,30 @@ public final class GetCarrierGatewayResult {
     }
 
     /**
-     * The ID of the carrier gateway.
+     * @return The ID of the carrier gateway.
      * 
-    */
+     */
     public Optional<String> carrierGatewayId() {
         return Optional.ofNullable(this.carrierGatewayId);
     }
     /**
-     * The ID of the owner.
+     * @return The ID of the owner.
      * 
-    */
+     */
     public Optional<String> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
-     * The state of the carrier gateway.
+     * @return The state of the carrier gateway.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * The tags for the carrier gateway.
+     * @return The tags for the carrier gateway.
      * 
-    */
+     */
     public List<CarrierGatewayTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -26,6 +26,10 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
     @Import(name="cisBenchmark", required=true)
     private CisBenchmarkResponse cisBenchmark;
 
+    /**
+     * @return Right now we only have one compliance type, but we may add additional types in the future.
+     * 
+     */
     public CisBenchmarkResponse cisBenchmark() {
         return this.cisBenchmark;
     }
@@ -37,6 +41,10 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return A description about this compliance check.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -48,6 +56,10 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
     @Import(name="rationale", required=true)
     private String rationale;
 
+    /**
+     * @return A rationale for the existence of this compliance check.
+     * 
+     */
     public String rationale() {
         return this.rationale;
     }
@@ -59,6 +71,10 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
     @Import(name="remediation", required=true)
     private String remediation;
 
+    /**
+     * @return A description of remediation steps if the compliance check fails.
+     * 
+     */
     public String remediation() {
         return this.remediation;
     }
@@ -70,6 +86,10 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
     @Import(name="scanInstructions", required=true)
     private String scanInstructions;
 
+    /**
+     * @return Serialized scan instructions with a predefined format.
+     * 
+     */
     public String scanInstructions() {
         return this.scanInstructions;
     }
@@ -81,6 +101,10 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return The title that identifies this compliance check.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -92,6 +116,10 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
     @Import(name="version", required=true)
     private List<ComplianceVersionResponse> version;
 
+    /**
+     * @return The OS and config versions the benchmark applies to.
+     * 
+     */
     public List<ComplianceVersionResponse> version() {
         return this.version;
     }
@@ -126,41 +154,89 @@ public final class ComplianceNoteResponse extends com.pulumi.resources.InvokeArg
             $ = new ComplianceNoteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cisBenchmark Right now we only have one compliance type, but we may add additional types in the future.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cisBenchmark(CisBenchmarkResponse cisBenchmark) {
             $.cisBenchmark = cisBenchmark;
             return this;
         }
 
+        /**
+         * @param description A description about this compliance check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param rationale A rationale for the existence of this compliance check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rationale(String rationale) {
             $.rationale = rationale;
             return this;
         }
 
+        /**
+         * @param remediation A description of remediation steps if the compliance check fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediation(String remediation) {
             $.remediation = remediation;
             return this;
         }
 
+        /**
+         * @param scanInstructions Serialized scan instructions with a predefined format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scanInstructions(String scanInstructions) {
             $.scanInstructions = scanInstructions;
             return this;
         }
 
+        /**
+         * @param title The title that identifies this compliance check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param version The OS and config versions the benchmark applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(List<ComplianceVersionResponse> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The OS and config versions the benchmark applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(ComplianceVersionResponse... version) {
             return version(List.of(version));
         }

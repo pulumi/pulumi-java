@@ -26,6 +26,10 @@ public final class RestrictionEvaluationsArgs extends com.pulumi.resources.Resou
     @Import(name="memberRestrictionEvaluation")
     private @Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation;
 
+    /**
+     * @return Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.
+     * 
+     */
     public Optional<Output<MembershipRoleRestrictionEvaluationArgs>> memberRestrictionEvaluation() {
         return Optional.ofNullable(this.memberRestrictionEvaluation);
     }
@@ -54,11 +58,23 @@ public final class RestrictionEvaluationsArgs extends com.pulumi.resources.Resou
             $ = new RestrictionEvaluationsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param memberRestrictionEvaluation Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberRestrictionEvaluation(@Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation) {
             $.memberRestrictionEvaluation = memberRestrictionEvaluation;
             return this;
         }
 
+        /**
+         * @param memberRestrictionEvaluation Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberRestrictionEvaluation(MembershipRoleRestrictionEvaluationArgs memberRestrictionEvaluation) {
             return memberRestrictionEvaluation(Output.of(memberRestrictionEvaluation));
         }

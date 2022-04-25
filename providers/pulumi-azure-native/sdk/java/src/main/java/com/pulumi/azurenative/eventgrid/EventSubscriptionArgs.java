@@ -37,6 +37,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="deadLetterDestination")
     private @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
+    /**
+     * @return The DeadLetter destination of the event subscription.
+     * 
+     */
     public Optional<Output<StorageBlobDeadLetterDestinationArgs>> deadLetterDestination() {
         return Optional.ofNullable(this.deadLetterDestination);
     }
@@ -48,6 +52,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="destination")
     private @Nullable Output<Object> destination;
 
+    /**
+     * @return Information about the destination where events have to be delivered for the event subscription.
+     * 
+     */
     public Optional<Output<Object>> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -59,6 +67,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="eventDeliverySchema")
     private @Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema;
 
+    /**
+     * @return The event delivery schema for the event subscription.
+     * 
+     */
     public Optional<Output<Either<String,EventDeliverySchema>>> eventDeliverySchema() {
         return Optional.ofNullable(this.eventDeliverySchema);
     }
@@ -70,6 +82,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="eventSubscriptionName")
     private @Nullable Output<String> eventSubscriptionName;
 
+    /**
+     * @return Name of the event subscription. Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.
+     * 
+     */
     public Optional<Output<String>> eventSubscriptionName() {
         return Optional.ofNullable(this.eventSubscriptionName);
     }
@@ -81,6 +97,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="expirationTimeUtc")
     private @Nullable Output<String> expirationTimeUtc;
 
+    /**
+     * @return Expiration time of the event subscription.
+     * 
+     */
     public Optional<Output<String>> expirationTimeUtc() {
         return Optional.ofNullable(this.expirationTimeUtc);
     }
@@ -92,6 +112,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="filter")
     private @Nullable Output<EventSubscriptionFilterArgs> filter;
 
+    /**
+     * @return Information about the filter for the event subscription.
+     * 
+     */
     public Optional<Output<EventSubscriptionFilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -103,6 +127,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="labels")
     private @Nullable Output<List<String>> labels;
 
+    /**
+     * @return List of user defined labels.
+     * 
+     */
     public Optional<Output<List<String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -114,6 +142,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="retryPolicy")
     private @Nullable Output<RetryPolicyArgs> retryPolicy;
 
+    /**
+     * @return The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
+     * 
+     */
     public Optional<Output<RetryPolicyArgs>> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
@@ -125,6 +157,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return The identifier of the resource to which the event subscription needs to be created or updated. The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic. For example, use &#39;/subscriptions/{subscriptionId}/&#39; for a subscription, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for a resource group, and &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}&#39; for a resource, and &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}&#39; for an EventGrid topic.
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -161,95 +197,221 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
             $ = new EventSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deadLetterDestination The DeadLetter destination of the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterDestination(@Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination) {
             $.deadLetterDestination = deadLetterDestination;
             return this;
         }
 
+        /**
+         * @param deadLetterDestination The DeadLetter destination of the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterDestination(StorageBlobDeadLetterDestinationArgs deadLetterDestination) {
             return deadLetterDestination(Output.of(deadLetterDestination));
         }
 
+        /**
+         * @param destination Information about the destination where events have to be delivered for the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable Output<Object> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Information about the destination where events have to be delivered for the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(Object destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param eventDeliverySchema The event delivery schema for the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventDeliverySchema(@Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema) {
             $.eventDeliverySchema = eventDeliverySchema;
             return this;
         }
 
+        /**
+         * @param eventDeliverySchema The event delivery schema for the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventDeliverySchema(Either<String,EventDeliverySchema> eventDeliverySchema) {
             return eventDeliverySchema(Output.of(eventDeliverySchema));
         }
 
+        /**
+         * @param eventDeliverySchema The event delivery schema for the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventDeliverySchema(String eventDeliverySchema) {
             return eventDeliverySchema(Either.ofLeft(eventDeliverySchema));
         }
 
+        /**
+         * @param eventDeliverySchema The event delivery schema for the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventDeliverySchema(EventDeliverySchema eventDeliverySchema) {
             return eventDeliverySchema(Either.ofRight(eventDeliverySchema));
         }
 
+        /**
+         * @param eventSubscriptionName Name of the event subscription. Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSubscriptionName(@Nullable Output<String> eventSubscriptionName) {
             $.eventSubscriptionName = eventSubscriptionName;
             return this;
         }
 
+        /**
+         * @param eventSubscriptionName Name of the event subscription. Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSubscriptionName(String eventSubscriptionName) {
             return eventSubscriptionName(Output.of(eventSubscriptionName));
         }
 
+        /**
+         * @param expirationTimeUtc Expiration time of the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTimeUtc(@Nullable Output<String> expirationTimeUtc) {
             $.expirationTimeUtc = expirationTimeUtc;
             return this;
         }
 
+        /**
+         * @param expirationTimeUtc Expiration time of the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTimeUtc(String expirationTimeUtc) {
             return expirationTimeUtc(Output.of(expirationTimeUtc));
         }
 
+        /**
+         * @param filter Information about the filter for the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<EventSubscriptionFilterArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter Information about the filter for the event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(EventSubscriptionFilterArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param labels List of user defined labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<List<String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels List of user defined labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels List of user defined labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(String... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param retryPolicy The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
             $.retryPolicy = retryPolicy;
             return this;
         }
 
+        /**
+         * @param retryPolicy The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(RetryPolicyArgs retryPolicy) {
             return retryPolicy(Output.of(retryPolicy));
         }
 
+        /**
+         * @param scope The identifier of the resource to which the event subscription needs to be created or updated. The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic. For example, use &#39;/subscriptions/{subscriptionId}/&#39; for a subscription, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for a resource group, and &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}&#39; for a resource, and &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}&#39; for an EventGrid topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The identifier of the resource to which the event subscription needs to be created or updated. The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic. For example, use &#39;/subscriptions/{subscriptionId}/&#39; for a subscription, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for a resource group, and &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}&#39; for a resource, and &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}&#39; for an EventGrid topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }

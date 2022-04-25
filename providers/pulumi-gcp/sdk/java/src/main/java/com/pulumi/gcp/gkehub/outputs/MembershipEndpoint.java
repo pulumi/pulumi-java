@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MembershipEndpoint {
     /**
-     * If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
+     * @return If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
      * Structure is documented below.
      * 
      */
@@ -24,10 +24,10 @@ public final class MembershipEndpoint {
     }
 
     /**
-     * If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
+     * @return If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<MembershipEndpointGkeCluster> gkeCluster() {
         return Optional.ofNullable(this.gkeCluster);
     }

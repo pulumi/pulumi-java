@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PipelineSourceTriggerDescriptorResponse {
     /**
-     * The timestamp when the source update happened.
+     * @return The timestamp when the source update happened.
      * 
      */
     private final @Nullable String timestamp;
@@ -23,9 +23,9 @@ public final class PipelineSourceTriggerDescriptorResponse {
     }
 
     /**
-     * The timestamp when the source update happened.
+     * @return The timestamp when the source update happened.
      * 
-    */
+     */
     public Optional<String> timestamp() {
         return Optional.ofNullable(this.timestamp);
     }

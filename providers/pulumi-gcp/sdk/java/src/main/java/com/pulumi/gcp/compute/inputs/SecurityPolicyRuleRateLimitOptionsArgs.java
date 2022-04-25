@@ -27,6 +27,11 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
     @Import(name="banDurationSec")
     private @Nullable Output<Integer> banDurationSec;
 
+    /**
+     * @return Can only be specified if the `action` for the rule is &#34;rate_based_ban&#34;.
+     * If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
+     * 
+     */
     public Optional<Output<Integer>> banDurationSec() {
         return Optional.ofNullable(this.banDurationSec);
     }
@@ -40,6 +45,12 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
     @Import(name="banThreshold")
     private @Nullable Output<SecurityPolicyRuleRateLimitOptionsBanThresholdArgs> banThreshold;
 
+    /**
+     * @return Can only be specified if the `action` for the rule is &#34;rate_based_ban&#34;.
+     * If specified, the key will be banned for the configured &#39;ban_duration_sec&#39; when the number of requests that exceed the &#39;rate_limit_threshold&#39; also
+     * exceed this &#39;ban_threshold&#39;. Structure is documented below.
+     * 
+     */
     public Optional<Output<SecurityPolicyRuleRateLimitOptionsBanThresholdArgs>> banThreshold() {
         return Optional.ofNullable(this.banThreshold);
     }
@@ -51,6 +62,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
     @Import(name="conformAction", required=true)
     private Output<String> conformAction;
 
+    /**
+     * @return Action to take for requests that are under the configured rate limit threshold. Valid option is &#34;allow&#34; only.
+     * 
+     */
     public Output<String> conformAction() {
         return this.conformAction;
     }
@@ -63,6 +78,11 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
     @Import(name="enforceOnKey")
     private @Nullable Output<String> enforceOnKey;
 
+    /**
+     * @return Determines the key to enforce the rate_limit_threshold on.
+     * Possible values incude &#34;ALL&#34;, &#34;ALL_IPS&#34;, &#34;HTTP_HEADER&#34;, &#34;IP&#34;, &#34;XFF_IP&#34;. If not specified, defaults to &#34;ALL&#34;.
+     * 
+     */
     public Optional<Output<String>> enforceOnKey() {
         return Optional.ofNullable(this.enforceOnKey);
     }
@@ -74,6 +94,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
     @Import(name="enforceOnKeyName")
     private @Nullable Output<String> enforceOnKeyName;
 
+    /**
+     * @return Rate limit key name applicable only for HTTP_HEADER key types. Name of the HTTP header whose value is taken as the key value.
+     * 
+     */
     public Optional<Output<String>> enforceOnKeyName() {
         return Optional.ofNullable(this.enforceOnKeyName);
     }
@@ -86,6 +110,11 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
     @Import(name="exceedAction", required=true)
     private Output<String> exceedAction;
 
+    /**
+     * @return When a request is denied, returns the HTTP response code specified.
+     * Valid options are &#34;deny()&#34; where valid values for status are 403, 404, 429, and 502.
+     * 
+     */
     public Output<String> exceedAction() {
         return this.exceedAction;
     }
@@ -104,6 +133,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
     @Import(name="rateLimitThreshold", required=true)
     private Output<SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs> rateLimitThreshold;
 
+    /**
+     * @return Threshold at which to begin ratelimiting. Structure is documented below.
+     * 
+     */
     public Output<SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs> rateLimitThreshold() {
         return this.rateLimitThreshold;
     }
@@ -139,56 +172,138 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
             $ = new SecurityPolicyRuleRateLimitOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param banDurationSec Can only be specified if the `action` for the rule is &#34;rate_based_ban&#34;.
+         * If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder banDurationSec(@Nullable Output<Integer> banDurationSec) {
             $.banDurationSec = banDurationSec;
             return this;
         }
 
+        /**
+         * @param banDurationSec Can only be specified if the `action` for the rule is &#34;rate_based_ban&#34;.
+         * If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder banDurationSec(Integer banDurationSec) {
             return banDurationSec(Output.of(banDurationSec));
         }
 
+        /**
+         * @param banThreshold Can only be specified if the `action` for the rule is &#34;rate_based_ban&#34;.
+         * If specified, the key will be banned for the configured &#39;ban_duration_sec&#39; when the number of requests that exceed the &#39;rate_limit_threshold&#39; also
+         * exceed this &#39;ban_threshold&#39;. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder banThreshold(@Nullable Output<SecurityPolicyRuleRateLimitOptionsBanThresholdArgs> banThreshold) {
             $.banThreshold = banThreshold;
             return this;
         }
 
+        /**
+         * @param banThreshold Can only be specified if the `action` for the rule is &#34;rate_based_ban&#34;.
+         * If specified, the key will be banned for the configured &#39;ban_duration_sec&#39; when the number of requests that exceed the &#39;rate_limit_threshold&#39; also
+         * exceed this &#39;ban_threshold&#39;. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder banThreshold(SecurityPolicyRuleRateLimitOptionsBanThresholdArgs banThreshold) {
             return banThreshold(Output.of(banThreshold));
         }
 
+        /**
+         * @param conformAction Action to take for requests that are under the configured rate limit threshold. Valid option is &#34;allow&#34; only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conformAction(Output<String> conformAction) {
             $.conformAction = conformAction;
             return this;
         }
 
+        /**
+         * @param conformAction Action to take for requests that are under the configured rate limit threshold. Valid option is &#34;allow&#34; only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conformAction(String conformAction) {
             return conformAction(Output.of(conformAction));
         }
 
+        /**
+         * @param enforceOnKey Determines the key to enforce the rate_limit_threshold on.
+         * Possible values incude &#34;ALL&#34;, &#34;ALL_IPS&#34;, &#34;HTTP_HEADER&#34;, &#34;IP&#34;, &#34;XFF_IP&#34;. If not specified, defaults to &#34;ALL&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforceOnKey(@Nullable Output<String> enforceOnKey) {
             $.enforceOnKey = enforceOnKey;
             return this;
         }
 
+        /**
+         * @param enforceOnKey Determines the key to enforce the rate_limit_threshold on.
+         * Possible values incude &#34;ALL&#34;, &#34;ALL_IPS&#34;, &#34;HTTP_HEADER&#34;, &#34;IP&#34;, &#34;XFF_IP&#34;. If not specified, defaults to &#34;ALL&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforceOnKey(String enforceOnKey) {
             return enforceOnKey(Output.of(enforceOnKey));
         }
 
+        /**
+         * @param enforceOnKeyName Rate limit key name applicable only for HTTP_HEADER key types. Name of the HTTP header whose value is taken as the key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforceOnKeyName(@Nullable Output<String> enforceOnKeyName) {
             $.enforceOnKeyName = enforceOnKeyName;
             return this;
         }
 
+        /**
+         * @param enforceOnKeyName Rate limit key name applicable only for HTTP_HEADER key types. Name of the HTTP header whose value is taken as the key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforceOnKeyName(String enforceOnKeyName) {
             return enforceOnKeyName(Output.of(enforceOnKeyName));
         }
 
+        /**
+         * @param exceedAction When a request is denied, returns the HTTP response code specified.
+         * Valid options are &#34;deny()&#34; where valid values for status are 403, 404, 429, and 502.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceedAction(Output<String> exceedAction) {
             $.exceedAction = exceedAction;
             return this;
         }
 
+        /**
+         * @param exceedAction When a request is denied, returns the HTTP response code specified.
+         * Valid options are &#34;deny()&#34; where valid values for status are 403, 404, 429, and 502.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceedAction(String exceedAction) {
             return exceedAction(Output.of(exceedAction));
         }
@@ -202,11 +317,23 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
             return exceedRedirectOptions(Output.of(exceedRedirectOptions));
         }
 
+        /**
+         * @param rateLimitThreshold Threshold at which to begin ratelimiting. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimitThreshold(Output<SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs> rateLimitThreshold) {
             $.rateLimitThreshold = rateLimitThreshold;
             return this;
         }
 
+        /**
+         * @param rateLimitThreshold Threshold at which to begin ratelimiting. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimitThreshold(SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs rateLimitThreshold) {
             return rateLimitThreshold(Output.of(rateLimitThreshold));
         }

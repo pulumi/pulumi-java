@@ -25,6 +25,10 @@ public final class TargetCostAllocationResourceResponse extends com.pulumi.resou
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -36,6 +40,10 @@ public final class TargetCostAllocationResourceResponse extends com.pulumi.resou
     @Import(name="policyType", required=true)
     private String policyType;
 
+    /**
+     * @return Method of cost allocation for the rule
+     * 
+     */
     public String policyType() {
         return this.policyType;
     }
@@ -47,6 +55,10 @@ public final class TargetCostAllocationResourceResponse extends com.pulumi.resou
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return Type of resources contained in this cost allocation rule
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -58,6 +70,10 @@ public final class TargetCostAllocationResourceResponse extends com.pulumi.resou
     @Import(name="values", required=true)
     private List<CostAllocationProportionResponse> values;
 
+    /**
+     * @return Target resources for cost allocation. This list cannot contain more than 25 values.
+     * 
+     */
     public List<CostAllocationProportionResponse> values() {
         return this.values;
     }
@@ -89,26 +105,56 @@ public final class TargetCostAllocationResourceResponse extends com.pulumi.resou
             $ = new TargetCostAllocationResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param policyType Method of cost allocation for the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(String policyType) {
             $.policyType = policyType;
             return this;
         }
 
+        /**
+         * @param resourceType Type of resources contained in this cost allocation rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param values Target resources for cost allocation. This list cannot contain more than 25 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<CostAllocationProportionResponse> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Target resources for cost allocation. This list cannot contain more than 25 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(CostAllocationProportionResponse... values) {
             return values(List.of(values));
         }

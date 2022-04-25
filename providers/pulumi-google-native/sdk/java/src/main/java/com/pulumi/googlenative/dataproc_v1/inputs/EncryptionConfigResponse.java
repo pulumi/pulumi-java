@@ -23,6 +23,10 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="gcePdKmsKeyName", required=true)
     private String gcePdKmsKeyName;
 
+    /**
+     * @return Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
+     * 
+     */
     public String gcePdKmsKeyName() {
         return this.gcePdKmsKeyName;
     }
@@ -51,6 +55,12 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
             $ = new EncryptionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gcePdKmsKeyName Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcePdKmsKeyName(String gcePdKmsKeyName) {
             $.gcePdKmsKeyName = gcePdKmsKeyName;
             return this;

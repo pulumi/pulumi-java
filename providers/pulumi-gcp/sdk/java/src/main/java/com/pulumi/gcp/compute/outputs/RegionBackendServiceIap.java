@@ -12,18 +12,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionBackendServiceIap {
     /**
-     * OAuth2 Client ID for IAP
+     * @return OAuth2 Client ID for IAP
      * 
      */
     private final String oauth2ClientId;
     /**
-     * OAuth2 Client Secret for IAP
+     * @return OAuth2 Client Secret for IAP
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
     private final String oauth2ClientSecret;
     /**
-     * - 
+     * @return -
      * OAuth2 Client Secret SHA-256 for IAP
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
@@ -41,26 +41,26 @@ public final class RegionBackendServiceIap {
     }
 
     /**
-     * OAuth2 Client ID for IAP
+     * @return OAuth2 Client ID for IAP
      * 
-    */
+     */
     public String oauth2ClientId() {
         return this.oauth2ClientId;
     }
     /**
-     * OAuth2 Client Secret for IAP
+     * @return OAuth2 Client Secret for IAP
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
-    */
+     */
     public String oauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
     /**
-     * - 
+     * @return -
      * OAuth2 Client Secret SHA-256 for IAP
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
-    */
+     */
     public Optional<String> oauth2ClientSecretSha256() {
         return Optional.ofNullable(this.oauth2ClientSecretSha256);
     }

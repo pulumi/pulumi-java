@@ -24,6 +24,10 @@ public final class GoogleCloudRunOpV2VolumeMountArgs extends com.pulumi.resource
     @Import(name="mountPath", required=true)
     private Output<String> mountPath;
 
+    /**
+     * @return Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;. For Cloud SQL volumes, it can be left empty, or must otherwise be `/cloudsql`. All instances defined in the Volume will be available as `/cloudsql/[instance]`. For more information on Cloud SQL volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run
+     * 
+     */
     public Output<String> mountPath() {
         return this.mountPath;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudRunOpV2VolumeMountArgs extends com.pulumi.resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return This must match the Name of a Volume.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -64,20 +72,44 @@ public final class GoogleCloudRunOpV2VolumeMountArgs extends com.pulumi.resource
             $ = new GoogleCloudRunOpV2VolumeMountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mountPath Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;. For Cloud SQL volumes, it can be left empty, or must otherwise be `/cloudsql`. All instances defined in the Volume will be available as `/cloudsql/[instance]`. For more information on Cloud SQL volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(Output<String> mountPath) {
             $.mountPath = mountPath;
             return this;
         }
 
+        /**
+         * @param mountPath Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;. For Cloud SQL volumes, it can be left empty, or must otherwise be `/cloudsql`. All instances defined in the Volume will be available as `/cloudsql/[instance]`. For more information on Cloud SQL volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(String mountPath) {
             return mountPath(Output.of(mountPath));
         }
 
+        /**
+         * @param name This must match the Name of a Volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name This must match the Name of a Volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -19,6 +19,10 @@ public final class GetQuickConnectQuickConnectConfigUserConfig extends com.pulum
     @Import(name="contactFlowId", required=true)
     private String contactFlowId;
 
+    /**
+     * @return Specifies the identifier of the contact flow.
+     * 
+     */
     public String contactFlowId() {
         return this.contactFlowId;
     }
@@ -30,6 +34,10 @@ public final class GetQuickConnectQuickConnectConfigUserConfig extends com.pulum
     @Import(name="userId", required=true)
     private String userId;
 
+    /**
+     * @return Specifies the identifier for the user.
+     * 
+     */
     public String userId() {
         return this.userId;
     }
@@ -59,11 +67,23 @@ public final class GetQuickConnectQuickConnectConfigUserConfig extends com.pulum
             $ = new GetQuickConnectQuickConnectConfigUserConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactFlowId Specifies the identifier of the contact flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactFlowId(String contactFlowId) {
             $.contactFlowId = contactFlowId;
             return this;
         }
 
+        /**
+         * @param userId Specifies the identifier for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             $.userId = userId;
             return this;

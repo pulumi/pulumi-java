@@ -23,6 +23,10 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends c
     @Import(name="ipRange", required=true)
     private String ipRange;
 
+    /**
+     * @return The IP address range of the public delegated prefix
+     * 
+     */
     public String ipRange() {
         return this.ipRange;
     }
@@ -34,6 +38,10 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends c
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the public delegated prefix
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends c
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return The project number of the public delegated prefix
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -56,6 +68,10 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends c
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return The region of the public delegated prefix if it is regional. If absent, the prefix is global.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -67,6 +83,10 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends c
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of the public delegated prefix. Possible values are: INITIALIZING: The public delegated prefix is being initialized and addresses cannot be created yet. ANNOUNCED: The public delegated prefix is active.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -99,26 +119,56 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends c
             $ = new PublicAdvertisedPrefixPublicDelegatedPrefixResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipRange The IP address range of the public delegated prefix
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRange(String ipRange) {
             $.ipRange = ipRange;
             return this;
         }
 
+        /**
+         * @param name The name of the public delegated prefix
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param project The project number of the public delegated prefix
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param region The region of the public delegated prefix if it is regional. If absent, the prefix is global.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param status The status of the public delegated prefix. Possible values are: INITIALIZING: The public delegated prefix is being initialized and addresses cannot be created yet. ANNOUNCED: The public delegated prefix is active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

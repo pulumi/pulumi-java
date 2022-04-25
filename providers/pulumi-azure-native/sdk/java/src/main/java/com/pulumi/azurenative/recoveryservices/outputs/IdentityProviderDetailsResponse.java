@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IdentityProviderDetailsResponse {
     /**
-     * The base authority for Azure Active Directory authentication.
+     * @return The base authority for Azure Active Directory authentication.
      * 
      */
     private final @Nullable String aadAuthority;
     /**
-     * The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * @return The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
     private final @Nullable String applicationId;
     /**
-     * The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * @return The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
     private final @Nullable String audience;
     /**
-     * The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * @return The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
     private final @Nullable String objectId;
     /**
-     * The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * @return The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
     private final @Nullable String tenantId;
@@ -52,37 +52,37 @@ public final class IdentityProviderDetailsResponse {
     }
 
     /**
-     * The base authority for Azure Active Directory authentication.
+     * @return The base authority for Azure Active Directory authentication.
      * 
-    */
+     */
     public Optional<String> aadAuthority() {
         return Optional.ofNullable(this.aadAuthority);
     }
     /**
-     * The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * @return The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
-    */
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
-     * The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * @return The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
-    */
+     */
     public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
     /**
-     * The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * @return The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
-    */
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
-     * The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * @return The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }

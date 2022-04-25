@@ -30,6 +30,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="allowedScenarios")
     private @Nullable List<String> allowedScenarios;
 
+    /**
+     * @return The scenarios allowed on this provider.
+     * 
+     */
     public Optional<List<String>> allowedScenarios() {
         return Optional.ofNullable(this.allowedScenarios);
     }
@@ -41,6 +45,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="authenticationIdentityDetails")
     private @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails;
 
+    /**
+     * @return The authentication identity details.
+     * 
+     */
     public Optional<IdentityProviderDetailsResponse> authenticationIdentityDetails() {
         return Optional.ofNullable(this.authenticationIdentityDetails);
     }
@@ -52,6 +60,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="connectionStatus")
     private @Nullable String connectionStatus;
 
+    /**
+     * @return A value indicating whether DRA is responsive.
+     * 
+     */
     public Optional<String> connectionStatus() {
         return Optional.ofNullable(this.connectionStatus);
     }
@@ -63,6 +75,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="draIdentifier")
     private @Nullable String draIdentifier;
 
+    /**
+     * @return The DRA Id.
+     * 
+     */
     public Optional<String> draIdentifier() {
         return Optional.ofNullable(this.draIdentifier);
     }
@@ -74,6 +90,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="fabricFriendlyName")
     private @Nullable String fabricFriendlyName;
 
+    /**
+     * @return The fabric friendly name.
+     * 
+     */
     public Optional<String> fabricFriendlyName() {
         return Optional.ofNullable(this.fabricFriendlyName);
     }
@@ -85,6 +105,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="fabricType")
     private @Nullable String fabricType;
 
+    /**
+     * @return Type of the site.
+     * 
+     */
     public Optional<String> fabricType() {
         return Optional.ofNullable(this.fabricType);
     }
@@ -96,6 +120,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return Friendly name of the DRA.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -107,6 +135,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="healthErrorDetails")
     private @Nullable List<HealthErrorResponse> healthErrorDetails;
 
+    /**
+     * @return The recovery services provider health error details.
+     * 
+     */
     public Optional<List<HealthErrorResponse>> healthErrorDetails() {
         return Optional.ofNullable(this.healthErrorDetails);
     }
@@ -118,6 +150,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="lastHeartBeat")
     private @Nullable String lastHeartBeat;
 
+    /**
+     * @return Time when last heartbeat was sent by the DRA.
+     * 
+     */
     public Optional<String> lastHeartBeat() {
         return Optional.ofNullable(this.lastHeartBeat);
     }
@@ -129,6 +165,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="protectedItemCount")
     private @Nullable Integer protectedItemCount;
 
+    /**
+     * @return Number of protected VMs currently managed by the DRA.
+     * 
+     */
     public Optional<Integer> protectedItemCount() {
         return Optional.ofNullable(this.protectedItemCount);
     }
@@ -140,6 +180,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="providerVersion")
     private @Nullable String providerVersion;
 
+    /**
+     * @return The provider version.
+     * 
+     */
     public Optional<String> providerVersion() {
         return Optional.ofNullable(this.providerVersion);
     }
@@ -151,6 +195,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="providerVersionDetails")
     private @Nullable VersionDetailsResponse providerVersionDetails;
 
+    /**
+     * @return The provider version details.
+     * 
+     */
     public Optional<VersionDetailsResponse> providerVersionDetails() {
         return Optional.ofNullable(this.providerVersionDetails);
     }
@@ -162,6 +210,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="providerVersionExpiryDate")
     private @Nullable String providerVersionExpiryDate;
 
+    /**
+     * @return Expiry date of the version.
+     * 
+     */
     public Optional<String> providerVersionExpiryDate() {
         return Optional.ofNullable(this.providerVersionExpiryDate);
     }
@@ -173,6 +225,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="providerVersionState")
     private @Nullable String providerVersionState;
 
+    /**
+     * @return DRA version status.
+     * 
+     */
     public Optional<String> providerVersionState() {
         return Optional.ofNullable(this.providerVersionState);
     }
@@ -184,6 +240,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="resourceAccessIdentityDetails")
     private @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails;
 
+    /**
+     * @return The resource access identity details.
+     * 
+     */
     public Optional<IdentityProviderDetailsResponse> resourceAccessIdentityDetails() {
         return Optional.ofNullable(this.resourceAccessIdentityDetails);
     }
@@ -195,6 +255,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
     @Import(name="serverVersion")
     private @Nullable String serverVersion;
 
+    /**
+     * @return The fabric provider.
+     * 
+     */
     public Optional<String> serverVersion() {
         return Optional.ofNullable(this.serverVersion);
     }
@@ -238,89 +302,197 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
             $ = new RecoveryServicesProviderPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedScenarios The scenarios allowed on this provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedScenarios(@Nullable List<String> allowedScenarios) {
             $.allowedScenarios = allowedScenarios;
             return this;
         }
 
+        /**
+         * @param allowedScenarios The scenarios allowed on this provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedScenarios(String... allowedScenarios) {
             return allowedScenarios(List.of(allowedScenarios));
         }
 
+        /**
+         * @param authenticationIdentityDetails The authentication identity details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationIdentityDetails(@Nullable IdentityProviderDetailsResponse authenticationIdentityDetails) {
             $.authenticationIdentityDetails = authenticationIdentityDetails;
             return this;
         }
 
+        /**
+         * @param connectionStatus A value indicating whether DRA is responsive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionStatus(@Nullable String connectionStatus) {
             $.connectionStatus = connectionStatus;
             return this;
         }
 
+        /**
+         * @param draIdentifier The DRA Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder draIdentifier(@Nullable String draIdentifier) {
             $.draIdentifier = draIdentifier;
             return this;
         }
 
+        /**
+         * @param fabricFriendlyName The fabric friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricFriendlyName(@Nullable String fabricFriendlyName) {
             $.fabricFriendlyName = fabricFriendlyName;
             return this;
         }
 
+        /**
+         * @param fabricType Type of the site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricType(@Nullable String fabricType) {
             $.fabricType = fabricType;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of the DRA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param healthErrorDetails The recovery services provider health error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
             $.healthErrorDetails = healthErrorDetails;
             return this;
         }
 
+        /**
+         * @param healthErrorDetails The recovery services provider health error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrorDetails(HealthErrorResponse... healthErrorDetails) {
             return healthErrorDetails(List.of(healthErrorDetails));
         }
 
+        /**
+         * @param lastHeartBeat Time when last heartbeat was sent by the DRA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartBeat(@Nullable String lastHeartBeat) {
             $.lastHeartBeat = lastHeartBeat;
             return this;
         }
 
+        /**
+         * @param protectedItemCount Number of protected VMs currently managed by the DRA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemCount(@Nullable Integer protectedItemCount) {
             $.protectedItemCount = protectedItemCount;
             return this;
         }
 
+        /**
+         * @param providerVersion The provider version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerVersion(@Nullable String providerVersion) {
             $.providerVersion = providerVersion;
             return this;
         }
 
+        /**
+         * @param providerVersionDetails The provider version details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerVersionDetails(@Nullable VersionDetailsResponse providerVersionDetails) {
             $.providerVersionDetails = providerVersionDetails;
             return this;
         }
 
+        /**
+         * @param providerVersionExpiryDate Expiry date of the version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerVersionExpiryDate(@Nullable String providerVersionExpiryDate) {
             $.providerVersionExpiryDate = providerVersionExpiryDate;
             return this;
         }
 
+        /**
+         * @param providerVersionState DRA version status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerVersionState(@Nullable String providerVersionState) {
             $.providerVersionState = providerVersionState;
             return this;
         }
 
+        /**
+         * @param resourceAccessIdentityDetails The resource access identity details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAccessIdentityDetails(@Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails) {
             $.resourceAccessIdentityDetails = resourceAccessIdentityDetails;
             return this;
         }
 
+        /**
+         * @param serverVersion The fabric provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverVersion(@Nullable String serverVersion) {
             $.serverVersion = serverVersion;
             return this;

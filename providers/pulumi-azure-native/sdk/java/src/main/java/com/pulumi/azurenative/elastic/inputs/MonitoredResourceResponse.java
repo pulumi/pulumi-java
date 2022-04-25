@@ -25,6 +25,10 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ARM id of the resource.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="reasonForLogsStatus")
     private @Nullable String reasonForLogsStatus;
 
+    /**
+     * @return Reason for why the resource is sending logs (or why it is not sending).
+     * 
+     */
     public Optional<String> reasonForLogsStatus() {
         return Optional.ofNullable(this.reasonForLogsStatus);
     }
@@ -47,6 +55,10 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="sendingLogs")
     private @Nullable String sendingLogs;
 
+    /**
+     * @return Flag indicating the status of the resource for sending logs operation to Elastic.
+     * 
+     */
     public Optional<String> sendingLogs() {
         return Optional.ofNullable(this.sendingLogs);
     }
@@ -77,16 +89,34 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
             $ = new MonitoredResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ARM id of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param reasonForLogsStatus Reason for why the resource is sending logs (or why it is not sending).
+         * 
+         * @return builder
+         * 
+         */
         public Builder reasonForLogsStatus(@Nullable String reasonForLogsStatus) {
             $.reasonForLogsStatus = reasonForLogsStatus;
             return this;
         }
 
+        /**
+         * @param sendingLogs Flag indicating the status of the resource for sending logs operation to Elastic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendingLogs(@Nullable String sendingLogs) {
             $.sendingLogs = sendingLogs;
             return this;

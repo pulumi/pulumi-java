@@ -20,6 +20,10 @@ public final class RouterBgpPeerBfdResponse extends com.pulumi.resources.InvokeA
     @Import(name="minReceiveInterval", required=true)
     private Integer minReceiveInterval;
 
+    /**
+     * @return The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.
+     * 
+     */
     public Integer minReceiveInterval() {
         return this.minReceiveInterval;
     }
@@ -31,6 +35,10 @@ public final class RouterBgpPeerBfdResponse extends com.pulumi.resources.InvokeA
     @Import(name="minTransmitInterval", required=true)
     private Integer minTransmitInterval;
 
+    /**
+     * @return The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.
+     * 
+     */
     public Integer minTransmitInterval() {
         return this.minTransmitInterval;
     }
@@ -42,6 +50,10 @@ public final class RouterBgpPeerBfdResponse extends com.pulumi.resources.InvokeA
     @Import(name="multiplier", required=true)
     private Integer multiplier;
 
+    /**
+     * @return The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. If set, the value must be a value between 5 and 16. The default is 5.
+     * 
+     */
     public Integer multiplier() {
         return this.multiplier;
     }
@@ -53,6 +65,10 @@ public final class RouterBgpPeerBfdResponse extends com.pulumi.resources.InvokeA
     @Import(name="sessionInitializationMode", required=true)
     private String sessionInitializationMode;
 
+    /**
+     * @return The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.
+     * 
+     */
     public String sessionInitializationMode() {
         return this.sessionInitializationMode;
     }
@@ -84,21 +100,45 @@ public final class RouterBgpPeerBfdResponse extends com.pulumi.resources.InvokeA
             $ = new RouterBgpPeerBfdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minReceiveInterval The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReceiveInterval(Integer minReceiveInterval) {
             $.minReceiveInterval = minReceiveInterval;
             return this;
         }
 
+        /**
+         * @param minTransmitInterval The minimum interval, in milliseconds, between BFD control packets transmitted to the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the corresponding receive interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTransmitInterval(Integer minTransmitInterval) {
             $.minTransmitInterval = minTransmitInterval;
             return this;
         }
 
+        /**
+         * @param multiplier The number of consecutive BFD packets that must be missed before BFD declares that a peer is unavailable. If set, the value must be a value between 5 and 16. The default is 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiplier(Integer multiplier) {
             $.multiplier = multiplier;
             return this;
         }
 
+        /**
+         * @param sessionInitializationMode The BFD session initialization mode for this BGP peer. If set to ACTIVE, the Cloud Router will initiate the BFD session for this BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is disabled for this BGP peer. The default is PASSIVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionInitializationMode(String sessionInitializationMode) {
             $.sessionInitializationMode = sessionInitializationMode;
             return this;

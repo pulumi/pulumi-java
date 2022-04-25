@@ -31,6 +31,10 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="backupScheduleType")
     private @Nullable Output<Either<String,BackupScheduleType>> backupScheduleType;
 
+    /**
+     * @return Backup schedule type.
+     * 
+     */
     public Optional<Output<Either<String,BackupScheduleType>>> backupScheduleType() {
         return Optional.ofNullable(this.backupScheduleType);
     }
@@ -42,6 +46,10 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="backupSystemDbs")
     private @Nullable Output<Boolean> backupSystemDbs;
 
+    /**
+     * @return Include or exclude system databases from auto backup.
+     * 
+     */
     public Optional<Output<Boolean>> backupSystemDbs() {
         return Optional.ofNullable(this.backupSystemDbs);
     }
@@ -53,6 +61,10 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return Enable or disable autobackup on SQL virtual machine.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -64,6 +76,10 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="enableEncryption")
     private @Nullable Output<Boolean> enableEncryption;
 
+    /**
+     * @return Enable or disable encryption for backup on SQL virtual machine.
+     * 
+     */
     public Optional<Output<Boolean>> enableEncryption() {
         return Optional.ofNullable(this.enableEncryption);
     }
@@ -75,6 +91,10 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="fullBackupFrequency")
     private @Nullable Output<Either<String,FullBackupFrequencyType>> fullBackupFrequency;
 
+    /**
+     * @return Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
+     * 
+     */
     public Optional<Output<Either<String,FullBackupFrequencyType>>> fullBackupFrequency() {
         return Optional.ofNullable(this.fullBackupFrequency);
     }
@@ -86,6 +106,10 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="fullBackupStartTime")
     private @Nullable Output<Integer> fullBackupStartTime;
 
+    /**
+     * @return Start time of a given day during which full backups can take place. 0-23 hours.
+     * 
+     */
     public Optional<Output<Integer>> fullBackupStartTime() {
         return Optional.ofNullable(this.fullBackupStartTime);
     }
@@ -97,6 +121,10 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="fullBackupWindowHours")
     private @Nullable Output<Integer> fullBackupWindowHours;
 
+    /**
+     * @return Duration of the time window of a given day during which full backups can take place. 1-23 hours.
+     * 
+     */
     public Optional<Output<Integer>> fullBackupWindowHours() {
         return Optional.ofNullable(this.fullBackupWindowHours);
     }
@@ -108,6 +136,10 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="logBackupFrequency")
     private @Nullable Output<Integer> logBackupFrequency;
 
+    /**
+     * @return Frequency of log backups. 5-60 minutes.
+     * 
+     */
     public Optional<Output<Integer>> logBackupFrequency() {
         return Optional.ofNullable(this.logBackupFrequency);
     }
@@ -119,6 +151,10 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Password for encryption on backup.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -130,6 +166,10 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="retentionPeriod")
     private @Nullable Output<Integer> retentionPeriod;
 
+    /**
+     * @return Retention period of backup: 1-30 days.
+     * 
+     */
     public Optional<Output<Integer>> retentionPeriod() {
         return Optional.ofNullable(this.retentionPeriod);
     }
@@ -141,6 +181,10 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="storageAccessKey")
     private @Nullable Output<String> storageAccessKey;
 
+    /**
+     * @return Storage account key where backup will be taken to.
+     * 
+     */
     public Optional<Output<String>> storageAccessKey() {
         return Optional.ofNullable(this.storageAccessKey);
     }
@@ -152,6 +196,10 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="storageAccountUrl")
     private @Nullable Output<String> storageAccountUrl;
 
+    /**
+     * @return Storage account url where backup will be taken to.
+     * 
+     */
     public Optional<Output<String>> storageAccountUrl() {
         return Optional.ofNullable(this.storageAccountUrl);
     }
@@ -191,126 +239,294 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
             $ = new AutoBackupSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupScheduleType Backup schedule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupScheduleType(@Nullable Output<Either<String,BackupScheduleType>> backupScheduleType) {
             $.backupScheduleType = backupScheduleType;
             return this;
         }
 
+        /**
+         * @param backupScheduleType Backup schedule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupScheduleType(Either<String,BackupScheduleType> backupScheduleType) {
             return backupScheduleType(Output.of(backupScheduleType));
         }
 
+        /**
+         * @param backupScheduleType Backup schedule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupScheduleType(String backupScheduleType) {
             return backupScheduleType(Either.ofLeft(backupScheduleType));
         }
 
+        /**
+         * @param backupScheduleType Backup schedule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupScheduleType(BackupScheduleType backupScheduleType) {
             return backupScheduleType(Either.ofRight(backupScheduleType));
         }
 
+        /**
+         * @param backupSystemDbs Include or exclude system databases from auto backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupSystemDbs(@Nullable Output<Boolean> backupSystemDbs) {
             $.backupSystemDbs = backupSystemDbs;
             return this;
         }
 
+        /**
+         * @param backupSystemDbs Include or exclude system databases from auto backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupSystemDbs(Boolean backupSystemDbs) {
             return backupSystemDbs(Output.of(backupSystemDbs));
         }
 
+        /**
+         * @param enable Enable or disable autobackup on SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable Enable or disable autobackup on SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param enableEncryption Enable or disable encryption for backup on SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableEncryption(@Nullable Output<Boolean> enableEncryption) {
             $.enableEncryption = enableEncryption;
             return this;
         }
 
+        /**
+         * @param enableEncryption Enable or disable encryption for backup on SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableEncryption(Boolean enableEncryption) {
             return enableEncryption(Output.of(enableEncryption));
         }
 
+        /**
+         * @param fullBackupFrequency Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullBackupFrequency(@Nullable Output<Either<String,FullBackupFrequencyType>> fullBackupFrequency) {
             $.fullBackupFrequency = fullBackupFrequency;
             return this;
         }
 
+        /**
+         * @param fullBackupFrequency Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullBackupFrequency(Either<String,FullBackupFrequencyType> fullBackupFrequency) {
             return fullBackupFrequency(Output.of(fullBackupFrequency));
         }
 
+        /**
+         * @param fullBackupFrequency Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullBackupFrequency(String fullBackupFrequency) {
             return fullBackupFrequency(Either.ofLeft(fullBackupFrequency));
         }
 
+        /**
+         * @param fullBackupFrequency Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullBackupFrequency(FullBackupFrequencyType fullBackupFrequency) {
             return fullBackupFrequency(Either.ofRight(fullBackupFrequency));
         }
 
+        /**
+         * @param fullBackupStartTime Start time of a given day during which full backups can take place. 0-23 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullBackupStartTime(@Nullable Output<Integer> fullBackupStartTime) {
             $.fullBackupStartTime = fullBackupStartTime;
             return this;
         }
 
+        /**
+         * @param fullBackupStartTime Start time of a given day during which full backups can take place. 0-23 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullBackupStartTime(Integer fullBackupStartTime) {
             return fullBackupStartTime(Output.of(fullBackupStartTime));
         }
 
+        /**
+         * @param fullBackupWindowHours Duration of the time window of a given day during which full backups can take place. 1-23 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullBackupWindowHours(@Nullable Output<Integer> fullBackupWindowHours) {
             $.fullBackupWindowHours = fullBackupWindowHours;
             return this;
         }
 
+        /**
+         * @param fullBackupWindowHours Duration of the time window of a given day during which full backups can take place. 1-23 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullBackupWindowHours(Integer fullBackupWindowHours) {
             return fullBackupWindowHours(Output.of(fullBackupWindowHours));
         }
 
+        /**
+         * @param logBackupFrequency Frequency of log backups. 5-60 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logBackupFrequency(@Nullable Output<Integer> logBackupFrequency) {
             $.logBackupFrequency = logBackupFrequency;
             return this;
         }
 
+        /**
+         * @param logBackupFrequency Frequency of log backups. 5-60 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logBackupFrequency(Integer logBackupFrequency) {
             return logBackupFrequency(Output.of(logBackupFrequency));
         }
 
+        /**
+         * @param password Password for encryption on backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for encryption on backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param retentionPeriod Retention period of backup: 1-30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPeriod(@Nullable Output<Integer> retentionPeriod) {
             $.retentionPeriod = retentionPeriod;
             return this;
         }
 
+        /**
+         * @param retentionPeriod Retention period of backup: 1-30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPeriod(Integer retentionPeriod) {
             return retentionPeriod(Output.of(retentionPeriod));
         }
 
+        /**
+         * @param storageAccessKey Storage account key where backup will be taken to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccessKey(@Nullable Output<String> storageAccessKey) {
             $.storageAccessKey = storageAccessKey;
             return this;
         }
 
+        /**
+         * @param storageAccessKey Storage account key where backup will be taken to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccessKey(String storageAccessKey) {
             return storageAccessKey(Output.of(storageAccessKey));
         }
 
+        /**
+         * @param storageAccountUrl Storage account url where backup will be taken to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountUrl(@Nullable Output<String> storageAccountUrl) {
             $.storageAccountUrl = storageAccountUrl;
             return this;
         }
 
+        /**
+         * @param storageAccountUrl Storage account url where backup will be taken to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountUrl(String storageAccountUrl) {
             return storageAccountUrl(Output.of(storageAccountUrl));
         }

@@ -13,18 +13,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd {
     /**
-     * Headers to remove from the response prior to sending it back to the client.
+     * @return Headers to remove from the response prior to sending it back to the client.
      * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
      * 
      */
     private final String headerName;
     /**
-     * The value of the header to add.
+     * @return The value of the header to add.
      * 
      */
     private final String headerValue;
     /**
-     * Whether to replace all existing headers with the same name.
+     * @return Whether to replace all existing headers with the same name.
      * 
      */
     private final @Nullable Boolean replace;
@@ -40,24 +40,24 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
     }
 
     /**
-     * Headers to remove from the response prior to sending it back to the client.
+     * @return Headers to remove from the response prior to sending it back to the client.
      * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
      * 
-    */
+     */
     public String headerName() {
         return this.headerName;
     }
     /**
-     * The value of the header to add.
+     * @return The value of the header to add.
      * 
-    */
+     */
     public String headerValue() {
         return this.headerValue;
     }
     /**
-     * Whether to replace all existing headers with the same name.
+     * @return Whether to replace all existing headers with the same name.
      * 
-    */
+     */
     public Optional<Boolean> replace() {
         return Optional.ofNullable(this.replace);
     }

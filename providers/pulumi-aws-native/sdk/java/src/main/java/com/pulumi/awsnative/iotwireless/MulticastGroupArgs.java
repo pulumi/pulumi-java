@@ -25,6 +25,10 @@ public final class MulticastGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="associateWirelessDevice")
     private @Nullable Output<String> associateWirelessDevice;
 
+    /**
+     * @return Wireless device to associate. Only for update request.
+     * 
+     */
     public Optional<Output<String>> associateWirelessDevice() {
         return Optional.ofNullable(this.associateWirelessDevice);
     }
@@ -36,6 +40,10 @@ public final class MulticastGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Multicast group description
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class MulticastGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="disassociateWirelessDevice")
     private @Nullable Output<String> disassociateWirelessDevice;
 
+    /**
+     * @return Wireless device to disassociate. Only for update request.
+     * 
+     */
     public Optional<Output<String>> disassociateWirelessDevice() {
         return Optional.ofNullable(this.disassociateWirelessDevice);
     }
@@ -58,6 +70,10 @@ public final class MulticastGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="loRaWAN", required=true)
     private Output<MulticastGroupLoRaWANArgs> loRaWAN;
 
+    /**
+     * @return Multicast group LoRaWAN
+     * 
+     */
     public Output<MulticastGroupLoRaWANArgs> loRaWAN() {
         return this.loRaWAN;
     }
@@ -69,6 +85,10 @@ public final class MulticastGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of Multicast group
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class MulticastGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<List<MulticastGroupTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the Multicast group.
+     * 
+     */
     public Optional<Output<List<MulticastGroupTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,60 +137,138 @@ public final class MulticastGroupArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MulticastGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associateWirelessDevice Wireless device to associate. Only for update request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associateWirelessDevice(@Nullable Output<String> associateWirelessDevice) {
             $.associateWirelessDevice = associateWirelessDevice;
             return this;
         }
 
+        /**
+         * @param associateWirelessDevice Wireless device to associate. Only for update request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associateWirelessDevice(String associateWirelessDevice) {
             return associateWirelessDevice(Output.of(associateWirelessDevice));
         }
 
+        /**
+         * @param description Multicast group description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Multicast group description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param disassociateWirelessDevice Wireless device to disassociate. Only for update request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disassociateWirelessDevice(@Nullable Output<String> disassociateWirelessDevice) {
             $.disassociateWirelessDevice = disassociateWirelessDevice;
             return this;
         }
 
+        /**
+         * @param disassociateWirelessDevice Wireless device to disassociate. Only for update request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disassociateWirelessDevice(String disassociateWirelessDevice) {
             return disassociateWirelessDevice(Output.of(disassociateWirelessDevice));
         }
 
+        /**
+         * @param loRaWAN Multicast group LoRaWAN
+         * 
+         * @return builder
+         * 
+         */
         public Builder loRaWAN(Output<MulticastGroupLoRaWANArgs> loRaWAN) {
             $.loRaWAN = loRaWAN;
             return this;
         }
 
+        /**
+         * @param loRaWAN Multicast group LoRaWAN
+         * 
+         * @return builder
+         * 
+         */
         public Builder loRaWAN(MulticastGroupLoRaWANArgs loRaWAN) {
             return loRaWAN(Output.of(loRaWAN));
         }
 
+        /**
+         * @param name Name of Multicast group
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of Multicast group
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the Multicast group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<MulticastGroupTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the Multicast group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<MulticastGroupTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the Multicast group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(MulticastGroupTagArgs... tags) {
             return tags(List.of(tags));
         }

@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AccessLevelsAccessLevel {
     /**
-     * A set of predefined conditions for the access level and a combining function.
+     * @return A set of predefined conditions for the access level and a combining function.
      * Structure is documented below.
      * 
      */
     private final @Nullable AccessLevelsAccessLevelBasic basic;
     /**
-     * Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+     * @return Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
      * See CEL spec at: https://github.com/google/cel-spec.
      * Structure is documented below.
      * 
      */
     private final @Nullable AccessLevelsAccessLevelCustom custom;
     /**
-     * Description of the expression
+     * @return Description of the expression
      * 
      */
     private final @Nullable String description;
     /**
-     * Resource name for the Access Level. The short_name component must begin
+     * @return Resource name for the Access Level. The short_name component must begin
      * with a letter and only include alphanumeric and &#39;_&#39;.
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
      */
     private final String name;
     /**
-     * Title for the expression, i.e. a short string describing its purpose.
+     * @return Title for the expression, i.e. a short string describing its purpose.
      * 
      */
     private final String title;
@@ -59,42 +59,42 @@ public final class AccessLevelsAccessLevel {
     }
 
     /**
-     * A set of predefined conditions for the access level and a combining function.
+     * @return A set of predefined conditions for the access level and a combining function.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AccessLevelsAccessLevelBasic> basic() {
         return Optional.ofNullable(this.basic);
     }
     /**
-     * Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+     * @return Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
      * See CEL spec at: https://github.com/google/cel-spec.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AccessLevelsAccessLevelCustom> custom() {
         return Optional.ofNullable(this.custom);
     }
     /**
-     * Description of the expression
+     * @return Description of the expression
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Resource name for the Access Level. The short_name component must begin
+     * @return Resource name for the Access Level. The short_name component must begin
      * with a letter and only include alphanumeric and &#39;_&#39;.
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Title for the expression, i.e. a short string describing its purpose.
+     * @return Title for the expression, i.e. a short string describing its purpose.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

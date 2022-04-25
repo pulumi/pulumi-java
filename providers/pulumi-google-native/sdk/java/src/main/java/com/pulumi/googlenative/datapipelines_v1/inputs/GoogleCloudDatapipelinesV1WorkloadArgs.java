@@ -27,6 +27,10 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends com.pulumi.res
     @Import(name="dataflowFlexTemplateRequest")
     private @Nullable Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest;
 
+    /**
+     * @return Template information and additional parameters needed to launch a Dataflow job using the flex launch API.
+     * 
+     */
     public Optional<Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs>> dataflowFlexTemplateRequest() {
         return Optional.ofNullable(this.dataflowFlexTemplateRequest);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends com.pulumi.res
     @Import(name="dataflowLaunchTemplateRequest")
     private @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest;
 
+    /**
+     * @return Template information and additional parameters needed to launch a Dataflow job using the standard launch API.
+     * 
+     */
     public Optional<Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs>> dataflowLaunchTemplateRequest() {
         return Optional.ofNullable(this.dataflowLaunchTemplateRequest);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends com.pulumi.res
             $ = new GoogleCloudDatapipelinesV1WorkloadArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataflowFlexTemplateRequest Template information and additional parameters needed to launch a Dataflow job using the flex launch API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataflowFlexTemplateRequest(@Nullable Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest) {
             $.dataflowFlexTemplateRequest = dataflowFlexTemplateRequest;
             return this;
         }
 
+        /**
+         * @param dataflowFlexTemplateRequest Template information and additional parameters needed to launch a Dataflow job using the flex launch API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataflowFlexTemplateRequest(GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs dataflowFlexTemplateRequest) {
             return dataflowFlexTemplateRequest(Output.of(dataflowFlexTemplateRequest));
         }
 
+        /**
+         * @param dataflowLaunchTemplateRequest Template information and additional parameters needed to launch a Dataflow job using the standard launch API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataflowLaunchTemplateRequest(@Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest) {
             $.dataflowLaunchTemplateRequest = dataflowLaunchTemplateRequest;
             return this;
         }
 
+        /**
+         * @param dataflowLaunchTemplateRequest Template information and additional parameters needed to launch a Dataflow job using the standard launch API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataflowLaunchTemplateRequest(GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs dataflowLaunchTemplateRequest) {
             return dataflowLaunchTemplateRequest(Output.of(dataflowLaunchTemplateRequest));
         }

@@ -32,6 +32,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
     @Import(name="currentPage")
     private @Nullable Output<GoogleCloudDialogflowCxV3beta1PageArgs> currentPage;
 
+    /**
+     * @return The Page on which the utterance was spoken. Only name and displayName will be set.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3beta1PageArgs>> currentPage() {
         return Optional.ofNullable(this.currentPage);
     }
@@ -43,6 +47,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
     @Import(name="diagnosticInfo", required=true)
     private Output<Map<String,String>> diagnosticInfo;
 
+    /**
+     * @return Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.
+     * 
+     */
     public Output<Map<String,String>> diagnosticInfo() {
         return this.diagnosticInfo;
     }
@@ -54,6 +62,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
     @Import(name="sessionParameters")
     private @Nullable Output<Map<String,String>> sessionParameters;
 
+    /**
+     * @return The session parameters available to the bot at this point.
+     * 
+     */
     public Optional<Output<Map<String,String>>> sessionParameters() {
         return Optional.ofNullable(this.sessionParameters);
     }
@@ -65,6 +77,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
     @Import(name="status")
     private @Nullable Output<GoogleRpcStatusArgs> status;
 
+    /**
+     * @return Response error from the agent in the test result. If set, other output is empty.
+     * 
+     */
     public Optional<Output<GoogleRpcStatusArgs>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -76,6 +92,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
     @Import(name="textResponses")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs>> textResponses;
 
+    /**
+     * @return The text responses from the agent for the turn.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs>>> textResponses() {
         return Optional.ofNullable(this.textResponses);
     }
@@ -87,6 +107,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
     @Import(name="triggeredIntent")
     private @Nullable Output<GoogleCloudDialogflowCxV3beta1IntentArgs> triggeredIntent;
 
+    /**
+     * @return The Intent that triggered the response. Only name and displayName will be set.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3beta1IntentArgs>> triggeredIntent() {
         return Optional.ofNullable(this.triggeredIntent);
     }
@@ -120,60 +144,138 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
             $ = new GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentPage The Page on which the utterance was spoken. Only name and displayName will be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentPage(@Nullable Output<GoogleCloudDialogflowCxV3beta1PageArgs> currentPage) {
             $.currentPage = currentPage;
             return this;
         }
 
+        /**
+         * @param currentPage The Page on which the utterance was spoken. Only name and displayName will be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentPage(GoogleCloudDialogflowCxV3beta1PageArgs currentPage) {
             return currentPage(Output.of(currentPage));
         }
 
+        /**
+         * @param diagnosticInfo Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnosticInfo(Output<Map<String,String>> diagnosticInfo) {
             $.diagnosticInfo = diagnosticInfo;
             return this;
         }
 
+        /**
+         * @param diagnosticInfo Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnosticInfo(Map<String,String> diagnosticInfo) {
             return diagnosticInfo(Output.of(diagnosticInfo));
         }
 
+        /**
+         * @param sessionParameters The session parameters available to the bot at this point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionParameters(@Nullable Output<Map<String,String>> sessionParameters) {
             $.sessionParameters = sessionParameters;
             return this;
         }
 
+        /**
+         * @param sessionParameters The session parameters available to the bot at this point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionParameters(Map<String,String> sessionParameters) {
             return sessionParameters(Output.of(sessionParameters));
         }
 
+        /**
+         * @param status Response error from the agent in the test result. If set, other output is empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<GoogleRpcStatusArgs> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Response error from the agent in the test result. If set, other output is empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(GoogleRpcStatusArgs status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param textResponses The text responses from the agent for the turn.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textResponses(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs>> textResponses) {
             $.textResponses = textResponses;
             return this;
         }
 
+        /**
+         * @param textResponses The text responses from the agent for the turn.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textResponses(List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs> textResponses) {
             return textResponses(Output.of(textResponses));
         }
 
+        /**
+         * @param textResponses The text responses from the agent for the turn.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textResponses(GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs... textResponses) {
             return textResponses(List.of(textResponses));
         }
 
+        /**
+         * @param triggeredIntent The Intent that triggered the response. Only name and displayName will be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggeredIntent(@Nullable Output<GoogleCloudDialogflowCxV3beta1IntentArgs> triggeredIntent) {
             $.triggeredIntent = triggeredIntent;
             return this;
         }
 
+        /**
+         * @param triggeredIntent The Intent that triggered the response. Only name and displayName will be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggeredIntent(GoogleCloudDialogflowCxV3beta1IntentArgs triggeredIntent) {
             return triggeredIntent(Output.of(triggeredIntent));
         }

@@ -26,6 +26,10 @@ public final class CompletenessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="arguments")
     private @Nullable Output<Boolean> arguments;
 
+    /**
+     * @return If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
+     * 
+     */
     public Optional<Output<Boolean>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -37,6 +41,10 @@ public final class CompletenessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environment")
     private @Nullable Output<Boolean> environment;
 
+    /**
+     * @return If true, the builder claims that recipe.environment is claimed to be complete.
+     * 
+     */
     public Optional<Output<Boolean>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -48,6 +56,10 @@ public final class CompletenessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="materials")
     private @Nullable Output<Boolean> materials;
 
+    /**
+     * @return If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called &#34;hermetic&#34;.
+     * 
+     */
     public Optional<Output<Boolean>> materials() {
         return Optional.ofNullable(this.materials);
     }
@@ -78,29 +90,65 @@ public final class CompletenessArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CompletenessArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable Output<Boolean> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(Boolean arguments) {
             return arguments(Output.of(arguments));
         }
 
+        /**
+         * @param environment If true, the builder claims that recipe.environment is claimed to be complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<Boolean> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment If true, the builder claims that recipe.environment is claimed to be complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(Boolean environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param materials If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called &#34;hermetic&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(@Nullable Output<Boolean> materials) {
             $.materials = materials;
             return this;
         }
 
+        /**
+         * @param materials If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called &#34;hermetic&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(Boolean materials) {
             return materials(Output.of(materials));
         }

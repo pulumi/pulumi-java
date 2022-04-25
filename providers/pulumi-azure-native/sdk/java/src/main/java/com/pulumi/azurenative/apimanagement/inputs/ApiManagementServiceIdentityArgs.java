@@ -30,6 +30,10 @@ public final class ApiManagementServiceIdentityArgs extends com.pulumi.resources
     @Import(name="type", required=true)
     private Output<Either<String,ApimIdentityType>> type;
 
+    /**
+     * @return The type of identity used for the resource. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the service.
+     * 
+     */
     public Output<Either<String,ApimIdentityType>> type() {
         return this.type;
     }
@@ -44,6 +48,13 @@ public final class ApiManagementServiceIdentityArgs extends com.pulumi.resources
     @Import(name="userAssignedIdentities")
     private @Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 
+    /**
+     * @return The list of user identities associated with the resource. The user identity
+     * dictionary key references will be ARM resource ids in the form:
+     * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
+     *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * 
+     */
     public Optional<Output<Map<String,UserIdentityPropertiesArgs>>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -73,28 +84,70 @@ public final class ApiManagementServiceIdentityArgs extends com.pulumi.resources
             $ = new ApiManagementServiceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of identity used for the resource. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,ApimIdentityType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of identity used for the resource. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ApimIdentityType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of identity used for the resource. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of identity used for the resource. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ApimIdentityType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param userAssignedIdentities The list of user identities associated with the resource. The user identity
+         * dictionary key references will be ARM resource ids in the form:
+         * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
+         *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities The list of user identities associated with the resource. The user identity
+         * dictionary key references will be ARM resource ids in the form:
+         * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
+         *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(Map<String,UserIdentityPropertiesArgs> userAssignedIdentities) {
             return userAssignedIdentities(Output.of(userAssignedIdentities));
         }

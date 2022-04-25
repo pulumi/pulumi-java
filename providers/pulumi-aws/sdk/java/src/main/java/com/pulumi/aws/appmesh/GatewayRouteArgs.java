@@ -24,6 +24,10 @@ public final class GatewayRouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="meshName", required=true)
     private Output<String> meshName;
 
+    /**
+     * @return The name of the service mesh in which to create the gateway route. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Output<String> meshName() {
         return this.meshName;
     }
@@ -35,6 +39,10 @@ public final class GatewayRouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="meshOwner")
     private @Nullable Output<String> meshOwner;
 
+    /**
+     * @return The AWS account ID of the service mesh&#39;s owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+     * 
+     */
     public Optional<Output<String>> meshOwner() {
         return Optional.ofNullable(this.meshOwner);
     }
@@ -46,6 +54,10 @@ public final class GatewayRouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name to use for the gateway route. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,10 @@ public final class GatewayRouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spec", required=true)
     private Output<GatewayRouteSpecArgs> spec;
 
+    /**
+     * @return The gateway route specification to apply.
+     * 
+     */
     public Output<GatewayRouteSpecArgs> spec() {
         return this.spec;
     }
@@ -68,6 +84,10 @@ public final class GatewayRouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -79,6 +99,10 @@ public final class GatewayRouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualGatewayName", required=true)
     private Output<String> virtualGatewayName;
 
+    /**
+     * @return The name of the virtual gateway to associate the gateway route with. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Output<String> virtualGatewayName() {
         return this.virtualGatewayName;
     }
@@ -112,56 +136,128 @@ public final class GatewayRouteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GatewayRouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param meshName The name of the service mesh in which to create the gateway route. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshName(Output<String> meshName) {
             $.meshName = meshName;
             return this;
         }
 
+        /**
+         * @param meshName The name of the service mesh in which to create the gateway route. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshName(String meshName) {
             return meshName(Output.of(meshName));
         }
 
+        /**
+         * @param meshOwner The AWS account ID of the service mesh&#39;s owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshOwner(@Nullable Output<String> meshOwner) {
             $.meshOwner = meshOwner;
             return this;
         }
 
+        /**
+         * @param meshOwner The AWS account ID of the service mesh&#39;s owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshOwner(String meshOwner) {
             return meshOwner(Output.of(meshOwner));
         }
 
+        /**
+         * @param name The name to use for the gateway route. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name to use for the gateway route. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param spec The gateway route specification to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(Output<GatewayRouteSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec The gateway route specification to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(GatewayRouteSpecArgs spec) {
             return spec(Output.of(spec));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param virtualGatewayName The name of the virtual gateway to associate the gateway route with. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualGatewayName(Output<String> virtualGatewayName) {
             $.virtualGatewayName = virtualGatewayName;
             return this;
         }
 
+        /**
+         * @param virtualGatewayName The name of the virtual gateway to associate the gateway route with. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualGatewayName(String virtualGatewayName) {
             return virtualGatewayName(Output.of(virtualGatewayName));
         }

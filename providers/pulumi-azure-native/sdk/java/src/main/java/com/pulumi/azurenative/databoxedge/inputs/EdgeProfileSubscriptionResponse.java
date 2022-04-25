@@ -27,6 +27,10 @@ public final class EdgeProfileSubscriptionResponse extends com.pulumi.resources.
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return ARM ID of the subscription
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -66,6 +70,10 @@ public final class EdgeProfileSubscriptionResponse extends com.pulumi.resources.
     @Import(name="registrationId")
     private @Nullable String registrationId;
 
+    /**
+     * @return Edge Subscription Registration ID
+     * 
+     */
     public Optional<String> registrationId() {
         return Optional.ofNullable(this.registrationId);
     }
@@ -131,6 +139,12 @@ public final class EdgeProfileSubscriptionResponse extends com.pulumi.resources.
             $ = new EdgeProfileSubscriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id ARM ID of the subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
@@ -160,6 +174,12 @@ public final class EdgeProfileSubscriptionResponse extends com.pulumi.resources.
             return this;
         }
 
+        /**
+         * @param registrationId Edge Subscription Registration ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationId(@Nullable String registrationId) {
             $.registrationId = registrationId;
             return this;

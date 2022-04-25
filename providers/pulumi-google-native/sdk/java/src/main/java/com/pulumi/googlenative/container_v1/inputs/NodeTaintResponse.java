@@ -23,6 +23,10 @@ public final class NodeTaintResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="effect", required=true)
     private String effect;
 
+    /**
+     * @return Effect for taint.
+     * 
+     */
     public String effect() {
         return this.effect;
     }
@@ -34,6 +38,10 @@ public final class NodeTaintResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return Key for taint.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -45,6 +53,10 @@ public final class NodeTaintResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Value for taint.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -75,16 +87,34 @@ public final class NodeTaintResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NodeTaintResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param effect Effect for taint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effect(String effect) {
             $.effect = effect;
             return this;
         }
 
+        /**
+         * @param key Key for taint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value Value for taint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

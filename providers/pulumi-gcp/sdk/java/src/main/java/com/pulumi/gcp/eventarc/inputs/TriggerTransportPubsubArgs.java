@@ -23,6 +23,11 @@ public final class TriggerTransportPubsubArgs extends com.pulumi.resources.Resou
     @Import(name="subscription")
     private @Nullable Output<String> subscription;
 
+    /**
+     * @return -
+     * Output only. The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
+     * 
+     */
     public Optional<Output<String>> subscription() {
         return Optional.ofNullable(this.subscription);
     }
@@ -34,6 +39,10 @@ public final class TriggerTransportPubsubArgs extends com.pulumi.resources.Resou
     @Import(name="topic")
     private @Nullable Output<String> topic;
 
+    /**
+     * @return Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME You may set an existing topic for triggers of the type google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
+     * 
+     */
     public Optional<Output<String>> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -63,20 +72,46 @@ public final class TriggerTransportPubsubArgs extends com.pulumi.resources.Resou
             $ = new TriggerTransportPubsubArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subscription -
+         * Output only. The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscription(@Nullable Output<String> subscription) {
             $.subscription = subscription;
             return this;
         }
 
+        /**
+         * @param subscription -
+         * Output only. The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscription(String subscription) {
             return subscription(Output.of(subscription));
         }
 
+        /**
+         * @param topic Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME You may set an existing topic for triggers of the type google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME You may set an existing topic for triggers of the type google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

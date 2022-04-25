@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 public final class DetectorModelSqs {
     private final @Nullable DetectorModelPayload payload;
     /**
-     * The URL of the SQS queue where the data is written.
+     * @return The URL of the SQS queue where the data is written.
      * 
      */
     private final String queueUrl;
     /**
-     * Set this to `TRUE` if you want the data to be base-64 encoded before it is written to the queue. Otherwise, set this to `FALSE`.
+     * @return Set this to `TRUE` if you want the data to be base-64 encoded before it is written to the queue. Otherwise, set this to `FALSE`.
      * 
      */
     private final @Nullable Boolean useBase64;
@@ -39,16 +39,16 @@ public final class DetectorModelSqs {
         return Optional.ofNullable(this.payload);
     }
     /**
-     * The URL of the SQS queue where the data is written.
+     * @return The URL of the SQS queue where the data is written.
      * 
-    */
+     */
     public String queueUrl() {
         return this.queueUrl;
     }
     /**
-     * Set this to `TRUE` if you want the data to be base-64 encoded before it is written to the queue. Otherwise, set this to `FALSE`.
+     * @return Set this to `TRUE` if you want the data to be base-64 encoded before it is written to the queue. Otherwise, set this to `FALSE`.
      * 
-    */
+     */
     public Optional<Boolean> useBase64() {
         return Optional.ofNullable(this.useBase64);
     }

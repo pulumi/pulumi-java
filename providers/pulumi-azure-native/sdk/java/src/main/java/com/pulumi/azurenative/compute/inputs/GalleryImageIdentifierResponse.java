@@ -23,6 +23,10 @@ public final class GalleryImageIdentifierResponse extends com.pulumi.resources.I
     @Import(name="offer", required=true)
     private String offer;
 
+    /**
+     * @return The name of the gallery image definition offer.
+     * 
+     */
     public String offer() {
         return this.offer;
     }
@@ -34,6 +38,10 @@ public final class GalleryImageIdentifierResponse extends com.pulumi.resources.I
     @Import(name="publisher", required=true)
     private String publisher;
 
+    /**
+     * @return The name of the gallery image definition publisher.
+     * 
+     */
     public String publisher() {
         return this.publisher;
     }
@@ -45,6 +53,10 @@ public final class GalleryImageIdentifierResponse extends com.pulumi.resources.I
     @Import(name="sku", required=true)
     private String sku;
 
+    /**
+     * @return The name of the gallery image definition SKU.
+     * 
+     */
     public String sku() {
         return this.sku;
     }
@@ -75,16 +87,34 @@ public final class GalleryImageIdentifierResponse extends com.pulumi.resources.I
             $ = new GalleryImageIdentifierResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param offer The name of the gallery image definition offer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(String offer) {
             $.offer = offer;
             return this;
         }
 
+        /**
+         * @param publisher The name of the gallery image definition publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param sku The name of the gallery image definition SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             $.sku = sku;
             return this;

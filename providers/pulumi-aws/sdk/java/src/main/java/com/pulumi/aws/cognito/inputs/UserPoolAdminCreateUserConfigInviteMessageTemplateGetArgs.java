@@ -22,6 +22,10 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs ext
     @Import(name="emailMessage")
     private @Nullable Output<String> emailMessage;
 
+    /**
+     * @return Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
+     * 
+     */
     public Optional<Output<String>> emailMessage() {
         return Optional.ofNullable(this.emailMessage);
     }
@@ -33,6 +37,10 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs ext
     @Import(name="emailSubject")
     private @Nullable Output<String> emailSubject;
 
+    /**
+     * @return Subject line for the email message template. Conflicts with `email_verification_subject` argument.
+     * 
+     */
     public Optional<Output<String>> emailSubject() {
         return Optional.ofNullable(this.emailSubject);
     }
@@ -44,6 +52,10 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs ext
     @Import(name="smsMessage")
     private @Nullable Output<String> smsMessage;
 
+    /**
+     * @return SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
+     * 
+     */
     public Optional<Output<String>> smsMessage() {
         return Optional.ofNullable(this.smsMessage);
     }
@@ -74,29 +86,65 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs ext
             $ = new UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailMessage Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailMessage(@Nullable Output<String> emailMessage) {
             $.emailMessage = emailMessage;
             return this;
         }
 
+        /**
+         * @param emailMessage Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailMessage(String emailMessage) {
             return emailMessage(Output.of(emailMessage));
         }
 
+        /**
+         * @param emailSubject Subject line for the email message template. Conflicts with `email_verification_subject` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailSubject(@Nullable Output<String> emailSubject) {
             $.emailSubject = emailSubject;
             return this;
         }
 
+        /**
+         * @param emailSubject Subject line for the email message template. Conflicts with `email_verification_subject` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailSubject(String emailSubject) {
             return emailSubject(Output.of(emailSubject));
         }
 
+        /**
+         * @param smsMessage SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smsMessage(@Nullable Output<String> smsMessage) {
             $.smsMessage = smsMessage;
             return this;
         }
 
+        /**
+         * @param smsMessage SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smsMessage(String smsMessage) {
             return smsMessage(Output.of(smsMessage));
         }

@@ -50,6 +50,11 @@ public final class AzureRetentionRuleResponse extends com.pulumi.resources.Invok
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return
+     * Expected value is &#39;AzureRetentionRule&#39;.
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -100,6 +105,13 @@ public final class AzureRetentionRuleResponse extends com.pulumi.resources.Invok
             return this;
         }
 
+        /**
+         * @param objectType
+         * Expected value is &#39;AzureRetentionRule&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;

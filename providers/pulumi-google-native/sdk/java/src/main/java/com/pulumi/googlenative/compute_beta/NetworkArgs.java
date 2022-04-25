@@ -25,6 +25,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoCreateSubnetworks")
     private @Nullable Output<Boolean> autoCreateSubnetworks;
 
+    /**
+     * @return Must be set to create a VPC network. If not set, a legacy network is created. When set to true, the VPC network is created in auto mode. When set to false, the VPC network is created in custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC networks, you can add subnets using the subnetworks insert method.
+     * 
+     */
     public Optional<Output<Boolean>> autoCreateSubnetworks() {
         return Optional.ofNullable(this.autoCreateSubnetworks);
     }
@@ -36,6 +40,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this field when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mtu")
     private @Nullable Output<Integer> mtu;
 
+    /**
+     * @return Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. If unspecified, defaults to 1460.
+     * 
+     */
     public Optional<Output<Integer>> mtu() {
         return Optional.ofNullable(this.mtu);
     }
@@ -58,6 +70,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,6 +99,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routingConfig")
     private @Nullable Output<NetworkRoutingConfigArgs> routingConfig;
 
+    /**
+     * @return The network-level routing configuration for this network. Used by Cloud Router to determine what type of network-wide routing behavior to enforce.
+     * 
+     */
     public Optional<Output<NetworkRoutingConfigArgs>> routingConfig() {
         return Optional.ofNullable(this.routingConfig);
     }
@@ -117,38 +137,86 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoCreateSubnetworks Must be set to create a VPC network. If not set, a legacy network is created. When set to true, the VPC network is created in auto mode. When set to false, the VPC network is created in custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC networks, you can add subnets using the subnetworks insert method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoCreateSubnetworks(@Nullable Output<Boolean> autoCreateSubnetworks) {
             $.autoCreateSubnetworks = autoCreateSubnetworks;
             return this;
         }
 
+        /**
+         * @param autoCreateSubnetworks Must be set to create a VPC network. If not set, a legacy network is created. When set to true, the VPC network is created in auto mode. When set to false, the VPC network is created in custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC networks, you can add subnets using the subnetworks insert method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoCreateSubnetworks(Boolean autoCreateSubnetworks) {
             return autoCreateSubnetworks(Output.of(autoCreateSubnetworks));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this field when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this field when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param mtu Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. If unspecified, defaults to 1460.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mtu(@Nullable Output<Integer> mtu) {
             $.mtu = mtu;
             return this;
         }
 
+        /**
+         * @param mtu Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. If unspecified, defaults to 1460.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mtu(Integer mtu) {
             return mtu(Output.of(mtu));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -171,11 +239,23 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param routingConfig The network-level routing configuration for this network. Used by Cloud Router to determine what type of network-wide routing behavior to enforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingConfig(@Nullable Output<NetworkRoutingConfigArgs> routingConfig) {
             $.routingConfig = routingConfig;
             return this;
         }
 
+        /**
+         * @param routingConfig The network-level routing configuration for this network. Used by Cloud Router to determine what type of network-wide routing behavior to enforce.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingConfig(NetworkRoutingConfigArgs routingConfig) {
             return routingConfig(Output.of(routingConfig));
         }

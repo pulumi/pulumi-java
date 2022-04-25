@@ -25,6 +25,10 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse extends co
     @Import(name="dataType")
     private @Nullable String dataType;
 
+    /**
+     * @return The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
+     * 
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -36,6 +40,10 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse extends co
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the output column.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -65,11 +73,23 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse extends co
             $ = new AzureMachineLearningWebServiceOutputColumnResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataType The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable String dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param name The name of the output column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

@@ -29,6 +29,10 @@ public final class ResponsePlanSsmAutomationArgs extends com.pulumi.resources.Re
     @Import(name="documentName", required=true)
     private Output<String> documentName;
 
+    /**
+     * @return The document name to use when starting the SSM automation document.
+     * 
+     */
     public Output<String> documentName() {
         return this.documentName;
     }
@@ -40,6 +44,10 @@ public final class ResponsePlanSsmAutomationArgs extends com.pulumi.resources.Re
     @Import(name="documentVersion")
     private @Nullable Output<String> documentVersion;
 
+    /**
+     * @return The version of the document to use when starting the SSM automation document.
+     * 
+     */
     public Optional<Output<String>> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
@@ -51,6 +59,10 @@ public final class ResponsePlanSsmAutomationArgs extends com.pulumi.resources.Re
     @Import(name="parameters")
     private @Nullable Output<List<ResponsePlanSsmParameterArgs>> parameters;
 
+    /**
+     * @return The parameters to set when starting the SSM automation document.
+     * 
+     */
     public Optional<Output<List<ResponsePlanSsmParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -62,6 +74,10 @@ public final class ResponsePlanSsmAutomationArgs extends com.pulumi.resources.Re
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The role ARN to use when starting the SSM automation document.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -73,6 +89,10 @@ public final class ResponsePlanSsmAutomationArgs extends com.pulumi.resources.Re
     @Import(name="targetAccount")
     private @Nullable Output<ResponsePlanSsmAutomationTargetAccount> targetAccount;
 
+    /**
+     * @return The account type to use when starting the SSM automation document.
+     * 
+     */
     public Optional<Output<ResponsePlanSsmAutomationTargetAccount>> targetAccount() {
         return Optional.ofNullable(this.targetAccount);
     }
@@ -105,51 +125,117 @@ public final class ResponsePlanSsmAutomationArgs extends com.pulumi.resources.Re
             $ = new ResponsePlanSsmAutomationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param documentName The document name to use when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentName(Output<String> documentName) {
             $.documentName = documentName;
             return this;
         }
 
+        /**
+         * @param documentName The document name to use when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentName(String documentName) {
             return documentName(Output.of(documentName));
         }
 
+        /**
+         * @param documentVersion The version of the document to use when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
             $.documentVersion = documentVersion;
             return this;
         }
 
+        /**
+         * @param documentVersion The version of the document to use when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentVersion(String documentVersion) {
             return documentVersion(Output.of(documentVersion));
         }
 
+        /**
+         * @param parameters The parameters to set when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<ResponsePlanSsmParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters to set when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<ResponsePlanSsmParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters The parameters to set when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ResponsePlanSsmParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param roleArn The role ARN to use when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The role ARN to use when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param targetAccount The account type to use when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAccount(@Nullable Output<ResponsePlanSsmAutomationTargetAccount> targetAccount) {
             $.targetAccount = targetAccount;
             return this;
         }
 
+        /**
+         * @param targetAccount The account type to use when starting the SSM automation document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAccount(ResponsePlanSsmAutomationTargetAccount targetAccount) {
             return targetAccount(Output.of(targetAccount));
         }

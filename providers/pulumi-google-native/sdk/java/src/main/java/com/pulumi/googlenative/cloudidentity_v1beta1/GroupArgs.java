@@ -27,6 +27,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalGroupKeys")
     private @Nullable Output<List<EntityKeyArgs>> additionalGroupKeys;
 
+    /**
+     * @return Additional entity key aliases for a Group.
+     * 
+     */
     public Optional<Output<List<EntityKeyArgs>>> additionalGroupKeys() {
         return Optional.ofNullable(this.additionalGroupKeys);
     }
@@ -38,6 +42,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An extended description to help users determine the purpose of a `Group`. Must not be longer than 4,096 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name of the `Group`.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -60,6 +72,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dynamicGroupMetadata")
     private @Nullable Output<DynamicGroupMetadataArgs> dynamicGroupMetadata;
 
+    /**
+     * @return Optional. Dynamic group metadata like queries and status.
+     * 
+     */
     public Optional<Output<DynamicGroupMetadataArgs>> dynamicGroupMetadata() {
         return Optional.ofNullable(this.dynamicGroupMetadata);
     }
@@ -71,6 +87,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupKey", required=true)
     private Output<EntityKeyArgs> groupKey;
 
+    /**
+     * @return The `EntityKey` of the `Group`.
+     * 
+     */
     public Output<EntityKeyArgs> groupKey() {
         return this.groupKey;
     }
@@ -89,6 +109,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels", required=true)
     private Output<Map<String,String>> labels;
 
+    /**
+     * @return One or more label entries that apply to the Group. Currently supported labels contain a key with an empty value. Google Groups are the default type of group and have a label with a key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google Groups can have an additional label with a key of `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an immutable change and the security label cannot be removed once added.** Dynamic groups have a label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for Cloud Search have a label with a key of `system/groups/external` and an empty value.
+     * 
+     */
     public Output<Map<String,String>> labels() {
         return this.labels;
     }
@@ -100,6 +124,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
     private Output<String> parent;
 
+    /**
+     * @return Immutable. The resource name of the entity under which this `Group` resides in the Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped groups or `customers/{customer_id}` for Google Groups. The `customer_id` must begin with &#34;C&#34; (for example, &#39;C046psxkn&#39;).
+     * 
+     */
     public Output<String> parent() {
         return this.parent;
     }
@@ -111,6 +139,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="posixGroups")
     private @Nullable Output<List<PosixGroupArgs>> posixGroups;
 
+    /**
+     * @return Optional. The POSIX groups associated with the `Group`.
+     * 
+     */
     public Optional<Output<List<PosixGroupArgs>>> posixGroups() {
         return Optional.ofNullable(this.posixGroups);
     }
@@ -147,51 +179,117 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalGroupKeys Additional entity key aliases for a Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalGroupKeys(@Nullable Output<List<EntityKeyArgs>> additionalGroupKeys) {
             $.additionalGroupKeys = additionalGroupKeys;
             return this;
         }
 
+        /**
+         * @param additionalGroupKeys Additional entity key aliases for a Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalGroupKeys(List<EntityKeyArgs> additionalGroupKeys) {
             return additionalGroupKeys(Output.of(additionalGroupKeys));
         }
 
+        /**
+         * @param additionalGroupKeys Additional entity key aliases for a Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalGroupKeys(EntityKeyArgs... additionalGroupKeys) {
             return additionalGroupKeys(List.of(additionalGroupKeys));
         }
 
+        /**
+         * @param description An extended description to help users determine the purpose of a `Group`. Must not be longer than 4,096 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An extended description to help users determine the purpose of a `Group`. Must not be longer than 4,096 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The display name of the `Group`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the `Group`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param dynamicGroupMetadata Optional. Dynamic group metadata like queries and status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamicGroupMetadata(@Nullable Output<DynamicGroupMetadataArgs> dynamicGroupMetadata) {
             $.dynamicGroupMetadata = dynamicGroupMetadata;
             return this;
         }
 
+        /**
+         * @param dynamicGroupMetadata Optional. Dynamic group metadata like queries and status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamicGroupMetadata(DynamicGroupMetadataArgs dynamicGroupMetadata) {
             return dynamicGroupMetadata(Output.of(dynamicGroupMetadata));
         }
 
+        /**
+         * @param groupKey The `EntityKey` of the `Group`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupKey(Output<EntityKeyArgs> groupKey) {
             $.groupKey = groupKey;
             return this;
         }
 
+        /**
+         * @param groupKey The `EntityKey` of the `Group`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupKey(EntityKeyArgs groupKey) {
             return groupKey(Output.of(groupKey));
         }
@@ -205,33 +303,75 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
             return initialGroupConfig(Output.of(initialGroupConfig));
         }
 
+        /**
+         * @param labels One or more label entries that apply to the Group. Currently supported labels contain a key with an empty value. Google Groups are the default type of group and have a label with a key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google Groups can have an additional label with a key of `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an immutable change and the security label cannot be removed once added.** Dynamic groups have a label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for Cloud Search have a label with a key of `system/groups/external` and an empty value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels One or more label entries that apply to the Group. Currently supported labels contain a key with an empty value. Google Groups are the default type of group and have a label with a key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google Groups can have an additional label with a key of `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an immutable change and the security label cannot be removed once added.** Dynamic groups have a label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for Cloud Search have a label with a key of `system/groups/external` and an empty value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param parent Immutable. The resource name of the entity under which this `Group` resides in the Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped groups or `customers/{customer_id}` for Google Groups. The `customer_id` must begin with &#34;C&#34; (for example, &#39;C046psxkn&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent Immutable. The resource name of the entity under which this `Group` resides in the Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped groups or `customers/{customer_id}` for Google Groups. The `customer_id` must begin with &#34;C&#34; (for example, &#39;C046psxkn&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param posixGroups Optional. The POSIX groups associated with the `Group`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixGroups(@Nullable Output<List<PosixGroupArgs>> posixGroups) {
             $.posixGroups = posixGroups;
             return this;
         }
 
+        /**
+         * @param posixGroups Optional. The POSIX groups associated with the `Group`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixGroups(List<PosixGroupArgs> posixGroups) {
             return posixGroups(Output.of(posixGroups));
         }
 
+        /**
+         * @param posixGroups Optional. The POSIX groups associated with the `Group`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixGroups(PosixGroupArgs... posixGroups) {
             return posixGroups(List.of(posixGroups));
         }

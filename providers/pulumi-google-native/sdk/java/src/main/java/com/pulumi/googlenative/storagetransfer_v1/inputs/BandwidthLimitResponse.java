@@ -23,6 +23,10 @@ public final class BandwidthLimitResponse extends com.pulumi.resources.InvokeArg
     @Import(name="limitMbps", required=true)
     private String limitMbps;
 
+    /**
+     * @return Bandwidth rate in megabytes per second, distributed across all the agents in the pool.
+     * 
+     */
     public String limitMbps() {
         return this.limitMbps;
     }
@@ -51,6 +55,12 @@ public final class BandwidthLimitResponse extends com.pulumi.resources.InvokeArg
             $ = new BandwidthLimitResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param limitMbps Bandwidth rate in megabytes per second, distributed across all the agents in the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limitMbps(String limitMbps) {
             $.limitMbps = limitMbps;
             return this;

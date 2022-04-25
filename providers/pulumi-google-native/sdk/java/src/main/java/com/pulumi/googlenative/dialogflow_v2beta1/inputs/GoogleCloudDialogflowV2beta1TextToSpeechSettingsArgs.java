@@ -30,6 +30,10 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
     @Import(name="enableTextToSpeech")
     private @Nullable Output<Boolean> enableTextToSpeech;
 
+    /**
+     * @return Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
+     * 
+     */
     public Optional<Output<Boolean>> enableTextToSpeech() {
         return Optional.ofNullable(this.enableTextToSpeech);
     }
@@ -41,6 +45,10 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
     @Import(name="outputAudioEncoding", required=true)
     private Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding;
 
+    /**
+     * @return Audio encoding of the synthesized audio content.
+     * 
+     */
     public Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding() {
         return this.outputAudioEncoding;
     }
@@ -52,6 +60,10 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
     @Import(name="sampleRateHertz")
     private @Nullable Output<Integer> sampleRateHertz;
 
+    /**
+     * @return Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice&#39;s natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
+     * 
+     */
     public Optional<Output<Integer>> sampleRateHertz() {
         return Optional.ofNullable(this.sampleRateHertz);
     }
@@ -63,6 +75,10 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
     @Import(name="synthesizeSpeechConfigs")
     private @Nullable Output<Map<String,String>> synthesizeSpeechConfigs;
 
+    /**
+     * @return Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
+     * 
+     */
     public Optional<Output<Map<String,String>>> synthesizeSpeechConfigs() {
         return Optional.ofNullable(this.synthesizeSpeechConfigs);
     }
@@ -94,38 +110,86 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
             $ = new GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableTextToSpeech Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableTextToSpeech(@Nullable Output<Boolean> enableTextToSpeech) {
             $.enableTextToSpeech = enableTextToSpeech;
             return this;
         }
 
+        /**
+         * @param enableTextToSpeech Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableTextToSpeech(Boolean enableTextToSpeech) {
             return enableTextToSpeech(Output.of(enableTextToSpeech));
         }
 
+        /**
+         * @param outputAudioEncoding Audio encoding of the synthesized audio content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputAudioEncoding(Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding) {
             $.outputAudioEncoding = outputAudioEncoding;
             return this;
         }
 
+        /**
+         * @param outputAudioEncoding Audio encoding of the synthesized audio content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputAudioEncoding(GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding outputAudioEncoding) {
             return outputAudioEncoding(Output.of(outputAudioEncoding));
         }
 
+        /**
+         * @param sampleRateHertz Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice&#39;s natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleRateHertz(@Nullable Output<Integer> sampleRateHertz) {
             $.sampleRateHertz = sampleRateHertz;
             return this;
         }
 
+        /**
+         * @param sampleRateHertz Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice&#39;s natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleRateHertz(Integer sampleRateHertz) {
             return sampleRateHertz(Output.of(sampleRateHertz));
         }
 
+        /**
+         * @param synthesizeSpeechConfigs Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synthesizeSpeechConfigs(@Nullable Output<Map<String,String>> synthesizeSpeechConfigs) {
             $.synthesizeSpeechConfigs = synthesizeSpeechConfigs;
             return this;
         }
 
+        /**
+         * @param synthesizeSpeechConfigs Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synthesizeSpeechConfigs(Map<String,String> synthesizeSpeechConfigs) {
             return synthesizeSpeechConfigs(Output.of(synthesizeSpeechConfigs));
         }

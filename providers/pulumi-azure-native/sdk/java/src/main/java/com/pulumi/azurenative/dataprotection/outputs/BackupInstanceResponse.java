@@ -17,43 +17,43 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BackupInstanceResponse {
     /**
-     * Specifies the current protection state of the resource
+     * @return Specifies the current protection state of the resource
      * 
      */
     private final String currentProtectionState;
     /**
-     * Gets or sets the data source information.
+     * @return Gets or sets the data source information.
      * 
      */
     private final DatasourceResponse dataSourceInfo;
     /**
-     * Gets or sets the data source set information.
+     * @return Gets or sets the data source set information.
      * 
      */
     private final @Nullable DatasourceSetResponse dataSourceSetInfo;
     /**
-     * Gets or sets the Backup Instance friendly name.
+     * @return Gets or sets the Backup Instance friendly name.
      * 
      */
     private final @Nullable String friendlyName;
     private final String objectType;
     /**
-     * Gets or sets the policy information.
+     * @return Gets or sets the policy information.
      * 
      */
     private final PolicyInfoResponse policyInfo;
     /**
-     * Specifies the protection error of the resource
+     * @return Specifies the protection error of the resource
      * 
      */
     private final UserFacingErrorResponse protectionErrorDetails;
     /**
-     * Specifies the protection status of the resource
+     * @return Specifies the protection status of the resource
      * 
      */
     private final ProtectionStatusDetailsResponse protectionStatus;
     /**
-     * Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed
+     * @return Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed
      * 
      */
     private final String provisioningState;
@@ -81,30 +81,30 @@ public final class BackupInstanceResponse {
     }
 
     /**
-     * Specifies the current protection state of the resource
+     * @return Specifies the current protection state of the resource
      * 
-    */
+     */
     public String currentProtectionState() {
         return this.currentProtectionState;
     }
     /**
-     * Gets or sets the data source information.
+     * @return Gets or sets the data source information.
      * 
-    */
+     */
     public DatasourceResponse dataSourceInfo() {
         return this.dataSourceInfo;
     }
     /**
-     * Gets or sets the data source set information.
+     * @return Gets or sets the data source set information.
      * 
-    */
+     */
     public Optional<DatasourceSetResponse> dataSourceSetInfo() {
         return Optional.ofNullable(this.dataSourceSetInfo);
     }
     /**
-     * Gets or sets the Backup Instance friendly name.
+     * @return Gets or sets the Backup Instance friendly name.
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -112,30 +112,30 @@ public final class BackupInstanceResponse {
         return this.objectType;
     }
     /**
-     * Gets or sets the policy information.
+     * @return Gets or sets the policy information.
      * 
-    */
+     */
     public PolicyInfoResponse policyInfo() {
         return this.policyInfo;
     }
     /**
-     * Specifies the protection error of the resource
+     * @return Specifies the protection error of the resource
      * 
-    */
+     */
     public UserFacingErrorResponse protectionErrorDetails() {
         return this.protectionErrorDetails;
     }
     /**
-     * Specifies the protection status of the resource
+     * @return Specifies the protection status of the resource
      * 
-    */
+     */
     public ProtectionStatusDetailsResponse protectionStatus() {
         return this.protectionStatus;
     }
     /**
-     * Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed
+     * @return Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

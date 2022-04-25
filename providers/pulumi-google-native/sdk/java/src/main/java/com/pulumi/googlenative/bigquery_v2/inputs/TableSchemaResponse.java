@@ -20,6 +20,10 @@ public final class TableSchemaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fields", required=true)
     private List<TableFieldSchemaResponse> fields;
 
+    /**
+     * @return Describes the fields in a table.
+     * 
+     */
     public List<TableFieldSchemaResponse> fields() {
         return this.fields;
     }
@@ -48,11 +52,23 @@ public final class TableSchemaResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TableSchemaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fields Describes the fields in a table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(List<TableFieldSchemaResponse> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields Describes the fields in a table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(TableFieldSchemaResponse... fields) {
             return fields(List.of(fields));
         }

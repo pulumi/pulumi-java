@@ -28,6 +28,10 @@ public final class DataSourceRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="filterOptions")
     private @Nullable Output<List<FilterOptionsArgs>> filterOptions;
 
+    /**
+     * @return Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: &#34;objecttype&#34;, &#34;type&#34; and &#34;mimetype&#34;. For now, schema specific filters cannot be used to filter suggestions.
+     * 
+     */
     public Optional<Output<List<FilterOptionsArgs>>> filterOptions() {
         return Optional.ofNullable(this.filterOptions);
     }
@@ -39,6 +43,10 @@ public final class DataSourceRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="source")
     private @Nullable Output<SourceArgs> source;
 
+    /**
+     * @return The source of restriction.
+     * 
+     */
     public Optional<Output<SourceArgs>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -68,24 +76,54 @@ public final class DataSourceRestrictionArgs extends com.pulumi.resources.Resour
             $ = new DataSourceRestrictionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filterOptions Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: &#34;objecttype&#34;, &#34;type&#34; and &#34;mimetype&#34;. For now, schema specific filters cannot be used to filter suggestions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterOptions(@Nullable Output<List<FilterOptionsArgs>> filterOptions) {
             $.filterOptions = filterOptions;
             return this;
         }
 
+        /**
+         * @param filterOptions Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: &#34;objecttype&#34;, &#34;type&#34; and &#34;mimetype&#34;. For now, schema specific filters cannot be used to filter suggestions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterOptions(List<FilterOptionsArgs> filterOptions) {
             return filterOptions(Output.of(filterOptions));
         }
 
+        /**
+         * @param filterOptions Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: &#34;objecttype&#34;, &#34;type&#34; and &#34;mimetype&#34;. For now, schema specific filters cannot be used to filter suggestions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterOptions(FilterOptionsArgs... filterOptions) {
             return filterOptions(List.of(filterOptions));
         }
 
+        /**
+         * @param source The source of restriction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<SourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The source of restriction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(SourceArgs source) {
             return source(Output.of(source));
         }

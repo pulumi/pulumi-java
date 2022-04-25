@@ -23,6 +23,10 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends com
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether to enable encryption at rest. Default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -34,6 +38,10 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends com
     @Import(name="keyArn")
     private @Nullable Output<String> keyArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the encryption key. Required when `key_type` is `CUSTOMER_MANAGED_CMK`.
+     * 
+     */
     public Optional<Output<String>> keyArn() {
         return Optional.ofNullable(this.keyArn);
     }
@@ -45,6 +53,10 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends com
     @Import(name="keyType")
     private @Nullable Output<String> keyType;
 
+    /**
+     * @return Type of encryption key. Default is `AWS_OWNED_CMK`. Valid values are `AWS_OWNED_CMK` and `CUSTOMER_MANAGED_CMK`
+     * 
+     */
     public Optional<Output<String>> keyType() {
         return Optional.ofNullable(this.keyType);
     }
@@ -75,29 +87,65 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends com
             $ = new FirehoseDeliveryStreamServerSideEncryptionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether to enable encryption at rest. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether to enable encryption at rest. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param keyArn Amazon Resource Name (ARN) of the encryption key. Required when `key_type` is `CUSTOMER_MANAGED_CMK`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyArn(@Nullable Output<String> keyArn) {
             $.keyArn = keyArn;
             return this;
         }
 
+        /**
+         * @param keyArn Amazon Resource Name (ARN) of the encryption key. Required when `key_type` is `CUSTOMER_MANAGED_CMK`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyArn(String keyArn) {
             return keyArn(Output.of(keyArn));
         }
 
+        /**
+         * @param keyType Type of encryption key. Default is `AWS_OWNED_CMK`. Valid values are `AWS_OWNED_CMK` and `CUSTOMER_MANAGED_CMK`
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(@Nullable Output<String> keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param keyType Type of encryption key. Default is `AWS_OWNED_CMK`. Valid values are `AWS_OWNED_CMK` and `CUSTOMER_MANAGED_CMK`
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(String keyType) {
             return keyType(Output.of(keyType));
         }

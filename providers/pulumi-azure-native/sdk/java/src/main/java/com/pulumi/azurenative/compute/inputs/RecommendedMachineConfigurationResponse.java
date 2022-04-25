@@ -25,6 +25,10 @@ public final class RecommendedMachineConfigurationResponse extends com.pulumi.re
     @Import(name="memory")
     private @Nullable ResourceRangeResponse memory;
 
+    /**
+     * @return Describes the resource range.
+     * 
+     */
     public Optional<ResourceRangeResponse> memory() {
         return Optional.ofNullable(this.memory);
     }
@@ -36,6 +40,10 @@ public final class RecommendedMachineConfigurationResponse extends com.pulumi.re
     @Import(name="vCPUs")
     private @Nullable ResourceRangeResponse vCPUs;
 
+    /**
+     * @return Describes the resource range.
+     * 
+     */
     public Optional<ResourceRangeResponse> vCPUs() {
         return Optional.ofNullable(this.vCPUs);
     }
@@ -65,11 +73,23 @@ public final class RecommendedMachineConfigurationResponse extends com.pulumi.re
             $ = new RecommendedMachineConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param memory Describes the resource range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(@Nullable ResourceRangeResponse memory) {
             $.memory = memory;
             return this;
         }
 
+        /**
+         * @param vCPUs Describes the resource range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vCPUs(@Nullable ResourceRangeResponse vCPUs) {
             $.vCPUs = vCPUs;
             return this;

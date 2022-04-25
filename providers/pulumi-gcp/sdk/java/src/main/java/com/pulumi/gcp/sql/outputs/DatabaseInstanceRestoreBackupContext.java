@@ -13,18 +13,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DatabaseInstanceRestoreBackupContext {
     /**
-     * The ID of the backup run to restore from.
+     * @return The ID of the backup run to restore from.
      * 
      */
     private final Integer backupRunId;
     /**
-     * The ID of the instance that the backup was taken from. If left empty,
+     * @return The ID of the instance that the backup was taken from. If left empty,
      * this instance&#39;s ID will be used.
      * 
      */
     private final @Nullable String instanceId;
     /**
-     * The full project ID of the source instance.`
+     * @return The full project ID of the source instance.`
      * 
      */
     private final @Nullable String project;
@@ -40,24 +40,24 @@ public final class DatabaseInstanceRestoreBackupContext {
     }
 
     /**
-     * The ID of the backup run to restore from.
+     * @return The ID of the backup run to restore from.
      * 
-    */
+     */
     public Integer backupRunId() {
         return this.backupRunId;
     }
     /**
-     * The ID of the instance that the backup was taken from. If left empty,
+     * @return The ID of the instance that the backup was taken from. If left empty,
      * this instance&#39;s ID will be used.
      * 
-    */
+     */
     public Optional<String> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
     /**
-     * The full project ID of the source instance.`
+     * @return The full project ID of the source instance.`
      * 
-    */
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }

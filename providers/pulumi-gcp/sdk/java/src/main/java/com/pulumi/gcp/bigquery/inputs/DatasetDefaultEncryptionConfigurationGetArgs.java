@@ -22,6 +22,12 @@ public final class DatasetDefaultEncryptionConfigurationGetArgs extends com.pulu
     @Import(name="kmsKeyName", required=true)
     private Output<String> kmsKeyName;
 
+    /**
+     * @return Describes the Cloud KMS encryption key that will be used to protect destination
+     * BigQuery table. The BigQuery Service Account associated with your project requires
+     * access to this encryption key.
+     * 
+     */
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -50,11 +56,27 @@ public final class DatasetDefaultEncryptionConfigurationGetArgs extends com.pulu
             $ = new DatasetDefaultEncryptionConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName Describes the Cloud KMS encryption key that will be used to protect destination
+         * BigQuery table. The BigQuery Service Account associated with your project requires
+         * access to this encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName Describes the Cloud KMS encryption key that will be used to protect destination
+         * BigQuery table. The BigQuery Service Account associated with your project requires
+         * access to this encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }

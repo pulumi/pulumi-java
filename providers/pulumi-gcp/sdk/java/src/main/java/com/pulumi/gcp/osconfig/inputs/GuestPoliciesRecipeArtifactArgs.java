@@ -27,6 +27,12 @@ public final class GuestPoliciesRecipeArtifactArgs extends com.pulumi.resources.
     @Import(name="allowInsecure")
     private @Nullable Output<Boolean> allowInsecure;
 
+    /**
+     * @return Defaults to false. When false, recipes are subject to validations based on the artifact type:
+     * Remote: A checksum must be specified, and only protocols with transport-layer security are permitted.
+     * GCS: An object generation number must be specified.
+     * 
+     */
     public Optional<Output<Boolean>> allowInsecure() {
         return Optional.ofNullable(this.allowInsecure);
     }
@@ -39,6 +45,11 @@ public final class GuestPoliciesRecipeArtifactArgs extends com.pulumi.resources.
     @Import(name="gcs")
     private @Nullable Output<GuestPoliciesRecipeArtifactGcsArgs> gcs;
 
+    /**
+     * @return A Google Cloud Storage artifact.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GuestPoliciesRecipeArtifactGcsArgs>> gcs() {
         return Optional.ofNullable(this.gcs);
     }
@@ -51,6 +62,11 @@ public final class GuestPoliciesRecipeArtifactArgs extends com.pulumi.resources.
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Id of the artifact, which the installation and update steps of this recipe can reference.
+     * Artifacts in a recipe cannot have the same id.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -63,6 +79,11 @@ public final class GuestPoliciesRecipeArtifactArgs extends com.pulumi.resources.
     @Import(name="remote")
     private @Nullable Output<GuestPoliciesRecipeArtifactRemoteArgs> remote;
 
+    /**
+     * @return A generic remote artifact.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GuestPoliciesRecipeArtifactRemoteArgs>> remote() {
         return Optional.ofNullable(this.remote);
     }
@@ -94,38 +115,96 @@ public final class GuestPoliciesRecipeArtifactArgs extends com.pulumi.resources.
             $ = new GuestPoliciesRecipeArtifactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowInsecure Defaults to false. When false, recipes are subject to validations based on the artifact type:
+         * Remote: A checksum must be specified, and only protocols with transport-layer security are permitted.
+         * GCS: An object generation number must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowInsecure(@Nullable Output<Boolean> allowInsecure) {
             $.allowInsecure = allowInsecure;
             return this;
         }
 
+        /**
+         * @param allowInsecure Defaults to false. When false, recipes are subject to validations based on the artifact type:
+         * Remote: A checksum must be specified, and only protocols with transport-layer security are permitted.
+         * GCS: An object generation number must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowInsecure(Boolean allowInsecure) {
             return allowInsecure(Output.of(allowInsecure));
         }
 
+        /**
+         * @param gcs A Google Cloud Storage artifact.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcs(@Nullable Output<GuestPoliciesRecipeArtifactGcsArgs> gcs) {
             $.gcs = gcs;
             return this;
         }
 
+        /**
+         * @param gcs A Google Cloud Storage artifact.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcs(GuestPoliciesRecipeArtifactGcsArgs gcs) {
             return gcs(Output.of(gcs));
         }
 
+        /**
+         * @param id Id of the artifact, which the installation and update steps of this recipe can reference.
+         * Artifacts in a recipe cannot have the same id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Id of the artifact, which the installation and update steps of this recipe can reference.
+         * Artifacts in a recipe cannot have the same id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param remote A generic remote artifact.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remote(@Nullable Output<GuestPoliciesRecipeArtifactRemoteArgs> remote) {
             $.remote = remote;
             return this;
         }
 
+        /**
+         * @param remote A generic remote artifact.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remote(GuestPoliciesRecipeArtifactRemoteArgs remote) {
             return remote(Output.of(remote));
         }

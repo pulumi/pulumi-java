@@ -27,6 +27,10 @@ public final class DetectorModelAssetPropertyValue extends com.pulumi.resources.
     @Import(name="quality")
     private @Nullable String quality;
 
+    /**
+     * @return The quality of the asset property value. The value must be `GOOD`, `BAD`, or `UNCERTAIN`. You can also specify an expression.
+     * 
+     */
     public Optional<String> quality() {
         return Optional.ofNullable(this.quality);
     }
@@ -71,6 +75,12 @@ public final class DetectorModelAssetPropertyValue extends com.pulumi.resources.
             $ = new DetectorModelAssetPropertyValue(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param quality The quality of the asset property value. The value must be `GOOD`, `BAD`, or `UNCERTAIN`. You can also specify an expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quality(@Nullable String quality) {
             $.quality = quality;
             return this;

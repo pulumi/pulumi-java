@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OsDiskResponse {
     /**
-     * Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.
+     * @return Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.
      * 
      */
     private final @Nullable Integer diskSizeGB;
     /**
-     * The VHD name.
+     * @return The VHD name.
      * 
      */
     private final @Nullable String name;
     /**
-     * The OS type.
+     * @return The OS type.
      * 
      */
     private final @Nullable String osType;
@@ -39,23 +39,23 @@ public final class OsDiskResponse {
     }
 
     /**
-     * Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.
+     * @return Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.
      * 
-    */
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
-     * The VHD name.
+     * @return The VHD name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The OS type.
+     * @return The OS type.
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }

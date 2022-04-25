@@ -19,6 +19,10 @@ public final class GetAttestationProviderArgs extends com.pulumi.resources.Invok
     @Import(name="providerName", required=true)
     private String providerName;
 
+    /**
+     * @return Name of the attestation provider.
+     * 
+     */
     public String providerName() {
         return this.providerName;
     }
@@ -30,6 +34,10 @@ public final class GetAttestationProviderArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetAttestationProviderArgs extends com.pulumi.resources.Invok
             $ = new GetAttestationProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param providerName Name of the attestation provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(String providerName) {
             $.providerName = providerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

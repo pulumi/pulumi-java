@@ -27,6 +27,10 @@ public final class PrefixListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addressFamily", required=true)
     private Output<PrefixListAddressFamily> addressFamily;
 
+    /**
+     * @return Ip Version of Prefix List.
+     * 
+     */
     public Output<PrefixListAddressFamily> addressFamily() {
         return this.addressFamily;
     }
@@ -38,6 +42,10 @@ public final class PrefixListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="entries")
     private @Nullable Output<List<PrefixListEntryArgs>> entries;
 
+    /**
+     * @return Entries of Prefix List.
+     * 
+     */
     public Optional<Output<List<PrefixListEntryArgs>>> entries() {
         return Optional.ofNullable(this.entries);
     }
@@ -49,6 +57,10 @@ public final class PrefixListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxEntries", required=true)
     private Output<Integer> maxEntries;
 
+    /**
+     * @return Max Entries of Prefix List.
+     * 
+     */
     public Output<Integer> maxEntries() {
         return this.maxEntries;
     }
@@ -60,6 +72,10 @@ public final class PrefixListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="prefixListName")
     private @Nullable Output<String> prefixListName;
 
+    /**
+     * @return Name of Prefix List.
+     * 
+     */
     public Optional<Output<String>> prefixListName() {
         return Optional.ofNullable(this.prefixListName);
     }
@@ -71,6 +87,10 @@ public final class PrefixListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<PrefixListTagArgs>> tags;
 
+    /**
+     * @return Tags for Prefix List
+     * 
+     */
     public Optional<Output<List<PrefixListTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -103,55 +123,127 @@ public final class PrefixListArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PrefixListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressFamily Ip Version of Prefix List.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressFamily(Output<PrefixListAddressFamily> addressFamily) {
             $.addressFamily = addressFamily;
             return this;
         }
 
+        /**
+         * @param addressFamily Ip Version of Prefix List.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressFamily(PrefixListAddressFamily addressFamily) {
             return addressFamily(Output.of(addressFamily));
         }
 
+        /**
+         * @param entries Entries of Prefix List.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entries(@Nullable Output<List<PrefixListEntryArgs>> entries) {
             $.entries = entries;
             return this;
         }
 
+        /**
+         * @param entries Entries of Prefix List.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entries(List<PrefixListEntryArgs> entries) {
             return entries(Output.of(entries));
         }
 
+        /**
+         * @param entries Entries of Prefix List.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entries(PrefixListEntryArgs... entries) {
             return entries(List.of(entries));
         }
 
+        /**
+         * @param maxEntries Max Entries of Prefix List.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxEntries(Output<Integer> maxEntries) {
             $.maxEntries = maxEntries;
             return this;
         }
 
+        /**
+         * @param maxEntries Max Entries of Prefix List.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxEntries(Integer maxEntries) {
             return maxEntries(Output.of(maxEntries));
         }
 
+        /**
+         * @param prefixListName Name of Prefix List.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixListName(@Nullable Output<String> prefixListName) {
             $.prefixListName = prefixListName;
             return this;
         }
 
+        /**
+         * @param prefixListName Name of Prefix List.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixListName(String prefixListName) {
             return prefixListName(Output.of(prefixListName));
         }
 
+        /**
+         * @param tags Tags for Prefix List
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<PrefixListTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags for Prefix List
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<PrefixListTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags for Prefix List
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(PrefixListTagArgs... tags) {
             return tags(List.of(tags));
         }

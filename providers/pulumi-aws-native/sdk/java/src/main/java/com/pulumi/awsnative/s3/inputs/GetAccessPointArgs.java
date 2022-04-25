@@ -19,6 +19,10 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name you want to assign to this Access Point. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID and uses that ID for the access point name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccessPointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name you want to assign to this Access Point. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID and uses that ID for the access point name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

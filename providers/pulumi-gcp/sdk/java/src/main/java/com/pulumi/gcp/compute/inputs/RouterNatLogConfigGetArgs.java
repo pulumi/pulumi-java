@@ -21,6 +21,10 @@ public final class RouterNatLogConfigGetArgs extends com.pulumi.resources.Resour
     @Import(name="enable", required=true)
     private Output<Boolean> enable;
 
+    /**
+     * @return Indicates whether or not to export logs.
+     * 
+     */
     public Output<Boolean> enable() {
         return this.enable;
     }
@@ -33,6 +37,11 @@ public final class RouterNatLogConfigGetArgs extends com.pulumi.resources.Resour
     @Import(name="filter", required=true)
     private Output<String> filter;
 
+    /**
+     * @return Specifies the desired filtering of logs on this NAT.
+     * Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
+     * 
+     */
     public Output<String> filter() {
         return this.filter;
     }
@@ -62,20 +71,46 @@ public final class RouterNatLogConfigGetArgs extends com.pulumi.resources.Resour
             $ = new RouterNatLogConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enable Indicates whether or not to export logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable Indicates whether or not to export logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param filter Specifies the desired filtering of logs on this NAT.
+         * Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(Output<String> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter Specifies the desired filtering of logs on this NAT.
+         * Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Output.of(filter));
         }

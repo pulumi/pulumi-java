@@ -28,6 +28,10 @@ public final class ManifestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileName")
     private @Nullable Output<String> fileName;
 
+    /**
+     * @return The name of the generated file. The default is `manifest` with the extension suffix corresponding to the `Manifest.type`.
+     * 
+     */
     public Optional<Output<String>> fileName() {
         return Optional.ofNullable(this.fileName);
     }
@@ -39,6 +43,10 @@ public final class ManifestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="muxStreams", required=true)
     private Output<List<String>> muxStreams;
 
+    /**
+     * @return List of user given `MuxStream.key`s that should appear in this manifest. When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is generated for each element of the `Manifest.mux_streams`.
+     * 
+     */
     public Output<List<String>> muxStreams() {
         return this.muxStreams;
     }
@@ -50,6 +58,10 @@ public final class ManifestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<ManifestType> type;
 
+    /**
+     * @return Type of the manifest, can be `HLS` or `DASH`.
+     * 
+     */
     public Output<ManifestType> type() {
         return this.type;
     }
@@ -80,33 +92,75 @@ public final class ManifestArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ManifestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileName The name of the generated file. The default is `manifest` with the extension suffix corresponding to the `Manifest.type`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(@Nullable Output<String> fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param fileName The name of the generated file. The default is `manifest` with the extension suffix corresponding to the `Manifest.type`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(String fileName) {
             return fileName(Output.of(fileName));
         }
 
+        /**
+         * @param muxStreams List of user given `MuxStream.key`s that should appear in this manifest. When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is generated for each element of the `Manifest.mux_streams`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder muxStreams(Output<List<String>> muxStreams) {
             $.muxStreams = muxStreams;
             return this;
         }
 
+        /**
+         * @param muxStreams List of user given `MuxStream.key`s that should appear in this manifest. When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is generated for each element of the `Manifest.mux_streams`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder muxStreams(List<String> muxStreams) {
             return muxStreams(Output.of(muxStreams));
         }
 
+        /**
+         * @param muxStreams List of user given `MuxStream.key`s that should appear in this manifest. When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is generated for each element of the `Manifest.mux_streams`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder muxStreams(String... muxStreams) {
             return muxStreams(List.of(muxStreams));
         }
 
+        /**
+         * @param type Type of the manifest, can be `HLS` or `DASH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<ManifestType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the manifest, can be `HLS` or `DASH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ManifestType type) {
             return type(Output.of(type));
         }

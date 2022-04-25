@@ -26,6 +26,10 @@ public final class ReportSettingProperties extends com.pulumi.resources.InvokeAr
     @Import(name="frameworkArns")
     private @Nullable List<String> frameworkArns;
 
+    /**
+     * @return The Amazon Resource Names (ARNs) of the frameworks a report covers.
+     * 
+     */
     public Optional<List<String>> frameworkArns() {
         return Optional.ofNullable(this.frameworkArns);
     }
@@ -37,6 +41,10 @@ public final class ReportSettingProperties extends com.pulumi.resources.InvokeAr
     @Import(name="reportTemplate", required=true)
     private String reportTemplate;
 
+    /**
+     * @return Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`
+     * 
+     */
     public String reportTemplate() {
         return this.reportTemplate;
     }
@@ -66,15 +74,33 @@ public final class ReportSettingProperties extends com.pulumi.resources.InvokeAr
             $ = new ReportSettingProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frameworkArns The Amazon Resource Names (ARNs) of the frameworks a report covers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameworkArns(@Nullable List<String> frameworkArns) {
             $.frameworkArns = frameworkArns;
             return this;
         }
 
+        /**
+         * @param frameworkArns The Amazon Resource Names (ARNs) of the frameworks a report covers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameworkArns(String... frameworkArns) {
             return frameworkArns(List.of(frameworkArns));
         }
 
+        /**
+         * @param reportTemplate Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportTemplate(String reportTemplate) {
             $.reportTemplate = reportTemplate;
             return this;

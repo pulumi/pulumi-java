@@ -27,6 +27,10 @@ public final class ClusterAutoscalingResponse extends com.pulumi.resources.Invok
     @Import(name="autoprovisioningLocations", required=true)
     private List<String> autoprovisioningLocations;
 
+    /**
+     * @return The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes can be created by NAP.
+     * 
+     */
     public List<String> autoprovisioningLocations() {
         return this.autoprovisioningLocations;
     }
@@ -38,6 +42,10 @@ public final class ClusterAutoscalingResponse extends com.pulumi.resources.Invok
     @Import(name="autoprovisioningNodePoolDefaults", required=true)
     private AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults;
 
+    /**
+     * @return AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
+     * 
+     */
     public AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults() {
         return this.autoprovisioningNodePoolDefaults;
     }
@@ -49,6 +57,10 @@ public final class ClusterAutoscalingResponse extends com.pulumi.resources.Invok
     @Import(name="autoscalingProfile", required=true)
     private String autoscalingProfile;
 
+    /**
+     * @return Defines autoscaling behaviour.
+     * 
+     */
     public String autoscalingProfile() {
         return this.autoscalingProfile;
     }
@@ -60,6 +72,10 @@ public final class ClusterAutoscalingResponse extends com.pulumi.resources.Invok
     @Import(name="enableNodeAutoprovisioning", required=true)
     private Boolean enableNodeAutoprovisioning;
 
+    /**
+     * @return Enables automatic node pool creation and deletion.
+     * 
+     */
     public Boolean enableNodeAutoprovisioning() {
         return this.enableNodeAutoprovisioning;
     }
@@ -71,6 +87,10 @@ public final class ClusterAutoscalingResponse extends com.pulumi.resources.Invok
     @Import(name="resourceLimits", required=true)
     private List<ResourceLimitResponse> resourceLimits;
 
+    /**
+     * @return Contains global constraints regarding minimum and maximum amount of resources in the cluster.
+     * 
+     */
     public List<ResourceLimitResponse> resourceLimits() {
         return this.resourceLimits;
     }
@@ -103,35 +123,77 @@ public final class ClusterAutoscalingResponse extends com.pulumi.resources.Invok
             $ = new ClusterAutoscalingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoprovisioningLocations The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes can be created by NAP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoprovisioningLocations(List<String> autoprovisioningLocations) {
             $.autoprovisioningLocations = autoprovisioningLocations;
             return this;
         }
 
+        /**
+         * @param autoprovisioningLocations The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool&#39;s nodes can be created by NAP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoprovisioningLocations(String... autoprovisioningLocations) {
             return autoprovisioningLocations(List.of(autoprovisioningLocations));
         }
 
+        /**
+         * @param autoprovisioningNodePoolDefaults AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoprovisioningNodePoolDefaults(AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults) {
             $.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
             return this;
         }
 
+        /**
+         * @param autoscalingProfile Defines autoscaling behaviour.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingProfile(String autoscalingProfile) {
             $.autoscalingProfile = autoscalingProfile;
             return this;
         }
 
+        /**
+         * @param enableNodeAutoprovisioning Enables automatic node pool creation and deletion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNodeAutoprovisioning(Boolean enableNodeAutoprovisioning) {
             $.enableNodeAutoprovisioning = enableNodeAutoprovisioning;
             return this;
         }
 
+        /**
+         * @param resourceLimits Contains global constraints regarding minimum and maximum amount of resources in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLimits(List<ResourceLimitResponse> resourceLimits) {
             $.resourceLimits = resourceLimits;
             return this;
         }
 
+        /**
+         * @param resourceLimits Contains global constraints regarding minimum and maximum amount of resources in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLimits(ResourceLimitResponse... resourceLimits) {
             return resourceLimits(List.of(resourceLimits));
         }

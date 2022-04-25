@@ -23,6 +23,10 @@ public final class MysqlSourceConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="excludeObjects", required=true)
     private MysqlRdbmsResponse excludeObjects;
 
+    /**
+     * @return MySQL objects to exclude from the stream.
+     * 
+     */
     public MysqlRdbmsResponse excludeObjects() {
         return this.excludeObjects;
     }
@@ -34,6 +38,10 @@ public final class MysqlSourceConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="includeObjects", required=true)
     private MysqlRdbmsResponse includeObjects;
 
+    /**
+     * @return MySQL objects to retrieve from the source.
+     * 
+     */
     public MysqlRdbmsResponse includeObjects() {
         return this.includeObjects;
     }
@@ -63,11 +71,23 @@ public final class MysqlSourceConfigResponse extends com.pulumi.resources.Invoke
             $ = new MysqlSourceConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludeObjects MySQL objects to exclude from the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeObjects(MysqlRdbmsResponse excludeObjects) {
             $.excludeObjects = excludeObjects;
             return this;
         }
 
+        /**
+         * @param includeObjects MySQL objects to retrieve from the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeObjects(MysqlRdbmsResponse includeObjects) {
             $.includeObjects = includeObjects;
             return this;

@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class ScaleRuleMetricDimensionResponse {
     /**
-     * Name of the dimension.
+     * @return Name of the dimension.
      * 
      */
     private final String dimensionName;
     /**
-     * the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
+     * @return the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
      * 
      */
     private final String operator;
     /**
-     * list of dimension values. For example: [&#34;App1&#34;,&#34;App2&#34;].
+     * @return list of dimension values. For example: [&#34;App1&#34;,&#34;App2&#34;].
      * 
      */
     private final List<String> values;
@@ -37,23 +37,23 @@ public final class ScaleRuleMetricDimensionResponse {
     }
 
     /**
-     * Name of the dimension.
+     * @return Name of the dimension.
      * 
-    */
+     */
     public String dimensionName() {
         return this.dimensionName;
     }
     /**
-     * the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
+     * @return the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * list of dimension values. For example: [&#34;App1&#34;,&#34;App2&#34;].
+     * @return list of dimension values. For example: [&#34;App1&#34;,&#34;App2&#34;].
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

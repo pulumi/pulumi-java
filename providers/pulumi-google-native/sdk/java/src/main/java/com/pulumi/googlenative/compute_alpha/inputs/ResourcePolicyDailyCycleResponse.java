@@ -24,6 +24,10 @@ public final class ResourcePolicyDailyCycleResponse extends com.pulumi.resources
     @Import(name="daysInCycle", required=true)
     private Integer daysInCycle;
 
+    /**
+     * @return Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
+     * 
+     */
     public Integer daysInCycle() {
         return this.daysInCycle;
     }
@@ -35,6 +39,10 @@ public final class ResourcePolicyDailyCycleResponse extends com.pulumi.resources
     @Import(name="duration", required=true)
     private String duration;
 
+    /**
+     * @return [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
+     * 
+     */
     public String duration() {
         return this.duration;
     }
@@ -46,6 +54,10 @@ public final class ResourcePolicyDailyCycleResponse extends com.pulumi.resources
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -76,16 +88,34 @@ public final class ResourcePolicyDailyCycleResponse extends com.pulumi.resources
             $ = new ResourcePolicyDailyCycleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysInCycle Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysInCycle(Integer daysInCycle) {
             $.daysInCycle = daysInCycle;
             return this;
         }
 
+        /**
+         * @param duration [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

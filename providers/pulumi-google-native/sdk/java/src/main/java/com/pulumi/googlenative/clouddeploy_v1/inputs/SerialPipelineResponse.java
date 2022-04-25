@@ -24,6 +24,10 @@ public final class SerialPipelineResponse extends com.pulumi.resources.InvokeArg
     @Import(name="stages", required=true)
     private List<StageResponse> stages;
 
+    /**
+     * @return Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
+     * 
+     */
     public List<StageResponse> stages() {
         return this.stages;
     }
@@ -52,11 +56,23 @@ public final class SerialPipelineResponse extends com.pulumi.resources.InvokeArg
             $ = new SerialPipelineResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param stages Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stages(List<StageResponse> stages) {
             $.stages = stages;
             return this;
         }
 
+        /**
+         * @param stages Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stages(StageResponse... stages) {
             return stages(List.of(stages));
         }

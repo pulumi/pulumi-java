@@ -27,6 +27,10 @@ public final class RemoteAddressMatchConditionParametersResponse extends com.pul
     @Import(name="matchValues")
     private @Nullable List<String> matchValues;
 
+    /**
+     * @return Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+     * 
+     */
     public Optional<List<String>> matchValues() {
         return Optional.ofNullable(this.matchValues);
     }
@@ -38,6 +42,10 @@ public final class RemoteAddressMatchConditionParametersResponse extends com.pul
     @Import(name="negateCondition")
     private @Nullable Boolean negateCondition;
 
+    /**
+     * @return Describes if this is negate condition or not
+     * 
+     */
     public Optional<Boolean> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
@@ -56,6 +64,10 @@ public final class RemoteAddressMatchConditionParametersResponse extends com.pul
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return Describes operator to be matched
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -67,6 +79,10 @@ public final class RemoteAddressMatchConditionParametersResponse extends com.pul
     @Import(name="transforms")
     private @Nullable List<String> transforms;
 
+    /**
+     * @return List of transforms
+     * 
+     */
     public Optional<List<String>> transforms() {
         return Optional.ofNullable(this.transforms);
     }
@@ -99,15 +115,33 @@ public final class RemoteAddressMatchConditionParametersResponse extends com.pul
             $ = new RemoteAddressMatchConditionParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchValues Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(@Nullable List<String> matchValues) {
             $.matchValues = matchValues;
             return this;
         }
 
+        /**
+         * @param matchValues Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(String... matchValues) {
             return matchValues(List.of(matchValues));
         }
 
+        /**
+         * @param negateCondition Describes if this is negate condition or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder negateCondition(@Nullable Boolean negateCondition) {
             $.negateCondition = negateCondition;
             return this;
@@ -118,16 +152,34 @@ public final class RemoteAddressMatchConditionParametersResponse extends com.pul
             return this;
         }
 
+        /**
+         * @param operator Describes operator to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(@Nullable List<String> transforms) {
             $.transforms = transforms;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(String... transforms) {
             return transforms(List.of(transforms));
         }

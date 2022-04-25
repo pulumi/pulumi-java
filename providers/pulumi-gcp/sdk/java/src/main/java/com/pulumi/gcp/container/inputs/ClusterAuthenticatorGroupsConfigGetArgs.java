@@ -20,6 +20,10 @@ public final class ClusterAuthenticatorGroupsConfigGetArgs extends com.pulumi.re
     @Import(name="securityGroup", required=true)
     private Output<String> securityGroup;
 
+    /**
+     * @return The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format `gke-security-groups@yourdomain.com`.
+     * 
+     */
     public Output<String> securityGroup() {
         return this.securityGroup;
     }
@@ -48,11 +52,23 @@ public final class ClusterAuthenticatorGroupsConfigGetArgs extends com.pulumi.re
             $ = new ClusterAuthenticatorGroupsConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityGroup The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format `gke-security-groups@yourdomain.com`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroup(Output<String> securityGroup) {
             $.securityGroup = securityGroup;
             return this;
         }
 
+        /**
+         * @param securityGroup The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format `gke-security-groups@yourdomain.com`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroup(String securityGroup) {
             return securityGroup(Output.of(securityGroup));
         }

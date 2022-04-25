@@ -26,6 +26,10 @@ public final class ConnectionStatusDefinitionResponse extends com.pulumi.resourc
     @Import(name="error")
     private @Nullable ConnectionErrorResponse error;
 
+    /**
+     * @return Connection error
+     * 
+     */
     public Optional<ConnectionErrorResponse> error() {
         return Optional.ofNullable(this.error);
     }
@@ -37,6 +41,10 @@ public final class ConnectionStatusDefinitionResponse extends com.pulumi.resourc
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The gateway status
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -48,6 +56,10 @@ public final class ConnectionStatusDefinitionResponse extends com.pulumi.resourc
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return Target of the error
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -78,16 +90,34 @@ public final class ConnectionStatusDefinitionResponse extends com.pulumi.resourc
             $ = new ConnectionStatusDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param error Connection error
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable ConnectionErrorResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param status The gateway status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param target Target of the error
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;

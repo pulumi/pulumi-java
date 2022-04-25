@@ -19,6 +19,10 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterArn", required=true)
     private String clusterArn;
 
+    /**
+     * @return The arn of the ECS Cluster
+     * 
+     */
     public String clusterArn() {
         return this.clusterArn;
     }
@@ -30,6 +34,10 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the ECS Service
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -59,11 +67,23 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterArn The arn of the ECS Cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterArn(String clusterArn) {
             $.clusterArn = clusterArn;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the ECS Service
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

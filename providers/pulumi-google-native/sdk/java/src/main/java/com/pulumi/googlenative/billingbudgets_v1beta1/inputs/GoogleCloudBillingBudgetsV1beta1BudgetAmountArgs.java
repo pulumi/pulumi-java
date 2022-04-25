@@ -27,6 +27,10 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs extends com.
     @Import(name="lastPeriodAmount")
     private @Nullable Output<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> lastPeriodAmount;
 
+    /**
+     * @return Use the last period&#39;s actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget&#39;s time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
+     * 
+     */
     public Optional<Output<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs>> lastPeriodAmount() {
         return Optional.ofNullable(this.lastPeriodAmount);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs extends com.
     @Import(name="specifiedAmount")
     private @Nullable Output<GoogleTypeMoneyArgs> specifiedAmount;
 
+    /**
+     * @return A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.
+     * 
+     */
     public Optional<Output<GoogleTypeMoneyArgs>> specifiedAmount() {
         return Optional.ofNullable(this.specifiedAmount);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs extends com.
             $ = new GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastPeriodAmount Use the last period&#39;s actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget&#39;s time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastPeriodAmount(@Nullable Output<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> lastPeriodAmount) {
             $.lastPeriodAmount = lastPeriodAmount;
             return this;
         }
 
+        /**
+         * @param lastPeriodAmount Use the last period&#39;s actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget&#39;s time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastPeriodAmount(GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs lastPeriodAmount) {
             return lastPeriodAmount(Output.of(lastPeriodAmount));
         }
 
+        /**
+         * @param specifiedAmount A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specifiedAmount(@Nullable Output<GoogleTypeMoneyArgs> specifiedAmount) {
             $.specifiedAmount = specifiedAmount;
             return this;
         }
 
+        /**
+         * @param specifiedAmount A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specifiedAmount(GoogleTypeMoneyArgs specifiedAmount) {
             return specifiedAmount(Output.of(specifiedAmount));
         }

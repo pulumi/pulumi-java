@@ -25,6 +25,10 @@ public final class HostingEnvironmentProfileResponse extends com.pulumi.resource
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID of the App Service Environment.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class HostingEnvironmentProfileResponse extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the App Service Environment.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class HostingEnvironmentProfileResponse extends com.pulumi.resource
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type of the App Service Environment.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -77,16 +89,34 @@ public final class HostingEnvironmentProfileResponse extends com.pulumi.resource
             $ = new HostingEnvironmentProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID of the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Resource type of the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

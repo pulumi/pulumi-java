@@ -20,6 +20,10 @@ public final class GatewayRouteSpecHttpRouteMatchGetArgs extends com.pulumi.reso
     @Import(name="prefix", required=true)
     private Output<String> prefix;
 
+    /**
+     * @return Specifies the path to match requests with. This parameter must always start with `/`, which by itself matches all requests to the virtual service name.
+     * 
+     */
     public Output<String> prefix() {
         return this.prefix;
     }
@@ -48,11 +52,23 @@ public final class GatewayRouteSpecHttpRouteMatchGetArgs extends com.pulumi.reso
             $ = new GatewayRouteSpecHttpRouteMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param prefix Specifies the path to match requests with. This parameter must always start with `/`, which by itself matches all requests to the virtual service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix Specifies the path to match requests with. This parameter must always start with `/`, which by itself matches all requests to the virtual service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }

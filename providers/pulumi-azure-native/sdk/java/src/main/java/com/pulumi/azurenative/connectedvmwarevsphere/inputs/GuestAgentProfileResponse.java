@@ -25,6 +25,10 @@ public final class GuestAgentProfileResponse extends com.pulumi.resources.Invoke
     @Import(name="agentVersion", required=true)
     private String agentVersion;
 
+    /**
+     * @return The hybrid machine agent full version.
+     * 
+     */
     public String agentVersion() {
         return this.agentVersion;
     }
@@ -36,6 +40,10 @@ public final class GuestAgentProfileResponse extends com.pulumi.resources.Invoke
     @Import(name="errorDetails", required=true)
     private List<ErrorDetailResponse> errorDetails;
 
+    /**
+     * @return Details about the error state.
+     * 
+     */
     public List<ErrorDetailResponse> errorDetails() {
         return this.errorDetails;
     }
@@ -47,6 +55,10 @@ public final class GuestAgentProfileResponse extends com.pulumi.resources.Invoke
     @Import(name="lastStatusChange", required=true)
     private String lastStatusChange;
 
+    /**
+     * @return The time of the last status change.
+     * 
+     */
     public String lastStatusChange() {
         return this.lastStatusChange;
     }
@@ -58,6 +70,10 @@ public final class GuestAgentProfileResponse extends com.pulumi.resources.Invoke
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of the hybrid machine agent.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -69,6 +85,10 @@ public final class GuestAgentProfileResponse extends com.pulumi.resources.Invoke
     @Import(name="vmUuid", required=true)
     private String vmUuid;
 
+    /**
+     * @return Specifies the VM&#39;s unique SMBIOS ID.
+     * 
+     */
     public String vmUuid() {
         return this.vmUuid;
     }
@@ -101,30 +121,66 @@ public final class GuestAgentProfileResponse extends com.pulumi.resources.Invoke
             $ = new GuestAgentProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentVersion The hybrid machine agent full version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(String agentVersion) {
             $.agentVersion = agentVersion;
             return this;
         }
 
+        /**
+         * @param errorDetails Details about the error state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorDetails(List<ErrorDetailResponse> errorDetails) {
             $.errorDetails = errorDetails;
             return this;
         }
 
+        /**
+         * @param errorDetails Details about the error state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorDetails(ErrorDetailResponse... errorDetails) {
             return errorDetails(List.of(errorDetails));
         }
 
+        /**
+         * @param lastStatusChange The time of the last status change.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastStatusChange(String lastStatusChange) {
             $.lastStatusChange = lastStatusChange;
             return this;
         }
 
+        /**
+         * @param status The status of the hybrid machine agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param vmUuid Specifies the VM&#39;s unique SMBIOS ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmUuid(String vmUuid) {
             $.vmUuid = vmUuid;
             return this;

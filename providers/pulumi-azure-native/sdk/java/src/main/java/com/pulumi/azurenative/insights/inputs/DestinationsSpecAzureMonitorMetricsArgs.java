@@ -27,6 +27,11 @@ public final class DestinationsSpecAzureMonitorMetricsArgs extends com.pulumi.re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A friendly name for the destination.
+     * This name should be unique across all destinations (regardless of type) within the data collection rule.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,11 +60,25 @@ public final class DestinationsSpecAzureMonitorMetricsArgs extends com.pulumi.re
             $ = new DestinationsSpecAzureMonitorMetricsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A friendly name for the destination.
+         * This name should be unique across all destinations (regardless of type) within the data collection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A friendly name for the destination.
+         * This name should be unique across all destinations (regardless of type) within the data collection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

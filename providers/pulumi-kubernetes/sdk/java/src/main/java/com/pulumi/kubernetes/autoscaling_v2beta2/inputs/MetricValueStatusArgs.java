@@ -27,6 +27,10 @@ public final class MetricValueStatusArgs extends com.pulumi.resources.ResourceAr
     @Import(name="averageUtilization")
     private @Nullable Output<Integer> averageUtilization;
 
+    /**
+     * @return currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
+     * 
+     */
     public Optional<Output<Integer>> averageUtilization() {
         return Optional.ofNullable(this.averageUtilization);
     }
@@ -38,6 +42,10 @@ public final class MetricValueStatusArgs extends com.pulumi.resources.ResourceAr
     @Import(name="averageValue")
     private @Nullable Output<String> averageValue;
 
+    /**
+     * @return averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
+     * 
+     */
     public Optional<Output<String>> averageValue() {
         return Optional.ofNullable(this.averageValue);
     }
@@ -49,6 +57,10 @@ public final class MetricValueStatusArgs extends com.pulumi.resources.ResourceAr
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return value is the current value of the metric (as a quantity).
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -79,29 +91,65 @@ public final class MetricValueStatusArgs extends com.pulumi.resources.ResourceAr
             $ = new MetricValueStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param averageUtilization currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageUtilization(@Nullable Output<Integer> averageUtilization) {
             $.averageUtilization = averageUtilization;
             return this;
         }
 
+        /**
+         * @param averageUtilization currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageUtilization(Integer averageUtilization) {
             return averageUtilization(Output.of(averageUtilization));
         }
 
+        /**
+         * @param averageValue averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageValue(@Nullable Output<String> averageValue) {
             $.averageValue = averageValue;
             return this;
         }
 
+        /**
+         * @param averageValue averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageValue(String averageValue) {
             return averageValue(Output.of(averageValue));
         }
 
+        /**
+         * @param value value is the current value of the metric (as a quantity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value value is the current value of the metric (as a quantity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

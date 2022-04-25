@@ -15,52 +15,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetHubResult {
     /**
-     * API endpoint URL of the hub.
+     * @return API endpoint URL of the hub.
      * 
      */
     private final String apiEndpoint;
     /**
-     * Billing settings of the hub.
+     * @return Billing settings of the hub.
      * 
      */
     private final @Nullable HubBillingInfoFormatResponse hubBillingInfo;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Provisioning state of the hub.
+     * @return Provisioning state of the hub.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
+     * @return The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
      * 
      */
     private final @Nullable Integer tenantFeatures;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Web endpoint URL of the hub.
+     * @return Web endpoint URL of the hub.
      * 
      */
     private final String webEndpoint;
@@ -90,72 +90,72 @@ public final class GetHubResult {
     }
 
     /**
-     * API endpoint URL of the hub.
+     * @return API endpoint URL of the hub.
      * 
-    */
+     */
     public String apiEndpoint() {
         return this.apiEndpoint;
     }
     /**
-     * Billing settings of the hub.
+     * @return Billing settings of the hub.
      * 
-    */
+     */
     public Optional<HubBillingInfoFormatResponse> hubBillingInfo() {
         return Optional.ofNullable(this.hubBillingInfo);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the hub.
+     * @return Provisioning state of the hub.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
+     * @return The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
      * 
-    */
+     */
     public Optional<Integer> tenantFeatures() {
         return Optional.ofNullable(this.tenantFeatures);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Web endpoint URL of the hub.
+     * @return Web endpoint URL of the hub.
      * 
-    */
+     */
     public String webEndpoint() {
         return this.webEndpoint;
     }

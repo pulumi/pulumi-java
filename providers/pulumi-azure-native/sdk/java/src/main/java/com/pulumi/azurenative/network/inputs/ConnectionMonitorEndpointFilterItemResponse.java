@@ -25,6 +25,10 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends com.pulum
     @Import(name="address")
     private @Nullable String address;
 
+    /**
+     * @return The address of the filter item.
+     * 
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
@@ -36,6 +40,10 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends com.pulum
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of item included in the filter. Currently only &#39;AgentAddress&#39; is supported.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -65,11 +73,23 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends com.pulum
             $ = new ConnectionMonitorEndpointFilterItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address The address of the filter item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable String address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param type The type of item included in the filter. Currently only &#39;AgentAddress&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

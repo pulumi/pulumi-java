@@ -10,18 +10,18 @@ import java.util.Objects;
 @CustomType
 public final class ManagedDiskDetailsResponse {
     /**
-     * Account Type of the data to be transferred.
+     * @return Account Type of the data to be transferred.
      * Expected value is &#39;ManagedDisk&#39;.
      * 
      */
     private final String dataAccountType;
     /**
-     * Resource Group Id of the compute disks.
+     * @return Resource Group Id of the compute disks.
      * 
      */
     private final String resourceGroupId;
     /**
-     * Resource Id of the storage account that can be used to copy the vhd for staging.
+     * @return Resource Id of the storage account that can be used to copy the vhd for staging.
      * 
      */
     private final String stagingStorageAccountId;
@@ -37,24 +37,24 @@ public final class ManagedDiskDetailsResponse {
     }
 
     /**
-     * Account Type of the data to be transferred.
+     * @return Account Type of the data to be transferred.
      * Expected value is &#39;ManagedDisk&#39;.
      * 
-    */
+     */
     public String dataAccountType() {
         return this.dataAccountType;
     }
     /**
-     * Resource Group Id of the compute disks.
+     * @return Resource Group Id of the compute disks.
      * 
-    */
+     */
     public String resourceGroupId() {
         return this.resourceGroupId;
     }
     /**
-     * Resource Id of the storage account that can be used to copy the vhd for staging.
+     * @return Resource Id of the storage account that can be used to copy the vhd for staging.
      * 
-    */
+     */
     public String stagingStorageAccountId() {
         return this.stagingStorageAccountId;
     }

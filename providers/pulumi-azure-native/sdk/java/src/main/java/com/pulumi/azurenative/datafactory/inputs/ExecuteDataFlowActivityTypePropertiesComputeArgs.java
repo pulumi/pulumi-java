@@ -26,6 +26,10 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends com.
     @Import(name="computeType")
     private @Nullable Output<Object> computeType;
 
+    /**
+     * @return Compute type of the cluster which will execute data flow job. Possible values include: &#39;General&#39;, &#39;MemoryOptimized&#39;, &#39;ComputeOptimized&#39;. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Output<Object>> computeType() {
         return Optional.ofNullable(this.computeType);
     }
@@ -37,6 +41,10 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends com.
     @Import(name="coreCount")
     private @Nullable Output<Object> coreCount;
 
+    /**
+     * @return Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272. Type: integer (or Expression with resultType integer)
+     * 
+     */
     public Optional<Output<Object>> coreCount() {
         return Optional.ofNullable(this.coreCount);
     }
@@ -66,20 +74,44 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends com.
             $ = new ExecuteDataFlowActivityTypePropertiesComputeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeType Compute type of the cluster which will execute data flow job. Possible values include: &#39;General&#39;, &#39;MemoryOptimized&#39;, &#39;ComputeOptimized&#39;. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(@Nullable Output<Object> computeType) {
             $.computeType = computeType;
             return this;
         }
 
+        /**
+         * @param computeType Compute type of the cluster which will execute data flow job. Possible values include: &#39;General&#39;, &#39;MemoryOptimized&#39;, &#39;ComputeOptimized&#39;. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(Object computeType) {
             return computeType(Output.of(computeType));
         }
 
+        /**
+         * @param coreCount Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272. Type: integer (or Expression with resultType integer)
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreCount(@Nullable Output<Object> coreCount) {
             $.coreCount = coreCount;
             return this;
         }
 
+        /**
+         * @param coreCount Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272. Type: integer (or Expression with resultType integer)
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreCount(Object coreCount) {
             return coreCount(Output.of(coreCount));
         }

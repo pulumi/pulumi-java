@@ -31,6 +31,10 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="categoricalStatsResult", required=true)
     private GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult;
 
+    /**
+     * @return Categorical stats result
+     * 
+     */
     public GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult() {
         return this.categoricalStatsResult;
     }
@@ -42,6 +46,10 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="deltaPresenceEstimationResult", required=true)
     private GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult;
 
+    /**
+     * @return Delta-presence result
+     * 
+     */
     public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult() {
         return this.deltaPresenceEstimationResult;
     }
@@ -53,6 +61,10 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="kAnonymityResult", required=true)
     private GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult;
 
+    /**
+     * @return K-anonymity result
+     * 
+     */
     public GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult() {
         return this.kAnonymityResult;
     }
@@ -64,6 +76,10 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="kMapEstimationResult", required=true)
     private GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult;
 
+    /**
+     * @return K-map result
+     * 
+     */
     public GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult() {
         return this.kMapEstimationResult;
     }
@@ -75,6 +91,10 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="lDiversityResult", required=true)
     private GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult;
 
+    /**
+     * @return L-divesity result
+     * 
+     */
     public GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult() {
         return this.lDiversityResult;
     }
@@ -86,6 +106,10 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="numericalStatsResult", required=true)
     private GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult;
 
+    /**
+     * @return Numerical stats result
+     * 
+     */
     public GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult() {
         return this.numericalStatsResult;
     }
@@ -97,6 +121,10 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="requestedOptions", required=true)
     private GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions;
 
+    /**
+     * @return The configuration used for this job.
+     * 
+     */
     public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions() {
         return this.requestedOptions;
     }
@@ -108,6 +136,10 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="requestedPrivacyMetric", required=true)
     private GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric;
 
+    /**
+     * @return Privacy metric to compute.
+     * 
+     */
     public GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric() {
         return this.requestedPrivacyMetric;
     }
@@ -119,6 +151,10 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
     @Import(name="requestedSourceTable", required=true)
     private GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable;
 
+    /**
+     * @return Input dataset to compute metrics over.
+     * 
+     */
     public GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable() {
         return this.requestedSourceTable;
     }
@@ -155,46 +191,100 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
             $ = new GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categoricalStatsResult Categorical stats result
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoricalStatsResult(GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult) {
             $.categoricalStatsResult = categoricalStatsResult;
             return this;
         }
 
+        /**
+         * @param deltaPresenceEstimationResult Delta-presence result
+         * 
+         * @return builder
+         * 
+         */
         public Builder deltaPresenceEstimationResult(GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult) {
             $.deltaPresenceEstimationResult = deltaPresenceEstimationResult;
             return this;
         }
 
+        /**
+         * @param kAnonymityResult K-anonymity result
+         * 
+         * @return builder
+         * 
+         */
         public Builder kAnonymityResult(GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult) {
             $.kAnonymityResult = kAnonymityResult;
             return this;
         }
 
+        /**
+         * @param kMapEstimationResult K-map result
+         * 
+         * @return builder
+         * 
+         */
         public Builder kMapEstimationResult(GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult) {
             $.kMapEstimationResult = kMapEstimationResult;
             return this;
         }
 
+        /**
+         * @param lDiversityResult L-divesity result
+         * 
+         * @return builder
+         * 
+         */
         public Builder lDiversityResult(GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult) {
             $.lDiversityResult = lDiversityResult;
             return this;
         }
 
+        /**
+         * @param numericalStatsResult Numerical stats result
+         * 
+         * @return builder
+         * 
+         */
         public Builder numericalStatsResult(GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult) {
             $.numericalStatsResult = numericalStatsResult;
             return this;
         }
 
+        /**
+         * @param requestedOptions The configuration used for this job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedOptions(GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions) {
             $.requestedOptions = requestedOptions;
             return this;
         }
 
+        /**
+         * @param requestedPrivacyMetric Privacy metric to compute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedPrivacyMetric(GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric) {
             $.requestedPrivacyMetric = requestedPrivacyMetric;
             return this;
         }
 
+        /**
+         * @param requestedSourceTable Input dataset to compute metrics over.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedSourceTable(GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable) {
             $.requestedSourceTable = requestedSourceTable;
             return this;

@@ -27,6 +27,10 @@ public final class EmailChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="emailAddress", required=true)
     private Output<String> emailAddress;
 
+    /**
+     * @return The email address
+     * 
+     */
     public Output<String> emailAddress() {
         return this.emailAddress;
     }
@@ -38,6 +42,10 @@ public final class EmailChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -49,6 +57,10 @@ public final class EmailChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -79,29 +91,65 @@ public final class EmailChannelPropertiesArgs extends com.pulumi.resources.Resou
             $ = new EmailChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress The email address
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(Output<String> emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param emailAddress The email address
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(String emailAddress) {
             return emailAddress(Output.of(emailAddress));
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param password The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }

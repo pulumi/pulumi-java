@@ -24,6 +24,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="properties", required=true)
     private Output<PrivateEndpointConnectionPropertiesArgs> properties;
 
+    /**
+     * @return The properties of a private endpoint connection
+     * 
+     */
     public Output<PrivateEndpointConnectionPropertiesArgs> properties() {
         return this.properties;
     }
@@ -52,11 +56,23 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
             $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties The properties of a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<PrivateEndpointConnectionPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The properties of a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(PrivateEndpointConnectionPropertiesArgs properties) {
             return properties(Output.of(properties));
         }

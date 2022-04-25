@@ -27,6 +27,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
     @Import(name="hostKey")
     private @Nullable String hostKey;
 
+    /**
+     * @return Public sshKey of git repository.
+     * 
+     */
     public Optional<String> hostKey() {
         return Optional.ofNullable(this.hostKey);
     }
@@ -38,6 +42,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
     @Import(name="hostKeyAlgorithm")
     private @Nullable String hostKeyAlgorithm;
 
+    /**
+     * @return SshKey algorithm of git repository.
+     * 
+     */
     public Optional<String> hostKeyAlgorithm() {
         return Optional.ofNullable(this.hostKeyAlgorithm);
     }
@@ -49,6 +57,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
     @Import(name="label", required=true)
     private String label;
 
+    /**
+     * @return Label of the repository
+     * 
+     */
     public String label() {
         return this.label;
     }
@@ -60,6 +72,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the repository
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -71,6 +87,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return Password of git repository basic auth.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -82,6 +102,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
     @Import(name="patterns", required=true)
     private List<String> patterns;
 
+    /**
+     * @return Collection of patterns of the repository
+     * 
+     */
     public List<String> patterns() {
         return this.patterns;
     }
@@ -93,6 +117,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
     @Import(name="privateKey")
     private @Nullable String privateKey;
 
+    /**
+     * @return Private sshKey algorithm of git repository.
+     * 
+     */
     public Optional<String> privateKey() {
         return Optional.ofNullable(this.privateKey);
     }
@@ -104,6 +132,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
     @Import(name="searchPaths")
     private @Nullable List<String> searchPaths;
 
+    /**
+     * @return Searching path of the repository
+     * 
+     */
     public Optional<List<String>> searchPaths() {
         return Optional.ofNullable(this.searchPaths);
     }
@@ -115,6 +147,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
     @Import(name="strictHostKeyChecking")
     private @Nullable Boolean strictHostKeyChecking;
 
+    /**
+     * @return Strict host key checking or not.
+     * 
+     */
     public Optional<Boolean> strictHostKeyChecking() {
         return Optional.ofNullable(this.strictHostKeyChecking);
     }
@@ -126,6 +162,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI of the repository
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -137,6 +177,10 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return Username of git repository basic auth.
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -175,64 +219,142 @@ public final class ConfigurationServiceGitRepositoryResponse extends com.pulumi.
             $ = new ConfigurationServiceGitRepositoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostKey Public sshKey of git repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostKey(@Nullable String hostKey) {
             $.hostKey = hostKey;
             return this;
         }
 
+        /**
+         * @param hostKeyAlgorithm SshKey algorithm of git repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostKeyAlgorithm(@Nullable String hostKeyAlgorithm) {
             $.hostKeyAlgorithm = hostKeyAlgorithm;
             return this;
         }
 
+        /**
+         * @param label Label of the repository
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param name Name of the repository
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param password Password of git repository basic auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param patterns Collection of patterns of the repository
+         * 
+         * @return builder
+         * 
+         */
         public Builder patterns(List<String> patterns) {
             $.patterns = patterns;
             return this;
         }
 
+        /**
+         * @param patterns Collection of patterns of the repository
+         * 
+         * @return builder
+         * 
+         */
         public Builder patterns(String... patterns) {
             return patterns(List.of(patterns));
         }
 
+        /**
+         * @param privateKey Private sshKey algorithm of git repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(@Nullable String privateKey) {
             $.privateKey = privateKey;
             return this;
         }
 
+        /**
+         * @param searchPaths Searching path of the repository
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchPaths(@Nullable List<String> searchPaths) {
             $.searchPaths = searchPaths;
             return this;
         }
 
+        /**
+         * @param searchPaths Searching path of the repository
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchPaths(String... searchPaths) {
             return searchPaths(List.of(searchPaths));
         }
 
+        /**
+         * @param strictHostKeyChecking Strict host key checking or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strictHostKeyChecking(@Nullable Boolean strictHostKeyChecking) {
             $.strictHostKeyChecking = strictHostKeyChecking;
             return this;
         }
 
+        /**
+         * @param uri URI of the repository
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param username Username of git repository basic auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

@@ -26,6 +26,10 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends com.pulum
     @Import(name="region")
     private @Nullable String region;
 
+    /**
+     * @return Region to configure the Workspace.
+     * 
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
@@ -37,6 +41,10 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends com.pulum
     @Import(name="workspaceId")
     private @Nullable SubResourceResponse workspaceId;
 
+    /**
+     * @return The workspace Id for Firewall Policy Insights.
+     * 
+     */
     public Optional<SubResourceResponse> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -66,11 +74,23 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends com.pulum
             $ = new FirewallPolicyLogAnalyticsWorkspaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param region Region to configure the Workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param workspaceId The workspace Id for Firewall Policy Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(@Nullable SubResourceResponse workspaceId) {
             $.workspaceId = workspaceId;
             return this;

@@ -16,13 +16,13 @@ public final class GetAttributeGroupResult {
     private final @Nullable String arn;
     private final @Nullable Object attributes;
     /**
-     * The description of the attribute group.
+     * @return The description of the attribute group.
      * 
      */
     private final @Nullable String description;
     private final @Nullable String id;
     /**
-     * The name of the attribute group.
+     * @return The name of the attribute group.
      * 
      */
     private final @Nullable String name;
@@ -51,9 +51,9 @@ public final class GetAttributeGroupResult {
         return Optional.ofNullable(this.attributes);
     }
     /**
-     * The description of the attribute group.
+     * @return The description of the attribute group.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -61,9 +61,9 @@ public final class GetAttributeGroupResult {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the attribute group.
+     * @return The name of the attribute group.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

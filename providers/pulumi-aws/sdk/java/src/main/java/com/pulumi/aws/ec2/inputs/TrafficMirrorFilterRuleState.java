@@ -25,6 +25,10 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the traffic mirror filter rule.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the traffic mirror filter rule.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="destinationCidrBlock")
     private @Nullable Output<String> destinationCidrBlock;
 
+    /**
+     * @return Destination CIDR block to assign to the Traffic Mirror rule.
+     * 
+     */
     public Optional<Output<String>> destinationCidrBlock() {
         return Optional.ofNullable(this.destinationCidrBlock);
     }
@@ -58,6 +70,10 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="destinationPortRange")
     private @Nullable Output<TrafficMirrorFilterRuleDestinationPortRangeGetArgs> destinationPortRange;
 
+    /**
+     * @return Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+     * 
+     */
     public Optional<Output<TrafficMirrorFilterRuleDestinationPortRangeGetArgs>> destinationPortRange() {
         return Optional.ofNullable(this.destinationPortRange);
     }
@@ -69,6 +85,10 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="protocol")
     private @Nullable Output<Integer> protocol;
 
+    /**
+     * @return Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
+     * 
+     */
     public Optional<Output<Integer>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -80,6 +100,10 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="ruleAction")
     private @Nullable Output<String> ruleAction;
 
+    /**
+     * @return Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
+     * 
+     */
     public Optional<Output<String>> ruleAction() {
         return Optional.ofNullable(this.ruleAction);
     }
@@ -91,6 +115,10 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="ruleNumber")
     private @Nullable Output<Integer> ruleNumber;
 
+    /**
+     * @return Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
+     * 
+     */
     public Optional<Output<Integer>> ruleNumber() {
         return Optional.ofNullable(this.ruleNumber);
     }
@@ -102,6 +130,10 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="sourceCidrBlock")
     private @Nullable Output<String> sourceCidrBlock;
 
+    /**
+     * @return Source CIDR block to assign to the Traffic Mirror rule.
+     * 
+     */
     public Optional<Output<String>> sourceCidrBlock() {
         return Optional.ofNullable(this.sourceCidrBlock);
     }
@@ -113,6 +145,10 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="sourcePortRange")
     private @Nullable Output<TrafficMirrorFilterRuleSourcePortRangeGetArgs> sourcePortRange;
 
+    /**
+     * @return Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+     * 
+     */
     public Optional<Output<TrafficMirrorFilterRuleSourcePortRangeGetArgs>> sourcePortRange() {
         return Optional.ofNullable(this.sourcePortRange);
     }
@@ -124,6 +160,10 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="trafficDirection")
     private @Nullable Output<String> trafficDirection;
 
+    /**
+     * @return Direction of traffic to be captured. Valid values are `ingress` and `egress`
+     * 
+     */
     public Optional<Output<String>> trafficDirection() {
         return Optional.ofNullable(this.trafficDirection);
     }
@@ -135,6 +175,10 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="trafficMirrorFilterId")
     private @Nullable Output<String> trafficMirrorFilterId;
 
+    /**
+     * @return ID of the traffic mirror filter to which this rule should be added
+     * 
+     */
     public Optional<Output<String>> trafficMirrorFilterId() {
         return Optional.ofNullable(this.trafficMirrorFilterId);
     }
@@ -173,101 +217,233 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
             $ = new TrafficMirrorFilterRuleState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn ARN of the traffic mirror filter rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the traffic mirror filter rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description Description of the traffic mirror filter rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the traffic mirror filter rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param destinationCidrBlock Destination CIDR block to assign to the Traffic Mirror rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
             $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
+        /**
+         * @param destinationCidrBlock Destination CIDR block to assign to the Traffic Mirror rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             return destinationCidrBlock(Output.of(destinationCidrBlock));
         }
 
+        /**
+         * @param destinationPortRange Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortRange(@Nullable Output<TrafficMirrorFilterRuleDestinationPortRangeGetArgs> destinationPortRange) {
             $.destinationPortRange = destinationPortRange;
             return this;
         }
 
+        /**
+         * @param destinationPortRange Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortRange(TrafficMirrorFilterRuleDestinationPortRangeGetArgs destinationPortRange) {
             return destinationPortRange(Output.of(destinationPortRange));
         }
 
+        /**
+         * @param protocol Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<Integer> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Integer protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param ruleAction Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleAction(@Nullable Output<String> ruleAction) {
             $.ruleAction = ruleAction;
             return this;
         }
 
+        /**
+         * @param ruleAction Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleAction(String ruleAction) {
             return ruleAction(Output.of(ruleAction));
         }
 
+        /**
+         * @param ruleNumber Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleNumber(@Nullable Output<Integer> ruleNumber) {
             $.ruleNumber = ruleNumber;
             return this;
         }
 
+        /**
+         * @param ruleNumber Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleNumber(Integer ruleNumber) {
             return ruleNumber(Output.of(ruleNumber));
         }
 
+        /**
+         * @param sourceCidrBlock Source CIDR block to assign to the Traffic Mirror rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceCidrBlock(@Nullable Output<String> sourceCidrBlock) {
             $.sourceCidrBlock = sourceCidrBlock;
             return this;
         }
 
+        /**
+         * @param sourceCidrBlock Source CIDR block to assign to the Traffic Mirror rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceCidrBlock(String sourceCidrBlock) {
             return sourceCidrBlock(Output.of(sourceCidrBlock));
         }
 
+        /**
+         * @param sourcePortRange Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortRange(@Nullable Output<TrafficMirrorFilterRuleSourcePortRangeGetArgs> sourcePortRange) {
             $.sourcePortRange = sourcePortRange;
             return this;
         }
 
+        /**
+         * @param sourcePortRange Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortRange(TrafficMirrorFilterRuleSourcePortRangeGetArgs sourcePortRange) {
             return sourcePortRange(Output.of(sourcePortRange));
         }
 
+        /**
+         * @param trafficDirection Direction of traffic to be captured. Valid values are `ingress` and `egress`
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficDirection(@Nullable Output<String> trafficDirection) {
             $.trafficDirection = trafficDirection;
             return this;
         }
 
+        /**
+         * @param trafficDirection Direction of traffic to be captured. Valid values are `ingress` and `egress`
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficDirection(String trafficDirection) {
             return trafficDirection(Output.of(trafficDirection));
         }
 
+        /**
+         * @param trafficMirrorFilterId ID of the traffic mirror filter to which this rule should be added
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficMirrorFilterId(@Nullable Output<String> trafficMirrorFilterId) {
             $.trafficMirrorFilterId = trafficMirrorFilterId;
             return this;
         }
 
+        /**
+         * @param trafficMirrorFilterId ID of the traffic mirror filter to which this rule should be added
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
             return trafficMirrorFilterId(Output.of(trafficMirrorFilterId));
         }

@@ -23,6 +23,10 @@ public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnectio
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Remote private endpoint connection ID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnectio
             $ = new PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Remote private endpoint connection ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

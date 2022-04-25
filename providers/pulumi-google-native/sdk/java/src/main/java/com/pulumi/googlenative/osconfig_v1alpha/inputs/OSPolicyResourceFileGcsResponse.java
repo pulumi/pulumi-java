@@ -23,6 +23,10 @@ public final class OSPolicyResourceFileGcsResponse extends com.pulumi.resources.
     @Import(name="bucket", required=true)
     private String bucket;
 
+    /**
+     * @return Bucket of the Cloud Storage object.
+     * 
+     */
     public String bucket() {
         return this.bucket;
     }
@@ -34,6 +38,10 @@ public final class OSPolicyResourceFileGcsResponse extends com.pulumi.resources.
     @Import(name="generation", required=true)
     private String generation;
 
+    /**
+     * @return Generation number of the Cloud Storage object.
+     * 
+     */
     public String generation() {
         return this.generation;
     }
@@ -45,6 +53,10 @@ public final class OSPolicyResourceFileGcsResponse extends com.pulumi.resources.
     @Import(name="object", required=true)
     private String object;
 
+    /**
+     * @return Name of the Cloud Storage object.
+     * 
+     */
     public String object() {
         return this.object;
     }
@@ -75,16 +87,34 @@ public final class OSPolicyResourceFileGcsResponse extends com.pulumi.resources.
             $ = new OSPolicyResourceFileGcsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Bucket of the Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param generation Generation number of the Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generation(String generation) {
             $.generation = generation;
             return this;
         }
 
+        /**
+         * @param object Name of the Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(String object) {
             $.object = object;
             return this;

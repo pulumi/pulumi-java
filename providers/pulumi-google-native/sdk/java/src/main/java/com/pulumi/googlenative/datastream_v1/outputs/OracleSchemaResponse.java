@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class OracleSchemaResponse {
     /**
-     * Tables in the schema.
+     * @return Tables in the schema.
      * 
      */
     private final List<OracleTableResponse> oracleTables;
     /**
-     * Schema name.
+     * @return Schema name.
      * 
      */
     private final String schema;
@@ -31,16 +31,16 @@ public final class OracleSchemaResponse {
     }
 
     /**
-     * Tables in the schema.
+     * @return Tables in the schema.
      * 
-    */
+     */
     public List<OracleTableResponse> oracleTables() {
         return this.oracleTables;
     }
     /**
-     * Schema name.
+     * @return Schema name.
      * 
-    */
+     */
     public String schema() {
         return this.schema;
     }

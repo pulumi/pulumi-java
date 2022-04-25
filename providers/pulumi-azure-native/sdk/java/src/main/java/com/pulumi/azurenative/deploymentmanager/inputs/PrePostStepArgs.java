@@ -24,6 +24,10 @@ public final class PrePostStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stepId", required=true)
     private Output<String> stepId;
 
+    /**
+     * @return The resource Id of the step to be run.
+     * 
+     */
     public Output<String> stepId() {
         return this.stepId;
     }
@@ -52,11 +56,23 @@ public final class PrePostStepArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PrePostStepArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param stepId The resource Id of the step to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepId(Output<String> stepId) {
             $.stepId = stepId;
             return this;
         }
 
+        /**
+         * @param stepId The resource Id of the step to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepId(String stepId) {
             return stepId(Output.of(stepId));
         }

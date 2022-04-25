@@ -23,6 +23,10 @@ public final class PrivateLinkConnectionStateResponse extends com.pulumi.resourc
     @Import(name="actionsRequired", required=true)
     private String actionsRequired;
 
+    /**
+     * @return A message indicating if changes on the service provider require any updates on the consumer.
+     * 
+     */
     public String actionsRequired() {
         return this.actionsRequired;
     }
@@ -34,6 +38,10 @@ public final class PrivateLinkConnectionStateResponse extends com.pulumi.resourc
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return The reason for approval/rejection of the connection.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -45,6 +53,10 @@ public final class PrivateLinkConnectionStateResponse extends com.pulumi.resourc
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Indicates whether the connection has been Approved/Rejected/Removed by the owner of the remote resource/service.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -75,16 +87,34 @@ public final class PrivateLinkConnectionStateResponse extends com.pulumi.resourc
             $ = new PrivateLinkConnectionStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsRequired A message indicating if changes on the service provider require any updates on the consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(String actionsRequired) {
             $.actionsRequired = actionsRequired;
             return this;
         }
 
+        /**
+         * @param description The reason for approval/rejection of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param status Indicates whether the connection has been Approved/Rejected/Removed by the owner of the remote resource/service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

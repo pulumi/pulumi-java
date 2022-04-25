@@ -17,39 +17,39 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMonitoringScheduleResult {
     /**
-     * The time at which the schedule was created.
+     * @return The time at which the schedule was created.
      * 
      */
     private final @Nullable String creationTime;
     private final @Nullable String endpointName;
     /**
-     * Contains the reason a monitoring job failed, if it failed.
+     * @return Contains the reason a monitoring job failed, if it failed.
      * 
      */
     private final @Nullable String failureReason;
     /**
-     * A timestamp that indicates the last time the monitoring job was modified.
+     * @return A timestamp that indicates the last time the monitoring job was modified.
      * 
      */
     private final @Nullable String lastModifiedTime;
     /**
-     * Describes metadata on the last execution to run, if there was one.
+     * @return Describes metadata on the last execution to run, if there was one.
      * 
      */
     private final @Nullable MonitoringScheduleMonitoringExecutionSummary lastMonitoringExecutionSummary;
     /**
-     * The Amazon Resource Name (ARN) of the monitoring schedule.
+     * @return The Amazon Resource Name (ARN) of the monitoring schedule.
      * 
      */
     private final @Nullable String monitoringScheduleArn;
     private final @Nullable MonitoringScheduleConfig monitoringScheduleConfig;
     /**
-     * The status of a schedule job.
+     * @return The status of a schedule job.
      * 
      */
     private final @Nullable MonitoringScheduleStatus monitoringScheduleStatus;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<MonitoringScheduleTag> tags;
@@ -77,9 +77,9 @@ public final class GetMonitoringScheduleResult {
     }
 
     /**
-     * The time at which the schedule was created.
+     * @return The time at which the schedule was created.
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
@@ -87,30 +87,30 @@ public final class GetMonitoringScheduleResult {
         return Optional.ofNullable(this.endpointName);
     }
     /**
-     * Contains the reason a monitoring job failed, if it failed.
+     * @return Contains the reason a monitoring job failed, if it failed.
      * 
-    */
+     */
     public Optional<String> failureReason() {
         return Optional.ofNullable(this.failureReason);
     }
     /**
-     * A timestamp that indicates the last time the monitoring job was modified.
+     * @return A timestamp that indicates the last time the monitoring job was modified.
      * 
-    */
+     */
     public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
-     * Describes metadata on the last execution to run, if there was one.
+     * @return Describes metadata on the last execution to run, if there was one.
      * 
-    */
+     */
     public Optional<MonitoringScheduleMonitoringExecutionSummary> lastMonitoringExecutionSummary() {
         return Optional.ofNullable(this.lastMonitoringExecutionSummary);
     }
     /**
-     * The Amazon Resource Name (ARN) of the monitoring schedule.
+     * @return The Amazon Resource Name (ARN) of the monitoring schedule.
      * 
-    */
+     */
     public Optional<String> monitoringScheduleArn() {
         return Optional.ofNullable(this.monitoringScheduleArn);
     }
@@ -118,16 +118,16 @@ public final class GetMonitoringScheduleResult {
         return Optional.ofNullable(this.monitoringScheduleConfig);
     }
     /**
-     * The status of a schedule job.
+     * @return The status of a schedule job.
      * 
-    */
+     */
     public Optional<MonitoringScheduleStatus> monitoringScheduleStatus() {
         return Optional.ofNullable(this.monitoringScheduleStatus);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<MonitoringScheduleTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

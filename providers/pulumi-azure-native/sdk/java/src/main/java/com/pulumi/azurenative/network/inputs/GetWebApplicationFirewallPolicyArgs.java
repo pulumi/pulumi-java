@@ -19,6 +19,10 @@ public final class GetWebApplicationFirewallPolicyArgs extends com.pulumi.resour
     @Import(name="policyName", required=true)
     private String policyName;
 
+    /**
+     * @return The name of the policy.
+     * 
+     */
     public String policyName() {
         return this.policyName;
     }
@@ -30,6 +34,10 @@ public final class GetWebApplicationFirewallPolicyArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetWebApplicationFirewallPolicyArgs extends com.pulumi.resour
             $ = new GetWebApplicationFirewallPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyName The name of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

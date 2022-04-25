@@ -25,6 +25,10 @@ public final class RegistryPasswordResponse extends com.pulumi.resources.InvokeA
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The password name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class RegistryPasswordResponse extends com.pulumi.resources.InvokeA
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The password value.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class RegistryPasswordResponse extends com.pulumi.resources.InvokeA
             $ = new RegistryPasswordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The password name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The password value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class CloudTieringCachePerformanceResponse {
     /**
-     * Count of bytes that were served from the local server
+     * @return Count of bytes that were served from the local server
      * 
      */
     private final Double cacheHitBytes;
     /**
-     * Percentage of total bytes (hit + miss) that were served from the local server
+     * @return Percentage of total bytes (hit + miss) that were served from the local server
      * 
      */
     private final Integer cacheHitBytesPercent;
     /**
-     * Count of bytes that were served from the cloud
+     * @return Count of bytes that were served from the cloud
      * 
      */
     private final Double cacheMissBytes;
     /**
-     * Last updated timestamp
+     * @return Last updated timestamp
      * 
      */
     private final String lastUpdatedTimestamp;
@@ -45,30 +45,30 @@ public final class CloudTieringCachePerformanceResponse {
     }
 
     /**
-     * Count of bytes that were served from the local server
+     * @return Count of bytes that were served from the local server
      * 
-    */
+     */
     public Double cacheHitBytes() {
         return this.cacheHitBytes;
     }
     /**
-     * Percentage of total bytes (hit + miss) that were served from the local server
+     * @return Percentage of total bytes (hit + miss) that were served from the local server
      * 
-    */
+     */
     public Integer cacheHitBytesPercent() {
         return this.cacheHitBytesPercent;
     }
     /**
-     * Count of bytes that were served from the cloud
+     * @return Count of bytes that were served from the cloud
      * 
-    */
+     */
     public Double cacheMissBytes() {
         return this.cacheMissBytes;
     }
     /**
-     * Last updated timestamp
+     * @return Last updated timestamp
      * 
-    */
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }

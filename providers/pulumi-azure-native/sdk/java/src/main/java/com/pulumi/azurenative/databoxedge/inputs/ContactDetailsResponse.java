@@ -24,6 +24,10 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="companyName", required=true)
     private String companyName;
 
+    /**
+     * @return The name of the company.
+     * 
+     */
     public String companyName() {
         return this.companyName;
     }
@@ -35,6 +39,10 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="contactPerson", required=true)
     private String contactPerson;
 
+    /**
+     * @return The contact person name.
+     * 
+     */
     public String contactPerson() {
         return this.contactPerson;
     }
@@ -46,6 +54,10 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="emailList", required=true)
     private List<String> emailList;
 
+    /**
+     * @return The email list.
+     * 
+     */
     public List<String> emailList() {
         return this.emailList;
     }
@@ -57,6 +69,10 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="phone", required=true)
     private String phone;
 
+    /**
+     * @return The phone number.
+     * 
+     */
     public String phone() {
         return this.phone;
     }
@@ -88,25 +104,55 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
             $ = new ContactDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param companyName The name of the company.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyName(String companyName) {
             $.companyName = companyName;
             return this;
         }
 
+        /**
+         * @param contactPerson The contact person name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactPerson(String contactPerson) {
             $.contactPerson = contactPerson;
             return this;
         }
 
+        /**
+         * @param emailList The email list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailList(List<String> emailList) {
             $.emailList = emailList;
             return this;
         }
 
+        /**
+         * @param emailList The email list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailList(String... emailList) {
             return emailList(List.of(emailList));
         }
 
+        /**
+         * @param phone The phone number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(String phone) {
             $.phone = phone;
             return this;

@@ -25,6 +25,10 @@ public final class AnimationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="animationEnd", required=true)
     private AnimationEndResponse animationEnd;
 
+    /**
+     * @return End previous animation.
+     * 
+     */
     public AnimationEndResponse animationEnd() {
         return this.animationEnd;
     }
@@ -36,6 +40,10 @@ public final class AnimationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="animationFade", required=true)
     private AnimationFadeResponse animationFade;
 
+    /**
+     * @return Display overlay object with fade animation.
+     * 
+     */
     public AnimationFadeResponse animationFade() {
         return this.animationFade;
     }
@@ -47,6 +55,10 @@ public final class AnimationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="animationStatic", required=true)
     private AnimationStaticResponse animationStatic;
 
+    /**
+     * @return Display static overlay object.
+     * 
+     */
     public AnimationStaticResponse animationStatic() {
         return this.animationStatic;
     }
@@ -77,16 +89,34 @@ public final class AnimationResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AnimationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param animationEnd End previous animation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder animationEnd(AnimationEndResponse animationEnd) {
             $.animationEnd = animationEnd;
             return this;
         }
 
+        /**
+         * @param animationFade Display overlay object with fade animation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder animationFade(AnimationFadeResponse animationFade) {
             $.animationFade = animationFade;
             return this;
         }
 
+        /**
+         * @param animationStatic Display static overlay object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder animationStatic(AnimationStaticResponse animationStatic) {
             $.animationStatic = animationStatic;
             return this;

@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ThingTypeProperties {
     /**
-     * The description of the thing type.
+     * @return The description of the thing type.
      * 
      */
     private final @Nullable String description;
     /**
-     * A list of searchable thing attribute names.
+     * @return A list of searchable thing attribute names.
      * 
      */
     private final @Nullable List<String> searchableAttributes;
@@ -32,16 +32,16 @@ public final class ThingTypeProperties {
     }
 
     /**
-     * The description of the thing type.
+     * @return The description of the thing type.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * A list of searchable thing attribute names.
+     * @return A list of searchable thing attribute names.
      * 
-    */
+     */
     public List<String> searchableAttributes() {
         return this.searchableAttributes == null ? List.of() : this.searchableAttributes;
     }

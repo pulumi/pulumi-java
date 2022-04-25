@@ -25,6 +25,11 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bgp")
     private @Nullable Output<RouterBgpArgs> bgp;
 
+    /**
+     * @return BGP information specific to this router.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RouterBgpArgs>> bgp() {
         return Optional.ofNullable(this.bgp);
     }
@@ -36,6 +41,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User-specified description for the IP range.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +58,12 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptedInterconnectRouter")
     private @Nullable Output<Boolean> encryptedInterconnectRouter;
 
+    /**
+     * @return Field to indicate if a router is dedicated to use with encrypted
+     * Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
+     * Not currently available publicly.
+     * 
+     */
     public Optional<Output<Boolean>> encryptedInterconnectRouter() {
         return Optional.ofNullable(this.encryptedInterconnectRouter);
     }
@@ -65,6 +80,15 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. The name must be 1-63 characters long, and
+     * comply with RFC1035. Specifically, the name must be 1-63 characters
+     * long and match the regular expression `a-z?`
+     * which means the first character must be a lowercase letter, and all
+     * following characters must be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -76,6 +100,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="network", required=true)
     private Output<String> network;
 
+    /**
+     * @return A reference to the network to which this router belongs.
+     * 
+     */
     public Output<String> network() {
         return this.network;
     }
@@ -88,6 +116,11 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -99,6 +132,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return Region where the router resides.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -133,65 +170,167 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RouterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bgp BGP information specific to this router.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgp(@Nullable Output<RouterBgpArgs> bgp) {
             $.bgp = bgp;
             return this;
         }
 
+        /**
+         * @param bgp BGP information specific to this router.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgp(RouterBgpArgs bgp) {
             return bgp(Output.of(bgp));
         }
 
+        /**
+         * @param description User-specified description for the IP range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User-specified description for the IP range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptedInterconnectRouter Field to indicate if a router is dedicated to use with encrypted
+         * Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
+         * Not currently available publicly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedInterconnectRouter(@Nullable Output<Boolean> encryptedInterconnectRouter) {
             $.encryptedInterconnectRouter = encryptedInterconnectRouter;
             return this;
         }
 
+        /**
+         * @param encryptedInterconnectRouter Field to indicate if a router is dedicated to use with encrypted
+         * Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
+         * Not currently available publicly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedInterconnectRouter(Boolean encryptedInterconnectRouter) {
             return encryptedInterconnectRouter(Output.of(encryptedInterconnectRouter));
         }
 
+        /**
+         * @param name Name of the resource. The name must be 1-63 characters long, and
+         * comply with RFC1035. Specifically, the name must be 1-63 characters
+         * long and match the regular expression `a-z?`
+         * which means the first character must be a lowercase letter, and all
+         * following characters must be a dash, lowercase letter, or digit,
+         * except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. The name must be 1-63 characters long, and
+         * comply with RFC1035. Specifically, the name must be 1-63 characters
+         * long and match the regular expression `a-z?`
+         * which means the first character must be a lowercase letter, and all
+         * following characters must be a dash, lowercase letter, or digit,
+         * except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network A reference to the network to which this router belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network A reference to the network to which this router belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region Region where the router resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Region where the router resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

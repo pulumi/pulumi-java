@@ -14,47 +14,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWorkloadGroupResult {
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * The workload group importance level.
+     * @return The workload group importance level.
      * 
      */
     private final @Nullable String importance;
     /**
-     * The workload group cap percentage resource.
+     * @return The workload group cap percentage resource.
      * 
      */
     private final Integer maxResourcePercent;
     /**
-     * The workload group request maximum grant percentage.
+     * @return The workload group request maximum grant percentage.
      * 
      */
     private final @Nullable Double maxResourcePercentPerRequest;
     /**
-     * The workload group minimum percentage resource.
+     * @return The workload group minimum percentage resource.
      * 
      */
     private final Integer minResourcePercent;
     /**
-     * The workload group request minimum grant percentage.
+     * @return The workload group request minimum grant percentage.
      * 
      */
     private final Double minResourcePercentPerRequest;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The workload group query execution timeout.
+     * @return The workload group query execution timeout.
      * 
      */
     private final @Nullable Integer queryExecutionTimeout;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -82,65 +82,65 @@ public final class GetWorkloadGroupResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The workload group importance level.
+     * @return The workload group importance level.
      * 
-    */
+     */
     public Optional<String> importance() {
         return Optional.ofNullable(this.importance);
     }
     /**
-     * The workload group cap percentage resource.
+     * @return The workload group cap percentage resource.
      * 
-    */
+     */
     public Integer maxResourcePercent() {
         return this.maxResourcePercent;
     }
     /**
-     * The workload group request maximum grant percentage.
+     * @return The workload group request maximum grant percentage.
      * 
-    */
+     */
     public Optional<Double> maxResourcePercentPerRequest() {
         return Optional.ofNullable(this.maxResourcePercentPerRequest);
     }
     /**
-     * The workload group minimum percentage resource.
+     * @return The workload group minimum percentage resource.
      * 
-    */
+     */
     public Integer minResourcePercent() {
         return this.minResourcePercent;
     }
     /**
-     * The workload group request minimum grant percentage.
+     * @return The workload group request minimum grant percentage.
      * 
-    */
+     */
     public Double minResourcePercentPerRequest() {
         return this.minResourcePercentPerRequest;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The workload group query execution timeout.
+     * @return The workload group query execution timeout.
      * 
-    */
+     */
     public Optional<Integer> queryExecutionTimeout() {
         return Optional.ofNullable(this.queryExecutionTimeout);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

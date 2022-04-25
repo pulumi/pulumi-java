@@ -25,6 +25,10 @@ public final class ContentPathMapResponse extends com.pulumi.resources.InvokeArg
     @Import(name="contentType")
     private @Nullable String contentType;
 
+    /**
+     * @return Content type.
+     * 
+     */
     public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -36,6 +40,10 @@ public final class ContentPathMapResponse extends com.pulumi.resources.InvokeArg
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return The path to the content.
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -65,11 +73,23 @@ public final class ContentPathMapResponse extends com.pulumi.resources.InvokeArg
             $ = new ContentPathMapResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentType Content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable String contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param path The path to the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;

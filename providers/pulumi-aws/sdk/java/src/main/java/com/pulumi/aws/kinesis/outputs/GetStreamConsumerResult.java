@@ -11,18 +11,18 @@ import java.util.Objects;
 public final class GetStreamConsumerResult {
     private final String arn;
     /**
-     * Approximate timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of when the stream consumer was created.
+     * @return Approximate timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of when the stream consumer was created.
      * 
      */
     private final String creationTimestamp;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String name;
     /**
-     * The current status of the stream consumer.
+     * @return The current status of the stream consumer.
      * 
      */
     private final String status;
@@ -48,16 +48,16 @@ public final class GetStreamConsumerResult {
         return this.arn;
     }
     /**
-     * Approximate timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of when the stream consumer was created.
+     * @return Approximate timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of when the stream consumer was created.
      * 
-    */
+     */
     public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -65,9 +65,9 @@ public final class GetStreamConsumerResult {
         return this.name;
     }
     /**
-     * The current status of the stream consumer.
+     * @return The current status of the stream consumer.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

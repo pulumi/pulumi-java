@@ -24,6 +24,10 @@ public final class CloudAuditOptionsResponse extends com.pulumi.resources.Invoke
     @Import(name="authorizationLoggingOptions", required=true)
     private AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
 
+    /**
+     * @return Information used by the Cloud Audit Logging pipeline.
+     * 
+     */
     public AuthorizationLoggingOptionsResponse authorizationLoggingOptions() {
         return this.authorizationLoggingOptions;
     }
@@ -35,6 +39,10 @@ public final class CloudAuditOptionsResponse extends com.pulumi.resources.Invoke
     @Import(name="logName", required=true)
     private String logName;
 
+    /**
+     * @return The log_name to populate in the Cloud Audit Record.
+     * 
+     */
     public String logName() {
         return this.logName;
     }
@@ -64,11 +72,23 @@ public final class CloudAuditOptionsResponse extends com.pulumi.resources.Invoke
             $ = new CloudAuditOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationLoggingOptions Information used by the Cloud Audit Logging pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationLoggingOptions(AuthorizationLoggingOptionsResponse authorizationLoggingOptions) {
             $.authorizationLoggingOptions = authorizationLoggingOptions;
             return this;
         }
 
+        /**
+         * @param logName The log_name to populate in the Cloud Audit Record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logName(String logName) {
             $.logName = logName;
             return this;

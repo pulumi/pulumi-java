@@ -23,6 +23,10 @@ public final class IncidentLabelResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="labelName", required=true)
     private String labelName;
 
+    /**
+     * @return The name of the label
+     * 
+     */
     public String labelName() {
         return this.labelName;
     }
@@ -34,6 +38,10 @@ public final class IncidentLabelResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="labelType", required=true)
     private String labelType;
 
+    /**
+     * @return The type of the label
+     * 
+     */
     public String labelType() {
         return this.labelType;
     }
@@ -63,11 +71,23 @@ public final class IncidentLabelResponse extends com.pulumi.resources.InvokeArgs
             $ = new IncidentLabelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labelName The name of the label
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelName(String labelName) {
             $.labelName = labelName;
             return this;
         }
 
+        /**
+         * @param labelType The type of the label
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelType(String labelType) {
             $.labelType = labelType;
             return this;

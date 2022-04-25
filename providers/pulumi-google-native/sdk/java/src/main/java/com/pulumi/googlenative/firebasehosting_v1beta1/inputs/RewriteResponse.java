@@ -25,6 +25,10 @@ public final class RewriteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dynamicLinks", required=true)
     private Boolean dynamicLinks;
 
+    /**
+     * @return The request will be forwarded to Firebase Dynamic Links.
+     * 
+     */
     public Boolean dynamicLinks() {
         return this.dynamicLinks;
     }
@@ -36,6 +40,10 @@ public final class RewriteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="function", required=true)
     private String function;
 
+    /**
+     * @return The function to proxy requests to. Must match the exported function name exactly.
+     * 
+     */
     public String function() {
         return this.function;
     }
@@ -47,6 +55,10 @@ public final class RewriteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="glob", required=true)
     private String glob;
 
+    /**
+     * @return The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
+     * 
+     */
     public String glob() {
         return this.glob;
     }
@@ -58,6 +70,10 @@ public final class RewriteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The URL path to rewrite the request to.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -69,6 +85,10 @@ public final class RewriteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="regex", required=true)
     private String regex;
 
+    /**
+     * @return The user-supplied RE2 regular expression to match against the request URL path.
+     * 
+     */
     public String regex() {
         return this.regex;
     }
@@ -80,6 +100,10 @@ public final class RewriteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="run", required=true)
     private CloudRunRewriteResponse run;
 
+    /**
+     * @return The request will be forwarded to Cloud Run.
+     * 
+     */
     public CloudRunRewriteResponse run() {
         return this.run;
     }
@@ -113,31 +137,67 @@ public final class RewriteResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RewriteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dynamicLinks The request will be forwarded to Firebase Dynamic Links.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamicLinks(Boolean dynamicLinks) {
             $.dynamicLinks = dynamicLinks;
             return this;
         }
 
+        /**
+         * @param function The function to proxy requests to. Must match the exported function name exactly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(String function) {
             $.function = function;
             return this;
         }
 
+        /**
+         * @param glob The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder glob(String glob) {
             $.glob = glob;
             return this;
         }
 
+        /**
+         * @param path The URL path to rewrite the request to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param regex The user-supplied RE2 regular expression to match against the request URL path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(String regex) {
             $.regex = regex;
             return this;
         }
 
+        /**
+         * @param run The request will be forwarded to Cloud Run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder run(CloudRunRewriteResponse run) {
             $.run = run;
             return this;

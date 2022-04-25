@@ -25,6 +25,10 @@ public final class MosaicLayoutResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="columns", required=true)
     private Integer columns;
 
+    /**
+     * @return The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.
+     * 
+     */
     public Integer columns() {
         return this.columns;
     }
@@ -36,6 +40,10 @@ public final class MosaicLayoutResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tiles", required=true)
     private List<TileResponse> tiles;
 
+    /**
+     * @return The tiles to display.
+     * 
+     */
     public List<TileResponse> tiles() {
         return this.tiles;
     }
@@ -65,16 +73,34 @@ public final class MosaicLayoutResponse extends com.pulumi.resources.InvokeArgs 
             $ = new MosaicLayoutResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(Integer columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param tiles The tiles to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tiles(List<TileResponse> tiles) {
             $.tiles = tiles;
             return this;
         }
 
+        /**
+         * @param tiles The tiles to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tiles(TileResponse... tiles) {
             return tiles(List.of(tiles));
         }

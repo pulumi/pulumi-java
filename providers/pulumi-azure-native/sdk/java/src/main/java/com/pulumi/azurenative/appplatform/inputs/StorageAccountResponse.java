@@ -24,6 +24,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The account name of the Azure Storage Account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -36,6 +40,11 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="storageType", required=true)
     private String storageType;
 
+    /**
+     * @return The type of the storage.
+     * Expected value is &#39;StorageAccount&#39;.
+     * 
+     */
     public String storageType() {
         return this.storageType;
     }
@@ -65,11 +74,24 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
             $ = new StorageAccountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The account name of the Azure Storage Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param storageType The type of the storage.
+         * Expected value is &#39;StorageAccount&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(String storageType) {
             $.storageType = storageType;
             return this;

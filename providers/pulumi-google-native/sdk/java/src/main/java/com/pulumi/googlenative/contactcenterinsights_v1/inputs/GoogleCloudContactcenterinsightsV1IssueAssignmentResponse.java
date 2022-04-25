@@ -24,6 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Immutable. Display name of the assigned issue. This field is set at time of analyis and immutable since then.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
     @Import(name="issue", required=true)
     private String issue;
 
+    /**
+     * @return Resource name of the assigned issue.
+     * 
+     */
     public String issue() {
         return this.issue;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
     @Import(name="score", required=true)
     private Double score;
 
+    /**
+     * @return Score indicating the likelihood of the issue assignment. currently bounded on [0,1].
+     * 
+     */
     public Double score() {
         return this.score;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
             $ = new GoogleCloudContactcenterinsightsV1IssueAssignmentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Immutable. Display name of the assigned issue. This field is set at time of analyis and immutable since then.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param issue Resource name of the assigned issue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issue(String issue) {
             $.issue = issue;
             return this;
         }
 
+        /**
+         * @param score Score indicating the likelihood of the issue assignment. currently bounded on [0,1].
+         * 
+         * @return builder
+         * 
+         */
         public Builder score(Double score) {
             $.score = score;
             return this;

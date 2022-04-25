@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedInstanceExternalAdministratorResponse {
     /**
-     * Type of the sever administrator.
+     * @return Type of the sever administrator.
      * 
      */
     private final @Nullable String administratorType;
     /**
-     * Azure Active Directory only Authentication enabled.
+     * @return Azure Active Directory only Authentication enabled.
      * 
      */
     private final @Nullable Boolean azureADOnlyAuthentication;
     /**
-     * Login name of the server administrator.
+     * @return Login name of the server administrator.
      * 
      */
     private final @Nullable String login;
     /**
-     * Principal Type of the sever administrator.
+     * @return Principal Type of the sever administrator.
      * 
      */
     private final @Nullable String principalType;
     /**
-     * SID (object ID) of the server administrator.
+     * @return SID (object ID) of the server administrator.
      * 
      */
     private final @Nullable String sid;
     /**
-     * Tenant ID of the administrator.
+     * @return Tenant ID of the administrator.
      * 
      */
     private final @Nullable String tenantId;
@@ -60,44 +60,44 @@ public final class ManagedInstanceExternalAdministratorResponse {
     }
 
     /**
-     * Type of the sever administrator.
+     * @return Type of the sever administrator.
      * 
-    */
+     */
     public Optional<String> administratorType() {
         return Optional.ofNullable(this.administratorType);
     }
     /**
-     * Azure Active Directory only Authentication enabled.
+     * @return Azure Active Directory only Authentication enabled.
      * 
-    */
+     */
     public Optional<Boolean> azureADOnlyAuthentication() {
         return Optional.ofNullable(this.azureADOnlyAuthentication);
     }
     /**
-     * Login name of the server administrator.
+     * @return Login name of the server administrator.
      * 
-    */
+     */
     public Optional<String> login() {
         return Optional.ofNullable(this.login);
     }
     /**
-     * Principal Type of the sever administrator.
+     * @return Principal Type of the sever administrator.
      * 
-    */
+     */
     public Optional<String> principalType() {
         return Optional.ofNullable(this.principalType);
     }
     /**
-     * SID (object ID) of the server administrator.
+     * @return SID (object ID) of the server administrator.
      * 
-    */
+     */
     public Optional<String> sid() {
         return Optional.ofNullable(this.sid);
     }
     /**
-     * Tenant ID of the administrator.
+     * @return Tenant ID of the administrator.
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }

@@ -30,6 +30,10 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the notification config (max of 1024 characters).
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -41,6 +45,10 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/notificationConfigs/notify_public_bucket&#34;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +67,10 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="pubsubTopic")
     private @Nullable Output<String> pubsubTopic;
 
+    /**
+     * @return The Pub/Sub topic to send notifications to. Its format is &#34;projects/[project_id]/topics/[topic]&#34;.
+     * 
+     */
     public Optional<Output<String>> pubsubTopic() {
         return Optional.ofNullable(this.pubsubTopic);
     }
@@ -70,6 +82,10 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="streamingConfig")
     private @Nullable Output<StreamingConfigArgs> streamingConfig;
 
+    /**
+     * @return The config for triggering streaming-based notifications.
+     * 
+     */
     public Optional<Output<StreamingConfigArgs>> streamingConfig() {
         return Optional.ofNullable(this.streamingConfig);
     }
@@ -112,20 +128,44 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
             return configId(Output.of(configId));
         }
 
+        /**
+         * @param description The description of the notification config (max of 1024 characters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the notification config (max of 1024 characters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/notificationConfigs/notify_public_bucket&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: &#34;organizations/{organization_id}/notificationConfigs/notify_public_bucket&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -139,20 +179,44 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param pubsubTopic The Pub/Sub topic to send notifications to. Its format is &#34;projects/[project_id]/topics/[topic]&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopic(@Nullable Output<String> pubsubTopic) {
             $.pubsubTopic = pubsubTopic;
             return this;
         }
 
+        /**
+         * @param pubsubTopic The Pub/Sub topic to send notifications to. Its format is &#34;projects/[project_id]/topics/[topic]&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopic(String pubsubTopic) {
             return pubsubTopic(Output.of(pubsubTopic));
         }
 
+        /**
+         * @param streamingConfig The config for triggering streaming-based notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingConfig(@Nullable Output<StreamingConfigArgs> streamingConfig) {
             $.streamingConfig = streamingConfig;
             return this;
         }
 
+        /**
+         * @param streamingConfig The config for triggering streaming-based notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingConfig(StreamingConfigArgs streamingConfig) {
             return streamingConfig(Output.of(streamingConfig));
         }

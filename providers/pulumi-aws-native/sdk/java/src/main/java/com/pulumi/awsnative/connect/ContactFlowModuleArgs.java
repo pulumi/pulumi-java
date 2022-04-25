@@ -25,6 +25,10 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="content", required=true)
     private Output<String> content;
 
+    /**
+     * @return The content of the contact flow module in JSON format.
+     * 
+     */
     public Output<String> content() {
         return this.content;
     }
@@ -36,6 +40,10 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the contact flow module.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="instanceArn", required=true)
     private Output<String> instanceArn;
 
+    /**
+     * @return The identifier of the Amazon Connect instance (ARN).
+     * 
+     */
     public Output<String> instanceArn() {
         return this.instanceArn;
     }
@@ -58,6 +70,10 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the contact flow module.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +85,10 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="state")
     private @Nullable Output<ContactFlowModuleState> state;
 
+    /**
+     * @return The state of the contact flow module.
+     * 
+     */
     public Optional<Output<ContactFlowModuleState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -80,6 +100,10 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<List<ContactFlowModuleTagArgs>> tags;
 
+    /**
+     * @return One or more tags.
+     * 
+     */
     public Optional<Output<List<ContactFlowModuleTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,60 +137,138 @@ public final class ContactFlowModuleArgs extends com.pulumi.resources.ResourceAr
             $ = new ContactFlowModuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The content of the contact flow module in JSON format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The content of the contact flow module in JSON format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param description The description of the contact flow module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the contact flow module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param instanceArn The identifier of the Amazon Connect instance (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(Output<String> instanceArn) {
             $.instanceArn = instanceArn;
             return this;
         }
 
+        /**
+         * @param instanceArn The identifier of the Amazon Connect instance (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(String instanceArn) {
             return instanceArn(Output.of(instanceArn));
         }
 
+        /**
+         * @param name The name of the contact flow module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the contact flow module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param state The state of the contact flow module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<ContactFlowModuleState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of the contact flow module.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(ContactFlowModuleState state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ContactFlowModuleTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ContactFlowModuleTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ContactFlowModuleTagArgs... tags) {
             return tags(List.of(tags));
         }

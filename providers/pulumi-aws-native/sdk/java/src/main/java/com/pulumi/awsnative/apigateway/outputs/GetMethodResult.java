@@ -18,52 +18,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMethodResult {
     /**
-     * Indicates whether the method requires clients to submit a valid API key.
+     * @return Indicates whether the method requires clients to submit a valid API key.
      * 
      */
     private final @Nullable Boolean apiKeyRequired;
     /**
-     * A list of authorization scopes configured on the method.
+     * @return A list of authorization scopes configured on the method.
      * 
      */
     private final @Nullable List<String> authorizationScopes;
     /**
-     * The method&#39;s authorization type.
+     * @return The method&#39;s authorization type.
      * 
      */
     private final @Nullable MethodAuthorizationType authorizationType;
     /**
-     * The identifier of the authorizer to use on this method.
+     * @return The identifier of the authorizer to use on this method.
      * 
      */
     private final @Nullable String authorizerId;
     /**
-     * The backend system that the method calls when it receives a request.
+     * @return The backend system that the method calls when it receives a request.
      * 
      */
     private final @Nullable MethodIntegration integration;
     /**
-     * The responses that can be sent to the client who calls the method.
+     * @return The responses that can be sent to the client who calls the method.
      * 
      */
     private final @Nullable List<MethodResponse> methodResponses;
     /**
-     * A friendly operation name for the method.
+     * @return A friendly operation name for the method.
      * 
      */
     private final @Nullable String operationName;
     /**
-     * The resources that are used for the request&#39;s content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
+     * @return The resources that are used for the request&#39;s content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
      * 
      */
     private final @Nullable Object requestModels;
     /**
-     * The request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean mapping), with a source as the key and a Boolean as the value.
+     * @return The request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean mapping), with a source as the key and a Boolean as the value.
      * 
      */
     private final @Nullable Object requestParameters;
     /**
-     * The ID of the associated request validator.
+     * @return The ID of the associated request validator.
      * 
      */
     private final @Nullable String requestValidatorId;
@@ -93,72 +93,72 @@ public final class GetMethodResult {
     }
 
     /**
-     * Indicates whether the method requires clients to submit a valid API key.
+     * @return Indicates whether the method requires clients to submit a valid API key.
      * 
-    */
+     */
     public Optional<Boolean> apiKeyRequired() {
         return Optional.ofNullable(this.apiKeyRequired);
     }
     /**
-     * A list of authorization scopes configured on the method.
+     * @return A list of authorization scopes configured on the method.
      * 
-    */
+     */
     public List<String> authorizationScopes() {
         return this.authorizationScopes == null ? List.of() : this.authorizationScopes;
     }
     /**
-     * The method&#39;s authorization type.
+     * @return The method&#39;s authorization type.
      * 
-    */
+     */
     public Optional<MethodAuthorizationType> authorizationType() {
         return Optional.ofNullable(this.authorizationType);
     }
     /**
-     * The identifier of the authorizer to use on this method.
+     * @return The identifier of the authorizer to use on this method.
      * 
-    */
+     */
     public Optional<String> authorizerId() {
         return Optional.ofNullable(this.authorizerId);
     }
     /**
-     * The backend system that the method calls when it receives a request.
+     * @return The backend system that the method calls when it receives a request.
      * 
-    */
+     */
     public Optional<MethodIntegration> integration() {
         return Optional.ofNullable(this.integration);
     }
     /**
-     * The responses that can be sent to the client who calls the method.
+     * @return The responses that can be sent to the client who calls the method.
      * 
-    */
+     */
     public List<MethodResponse> methodResponses() {
         return this.methodResponses == null ? List.of() : this.methodResponses;
     }
     /**
-     * A friendly operation name for the method.
+     * @return A friendly operation name for the method.
      * 
-    */
+     */
     public Optional<String> operationName() {
         return Optional.ofNullable(this.operationName);
     }
     /**
-     * The resources that are used for the request&#39;s content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
+     * @return The resources that are used for the request&#39;s content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
      * 
-    */
+     */
     public Optional<Object> requestModels() {
         return Optional.ofNullable(this.requestModels);
     }
     /**
-     * The request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean mapping), with a source as the key and a Boolean as the value.
+     * @return The request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean mapping), with a source as the key and a Boolean as the value.
      * 
-    */
+     */
     public Optional<Object> requestParameters() {
         return Optional.ofNullable(this.requestParameters);
     }
     /**
-     * The ID of the associated request validator.
+     * @return The ID of the associated request validator.
      * 
-    */
+     */
     public Optional<String> requestValidatorId() {
         return Optional.ofNullable(this.requestValidatorId);
     }

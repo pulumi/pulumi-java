@@ -21,6 +21,10 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
     @Import(name="queryStringBehavior", required=true)
     private String queryStringBehavior;
 
+    /**
+     * @return Determines whether any URL query strings in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+     * 
+     */
     public String queryStringBehavior() {
         return this.queryStringBehavior;
     }
@@ -32,6 +36,10 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
     @Import(name="queryStrings", required=true)
     private List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings;
 
+    /**
+     * @return Object that contains a list of query string names. See Items for more information.
+     * 
+     */
     public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings() {
         return this.queryStrings;
     }
@@ -61,16 +69,34 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
             $ = new GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queryStringBehavior Determines whether any URL query strings in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringBehavior(String queryStringBehavior) {
             $.queryStringBehavior = queryStringBehavior;
             return this;
         }
 
+        /**
+         * @param queryStrings Object that contains a list of query string names. See Items for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStrings(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings) {
             $.queryStrings = queryStrings;
             return this;
         }
 
+        /**
+         * @param queryStrings Object that contains a list of query string names. See Items for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStrings(GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString... queryStrings) {
             return queryStrings(List.of(queryStrings));
         }

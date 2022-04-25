@@ -21,92 +21,92 @@ import java.util.Objects;
 @CustomType
 public final class GetOccurrenceResult {
     /**
-     * Describes an attestation of an artifact.
+     * @return Describes an attestation of an artifact.
      * 
      */
     private final AttestationOccurrenceResponse attestation;
     /**
-     * Describes a verifiable build.
+     * @return Describes a verifiable build.
      * 
      */
     private final BuildOccurrenceResponse build;
     /**
-     * Describes a compliance violation on a linked resource.
+     * @return Describes a compliance violation on a linked resource.
      * 
      */
     private final ComplianceOccurrenceResponse compliance;
     /**
-     * The time this occurrence was created.
+     * @return The time this occurrence was created.
      * 
      */
     private final String createTime;
     /**
-     * Describes the deployment of an artifact on a runtime.
+     * @return Describes the deployment of an artifact on a runtime.
      * 
      */
     private final DeploymentOccurrenceResponse deployment;
     /**
-     * Describes when a resource was discovered.
+     * @return Describes when a resource was discovered.
      * 
      */
     private final DiscoveryOccurrenceResponse discovery;
     /**
-     * Describes an attestation of an artifact using dsse.
+     * @return Describes an attestation of an artifact using dsse.
      * 
      */
     private final DSSEAttestationOccurrenceResponse dsseAttestation;
     /**
-     * https://github.com/secure-systems-lab/dsse
+     * @return https://github.com/secure-systems-lab/dsse
      * 
      */
     private final EnvelopeResponse envelope;
     /**
-     * Describes how this resource derives from the basis in the associated note.
+     * @return Describes how this resource derives from the basis in the associated note.
      * 
      */
     private final ImageOccurrenceResponse image;
     /**
-     * This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
+     * @return This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
      * 
      */
     private final String kind;
     /**
-     * The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+     * @return The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
      * 
      */
     private final String name;
     /**
-     * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
+     * @return Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
      * 
      */
     private final String noteName;
     /**
-     * Describes the installation of a package on the linked resource.
+     * @return Describes the installation of a package on the linked resource.
      * 
      */
     private final PackageOccurrenceResponse package_;
     /**
-     * A description of actions that can be taken to remedy the note.
+     * @return A description of actions that can be taken to remedy the note.
      * 
      */
     private final String remediation;
     /**
-     * Immutable. A URI that represents the resource for which the occurrence applies. For example, `https://gcr.io/project/image@sha256:123abc` for a Docker image.
+     * @return Immutable. A URI that represents the resource for which the occurrence applies. For example, `https://gcr.io/project/image@sha256:123abc` for a Docker image.
      * 
      */
     private final String resourceUri;
     /**
-     * The time this occurrence was last updated.
+     * @return The time this occurrence was last updated.
      * 
      */
     private final String updateTime;
     /**
-     * Describes an available package upgrade on the linked resource.
+     * @return Describes an available package upgrade on the linked resource.
      * 
      */
     private final UpgradeOccurrenceResponse upgrade;
     /**
-     * Describes a security vulnerability.
+     * @return Describes a security vulnerability.
      * 
      */
     private final VulnerabilityOccurrenceResponse vulnerability;
@@ -152,128 +152,128 @@ public final class GetOccurrenceResult {
     }
 
     /**
-     * Describes an attestation of an artifact.
+     * @return Describes an attestation of an artifact.
      * 
-    */
+     */
     public AttestationOccurrenceResponse attestation() {
         return this.attestation;
     }
     /**
-     * Describes a verifiable build.
+     * @return Describes a verifiable build.
      * 
-    */
+     */
     public BuildOccurrenceResponse build() {
         return this.build;
     }
     /**
-     * Describes a compliance violation on a linked resource.
+     * @return Describes a compliance violation on a linked resource.
      * 
-    */
+     */
     public ComplianceOccurrenceResponse compliance() {
         return this.compliance;
     }
     /**
-     * The time this occurrence was created.
+     * @return The time this occurrence was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Describes the deployment of an artifact on a runtime.
+     * @return Describes the deployment of an artifact on a runtime.
      * 
-    */
+     */
     public DeploymentOccurrenceResponse deployment() {
         return this.deployment;
     }
     /**
-     * Describes when a resource was discovered.
+     * @return Describes when a resource was discovered.
      * 
-    */
+     */
     public DiscoveryOccurrenceResponse discovery() {
         return this.discovery;
     }
     /**
-     * Describes an attestation of an artifact using dsse.
+     * @return Describes an attestation of an artifact using dsse.
      * 
-    */
+     */
     public DSSEAttestationOccurrenceResponse dsseAttestation() {
         return this.dsseAttestation;
     }
     /**
-     * https://github.com/secure-systems-lab/dsse
+     * @return https://github.com/secure-systems-lab/dsse
      * 
-    */
+     */
     public EnvelopeResponse envelope() {
         return this.envelope;
     }
     /**
-     * Describes how this resource derives from the basis in the associated note.
+     * @return Describes how this resource derives from the basis in the associated note.
      * 
-    */
+     */
     public ImageOccurrenceResponse image() {
         return this.image;
     }
     /**
-     * This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
+     * @return This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+     * @return The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
+     * @return Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
      * 
-    */
+     */
     public String noteName() {
         return this.noteName;
     }
     /**
-     * Describes the installation of a package on the linked resource.
+     * @return Describes the installation of a package on the linked resource.
      * 
-    */
+     */
     public PackageOccurrenceResponse package_() {
         return this.package_;
     }
     /**
-     * A description of actions that can be taken to remedy the note.
+     * @return A description of actions that can be taken to remedy the note.
      * 
-    */
+     */
     public String remediation() {
         return this.remediation;
     }
     /**
-     * Immutable. A URI that represents the resource for which the occurrence applies. For example, `https://gcr.io/project/image@sha256:123abc` for a Docker image.
+     * @return Immutable. A URI that represents the resource for which the occurrence applies. For example, `https://gcr.io/project/image@sha256:123abc` for a Docker image.
      * 
-    */
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
     /**
-     * The time this occurrence was last updated.
+     * @return The time this occurrence was last updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * Describes an available package upgrade on the linked resource.
+     * @return Describes an available package upgrade on the linked resource.
      * 
-    */
+     */
     public UpgradeOccurrenceResponse upgrade() {
         return this.upgrade;
     }
     /**
-     * Describes a security vulnerability.
+     * @return Describes a security vulnerability.
      * 
-    */
+     */
     public VulnerabilityOccurrenceResponse vulnerability() {
         return this.vulnerability;
     }

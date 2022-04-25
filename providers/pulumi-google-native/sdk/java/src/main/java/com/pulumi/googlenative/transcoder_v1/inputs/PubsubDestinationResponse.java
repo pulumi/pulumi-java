@@ -23,6 +23,10 @@ public final class PubsubDestinationResponse extends com.pulumi.resources.Invoke
     @Import(name="topic", required=true)
     private String topic;
 
+    /**
+     * @return The name of the Pub/Sub topic to publish job completion notification to. For example: `projects/{project}/topics/{topic}`.
+     * 
+     */
     public String topic() {
         return this.topic;
     }
@@ -51,6 +55,12 @@ public final class PubsubDestinationResponse extends com.pulumi.resources.Invoke
             $ = new PubsubDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param topic The name of the Pub/Sub topic to publish job completion notification to. For example: `projects/{project}/topics/{topic}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             $.topic = topic;
             return this;

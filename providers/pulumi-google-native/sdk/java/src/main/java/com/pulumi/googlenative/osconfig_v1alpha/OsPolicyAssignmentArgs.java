@@ -26,6 +26,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return OS policy assignment description. Length of the description is limited to 1024 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -48,6 +56,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="instanceFilter", required=true)
     private Output<OSPolicyAssignmentInstanceFilterArgs> instanceFilter;
 
+    /**
+     * @return Filter to select VMs.
+     * 
+     */
     public Output<OSPolicyAssignmentInstanceFilterArgs> instanceFilter() {
         return this.instanceFilter;
     }
@@ -66,6 +78,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name. Format: `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_id}` This field is ignored when you create an OS policy assignment.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -77,6 +93,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="osPolicies", required=true)
     private Output<List<OSPolicyArgs>> osPolicies;
 
+    /**
+     * @return List of OS policies to be applied to the VMs.
+     * 
+     */
     public Output<List<OSPolicyArgs>> osPolicies() {
         return this.osPolicies;
     }
@@ -102,6 +122,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="rollout", required=true)
     private Output<OSPolicyAssignmentRolloutArgs> rollout;
 
+    /**
+     * @return Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
+     * 
+     */
     public Output<OSPolicyAssignmentRolloutArgs> rollout() {
         return this.rollout;
     }
@@ -138,29 +162,65 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
             $ = new OsPolicyAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description OS policy assignment description. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description OS policy assignment description. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param etag The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param instanceFilter Filter to select VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceFilter(Output<OSPolicyAssignmentInstanceFilterArgs> instanceFilter) {
             $.instanceFilter = instanceFilter;
             return this;
         }
 
+        /**
+         * @param instanceFilter Filter to select VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceFilter(OSPolicyAssignmentInstanceFilterArgs instanceFilter) {
             return instanceFilter(Output.of(instanceFilter));
         }
@@ -174,24 +234,54 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Resource name. Format: `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_id}` This field is ignored when you create an OS policy assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name. Format: `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_id}` This field is ignored when you create an OS policy assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param osPolicies List of OS policies to be applied to the VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osPolicies(Output<List<OSPolicyArgs>> osPolicies) {
             $.osPolicies = osPolicies;
             return this;
         }
 
+        /**
+         * @param osPolicies List of OS policies to be applied to the VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osPolicies(List<OSPolicyArgs> osPolicies) {
             return osPolicies(Output.of(osPolicies));
         }
 
+        /**
+         * @param osPolicies List of OS policies to be applied to the VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osPolicies(OSPolicyArgs... osPolicies) {
             return osPolicies(List.of(osPolicies));
         }
@@ -214,11 +304,23 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
             return project(Output.of(project));
         }
 
+        /**
+         * @param rollout Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollout(Output<OSPolicyAssignmentRolloutArgs> rollout) {
             $.rollout = rollout;
             return this;
         }
 
+        /**
+         * @param rollout Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollout(OSPolicyAssignmentRolloutArgs rollout) {
             return rollout(Output.of(rollout));
         }

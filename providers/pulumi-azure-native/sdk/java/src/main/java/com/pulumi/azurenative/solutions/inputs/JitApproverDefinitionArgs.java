@@ -28,6 +28,10 @@ public final class JitApproverDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The approver display name.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -39,6 +43,10 @@ public final class JitApproverDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The approver service principal Id.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -50,6 +58,10 @@ public final class JitApproverDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="type")
     private @Nullable Output<Either<String,JitApproverType>> type;
 
+    /**
+     * @return The approver type.
+     * 
+     */
     public Optional<Output<Either<String,JitApproverType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -80,37 +92,85 @@ public final class JitApproverDefinitionArgs extends com.pulumi.resources.Resour
             $ = new JitApproverDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The approver display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The approver display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param id The approver service principal Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The approver service principal Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param type The approver type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,JitApproverType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The approver type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,JitApproverType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The approver type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The approver type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(JitApproverType type) {
             return type(Either.ofRight(type));
         }

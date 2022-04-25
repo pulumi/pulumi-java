@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetComponentsFilter {
     /**
-     * The name of the filter field. Valid values can be found in the [Image Builder ListComponents API Reference](https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_ListComponents.html).
+     * @return The name of the filter field. Valid values can be found in the [Image Builder ListComponents API Reference](https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_ListComponents.html).
      * 
      */
     private final String name;
     /**
-     * Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
+     * @return Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
      * 
      */
     private final List<String> values;
@@ -30,16 +30,16 @@ public final class GetComponentsFilter {
     }
 
     /**
-     * The name of the filter field. Valid values can be found in the [Image Builder ListComponents API Reference](https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_ListComponents.html).
+     * @return The name of the filter field. Valid values can be found in the [Image Builder ListComponents API Reference](https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_ListComponents.html).
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
+     * @return Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

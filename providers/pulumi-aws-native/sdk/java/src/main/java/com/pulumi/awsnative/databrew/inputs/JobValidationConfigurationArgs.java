@@ -27,6 +27,10 @@ public final class JobValidationConfigurationArgs extends com.pulumi.resources.R
     @Import(name="rulesetArn", required=true)
     private Output<String> rulesetArn;
 
+    /**
+     * @return Arn of the Ruleset
+     * 
+     */
     public Output<String> rulesetArn() {
         return this.rulesetArn;
     }
@@ -63,11 +67,23 @@ public final class JobValidationConfigurationArgs extends com.pulumi.resources.R
             $ = new JobValidationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rulesetArn Arn of the Ruleset
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesetArn(Output<String> rulesetArn) {
             $.rulesetArn = rulesetArn;
             return this;
         }
 
+        /**
+         * @param rulesetArn Arn of the Ruleset
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesetArn(String rulesetArn) {
             return rulesetArn(Output.of(rulesetArn));
         }

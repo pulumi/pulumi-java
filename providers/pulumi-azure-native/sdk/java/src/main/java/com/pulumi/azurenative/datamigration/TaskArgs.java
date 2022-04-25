@@ -44,6 +44,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupName", required=true)
     private Output<String> groupName;
 
+    /**
+     * @return Name of the resource group
+     * 
+     */
     public Output<String> groupName() {
         return this.groupName;
     }
@@ -55,6 +59,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectName", required=true)
     private Output<String> projectName;
 
+    /**
+     * @return Name of the project
+     * 
+     */
     public Output<String> projectName() {
         return this.projectName;
     }
@@ -66,6 +74,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<Object> properties;
 
+    /**
+     * @return Custom task properties
+     * 
+     */
     public Optional<Output<Object>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -77,6 +89,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return Name of the service
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -88,6 +104,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskName")
     private @Nullable Output<String> taskName;
 
+    /**
+     * @return Name of the Task
+     * 
+     */
     public Optional<Output<String>> taskName() {
         return Optional.ofNullable(this.taskName);
     }
@@ -120,47 +140,107 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TaskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupName Name of the resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(Output<String> groupName) {
             $.groupName = groupName;
             return this;
         }
 
+        /**
+         * @param groupName Name of the resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(String groupName) {
             return groupName(Output.of(groupName));
         }
 
+        /**
+         * @param projectName Name of the project
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(Output<String> projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param projectName Name of the project
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(String projectName) {
             return projectName(Output.of(projectName));
         }
 
+        /**
+         * @param properties Custom task properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Object> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Custom task properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Object properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param serviceName Name of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName Name of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param taskName Name of the Task
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskName(@Nullable Output<String> taskName) {
             $.taskName = taskName;
             return this;
         }
 
+        /**
+         * @param taskName Name of the Task
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskName(String taskName) {
             return taskName(Output.of(taskName));
         }

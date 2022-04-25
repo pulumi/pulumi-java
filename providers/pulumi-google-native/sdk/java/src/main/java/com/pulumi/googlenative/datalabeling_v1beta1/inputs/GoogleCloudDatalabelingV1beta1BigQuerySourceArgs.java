@@ -24,6 +24,10 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySourceArgs extends com.
     @Import(name="inputUri", required=true)
     private Output<String> inputUri;
 
+    /**
+     * @return BigQuery URI to a table, up to 2,000 characters long. If you specify the URI of a table that does not exist, Data Labeling Service creates a table at the URI with the correct schema when you create your EvaluationJob. If you specify the URI of a table that already exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-job#table-schema). Provide the table URI in the following format: &#34;bq://{your_project_id}/ {your_dataset_name}/{your_table_name}&#34; [Learn more](/ml-engine/docs/continuous-evaluation/create-job#table-schema).
+     * 
+     */
     public Output<String> inputUri() {
         return this.inputUri;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySourceArgs extends com.
             $ = new GoogleCloudDatalabelingV1beta1BigQuerySourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputUri BigQuery URI to a table, up to 2,000 characters long. If you specify the URI of a table that does not exist, Data Labeling Service creates a table at the URI with the correct schema when you create your EvaluationJob. If you specify the URI of a table that already exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-job#table-schema). Provide the table URI in the following format: &#34;bq://{your_project_id}/ {your_dataset_name}/{your_table_name}&#34; [Learn more](/ml-engine/docs/continuous-evaluation/create-job#table-schema).
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputUri(Output<String> inputUri) {
             $.inputUri = inputUri;
             return this;
         }
 
+        /**
+         * @param inputUri BigQuery URI to a table, up to 2,000 characters long. If you specify the URI of a table that does not exist, Data Labeling Service creates a table at the URI with the correct schema when you create your EvaluationJob. If you specify the URI of a table that already exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-job#table-schema). Provide the table URI in the following format: &#34;bq://{your_project_id}/ {your_dataset_name}/{your_table_name}&#34; [Learn more](/ml-engine/docs/continuous-evaluation/create-job#table-schema).
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputUri(String inputUri) {
             return inputUri(Output.of(inputUri));
         }

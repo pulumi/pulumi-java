@@ -26,6 +26,13 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs extends com.
     @Import(name="gracefulDecommissionTimeout", required=true)
     private Output<String> gracefulDecommissionTimeout;
 
+    /**
+     * @return Timeout for YARN graceful decommissioning of Node Managers. Specifies the
+     * duration to wait for jobs to complete before forcefully removing workers
+     * (and potentially interrupting jobs). Only applicable to downscaling operations.
+     * Bounds: [0s, 1d].
+     * 
+     */
     public Output<String> gracefulDecommissionTimeout() {
         return this.gracefulDecommissionTimeout;
     }
@@ -42,6 +49,15 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs extends com.
     @Import(name="scaleDownFactor", required=true)
     private Output<Double> scaleDownFactor;
 
+    /**
+     * @return Fraction of average pending memory in the last cooldown period for which to
+     * remove workers. A scale-down factor of 1 will result in scaling down so that there
+     * is no available memory remaining after the update (more aggressive scaling).
+     * A scale-down factor of 0 disables removing workers, which can be beneficial for
+     * autoscaling a single job.
+     * Bounds: [0.0, 1.0].
+     * 
+     */
     public Output<Double> scaleDownFactor() {
         return this.scaleDownFactor;
     }
@@ -57,6 +73,14 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs extends com.
     @Import(name="scaleDownMinWorkerFraction")
     private @Nullable Output<Double> scaleDownMinWorkerFraction;
 
+    /**
+     * @return Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
+     * For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
+     * recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
+     * means the autoscaler will scale down on any recommended change.
+     * Bounds: [0.0, 1.0]. Default: 0.0.
+     * 
+     */
     public Optional<Output<Double>> scaleDownMinWorkerFraction() {
         return Optional.ofNullable(this.scaleDownMinWorkerFraction);
     }
@@ -73,6 +97,15 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs extends com.
     @Import(name="scaleUpFactor", required=true)
     private Output<Double> scaleUpFactor;
 
+    /**
+     * @return Fraction of average pending memory in the last cooldown period for which to
+     * add workers. A scale-up factor of 1.0 will result in scaling up so that there
+     * is no pending memory remaining after the update (more aggressive scaling).
+     * A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
+     * (less aggressive scaling).
+     * Bounds: [0.0, 1.0].
+     * 
+     */
     public Output<Double> scaleUpFactor() {
         return this.scaleUpFactor;
     }
@@ -88,6 +121,14 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs extends com.
     @Import(name="scaleUpMinWorkerFraction")
     private @Nullable Output<Double> scaleUpMinWorkerFraction;
 
+    /**
+     * @return Minimum scale-up threshold as a fraction of total cluster size before scaling
+     * occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
+     * must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
+     * 0 means the autoscaler will scale up on any recommended change.
+     * Bounds: [0.0, 1.0]. Default: 0.0.
+     * 
+     */
     public Optional<Output<Double>> scaleUpMinWorkerFraction() {
         return Optional.ofNullable(this.scaleUpMinWorkerFraction);
     }
@@ -120,47 +161,149 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs extends com.
             $ = new AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gracefulDecommissionTimeout Timeout for YARN graceful decommissioning of Node Managers. Specifies the
+         * duration to wait for jobs to complete before forcefully removing workers
+         * (and potentially interrupting jobs). Only applicable to downscaling operations.
+         * Bounds: [0s, 1d].
+         * 
+         * @return builder
+         * 
+         */
         public Builder gracefulDecommissionTimeout(Output<String> gracefulDecommissionTimeout) {
             $.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
             return this;
         }
 
+        /**
+         * @param gracefulDecommissionTimeout Timeout for YARN graceful decommissioning of Node Managers. Specifies the
+         * duration to wait for jobs to complete before forcefully removing workers
+         * (and potentially interrupting jobs). Only applicable to downscaling operations.
+         * Bounds: [0s, 1d].
+         * 
+         * @return builder
+         * 
+         */
         public Builder gracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
             return gracefulDecommissionTimeout(Output.of(gracefulDecommissionTimeout));
         }
 
+        /**
+         * @param scaleDownFactor Fraction of average pending memory in the last cooldown period for which to
+         * remove workers. A scale-down factor of 1 will result in scaling down so that there
+         * is no available memory remaining after the update (more aggressive scaling).
+         * A scale-down factor of 0 disables removing workers, which can be beneficial for
+         * autoscaling a single job.
+         * Bounds: [0.0, 1.0].
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleDownFactor(Output<Double> scaleDownFactor) {
             $.scaleDownFactor = scaleDownFactor;
             return this;
         }
 
+        /**
+         * @param scaleDownFactor Fraction of average pending memory in the last cooldown period for which to
+         * remove workers. A scale-down factor of 1 will result in scaling down so that there
+         * is no available memory remaining after the update (more aggressive scaling).
+         * A scale-down factor of 0 disables removing workers, which can be beneficial for
+         * autoscaling a single job.
+         * Bounds: [0.0, 1.0].
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleDownFactor(Double scaleDownFactor) {
             return scaleDownFactor(Output.of(scaleDownFactor));
         }
 
+        /**
+         * @param scaleDownMinWorkerFraction Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
+         * For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
+         * recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
+         * means the autoscaler will scale down on any recommended change.
+         * Bounds: [0.0, 1.0]. Default: 0.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleDownMinWorkerFraction(@Nullable Output<Double> scaleDownMinWorkerFraction) {
             $.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;
             return this;
         }
 
+        /**
+         * @param scaleDownMinWorkerFraction Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
+         * For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
+         * recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
+         * means the autoscaler will scale down on any recommended change.
+         * Bounds: [0.0, 1.0]. Default: 0.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleDownMinWorkerFraction(Double scaleDownMinWorkerFraction) {
             return scaleDownMinWorkerFraction(Output.of(scaleDownMinWorkerFraction));
         }
 
+        /**
+         * @param scaleUpFactor Fraction of average pending memory in the last cooldown period for which to
+         * add workers. A scale-up factor of 1.0 will result in scaling up so that there
+         * is no pending memory remaining after the update (more aggressive scaling).
+         * A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
+         * (less aggressive scaling).
+         * Bounds: [0.0, 1.0].
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleUpFactor(Output<Double> scaleUpFactor) {
             $.scaleUpFactor = scaleUpFactor;
             return this;
         }
 
+        /**
+         * @param scaleUpFactor Fraction of average pending memory in the last cooldown period for which to
+         * add workers. A scale-up factor of 1.0 will result in scaling up so that there
+         * is no pending memory remaining after the update (more aggressive scaling).
+         * A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
+         * (less aggressive scaling).
+         * Bounds: [0.0, 1.0].
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleUpFactor(Double scaleUpFactor) {
             return scaleUpFactor(Output.of(scaleUpFactor));
         }
 
+        /**
+         * @param scaleUpMinWorkerFraction Minimum scale-up threshold as a fraction of total cluster size before scaling
+         * occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
+         * must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
+         * 0 means the autoscaler will scale up on any recommended change.
+         * Bounds: [0.0, 1.0]. Default: 0.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleUpMinWorkerFraction(@Nullable Output<Double> scaleUpMinWorkerFraction) {
             $.scaleUpMinWorkerFraction = scaleUpMinWorkerFraction;
             return this;
         }
 
+        /**
+         * @param scaleUpMinWorkerFraction Minimum scale-up threshold as a fraction of total cluster size before scaling
+         * occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
+         * must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
+         * 0 means the autoscaler will scale up on any recommended change.
+         * Bounds: [0.0, 1.0]. Default: 0.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleUpMinWorkerFraction(Double scaleUpMinWorkerFraction) {
             return scaleUpMinWorkerFraction(Output.of(scaleUpMinWorkerFraction));
         }

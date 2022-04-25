@@ -27,6 +27,10 @@ public final class EndpointPropertiesSubnetsArgs extends com.pulumi.resources.Re
     @Import(name="first")
     private @Nullable Output<String> first;
 
+    /**
+     * @return First address in the subnet.
+     * 
+     */
     public Optional<Output<String>> first() {
         return Optional.ofNullable(this.first);
     }
@@ -38,6 +42,10 @@ public final class EndpointPropertiesSubnetsArgs extends com.pulumi.resources.Re
     @Import(name="last")
     private @Nullable Output<String> last;
 
+    /**
+     * @return Last address in the subnet.
+     * 
+     */
     public Optional<Output<String>> last() {
         return Optional.ofNullable(this.last);
     }
@@ -49,6 +57,10 @@ public final class EndpointPropertiesSubnetsArgs extends com.pulumi.resources.Re
     @Import(name="scope")
     private @Nullable Output<Integer> scope;
 
+    /**
+     * @return Block size (number of leading bits in the subnet mask).
+     * 
+     */
     public Optional<Output<Integer>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -79,29 +91,65 @@ public final class EndpointPropertiesSubnetsArgs extends com.pulumi.resources.Re
             $ = new EndpointPropertiesSubnetsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param first First address in the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder first(@Nullable Output<String> first) {
             $.first = first;
             return this;
         }
 
+        /**
+         * @param first First address in the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder first(String first) {
             return first(Output.of(first));
         }
 
+        /**
+         * @param last Last address in the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder last(@Nullable Output<String> last) {
             $.last = last;
             return this;
         }
 
+        /**
+         * @param last Last address in the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder last(String last) {
             return last(Output.of(last));
         }
 
+        /**
+         * @param scope Block size (number of leading bits in the subnet mask).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<Integer> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Block size (number of leading bits in the subnet mask).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Integer scope) {
             return scope(Output.of(scope));
         }

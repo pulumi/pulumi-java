@@ -27,6 +27,10 @@ public final class NodeSelectorRequirementArgs extends com.pulumi.resources.Reso
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The label key that the selector applies to.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -46,6 +50,18 @@ public final class NodeSelectorRequirementArgs extends com.pulumi.resources.Reso
     @Import(name="operator", required=true)
     private Output<String> operator;
 
+    /**
+     * @return Represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
+     * 
+     * Possible enum values:
+     *  - `&#34;DoesNotExist&#34;`
+     *  - `&#34;Exists&#34;`
+     *  - `&#34;Gt&#34;`
+     *  - `&#34;In&#34;`
+     *  - `&#34;Lt&#34;`
+     *  - `&#34;NotIn&#34;`
+     * 
+     */
     public Output<String> operator() {
         return this.operator;
     }
@@ -57,6 +73,10 @@ public final class NodeSelectorRequirementArgs extends com.pulumi.resources.Reso
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -87,33 +107,91 @@ public final class NodeSelectorRequirementArgs extends com.pulumi.resources.Reso
             $ = new NodeSelectorRequirementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The label key that the selector applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The label key that the selector applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param operator Represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
+         * 
+         * Possible enum values:
+         *  - `&#34;DoesNotExist&#34;`
+         *  - `&#34;Exists&#34;`
+         *  - `&#34;Gt&#34;`
+         *  - `&#34;In&#34;`
+         *  - `&#34;Lt&#34;`
+         *  - `&#34;NotIn&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<String> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator Represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
+         * 
+         * Possible enum values:
+         *  - `&#34;DoesNotExist&#34;`
+         *  - `&#34;Exists&#34;`
+         *  - `&#34;Gt&#34;`
+         *  - `&#34;In&#34;`
+         *  - `&#34;Lt&#34;`
+         *  - `&#34;NotIn&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param values An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

@@ -22,6 +22,10 @@ public final class VirtualGatewaySpecLoggingAccessLogGetArgs extends com.pulumi.
     @Import(name="file")
     private @Nullable Output<VirtualGatewaySpecLoggingAccessLogFileGetArgs> file;
 
+    /**
+     * @return The file object to send virtual gateway access logs to.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecLoggingAccessLogFileGetArgs>> file() {
         return Optional.ofNullable(this.file);
     }
@@ -50,11 +54,23 @@ public final class VirtualGatewaySpecLoggingAccessLogGetArgs extends com.pulumi.
             $ = new VirtualGatewaySpecLoggingAccessLogGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param file The file object to send virtual gateway access logs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(@Nullable Output<VirtualGatewaySpecLoggingAccessLogFileGetArgs> file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param file The file object to send virtual gateway access logs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(VirtualGatewaySpecLoggingAccessLogFileGetArgs file) {
             return file(Output.of(file));
         }

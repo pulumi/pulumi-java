@@ -27,6 +27,10 @@ public final class Oauth2ClientCredentialsArgs extends com.pulumi.resources.Reso
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return The client identifier.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -38,6 +42,10 @@ public final class Oauth2ClientCredentialsArgs extends com.pulumi.resources.Reso
     @Import(name="clientSecret")
     private @Nullable Output<SecretArgs> clientSecret;
 
+    /**
+     * @return Secret version reference containing the client secret.
+     * 
+     */
     public Optional<Output<SecretArgs>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -67,20 +75,44 @@ public final class Oauth2ClientCredentialsArgs extends com.pulumi.resources.Reso
             $ = new Oauth2ClientCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The client identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The client identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret Secret version reference containing the client secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Output<SecretArgs> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret Secret version reference containing the client secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(SecretArgs clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }

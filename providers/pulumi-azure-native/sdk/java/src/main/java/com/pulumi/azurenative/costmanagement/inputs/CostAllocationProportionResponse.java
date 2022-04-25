@@ -24,6 +24,10 @@ public final class CostAllocationProportionResponse extends com.pulumi.resources
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Target resource for cost allocation
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class CostAllocationProportionResponse extends com.pulumi.resources
     @Import(name="percentage", required=true)
     private Double percentage;
 
+    /**
+     * @return Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.
+     * 
+     */
     public Double percentage() {
         return this.percentage;
     }
@@ -64,11 +72,23 @@ public final class CostAllocationProportionResponse extends com.pulumi.resources
             $ = new CostAllocationProportionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Target resource for cost allocation
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param percentage Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(Double percentage) {
             $.percentage = percentage;
             return this;

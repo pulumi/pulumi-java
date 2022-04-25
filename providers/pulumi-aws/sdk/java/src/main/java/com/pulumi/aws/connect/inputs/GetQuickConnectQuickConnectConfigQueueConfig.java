@@ -19,6 +19,10 @@ public final class GetQuickConnectQuickConnectConfigQueueConfig extends com.pulu
     @Import(name="contactFlowId", required=true)
     private String contactFlowId;
 
+    /**
+     * @return Specifies the identifier of the contact flow.
+     * 
+     */
     public String contactFlowId() {
         return this.contactFlowId;
     }
@@ -30,6 +34,10 @@ public final class GetQuickConnectQuickConnectConfigQueueConfig extends com.pulu
     @Import(name="queueId", required=true)
     private String queueId;
 
+    /**
+     * @return Specifies the identifier for the queue.
+     * 
+     */
     public String queueId() {
         return this.queueId;
     }
@@ -59,11 +67,23 @@ public final class GetQuickConnectQuickConnectConfigQueueConfig extends com.pulu
             $ = new GetQuickConnectQuickConnectConfigQueueConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactFlowId Specifies the identifier of the contact flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactFlowId(String contactFlowId) {
             $.contactFlowId = contactFlowId;
             return this;
         }
 
+        /**
+         * @param queueId Specifies the identifier for the queue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueId(String queueId) {
             $.queueId = queueId;
             return this;

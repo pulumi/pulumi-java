@@ -19,6 +19,10 @@ public final class GetFavoriteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="favoriteId", required=true)
     private String favoriteId;
 
+    /**
+     * @return The Id of a specific favorite defined in the Application Insights component
+     * 
+     */
     public String favoriteId() {
         return this.favoriteId;
     }
@@ -30,6 +34,10 @@ public final class GetFavoriteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetFavoriteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the Application Insights component resource.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -71,16 +83,34 @@ public final class GetFavoriteArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFavoriteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param favoriteId The Id of a specific favorite defined in the Application Insights component
+         * 
+         * @return builder
+         * 
+         */
         public Builder favoriteId(String favoriteId) {
             $.favoriteId = favoriteId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

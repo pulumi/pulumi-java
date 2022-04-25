@@ -26,6 +26,10 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="associationAssignedCode")
     private @Nullable Output<String> associationAssignedCode;
 
+    /**
+     * @return The association assigned code.
+     * 
+     */
     public Optional<Output<String>> associationAssignedCode() {
         return Optional.ofNullable(this.associationAssignedCode);
     }
@@ -37,6 +41,10 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="messageId", required=true)
     private Output<String> messageId;
 
+    /**
+     * @return The message id.
+     * 
+     */
     public Output<String> messageId() {
         return this.messageId;
     }
@@ -48,6 +56,10 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="messageRelease", required=true)
     private Output<String> messageRelease;
 
+    /**
+     * @return The message release version.
+     * 
+     */
     public Output<String> messageRelease() {
         return this.messageRelease;
     }
@@ -59,6 +71,10 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="messageVersion", required=true)
     private Output<String> messageVersion;
 
+    /**
+     * @return The message version.
+     * 
+     */
     public Output<String> messageVersion() {
         return this.messageVersion;
     }
@@ -70,6 +86,10 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="schemaName", required=true)
     private Output<String> schemaName;
 
+    /**
+     * @return The schema name.
+     * 
+     */
     public Output<String> schemaName() {
         return this.schemaName;
     }
@@ -81,6 +101,10 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="senderApplicationId")
     private @Nullable Output<String> senderApplicationId;
 
+    /**
+     * @return The sender application id.
+     * 
+     */
     public Optional<Output<String>> senderApplicationId() {
         return Optional.ofNullable(this.senderApplicationId);
     }
@@ -92,6 +116,10 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="senderApplicationQualifier")
     private @Nullable Output<String> senderApplicationQualifier;
 
+    /**
+     * @return The sender application qualifier.
+     * 
+     */
     public Optional<Output<String>> senderApplicationQualifier() {
         return Optional.ofNullable(this.senderApplicationQualifier);
     }
@@ -126,65 +154,149 @@ public final class EdifactSchemaReferenceArgs extends com.pulumi.resources.Resou
             $ = new EdifactSchemaReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associationAssignedCode The association assigned code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationAssignedCode(@Nullable Output<String> associationAssignedCode) {
             $.associationAssignedCode = associationAssignedCode;
             return this;
         }
 
+        /**
+         * @param associationAssignedCode The association assigned code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationAssignedCode(String associationAssignedCode) {
             return associationAssignedCode(Output.of(associationAssignedCode));
         }
 
+        /**
+         * @param messageId The message id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(Output<String> messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param messageId The message id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(String messageId) {
             return messageId(Output.of(messageId));
         }
 
+        /**
+         * @param messageRelease The message release version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRelease(Output<String> messageRelease) {
             $.messageRelease = messageRelease;
             return this;
         }
 
+        /**
+         * @param messageRelease The message release version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRelease(String messageRelease) {
             return messageRelease(Output.of(messageRelease));
         }
 
+        /**
+         * @param messageVersion The message version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageVersion(Output<String> messageVersion) {
             $.messageVersion = messageVersion;
             return this;
         }
 
+        /**
+         * @param messageVersion The message version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageVersion(String messageVersion) {
             return messageVersion(Output.of(messageVersion));
         }
 
+        /**
+         * @param schemaName The schema name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(Output<String> schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param schemaName The schema name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(String schemaName) {
             return schemaName(Output.of(schemaName));
         }
 
+        /**
+         * @param senderApplicationId The sender application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationId(@Nullable Output<String> senderApplicationId) {
             $.senderApplicationId = senderApplicationId;
             return this;
         }
 
+        /**
+         * @param senderApplicationId The sender application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationId(String senderApplicationId) {
             return senderApplicationId(Output.of(senderApplicationId));
         }
 
+        /**
+         * @param senderApplicationQualifier The sender application qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationQualifier(@Nullable Output<String> senderApplicationQualifier) {
             $.senderApplicationQualifier = senderApplicationQualifier;
             return this;
         }
 
+        /**
+         * @param senderApplicationQualifier The sender application qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationQualifier(String senderApplicationQualifier) {
             return senderApplicationQualifier(Output.of(senderApplicationQualifier));
         }

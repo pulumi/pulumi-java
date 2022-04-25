@@ -27,6 +27,10 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends com.p
     @Import(name="categories")
     private @Nullable Output<List<String>> categories;
 
+    /**
+     * @return The related categories for the function.
+     * 
+     */
     public Optional<Output<List<String>>> categories() {
         return Optional.ofNullable(this.categories);
     }
@@ -38,6 +42,10 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends com.p
     @Import(name="resourceTypes")
     private @Nullable Output<List<String>> resourceTypes;
 
+    /**
+     * @return The related resource types for the function.
+     * 
+     */
     public Optional<Output<List<String>>> resourceTypes() {
         return Optional.ofNullable(this.resourceTypes);
     }
@@ -49,6 +57,10 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends com.p
     @Import(name="solutions")
     private @Nullable Output<List<String>> solutions;
 
+    /**
+     * @return The related Log Analytics solutions for the function.
+     * 
+     */
     public Optional<Output<List<String>>> solutions() {
         return Optional.ofNullable(this.solutions);
     }
@@ -79,41 +91,95 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends com.p
             $ = new LogAnalyticsQueryPackQueryPropertiesRelatedArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categories The related categories for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(@Nullable Output<List<String>> categories) {
             $.categories = categories;
             return this;
         }
 
+        /**
+         * @param categories The related categories for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(List<String> categories) {
             return categories(Output.of(categories));
         }
 
+        /**
+         * @param categories The related categories for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
 
+        /**
+         * @param resourceTypes The related resource types for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
             $.resourceTypes = resourceTypes;
             return this;
         }
 
+        /**
+         * @param resourceTypes The related resource types for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(List<String> resourceTypes) {
             return resourceTypes(Output.of(resourceTypes));
         }
 
+        /**
+         * @param resourceTypes The related resource types for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(String... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
         }
 
+        /**
+         * @param solutions The related Log Analytics solutions for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutions(@Nullable Output<List<String>> solutions) {
             $.solutions = solutions;
             return this;
         }
 
+        /**
+         * @param solutions The related Log Analytics solutions for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutions(List<String> solutions) {
             return solutions(Output.of(solutions));
         }
 
+        /**
+         * @param solutions The related Log Analytics solutions for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutions(String... solutions) {
             return solutions(List.of(solutions));
         }

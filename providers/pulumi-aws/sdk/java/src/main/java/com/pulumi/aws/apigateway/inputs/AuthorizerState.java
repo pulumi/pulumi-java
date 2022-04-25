@@ -24,6 +24,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerCredentials")
     private @Nullable Output<String> authorizerCredentials;
 
+    /**
+     * @return The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
+     * 
+     */
     public Optional<Output<String>> authorizerCredentials() {
         return Optional.ofNullable(this.authorizerCredentials);
     }
@@ -35,6 +39,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerResultTtlInSeconds")
     private @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
+    /**
+     * @return The TTL of cached authorizer results in seconds. Defaults to `300`.
+     * 
+     */
     public Optional<Output<Integer>> authorizerResultTtlInSeconds() {
         return Optional.ofNullable(this.authorizerResultTtlInSeconds);
     }
@@ -47,6 +55,11 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerUri")
     private @Nullable Output<String> authorizerUri;
 
+    /**
+     * @return The authorizer&#39;s Uniform Resource Identifier (URI). This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
+     * e.g., `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
+     * 
+     */
     public Optional<Output<String>> authorizerUri() {
         return Optional.ofNullable(this.authorizerUri);
     }
@@ -58,6 +71,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="identitySource")
     private @Nullable Output<String> identitySource;
 
+    /**
+     * @return The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g., `&#34;method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName&#34;`
+     * 
+     */
     public Optional<Output<String>> identitySource() {
         return Optional.ofNullable(this.identitySource);
     }
@@ -69,6 +86,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="identityValidationExpression")
     private @Nullable Output<String> identityValidationExpression;
 
+    /**
+     * @return A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn&#39;t match, the client receives a 401 Unauthorized response.
+     * 
+     */
     public Optional<Output<String>> identityValidationExpression() {
         return Optional.ofNullable(this.identityValidationExpression);
     }
@@ -80,6 +101,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the authorizer
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,6 +116,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerArns")
     private @Nullable Output<List<String>> providerArns;
 
+    /**
+     * @return A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
+     * 
+     */
     public Optional<Output<List<String>>> providerArns() {
         return Optional.ofNullable(this.providerArns);
     }
@@ -102,6 +131,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="restApi")
     private @Nullable Output<String> restApi;
 
+    /**
+     * @return The ID of the associated REST API
+     * 
+     */
     public Optional<Output<String>> restApi() {
         return Optional.ofNullable(this.restApi);
     }
@@ -113,6 +146,10 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool. Defaults to `TOKEN`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -149,87 +186,203 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
             $ = new AuthorizerState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizerCredentials The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerCredentials(@Nullable Output<String> authorizerCredentials) {
             $.authorizerCredentials = authorizerCredentials;
             return this;
         }
 
+        /**
+         * @param authorizerCredentials The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerCredentials(String authorizerCredentials) {
             return authorizerCredentials(Output.of(authorizerCredentials));
         }
 
+        /**
+         * @param authorizerResultTtlInSeconds The TTL of cached authorizer results in seconds. Defaults to `300`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerResultTtlInSeconds(@Nullable Output<Integer> authorizerResultTtlInSeconds) {
             $.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
 
+        /**
+         * @param authorizerResultTtlInSeconds The TTL of cached authorizer results in seconds. Defaults to `300`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerResultTtlInSeconds(Integer authorizerResultTtlInSeconds) {
             return authorizerResultTtlInSeconds(Output.of(authorizerResultTtlInSeconds));
         }
 
+        /**
+         * @param authorizerUri The authorizer&#39;s Uniform Resource Identifier (URI). This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
+         * e.g., `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerUri(@Nullable Output<String> authorizerUri) {
             $.authorizerUri = authorizerUri;
             return this;
         }
 
+        /**
+         * @param authorizerUri The authorizer&#39;s Uniform Resource Identifier (URI). This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
+         * e.g., `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerUri(String authorizerUri) {
             return authorizerUri(Output.of(authorizerUri));
         }
 
+        /**
+         * @param identitySource The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g., `&#34;method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder identitySource(@Nullable Output<String> identitySource) {
             $.identitySource = identitySource;
             return this;
         }
 
+        /**
+         * @param identitySource The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g., `&#34;method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder identitySource(String identitySource) {
             return identitySource(Output.of(identitySource));
         }
 
+        /**
+         * @param identityValidationExpression A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn&#39;t match, the client receives a 401 Unauthorized response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityValidationExpression(@Nullable Output<String> identityValidationExpression) {
             $.identityValidationExpression = identityValidationExpression;
             return this;
         }
 
+        /**
+         * @param identityValidationExpression A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn&#39;t match, the client receives a 401 Unauthorized response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityValidationExpression(String identityValidationExpression) {
             return identityValidationExpression(Output.of(identityValidationExpression));
         }
 
+        /**
+         * @param name The name of the authorizer
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the authorizer
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param providerArns A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerArns(@Nullable Output<List<String>> providerArns) {
             $.providerArns = providerArns;
             return this;
         }
 
+        /**
+         * @param providerArns A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerArns(List<String> providerArns) {
             return providerArns(Output.of(providerArns));
         }
 
+        /**
+         * @param providerArns A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerArns(String... providerArns) {
             return providerArns(List.of(providerArns));
         }
 
+        /**
+         * @param restApi The ID of the associated REST API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApi(@Nullable Output<String> restApi) {
             $.restApi = restApi;
             return this;
         }
 
+        /**
+         * @param restApi The ID of the associated REST API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApi(String restApi) {
             return restApi(Output.of(restApi));
         }
 
+        /**
+         * @param type The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool. Defaults to `TOKEN`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool. Defaults to `TOKEN`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

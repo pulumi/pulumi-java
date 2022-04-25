@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class GetKnowledgeBaseResult {
     /**
-     * The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
+     * @return The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
      * 
      */
     private final String displayName;
     /**
-     * Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, this is populated for all non en-us languages. If not populated, the default language en-us applies.
+     * @return Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, this is populated for all non en-us languages. If not populated, the default language en-us applies.
      * 
      */
     private final String languageCode;
     /**
-     * The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
+     * @return The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
      * 
      */
     private final String name;
@@ -36,23 +36,23 @@ public final class GetKnowledgeBaseResult {
     }
 
     /**
-     * The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
+     * @return The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, this is populated for all non en-us languages. If not populated, the default language en-us applies.
+     * @return Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, this is populated for all non en-us languages. If not populated, the default language en-us applies.
      * 
-    */
+     */
     public String languageCode() {
         return this.languageCode;
     }
     /**
-     * The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
+     * @return The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

@@ -26,6 +26,10 @@ public final class BucketQueueConfiguration extends com.pulumi.resources.InvokeA
     @Import(name="event", required=true)
     private String event;
 
+    /**
+     * @return The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.
+     * 
+     */
     public String event() {
         return this.event;
     }
@@ -37,6 +41,10 @@ public final class BucketQueueConfiguration extends com.pulumi.resources.InvokeA
     @Import(name="filter")
     private @Nullable BucketNotificationFilter filter;
 
+    /**
+     * @return The filtering rules that determine which objects trigger notifications.
+     * 
+     */
     public Optional<BucketNotificationFilter> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -48,6 +56,10 @@ public final class BucketQueueConfiguration extends com.pulumi.resources.InvokeA
     @Import(name="queue", required=true)
     private String queue;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type.
+     * 
+     */
     public String queue() {
         return this.queue;
     }
@@ -78,16 +90,34 @@ public final class BucketQueueConfiguration extends com.pulumi.resources.InvokeA
             $ = new BucketQueueConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param event The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(String event) {
             $.event = event;
             return this;
         }
 
+        /**
+         * @param filter The filtering rules that determine which objects trigger notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable BucketNotificationFilter filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param queue The Amazon Resource Name (ARN) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queue(String queue) {
             $.queue = queue;
             return this;

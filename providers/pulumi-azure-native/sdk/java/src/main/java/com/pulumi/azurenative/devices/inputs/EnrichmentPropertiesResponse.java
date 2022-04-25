@@ -24,6 +24,10 @@ public final class EnrichmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="endpointNames", required=true)
     private List<String> endpointNames;
 
+    /**
+     * @return The list of endpoints for which the enrichment is applied to the message.
+     * 
+     */
     public List<String> endpointNames() {
         return this.endpointNames;
     }
@@ -35,6 +39,10 @@ public final class EnrichmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The key or name for the enrichment property.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -46,6 +54,10 @@ public final class EnrichmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value for the enrichment property.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -76,20 +88,44 @@ public final class EnrichmentPropertiesResponse extends com.pulumi.resources.Inv
             $ = new EnrichmentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointNames The list of endpoints for which the enrichment is applied to the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointNames(List<String> endpointNames) {
             $.endpointNames = endpointNames;
             return this;
         }
 
+        /**
+         * @param endpointNames The list of endpoints for which the enrichment is applied to the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointNames(String... endpointNames) {
             return endpointNames(List.of(endpointNames));
         }
 
+        /**
+         * @param key The key or name for the enrichment property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value The value for the enrichment property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

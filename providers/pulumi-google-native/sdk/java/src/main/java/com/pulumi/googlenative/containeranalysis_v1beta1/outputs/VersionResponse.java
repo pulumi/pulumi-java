@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class VersionResponse {
     /**
-     * Used to correct mistakes in the version numbering scheme.
+     * @return Used to correct mistakes in the version numbering scheme.
      * 
      */
     private final Integer epoch;
     /**
-     * Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
+     * @return Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
      * 
      */
     private final Boolean inclusive;
     /**
-     * Distinguishes between sentinel MIN/MAX versions and normal versions.
+     * @return Distinguishes between sentinel MIN/MAX versions and normal versions.
      * 
      */
     private final String kind;
     /**
-     * Required only when version kind is NORMAL. The main part of the version name.
+     * @return Required only when version kind is NORMAL. The main part of the version name.
      * 
      */
     private final String name;
     /**
-     * The iteration of the package build from the above version.
+     * @return The iteration of the package build from the above version.
      * 
      */
     private final String revision;
@@ -52,37 +52,37 @@ public final class VersionResponse {
     }
 
     /**
-     * Used to correct mistakes in the version numbering scheme.
+     * @return Used to correct mistakes in the version numbering scheme.
      * 
-    */
+     */
     public Integer epoch() {
         return this.epoch;
     }
     /**
-     * Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
+     * @return Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
      * 
-    */
+     */
     public Boolean inclusive() {
         return this.inclusive;
     }
     /**
-     * Distinguishes between sentinel MIN/MAX versions and normal versions.
+     * @return Distinguishes between sentinel MIN/MAX versions and normal versions.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Required only when version kind is NORMAL. The main part of the version name.
+     * @return Required only when version kind is NORMAL. The main part of the version name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The iteration of the package build from the above version.
+     * @return The iteration of the package build from the above version.
      * 
-    */
+     */
     public String revision() {
         return this.revision;
     }

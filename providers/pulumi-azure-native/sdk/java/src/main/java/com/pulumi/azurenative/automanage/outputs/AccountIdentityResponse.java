@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AccountIdentityResponse {
     /**
-     * The principal id of Automanage account identity.
+     * @return The principal id of Automanage account identity.
      * 
      */
     private final String principalId;
     /**
-     * The tenant id associated with the Automanage account.
+     * @return The tenant id associated with the Automanage account.
      * 
      */
     private final String tenantId;
     /**
-     * The type of identity used for the Automanage account. Currently, the only supported type is &#39;SystemAssigned&#39;, which implicitly creates an identity.
+     * @return The type of identity used for the Automanage account. Currently, the only supported type is &#39;SystemAssigned&#39;, which implicitly creates an identity.
      * 
      */
     private final @Nullable String type;
@@ -38,23 +38,23 @@ public final class AccountIdentityResponse {
     }
 
     /**
-     * The principal id of Automanage account identity.
+     * @return The principal id of Automanage account identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant id associated with the Automanage account.
+     * @return The tenant id associated with the Automanage account.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of identity used for the Automanage account. Currently, the only supported type is &#39;SystemAssigned&#39;, which implicitly creates an identity.
+     * @return The type of identity used for the Automanage account. Currently, the only supported type is &#39;SystemAssigned&#39;, which implicitly creates an identity.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

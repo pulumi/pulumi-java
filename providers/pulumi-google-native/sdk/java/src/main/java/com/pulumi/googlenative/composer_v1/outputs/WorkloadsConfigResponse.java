@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class WorkloadsConfigResponse {
     /**
-     * Optional. Resources used by Airflow schedulers.
+     * @return Optional. Resources used by Airflow schedulers.
      * 
      */
     private final SchedulerResourceResponse scheduler;
     /**
-     * Optional. Resources used by Airflow web server.
+     * @return Optional. Resources used by Airflow web server.
      * 
      */
     private final WebServerResourceResponse webServer;
     /**
-     * Optional. Resources used by Airflow workers.
+     * @return Optional. Resources used by Airflow workers.
      * 
      */
     private final WorkerResourceResponse worker;
@@ -38,23 +38,23 @@ public final class WorkloadsConfigResponse {
     }
 
     /**
-     * Optional. Resources used by Airflow schedulers.
+     * @return Optional. Resources used by Airflow schedulers.
      * 
-    */
+     */
     public SchedulerResourceResponse scheduler() {
         return this.scheduler;
     }
     /**
-     * Optional. Resources used by Airflow web server.
+     * @return Optional. Resources used by Airflow web server.
      * 
-    */
+     */
     public WebServerResourceResponse webServer() {
         return this.webServer;
     }
     /**
-     * Optional. Resources used by Airflow workers.
+     * @return Optional. Resources used by Airflow workers.
      * 
-    */
+     */
     public WorkerResourceResponse worker() {
         return this.worker;
     }

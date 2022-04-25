@@ -23,6 +23,10 @@ public final class LiveEventOutputTranscriptionTrackResponse extends com.pulumi.
     @Import(name="trackName", required=true)
     private String trackName;
 
+    /**
+     * @return The output track name. This property is reserved for future use, any value set on this property will be ignored.
+     * 
+     */
     public String trackName() {
         return this.trackName;
     }
@@ -51,6 +55,12 @@ public final class LiveEventOutputTranscriptionTrackResponse extends com.pulumi.
             $ = new LiveEventOutputTranscriptionTrackResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param trackName The output track name. This property is reserved for future use, any value set on this property will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackName(String trackName) {
             $.trackName = trackName;
             return this;

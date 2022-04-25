@@ -25,6 +25,10 @@ public final class ConsoleProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return The URL to access the cluster console (immutable).
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -53,6 +57,12 @@ public final class ConsoleProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new ConsoleProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param url The URL to access the cluster console (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;

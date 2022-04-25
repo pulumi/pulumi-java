@@ -24,6 +24,10 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
     @Import(name="displayNameHint", required=true)
     private String displayNameHint;
 
+    /**
+     * @return Last known display name.
+     * 
+     */
     public String displayNameHint() {
         return this.displayNameHint;
     }
@@ -35,6 +39,10 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource URI.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +55,11 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Specifies the sub-class of the reference.
+     * Expected value is &#39;ref:machinewithhints&#39;.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -58,6 +71,10 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -69,6 +86,10 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
     @Import(name="osFamilyHint", required=true)
     private String osFamilyHint;
 
+    /**
+     * @return Last known operating system family.
+     * 
+     */
     public String osFamilyHint() {
         return this.osFamilyHint;
     }
@@ -80,6 +101,10 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type qualifier.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -113,31 +138,68 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
             $ = new MachineReferenceWithHintsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayNameHint Last known display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayNameHint(String displayNameHint) {
             $.displayNameHint = displayNameHint;
             return this;
         }
 
+        /**
+         * @param id Resource URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param kind Specifies the sub-class of the reference.
+         * Expected value is &#39;ref:machinewithhints&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param osFamilyHint Last known operating system family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osFamilyHint(String osFamilyHint) {
             $.osFamilyHint = osFamilyHint;
             return this;
         }
 
+        /**
+         * @param type Resource type qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

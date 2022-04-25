@@ -23,6 +23,10 @@ public final class CircuitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="expressRouteID", required=true)
     private String expressRouteID;
 
+    /**
+     * @return Identifier of the ExpressRoute Circuit (Microsoft Colo only)
+     * 
+     */
     public String expressRouteID() {
         return this.expressRouteID;
     }
@@ -34,6 +38,10 @@ public final class CircuitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="expressRoutePrivatePeeringID", required=true)
     private String expressRoutePrivatePeeringID;
 
+    /**
+     * @return ExpressRoute Circuit private peering identifier
+     * 
+     */
     public String expressRoutePrivatePeeringID() {
         return this.expressRoutePrivatePeeringID;
     }
@@ -45,6 +53,10 @@ public final class CircuitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="primarySubnet", required=true)
     private String primarySubnet;
 
+    /**
+     * @return CIDR of primary subnet
+     * 
+     */
     public String primarySubnet() {
         return this.primarySubnet;
     }
@@ -56,6 +68,10 @@ public final class CircuitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="secondarySubnet", required=true)
     private String secondarySubnet;
 
+    /**
+     * @return CIDR of secondary subnet
+     * 
+     */
     public String secondarySubnet() {
         return this.secondarySubnet;
     }
@@ -87,21 +103,45 @@ public final class CircuitResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CircuitResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expressRouteID Identifier of the ExpressRoute Circuit (Microsoft Colo only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRouteID(String expressRouteID) {
             $.expressRouteID = expressRouteID;
             return this;
         }
 
+        /**
+         * @param expressRoutePrivatePeeringID ExpressRoute Circuit private peering identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRoutePrivatePeeringID(String expressRoutePrivatePeeringID) {
             $.expressRoutePrivatePeeringID = expressRoutePrivatePeeringID;
             return this;
         }
 
+        /**
+         * @param primarySubnet CIDR of primary subnet
+         * 
+         * @return builder
+         * 
+         */
         public Builder primarySubnet(String primarySubnet) {
             $.primarySubnet = primarySubnet;
             return this;
         }
 
+        /**
+         * @param secondarySubnet CIDR of secondary subnet
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondarySubnet(String secondarySubnet) {
             $.secondarySubnet = secondarySubnet;
             return this;

@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 public final class ResourceSetResource {
     private final @Nullable String componentId;
     /**
-     * Component for DNS/Routing Control Readiness Checks.
+     * @return Component for DNS/Routing Control Readiness Checks.
      * 
      */
     private final @Nullable ResourceSetResourceDnsTargetResource dnsTargetResource;
     /**
-     * Recovery group ARN or cell ARN that contains this resource set.
+     * @return Recovery group ARN or cell ARN that contains this resource set.
      * 
      */
     private final @Nullable List<String> readinessScopes;
     /**
-     * ARN of the resource.
+     * @return ARN of the resource.
      * 
      */
     private final @Nullable String resourceArn;
@@ -46,23 +46,23 @@ public final class ResourceSetResource {
         return Optional.ofNullable(this.componentId);
     }
     /**
-     * Component for DNS/Routing Control Readiness Checks.
+     * @return Component for DNS/Routing Control Readiness Checks.
      * 
-    */
+     */
     public Optional<ResourceSetResourceDnsTargetResource> dnsTargetResource() {
         return Optional.ofNullable(this.dnsTargetResource);
     }
     /**
-     * Recovery group ARN or cell ARN that contains this resource set.
+     * @return Recovery group ARN or cell ARN that contains this resource set.
      * 
-    */
+     */
     public List<String> readinessScopes() {
         return this.readinessScopes == null ? List.of() : this.readinessScopes;
     }
     /**
-     * ARN of the resource.
+     * @return ARN of the resource.
      * 
-    */
+     */
     public Optional<String> resourceArn() {
         return Optional.ofNullable(this.resourceArn);
     }

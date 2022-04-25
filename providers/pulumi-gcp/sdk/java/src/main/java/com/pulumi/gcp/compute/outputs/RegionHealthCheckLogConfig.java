@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionHealthCheckLogConfig {
     /**
-     * Indicates whether or not to export logs. This is false by default,
+     * @return Indicates whether or not to export logs. This is false by default,
      * which means no health check logging will be done.
      * 
      */
@@ -24,10 +24,10 @@ public final class RegionHealthCheckLogConfig {
     }
 
     /**
-     * Indicates whether or not to export logs. This is false by default,
+     * @return Indicates whether or not to export logs. This is false by default,
      * which means no health check logging will be done.
      * 
-    */
+     */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }

@@ -25,6 +25,10 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return The name of the Kusto cluster.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -36,6 +40,10 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
 
+    /**
+     * @return The name of the database in the Kusto cluster.
+     * 
+     */
     public Output<String> databaseName() {
         return this.databaseName;
     }
@@ -47,6 +55,10 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
     @Import(name="principalAssignmentName")
     private @Nullable Output<String> principalAssignmentName;
 
+    /**
+     * @return The name of the Kusto principalAssignment.
+     * 
+     */
     public Optional<Output<String>> principalAssignmentName() {
         return Optional.ofNullable(this.principalAssignmentName);
     }
@@ -58,6 +70,10 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
     @Import(name="principalId", required=true)
     private Output<String> principalId;
 
+    /**
+     * @return The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
+     * 
+     */
     public Output<String> principalId() {
         return this.principalId;
     }
@@ -69,6 +85,10 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
     @Import(name="principalType", required=true)
     private Output<Either<String,PrincipalType>> principalType;
 
+    /**
+     * @return Principal type.
+     * 
+     */
     public Output<Either<String,PrincipalType>> principalType() {
         return this.principalType;
     }
@@ -80,6 +100,10 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing the Kusto cluster.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
     @Import(name="role", required=true)
     private Output<Either<String,DatabasePrincipalRole>> role;
 
+    /**
+     * @return Database principal role.
+     * 
+     */
     public Output<Either<String,DatabasePrincipalRole>> role() {
         return this.role;
     }
@@ -102,6 +130,10 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return The tenant id of the principal
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -137,90 +169,210 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
             $ = new DatabasePrincipalAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param databaseName The name of the database in the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database in the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param principalAssignmentName The name of the Kusto principalAssignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalAssignmentName(@Nullable Output<String> principalAssignmentName) {
             $.principalAssignmentName = principalAssignmentName;
             return this;
         }
 
+        /**
+         * @param principalAssignmentName The name of the Kusto principalAssignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalAssignmentName(String principalAssignmentName) {
             return principalAssignmentName(Output.of(principalAssignmentName));
         }
 
+        /**
+         * @param principalId The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }
 
+        /**
+         * @param principalType Principal type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(Output<Either<String,PrincipalType>> principalType) {
             $.principalType = principalType;
             return this;
         }
 
+        /**
+         * @param principalType Principal type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(Either<String,PrincipalType> principalType) {
             return principalType(Output.of(principalType));
         }
 
+        /**
+         * @param principalType Principal type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(String principalType) {
             return principalType(Either.ofLeft(principalType));
         }
 
+        /**
+         * @param principalType Principal type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(PrincipalType principalType) {
             return principalType(Either.ofRight(principalType));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param role Database principal role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<Either<String,DatabasePrincipalRole>> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role Database principal role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Either<String,DatabasePrincipalRole> role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param role Database principal role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Either.ofLeft(role));
         }
 
+        /**
+         * @param role Database principal role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(DatabasePrincipalRole role) {
             return role(Either.ofRight(role));
         }
 
+        /**
+         * @param tenantId The tenant id of the principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant id of the principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

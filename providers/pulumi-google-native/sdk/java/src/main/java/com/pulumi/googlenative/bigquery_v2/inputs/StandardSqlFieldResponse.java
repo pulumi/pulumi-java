@@ -24,6 +24,10 @@ public final class StandardSqlFieldResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Optional. The name of this field. Can be absent for struct fields.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class StandardSqlFieldResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private StandardSqlDataTypeResponse type;
 
+    /**
+     * @return Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this &#34;type&#34; field).
+     * 
+     */
     public StandardSqlDataTypeResponse type() {
         return this.type;
     }
@@ -64,11 +72,23 @@ public final class StandardSqlFieldResponse extends com.pulumi.resources.InvokeA
             $ = new StandardSqlFieldResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Optional. The name of this field. Can be absent for struct fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this &#34;type&#34; field).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(StandardSqlDataTypeResponse type) {
             $.type = type;
             return this;

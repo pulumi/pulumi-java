@@ -27,6 +27,10 @@ public final class ModelEnvironmentDefinitionDockerArgs extends com.pulumi.resou
     @Import(name="baseDockerfile")
     private @Nullable Output<String> baseDockerfile;
 
+    /**
+     * @return Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
+     * 
+     */
     public Optional<Output<String>> baseDockerfile() {
         return Optional.ofNullable(this.baseDockerfile);
     }
@@ -38,6 +42,10 @@ public final class ModelEnvironmentDefinitionDockerArgs extends com.pulumi.resou
     @Import(name="baseImage")
     private @Nullable Output<String> baseImage;
 
+    /**
+     * @return Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
+     * 
+     */
     public Optional<Output<String>> baseImage() {
         return Optional.ofNullable(this.baseImage);
     }
@@ -49,6 +57,10 @@ public final class ModelEnvironmentDefinitionDockerArgs extends com.pulumi.resou
     @Import(name="baseImageRegistry")
     private @Nullable Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry;
 
+    /**
+     * @return Image registry that contains the base image.
+     * 
+     */
     public Optional<Output<ModelDockerSectionBaseImageRegistryArgs>> baseImageRegistry() {
         return Optional.ofNullable(this.baseImageRegistry);
     }
@@ -79,29 +91,65 @@ public final class ModelEnvironmentDefinitionDockerArgs extends com.pulumi.resou
             $ = new ModelEnvironmentDefinitionDockerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseDockerfile Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseDockerfile(@Nullable Output<String> baseDockerfile) {
             $.baseDockerfile = baseDockerfile;
             return this;
         }
 
+        /**
+         * @param baseDockerfile Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseDockerfile(String baseDockerfile) {
             return baseDockerfile(Output.of(baseDockerfile));
         }
 
+        /**
+         * @param baseImage Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImage(@Nullable Output<String> baseImage) {
             $.baseImage = baseImage;
             return this;
         }
 
+        /**
+         * @param baseImage Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImage(String baseImage) {
             return baseImage(Output.of(baseImage));
         }
 
+        /**
+         * @param baseImageRegistry Image registry that contains the base image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageRegistry(@Nullable Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry) {
             $.baseImageRegistry = baseImageRegistry;
             return this;
         }
 
+        /**
+         * @param baseImageRegistry Image registry that contains the base image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageRegistry(ModelDockerSectionBaseImageRegistryArgs baseImageRegistry) {
             return baseImageRegistry(Output.of(baseImageRegistry));
         }

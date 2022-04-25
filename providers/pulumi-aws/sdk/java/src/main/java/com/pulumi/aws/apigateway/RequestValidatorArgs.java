@@ -23,6 +23,10 @@ public final class RequestValidatorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the request validator
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -34,6 +38,10 @@ public final class RequestValidatorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="restApi", required=true)
     private Output<String> restApi;
 
+    /**
+     * @return The ID of the associated Rest API
+     * 
+     */
     public Output<String> restApi() {
         return this.restApi;
     }
@@ -45,6 +53,10 @@ public final class RequestValidatorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="validateRequestBody")
     private @Nullable Output<Boolean> validateRequestBody;
 
+    /**
+     * @return Boolean whether to validate request body. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> validateRequestBody() {
         return Optional.ofNullable(this.validateRequestBody);
     }
@@ -56,6 +68,10 @@ public final class RequestValidatorArgs extends com.pulumi.resources.ResourceArg
     @Import(name="validateRequestParameters")
     private @Nullable Output<Boolean> validateRequestParameters;
 
+    /**
+     * @return Boolean whether to validate request parameters. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> validateRequestParameters() {
         return Optional.ofNullable(this.validateRequestParameters);
     }
@@ -87,38 +103,86 @@ public final class RequestValidatorArgs extends com.pulumi.resources.ResourceArg
             $ = new RequestValidatorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the request validator
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the request validator
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param restApi The ID of the associated Rest API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApi(Output<String> restApi) {
             $.restApi = restApi;
             return this;
         }
 
+        /**
+         * @param restApi The ID of the associated Rest API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApi(String restApi) {
             return restApi(Output.of(restApi));
         }
 
+        /**
+         * @param validateRequestBody Boolean whether to validate request body. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateRequestBody(@Nullable Output<Boolean> validateRequestBody) {
             $.validateRequestBody = validateRequestBody;
             return this;
         }
 
+        /**
+         * @param validateRequestBody Boolean whether to validate request body. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateRequestBody(Boolean validateRequestBody) {
             return validateRequestBody(Output.of(validateRequestBody));
         }
 
+        /**
+         * @param validateRequestParameters Boolean whether to validate request parameters. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateRequestParameters(@Nullable Output<Boolean> validateRequestParameters) {
             $.validateRequestParameters = validateRequestParameters;
             return this;
         }
 
+        /**
+         * @param validateRequestParameters Boolean whether to validate request parameters. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateRequestParameters(Boolean validateRequestParameters) {
             return validateRequestParameters(Output.of(validateRequestParameters));
         }

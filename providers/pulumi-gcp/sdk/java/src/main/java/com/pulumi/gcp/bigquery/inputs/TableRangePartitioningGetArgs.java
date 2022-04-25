@@ -22,6 +22,11 @@ public final class TableRangePartitioningGetArgs extends com.pulumi.resources.Re
     @Import(name="field", required=true)
     private Output<String> field;
 
+    /**
+     * @return The field used to determine how to create a range-based
+     * partition.
+     * 
+     */
     public Output<String> field() {
         return this.field;
     }
@@ -34,6 +39,11 @@ public final class TableRangePartitioningGetArgs extends com.pulumi.resources.Re
     @Import(name="range", required=true)
     private Output<TableRangePartitioningRangeGetArgs> range;
 
+    /**
+     * @return Information required to partition based on ranges.
+     * Structure is documented below.
+     * 
+     */
     public Output<TableRangePartitioningRangeGetArgs> range() {
         return this.range;
     }
@@ -63,20 +73,48 @@ public final class TableRangePartitioningGetArgs extends com.pulumi.resources.Re
             $ = new TableRangePartitioningGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field The field used to determine how to create a range-based
+         * partition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(Output<String> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field The field used to determine how to create a range-based
+         * partition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             return field(Output.of(field));
         }
 
+        /**
+         * @param range Information required to partition based on ranges.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(Output<TableRangePartitioningRangeGetArgs> range) {
             $.range = range;
             return this;
         }
 
+        /**
+         * @param range Information required to partition based on ranges.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(TableRangePartitioningRangeGetArgs range) {
             return range(Output.of(range));
         }

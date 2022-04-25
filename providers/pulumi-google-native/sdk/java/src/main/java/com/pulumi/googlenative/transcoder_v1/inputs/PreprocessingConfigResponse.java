@@ -28,6 +28,10 @@ public final class PreprocessingConfigResponse extends com.pulumi.resources.Invo
     @Import(name="audio", required=true)
     private AudioResponse audio;
 
+    /**
+     * @return Audio preprocessing configuration.
+     * 
+     */
     public AudioResponse audio() {
         return this.audio;
     }
@@ -39,6 +43,10 @@ public final class PreprocessingConfigResponse extends com.pulumi.resources.Invo
     @Import(name="color", required=true)
     private ColorResponse color;
 
+    /**
+     * @return Color preprocessing configuration.
+     * 
+     */
     public ColorResponse color() {
         return this.color;
     }
@@ -50,6 +58,10 @@ public final class PreprocessingConfigResponse extends com.pulumi.resources.Invo
     @Import(name="crop", required=true)
     private CropResponse crop;
 
+    /**
+     * @return Specify the video cropping configuration.
+     * 
+     */
     public CropResponse crop() {
         return this.crop;
     }
@@ -61,6 +73,10 @@ public final class PreprocessingConfigResponse extends com.pulumi.resources.Invo
     @Import(name="deblock", required=true)
     private DeblockResponse deblock;
 
+    /**
+     * @return Deblock preprocessing configuration.
+     * 
+     */
     public DeblockResponse deblock() {
         return this.deblock;
     }
@@ -72,6 +88,10 @@ public final class PreprocessingConfigResponse extends com.pulumi.resources.Invo
     @Import(name="denoise", required=true)
     private DenoiseResponse denoise;
 
+    /**
+     * @return Denoise preprocessing configuration.
+     * 
+     */
     public DenoiseResponse denoise() {
         return this.denoise;
     }
@@ -83,6 +103,10 @@ public final class PreprocessingConfigResponse extends com.pulumi.resources.Invo
     @Import(name="pad", required=true)
     private PadResponse pad;
 
+    /**
+     * @return Specify the video pad filter configuration.
+     * 
+     */
     public PadResponse pad() {
         return this.pad;
     }
@@ -116,31 +140,67 @@ public final class PreprocessingConfigResponse extends com.pulumi.resources.Invo
             $ = new PreprocessingConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audio Audio preprocessing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audio(AudioResponse audio) {
             $.audio = audio;
             return this;
         }
 
+        /**
+         * @param color Color preprocessing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder color(ColorResponse color) {
             $.color = color;
             return this;
         }
 
+        /**
+         * @param crop Specify the video cropping configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crop(CropResponse crop) {
             $.crop = crop;
             return this;
         }
 
+        /**
+         * @param deblock Deblock preprocessing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deblock(DeblockResponse deblock) {
             $.deblock = deblock;
             return this;
         }
 
+        /**
+         * @param denoise Denoise preprocessing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denoise(DenoiseResponse denoise) {
             $.denoise = denoise;
             return this;
         }
 
+        /**
+         * @param pad Specify the video pad filter configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pad(PadResponse pad) {
             $.pad = pad;
             return this;

@@ -15,42 +15,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetIotHubResourceResult {
     /**
-     * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
+     * @return The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
      * 
      */
     private final @Nullable String etag;
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
      */
     private final String id;
     /**
-     * The resource location.
+     * @return The resource location.
      * 
      */
     private final String location;
     /**
-     * The resource name.
+     * @return The resource name.
      * 
      */
     private final String name;
     /**
-     * IotHub properties
+     * @return IotHub properties
      * 
      */
     private final IotHubPropertiesResponse properties;
     /**
-     * IotHub SKU info
+     * @return IotHub SKU info
      * 
      */
     private final IotHubSkuInfoResponse sku;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String type;
@@ -76,58 +76,58 @@ public final class GetIotHubResourceResult {
     }
 
     /**
-     * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
+     * @return The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * IotHub properties
+     * @return IotHub properties
      * 
-    */
+     */
     public IotHubPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * IotHub SKU info
+     * @return IotHub SKU info
      * 
-    */
+     */
     public IotHubSkuInfoResponse sku() {
         return this.sku;
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

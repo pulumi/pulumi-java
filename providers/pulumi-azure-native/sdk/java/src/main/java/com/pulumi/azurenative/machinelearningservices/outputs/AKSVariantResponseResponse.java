@@ -16,53 +16,53 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AKSVariantResponseResponse {
     /**
-     * The compute environment type for the service.
+     * @return The compute environment type for the service.
      * Expected value is &#39;Custom&#39;.
      * 
      */
     private final String computeType;
     /**
-     * The deployment type for the service.
+     * @return The deployment type for the service.
      * 
      */
     private final @Nullable String deploymentType;
     /**
-     * The service description.
+     * @return The service description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The error details.
+     * @return The error details.
      * 
      */
     private final ServiceResponseBaseResponseError error;
     /**
-     * Is this the default variant.
+     * @return Is this the default variant.
      * 
      */
     private final @Nullable Boolean isDefault;
     /**
-     * The service tag dictionary. Tags are mutable.
+     * @return The service tag dictionary. Tags are mutable.
      * 
      */
     private final @Nullable Map<String,String> kvTags;
     /**
-     * The service property dictionary. Properties are immutable.
+     * @return The service property dictionary. Properties are immutable.
      * 
      */
     private final @Nullable Map<String,String> properties;
     /**
-     * The current state of the service.
+     * @return The current state of the service.
      * 
      */
     private final String state;
     /**
-     * The amount of traffic variant receives.
+     * @return The amount of traffic variant receives.
      * 
      */
     private final @Nullable Double trafficPercentile;
     /**
-     * The type of the variant.
+     * @return The type of the variant.
      * 
      */
     private final @Nullable String type;
@@ -92,73 +92,73 @@ public final class AKSVariantResponseResponse {
     }
 
     /**
-     * The compute environment type for the service.
+     * @return The compute environment type for the service.
      * Expected value is &#39;Custom&#39;.
      * 
-    */
+     */
     public String computeType() {
         return this.computeType;
     }
     /**
-     * The deployment type for the service.
+     * @return The deployment type for the service.
      * 
-    */
+     */
     public Optional<String> deploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
     /**
-     * The service description.
+     * @return The service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The error details.
+     * @return The error details.
      * 
-    */
+     */
     public ServiceResponseBaseResponseError error() {
         return this.error;
     }
     /**
-     * Is this the default variant.
+     * @return Is this the default variant.
      * 
-    */
+     */
     public Optional<Boolean> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
     /**
-     * The service tag dictionary. Tags are mutable.
+     * @return The service tag dictionary. Tags are mutable.
      * 
-    */
+     */
     public Map<String,String> kvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
     /**
-     * The service property dictionary. Properties are immutable.
+     * @return The service property dictionary. Properties are immutable.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * The current state of the service.
+     * @return The current state of the service.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The amount of traffic variant receives.
+     * @return The amount of traffic variant receives.
      * 
-    */
+     */
     public Optional<Double> trafficPercentile() {
         return Optional.ofNullable(this.trafficPercentile);
     }
     /**
-     * The type of the variant.
+     * @return The type of the variant.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

@@ -24,6 +24,10 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -35,6 +39,10 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataSetMappingName")
     private @Nullable Output<String> dataSetMappingName;
 
+    /**
+     * @return The name of the data set mapping to be created.
+     * 
+     */
     public Optional<Output<String>> dataSetMappingName() {
         return Optional.ofNullable(this.dataSetMappingName);
     }
@@ -46,6 +54,10 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind", required=true)
     private Output<Either<String,DataSetMappingKind>> kind;
 
+    /**
+     * @return Kind of data set mapping.
+     * 
+     */
     public Output<Either<String,DataSetMappingKind>> kind() {
         return this.kind;
     }
@@ -57,6 +69,10 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="shareSubscriptionName", required=true)
     private Output<String> shareSubscriptionName;
 
+    /**
+     * @return The name of the share subscription which will hold the data set sink.
+     * 
+     */
     public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
@@ -100,55 +120,127 @@ public final class DataSetMappingArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DataSetMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param dataSetMappingName The name of the data set mapping to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
             $.dataSetMappingName = dataSetMappingName;
             return this;
         }
 
+        /**
+         * @param dataSetMappingName The name of the data set mapping to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetMappingName(String dataSetMappingName) {
             return dataSetMappingName(Output.of(dataSetMappingName));
         }
 
+        /**
+         * @param kind Kind of data set mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,DataSetMappingKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of data set mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,DataSetMappingKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Kind of data set mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Kind of data set mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(DataSetMappingKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param shareSubscriptionName The name of the share subscription which will hold the data set sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
 
+        /**
+         * @param shareSubscriptionName The name of the share subscription which will hold the data set sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             return shareSubscriptionName(Output.of(shareSubscriptionName));
         }

@@ -32,6 +32,10 @@ public final class WebApplicationFirewallCustomRuleArgs extends com.pulumi.resou
     @Import(name="action", required=true)
     private Output<Either<String,WebApplicationFirewallAction>> action;
 
+    /**
+     * @return Type of Actions.
+     * 
+     */
     public Output<Either<String,WebApplicationFirewallAction>> action() {
         return this.action;
     }
@@ -43,6 +47,10 @@ public final class WebApplicationFirewallCustomRuleArgs extends com.pulumi.resou
     @Import(name="matchConditions", required=true)
     private Output<List<MatchConditionArgs>> matchConditions;
 
+    /**
+     * @return List of match conditions.
+     * 
+     */
     public Output<List<MatchConditionArgs>> matchConditions() {
         return this.matchConditions;
     }
@@ -54,6 +62,10 @@ public final class WebApplicationFirewallCustomRuleArgs extends com.pulumi.resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a policy. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -65,6 +77,10 @@ public final class WebApplicationFirewallCustomRuleArgs extends com.pulumi.resou
     @Import(name="priority", required=true)
     private Output<Integer> priority;
 
+    /**
+     * @return Priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
+     * 
+     */
     public Output<Integer> priority() {
         return this.priority;
     }
@@ -76,6 +92,10 @@ public final class WebApplicationFirewallCustomRuleArgs extends com.pulumi.resou
     @Import(name="ruleType", required=true)
     private Output<Either<String,WebApplicationFirewallRuleType>> ruleType;
 
+    /**
+     * @return The rule type.
+     * 
+     */
     public Output<Either<String,WebApplicationFirewallRuleType>> ruleType() {
         return this.ruleType;
     }
@@ -108,67 +128,157 @@ public final class WebApplicationFirewallCustomRuleArgs extends com.pulumi.resou
             $ = new WebApplicationFirewallCustomRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Type of Actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<Either<String,WebApplicationFirewallAction>> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Type of Actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Either<String,WebApplicationFirewallAction> action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param action Type of Actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Either.ofLeft(action));
         }
 
+        /**
+         * @param action Type of Actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(WebApplicationFirewallAction action) {
             return action(Either.ofRight(action));
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(Output<List<MatchConditionArgs>> matchConditions) {
             $.matchConditions = matchConditions;
             return this;
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(List<MatchConditionArgs> matchConditions) {
             return matchConditions(Output.of(matchConditions));
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(MatchConditionArgs... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a policy. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a policy. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param priority Priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param ruleType The rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(Output<Either<String,WebApplicationFirewallRuleType>> ruleType) {
             $.ruleType = ruleType;
             return this;
         }
 
+        /**
+         * @param ruleType The rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(Either<String,WebApplicationFirewallRuleType> ruleType) {
             return ruleType(Output.of(ruleType));
         }
 
+        /**
+         * @param ruleType The rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(String ruleType) {
             return ruleType(Either.ofLeft(ruleType));
         }
 
+        /**
+         * @param ruleType The rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(WebApplicationFirewallRuleType ruleType) {
             return ruleType(Either.ofRight(ruleType));
         }

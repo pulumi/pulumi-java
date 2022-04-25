@@ -31,6 +31,10 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
     @Import(name="checkIntervalSec")
     private @Nullable Output<Integer> checkIntervalSec;
 
+    /**
+     * @return How often (in seconds) to send a health check. The default value is 5 seconds.
+     * 
+     */
     public Optional<Output<Integer>> checkIntervalSec() {
         return Optional.ofNullable(this.checkIntervalSec);
     }
@@ -42,6 +46,10 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -60,6 +68,10 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
     @Import(name="healthyThreshold")
     private @Nullable Output<Integer> healthyThreshold;
 
+    /**
+     * @return A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+     * 
+     */
     public Optional<Output<Integer>> healthyThreshold() {
         return Optional.ofNullable(this.healthyThreshold);
     }
@@ -92,6 +104,10 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -103,6 +119,10 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
     @Import(name="logConfig")
     private @Nullable Output<HealthCheckLogConfigArgs> logConfig;
 
+    /**
+     * @return Configure logging on this health check.
+     * 
+     */
     public Optional<Output<HealthCheckLogConfigArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
@@ -114,6 +134,10 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn&#39;t a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -160,6 +184,10 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
     @Import(name="timeoutSec")
     private @Nullable Output<Integer> timeoutSec;
 
+    /**
+     * @return How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
+     * 
+     */
     public Optional<Output<Integer>> timeoutSec() {
         return Optional.ofNullable(this.timeoutSec);
     }
@@ -171,6 +199,10 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type")
     private @Nullable Output<RegionHealthCheckType> type;
 
+    /**
+     * @return Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. Exactly one of the protocol-specific health check field must be specified, which must match type field.
+     * 
+     */
     public Optional<Output<RegionHealthCheckType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -182,6 +214,10 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
     @Import(name="unhealthyThreshold")
     private @Nullable Output<Integer> unhealthyThreshold;
 
+    /**
+     * @return A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+     * 
+     */
     public Optional<Output<Integer>> unhealthyThreshold() {
         return Optional.ofNullable(this.unhealthyThreshold);
     }
@@ -227,20 +263,44 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
             $ = new RegionHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checkIntervalSec How often (in seconds) to send a health check. The default value is 5 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkIntervalSec(@Nullable Output<Integer> checkIntervalSec) {
             $.checkIntervalSec = checkIntervalSec;
             return this;
         }
 
+        /**
+         * @param checkIntervalSec How often (in seconds) to send a health check. The default value is 5 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkIntervalSec(Integer checkIntervalSec) {
             return checkIntervalSec(Output.of(checkIntervalSec));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -254,11 +314,23 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
             return grpcHealthCheck(Output.of(grpcHealthCheck));
         }
 
+        /**
+         * @param healthyThreshold A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
             $.healthyThreshold = healthyThreshold;
             return this;
         }
 
+        /**
+         * @param healthyThreshold A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthyThreshold(Integer healthyThreshold) {
             return healthyThreshold(Output.of(healthyThreshold));
         }
@@ -290,29 +362,65 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
             return httpsHealthCheck(Output.of(httpsHealthCheck));
         }
 
+        /**
+         * @param kind Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param logConfig Configure logging on this health check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(@Nullable Output<HealthCheckLogConfigArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
 
+        /**
+         * @param logConfig Configure logging on this health check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(HealthCheckLogConfigArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn&#39;t a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn&#39;t a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -362,29 +470,65 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
             return tcpHealthCheck(Output.of(tcpHealthCheck));
         }
 
+        /**
+         * @param timeoutSec How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
             $.timeoutSec = timeoutSec;
             return this;
         }
 
+        /**
+         * @param timeoutSec How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSec(Integer timeoutSec) {
             return timeoutSec(Output.of(timeoutSec));
         }
 
+        /**
+         * @param type Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. Exactly one of the protocol-specific health check field must be specified, which must match type field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<RegionHealthCheckType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. Exactly one of the protocol-specific health check field must be specified, which must match type field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(RegionHealthCheckType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param unhealthyThreshold A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             $.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
+        /**
+         * @param unhealthyThreshold A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             return unhealthyThreshold(Output.of(unhealthyThreshold));
         }

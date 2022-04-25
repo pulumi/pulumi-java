@@ -26,6 +26,10 @@ public final class AutoscaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
     private @Nullable AutoscaleCapacityResponse capacity;
 
+    /**
+     * @return Parameters for load-based autoscale
+     * 
+     */
     public Optional<AutoscaleCapacityResponse> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class AutoscaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="recurrence")
     private @Nullable AutoscaleRecurrenceResponse recurrence;
 
+    /**
+     * @return Parameters for schedule-based autoscale
+     * 
+     */
     public Optional<AutoscaleRecurrenceResponse> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }
@@ -66,11 +74,23 @@ public final class AutoscaleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AutoscaleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Parameters for load-based autoscale
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable AutoscaleCapacityResponse capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param recurrence Parameters for schedule-based autoscale
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(@Nullable AutoscaleRecurrenceResponse recurrence) {
             $.recurrence = recurrence;
             return this;

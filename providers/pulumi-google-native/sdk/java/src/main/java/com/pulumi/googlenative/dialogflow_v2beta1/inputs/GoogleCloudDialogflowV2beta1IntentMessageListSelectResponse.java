@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse e
     @Import(name="items", required=true)
     private List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse> items;
 
+    /**
+     * @return List items.
+     * 
+     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse> items() {
         return this.items;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse e
     @Import(name="subtitle", required=true)
     private String subtitle;
 
+    /**
+     * @return Optional. Subtitle of the list.
+     * 
+     */
     public String subtitle() {
         return this.subtitle;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse e
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Optional. The overall title of the list.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -77,20 +89,44 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse e
             $ = new GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items List items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items List items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse... items) {
             return items(List.of(items));
         }
 
+        /**
+         * @param subtitle Optional. Subtitle of the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(String subtitle) {
             $.subtitle = subtitle;
             return this;
         }
 
+        /**
+         * @param title Optional. The overall title of the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

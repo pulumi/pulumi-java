@@ -21,6 +21,10 @@ public final class MlStatisticsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="iterationResults", required=true)
     private List<IterationResultResponse> iterationResults;
 
+    /**
+     * @return Results for all completed iterations.
+     * 
+     */
     public List<IterationResultResponse> iterationResults() {
         return this.iterationResults;
     }
@@ -32,6 +36,10 @@ public final class MlStatisticsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="maxIterations", required=true)
     private String maxIterations;
 
+    /**
+     * @return Maximum number of iterations specified as max_iterations in the &#39;CREATE MODEL&#39; query. The actual number of iterations may be less than this number due to early stop.
+     * 
+     */
     public String maxIterations() {
         return this.maxIterations;
     }
@@ -61,15 +69,33 @@ public final class MlStatisticsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new MlStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iterationResults Results for all completed iterations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iterationResults(List<IterationResultResponse> iterationResults) {
             $.iterationResults = iterationResults;
             return this;
         }
 
+        /**
+         * @param iterationResults Results for all completed iterations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iterationResults(IterationResultResponse... iterationResults) {
             return iterationResults(List.of(iterationResults));
         }
 
+        /**
+         * @param maxIterations Maximum number of iterations specified as max_iterations in the &#39;CREATE MODEL&#39; query. The actual number of iterations may be less than this number due to early stop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxIterations(String maxIterations) {
             $.maxIterations = maxIterations;
             return this;

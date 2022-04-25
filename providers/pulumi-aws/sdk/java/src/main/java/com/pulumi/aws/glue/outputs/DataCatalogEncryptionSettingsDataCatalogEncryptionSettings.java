@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettings {
     /**
-     * When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
+     * @return When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
      * 
      */
     private final DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryption connectionPasswordEncryption;
     /**
-     * Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
+     * @return Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
      * 
      */
     private final DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRest encryptionAtRest;
@@ -30,16 +30,16 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettings {
     }
 
     /**
-     * When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
+     * @return When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
      * 
-    */
+     */
     public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryption connectionPasswordEncryption() {
         return this.connectionPasswordEncryption;
     }
     /**
-     * Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
+     * @return Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
      * 
-    */
+     */
     public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRest encryptionAtRest() {
         return this.encryptionAtRest;
     }

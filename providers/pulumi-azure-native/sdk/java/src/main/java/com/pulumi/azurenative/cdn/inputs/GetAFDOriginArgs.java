@@ -19,6 +19,10 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="originGroupName", required=true)
     private String originGroupName;
 
+    /**
+     * @return Name of the origin group which is unique within the profile.
+     * 
+     */
     public String originGroupName() {
         return this.originGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="originName", required=true)
     private String originName;
 
+    /**
+     * @return Name of the origin which is unique within the profile.
+     * 
+     */
     public String originName() {
         return this.originName;
     }
@@ -41,6 +49,10 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="profileName", required=true)
     private String profileName;
 
+    /**
+     * @return Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     public String profileName() {
         return this.profileName;
     }
@@ -52,6 +64,10 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAFDOriginArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param originGroupName Name of the origin group which is unique within the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originGroupName(String originGroupName) {
             $.originGroupName = originGroupName;
             return this;
         }
 
+        /**
+         * @param originName Name of the origin which is unique within the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originName(String originName) {
             $.originName = originName;
             return this;
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

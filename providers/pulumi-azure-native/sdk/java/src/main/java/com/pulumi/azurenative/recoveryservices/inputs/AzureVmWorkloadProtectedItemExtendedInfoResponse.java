@@ -26,6 +26,10 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse extends com.
     @Import(name="oldestRecoveryPoint")
     private @Nullable String oldestRecoveryPoint;
 
+    /**
+     * @return The oldest backup copy available for this backup item.
+     * 
+     */
     public Optional<String> oldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
@@ -37,6 +41,10 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse extends com.
     @Import(name="policyState")
     private @Nullable String policyState;
 
+    /**
+     * @return Indicates consistency of policy object and policy applied to this backup item.
+     * 
+     */
     public Optional<String> policyState() {
         return Optional.ofNullable(this.policyState);
     }
@@ -48,6 +56,10 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse extends com.
     @Import(name="recoveryPointCount")
     private @Nullable Integer recoveryPointCount;
 
+    /**
+     * @return Number of backup copies available for this backup item.
+     * 
+     */
     public Optional<Integer> recoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
@@ -78,16 +90,34 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse extends com.
             $ = new AzureVmWorkloadProtectedItemExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oldestRecoveryPoint The oldest backup copy available for this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
+        /**
+         * @param policyState Indicates consistency of policy object and policy applied to this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyState(@Nullable String policyState) {
             $.policyState = policyState;
             return this;
         }
 
+        /**
+         * @param recoveryPointCount Number of backup copies available for this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             $.recoveryPointCount = recoveryPointCount;
             return this;

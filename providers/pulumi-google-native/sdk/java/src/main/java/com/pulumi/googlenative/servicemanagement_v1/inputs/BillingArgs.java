@@ -27,6 +27,10 @@ public final class BillingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="consumerDestinations")
     private @Nullable Output<List<BillingDestinationArgs>> consumerDestinations;
 
+    /**
+     * @return Billing configurations for sending metrics to the consumer project. There can be multiple consumer destinations per service, each one must have a different monitored resource type. A metric can be used in at most one consumer destination.
+     * 
+     */
     public Optional<Output<List<BillingDestinationArgs>>> consumerDestinations() {
         return Optional.ofNullable(this.consumerDestinations);
     }
@@ -55,15 +59,33 @@ public final class BillingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BillingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumerDestinations Billing configurations for sending metrics to the consumer project. There can be multiple consumer destinations per service, each one must have a different monitored resource type. A metric can be used in at most one consumer destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerDestinations(@Nullable Output<List<BillingDestinationArgs>> consumerDestinations) {
             $.consumerDestinations = consumerDestinations;
             return this;
         }
 
+        /**
+         * @param consumerDestinations Billing configurations for sending metrics to the consumer project. There can be multiple consumer destinations per service, each one must have a different monitored resource type. A metric can be used in at most one consumer destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerDestinations(List<BillingDestinationArgs> consumerDestinations) {
             return consumerDestinations(Output.of(consumerDestinations));
         }
 
+        /**
+         * @param consumerDestinations Billing configurations for sending metrics to the consumer project. There can be multiple consumer destinations per service, each one must have a different monitored resource type. A metric can be used in at most one consumer destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerDestinations(BillingDestinationArgs... consumerDestinations) {
             return consumerDestinations(List.of(consumerDestinations));
         }

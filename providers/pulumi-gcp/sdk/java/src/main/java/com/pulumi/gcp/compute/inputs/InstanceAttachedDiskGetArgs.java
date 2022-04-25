@@ -23,6 +23,11 @@ public final class InstanceAttachedDiskGetArgs extends com.pulumi.resources.Reso
     @Import(name="deviceName")
     private @Nullable Output<String> deviceName;
 
+    /**
+     * @return Name with which the attached disk will be accessible
+     * under `/dev/disk/by-id/google-*`
+     * 
+     */
     public Optional<Output<String>> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -37,6 +42,13 @@ public final class InstanceAttachedDiskGetArgs extends com.pulumi.resources.Reso
     @Import(name="diskEncryptionKeyRaw")
     private @Nullable Output<String> diskEncryptionKeyRaw;
 
+    /**
+     * @return A 256-bit [customer-supplied encryption key]
+     * (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
+     * encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
+     * to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_raw` may be set.
+     * 
+     */
     public Optional<Output<String>> diskEncryptionKeyRaw() {
         return Optional.ofNullable(this.diskEncryptionKeyRaw);
     }
@@ -57,6 +69,12 @@ public final class InstanceAttachedDiskGetArgs extends com.pulumi.resources.Reso
     @Import(name="kmsKeySelfLink")
     private @Nullable Output<String> kmsKeySelfLink;
 
+    /**
+     * @return The self_link of the encryption key that is
+     * stored in Google Cloud KMS to encrypt this disk. Only one of `kms_key_self_link`
+     * and `disk_encryption_key_raw` may be set.
+     * 
+     */
     public Optional<Output<String>> kmsKeySelfLink() {
         return Optional.ofNullable(this.kmsKeySelfLink);
     }
@@ -71,6 +89,13 @@ public final class InstanceAttachedDiskGetArgs extends com.pulumi.resources.Reso
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
+    /**
+     * @return Either &#34;READ_ONLY&#34; or &#34;READ_WRITE&#34;, defaults to &#34;READ_WRITE&#34;
+     * If you have a persistent disk with data that you want to share
+     * between multiple instances, detach it from any read-write instances and
+     * attach it to one or more instances in read-only mode.
+     * 
+     */
     public Optional<Output<String>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -82,6 +107,10 @@ public final class InstanceAttachedDiskGetArgs extends com.pulumi.resources.Reso
     @Import(name="source", required=true)
     private Output<String> source;
 
+    /**
+     * @return The name or self_link of the disk to attach to this instance.
+     * 
+     */
     public Output<String> source() {
         return this.source;
     }
@@ -115,20 +144,52 @@ public final class InstanceAttachedDiskGetArgs extends com.pulumi.resources.Reso
             $ = new InstanceAttachedDiskGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName Name with which the attached disk will be accessible
+         * under `/dev/disk/by-id/google-*`
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(@Nullable Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName Name with which the attached disk will be accessible
+         * under `/dev/disk/by-id/google-*`
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param diskEncryptionKeyRaw A 256-bit [customer-supplied encryption key]
+         * (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
+         * encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
+         * to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_raw` may be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKeyRaw(@Nullable Output<String> diskEncryptionKeyRaw) {
             $.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
             return this;
         }
 
+        /**
+         * @param diskEncryptionKeyRaw A 256-bit [customer-supplied encryption key]
+         * (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
+         * encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
+         * to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_raw` may be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKeyRaw(String diskEncryptionKeyRaw) {
             return diskEncryptionKeyRaw(Output.of(diskEncryptionKeyRaw));
         }
@@ -142,29 +203,75 @@ public final class InstanceAttachedDiskGetArgs extends com.pulumi.resources.Reso
             return diskEncryptionKeySha256(Output.of(diskEncryptionKeySha256));
         }
 
+        /**
+         * @param kmsKeySelfLink The self_link of the encryption key that is
+         * stored in Google Cloud KMS to encrypt this disk. Only one of `kms_key_self_link`
+         * and `disk_encryption_key_raw` may be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeySelfLink(@Nullable Output<String> kmsKeySelfLink) {
             $.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
 
+        /**
+         * @param kmsKeySelfLink The self_link of the encryption key that is
+         * stored in Google Cloud KMS to encrypt this disk. Only one of `kms_key_self_link`
+         * and `disk_encryption_key_raw` may be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeySelfLink(String kmsKeySelfLink) {
             return kmsKeySelfLink(Output.of(kmsKeySelfLink));
         }
 
+        /**
+         * @param mode Either &#34;READ_ONLY&#34; or &#34;READ_WRITE&#34;, defaults to &#34;READ_WRITE&#34;
+         * If you have a persistent disk with data that you want to share
+         * between multiple instances, detach it from any read-write instances and
+         * attach it to one or more instances in read-only mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<String> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Either &#34;READ_ONLY&#34; or &#34;READ_WRITE&#34;, defaults to &#34;READ_WRITE&#34;
+         * If you have a persistent disk with data that you want to share
+         * between multiple instances, detach it from any read-write instances and
+         * attach it to one or more instances in read-only mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param source The name or self_link of the disk to attach to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The name or self_link of the disk to attach to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }

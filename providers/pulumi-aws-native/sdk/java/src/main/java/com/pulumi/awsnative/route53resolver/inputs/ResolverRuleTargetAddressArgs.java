@@ -22,6 +22,10 @@ public final class ResolverRuleTargetAddressArgs extends com.pulumi.resources.Re
     @Import(name="ip", required=true)
     private Output<String> ip;
 
+    /**
+     * @return One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+     * 
+     */
     public Output<String> ip() {
         return this.ip;
     }
@@ -33,6 +37,10 @@ public final class ResolverRuleTargetAddressArgs extends com.pulumi.resources.Re
     @Import(name="port")
     private @Nullable Output<String> port;
 
+    /**
+     * @return The port at Ip that you want to forward DNS queries to.
+     * 
+     */
     public Optional<Output<String>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -62,20 +70,44 @@ public final class ResolverRuleTargetAddressArgs extends com.pulumi.resources.Re
             $ = new ResolverRuleTargetAddressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ip One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(Output<String> ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param ip One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(String ip) {
             return ip(Output.of(ip));
         }
 
+        /**
+         * @param port The port at Ip that you want to forward DNS queries to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<String> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port at Ip that you want to forward DNS queries to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(String port) {
             return port(Output.of(port));
         }

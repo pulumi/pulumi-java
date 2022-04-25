@@ -20,6 +20,10 @@ public final class ConnectionConfirmationArgs extends com.pulumi.resources.Resou
     @Import(name="connectionId", required=true)
     private Output<String> connectionId;
 
+    /**
+     * @return The ID of the hosted connection.
+     * 
+     */
     public Output<String> connectionId() {
         return this.connectionId;
     }
@@ -48,11 +52,23 @@ public final class ConnectionConfirmationArgs extends com.pulumi.resources.Resou
             $ = new ConnectionConfirmationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionId The ID of the hosted connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(Output<String> connectionId) {
             $.connectionId = connectionId;
             return this;
         }
 
+        /**
+         * @param connectionId The ID of the hosted connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(String connectionId) {
             return connectionId(Output.of(connectionId));
         }

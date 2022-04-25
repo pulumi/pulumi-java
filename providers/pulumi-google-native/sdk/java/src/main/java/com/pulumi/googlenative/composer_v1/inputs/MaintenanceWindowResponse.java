@@ -23,6 +23,10 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return Maintenance window end time. It is used only to calculate the duration of the maintenance window. The value for end-time must be in the future, relative to `start_time`.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -34,6 +38,10 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
     @Import(name="recurrence", required=true)
     private String recurrence;
 
+    /**
+     * @return Maintenance window recurrence. Format is a subset of [RFC-5545](https://tools.ietf.org/html/rfc5545) `RRULE`. The only allowed values for `FREQ` field are `FREQ=DAILY` and `FREQ=WEEKLY;BYDAY=...` Example values: `FREQ=WEEKLY;BYDAY=TU,WE`, `FREQ=DAILY`.
+     * 
+     */
     public String recurrence() {
         return this.recurrence;
     }
@@ -45,6 +53,10 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start time of the first recurrence of the maintenance window.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -75,16 +87,34 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
             $ = new MaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime Maintenance window end time. It is used only to calculate the duration of the maintenance window. The value for end-time must be in the future, relative to `start_time`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param recurrence Maintenance window recurrence. Format is a subset of [RFC-5545](https://tools.ietf.org/html/rfc5545) `RRULE`. The only allowed values for `FREQ` field are `FREQ=DAILY` and `FREQ=WEEKLY;BYDAY=...` Example values: `FREQ=WEEKLY;BYDAY=TU,WE`, `FREQ=DAILY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(String recurrence) {
             $.recurrence = recurrence;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the first recurrence of the maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

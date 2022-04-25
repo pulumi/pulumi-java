@@ -26,6 +26,10 @@ public final class MigrateMISyncCompleteCommandOutputResponse extends com.pulumi
     @Import(name="errors")
     private @Nullable List<ReportableExceptionResponse> errors;
 
+    /**
+     * @return List of errors that happened during the command execution
+     * 
+     */
     public Optional<List<ReportableExceptionResponse>> errors() {
         return Optional.ofNullable(this.errors);
     }
@@ -54,11 +58,23 @@ public final class MigrateMISyncCompleteCommandOutputResponse extends com.pulumi
             $ = new MigrateMISyncCompleteCommandOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errors List of errors that happened during the command execution
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(@Nullable List<ReportableExceptionResponse> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors List of errors that happened during the command execution
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(ReportableExceptionResponse... errors) {
             return errors(List.of(errors));
         }

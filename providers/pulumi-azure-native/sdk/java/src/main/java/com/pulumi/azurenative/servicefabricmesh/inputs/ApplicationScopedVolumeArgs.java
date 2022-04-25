@@ -28,6 +28,10 @@ public final class ApplicationScopedVolumeArgs extends com.pulumi.resources.Reso
     @Import(name="creationParameters", required=true)
     private Output<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters;
 
+    /**
+     * @return Describes parameters for creating application-scoped volumes.
+     * 
+     */
     public Output<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters() {
         return this.creationParameters;
     }
@@ -39,6 +43,10 @@ public final class ApplicationScopedVolumeArgs extends com.pulumi.resources.Reso
     @Import(name="destinationPath", required=true)
     private Output<String> destinationPath;
 
+    /**
+     * @return The path within the container at which the volume should be mounted. Only valid path characters are allowed.
+     * 
+     */
     public Output<String> destinationPath() {
         return this.destinationPath;
     }
@@ -50,6 +58,10 @@ public final class ApplicationScopedVolumeArgs extends com.pulumi.resources.Reso
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the volume being referenced.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -61,6 +73,10 @@ public final class ApplicationScopedVolumeArgs extends com.pulumi.resources.Reso
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return The flag indicating whether the volume is read only. Default is &#39;false&#39;.
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -92,38 +108,86 @@ public final class ApplicationScopedVolumeArgs extends com.pulumi.resources.Reso
             $ = new ApplicationScopedVolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationParameters Describes parameters for creating application-scoped volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationParameters(Output<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters) {
             $.creationParameters = creationParameters;
             return this;
         }
 
+        /**
+         * @param creationParameters Describes parameters for creating application-scoped volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationParameters(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs creationParameters) {
             return creationParameters(Output.of(creationParameters));
         }
 
+        /**
+         * @param destinationPath The path within the container at which the volume should be mounted. Only valid path characters are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPath(Output<String> destinationPath) {
             $.destinationPath = destinationPath;
             return this;
         }
 
+        /**
+         * @param destinationPath The path within the container at which the volume should be mounted. Only valid path characters are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPath(String destinationPath) {
             return destinationPath(Output.of(destinationPath));
         }
 
+        /**
+         * @param name Name of the volume being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the volume being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param readOnly The flag indicating whether the volume is read only. Default is &#39;false&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly The flag indicating whether the volume is read only. Default is &#39;false&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }

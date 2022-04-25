@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 public final class GetInstanceAccessControlAttributeConfigurationResult {
     private final @Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes;
     /**
-     * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
+     * @return The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
      * 
      */
     private final @Nullable InstanceAccessControlAttributeConfigurationProperties instanceAccessControlAttributeConfiguration;
@@ -32,9 +32,9 @@ public final class GetInstanceAccessControlAttributeConfigurationResult {
         return this.accessControlAttributes == null ? List.of() : this.accessControlAttributes;
     }
     /**
-     * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
+     * @return The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
      * 
-    */
+     */
     public Optional<InstanceAccessControlAttributeConfigurationProperties> instanceAccessControlAttributeConfiguration() {
         return Optional.ofNullable(this.instanceAccessControlAttributeConfiguration);
     }

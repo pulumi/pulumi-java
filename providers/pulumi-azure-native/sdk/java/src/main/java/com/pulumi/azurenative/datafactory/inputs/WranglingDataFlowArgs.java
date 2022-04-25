@@ -31,6 +31,10 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the data flow.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -42,6 +46,10 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the data flow.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -53,6 +61,10 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="documentLocale")
     private @Nullable Output<String> documentLocale;
 
+    /**
+     * @return Locale of the Power query mashup document.
+     * 
+     */
     public Optional<Output<String>> documentLocale() {
         return Optional.ofNullable(this.documentLocale);
     }
@@ -64,6 +76,10 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="folder")
     private @Nullable Output<DataFlowFolderArgs> folder;
 
+    /**
+     * @return The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+     * 
+     */
     public Optional<Output<DataFlowFolderArgs>> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -75,6 +91,10 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="script")
     private @Nullable Output<String> script;
 
+    /**
+     * @return Power query mashup script.
+     * 
+     */
     public Optional<Output<String>> script() {
         return Optional.ofNullable(this.script);
     }
@@ -86,6 +106,10 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sources")
     private @Nullable Output<List<PowerQuerySourceArgs>> sources;
 
+    /**
+     * @return List of sources in Power Query.
+     * 
+     */
     public Optional<Output<List<PowerQuerySourceArgs>>> sources() {
         return Optional.ofNullable(this.sources);
     }
@@ -98,6 +122,11 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of data flow.
+     * Expected value is &#39;WranglingDataFlow&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -132,73 +161,171 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
             $ = new WranglingDataFlowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param description The description of the data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param documentLocale Locale of the Power query mashup document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentLocale(@Nullable Output<String> documentLocale) {
             $.documentLocale = documentLocale;
             return this;
         }
 
+        /**
+         * @param documentLocale Locale of the Power query mashup document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentLocale(String documentLocale) {
             return documentLocale(Output.of(documentLocale));
         }
 
+        /**
+         * @param folder The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable Output<DataFlowFolderArgs> folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folder The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(DataFlowFolderArgs folder) {
             return folder(Output.of(folder));
         }
 
+        /**
+         * @param script Power query mashup script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(@Nullable Output<String> script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param script Power query mashup script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             return script(Output.of(script));
         }
 
+        /**
+         * @param sources List of sources in Power Query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(@Nullable Output<List<PowerQuerySourceArgs>> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources List of sources in Power Query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<PowerQuerySourceArgs> sources) {
             return sources(Output.of(sources));
         }
 
+        /**
+         * @param sources List of sources in Power Query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(PowerQuerySourceArgs... sources) {
             return sources(List.of(sources));
         }
 
+        /**
+         * @param type Type of data flow.
+         * Expected value is &#39;WranglingDataFlow&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of data flow.
+         * Expected value is &#39;WranglingDataFlow&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

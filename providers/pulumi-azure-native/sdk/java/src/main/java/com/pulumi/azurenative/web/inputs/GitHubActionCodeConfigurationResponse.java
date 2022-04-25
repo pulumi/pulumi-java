@@ -25,6 +25,10 @@ public final class GitHubActionCodeConfigurationResponse extends com.pulumi.reso
     @Import(name="runtimeStack")
     private @Nullable String runtimeStack;
 
+    /**
+     * @return Runtime stack is used to determine the workflow file content for code base apps.
+     * 
+     */
     public Optional<String> runtimeStack() {
         return Optional.ofNullable(this.runtimeStack);
     }
@@ -36,6 +40,10 @@ public final class GitHubActionCodeConfigurationResponse extends com.pulumi.reso
     @Import(name="runtimeVersion")
     private @Nullable String runtimeVersion;
 
+    /**
+     * @return Runtime version is used to determine what build version to set in the workflow file.
+     * 
+     */
     public Optional<String> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
@@ -65,11 +73,23 @@ public final class GitHubActionCodeConfigurationResponse extends com.pulumi.reso
             $ = new GitHubActionCodeConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param runtimeStack Runtime stack is used to determine the workflow file content for code base apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeStack(@Nullable String runtimeStack) {
             $.runtimeStack = runtimeStack;
             return this;
         }
 
+        /**
+         * @param runtimeVersion Runtime version is used to determine what build version to set in the workflow file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
             $.runtimeVersion = runtimeVersion;
             return this;

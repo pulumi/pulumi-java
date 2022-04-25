@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2CryptoHashConfigResponse {
     /**
-     * The key used by the hash function.
+     * @return The key used by the hash function.
      * 
      */
     private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
@@ -21,9 +21,9 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse {
     }
 
     /**
-     * The key used by the hash function.
+     * @return The key used by the hash function.
      * 
-    */
+     */
     public GooglePrivacyDlpV2CryptoKeyResponse cryptoKey() {
         return this.cryptoKey;
     }

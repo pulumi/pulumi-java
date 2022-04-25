@@ -25,6 +25,10 @@ public final class ConnectorMappingCompleteOperationResponse extends com.pulumi.
     @Import(name="completionOperationType")
     private @Nullable String completionOperationType;
 
+    /**
+     * @return The type of completion operation.
+     * 
+     */
     public Optional<String> completionOperationType() {
         return Optional.ofNullable(this.completionOperationType);
     }
@@ -36,6 +40,10 @@ public final class ConnectorMappingCompleteOperationResponse extends com.pulumi.
     @Import(name="destinationFolder")
     private @Nullable String destinationFolder;
 
+    /**
+     * @return The destination folder where files will be moved to once the import is done.
+     * 
+     */
     public Optional<String> destinationFolder() {
         return Optional.ofNullable(this.destinationFolder);
     }
@@ -65,11 +73,23 @@ public final class ConnectorMappingCompleteOperationResponse extends com.pulumi.
             $ = new ConnectorMappingCompleteOperationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param completionOperationType The type of completion operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completionOperationType(@Nullable String completionOperationType) {
             $.completionOperationType = completionOperationType;
             return this;
         }
 
+        /**
+         * @param destinationFolder The destination folder where files will be moved to once the import is done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationFolder(@Nullable String destinationFolder) {
             $.destinationFolder = destinationFolder;
             return this;

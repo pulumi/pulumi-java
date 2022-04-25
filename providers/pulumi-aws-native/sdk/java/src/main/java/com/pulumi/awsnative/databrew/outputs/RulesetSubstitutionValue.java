@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class RulesetSubstitutionValue {
     /**
-     * Value or column name
+     * @return Value or column name
      * 
      */
     private final String value;
     /**
-     * Variable name
+     * @return Variable name
      * 
      */
     private final String valueReference;
@@ -29,16 +29,16 @@ public final class RulesetSubstitutionValue {
     }
 
     /**
-     * Value or column name
+     * @return Value or column name
      * 
-    */
+     */
     public String value() {
         return this.value;
     }
     /**
-     * Variable name
+     * @return Variable name
      * 
-    */
+     */
     public String valueReference() {
         return this.valueReference;
     }

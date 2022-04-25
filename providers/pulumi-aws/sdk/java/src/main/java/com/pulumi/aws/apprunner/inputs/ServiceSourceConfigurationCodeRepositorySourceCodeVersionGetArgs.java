@@ -20,6 +20,10 @@ public final class ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetA
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of version identifier. For a git-based repository, branches represent versions. Valid values: `BRANCH`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -31,6 +35,10 @@ public final class ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetA
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return A source code version. For a git-based repository, a branch name maps to a specific version. App Runner uses the most recent commit to the branch.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -60,20 +68,44 @@ public final class ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetA
             $ = new ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of version identifier. For a git-based repository, branches represent versions. Valid values: `BRANCH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of version identifier. For a git-based repository, branches represent versions. Valid values: `BRANCH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param value A source code version. For a git-based repository, a branch name maps to a specific version. App Runner uses the most recent commit to the branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value A source code version. For a git-based repository, a branch name maps to a specific version. App Runner uses the most recent commit to the branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

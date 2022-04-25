@@ -25,6 +25,10 @@ public final class AutomaticOSUpgradePolicyResponse extends com.pulumi.resources
     @Import(name="disableAutomaticRollback")
     private @Nullable Boolean disableAutomaticRollback;
 
+    /**
+     * @return Whether OS image rollback feature should be disabled. Default value is false.
+     * 
+     */
     public Optional<Boolean> disableAutomaticRollback() {
         return Optional.ofNullable(this.disableAutomaticRollback);
     }
@@ -36,6 +40,10 @@ public final class AutomaticOSUpgradePolicyResponse extends com.pulumi.resources
     @Import(name="enableAutomaticOSUpgrade")
     private @Nullable Boolean enableAutomaticOSUpgrade;
 
+    /**
+     * @return Indicates whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the OS image becomes available. Default value is false. &lt;br&gt;&lt;br&gt; If this is set to true for Windows based scale sets, [enableAutomaticUpdates](https://docs.microsoft.com/dotnet/api/microsoft.azure.management.compute.models.windowsconfiguration.enableautomaticupdates?view=azure-dotnet) is automatically set to false and cannot be set to true.
+     * 
+     */
     public Optional<Boolean> enableAutomaticOSUpgrade() {
         return Optional.ofNullable(this.enableAutomaticOSUpgrade);
     }
@@ -65,11 +73,23 @@ public final class AutomaticOSUpgradePolicyResponse extends com.pulumi.resources
             $ = new AutomaticOSUpgradePolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableAutomaticRollback Whether OS image rollback feature should be disabled. Default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableAutomaticRollback(@Nullable Boolean disableAutomaticRollback) {
             $.disableAutomaticRollback = disableAutomaticRollback;
             return this;
         }
 
+        /**
+         * @param enableAutomaticOSUpgrade Indicates whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the OS image becomes available. Default value is false. &lt;br&gt;&lt;br&gt; If this is set to true for Windows based scale sets, [enableAutomaticUpdates](https://docs.microsoft.com/dotnet/api/microsoft.azure.management.compute.models.windowsconfiguration.enableautomaticupdates?view=azure-dotnet) is automatically set to false and cannot be set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutomaticOSUpgrade(@Nullable Boolean enableAutomaticOSUpgrade) {
             $.enableAutomaticOSUpgrade = enableAutomaticOSUpgrade;
             return this;

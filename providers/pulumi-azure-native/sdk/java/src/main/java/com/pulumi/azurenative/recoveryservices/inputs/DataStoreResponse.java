@@ -25,6 +25,10 @@ public final class DataStoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
     private @Nullable String capacity;
 
+    /**
+     * @return The capacity of data store in GBs.
+     * 
+     */
     public Optional<String> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -36,6 +40,10 @@ public final class DataStoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="freeSpace")
     private @Nullable String freeSpace;
 
+    /**
+     * @return The free space of data store in GBs.
+     * 
+     */
     public Optional<String> freeSpace() {
         return Optional.ofNullable(this.freeSpace);
     }
@@ -47,6 +55,10 @@ public final class DataStoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="symbolicName")
     private @Nullable String symbolicName;
 
+    /**
+     * @return The symbolic name of data store.
+     * 
+     */
     public Optional<String> symbolicName() {
         return Optional.ofNullable(this.symbolicName);
     }
@@ -58,6 +70,10 @@ public final class DataStoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of data store.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -69,6 +85,10 @@ public final class DataStoreResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uuid")
     private @Nullable String uuid;
 
+    /**
+     * @return The uuid of data store.
+     * 
+     */
     public Optional<String> uuid() {
         return Optional.ofNullable(this.uuid);
     }
@@ -101,26 +121,56 @@ public final class DataStoreResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DataStoreResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The capacity of data store in GBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable String capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param freeSpace The free space of data store in GBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder freeSpace(@Nullable String freeSpace) {
             $.freeSpace = freeSpace;
             return this;
         }
 
+        /**
+         * @param symbolicName The symbolic name of data store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder symbolicName(@Nullable String symbolicName) {
             $.symbolicName = symbolicName;
             return this;
         }
 
+        /**
+         * @param type The type of data store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param uuid The uuid of data store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uuid(@Nullable String uuid) {
             $.uuid = uuid;
             return this;

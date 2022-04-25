@@ -26,6 +26,10 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     @Import(name="algorithm", required=true)
     private String algorithm;
 
+    /**
+     * @return The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
+     * 
+     */
     public String algorithm() {
         return this.algorithm;
     }
@@ -37,6 +41,10 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     @Import(name="attestation", required=true)
     private KeyOperationAttestationResponse attestation;
 
+    /**
+     * @return Statement that was generated and signed by the HSM at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only provided for key versions with protection_level HSM.
+     * 
+     */
     public KeyOperationAttestationResponse attestation() {
         return this.attestation;
     }
@@ -48,6 +56,10 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The time at which this CryptoKeyVersion was created.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -59,6 +71,10 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     @Import(name="destroyEventTime", required=true)
     private String destroyEventTime;
 
+    /**
+     * @return The time this CryptoKeyVersion&#39;s key material was destroyed. Only present if state is DESTROYED.
+     * 
+     */
     public String destroyEventTime() {
         return this.destroyEventTime;
     }
@@ -70,6 +86,10 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     @Import(name="destroyTime", required=true)
     private String destroyTime;
 
+    /**
+     * @return The time this CryptoKeyVersion&#39;s key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
+     * 
+     */
     public String destroyTime() {
         return this.destroyTime;
     }
@@ -81,6 +101,10 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     @Import(name="externalProtectionLevelOptions", required=true)
     private ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions;
 
+    /**
+     * @return ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
+     * 
+     */
     public ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions() {
         return this.externalProtectionLevelOptions;
     }
@@ -92,6 +116,10 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     @Import(name="generateTime", required=true)
     private String generateTime;
 
+    /**
+     * @return The time this CryptoKeyVersion&#39;s key material was generated.
+     * 
+     */
     public String generateTime() {
         return this.generateTime;
     }
@@ -103,6 +131,10 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     @Import(name="importFailureReason", required=true)
     private String importFailureReason;
 
+    /**
+     * @return The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.
+     * 
+     */
     public String importFailureReason() {
         return this.importFailureReason;
     }
@@ -114,6 +146,10 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     @Import(name="importJob", required=true)
     private String importJob;
 
+    /**
+     * @return The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.
+     * 
+     */
     public String importJob() {
         return this.importJob;
     }
@@ -125,6 +161,10 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     @Import(name="importTime", required=true)
     private String importTime;
 
+    /**
+     * @return The time at which this CryptoKeyVersion&#39;s key material was most recently imported.
+     * 
+     */
     public String importTime() {
         return this.importTime;
     }
@@ -136,6 +176,10 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The resource name for this CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -147,6 +191,10 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     @Import(name="protectionLevel", required=true)
     private String protectionLevel;
 
+    /**
+     * @return The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.
+     * 
+     */
     public String protectionLevel() {
         return this.protectionLevel;
     }
@@ -158,6 +206,10 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     @Import(name="reimportEligible", required=true)
     private Boolean reimportEligible;
 
+    /**
+     * @return Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.
+     * 
+     */
     public Boolean reimportEligible() {
         return this.reimportEligible;
     }
@@ -169,6 +221,10 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The current state of the CryptoKeyVersion.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -210,71 +266,155 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
             $ = new CryptoKeyVersionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param attestation Statement that was generated and signed by the HSM at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only provided for key versions with protection_level HSM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestation(KeyOperationAttestationResponse attestation) {
             $.attestation = attestation;
             return this;
         }
 
+        /**
+         * @param createTime The time at which this CryptoKeyVersion was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param destroyEventTime The time this CryptoKeyVersion&#39;s key material was destroyed. Only present if state is DESTROYED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destroyEventTime(String destroyEventTime) {
             $.destroyEventTime = destroyEventTime;
             return this;
         }
 
+        /**
+         * @param destroyTime The time this CryptoKeyVersion&#39;s key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destroyTime(String destroyTime) {
             $.destroyTime = destroyTime;
             return this;
         }
 
+        /**
+         * @param externalProtectionLevelOptions ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalProtectionLevelOptions(ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions) {
             $.externalProtectionLevelOptions = externalProtectionLevelOptions;
             return this;
         }
 
+        /**
+         * @param generateTime The time this CryptoKeyVersion&#39;s key material was generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generateTime(String generateTime) {
             $.generateTime = generateTime;
             return this;
         }
 
+        /**
+         * @param importFailureReason The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importFailureReason(String importFailureReason) {
             $.importFailureReason = importFailureReason;
             return this;
         }
 
+        /**
+         * @param importJob The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importJob(String importJob) {
             $.importJob = importJob;
             return this;
         }
 
+        /**
+         * @param importTime The time at which this CryptoKeyVersion&#39;s key material was most recently imported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importTime(String importTime) {
             $.importTime = importTime;
             return this;
         }
 
+        /**
+         * @param name The resource name for this CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param protectionLevel The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionLevel(String protectionLevel) {
             $.protectionLevel = protectionLevel;
             return this;
         }
 
+        /**
+         * @param reimportEligible Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reimportEligible(Boolean reimportEligible) {
             $.reimportEligible = reimportEligible;
             return this;
         }
 
+        /**
+         * @param state The current state of the CryptoKeyVersion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

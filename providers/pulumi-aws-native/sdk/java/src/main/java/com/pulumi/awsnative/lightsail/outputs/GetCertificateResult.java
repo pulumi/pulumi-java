@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 public final class GetCertificateResult {
     private final @Nullable String certificateArn;
     /**
-     * The validation status of the certificate.
+     * @return The validation status of the certificate.
      * 
      */
     private final @Nullable String status;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<CertificateTag> tags;
@@ -39,16 +39,16 @@ public final class GetCertificateResult {
         return Optional.ofNullable(this.certificateArn);
     }
     /**
-     * The validation status of the certificate.
+     * @return The validation status of the certificate.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<CertificateTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

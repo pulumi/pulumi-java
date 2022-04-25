@@ -24,6 +24,10 @@ public final class InboundIpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action")
     private @Nullable Output<Either<String,IpActionType>> action;
 
+    /**
+     * @return Action to perform based on the match or no match of the IpMask.
+     * 
+     */
     public Optional<Output<Either<String,IpActionType>>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -35,6 +39,10 @@ public final class InboundIpRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipMask")
     private @Nullable Output<String> ipMask;
 
+    /**
+     * @return IP Address in CIDR notation e.g., 10.0.0.0/8.
+     * 
+     */
     public Optional<Output<String>> ipMask() {
         return Optional.ofNullable(this.ipMask);
     }
@@ -64,28 +72,64 @@ public final class InboundIpRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InboundIpRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Action to perform based on the match or no match of the IpMask.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<Either<String,IpActionType>> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Action to perform based on the match or no match of the IpMask.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Either<String,IpActionType> action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param action Action to perform based on the match or no match of the IpMask.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Either.ofLeft(action));
         }
 
+        /**
+         * @param action Action to perform based on the match or no match of the IpMask.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(IpActionType action) {
             return action(Either.ofRight(action));
         }
 
+        /**
+         * @param ipMask IP Address in CIDR notation e.g., 10.0.0.0/8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipMask(@Nullable Output<String> ipMask) {
             $.ipMask = ipMask;
             return this;
         }
 
+        /**
+         * @param ipMask IP Address in CIDR notation e.g., 10.0.0.0/8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipMask(String ipMask) {
             return ipMask(Output.of(ipMask));
         }

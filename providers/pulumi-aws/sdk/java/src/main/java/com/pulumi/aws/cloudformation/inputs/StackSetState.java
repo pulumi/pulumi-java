@@ -25,6 +25,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="administrationRoleArn")
     private @Nullable Output<String> administrationRoleArn;
 
+    /**
+     * @return Amazon Resource Number (ARN) of the IAM Role in the administrator account. This must be defined when using the `SELF_MANAGED` permission model.
+     * 
+     */
     public Optional<Output<String>> administrationRoleArn() {
         return Optional.ofNullable(this.administrationRoleArn);
     }
@@ -36,6 +40,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the StackSet.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -47,6 +55,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoDeployment")
     private @Nullable Output<StackSetAutoDeploymentGetArgs> autoDeployment;
 
+    /**
+     * @return Configuration block containing the auto-deployment model for your StackSet. This can only be defined when using the `SERVICE_MANAGED` permission model.
+     * 
+     */
     public Optional<Output<StackSetAutoDeploymentGetArgs>> autoDeployment() {
         return Optional.ofNullable(this.autoDeployment);
     }
@@ -58,6 +70,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="capabilities")
     private @Nullable Output<List<String>> capabilities;
 
+    /**
+     * @return A list of capabilities. Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, `CAPABILITY_AUTO_EXPAND`.
+     * 
+     */
     public Optional<Output<List<String>>> capabilities() {
         return Optional.ofNullable(this.capabilities);
     }
@@ -69,6 +85,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the StackSet.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -80,6 +100,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleName")
     private @Nullable Output<String> executionRoleName;
 
+    /**
+     * @return Name of the IAM Role in all target accounts for StackSet operations. Defaults to `AWSCloudFormationStackSetExecutionRole` when using the `SELF_MANAGED` permission model. This should not be defined when using the `SERVICE_MANAGED` permission model.
+     * 
+     */
     public Optional<Output<String>> executionRoleName() {
         return Optional.ofNullable(this.executionRoleName);
     }
@@ -91,6 +115,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the StackSet. The name must be unique in the region where you create your StackSet. The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start with an alphabetic character and cannot be longer than 128 characters.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -102,6 +130,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Map<String,String>> parameters;
 
+    /**
+     * @return Key-value map of input parameters for the StackSet template. All template parameters, including those with a `Default`, must be configured or ignored with `lifecycle` configuration block `ignore_changes` argument. All `NoEcho` template parameters must be ignored with the `lifecycle` configuration block `ignore_changes` argument.
+     * 
+     */
     public Optional<Output<Map<String,String>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -113,6 +145,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissionModel")
     private @Nullable Output<String> permissionModel;
 
+    /**
+     * @return Describes how the IAM roles required for your StackSet are created. Valid values: `SELF_MANAGED` (default), `SERVICE_MANAGED`.
+     * 
+     */
     public Optional<Output<String>> permissionModel() {
         return Optional.ofNullable(this.permissionModel);
     }
@@ -124,6 +160,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="stackSetId")
     private @Nullable Output<String> stackSetId;
 
+    /**
+     * @return Unique identifier of the StackSet.
+     * 
+     */
     public Optional<Output<String>> stackSetId() {
         return Optional.ofNullable(this.stackSetId);
     }
@@ -135,6 +175,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -146,6 +190,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -157,6 +205,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateBody")
     private @Nullable Output<String> templateBody;
 
+    /**
+     * @return String containing the CloudFormation template body. Maximum size: 51,200 bytes. Conflicts with `template_url`.
+     * 
+     */
     public Optional<Output<String>> templateBody() {
         return Optional.ofNullable(this.templateBody);
     }
@@ -168,6 +220,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateUrl")
     private @Nullable Output<String> templateUrl;
 
+    /**
+     * @return String containing the location of a file containing the CloudFormation template body. The URL must point to a template that is located in an Amazon S3 bucket. Maximum location file size: 460,800 bytes. Conflicts with `template_body`.
+     * 
+     */
     public Optional<Output<String>> templateUrl() {
         return Optional.ofNullable(this.templateUrl);
     }
@@ -209,132 +265,306 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
             $ = new StackSetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param administrationRoleArn Amazon Resource Number (ARN) of the IAM Role in the administrator account. This must be defined when using the `SELF_MANAGED` permission model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administrationRoleArn(@Nullable Output<String> administrationRoleArn) {
             $.administrationRoleArn = administrationRoleArn;
             return this;
         }
 
+        /**
+         * @param administrationRoleArn Amazon Resource Number (ARN) of the IAM Role in the administrator account. This must be defined when using the `SELF_MANAGED` permission model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administrationRoleArn(String administrationRoleArn) {
             return administrationRoleArn(Output.of(administrationRoleArn));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the StackSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the StackSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param autoDeployment Configuration block containing the auto-deployment model for your StackSet. This can only be defined when using the `SERVICE_MANAGED` permission model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeployment(@Nullable Output<StackSetAutoDeploymentGetArgs> autoDeployment) {
             $.autoDeployment = autoDeployment;
             return this;
         }
 
+        /**
+         * @param autoDeployment Configuration block containing the auto-deployment model for your StackSet. This can only be defined when using the `SERVICE_MANAGED` permission model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeployment(StackSetAutoDeploymentGetArgs autoDeployment) {
             return autoDeployment(Output.of(autoDeployment));
         }
 
+        /**
+         * @param capabilities A list of capabilities. Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, `CAPABILITY_AUTO_EXPAND`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(@Nullable Output<List<String>> capabilities) {
             $.capabilities = capabilities;
             return this;
         }
 
+        /**
+         * @param capabilities A list of capabilities. Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, `CAPABILITY_AUTO_EXPAND`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(List<String> capabilities) {
             return capabilities(Output.of(capabilities));
         }
 
+        /**
+         * @param capabilities A list of capabilities. Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, `CAPABILITY_AUTO_EXPAND`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(String... capabilities) {
             return capabilities(List.of(capabilities));
         }
 
+        /**
+         * @param description Description of the StackSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the StackSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param executionRoleName Name of the IAM Role in all target accounts for StackSet operations. Defaults to `AWSCloudFormationStackSetExecutionRole` when using the `SELF_MANAGED` permission model. This should not be defined when using the `SERVICE_MANAGED` permission model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleName(@Nullable Output<String> executionRoleName) {
             $.executionRoleName = executionRoleName;
             return this;
         }
 
+        /**
+         * @param executionRoleName Name of the IAM Role in all target accounts for StackSet operations. Defaults to `AWSCloudFormationStackSetExecutionRole` when using the `SELF_MANAGED` permission model. This should not be defined when using the `SERVICE_MANAGED` permission model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleName(String executionRoleName) {
             return executionRoleName(Output.of(executionRoleName));
         }
 
+        /**
+         * @param name Name of the StackSet. The name must be unique in the region where you create your StackSet. The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start with an alphabetic character and cannot be longer than 128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the StackSet. The name must be unique in the region where you create your StackSet. The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start with an alphabetic character and cannot be longer than 128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters Key-value map of input parameters for the StackSet template. All template parameters, including those with a `Default`, must be configured or ignored with `lifecycle` configuration block `ignore_changes` argument. All `NoEcho` template parameters must be ignored with the `lifecycle` configuration block `ignore_changes` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Key-value map of input parameters for the StackSet template. All template parameters, including those with a `Default`, must be configured or ignored with `lifecycle` configuration block `ignore_changes` argument. All `NoEcho` template parameters must be ignored with the `lifecycle` configuration block `ignore_changes` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,String> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param permissionModel Describes how the IAM roles required for your StackSet are created. Valid values: `SELF_MANAGED` (default), `SERVICE_MANAGED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionModel(@Nullable Output<String> permissionModel) {
             $.permissionModel = permissionModel;
             return this;
         }
 
+        /**
+         * @param permissionModel Describes how the IAM roles required for your StackSet are created. Valid values: `SELF_MANAGED` (default), `SERVICE_MANAGED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionModel(String permissionModel) {
             return permissionModel(Output.of(permissionModel));
         }
 
+        /**
+         * @param stackSetId Unique identifier of the StackSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackSetId(@Nullable Output<String> stackSetId) {
             $.stackSetId = stackSetId;
             return this;
         }
 
+        /**
+         * @param stackSetId Unique identifier of the StackSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackSetId(String stackSetId) {
             return stackSetId(Output.of(stackSetId));
         }
 
+        /**
+         * @param tags Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param templateBody String containing the CloudFormation template body. Maximum size: 51,200 bytes. Conflicts with `template_url`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateBody(@Nullable Output<String> templateBody) {
             $.templateBody = templateBody;
             return this;
         }
 
+        /**
+         * @param templateBody String containing the CloudFormation template body. Maximum size: 51,200 bytes. Conflicts with `template_url`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateBody(String templateBody) {
             return templateBody(Output.of(templateBody));
         }
 
+        /**
+         * @param templateUrl String containing the location of a file containing the CloudFormation template body. The URL must point to a template that is located in an Amazon S3 bucket. Maximum location file size: 460,800 bytes. Conflicts with `template_body`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateUrl(@Nullable Output<String> templateUrl) {
             $.templateUrl = templateUrl;
             return this;
         }
 
+        /**
+         * @param templateUrl String containing the location of a file containing the CloudFormation template body. The URL must point to a template that is located in an Amazon S3 bucket. Maximum location file size: 460,800 bytes. Conflicts with `template_body`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateUrl(String templateUrl) {
             return templateUrl(Output.of(templateUrl));
         }

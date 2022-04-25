@@ -23,6 +23,10 @@ public final class ServiceTopologyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="artifactSourceId")
     private @Nullable Output<String> artifactSourceId;
 
+    /**
+     * @return The resource Id of the artifact source that contains the artifacts that can be referenced in the service units.
+     * 
+     */
     public Optional<Output<String>> artifactSourceId() {
         return Optional.ofNullable(this.artifactSourceId);
     }
@@ -34,6 +38,10 @@ public final class ServiceTopologyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -45,6 +53,10 @@ public final class ServiceTopologyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class ServiceTopologyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serviceTopologyName")
     private @Nullable Output<String> serviceTopologyName;
 
+    /**
+     * @return The name of the service topology .
+     * 
+     */
     public Optional<Output<String>> serviceTopologyName() {
         return Optional.ofNullable(this.serviceTopologyName);
     }
@@ -67,6 +83,10 @@ public final class ServiceTopologyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -99,47 +119,107 @@ public final class ServiceTopologyArgs extends com.pulumi.resources.ResourceArgs
             $ = new ServiceTopologyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactSourceId The resource Id of the artifact source that contains the artifacts that can be referenced in the service units.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactSourceId(@Nullable Output<String> artifactSourceId) {
             $.artifactSourceId = artifactSourceId;
             return this;
         }
 
+        /**
+         * @param artifactSourceId The resource Id of the artifact source that contains the artifacts that can be referenced in the service units.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactSourceId(String artifactSourceId) {
             return artifactSourceId(Output.of(artifactSourceId));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceTopologyName The name of the service topology .
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTopologyName(@Nullable Output<String> serviceTopologyName) {
             $.serviceTopologyName = serviceTopologyName;
             return this;
         }
 
+        /**
+         * @param serviceTopologyName The name of the service topology .
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTopologyName(String serviceTopologyName) {
             return serviceTopologyName(Output.of(serviceTopologyName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

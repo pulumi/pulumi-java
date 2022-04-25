@@ -20,6 +20,10 @@ public final class SnapshotCreateVolumePermissionArgs extends com.pulumi.resourc
     @Import(name="accountId", required=true)
     private Output<String> accountId;
 
+    /**
+     * @return An AWS Account ID to add create volume permissions
+     * 
+     */
     public Output<String> accountId() {
         return this.accountId;
     }
@@ -31,6 +35,10 @@ public final class SnapshotCreateVolumePermissionArgs extends com.pulumi.resourc
     @Import(name="snapshotId", required=true)
     private Output<String> snapshotId;
 
+    /**
+     * @return A snapshot ID
+     * 
+     */
     public Output<String> snapshotId() {
         return this.snapshotId;
     }
@@ -60,20 +68,44 @@ public final class SnapshotCreateVolumePermissionArgs extends com.pulumi.resourc
             $ = new SnapshotCreateVolumePermissionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId An AWS Account ID to add create volume permissions
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId An AWS Account ID to add create volume permissions
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param snapshotId A snapshot ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotId(Output<String> snapshotId) {
             $.snapshotId = snapshotId;
             return this;
         }
 
+        /**
+         * @param snapshotId A snapshot ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotId(String snapshotId) {
             return snapshotId(Output.of(snapshotId));
         }

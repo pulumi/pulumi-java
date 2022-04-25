@@ -23,6 +23,10 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends co
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The location name.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -34,6 +38,10 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends co
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The regional service name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends co
     @Import(name="sqlDedicatedGatewayEndpoint", required=true)
     private String sqlDedicatedGatewayEndpoint;
 
+    /**
+     * @return The regional endpoint for SqlDedicatedGateway.
+     * 
+     */
     public String sqlDedicatedGatewayEndpoint() {
         return this.sqlDedicatedGatewayEndpoint;
     }
@@ -56,6 +68,10 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends co
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Describes the status of a service.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -87,21 +103,45 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends co
             $ = new SqlDedicatedGatewayRegionalServiceResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The location name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name The regional service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sqlDedicatedGatewayEndpoint The regional endpoint for SqlDedicatedGateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlDedicatedGatewayEndpoint(String sqlDedicatedGatewayEndpoint) {
             $.sqlDedicatedGatewayEndpoint = sqlDedicatedGatewayEndpoint;
             return this;
         }
 
+        /**
+         * @param status Describes the status of a service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

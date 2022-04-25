@@ -23,6 +23,10 @@ public final class DomainSamlOptionsState extends com.pulumi.resources.ResourceA
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return Name of the domain.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -34,6 +38,10 @@ public final class DomainSamlOptionsState extends com.pulumi.resources.ResourceA
     @Import(name="samlOptions")
     private @Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions;
 
+    /**
+     * @return The SAML authentication options for an AWS Elasticsearch Domain.
+     * 
+     */
     public Optional<Output<DomainSamlOptionsSamlOptionsGetArgs>> samlOptions() {
         return Optional.ofNullable(this.samlOptions);
     }
@@ -63,20 +71,44 @@ public final class DomainSamlOptionsState extends com.pulumi.resources.ResourceA
             $ = new DomainSamlOptionsState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName Name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName Name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param samlOptions The SAML authentication options for an AWS Elasticsearch Domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samlOptions(@Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions) {
             $.samlOptions = samlOptions;
             return this;
         }
 
+        /**
+         * @param samlOptions The SAML authentication options for an AWS Elasticsearch Domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samlOptions(DomainSamlOptionsSamlOptionsGetArgs samlOptions) {
             return samlOptions(Output.of(samlOptions));
         }

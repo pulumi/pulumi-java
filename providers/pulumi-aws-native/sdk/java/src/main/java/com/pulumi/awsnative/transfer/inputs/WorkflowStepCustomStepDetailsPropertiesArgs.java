@@ -27,6 +27,10 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends com.pulum
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the step, used as an identifier.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends com.pulum
     @Import(name="target")
     private @Nullable Output<String> target;
 
+    /**
+     * @return The ARN for the lambda function that is being called.
+     * 
+     */
     public Optional<Output<String>> target() {
         return Optional.ofNullable(this.target);
     }
@@ -49,6 +57,10 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends com.pulum
     @Import(name="timeoutSeconds")
     private @Nullable Output<Integer> timeoutSeconds;
 
+    /**
+     * @return Timeout, in seconds, for the step.
+     * 
+     */
     public Optional<Output<Integer>> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
@@ -79,29 +91,65 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends com.pulum
             $ = new WorkflowStepCustomStepDetailsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the step, used as an identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the step, used as an identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param target The ARN for the lambda function that is being called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target The ARN for the lambda function that is being called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }
 
+        /**
+         * @param timeoutSeconds Timeout, in seconds, for the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             $.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
+        /**
+         * @param timeoutSeconds Timeout, in seconds, for the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             return timeoutSeconds(Output.of(timeoutSeconds));
         }

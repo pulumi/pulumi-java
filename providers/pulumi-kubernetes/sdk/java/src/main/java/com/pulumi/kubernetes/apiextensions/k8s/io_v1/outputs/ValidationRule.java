@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ValidationRule {
     /**
-     * Message represents the message displayed when validation fails. The message is required if the Rule contains line breaks. The message must not contain line breaks. If unset, the message is &#34;failed rule: {Rule}&#34;. e.g. &#34;must be a URL with the host matching spec.host&#34;
+     * @return Message represents the message displayed when validation fails. The message is required if the Rule contains line breaks. The message must not contain line breaks. If unset, the message is &#34;failed rule: {Rule}&#34;. e.g. &#34;must be a URL with the host matching spec.host&#34;
      * 
      */
     private final @Nullable String message;
     /**
-     * Rule represents the expression which will be evaluated by CEL. ref: https://github.com/google/cel-spec The Rule is scoped to the location of the x-kubernetes-validations extension in the schema. The `self` variable in the CEL expression is bound to the scoped value. Example: - Rule scoped to the root of a resource with a status subresource: {&#34;rule&#34;: &#34;self.status.actual &lt;= self.spec.maxDesired&#34;}
+     * @return Rule represents the expression which will be evaluated by CEL. ref: https://github.com/google/cel-spec The Rule is scoped to the location of the x-kubernetes-validations extension in the schema. The `self` variable in the CEL expression is bound to the scoped value. Example: - Rule scoped to the root of a resource with a status subresource: {&#34;rule&#34;: &#34;self.status.actual &lt;= self.spec.maxDesired&#34;}
      * 
      * If the Rule is scoped to an object with properties, the accessible properties of the object are field selectable via `self.field` and field presence can be checked via `has(self.field)`. Null valued fields are treated as absent fields in CEL expressions. If the Rule is scoped to an object with additionalProperties (i.e. a map) the value of the map are accessible via `self[mapKey]`, map containment can be checked via `mapKey in self` and all entries of the map are accessible via CEL macros and functions such as `self.all(...)`. If the Rule is scoped to an array, the elements of the array are accessible via `self[i]` and also by macros and functions. If the Rule is scoped to a scalar, `self` is bound to the scalar value. Examples: - Rule scoped to a map of objects: {&#34;rule&#34;: &#34;self.components[&#39;Widget&#39;].priority &lt; 10&#34;} - Rule scoped to a list of integers: {&#34;rule&#34;: &#34;self.values.all(value, value &gt;= 0 &amp;&amp; value &lt; 100)&#34;} - Rule scoped to a string value: {&#34;rule&#34;: &#34;self.startsWith(&#39;kube&#39;)&#34;}
      * 
@@ -55,14 +55,14 @@ public final class ValidationRule {
     }
 
     /**
-     * Message represents the message displayed when validation fails. The message is required if the Rule contains line breaks. The message must not contain line breaks. If unset, the message is &#34;failed rule: {Rule}&#34;. e.g. &#34;must be a URL with the host matching spec.host&#34;
+     * @return Message represents the message displayed when validation fails. The message is required if the Rule contains line breaks. The message must not contain line breaks. If unset, the message is &#34;failed rule: {Rule}&#34;. e.g. &#34;must be a URL with the host matching spec.host&#34;
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Rule represents the expression which will be evaluated by CEL. ref: https://github.com/google/cel-spec The Rule is scoped to the location of the x-kubernetes-validations extension in the schema. The `self` variable in the CEL expression is bound to the scoped value. Example: - Rule scoped to the root of a resource with a status subresource: {&#34;rule&#34;: &#34;self.status.actual &lt;= self.spec.maxDesired&#34;}
+     * @return Rule represents the expression which will be evaluated by CEL. ref: https://github.com/google/cel-spec The Rule is scoped to the location of the x-kubernetes-validations extension in the schema. The `self` variable in the CEL expression is bound to the scoped value. Example: - Rule scoped to the root of a resource with a status subresource: {&#34;rule&#34;: &#34;self.status.actual &lt;= self.spec.maxDesired&#34;}
      * 
      * If the Rule is scoped to an object with properties, the accessible properties of the object are field selectable via `self.field` and field presence can be checked via `has(self.field)`. Null valued fields are treated as absent fields in CEL expressions. If the Rule is scoped to an object with additionalProperties (i.e. a map) the value of the map are accessible via `self[mapKey]`, map containment can be checked via `mapKey in self` and all entries of the map are accessible via CEL macros and functions such as `self.all(...)`. If the Rule is scoped to an array, the elements of the array are accessible via `self[i]` and also by macros and functions. If the Rule is scoped to a scalar, `self` is bound to the scalar value. Examples: - Rule scoped to a map of objects: {&#34;rule&#34;: &#34;self.components[&#39;Widget&#39;].priority &lt; 10&#34;} - Rule scoped to a list of integers: {&#34;rule&#34;: &#34;self.values.all(value, value &gt;= 0 &amp;&amp; value &lt; 100)&#34;} - Rule scoped to a string value: {&#34;rule&#34;: &#34;self.startsWith(&#39;kube&#39;)&#34;}
      * 
@@ -88,7 +88,7 @@ public final class ValidationRule {
      *     are overwritten by values in `Y` when the key sets of `X` and `Y` intersect. Elements in `Y` with
      *     non-intersecting keys are appended, retaining their partial order.
      * 
-    */
+     */
     public String rule() {
         return this.rule;
     }

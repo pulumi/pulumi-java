@@ -23,6 +23,10 @@ public final class ParticipantPropertyReferenceResponse extends com.pulumi.resou
     @Import(name="sourcePropertyName", required=true)
     private String sourcePropertyName;
 
+    /**
+     * @return The source property that maps to the target property.
+     * 
+     */
     public String sourcePropertyName() {
         return this.sourcePropertyName;
     }
@@ -34,6 +38,10 @@ public final class ParticipantPropertyReferenceResponse extends com.pulumi.resou
     @Import(name="targetPropertyName", required=true)
     private String targetPropertyName;
 
+    /**
+     * @return The target property that maps to the source property.
+     * 
+     */
     public String targetPropertyName() {
         return this.targetPropertyName;
     }
@@ -63,11 +71,23 @@ public final class ParticipantPropertyReferenceResponse extends com.pulumi.resou
             $ = new ParticipantPropertyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourcePropertyName The source property that maps to the target property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePropertyName(String sourcePropertyName) {
             $.sourcePropertyName = sourcePropertyName;
             return this;
         }
 
+        /**
+         * @param targetPropertyName The target property that maps to the source property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPropertyName(String targetPropertyName) {
             $.targetPropertyName = targetPropertyName;
             return this;

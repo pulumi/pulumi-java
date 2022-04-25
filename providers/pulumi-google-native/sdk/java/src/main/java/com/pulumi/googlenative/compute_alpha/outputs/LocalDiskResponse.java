@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class LocalDiskResponse {
     /**
-     * Specifies the number of such disks.
+     * @return Specifies the number of such disks.
      * 
      */
     private final Integer diskCount;
     /**
-     * Specifies the size of the disk in base-2 GB.
+     * @return Specifies the size of the disk in base-2 GB.
      * 
      */
     private final Integer diskSizeGb;
     /**
-     * Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.
+     * @return Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.
      * 
      */
     private final String diskType;
@@ -37,23 +37,23 @@ public final class LocalDiskResponse {
     }
 
     /**
-     * Specifies the number of such disks.
+     * @return Specifies the number of such disks.
      * 
-    */
+     */
     public Integer diskCount() {
         return this.diskCount;
     }
     /**
-     * Specifies the size of the disk in base-2 GB.
+     * @return Specifies the size of the disk in base-2 GB.
      * 
-    */
+     */
     public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
-     * Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.
+     * @return Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.
      * 
-    */
+     */
     public String diskType() {
         return this.diskType;
     }

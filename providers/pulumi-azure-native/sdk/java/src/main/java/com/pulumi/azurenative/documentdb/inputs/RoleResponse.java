@@ -25,6 +25,10 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="db")
     private @Nullable String db;
 
+    /**
+     * @return The database name the role is applied.
+     * 
+     */
     public Optional<String> db() {
         return Optional.ofNullable(this.db);
     }
@@ -36,6 +40,10 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="role")
     private @Nullable String role;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
@@ -65,11 +73,23 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RoleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param db The database name the role is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder db(@Nullable String db) {
             $.db = db;
             return this;
         }
 
+        /**
+         * @param role The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable String role) {
             $.role = role;
             return this;

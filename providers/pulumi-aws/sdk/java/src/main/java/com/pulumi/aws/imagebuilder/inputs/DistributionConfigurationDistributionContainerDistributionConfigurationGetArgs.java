@@ -24,6 +24,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="containerTags")
     private @Nullable Output<List<String>> containerTags;
 
+    /**
+     * @return Set of tags that are attached to the container distribution configuration.
+     * 
+     */
     public Optional<Output<List<String>>> containerTags() {
         return Optional.ofNullable(this.containerTags);
     }
@@ -35,6 +39,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the container distribution configuration.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="targetRepository", required=true)
     private Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> targetRepository;
 
+    /**
+     * @return Configuration block with the destination repository for the container distribution configuration.
+     * 
+     */
     public Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> targetRepository() {
         return this.targetRepository;
     }
@@ -76,33 +88,75 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
             $ = new DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerTags Set of tags that are attached to the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerTags(@Nullable Output<List<String>> containerTags) {
             $.containerTags = containerTags;
             return this;
         }
 
+        /**
+         * @param containerTags Set of tags that are attached to the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerTags(List<String> containerTags) {
             return containerTags(Output.of(containerTags));
         }
 
+        /**
+         * @param containerTags Set of tags that are attached to the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerTags(String... containerTags) {
             return containerTags(List.of(containerTags));
         }
 
+        /**
+         * @param description Description of the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param targetRepository Configuration block with the destination repository for the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRepository(Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> targetRepository) {
             $.targetRepository = targetRepository;
             return this;
         }
 
+        /**
+         * @param targetRepository Configuration block with the destination repository for the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRepository(DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs targetRepository) {
             return targetRepository(Output.of(targetRepository));
         }

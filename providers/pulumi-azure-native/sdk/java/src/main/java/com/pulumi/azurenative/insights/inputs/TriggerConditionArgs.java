@@ -30,6 +30,10 @@ public final class TriggerConditionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="metricTrigger")
     private @Nullable Output<LogMetricTriggerArgs> metricTrigger;
 
+    /**
+     * @return Trigger condition for metric query rule
+     * 
+     */
     public Optional<Output<LogMetricTriggerArgs>> metricTrigger() {
         return Optional.ofNullable(this.metricTrigger);
     }
@@ -41,6 +45,10 @@ public final class TriggerConditionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="threshold", required=true)
     private Output<Double> threshold;
 
+    /**
+     * @return Result or count threshold based on which rule should be triggered.
+     * 
+     */
     public Output<Double> threshold() {
         return this.threshold;
     }
@@ -52,6 +60,10 @@ public final class TriggerConditionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="thresholdOperator", required=true)
     private Output<Either<String,ConditionalOperator>> thresholdOperator;
 
+    /**
+     * @return Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
+     * 
+     */
     public Output<Either<String,ConditionalOperator>> thresholdOperator() {
         return this.thresholdOperator;
     }
@@ -82,37 +94,85 @@ public final class TriggerConditionArgs extends com.pulumi.resources.ResourceArg
             $ = new TriggerConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metricTrigger Trigger condition for metric query rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricTrigger(@Nullable Output<LogMetricTriggerArgs> metricTrigger) {
             $.metricTrigger = metricTrigger;
             return this;
         }
 
+        /**
+         * @param metricTrigger Trigger condition for metric query rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricTrigger(LogMetricTriggerArgs metricTrigger) {
             return metricTrigger(Output.of(metricTrigger));
         }
 
+        /**
+         * @param threshold Result or count threshold based on which rule should be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Output<Double> threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param threshold Result or count threshold based on which rule should be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Double threshold) {
             return threshold(Output.of(threshold));
         }
 
+        /**
+         * @param thresholdOperator Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdOperator(Output<Either<String,ConditionalOperator>> thresholdOperator) {
             $.thresholdOperator = thresholdOperator;
             return this;
         }
 
+        /**
+         * @param thresholdOperator Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdOperator(Either<String,ConditionalOperator> thresholdOperator) {
             return thresholdOperator(Output.of(thresholdOperator));
         }
 
+        /**
+         * @param thresholdOperator Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdOperator(String thresholdOperator) {
             return thresholdOperator(Either.ofLeft(thresholdOperator));
         }
 
+        /**
+         * @param thresholdOperator Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdOperator(ConditionalOperator thresholdOperator) {
             return thresholdOperator(Either.ofRight(thresholdOperator));
         }

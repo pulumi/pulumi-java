@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class TaskSchedule {
     /**
-     * Specifies the schedule you want your task to use for repeated executions. For more information, see [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html).
+     * @return Specifies the schedule you want your task to use for repeated executions. For more information, see [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html).
      * 
      */
     private final String scheduleExpression;
@@ -21,9 +21,9 @@ public final class TaskSchedule {
     }
 
     /**
-     * Specifies the schedule you want your task to use for repeated executions. For more information, see [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html).
+     * @return Specifies the schedule you want your task to use for repeated executions. For more information, see [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html).
      * 
-    */
+     */
     public String scheduleExpression() {
         return this.scheduleExpression;
     }

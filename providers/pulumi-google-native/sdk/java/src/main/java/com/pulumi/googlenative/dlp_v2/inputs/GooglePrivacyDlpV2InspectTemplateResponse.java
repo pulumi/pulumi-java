@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends com.pulumi.
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The creation timestamp of an inspectTemplate.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends com.pulumi.
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Short description (max 256 chars).
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -46,6 +54,10 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends com.pulumi.
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Display name (max 256 chars).
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -57,6 +69,10 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends com.pulumi.
     @Import(name="inspectConfig", required=true)
     private GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
 
+    /**
+     * @return The core content of the template. Configuration of the scanning process.
+     * 
+     */
     public GooglePrivacyDlpV2InspectConfigResponse inspectConfig() {
         return this.inspectConfig;
     }
@@ -68,6 +84,10 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends com.pulumi.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The template name. The template will have one of the following formats: `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -79,6 +99,10 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends com.pulumi.
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return The last update timestamp of an inspectTemplate.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -112,31 +136,67 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends com.pulumi.
             $ = new GooglePrivacyDlpV2InspectTemplateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime The creation timestamp of an inspectTemplate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param description Short description (max 256 chars).
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName Display name (max 256 chars).
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param inspectConfig The core content of the template. Configuration of the scanning process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectConfig(GooglePrivacyDlpV2InspectConfigResponse inspectConfig) {
             $.inspectConfig = inspectConfig;
             return this;
         }
 
+        /**
+         * @param name The template name. The template will have one of the following formats: `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param updateTime The last update timestamp of an inspectTemplate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

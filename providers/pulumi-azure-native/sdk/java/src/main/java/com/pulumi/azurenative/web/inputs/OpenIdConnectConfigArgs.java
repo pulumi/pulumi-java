@@ -26,6 +26,10 @@ public final class OpenIdConnectConfigArgs extends com.pulumi.resources.Resource
     @Import(name="authorizationEndpoint")
     private @Nullable Output<String> authorizationEndpoint;
 
+    /**
+     * @return The endpoint to be used to make an authorization request.
+     * 
+     */
     public Optional<Output<String>> authorizationEndpoint() {
         return Optional.ofNullable(this.authorizationEndpoint);
     }
@@ -37,6 +41,10 @@ public final class OpenIdConnectConfigArgs extends com.pulumi.resources.Resource
     @Import(name="certificationUri")
     private @Nullable Output<String> certificationUri;
 
+    /**
+     * @return The endpoint that provides the keys necessary to validate the token.
+     * 
+     */
     public Optional<Output<String>> certificationUri() {
         return Optional.ofNullable(this.certificationUri);
     }
@@ -48,6 +56,10 @@ public final class OpenIdConnectConfigArgs extends com.pulumi.resources.Resource
     @Import(name="issuer")
     private @Nullable Output<String> issuer;
 
+    /**
+     * @return The endpoint that issues the token.
+     * 
+     */
     public Optional<Output<String>> issuer() {
         return Optional.ofNullable(this.issuer);
     }
@@ -59,6 +71,10 @@ public final class OpenIdConnectConfigArgs extends com.pulumi.resources.Resource
     @Import(name="tokenEndpoint")
     private @Nullable Output<String> tokenEndpoint;
 
+    /**
+     * @return The endpoint to be used to request a token.
+     * 
+     */
     public Optional<Output<String>> tokenEndpoint() {
         return Optional.ofNullable(this.tokenEndpoint);
     }
@@ -70,6 +86,10 @@ public final class OpenIdConnectConfigArgs extends com.pulumi.resources.Resource
     @Import(name="wellKnownOpenIdConfiguration")
     private @Nullable Output<String> wellKnownOpenIdConfiguration;
 
+    /**
+     * @return The endpoint that contains all the configuration endpoints for the provider.
+     * 
+     */
     public Optional<Output<String>> wellKnownOpenIdConfiguration() {
         return Optional.ofNullable(this.wellKnownOpenIdConfiguration);
     }
@@ -102,47 +122,107 @@ public final class OpenIdConnectConfigArgs extends com.pulumi.resources.Resource
             $ = new OpenIdConnectConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationEndpoint The endpoint to be used to make an authorization request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationEndpoint(@Nullable Output<String> authorizationEndpoint) {
             $.authorizationEndpoint = authorizationEndpoint;
             return this;
         }
 
+        /**
+         * @param authorizationEndpoint The endpoint to be used to make an authorization request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationEndpoint(String authorizationEndpoint) {
             return authorizationEndpoint(Output.of(authorizationEndpoint));
         }
 
+        /**
+         * @param certificationUri The endpoint that provides the keys necessary to validate the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificationUri(@Nullable Output<String> certificationUri) {
             $.certificationUri = certificationUri;
             return this;
         }
 
+        /**
+         * @param certificationUri The endpoint that provides the keys necessary to validate the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificationUri(String certificationUri) {
             return certificationUri(Output.of(certificationUri));
         }
 
+        /**
+         * @param issuer The endpoint that issues the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(@Nullable Output<String> issuer) {
             $.issuer = issuer;
             return this;
         }
 
+        /**
+         * @param issuer The endpoint that issues the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
             return issuer(Output.of(issuer));
         }
 
+        /**
+         * @param tokenEndpoint The endpoint to be used to request a token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenEndpoint(@Nullable Output<String> tokenEndpoint) {
             $.tokenEndpoint = tokenEndpoint;
             return this;
         }
 
+        /**
+         * @param tokenEndpoint The endpoint to be used to request a token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenEndpoint(String tokenEndpoint) {
             return tokenEndpoint(Output.of(tokenEndpoint));
         }
 
+        /**
+         * @param wellKnownOpenIdConfiguration The endpoint that contains all the configuration endpoints for the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wellKnownOpenIdConfiguration(@Nullable Output<String> wellKnownOpenIdConfiguration) {
             $.wellKnownOpenIdConfiguration = wellKnownOpenIdConfiguration;
             return this;
         }
 
+        /**
+         * @param wellKnownOpenIdConfiguration The endpoint that contains all the configuration endpoints for the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wellKnownOpenIdConfiguration(String wellKnownOpenIdConfiguration) {
             return wellKnownOpenIdConfiguration(Output.of(wellKnownOpenIdConfiguration));
         }

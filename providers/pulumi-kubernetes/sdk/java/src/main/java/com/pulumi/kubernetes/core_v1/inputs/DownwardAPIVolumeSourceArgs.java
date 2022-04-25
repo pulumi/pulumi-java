@@ -28,6 +28,10 @@ public final class DownwardAPIVolumeSourceArgs extends com.pulumi.resources.Reso
     @Import(name="defaultMode")
     private @Nullable Output<Integer> defaultMode;
 
+    /**
+     * @return Optional: mode bits to use on created files by default. Must be a Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+     * 
+     */
     public Optional<Output<Integer>> defaultMode() {
         return Optional.ofNullable(this.defaultMode);
     }
@@ -39,6 +43,10 @@ public final class DownwardAPIVolumeSourceArgs extends com.pulumi.resources.Reso
     @Import(name="items")
     private @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;
 
+    /**
+     * @return Items is a list of downward API volume file
+     * 
+     */
     public Optional<Output<List<DownwardAPIVolumeFileArgs>>> items() {
         return Optional.ofNullable(this.items);
     }
@@ -68,24 +76,54 @@ public final class DownwardAPIVolumeSourceArgs extends com.pulumi.resources.Reso
             $ = new DownwardAPIVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultMode Optional: mode bits to use on created files by default. Must be a Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMode(@Nullable Output<Integer> defaultMode) {
             $.defaultMode = defaultMode;
             return this;
         }
 
+        /**
+         * @param defaultMode Optional: mode bits to use on created files by default. Must be a Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMode(Integer defaultMode) {
             return defaultMode(Output.of(defaultMode));
         }
 
+        /**
+         * @param items Items is a list of downward API volume file
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(@Nullable Output<List<DownwardAPIVolumeFileArgs>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items Items is a list of downward API volume file
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<DownwardAPIVolumeFileArgs> items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param items Items is a list of downward API volume file
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(DownwardAPIVolumeFileArgs... items) {
             return items(List.of(items));
         }

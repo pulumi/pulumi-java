@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 public final class GetLocalGatewaysResult {
     private final @Nullable List<GetLocalGatewaysFilter> filters;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Set of all the Local Gateway identifiers
+     * @return Set of all the Local Gateway identifiers
      * 
      */
     private final List<String> ids;
@@ -42,16 +42,16 @@ public final class GetLocalGatewaysResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set of all the Local Gateway identifiers
+     * @return Set of all the Local Gateway identifiers
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }

@@ -26,6 +26,12 @@ public final class ServicePerimeterStatusEgressPolicyEgressToArgs extends com.pu
     @Import(name="operations")
     private @Nullable Output<List<ServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations;
 
+    /**
+     * @return A list of `ApiOperations` that this egress rule applies to. A request matches
+     * if it contains an operation/service in this list.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<ServicePerimeterStatusEgressPolicyEgressToOperationArgs>>> operations() {
         return Optional.ofNullable(this.operations);
     }
@@ -41,6 +47,14 @@ public final class ServicePerimeterStatusEgressPolicyEgressToArgs extends com.pu
     @Import(name="resources")
     private @Nullable Output<List<String>> resources;
 
+    /**
+     * @return A list of resources, currently only projects in the form
+     * `projects/&lt;projectnumber&gt;`, that match this to stanza. A request matches
+     * if it contains a resource in this list. If * is specified for resources,
+     * then this `EgressTo` rule will authorize access to all resources outside
+     * the perimeter.
+     * 
+     */
     public Optional<Output<List<String>>> resources() {
         return Optional.ofNullable(this.resources);
     }
@@ -70,28 +84,82 @@ public final class ServicePerimeterStatusEgressPolicyEgressToArgs extends com.pu
             $ = new ServicePerimeterStatusEgressPolicyEgressToArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operations A list of `ApiOperations` that this egress rule applies to. A request matches
+         * if it contains an operation/service in this list.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operations(@Nullable Output<List<ServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations) {
             $.operations = operations;
             return this;
         }
 
+        /**
+         * @param operations A list of `ApiOperations` that this egress rule applies to. A request matches
+         * if it contains an operation/service in this list.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operations(List<ServicePerimeterStatusEgressPolicyEgressToOperationArgs> operations) {
             return operations(Output.of(operations));
         }
 
+        /**
+         * @param operations A list of `ApiOperations` that this egress rule applies to. A request matches
+         * if it contains an operation/service in this list.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operations(ServicePerimeterStatusEgressPolicyEgressToOperationArgs... operations) {
             return operations(List.of(operations));
         }
 
+        /**
+         * @param resources A list of resources, currently only projects in the form
+         * `projects/&lt;projectnumber&gt;`, that match this to stanza. A request matches
+         * if it contains a resource in this list. If * is specified for resources,
+         * then this `EgressTo` rule will authorize access to all resources outside
+         * the perimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(@Nullable Output<List<String>> resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param resources A list of resources, currently only projects in the form
+         * `projects/&lt;projectnumber&gt;`, that match this to stanza. A request matches
+         * if it contains a resource in this list. If * is specified for resources,
+         * then this `EgressTo` rule will authorize access to all resources outside
+         * the perimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(List<String> resources) {
             return resources(Output.of(resources));
         }
 
+        /**
+         * @param resources A list of resources, currently only projects in the form
+         * `projects/&lt;projectnumber&gt;`, that match this to stanza. A request matches
+         * if it contains a resource in this list. If * is specified for resources,
+         * then this `EgressTo` rule will authorize access to all resources outside
+         * the perimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(String... resources) {
             return resources(List.of(resources));
         }

@@ -26,6 +26,10 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="backupManagementType")
     private @Nullable String backupManagementType;
 
+    /**
+     * @return Type of backup management for the container.
+     * 
+     */
     public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -41,6 +45,14 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="containerType", required=true)
     private String containerType;
 
+    /**
+     * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+     * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+     * Backup is VMAppContainer
+     * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
+     * 
+     */
     public String containerType() {
         return this.containerType;
     }
@@ -52,6 +64,10 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return Friendly name of the container.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -63,6 +79,10 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="healthStatus")
     private @Nullable String healthStatus;
 
+    /**
+     * @return Status of health of the container.
+     * 
+     */
     public Optional<String> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
@@ -74,6 +94,10 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="registrationStatus")
     private @Nullable String registrationStatus;
 
+    /**
+     * @return Status of registration of the container with the Recovery Services Vault.
+     * 
+     */
     public Optional<String> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
@@ -85,6 +109,10 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="resourceGroup")
     private @Nullable String resourceGroup;
 
+    /**
+     * @return Resource group name of Recovery Services Vault.
+     * 
+     */
     public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
@@ -96,6 +124,10 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="virtualMachineId")
     private @Nullable String virtualMachineId;
 
+    /**
+     * @return Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.
+     * 
+     */
     public Optional<String> virtualMachineId() {
         return Optional.ofNullable(this.virtualMachineId);
     }
@@ -107,6 +139,10 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="virtualMachineVersion")
     private @Nullable String virtualMachineVersion;
 
+    /**
+     * @return Specifies whether the container represents a Classic or an Azure Resource Manager VM.
+     * 
+     */
     public Optional<String> virtualMachineVersion() {
         return Optional.ofNullable(this.virtualMachineVersion);
     }
@@ -142,41 +178,93 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
             $ = new AzureIaaSComputeVMContainerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(@Nullable String backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param containerType Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+         * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+         * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+         * Backup is VMAppContainer
+         * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(String containerType) {
             $.containerType = containerType;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param healthStatus Status of health of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStatus(@Nullable String healthStatus) {
             $.healthStatus = healthStatus;
             return this;
         }
 
+        /**
+         * @param registrationStatus Status of registration of the container with the Recovery Services Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationStatus(@Nullable String registrationStatus) {
             $.registrationStatus = registrationStatus;
             return this;
         }
 
+        /**
+         * @param resourceGroup Resource group name of Recovery Services Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(@Nullable String resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param virtualMachineId Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineId(@Nullable String virtualMachineId) {
             $.virtualMachineId = virtualMachineId;
             return this;
         }
 
+        /**
+         * @param virtualMachineVersion Specifies whether the container represents a Classic or an Azure Resource Manager VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineVersion(@Nullable String virtualMachineVersion) {
             $.virtualMachineVersion = virtualMachineVersion;
             return this;

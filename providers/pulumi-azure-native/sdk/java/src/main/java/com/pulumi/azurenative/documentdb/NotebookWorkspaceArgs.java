@@ -22,6 +22,10 @@ public final class NotebookWorkspaceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -33,6 +37,10 @@ public final class NotebookWorkspaceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="notebookWorkspaceName")
     private @Nullable Output<String> notebookWorkspaceName;
 
+    /**
+     * @return The name of the notebook workspace resource.
+     * 
+     */
     public Optional<Output<String>> notebookWorkspaceName() {
         return Optional.ofNullable(this.notebookWorkspaceName);
     }
@@ -44,6 +52,10 @@ public final class NotebookWorkspaceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -74,29 +86,65 @@ public final class NotebookWorkspaceArgs extends com.pulumi.resources.ResourceAr
             $ = new NotebookWorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param notebookWorkspaceName The name of the notebook workspace resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notebookWorkspaceName(@Nullable Output<String> notebookWorkspaceName) {
             $.notebookWorkspaceName = notebookWorkspaceName;
             return this;
         }
 
+        /**
+         * @param notebookWorkspaceName The name of the notebook workspace resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notebookWorkspaceName(String notebookWorkspaceName) {
             return notebookWorkspaceName(Output.of(notebookWorkspaceName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

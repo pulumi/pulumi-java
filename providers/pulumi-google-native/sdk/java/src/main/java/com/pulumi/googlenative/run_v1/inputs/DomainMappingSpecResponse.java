@@ -24,6 +24,10 @@ public final class DomainMappingSpecResponse extends com.pulumi.resources.Invoke
     @Import(name="certificateMode", required=true)
     private String certificateMode;
 
+    /**
+     * @return The mode of the certificate.
+     * 
+     */
     public String certificateMode() {
         return this.certificateMode;
     }
@@ -35,6 +39,10 @@ public final class DomainMappingSpecResponse extends com.pulumi.resources.Invoke
     @Import(name="forceOverride", required=true)
     private Boolean forceOverride;
 
+    /**
+     * @return If set, the mapping will override any mapping set before this spec was set. It is recommended that the user leaves this empty to receive an error warning about a potential conflict and only set it once the respective UI has given such a warning.
+     * 
+     */
     public Boolean forceOverride() {
         return this.forceOverride;
     }
@@ -46,6 +54,10 @@ public final class DomainMappingSpecResponse extends com.pulumi.resources.Invoke
     @Import(name="routeName", required=true)
     private String routeName;
 
+    /**
+     * @return The name of the Knative Route that this DomainMapping applies to. The route must exist.
+     * 
+     */
     public String routeName() {
         return this.routeName;
     }
@@ -76,16 +88,34 @@ public final class DomainMappingSpecResponse extends com.pulumi.resources.Invoke
             $ = new DomainMappingSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateMode The mode of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateMode(String certificateMode) {
             $.certificateMode = certificateMode;
             return this;
         }
 
+        /**
+         * @param forceOverride If set, the mapping will override any mapping set before this spec was set. It is recommended that the user leaves this empty to receive an error warning about a potential conflict and only set it once the respective UI has given such a warning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceOverride(Boolean forceOverride) {
             $.forceOverride = forceOverride;
             return this;
         }
 
+        /**
+         * @param routeName The name of the Knative Route that this DomainMapping applies to. The route must exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeName(String routeName) {
             $.routeName = routeName;
             return this;

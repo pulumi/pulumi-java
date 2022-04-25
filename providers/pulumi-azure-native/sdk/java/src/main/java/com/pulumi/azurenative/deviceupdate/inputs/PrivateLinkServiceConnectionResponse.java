@@ -26,6 +26,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
     @Import(name="groupIds")
     private @Nullable List<String> groupIds;
 
+    /**
+     * @return List of group IDs.
+     * 
+     */
     public Optional<List<String>> groupIds() {
         return Optional.ofNullable(this.groupIds);
     }
@@ -37,6 +41,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Private link service connection name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
     @Import(name="requestMessage")
     private @Nullable String requestMessage;
 
+    /**
+     * @return Request message.
+     * 
+     */
     public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
@@ -78,20 +90,44 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
             $ = new PrivateLinkServiceConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupIds List of group IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(@Nullable List<String> groupIds) {
             $.groupIds = groupIds;
             return this;
         }
 
+        /**
+         * @param groupIds List of group IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
         }
 
+        /**
+         * @param name Private link service connection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param requestMessage Request message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(@Nullable String requestMessage) {
             $.requestMessage = requestMessage;
             return this;

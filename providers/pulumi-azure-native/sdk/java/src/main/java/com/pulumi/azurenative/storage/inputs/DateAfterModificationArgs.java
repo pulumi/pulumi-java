@@ -26,6 +26,10 @@ public final class DateAfterModificationArgs extends com.pulumi.resources.Resour
     @Import(name="daysAfterLastAccessTimeGreaterThan")
     private @Nullable Output<Double> daysAfterLastAccessTimeGreaterThan;
 
+    /**
+     * @return Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
+     * 
+     */
     public Optional<Output<Double>> daysAfterLastAccessTimeGreaterThan() {
         return Optional.ofNullable(this.daysAfterLastAccessTimeGreaterThan);
     }
@@ -37,6 +41,10 @@ public final class DateAfterModificationArgs extends com.pulumi.resources.Resour
     @Import(name="daysAfterModificationGreaterThan")
     private @Nullable Output<Double> daysAfterModificationGreaterThan;
 
+    /**
+     * @return Value indicating the age in days after last modification
+     * 
+     */
     public Optional<Output<Double>> daysAfterModificationGreaterThan() {
         return Optional.ofNullable(this.daysAfterModificationGreaterThan);
     }
@@ -66,20 +74,44 @@ public final class DateAfterModificationArgs extends com.pulumi.resources.Resour
             $ = new DateAfterModificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysAfterLastAccessTimeGreaterThan Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysAfterLastAccessTimeGreaterThan(@Nullable Output<Double> daysAfterLastAccessTimeGreaterThan) {
             $.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
             return this;
         }
 
+        /**
+         * @param daysAfterLastAccessTimeGreaterThan Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysAfterLastAccessTimeGreaterThan(Double daysAfterLastAccessTimeGreaterThan) {
             return daysAfterLastAccessTimeGreaterThan(Output.of(daysAfterLastAccessTimeGreaterThan));
         }
 
+        /**
+         * @param daysAfterModificationGreaterThan Value indicating the age in days after last modification
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysAfterModificationGreaterThan(@Nullable Output<Double> daysAfterModificationGreaterThan) {
             $.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
             return this;
         }
 
+        /**
+         * @param daysAfterModificationGreaterThan Value indicating the age in days after last modification
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysAfterModificationGreaterThan(Double daysAfterModificationGreaterThan) {
             return daysAfterModificationGreaterThan(Output.of(daysAfterModificationGreaterThan));
         }

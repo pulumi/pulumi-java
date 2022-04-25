@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class FilterFileDetailsResponse {
     /**
-     * Path of the file that contains the details of all items to transfer.
+     * @return Path of the file that contains the details of all items to transfer.
      * 
      */
     private final String filterFilePath;
     /**
-     * Type of the filter file.
+     * @return Type of the filter file.
      * 
      */
     private final String filterFileType;
@@ -29,16 +29,16 @@ public final class FilterFileDetailsResponse {
     }
 
     /**
-     * Path of the file that contains the details of all items to transfer.
+     * @return Path of the file that contains the details of all items to transfer.
      * 
-    */
+     */
     public String filterFilePath() {
         return this.filterFilePath;
     }
     /**
-     * Type of the filter file.
+     * @return Type of the filter file.
      * 
-    */
+     */
     public String filterFileType() {
         return this.filterFileType;
     }

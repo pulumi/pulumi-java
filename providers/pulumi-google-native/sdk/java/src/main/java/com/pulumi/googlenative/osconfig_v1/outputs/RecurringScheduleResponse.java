@@ -14,47 +14,47 @@ import java.util.Objects;
 @CustomType
 public final class RecurringScheduleResponse {
     /**
-     * Optional. The end time at which a recurring patch deployment schedule is no longer active.
+     * @return Optional. The end time at which a recurring patch deployment schedule is no longer active.
      * 
      */
     private final String endTime;
     /**
-     * The frequency unit of this recurring schedule.
+     * @return The frequency unit of this recurring schedule.
      * 
      */
     private final String frequency;
     /**
-     * The time the last patch job ran successfully.
+     * @return The time the last patch job ran successfully.
      * 
      */
     private final String lastExecuteTime;
     /**
-     * Schedule with monthly executions.
+     * @return Schedule with monthly executions.
      * 
      */
     private final MonthlyScheduleResponse monthly;
     /**
-     * The time the next patch job is scheduled to run.
+     * @return The time the next patch job is scheduled to run.
      * 
      */
     private final String nextExecuteTime;
     /**
-     * Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.
+     * @return Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.
      * 
      */
     private final String startTime;
     /**
-     * Time of the day to run a recurring deployment.
+     * @return Time of the day to run a recurring deployment.
      * 
      */
     private final TimeOfDayResponse timeOfDay;
     /**
-     * Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.
+     * @return Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.
      * 
      */
     private final TimeZoneResponse timeZone;
     /**
-     * Schedule with weekly executions.
+     * @return Schedule with weekly executions.
      * 
      */
     private final WeeklyScheduleResponse weekly;
@@ -82,65 +82,65 @@ public final class RecurringScheduleResponse {
     }
 
     /**
-     * Optional. The end time at which a recurring patch deployment schedule is no longer active.
+     * @return Optional. The end time at which a recurring patch deployment schedule is no longer active.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The frequency unit of this recurring schedule.
+     * @return The frequency unit of this recurring schedule.
      * 
-    */
+     */
     public String frequency() {
         return this.frequency;
     }
     /**
-     * The time the last patch job ran successfully.
+     * @return The time the last patch job ran successfully.
      * 
-    */
+     */
     public String lastExecuteTime() {
         return this.lastExecuteTime;
     }
     /**
-     * Schedule with monthly executions.
+     * @return Schedule with monthly executions.
      * 
-    */
+     */
     public MonthlyScheduleResponse monthly() {
         return this.monthly;
     }
     /**
-     * The time the next patch job is scheduled to run.
+     * @return The time the next patch job is scheduled to run.
      * 
-    */
+     */
     public String nextExecuteTime() {
         return this.nextExecuteTime;
     }
     /**
-     * Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.
+     * @return Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Time of the day to run a recurring deployment.
+     * @return Time of the day to run a recurring deployment.
      * 
-    */
+     */
     public TimeOfDayResponse timeOfDay() {
         return this.timeOfDay;
     }
     /**
-     * Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.
+     * @return Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.
      * 
-    */
+     */
     public TimeZoneResponse timeZone() {
         return this.timeZone;
     }
     /**
-     * Schedule with weekly executions.
+     * @return Schedule with weekly executions.
      * 
-    */
+     */
     public WeeklyScheduleResponse weekly() {
         return this.weekly;
     }

@@ -21,6 +21,10 @@ public final class AppImageConfigKernelSpec extends com.pulumi.resources.InvokeA
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The display name of the kernel.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -32,6 +36,10 @@ public final class AppImageConfigKernelSpec extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the kernel.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -61,11 +69,23 @@ public final class AppImageConfigKernelSpec extends com.pulumi.resources.InvokeA
             $ = new AppImageConfigKernelSpec(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name of the kernel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param name The name of the kernel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

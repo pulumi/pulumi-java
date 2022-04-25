@@ -28,6 +28,10 @@ public final class SourceTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the trigger.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -39,6 +43,10 @@ public final class SourceTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sourceRepository", required=true)
     private SourcePropertiesResponse sourceRepository;
 
+    /**
+     * @return The properties that describes the source(code) for the task.
+     * 
+     */
     public SourcePropertiesResponse sourceRepository() {
         return this.sourceRepository;
     }
@@ -50,6 +58,10 @@ public final class SourceTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sourceTriggerEvents", required=true)
     private List<String> sourceTriggerEvents;
 
+    /**
+     * @return The source event corresponding to the trigger.
+     * 
+     */
     public List<String> sourceTriggerEvents() {
         return this.sourceTriggerEvents;
     }
@@ -61,6 +73,10 @@ public final class SourceTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The current status of trigger.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -92,25 +108,55 @@ public final class SourceTriggerResponse extends com.pulumi.resources.InvokeArgs
             $ = new SourceTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sourceRepository The properties that describes the source(code) for the task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRepository(SourcePropertiesResponse sourceRepository) {
             $.sourceRepository = sourceRepository;
             return this;
         }
 
+        /**
+         * @param sourceTriggerEvents The source event corresponding to the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTriggerEvents(List<String> sourceTriggerEvents) {
             $.sourceTriggerEvents = sourceTriggerEvents;
             return this;
         }
 
+        /**
+         * @param sourceTriggerEvents The source event corresponding to the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTriggerEvents(String... sourceTriggerEvents) {
             return sourceTriggerEvents(List.of(sourceTriggerEvents));
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

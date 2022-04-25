@@ -26,6 +26,10 @@ public final class IoTDeviceInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="authentication")
     private @Nullable AuthenticationResponse authentication;
 
+    /**
+     * @return Encrypted IoT device/IoT edge device connection string.
+     * 
+     */
     public Optional<AuthenticationResponse> authentication() {
         return Optional.ofNullable(this.authentication);
     }
@@ -37,6 +41,10 @@ public final class IoTDeviceInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="deviceId", required=true)
     private String deviceId;
 
+    /**
+     * @return ID of the IoT device/edge device.
+     * 
+     */
     public String deviceId() {
         return this.deviceId;
     }
@@ -48,6 +56,10 @@ public final class IoTDeviceInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ioTHostHub", required=true)
     private String ioTHostHub;
 
+    /**
+     * @return Host name for the IoT hub associated to the device.
+     * 
+     */
     public String ioTHostHub() {
         return this.ioTHostHub;
     }
@@ -59,6 +71,10 @@ public final class IoTDeviceInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ioTHostHubId")
     private @Nullable String ioTHostHubId;
 
+    /**
+     * @return Id for the IoT hub associated to the device.
+     * 
+     */
     public Optional<String> ioTHostHubId() {
         return Optional.ofNullable(this.ioTHostHubId);
     }
@@ -90,21 +106,45 @@ public final class IoTDeviceInfoResponse extends com.pulumi.resources.InvokeArgs
             $ = new IoTDeviceInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authentication Encrypted IoT device/IoT edge device connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(@Nullable AuthenticationResponse authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param deviceId ID of the IoT device/edge device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceId(String deviceId) {
             $.deviceId = deviceId;
             return this;
         }
 
+        /**
+         * @param ioTHostHub Host name for the IoT hub associated to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTHostHub(String ioTHostHub) {
             $.ioTHostHub = ioTHostHub;
             return this;
         }
 
+        /**
+         * @param ioTHostHubId Id for the IoT hub associated to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTHostHubId(@Nullable String ioTHostHubId) {
             $.ioTHostHubId = ioTHostHubId;
             return this;

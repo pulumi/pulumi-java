@@ -24,6 +24,10 @@ public final class ScaleRuleMetricDimensionResponse extends com.pulumi.resources
     @Import(name="dimensionName", required=true)
     private String dimensionName;
 
+    /**
+     * @return Name of the dimension.
+     * 
+     */
     public String dimensionName() {
         return this.dimensionName;
     }
@@ -35,6 +39,10 @@ public final class ScaleRuleMetricDimensionResponse extends com.pulumi.resources
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -46,6 +54,10 @@ public final class ScaleRuleMetricDimensionResponse extends com.pulumi.resources
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return list of dimension values. For example: [&#34;App1&#34;,&#34;App2&#34;].
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -76,21 +88,45 @@ public final class ScaleRuleMetricDimensionResponse extends com.pulumi.resources
             $ = new ScaleRuleMetricDimensionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dimensionName Name of the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionName(String dimensionName) {
             $.dimensionName = dimensionName;
             return this;
         }
 
+        /**
+         * @param operator the dimension operator. Only &#39;Equals&#39; and &#39;NotEquals&#39; are supported. &#39;Equals&#39; being equal to any of the values. &#39;NotEquals&#39; being not equal to all of the values
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param values list of dimension values. For example: [&#34;App1&#34;,&#34;App2&#34;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values list of dimension values. For example: [&#34;App1&#34;,&#34;App2&#34;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

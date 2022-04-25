@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BudgetThresholdRule {
     /**
-     * The type of basis used to determine if spend has passed
+     * @return The type of basis used to determine if spend has passed
      * the threshold.
      * Default value is `CURRENT_SPEND`.
      * Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
@@ -21,7 +21,7 @@ public final class BudgetThresholdRule {
      */
     private final @Nullable String spendBasis;
     /**
-     * Send an alert when this threshold is exceeded. This is a
+     * @return Send an alert when this threshold is exceeded. This is a
      * 1.0-based percentage, so 0.5 = 50%. Must be &gt;= 0.
      * 
      */
@@ -36,20 +36,20 @@ public final class BudgetThresholdRule {
     }
 
     /**
-     * The type of basis used to determine if spend has passed
+     * @return The type of basis used to determine if spend has passed
      * the threshold.
      * Default value is `CURRENT_SPEND`.
      * Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
      * 
-    */
+     */
     public Optional<String> spendBasis() {
         return Optional.ofNullable(this.spendBasis);
     }
     /**
-     * Send an alert when this threshold is exceeded. This is a
+     * @return Send an alert when this threshold is exceeded. This is a
      * 1.0-based percentage, so 0.5 = 50%. Must be &gt;= 0.
      * 
-    */
+     */
     public Double thresholdPercent() {
         return this.thresholdPercent;
     }

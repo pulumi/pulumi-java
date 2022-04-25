@@ -26,6 +26,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The rule description
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The rule name as it is displayed in UI
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -48,6 +56,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
     @Import(name="helpUrl")
     private @Nullable String helpUrl;
 
+    /**
+     * @return URL which displays additional info about the proactive detection rule
+     * 
+     */
     public Optional<String> helpUrl() {
         return Optional.ofNullable(this.helpUrl);
     }
@@ -59,6 +71,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
     @Import(name="isEnabledByDefault")
     private @Nullable Boolean isEnabledByDefault;
 
+    /**
+     * @return A flag indicating whether the rule is enabled by default
+     * 
+     */
     public Optional<Boolean> isEnabledByDefault() {
         return Optional.ofNullable(this.isEnabledByDefault);
     }
@@ -70,6 +86,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
     @Import(name="isHidden")
     private @Nullable Boolean isHidden;
 
+    /**
+     * @return A flag indicating whether the rule is hidden (from the UI)
+     * 
+     */
     public Optional<Boolean> isHidden() {
         return Optional.ofNullable(this.isHidden);
     }
@@ -81,6 +101,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
     @Import(name="isInPreview")
     private @Nullable Boolean isInPreview;
 
+    /**
+     * @return A flag indicating whether the rule is in preview
+     * 
+     */
     public Optional<Boolean> isInPreview() {
         return Optional.ofNullable(this.isInPreview);
     }
@@ -92,6 +116,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The rule name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -103,6 +131,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
     @Import(name="supportsEmailNotifications")
     private @Nullable Boolean supportsEmailNotifications;
 
+    /**
+     * @return A flag indicating whether email notifications are supported for detections for this rule
+     * 
+     */
     public Optional<Boolean> supportsEmailNotifications() {
         return Optional.ofNullable(this.supportsEmailNotifications);
     }
@@ -138,41 +170,89 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
             $ = new ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The rule description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The rule name as it is displayed in UI
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param helpUrl URL which displays additional info about the proactive detection rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder helpUrl(@Nullable String helpUrl) {
             $.helpUrl = helpUrl;
             return this;
         }
 
+        /**
+         * @param isEnabledByDefault A flag indicating whether the rule is enabled by default
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabledByDefault(@Nullable Boolean isEnabledByDefault) {
             $.isEnabledByDefault = isEnabledByDefault;
             return this;
         }
 
+        /**
+         * @param isHidden A flag indicating whether the rule is hidden (from the UI)
+         * 
+         * @return builder
+         * 
+         */
         public Builder isHidden(@Nullable Boolean isHidden) {
             $.isHidden = isHidden;
             return this;
         }
 
+        /**
+         * @param isInPreview A flag indicating whether the rule is in preview
+         * 
+         * @return builder
+         * 
+         */
         public Builder isInPreview(@Nullable Boolean isInPreview) {
             $.isInPreview = isInPreview;
             return this;
         }
 
+        /**
+         * @param name The rule name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param supportsEmailNotifications A flag indicating whether email notifications are supported for detections for this rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportsEmailNotifications(@Nullable Boolean supportsEmailNotifications) {
             $.supportsEmailNotifications = supportsEmailNotifications;
             return this;

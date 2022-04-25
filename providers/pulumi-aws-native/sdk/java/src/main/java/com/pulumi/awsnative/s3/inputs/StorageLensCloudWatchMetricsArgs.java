@@ -24,6 +24,10 @@ public final class StorageLensCloudWatchMetricsArgs extends com.pulumi.resources
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Specifies whether CloudWatch metrics are enabled or disabled.
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -52,11 +56,23 @@ public final class StorageLensCloudWatchMetricsArgs extends com.pulumi.resources
             $ = new StorageLensCloudWatchMetricsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isEnabled Specifies whether CloudWatch metrics are enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Specifies whether CloudWatch metrics are enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }

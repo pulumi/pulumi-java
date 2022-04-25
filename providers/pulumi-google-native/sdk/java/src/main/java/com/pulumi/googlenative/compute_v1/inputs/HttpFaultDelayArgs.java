@@ -27,6 +27,10 @@ public final class HttpFaultDelayArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fixedDelay")
     private @Nullable Output<DurationArgs> fixedDelay;
 
+    /**
+     * @return Specifies the value of the fixed delay interval.
+     * 
+     */
     public Optional<Output<DurationArgs>> fixedDelay() {
         return Optional.ofNullable(this.fixedDelay);
     }
@@ -38,6 +42,10 @@ public final class HttpFaultDelayArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="percentage")
     private @Nullable Output<Double> percentage;
 
+    /**
+     * @return The percentage of traffic for connections, operations, or requests for which a delay is introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+     * 
+     */
     public Optional<Output<Double>> percentage() {
         return Optional.ofNullable(this.percentage);
     }
@@ -67,20 +75,44 @@ public final class HttpFaultDelayArgs extends com.pulumi.resources.ResourceArgs 
             $ = new HttpFaultDelayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fixedDelay Specifies the value of the fixed delay interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedDelay(@Nullable Output<DurationArgs> fixedDelay) {
             $.fixedDelay = fixedDelay;
             return this;
         }
 
+        /**
+         * @param fixedDelay Specifies the value of the fixed delay interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedDelay(DurationArgs fixedDelay) {
             return fixedDelay(Output.of(fixedDelay));
         }
 
+        /**
+         * @param percentage The percentage of traffic for connections, operations, or requests for which a delay is introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(@Nullable Output<Double> percentage) {
             $.percentage = percentage;
             return this;
         }
 
+        /**
+         * @param percentage The percentage of traffic for connections, operations, or requests for which a delay is introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(Double percentage) {
             return percentage(Output.of(percentage));
         }

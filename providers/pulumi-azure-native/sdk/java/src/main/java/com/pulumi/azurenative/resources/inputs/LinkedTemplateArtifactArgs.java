@@ -25,6 +25,10 @@ public final class LinkedTemplateArtifactArgs extends com.pulumi.resources.Resou
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return A filesystem safe relative path of the artifact.
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -36,6 +40,10 @@ public final class LinkedTemplateArtifactArgs extends com.pulumi.resources.Resou
     @Import(name="template", required=true)
     private Output<Object> template;
 
+    /**
+     * @return The Azure Resource Manager template.
+     * 
+     */
     public Output<Object> template() {
         return this.template;
     }
@@ -65,20 +73,44 @@ public final class LinkedTemplateArtifactArgs extends com.pulumi.resources.Resou
             $ = new LinkedTemplateArtifactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path A filesystem safe relative path of the artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path A filesystem safe relative path of the artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param template The Azure Resource Manager template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(Output<Object> template) {
             $.template = template;
             return this;
         }
 
+        /**
+         * @param template The Azure Resource Manager template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(Object template) {
             return template(Output.of(template));
         }

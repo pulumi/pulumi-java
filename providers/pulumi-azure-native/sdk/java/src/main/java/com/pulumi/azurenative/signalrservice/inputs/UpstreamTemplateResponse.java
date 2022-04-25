@@ -30,6 +30,14 @@ public final class UpstreamTemplateResponse extends com.pulumi.resources.InvokeA
     @Import(name="categoryPattern")
     private @Nullable String categoryPattern;
 
+    /**
+     * @return Gets or sets the matching pattern for category names. If not set, it matches any category.
+     * There are 3 kind of patterns supported:
+     *     1. &#34;*&#34;, it to matches any category name
+     *     2. Combine multiple categories with &#34;,&#34;, for example &#34;connections,messages&#34;, it matches category &#34;connections&#34; and &#34;messages&#34;
+     *     3. The single category name, for example, &#34;connections&#34;, it matches the category &#34;connections&#34;
+     * 
+     */
     public Optional<String> categoryPattern() {
         return Optional.ofNullable(this.categoryPattern);
     }
@@ -45,6 +53,14 @@ public final class UpstreamTemplateResponse extends com.pulumi.resources.InvokeA
     @Import(name="eventPattern")
     private @Nullable String eventPattern;
 
+    /**
+     * @return Gets or sets the matching pattern for event names. If not set, it matches any event.
+     * There are 3 kind of patterns supported:
+     *     1. &#34;*&#34;, it to matches any event name
+     *     2. Combine multiple events with &#34;,&#34;, for example &#34;connect,disconnect&#34;, it matches event &#34;connect&#34; and &#34;disconnect&#34;
+     *     3. The single event name, for example, &#34;connect&#34;, it matches &#34;connect&#34;
+     * 
+     */
     public Optional<String> eventPattern() {
         return Optional.ofNullable(this.eventPattern);
     }
@@ -60,6 +76,14 @@ public final class UpstreamTemplateResponse extends com.pulumi.resources.InvokeA
     @Import(name="hubPattern")
     private @Nullable String hubPattern;
 
+    /**
+     * @return Gets or sets the matching pattern for hub names. If not set, it matches any hub.
+     * There are 3 kind of patterns supported:
+     *     1. &#34;*&#34;, it to matches any hub name
+     *     2. Combine multiple hubs with &#34;,&#34;, for example &#34;hub1,hub2&#34;, it matches &#34;hub1&#34; and &#34;hub2&#34;
+     *     3. The single hub name, for example, &#34;hub1&#34;, it matches &#34;hub1&#34;
+     * 
+     */
     public Optional<String> hubPattern() {
         return Optional.ofNullable(this.hubPattern);
     }
@@ -72,6 +96,11 @@ public final class UpstreamTemplateResponse extends com.pulumi.resources.InvokeA
     @Import(name="urlTemplate", required=true)
     private String urlTemplate;
 
+    /**
+     * @return Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
+     * For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.
+     * 
+     */
     public String urlTemplate() {
         return this.urlTemplate;
     }
@@ -103,21 +132,58 @@ public final class UpstreamTemplateResponse extends com.pulumi.resources.InvokeA
             $ = new UpstreamTemplateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categoryPattern Gets or sets the matching pattern for category names. If not set, it matches any category.
+         * There are 3 kind of patterns supported:
+         *     1. &#34;*&#34;, it to matches any category name
+         *     2. Combine multiple categories with &#34;,&#34;, for example &#34;connections,messages&#34;, it matches category &#34;connections&#34; and &#34;messages&#34;
+         *     3. The single category name, for example, &#34;connections&#34;, it matches the category &#34;connections&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoryPattern(@Nullable String categoryPattern) {
             $.categoryPattern = categoryPattern;
             return this;
         }
 
+        /**
+         * @param eventPattern Gets or sets the matching pattern for event names. If not set, it matches any event.
+         * There are 3 kind of patterns supported:
+         *     1. &#34;*&#34;, it to matches any event name
+         *     2. Combine multiple events with &#34;,&#34;, for example &#34;connect,disconnect&#34;, it matches event &#34;connect&#34; and &#34;disconnect&#34;
+         *     3. The single event name, for example, &#34;connect&#34;, it matches &#34;connect&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventPattern(@Nullable String eventPattern) {
             $.eventPattern = eventPattern;
             return this;
         }
 
+        /**
+         * @param hubPattern Gets or sets the matching pattern for hub names. If not set, it matches any hub.
+         * There are 3 kind of patterns supported:
+         *     1. &#34;*&#34;, it to matches any hub name
+         *     2. Combine multiple hubs with &#34;,&#34;, for example &#34;hub1,hub2&#34;, it matches &#34;hub1&#34; and &#34;hub2&#34;
+         *     3. The single hub name, for example, &#34;hub1&#34;, it matches &#34;hub1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubPattern(@Nullable String hubPattern) {
             $.hubPattern = hubPattern;
             return this;
         }
 
+        /**
+         * @param urlTemplate Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
+         * For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlTemplate(String urlTemplate) {
             $.urlTemplate = urlTemplate;
             return this;

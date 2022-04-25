@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2ReplaceValueConfigResponse {
     /**
-     * Value to replace it with.
+     * @return Value to replace it with.
      * 
      */
     private final GooglePrivacyDlpV2ValueResponse newValue;
@@ -21,9 +21,9 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse {
     }
 
     /**
-     * Value to replace it with.
+     * @return Value to replace it with.
      * 
-    */
+     */
     public GooglePrivacyDlpV2ValueResponse newValue() {
         return this.newValue;
     }

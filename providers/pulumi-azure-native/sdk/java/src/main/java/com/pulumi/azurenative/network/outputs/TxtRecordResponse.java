@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TxtRecordResponse {
     /**
-     * The text value of this TXT record.
+     * @return The text value of this TXT record.
      * 
      */
     private final @Nullable List<String> value;
@@ -23,9 +23,9 @@ public final class TxtRecordResponse {
     }
 
     /**
-     * The text value of this TXT record.
+     * @return The text value of this TXT record.
      * 
-    */
+     */
     public List<String> value() {
         return this.value == null ? List.of() : this.value;
     }

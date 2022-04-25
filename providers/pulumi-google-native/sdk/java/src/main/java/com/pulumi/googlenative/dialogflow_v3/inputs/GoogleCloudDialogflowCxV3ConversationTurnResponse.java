@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse extends com
     @Import(name="userInput", required=true)
     private GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput;
 
+    /**
+     * @return The user input.
+     * 
+     */
     public GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput() {
         return this.userInput;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse extends com
     @Import(name="virtualAgentOutput", required=true)
     private GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
 
+    /**
+     * @return The virtual agent output.
+     * 
+     */
     public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput() {
         return this.virtualAgentOutput;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse extends com
             $ = new GoogleCloudDialogflowCxV3ConversationTurnResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userInput The user input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userInput(GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput) {
             $.userInput = userInput;
             return this;
         }
 
+        /**
+         * @param virtualAgentOutput The virtual agent output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualAgentOutput(GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
             $.virtualAgentOutput = virtualAgentOutput;
             return this;

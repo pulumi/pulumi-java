@@ -20,6 +20,11 @@ public final class CloudConnectorsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="awsExternalId", required=true)
     private String awsExternalId;
 
+    /**
+     * @return AWS external identifier.
+     * Configured in AWS to allow use of the role arn used for scanning
+     * 
+     */
     public String awsExternalId() {
         return this.awsExternalId;
     }
@@ -48,6 +53,13 @@ public final class CloudConnectorsResponse extends com.pulumi.resources.InvokeAr
             $ = new CloudConnectorsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsExternalId AWS external identifier.
+         * Configured in AWS to allow use of the role arn used for scanning
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsExternalId(String awsExternalId) {
             $.awsExternalId = awsExternalId;
             return this;

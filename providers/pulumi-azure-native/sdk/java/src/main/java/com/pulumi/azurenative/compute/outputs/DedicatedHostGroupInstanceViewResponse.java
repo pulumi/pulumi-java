@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DedicatedHostGroupInstanceViewResponse {
     /**
-     * List of instance view of the dedicated hosts under the dedicated host group.
+     * @return List of instance view of the dedicated hosts under the dedicated host group.
      * 
      */
     private final @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
@@ -23,9 +23,9 @@ public final class DedicatedHostGroupInstanceViewResponse {
     }
 
     /**
-     * List of instance view of the dedicated hosts under the dedicated host group.
+     * @return List of instance view of the dedicated hosts under the dedicated host group.
      * 
-    */
+     */
     public List<DedicatedHostInstanceViewWithNameResponse> hosts() {
         return this.hosts == null ? List.of() : this.hosts;
     }

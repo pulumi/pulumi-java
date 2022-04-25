@@ -20,6 +20,10 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends com.pulumi.r
     @Import(name="dimensions", required=true)
     private List<String> dimensions;
 
+    /**
+     * @return Dimensions of the AsyncQuery.
+     * 
+     */
     public List<String> dimensions() {
         return this.dimensions;
     }
@@ -31,6 +35,10 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends com.pulumi.r
     @Import(name="endTimestamp", required=true)
     private String endTimestamp;
 
+    /**
+     * @return End timestamp of the query range.
+     * 
+     */
     public String endTimestamp() {
         return this.endTimestamp;
     }
@@ -42,6 +50,10 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends com.pulumi.r
     @Import(name="metrics", required=true)
     private List<String> metrics;
 
+    /**
+     * @return Metrics of the AsyncQuery. Example: [&#34;name:message_count,func:sum,alias:sum_message_count&#34;]
+     * 
+     */
     public List<String> metrics() {
         return this.metrics;
     }
@@ -53,6 +65,10 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends com.pulumi.r
     @Import(name="outputFormat", required=true)
     private String outputFormat;
 
+    /**
+     * @return Output format.
+     * 
+     */
     public String outputFormat() {
         return this.outputFormat;
     }
@@ -64,6 +80,10 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends com.pulumi.r
     @Import(name="startTimestamp", required=true)
     private String startTimestamp;
 
+    /**
+     * @return Start timestamp of the query range.
+     * 
+     */
     public String startTimestamp() {
         return this.startTimestamp;
     }
@@ -75,6 +95,10 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends com.pulumi.r
     @Import(name="timeUnit", required=true)
     private String timeUnit;
 
+    /**
+     * @return Query GroupBy time unit.
+     * 
+     */
     public String timeUnit() {
         return this.timeUnit;
     }
@@ -108,39 +132,87 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends com.pulumi.r
             $ = new GoogleCloudApigeeV1QueryMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dimensions Dimensions of the AsyncQuery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(List<String> dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param dimensions Dimensions of the AsyncQuery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(String... dimensions) {
             return dimensions(List.of(dimensions));
         }
 
+        /**
+         * @param endTimestamp End timestamp of the query range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimestamp(String endTimestamp) {
             $.endTimestamp = endTimestamp;
             return this;
         }
 
+        /**
+         * @param metrics Metrics of the AsyncQuery. Example: [&#34;name:message_count,func:sum,alias:sum_message_count&#34;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<String> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics Metrics of the AsyncQuery. Example: [&#34;name:message_count,func:sum,alias:sum_message_count&#34;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(String... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param outputFormat Output format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputFormat(String outputFormat) {
             $.outputFormat = outputFormat;
             return this;
         }
 
+        /**
+         * @param startTimestamp Start timestamp of the query range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimestamp(String startTimestamp) {
             $.startTimestamp = startTimestamp;
             return this;
         }
 
+        /**
+         * @param timeUnit Query GroupBy time unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeUnit(String timeUnit) {
             $.timeUnit = timeUnit;
             return this;

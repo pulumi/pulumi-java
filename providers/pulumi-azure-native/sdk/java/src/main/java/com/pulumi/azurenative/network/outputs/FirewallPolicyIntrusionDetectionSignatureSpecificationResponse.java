@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FirewallPolicyIntrusionDetectionSignatureSpecificationResponse {
     /**
-     * Signature id.
+     * @return Signature id.
      * 
      */
     private final @Nullable String id;
     /**
-     * The signature state.
+     * @return The signature state.
      * 
      */
     private final @Nullable String mode;
@@ -31,16 +31,16 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
     }
 
     /**
-     * Signature id.
+     * @return Signature id.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The signature state.
+     * @return The signature state.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }

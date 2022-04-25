@@ -25,6 +25,10 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return The value of the host header in the HTTPS health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -36,6 +40,10 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -47,6 +55,10 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
     @Import(name="portName")
     private @Nullable Output<String> portName;
 
+    /**
+     * @return Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
+     * 
+     */
     public Optional<Output<String>> portName() {
         return Optional.ofNullable(this.portName);
     }
@@ -58,6 +70,10 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
     @Import(name="portSpecification")
     private @Nullable Output<HTTPSHealthCheckPortSpecification> portSpecification;
 
+    /**
+     * @return Specifies how port is selected for health checking, can be one of following values: USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. If not specified, HTTPS health check follows behavior specified in port and portName fields.
+     * 
+     */
     public Optional<Output<HTTPSHealthCheckPortSpecification>> portSpecification() {
         return Optional.ofNullable(this.portSpecification);
     }
@@ -69,6 +85,10 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
     @Import(name="proxyHeader")
     private @Nullable Output<HTTPSHealthCheckProxyHeader> proxyHeader;
 
+    /**
+     * @return Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
+     * 
+     */
     public Optional<Output<HTTPSHealthCheckProxyHeader>> proxyHeader() {
         return Optional.ofNullable(this.proxyHeader);
     }
@@ -80,6 +100,10 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
     @Import(name="requestPath")
     private @Nullable Output<String> requestPath;
 
+    /**
+     * @return The request path of the HTTPS health check request. The default value is /.
+     * 
+     */
     public Optional<Output<String>> requestPath() {
         return Optional.ofNullable(this.requestPath);
     }
@@ -91,6 +115,10 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
     @Import(name="response")
     private @Nullable Output<String> response;
 
+    /**
+     * @return The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.
+     * 
+     */
     public Optional<Output<String>> response() {
         return Optional.ofNullable(this.response);
     }
@@ -125,65 +153,149 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
             $ = new HTTPSHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host The value of the host header in the HTTPS health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host The value of the host header in the HTTPS health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param port The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param portName Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portName(@Nullable Output<String> portName) {
             $.portName = portName;
             return this;
         }
 
+        /**
+         * @param portName Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portName(String portName) {
             return portName(Output.of(portName));
         }
 
+        /**
+         * @param portSpecification Specifies how port is selected for health checking, can be one of following values: USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. If not specified, HTTPS health check follows behavior specified in port and portName fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portSpecification(@Nullable Output<HTTPSHealthCheckPortSpecification> portSpecification) {
             $.portSpecification = portSpecification;
             return this;
         }
 
+        /**
+         * @param portSpecification Specifies how port is selected for health checking, can be one of following values: USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. If not specified, HTTPS health check follows behavior specified in port and portName fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portSpecification(HTTPSHealthCheckPortSpecification portSpecification) {
             return portSpecification(Output.of(portSpecification));
         }
 
+        /**
+         * @param proxyHeader Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyHeader(@Nullable Output<HTTPSHealthCheckProxyHeader> proxyHeader) {
             $.proxyHeader = proxyHeader;
             return this;
         }
 
+        /**
+         * @param proxyHeader Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyHeader(HTTPSHealthCheckProxyHeader proxyHeader) {
             return proxyHeader(Output.of(proxyHeader));
         }
 
+        /**
+         * @param requestPath The request path of the HTTPS health check request. The default value is /.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestPath(@Nullable Output<String> requestPath) {
             $.requestPath = requestPath;
             return this;
         }
 
+        /**
+         * @param requestPath The request path of the HTTPS health check request. The default value is /.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestPath(String requestPath) {
             return requestPath(Output.of(requestPath));
         }
 
+        /**
+         * @param response The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.
+         * 
+         * @return builder
+         * 
+         */
         public Builder response(@Nullable Output<String> response) {
             $.response = response;
             return this;
         }
 
+        /**
+         * @param response The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.
+         * 
+         * @return builder
+         * 
+         */
         public Builder response(String response) {
             return response(Output.of(response));
         }

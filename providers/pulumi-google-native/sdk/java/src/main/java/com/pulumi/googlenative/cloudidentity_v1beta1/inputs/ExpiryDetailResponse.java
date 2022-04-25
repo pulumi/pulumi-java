@@ -23,6 +23,10 @@ public final class ExpiryDetailResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="expireTime", required=true)
     private String expireTime;
 
+    /**
+     * @return The time at which the `MembershipRole` will expire.
+     * 
+     */
     public String expireTime() {
         return this.expireTime;
     }
@@ -51,6 +55,12 @@ public final class ExpiryDetailResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ExpiryDetailResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expireTime The time at which the `MembershipRole` will expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(String expireTime) {
             $.expireTime = expireTime;
             return this;

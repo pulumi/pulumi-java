@@ -26,6 +26,10 @@ public final class RequestMirrorPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="backendService")
     private @Nullable Output<String> backendService;
 
+    /**
+     * @return The full or partial URL to the BackendService resource being mirrored to.
+     * 
+     */
     public Optional<Output<String>> backendService() {
         return Optional.ofNullable(this.backendService);
     }
@@ -54,11 +58,23 @@ public final class RequestMirrorPolicyArgs extends com.pulumi.resources.Resource
             $ = new RequestMirrorPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendService The full or partial URL to the BackendService resource being mirrored to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendService(@Nullable Output<String> backendService) {
             $.backendService = backendService;
             return this;
         }
 
+        /**
+         * @param backendService The full or partial URL to the BackendService resource being mirrored to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendService(String backendService) {
             return backendService(Output.of(backendService));
         }

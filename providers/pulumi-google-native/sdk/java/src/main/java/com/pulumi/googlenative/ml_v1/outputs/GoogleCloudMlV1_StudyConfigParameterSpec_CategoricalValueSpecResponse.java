@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse {
     /**
-     * Must be specified if type is `CATEGORICAL`. The list of possible categories.
+     * @return Must be specified if type is `CATEGORICAL`. The list of possible categories.
      * 
      */
     private final List<String> values;
@@ -22,9 +22,9 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpec
     }
 
     /**
-     * Must be specified if type is `CATEGORICAL`. The list of possible categories.
+     * @return Must be specified if type is `CATEGORICAL`. The list of possible categories.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

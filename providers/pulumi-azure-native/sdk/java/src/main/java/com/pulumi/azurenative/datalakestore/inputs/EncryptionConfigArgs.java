@@ -27,6 +27,10 @@ public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="keyVaultMetaInfo")
     private @Nullable Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo;
 
+    /**
+     * @return The Key Vault information for connecting to user managed encryption keys.
+     * 
+     */
     public Optional<Output<KeyVaultMetaInfoArgs>> keyVaultMetaInfo() {
         return Optional.ofNullable(this.keyVaultMetaInfo);
     }
@@ -38,6 +42,10 @@ public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
     private Output<EncryptionConfigType> type;
 
+    /**
+     * @return The type of encryption configuration being used. Currently the only supported types are &#39;UserManaged&#39; and &#39;ServiceManaged&#39;.
+     * 
+     */
     public Output<EncryptionConfigType> type() {
         return this.type;
     }
@@ -67,20 +75,44 @@ public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new EncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultMetaInfo The Key Vault information for connecting to user managed encryption keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultMetaInfo(@Nullable Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo) {
             $.keyVaultMetaInfo = keyVaultMetaInfo;
             return this;
         }
 
+        /**
+         * @param keyVaultMetaInfo The Key Vault information for connecting to user managed encryption keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultMetaInfo(KeyVaultMetaInfoArgs keyVaultMetaInfo) {
             return keyVaultMetaInfo(Output.of(keyVaultMetaInfo));
         }
 
+        /**
+         * @param type The type of encryption configuration being used. Currently the only supported types are &#39;UserManaged&#39; and &#39;ServiceManaged&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<EncryptionConfigType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of encryption configuration being used. Currently the only supported types are &#39;UserManaged&#39; and &#39;ServiceManaged&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(EncryptionConfigType type) {
             return type(Output.of(type));
         }

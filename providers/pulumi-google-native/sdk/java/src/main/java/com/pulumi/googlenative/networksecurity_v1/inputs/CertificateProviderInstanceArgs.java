@@ -24,6 +24,10 @@ public final class CertificateProviderInstanceArgs extends com.pulumi.resources.
     @Import(name="pluginInstance", required=true)
     private Output<String> pluginInstance;
 
+    /**
+     * @return Plugin instance name, used to locate and load CertificateProvider instance configuration. Set to &#34;google_cloud_private_spiffe&#34; to use Certificate Authority Service certificate provider instance.
+     * 
+     */
     public Output<String> pluginInstance() {
         return this.pluginInstance;
     }
@@ -52,11 +56,23 @@ public final class CertificateProviderInstanceArgs extends com.pulumi.resources.
             $ = new CertificateProviderInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pluginInstance Plugin instance name, used to locate and load CertificateProvider instance configuration. Set to &#34;google_cloud_private_spiffe&#34; to use Certificate Authority Service certificate provider instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pluginInstance(Output<String> pluginInstance) {
             $.pluginInstance = pluginInstance;
             return this;
         }
 
+        /**
+         * @param pluginInstance Plugin instance name, used to locate and load CertificateProvider instance configuration. Set to &#34;google_cloud_private_spiffe&#34; to use Certificate Authority Service certificate provider instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pluginInstance(String pluginInstance) {
             return pluginInstance(Output.of(pluginInstance));
         }

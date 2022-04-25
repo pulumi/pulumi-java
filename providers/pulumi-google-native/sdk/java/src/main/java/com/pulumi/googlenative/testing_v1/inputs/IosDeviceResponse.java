@@ -23,6 +23,10 @@ public final class IosDeviceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="iosModelId", required=true)
     private String iosModelId;
 
+    /**
+     * @return The id of the iOS device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public String iosModelId() {
         return this.iosModelId;
     }
@@ -34,6 +38,10 @@ public final class IosDeviceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="iosVersionId", required=true)
     private String iosVersionId;
 
+    /**
+     * @return The id of the iOS major software version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public String iosVersionId() {
         return this.iosVersionId;
     }
@@ -45,6 +53,10 @@ public final class IosDeviceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="locale", required=true)
     private String locale;
 
+    /**
+     * @return The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public String locale() {
         return this.locale;
     }
@@ -56,6 +68,10 @@ public final class IosDeviceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="orientation", required=true)
     private String orientation;
 
+    /**
+     * @return How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+     * 
+     */
     public String orientation() {
         return this.orientation;
     }
@@ -87,21 +103,45 @@ public final class IosDeviceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IosDeviceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iosModelId The id of the iOS device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosModelId(String iosModelId) {
             $.iosModelId = iosModelId;
             return this;
         }
 
+        /**
+         * @param iosVersionId The id of the iOS major software version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosVersionId(String iosVersionId) {
             $.iosVersionId = iosVersionId;
             return this;
         }
 
+        /**
+         * @param locale The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locale(String locale) {
             $.locale = locale;
             return this;
         }
 
+        /**
+         * @param orientation How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orientation(String orientation) {
             $.orientation = orientation;
             return this;

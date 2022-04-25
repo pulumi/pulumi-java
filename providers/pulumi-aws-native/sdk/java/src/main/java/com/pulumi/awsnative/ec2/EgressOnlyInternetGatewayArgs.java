@@ -20,6 +20,10 @@ public final class EgressOnlyInternetGatewayArgs extends com.pulumi.resources.Re
     @Import(name="vpcId", required=true)
     private Output<String> vpcId;
 
+    /**
+     * @return The ID of the VPC for which to create the egress-only internet gateway.
+     * 
+     */
     public Output<String> vpcId() {
         return this.vpcId;
     }
@@ -48,11 +52,23 @@ public final class EgressOnlyInternetGatewayArgs extends com.pulumi.resources.Re
             $ = new EgressOnlyInternetGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vpcId The ID of the VPC for which to create the egress-only internet gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The ID of the VPC for which to create the egress-only internet gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

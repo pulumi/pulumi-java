@@ -24,6 +24,10 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the script action.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters", required=true)
     private Output<String> parameters;
 
+    /**
+     * @return The parameters for the script provided.
+     * 
+     */
     public Output<String> parameters() {
         return this.parameters;
     }
@@ -46,6 +54,10 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return The URI to the script.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -76,29 +88,65 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScriptActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the script action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the script action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters The parameters for the script provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Output<String> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters for the script provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(String parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param uri The URI to the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The URI to the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

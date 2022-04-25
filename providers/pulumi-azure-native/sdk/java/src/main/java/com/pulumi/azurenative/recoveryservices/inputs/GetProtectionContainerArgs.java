@@ -19,6 +19,10 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
     @Import(name="containerName", required=true)
     private String containerName;
 
+    /**
+     * @return Name of the container whose details need to be fetched.
+     * 
+     */
     public String containerName() {
         return this.containerName;
     }
@@ -30,6 +34,10 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
     @Import(name="fabricName", required=true)
     private String fabricName;
 
+    /**
+     * @return Name of the fabric where the container belongs.
+     * 
+     */
     public String fabricName() {
         return this.fabricName;
     }
@@ -41,6 +49,10 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
     @Import(name="vaultName", required=true)
     private String vaultName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public String vaultName() {
         return this.vaultName;
     }
@@ -83,21 +99,45 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
             $ = new GetProtectionContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerName Name of the container whose details need to be fetched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param fabricName Name of the fabric where the container belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(String fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             $.vaultName = vaultName;
             return this;

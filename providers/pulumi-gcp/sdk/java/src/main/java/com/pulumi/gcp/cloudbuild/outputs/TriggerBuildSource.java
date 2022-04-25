@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TriggerBuildSource {
     /**
-     * Location of the source in a Google Cloud Source Repository.
+     * @return Location of the source in a Google Cloud Source Repository.
      * Structure is documented below.
      * 
      */
     private final @Nullable TriggerBuildSourceRepoSource repoSource;
     /**
-     * Location of the source in an archive file in Google Cloud Storage.
+     * @return Location of the source in an archive file in Google Cloud Storage.
      * Structure is documented below.
      * 
      */
@@ -34,18 +34,18 @@ public final class TriggerBuildSource {
     }
 
     /**
-     * Location of the source in a Google Cloud Source Repository.
+     * @return Location of the source in a Google Cloud Source Repository.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<TriggerBuildSourceRepoSource> repoSource() {
         return Optional.ofNullable(this.repoSource);
     }
     /**
-     * Location of the source in an archive file in Google Cloud Storage.
+     * @return Location of the source in an archive file in Google Cloud Storage.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<TriggerBuildSourceStorageSource> storageSource() {
         return Optional.ofNullable(this.storageSource);
     }

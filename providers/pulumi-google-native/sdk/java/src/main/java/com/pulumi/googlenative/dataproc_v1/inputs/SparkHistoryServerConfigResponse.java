@@ -23,6 +23,10 @@ public final class SparkHistoryServerConfigResponse extends com.pulumi.resources
     @Import(name="dataprocCluster", required=true)
     private String dataprocCluster;
 
+    /**
+     * @return Optional. Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.Example: projects/[project_id]/regions/[region]/clusters/[cluster_name]
+     * 
+     */
     public String dataprocCluster() {
         return this.dataprocCluster;
     }
@@ -51,6 +55,12 @@ public final class SparkHistoryServerConfigResponse extends com.pulumi.resources
             $ = new SparkHistoryServerConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataprocCluster Optional. Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.Example: projects/[project_id]/regions/[region]/clusters/[cluster_name]
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataprocCluster(String dataprocCluster) {
             $.dataprocCluster = dataprocCluster;
             return this;

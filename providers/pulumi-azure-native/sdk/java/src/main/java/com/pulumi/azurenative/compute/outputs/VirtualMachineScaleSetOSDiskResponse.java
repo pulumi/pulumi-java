@@ -18,52 +18,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualMachineScaleSetOSDiskResponse {
     /**
-     * Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+     * @return Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
      * 
      */
     private final @Nullable String caching;
     /**
-     * Specifies how the virtual machines in the scale set should be created.&lt;br&gt;&lt;br&gt; The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+     * @return Specifies how the virtual machines in the scale set should be created.&lt;br&gt;&lt;br&gt; The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
      * 
      */
     private final String createOption;
     /**
-     * Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.
+     * @return Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.
      * 
      */
     private final @Nullable DiffDiskSettingsResponse diffDiskSettings;
     /**
-     * Specifies the size of the operating system disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+     * @return Specifies the size of the operating system disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
      * 
      */
     private final @Nullable Integer diskSizeGB;
     /**
-     * Specifies information about the unmanaged user image to base the scale set on.
+     * @return Specifies information about the unmanaged user image to base the scale set on.
      * 
      */
     private final @Nullable VirtualHardDiskResponse image;
     /**
-     * The managed disk parameters.
+     * @return The managed disk parameters.
      * 
      */
     private final @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk;
     /**
-     * The disk name.
+     * @return The disk name.
      * 
      */
     private final @Nullable String name;
     /**
-     * This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
+     * @return This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
      * 
      */
     private final @Nullable String osType;
     /**
-     * Specifies the container urls that are used to store operating system disks for the scale set.
+     * @return Specifies the container urls that are used to store operating system disks for the scale set.
      * 
      */
     private final @Nullable List<String> vhdContainers;
     /**
-     * Specifies whether writeAccelerator should be enabled or disabled on the disk.
+     * @return Specifies whether writeAccelerator should be enabled or disabled on the disk.
      * 
      */
     private final @Nullable Boolean writeAcceleratorEnabled;
@@ -93,72 +93,72 @@ public final class VirtualMachineScaleSetOSDiskResponse {
     }
 
     /**
-     * Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+     * @return Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
      * 
-    */
+     */
     public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
     /**
-     * Specifies how the virtual machines in the scale set should be created.&lt;br&gt;&lt;br&gt; The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+     * @return Specifies how the virtual machines in the scale set should be created.&lt;br&gt;&lt;br&gt; The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
      * 
-    */
+     */
     public String createOption() {
         return this.createOption;
     }
     /**
-     * Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.
+     * @return Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.
      * 
-    */
+     */
     public Optional<DiffDiskSettingsResponse> diffDiskSettings() {
         return Optional.ofNullable(this.diffDiskSettings);
     }
     /**
-     * Specifies the size of the operating system disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+     * @return Specifies the size of the operating system disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
      * 
-    */
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
-     * Specifies information about the unmanaged user image to base the scale set on.
+     * @return Specifies information about the unmanaged user image to base the scale set on.
      * 
-    */
+     */
     public Optional<VirtualHardDiskResponse> image() {
         return Optional.ofNullable(this.image);
     }
     /**
-     * The managed disk parameters.
+     * @return The managed disk parameters.
      * 
-    */
+     */
     public Optional<VirtualMachineScaleSetManagedDiskParametersResponse> managedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
     /**
-     * The disk name.
+     * @return The disk name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
+     * @return This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
-     * Specifies the container urls that are used to store operating system disks for the scale set.
+     * @return Specifies the container urls that are used to store operating system disks for the scale set.
      * 
-    */
+     */
     public List<String> vhdContainers() {
         return this.vhdContainers == null ? List.of() : this.vhdContainers;
     }
     /**
-     * Specifies whether writeAccelerator should be enabled or disabled on the disk.
+     * @return Specifies whether writeAccelerator should be enabled or disabled on the disk.
      * 
-    */
+     */
     public Optional<Boolean> writeAcceleratorEnabled() {
         return Optional.ofNullable(this.writeAcceleratorEnabled);
     }

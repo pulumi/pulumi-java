@@ -27,6 +27,10 @@ public final class DatabaseEncryptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyName")
     private @Nullable Output<String> keyName;
 
+    /**
+     * @return Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
+     * 
+     */
     public Optional<Output<String>> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -38,6 +42,10 @@ public final class DatabaseEncryptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="state")
     private @Nullable Output<DatabaseEncryptionState> state;
 
+    /**
+     * @return Denotes the state of etcd encryption.
+     * 
+     */
     public Optional<Output<DatabaseEncryptionState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -67,20 +75,44 @@ public final class DatabaseEncryptionArgs extends com.pulumi.resources.ResourceA
             $ = new DatabaseEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param state Denotes the state of etcd encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<DatabaseEncryptionState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Denotes the state of etcd encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(DatabaseEncryptionState state) {
             return state(Output.of(state));
         }

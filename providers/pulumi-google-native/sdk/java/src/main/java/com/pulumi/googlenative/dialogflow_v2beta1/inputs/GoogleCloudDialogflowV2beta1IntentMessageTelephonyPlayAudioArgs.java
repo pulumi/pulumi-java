@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioAr
     @Import(name="audioUri", required=true)
     private Output<String> audioUri;
 
+    /**
+     * @return URI to a Google Cloud Storage object containing the audio to play, e.g., &#34;gs://bucket/object&#34;. The object must contain a single channel (mono) of linear PCM audio (2 bytes / sample) at 8kHz. This object must be readable by the `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` service account where is the number of the Telephony Gateway project (usually the same as the Dialogflow agent project). If the Google Cloud Storage bucket is in the Telephony Gateway project, this permission is added by default when enabling the Dialogflow V2 API. For audio from other sources, consider using the `TelephonySynthesizeSpeech` message with SSML.
+     * 
+     */
     public Output<String> audioUri() {
         return this.audioUri;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioAr
             $ = new GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audioUri URI to a Google Cloud Storage object containing the audio to play, e.g., &#34;gs://bucket/object&#34;. The object must contain a single channel (mono) of linear PCM audio (2 bytes / sample) at 8kHz. This object must be readable by the `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` service account where is the number of the Telephony Gateway project (usually the same as the Dialogflow agent project). If the Google Cloud Storage bucket is in the Telephony Gateway project, this permission is added by default when enabling the Dialogflow V2 API. For audio from other sources, consider using the `TelephonySynthesizeSpeech` message with SSML.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioUri(Output<String> audioUri) {
             $.audioUri = audioUri;
             return this;
         }
 
+        /**
+         * @param audioUri URI to a Google Cloud Storage object containing the audio to play, e.g., &#34;gs://bucket/object&#34;. The object must contain a single channel (mono) of linear PCM audio (2 bytes / sample) at 8kHz. This object must be readable by the `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` service account where is the number of the Telephony Gateway project (usually the same as the Dialogflow agent project). If the Google Cloud Storage bucket is in the Telephony Gateway project, this permission is added by default when enabling the Dialogflow V2 API. For audio from other sources, consider using the `TelephonySynthesizeSpeech` message with SSML.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioUri(String audioUri) {
             return audioUri(Output.of(audioUri));
         }

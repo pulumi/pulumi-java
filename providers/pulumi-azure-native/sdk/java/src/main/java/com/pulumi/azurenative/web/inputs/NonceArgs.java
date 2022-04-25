@@ -27,6 +27,10 @@ public final class NonceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nonceExpirationInterval")
     private @Nullable Output<String> nonceExpirationInterval;
 
+    /**
+     * @return The time after the request is made when the nonce should expire.
+     * 
+     */
     public Optional<Output<String>> nonceExpirationInterval() {
         return Optional.ofNullable(this.nonceExpirationInterval);
     }
@@ -38,6 +42,10 @@ public final class NonceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="validateNonce")
     private @Nullable Output<Boolean> validateNonce;
 
+    /**
+     * @return &lt;code&gt;false&lt;/code&gt; if the nonce should not be validated while completing the login flow; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> validateNonce() {
         return Optional.ofNullable(this.validateNonce);
     }
@@ -67,20 +75,44 @@ public final class NonceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NonceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nonceExpirationInterval The time after the request is made when the nonce should expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonceExpirationInterval(@Nullable Output<String> nonceExpirationInterval) {
             $.nonceExpirationInterval = nonceExpirationInterval;
             return this;
         }
 
+        /**
+         * @param nonceExpirationInterval The time after the request is made when the nonce should expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonceExpirationInterval(String nonceExpirationInterval) {
             return nonceExpirationInterval(Output.of(nonceExpirationInterval));
         }
 
+        /**
+         * @param validateNonce &lt;code&gt;false&lt;/code&gt; if the nonce should not be validated while completing the login flow; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateNonce(@Nullable Output<Boolean> validateNonce) {
             $.validateNonce = validateNonce;
             return this;
         }
 
+        /**
+         * @param validateNonce &lt;code&gt;false&lt;/code&gt; if the nonce should not be validated while completing the login flow; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateNonce(Boolean validateNonce) {
             return validateNonce(Output.of(validateNonce));
         }

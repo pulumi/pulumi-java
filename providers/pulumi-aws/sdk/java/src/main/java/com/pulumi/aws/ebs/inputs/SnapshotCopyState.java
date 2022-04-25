@@ -25,6 +25,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the EBS Snapshot.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataEncryptionKeyId")
     private @Nullable Output<String> dataEncryptionKeyId;
 
+    /**
+     * @return The data encryption key identifier for the snapshot.
+     * 
+     */
     public Optional<Output<String>> dataEncryptionKeyId() {
         return Optional.ofNullable(this.dataEncryptionKeyId);
     }
@@ -47,6 +55,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of what the snapshot is.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -58,6 +70,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
     private @Nullable Output<Boolean> encrypted;
 
+    /**
+     * @return Whether the snapshot is encrypted.
+     * 
+     */
     public Optional<Output<Boolean>> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
@@ -69,6 +85,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return The ARN for the KMS encryption key.
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -87,6 +107,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ownerAlias")
     private @Nullable Output<String> ownerAlias;
 
+    /**
+     * @return Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
+     * 
+     */
     public Optional<Output<String>> ownerAlias() {
         return Optional.ofNullable(this.ownerAlias);
     }
@@ -98,6 +122,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
     private @Nullable Output<String> ownerId;
 
+    /**
+     * @return The AWS account ID of the snapshot owner.
+     * 
+     */
     public Optional<Output<String>> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
@@ -109,6 +137,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="permanentRestore")
     private @Nullable Output<Boolean> permanentRestore;
 
+    /**
+     * @return Indicates whether to permanently restore an archived snapshot.
+     * 
+     */
     public Optional<Output<Boolean>> permanentRestore() {
         return Optional.ofNullable(this.permanentRestore);
     }
@@ -120,6 +152,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRegion")
     private @Nullable Output<String> sourceRegion;
 
+    /**
+     * @return The region of the source snapshot.
+     * 
+     */
     public Optional<Output<String>> sourceRegion() {
         return Optional.ofNullable(this.sourceRegion);
     }
@@ -131,6 +167,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshotId")
     private @Nullable Output<String> sourceSnapshotId;
 
+    /**
+     * @return The ARN for the snapshot to be copied.
+     * 
+     */
     public Optional<Output<String>> sourceSnapshotId() {
         return Optional.ofNullable(this.sourceSnapshotId);
     }
@@ -142,6 +182,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageTier")
     private @Nullable Output<String> storageTier;
 
+    /**
+     * @return The name of the storage tier. Valid values are `archive` and `standard`. Default value is `standard`.
+     * 
+     */
     public Optional<Output<String>> storageTier() {
         return Optional.ofNullable(this.storageTier);
     }
@@ -160,6 +204,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -171,6 +219,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="temporaryRestoreDays")
     private @Nullable Output<Integer> temporaryRestoreDays;
 
+    /**
+     * @return Specifies the number of days for which to temporarily restore an archived snapshot. Required for temporary restores only. The snapshot will be automatically re-archived after this period.
+     * 
+     */
     public Optional<Output<Integer>> temporaryRestoreDays() {
         return Optional.ofNullable(this.temporaryRestoreDays);
     }
@@ -189,6 +241,10 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumeSize")
     private @Nullable Output<Integer> volumeSize;
 
+    /**
+     * @return The size of the drive in GiBs.
+     * 
+     */
     public Optional<Output<Integer>> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
@@ -233,47 +289,107 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
             $ = new SnapshotCopyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the EBS Snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the EBS Snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param dataEncryptionKeyId The data encryption key identifier for the snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataEncryptionKeyId(@Nullable Output<String> dataEncryptionKeyId) {
             $.dataEncryptionKeyId = dataEncryptionKeyId;
             return this;
         }
 
+        /**
+         * @param dataEncryptionKeyId The data encryption key identifier for the snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataEncryptionKeyId(String dataEncryptionKeyId) {
             return dataEncryptionKeyId(Output.of(dataEncryptionKeyId));
         }
 
+        /**
+         * @param description A description of what the snapshot is.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of what the snapshot is.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encrypted Whether the snapshot is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             $.encrypted = encrypted;
             return this;
         }
 
+        /**
+         * @param encrypted Whether the snapshot is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(Boolean encrypted) {
             return encrypted(Output.of(encrypted));
         }
 
+        /**
+         * @param kmsKeyId The ARN for the KMS encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId The ARN for the KMS encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
@@ -287,56 +403,128 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
             return outpostArn(Output.of(outpostArn));
         }
 
+        /**
+         * @param ownerAlias Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerAlias(@Nullable Output<String> ownerAlias) {
             $.ownerAlias = ownerAlias;
             return this;
         }
 
+        /**
+         * @param ownerAlias Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerAlias(String ownerAlias) {
             return ownerAlias(Output.of(ownerAlias));
         }
 
+        /**
+         * @param ownerId The AWS account ID of the snapshot owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(@Nullable Output<String> ownerId) {
             $.ownerId = ownerId;
             return this;
         }
 
+        /**
+         * @param ownerId The AWS account ID of the snapshot owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(String ownerId) {
             return ownerId(Output.of(ownerId));
         }
 
+        /**
+         * @param permanentRestore Indicates whether to permanently restore an archived snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permanentRestore(@Nullable Output<Boolean> permanentRestore) {
             $.permanentRestore = permanentRestore;
             return this;
         }
 
+        /**
+         * @param permanentRestore Indicates whether to permanently restore an archived snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permanentRestore(Boolean permanentRestore) {
             return permanentRestore(Output.of(permanentRestore));
         }
 
+        /**
+         * @param sourceRegion The region of the source snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRegion(@Nullable Output<String> sourceRegion) {
             $.sourceRegion = sourceRegion;
             return this;
         }
 
+        /**
+         * @param sourceRegion The region of the source snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRegion(String sourceRegion) {
             return sourceRegion(Output.of(sourceRegion));
         }
 
+        /**
+         * @param sourceSnapshotId The ARN for the snapshot to be copied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshotId(@Nullable Output<String> sourceSnapshotId) {
             $.sourceSnapshotId = sourceSnapshotId;
             return this;
         }
 
+        /**
+         * @param sourceSnapshotId The ARN for the snapshot to be copied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshotId(String sourceSnapshotId) {
             return sourceSnapshotId(Output.of(sourceSnapshotId));
         }
 
+        /**
+         * @param storageTier The name of the storage tier. Valid values are `archive` and `standard`. Default value is `standard`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageTier(@Nullable Output<String> storageTier) {
             $.storageTier = storageTier;
             return this;
         }
 
+        /**
+         * @param storageTier The name of the storage tier. Valid values are `archive` and `standard`. Default value is `standard`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageTier(String storageTier) {
             return storageTier(Output.of(storageTier));
         }
@@ -350,20 +538,44 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param temporaryRestoreDays Specifies the number of days for which to temporarily restore an archived snapshot. Required for temporary restores only. The snapshot will be automatically re-archived after this period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryRestoreDays(@Nullable Output<Integer> temporaryRestoreDays) {
             $.temporaryRestoreDays = temporaryRestoreDays;
             return this;
         }
 
+        /**
+         * @param temporaryRestoreDays Specifies the number of days for which to temporarily restore an archived snapshot. Required for temporary restores only. The snapshot will be automatically re-archived after this period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryRestoreDays(Integer temporaryRestoreDays) {
             return temporaryRestoreDays(Output.of(temporaryRestoreDays));
         }
@@ -377,11 +589,23 @@ public final class SnapshotCopyState extends com.pulumi.resources.ResourceArgs {
             return volumeId(Output.of(volumeId));
         }
 
+        /**
+         * @param volumeSize The size of the drive in GiBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             $.volumeSize = volumeSize;
             return this;
         }
 
+        /**
+         * @param volumeSize The size of the drive in GiBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeSize(Integer volumeSize) {
             return volumeSize(Output.of(volumeSize));
         }

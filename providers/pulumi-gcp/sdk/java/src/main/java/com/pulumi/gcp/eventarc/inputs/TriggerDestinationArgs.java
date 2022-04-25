@@ -23,6 +23,10 @@ public final class TriggerDestinationArgs extends com.pulumi.resources.ResourceA
     @Import(name="cloudFunction")
     private @Nullable Output<String> cloudFunction;
 
+    /**
+     * @return The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+     * 
+     */
     public Optional<Output<String>> cloudFunction() {
         return Optional.ofNullable(this.cloudFunction);
     }
@@ -34,6 +38,10 @@ public final class TriggerDestinationArgs extends com.pulumi.resources.ResourceA
     @Import(name="cloudRunService")
     private @Nullable Output<TriggerDestinationCloudRunServiceArgs> cloudRunService;
 
+    /**
+     * @return Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.
+     * 
+     */
     public Optional<Output<TriggerDestinationCloudRunServiceArgs>> cloudRunService() {
         return Optional.ofNullable(this.cloudRunService);
     }
@@ -63,20 +71,44 @@ public final class TriggerDestinationArgs extends com.pulumi.resources.ResourceA
             $ = new TriggerDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudFunction The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudFunction(@Nullable Output<String> cloudFunction) {
             $.cloudFunction = cloudFunction;
             return this;
         }
 
+        /**
+         * @param cloudFunction The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudFunction(String cloudFunction) {
             return cloudFunction(Output.of(cloudFunction));
         }
 
+        /**
+         * @param cloudRunService Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRunService(@Nullable Output<TriggerDestinationCloudRunServiceArgs> cloudRunService) {
             $.cloudRunService = cloudRunService;
             return this;
         }
 
+        /**
+         * @param cloudRunService Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRunService(TriggerDestinationCloudRunServiceArgs cloudRunService) {
             return cloudRunService(Output.of(cloudRunService));
         }

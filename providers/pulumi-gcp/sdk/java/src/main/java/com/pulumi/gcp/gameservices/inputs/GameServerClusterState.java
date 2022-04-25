@@ -24,6 +24,10 @@ public final class GameServerClusterState extends com.pulumi.resources.ResourceA
     @Import(name="clusterId")
     private @Nullable Output<String> clusterId;
 
+    /**
+     * @return Required. The resource name of the game server cluster
+     * 
+     */
     public Optional<Output<String>> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
@@ -37,6 +41,12 @@ public final class GameServerClusterState extends com.pulumi.resources.ResourceA
     @Import(name="connectionInfo")
     private @Nullable Output<GameServerClusterConnectionInfoGetArgs> connectionInfo;
 
+    /**
+     * @return Game server cluster connection information. This information is used to
+     * manage game server clusters.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GameServerClusterConnectionInfoGetArgs>> connectionInfo() {
         return Optional.ofNullable(this.connectionInfo);
     }
@@ -48,6 +58,10 @@ public final class GameServerClusterState extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Human readable description of the cluster.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -60,6 +74,11 @@ public final class GameServerClusterState extends com.pulumi.resources.ResourceA
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The labels associated with this game server cluster. Each label is a
+     * key-value pair.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -71,6 +90,10 @@ public final class GameServerClusterState extends com.pulumi.resources.ResourceA
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the Cluster.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -84,6 +107,12 @@ public final class GameServerClusterState extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource id of the game server cluster, eg:
+     * &#39;projects/{project_id}/locations/{location}/realms/{realm_id}/gameServerClusters/{cluster_id}&#39;. For example,
+     * &#39;projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster&#39;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -96,6 +125,11 @@ public final class GameServerClusterState extends com.pulumi.resources.ResourceA
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -107,6 +141,10 @@ public final class GameServerClusterState extends com.pulumi.resources.ResourceA
     @Import(name="realmId")
     private @Nullable Output<String> realmId;
 
+    /**
+     * @return The realm id of the game server realm.
+     * 
+     */
     public Optional<Output<String>> realmId() {
         return Optional.ofNullable(this.realmId);
     }
@@ -142,74 +180,182 @@ public final class GameServerClusterState extends com.pulumi.resources.ResourceA
             $ = new GameServerClusterState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterId Required. The resource name of the game server cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(@Nullable Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param clusterId Required. The resource name of the game server cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(String clusterId) {
             return clusterId(Output.of(clusterId));
         }
 
+        /**
+         * @param connectionInfo Game server cluster connection information. This information is used to
+         * manage game server clusters.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionInfo(@Nullable Output<GameServerClusterConnectionInfoGetArgs> connectionInfo) {
             $.connectionInfo = connectionInfo;
             return this;
         }
 
+        /**
+         * @param connectionInfo Game server cluster connection information. This information is used to
+         * manage game server clusters.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionInfo(GameServerClusterConnectionInfoGetArgs connectionInfo) {
             return connectionInfo(Output.of(connectionInfo));
         }
 
+        /**
+         * @param description Human readable description of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Human readable description of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param labels The labels associated with this game server cluster. Each label is a
+         * key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The labels associated with this game server cluster. Each label is a
+         * key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param location Location of the Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource id of the game server cluster, eg:
+         * &#39;projects/{project_id}/locations/{location}/realms/{realm_id}/gameServerClusters/{cluster_id}&#39;. For example,
+         * &#39;projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource id of the game server cluster, eg:
+         * &#39;projects/{project_id}/locations/{location}/realms/{realm_id}/gameServerClusters/{cluster_id}&#39;. For example,
+         * &#39;projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param realmId The realm id of the game server realm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder realmId(@Nullable Output<String> realmId) {
             $.realmId = realmId;
             return this;
         }
 
+        /**
+         * @param realmId The realm id of the game server realm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder realmId(String realmId) {
             return realmId(Output.of(realmId));
         }

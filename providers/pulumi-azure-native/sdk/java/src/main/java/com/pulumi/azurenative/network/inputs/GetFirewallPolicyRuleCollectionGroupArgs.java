@@ -19,6 +19,10 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends com.pulumi.r
     @Import(name="firewallPolicyName", required=true)
     private String firewallPolicyName;
 
+    /**
+     * @return The name of the Firewall Policy.
+     * 
+     */
     public String firewallPolicyName() {
         return this.firewallPolicyName;
     }
@@ -30,6 +34,10 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends com.pulumi.r
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends com.pulumi.r
     @Import(name="ruleCollectionGroupName", required=true)
     private String ruleCollectionGroupName;
 
+    /**
+     * @return The name of the FirewallPolicyRuleCollectionGroup.
+     * 
+     */
     public String ruleCollectionGroupName() {
         return this.ruleCollectionGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends com.pulumi.r
             $ = new GetFirewallPolicyRuleCollectionGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param firewallPolicyName The name of the Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallPolicyName(String firewallPolicyName) {
             $.firewallPolicyName = firewallPolicyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param ruleCollectionGroupName The name of the FirewallPolicyRuleCollectionGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleCollectionGroupName(String ruleCollectionGroupName) {
             $.ruleCollectionGroupName = ruleCollectionGroupName;
             return this;

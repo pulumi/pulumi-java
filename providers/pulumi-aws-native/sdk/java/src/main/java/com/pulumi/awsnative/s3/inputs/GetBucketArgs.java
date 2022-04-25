@@ -19,6 +19,10 @@ public final class GetBucketArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="bucketName", required=true)
     private String bucketName;
 
+    /**
+     * @return A name for the bucket. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
+     * 
+     */
     public String bucketName() {
         return this.bucketName;
     }
@@ -47,6 +51,12 @@ public final class GetBucketArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBucketArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName A name for the bucket. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             $.bucketName = bucketName;
             return this;

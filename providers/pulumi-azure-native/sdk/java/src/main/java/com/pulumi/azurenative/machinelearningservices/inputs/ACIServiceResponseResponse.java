@@ -37,6 +37,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="appInsightsEnabled")
     private @Nullable Boolean appInsightsEnabled;
 
+    /**
+     * @return Whether or not Application Insights is enabled.
+     * 
+     */
     public Optional<Boolean> appInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
@@ -48,6 +52,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="authEnabled")
     private @Nullable Boolean authEnabled;
 
+    /**
+     * @return Whether or not authentication is enabled on the service.
+     * 
+     */
     public Optional<Boolean> authEnabled() {
         return Optional.ofNullable(this.authEnabled);
     }
@@ -59,6 +67,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="cname")
     private @Nullable String cname;
 
+    /**
+     * @return The CName for the service.
+     * 
+     */
     public Optional<String> cname() {
         return Optional.ofNullable(this.cname);
     }
@@ -71,6 +83,11 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="computeType", required=true)
     private String computeType;
 
+    /**
+     * @return The compute environment type for the service.
+     * Expected value is &#39;ACI&#39;.
+     * 
+     */
     public String computeType() {
         return this.computeType;
     }
@@ -82,6 +99,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="containerResourceRequirements")
     private @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
 
+    /**
+     * @return The container resource requirements.
+     * 
+     */
     public Optional<ContainerResourceRequirementsResponse> containerResourceRequirements() {
         return Optional.ofNullable(this.containerResourceRequirements);
     }
@@ -93,6 +114,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="dataCollection")
     private @Nullable ACIServiceResponseResponseDataCollection dataCollection;
 
+    /**
+     * @return Details of the data collection options specified.
+     * 
+     */
     public Optional<ACIServiceResponseResponseDataCollection> dataCollection() {
         return Optional.ofNullable(this.dataCollection);
     }
@@ -104,6 +129,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="deploymentType")
     private @Nullable String deploymentType;
 
+    /**
+     * @return The deployment type for the service.
+     * 
+     */
     public Optional<String> deploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
@@ -115,6 +144,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -126,6 +159,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="encryptionProperties")
     private @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties;
 
+    /**
+     * @return The encryption properties.
+     * 
+     */
     public Optional<ACIServiceResponseResponseEncryptionProperties> encryptionProperties() {
         return Optional.ofNullable(this.encryptionProperties);
     }
@@ -137,6 +174,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="environmentImageRequest")
     private @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
 
+    /**
+     * @return The Environment, models and assets used for inferencing.
+     * 
+     */
     public Optional<ACIServiceResponseResponseEnvironmentImageRequest> environmentImageRequest() {
         return Optional.ofNullable(this.environmentImageRequest);
     }
@@ -148,6 +189,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="error", required=true)
     private ServiceResponseBaseResponseError error;
 
+    /**
+     * @return The error details.
+     * 
+     */
     public ServiceResponseBaseResponseError error() {
         return this.error;
     }
@@ -159,6 +204,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="kvTags")
     private @Nullable Map<String,String> kvTags;
 
+    /**
+     * @return The service tag dictionary. Tags are mutable.
+     * 
+     */
     public Optional<Map<String,String>> kvTags() {
         return Optional.ofNullable(this.kvTags);
     }
@@ -170,6 +219,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return The name of the Azure location/region.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -181,6 +234,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="modelConfigMap", required=true)
     private Map<String,Object> modelConfigMap;
 
+    /**
+     * @return Details on the models and configurations.
+     * 
+     */
     public Map<String,Object> modelConfigMap() {
         return this.modelConfigMap;
     }
@@ -192,6 +249,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="models")
     private @Nullable List<ModelResponse> models;
 
+    /**
+     * @return The list of models.
+     * 
+     */
     public Optional<List<ModelResponse>> models() {
         return Optional.ofNullable(this.models);
     }
@@ -203,6 +264,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return The service property dictionary. Properties are immutable.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -214,6 +279,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="publicFqdn")
     private @Nullable String publicFqdn;
 
+    /**
+     * @return The public Fqdn for the service.
+     * 
+     */
     public Optional<String> publicFqdn() {
         return Optional.ofNullable(this.publicFqdn);
     }
@@ -225,6 +294,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="publicIp")
     private @Nullable String publicIp;
 
+    /**
+     * @return The public IP address for the service.
+     * 
+     */
     public Optional<String> publicIp() {
         return Optional.ofNullable(this.publicIp);
     }
@@ -236,6 +309,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="scoringUri", required=true)
     private String scoringUri;
 
+    /**
+     * @return The Uri for sending scoring requests.
+     * 
+     */
     public String scoringUri() {
         return this.scoringUri;
     }
@@ -247,6 +324,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="sslCertificate")
     private @Nullable String sslCertificate;
 
+    /**
+     * @return The public SSL certificate in PEM format to use if SSL is enabled.
+     * 
+     */
     public Optional<String> sslCertificate() {
         return Optional.ofNullable(this.sslCertificate);
     }
@@ -258,6 +339,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="sslEnabled")
     private @Nullable Boolean sslEnabled;
 
+    /**
+     * @return Whether or not SSL is enabled.
+     * 
+     */
     public Optional<Boolean> sslEnabled() {
         return Optional.ofNullable(this.sslEnabled);
     }
@@ -269,6 +354,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="sslKey")
     private @Nullable String sslKey;
 
+    /**
+     * @return The public SSL key in PEM format for the certificate.
+     * 
+     */
     public Optional<String> sslKey() {
         return Optional.ofNullable(this.sslKey);
     }
@@ -280,6 +369,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The current state of the service.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -291,6 +384,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="swaggerUri", required=true)
     private String swaggerUri;
 
+    /**
+     * @return The Uri for sending swagger requests.
+     * 
+     */
     public String swaggerUri() {
         return this.swaggerUri;
     }
@@ -302,6 +399,10 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="vnetConfiguration")
     private @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration;
 
+    /**
+     * @return The virtual network configuration.
+     * 
+     */
     public Optional<ACIServiceResponseResponseVnetConfiguration> vnetConfiguration() {
         return Optional.ofNullable(this.vnetConfiguration);
     }
@@ -354,130 +455,287 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
             $ = new ACIServiceResponseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appInsightsEnabled Whether or not Application Insights is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
             $.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
 
+        /**
+         * @param authEnabled Whether or not authentication is enabled on the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authEnabled(@Nullable Boolean authEnabled) {
             $.authEnabled = authEnabled;
             return this;
         }
 
+        /**
+         * @param cname The CName for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cname(@Nullable String cname) {
             $.cname = cname;
             return this;
         }
 
+        /**
+         * @param computeType The compute environment type for the service.
+         * Expected value is &#39;ACI&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(String computeType) {
             $.computeType = computeType;
             return this;
         }
 
+        /**
+         * @param containerResourceRequirements The container resource requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
             $.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
 
+        /**
+         * @param dataCollection Details of the data collection options specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollection(@Nullable ACIServiceResponseResponseDataCollection dataCollection) {
             $.dataCollection = dataCollection;
             return this;
         }
 
+        /**
+         * @param deploymentType The deployment type for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentType(@Nullable String deploymentType) {
             $.deploymentType = deploymentType;
             return this;
         }
 
+        /**
+         * @param description The service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptionProperties The encryption properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionProperties(@Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties) {
             $.encryptionProperties = encryptionProperties;
             return this;
         }
 
+        /**
+         * @param environmentImageRequest The Environment, models and assets used for inferencing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentImageRequest(@Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest) {
             $.environmentImageRequest = environmentImageRequest;
             return this;
         }
 
+        /**
+         * @param error The error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(ServiceResponseBaseResponseError error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param kvTags The service tag dictionary. Tags are mutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
             $.kvTags = kvTags;
             return this;
         }
 
+        /**
+         * @param location The name of the Azure location/region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param modelConfigMap Details on the models and configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelConfigMap(Map<String,Object> modelConfigMap) {
             $.modelConfigMap = modelConfigMap;
             return this;
         }
 
+        /**
+         * @param models The list of models.
+         * 
+         * @return builder
+         * 
+         */
         public Builder models(@Nullable List<ModelResponse> models) {
             $.models = models;
             return this;
         }
 
+        /**
+         * @param models The list of models.
+         * 
+         * @return builder
+         * 
+         */
         public Builder models(ModelResponse... models) {
             return models(List.of(models));
         }
 
+        /**
+         * @param properties The service property dictionary. Properties are immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param publicFqdn The public Fqdn for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicFqdn(@Nullable String publicFqdn) {
             $.publicFqdn = publicFqdn;
             return this;
         }
 
+        /**
+         * @param publicIp The public IP address for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIp(@Nullable String publicIp) {
             $.publicIp = publicIp;
             return this;
         }
 
+        /**
+         * @param scoringUri The Uri for sending scoring requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringUri(String scoringUri) {
             $.scoringUri = scoringUri;
             return this;
         }
 
+        /**
+         * @param sslCertificate The public SSL certificate in PEM format to use if SSL is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificate(@Nullable String sslCertificate) {
             $.sslCertificate = sslCertificate;
             return this;
         }
 
+        /**
+         * @param sslEnabled Whether or not SSL is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslEnabled(@Nullable Boolean sslEnabled) {
             $.sslEnabled = sslEnabled;
             return this;
         }
 
+        /**
+         * @param sslKey The public SSL key in PEM format for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslKey(@Nullable String sslKey) {
             $.sslKey = sslKey;
             return this;
         }
 
+        /**
+         * @param state The current state of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param swaggerUri The Uri for sending swagger requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder swaggerUri(String swaggerUri) {
             $.swaggerUri = swaggerUri;
             return this;
         }
 
+        /**
+         * @param vnetConfiguration The virtual network configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetConfiguration(@Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration) {
             $.vnetConfiguration = vnetConfiguration;
             return this;

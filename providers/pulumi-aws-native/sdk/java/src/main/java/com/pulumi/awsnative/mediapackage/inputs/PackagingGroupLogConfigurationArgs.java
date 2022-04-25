@@ -22,6 +22,10 @@ public final class PackagingGroupLogConfigurationArgs extends com.pulumi.resourc
     @Import(name="logGroupName")
     private @Nullable Output<String> logGroupName;
 
+    /**
+     * @return Sets a custom AWS CloudWatch log group name for egress logs. If a log group name isn&#39;t specified, the default name is used: /aws/MediaPackage/VodEgressAccessLogs.
+     * 
+     */
     public Optional<Output<String>> logGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
@@ -50,11 +54,23 @@ public final class PackagingGroupLogConfigurationArgs extends com.pulumi.resourc
             $ = new PackagingGroupLogConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logGroupName Sets a custom AWS CloudWatch log group name for egress logs. If a log group name isn&#39;t specified, the default name is used: /aws/MediaPackage/VodEgressAccessLogs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
             $.logGroupName = logGroupName;
             return this;
         }
 
+        /**
+         * @param logGroupName Sets a custom AWS CloudWatch log group name for egress logs. If a log group name isn&#39;t specified, the default name is used: /aws/MediaPackage/VodEgressAccessLogs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(String logGroupName) {
             return logGroupName(Output.of(logGroupName));
         }

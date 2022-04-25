@@ -25,6 +25,10 @@ public final class ResourceGroupValueResponse extends com.pulumi.resources.Invok
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Location of the resource group.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -36,6 +40,10 @@ public final class ResourceGroupValueResponse extends com.pulumi.resources.Invok
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -65,11 +73,23 @@ public final class ResourceGroupValueResponse extends com.pulumi.resources.Invok
             $ = new ResourceGroupValueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Location of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

@@ -26,6 +26,10 @@ public final class ApplicationGatewayProbeHealthResponseMatch extends com.pulumi
     @Import(name="body")
     private @Nullable String body;
 
+    /**
+     * @return Body that must be contained in the health response. Default value is empty.
+     * 
+     */
     public Optional<String> body() {
         return Optional.ofNullable(this.body);
     }
@@ -37,6 +41,10 @@ public final class ApplicationGatewayProbeHealthResponseMatch extends com.pulumi
     @Import(name="statusCodes")
     private @Nullable List<String> statusCodes;
 
+    /**
+     * @return Allowed ranges of healthy status codes. Default range of healthy status codes is 200-399.
+     * 
+     */
     public Optional<List<String>> statusCodes() {
         return Optional.ofNullable(this.statusCodes);
     }
@@ -66,16 +74,34 @@ public final class ApplicationGatewayProbeHealthResponseMatch extends com.pulumi
             $ = new ApplicationGatewayProbeHealthResponseMatch(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param body Body that must be contained in the health response. Default value is empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable String body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param statusCodes Allowed ranges of healthy status codes. Default range of healthy status codes is 200-399.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCodes(@Nullable List<String> statusCodes) {
             $.statusCodes = statusCodes;
             return this;
         }
 
+        /**
+         * @param statusCodes Allowed ranges of healthy status codes. Default range of healthy status codes is 200-399.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCodes(String... statusCodes) {
             return statusCodes(List.of(statusCodes));
         }

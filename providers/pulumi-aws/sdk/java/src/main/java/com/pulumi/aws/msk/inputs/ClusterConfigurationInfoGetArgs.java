@@ -21,6 +21,10 @@ public final class ClusterConfigurationInfoGetArgs extends com.pulumi.resources.
     @Import(name="arn", required=true)
     private Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
+     * 
+     */
     public Output<String> arn() {
         return this.arn;
     }
@@ -32,6 +36,10 @@ public final class ClusterConfigurationInfoGetArgs extends com.pulumi.resources.
     @Import(name="revision", required=true)
     private Output<Integer> revision;
 
+    /**
+     * @return Revision of the MSK Configuration to use in the cluster.
+     * 
+     */
     public Output<Integer> revision() {
         return this.revision;
     }
@@ -61,20 +69,44 @@ public final class ClusterConfigurationInfoGetArgs extends com.pulumi.resources.
             $ = new ClusterConfigurationInfoGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param revision Revision of the MSK Configuration to use in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Output<Integer> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision Revision of the MSK Configuration to use in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Integer revision) {
             return revision(Output.of(revision));
         }

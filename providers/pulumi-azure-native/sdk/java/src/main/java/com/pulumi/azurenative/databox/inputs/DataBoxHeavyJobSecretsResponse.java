@@ -28,6 +28,10 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
     @Import(name="cabinetPodSecrets", required=true)
     private List<DataBoxHeavySecretResponse> cabinetPodSecrets;
 
+    /**
+     * @return Contains the list of secret objects for a databox heavy job.
+     * 
+     */
     public List<DataBoxHeavySecretResponse> cabinetPodSecrets() {
         return this.cabinetPodSecrets;
     }
@@ -39,6 +43,10 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
     @Import(name="dcAccessSecurityCode", required=true)
     private DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
+    /**
+     * @return Dc Access Security Code for Customer Managed Shipping
+     * 
+     */
     public DcAccessSecurityCodeResponse dcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
@@ -50,6 +58,10 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
     @Import(name="error", required=true)
     private CloudErrorResponse error;
 
+    /**
+     * @return Error while fetching the secrets.
+     * 
+     */
     public CloudErrorResponse error() {
         return this.error;
     }
@@ -62,6 +74,11 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
     @Import(name="jobSecretsType", required=true)
     private String jobSecretsType;
 
+    /**
+     * @return Used to indicate what type of job secrets object.
+     * Expected value is &#39;DataBoxHeavy&#39;.
+     * 
+     */
     public String jobSecretsType() {
         return this.jobSecretsType;
     }
@@ -93,25 +110,56 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
             $ = new DataBoxHeavyJobSecretsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cabinetPodSecrets Contains the list of secret objects for a databox heavy job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cabinetPodSecrets(List<DataBoxHeavySecretResponse> cabinetPodSecrets) {
             $.cabinetPodSecrets = cabinetPodSecrets;
             return this;
         }
 
+        /**
+         * @param cabinetPodSecrets Contains the list of secret objects for a databox heavy job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cabinetPodSecrets(DataBoxHeavySecretResponse... cabinetPodSecrets) {
             return cabinetPodSecrets(List.of(cabinetPodSecrets));
         }
 
+        /**
+         * @param dcAccessSecurityCode Dc Access Security Code for Customer Managed Shipping
+         * 
+         * @return builder
+         * 
+         */
         public Builder dcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
             $.dcAccessSecurityCode = dcAccessSecurityCode;
             return this;
         }
 
+        /**
+         * @param error Error while fetching the secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(CloudErrorResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param jobSecretsType Used to indicate what type of job secrets object.
+         * Expected value is &#39;DataBoxHeavy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobSecretsType(String jobSecretsType) {
             $.jobSecretsType = jobSecretsType;
             return this;

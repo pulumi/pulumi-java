@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2CryptoHashConfigArgs extends com.pulumi.res
     @Import(name="cryptoKey")
     private @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
+    /**
+     * @return The key used by the hash function.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2CryptoKeyArgs>> cryptoKey() {
         return Optional.ofNullable(this.cryptoKey);
     }
@@ -54,11 +58,23 @@ public final class GooglePrivacyDlpV2CryptoHashConfigArgs extends com.pulumi.res
             $ = new GooglePrivacyDlpV2CryptoHashConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cryptoKey The key used by the hash function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKey(@Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
             $.cryptoKey = cryptoKey;
             return this;
         }
 
+        /**
+         * @param cryptoKey The key used by the hash function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
             return cryptoKey(Output.of(cryptoKey));
         }

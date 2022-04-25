@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2ConditionsResponse extends com.pulumi.resou
     @Import(name="conditions", required=true)
     private List<GooglePrivacyDlpV2ConditionResponse> conditions;
 
+    /**
+     * @return A collection of conditions.
+     * 
+     */
     public List<GooglePrivacyDlpV2ConditionResponse> conditions() {
         return this.conditions;
     }
@@ -52,11 +56,23 @@ public final class GooglePrivacyDlpV2ConditionsResponse extends com.pulumi.resou
             $ = new GooglePrivacyDlpV2ConditionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions A collection of conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<GooglePrivacyDlpV2ConditionResponse> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions A collection of conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(GooglePrivacyDlpV2ConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }

@@ -19,6 +19,10 @@ public final class GetSnapshotPolicyArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the NetApp account
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetSnapshotPolicyArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetSnapshotPolicyArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="snapshotPolicyName", required=true)
     private String snapshotPolicyName;
 
+    /**
+     * @return The name of the snapshot policy
+     * 
+     */
     public String snapshotPolicyName() {
         return this.snapshotPolicyName;
     }
@@ -71,16 +83,34 @@ public final class GetSnapshotPolicyArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetSnapshotPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param snapshotPolicyName The name of the snapshot policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotPolicyName(String snapshotPolicyName) {
             $.snapshotPolicyName = snapshotPolicyName;
             return this;

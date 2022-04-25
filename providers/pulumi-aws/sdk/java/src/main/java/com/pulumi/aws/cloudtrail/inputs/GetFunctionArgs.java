@@ -19,6 +19,10 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the CloudFront function.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="stage", required=true)
     private String stage;
 
+    /**
+     * @return The function’s stage, either `DEVELOPMENT` or `LIVE`.
+     * 
+     */
     public String stage() {
         return this.stage;
     }
@@ -59,11 +67,23 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFunctionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the CloudFront function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param stage The function’s stage, either `DEVELOPMENT` or `LIVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(String stage) {
             $.stage = stage;
             return this;

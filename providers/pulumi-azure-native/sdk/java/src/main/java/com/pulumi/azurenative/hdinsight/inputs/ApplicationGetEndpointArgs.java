@@ -27,6 +27,10 @@ public final class ApplicationGetEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="destinationPort")
     private @Nullable Output<Integer> destinationPort;
 
+    /**
+     * @return The destination port to connect to.
+     * 
+     */
     public Optional<Output<Integer>> destinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
@@ -38,6 +42,10 @@ public final class ApplicationGetEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the endpoint.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -49,6 +57,10 @@ public final class ApplicationGetEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="privateIPAddress")
     private @Nullable Output<String> privateIPAddress;
 
+    /**
+     * @return The private ip address of the endpoint.
+     * 
+     */
     public Optional<Output<String>> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
@@ -60,6 +72,10 @@ public final class ApplicationGetEndpointArgs extends com.pulumi.resources.Resou
     @Import(name="publicPort")
     private @Nullable Output<Integer> publicPort;
 
+    /**
+     * @return The public port to connect to.
+     * 
+     */
     public Optional<Output<Integer>> publicPort() {
         return Optional.ofNullable(this.publicPort);
     }
@@ -91,38 +107,86 @@ public final class ApplicationGetEndpointArgs extends com.pulumi.resources.Resou
             $ = new ApplicationGetEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationPort The destination port to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
             $.destinationPort = destinationPort;
             return this;
         }
 
+        /**
+         * @param destinationPort The destination port to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPort(Integer destinationPort) {
             return destinationPort(Output.of(destinationPort));
         }
 
+        /**
+         * @param location The location of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param privateIPAddress The private ip address of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param privateIPAddress The private ip address of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(String privateIPAddress) {
             return privateIPAddress(Output.of(privateIPAddress));
         }
 
+        /**
+         * @param publicPort The public port to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicPort(@Nullable Output<Integer> publicPort) {
             $.publicPort = publicPort;
             return this;
         }
 
+        /**
+         * @param publicPort The public port to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicPort(Integer publicPort) {
             return publicPort(Output.of(publicPort));
         }

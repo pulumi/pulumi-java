@@ -20,6 +20,10 @@ public final class ScheduledActionTargetActionPauseClusterGetArgs extends com.pu
     @Import(name="clusterIdentifier", required=true)
     private Output<String> clusterIdentifier;
 
+    /**
+     * @return The identifier of the cluster to be resumed.
+     * 
+     */
     public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
@@ -48,11 +52,23 @@ public final class ScheduledActionTargetActionPauseClusterGetArgs extends com.pu
             $ = new ScheduledActionTargetActionPauseClusterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterIdentifier The identifier of the cluster to be resumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
             $.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
+        /**
+         * @param clusterIdentifier The identifier of the cluster to be resumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(String clusterIdentifier) {
             return clusterIdentifier(Output.of(clusterIdentifier));
         }

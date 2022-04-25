@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScheduleRecurrenceResponse {
     /**
-     * The recurrence type.
+     * @return The recurrence type.
      * 
      */
     private final String recurrenceType;
     /**
-     * The recurrence value.
+     * @return The recurrence value.
      * 
      */
     private final Integer recurrenceValue;
     /**
-     * The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
+     * @return The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
      * 
      */
     private final @Nullable List<String> weeklyDaysList;
@@ -39,23 +39,23 @@ public final class ScheduleRecurrenceResponse {
     }
 
     /**
-     * The recurrence type.
+     * @return The recurrence type.
      * 
-    */
+     */
     public String recurrenceType() {
         return this.recurrenceType;
     }
     /**
-     * The recurrence value.
+     * @return The recurrence value.
      * 
-    */
+     */
     public Integer recurrenceValue() {
         return this.recurrenceValue;
     }
     /**
-     * The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
+     * @return The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
      * 
-    */
+     */
     public List<String> weeklyDaysList() {
         return this.weeklyDaysList == null ? List.of() : this.weeklyDaysList;
     }

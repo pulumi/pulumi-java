@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UpgradePolicyResponse {
     /**
-     * Configuration parameters used for performing automatic OS Upgrade.
+     * @return Configuration parameters used for performing automatic OS Upgrade.
      * 
      */
     private final @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy;
     /**
-     * Specifies the mode of an upgrade to virtual machines in the scale set.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.&lt;br /&gt;&lt;br /&gt; **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.
+     * @return Specifies the mode of an upgrade to virtual machines in the scale set.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.&lt;br /&gt;&lt;br /&gt; **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.
      * 
      */
     private final @Nullable String mode;
     /**
-     * The configuration parameters used while performing a rolling upgrade.
+     * @return The configuration parameters used while performing a rolling upgrade.
      * 
      */
     private final @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy;
@@ -40,23 +40,23 @@ public final class UpgradePolicyResponse {
     }
 
     /**
-     * Configuration parameters used for performing automatic OS Upgrade.
+     * @return Configuration parameters used for performing automatic OS Upgrade.
      * 
-    */
+     */
     public Optional<AutomaticOSUpgradePolicyResponse> automaticOSUpgradePolicy() {
         return Optional.ofNullable(this.automaticOSUpgradePolicy);
     }
     /**
-     * Specifies the mode of an upgrade to virtual machines in the scale set.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.&lt;br /&gt;&lt;br /&gt; **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.
+     * @return Specifies the mode of an upgrade to virtual machines in the scale set.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.&lt;br /&gt;&lt;br /&gt; **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * The configuration parameters used while performing a rolling upgrade.
+     * @return The configuration parameters used while performing a rolling upgrade.
      * 
-    */
+     */
     public Optional<RollingUpgradePolicyResponse> rollingUpgradePolicy() {
         return Optional.ofNullable(this.rollingUpgradePolicy);
     }

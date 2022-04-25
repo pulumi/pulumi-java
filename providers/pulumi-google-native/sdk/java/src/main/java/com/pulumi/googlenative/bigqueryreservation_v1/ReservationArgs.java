@@ -23,6 +23,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ignoreIdleSlots")
     private @Nullable Output<Boolean> ignoreIdleSlots;
 
+    /**
+     * @return If false, any query or pipeline job using this reservation will use idle slots from other reservations within the same admin project. If true, a query or pipeline job using this reservation will execute with the slot capacity specified in the slot_capacity field at most.
+     * 
+     */
     public Optional<Output<Boolean>> ignoreIdleSlots() {
         return Optional.ofNullable(this.ignoreIdleSlots);
     }
@@ -41,6 +45,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,6 +74,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="slotCapacity")
     private @Nullable Output<String> slotCapacity;
 
+    /**
+     * @return Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignore_idle_slots is set to false. If the new reservation&#39;s slot capacity exceed the project&#39;s slot capacity or if total slot capacity of the new reservation and its siblings exceeds the project&#39;s slot capacity, the request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions slot capacity constraints are checked separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.
+     * 
+     */
     public Optional<Output<String>> slotCapacity() {
         return Optional.ofNullable(this.slotCapacity);
     }
@@ -99,11 +111,23 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReservationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreIdleSlots If false, any query or pipeline job using this reservation will use idle slots from other reservations within the same admin project. If true, a query or pipeline job using this reservation will execute with the slot capacity specified in the slot_capacity field at most.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreIdleSlots(@Nullable Output<Boolean> ignoreIdleSlots) {
             $.ignoreIdleSlots = ignoreIdleSlots;
             return this;
         }
 
+        /**
+         * @param ignoreIdleSlots If false, any query or pipeline job using this reservation will use idle slots from other reservations within the same admin project. If true, a query or pipeline job using this reservation will execute with the slot capacity specified in the slot_capacity field at most.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreIdleSlots(Boolean ignoreIdleSlots) {
             return ignoreIdleSlots(Output.of(ignoreIdleSlots));
         }
@@ -117,11 +141,23 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -144,11 +180,23 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
             return reservationId(Output.of(reservationId));
         }
 
+        /**
+         * @param slotCapacity Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignore_idle_slots is set to false. If the new reservation&#39;s slot capacity exceed the project&#39;s slot capacity or if total slot capacity of the new reservation and its siblings exceeds the project&#39;s slot capacity, the request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions slot capacity constraints are checked separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotCapacity(@Nullable Output<String> slotCapacity) {
             $.slotCapacity = slotCapacity;
             return this;
         }
 
+        /**
+         * @param slotCapacity Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignore_idle_slots is set to false. If the new reservation&#39;s slot capacity exceed the project&#39;s slot capacity or if total slot capacity of the new reservation and its siblings exceeds the project&#39;s slot capacity, the request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions slot capacity constraints are checked separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotCapacity(String slotCapacity) {
             return slotCapacity(Output.of(slotCapacity));
         }

@@ -26,6 +26,10 @@ public final class JobSchedulingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxFailuresPerHour")
     private @Nullable Output<Integer> maxFailuresPerHour;
 
+    /**
+     * @return Optional. Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed.A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window.Maximum value is 10.Note: Currently, this restartable job option is not supported in Dataproc workflow template (https://cloud.google.com/dataproc/docs/concepts/workflows/using-workflows#adding_jobs_to_a_template) jobs.
+     * 
+     */
     public Optional<Output<Integer>> maxFailuresPerHour() {
         return Optional.ofNullable(this.maxFailuresPerHour);
     }
@@ -37,6 +41,10 @@ public final class JobSchedulingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxFailuresTotal")
     private @Nullable Output<Integer> maxFailuresTotal;
 
+    /**
+     * @return Optional. Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240.Note: Currently, this restartable job option is not supported in Dataproc workflow template (https://cloud.google.com/dataproc/docs/concepts/workflows/using-workflows#adding_jobs_to_a_template) jobs.
+     * 
+     */
     public Optional<Output<Integer>> maxFailuresTotal() {
         return Optional.ofNullable(this.maxFailuresTotal);
     }
@@ -66,20 +74,44 @@ public final class JobSchedulingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobSchedulingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxFailuresPerHour Optional. Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed.A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window.Maximum value is 10.Note: Currently, this restartable job option is not supported in Dataproc workflow template (https://cloud.google.com/dataproc/docs/concepts/workflows/using-workflows#adding_jobs_to_a_template) jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFailuresPerHour(@Nullable Output<Integer> maxFailuresPerHour) {
             $.maxFailuresPerHour = maxFailuresPerHour;
             return this;
         }
 
+        /**
+         * @param maxFailuresPerHour Optional. Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed.A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window.Maximum value is 10.Note: Currently, this restartable job option is not supported in Dataproc workflow template (https://cloud.google.com/dataproc/docs/concepts/workflows/using-workflows#adding_jobs_to_a_template) jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFailuresPerHour(Integer maxFailuresPerHour) {
             return maxFailuresPerHour(Output.of(maxFailuresPerHour));
         }
 
+        /**
+         * @param maxFailuresTotal Optional. Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240.Note: Currently, this restartable job option is not supported in Dataproc workflow template (https://cloud.google.com/dataproc/docs/concepts/workflows/using-workflows#adding_jobs_to_a_template) jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFailuresTotal(@Nullable Output<Integer> maxFailuresTotal) {
             $.maxFailuresTotal = maxFailuresTotal;
             return this;
         }
 
+        /**
+         * @param maxFailuresTotal Optional. Maximum number of times in total a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. Maximum value is 240.Note: Currently, this restartable job option is not supported in Dataproc workflow template (https://cloud.google.com/dataproc/docs/concepts/workflows/using-workflows#adding_jobs_to_a_template) jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFailuresTotal(Integer maxFailuresTotal) {
             return maxFailuresTotal(Output.of(maxFailuresTotal));
         }

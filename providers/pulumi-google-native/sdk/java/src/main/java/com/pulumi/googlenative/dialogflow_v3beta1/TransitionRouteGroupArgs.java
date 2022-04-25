@@ -31,6 +31,10 @@ public final class TransitionRouteGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -63,6 +67,10 @@ public final class TransitionRouteGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The unique identifier of the transition route group. TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format: `projects//locations//agents//flows//transitionRouteGroups/`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -81,6 +89,10 @@ public final class TransitionRouteGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="transitionRoutes")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs>> transitionRoutes;
 
+    /**
+     * @return Transition routes associated with the TransitionRouteGroup.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs>>> transitionRoutes() {
         return Optional.ofNullable(this.transitionRoutes);
     }
@@ -125,11 +137,23 @@ public final class TransitionRouteGroupArgs extends com.pulumi.resources.Resourc
             return agentId(Output.of(agentId));
         }
 
+        /**
+         * @param displayName The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -161,11 +185,23 @@ public final class TransitionRouteGroupArgs extends com.pulumi.resources.Resourc
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The unique identifier of the transition route group. TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format: `projects//locations//agents//flows//transitionRouteGroups/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique identifier of the transition route group. TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format: `projects//locations//agents//flows//transitionRouteGroups/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -179,15 +215,33 @@ public final class TransitionRouteGroupArgs extends com.pulumi.resources.Resourc
             return project(Output.of(project));
         }
 
+        /**
+         * @param transitionRoutes Transition routes associated with the TransitionRouteGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRoutes(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs>> transitionRoutes) {
             $.transitionRoutes = transitionRoutes;
             return this;
         }
 
+        /**
+         * @param transitionRoutes Transition routes associated with the TransitionRouteGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRoutes(List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs> transitionRoutes) {
             return transitionRoutes(Output.of(transitionRoutes));
         }
 
+        /**
+         * @param transitionRoutes Transition routes associated with the TransitionRouteGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionRoutes(GoogleCloudDialogflowCxV3beta1TransitionRouteArgs... transitionRoutes) {
             return transitionRoutes(List.of(transitionRoutes));
         }

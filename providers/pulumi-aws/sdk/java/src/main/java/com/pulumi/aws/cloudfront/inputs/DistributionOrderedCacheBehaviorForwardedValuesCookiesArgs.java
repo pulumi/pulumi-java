@@ -26,6 +26,13 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs ex
     @Import(name="forward", required=true)
     private Output<String> forward;
 
+    /**
+     * @return Specifies whether you want CloudFront to forward
+     * cookies to the origin that is associated with this cache behavior. You can
+     * specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
+     * subsequent `whitelisted_names`
+     * 
+     */
     public Output<String> forward() {
         return this.forward;
     }
@@ -39,6 +46,12 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs ex
     @Import(name="whitelistedNames")
     private @Nullable Output<List<String>> whitelistedNames;
 
+    /**
+     * @return If you have specified `whitelist` to
+     * `forward`, the whitelisted cookies that you want CloudFront to forward to
+     * your origin.
+     * 
+     */
     public Optional<Output<List<String>>> whitelistedNames() {
         return Optional.ofNullable(this.whitelistedNames);
     }
@@ -68,24 +81,66 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs ex
             $ = new DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param forward Specifies whether you want CloudFront to forward
+         * cookies to the origin that is associated with this cache behavior. You can
+         * specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
+         * subsequent `whitelisted_names`
+         * 
+         * @return builder
+         * 
+         */
         public Builder forward(Output<String> forward) {
             $.forward = forward;
             return this;
         }
 
+        /**
+         * @param forward Specifies whether you want CloudFront to forward
+         * cookies to the origin that is associated with this cache behavior. You can
+         * specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
+         * subsequent `whitelisted_names`
+         * 
+         * @return builder
+         * 
+         */
         public Builder forward(String forward) {
             return forward(Output.of(forward));
         }
 
+        /**
+         * @param whitelistedNames If you have specified `whitelist` to
+         * `forward`, the whitelisted cookies that you want CloudFront to forward to
+         * your origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder whitelistedNames(@Nullable Output<List<String>> whitelistedNames) {
             $.whitelistedNames = whitelistedNames;
             return this;
         }
 
+        /**
+         * @param whitelistedNames If you have specified `whitelist` to
+         * `forward`, the whitelisted cookies that you want CloudFront to forward to
+         * your origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder whitelistedNames(List<String> whitelistedNames) {
             return whitelistedNames(Output.of(whitelistedNames));
         }
 
+        /**
+         * @param whitelistedNames If you have specified `whitelist` to
+         * `forward`, the whitelisted cookies that you want CloudFront to forward to
+         * your origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder whitelistedNames(String... whitelistedNames) {
             return whitelistedNames(List.of(whitelistedNames));
         }

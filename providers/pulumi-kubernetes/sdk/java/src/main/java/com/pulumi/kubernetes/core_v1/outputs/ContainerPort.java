@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerPort {
     /**
-     * Number of port to expose on the pod&#39;s IP address. This must be a valid port number, 0 &lt; x &lt; 65536.
+     * @return Number of port to expose on the pod&#39;s IP address. This must be a valid port number, 0 &lt; x &lt; 65536.
      * 
      */
     private final Integer containerPort;
     /**
-     * What host IP to bind the external port to.
+     * @return What host IP to bind the external port to.
      * 
      */
     private final @Nullable String hostIP;
     /**
-     * Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
+     * @return Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
      * 
      */
     private final @Nullable Integer hostPort;
     /**
-     * If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.
+     * @return If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.
      * 
      */
     private final @Nullable String name;
     /**
-     * Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
+     * @return Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
      * 
      * Possible enum values:
      *  - `&#34;SCTP&#34;` is the SCTP protocol.
@@ -58,42 +58,42 @@ public final class ContainerPort {
     }
 
     /**
-     * Number of port to expose on the pod&#39;s IP address. This must be a valid port number, 0 &lt; x &lt; 65536.
+     * @return Number of port to expose on the pod&#39;s IP address. This must be a valid port number, 0 &lt; x &lt; 65536.
      * 
-    */
+     */
     public Integer containerPort() {
         return this.containerPort;
     }
     /**
-     * What host IP to bind the external port to.
+     * @return What host IP to bind the external port to.
      * 
-    */
+     */
     public Optional<String> hostIP() {
         return Optional.ofNullable(this.hostIP);
     }
     /**
-     * Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
+     * @return Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
      * 
-    */
+     */
     public Optional<Integer> hostPort() {
         return Optional.ofNullable(this.hostPort);
     }
     /**
-     * If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.
+     * @return If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
+     * @return Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
      * 
      * Possible enum values:
      *  - `&#34;SCTP&#34;` is the SCTP protocol.
      *  - `&#34;TCP&#34;` is the TCP protocol.
      *  - `&#34;UDP&#34;` is the UDP protocol.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }

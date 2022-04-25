@@ -32,6 +32,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -43,6 +47,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partitionConfig")
     private @Nullable Output<PartitionConfigArgs> partitionConfig;
 
+    /**
+     * @return The settings for this topic&#39;s partitions.
+     * 
+     */
     public Optional<Output<PartitionConfigArgs>> partitionConfig() {
         return Optional.ofNullable(this.partitionConfig);
     }
@@ -61,6 +69,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservationConfig")
     private @Nullable Output<ReservationConfigArgs> reservationConfig;
 
+    /**
+     * @return The settings for this topic&#39;s Reservation usage.
+     * 
+     */
     public Optional<Output<ReservationConfigArgs>> reservationConfig() {
         return Optional.ofNullable(this.reservationConfig);
     }
@@ -72,6 +84,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionConfig")
     private @Nullable Output<RetentionConfigArgs> retentionConfig;
 
+    /**
+     * @return The settings for this topic&#39;s message retention.
+     * 
+     */
     public Optional<Output<RetentionConfigArgs>> retentionConfig() {
         return Optional.ofNullable(this.retentionConfig);
     }
@@ -122,20 +138,44 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param partitionConfig The settings for this topic&#39;s partitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionConfig(@Nullable Output<PartitionConfigArgs> partitionConfig) {
             $.partitionConfig = partitionConfig;
             return this;
         }
 
+        /**
+         * @param partitionConfig The settings for this topic&#39;s partitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionConfig(PartitionConfigArgs partitionConfig) {
             return partitionConfig(Output.of(partitionConfig));
         }
@@ -149,20 +189,44 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param reservationConfig The settings for this topic&#39;s Reservation usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationConfig(@Nullable Output<ReservationConfigArgs> reservationConfig) {
             $.reservationConfig = reservationConfig;
             return this;
         }
 
+        /**
+         * @param reservationConfig The settings for this topic&#39;s Reservation usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationConfig(ReservationConfigArgs reservationConfig) {
             return reservationConfig(Output.of(reservationConfig));
         }
 
+        /**
+         * @param retentionConfig The settings for this topic&#39;s message retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionConfig(@Nullable Output<RetentionConfigArgs> retentionConfig) {
             $.retentionConfig = retentionConfig;
             return this;
         }
 
+        /**
+         * @param retentionConfig The settings for this topic&#39;s message retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionConfig(RetentionConfigArgs retentionConfig) {
             return retentionConfig(Output.of(retentionConfig));
         }

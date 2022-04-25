@@ -14,52 +14,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetTransactionNodeResult {
     /**
-     * Gets or sets the transaction node dns endpoint.
+     * @return Gets or sets the transaction node dns endpoint.
      * 
      */
     private final String dns;
     /**
-     * Gets or sets the firewall rules.
+     * @return Gets or sets the firewall rules.
      * 
      */
     private final @Nullable List<FirewallRuleResponse> firewallRules;
     /**
-     * Fully qualified resource Id of the resource.
+     * @return Fully qualified resource Id of the resource.
      * 
      */
     private final String id;
     /**
-     * Gets or sets the transaction node location.
+     * @return Gets or sets the transaction node location.
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * Sets the transaction node dns endpoint basic auth password.
+     * @return Sets the transaction node dns endpoint basic auth password.
      * 
      */
     private final @Nullable String password;
     /**
-     * Gets or sets the blockchain member provision state.
+     * @return Gets or sets the blockchain member provision state.
      * 
      */
     private final String provisioningState;
     /**
-     * Gets or sets the transaction node public key.
+     * @return Gets or sets the transaction node public key.
      * 
      */
     private final String publicKey;
     /**
-     * The type of the service - e.g. &#34;Microsoft.Blockchain&#34;
+     * @return The type of the service - e.g. &#34;Microsoft.Blockchain&#34;
      * 
      */
     private final String type;
     /**
-     * Gets or sets the transaction node dns endpoint basic auth user name.
+     * @return Gets or sets the transaction node dns endpoint basic auth user name.
      * 
      */
     private final String userName;
@@ -89,72 +89,72 @@ public final class GetTransactionNodeResult {
     }
 
     /**
-     * Gets or sets the transaction node dns endpoint.
+     * @return Gets or sets the transaction node dns endpoint.
      * 
-    */
+     */
     public String dns() {
         return this.dns;
     }
     /**
-     * Gets or sets the firewall rules.
+     * @return Gets or sets the firewall rules.
      * 
-    */
+     */
     public List<FirewallRuleResponse> firewallRules() {
         return this.firewallRules == null ? List.of() : this.firewallRules;
     }
     /**
-     * Fully qualified resource Id of the resource.
+     * @return Fully qualified resource Id of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets or sets the transaction node location.
+     * @return Gets or sets the transaction node location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Sets the transaction node dns endpoint basic auth password.
+     * @return Sets the transaction node dns endpoint basic auth password.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Gets or sets the blockchain member provision state.
+     * @return Gets or sets the blockchain member provision state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Gets or sets the transaction node public key.
+     * @return Gets or sets the transaction node public key.
      * 
-    */
+     */
     public String publicKey() {
         return this.publicKey;
     }
     /**
-     * The type of the service - e.g. &#34;Microsoft.Blockchain&#34;
+     * @return The type of the service - e.g. &#34;Microsoft.Blockchain&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Gets or sets the transaction node dns endpoint basic auth user name.
+     * @return Gets or sets the transaction node dns endpoint basic auth user name.
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

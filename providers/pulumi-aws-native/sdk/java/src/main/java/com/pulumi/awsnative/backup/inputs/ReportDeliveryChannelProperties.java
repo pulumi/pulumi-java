@@ -26,6 +26,10 @@ public final class ReportDeliveryChannelProperties extends com.pulumi.resources.
     @Import(name="formats")
     private @Nullable List<String> formats;
 
+    /**
+     * @return A list of the format of your reports: CSV, JSON, or both. If not specified, the default format is CSV.
+     * 
+     */
     public Optional<List<String>> formats() {
         return Optional.ofNullable(this.formats);
     }
@@ -37,6 +41,10 @@ public final class ReportDeliveryChannelProperties extends com.pulumi.resources.
     @Import(name="s3BucketName", required=true)
     private String s3BucketName;
 
+    /**
+     * @return The unique name of the S3 bucket that receives your reports.
+     * 
+     */
     public String s3BucketName() {
         return this.s3BucketName;
     }
@@ -48,6 +56,10 @@ public final class ReportDeliveryChannelProperties extends com.pulumi.resources.
     @Import(name="s3KeyPrefix")
     private @Nullable String s3KeyPrefix;
 
+    /**
+     * @return The prefix for where AWS Backup Audit Manager delivers your reports to Amazon S3. The prefix is this part of the following path: s3://your-bucket-name/prefix/Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
+     * 
+     */
     public Optional<String> s3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }
@@ -78,20 +90,44 @@ public final class ReportDeliveryChannelProperties extends com.pulumi.resources.
             $ = new ReportDeliveryChannelProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param formats A list of the format of your reports: CSV, JSON, or both. If not specified, the default format is CSV.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formats(@Nullable List<String> formats) {
             $.formats = formats;
             return this;
         }
 
+        /**
+         * @param formats A list of the format of your reports: CSV, JSON, or both. If not specified, the default format is CSV.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formats(String... formats) {
             return formats(List.of(formats));
         }
 
+        /**
+         * @param s3BucketName The unique name of the S3 bucket that receives your reports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3BucketName(String s3BucketName) {
             $.s3BucketName = s3BucketName;
             return this;
         }
 
+        /**
+         * @param s3KeyPrefix The prefix for where AWS Backup Audit Manager delivers your reports to Amazon S3. The prefix is this part of the following path: s3://your-bucket-name/prefix/Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             $.s3KeyPrefix = s3KeyPrefix;
             return this;

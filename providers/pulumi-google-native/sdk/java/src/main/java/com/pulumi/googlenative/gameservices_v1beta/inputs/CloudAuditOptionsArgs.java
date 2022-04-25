@@ -27,6 +27,10 @@ public final class CloudAuditOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="authorizationLoggingOptions")
     private @Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
 
+    /**
+     * @return Information used by the Cloud Audit Logging pipeline.
+     * 
+     */
     public Optional<Output<AuthorizationLoggingOptionsArgs>> authorizationLoggingOptions() {
         return Optional.ofNullable(this.authorizationLoggingOptions);
     }
@@ -38,6 +42,10 @@ public final class CloudAuditOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="logName")
     private @Nullable Output<CloudAuditOptionsLogName> logName;
 
+    /**
+     * @return The log_name to populate in the Cloud Audit Record.
+     * 
+     */
     public Optional<Output<CloudAuditOptionsLogName>> logName() {
         return Optional.ofNullable(this.logName);
     }
@@ -67,20 +75,44 @@ public final class CloudAuditOptionsArgs extends com.pulumi.resources.ResourceAr
             $ = new CloudAuditOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationLoggingOptions Information used by the Cloud Audit Logging pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationLoggingOptions(@Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions) {
             $.authorizationLoggingOptions = authorizationLoggingOptions;
             return this;
         }
 
+        /**
+         * @param authorizationLoggingOptions Information used by the Cloud Audit Logging pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationLoggingOptions(AuthorizationLoggingOptionsArgs authorizationLoggingOptions) {
             return authorizationLoggingOptions(Output.of(authorizationLoggingOptions));
         }
 
+        /**
+         * @param logName The log_name to populate in the Cloud Audit Record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logName(@Nullable Output<CloudAuditOptionsLogName> logName) {
             $.logName = logName;
             return this;
         }
 
+        /**
+         * @param logName The log_name to populate in the Cloud Audit Record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logName(CloudAuditOptionsLogName logName) {
             return logName(Output.of(logName));
         }

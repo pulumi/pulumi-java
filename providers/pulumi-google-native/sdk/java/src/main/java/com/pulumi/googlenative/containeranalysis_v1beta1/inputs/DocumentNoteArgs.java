@@ -26,6 +26,10 @@ public final class DocumentNoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataLicence")
     private @Nullable Output<String> dataLicence;
 
+    /**
+     * @return Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields (&#34;SPDX-Metadata&#34;)
+     * 
+     */
     public Optional<Output<String>> dataLicence() {
         return Optional.ofNullable(this.dataLicence);
     }
@@ -37,6 +41,10 @@ public final class DocumentNoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spdxVersion")
     private @Nullable Output<String> spdxVersion;
 
+    /**
+     * @return Provide a reference number that can be used to understand how to parse and interpret the rest of the file
+     * 
+     */
     public Optional<Output<String>> spdxVersion() {
         return Optional.ofNullable(this.spdxVersion);
     }
@@ -66,20 +74,44 @@ public final class DocumentNoteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DocumentNoteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataLicence Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields (&#34;SPDX-Metadata&#34;)
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLicence(@Nullable Output<String> dataLicence) {
             $.dataLicence = dataLicence;
             return this;
         }
 
+        /**
+         * @param dataLicence Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields (&#34;SPDX-Metadata&#34;)
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLicence(String dataLicence) {
             return dataLicence(Output.of(dataLicence));
         }
 
+        /**
+         * @param spdxVersion Provide a reference number that can be used to understand how to parse and interpret the rest of the file
+         * 
+         * @return builder
+         * 
+         */
         public Builder spdxVersion(@Nullable Output<String> spdxVersion) {
             $.spdxVersion = spdxVersion;
             return this;
         }
 
+        /**
+         * @param spdxVersion Provide a reference number that can be used to understand how to parse and interpret the rest of the file
+         * 
+         * @return builder
+         * 
+         */
         public Builder spdxVersion(String spdxVersion) {
             return spdxVersion(Output.of(spdxVersion));
         }

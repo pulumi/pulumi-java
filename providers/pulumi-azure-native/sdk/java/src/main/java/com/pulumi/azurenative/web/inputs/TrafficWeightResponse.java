@@ -28,6 +28,10 @@ public final class TrafficWeightResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="latestRevision")
     private @Nullable Boolean latestRevision;
 
+    /**
+     * @return Indicates that the traffic weight belongs to a latest stable revision
+     * 
+     */
     public Optional<Boolean> latestRevision() {
         return Optional.ofNullable(this.latestRevision);
     }
@@ -39,6 +43,10 @@ public final class TrafficWeightResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="revisionName")
     private @Nullable String revisionName;
 
+    /**
+     * @return Name of a revision
+     * 
+     */
     public Optional<String> revisionName() {
         return Optional.ofNullable(this.revisionName);
     }
@@ -50,6 +58,10 @@ public final class TrafficWeightResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="weight")
     private @Nullable Integer weight;
 
+    /**
+     * @return Traffic weight assigned to a revision
+     * 
+     */
     public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -80,16 +92,34 @@ public final class TrafficWeightResponse extends com.pulumi.resources.InvokeArgs
             $ = new TrafficWeightResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param latestRevision Indicates that the traffic weight belongs to a latest stable revision
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestRevision(@Nullable Boolean latestRevision) {
             $.latestRevision = latestRevision;
             return this;
         }
 
+        /**
+         * @param revisionName Name of a revision
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionName(@Nullable String revisionName) {
             $.revisionName = revisionName;
             return this;
         }
 
+        /**
+         * @param weight Traffic weight assigned to a revision
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Integer weight) {
             $.weight = weight;
             return this;

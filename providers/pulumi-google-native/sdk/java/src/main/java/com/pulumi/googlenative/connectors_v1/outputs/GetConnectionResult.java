@@ -17,82 +17,82 @@ import java.util.Objects;
 @CustomType
 public final class GetConnectionResult {
     /**
-     * Optional. Configuration for establishing the connection&#39;s authentication with an external system.
+     * @return Optional. Configuration for establishing the connection&#39;s authentication with an external system.
      * 
      */
     private final AuthConfigResponse authConfig;
     /**
-     * Optional. Configuration for configuring the connection with an external system.
+     * @return Optional. Configuration for configuring the connection with an external system.
      * 
      */
     private final List<ConfigVariableResponse> configVariables;
     /**
-     * Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
+     * @return Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
      * 
      */
     private final String connectorVersion;
     /**
-     * Created time.
+     * @return Created time.
      * 
      */
     private final String createTime;
     /**
-     * Optional. Description of the resource.
+     * @return Optional. Description of the resource.
      * 
      */
     private final String description;
     /**
-     * Outbound domains/hosts needs to be allowlisted.
+     * @return Outbound domains/hosts needs to be allowlisted.
      * 
      */
     private final List<String> egressBackends;
     /**
-     * GCR location where the envoy image is stored. formatted like: gcr.io/{bucketName}/{imageName}
+     * @return GCR location where the envoy image is stored. formatted like: gcr.io/{bucketName}/{imageName}
      * 
      */
     private final String envoyImageLocation;
     /**
-     * GCR location where the runtime image is stored. formatted like: gcr.io/{bucketName}/{imageName}
+     * @return GCR location where the runtime image is stored. formatted like: gcr.io/{bucketName}/{imageName}
      * 
      */
     private final String imageLocation;
     /**
-     * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+     * @return Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
     private final Map<String,String> labels;
     /**
-     * Optional. Configuration that indicates whether or not the Connection can be edited.
+     * @return Optional. Configuration that indicates whether or not the Connection can be edited.
      * 
      */
     private final LockConfigResponse lockConfig;
     /**
-     * Resource name of the Connection. Format: projects/{project}/locations/{location}/connections/{connection}
+     * @return Resource name of the Connection. Format: projects/{project}/locations/{location}/connections/{connection}
      * 
      */
     private final String name;
     /**
-     * Optional. Service account needed for runtime plane to access GCP resources.
+     * @return Optional. Service account needed for runtime plane to access GCP resources.
      * 
      */
     private final String serviceAccount;
     /**
-     * The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. &#34;projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors&#34;
+     * @return The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. &#34;projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors&#34;
      * 
      */
     private final String serviceDirectory;
     /**
-     * Current status of the connection.
+     * @return Current status of the connection.
      * 
      */
     private final ConnectionStatusResponse status;
     /**
-     * Optional. Suspended indicates if a user has suspended a connection or not.
+     * @return Optional. Suspended indicates if a user has suspended a connection or not.
      * 
      */
     private final Boolean suspended;
     /**
-     * Updated time.
+     * @return Updated time.
      * 
      */
     private final String updateTime;
@@ -134,114 +134,114 @@ public final class GetConnectionResult {
     }
 
     /**
-     * Optional. Configuration for establishing the connection&#39;s authentication with an external system.
+     * @return Optional. Configuration for establishing the connection&#39;s authentication with an external system.
      * 
-    */
+     */
     public AuthConfigResponse authConfig() {
         return this.authConfig;
     }
     /**
-     * Optional. Configuration for configuring the connection with an external system.
+     * @return Optional. Configuration for configuring the connection with an external system.
      * 
-    */
+     */
     public List<ConfigVariableResponse> configVariables() {
         return this.configVariables;
     }
     /**
-     * Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
+     * @return Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
      * 
-    */
+     */
     public String connectorVersion() {
         return this.connectorVersion;
     }
     /**
-     * Created time.
+     * @return Created time.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Optional. Description of the resource.
+     * @return Optional. Description of the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Outbound domains/hosts needs to be allowlisted.
+     * @return Outbound domains/hosts needs to be allowlisted.
      * 
-    */
+     */
     public List<String> egressBackends() {
         return this.egressBackends;
     }
     /**
-     * GCR location where the envoy image is stored. formatted like: gcr.io/{bucketName}/{imageName}
+     * @return GCR location where the envoy image is stored. formatted like: gcr.io/{bucketName}/{imageName}
      * 
-    */
+     */
     public String envoyImageLocation() {
         return this.envoyImageLocation;
     }
     /**
-     * GCR location where the runtime image is stored. formatted like: gcr.io/{bucketName}/{imageName}
+     * @return GCR location where the runtime image is stored. formatted like: gcr.io/{bucketName}/{imageName}
      * 
-    */
+     */
     public String imageLocation() {
         return this.imageLocation;
     }
     /**
-     * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+     * @return Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Optional. Configuration that indicates whether or not the Connection can be edited.
+     * @return Optional. Configuration that indicates whether or not the Connection can be edited.
      * 
-    */
+     */
     public LockConfigResponse lockConfig() {
         return this.lockConfig;
     }
     /**
-     * Resource name of the Connection. Format: projects/{project}/locations/{location}/connections/{connection}
+     * @return Resource name of the Connection. Format: projects/{project}/locations/{location}/connections/{connection}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Optional. Service account needed for runtime plane to access GCP resources.
+     * @return Optional. Service account needed for runtime plane to access GCP resources.
      * 
-    */
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
-     * The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. &#34;projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors&#34;
+     * @return The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. &#34;projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors&#34;
      * 
-    */
+     */
     public String serviceDirectory() {
         return this.serviceDirectory;
     }
     /**
-     * Current status of the connection.
+     * @return Current status of the connection.
      * 
-    */
+     */
     public ConnectionStatusResponse status() {
         return this.status;
     }
     /**
-     * Optional. Suspended indicates if a user has suspended a connection or not.
+     * @return Optional. Suspended indicates if a user has suspended a connection or not.
      * 
-    */
+     */
     public Boolean suspended() {
         return this.suspended;
     }
     /**
-     * Updated time.
+     * @return Updated time.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

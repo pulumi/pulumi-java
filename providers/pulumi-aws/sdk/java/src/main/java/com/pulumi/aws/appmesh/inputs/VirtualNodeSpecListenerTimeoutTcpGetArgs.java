@@ -22,6 +22,10 @@ public final class VirtualNodeSpecListenerTimeoutTcpGetArgs extends com.pulumi.r
     @Import(name="idle")
     private @Nullable Output<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> idle;
 
+    /**
+     * @return The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs>> idle() {
         return Optional.ofNullable(this.idle);
     }
@@ -50,11 +54,23 @@ public final class VirtualNodeSpecListenerTimeoutTcpGetArgs extends com.pulumi.r
             $ = new VirtualNodeSpecListenerTimeoutTcpGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param idle The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idle(@Nullable Output<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> idle) {
             $.idle = idle;
             return this;
         }
 
+        /**
+         * @param idle The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idle(VirtualNodeSpecListenerTimeoutTcpIdleGetArgs idle) {
             return idle(Output.of(idle));
         }

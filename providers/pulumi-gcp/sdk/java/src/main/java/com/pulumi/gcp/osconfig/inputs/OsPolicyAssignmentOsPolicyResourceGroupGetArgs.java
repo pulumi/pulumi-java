@@ -24,6 +24,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends com.pu
     @Import(name="inventoryFilters")
     private @Nullable Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters;
 
+    /**
+     * @return List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name=&#39;rhel&#39; and inventory_filters[1].os_short_name=&#39;centos&#39; If the list is empty, this resource group will be applied to the target VM unconditionally.
+     * 
+     */
     public Optional<Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>>> inventoryFilters() {
         return Optional.ofNullable(this.inventoryFilters);
     }
@@ -35,6 +39,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends com.pu
     @Import(name="resources", required=true)
     private Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources;
 
+    /**
+     * @return Required. List of resources configured for this resource group. The resources are executed in the exact order specified here.
+     * 
+     */
     public Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources() {
         return this.resources;
     }
@@ -64,28 +72,64 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends com.pu
             $ = new OsPolicyAssignmentOsPolicyResourceGroupGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inventoryFilters List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name=&#39;rhel&#39; and inventory_filters[1].os_short_name=&#39;centos&#39; If the list is empty, this resource group will be applied to the target VM unconditionally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventoryFilters(@Nullable Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters) {
             $.inventoryFilters = inventoryFilters;
             return this;
         }
 
+        /**
+         * @param inventoryFilters List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name=&#39;rhel&#39; and inventory_filters[1].os_short_name=&#39;centos&#39; If the list is empty, this resource group will be applied to the target VM unconditionally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventoryFilters(List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs> inventoryFilters) {
             return inventoryFilters(Output.of(inventoryFilters));
         }
 
+        /**
+         * @param inventoryFilters List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name=&#39;rhel&#39; and inventory_filters[1].os_short_name=&#39;centos&#39; If the list is empty, this resource group will be applied to the target VM unconditionally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventoryFilters(OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs... inventoryFilters) {
             return inventoryFilters(List.of(inventoryFilters));
         }
 
+        /**
+         * @param resources Required. List of resources configured for this resource group. The resources are executed in the exact order specified here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param resources Required. List of resources configured for this resource group. The resources are executed in the exact order specified here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs> resources) {
             return resources(Output.of(resources));
         }
 
+        /**
+         * @param resources Required. List of resources configured for this resource group. The resources are executed in the exact order specified here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs... resources) {
             return resources(List.of(resources));
         }

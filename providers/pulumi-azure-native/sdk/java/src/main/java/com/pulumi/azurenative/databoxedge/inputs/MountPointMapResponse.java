@@ -23,6 +23,10 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="mountPoint", required=true)
     private String mountPoint;
 
+    /**
+     * @return Mount point for the share.
+     * 
+     */
     public String mountPoint() {
         return this.mountPoint;
     }
@@ -34,6 +38,10 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="mountType", required=true)
     private String mountType;
 
+    /**
+     * @return Mounting type.
+     * 
+     */
     public String mountType() {
         return this.mountType;
     }
@@ -45,6 +53,10 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="roleId", required=true)
     private String roleId;
 
+    /**
+     * @return ID of the role to which share is mounted.
+     * 
+     */
     public String roleId() {
         return this.roleId;
     }
@@ -56,6 +68,10 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="roleType", required=true)
     private String roleType;
 
+    /**
+     * @return Role type.
+     * 
+     */
     public String roleType() {
         return this.roleType;
     }
@@ -67,6 +83,10 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="shareId", required=true)
     private String shareId;
 
+    /**
+     * @return ID of the share mounted to the role VM.
+     * 
+     */
     public String shareId() {
         return this.shareId;
     }
@@ -99,26 +119,56 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
             $ = new MountPointMapResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mountPoint Mount point for the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPoint(String mountPoint) {
             $.mountPoint = mountPoint;
             return this;
         }
 
+        /**
+         * @param mountType Mounting type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountType(String mountType) {
             $.mountType = mountType;
             return this;
         }
 
+        /**
+         * @param roleId ID of the role to which share is mounted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleId(String roleId) {
             $.roleId = roleId;
             return this;
         }
 
+        /**
+         * @param roleType Role type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleType(String roleType) {
             $.roleType = roleType;
             return this;
         }
 
+        /**
+         * @param shareId ID of the share mounted to the role VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareId(String shareId) {
             $.shareId = shareId;
             return this;

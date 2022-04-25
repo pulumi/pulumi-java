@@ -30,6 +30,10 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="capacity", required=true)
     private ScaleCapacityResponse capacity;
 
+    /**
+     * @return the number of instances that can be used during this profile.
+     * 
+     */
     public ScaleCapacityResponse capacity() {
         return this.capacity;
     }
@@ -41,6 +45,10 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="fixedDate")
     private @Nullable TimeWindowResponse fixedDate;
 
+    /**
+     * @return the specific date-time for the profile. This element is not used if the Recurrence element is used.
+     * 
+     */
     public Optional<TimeWindowResponse> fixedDate() {
         return Optional.ofNullable(this.fixedDate);
     }
@@ -52,6 +60,10 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return the name of the profile.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,6 +75,10 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="recurrence")
     private @Nullable RecurrenceResponse recurrence;
 
+    /**
+     * @return the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
+     * 
+     */
     public Optional<RecurrenceResponse> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }
@@ -74,6 +90,10 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="rules", required=true)
     private List<ScaleRuleResponse> rules;
 
+    /**
+     * @return the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
+     * 
+     */
     public List<ScaleRuleResponse> rules() {
         return this.rules;
     }
@@ -106,31 +126,67 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
             $ = new AutoscaleProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity the number of instances that can be used during this profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(ScaleCapacityResponse capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param fixedDate the specific date-time for the profile. This element is not used if the Recurrence element is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedDate(@Nullable TimeWindowResponse fixedDate) {
             $.fixedDate = fixedDate;
             return this;
         }
 
+        /**
+         * @param name the name of the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param recurrence the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(@Nullable RecurrenceResponse recurrence) {
             $.recurrence = recurrence;
             return this;
         }
 
+        /**
+         * @param rules the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<ScaleRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(ScaleRuleResponse... rules) {
             return rules(List.of(rules));
         }

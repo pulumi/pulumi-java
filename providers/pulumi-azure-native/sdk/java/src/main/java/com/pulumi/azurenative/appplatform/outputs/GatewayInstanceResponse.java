@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GatewayInstanceResponse {
     /**
-     * Name of the Spring Cloud Gateway instance
+     * @return Name of the Spring Cloud Gateway instance
      * 
      */
     private final String name;
     /**
-     * Status of the Spring Cloud Gateway instance
+     * @return Status of the Spring Cloud Gateway instance
      * 
      */
     private final String status;
@@ -29,16 +29,16 @@ public final class GatewayInstanceResponse {
     }
 
     /**
-     * Name of the Spring Cloud Gateway instance
+     * @return Name of the Spring Cloud Gateway instance
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Status of the Spring Cloud Gateway instance
+     * @return Status of the Spring Cloud Gateway instance
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

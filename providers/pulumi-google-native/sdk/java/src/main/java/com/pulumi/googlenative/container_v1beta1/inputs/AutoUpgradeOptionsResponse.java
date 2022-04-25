@@ -23,6 +23,10 @@ public final class AutoUpgradeOptionsResponse extends com.pulumi.resources.Invok
     @Import(name="autoUpgradeStartTime", required=true)
     private String autoUpgradeStartTime;
 
+    /**
+     * @return [Output only] This field is set when upgrades are about to commence with the approximate start time for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * 
+     */
     public String autoUpgradeStartTime() {
         return this.autoUpgradeStartTime;
     }
@@ -34,6 +38,10 @@ public final class AutoUpgradeOptionsResponse extends com.pulumi.resources.Invok
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return [Output only] This field is set when upgrades are about to commence with the description of the upgrade.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -63,11 +71,23 @@ public final class AutoUpgradeOptionsResponse extends com.pulumi.resources.Invok
             $ = new AutoUpgradeOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoUpgradeStartTime [Output only] This field is set when upgrades are about to commence with the approximate start time for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgradeStartTime(String autoUpgradeStartTime) {
             $.autoUpgradeStartTime = autoUpgradeStartTime;
             return this;
         }
 
+        /**
+         * @param description [Output only] This field is set when upgrades are about to commence with the description of the upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;

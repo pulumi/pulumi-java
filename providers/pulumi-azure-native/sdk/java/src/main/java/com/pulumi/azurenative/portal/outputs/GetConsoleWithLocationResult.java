@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetConsoleWithLocationResult {
     /**
-     * Cloud shell console properties.
+     * @return Cloud shell console properties.
      * 
      */
     private final ConsolePropertiesResponse properties;
@@ -21,9 +21,9 @@ public final class GetConsoleWithLocationResult {
     }
 
     /**
-     * Cloud shell console properties.
+     * @return Cloud shell console properties.
      * 
-    */
+     */
     public ConsolePropertiesResponse properties() {
         return this.properties;
     }

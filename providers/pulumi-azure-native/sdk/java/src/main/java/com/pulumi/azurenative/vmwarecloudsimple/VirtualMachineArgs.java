@@ -30,6 +30,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="amountOfRam", required=true)
     private Output<Integer> amountOfRam;
 
+    /**
+     * @return The amount of memory
+     * 
+     */
     public Output<Integer> amountOfRam() {
         return this.amountOfRam;
     }
@@ -41,6 +45,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="customization")
     private @Nullable Output<GuestOSCustomizationArgs> customization;
 
+    /**
+     * @return Virtual machine properties
+     * 
+     */
     public Optional<Output<GuestOSCustomizationArgs>> customization() {
         return Optional.ofNullable(this.customization);
     }
@@ -52,6 +60,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="disks")
     private @Nullable Output<List<VirtualDiskArgs>> disks;
 
+    /**
+     * @return The list of Virtual Disks
+     * 
+     */
     public Optional<Output<List<VirtualDiskArgs>>> disks() {
         return Optional.ofNullable(this.disks);
     }
@@ -63,6 +75,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="exposeToGuestVM")
     private @Nullable Output<Boolean> exposeToGuestVM;
 
+    /**
+     * @return Expose Guest OS or not
+     * 
+     */
     public Optional<Output<Boolean>> exposeToGuestVM() {
         return Optional.ofNullable(this.exposeToGuestVM);
     }
@@ -74,6 +90,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Azure region
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -85,6 +105,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="nics")
     private @Nullable Output<List<VirtualNicArgs>> nics;
 
+    /**
+     * @return The list of Virtual NICs
+     * 
+     */
     public Optional<Output<List<VirtualNicArgs>>> nics() {
         return Optional.ofNullable(this.nics);
     }
@@ -96,6 +120,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="numberOfCores", required=true)
     private Output<Integer> numberOfCores;
 
+    /**
+     * @return The number of CPU cores
+     * 
+     */
     public Output<Integer> numberOfCores() {
         return this.numberOfCores;
     }
@@ -107,6 +135,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Password for login. Deprecated - use customization property
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -118,6 +150,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="privateCloudId", required=true)
     private Output<String> privateCloudId;
 
+    /**
+     * @return Private Cloud Id
+     * 
+     */
     public Output<String> privateCloudId() {
         return this.privateCloudId;
     }
@@ -129,6 +165,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -140,6 +180,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourcePool")
     private @Nullable Output<ResourcePoolArgs> resourcePool;
 
+    /**
+     * @return Virtual Machines Resource Pool
+     * 
+     */
     public Optional<Output<ResourcePoolArgs>> resourcePool() {
         return Optional.ofNullable(this.resourcePool);
     }
@@ -151,6 +195,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The list of tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -162,6 +210,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="templateId")
     private @Nullable Output<String> templateId;
 
+    /**
+     * @return Virtual Machine Template Id
+     * 
+     */
     public Optional<Output<String>> templateId() {
         return Optional.ofNullable(this.templateId);
     }
@@ -173,6 +225,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return Username for login. Deprecated - use customization property
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -184,6 +240,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="vSphereNetworks")
     private @Nullable Output<List<String>> vSphereNetworks;
 
+    /**
+     * @return The list of Virtual VSphere Networks
+     * 
+     */
     public Optional<Output<List<String>>> vSphereNetworks() {
         return Optional.ofNullable(this.vSphereNetworks);
     }
@@ -195,6 +255,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="virtualMachineName")
     private @Nullable Output<String> virtualMachineName;
 
+    /**
+     * @return virtual machine name
+     * 
+     */
     public Optional<Output<String>> virtualMachineName() {
         return Optional.ofNullable(this.virtualMachineName);
     }
@@ -238,158 +302,368 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
             $ = new VirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amountOfRam The amount of memory
+         * 
+         * @return builder
+         * 
+         */
         public Builder amountOfRam(Output<Integer> amountOfRam) {
             $.amountOfRam = amountOfRam;
             return this;
         }
 
+        /**
+         * @param amountOfRam The amount of memory
+         * 
+         * @return builder
+         * 
+         */
         public Builder amountOfRam(Integer amountOfRam) {
             return amountOfRam(Output.of(amountOfRam));
         }
 
+        /**
+         * @param customization Virtual machine properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder customization(@Nullable Output<GuestOSCustomizationArgs> customization) {
             $.customization = customization;
             return this;
         }
 
+        /**
+         * @param customization Virtual machine properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder customization(GuestOSCustomizationArgs customization) {
             return customization(Output.of(customization));
         }
 
+        /**
+         * @param disks The list of Virtual Disks
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(@Nullable Output<List<VirtualDiskArgs>> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks The list of Virtual Disks
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(List<VirtualDiskArgs> disks) {
             return disks(Output.of(disks));
         }
 
+        /**
+         * @param disks The list of Virtual Disks
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(VirtualDiskArgs... disks) {
             return disks(List.of(disks));
         }
 
+        /**
+         * @param exposeToGuestVM Expose Guest OS or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposeToGuestVM(@Nullable Output<Boolean> exposeToGuestVM) {
             $.exposeToGuestVM = exposeToGuestVM;
             return this;
         }
 
+        /**
+         * @param exposeToGuestVM Expose Guest OS or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposeToGuestVM(Boolean exposeToGuestVM) {
             return exposeToGuestVM(Output.of(exposeToGuestVM));
         }
 
+        /**
+         * @param location Azure region
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Azure region
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param nics The list of Virtual NICs
+         * 
+         * @return builder
+         * 
+         */
         public Builder nics(@Nullable Output<List<VirtualNicArgs>> nics) {
             $.nics = nics;
             return this;
         }
 
+        /**
+         * @param nics The list of Virtual NICs
+         * 
+         * @return builder
+         * 
+         */
         public Builder nics(List<VirtualNicArgs> nics) {
             return nics(Output.of(nics));
         }
 
+        /**
+         * @param nics The list of Virtual NICs
+         * 
+         * @return builder
+         * 
+         */
         public Builder nics(VirtualNicArgs... nics) {
             return nics(List.of(nics));
         }
 
+        /**
+         * @param numberOfCores The number of CPU cores
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfCores(Output<Integer> numberOfCores) {
             $.numberOfCores = numberOfCores;
             return this;
         }
 
+        /**
+         * @param numberOfCores The number of CPU cores
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfCores(Integer numberOfCores) {
             return numberOfCores(Output.of(numberOfCores));
         }
 
+        /**
+         * @param password Password for login. Deprecated - use customization property
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for login. Deprecated - use customization property
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param privateCloudId Private Cloud Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudId(Output<String> privateCloudId) {
             $.privateCloudId = privateCloudId;
             return this;
         }
 
+        /**
+         * @param privateCloudId Private Cloud Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudId(String privateCloudId) {
             return privateCloudId(Output.of(privateCloudId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourcePool Virtual Machines Resource Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePool(@Nullable Output<ResourcePoolArgs> resourcePool) {
             $.resourcePool = resourcePool;
             return this;
         }
 
+        /**
+         * @param resourcePool Virtual Machines Resource Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePool(ResourcePoolArgs resourcePool) {
             return resourcePool(Output.of(resourcePool));
         }
 
+        /**
+         * @param tags The list of tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The list of tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param templateId Virtual Machine Template Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateId(@Nullable Output<String> templateId) {
             $.templateId = templateId;
             return this;
         }
 
+        /**
+         * @param templateId Virtual Machine Template Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateId(String templateId) {
             return templateId(Output.of(templateId));
         }
 
+        /**
+         * @param username Username for login. Deprecated - use customization property
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Username for login. Deprecated - use customization property
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }
 
+        /**
+         * @param vSphereNetworks The list of Virtual VSphere Networks
+         * 
+         * @return builder
+         * 
+         */
         public Builder vSphereNetworks(@Nullable Output<List<String>> vSphereNetworks) {
             $.vSphereNetworks = vSphereNetworks;
             return this;
         }
 
+        /**
+         * @param vSphereNetworks The list of Virtual VSphere Networks
+         * 
+         * @return builder
+         * 
+         */
         public Builder vSphereNetworks(List<String> vSphereNetworks) {
             return vSphereNetworks(Output.of(vSphereNetworks));
         }
 
+        /**
+         * @param vSphereNetworks The list of Virtual VSphere Networks
+         * 
+         * @return builder
+         * 
+         */
         public Builder vSphereNetworks(String... vSphereNetworks) {
             return vSphereNetworks(List.of(vSphereNetworks));
         }
 
+        /**
+         * @param virtualMachineName virtual machine name
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineName(@Nullable Output<String> virtualMachineName) {
             $.virtualMachineName = virtualMachineName;
             return this;
         }
 
+        /**
+         * @param virtualMachineName virtual machine name
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineName(String virtualMachineName) {
             return virtualMachineName(Output.of(virtualMachineName));
         }

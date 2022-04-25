@@ -22,6 +22,11 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
     @Import(name="dayOfWeek", required=true)
     private Output<String> dayOfWeek;
 
+    /**
+     * @return A day of the week.
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     public Output<String> dayOfWeek() {
         return this.dayOfWeek;
     }
@@ -33,6 +38,10 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
     @Import(name="weekOrdinal", required=true)
     private Output<Integer> weekOrdinal;
 
+    /**
+     * @return Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
+     * 
+     */
     public Output<Integer> weekOrdinal() {
         return this.weekOrdinal;
     }
@@ -62,20 +71,46 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
             $ = new PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeek A day of the week.
+         * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(Output<String> dayOfWeek) {
             $.dayOfWeek = dayOfWeek;
             return this;
         }
 
+        /**
+         * @param dayOfWeek A day of the week.
+         * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(String dayOfWeek) {
             return dayOfWeek(Output.of(dayOfWeek));
         }
 
+        /**
+         * @param weekOrdinal Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekOrdinal(Output<Integer> weekOrdinal) {
             $.weekOrdinal = weekOrdinal;
             return this;
         }
 
+        /**
+         * @param weekOrdinal Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekOrdinal(Integer weekOrdinal) {
             return weekOrdinal(Output.of(weekOrdinal));
         }

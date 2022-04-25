@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataCollectionRuleResponseDataSources {
     /**
-     * The list of Azure VM extension data source configurations.
+     * @return The list of Azure VM extension data source configurations.
      * 
      */
     private final @Nullable List<ExtensionDataSourceResponse> extensions;
     /**
-     * The list of performance counter data source configurations.
+     * @return The list of performance counter data source configurations.
      * 
      */
     private final @Nullable List<PerfCounterDataSourceResponse> performanceCounters;
     /**
-     * The list of Syslog data source configurations.
+     * @return The list of Syslog data source configurations.
      * 
      */
     private final @Nullable List<SyslogDataSourceResponse> syslog;
     /**
-     * The list of Windows Event Log data source configurations.
+     * @return The list of Windows Event Log data source configurations.
      * 
      */
     private final @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs;
@@ -48,30 +48,30 @@ public final class DataCollectionRuleResponseDataSources {
     }
 
     /**
-     * The list of Azure VM extension data source configurations.
+     * @return The list of Azure VM extension data source configurations.
      * 
-    */
+     */
     public List<ExtensionDataSourceResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
     /**
-     * The list of performance counter data source configurations.
+     * @return The list of performance counter data source configurations.
      * 
-    */
+     */
     public List<PerfCounterDataSourceResponse> performanceCounters() {
         return this.performanceCounters == null ? List.of() : this.performanceCounters;
     }
     /**
-     * The list of Syslog data source configurations.
+     * @return The list of Syslog data source configurations.
      * 
-    */
+     */
     public List<SyslogDataSourceResponse> syslog() {
         return this.syslog == null ? List.of() : this.syslog;
     }
     /**
-     * The list of Windows Event Log data source configurations.
+     * @return The list of Windows Event Log data source configurations.
      * 
-    */
+     */
     public List<WindowsEventLogDataSourceResponse> windowsEventLogs() {
         return this.windowsEventLogs == null ? List.of() : this.windowsEventLogs;
     }

@@ -26,6 +26,10 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return FAQ description
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileFormat")
     private @Nullable Output<FaqFileFormat> fileFormat;
 
+    /**
+     * @return FAQ file format
+     * 
+     */
     public Optional<Output<FaqFileFormat>> fileFormat() {
         return Optional.ofNullable(this.fileFormat);
     }
@@ -48,6 +56,10 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="indexId", required=true)
     private Output<String> indexId;
 
+    /**
+     * @return Index ID
+     * 
+     */
     public Output<String> indexId() {
         return this.indexId;
     }
@@ -59,6 +71,10 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return FAQ name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return FAQ role ARN
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -81,6 +101,10 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Path", required=true)
     private Output<FaqS3PathArgs> s3Path;
 
+    /**
+     * @return FAQ S3 path
+     * 
+     */
     public Output<FaqS3PathArgs> s3Path() {
         return this.s3Path;
     }
@@ -92,6 +116,10 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<FaqTagArgs>> tags;
 
+    /**
+     * @return Tags for labeling the FAQ
+     * 
+     */
     public Optional<Output<List<FaqTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -126,69 +154,159 @@ public final class FaqArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FaqArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description FAQ description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description FAQ description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param fileFormat FAQ file format
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileFormat(@Nullable Output<FaqFileFormat> fileFormat) {
             $.fileFormat = fileFormat;
             return this;
         }
 
+        /**
+         * @param fileFormat FAQ file format
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileFormat(FaqFileFormat fileFormat) {
             return fileFormat(Output.of(fileFormat));
         }
 
+        /**
+         * @param indexId Index ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexId(Output<String> indexId) {
             $.indexId = indexId;
             return this;
         }
 
+        /**
+         * @param indexId Index ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexId(String indexId) {
             return indexId(Output.of(indexId));
         }
 
+        /**
+         * @param name FAQ name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name FAQ name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param roleArn FAQ role ARN
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn FAQ role ARN
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param s3Path FAQ S3 path
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Path(Output<FaqS3PathArgs> s3Path) {
             $.s3Path = s3Path;
             return this;
         }
 
+        /**
+         * @param s3Path FAQ S3 path
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Path(FaqS3PathArgs s3Path) {
             return s3Path(Output.of(s3Path));
         }
 
+        /**
+         * @param tags Tags for labeling the FAQ
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<FaqTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags for labeling the FAQ
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<FaqTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags for labeling the FAQ
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(FaqTagArgs... tags) {
             return tags(List.of(tags));
         }

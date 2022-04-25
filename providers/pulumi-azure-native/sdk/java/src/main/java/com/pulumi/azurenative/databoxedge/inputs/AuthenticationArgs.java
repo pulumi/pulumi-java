@@ -26,6 +26,10 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="symmetricKey")
     private @Nullable Output<SymmetricKeyArgs> symmetricKey;
 
+    /**
+     * @return Symmetric key for authentication.
+     * 
+     */
     public Optional<Output<SymmetricKeyArgs>> symmetricKey() {
         return Optional.ofNullable(this.symmetricKey);
     }
@@ -54,11 +58,23 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param symmetricKey Symmetric key for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder symmetricKey(@Nullable Output<SymmetricKeyArgs> symmetricKey) {
             $.symmetricKey = symmetricKey;
             return this;
         }
 
+        /**
+         * @param symmetricKey Symmetric key for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder symmetricKey(SymmetricKeyArgs symmetricKey) {
             return symmetricKey(Output.of(symmetricKey));
         }

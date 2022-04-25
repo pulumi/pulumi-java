@@ -29,6 +29,10 @@ public final class EncryptionPreferencesArgs extends com.pulumi.resources.Resour
     @Import(name="doubleEncryption")
     private @Nullable Output<Either<String,DoubleEncryption>> doubleEncryption;
 
+    /**
+     * @return Defines secondary layer of software-based encryption enablement.
+     * 
+     */
     public Optional<Output<Either<String,DoubleEncryption>>> doubleEncryption() {
         return Optional.ofNullable(this.doubleEncryption);
     }
@@ -57,19 +61,43 @@ public final class EncryptionPreferencesArgs extends com.pulumi.resources.Resour
             $ = new EncryptionPreferencesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param doubleEncryption Defines secondary layer of software-based encryption enablement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleEncryption(@Nullable Output<Either<String,DoubleEncryption>> doubleEncryption) {
             $.doubleEncryption = doubleEncryption;
             return this;
         }
 
+        /**
+         * @param doubleEncryption Defines secondary layer of software-based encryption enablement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleEncryption(Either<String,DoubleEncryption> doubleEncryption) {
             return doubleEncryption(Output.of(doubleEncryption));
         }
 
+        /**
+         * @param doubleEncryption Defines secondary layer of software-based encryption enablement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleEncryption(String doubleEncryption) {
             return doubleEncryption(Either.ofLeft(doubleEncryption));
         }
 
+        /**
+         * @param doubleEncryption Defines secondary layer of software-based encryption enablement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleEncryption(DoubleEncryption doubleEncryption) {
             return doubleEncryption(Either.ofRight(doubleEncryption));
         }

@@ -35,6 +35,11 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
     @Import(name="absoluteCriteria")
     private @Nullable Output<List<Either<String,AbsoluteMarker>>> absoluteCriteria;
 
+    /**
+     * @return it contains absolute values like &#34;AllBackup&#34; / &#34;FirstOfDay&#34; / &#34;FirstOfWeek&#34; / &#34;FirstOfMonth&#34;
+     * and should be part of AbsoluteMarker enum
+     * 
+     */
     public Optional<Output<List<Either<String,AbsoluteMarker>>>> absoluteCriteria() {
         return Optional.ofNullable(this.absoluteCriteria);
     }
@@ -46,6 +51,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
     @Import(name="daysOfMonth")
     private @Nullable Output<List<DayArgs>> daysOfMonth;
 
+    /**
+     * @return This is day of the month from 1 to 28 other wise last of month
+     * 
+     */
     public Optional<Output<List<DayArgs>>> daysOfMonth() {
         return Optional.ofNullable(this.daysOfMonth);
     }
@@ -57,6 +66,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
     @Import(name="daysOfTheWeek")
     private @Nullable Output<List<Either<String,DayOfWeek>>> daysOfTheWeek;
 
+    /**
+     * @return It should be Sunday/Monday/T..../Saturday
+     * 
+     */
     public Optional<Output<List<Either<String,DayOfWeek>>>> daysOfTheWeek() {
         return Optional.ofNullable(this.daysOfTheWeek);
     }
@@ -68,6 +81,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
     @Import(name="monthsOfYear")
     private @Nullable Output<List<Either<String,Month>>> monthsOfYear;
 
+    /**
+     * @return It should be January/February/....../December
+     * 
+     */
     public Optional<Output<List<Either<String,Month>>>> monthsOfYear() {
         return Optional.ofNullable(this.monthsOfYear);
     }
@@ -80,6 +97,11 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
     @Import(name="objectType", required=true)
     private Output<String> objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;ScheduleBasedBackupCriteria&#39;.
+     * 
+     */
     public Output<String> objectType() {
         return this.objectType;
     }
@@ -91,6 +113,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
     @Import(name="scheduleTimes")
     private @Nullable Output<List<String>> scheduleTimes;
 
+    /**
+     * @return List of schedule times for backup
+     * 
+     */
     public Optional<Output<List<String>>> scheduleTimes() {
         return Optional.ofNullable(this.scheduleTimes);
     }
@@ -102,6 +128,10 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
     @Import(name="weeksOfTheMonth")
     private @Nullable Output<List<Either<String,WeekNumber>>> weeksOfTheMonth;
 
+    /**
+     * @return It should be First/Second/Third/Fourth/Last
+     * 
+     */
     public Optional<Output<List<Either<String,WeekNumber>>>> weeksOfTheMonth() {
         return Optional.ofNullable(this.weeksOfTheMonth);
     }
@@ -136,89 +166,214 @@ public final class ScheduleBasedBackupCriteriaArgs extends com.pulumi.resources.
             $ = new ScheduleBasedBackupCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param absoluteCriteria it contains absolute values like &#34;AllBackup&#34; / &#34;FirstOfDay&#34; / &#34;FirstOfWeek&#34; / &#34;FirstOfMonth&#34;
+         * and should be part of AbsoluteMarker enum
+         * 
+         * @return builder
+         * 
+         */
         public Builder absoluteCriteria(@Nullable Output<List<Either<String,AbsoluteMarker>>> absoluteCriteria) {
             $.absoluteCriteria = absoluteCriteria;
             return this;
         }
 
+        /**
+         * @param absoluteCriteria it contains absolute values like &#34;AllBackup&#34; / &#34;FirstOfDay&#34; / &#34;FirstOfWeek&#34; / &#34;FirstOfMonth&#34;
+         * and should be part of AbsoluteMarker enum
+         * 
+         * @return builder
+         * 
+         */
         public Builder absoluteCriteria(List<Either<String,AbsoluteMarker>> absoluteCriteria) {
             return absoluteCriteria(Output.of(absoluteCriteria));
         }
 
+        /**
+         * @param absoluteCriteria it contains absolute values like &#34;AllBackup&#34; / &#34;FirstOfDay&#34; / &#34;FirstOfWeek&#34; / &#34;FirstOfMonth&#34;
+         * and should be part of AbsoluteMarker enum
+         * 
+         * @return builder
+         * 
+         */
         public Builder absoluteCriteria(Either<String,AbsoluteMarker>... absoluteCriteria) {
             return absoluteCriteria(List.of(absoluteCriteria));
         }
 
+        /**
+         * @param daysOfMonth This is day of the month from 1 to 28 other wise last of month
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfMonth(@Nullable Output<List<DayArgs>> daysOfMonth) {
             $.daysOfMonth = daysOfMonth;
             return this;
         }
 
+        /**
+         * @param daysOfMonth This is day of the month from 1 to 28 other wise last of month
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfMonth(List<DayArgs> daysOfMonth) {
             return daysOfMonth(Output.of(daysOfMonth));
         }
 
+        /**
+         * @param daysOfMonth This is day of the month from 1 to 28 other wise last of month
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfMonth(DayArgs... daysOfMonth) {
             return daysOfMonth(List.of(daysOfMonth));
         }
 
+        /**
+         * @param daysOfTheWeek It should be Sunday/Monday/T..../Saturday
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheWeek(@Nullable Output<List<Either<String,DayOfWeek>>> daysOfTheWeek) {
             $.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
 
+        /**
+         * @param daysOfTheWeek It should be Sunday/Monday/T..../Saturday
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheWeek(List<Either<String,DayOfWeek>> daysOfTheWeek) {
             return daysOfTheWeek(Output.of(daysOfTheWeek));
         }
 
+        /**
+         * @param daysOfTheWeek It should be Sunday/Monday/T..../Saturday
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheWeek(Either<String,DayOfWeek>... daysOfTheWeek) {
             return daysOfTheWeek(List.of(daysOfTheWeek));
         }
 
+        /**
+         * @param monthsOfYear It should be January/February/....../December
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthsOfYear(@Nullable Output<List<Either<String,Month>>> monthsOfYear) {
             $.monthsOfYear = monthsOfYear;
             return this;
         }
 
+        /**
+         * @param monthsOfYear It should be January/February/....../December
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthsOfYear(List<Either<String,Month>> monthsOfYear) {
             return monthsOfYear(Output.of(monthsOfYear));
         }
 
+        /**
+         * @param monthsOfYear It should be January/February/....../December
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthsOfYear(Either<String,Month>... monthsOfYear) {
             return monthsOfYear(List.of(monthsOfYear));
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;ScheduleBasedBackupCriteria&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(Output<String> objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;ScheduleBasedBackupCriteria&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             return objectType(Output.of(objectType));
         }
 
+        /**
+         * @param scheduleTimes List of schedule times for backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleTimes(@Nullable Output<List<String>> scheduleTimes) {
             $.scheduleTimes = scheduleTimes;
             return this;
         }
 
+        /**
+         * @param scheduleTimes List of schedule times for backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleTimes(List<String> scheduleTimes) {
             return scheduleTimes(Output.of(scheduleTimes));
         }
 
+        /**
+         * @param scheduleTimes List of schedule times for backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleTimes(String... scheduleTimes) {
             return scheduleTimes(List.of(scheduleTimes));
         }
 
+        /**
+         * @param weeksOfTheMonth It should be First/Second/Third/Fourth/Last
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeksOfTheMonth(@Nullable Output<List<Either<String,WeekNumber>>> weeksOfTheMonth) {
             $.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
 
+        /**
+         * @param weeksOfTheMonth It should be First/Second/Third/Fourth/Last
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeksOfTheMonth(List<Either<String,WeekNumber>> weeksOfTheMonth) {
             return weeksOfTheMonth(Output.of(weeksOfTheMonth));
         }
 
+        /**
+         * @param weeksOfTheMonth It should be First/Second/Third/Fourth/Last
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeksOfTheMonth(Either<String,WeekNumber>... weeksOfTheMonth) {
             return weeksOfTheMonth(List.of(weeksOfTheMonth));
         }

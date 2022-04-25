@@ -27,6 +27,10 @@ public final class ManagementPolicyFilterResponse extends com.pulumi.resources.I
     @Import(name="blobIndexMatch")
     private @Nullable List<TagFilterResponse> blobIndexMatch;
 
+    /**
+     * @return An array of blob index tag based filters, there can be at most 10 tag filters
+     * 
+     */
     public Optional<List<TagFilterResponse>> blobIndexMatch() {
         return Optional.ofNullable(this.blobIndexMatch);
     }
@@ -38,6 +42,10 @@ public final class ManagementPolicyFilterResponse extends com.pulumi.resources.I
     @Import(name="blobTypes", required=true)
     private List<String> blobTypes;
 
+    /**
+     * @return An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
+     * 
+     */
     public List<String> blobTypes() {
         return this.blobTypes;
     }
@@ -49,6 +57,10 @@ public final class ManagementPolicyFilterResponse extends com.pulumi.resources.I
     @Import(name="prefixMatch")
     private @Nullable List<String> prefixMatch;
 
+    /**
+     * @return An array of strings for prefixes to be match.
+     * 
+     */
     public Optional<List<String>> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
@@ -79,29 +91,65 @@ public final class ManagementPolicyFilterResponse extends com.pulumi.resources.I
             $ = new ManagementPolicyFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobIndexMatch An array of blob index tag based filters, there can be at most 10 tag filters
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobIndexMatch(@Nullable List<TagFilterResponse> blobIndexMatch) {
             $.blobIndexMatch = blobIndexMatch;
             return this;
         }
 
+        /**
+         * @param blobIndexMatch An array of blob index tag based filters, there can be at most 10 tag filters
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobIndexMatch(TagFilterResponse... blobIndexMatch) {
             return blobIndexMatch(List.of(blobIndexMatch));
         }
 
+        /**
+         * @param blobTypes An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobTypes(List<String> blobTypes) {
             $.blobTypes = blobTypes;
             return this;
         }
 
+        /**
+         * @param blobTypes An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobTypes(String... blobTypes) {
             return blobTypes(List.of(blobTypes));
         }
 
+        /**
+         * @param prefixMatch An array of strings for prefixes to be match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             $.prefixMatch = prefixMatch;
             return this;
         }
 
+        /**
+         * @param prefixMatch An array of strings for prefixes to be match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(String... prefixMatch) {
             return prefixMatch(List.of(prefixMatch));
         }

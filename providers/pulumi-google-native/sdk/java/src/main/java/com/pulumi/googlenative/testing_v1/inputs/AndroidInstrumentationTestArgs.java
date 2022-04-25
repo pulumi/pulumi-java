@@ -31,6 +31,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
     @Import(name="appApk")
     private @Nullable Output<FileReferenceArgs> appApk;
 
+    /**
+     * @return The APK for the application under test.
+     * 
+     */
     public Optional<Output<FileReferenceArgs>> appApk() {
         return Optional.ofNullable(this.appApk);
     }
@@ -42,6 +46,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
     @Import(name="appBundle")
     private @Nullable Output<AppBundleArgs> appBundle;
 
+    /**
+     * @return A multi-apk app bundle for the application under test.
+     * 
+     */
     public Optional<Output<AppBundleArgs>> appBundle() {
         return Optional.ofNullable(this.appBundle);
     }
@@ -53,6 +61,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
     @Import(name="appPackageId")
     private @Nullable Output<String> appPackageId;
 
+    /**
+     * @return The java package for the application under test. The default value is determined by examining the application&#39;s manifest.
+     * 
+     */
     public Optional<Output<String>> appPackageId() {
         return Optional.ofNullable(this.appPackageId);
     }
@@ -64,6 +76,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
     @Import(name="orchestratorOption")
     private @Nullable Output<AndroidInstrumentationTestOrchestratorOption> orchestratorOption;
 
+    /**
+     * @return The option of whether running each test within its own invocation of instrumentation with Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner version 1.1 or higher! ** Orchestrator offers the following benefits: - No shared state - Crashes are isolated - Logs are scoped per test See for more information about Android Test Orchestrator. If not set, the test will be run without the orchestrator.
+     * 
+     */
     public Optional<Output<AndroidInstrumentationTestOrchestratorOption>> orchestratorOption() {
         return Optional.ofNullable(this.orchestratorOption);
     }
@@ -75,6 +91,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
     @Import(name="shardingOption")
     private @Nullable Output<ShardingOptionArgs> shardingOption;
 
+    /**
+     * @return The option to run tests in multiple shards in parallel.
+     * 
+     */
     public Optional<Output<ShardingOptionArgs>> shardingOption() {
         return Optional.ofNullable(this.shardingOption);
     }
@@ -86,6 +106,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
     @Import(name="testApk", required=true)
     private Output<FileReferenceArgs> testApk;
 
+    /**
+     * @return The APK containing the test code to be executed.
+     * 
+     */
     public Output<FileReferenceArgs> testApk() {
         return this.testApk;
     }
@@ -97,6 +121,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
     @Import(name="testPackageId")
     private @Nullable Output<String> testPackageId;
 
+    /**
+     * @return The java package for the test to be executed. The default value is determined by examining the application&#39;s manifest.
+     * 
+     */
     public Optional<Output<String>> testPackageId() {
         return Optional.ofNullable(this.testPackageId);
     }
@@ -108,6 +136,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
     @Import(name="testRunnerClass")
     private @Nullable Output<String> testRunnerClass;
 
+    /**
+     * @return The InstrumentationTestRunner class. The default value is determined by examining the application&#39;s manifest.
+     * 
+     */
     public Optional<Output<String>> testRunnerClass() {
         return Optional.ofNullable(this.testRunnerClass);
     }
@@ -119,6 +151,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
     @Import(name="testTargets")
     private @Nullable Output<List<String>> testTargets;
 
+    /**
+     * @return Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+     * 
+     */
     public Optional<Output<List<String>>> testTargets() {
         return Optional.ofNullable(this.testTargets);
     }
@@ -155,87 +191,201 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
             $ = new AndroidInstrumentationTestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appApk The APK for the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appApk(@Nullable Output<FileReferenceArgs> appApk) {
             $.appApk = appApk;
             return this;
         }
 
+        /**
+         * @param appApk The APK for the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appApk(FileReferenceArgs appApk) {
             return appApk(Output.of(appApk));
         }
 
+        /**
+         * @param appBundle A multi-apk app bundle for the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appBundle(@Nullable Output<AppBundleArgs> appBundle) {
             $.appBundle = appBundle;
             return this;
         }
 
+        /**
+         * @param appBundle A multi-apk app bundle for the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appBundle(AppBundleArgs appBundle) {
             return appBundle(Output.of(appBundle));
         }
 
+        /**
+         * @param appPackageId The java package for the application under test. The default value is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appPackageId(@Nullable Output<String> appPackageId) {
             $.appPackageId = appPackageId;
             return this;
         }
 
+        /**
+         * @param appPackageId The java package for the application under test. The default value is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appPackageId(String appPackageId) {
             return appPackageId(Output.of(appPackageId));
         }
 
+        /**
+         * @param orchestratorOption The option of whether running each test within its own invocation of instrumentation with Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner version 1.1 or higher! ** Orchestrator offers the following benefits: - No shared state - Crashes are isolated - Logs are scoped per test See for more information about Android Test Orchestrator. If not set, the test will be run without the orchestrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestratorOption(@Nullable Output<AndroidInstrumentationTestOrchestratorOption> orchestratorOption) {
             $.orchestratorOption = orchestratorOption;
             return this;
         }
 
+        /**
+         * @param orchestratorOption The option of whether running each test within its own invocation of instrumentation with Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner version 1.1 or higher! ** Orchestrator offers the following benefits: - No shared state - Crashes are isolated - Logs are scoped per test See for more information about Android Test Orchestrator. If not set, the test will be run without the orchestrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestratorOption(AndroidInstrumentationTestOrchestratorOption orchestratorOption) {
             return orchestratorOption(Output.of(orchestratorOption));
         }
 
+        /**
+         * @param shardingOption The option to run tests in multiple shards in parallel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardingOption(@Nullable Output<ShardingOptionArgs> shardingOption) {
             $.shardingOption = shardingOption;
             return this;
         }
 
+        /**
+         * @param shardingOption The option to run tests in multiple shards in parallel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardingOption(ShardingOptionArgs shardingOption) {
             return shardingOption(Output.of(shardingOption));
         }
 
+        /**
+         * @param testApk The APK containing the test code to be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testApk(Output<FileReferenceArgs> testApk) {
             $.testApk = testApk;
             return this;
         }
 
+        /**
+         * @param testApk The APK containing the test code to be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testApk(FileReferenceArgs testApk) {
             return testApk(Output.of(testApk));
         }
 
+        /**
+         * @param testPackageId The java package for the test to be executed. The default value is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testPackageId(@Nullable Output<String> testPackageId) {
             $.testPackageId = testPackageId;
             return this;
         }
 
+        /**
+         * @param testPackageId The java package for the test to be executed. The default value is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testPackageId(String testPackageId) {
             return testPackageId(Output.of(testPackageId));
         }
 
+        /**
+         * @param testRunnerClass The InstrumentationTestRunner class. The default value is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testRunnerClass(@Nullable Output<String> testRunnerClass) {
             $.testRunnerClass = testRunnerClass;
             return this;
         }
 
+        /**
+         * @param testRunnerClass The InstrumentationTestRunner class. The default value is determined by examining the application&#39;s manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testRunnerClass(String testRunnerClass) {
             return testRunnerClass(Output.of(testRunnerClass));
         }
 
+        /**
+         * @param testTargets Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargets(@Nullable Output<List<String>> testTargets) {
             $.testTargets = testTargets;
             return this;
         }
 
+        /**
+         * @param testTargets Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargets(List<String> testTargets) {
             return testTargets(Output.of(testTargets));
         }
 
+        /**
+         * @param testTargets Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargets(String... testTargets) {
             return testTargets(List.of(testTargets));
         }

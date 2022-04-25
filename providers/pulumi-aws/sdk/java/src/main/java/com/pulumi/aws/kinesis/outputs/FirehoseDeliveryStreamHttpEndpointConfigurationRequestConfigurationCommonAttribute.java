@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute {
     /**
-     * The name of the HTTP endpoint common attribute.
+     * @return The name of the HTTP endpoint common attribute.
      * 
      */
     private final String name;
     /**
-     * The value of the HTTP endpoint common attribute.
+     * @return The value of the HTTP endpoint common attribute.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
     }
 
     /**
-     * The name of the HTTP endpoint common attribute.
+     * @return The name of the HTTP endpoint common attribute.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The value of the HTTP endpoint common attribute.
+     * @return The value of the HTTP endpoint common attribute.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

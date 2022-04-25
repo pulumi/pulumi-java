@@ -30,6 +30,10 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends com.pulumi.resour
     @Import(name="bigQueryOptions")
     private @Nullable Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions;
 
+    /**
+     * @return BigQuery options.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2BigQueryOptionsArgs>> bigQueryOptions() {
         return Optional.ofNullable(this.bigQueryOptions);
     }
@@ -41,6 +45,10 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends com.pulumi.resour
     @Import(name="cloudStorageOptions")
     private @Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions;
 
+    /**
+     * @return Google Cloud Storage options.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2CloudStorageOptionsArgs>> cloudStorageOptions() {
         return Optional.ofNullable(this.cloudStorageOptions);
     }
@@ -52,6 +60,10 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends com.pulumi.resour
     @Import(name="datastoreOptions")
     private @Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions;
 
+    /**
+     * @return Google Cloud Datastore options.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2DatastoreOptionsArgs>> datastoreOptions() {
         return Optional.ofNullable(this.datastoreOptions);
     }
@@ -63,6 +75,10 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends com.pulumi.resour
     @Import(name="hybridOptions")
     private @Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions;
 
+    /**
+     * @return Hybrid inspection options.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2HybridOptionsArgs>> hybridOptions() {
         return Optional.ofNullable(this.hybridOptions);
     }
@@ -102,38 +118,86 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends com.pulumi.resour
             $ = new GooglePrivacyDlpV2StorageConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigQueryOptions BigQuery options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigQueryOptions(@Nullable Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions) {
             $.bigQueryOptions = bigQueryOptions;
             return this;
         }
 
+        /**
+         * @param bigQueryOptions BigQuery options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigQueryOptions(GooglePrivacyDlpV2BigQueryOptionsArgs bigQueryOptions) {
             return bigQueryOptions(Output.of(bigQueryOptions));
         }
 
+        /**
+         * @param cloudStorageOptions Google Cloud Storage options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStorageOptions(@Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions) {
             $.cloudStorageOptions = cloudStorageOptions;
             return this;
         }
 
+        /**
+         * @param cloudStorageOptions Google Cloud Storage options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStorageOptions(GooglePrivacyDlpV2CloudStorageOptionsArgs cloudStorageOptions) {
             return cloudStorageOptions(Output.of(cloudStorageOptions));
         }
 
+        /**
+         * @param datastoreOptions Google Cloud Datastore options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreOptions(@Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions) {
             $.datastoreOptions = datastoreOptions;
             return this;
         }
 
+        /**
+         * @param datastoreOptions Google Cloud Datastore options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreOptions(GooglePrivacyDlpV2DatastoreOptionsArgs datastoreOptions) {
             return datastoreOptions(Output.of(datastoreOptions));
         }
 
+        /**
+         * @param hybridOptions Hybrid inspection options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridOptions(@Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions) {
             $.hybridOptions = hybridOptions;
             return this;
         }
 
+        /**
+         * @param hybridOptions Hybrid inspection options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridOptions(GooglePrivacyDlpV2HybridOptionsArgs hybridOptions) {
             return hybridOptions(Output.of(hybridOptions));
         }

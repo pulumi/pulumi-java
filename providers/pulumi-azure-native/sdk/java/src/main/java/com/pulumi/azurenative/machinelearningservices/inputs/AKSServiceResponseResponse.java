@@ -40,6 +40,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="aadAuthEnabled")
     private @Nullable Boolean aadAuthEnabled;
 
+    /**
+     * @return Whether or not AAD authentication is enabled.
+     * 
+     */
     public Optional<Boolean> aadAuthEnabled() {
         return Optional.ofNullable(this.aadAuthEnabled);
     }
@@ -51,6 +55,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="appInsightsEnabled")
     private @Nullable Boolean appInsightsEnabled;
 
+    /**
+     * @return Whether or not Application Insights is enabled.
+     * 
+     */
     public Optional<Boolean> appInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
@@ -62,6 +70,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="authEnabled")
     private @Nullable Boolean authEnabled;
 
+    /**
+     * @return Whether or not authentication is enabled.
+     * 
+     */
     public Optional<Boolean> authEnabled() {
         return Optional.ofNullable(this.authEnabled);
     }
@@ -73,6 +85,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="autoScaler")
     private @Nullable AKSServiceResponseResponseAutoScaler autoScaler;
 
+    /**
+     * @return The auto scaler properties.
+     * 
+     */
     public Optional<AKSServiceResponseResponseAutoScaler> autoScaler() {
         return Optional.ofNullable(this.autoScaler);
     }
@@ -84,6 +100,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="computeName")
     private @Nullable String computeName;
 
+    /**
+     * @return The name of the compute resource.
+     * 
+     */
     public Optional<String> computeName() {
         return Optional.ofNullable(this.computeName);
     }
@@ -96,6 +116,11 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="computeType", required=true)
     private String computeType;
 
+    /**
+     * @return The compute environment type for the service.
+     * Expected value is &#39;AKS&#39;.
+     * 
+     */
     public String computeType() {
         return this.computeType;
     }
@@ -107,6 +132,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="containerResourceRequirements")
     private @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
 
+    /**
+     * @return The container resource requirements.
+     * 
+     */
     public Optional<ContainerResourceRequirementsResponse> containerResourceRequirements() {
         return Optional.ofNullable(this.containerResourceRequirements);
     }
@@ -118,6 +147,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="dataCollection")
     private @Nullable AKSServiceResponseResponseDataCollection dataCollection;
 
+    /**
+     * @return Details of the data collection options specified.
+     * 
+     */
     public Optional<AKSServiceResponseResponseDataCollection> dataCollection() {
         return Optional.ofNullable(this.dataCollection);
     }
@@ -129,6 +162,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="deploymentStatus", required=true)
     private AKSServiceResponseResponseDeploymentStatus deploymentStatus;
 
+    /**
+     * @return The deployment status.
+     * 
+     */
     public AKSServiceResponseResponseDeploymentStatus deploymentStatus() {
         return this.deploymentStatus;
     }
@@ -140,6 +177,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="deploymentType")
     private @Nullable String deploymentType;
 
+    /**
+     * @return The deployment type for the service.
+     * 
+     */
     public Optional<String> deploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
@@ -151,6 +192,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -162,6 +207,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="environmentImageRequest")
     private @Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
 
+    /**
+     * @return The Environment, models and assets used for inferencing.
+     * 
+     */
     public Optional<AKSServiceResponseResponseEnvironmentImageRequest> environmentImageRequest() {
         return Optional.ofNullable(this.environmentImageRequest);
     }
@@ -173,6 +222,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="error", required=true)
     private ServiceResponseBaseResponseError error;
 
+    /**
+     * @return The error details.
+     * 
+     */
     public ServiceResponseBaseResponseError error() {
         return this.error;
     }
@@ -184,6 +237,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="isDefault")
     private @Nullable Boolean isDefault;
 
+    /**
+     * @return Is this the default variant.
+     * 
+     */
     public Optional<Boolean> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
@@ -195,6 +252,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="kvTags")
     private @Nullable Map<String,String> kvTags;
 
+    /**
+     * @return The service tag dictionary. Tags are mutable.
+     * 
+     */
     public Optional<Map<String,String>> kvTags() {
         return Optional.ofNullable(this.kvTags);
     }
@@ -206,6 +267,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="livenessProbeRequirements")
     private @Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements;
 
+    /**
+     * @return The liveness probe requirements.
+     * 
+     */
     public Optional<AKSServiceResponseResponseLivenessProbeRequirements> livenessProbeRequirements() {
         return Optional.ofNullable(this.livenessProbeRequirements);
     }
@@ -217,6 +282,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="maxConcurrentRequestsPerContainer")
     private @Nullable Integer maxConcurrentRequestsPerContainer;
 
+    /**
+     * @return The maximum number of concurrent requests per container.
+     * 
+     */
     public Optional<Integer> maxConcurrentRequestsPerContainer() {
         return Optional.ofNullable(this.maxConcurrentRequestsPerContainer);
     }
@@ -228,6 +297,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="maxQueueWaitMs")
     private @Nullable Integer maxQueueWaitMs;
 
+    /**
+     * @return Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
+     * 
+     */
     public Optional<Integer> maxQueueWaitMs() {
         return Optional.ofNullable(this.maxQueueWaitMs);
     }
@@ -239,6 +312,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="modelConfigMap", required=true)
     private Map<String,Object> modelConfigMap;
 
+    /**
+     * @return Details on the models and configurations.
+     * 
+     */
     public Map<String,Object> modelConfigMap() {
         return this.modelConfigMap;
     }
@@ -250,6 +327,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="models")
     private @Nullable List<ModelResponse> models;
 
+    /**
+     * @return The list of models.
+     * 
+     */
     public Optional<List<ModelResponse>> models() {
         return Optional.ofNullable(this.models);
     }
@@ -261,6 +342,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="namespace")
     private @Nullable String namespace;
 
+    /**
+     * @return The Kubernetes namespace of the deployment.
+     * 
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -272,6 +357,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="numReplicas")
     private @Nullable Integer numReplicas;
 
+    /**
+     * @return The number of replicas on the cluster.
+     * 
+     */
     public Optional<Integer> numReplicas() {
         return Optional.ofNullable(this.numReplicas);
     }
@@ -283,6 +372,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return The service property dictionary. Properties are immutable.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -294,6 +387,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="scoringTimeoutMs")
     private @Nullable Integer scoringTimeoutMs;
 
+    /**
+     * @return The scoring timeout in milliseconds.
+     * 
+     */
     public Optional<Integer> scoringTimeoutMs() {
         return Optional.ofNullable(this.scoringTimeoutMs);
     }
@@ -305,6 +402,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="scoringUri", required=true)
     private String scoringUri;
 
+    /**
+     * @return The Uri for sending scoring requests.
+     * 
+     */
     public String scoringUri() {
         return this.scoringUri;
     }
@@ -316,6 +417,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The current state of the service.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -327,6 +432,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="swaggerUri", required=true)
     private String swaggerUri;
 
+    /**
+     * @return The Uri for sending swagger requests.
+     * 
+     */
     public String swaggerUri() {
         return this.swaggerUri;
     }
@@ -338,6 +447,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="trafficPercentile")
     private @Nullable Double trafficPercentile;
 
+    /**
+     * @return The amount of traffic variant receives.
+     * 
+     */
     public Optional<Double> trafficPercentile() {
         return Optional.ofNullable(this.trafficPercentile);
     }
@@ -349,6 +462,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of the variant.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -405,150 +522,331 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
             $ = new AKSServiceResponseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadAuthEnabled Whether or not AAD authentication is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadAuthEnabled(@Nullable Boolean aadAuthEnabled) {
             $.aadAuthEnabled = aadAuthEnabled;
             return this;
         }
 
+        /**
+         * @param appInsightsEnabled Whether or not Application Insights is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
             $.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
 
+        /**
+         * @param authEnabled Whether or not authentication is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authEnabled(@Nullable Boolean authEnabled) {
             $.authEnabled = authEnabled;
             return this;
         }
 
+        /**
+         * @param autoScaler The auto scaler properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScaler(@Nullable AKSServiceResponseResponseAutoScaler autoScaler) {
             $.autoScaler = autoScaler;
             return this;
         }
 
+        /**
+         * @param computeName The name of the compute resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeName(@Nullable String computeName) {
             $.computeName = computeName;
             return this;
         }
 
+        /**
+         * @param computeType The compute environment type for the service.
+         * Expected value is &#39;AKS&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(String computeType) {
             $.computeType = computeType;
             return this;
         }
 
+        /**
+         * @param containerResourceRequirements The container resource requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
             $.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
 
+        /**
+         * @param dataCollection Details of the data collection options specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollection(@Nullable AKSServiceResponseResponseDataCollection dataCollection) {
             $.dataCollection = dataCollection;
             return this;
         }
 
+        /**
+         * @param deploymentStatus The deployment status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentStatus(AKSServiceResponseResponseDeploymentStatus deploymentStatus) {
             $.deploymentStatus = deploymentStatus;
             return this;
         }
 
+        /**
+         * @param deploymentType The deployment type for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentType(@Nullable String deploymentType) {
             $.deploymentType = deploymentType;
             return this;
         }
 
+        /**
+         * @param description The service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param environmentImageRequest The Environment, models and assets used for inferencing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentImageRequest(@Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest) {
             $.environmentImageRequest = environmentImageRequest;
             return this;
         }
 
+        /**
+         * @param error The error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(ServiceResponseBaseResponseError error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param isDefault Is this the default variant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefault(@Nullable Boolean isDefault) {
             $.isDefault = isDefault;
             return this;
         }
 
+        /**
+         * @param kvTags The service tag dictionary. Tags are mutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
             $.kvTags = kvTags;
             return this;
         }
 
+        /**
+         * @param livenessProbeRequirements The liveness probe requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livenessProbeRequirements(@Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements) {
             $.livenessProbeRequirements = livenessProbeRequirements;
             return this;
         }
 
+        /**
+         * @param maxConcurrentRequestsPerContainer The maximum number of concurrent requests per container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentRequestsPerContainer(@Nullable Integer maxConcurrentRequestsPerContainer) {
             $.maxConcurrentRequestsPerContainer = maxConcurrentRequestsPerContainer;
             return this;
         }
 
+        /**
+         * @param maxQueueWaitMs Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxQueueWaitMs(@Nullable Integer maxQueueWaitMs) {
             $.maxQueueWaitMs = maxQueueWaitMs;
             return this;
         }
 
+        /**
+         * @param modelConfigMap Details on the models and configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelConfigMap(Map<String,Object> modelConfigMap) {
             $.modelConfigMap = modelConfigMap;
             return this;
         }
 
+        /**
+         * @param models The list of models.
+         * 
+         * @return builder
+         * 
+         */
         public Builder models(@Nullable List<ModelResponse> models) {
             $.models = models;
             return this;
         }
 
+        /**
+         * @param models The list of models.
+         * 
+         * @return builder
+         * 
+         */
         public Builder models(ModelResponse... models) {
             return models(List.of(models));
         }
 
+        /**
+         * @param namespace The Kubernetes namespace of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable String namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param numReplicas The number of replicas on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numReplicas(@Nullable Integer numReplicas) {
             $.numReplicas = numReplicas;
             return this;
         }
 
+        /**
+         * @param properties The service property dictionary. Properties are immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param scoringTimeoutMs The scoring timeout in milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringTimeoutMs(@Nullable Integer scoringTimeoutMs) {
             $.scoringTimeoutMs = scoringTimeoutMs;
             return this;
         }
 
+        /**
+         * @param scoringUri The Uri for sending scoring requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringUri(String scoringUri) {
             $.scoringUri = scoringUri;
             return this;
         }
 
+        /**
+         * @param state The current state of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param swaggerUri The Uri for sending swagger requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder swaggerUri(String swaggerUri) {
             $.swaggerUri = swaggerUri;
             return this;
         }
 
+        /**
+         * @param trafficPercentile The amount of traffic variant receives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficPercentile(@Nullable Double trafficPercentile) {
             $.trafficPercentile = trafficPercentile;
             return this;
         }
 
+        /**
+         * @param type The type of the variant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

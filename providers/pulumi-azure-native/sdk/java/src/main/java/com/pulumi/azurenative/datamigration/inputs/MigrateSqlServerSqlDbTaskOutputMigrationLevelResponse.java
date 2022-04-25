@@ -30,6 +30,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="databaseSummary", required=true)
     private Map<String,DatabaseSummaryResultResponse> databaseSummary;
 
+    /**
+     * @return Summary of database results in the migration
+     * 
+     */
     public Map<String,DatabaseSummaryResultResponse> databaseSummary() {
         return this.databaseSummary;
     }
@@ -41,6 +45,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="databases", required=true)
     private Map<String,String> databases;
 
+    /**
+     * @return Selected databases as a map from database name to database id
+     * 
+     */
     public Map<String,String> databases() {
         return this.databases;
     }
@@ -52,6 +60,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="durationInSeconds", required=true)
     private Double durationInSeconds;
 
+    /**
+     * @return Duration of task execution in seconds.
+     * 
+     */
     public Double durationInSeconds() {
         return this.durationInSeconds;
     }
@@ -63,6 +75,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="endedOn", required=true)
     private String endedOn;
 
+    /**
+     * @return Migration end time
+     * 
+     */
     public String endedOn() {
         return this.endedOn;
     }
@@ -74,6 +90,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="exceptionsAndWarnings", required=true)
     private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
+    /**
+     * @return Migration exceptions and warnings.
+     * 
+     */
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
@@ -85,6 +105,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -96,6 +120,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Migration progress message
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -107,6 +135,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="migrationReport", required=true)
     private MigrationReportResultResponse migrationReport;
 
+    /**
+     * @return Migration Report Result, provides unique url for downloading your migration report.
+     * 
+     */
     public MigrationReportResultResponse migrationReport() {
         return this.migrationReport;
     }
@@ -119,6 +151,11 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Result type
+     * Expected value is &#39;MigrationLevelOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -130,6 +167,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="sourceServerBrandVersion", required=true)
     private String sourceServerBrandVersion;
 
+    /**
+     * @return Source server brand version
+     * 
+     */
     public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
@@ -141,6 +182,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="sourceServerVersion", required=true)
     private String sourceServerVersion;
 
+    /**
+     * @return Source server version
+     * 
+     */
     public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
@@ -152,6 +197,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="startedOn", required=true)
     private String startedOn;
 
+    /**
+     * @return Migration start time
+     * 
+     */
     public String startedOn() {
         return this.startedOn;
     }
@@ -163,6 +212,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Current status of migration
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -174,6 +227,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="statusMessage", required=true)
     private String statusMessage;
 
+    /**
+     * @return Migration status message
+     * 
+     */
     public String statusMessage() {
         return this.statusMessage;
     }
@@ -185,6 +242,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="targetServerBrandVersion", required=true)
     private String targetServerBrandVersion;
 
+    /**
+     * @return Target server brand version
+     * 
+     */
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
@@ -196,6 +257,10 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
     @Import(name="targetServerVersion", required=true)
     private String targetServerVersion;
 
+    /**
+     * @return Target server version
+     * 
+     */
     public String targetServerVersion() {
         return this.targetServerVersion;
     }
@@ -239,85 +304,188 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
             $ = new MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseSummary Summary of database results in the migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseSummary(Map<String,DatabaseSummaryResultResponse> databaseSummary) {
             $.databaseSummary = databaseSummary;
             return this;
         }
 
+        /**
+         * @param databases Selected databases as a map from database name to database id
+         * 
+         * @return builder
+         * 
+         */
         public Builder databases(Map<String,String> databases) {
             $.databases = databases;
             return this;
         }
 
+        /**
+         * @param durationInSeconds Duration of task execution in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationInSeconds(Double durationInSeconds) {
             $.durationInSeconds = durationInSeconds;
             return this;
         }
 
+        /**
+         * @param endedOn Migration end time
+         * 
+         * @return builder
+         * 
+         */
         public Builder endedOn(String endedOn) {
             $.endedOn = endedOn;
             return this;
         }
 
+        /**
+         * @param exceptionsAndWarnings Migration exceptions and warnings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
 
+        /**
+         * @param exceptionsAndWarnings Migration exceptions and warnings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param message Migration progress message
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param migrationReport Migration Report Result, provides unique url for downloading your migration report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationReport(MigrationReportResultResponse migrationReport) {
             $.migrationReport = migrationReport;
             return this;
         }
 
+        /**
+         * @param resultType Result type
+         * Expected value is &#39;MigrationLevelOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;
         }
 
+        /**
+         * @param sourceServerBrandVersion Source server brand version
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceServerBrandVersion(String sourceServerBrandVersion) {
             $.sourceServerBrandVersion = sourceServerBrandVersion;
             return this;
         }
 
+        /**
+         * @param sourceServerVersion Source server version
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceServerVersion(String sourceServerVersion) {
             $.sourceServerVersion = sourceServerVersion;
             return this;
         }
 
+        /**
+         * @param startedOn Migration start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder startedOn(String startedOn) {
             $.startedOn = startedOn;
             return this;
         }
 
+        /**
+         * @param status Current status of migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param statusMessage Migration status message
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusMessage(String statusMessage) {
             $.statusMessage = statusMessage;
             return this;
         }
 
+        /**
+         * @param targetServerBrandVersion Target server brand version
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             $.targetServerBrandVersion = targetServerBrandVersion;
             return this;
         }
 
+        /**
+         * @param targetServerVersion Target server version
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServerVersion(String targetServerVersion) {
             $.targetServerVersion = targetServerVersion;
             return this;

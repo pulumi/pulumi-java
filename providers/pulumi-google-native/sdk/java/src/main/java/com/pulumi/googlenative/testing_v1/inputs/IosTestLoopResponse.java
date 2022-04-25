@@ -26,6 +26,10 @@ public final class IosTestLoopResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="appBundleId", required=true)
     private String appBundleId;
 
+    /**
+     * @return The bundle id for the application under test.
+     * 
+     */
     public String appBundleId() {
         return this.appBundleId;
     }
@@ -37,6 +41,10 @@ public final class IosTestLoopResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="appIpa", required=true)
     private FileReferenceResponse appIpa;
 
+    /**
+     * @return The .ipa of the application to test.
+     * 
+     */
     public FileReferenceResponse appIpa() {
         return this.appIpa;
     }
@@ -48,6 +56,10 @@ public final class IosTestLoopResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scenarios", required=true)
     private List<Integer> scenarios;
 
+    /**
+     * @return The list of scenarios that should be run during the test. Defaults to the single scenario 0 if unspecified.
+     * 
+     */
     public List<Integer> scenarios() {
         return this.scenarios;
     }
@@ -78,21 +90,45 @@ public final class IosTestLoopResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IosTestLoopResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appBundleId The bundle id for the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appBundleId(String appBundleId) {
             $.appBundleId = appBundleId;
             return this;
         }
 
+        /**
+         * @param appIpa The .ipa of the application to test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appIpa(FileReferenceResponse appIpa) {
             $.appIpa = appIpa;
             return this;
         }
 
+        /**
+         * @param scenarios The list of scenarios that should be run during the test. Defaults to the single scenario 0 if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scenarios(List<Integer> scenarios) {
             $.scenarios = scenarios;
             return this;
         }
 
+        /**
+         * @param scenarios The list of scenarios that should be run during the test. Defaults to the single scenario 0 if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scenarios(Integer... scenarios) {
             return scenarios(List.of(scenarios));
         }

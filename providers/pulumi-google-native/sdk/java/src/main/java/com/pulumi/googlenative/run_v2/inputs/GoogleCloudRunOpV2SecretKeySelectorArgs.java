@@ -26,6 +26,10 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends com.pulumi.re
     @Import(name="secret", required=true)
     private Output<String> secret;
 
+    /**
+     * @return The name of the secret in Cloud Secret Manager. Format: {secret_name} if the secret is in the same project. projects/{project}/secrets/{secret_name} if the secret is in a different project.
+     * 
+     */
     public Output<String> secret() {
         return this.secret;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends com.pulumi.re
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The Cloud Secret Manager secret version. Can be &#39;latest&#39; for the latest value or an integer for a specific version.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends com.pulumi.re
             $ = new GoogleCloudRunOpV2SecretKeySelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secret The name of the secret in Cloud Secret Manager. Format: {secret_name} if the secret is in the same project. projects/{project}/secrets/{secret_name} if the secret is in a different project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret The name of the secret in Cloud Secret Manager. Format: {secret_name} if the secret is in the same project. projects/{project}/secrets/{secret_name} if the secret is in a different project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }
 
+        /**
+         * @param version The Cloud Secret Manager secret version. Can be &#39;latest&#39; for the latest value or an integer for a specific version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The Cloud Secret Manager secret version. Can be &#39;latest&#39; for the latest value or an integer for a specific version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

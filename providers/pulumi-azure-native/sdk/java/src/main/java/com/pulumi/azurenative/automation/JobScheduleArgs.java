@@ -25,6 +25,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
     private Output<String> automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
@@ -36,6 +40,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobScheduleId")
     private @Nullable Output<String> jobScheduleId;
 
+    /**
+     * @return The job schedule name.
+     * 
+     */
     public Optional<Output<String>> jobScheduleId() {
         return Optional.ofNullable(this.jobScheduleId);
     }
@@ -47,6 +55,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Map<String,String>> parameters;
 
+    /**
+     * @return Gets or sets a list of job properties.
+     * 
+     */
     public Optional<Output<Map<String,String>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -58,6 +70,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runOn")
     private @Nullable Output<String> runOn;
 
+    /**
+     * @return Gets or sets the hybrid worker group that the scheduled job should run on.
+     * 
+     */
     public Optional<Output<String>> runOn() {
         return Optional.ofNullable(this.runOn);
     }
@@ -80,6 +100,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runbook", required=true)
     private Output<RunbookAssociationPropertyArgs> runbook;
 
+    /**
+     * @return Gets or sets the runbook.
+     * 
+     */
     public Output<RunbookAssociationPropertyArgs> runbook() {
         return this.runbook;
     }
@@ -91,6 +115,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
     private Output<ScheduleAssociationPropertyArgs> schedule;
 
+    /**
+     * @return Gets or sets the schedule.
+     * 
+     */
     public Output<ScheduleAssociationPropertyArgs> schedule() {
         return this.schedule;
     }
@@ -125,65 +153,149 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
         }
 
+        /**
+         * @param jobScheduleId The job schedule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobScheduleId(@Nullable Output<String> jobScheduleId) {
             $.jobScheduleId = jobScheduleId;
             return this;
         }
 
+        /**
+         * @param jobScheduleId The job schedule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobScheduleId(String jobScheduleId) {
             return jobScheduleId(Output.of(jobScheduleId));
         }
 
+        /**
+         * @param parameters Gets or sets a list of job properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Gets or sets a list of job properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,String> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param runOn Gets or sets the hybrid worker group that the scheduled job should run on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runOn(@Nullable Output<String> runOn) {
             $.runOn = runOn;
             return this;
         }
 
+        /**
+         * @param runOn Gets or sets the hybrid worker group that the scheduled job should run on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runOn(String runOn) {
             return runOn(Output.of(runOn));
         }
 
+        /**
+         * @param runbook Gets or sets the runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runbook(Output<RunbookAssociationPropertyArgs> runbook) {
             $.runbook = runbook;
             return this;
         }
 
+        /**
+         * @param runbook Gets or sets the runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runbook(RunbookAssociationPropertyArgs runbook) {
             return runbook(Output.of(runbook));
         }
 
+        /**
+         * @param schedule Gets or sets the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(Output<ScheduleAssociationPropertyArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Gets or sets the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(ScheduleAssociationPropertyArgs schedule) {
             return schedule(Output.of(schedule));
         }

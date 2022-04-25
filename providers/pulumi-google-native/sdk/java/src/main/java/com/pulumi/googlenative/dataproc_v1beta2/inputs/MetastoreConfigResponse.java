@@ -23,6 +23,10 @@ public final class MetastoreConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dataprocMetastoreService", required=true)
     private String dataprocMetastoreService;
 
+    /**
+     * @return Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[dataproc_region]/services/[service-name]
+     * 
+     */
     public String dataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }
@@ -51,6 +55,12 @@ public final class MetastoreConfigResponse extends com.pulumi.resources.InvokeAr
             $ = new MetastoreConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataprocMetastoreService Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[dataproc_region]/services/[service-name]
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataprocMetastoreService(String dataprocMetastoreService) {
             $.dataprocMetastoreService = dataprocMetastoreService;
             return this;

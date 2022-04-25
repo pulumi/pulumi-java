@@ -26,6 +26,10 @@ public final class FilterFileDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="filterFilePath", required=true)
     private Output<String> filterFilePath;
 
+    /**
+     * @return Path of the file that contains the details of all items to transfer.
+     * 
+     */
     public Output<String> filterFilePath() {
         return this.filterFilePath;
     }
@@ -37,6 +41,10 @@ public final class FilterFileDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="filterFileType", required=true)
     private Output<Either<String,FilterFileType>> filterFileType;
 
+    /**
+     * @return Type of the filter file.
+     * 
+     */
     public Output<Either<String,FilterFileType>> filterFileType() {
         return this.filterFileType;
     }
@@ -66,28 +74,64 @@ public final class FilterFileDetailsArgs extends com.pulumi.resources.ResourceAr
             $ = new FilterFileDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filterFilePath Path of the file that contains the details of all items to transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterFilePath(Output<String> filterFilePath) {
             $.filterFilePath = filterFilePath;
             return this;
         }
 
+        /**
+         * @param filterFilePath Path of the file that contains the details of all items to transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterFilePath(String filterFilePath) {
             return filterFilePath(Output.of(filterFilePath));
         }
 
+        /**
+         * @param filterFileType Type of the filter file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterFileType(Output<Either<String,FilterFileType>> filterFileType) {
             $.filterFileType = filterFileType;
             return this;
         }
 
+        /**
+         * @param filterFileType Type of the filter file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterFileType(Either<String,FilterFileType> filterFileType) {
             return filterFileType(Output.of(filterFileType));
         }
 
+        /**
+         * @param filterFileType Type of the filter file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterFileType(String filterFileType) {
             return filterFileType(Either.ofLeft(filterFileType));
         }
 
+        /**
+         * @param filterFileType Type of the filter file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterFileType(FilterFileType filterFileType) {
             return filterFileType(Either.ofRight(filterFileType));
         }

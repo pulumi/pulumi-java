@@ -23,6 +23,10 @@ public final class AcceleratorConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="acceleratorCount", required=true)
     private String acceleratorCount;
 
+    /**
+     * @return The number of the accelerator cards exposed to an instance.
+     * 
+     */
     public String acceleratorCount() {
         return this.acceleratorCount;
     }
@@ -34,6 +38,10 @@ public final class AcceleratorConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="acceleratorType", required=true)
     private String acceleratorType;
 
+    /**
+     * @return The accelerator type resource name. List of supported accelerators [here](https://cloud.google.com/compute/docs/gpus)
+     * 
+     */
     public String acceleratorType() {
         return this.acceleratorType;
     }
@@ -45,6 +53,10 @@ public final class AcceleratorConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="gpuPartitionSize", required=true)
     private String gpuPartitionSize;
 
+    /**
+     * @return Size of partitions to create on the GPU. Valid values are described in the NVIDIA [mig user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+     * 
+     */
     public String gpuPartitionSize() {
         return this.gpuPartitionSize;
     }
@@ -75,16 +87,34 @@ public final class AcceleratorConfigResponse extends com.pulumi.resources.Invoke
             $ = new AcceleratorConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorCount The number of the accelerator cards exposed to an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(String acceleratorCount) {
             $.acceleratorCount = acceleratorCount;
             return this;
         }
 
+        /**
+         * @param acceleratorType The accelerator type resource name. List of supported accelerators [here](https://cloud.google.com/compute/docs/gpus)
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(String acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;
         }
 
+        /**
+         * @param gpuPartitionSize Size of partitions to create on the GPU. Valid values are described in the NVIDIA [mig user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpuPartitionSize(String gpuPartitionSize) {
             $.gpuPartitionSize = gpuPartitionSize;
             return this;

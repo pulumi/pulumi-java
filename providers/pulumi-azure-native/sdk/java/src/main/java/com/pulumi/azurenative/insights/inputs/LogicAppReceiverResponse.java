@@ -27,6 +27,10 @@ public final class LogicAppReceiverResponse extends com.pulumi.resources.InvokeA
     @Import(name="callbackUrl", required=true)
     private String callbackUrl;
 
+    /**
+     * @return The callback url where http request sent to.
+     * 
+     */
     public String callbackUrl() {
         return this.callbackUrl;
     }
@@ -38,6 +42,10 @@ public final class LogicAppReceiverResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the logic app receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class LogicAppReceiverResponse extends com.pulumi.resources.InvokeA
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return The azure resource id of the logic app receiver.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -60,6 +72,10 @@ public final class LogicAppReceiverResponse extends com.pulumi.resources.InvokeA
     @Import(name="useCommonAlertSchema")
     private @Nullable Boolean useCommonAlertSchema;
 
+    /**
+     * @return Indicates whether to use common alert schema.
+     * 
+     */
     public Optional<Boolean> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
@@ -91,21 +107,45 @@ public final class LogicAppReceiverResponse extends com.pulumi.resources.InvokeA
             $ = new LogicAppReceiverResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param callbackUrl The callback url where http request sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callbackUrl(String callbackUrl) {
             $.callbackUrl = callbackUrl;
             return this;
         }
 
+        /**
+         * @param name The name of the logic app receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceId The azure resource id of the logic app receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             $.useCommonAlertSchema = useCommonAlertSchema;
             return this;

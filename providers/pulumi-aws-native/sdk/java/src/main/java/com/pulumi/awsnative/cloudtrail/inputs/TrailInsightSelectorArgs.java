@@ -26,6 +26,10 @@ public final class TrailInsightSelectorArgs extends com.pulumi.resources.Resourc
     @Import(name="insightType")
     private @Nullable Output<String> insightType;
 
+    /**
+     * @return The type of insight to log on a trail.
+     * 
+     */
     public Optional<Output<String>> insightType() {
         return Optional.ofNullable(this.insightType);
     }
@@ -54,11 +58,23 @@ public final class TrailInsightSelectorArgs extends com.pulumi.resources.Resourc
             $ = new TrailInsightSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param insightType The type of insight to log on a trail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insightType(@Nullable Output<String> insightType) {
             $.insightType = insightType;
             return this;
         }
 
+        /**
+         * @param insightType The type of insight to log on a trail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insightType(String insightType) {
             return insightType(Output.of(insightType));
         }

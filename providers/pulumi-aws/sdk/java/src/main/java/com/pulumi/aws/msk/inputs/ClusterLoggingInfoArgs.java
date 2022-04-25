@@ -20,6 +20,10 @@ public final class ClusterLoggingInfoArgs extends com.pulumi.resources.ResourceA
     @Import(name="brokerLogs", required=true)
     private Output<ClusterLoggingInfoBrokerLogsArgs> brokerLogs;
 
+    /**
+     * @return Configuration block for Broker Logs settings for logging info. See below.
+     * 
+     */
     public Output<ClusterLoggingInfoBrokerLogsArgs> brokerLogs() {
         return this.brokerLogs;
     }
@@ -48,11 +52,23 @@ public final class ClusterLoggingInfoArgs extends com.pulumi.resources.ResourceA
             $ = new ClusterLoggingInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param brokerLogs Configuration block for Broker Logs settings for logging info. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brokerLogs(Output<ClusterLoggingInfoBrokerLogsArgs> brokerLogs) {
             $.brokerLogs = brokerLogs;
             return this;
         }
 
+        /**
+         * @param brokerLogs Configuration block for Broker Logs settings for logging info. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brokerLogs(ClusterLoggingInfoBrokerLogsArgs brokerLogs) {
             return brokerLogs(Output.of(brokerLogs));
         }

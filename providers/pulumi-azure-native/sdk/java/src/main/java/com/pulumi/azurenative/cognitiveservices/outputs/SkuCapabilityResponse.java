@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SkuCapabilityResponse {
     /**
-     * The name of the SkuCapability.
+     * @return The name of the SkuCapability.
      * 
      */
     private final @Nullable String name;
     /**
-     * The value of the SkuCapability.
+     * @return The value of the SkuCapability.
      * 
      */
     private final @Nullable String value;
@@ -31,16 +31,16 @@ public final class SkuCapabilityResponse {
     }
 
     /**
-     * The name of the SkuCapability.
+     * @return The name of the SkuCapability.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The value of the SkuCapability.
+     * @return The value of the SkuCapability.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

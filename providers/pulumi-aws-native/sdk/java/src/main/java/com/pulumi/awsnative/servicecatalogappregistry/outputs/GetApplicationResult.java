@@ -14,13 +14,13 @@ import javax.annotation.Nullable;
 public final class GetApplicationResult {
     private final @Nullable String arn;
     /**
-     * The description of the application.
+     * @return The description of the application.
      * 
      */
     private final @Nullable String description;
     private final @Nullable String id;
     /**
-     * The name of the application.
+     * @return The name of the application.
      * 
      */
     private final @Nullable String name;
@@ -44,9 +44,9 @@ public final class GetApplicationResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The description of the application.
+     * @return The description of the application.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -54,9 +54,9 @@ public final class GetApplicationResult {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the application.
+     * @return The name of the application.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

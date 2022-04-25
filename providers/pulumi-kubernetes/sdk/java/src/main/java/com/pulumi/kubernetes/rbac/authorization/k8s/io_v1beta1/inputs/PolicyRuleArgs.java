@@ -27,6 +27,10 @@ public final class PolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiGroups")
     private @Nullable Output<List<String>> apiGroups;
 
+    /**
+     * @return APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.
+     * 
+     */
     public Optional<Output<List<String>>> apiGroups() {
         return Optional.ofNullable(this.apiGroups);
     }
@@ -38,6 +42,10 @@ public final class PolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nonResourceURLs")
     private @Nullable Output<List<String>> nonResourceURLs;
 
+    /**
+     * @return NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as &#34;pods&#34; or &#34;secrets&#34;) or non-resource URL paths (such as &#34;/api&#34;),  but not both.
+     * 
+     */
     public Optional<Output<List<String>>> nonResourceURLs() {
         return Optional.ofNullable(this.nonResourceURLs);
     }
@@ -49,6 +57,10 @@ public final class PolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceNames")
     private @Nullable Output<List<String>> resourceNames;
 
+    /**
+     * @return ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.
+     * 
+     */
     public Optional<Output<List<String>>> resourceNames() {
         return Optional.ofNullable(this.resourceNames);
     }
@@ -60,6 +72,10 @@ public final class PolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resources")
     private @Nullable Output<List<String>> resources;
 
+    /**
+     * @return Resources is a list of resources this rule applies to.  &#39;*&#39; represents all resources in the specified apiGroups. &#39;*{@literal /}foo&#39; represents the subresource &#39;foo&#39; for all resources in the specified apiGroups.
+     * 
+     */
     public Optional<Output<List<String>>> resources() {
         return Optional.ofNullable(this.resources);
     }
@@ -71,6 +87,10 @@ public final class PolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="verbs", required=true)
     private Output<List<String>> verbs;
 
+    /**
+     * @return Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestrictions contained in this rule.  VerbAll represents all kinds.
+     * 
+     */
     public Output<List<String>> verbs() {
         return this.verbs;
     }
@@ -103,67 +123,157 @@ public final class PolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiGroups APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiGroups(@Nullable Output<List<String>> apiGroups) {
             $.apiGroups = apiGroups;
             return this;
         }
 
+        /**
+         * @param apiGroups APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiGroups(List<String> apiGroups) {
             return apiGroups(Output.of(apiGroups));
         }
 
+        /**
+         * @param apiGroups APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiGroups(String... apiGroups) {
             return apiGroups(List.of(apiGroups));
         }
 
+        /**
+         * @param nonResourceURLs NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as &#34;pods&#34; or &#34;secrets&#34;) or non-resource URL paths (such as &#34;/api&#34;),  but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonResourceURLs(@Nullable Output<List<String>> nonResourceURLs) {
             $.nonResourceURLs = nonResourceURLs;
             return this;
         }
 
+        /**
+         * @param nonResourceURLs NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as &#34;pods&#34; or &#34;secrets&#34;) or non-resource URL paths (such as &#34;/api&#34;),  but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonResourceURLs(List<String> nonResourceURLs) {
             return nonResourceURLs(Output.of(nonResourceURLs));
         }
 
+        /**
+         * @param nonResourceURLs NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as &#34;pods&#34; or &#34;secrets&#34;) or non-resource URL paths (such as &#34;/api&#34;),  but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonResourceURLs(String... nonResourceURLs) {
             return nonResourceURLs(List.of(nonResourceURLs));
         }
 
+        /**
+         * @param resourceNames ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceNames(@Nullable Output<List<String>> resourceNames) {
             $.resourceNames = resourceNames;
             return this;
         }
 
+        /**
+         * @param resourceNames ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceNames(List<String> resourceNames) {
             return resourceNames(Output.of(resourceNames));
         }
 
+        /**
+         * @param resourceNames ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceNames(String... resourceNames) {
             return resourceNames(List.of(resourceNames));
         }
 
+        /**
+         * @param resources Resources is a list of resources this rule applies to.  &#39;*&#39; represents all resources in the specified apiGroups. &#39;*{@literal /}foo&#39; represents the subresource &#39;foo&#39; for all resources in the specified apiGroups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(@Nullable Output<List<String>> resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param resources Resources is a list of resources this rule applies to.  &#39;*&#39; represents all resources in the specified apiGroups. &#39;*{@literal /}foo&#39; represents the subresource &#39;foo&#39; for all resources in the specified apiGroups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(List<String> resources) {
             return resources(Output.of(resources));
         }
 
+        /**
+         * @param resources Resources is a list of resources this rule applies to.  &#39;*&#39; represents all resources in the specified apiGroups. &#39;*{@literal /}foo&#39; represents the subresource &#39;foo&#39; for all resources in the specified apiGroups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(String... resources) {
             return resources(List.of(resources));
         }
 
+        /**
+         * @param verbs Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestrictions contained in this rule.  VerbAll represents all kinds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verbs(Output<List<String>> verbs) {
             $.verbs = verbs;
             return this;
         }
 
+        /**
+         * @param verbs Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestrictions contained in this rule.  VerbAll represents all kinds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verbs(List<String> verbs) {
             return verbs(Output.of(verbs));
         }
 
+        /**
+         * @param verbs Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestrictions contained in this rule.  VerbAll represents all kinds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verbs(String... verbs) {
             return verbs(List.of(verbs));
         }

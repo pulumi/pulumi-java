@@ -13,37 +13,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetApplicationTypeResult {
     /**
-     * Azure resource etag.
+     * @return Azure resource etag.
      * 
      */
     private final String etag;
     /**
-     * Azure resource identifier.
+     * @return Azure resource identifier.
      * 
      */
     private final String id;
     /**
-     * It will be deprecated in New API, resource location depends on the parent resource.
+     * @return It will be deprecated in New API, resource location depends on the parent resource.
      * 
      */
     private final @Nullable String location;
     /**
-     * Azure resource name.
+     * @return Azure resource name.
      * 
      */
     private final String name;
     /**
-     * The current deployment or provisioning state, which only appears in the response.
+     * @return The current deployment or provisioning state, which only appears in the response.
      * 
      */
     private final String provisioningState;
     /**
-     * Azure resource tags.
+     * @return Azure resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Azure resource type.
+     * @return Azure resource type.
      * 
      */
     private final String type;
@@ -67,51 +67,51 @@ public final class GetApplicationTypeResult {
     }
 
     /**
-     * Azure resource etag.
+     * @return Azure resource etag.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Azure resource identifier.
+     * @return Azure resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * It will be deprecated in New API, resource location depends on the parent resource.
+     * @return It will be deprecated in New API, resource location depends on the parent resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Azure resource name.
+     * @return Azure resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current deployment or provisioning state, which only appears in the response.
+     * @return The current deployment or provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Azure resource tags.
+     * @return Azure resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Azure resource type.
+     * @return Azure resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

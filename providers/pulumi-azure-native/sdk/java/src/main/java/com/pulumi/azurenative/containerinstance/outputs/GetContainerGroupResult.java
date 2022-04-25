@@ -25,82 +25,82 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetContainerGroupResult {
     /**
-     * The containers within the container group.
+     * @return The containers within the container group.
      * 
      */
     private final List<ContainerResponse> containers;
     /**
-     * The diagnostic information for a container group.
+     * @return The diagnostic information for a container group.
      * 
      */
     private final @Nullable ContainerGroupDiagnosticsResponse diagnostics;
     /**
-     * The DNS config information for a container group.
+     * @return The DNS config information for a container group.
      * 
      */
     private final @Nullable DnsConfigurationResponse dnsConfig;
     /**
-     * The encryption properties for a container group.
+     * @return The encryption properties for a container group.
      * 
      */
     private final @Nullable EncryptionPropertiesResponse encryptionProperties;
     /**
-     * The resource id.
+     * @return The resource id.
      * 
      */
     private final String id;
     /**
-     * The identity of the container group, if configured.
+     * @return The identity of the container group, if configured.
      * 
      */
     private final @Nullable ContainerGroupIdentityResponse identity;
     /**
-     * The image registry credentials by which the container group is created from.
+     * @return The image registry credentials by which the container group is created from.
      * 
      */
     private final @Nullable List<ImageRegistryCredentialResponse> imageRegistryCredentials;
     /**
-     * The init containers for a container group.
+     * @return The init containers for a container group.
      * 
      */
     private final @Nullable List<InitContainerDefinitionResponse> initContainers;
     /**
-     * The instance view of the container group. Only valid in response.
+     * @return The instance view of the container group. Only valid in response.
      * 
      */
     private final ContainerGroupResponseInstanceView instanceView;
     /**
-     * The IP address type of the container group.
+     * @return The IP address type of the container group.
      * 
      */
     private final @Nullable IpAddressResponse ipAddress;
     /**
-     * The resource location.
+     * @return The resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * The resource name.
+     * @return The resource name.
      * 
      */
     private final String name;
     /**
-     * The network profile information for a container group.
+     * @return The network profile information for a container group.
      * 
      */
     private final @Nullable ContainerGroupNetworkProfileResponse networkProfile;
     /**
-     * The operating system type required by the containers in the container group.
+     * @return The operating system type required by the containers in the container group.
      * 
      */
     private final String osType;
     /**
-     * The provisioning state of the container group. This only appears in the response.
+     * @return The provisioning state of the container group. This only appears in the response.
      * 
      */
     private final String provisioningState;
     /**
-     * Restart policy for all containers within the container group.
+     * @return Restart policy for all containers within the container group.
      * - `Always` Always restart
      * - `OnFailure` Restart on failure
      * - `Never` Never restart
@@ -108,22 +108,22 @@ public final class GetContainerGroupResult {
      */
     private final @Nullable String restartPolicy;
     /**
-     * The SKU for a container group.
+     * @return The SKU for a container group.
      * 
      */
     private final @Nullable String sku;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String type;
     /**
-     * The list of volumes that can be mounted by containers in this container group.
+     * @return The list of volumes that can be mounted by containers in this container group.
      * 
      */
     private final @Nullable List<VolumeResponse> volumes;
@@ -173,145 +173,145 @@ public final class GetContainerGroupResult {
     }
 
     /**
-     * The containers within the container group.
+     * @return The containers within the container group.
      * 
-    */
+     */
     public List<ContainerResponse> containers() {
         return this.containers;
     }
     /**
-     * The diagnostic information for a container group.
+     * @return The diagnostic information for a container group.
      * 
-    */
+     */
     public Optional<ContainerGroupDiagnosticsResponse> diagnostics() {
         return Optional.ofNullable(this.diagnostics);
     }
     /**
-     * The DNS config information for a container group.
+     * @return The DNS config information for a container group.
      * 
-    */
+     */
     public Optional<DnsConfigurationResponse> dnsConfig() {
         return Optional.ofNullable(this.dnsConfig);
     }
     /**
-     * The encryption properties for a container group.
+     * @return The encryption properties for a container group.
      * 
-    */
+     */
     public Optional<EncryptionPropertiesResponse> encryptionProperties() {
         return Optional.ofNullable(this.encryptionProperties);
     }
     /**
-     * The resource id.
+     * @return The resource id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the container group, if configured.
+     * @return The identity of the container group, if configured.
      * 
-    */
+     */
     public Optional<ContainerGroupIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The image registry credentials by which the container group is created from.
+     * @return The image registry credentials by which the container group is created from.
      * 
-    */
+     */
     public List<ImageRegistryCredentialResponse> imageRegistryCredentials() {
         return this.imageRegistryCredentials == null ? List.of() : this.imageRegistryCredentials;
     }
     /**
-     * The init containers for a container group.
+     * @return The init containers for a container group.
      * 
-    */
+     */
     public List<InitContainerDefinitionResponse> initContainers() {
         return this.initContainers == null ? List.of() : this.initContainers;
     }
     /**
-     * The instance view of the container group. Only valid in response.
+     * @return The instance view of the container group. Only valid in response.
      * 
-    */
+     */
     public ContainerGroupResponseInstanceView instanceView() {
         return this.instanceView;
     }
     /**
-     * The IP address type of the container group.
+     * @return The IP address type of the container group.
      * 
-    */
+     */
     public Optional<IpAddressResponse> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The network profile information for a container group.
+     * @return The network profile information for a container group.
      * 
-    */
+     */
     public Optional<ContainerGroupNetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
-     * The operating system type required by the containers in the container group.
+     * @return The operating system type required by the containers in the container group.
      * 
-    */
+     */
     public String osType() {
         return this.osType;
     }
     /**
-     * The provisioning state of the container group. This only appears in the response.
+     * @return The provisioning state of the container group. This only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Restart policy for all containers within the container group.
+     * @return Restart policy for all containers within the container group.
      * - `Always` Always restart
      * - `OnFailure` Restart on failure
      * - `Never` Never restart
      * 
-    */
+     */
     public Optional<String> restartPolicy() {
         return Optional.ofNullable(this.restartPolicy);
     }
     /**
-     * The SKU for a container group.
+     * @return The SKU for a container group.
      * 
-    */
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The list of volumes that can be mounted by containers in this container group.
+     * @return The list of volumes that can be mounted by containers in this container group.
      * 
-    */
+     */
     public List<VolumeResponse> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }

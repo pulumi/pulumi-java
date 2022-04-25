@@ -35,6 +35,11 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
     @Import(name="backupManagementType", required=true)
     private String backupManagementType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;AzureStorage&#39;.
+     * 
+     */
     public String backupManagementType() {
         return this.backupManagementType;
     }
@@ -46,6 +51,10 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
     @Import(name="protectedItemsCount")
     private @Nullable Integer protectedItemsCount;
 
+    /**
+     * @return Number of items associated with this policy.
+     * 
+     */
     public Optional<Integer> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
@@ -57,6 +66,10 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
     @Import(name="retentionPolicy")
     private @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
+    /**
+     * @return Retention policy with the details on backup copy retention ranges.
+     * 
+     */
     public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -68,6 +81,10 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
     @Import(name="schedulePolicy")
     private @Nullable Object schedulePolicy;
 
+    /**
+     * @return Backup schedule specified as part of backup policy.
+     * 
+     */
     public Optional<Object> schedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
@@ -79,6 +96,10 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
     @Import(name="timeZone")
     private @Nullable String timeZone;
 
+    /**
+     * @return TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+     * 
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -90,6 +111,10 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
     @Import(name="workLoadType")
     private @Nullable String workLoadType;
 
+    /**
+     * @return Type of workload for the backup management
+     * 
+     */
     public Optional<String> workLoadType() {
         return Optional.ofNullable(this.workLoadType);
     }
@@ -123,39 +148,88 @@ public final class AzureFileShareProtectionPolicyResponse extends com.pulumi.res
             $ = new AzureFileShareProtectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;AzureStorage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(String backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param protectedItemsCount Number of items associated with this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             $.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(LongTermRetentionPolicyResponse retentionPolicy) {
             return retentionPolicy(Either.ofLeft(retentionPolicy));
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(SimpleRetentionPolicyResponse retentionPolicy) {
             return retentionPolicy(Either.ofRight(retentionPolicy));
         }
 
+        /**
+         * @param schedulePolicy Backup schedule specified as part of backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             $.schedulePolicy = schedulePolicy;
             return this;
         }
 
+        /**
+         * @param timeZone TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable String timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param workLoadType Type of workload for the backup management
+         * 
+         * @return builder
+         * 
+         */
         public Builder workLoadType(@Nullable String workLoadType) {
             $.workLoadType = workLoadType;
             return this;
