@@ -388,6 +388,48 @@ type plainType struct {
 	state                 bool
 }
 
+type propJavadocOptions struct {
+	indent    string
+	isSetter  bool
+	isBuilder bool
+	isGetter  bool
+	fieldName string
+}
+
+func genPropJavadoc(ctx *classFileContext, prop *schema.Property, options propJavadocOptions) {
+	w := ctx.writer
+
+	if prop.Comment == "" && prop.DeprecationMessage == "" {
+		return
+	}
+	fprintf(w, "%s/**\n", options.indent)
+
+	preamble := ""
+	if options.isBuilder {
+		preamble = fmt.Sprintf("@param %s ", options.fieldName)
+	}
+	if options.isSetter {
+		preamble = fmt.Sprintf("@param %s ", options.fieldName)
+	}
+	if options.isGetter {
+		preamble = "@return "
+	}
+
+	if prop.Comment != "" {
+		fprintf(w, "%s\n", formatBlockComment(preamble+prop.Comment, options.indent))
+	}
+	if options.isBuilder {
+		fprintf(w, "%s\n", formatBlockComment("@return builder", options.indent))
+	}
+
+	if prop.DeprecationMessage != "" {
+		fprintf(w, "%s * @deprecated\n", options.indent)
+		fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, options.indent))
+	}
+	fprintf(w, "%s */\n", options.indent)
+	printObsoleteAttribute(ctx, prop.DeprecationMessage, options.indent)
+}
+
 func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Property, targetType TypeShape) error {
 	w := ctx.writer
 	wireName := prop.Name
@@ -411,31 +453,17 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 	}
 
 	const indent = "    "
-
-	if prop.Comment != "" || prop.DeprecationMessage != "" {
-		fprintf(w, "    /**\n")
-		if prop.Comment != "" {
-			fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent))
-		}
-
-		if prop.DeprecationMessage != "" {
-			fprintf(w, "     * @deprecated\n")
-			fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
-
-		}
-		fprintf(w, "     */\n")
-	}
+	genPropJavadoc(ctx, prop, propJavadocOptions{
+		indent: indent,
+	})
 
 	propertyName := names.Ident(pt.mod.propertyName(prop))
 	propertyModifiers := []string{}
 
 	propertyModifiers = append(propertyModifiers, "private")
-	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
 	fprintf(w, "    @%s(name=\"%s\"%s)\n", ctx.ref(names.Import), wireName, attributeArgs)
 	fprintf(w, "    %s %s %s;\n\n", strings.Join(propertyModifiers, " "),
 		targetType.ToCode(ctx.imports), propertyName)
-
-	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
 
 	getterType, returnStatement := targetType, fmt.Sprintf("this.%s", propertyName)
 
@@ -447,6 +475,10 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 			returnStatement)
 	}
 
+	genPropJavadoc(ctx, prop, propJavadocOptions{
+		indent:   indent,
+		isGetter: true,
+	})
 	if err := getterTemplate.Execute(w, getterTemplateContext{
 		Indent:          indent,
 		GetterType:      getterType.ToCode(ctx.imports),
@@ -551,13 +583,20 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 
 		setterName := names.Ident(prop.Name).AsProperty().Setter()
 
+		const indent = "        "
+		genPropJavadoc(ctx, prop, propJavadocOptions{
+			indent:    indent,
+			isBuilder: true,
+			fieldName: fieldName,
+		})
+
 		fprintf(w, "        public Builder %[1]s(%[3]s %[2]s) {\n",
 			setterName, fieldName, propType.ToCode(ctx.imports))
 		fprintf(w, "            $.%[1]s = %[1]s;\n", fieldName)
 		fprintf(w, "            return this;\n")
 		fprintf(w, "        }\n\n")
 
-		pt.genBuilderHelpers(ctx, setterName, fieldName, propType)
+		pt.genBuilderHelpers(ctx, setterName, fieldName, propType, prop)
 	}
 
 	// Generate the build() method that does default application
@@ -589,12 +628,18 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 // Generates derived builder setters that resolve to the main setter.
 // This helps to promote T to Output<T>, accept varargs for a List parameter
 // and to unroll Either<L, R> to both of its types.
-func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName, fieldName string, t TypeShape) {
+func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName, fieldName string, t TypeShape, prop *schema.Property) {
 	w := ctx.writer
+	const indent = "        "
 
 	// Helper for when Output<T> is needed but T is provided.
 	isOutput, t1 := t.UnOutput()
 	if isOutput {
+		genPropJavadoc(ctx, prop, propJavadocOptions{
+			indent:    indent,
+			isBuilder: true,
+			fieldName: fieldName,
+		})
 		fprintf(w, "        public Builder %[1]s(%[3]s %[2]s) {\n",
 			setterName, fieldName, t1.ToCode(ctx.imports))
 		fprintf(w, "            return %[1]s(%[3]s.of(%[2]s));\n",
@@ -604,6 +649,11 @@ func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName, fieldN
 
 	// Further helper for when List<T> is needed but varargs are provided.
 	if isList, t2 := t1.UnList(); isList {
+		genPropJavadoc(ctx, prop, propJavadocOptions{
+			indent:    indent,
+			isBuilder: true,
+			fieldName: fieldName,
+		})
 		fprintf(w, "        public Builder %[1]s(%[3]s... %[2]s) {\n",
 			setterName, fieldName, t2.ToCode(ctx.imports))
 		fprintf(w, "            return %[1]s(%[3]s.of(%[2]s));\n",
@@ -621,12 +671,22 @@ func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName, fieldN
 			t1.Type, t2.Type)
 	}
 	if isEither && !areAmbiguousTypes {
+		genPropJavadoc(ctx, prop, propJavadocOptions{
+			indent:    indent,
+			isBuilder: true,
+			fieldName: fieldName,
+		})
 		fprintf(w, "        public Builder %[1]s(%[3]s %[2]s) {\n",
 			setterName, fieldName, t1.ToCode(ctx.imports))
 		fprintf(w, "            return %[1]s(%[3]s.ofLeft(%[2]s));\n",
 			setterName, fieldName, ctx.ref(names.Either),
 		)
 		fprintf(w, "        }\n\n")
+		genPropJavadoc(ctx, prop, propJavadocOptions{
+			indent:    indent,
+			isBuilder: true,
+			fieldName: fieldName,
+		})
 		fprintf(w, "        public Builder %[1]s(%[3]s %[2]s) {\n",
 			setterName, fieldName, t2.ToCode(ctx.imports))
 		fprintf(w, "            return %[1]s(%[3]s.ofRight(%[2]s));\n",
@@ -667,19 +727,10 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			false, // outer optional
 			false, // inputless overload
 		)
-		if prop.Comment != "" || prop.DeprecationMessage != "" {
-			fprintf(w, "    /**\n")
-			if prop.Comment != "" {
-				fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent))
-			}
-			if prop.DeprecationMessage != "" {
-				fprintf(w, "     * @deprecated\n")
-				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
-
-			}
-			fprintf(w, "     */\n")
-		}
-		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
+		genPropJavadoc(ctx, prop, propJavadocOptions{
+			indent:   indent,
+			isGetter: true,
+		})
 		fprintf(w, "    private %s %s;\n", fieldType.ToCode(ctx.imports), fieldName)
 	}
 	if len(props) > 0 {
@@ -715,19 +766,6 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 
 	// Generate getters
 	for _, prop := range props {
-		if prop.Comment != "" || prop.DeprecationMessage != "" {
-			fprintf(w, "    /**\n")
-			if prop.Comment != "" {
-				fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent))
-			}
-
-			if prop.DeprecationMessage != "" {
-				fprintf(w, "     * @deprecated\n")
-				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
-
-			}
-			fprintf(w, "     */\n")
-		}
 		paramName := names.Ident(prop.Name)
 		getterName := names.Ident(prop.Name).AsProperty().Getter()
 		getterType := pt.mod.typeString(
@@ -771,7 +809,10 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			}
 		}
 
-		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
+		genPropJavadoc(ctx, prop, propJavadocOptions{
+			indent:   indent,
+			isGetter: true,
+		})
 		if err := getterTemplate.Execute(w, getterTemplateContext{
 			Indent:          indent,
 			GetterType:      getterType.ToCode(ctx.imports),
@@ -867,19 +908,10 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			false, // outer optional
 			false, // inputless overload
 		)
-		if prop.Comment != "" || prop.DeprecationMessage != "" {
-			fprintf(w, "    /**\n")
-			if prop.Comment != "" {
-				fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent))
-			}
-			if prop.DeprecationMessage != "" {
-				fprintf(w, "     * @deprecated\n")
-				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
-
-			}
-			fprintf(w, "     */\n")
-		}
-		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent+"    ")
+		genPropJavadoc(ctx, prop, propJavadocOptions{
+			indent:   indent + "    ",
+			isGetter: true,
+		})
 		fprintf(w, "    private final %s %s;\n", fieldType.ToCode(ctx.imports), fieldName)
 	}
 	if len(props) > 0 {
@@ -942,19 +974,6 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 
 	// Generate getters
 	for _, prop := range props {
-		if prop.Comment != "" || prop.DeprecationMessage != "" {
-			fprintf(w, "    /**\n")
-			if prop.Comment != "" {
-				fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent))
-			}
-
-			if prop.DeprecationMessage != "" {
-				fprintf(w, "     * @deprecated\n")
-				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
-
-			}
-			fprintf(w, "    */\n")
-		}
 		paramName := names.Ident(prop.Name)
 		getterName := names.Ident(prop.Name).AsProperty().Getter()
 		getterType := pt.mod.typeString(
@@ -998,7 +1017,10 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			}
 		}
 
-		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
+		genPropJavadoc(ctx, prop, propJavadocOptions{
+			indent:   indent,
+			isGetter: true,
+		})
 		if err := getterTemplate.Execute(w, getterTemplateContext{
 			Indent:          indent,
 			GetterType:      getterType.ToCode(ctx.imports),
