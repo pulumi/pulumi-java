@@ -12,10 +12,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRegistryImageResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final @Nullable Boolean insecureSkipVerify;
     private final String name;
@@ -34,9 +34,9 @@ public final class GetRegistryImageResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

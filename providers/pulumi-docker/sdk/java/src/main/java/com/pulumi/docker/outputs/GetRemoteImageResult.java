@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRemoteImageResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String name;
     private final String repoDigest;
@@ -28,9 +28,9 @@ public final class GetRemoteImageResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
