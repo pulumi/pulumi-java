@@ -23,6 +23,10 @@ public final class LinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkType", required=true)
     private String linkType;
 
+    /**
+     * @return Type of link
+     * 
+     */
     public String linkType() {
         return this.linkType;
     }
@@ -34,6 +38,10 @@ public final class LinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkUrl", required=true)
     private String linkUrl;
 
+    /**
+     * @return Url of the link
+     * 
+     */
     public String linkUrl() {
         return this.linkUrl;
     }
@@ -63,11 +71,23 @@ public final class LinkResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkType Type of link
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkType(String linkType) {
             $.linkType = linkType;
             return this;
         }
 
+        /**
+         * @param linkUrl Url of the link
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkUrl(String linkUrl) {
             $.linkUrl = linkUrl;
             return this;

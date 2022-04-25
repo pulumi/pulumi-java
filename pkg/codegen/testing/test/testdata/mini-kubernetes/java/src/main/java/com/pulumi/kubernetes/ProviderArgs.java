@@ -24,6 +24,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
     private @Nullable Output<String> cluster;
 
+    /**
+     * @return If present, the name of the kubeconfig cluster to use.
+     * 
+     */
     public Optional<Output<String>> cluster() {
         return Optional.ofNullable(this.cluster);
     }
@@ -35,6 +39,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="context")
     private @Nullable Output<String> context;
 
+    /**
+     * @return If present, the name of the kubeconfig context to use.
+     * 
+     */
     public Optional<Output<String>> context() {
         return Optional.ofNullable(this.context);
     }
@@ -46,6 +54,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kubeClientSettings", json=true)
     private @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
 
+    /**
+     * @return Options for tuning the Kubernetes client used by a Provider.
+     * 
+     */
     public Optional<Output<KubeClientSettingsArgs>> kubeClientSettings() {
         return Optional.ofNullable(this.kubeClientSettings);
     }
@@ -57,6 +69,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kubeconfig")
     private @Nullable Output<String> kubeconfig;
 
+    /**
+     * @return The contents of a kubeconfig file or the path to a kubeconfig file.
+     * 
+     */
     public Optional<Output<String>> kubeconfig() {
         return Optional.ofNullable(this.kubeconfig);
     }
@@ -88,38 +104,86 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster If present, the name of the kubeconfig cluster to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(@Nullable Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster If present, the name of the kubeconfig cluster to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
         }
 
+        /**
+         * @param context If present, the name of the kubeconfig context to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(@Nullable Output<String> context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param context If present, the name of the kubeconfig context to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(String context) {
             return context(Output.of(context));
         }
 
+        /**
+         * @param kubeClientSettings Options for tuning the Kubernetes client used by a Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeClientSettings(@Nullable Output<KubeClientSettingsArgs> kubeClientSettings) {
             $.kubeClientSettings = kubeClientSettings;
             return this;
         }
 
+        /**
+         * @param kubeClientSettings Options for tuning the Kubernetes client used by a Provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeClientSettings(KubeClientSettingsArgs kubeClientSettings) {
             return kubeClientSettings(Output.of(kubeClientSettings));
         }
 
+        /**
+         * @param kubeconfig The contents of a kubeconfig file or the path to a kubeconfig file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeconfig(@Nullable Output<String> kubeconfig) {
             $.kubeconfig = kubeconfig;
             return this;
         }
 
+        /**
+         * @param kubeconfig The contents of a kubeconfig file or the path to a kubeconfig file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeconfig(String kubeconfig) {
             return kubeconfig(Output.of(kubeconfig));
         }

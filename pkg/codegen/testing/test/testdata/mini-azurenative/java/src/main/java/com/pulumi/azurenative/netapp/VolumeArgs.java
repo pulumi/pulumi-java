@@ -30,6 +30,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="usageThreshold", required=true)
     private Output<Double> usageThreshold;
 
+    /**
+     * @return Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
+     * 
+     */
     public Output<Double> usageThreshold() {
         return this.usageThreshold;
     }
@@ -68,11 +72,23 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
             return throughputMibps(Output.of(throughputMibps));
         }
 
+        /**
+         * @param usageThreshold Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usageThreshold(Output<Double> usageThreshold) {
             $.usageThreshold = usageThreshold;
             return this;
         }
 
+        /**
+         * @param usageThreshold Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usageThreshold(Double usageThreshold) {
             return usageThreshold(Output.of(usageThreshold));
         }

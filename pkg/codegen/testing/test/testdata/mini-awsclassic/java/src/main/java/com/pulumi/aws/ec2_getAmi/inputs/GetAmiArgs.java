@@ -23,6 +23,11 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="executableUsers")
     private @Nullable List<String> executableUsers;
 
+    /**
+     * @return Limit search to users with *explicit* launch permission on
+     * the image. Valid items are the numeric account ID or `self`.
+     * 
+     */
     public Optional<List<String>> executableUsers() {
         return Optional.ofNullable(this.executableUsers);
     }
@@ -34,6 +39,10 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="owners", required=true)
     private List<String> owners;
 
+    /**
+     * @return List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g., `amazon`, `aws-marketplace`, `microsoft`).
+     * 
+     */
     public List<String> owners() {
         return this.owners;
     }
@@ -63,20 +72,46 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAmiArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executableUsers Limit search to users with *explicit* launch permission on
+         * the image. Valid items are the numeric account ID or `self`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executableUsers(@Nullable List<String> executableUsers) {
             $.executableUsers = executableUsers;
             return this;
         }
 
+        /**
+         * @param executableUsers Limit search to users with *explicit* launch permission on
+         * the image. Valid items are the numeric account ID or `self`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executableUsers(String... executableUsers) {
             return executableUsers(List.of(executableUsers));
         }
 
+        /**
+         * @param owners List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g., `amazon`, `aws-marketplace`, `microsoft`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(List<String> owners) {
             $.owners = owners;
             return this;
         }
 
+        /**
+         * @param owners List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g., `amazon`, `aws-marketplace`, `microsoft`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(String... owners) {
             return owners(List.of(owners));
         }
