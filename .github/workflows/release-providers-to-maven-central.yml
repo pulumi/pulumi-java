@@ -8,6 +8,7 @@ on:
     tags:
       - aws-native/v*.*.*
       - aws/v*.*.*
+      - awsx/v*.*.*
       - azure-native/v*.*.*
       - azuread/v*.*.*
       - docker/v*.*.*
@@ -55,6 +56,7 @@ jobs:
         - gcp
         - aws
         - aws-native
+        - awsx
         - kubernetes
         - docker
     steps:
